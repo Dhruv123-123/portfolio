@@ -271,5 +271,14 @@
     "logoLoading": "Logo portfolio XP black loading",
     "logoLogin": "Logo portfolio XP white login",
     "currLang": "Current language"
+  },
+  "clippy": {
+    "greeting": "Hi there! 👋",
+    "message": "It looks like you're enjoying this portfolio! Would you like to support the project?",
+    "starRepo": "Star on GitHub",
+    "buyMeCoffee": "Buy me a coffee",
+    "dontShowAgain": "Don't show this again",
+    "close": "Close",
+    "clippyAlt": "Clippy assistant"
   }
 }

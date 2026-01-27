@@ -267,5 +267,14 @@
     "logoLoading": "Logo portfolio XP noir chargement",
     "logoLogin": "Logo portfolio XP blanc connexion",
     "currLang": "Langue actuelle"
+  },
+  "clippy": {
+    "greeting": "Salut ! 👋",
+    "message": "On dirait que tu apprécies ce portfolio ! Voudrais-tu soutenir le projet ?",
+    "starRepo": "Star sur GitHub",
+    "buyMeCoffee": "Offrir un café",
+    "dontShowAgain": "Ne plus afficher",
+    "close": "Fermer",
+    "clippyAlt": "Assistant Clippy"
   }
 }
