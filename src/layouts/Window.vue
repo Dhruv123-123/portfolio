@@ -103,17 +103,17 @@ const {
 // Locale management
 const localeStore = useLocaleStore()
 
-const translatedTitle = ref(title[localeStore.currentLocale] || title['fr'])
+const translatedTitle = ref(title[localeStore.currentLocale] || title['en'])
 const translatedMenuHeaderItems = ref(
-  menuHeaderData.menuHeaderItems[menuHeaderItemsId][localeStore.currentLocale] || menuHeaderData.menuHeaderItems[menuHeaderItemsId]['fr']
+  menuHeaderData.menuHeaderItems[menuHeaderItemsId][localeStore.currentLocale] || menuHeaderData.menuHeaderItems[menuHeaderItemsId]['en']
 )
 
 watch(
   () => localeStore.currentLocale,
   (newLocale) => {
-    translatedTitle.value = title[newLocale] || title['fr']
+    translatedTitle.value = title[newLocale] || title['en']
     const items = menuHeaderData.menuHeaderItems[menuHeaderItemsId]
-    translatedMenuHeaderItems.value = items ? items[newLocale] || items['fr'] : []
+    translatedMenuHeaderItems.value = items ? items[newLocale] || items['en'] : []
   }
 )
 

@@ -13,11 +13,11 @@ const currentLocale = computed(() => localeStore.currentLocale)
 const leftMenu = leftMenuData.leftMenuItems[props.leftMenuType]
 
 const getLocalizedTitle = (item) => {
-  return item.title[currentLocale.value] || item.title['fr']
+  return item.title[currentLocale.value] || item.title['en']
 }
 
 const getLocalizedSubtitle = (subtask) => {
-  return subtask.subtitle[currentLocale.value] || subtask.subtitle['fr']
+  return subtask.subtitle[currentLocale.value] || subtask.subtitle['en']
 }
 </script>
 

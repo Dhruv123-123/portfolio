@@ -1,637 +1,742 @@
 {
-  "name": "Portfolio - Playlist",
+  "name": "Dhruv's Tomorrowland Playlist",
   "images": [
     {
-      "url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffr-nhvnaturalpetproducts.glopalstore.com%2Fcats%2Fremedies-by-breed%2Fscottish-straight%2F&psig=AOvVaw2XpKYU2_h6MAZN9lQNADH5&ust=1739875630694000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIC2lPrDyosDFQAAAAAdAAAAABAK"
+      "url": "https://mosaic.scdn.co/640/ab67616d00001e02placeholder"
     }
   ],
   "external_urls": {
-    "spotify": "https://open.spotify.com/playlist/1hMzZICeyywzM40RKVahoU"
+    "spotify": "https://open.spotify.com/playlist/2wTdp6uofJh3wOaF1gqBG2"
   },
   "tracks": {
     "items": [
       {
-        "id": "1lHiKWnlJtjzA4vHnjAr39",
-        "name": "Windy - Remastered Version",
+        "id": "0GjEhVFGZW8afUYGChu3Rr",
+        "name": "Dancing Queen",
         "album": {
-          "name": "Insight Out",
+          "name": "Arrival",
           "images": [
             {
-              "url": "/img/album-covers/1lHiKWnlJtjzA4vHnjAr39.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/1lHiKWnlJtjzA4vHnjAr39",
-            "deezer": "https://www.deezer.com/us/track/733073"
+            "spotify": "https://open.spotify.com/track/0GjEhVFGZW8afUYGChu3Rr"
           }
         },
         "artists": [
           {
-            "name": "The Association"
+            "name": "ABBA"
           }
         ],
-        "added_at": "2025-05-28T07:40:39Z",
-        "duration_ms": 176600
-      },    
-      {
-        "id": "5BH4zfMUbea376GQp5okHw",
-        "name": "Enough",
-        "album": {
-          "name": "Radiolove",
-          "images": [
-            {
-              "url": "/img/album-covers/5BH4zfMUbea376GQp5okHw.webp"
-            }
-          ],
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/5BH4zfMUbea376GQp5okHw",
-            "deezer": "https://www.deezer.com/us/track/1655565142"
-          }
-        },
-        "artists": [
-          {
-            "name": "Tanukichan"
-          }
-        ],
-        "added_at": "2024-12-20T13:24:00",
-        "duration_ms": 176196
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 231000
       },
       {
-        "id": "6EpQ1y9VipffuPRhI3GTQc",
-        "name": "Le sablier",
+        "id": "4dhHwcbp049EjqSiaD5E37",
+        "name": "Hungry Eyes",
         "album": {
-          "name": "\"X\"",
+          "name": "Dirty Dancing (Original Soundtrack)",
           "images": [
             {
-              "url": "/img/album-covers/6EpQ1y9VipffuPRhI3GTQc.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/6EpQ1y9VipffuPRhI3GTQc",
-            "deezer": "https://www.deezer.com/us/track/1772850617"
+            "spotify": "https://open.spotify.com/track/4dhHwcbp049EjqSiaD5E37"
           }
         },
         "artists": [
           {
-            "name": "Fred Pallem, le Sacre du Tympan"
+            "name": "Eric Carmen"
           }
         ],
-        "added_at": "2024-10-31T11:38:16Z",
-        "duration_ms": 341368
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 239000
       },
       {
-        "id": "7bu3H8JO7d0UbMoVzbo70s",
-        "name": "A Forest",
+        "id": "4RvWPyQ5RL0ao9LPZeSouE",
+        "name": "Everybody Wants To Rule The World",
         "album": {
-          "name": "Seventeen Seconds",
+          "name": "Songs from the Big Chair",
           "images": [
             {
-              "url": "/img/album-covers/7bu3H8JO7d0UbMoVzbo70s.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/4iVTSRiJAA18d3QglhyJ6Q",
-            "deezer": "https://www.deezer.com/us/track/1166205"
+            "spotify": "https://open.spotify.com/track/4RvWPyQ5RL0ao9LPZeSouE"
           }
         },
         "artists": [
           {
-            "name": "The Cure"
+            "name": "Tears For Fears"
           }
         ],
-        "added_at": "2024-10-31T11:38:16Z",
-        "duration_ms": 354346
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 255000
       },
       {
-        "id": "3uaKz4HTXFCGzIHmqRMLcO",
-        "name": "La nuit américaine",
+        "id": "7aQjPecQdIuNd1sz3KCDhD",
+        "name": "Lovefool",
         "album": {
-          "name": "American Classics",
+          "name": "First Band on the Moon",
           "images": [
             {
-              "url": "/img/album-covers/3uaKz4HTXFCGzIHmqRMLcO.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/3uaKz4HTXFCGzIHmqRMLcO",
-            "deezer": "https://www.deezer.com/us/track/2165509787"
+            "spotify": "https://open.spotify.com/track/7aQjPecQdIuNd1sz3KCDhD"
           }
         },
         "artists": [
           {
-            "name": "Georges Delerue, Eric Aubier, Sébastien Billard"
+            "name": "The Cardigans"
           }
         ],
-        "added_at": "2024-08-13T08:34:37Z",
-        "duration_ms": 138507
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 196000
       },
       {
-        "id": "1gl0S9pS0Zw0qfa14rDD3D",
-        "name": "Freaks",
+        "id": "0aF9m87P8Tja3NUMv4DfHt",
+        "name": "Head Over Heels",
         "album": {
-          "name": "Surf Curse",
+          "name": "Songs from the Big Chair",
           "images": [
             {
-              "url": "/img/album-covers/1gl0S9pS0Zw0qfa14rDD3D.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/7EkWXAI1wn8Ii883ecd9xr",
-            "deezer": "https://www.deezer.com/us/track/1373268472"
+            "spotify": "https://open.spotify.com/track/0aF9m87P8Tja3NUMv4DfHt"
           }
         },
         "artists": [
           {
-            "name": "Freaks"
+            "name": "Tears For Fears"
           }
         ],
-        "added_at": "2024-08-12T17:04:18Z",
-        "duration_ms": 147098
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 258000
       },
       {
-        "id": "1QFh8OH1e78dGd3VyJZCAC",
-        "name": "Boys Don't Cry",
+        "id": "6adX63Ubv8bcO1Kcv83LRV",
+        "name": "More Than A Woman",
         "album": {
-          "name": "Three Imaginary Boys",
+          "name": "Saturday Night Fever",
           "images": [
             {
-              "url": "/img/album-covers/1QFh8OH1e78dGd3VyJZCAC.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/1QFh8OH1e78dGd3VyJZCAC",
-            "deezer": "https://www.deezer.com/us/track/1143625"
+            "spotify": "https://open.spotify.com/track/6adX63Ubv8bcO1Kcv83LRV"
           }
         },
         "artists": [
           {
-            "name": "The Cure"
+            "name": "Bee Gees"
           }
         ],
-        "added_at": "2024-08-15T17:19:54Z",
-        "duration_ms": 154887
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 201000
       },
       {
-        "id": "7oG9qhZ0UaQEoUGJJVXh1U",
-        "name": "Favourite",
+        "id": "4s6LhHAV5SEsOV0lC2tjvJ",
+        "name": "California Dreamin'",
         "album": {
-          "name": "Favourite",
+          "name": "If You Can Believe Your Eyes & Ears",
           "images": [
             {
-              "url": "/img/album-covers/7oG9qhZ0UaQEoUGJJVXh1U.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/7oG9qhZ0UaQEoUGJJVXh1U",
-            "deezer": "https://www.deezer.com/us/track/2928358941"
+            "spotify": "https://open.spotify.com/track/4s6LhHAV5SEsOV0lC2tjvJ"
           }
         },
         "artists": [
           {
-            "name": "Fontaines D.C."
+            "name": "The Mamas & The Papas"
           }
         ],
-        "added_at": "2024-08-12T17:46:20Z",
-        "duration_ms": 268016
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 159000
       },
       {
-        "id": "3dBVyJ7JuOMt4GE9607Qin",
-        "name": "Cosmic Dancer",
+        "id": "5WDLRQ3VCdVrKw0njWe5E5",
+        "name": "Careless Whisper",
         "album": {
-          "name": "Electric Warrior",
+          "name": "Make It Big",
           "images": [
             {
-              "url": "/img/album-covers/3dBVyJ7JuOMt4GE9607Qin.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/3dBVyJ7JuOMt4GE9607Qin",
-            "deezer": "https://www.deezer.com/us/track/25003771"
+            "spotify": "https://open.spotify.com/track/5WDLRQ3VCdVrKw0njWe5E5"
           }
         },
         "artists": [
           {
-            "name": "T. Rex"
+            "name": "George Michael"
           }
         ],
-        "added_at": "2024-08-13T08:36:46Z",
-        "duration_ms": 266579
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 327000
       },
       {
-        "id": "0IwlY33zbBXN7zlS9DP2Cj",
-        "name": "Sunday Morning",
+        "id": "2ajUl8lBLAXOXNpG4NEPMz",
+        "name": "Sway",
         "album": {
-          "name": "The Velvet Underground & Nico 45th Anniversary",
+          "name": "It's Time",
           "images": [
             {
-              "url": "/img/album-covers/0IwlY33zbBXN7zlS9DP2Cj.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/11607FzqoipskTsXrwEHnJ",
-            "deezer": "https://www.deezer.com/us/track/61292499"
+            "spotify": "https://open.spotify.com/track/2ajUl8lBLAXOXNpG4NEPMz"
           }
         },
         "artists": [
           {
-            "name": "The Velvet Underground, Nico"
+            "name": "Michael Bublé"
           }
         ],
-        "added_at": "2024-08-13T08:37:24Z",
-        "duration_ms": 176100
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 192000
       },
       {
-        "id": "1Clu0gbMFEvJ3bdpgmlMvh",
-        "name": "Mr. Fox in the Fields",
+        "id": "4T6HLdP6OcAtqC6tGnQelG",
+        "name": "Feeling Good",
         "album": {
-          "name": "Fantastic Mr. Fox (Original Soundtrack)",
+          "name": "It's Time",
           "images": [
             {
-              "url": "/img/album-covers/1Clu0gbMFEvJ3bdpgmlMvh.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/1Clu0gbMFEvJ3bdpgmlMvh",
-            "deezer": "https://www.deezer.com/us/track/10102011"
+            "spotify": "https://open.spotify.com/track/4T6HLdP6OcAtqC6tGnQelG"
           }
         },
         "artists": [
           {
-            "name": "Alexandre Desplat"
+            "name": "Michael Bublé"
           }
         ],
-        "added_at": "2024-08-13T08:35:08Z",
-        "duration_ms": 62589
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 218000
       },
       {
-        "id": "7lTTDZv3adwmeoWRobZmbU",
-        "name": "Clicktivism",
+        "id": "2WfaOiMkCvy7F5fcp2zZ8L",
+        "name": "Take on Me",
         "album": {
-          "name": "Flickering i",
+          "name": "Hunting High and Low",
           "images": [
             {
-              "url": "/img/album-covers/7lTTDZv3adwmeoWRobZmbU.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/7lTTDZv3adwmeoWRobZmbU",
-            "deezer": "https://www.deezer.com/us/track/1674218887"
+            "spotify": "https://open.spotify.com/track/2WfaOiMkCvy7F5fcp2zZ8L"
           }
         },
         "artists": [
           {
-            "name": "Astrel K"
+            "name": "a-ha"
           }
         ],
-        "added_at": "2024-08-13T09:20:28Z",
-        "duration_ms": 298605
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 225000
       },
       {
-        "id": "1JIzFhI9Lt5FyslawmHCBi",
-        "name": "Five Years - 2012 Remaster",
+        "id": "4fSuPsbl2ElgQdpje5nfzn",
+        "name": "Stayin' Alive",
         "album": {
-          "name": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)",
+          "name": "Saturday Night Fever",
           "images": [
             {
-              "url": "/img/album-covers/1JIzFhI9Lt5FyslawmHCBi.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/1JIzFhI9Lt5FyslawmHCBi",
-            "deezer": "https://www.deezer.com/us/track/107471920"
+            "spotify": "https://open.spotify.com/track/4fSuPsbl2ElgQdpje5nfzn"
           }
         },
         "artists": [
           {
-            "name": "David Bowie"
+            "name": "Bee Gees"
           }
         ],
-        "added_at": "2024-08-15T17:27:17Z",
-        "duration_ms": 283758
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 285000
       },
       {
-        "id": "6e65fH1wClamA2QPI5HUi3",
-        "name": "Prickly Pear",
+        "id": "6MDiw9iKVpyevm4Zt4mtJ5",
+        "name": "Island In The Sun",
         "album": {
-          "name": "Knee-Deep In the North Sea",
+          "name": "Weezer (Green Album)",
           "images": [
             {
-              "url": "/img/album-covers/6e65fH1wClamA2QPI5HUi3.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/6e65fH1wClamA2QPI5HUi3",
-            "deezer": "https://www.deezer.com/us/track/99279042"
+            "spotify": "https://open.spotify.com/track/6MDiw9iKVpyevm4Zt4mtJ5"
           }
         },
         "artists": [
           {
-            "name": "Portico Quartet"
+            "name": "Weezer"
           }
         ],
-        "added_at": "2024-08-17T19:11:55Z",
-        "duration_ms": 341942
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 197000
       },
       {
-        "id": "2DPWQEfEW4ptmAQfTbZE76",
-        "name": "Tonight We Fly",
+        "id": "49X0LAl6faAusYq02PRAY6",
+        "name": "Lady - Hear Me Tonight",
         "album": {
-          "name": "Promenade",
+          "name": "Modjo",
           "images": [
             {
-              "url": "/img/album-covers/2DPWQEfEW4ptmAQfTbZE76.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/2DPWQEfEW4ptmAQfTbZE76",
-            "deezer": "https://www.deezer.com/us/track/1091791272"
+            "spotify": "https://open.spotify.com/track/49X0LAl6faAusYq02PRAY6"
           }
         },
         "artists": [
           {
-            "name": "The Divine Comedy"
+            "name": "Modjo"
           }
         ],
-        "added_at": "2024-08-21T06:30:10Z",
-        "duration_ms": 181080
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 315000
       },
       {
-        "id": "0sxx8bEWlTBmbw0X1Abgc3",
-        "name": "A Hero's Death",
+        "id": "0aym2LBJBk9DAYuHHutrIl",
+        "name": "Hey Jude",
         "album": {
-          "name": "A Hero's Death",
+          "name": "1 (Remastered)",
           "images": [
             {
-              "url": "/img/album-covers/0sxx8bEWlTBmbw0X1Abgc3.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/0sxx8bEWlTBmbw0X1Abgc3",
-            "deezer": "https://www.deezer.com/us/track/932332832"
+            "spotify": "https://open.spotify.com/track/0aym2LBJBk9DAYuHHutrIl"
           }
         },
         "artists": [
           {
-            "name": "Fontaines D.C."
+            "name": "The Beatles"
           }
         ],
-        "added_at": "2024-08-21T07:27:02Z",
-        "duration_ms": 211512
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 431000
       },
       {
-        "id": "2XXpCrhc1OF0oHvdKSd7SX",
-        "name": "Is It It Or Is It i?",
+        "id": "0bdszqAMfgdbu2hYHZdeJ4",
+        "name": "Wonderwall",
         "album": {
-          "name": "Flickering i",
+          "name": "(What's the Story) Morning Glory?",
           "images": [
             {
-              "url": "/img/album-covers/2XXpCrhc1OF0oHvdKSd7SX.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/2XXpCrhc1OF0oHvdKSd7SX",
-            "deezer": "https://www.deezer.com/us/track/1674218847"
+            "spotify": "https://open.spotify.com/track/0bdszqAMfgdbu2hYHZdeJ4"
           }
         },
         "artists": [
           {
-            "name": "Astrel K"
+            "name": "Oasis"
           }
         ],
-        "added_at": "2024-08-29T09:11:42Z",
-        "duration_ms": 356911
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 258000
       },
       {
-        "id": "4PDPn7HosIycoXeoeibFc5",
-        "name": "The Jeweller's Hands",
+        "id": "1JSTJqkT5qHq8MDJnJbRE1",
+        "name": "Every Breath You Take",
         "album": {
-          "name": "Humbug",
+          "name": "Synchronicity",
           "images": [
             {
-              "url": "/img/album-covers/4PDPn7HosIycoXeoeibFc5.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/4PDPn7HosIycoXeoeibFc5",
-            "deezer": "https://www.deezer.com/us/track/4315586"
+            "spotify": "https://open.spotify.com/track/1JSTJqkT5qHq8MDJnJbRE1"
           }
         },
         "artists": [
           {
-            "name": "Arctic Monkeys"
+            "name": "The Police"
           }
         ],
-        "added_at": "2024-09-04T11:56:50Z",
-        "duration_ms": 344111
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 253000
       },
       {
-        "id": "5Tf1BtJ5v5PebDYSwQXGFv",
-        "name": "Worn / Wander",
+        "id": "5jgFfDIR6FR0gvlA56Nakr",
+        "name": "Blackbird",
         "album": {
-          "name": "Gawk",
+          "name": "The Beatles (White Album)",
           "images": [
             {
-              "url": "/img/album-covers/5Tf1BtJ5v5PebDYSwQXGFv.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/5Tf1BtJ5v5PebDYSwQXGFv",
-            "deezer": "https://www.deezer.com/us/track/396127372"
+            "spotify": "https://open.spotify.com/track/5jgFfDIR6FR0gvlA56Nakr"
           }
         },
         "artists": [
           {
-            "name": "Vundabar"
+            "name": "The Beatles"
           }
         ],
-        "added_at": "2024-09-04T12:21:06Z",
-        "duration_ms": 216476
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 138000
       },
       {
-        "id": "3jjsRKEsF42ccXf8kWR3nu",
-        "name": "Washing Machine Heart",
+        "id": "7iN1s7xHE4ifF5povM6A48",
+        "name": "Let It Be",
         "album": {
-          "name": "Be the Cowboy",
+          "name": "Let It Be (Remastered)",
           "images": [
             {
-              "url": "/img/album-covers/3jjsRKEsF42ccXf8kWR3nu.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/3jjsRKEsF42ccXf8kWR3nu",
-            "deezer": "https://www.deezer.com/us/track/526540852"
+            "spotify": "https://open.spotify.com/track/7iN1s7xHE4ifF5povM6A48"
           }
         },
         "artists": [
           {
-            "name": "Mitski"
+            "name": "The Beatles"
           }
         ],
-        "added_at": "2024-10-05T17:42:31Z",
-        "duration_ms": 127640
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 243000
       },
       {
-        "id": "6YNfrgCOy1dCXZKKRUuZVq",
-        "name": "Everything Means Nothing To Me",
+        "id": "70C4NyhjD5OZUMzvWZ3njJ",
+        "name": "Piano Man",
         "album": {
-          "name": "Figure 8",
+          "name": "Piano Man",
           "images": [
             {
-              "url": "/img/album-covers/6YNfrgCOy1dCXZKKRUuZVq.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/6YNfrgCOy1dCXZKKRUuZVq",
-            "deezer": "https://www.deezer.com/us/track/2285241"
+            "spotify": "https://open.spotify.com/track/70C4NyhjD5OZUMzvWZ3njJ"
           }
         },
         "artists": [
           {
-            "name": "Elliott Smith"
+            "name": "Billy Joel"
           }
         ],
-        "added_at": "2024-10-09T14:19:43Z",
-        "duration_ms": 142942
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 338000
       },
       {
-        "id": "1dMcNgBWGFNgnXAm4IJQZX",
-        "name": "Saint Simon",
+        "id": "2G2YzndIA6jeWFPBXhUjh5",
+        "name": "Be My Baby",
         "album": {
-          "name": "Chutes Too Narrow",
+          "name": "Presenting the Fabulous Ronettes",
           "images": [
             {
-              "url": "/img/album-covers/1dMcNgBWGFNgnXAm4IJQZX.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/1dMcNgBWGFNgnXAm4IJQZX",
-            "deezer": "https://www.deezer.com/us/track/2459694965"
+            "spotify": "https://open.spotify.com/track/2G2YzndIA6jeWFPBXhUjh5"
           }
         },
         "artists": [
           {
-            "name": "The Shins"
+            "name": "The Ronettes"
           }
         ],
-        "added_at": "2024-10-17T08:48:32Z",
-        "duration_ms": 265613
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 161000
       },
       {
-        "id": "7gNJfhbuxZ6i3xmLE2Tp4n",
-        "name": "Class Historian",
+        "id": "34c091a317bc651c76a1",
+        "name": "Gimme! Gimme! Gimme!",
         "album": {
-          "name": "Just Enough Hip to Be Woman",
+          "name": "Greatest Hits Vol. 2",
           "images": [
             {
-              "url": "/img/album-covers/7gNJfhbuxZ6i3xmLE2Tp4n.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/7gNJfhbuxZ6i3xmLE2Tp4n",
-            "deezer": "https://www.deezer.com/us/track/136282240"
+            "spotify": ""
           }
         },
         "artists": [
           {
-            "name": "BRONCHO"
+            "name": "ABBA"
           }
         ],
-        "added_at": "2025-01-03T07:20:12Z",
-        "duration_ms": 212323
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 0
       },
       {
-        "id": "5neQ6EwRFLQijwXgiJ74Ta",
-        "name": "Late in the Evening - Live at Central Park, NY",
+        "id": "6344d2d9d94bdcbd4867",
+        "name": "The Winner Takes It All",
         "album": {
-          "name": "The Concert in Central Park (Live)",
+          "name": "Super Trouper",
           "images": [
             {
-              "url": "/img/album-covers/5neQ6EwRFLQijwXgiJ74Ta.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/5neQ6EwRFLQijwXgiJ74Ta",
-            "deezer": "https://www.deezer.com/us/track/90409391"
+            "spotify": ""
           }
         },
         "artists": [
           {
-            "name": "Simon & Garfunkel"
+            "name": "ABBA"
           }
         ],
-        "added_at": "2025-07-30T08:20:43Z",
-        "duration_ms": 247833
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 0
       },
       {
-        "id": "2AWFVhpDR8T8RIzFFJdatK",
-        "name": "Don't Kiss Me Goodbye",
+        "id": "04462a1b20d1ec4e11fc",
+        "name": "Chiquitita",
         "album": {
-          "name": "Ultra Orange & Emmanuelle",
+          "name": "Voulez-Vous",
           "images": [
             {
-              "url": "/img/album-covers/2AWFVhpDR8T8RIzFFJdatK.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/2AWFVhpDR8T8RIzFFJdatK",
-            "deezer": "https://www.deezer.com/us/track/535077"
+            "spotify": ""
           }
         },
         "artists": [
           {
-            "name": "Ultra Orange, Emmanuelle Seigner"
+            "name": "ABBA"
           }
         ],
-        "added_at": "2025-08-11T08:37:42Z",
-        "duration_ms": 255026
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 0
       },
       {
-        "id": "1gnP3cx9uzFAVll8OfBcqz",
-        "name": "This Time Tomorrow (2020 Stereo Remaster)",
+        "id": "3e2650c673140a9e75ad",
+        "name": "Dream On",
         "album": {
-          "name": "Lola Versus Powerman and the Moneygoround, Pt. 1",
+          "name": "Aerosmith",
           "images": [
             {
-              "url": "/img/album-covers/1gnP3cx9uzFAVll8OfBcqz.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/1gnP3cx9uzFAVll8OfBcqz",
-            "deezer": "https://www.deezer.com/us/track/131313320"
+            "spotify": ""
           }
         },
         "artists": [
           {
-            "name": "The Kinks"
+            "name": "Aerosmith"
           }
         ],
-        "added_at": "2025-08-11T08:42:32Z",
-        "duration_ms": 203973
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 0
       },
       {
-        "id": "57rAvblBMBmdPBugRF1T77",
-        "name": "The Skin of My Yellow Country Teeth",
+        "id": "5c2631de6da22f27319d",
+        "name": "Uptown Girl",
         "album": {
-          "name": "Clap Your Hands Say Yeah",
+          "name": "An Innocent Man",
           "images": [
             {
-              "url": "/img/album-covers/57rAvblBMBmdPBugRF1T77.webp"
+              "url": "/img/album-covers/default.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/57rAvblBMBmdPBugRF1T77",
-            "deezer": "https://www.deezer.com/us/track/1043338222"
+            "spotify": ""
           }
         },
         "artists": [
           {
-            "name": "Clap Your Hands Say Yeah"
+            "name": "Billy Joel"
           }
         ],
-        "added_at": "2025-09-15T06:57:42Z",
-        "duration_ms": 343773
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 0
+      },
+      {
+        "id": "68094a1aff895186db0f",
+        "name": "Bitter Sweet Symphony",
+        "album": {
+          "name": "Urban Hymns",
+          "images": [
+            {
+              "url": "/img/album-covers/default.webp"
+            }
+          ],
+          "external_urls": {
+            "spotify": ""
+          }
+        },
+        "artists": [
+          {
+            "name": "The Verve"
+          }
+        ],
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 0
+      },
+      {
+        "id": "c8a52c1e357dab599803",
+        "name": "American Pie",
+        "album": {
+          "name": "American Pie",
+          "images": [
+            {
+              "url": "/img/album-covers/default.webp"
+            }
+          ],
+          "external_urls": {
+            "spotify": ""
+          }
+        },
+        "artists": [
+          {
+            "name": "Don McLean"
+          }
+        ],
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 0
+      },
+      {
+        "id": "7362a374665a8b579a9b",
+        "name": "Happy Together",
+        "album": {
+          "name": "Happy Together",
+          "images": [
+            {
+              "url": "/img/album-covers/default.webp"
+            }
+          ],
+          "external_urls": {
+            "spotify": ""
+          }
+        },
+        "artists": [
+          {
+            "name": "The Turtles"
+          }
+        ],
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 0
+      },
+      {
+        "id": "3c85d54d82ca4b730025",
+        "name": "Here Comes The Sun",
+        "album": {
+          "name": "Abbey Road",
+          "images": [
+            {
+              "url": "/img/album-covers/default.webp"
+            }
+          ],
+          "external_urls": {
+            "spotify": ""
+          }
+        },
+        "artists": [
+          {
+            "name": "The Beatles"
+          }
+        ],
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 0
+      },
+      {
+        "id": "43d5ddf764bafb12fb97",
+        "name": "I Was Made For Lovin' You",
+        "album": {
+          "name": "Dynasty",
+          "images": [
+            {
+              "url": "/img/album-covers/default.webp"
+            }
+          ],
+          "external_urls": {
+            "spotify": ""
+          }
+        },
+        "artists": [
+          {
+            "name": "KISS"
+          }
+        ],
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 0
+      },
+      {
+        "id": "41d91b3307fb9d51712c",
+        "name": "Fast Car",
+        "album": {
+          "name": "Tracy Chapman",
+          "images": [
+            {
+              "url": "/img/album-covers/default.webp"
+            }
+          ],
+          "external_urls": {
+            "spotify": ""
+          }
+        },
+        "artists": [
+          {
+            "name": "Tracy Chapman"
+          }
+        ],
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 0
+      },
+      {
+        "id": "addf02827f1ab8410cbe",
+        "name": "With Or Without You",
+        "album": {
+          "name": "The Joshua Tree",
+          "images": [
+            {
+              "url": "/img/album-covers/default.webp"
+            }
+          ],
+          "external_urls": {
+            "spotify": ""
+          }
+        },
+        "artists": [
+          {
+            "name": "U2"
+          }
+        ],
+        "added_at": "2025-01-01T00:00:00Z",
+        "duration_ms": 0
       }
     ],
-    "length": 27
+    "length": 33
   }
 }

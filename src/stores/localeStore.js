@@ -3,7 +3,7 @@ import { useI18n } from 'vue-i18n'
 
 export const useLocaleStore = defineStore('locale', {
   state: () => ({
-    currentLocale: localStorage.getItem('currentLocale') || 'fr'
+    currentLocale: 'en'
   }),
   actions: {
     setLocale(newLocale) {

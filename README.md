@@ -15,7 +15,7 @@ If you like my work and want to support me! (Every little bit helps!)
 
 ![portfolio](https://github.com/user-attachments/assets/77a7b9c0-6276-43b4-8792-a1f6e86306f0)
 
-### [https://pauljaguin.com](https://pauljaguin.com)
+### [https://dhruvramasubban.com](https://dhruvramasubban.com)
 
 ## 👷 Disclaimers
 
@@ -48,7 +48,7 @@ I've been waiting for the Spotify team to review my application for extension re
 Since WindowsXp design was not really meant to be eco friendly _(thanks to the billions of linear gradients)_
 I did my best to make it as lightweight as possible.
 
-[Link to Website Carbon Calculator website](https://www.websitecarbon.com/website/pauljaguin-com-office/)
+[Link to Website Carbon Calculator website](https://www.websitecarbon.com/website/dhruvramasubban-com-office/)
 
 ## 🎨 Webdesign
 

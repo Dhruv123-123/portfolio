@@ -102,7 +102,7 @@
               "fr": "Mon Github"
             },
             "iconUrl": "/img/icons/side-menu/github-icon.webp",
-            "url": "https://github.com/UnMugViolet"
+            "url": "https://github.com/dhruvramasubban"
           },
           {
             "id": 2,
@@ -111,7 +111,7 @@
               "fr": "Mon LinkedIn"
             },
             "iconUrl": "/img/icons/side-menu/linkedin-icon.webp",
-            "url": "https://www.linkedin.com/in/pauljaguin/"
+            "url": "https://www.linkedin.com/in/dhruv-ramasubban-6b8a8b240/"
           },
           {
             "id": 3,
@@ -120,7 +120,7 @@
               "fr": "Buy me a coffee"
             },
             "iconUrl": "/img/icons/side-menu/buy-me-a-coffee-icon.webp",
-            "url": "https://buymeacoffee.com/unmugviolet"
+            "url": ""
           }
         ]
       }

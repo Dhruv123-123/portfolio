@@ -13,7 +13,7 @@
           
           <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4">
             <p class="text-xs md:text-sm text-gray-700">
-              {{ goBackStore.currentActiveService.description[localeStore.currentLocale] || goBackStore.currentActiveService.description['fr'] }}
+              {{ goBackStore.currentActiveService.description[localeStore.currentLocale] || goBackStore.currentActiveService.description['en'] }}
             </p>
           </div>
 
@@ -26,7 +26,7 @@
             <div class="bg-gray-50 p-4 rounded">
               <h3 class="text-sm font-semibold text-gray-600 mb-2">{{ $t('windows.services.duration') }}</h3>
               <p class="text-lg font-semibold text-gray-800">
-                {{ goBackStore.currentActiveService.duration[localeStore.currentLocale] || goBackStore.currentActiveService.duration['fr'] }}
+                {{ goBackStore.currentActiveService.duration[localeStore.currentLocale] || goBackStore.currentActiveService.duration['en'] }}
               </p>
             </div>
           </div>
@@ -34,7 +34,7 @@
           <div v-if="goBackStore.currentActiveService.features" class="mb-4">
             <h3 class="text-lg font-semibold mb-3">{{ $t('windows.services.features') }}</h3>
             <ul class="list-disc list-inside space-y-2">
-              <li v-for="(feature, index) in (goBackStore.currentActiveService.features[localeStore.currentLocale] || goBackStore.currentActiveService.features['fr'])" :key="index" class="text-xs md:text-sm text-gray-700">
+              <li v-for="(feature, index) in (goBackStore.currentActiveService.features[localeStore.currentLocale] || goBackStore.currentActiveService.features['en'])" :key="index" class="text-xs md:text-sm text-gray-700">
                 {{ feature }}
               </li>
             </ul>
@@ -179,11 +179,11 @@ const closeAllServices = () => {
 }
 
 const getLocalizedCategoryName = (category) => {
-  return category.name[localeStore.currentLocale] || category.name['fr']
+  return category.name[localeStore.currentLocale] || category.name['en']
 }
 
 const getLocalizedServiceName = (service) => {
-  return service.name[localeStore.currentLocale] || service.name['fr']
+  return service.name[localeStore.currentLocale] || service.name['en']
 }
 
 const openContactWindow = () => {

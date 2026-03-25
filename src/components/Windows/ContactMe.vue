@@ -2,9 +2,6 @@
 import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-import emailjs from '@emailjs/browser'
-import Button from '../Buttons/Button.vue'
-
 const { t } = useI18n()
 const userEmail = ref('')
 const emailSubject = ref('')
@@ -14,12 +11,7 @@ const emailSent = ref(false)
 const isLoading = ref(false)
 const isFormComplete = ref(false)
 
-// Get variables from .env
-const adminName = import.meta.env.VITE_APP_ADMIN_NAME
-const adminEmailAddress = import.meta.env.VITE_APP_ADMIN_EMAIL_ADDRESS
-const publicKey = import.meta.env.VITE_APP_PUBLIC_API_EMAILJS_KEY
-const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID
-const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID
+const adminEmailAddress = 'dhruv.ramasubban@berkeley.edu'
 
 const sendEmail = async () => {
   if (!userEmail.value || !userMessage.value || !emailSubject.value) {
@@ -28,7 +20,6 @@ const sendEmail = async () => {
     return
   }
 
-  // Check if the email is in a valid format
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailRegex.test(userEmail.value)) {
     emailSent.value = false
@@ -39,34 +30,35 @@ const sendEmail = async () => {
   isLoading.value = true
 
   try {
-    await emailjs.send(
-      serviceId,
-      templateId,
-      {
-        to_name: adminName,
+    const res = await fetch('https://formspree.io/f/xkgwlgkj', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        email: userEmail.value,
         subject: emailSubject.value,
-        message: userMessage.value,
-        reply_to: userEmail.value
-      },
-      publicKey
-    )
+        message: userMessage.value
+      })
+    })
 
-    // Reset form and error message
+    if (res.ok) {
+      errorMessage.value = ''
+      userEmail.value = ''
+      emailSubject.value = ''
+      userMessage.value = ''
+      emailSent.value = true
+    } else {
+      throw new Error('Form submission failed')
+    }
+  } catch {
+    const mailtoUrl = `mailto:${adminEmailAddress}?subject=${encodeURIComponent(emailSubject.value)}&body=${encodeURIComponent(userMessage.value + '\n\nFrom: ' + userEmail.value)}`
+    window.open(mailtoUrl, '_blank')
     errorMessage.value = ''
-    userEmail.value = ''
-    emailSubject.value = ''
-    userMessage.value = ''
     emailSent.value = true
+  } finally {
     isLoading.value = false
-  } catch (error) {
-    console.log(error.text)
-    emailSent.value = false
-    isLoading.value = false
-    errorMessage.value = t('windows.contact.error.unknown') + adminEmailAddress
   }
 }
 
-// Expose variables to the template
 defineExpose({
   userEmail,
   userMessage,
@@ -76,7 +68,6 @@ defineExpose({
   sendEmail
 })
 
-// Change cursor to wait when loading
 watch(isLoading, (newValue) => {
   if (newValue) {
     document.body.classList.add('cursor-wait')
@@ -95,12 +86,11 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
 </script>
 
 <template>
-  <form class="relative right-0 h-full flex flex-col h-content-headless-toolbox">
-    <!-- Header tools -->
+  <form class="relative right-0 h-full flex flex-col h-content-headless-toolbox" @submit.prevent="sendEmail">
     <div class="bg-window-white border-window-header-bot w-full h-12 py-1 flex items-center px-1 text-xxs gap-0.5">
       <button
+        type="submit"
         :disabled="isLoading || !isFormComplete"
-        @click="sendEmail"
         :isLoading="isLoading"
         class="flex items-center rounded-sm justify-center px-2 py-1 cursor-pointer flex-col hover:border-gray-300 hover:shadow-header-tools"
       >
@@ -153,7 +143,6 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
         <p>{{ $t('windows.contact.sign') }}</p>
       </div>
     </div>
-    <!-- Header content -->
     <div class="bg-window-white border-window-header-bot w-full h-18 flex items-center flex-col p-2 text-xxs gap-2">
       <label class="w-full flex gap-2 font-trebuchet-pixel">
         <div class="flex gap-1 w-14 items-center cursor-default">
@@ -163,7 +152,7 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
         <input
           type="text"
           class="w-full h-5 border border-input-blue p-1.5 text-xs outline-none placeholder:text-black"
-          placeholder="jaguinpaul@gmail.com"
+          placeholder="dhruv.ramasubban@berkeley.edu"
           readonly="readonly"
         />
       </label>
@@ -176,7 +165,7 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
           v-model="userEmail"
           type="email"
           class="w-full h-5 border border-input-blue p-1.5 text-xs outline-none font-trebuchet-pixel"
-          placeholder="jean_doe@wanadoo.com"
+          placeholder="your@email.com"
         />
       </label>
       <label class="w-full flex gap-2">
@@ -186,7 +175,6 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
         <input type="text" v-model="emailSubject" class="w-full h-5 border border-input-blue p-1.5 text-xs outline-none font-trebuchet-pixel" />
       </label>
     </div>
-    <!-- Main content -->
     <div class="flex flex-col w-full h-content-contact bg-white overflow-auto gap-2 font-trebuchet-pixel">
       <div class="m-2">
         <div class="max-w-prose">

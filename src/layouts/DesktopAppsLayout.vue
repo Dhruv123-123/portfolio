@@ -46,7 +46,7 @@ const localeStore = useLocaleStore()
 
 // Computed property to get the localized title
 const getLocalizedTitle = (entity) => {
-  return entity.title[localeStore.currentLocale] || entity.title['fr']
+  return entity.title[localeStore.currentLocale] || entity.title['en']
 }
 
 // If click occurs somewhere else, remove the active state

@@ -35,6 +35,6 @@ const toggleWindow = () => {
 }
 
 const getLocalizedTitle = (entity) => {
-  return entity.title[localeStore.currentLocale] || entity.title['fr']
+  return entity.title[localeStore.currentLocale] || entity.title['en']
 }
 </script>

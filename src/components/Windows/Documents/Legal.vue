@@ -20,6 +20,6 @@
     <h2>{{ $t('windows.documents.legal.contact') }}</h2>
     <hr class="mt-1 mb-2 border-t-1 border-gray-400" />
     <p class="small-p">{{ $t('windows.documents.legal.sixthParagraph') }}</p>
-    <p class="small-p mb-3">contact@pauljaguin.com</p>
+    <p class="small-p mb-3">dhruv.ramasubban@berkeley.edu</p>
   </section>
 </template>

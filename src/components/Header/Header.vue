@@ -4,7 +4,7 @@
       <div class="w-full h-full relative overflow-hidden">
         <div class="h-16 flex items-center px-2 header-top-background">
           <ProfilePicture class="w-11 h-11 stroke-white-1 header-profile-shadow" />
-          <h2 class="text-lg ml-2 text-white text-shadow-header">Paul Jaguin</h2>
+          <h2 class="text-lg ml-2 text-white text-shadow-header">Dhruv Ramasubban</h2>
         </div>
         <section class="relative w-full h-full px-0.5">
           <hr class="absolute top-0 left-0 right-0 bg-orange-hr block" />
@@ -99,11 +99,11 @@ const shutdown = () => {
 }
 
 const getLocalizedTitle = (entity) => {
-  return entity.title[localeStore.currentLocale] || entity.title['fr']
+  return entity.title[localeStore.currentLocale] || entity.title['en']
 }
 
 const getLocalizedSubtitle = (entity) => {
-  return entity.subtitle[localeStore.currentLocale] || entity.subtitle['fr']
+  return entity.subtitle[localeStore.currentLocale] || entity.subtitle['en']
 }
 </script>
 

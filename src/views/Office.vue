@@ -80,6 +80,7 @@ import Pictures from '@/components/Windows/Pictures.vue'
 import Calendar from '@/components/Windows/Calendar/Calendar.vue'
 import Notepad from '@/components/Windows/Notepad.vue'
 import Doom from '@/components/Windows/Doom.vue'
+import Mario from '@/components/Windows/Mario.vue'
 import Terminal from '@/components/Windows/Terminal.vue'
 import Services from '@/components/Windows/Services.vue'
 
@@ -96,8 +97,7 @@ const localeStore = useLocaleStore()
 
 onMounted(() => {
   // Ensure the localeStore is updated with the correct locale from localStorage
-  const storedLocale = localStorage.getItem('currentLocale') || 'fr'
-  localeStore.setLocale(storedLocale)
+  localeStore.setLocale('en')
 
   windowsStore.loadState()
   volumeStore.playAudio(['/sounds/start-windows.mp3'])
@@ -129,6 +129,7 @@ const components = {
   Calendar: shallowRef(Calendar),
   Notepad: shallowRef(Notepad),
   Doom: shallowRef(Doom),
+  Mario: shallowRef(Mario),
   Terminal: shallowRef(Terminal),
   Services: shallowRef(Services)
 }

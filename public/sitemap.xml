@@ -3,14 +3,14 @@
   
   <!-- The Office page -->
   <url>
-    <loc>https://pauljaguin.com/office</loc>
+    <loc>https://dhruvramasubban.com/office</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   
   <!-- Loader page -->
   <url>
-    <loc>https://pauljaguin.com/</loc>
+    <loc>https://dhruvramasubban.com/</loc>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>

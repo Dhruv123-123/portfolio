@@ -98,7 +98,7 @@
       "duration": "Durée",
       "link": "Liens",
       "artist": "Artiste",
-      "description": "Une playlist créée spécialement pour mon portfolio, elle contient mes morceaux préférés.",
+      "description": "La playlist tomorrowland de Dhruv — une collection de classiques intemporels.",
       "visitOnSpotify": "Voir sur Spotify",
       "albumCover": "Couverture de l'album",
       "playlistCoverAlt": "Couverture de la playlist"
@@ -121,21 +121,21 @@
         "contextSeventhParagraph": "Ce projet a été fait avec beaucoup de passion et de patience, j'espère que vous apprécierez la visite !",
         "secondTitle": "Remerciements",
         "helpFirst": "Ce projet a été réalisé avec l'aide de Dockurr windows xp qui m'a permis de faire fonctionner un environnement Windows XP sur mon ordinateur très facilement.",
-        "helpSecond": "L'API de Spotify m'a permis de récupérer les informations de ma playlist, de les afficher sur mon site et de mettre un player intégré.",
+        "helpSecond": "La musique est intégrée directement via le lecteur embarqué de Spotify.",
         "helpThird": "Pour la partie serveur, j'ai utilisé un serveur Node.js pour compiler ce site et pour gérer le formulaire de contact. Le site web est hébergé sur infomaniak et le déploiement continu est fait avec mon serveur.",
         "helpFourth": "Le site web internet archive m'a permis de récupérer les images de Windows XP pour les intégrer dans mon projet. Merci à eux.",
         "helpFifth": "Mon chat a en partie aider en marchant sur mon clavier, mais elle a surtout été un soutien moral."
       },
       "legal": {
         "title": "Mentions légales",
-        "firstParagraph": "Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site Portfolio - Paul Jaguin l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.",
+        "firstParagraph": "Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site Portfolio - Dhruv Ramasubban l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.",
         "edit": "Edition du site",
-        "secondParagraph": "Le présent site, accessible à l’URL https://pauljaguin.com (le « Site »), est édité par :",
-        "thirdParagraph": "Paul Jaguin, résidant 202 Boulevard de Charonne, 75020 PARIS, de nationalité Française (France), né(e) le 23/09/1999,",
+        "secondParagraph": "Le présent site, accessible à l’URL https://dhruvramasubban.com (le « Site »), est édité par :",
+        "thirdParagraph": "Dhruv Ramasubban, San Francisco, CA.",
         "hosting": "Hébergement",
         "fourthParagraph": "Le Site est hébergé par la société Infomaniak Network SA, il est possible de les contacter à l'adresse suivante : https://www.infomaniak.com/fr/aide",
         "dirPublication": "Directeur de publication",
-        "fifthParagraph": "Le Directeur de publication est : Paul Jaguin.",
+        "fifthParagraph": "Le Directeur de publication est : Dhruv Ramasubban.",
         "contact": "Contact",
         "sixthParagraph": "Pour toute question, information sur les produits présentés sur le Site, ou concernant le Site lui-même, vous pouvez laisser un message à l'adresse email suivante :"
       }

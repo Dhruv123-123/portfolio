@@ -1,129 +1,59 @@
 {
-  "fr": {
-    "education": [
-      {
-        "degree": "TRONC COMMUN",
-        "institution": "42 Paris",
-        "year": "2024 - 2025"
-      },
-      {
-        "degree": "BACHELOR DÉVELOPPEMENT WEB",
-        "institution": "MyDigitalSchool Rennes",
-        "year": "2022 - 2024"
-      },
-      {
-        "degree": "LICENCE ÉCONOMIE-GESTION PARCOURS MARKETING",
-        "institution": "Université de Varsovie, Faculté de Management",
-        "year": "2020 - 2021"
-      },
-      {
-        "degree": "DUT TECHNIQUES DE COMMERCIALISATION",
-        "institution": "IUT du Havre, site caucriauville",
-        "year": "2018 - 2020"
-      }
-    ],
-    "workExperience": [
-      {
-        "jobTitle": "MISSION DÉVELOPPEUR WEB",
-        "company": "Indépendant, Paris (75)",
-        "year": "Avril 2025",
-        "responsibilities": ["Création du site web fanny-seraudie.fr", "Conception de base de données et du backoffice", "Mise en production avec pipeline Jenkins / Docker sur VPS"]
-      },
-      {
-        "jobTitle": "ALTERNANT DÉVELOPPEUR WEB",
-        "company": "Screenup, Rennes (35)",
-        "year": "Octobre - Juin 2024",
-        "responsibilities": ["Conception et création de sites web", "Mise en Production", "Développement opérationnel sur serveur"]
-      },
-      {
-        "jobTitle": "STAGIAIRE DÉVELOPPEUR WEB",
-        "company": "Pangaia, Rennes (35)",
-        "year": "Avril - Juin 2023",
-        "responsibilities": ["Création d'une application avec Vue.js / Docker / Laravel", "Conception de la maquette ", "Travail d'équipe utilisant Git"]
-      },
-      {
-        "jobTitle": "OPÉRATEUR DE SAISIE",
-        "company": "Tessi, Rennes (35)",
-        "year": "Décembre - Juin 2021 - 2022",
-        "responsibilities": ["Saisies bancaires pour le compte des finances publiques", "Ouverture de compte bancaire", "Participation à la démarche qualité"]
-      },
-      {
-        "jobTitle": "STAGIAIRE COMMERCIAL",
-        "company": "ACLP, Le Havre (76)",
-        "year": "Avril - Juin 2020",
-        "responsibilities": ["Développement commercial", "Campagne de mailing", "Création d'un site web sur Prestashop"]
-      },
-      {
-        "jobTitle": "PROJET TUTEURÉ - SKI",
-        "company": "Iut site Caucriauville, Le Havre (76)",
-        "year": "2019 - 2020",
-        "responsibilities": [
-          "Actions commerciales pour financer le projet",
-          "Organisation d'un séjour au ski pour 130 participants",
-          "Négociation du contrat pour l'année suivante"
-        ]
-      }
-    ]
-  },
   "en": {
     "education": [
       {
-        "degree": "COMMON CORE",
-        "institution": "42 Paris",
-        "year": "2024 - 2025"
-      },
-      {
-        "degree": "BACHELOR WEB DEVELOPMENT",
-        "institution": "MyDigitalSchool Rennes",
-        "year": "2022 - 2024"
-      },
-      {
-        "degree": "BACHELOR ECONOMICS, MANAGEMENT AND MARKETING",
-        "institution": "University of Warsaw, Faculty of Management",
-        "year": "2020 - 2021"
-      },
-      {
-        "degree": "DUT SALES TECHNIQUES",
-        "institution": "IUT of le Havre",
-        "year": "2018 - 2020"
+        "degree": "BACHELOR OF ARTS IN COMPUTER SCIENCE AND APPLIED MATHEMATICS",
+        "institution": "University of California, Berkeley",
+        "year": "2024 - 2028"
       }
     ],
     "workExperience": [
       {
-        "jobTitle": "WEB DEVELOPER MISSION",
-        "company": "Freelance, Paris (75)",
-        "year": "April 2025",
-        "responsibilities": ["Creation of the website fanny-seraudie.fr", "Database and backoffice design", "Production deployment with Jenkins / Docker pipeline on VPS"]
+        "jobTitle": "FOUNDING ENGINEER",
+        "company": "Wrodium, Berkeley, CA",
+        "year": "October 2025 - Present",
+        "responsibilities": [
+          "Accomplished LLM-ready indexing for 100+ pages/site at 90% link coverage, by automating llms.txt manifests",
+          "Accomplished <1% duplicate IDs across reruns, by streaming 5-30 atomic claims/page via stable-hash deduplication",
+          "Accomplished 300+ cited outputs/day, by normalizing prompt-answer-source pipelines at 100 prompts x 3 engines/day"
+        ]
       },
       {
-        "jobTitle": "WEB DEVELOPER WORK-STUDY",
-        "company": "Screenup, Rennes (35)",
-        "year": "October - June 2024",
-        "responsibilities": ["Website design and creation", "Production deployment", "Operational server development"]
+        "jobTitle": "FOUNDING ENGINEER",
+        "company": "Acre Robotics, Redwood City, CA",
+        "year": "April 2025 - August 2025",
+        "responsibilities": [
+          "Accomplished 72% mAP@0.5 on farmland object detection by building a custom end-to-end CV pipeline with YOLOv8",
+          "Accomplished ±8mm sensor-alignment repeatability by designing and 3D-printing custom RTK and LiDAR hardware mounts",
+          "Accomplished a $750K pre-seed by co-authoring pitch decks and ROI models that secured investor commitments"
+        ]
       },
       {
-        "jobTitle": "WEB DEVELOPER INTERN",
-        "company": "Pangaia, Rennes (35)",
-        "year": "April - June 2023",
-        "responsibilities": ["Created an application using Vue.js / Docker / Laravel", "Designed the mockup", "Teamwork using Git"]
+        "jobTitle": "VEHICLE DYNAMICS MEMBER",
+        "company": "Berkeley Formula Racing, Berkeley, CA",
+        "year": "August 2025 - Present",
+        "responsibilities": [
+          "Accomplished 35% faster suspension setup by training an ML model on telemetry for optimal damper/spring settings",
+          "Accomplished R² > 0.85 tire-load-to-cornering correlation by building scikit-learn pipelines on fused sensor and sim data"
+        ]
       },
       {
-        "jobTitle": "DATA ENTRY OPERATOR",
-        "company": "Tessi, Rennes (35)",
-        "year": "December - June 2021 - 2022",
-        "responsibilities": ["Bank data entry for public finance purposes", "Bank account opening", "Participation in the quality process"]
+        "jobTitle": "TEACHING ASSISTANT",
+        "company": "De Anza Community College, Cupertino, CA",
+        "year": "May 2023 - May 2025",
+        "responsibilities": [
+          "Accomplished a department-first TA role, leading lessons and office hours for 40+ learners aged 15-77",
+          "Accomplished 30% more per-student speaking time by co-designing a conversation module with timed drills"
+        ]
       },
       {
-        "jobTitle": "SALES INTERN",
-        "company": "ACLP, Le Havre (76)",
-        "year": "April - June 2020",
-        "responsibilities": ["Business development", "Email campaign", "Website creation on Prestashop"]
-      },
-      {
-        "jobTitle": "TUTORED PROJECT - SKI",
-        "company": "IUT Caucriauville campus, Le Havre (76)",
-        "year": "2019 - 2020",
-        "responsibilities": ["Sales actions to fund the project", "Organization of a ski trip for 130 participants", "Negotiation of the contract for the following year"]
+        "jobTitle": "TUTOR",
+        "company": "Mathnasium, Mountain View, CA",
+        "year": "July 2023 - September 2024",
+        "responsibilities": [
+          "Accomplished foundational gap closure for 150+ students via targeted 1:1 and small-group sessions",
+          "Accomplished center-wide adoption of 3+ lesson plan frameworks by designing structured curricula"
+        ]
       }
     ]
   }
