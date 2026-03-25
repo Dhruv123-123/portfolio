@@ -5,13 +5,10 @@ import { useGoBackStore } from '@/stores/goBackStore'
 
 import projectData from '@/data/projects-data.json'
 import WindowLeftMenu from '@/components/Windows/WindowLeftMenu.vue'
-import HomeserverContent from '@/components/Windows/MyProjects/HomeserverContent.vue'
-import ClenchContent from '@/components/Windows/MyProjects/ClenchContent.vue'
-import LogmaContent from '@/components/Windows/MyProjects/LogmaContent.vue'
-import PangaiaContent from '@/components/Windows/MyProjects/PangaiaContent.vue'
-import FannyContent from './MyProjects/FannyContent.vue'
-import Emc2Content from './MyProjects/Emc2Content.vue'
-import AidellaContent from './MyProjects/AidellaContent.vue'
+import CubeCoachContent from '@/components/Windows/MyProjects/CubeCoachContent.vue'
+import ModelArenaContent from '@/components/Windows/MyProjects/ModelArenaContent.vue'
+import WrodiumContent from '@/components/Windows/MyProjects/WrodiumContent.vue'
+import AcreRoboticsContent from '@/components/Windows/MyProjects/AcreRoboticsContent.vue'
 
 const props = defineProps({
   leftMenuType: String
@@ -74,13 +71,10 @@ const closeAllProjects = () => {
 
 // Map of component names to component objects
 const componentMap = {
-  HomeserverContent,
-  ClenchContent,
-  LogmaContent,
-  PangaiaContent,
-  Emc2Content,
-  FannyContent,
-  AidellaContent
+  CubeCoachContent,
+  ModelArenaContent,
+  WrodiumContent,
+  AcreRoboticsContent
 }
 
 // Computed property that returns the component object based on the componentName of the selected project
@@ -92,17 +86,17 @@ const selectedComponent = computed(() => {
 })
 
 const getLocalizedCategoryName = (category) => {
-  return category.name[localeStore.currentLocale] || category.name['fr']
+  return category.name[localeStore.currentLocale] || category.name['en']
 }
 
 // Computed property to get the localized title
 const localizedTitle = computed(() => {
-  return goBackStore.currentActiveProject?.title[localeStore.currentLocale] || goBackStore.currentActiveProject?.title['fr']
+  return goBackStore.currentActiveProject?.title[localeStore.currentLocale] || goBackStore.currentActiveProject?.title['en']
 })
 
 // Computed property to get the localized date
 const localizedDate = computed(() => {
-  return goBackStore.currentActiveProject?.date[localeStore.currentLocale] || goBackStore.currentActiveProject?.date['fr']
+  return goBackStore.currentActiveProject?.date[localeStore.currentLocale] || goBackStore.currentActiveProject?.date['en']
 })
 
 // Watch for changes in currentActiveProject

@@ -27,7 +27,7 @@ const router = createRouter({
           },
           {
             name: 'keywords',
-            content: 'portfolio, dhruv ramasubban, web developer, full stack, websites, web applications, mobile applications, JS, frameworks, DevOps'
+            content: 'portfolio, dhruv ramasubban, computer science, machine learning, computer vision, UC Berkeley, Python, PyTorch, OpenCV'
           },
           {
             name: 'author',
@@ -136,7 +136,7 @@ const router = createRouter({
           },
           {
             name: 'keywords',
-            content: 'desktop, dhruv ramasubban, web developer, full stack, websites, web applications, mobile applications, JS, frameworks, DevOps'
+            content: 'desktop, dhruv ramasubban, computer science, machine learning, computer vision, UC Berkeley, Python, PyTorch, OpenCV'
           },
           {
             name: 'author',
