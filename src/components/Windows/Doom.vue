@@ -27,9 +27,11 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
-  if (isRunning.value) {
-    // Could not find a way to stop Dosbox from running
-    window.location.reload()
+  const container = document.getElementById('dosbox')
+  if (container) {
+    container.innerHTML = ''
   }
+  dosbox = null
+  isRunning.value = false
 })
 </script>
