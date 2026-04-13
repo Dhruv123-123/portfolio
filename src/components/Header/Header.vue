@@ -3,7 +3,6 @@
     <div class="absolute left-0 header-radius overflow-hidden bottom-0 mb-8 modal-size z-max bg-color-blue-window">
       <div class="w-full h-full relative overflow-hidden">
         <div class="h-16 flex items-center px-2 header-top-background">
-          <ProfilePicture class="w-11 h-11 stroke-white-1 header-profile-shadow" />
           <h2 class="text-lg ml-2 text-white text-shadow-header">Dhruv Ramasubban</h2>
         </div>
         <section class="relative w-full h-full px-0.5">
@@ -60,7 +59,6 @@ import { ref, watchEffect } from 'vue'
 import { useVolumeStore } from '@/stores/volumeStore.js'
 import { useLocaleStore } from '@/stores/localeStore'
 
-import ProfilePicture from '@/components/ProfilePicture.vue'
 import HeaderLeftButton from '@/components/Buttons/HeaderLeftButton.vue'
 import HeaderRightButton from '@/components/Buttons/HeaderRightButton.vue'
 import HeaderShutdown from '@/components/Buttons/HeaderShutdown.vue'

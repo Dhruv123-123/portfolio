@@ -309,32 +309,4 @@
     "component": "Terminal",
     "leftMenuType": ""
   },
-    {
-    "id": "services",
-    "title": {
-      "en": "Services",
-      "fr": "Prestations"
-    },
-    "subtitle": {
-      "en": "Check out my services",
-      "fr": "Découvrez mes services"
-    },
-    "imgSrc": "/img/icons/services-icon-lg.webp",
-    "onDesktop": true,
-    "resizable": true,
-    "windowsHeaderLogo": false,
-    "isSearchVisible": true,
-    "headerPosition": "left",
-    "headerToolsId": "default",
-    "menuHeaderItemsId": "default",
-    "iconSrc": "/img/icons/services-icon-lg.webp",
-    "initPositionX": 220,
-    "initPositionY": 350,
-    "initWidth": 660,
-    "initHeight": 500,
-    "minWidth": 200,
-    "minHeight": 160,
-    "component": "Services",
-    "leftMenuType": "default"
-  }
-]
+  ]

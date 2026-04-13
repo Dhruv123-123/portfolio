@@ -16,7 +16,6 @@
       @toggle-notepad="openWindow('notepad')"
       @toggle-doom="openWindow('doom')"
       @toggle-terminal="openWindow('terminal')"
-      @toggle-services="openWindow('services')"
     />
     <DesktopAppsLayout
       :entities="entities"
@@ -27,7 +26,6 @@
       @toggle-minesweeper="openWindow('minesweeper')"
       @toggle-notepad="openWindow('notepad')"
       @toggle-doom="openWindow('doom')"
-      @toggle-services="openWindow('services')"
     />
     <div v-for="window in windows" :key="window.id">
       <Window
@@ -82,7 +80,6 @@ import Notepad from '@/components/Windows/Notepad.vue'
 import Doom from '@/components/Windows/Doom.vue'
 import Mario from '@/components/Windows/Mario.vue'
 import Terminal from '@/components/Windows/Terminal.vue'
-import Services from '@/components/Windows/Services.vue'
 
 import DesktopAppsLayout from '@/layouts/DesktopAppsLayout.vue'
 import Window from '@/layouts/Window.vue'
@@ -130,8 +127,7 @@ const components = {
   Notepad: shallowRef(Notepad),
   Doom: shallowRef(Doom),
   Mario: shallowRef(Mario),
-  Terminal: shallowRef(Terminal),
-  Services: shallowRef(Services)
+  Terminal: shallowRef(Terminal)
 }
 
 // Create the entities array from the data.json
