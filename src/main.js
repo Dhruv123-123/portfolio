@@ -10,6 +10,8 @@ import en from './locales/en.json'
 import App from './App.vue'
 import router from './router'
 
+localStorage.setItem('currentLocale', 'en')
+
 const app = createApp(App)
 const pinia = createPinia()
 const head = createHead()

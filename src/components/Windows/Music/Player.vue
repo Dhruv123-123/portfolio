@@ -89,6 +89,21 @@ const handleTrackEnded = () => {
   nextTrack()
 }
 
+const onPlaybackError = () => {
+  detachTimeListener()
+  isPlaying.value = false
+  nextTrack()
+}
+
+const startPlayback = (file) => {
+  volumeStore.playAudio(file, onPlaybackError)
+  audioElement = volumeStore.audioElements[file]
+  if (audioElement) {
+    attachTimeListener()
+    isPlaying.value = true
+  }
+}
+
 const togglePlay = () => {
   if (!currentTrack.value) return
   const file = getAudioFile(currentTrack.value)
@@ -97,10 +112,7 @@ const togglePlay = () => {
     detachTimeListener()
     isPlaying.value = false
   } else {
-    volumeStore.playAudio(file)
-    audioElement = volumeStore.audioElements[file]
-    attachTimeListener()
-    isPlaying.value = true
+    startPlayback(file)
   }
 }
 
@@ -114,10 +126,7 @@ const switchTrack = (newTrack) => {
   currentTime.value = 0
   currentTrack.value = newTrack
   if (isPlaying.value && newTrack) {
-    const newFile = getAudioFile(newTrack)
-    volumeStore.playAudio(newFile)
-    audioElement = volumeStore.audioElements[newFile]
-    attachTimeListener()
+    startPlayback(getAudioFile(newTrack))
   }
 }
 
@@ -148,7 +157,7 @@ watch(
     if (!newTrackId || (currentTrack.value && newTrackId === currentTrack.value.id)) return
     const track = props.playlist.find((t) => t.id === newTrackId)
     if (track) {
-      if (!isPlaying.value) isPlaying.value = true
+      isPlaying.value = true
       switchTrack(track)
     }
   }

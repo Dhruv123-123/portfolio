@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import { useConnectionStore } from '@/stores/connectionStore'
 
 // Components
@@ -13,6 +14,7 @@ const showStep1 = ref(false)
 const showStep2 = ref(false)
 const showStep3 = ref(false)
 const showStep4 = ref(false)
+const router = useRouter()
 const connectionStore = useConnectionStore()
 
 const startLoading = () => {
@@ -36,6 +38,10 @@ const startLoading = () => {
 }
 
 onMounted(() => {
+  if (connectionStore.status === 'loggedIn') {
+    router.replace('/office')
+    return
+  }
   if (connectionStore.status === 'restart') {
     startLoading()
   } else {

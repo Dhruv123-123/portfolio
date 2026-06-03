@@ -67,10 +67,14 @@ watch(
 )
 
 async function fetchEvents() {
-  const icsFile = '/calendar/calendar-' + localeStore.currentLocale + '.ics'
+  const locale = localeStore.currentLocale === 'en' ? 'en' : 'en'
+  const icsFile = '/calendar/calendar-' + locale + '.ics'
 
   try {
-    const response = await fetch(icsFile)
+    let response = await fetch(icsFile)
+    if (!response.ok) {
+      response = await fetch('/calendar/calendar-en.ics')
+    }
     if (!response.ok) {
       throw new Error('An unexpected error occurred while fetching the calendar file')
     }

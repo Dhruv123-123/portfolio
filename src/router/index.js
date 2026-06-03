@@ -226,4 +226,13 @@ const router = createRouter({
   ]
 })
 
+router.beforeEach((to) => {
+  if (to.path === '/office') {
+    const session = sessionStorage.getItem('portfolioSession')
+    if (session !== 'loggedIn') {
+      return { path: '/' }
+    }
+  }
+})
+
 export default router

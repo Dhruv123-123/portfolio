@@ -20,19 +20,28 @@ export const useVolumeStore = defineStore('volume', {
         audio.volume = newVolume
       })
     },
-    playAudio(audioFile) {
-      if (this.audioElements[audioFile]) {
-        this.audioElements[audioFile].play().catch((error) => {
-          console.log('Autoplay prevented:', error)
-        })
-      } else {
-        const audio = new Audio(audioFile)
-        audio.volume = this.volume
-        audio.play().catch((error) => {
-          console.log('Autoplay prevented:', error)
-        })
-        this.audioElements[audioFile] = audio
+    playAudio(audioFile, onError) {
+      const handleError = () => {
+        if (typeof onError === 'function') onError(audioFile)
       }
+
+      if (this.audioElements[audioFile]) {
+        const audio = this.audioElements[audioFile]
+        audio.onerror = handleError
+        return audio.play().catch((error) => {
+          console.log('Playback prevented:', error)
+          handleError()
+        })
+      }
+
+      const audio = new Audio(audioFile)
+      audio.volume = this.volume
+      audio.onerror = handleError
+      this.audioElements[audioFile] = audio
+      return audio.play().catch((error) => {
+        console.log('Playback prevented:', error)
+        handleError()
+      })
     },
     pauseAudio(audioFile) {
       if (this.audioElements[audioFile]) {

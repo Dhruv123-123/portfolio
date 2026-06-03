@@ -1,8 +1,11 @@
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useMessagesStore } from '@/stores/messagesStore'
 
 const { t } = useI18n()
+const messagesStore = useMessagesStore()
+
 const userEmail = ref('')
 const emailSubject = ref('')
 const userMessage = ref('')
@@ -10,13 +13,27 @@ const errorMessage = ref('')
 const emailSent = ref(false)
 const isLoading = ref(false)
 const isFormComplete = ref(false)
+const statusDetail = ref('')
 
 const adminEmailAddress = 'dhruv.ramasubban@berkeley.edu'
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xkgwlgkj'
+
+onMounted(() => {
+  messagesStore.loadInbox()
+})
+
+const openMailtoFallback = () => {
+  const mailtoUrl = `mailto:${adminEmailAddress}?subject=${encodeURIComponent(emailSubject.value)}&body=${encodeURIComponent(
+    userMessage.value + '\n\nFrom: ' + userEmail.value
+  )}`
+  window.location.href = mailtoUrl
+}
 
 const sendEmail = async () => {
   if (!userEmail.value || !userMessage.value || !emailSubject.value) {
     emailSent.value = false
     errorMessage.value = t('windows.contact.error.empty')
+    statusDetail.value = ''
     return
   }
 
@@ -24,39 +41,59 @@ const sendEmail = async () => {
   if (!emailRegex.test(userEmail.value)) {
     emailSent.value = false
     errorMessage.value = userEmail.value + t('windows.contact.error.email')
+    statusDetail.value = ''
     return
   }
 
   isLoading.value = true
+  errorMessage.value = ''
+  statusDetail.value = ''
+
+  const payload = {
+    email: userEmail.value,
+    _replyto: userEmail.value,
+    subject: emailSubject.value,
+    message: userMessage.value
+  }
+
+  let delivery = 'saved'
 
   try {
-    const res = await fetch('https://formspree.io/f/xkgwlgkj', {
+    const res = await fetch(FORMSPREE_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({
-        email: userEmail.value,
-        subject: emailSubject.value,
-        message: userMessage.value
-      })
+      body: JSON.stringify(payload)
     })
 
     if (res.ok) {
-      errorMessage.value = ''
-      userEmail.value = ''
-      emailSubject.value = ''
-      userMessage.value = ''
-      emailSent.value = true
+      delivery = 'formspree'
     } else {
       throw new Error('Form submission failed')
     }
   } catch {
-    const mailtoUrl = `mailto:${adminEmailAddress}?subject=${encodeURIComponent(emailSubject.value)}&body=${encodeURIComponent(userMessage.value + '\n\nFrom: ' + userEmail.value)}`
-    window.open(mailtoUrl, '_blank')
-    errorMessage.value = ''
-    emailSent.value = true
-  } finally {
-    isLoading.value = false
+    delivery = 'mailto'
+    openMailtoFallback()
   }
+
+  messagesStore.saveMessage({
+    email: userEmail.value,
+    subject: emailSubject.value,
+    message: userMessage.value,
+    delivery
+  })
+
+  userEmail.value = ''
+  emailSubject.value = ''
+  userMessage.value = ''
+  emailSent.value = true
+
+  if (delivery === 'formspree') {
+    statusDetail.value = t('windows.contact.savedInbox')
+  } else {
+    statusDetail.value = t('windows.contact.mailtoFallback')
+  }
+
+  isLoading.value = false
 }
 
 defineExpose({
@@ -77,11 +114,7 @@ watch(isLoading, (newValue) => {
 })
 
 watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, newEmailSubject]) => {
-  if (newUserEmail && newUserMessage && newEmailSubject) {
-    isFormComplete.value = true
-  } else {
-    isFormComplete.value = false
-  }
+  isFormComplete.value = Boolean(newUserEmail && newUserMessage && newEmailSubject)
 })
 </script>
 
@@ -91,8 +124,7 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
       <button
         type="submit"
         :disabled="isLoading || !isFormComplete"
-        :isLoading="isLoading"
-        class="flex items-center rounded-sm justify-center px-2 py-1 cursor-pointer flex-col hover:border-gray-300 hover:shadow-header-tools"
+        class="flex items-center rounded-sm justify-center px-2 py-1 cursor-pointer flex-col hover:border-gray-300 hover:shadow-header-tools disabled:opacity-60"
       >
         <img src="/img/icons/contact/send-icon.webp" :alt="$t('windows.contact.send')" :class="[isFormComplete ? 'w-8' : 'filter grayscale w-8']" />
         <p>{{ $t('windows.contact.send') }}</p>
@@ -187,10 +219,11 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
         <p class="text-xs font-trebuchet-pixel italic mb-2">
           {{ $t('windows.contact.description') }}
         </p>
-        <div class="flex gap-2 items-center">
+        <div class="flex flex-col gap-1">
           <p class="text-xs text-green-600 font-medium" v-show="emailSent">
             {{ $t('windows.contact.success') }}
           </p>
+          <p class="text-xxs text-gray-600" v-show="emailSent && statusDetail">{{ statusDetail }}</p>
           <p class="text-xs text-red font-medium" v-show="errorMessage">{{ errorMessage }}</p>
         </div>
       </div>

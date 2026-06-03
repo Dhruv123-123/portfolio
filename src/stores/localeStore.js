@@ -7,10 +7,11 @@ export const useLocaleStore = defineStore('locale', {
   }),
   actions: {
     setLocale(newLocale) {
-      this.currentLocale = newLocale
-      localStorage.setItem('currentLocale', newLocale)
-      const { locale } = useI18n()
-      locale.value = newLocale
+      const locale = newLocale === 'en' ? 'en' : 'en'
+      this.currentLocale = locale
+      localStorage.setItem('currentLocale', locale)
+      const { locale: i18nLocale } = useI18n()
+      i18nLocale.value = locale
     }
   }
 })
