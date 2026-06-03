@@ -2,7 +2,7 @@
   "categories": [
     {
       "name": {
-        "en": "Projects"
+        "en": "Software Projects"
       },
       "projects": [
         {
@@ -67,6 +67,39 @@
             "en": "2025 - Present"
           },
           "componentName": "TaxscapeContent",
+          "isFocus": false,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Hardware Projects"
+      },
+      "projects": [
+        {
+          "name": "Battery Box",
+          "icon": "projects/homeserver-icon.webp",
+          "title": {
+            "en": "Battery Box — EV Enclosure CAD"
+          },
+          "date": {
+            "en": "Berkeley Formula Racing"
+          },
+          "componentName": "BatteryBoxContent",
+          "isFocus": false,
+          "isActive": false
+        },
+        {
+          "name": "Pushcart",
+          "icon": "projects/folder-emc2-icon.webp",
+          "title": {
+            "en": "Pushcart — SolidWorks Product Prototype"
+          },
+          "date": {
+            "en": "High School — First CAD Project"
+          },
+          "componentName": "PushcartContent",
           "isFocus": false,
           "isActive": false
         }

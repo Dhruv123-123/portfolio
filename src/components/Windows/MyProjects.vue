@@ -10,6 +10,8 @@ import ModelArenaContent from '@/components/Windows/MyProjects/ModelArenaContent
 import WrodiumContent from '@/components/Windows/MyProjects/WrodiumContent.vue'
 import AcreRoboticsContent from '@/components/Windows/MyProjects/AcreRoboticsContent.vue'
 import TaxscapeContent from '@/components/Windows/MyProjects/TaxscapeContent.vue'
+import BatteryBoxContent from '@/components/Windows/MyProjects/BatteryBoxContent.vue'
+import PushcartContent from '@/components/Windows/MyProjects/PushcartContent.vue'
 
 const props = defineProps({
   leftMenuType: String
@@ -76,7 +78,9 @@ const componentMap = {
   ModelArenaContent,
   WrodiumContent,
   AcreRoboticsContent,
-  TaxscapeContent
+  TaxscapeContent,
+  BatteryBoxContent,
+  PushcartContent
 }
 
 // Computed property that returns the component object based on the componentName of the selected project
@@ -145,7 +149,7 @@ window.addEventListener('click', (e) => {
     </div>
     <!-- Content window Foreach categories and projects -->
     <div v-else class="flex flex-col w-full h-full bg-white overflow-auto pt-0.5">
-      <div v-for="category in categories" :key="category.name" class="relative group mb-3">
+      <div v-for="category in categories" :key="getLocalizedCategoryName(category)" class="relative group mb-3">
         <h1 class="text-xs font-semibold px-3">{{ getLocalizedCategoryName(category) }}</h1>
         <div class="absolute left-[-12px] top-5 w-80 h-px bg-gradient-to-r from-blue-300 to-white"></div>
 
