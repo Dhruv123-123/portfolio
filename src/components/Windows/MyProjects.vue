@@ -8,7 +8,7 @@ import WindowLeftMenu from '@/components/Windows/WindowLeftMenu.vue'
 import CubeCoachContent from '@/components/Windows/MyProjects/CubeCoachContent.vue'
 import ModelArenaContent from '@/components/Windows/MyProjects/ModelArenaContent.vue'
 import WrodiumContent from '@/components/Windows/MyProjects/WrodiumContent.vue'
-import AcreRoboticsContent from '@/components/Windows/MyProjects/AcreRoboticsContent.vue'
+import ActorLabsContent from '@/components/Windows/MyProjects/ActorLabsContent.vue'
 import TaxscapeContent from '@/components/Windows/MyProjects/TaxscapeContent.vue'
 import BatteryBoxContent from '@/components/Windows/MyProjects/BatteryBoxContent.vue'
 import PushcartContent from '@/components/Windows/MyProjects/PushcartContent.vue'
@@ -77,7 +77,7 @@ const componentMap = {
   CubeCoachContent,
   ModelArenaContent,
   WrodiumContent,
-  AcreRoboticsContent,
+  ActorLabsContent,
   TaxscapeContent,
   BatteryBoxContent,
   PushcartContent

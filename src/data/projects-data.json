@@ -45,15 +45,15 @@
           "isActive": false
         },
         {
-          "name": "Acre Robotics",
+          "name": "Actor Labs",
           "icon": "projects/folder-emc2-icon.webp",
           "title": {
-            "en": "Acre Robotics — Computer Vision for Agriculture"
+            "en": "Actor Labs — Field Robotics & Data"
           },
           "date": {
             "en": "April 2025 - August 2025"
           },
-          "componentName": "AcreRoboticsContent",
+          "componentName": "ActorLabsContent",
           "isFocus": false,
           "isActive": false
         },
