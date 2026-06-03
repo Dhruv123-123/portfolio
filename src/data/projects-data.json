@@ -6,6 +6,19 @@
       },
       "projects": [
         {
+          "name": "Crucible",
+          "icon": "projects/folder-clench-icon.webp",
+          "title": {
+            "en": "Crucible — VLA Policy Validation Framework"
+          },
+          "date": {
+            "en": "2026 - Present"
+          },
+          "componentName": "CrucibleContent",
+          "isFocus": false,
+          "isActive": false
+        },
+        {
           "name": "CubeCoach",
           "icon": "projects/folder-logma-icon.webp",
           "title": {

@@ -63,6 +63,16 @@
     ],
     "projects": [
       {
+        "jobTitle": "CREATOR",
+        "company": "Crucible — VLA Policy Validation (Open Source)",
+        "year": "2026 - Present",
+        "responsibilities": [
+          "Built an open-source toolkit for systematic behavioral validation of VLA robot policies with PASS / CONDITIONAL / FAIL tier verdicts for CI gates",
+          "Shipped Latin Hypercube perturbation sweeps, SAFE-style failure detection, red team adversarial testing, and Markdown/HTML/JSON reports via pluggable PolicyAdapter API",
+          "Published crucible-vla on PyPI with CLI eval suites, live Rich dashboard, and docs at crucible-bay.vercel.app"
+        ]
+      },
+      {
         "jobTitle": "FOUNDER",
         "company": "CubeCoach, Berkeley, CA",
         "year": "August 2025 - Present",
