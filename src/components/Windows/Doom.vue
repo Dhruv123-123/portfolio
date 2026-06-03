@@ -5,21 +5,75 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
+
 let dosbox = null
-let isRunning = ref(false)
+const trackedAudioContexts = []
+let nativeAudioContext = null
+let nativeWebkitAudioContext = null
+
+function patchAudioContext() {
+  const Original = window.AudioContext || window.webkitAudioContext
+  if (!Original) return
+
+  nativeAudioContext = window.AudioContext
+  nativeWebkitAudioContext = window.webkitAudioContext
+
+  const PatchedAudioContext = function (...args) {
+    const ctx = new Original(...args)
+    trackedAudioContexts.push(ctx)
+    return ctx
+  }
+  PatchedAudioContext.prototype = Original.prototype
+
+  window.AudioContext = PatchedAudioContext
+  if (window.webkitAudioContext) {
+    window.webkitAudioContext = PatchedAudioContext
+  }
+}
+
+function restoreAudioContext() {
+  if (nativeAudioContext) window.AudioContext = nativeAudioContext
+  if (nativeWebkitAudioContext) window.webkitAudioContext = nativeWebkitAudioContext
+}
+
+function stopEmulatorAudio() {
+  trackedAudioContexts.forEach((ctx) => {
+    if (ctx.state !== 'closed') {
+      ctx.suspend().catch(() => {})
+      ctx.close().catch(() => {})
+    }
+  })
+  trackedAudioContexts.length = 0
+
+  document.querySelectorAll('audio').forEach((audio) => {
+    audio.pause()
+    audio.currentTime = 0
+    try {
+      audio.src = ''
+      audio.load()
+    } catch {
+      /* ignore */
+    }
+  })
+
+  const container = document.getElementById('dosbox')
+  if (container) {
+    container.querySelectorAll('iframe, canvas').forEach((node) => node.remove())
+    container.innerHTML = ''
+  }
+}
 
 onMounted(() => {
+  patchAudioContext()
+
   if (window.Dosbox) {
     dosbox = new Dosbox({
       id: 'dosbox',
-      onload: function (dosbox) {
-        dosbox.run('/game/DOOM-@evilution.zip', './DOOM/DOOM.EXE')
-        isRunning.value = true
+      onload: function (box) {
+        box.run('/game/DOOM-@evilution.zip', './DOOM/DOOM.EXE')
       },
-      onrun: function (dosbox, app) {
-        console.log("App '" + app + "' is running")
-      }
+      onrun: function () {}
     })
   } else {
     console.error('Dosbox is not defined')
@@ -27,11 +81,8 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
-  const container = document.getElementById('dosbox')
-  if (container) {
-    container.innerHTML = ''
-  }
+  stopEmulatorAudio()
+  restoreAudioContext()
   dosbox = null
-  isRunning.value = false
 })
 </script>

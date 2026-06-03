@@ -112,15 +112,6 @@
             },
             "iconUrl": "/img/icons/side-menu/linkedin-icon.webp",
             "url": "https://www.linkedin.com/in/dhruv-ramasubban-6b8a8b240/"
-          },
-          {
-            "id": 3,
-            "subtitle": {
-              "en": "Buy me a coffee",
-              "fr": "Buy me a coffee"
-            },
-            "iconUrl": "/img/icons/side-menu/buy-me-a-coffee-icon.webp",
-            "url": ""
           }
         ]
       }

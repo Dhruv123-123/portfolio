@@ -56,6 +56,19 @@
           "componentName": "AcreRoboticsContent",
           "isFocus": false,
           "isActive": false
+        },
+        {
+          "name": "TaxScape",
+          "icon": "projects/folder-pangaia-icon.webp",
+          "title": {
+            "en": "TaxScape — AI-Powered R&D Tax Credit Platform"
+          },
+          "date": {
+            "en": "2025 - Present"
+          },
+          "componentName": "TaxscapeContent",
+          "isFocus": false,
+          "isActive": false
         }
       ]
     }

@@ -9,6 +9,7 @@ import CubeCoachContent from '@/components/Windows/MyProjects/CubeCoachContent.v
 import ModelArenaContent from '@/components/Windows/MyProjects/ModelArenaContent.vue'
 import WrodiumContent from '@/components/Windows/MyProjects/WrodiumContent.vue'
 import AcreRoboticsContent from '@/components/Windows/MyProjects/AcreRoboticsContent.vue'
+import TaxscapeContent from '@/components/Windows/MyProjects/TaxscapeContent.vue'
 
 const props = defineProps({
   leftMenuType: String
@@ -74,7 +75,8 @@ const componentMap = {
   CubeCoachContent,
   ModelArenaContent,
   WrodiumContent,
-  AcreRoboticsContent
+  AcreRoboticsContent,
+  TaxscapeContent
 }
 
 // Computed property that returns the component object based on the componentName of the selected project
