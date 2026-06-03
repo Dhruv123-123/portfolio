@@ -92,7 +92,11 @@
     "cv": {
       "altPicture": "presentation CV",
       "education": "Education",
-      "proExperience": "Professional experiences"
+      "proExperience": "Work experience",
+      "leadership": "Leadership & involvement",
+      "projects": "Projects",
+      "skills": "Skills",
+      "interests": "Interests"
     },
     "music": {
       "title": "Title",

@@ -16,6 +16,17 @@ const educationData = computed(() => {
 const experienceData = computed(() => {
   return cvData[currentLocale.value]?.workExperience || []
 })
+
+const leadershipData = computed(() => {
+  return cvData[currentLocale.value]?.leadership || []
+})
+
+const projectsData = computed(() => {
+  return cvData[currentLocale.value]?.projects || []
+})
+
+const skills = computed(() => cvData[currentLocale.value]?.skills || '')
+const interests = computed(() => cvData[currentLocale.value]?.interests || '')
 </script>
 
 <template>
@@ -29,7 +40,20 @@ const experienceData = computed(() => {
         </section>
         <div class="mt-3">
           <h2 class="font-trebuchet-pixel mt-5 underline">{{ $t('windows.cv.proExperience') }}</h2>
-          <WorkExperienceItem v-for="(workExperience, index) in experienceData" :key="index" :workExperience="workExperience" />
+          <WorkExperienceItem v-for="(workExperience, index) in experienceData" :key="'work-' + index" :workExperience="workExperience" />
+        </div>
+        <div v-if="leadershipData.length" class="mt-3">
+          <h2 class="font-trebuchet-pixel mt-5 underline">{{ $t('windows.cv.leadership') }}</h2>
+          <WorkExperienceItem v-for="(item, index) in leadershipData" :key="'lead-' + index" :workExperience="item" />
+        </div>
+        <div v-if="projectsData.length" class="mt-3">
+          <h2 class="font-trebuchet-pixel mt-5 underline">{{ $t('windows.cv.projects') }}</h2>
+          <WorkExperienceItem v-for="(item, index) in projectsData" :key="'proj-' + index" :workExperience="item" />
+        </div>
+        <div v-if="skills" class="mt-3">
+          <h2 class="font-trebuchet-pixel mt-5 underline">{{ $t('windows.cv.skills') }}</h2>
+          <p class="font-trebuchet-pixel text-xs mt-2">{{ skills }}</p>
+          <p v-if="interests" class="font-trebuchet-pixel text-xs mt-2"><span class="font-medium">{{ $t('windows.cv.interests') }}:</span> {{ interests }}</p>
         </div>
       </div>
     </div>

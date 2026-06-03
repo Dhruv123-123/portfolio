@@ -2,9 +2,11 @@
   "en": {
     "education": [
       {
+        "id": "berkeley",
         "degree": "BACHELOR OF ARTS IN COMPUTER SCIENCE AND APPLIED MATHEMATICS",
         "institution": "University of California, Berkeley",
-        "year": "2024 - 2028"
+        "year": "May 2028",
+        "description": "Major GPA: 3.8/4.0 | Relevant Coursework: Structure and Interpretation of Computer Programs, Multivariable Calculus, Data Structures and Algorithms, Discrete Mathematics and Probability, Linear Algebra, Principles and Techniques of Data Science"
       }
     ],
     "workExperience": [
@@ -13,48 +15,73 @@
         "company": "Wrodium, Berkeley, CA",
         "year": "October 2025 - Present",
         "responsibilities": [
-          "Accomplished LLM-ready indexing for 100+ pages/site at 90% link coverage, by automating llms.txt manifests",
+          "Developed LLM-ready indexing for 100+ pages/site at 90% link coverage, by automating llms.txt manifests",
           "Accomplished <1% duplicate IDs across reruns, by streaming 5-30 atomic claims/page via stable-hash deduplication",
-          "Accomplished 300+ cited outputs/day, by normalizing prompt-answer-source pipelines at 100 prompts x 3 engines/day"
+          "Achieved 300+ cited outputs/day by normalizing prompt-answer-source pipelines at 100 prompts x 3 engines/day"
         ]
       },
       {
         "jobTitle": "FOUNDING ENGINEER",
-        "company": "Acre Robotics, Redwood City, CA",
+        "company": "Actor Labs, Redwood City, CA",
         "year": "April 2025 - August 2025",
         "responsibilities": [
-          "Accomplished 72% mAP@0.5 on farmland object detection by building a custom end-to-end CV pipeline with YOLOv8",
-          "Accomplished ±8mm sensor-alignment repeatability by designing and 3D-printing custom RTK and LiDAR hardware mounts",
-          "Accomplished a $750K pre-seed by co-authoring pitch decks and ROI models that secured investor commitments"
+          "Built end-to-end data pipelines ingesting and processing multi-terabyte field sensor streams (RTK GPS, LiDAR, camera) into a queryable store, enabling reproducible downstream analysis and model training",
+          "Designed Python/SQL ETL workflows that cleaned, fused, and aggregated raw sensor data, cutting analysis turnaround and powering a 72% mAP@0.5 detection model on the curated dataset",
+          "Stood up automated dashboards and metrics to surface field-deployment performance to stakeholders, replacing manual ad-hoc reporting"
         ]
       },
+      {
+        "jobTitle": "COURSE DESIGNER",
+        "company": "Descartes Learning Club, San Francisco, CA",
+        "year": "March 2025 - Present",
+        "responsibilities": [
+          "Designed and structured course curricula in math, statistics, and computer science, sequencing concepts to build from intuition to rigorous application",
+          "Analyzed student performance data across cohorts to identify common failure points, then redesigned lessons and practice sets to target those weak areas"
+        ]
+      }
+    ],
+    "leadership": [
       {
         "jobTitle": "VEHICLE DYNAMICS MEMBER",
         "company": "Berkeley Formula Racing, Berkeley, CA",
         "year": "August 2025 - Present",
         "responsibilities": [
-          "Accomplished 35% faster suspension setup by training an ML model on telemetry for optimal damper/spring settings",
-          "Accomplished R² > 0.85 tire-load-to-cornering correlation by building scikit-learn pipelines on fused sensor and sim data"
+          "Wrote Python/scikit-learn workflows to model tire-load-to-cornering behavior (R² > 0.85), enabling data-driven suspension tuning that improved lap times ~7%",
+          "Designed reproducible analysis notebooks and metrics that let team engineers self-serve telemetry insights instead of requesting one-off queries"
         ]
       },
       {
-        "jobTitle": "TEACHING ASSISTANT",
-        "company": "De Anza Community College, Cupertino, CA",
-        "year": "May 2023 - May 2025",
+        "jobTitle": "CAMPUS AMBASSADOR",
+        "company": "Mathworks, Inc., Berkeley, CA",
+        "year": "April 2025 - Present",
         "responsibilities": [
-          "Accomplished a department-first TA role, leading lessons and office hours for 40+ learners aged 15-77",
-          "Accomplished 30% more per-student speaking time by co-designing a conversation module with timed drills"
-        ]
-      },
-      {
-        "jobTitle": "TUTOR",
-        "company": "Mathnasium, Mountain View, CA",
-        "year": "July 2023 - September 2024",
-        "responsibilities": [
-          "Accomplished foundational gap closure for 150+ students via targeted 1:1 and small-group sessions",
-          "Accomplished center-wide adoption of 3+ lesson plan frameworks by designing structured curricula"
+          "Directed hands-on drone path Simulink workshop for student orgs, increasing student participation by 40%",
+          "Organized technical workshops, student competitions, and department partnerships to increase Simulink adoption",
+          "Enabled students' access to MATLAB resources by hosting demos aligned with academic and research use cases"
         ]
       }
-    ]
+    ],
+    "projects": [
+      {
+        "jobTitle": "FOUNDER",
+        "company": "CubeCoach, Berkeley, CA",
+        "year": "August 2025 - Present",
+        "responsibilities": [
+          "Accomplished 88% Rubik's Cube move classification at 30 fps, by stacking YOLOv8, MediaPipe, and TensorFlow.js into a fully in-browser pipeline requiring no install or backend",
+          "Achieved 90% detection across 15+ solve metrics (TPS, pauses, regrips), by shipping a client-side feedback engine that processes hand and cube state in real time at 60ms latency"
+        ]
+      },
+      {
+        "jobTitle": "FOUNDER",
+        "company": "ModelArena, Berkeley, CA",
+        "year": "January 2026 - Present",
+        "responsibilities": [
+          "Built a fully client-side ML experimentation platform with a visual drag-and-drop architecture builder, enabling real-time model design, training, and inference across 5 interactive environments (CartPole, Snake, Chess, etc.)",
+          "Designed an interactive training interface for reinforcement learning (Double DQN) with live tensor-shape propagation, Q-value visualizations, and in-app diagnostics (plateau/oscillation detection and corrective hints)"
+        ]
+      }
+    ],
+    "skills": "Python, SQL, Java, Spark, Kafka, Airflow, dbt, Snowflake, Databricks, AWS, GCP, Docker, Kubernetes",
+    "interests": "Running, Golf, Tennis, Skiing, Scuba Diving, Standup Comedy"
   }
 }
