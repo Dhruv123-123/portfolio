@@ -1,34 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Portfolio | Dhruv Ramasubban</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the portfolio of Dhruv Ramasubban — developer, creator, and builder of web experiences.">
-    <meta name="author" content="Dhruv Ramasubban">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dhruv Ramasubban</title>
+  <meta name="description" content="CS + Applied Math at UC Berkeley. I build ML tooling and data infrastructure.">
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    :root {
+      --bg: #fbfaf8;
+      --fg: #16150f;
+      --muted: #4a4944;
+      --faint: #8a887f;
+      --rule: #e7e4dc;
+      --accent: #b45309;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #131311;
+        --fg: #e8e6e1;
+        --muted: #b0aea6;
+        --faint: #7d7b73;
+        --rule: #2c2b27;
+        --accent: #e0913d;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0 auto;
+      max-width: 650px;
+      padding: 6rem 1.25rem 4rem;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    h1 { font-size: 1.6rem; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+    h2 {
+      font: 600 0.75rem/1 ui-monospace, "SF Mono", Menlo, monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin: 3.5rem 0 1.25rem;
+    }
+    p { margin: 0 0 1rem; color: var(--muted); }
+    a { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+    .links { display: flex; gap: 1.1rem; font: 0.8125rem ui-monospace, "SF Mono", Menlo, monospace; padding: 0; margin: 1rem 0 0; list-style: none; }
+    ul.plain { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem; }
+    .item p { margin: 0.25rem 0 0; font-size: 0.9375rem; }
+    .head { display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; }
+    .head strong { font-size: 1rem; }
+    .meta { font: 0.75rem ui-monospace, "SF Mono", Menlo, monospace; color: var(--faint); }
+    .head .meta { margin-left: auto; }
+    footer { border-top: 1px solid var(--rule); margin-top: 3.5rem; padding-top: 1.5rem; font-size: 0.9375rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dhruv Ramasubban</h1>
+    <p>CS + Applied Math at UC Berkeley ('28). I build ML tooling and data infrastructure — currently a founding engineer at Wrodium, working on LLM-ready web indexing.</p>
+    <ul class="links">
+      <li><a href="https://github.com/Dhruv123-123">github</a></li>
+      <li><a href="https://www.linkedin.com/in/dhruv-ramasubban-6b8a8b240/">linkedin</a></li>
+      <li><a href="mailto:dhruvramasubban@gmail.com">email</a></li>
+      <li><a href="/resume.pdf">resume</a></li>
+    </ul>
+  </header>
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Portfolio | Dhruv Ramasubban">
-    <meta property="og:description" content="Discover the portfolio of Dhruv Ramasubban — developer, creator, and builder of web experiences.">
-    <meta property="og:site_name" content="Portfolio | Dhruv Ramasubban">
-    <meta property="og:url" content="https://dhruvramasubban.com">
-    <meta property="og:image" content="https://dhruvramasubban.com/img/logo-portfolio-black.svg">
-    <meta property="og:image:alt" content="Logo Portfolio Dhruv Ramasubban">
-    <meta property="og:locale" content="en_US">
+  <main>
+    <section>
+      <h2>Now</h2>
+      <p>Building LLM-ready web indexing at Wrodium, an open-source validation toolkit for robot policies (Crucible), and tire-dynamics models for Berkeley Formula Racing.</p>
+    </section>
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Portfolio | Dhruv Ramasubban">
-    <meta name="twitter:description" content="Discover the portfolio of Dhruv Ramasubban — developer, creator, and builder of web experiences.">
-    <meta name="twitter:image" content="https://dhruvramasubban.com/img/logo-portfolio-black.svg">
-    <meta name="twitter:image:alt" content="Logo Portfolio Dhruv Ramasubban">
+    <section>
+      <h2>Projects</h2>
+      <ul class="plain">
+        <li class="item">
+          <div class="head"><strong><a href="https://github.com/Dhruv123-123/crucible">Crucible</a></strong> <span class="meta">open source · <a href="https://crucible-bay.vercel.app">docs</a> · PyPI</span></div>
+          <p>Behavioral validation for VLA robot policies — perturbation sweeps, red-team tests, and PASS/FAIL verdicts for CI gates.</p>
+        </li>
+        <li class="item">
+          <div class="head"><strong>CubeCoach</strong> <span class="meta">in-browser CV</span></div>
+          <p>Real-time Rubik's cube move classification at 30 fps, fully client-side — YOLOv8 + MediaPipe + TensorFlow.js, no install.</p>
+        </li>
+        <li class="item">
+          <div class="head"><strong>ModelArena</strong> <span class="meta">RL playground</span></div>
+          <p>Client-side ML experimentation platform — drag-and-drop architectures, live Double DQN training across five environments.</p>
+        </li>
+        <li class="item">
+          <div class="head"><strong>TaxScape</strong> <span class="meta">AI product</span></div>
+          <p>AI-powered R&amp;D tax credit platform.</p>
+        </li>
+      </ul>
+    </section>
 
-    <link rel="icon" href="/favicon.ico">
+    <section>
+      <h2>Experience</h2>
+      <ul class="plain">
+        <li class="item">
+          <div class="head"><strong>Wrodium</strong> — founding engineer <span class="meta">2025–now</span></div>
+          <p>LLM-ready indexing: llms.txt manifests, stable-hash claim dedup, 300+ cited outputs/day.</p>
+        </li>
+        <li class="item">
+          <div class="head"><strong>Actor Labs</strong> — founding engineer <span class="meta">2025</span></div>
+          <p>Multi-terabyte robotics sensor pipelines (RTK GPS, LiDAR, camera) feeding a 72% mAP@0.5 detection model.</p>
+        </li>
+        <li class="item">
+          <div class="head"><strong>Berkeley Formula Racing</strong> — vehicle dynamics <span class="meta">2025–now</span></div>
+          <p>Tire-load models (R² &gt; 0.85) behind data-driven suspension tuning, ~7% faster laps.</p>
+        </li>
+        <li class="item">
+          <div class="head"><strong>Descartes Learning Club</strong> — course designer <span class="meta">2025–now</span></div>
+          <p>Math, stats, and CS curricula, redesigned around where cohorts actually get stuck.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
 
-    <script src="https://js-dos.com/cdn/js-dos-api.js"></script>
-  </head>
-  <body class="cursor-default">
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-  </body>
+  <footer>
+    <p>Reach me at <a href="mailto:dhruvramasubban@gmail.com">dhruvramasubban@gmail.com</a>. I'm in Berkeley / SF and always up to talk robotics, ML infra, or whatever you're building.</p>
+  </footer>
+</body>
 </html>
