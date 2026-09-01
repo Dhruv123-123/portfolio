@@ -40,6 +40,40 @@ src/components/Windows/Blackbox/
   lib/narrative.js        markdown narrative generator
 ```
 
+## Catalog tier (thousands of accidents)
+
+On top of the hand-reviewed records, `blackbox/data/catalog/` holds summary-level
+records for thousands of accidents, served to the app as
+`public/blackbox/catalog/index.json` plus per-year shards and loaded on demand
+from the Graph tab.
+
+| Tier | Source | Volume | Extraction |
+|---|---|---|---|
+| `ntsb` | NTSB public aviation database (`avall.mdb`, 2008 onward) | fatal + air-carrier events, ~6,800 | keyword rules over the Board's coded findings, no LLM |
+| `wikidata` | Wikidata accident items + English Wikipedia text | ~3,100 worldwide | Haiku subagents read the trimmed article per batch |
+| deepened | official report PDFs linked from Wikipedia | top-ranked subset | Haiku subagents read key report sections, whole report only when needed |
+
+```bash
+# NTSB tier (needs mdbtools: apt-get install mdbtools)
+curl -L -o blackbox/cache/ntsb/avall.zip 'https://data.ntsb.gov/avdata/FileDirectory/DownloadFile?fileID=C%3A%5Cavdata%5Cavall.zip'
+cd blackbox/cache/ntsb && unzip avall.zip && for t in events aircraft narratives Findings Events_Sequence; do mdb-export avall.mdb $t > $t.csv; done; cd -
+python3 blackbox/pipeline/catalog/ntsb_ingest.py
+
+# Wikidata / Wikipedia tier
+python3 blackbox/pipeline/catalog/wikidata_fetch.py       # index (SPARQL, paged by years)
+python3 blackbox/pipeline/catalog/wikipedia_fetch.py      # article text + links (raw wikitext, polite)
+python3 blackbox/pipeline/catalog/make_batches.py --size 20   # interest-ranked batches for the workers
+#   -> run a Haiku worker per batch with catalog/AGENT_PROMPT.md, then:
+python3 blackbox/pipeline/catalog/merge_catalog.py
+python3 blackbox/pipeline/catalog/make_deepen_batches.py --limit 200
+#   -> run a Haiku worker per deepen batch with catalog/DEEPEN_PROMPT.md
+python3 blackbox/pipeline/build_graph.py                  # curated bundle + catalog index/shards
+```
+
+Aviation Safety Network was considered as the index but it sits behind a bot
+challenge and its robots.txt disallows AI crawlers, so it is not scraped; the
+Wikidata rows carry ASN ids (property P1755) for cross-reference.
+
 ## Running the pipeline
 
 ```bash

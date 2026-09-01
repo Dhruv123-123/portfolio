@@ -26,7 +26,7 @@ def main():
     for c in curated:
         by_date.setdefault(c["date"], []).append(c)
     rows = {}
-    files = sorted(BATCHES.glob("batch_*.out.jsonl"))
+    files = sorted(BATCHES.glob("*.out.jsonl"))
     for path in files:
         for line in path.read_text().splitlines():
             if not line.strip():

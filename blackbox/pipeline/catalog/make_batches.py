@@ -68,8 +68,15 @@ def report_links(extlinks):
     return uniq[:8]
 
 
+def num(v):
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return 0.0
+
+
 def interest(it, wp):
-    deaths = float(it.get("deaths") or 0)
+    deaths = num(it.get("deaths"))
     score = 2.0 * math.log1p(deaths)
     if wp and wp.get("extract"):
         score += 2.0 + min(2.0, len(wp["extract"]) / 15000)
@@ -89,6 +96,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--size", type=int, default=20)
     ap.add_argument("--only-missing", action="store_true", help="skip accidents already present in data/catalog/wikidata.jsonl")
+    ap.add_argument("--prefix", default="batch", help="batch file prefix, e.g. wave2 -> wave2_000.json")
+    ap.add_argument("--limit", type=int, default=0, help="only write the top N accidents")
+    ap.add_argument("--require-text", action="store_true", help="only accidents whose Wikipedia text has been fetched")
     args = ap.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
     done = set()
@@ -109,9 +119,9 @@ def main():
             "label": it.get("itemLabel"),
             "description": it.get("itemDescription"),
             "date": (it.get("date") or "")[:10],
-            "deaths": it.get("deaths"),
-            "injured": it.get("injured"),
-            "survivors": it.get("survivors"),
+            "deaths": int(num(it.get("deaths"))) if num(it.get("deaths")) else None,
+            "injured": int(num(it.get("injured"))) if num(it.get("injured")) else None,
+            "survivors": int(num(it.get("survivors"))) if num(it.get("survivors")) else None,
             "country": it.get("countryLabel"),
             "operators": it.get("operatorLabel", []),
             "aircraft": it.get("aircraftLabel", []),
@@ -127,16 +137,21 @@ def main():
             "interest": interest(it, wp),
             "text": trim_text(wp.get("extract")) if wp else (it.get("itemDescription") or "")
         })
+    if args.require_text:
+        rows = [r for r in rows if len(r["text"]) > 300]
     rows.sort(key=lambda r: (-r["interest"], r["date"]))
-    for old in OUT.glob("batch_*.json"):
-        old.unlink()
+    if args.limit:
+        rows = rows[: args.limit]
+    for old in OUT.glob(f"{args.prefix}_*.json"):
+        if not old.name.endswith(".out.jsonl"):
+            old.unlink()
     manifest = []
     for i in range(0, len(rows), args.size):
         batch = rows[i : i + args.size]
-        name = f"batch_{i // args.size:03d}"
+        name = f"{args.prefix}_{i // args.size:03d}"
         (OUT / f"{name}.json").write_text(json.dumps(batch, ensure_ascii=False, indent=1))
         manifest.append({"name": name, "n": len(batch), "min_interest": batch[-1]["interest"], "max_interest": batch[0]["interest"], "ids": [r["id"] for r in batch]})
-    (OUT / "manifest.json").write_text(json.dumps(manifest, indent=1))
+    (OUT / f"{args.prefix}_manifest.json").write_text(json.dumps(manifest, indent=1))
     with_text = sum(1 for r in rows if len(r["text"]) > 300)
     with_reports = sum(1 for r in rows if r["report_links"])
     print(f"{len(rows)} accidents -> {len(manifest)} batches of {args.size}; {with_text} with article text, {with_reports} with report links")
