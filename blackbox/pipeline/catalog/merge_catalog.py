@@ -8,6 +8,8 @@ ASN id, registration, or date plus a title token overlap with a curated record.
 """
 import json
 import re
+import subprocess
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -35,7 +37,13 @@ def main():
     for c in curated:
         by_date.setdefault(c["date"], []).append(c)
     rows = {}
-    files = sorted(BATCHES.glob("*.out.jsonl"))
+    files = []
+    skipped = []
+    for path in sorted(BATCHES.glob("*.out.jsonl")):
+        res = subprocess.run([sys.executable, str(ROOT / "pipeline" / "catalog" / "validate_catalog.py"), str(path)], capture_output=True, text=True)
+        (files if res.returncode == 0 else skipped).append(path)
+    if skipped:
+        print(f"skipping {len(skipped)} batch outputs that do not validate: {[p.stem for p in skipped]}")
     for path in files:
         batch_in = path.with_name(path.name.replace(".out.jsonl", ".json"))
         inputs = {it["id"]: it for it in json.loads(batch_in.read_text())} if batch_in.exists() else {}
