@@ -21,6 +21,27 @@ CATEGORIES = {"LOC-I", "CFIT", "RE", "RI", "SCF-PP", "SCF-NP", "F-NI", "F-POST",
 REQUIRED = ["id", "title", "date", "tier", "depth", "agency", "aircraft", "operator", "phase", "category", "summary", "factors", "chain", "events", "extraction"]
 
 
+def check_richness(rec, text_len, errors, where):
+    """Records built from substantial text must not be skeletons."""
+    if text_len is None:
+        return
+    if text_len > 3500:
+        need = (4, 2, 4, 250)
+    elif text_len > 1500:
+        need = (3, 1, 3, 180)
+    else:
+        return
+    f, c, e, s = need
+    if len(rec.get("factors", [])) < f:
+        errors.append(f"{where}: text has {text_len} chars but only {len(rec.get('factors', []))} factors (need >= {f})")
+    if len(rec.get("chain", [])) < c:
+        errors.append(f"{where}: text has {text_len} chars but only {len(rec.get('chain', []))} chain edges (need >= {c})")
+    if len(rec.get("events", [])) < e:
+        errors.append(f"{where}: text has {text_len} chars but only {len(rec.get('events', []))} events (need >= {e})")
+    if len(rec.get("summary", "")) < s:
+        errors.append(f"{where}: summary is {len(rec.get('summary', ''))} chars (need >= {s} for this much source text)")
+
+
 def check(rec, errors, where):
     for k in REQUIRED:
         if k not in rec:
@@ -91,6 +112,11 @@ def main():
     for path in files:
         errors = []
         ids = []
+        batch_in = path.with_name(path.name.replace(".out.jsonl", ".json"))
+        text_lens = {}
+        if batch_in.exists() and batch_in != path:
+            for item in json.loads(batch_in.read_text()):
+                text_lens[item["id"]] = len(item.get("text") or "")
         for n, line in enumerate(path.read_text().splitlines(), 1):
             if not line.strip():
                 continue
@@ -101,10 +127,10 @@ def main():
                 continue
             ids.append(rec.get("id"))
             check(rec, errors, f"{path.name}:{n} ({rec.get('id')})")
+            check_richness(rec, text_lens.get(rec.get("id")), errors, f"{path.name}:{n} ({rec.get('id')})")
         dup = {i for i in ids if ids.count(i) > 1}
         if dup:
             errors.append(f"{path.name}: duplicate ids {sorted(dup)}")
-        batch_in = path.with_name(path.name.replace(".out.jsonl", ".json"))
         if batch_in.exists() and batch_in != path:
             wanted = [r["id"] for r in json.loads(batch_in.read_text())]
             missing = [i for i in wanted if i not in ids]
