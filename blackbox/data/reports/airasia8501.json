@@ -1,0 +1,100 @@
+{
+  "id": "airasia8501",
+  "title": "Indonesia AirAsia 8501",
+  "flight_number": "QZ8501",
+  "date": "2014-12-28",
+  "time_reference": "UTC",
+  "t0": "2014-12-28T23:15:36Z",
+  "agency": "KNKT",
+  "agencies": [
+    { "code": "KNKT", "name": "Komite Nasional Keselamatan Transportasi", "country": "Indonesia", "role": "lead",
+      "report_id": "KNKT.14.12.29.04", "report_title": "Aircraft Accident Investigation Report, PT. Indonesia Air Asia, Airbus A320-216, PK-AXC, Karimata Strait, Republic of Indonesia, 28 December 2014", "report_date": "2015-12-01",
+      "url": "https://knkt.go.id/" },
+    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses", "country": "France", "role": "accredited_representative" },
+    { "code": "ATSB", "name": "Australian Transport Safety Bureau", "country": "Australia", "role": "accredited_representative" },
+    { "code": "AAIB-SG", "name": "Air Accident Investigation Bureau of Singapore", "country": "Singapore", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "Airbus A320-216", "family": "A320", "manufacturer": "Airbus", "registration": "PK-AXC", "msn": "3648", "engines": "CFM International CFM56-5B6" },
+  "operator": "Indonesia AirAsia",
+  "route": { "from": "WARR", "from_name": "Surabaya Juanda", "to": "WSSS", "to_name": "Singapore Changi" },
+  "location": { "name": "Java Sea (Karimata Strait), off Pangkalan Bun, Central Kalimantan", "country": "Indonesia", "lat": -3.62, "lon": 109.7 },
+  "phase": "cruise",
+  "occupants": 162, "fatalities": 162, "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "In cruise at FL320 over the Java Sea the A320's rudder travel limiter fault recurred four times, a problem that had appeared 23 times in the previous year because of a cracked solder joint. After the fourth warning the captain pulled the circuit breakers of both flight augmentation computers. The autopilot and autothrust disengaged and the flight controls reverted to alternate law; the aircraft rolled to 54 degrees before the first officer reacted, then pitched up into a steep climb. The aircraft stalled at about 38,000 ft and descended into the sea, killing all 162 on board.",
+  "probable_cause": "The KNKT found that a cracked solder joint in the rudder travel limiter unit caused repeated AUTO FLT RUD TRV LIM SYS failures, which the airline's maintenance system had not resolved. The crew's action of pulling the FAC circuit breakers in flight, which was not an approved procedure, disengaged the autopilot and degraded the flight control law, and the subsequent delayed and inappropriate crew inputs, including a sustained nose-up sidestick command and simultaneous inputs from both pilots after the captain's ambiguous 'pull down' instruction, led to an upset from which the crew did not recover. The crew had not received upset recovery training.",
+  "factors": [
+    { "id": "known_defect_unresolved", "role": "latent", "evidence": "The rudder travel limiter fault had occurred 23 times in the previous 12 months, with increasing frequency, without the root cause being identified." },
+    { "id": "maintenance_error", "role": "latent", "evidence": "Repeated troubleshooting reset the system rather than finding the cracked solder joint on the RTLU electronic module; the airline's reliability monitoring did not escalate the repetitive defect." },
+    { "id": "procedural_noncompliance", "role": "initiating", "evidence": "The captain pulled the FAC 1 and FAC 2 circuit breakers in flight to reset the system, an action not provided for in the flight crew procedures." },
+    { "id": "autopilot_disconnect", "role": "contributing", "evidence": "De-energising both FACs disengaged the autopilot and autothrust." },
+    { "id": "flight_control_law_degradation", "role": "contributing", "evidence": "Loss of both FACs caused the flight controls to revert to alternate law, removing the yaw damper and rudder travel limiting and the normal-law protections." },
+    { "id": "startle_effect", "role": "contributing", "evidence": "The aircraft rolled left for about nine seconds to 54 degrees of bank before the first officer, as pilot flying, made any input." },
+    { "id": "inappropriate_control_input", "role": "contributing", "evidence": "The first officer applied a sustained nose-up sidestick input that took the aircraft into a climb of up to 11,000 ft/min and a stall." },
+    { "id": "crm_breakdown", "role": "contributing", "evidence": "The captain's instruction 'pull down' was ambiguous and the first officer continued to pull back; there was no clear transfer of control." },
+    { "id": "dual_sidestick_input", "role": "contributing", "evidence": "Both pilots made sidestick inputs simultaneously without the priority push-button being used, so the inputs were summed." },
+    { "id": "inappropriate_stall_recovery", "role": "contributing", "evidence": "The nose-up inputs were maintained through the stall warning and the aircraft remained stalled during the descent." },
+    { "id": "inadequate_training", "role": "latent", "evidence": "The airline's training program did not include upset prevention and recovery training for this scenario." },
+    { "id": "aerodynamic_stall", "role": "outcome", "evidence": "The stall warning activated as the aircraft climbed through about FL370 and the aircraft stalled near 38,000 ft." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft descended in a stalled condition for about three minutes until it struck the sea." }
+  ],
+  "chain": [
+    ["maintenance_error", "known_defect_unresolved"],
+    ["known_defect_unresolved", "procedural_noncompliance"],
+    ["procedural_noncompliance", "autopilot_disconnect"],
+    ["procedural_noncompliance", "flight_control_law_degradation"],
+    ["autopilot_disconnect", "startle_effect"],
+    ["flight_control_law_degradation", "startle_effect"],
+    ["startle_effect", "inappropriate_control_input"],
+    ["inadequate_training", "inappropriate_control_input"],
+    ["inappropriate_control_input", "aerodynamic_stall"],
+    ["crm_breakdown", "dual_sidestick_input"],
+    ["dual_sidestick_input", "inappropriate_stall_recovery"],
+    ["inadequate_training", "inappropriate_stall_recovery"],
+    ["aerodynamic_stall", "loss_of_control_inflight"],
+    ["inappropriate_stall_recovery", "loss_of_control_inflight"]
+  ],
+  "events": [
+    { "t": -31536000, "clock": null, "phase": "ground", "actor": "GND", "text": "Over the preceding year the AUTO FLT RUD TRV LIM SYS fault occurs 23 times on PK-AXC with increasing frequency; maintenance repeatedly resets the system without finding the cracked solder joint in the rudder travel limiter unit.", "factors": ["known_defect_unresolved", "maintenance_error"], "kind": "system" },
+    { "t": -2436, "clock": "22:35", "phase": "takeoff", "actor": "PF", "text": "Departs Surabaya for Singapore with 155 passengers and 7 crew; the first officer is pilot flying.", "kind": "crew_action" },
+    { "t": -876, "clock": "23:01", "phase": "cruise", "actor": "SYS", "text": "First master caution in cruise at FL320: AUTO FLT RUD TRV LIM SYS. The crew carry out the ECAM actions and the fault clears.", "state": { "alt": 32000 }, "factors": ["known_defect_unresolved"], "kind": "warning" },
+    { "t": -396, "clock": "23:09", "phase": "cruise", "actor": "SYS", "text": "The fault recurs a second time; ECAM actions repeated.", "factors": ["known_defect_unresolved"], "kind": "warning" },
+    { "t": -156, "clock": "23:13", "phase": "cruise", "actor": "SYS", "text": "The fault recurs a third time; ECAM actions repeated.", "factors": ["known_defect_unresolved"], "kind": "warning" },
+    { "t": 0, "clock": "23:15:36", "phase": "cruise", "actor": "SYS", "text": "Fourth master caution; the fault persists after the ECAM actions.", "factors": ["known_defect_unresolved"], "kind": "warning" },
+    { "t": 50, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "The captain pulls the FAC 1 and then the FAC 2 circuit breakers on the panel behind his seat to reset the system. Both FACs de-energise; autopilot and autothrust disengage and the flight controls revert to alternate law.", "factors": ["procedural_noncompliance", "autopilot_disconnect", "flight_control_law_degradation"], "kind": "crew_action" },
+    { "t": 60, "clock": null, "phase": "cruise", "actor": "SYS", "text": "Without yaw damping the aircraft rolls left; no sidestick input is made for about nine seconds and the bank reaches 54 degrees.", "state": { "roll": -54 }, "factors": ["startle_effect"], "kind": "system" },
+    { "t": 70, "clock": null, "phase": "climb", "actor": "FO", "text": "The first officer applies right roll and sustained nose-up sidestick; the aircraft climbs from FL320 at up to 11,000 ft/min.", "state": { "alt": 32000, "vs": 11000 }, "factors": ["inappropriate_control_input"], "kind": "crew_action" },
+    { "t": 95, "clock": null, "phase": "climb", "actor": "SYS", "text": "Stall warning activates as the aircraft climbs through about FL370 with airspeed decaying.", "factors": ["aerodynamic_stall"], "kind": "warning" },
+    { "t": 100, "clock": null, "phase": "climb", "actor": "CAPT", "text": "The captain repeatedly says 'pull down'; the first officer continues to pull back. The captain applies nose-down on his own sidestick without taking priority, and the two inputs are summed.", "factors": ["crm_breakdown", "dual_sidestick_input", "inappropriate_stall_recovery"], "kind": "crew_speech" },
+    { "t": 120, "clock": null, "phase": "climb", "actor": "SYS", "text": "The aircraft reaches about 38,000 ft, stalls and begins a rapid descent in a nose-up, stalled attitude.", "factors": ["aerodynamic_stall", "loss_of_control_inflight"], "kind": "system" },
+    { "t": 200, "clock": null, "phase": "descent", "actor": "SYS", "text": "Stall warning continues; nose-up inputs are maintained and the aircraft remains stalled through the descent.", "factors": ["inappropriate_stall_recovery", "loss_of_control_inflight"], "kind": "system" },
+    { "t": 299, "clock": "23:20:35", "phase": "descent", "actor": "SYS", "text": "The flight recorders stop as the aircraft strikes the Java Sea; all 162 on board are killed.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+  ],
+  "cvr": [
+    { "t": 100, "clock": null, "speaker": "CAPT", "text": "Pull down", "translation": null }
+  ],
+  "recommendations": [
+    { "id": null, "to": "Indonesia AirAsia", "text": "Improve the maintenance reliability program so that repetitive defects are identified and resolved, and provide flight crews with upset prevention and recovery training.", "status": "unknown", "outcome": "The airline introduced upset recovery training and revised its repetitive-defect handling.", "trigger_factors": ["known_defect_unresolved", "maintenance_error", "inadequate_training"] },
+    { "id": null, "to": "Directorate General of Civil Aviation (Indonesia)", "text": "Ensure operators' maintenance and training programs address repetitive defects and upset recovery, and improve surveillance.", "status": "unknown", "outcome": null, "trigger_factors": ["known_defect_unresolved", "inadequate_training"] },
+    { "id": null, "to": "Airbus", "text": "Reinforce guidance to operators that circuit breakers are not to be pulled in flight as a troubleshooting action, and review procedures and training for dual sidestick input and alternate law handling.", "status": "unknown", "outcome": null, "trigger_factors": ["procedural_noncompliance", "dual_sidestick_input", "flight_control_law_degradation"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Indonesia AirAsia introduced upset prevention and recovery training and revised its handling of repetitive defects.",
+    "The Indonesian DGCA audited the airline and tightened oversight of maintenance reliability programs.",
+    "The accident reinforced industry-wide adoption of upset prevention and recovery training and the prohibition on in-flight circuit breaker resets for troubleshooting."
+  ],
+  "related": ["af447", "colgan3407", "westcaribbean708", "saratov703"],
+  "fdr": null,
+  "sources": [
+    "https://knkt.go.id/",
+    "https://www.bea.aero/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "The clock for the fourth master caution (23:15:36) and the end of recording (23:20:35) are as recalled from the KNKT report; times of the first three faults are to the minute and the times of the circuit-breaker pulls, roll, climb and stall are approximate offsets.",
+    "The maximum altitude reached (about 38,000 ft) and the climb rate (up to 11,000 ft/min) are from the report summary; peak descent rate is omitted.",
+    "The captain's 'pull down' line is quoted without an exact time.",
+    "Wreckage coordinates are approximate."
+  ] }
+}

@@ -5,6 +5,7 @@ import { useGoBackStore } from '@/stores/goBackStore'
 
 import projectData from '@/data/projects-data.json'
 import WindowLeftMenu from '@/components/Windows/WindowLeftMenu.vue'
+import BlackboxContent from '@/components/Windows/MyProjects/BlackboxContent.vue'
 import CrucibleContent from '@/components/Windows/MyProjects/CrucibleContent.vue'
 import CubeCoachContent from '@/components/Windows/MyProjects/CubeCoachContent.vue'
 import ModelArenaContent from '@/components/Windows/MyProjects/ModelArenaContent.vue'
@@ -75,6 +76,7 @@ const closeAllProjects = () => {
 
 // Map of component names to component objects
 const componentMap = {
+  BlackboxContent,
   CrucibleContent,
   CubeCoachContent,
   ModelArenaContent,

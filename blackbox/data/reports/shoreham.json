@@ -1,0 +1,78 @@
+{
+  "id": "shoreham",
+  "title": "Shoreham Airshow Hawker Hunter",
+  "flight_number": null,
+  "date": "2015-08-22",
+  "time_reference": "UTC",
+  "t0": "2015-08-22T12:21:40Z",
+  "agency": "AAIB",
+  "agencies": [
+    { "code": "AAIB", "name": "Air Accidents Investigation Branch", "country": "United Kingdom", "role": "lead",
+      "report_id": "1/2017", "report_title": "Report on the accident to Hawker Hunter T7, G-BXFI near Shoreham Airport on 22 August 2015", "report_date": "2017-03-03",
+      "url": "https://www.gov.uk/aaib-reports/aircraft-accident-report-aar-1-2017-g-bxfi-22-august-2015" }
+  ],
+  "aircraft": { "type": "Hawker Hunter T7", "family": "Hunter", "manufacturer": "Hawker Siddeley", "registration": "G-BXFI", "msn": "41H-670815", "engines": "Rolls-Royce Avon Mk 122" },
+  "operator": "Canfield Hunter Ltd (private display)",
+  "route": { "from": "EGKA", "from_name": "North Weald", "to": "EGKA", "to_name": "North Weald (display at Shoreham)" },
+  "location": { "name": "A27 road near Shoreham Airport, West Sussex", "country": "United Kingdom", "lat": 50.8357, "lon": -0.2865 },
+  "phase": "unknown",
+  "occupants": 1, "fatalities": 11, "injuries_serious": 1,
+  "damage": "destroyed",
+  "category": "LALT",
+  "summary": "During a display at the Shoreham Airshow the Hunter entered a loop-type manoeuvre from too low a height and at too low an airspeed. At the apex the aircraft was at 2,700 ft, below the minimum required to complete the manoeuvre, and the pilot did not fly an escape manoeuvre. The aircraft descended into traffic on the A27 dual carriageway, killing 11 people on the ground; the pilot survived.",
+  "probable_cause": "The aircraft did not achieve sufficient height at the apex of the accident manoeuvre to complete it before impacting the ground, because the combination of low entry speed and low engine thrust in the upward half of the manoeuvre was insufficient. An escape manoeuvre was not carried out, despite the aircraft not achieving the required minimum apex height. The pilot either did not perceive that an escape manoeuvre was necessary or did not realise one was possible at the speed achieved at the apex. Contributing: the display sequence had been planned for a different aircraft type, the pilot had not practised the sequence in the Hunter, and the regulatory and organisational oversight of displays did not ensure adequate risk management for the public outside the display site.",
+  "factors": [
+    { "id": "inappropriate_control_input", "role": "initiating", "evidence": "The loop was entered at about 185 kt and 200 ft, lower and slower than required, with the throttle not advanced to full power during the pull-up." },
+    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The pilot did not recognise at the apex that the aircraft was 800 ft below the required gate height and that an escape manoeuvre was needed." },
+    { "id": "inadequate_training", "role": "contributing", "evidence": "The pilot had not practised the display sequence in the Hunter, and the escape manoeuvre had not been practised or trained." },
+    { "id": "regulatory_oversight", "role": "latent", "evidence": "The CAA's oversight of flying displays did not require adequate risk assessment for areas outside the display site, and display authorisation evaluation was limited." },
+    { "id": "operator_safety_culture", "role": "latent", "evidence": "The display organiser's and operator's risk assessments did not adequately consider third parties outside the airfield boundary or enforce the gate heights in the pilot's display plan." },
+    { "id": "pilot_experience", "role": "contributing", "evidence": "The pilot's recent display experience was predominantly on the Jet Provost, with limited recent flying on the Hunter." },
+    { "id": "cfit", "role": "outcome", "evidence": "The aircraft struck the A27 road in a nose-up attitude at about 100 kt below the speed at which recovery was possible, colliding with vehicles." },
+    { "id": "post_impact_fire", "role": "outcome", "evidence": "A fireball followed the impact, contributing to the deaths of persons on the road." }
+  ],
+  "chain": [
+    ["regulatory_oversight", "operator_safety_culture"],
+    ["operator_safety_culture", "inadequate_training"],
+    ["inadequate_training", "inappropriate_control_input"],
+    ["pilot_experience", "inappropriate_control_input"],
+    ["inappropriate_control_input", "loss_of_situational_awareness"],
+    ["inadequate_training", "loss_of_situational_awareness"],
+    ["loss_of_situational_awareness", "cfit"],
+    ["cfit", "post_impact_fire"]
+  ],
+  "events": [
+    { "t": -1500, "clock": "11:56", "phase": "takeoff", "actor": "PF", "text": "G-BXFI departs North Weald for the Shoreham display.", "kind": "crew_action" },
+    { "t": -120, "clock": "12:19", "phase": "unknown", "actor": "PF", "text": "Pilot commences the display with a run-in and a series of aerobatic manoeuvres over the display line.", "kind": "crew_action" },
+    { "t": -30, "clock": "12:21", "phase": "unknown", "actor": "PF", "text": "Following a turn to the north, the pilot positions for a bent loop with a quarter clover at the top, entering from the east of the display line.", "kind": "crew_action" },
+    { "t": 0, "clock": "12:21:40", "phase": "unknown", "actor": "PF", "text": "Pull-up into the loop starts at about 185 kt and about 200 ft agl, below the 350 kt / 500 ft entry parameters in the pilot's plan; throttle not advanced to full.", "state": { "alt": 200, "ias": 185 }, "factors": ["inappropriate_control_input", "pilot_experience"], "kind": "crew_action" },
+    { "t": 10, "clock": "12:21:50", "phase": "unknown", "actor": "SYS", "text": "Aircraft climbs inverted; engine at less than full power throughout the upward half of the manoeuvre.", "factors": ["inappropriate_control_input"], "kind": "system" },
+    { "t": 17, "clock": "12:21:57", "phase": "unknown", "actor": "SYS", "text": "Apex of the manoeuvre reached at about 2,700 ft, 800 ft below the 3,500 ft minimum gate height, at about 105 kt.", "state": { "alt": 2700, "ias": 105 }, "factors": ["loss_of_situational_awareness"], "kind": "system" },
+    { "t": 18, "clock": "12:21:58", "phase": "unknown", "actor": "PF", "text": "No escape manoeuvre (rolling upright and recovering) is flown; the pilot continues the downward half of the loop.", "factors": ["loss_of_situational_awareness", "inadequate_training"], "kind": "crew_action" },
+    { "t": 28, "clock": "12:22:08", "phase": "unknown", "actor": "PF", "text": "Recognising the aircraft is low, the pilot applies increasing back stick; the aircraft reaches maximum g but is unable to arrest the descent.", "kind": "crew_action" },
+    { "t": 30, "clock": "12:22:10", "phase": "unknown", "actor": "SYS", "text": "Aircraft strikes the A27 westbound carriageway in a nose-high attitude, colliding with vehicles and breaking up; a fireball follows.", "factors": ["cfit", "post_impact_fire"], "kind": "outcome" },
+    { "t": 40, "clock": "12:22:20", "phase": "ground", "actor": "OTHER", "text": "Eleven people on the road are killed; the pilot is thrown clear of the wreckage and seriously injured.", "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": "2015-039", "to": "CAA", "text": "Introduce measures to ensure that flying displays are not conducted over areas where members of the public may be present unless the risk is acceptable; a review of the risk to third parties outside display sites.", "status": "closed_acceptable", "outcome": "CAA introduced restrictions on aerobatics by vintage jets over land and enhanced display risk assessment requirements.", "trigger_factors": ["regulatory_oversight"] },
+    { "id": null, "to": "CAA", "text": "Require that display pilots' authorisations are evaluated for the specific aircraft type and manoeuvres they intend to fly, and that escape manoeuvres are trained and practised.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_training", "pilot_experience"] },
+    { "id": null, "to": "CAA", "text": "Require the recording of flight data on ex-military jets used for displays and improve the maintenance standards oversight for such aircraft.", "status": "unknown", "outcome": null, "trigger_factors": ["regulatory_oversight"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "CAA restricted vintage jet displays over land to flypasts pending review, and later introduced new display risk assessment requirements (CAP 403 revisions).",
+    "Enhanced oversight of display authorisation evaluations and requirements for display sequences to be practised on type.",
+    "Increased separation distances between display lines and the public, including areas outside the airfield boundary."
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.gov.uk/aaib-reports/aircraft-accident-report-aar-1-2017-g-bxfi-22-august-2015"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "Entry and apex speeds/heights are the AAIB's derived values (approximately 185 kt / 200 ft entry, 2,700 ft / 105 kt apex, 3,500 ft required gate).",
+    "Event clock times are approximate relative to the 12:22 impact; the seconds are estimated.",
+    "Only one recommendation number (2015-039) is given; others left null. MSN is uncertain."
+  ] }
+}

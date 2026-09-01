@@ -1,0 +1,88 @@
+{
+  "id": "twa800",
+  "title": "TWA 800",
+  "flight_number": "TW800",
+  "date": "1996-07-17",
+  "time_reference": "EDT (local)",
+  "t0": "1996-07-18T00:31:12Z",
+  "agency": "NTSB",
+  "agencies": [
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+      "report_id": "NTSB/AAR-00/03",
+      "report_title": "In-flight Breakup Over the Atlantic Ocean, Trans World Airlines Flight 800, Boeing 747-131, N93119, Near East Moriches, New York, July 17, 1996",
+      "report_date": "2000-08-23",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0003.pdf" },
+    { "code": "FBI", "name": "Federal Bureau of Investigation", "country": "USA", "role": "participant" }
+  ],
+  "aircraft": { "type": "Boeing 747-131", "family": "747", "manufacturer": "Boeing", "registration": "N93119", "msn": "20083", "engines": "Pratt & Whitney JT9D-7AH" },
+  "operator": "Trans World Airlines",
+  "route": { "from": "KJFK", "from_name": "New York John F. Kennedy International", "to": "LFPG", "to_name": "Paris Charles de Gaulle" },
+  "location": { "name": "Atlantic Ocean about 8 miles south of East Moriches, Long Island, New York", "country": "USA", "lat": 40.65, "lon": -72.63 },
+  "phase": "climb",
+  "occupants": 230,
+  "fatalities": 230,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "F-NI",
+  "summary": "About twelve minutes after takeoff from JFK, climbing through about 13,800 feet, the 747's nearly empty center wing fuel tank exploded. The forward fuselage separated, the remainder of the airplane continued briefly before the wings failed and the burning wreckage fell into the Atlantic off Long Island. All 230 people on board died. A four-year investigation, the largest in NTSB history, ruled out a bomb or missile and attributed the explosion to ignition of flammable fuel vapor in the tank, most likely from a short circuit in fuel quantity indication system wiring.",
+  "probable_cause": "An explosion of the center wing fuel tank (CWT), resulting from ignition of the flammable fuel/air mixture in the tank. The source of ignition energy for the explosion could not be determined with certainty, but, of the sources evaluated by the investigation, the most likely was a short circuit outside of the CWT that allowed excessive voltage to enter it through electrical wiring associated with the fuel quantity indication system. Contributing factors to the accident were the design and certification concept that fuel tank explosions could be prevented solely by precluding all ignition sources and the design and certification of the Boeing 747 with heat sources located beneath the CWT with no means to reduce the heat transferred into the CWT or to render the fuel vapor in the tank nonflammable.",
+  "factors": [
+    { "id": "wiring_failure", "role": "initiating", "evidence": "The most likely ignition source was a short circuit outside the tank that allowed excessive voltage into fuel quantity indication system wiring; aging wiring with cracked insulation and sulfide deposits on FQIS components were found in the fleet." },
+    { "id": "fuel_tank_explosion", "role": "contributing", "evidence": "Wreckage and sooting patterns showed the center wing tank ruptured from an internal overpressure explosion of the fuel/air vapor." },
+    { "id": "design_deficiency", "role": "contributing", "evidence": "Air conditioning packs beneath the center wing tank heated the small quantity of residual fuel during the long ground delay, producing a flammable vapor in the tank." },
+    { "id": "certification_shortfall", "role": "contributing", "evidence": "The design and certification philosophy relied solely on excluding ignition sources and did not require reducing fuel tank flammability." },
+    { "id": "structural_failure", "role": "contributing", "evidence": "The explosion severed the fuselage forward of the wing; the forward section fell away and the remaining structure broke up as it descended." },
+    { "id": "inflight_fire", "role": "contributing", "evidence": "Fuel released from the ruptured wing tanks ignited, producing the fireball seen by witnesses as the wreckage descended." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "After the forward fuselage separated the airplane could not be controlled and broke up in flight." }
+  ],
+  "chain": [
+    ["certification_shortfall", "design_deficiency"],
+    ["design_deficiency", "fuel_tank_explosion"],
+    ["wiring_failure", "fuel_tank_explosion"],
+    ["fuel_tank_explosion", "structural_failure"],
+    ["structural_failure", "inflight_fire"],
+    ["structural_failure", "loss_of_control_inflight"]
+  ],
+  "events": [
+    { "t": -6000, "clock": null, "phase": "ground", "actor": "ENV", "text": "The airplane sits at the gate at JFK on a hot afternoon with air conditioning packs running beneath the nearly empty center wing tank, heating the small quantity of fuel and creating a flammable vapor.", "factors": ["design_deficiency", "fuel_tank_explosion"], "kind": "env" },
+    { "t": -720, "clock": "20:19", "phase": "takeoff", "actor": "CAPT", "text": "Flight 800 departs JFK runway 22R about an hour late and climbs out over Long Island.", "kind": "crew_action" },
+    { "t": -117, "clock": null, "phase": "climb", "actor": "CAPT", "text": "Captain remarks on an erratic number 4 engine fuel flow indication; the investigation did not link it to the accident.", "kind": "crew_speech" },
+    { "t": -40, "clock": null, "phase": "climb", "actor": "ATC", "text": "Boston Center clears the flight to climb and maintain 15,000 feet; the crew acknowledge and set climb thrust.", "kind": "atc" },
+    { "t": 0, "clock": "20:31:12", "phase": "climb", "actor": "SYS", "text": "The center wing tank explodes at about 13,800 feet; the CVR and FDR stop and the transponder return ceases.", "state": { "alt": 13800 }, "factors": ["fuel_tank_explosion", "wiring_failure"], "kind": "system" },
+    { "t": 2, "clock": null, "phase": "climb", "actor": "SYS", "text": "The fuselage fails forward of the wing and the nose section separates and falls into the sea.", "factors": ["structural_failure"], "kind": "system" },
+    { "t": 10, "clock": null, "phase": "climb", "actor": "SYS", "text": "The remaining airplane, now nose-light, pitches up and climbs briefly before rolling and descending out of control.", "factors": ["loss_of_control_inflight"], "kind": "system" },
+    { "t": 30, "clock": null, "phase": "descent", "actor": "SYS", "text": "The wings and remaining fuselage break up; fuel released from the wing tanks ignites and a fireball is seen by hundreds of witnesses on the shore and in aircraft.", "factors": ["inflight_fire", "structural_failure"], "kind": "system" },
+    { "t": 45, "clock": null, "phase": "descent", "actor": "SYS", "text": "Burning wreckage falls into the Atlantic Ocean about 8 miles south of East Moriches; there are no survivors.", "factors": ["loss_of_control_inflight"], "kind": "outcome" },
+    { "t": 300, "clock": null, "phase": "ground", "actor": "OTHER", "text": "A large search and recovery effort begins; over the following months more than 95 percent of the airplane is recovered from the seabed and reconstructed.", "kind": "env" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": "A-96-174", "to": "FAA", "text": "Require the development of and implementation of design or operational changes that will preclude the operation of transport-category airplanes with explosive fuel-air mixtures in the fuel tanks, such as nitrogen inerting or reduced heat transfer to the center tank.", "status": "closed_acceptable", "outcome": "FAA Fuel Tank Flammability Reduction rule (2008) required flammability reduction means, typically nitrogen inerting, on new and many in-service transport airplanes.", "trigger_factors": ["fuel_tank_explosion", "design_deficiency", "certification_shortfall"] },
+    { "id": null, "to": "FAA", "text": "Require a fleet-wide review of fuel tank systems, including fuel quantity indication system wiring, to identify and eliminate ignition sources, and address aging wiring and separation of FQIS wiring from higher voltage circuits.", "status": "closed_acceptable", "outcome": "SFAR 88 (2001) required design reviews of fuel tank systems and led to numerous airworthiness directives; transient suppression devices were developed for FQIS wiring.", "trigger_factors": ["wiring_failure", "fuel_tank_explosion"] },
+    { "id": null, "to": "FAA", "text": "Revise the transport-category certification standard for fuel tank systems so that flammability, and not only ignition source exclusion, is addressed in design.", "status": "closed_acceptable", "outcome": "14 CFR 25.981 was amended to require flammability reduction or ignition mitigation.", "trigger_factors": ["certification_shortfall"] },
+    { "id": null, "to": "FAA", "text": "Improve inspection, maintenance and replacement standards for aging electrical wiring on transport airplanes.", "status": "closed_acceptable", "outcome": "The Enhanced Airworthiness Program for Airplane Systems (EWIS rules, 2007) established electrical wiring interconnection system requirements.", "trigger_factors": ["wiring_failure"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "SFAR 88 (2001) required manufacturers and operators to conduct safety reviews of fuel tank systems, producing dozens of airworthiness directives on wiring, pumps and FQIS components.",
+    "14 CFR 25.981 was amended so that fuel tank flammability must be minimized or ignition effects mitigated in new designs.",
+    "The 2008 Fuel Tank Flammability Reduction rule required flammability reduction means, typically nitrogen inerting, on new production and most in-service large transport airplanes with heated center tanks.",
+    "Enhanced Airworthiness Program for Airplane Systems rules (2007) added electrical wiring interconnection system design, inspection and maintenance requirements for aging aircraft.",
+    "The FAA and Boeing developed and fielded onboard nitrogen generation systems for the 737, 747 and 777 families."
+  ],
+  "related": ["swissair111", "concorde4590", "united811", "jal123"],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0003.pdf",
+    "https://www.ntsb.gov"
+  ],
+  "extraction": {
+    "method": "llm", "model": "claude", "confidence": "high", "reviewed": false,
+    "notes": [
+      "Explosion time 20:31:12 EDT and altitude about 13,800 feet are as stated in the report; the sequence of breakup after the explosion is a reconstruction and the t values after 0 are approximate.",
+      "Takeoff time about 20:19 EDT; the captain's fuel flow remark is at about 20:29 and is paraphrased rather than quoted.",
+      "Recommendation A-96-174 was issued in December 1996 during the investigation; its wording is condensed. Other recommendation ids from the final report are not given because they are not recalled with confidence.",
+      "The FBI conducted a parallel criminal investigation and is listed as a participant, not as an investigating agency with a formal aviation role."
+    ]
+  }
+}

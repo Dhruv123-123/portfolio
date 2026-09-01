@@ -1,0 +1,103 @@
+{
+  "id": "comair5191",
+  "title": "Comair 5191",
+  "flight_number": "OH5191 (Delta Connection 5191, callsign Comair 191)",
+  "date": "2006-08-27",
+  "time_reference": "EDT (local)",
+  "t0": "2006-08-27T10:06:05Z",
+  "agency": "NTSB",
+  "agencies": [
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+      "report_id": "NTSB/AAR-07/05",
+      "report_title": "Attempted Takeoff From Wrong Runway, Comair Flight 5191, Bombardier CL-600-2B19, N431CA, Lexington, Kentucky, August 27, 2006",
+      "report_date": "2007-07-26",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0705.pdf" },
+    { "code": "TSB", "name": "Transportation Safety Board of Canada", "country": "Canada", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "Bombardier CL-600-2B19 (CRJ-100ER)", "family": "CRJ", "manufacturer": "Bombardier", "registration": "N431CA", "msn": null, "engines": "General Electric CF34-3A1" },
+  "operator": "Comair (operating as Delta Connection)",
+  "route": { "from": "KLEX", "from_name": "Lexington Blue Grass Airport", "to": "KATL", "to_name": "Atlanta Hartsfield-Jackson International" },
+  "location": { "name": "Beyond the end of runway 26, Blue Grass Airport, Lexington, Kentucky", "country": "USA", "lat": 38.036, "lon": -84.606 },
+  "phase": "takeoff",
+  "occupants": 50,
+  "fatalities": 49,
+  "injuries_serious": 1,
+  "damage": "destroyed",
+  "category": "RE",
+  "summary": "Before dawn at Lexington, the CRJ-100 was cleared for takeoff from runway 22 but the crew taxied onto the unlit, 3,500-foot general aviation runway 26 and began the takeoff roll. The first officer remarked on the absence of runway lights but the takeoff continued; the airplane ran off the end of the runway at about 137 knots, struck a berm and trees and burned. The captain, flight attendant and all 47 passengers died; the first officer survived with serious injuries. The single tower controller on duty was performing administrative tasks and did not see the airplane take the wrong runway.",
+  "probable_cause": "The flight crewmembers' failure to use available cues and aids to identify the airplane's location on the airport surface during taxi and their failure to cross-check and verify that the airplane was on the correct runway before takeoff. Contributing to the accident were the flight crew's nonpertinent conversation during taxi, which resulted in a loss of positional awareness, and the Federal Aviation Administration's failure to require that all runway crossings be authorized only by specific air traffic control clearances.",
+  "factors": [
+    { "id": "wrong_runway", "role": "initiating", "evidence": "The airplane taxied onto runway 26 (3,500 feet, unlit) instead of the assigned runway 22 (7,003 feet) and began its takeoff roll." },
+    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The crew lost positional awareness during taxi and did not use the compass heading, runway markings, signage or lack of lights to detect that they were on the wrong runway." },
+    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "Neither pilot cross-checked the runway heading against the assigned runway before takeoff, and the first officer's comment about the missing lights did not prompt a rejected takeoff." },
+    { "id": "sterile_cockpit_violation", "role": "contributing", "evidence": "The crew held nonpertinent conversation during taxi, contrary to sterile cockpit rules, which the NTSB found contributed to the loss of positional awareness." },
+    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The crew did not follow Comair's taxi and pre-takeoff verification procedures for confirming the departure runway." },
+    { "id": "airport_infrastructure", "role": "contributing", "evidence": "Recent taxiway construction had changed the route to runway 22, the airport diagram in the crew's charts did not reflect the changes, and runway 26 was unlit." },
+    { "id": "dark_night", "role": "contributing", "evidence": "The accident occurred before dawn in darkness, reducing the visual cues available to identify the runway." },
+    { "id": "atc_workload_staffing", "role": "latent", "evidence": "A single controller was handling tower and radar duties, contrary to FAA staffing guidance, and was performing an administrative traffic count while the airplane taxied onto the wrong runway." },
+    { "id": "regulatory_oversight", "role": "contributing", "evidence": "The FAA did not require that all runway crossings be authorized only by specific ATC clearances, and had not enforced two-controller staffing at the facility." },
+    { "id": "runway_overrun", "role": "outcome", "evidence": "The airplane became airborne only briefly after running off the end of runway 26, struck an earthen berm, a fence and trees." },
+    { "id": "post_impact_fire", "role": "outcome", "evidence": "The airplane was destroyed by impact forces and post-crash fire." }
+  ],
+  "chain": [
+    ["airport_infrastructure", "loss_of_situational_awareness"],
+    ["dark_night", "loss_of_situational_awareness"],
+    ["sterile_cockpit_violation", "loss_of_situational_awareness"],
+    ["loss_of_situational_awareness", "wrong_runway"],
+    ["procedural_noncompliance", "inadequate_monitoring"],
+    ["inadequate_monitoring", "wrong_runway"],
+    ["regulatory_oversight", "atc_workload_staffing"],
+    ["atc_workload_staffing", "wrong_runway"],
+    ["wrong_runway", "runway_overrun"],
+    ["runway_overrun", "post_impact_fire"]
+  ],
+  "events": [
+    { "t": -420, "clock": null, "phase": "taxi", "actor": "ATC", "text": "Ground control clears the flight to taxi to runway 22; the crew engage in nonpertinent conversation during the taxi.", "factors": ["sterile_cockpit_violation"], "kind": "atc" },
+    { "t": -300, "clock": null, "phase": "taxi", "actor": "CAPT", "text": "The crew taxi along taxiway Alpha, past construction changes not shown on their airport diagram, toward the runway 26 crossing that leads to runway 22.", "factors": ["airport_infrastructure", "loss_of_situational_awareness"], "kind": "crew_action" },
+    { "t": -50, "clock": "06:05:15", "phase": "taxi", "actor": "ATC", "text": "Tower controller clears 'Comair 191' to fly runway heading and take off; he then turns away to perform an administrative traffic count.", "factors": ["atc_workload_staffing"], "kind": "atc" },
+    { "t": -30, "clock": null, "phase": "taxi", "actor": "CAPT", "text": "The captain turns the airplane onto runway 26 instead of continuing across it to runway 22, and transfers control to the first officer for the takeoff.", "factors": ["wrong_runway", "loss_of_situational_awareness"], "kind": "crew_action" },
+    { "t": 0, "clock": null, "phase": "takeoff", "actor": "FO", "text": "Takeoff thrust is set and the takeoff roll begins on the unlit 3,500-foot runway 26; the heading indicator shows about 260 degrees rather than 220.", "state": { "hdg": 260 }, "factors": ["wrong_runway", "inadequate_monitoring"], "kind": "crew_action" },
+    { "t": 19, "clock": "06:06:24", "phase": "takeoff", "actor": "FO", "text": "First officer remarks 'that is weird with no lights'; the captain replies 'yeah' and the takeoff continues.", "factors": ["inadequate_monitoring", "dark_night"], "kind": "crew_speech" },
+    { "t": 26, "clock": "06:06:31", "phase": "takeoff", "actor": "FO", "text": "'One hundred knots' callout.", "state": { "ias": 100 }, "kind": "crew_speech" },
+    { "t": 28, "clock": "06:06:33", "phase": "takeoff", "actor": "CAPT", "text": "Captain calls 'V one, rotate' and then 'whoa' as the runway end approaches.", "factors": ["runway_overrun"], "kind": "crew_speech" },
+    { "t": 29, "clock": null, "phase": "takeoff", "actor": "SYS", "text": "The airplane runs off the end of runway 26 at about 137 knots, strikes an earthen berm and briefly becomes airborne.", "state": { "ias": 137 }, "factors": ["runway_overrun"], "kind": "outcome" },
+    { "t": 31, "clock": "06:06:36", "phase": "takeoff", "actor": "SYS", "text": "The airplane strikes the airport perimeter fence and trees, breaks apart and catches fire; the recording ends.", "factors": ["runway_overrun", "post_impact_fire"], "kind": "outcome" },
+    { "t": 120, "clock": null, "phase": "ground", "actor": "OTHER", "text": "Airport police and rescue personnel reach the wreckage and pull the first officer, the only survivor, from the cockpit.", "kind": "env" }
+  ],
+  "cvr": [
+    { "t": 19, "clock": "06:06:24", "speaker": "FO", "text": "that is weird with no lights.", "translation": null },
+    { "t": 20, "clock": null, "speaker": "CAPT", "text": "yeah.", "translation": null },
+    { "t": 26, "clock": "06:06:31", "speaker": "FO", "text": "one hundred knots.", "translation": null },
+    { "t": 28, "clock": "06:06:33", "speaker": "CAPT", "text": "V one, rotate.", "translation": null },
+    { "t": 29, "clock": null, "speaker": "CAPT", "text": "whoa.", "translation": null }
+  ],
+  "recommendations": [
+    { "id": null, "to": "FAA", "text": "Require that all runway crossings be authorized only by a specific air traffic control clearance and prohibit taxi clearances that cross a runway without explicit instruction.", "status": "closed_acceptable", "outcome": "FAA revised ATC procedures in 2010 so that explicit clearance is required for every runway crossing.", "trigger_factors": ["regulatory_oversight", "wrong_runway"] },
+    { "id": null, "to": "FAA", "text": "Require operators to establish procedures for flight crews to confirm the assigned runway, including verification of runway heading and identification, before starting the takeoff roll.", "status": "closed_acceptable", "outcome": "Operators added a line-up check of runway identification and heading to before-takeoff procedures; FAA issued guidance on wrong-runway takeoffs.", "trigger_factors": ["inadequate_monitoring", "procedural_noncompliance"] },
+    { "id": null, "to": "FAA", "text": "Require cockpit moving map displays or automatic runway awareness systems that alert crews when they are not on the intended runway.", "status": "unknown", "outcome": "Runway awareness and advisory systems were widely but voluntarily adopted.", "trigger_factors": ["loss_of_situational_awareness", "wrong_runway"] },
+    { "id": null, "to": "FAA", "text": "Ensure that runway and taxiway construction changes are promptly reflected in airport diagrams and NOTAMs and that closed or unlit runways are clearly marked.", "status": "unknown", "outcome": null, "trigger_factors": ["airport_infrastructure"] },
+    { "id": null, "to": "FAA", "text": "Ensure air traffic control facilities are staffed so that a controller is not required to handle both tower and radar positions alone during periods of activity.", "status": "closed_acceptable", "outcome": "FAA revised staffing at Lexington and similar facilities to provide two controllers during overnight and early morning hours.", "trigger_factors": ["atc_workload_staffing"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "FAA required explicit ATC clearance for every runway crossing from June 2010, ending taxi clearances that implied crossing authority.",
+    "Airlines added runway verification ('line-up check') steps to before-takeoff procedures, confirming runway identification and heading.",
+    "Runway awareness and advisory systems and electronic moving map displays were adopted across much of the U.S. airline fleet.",
+    "The FAA revised controller staffing guidance to ensure two controllers are on duty when tower and radar positions are both active, and reinforced sterile cockpit compliance through Safety Alerts for Operators."
+  ],
+  "related": ["tenerife", "spanair5022", "airflorida90", "korean801"],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0705.pdf",
+    "https://www.ntsb.gov"
+  ],
+  "extraction": {
+    "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+    "notes": [
+      "The clock for the start of the takeoff roll (t0) is estimated at about 06:06:05 EDT; the report's CVR times for 'that is weird with no lights' (06:06:24), 'one hundred knots' (06:06:31), 'V one, rotate' (06:06:33) and the end of recording (about 06:06:36) are used to place later events. t0 may be off by up to 10 seconds.",
+      "The takeoff clearance time 06:05:15 is as recalled from the report and may be off by a few seconds.",
+      "Speed at the runway end (about 137 knots) is from the report's performance study.",
+      "Aircraft MSN not given because it is not recalled with confidence."
+    ]
+  }
+}

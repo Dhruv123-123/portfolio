@@ -28,6 +28,34 @@
     "leftMenuType": "default"
   },
   {
+    "id": "blackbox",
+    "title": {
+      "en": "Blackbox",
+      "fr": "Blackbox"
+    },
+    "subtitle": {
+      "en": "Aviation accident knowledge graph, FDR replay, timelines",
+      "fr": "Graphe d'accidents aériens, replay FDR, chronologies"
+    },
+    "imgSrc": "/img/icons/blackbox/blackbox-icon-lg.svg",
+    "onDesktop": true,
+    "resizable": true,
+    "windowsHeaderLogo": false,
+    "isSearchVisible": false,
+    "headerPosition": "left",
+    "headerToolsId": "",
+    "menuHeaderItemsId": "none",
+    "iconSrc": "/img/icons/blackbox/blackbox-icon-sm.svg",
+    "initPositionX": 90,
+    "initPositionY": 40,
+    "initWidth": 1180,
+    "initHeight": 720,
+    "minWidth": 640,
+    "minHeight": 420,
+    "component": "Blackbox",
+    "leftMenuType": ""
+  },
+  {
     "id": "contact",
     "title": {
       "en": "Contact me",

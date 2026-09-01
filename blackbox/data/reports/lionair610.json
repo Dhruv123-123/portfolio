@@ -1,0 +1,103 @@
+{
+  "id": "lionair610",
+  "title": "Lion Air 610",
+  "flight_number": "JT610",
+  "date": "2018-10-29",
+  "time_reference": "UTC",
+  "t0": "2018-10-28T23:20:00Z",
+  "agency": "KNKT",
+  "agencies": [
+    { "code": "KNKT", "name": "Komite Nasional Keselamatan Transportasi", "country": "Indonesia", "role": "lead",
+      "report_id": "KNKT.18.10.35.04", "report_title": "Final Aircraft Accident Investigation Report, PT. Lion Mentari Airlines Boeing 737-8 (MAX) PK-LQP", "report_date": "2019-10-25",
+      "url": "https://knkt.go.id" },
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative",
+      "report_id": null, "report_title": null, "report_date": null, "url": "https://www.ntsb.gov" }
+  ],
+  "aircraft": { "type": "Boeing 737-8 MAX", "family": "737 MAX", "manufacturer": "Boeing", "registration": "PK-LQP", "msn": "43000", "engines": "CFM LEAP-1B" },
+  "operator": "Lion Air (PT Lion Mentari Airlines)",
+  "route": { "from": "WIII", "from_name": "Jakarta Soekarno-Hatta", "to": "WIPK", "to_name": "Pangkal Pinang Depati Amir" },
+  "location": { "name": "Java Sea off Karawang, West Java", "country": "Indonesia", "lat": -5.81, "lon": 107.13 },
+  "phase": "climb",
+  "occupants": 189, "fatalities": 189, "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "A replacement angle-of-attack sensor fitted the previous day had been miscalibrated by about 21 degrees during repair, and the same fault had produced a stick shaker and repeated automatic nose-down trim on the previous flight, which the crew countered with the trim cutout switches but did not fully record. On flight 610 the stick shaker activated at rotation and, after flap retraction, MCAS repeatedly trimmed the stabilizer nose down. The captain countered with electric trim for several minutes, then handed control to the first officer, whose shorter trim inputs did not keep up; the aircraft dived into the Java Sea about 12 minutes after takeoff.",
+  "probable_cause": "The KNKT identified nine contributing factors: the MCAS design's reliance on a single AOA sensor and the assumptions made about pilot response during development; the AOA sensor that had been miscalibrated during repair by Xtra Aerospace; the installation test that failed to detect the miscalibration; the AOA DISAGREE alert that was not functional on the aircraft; the absence of MCAS information in the flight manuals and pilot training; the incomplete documentation of the previous flight's defects, which meant the aircraft was dispatched with an unresolved problem; the multiple alerts, repetitive MCAS activations and distractions which were not effectively managed; and the crew's ineffective communication and coordination, in the context of the first officer's demonstrated difficulty in handling the aircraft.",
+  "factors": [
+    { "id": "maintenance_error", "role": "initiating", "evidence": "The left AOA sensor installed at Denpasar on 28 October had been miscalibrated by about 21 degrees during repair at Xtra Aerospace, and the post-installation test did not detect the bias." },
+    { "id": "aoa_sensor_failure", "role": "initiating", "evidence": "From rotation the FDR recorded a left-right AOA difference of about 20 degrees that persisted to the end of the recording." },
+    { "id": "known_defect_unresolved", "role": "latent", "evidence": "The previous flight (Denpasar to Jakarta) had experienced the same stick shaker and automatic trim; the crew wrote up IAS and ALT disagree and the feel differential pressure light but not the stick shaker or trim runaway, so the aircraft was dispatched." },
+    { "id": "stick_shaker_pusher", "role": "contributing", "evidence": "The left stick shaker activated during rotation and continued for most of the flight." },
+    { "id": "unreliable_airspeed", "role": "contributing", "evidence": "The erroneous AOA corrupted the left-side airspeed and altitude, producing IAS DISAGREE and ALT DISAGREE indications." },
+    { "id": "mcas_activation", "role": "contributing", "evidence": "After flap retraction the FDR recorded repeated automatic nose-down stabilizer trim, more than 20 activations, which stopped only while the flaps were re-extended." },
+    { "id": "design_deficiency", "role": "latent", "evidence": "MCAS relied on a single AOA input and could repeatedly command stabilizer motion; the report cited the design and development assumptions about pilot reaction as contributing." },
+    { "id": "certification_shortfall", "role": "latent", "evidence": "The report found that the assumptions used in MCAS's functional hazard assessment about pilot recognition and response were not consistent with the accident crew's actual response." },
+    { "id": "warning_system_deficiency", "role": "latent", "evidence": "The AOA DISAGREE alert was not functional on the aircraft because the optional AOA indicator had not been purchased, a fact Boeing had not communicated to operators." },
+    { "id": "manufacturer_communication", "role": "latent", "evidence": "MCAS was not described in the flight crew operations manual or training and the non-functional AOA DISAGREE alert had not been disclosed." },
+    { "id": "inadequate_training", "role": "contributing", "evidence": "The flight crew had received no information or training on MCAS and were expected to treat its effects as a runaway stabilizer." },
+    { "id": "crm_breakdown", "role": "contributing", "evidence": "The report found ineffective communication and coordination between the pilots, including when control was transferred to the first officer without a clear briefing of the trim problem." },
+    { "id": "high_workload", "role": "contributing", "evidence": "Multiple alerts, repetitive MCAS activations, ATC communication and checklist reading distracted the crew and were not effectively managed." },
+    { "id": "loss_of_pilot_control_authority", "role": "contributing", "evidence": "The first officer's shorter nose-up trim inputs did not fully counter the automatic nose-down trim and the stabilizer moved toward full nose down; aft column force could not stop the dive." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft entered a steep dive and struck the sea at high speed about 12 minutes after takeoff." }
+  ],
+  "chain": [
+    ["maintenance_error", "aoa_sensor_failure"],
+    ["known_defect_unresolved", "aoa_sensor_failure"],
+    ["aoa_sensor_failure", "stick_shaker_pusher"],
+    ["aoa_sensor_failure", "unreliable_airspeed"],
+    ["aoa_sensor_failure", "mcas_activation"],
+    ["design_deficiency", "mcas_activation"],
+    ["certification_shortfall", "design_deficiency"],
+    ["manufacturer_communication", "inadequate_training"],
+    ["warning_system_deficiency", "high_workload"],
+    ["stick_shaker_pusher", "high_workload"],
+    ["inadequate_training", "crm_breakdown"],
+    ["high_workload", "crm_breakdown"],
+    ["crm_breakdown", "loss_of_pilot_control_authority"],
+    ["mcas_activation", "loss_of_pilot_control_authority"],
+    ["loss_of_pilot_control_authority", "loss_of_control_inflight"]
+  ],
+  "events": [
+    { "t": -86400, "clock": null, "phase": "ground", "actor": "GND", "text": "At Denpasar on 28 October the left AOA sensor is replaced with a unit repaired by Xtra Aerospace; the installation test does not reveal a 21-degree calibration bias.", "factors": ["maintenance_error"], "kind": "crew_action" },
+    { "t": -43200, "clock": null, "phase": "climb", "actor": "SYS", "text": "On the previous flight (Denpasar to Jakarta) the stick shaker activates at rotation and automatic nose-down trim occurs after flap retraction; the crew set the stabilizer trim cutout switches and continue to Jakarta, recording IAS/ALT DISAGREE and the feel differential pressure light but not the stick shaker or trim.", "factors": ["known_defect_unresolved", "aoa_sensor_failure"], "kind": "system" },
+    { "t": 0, "clock": "23:20", "phase": "takeoff", "actor": "SYS", "text": "Takeoff from runway 25L; during rotation the left stick shaker activates and the FDR records a left-right AOA difference of about 20 degrees.", "factors": ["aoa_sensor_failure", "stick_shaker_pusher"], "kind": "warning" },
+    { "t": 82, "clock": "23:21:22", "phase": "initial_climb", "actor": "FO", "text": "First officer asks ATC to confirm the aircraft's altitude, then at 23:21:28 reports a flight control problem.", "factors": ["unreliable_airspeed"], "kind": "atc" },
+    { "t": 113, "clock": "23:21:53", "phase": "climb", "actor": "PF", "text": "Flaps retracted; shortly afterwards the FDR records automatic nose-down trim for about 10 seconds followed by crew nose-up electric trim.", "factors": ["mcas_activation"], "kind": "crew_action" },
+    { "t": 151, "clock": "23:22:31", "phase": "climb", "actor": "PF", "text": "Flaps re-extended to 5; the automatic nose-down trim stops.", "factors": [], "kind": "crew_action" },
+    { "t": 190, "clock": null, "phase": "climb", "actor": "FO", "text": "First officer asks ATC for the aircraft's speed as displayed on radar and requests a holding point; ATC assigns altitudes and headings while the crew work the problem.", "factors": ["high_workload"], "kind": "atc" },
+    { "t": 318, "clock": "23:25:18", "phase": "climb", "actor": "PF", "text": "Flaps retracted to 0 again; automatic nose-down trim resumes and the captain repeatedly counters each activation with nose-up electric trim, more than 20 cycles.", "factors": ["mcas_activation", "high_workload"], "kind": "system" },
+    { "t": 400, "clock": null, "phase": "climb", "actor": "CAPT", "text": "Captain asks the first officer to run the non-normal checklist for airspeed unreliable; the checklist reading is interrupted by ATC communications.", "factors": ["high_workload", "crm_breakdown"], "kind": "crew_action" },
+    { "t": 650, "clock": null, "phase": "climb", "actor": "CAPT", "text": "Captain hands control to the first officer without describing the trim problem, and takes over the radio and checklist.", "factors": ["crm_breakdown"], "kind": "crew_action" },
+    { "t": 680, "clock": null, "phase": "climb", "actor": "FO", "text": "The first officer's nose-up trim inputs are shorter than the automatic nose-down inputs; the stabilizer moves progressively nose down and the aircraft begins to descend.", "factors": ["loss_of_pilot_control_authority", "mcas_activation"], "kind": "crew_action" },
+    { "t": 700, "clock": null, "phase": "descent", "actor": "FO", "text": "First officer reports he cannot hold the aircraft up; both pilots pull on the control columns.", "factors": ["loss_of_pilot_control_authority"], "kind": "crew_speech" },
+    { "t": 714, "clock": "23:31:54", "phase": "descent", "actor": "ENV", "text": "End of FDR recording; the aircraft strikes the Java Sea at high speed in a steep nose-down attitude.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "Boeing / FAA", "text": "Redesign MCAS so that it is not vulnerable to a single erroneous AOA input and consider the effect of all flight-deck alerts and indications on flight-crew recognition and response.", "status": "closed_acceptable", "outcome": "MCAS was redesigned to compare both AOA sensors and to limit activation and authority; FAA AD 2020-24-02.", "trigger_factors": ["mcas_activation", "design_deficiency"] },
+    { "id": null, "to": "FAA", "text": "Review the assumptions used in the aircraft certification process about pilot recognition and reaction time to flight control system failures.", "status": "unknown", "outcome": null, "trigger_factors": ["certification_shortfall"] },
+    { "id": null, "to": "Lion Air", "text": "Improve the reporting of technical defects by flight crews and the hazard identification and risk assessment of reported problems so that aircraft are not dispatched with unresolved defects.", "status": "unknown", "outcome": null, "trigger_factors": ["known_defect_unresolved"] },
+    { "id": null, "to": "Xtra Aerospace / FAA", "text": "Ensure that AOA sensor repair and calibration procedures and their oversight prevent the release of miscalibrated units.", "status": "closed_acceptable", "outcome": "The FAA revoked Xtra Aerospace's repair station certificate in October 2019.", "trigger_factors": ["maintenance_error"] },
+    { "id": null, "to": "Lion Air", "text": "Improve crew resource management training, including the handover of control and the management of multiple simultaneous alerts.", "status": "unknown", "outcome": null, "trigger_factors": ["crm_breakdown", "high_workload"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "FAA Emergency Airworthiness Directive 2018-23-51 (November 2018) reminded 737 MAX crews of the runaway stabilizer procedure for erroneous AOA conditions.",
+    "After the Ethiopian Airlines 302 accident the 737 MAX was grounded worldwide until MCAS was redesigned and recertified in November 2020.",
+    "The FAA revoked the repair station certificate of Xtra Aerospace, which had repaired the accident AOA sensor."
+  ],
+  "related": ["ethiopian302", "birgenair301", "aeroperu603"],
+  "fdr": null,
+  "sources": [
+    "https://knkt.go.id",
+    "https://www.ntsb.gov"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+    "notes": [
+      "The accident date is 29 October 2018 local time (WIB); in UTC the flight departed at 23:20 on 28 October, which is why t0 is on 2018-10-28.",
+      "t0 is the departure time to the minute as stated in the report; events without a clock string are placed by approximate offset from the report narrative.",
+      "The count of MCAS activations (more than 20) is from the report narrative; individual activation times are not listed.",
+      "Recommendation ids are not given because the KNKT numbering was not verified.",
+      "The report contains a CVR transcript, but no lines are quoted here because exact wording was not verified."
+    ] }
+}

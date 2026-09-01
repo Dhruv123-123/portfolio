@@ -1,0 +1,79 @@
+{
+  "id": "united811",
+  "title": "United Airlines 811",
+  "flight_number": "UA811",
+  "date": "1989-02-24",
+  "time_reference": "HST (local)",
+  "t0": "1989-02-24T12:09:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+      "report_id": "NTSB/AAR-92/02", "report_title": "Explosive Decompression - Loss of Cargo Door in Flight, United Airlines Flight 811, Boeing 747-122, N4713U, Honolulu, Hawaii, February 24, 1989 (revised report)", "report_date": "1992-03-18",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9202.pdf" }
+  ],
+  "aircraft": { "type": "Boeing 747-122", "family": "747", "manufacturer": "Boeing", "registration": "N4713U", "msn": null, "engines": "Pratt & Whitney JT9D-7A" },
+  "operator": "United Airlines",
+  "route": { "from": "PHNL", "from_name": "Honolulu International", "to": "NZAA", "to_name": "Auckland" },
+  "location": { "name": "Pacific Ocean south of Honolulu, Hawaii; returned to Honolulu International Airport", "country": "USA", "lat": 21.32, "lon": -157.92 },
+  "phase": "climb",
+  "occupants": 355, "fatalities": 9, "injuries_serious": null,
+  "damage": "substantial",
+  "category": "SCF-NP",
+  "summary": "Climbing through about 22,000 ft after a night departure from Honolulu, the forward lower lobe cargo door of the 747 swung open and tore away, causing an explosive decompression that ripped out a section of the cabin floor and fuselage. Nine passengers were lost from the aircraft, and debris damaged engines 3 and 4, which were shut down. The crew returned to Honolulu and landed safely. After the door was recovered from the seabed in 1990 the NTSB revised its findings to a faulty switch or wiring that drove the latches open.",
+  "probable_cause": "The sudden opening of the forward lower lobe cargo door in flight and the subsequent explosive decompression. The door opening was attributed to a faulty switch or wiring in the door control system which permitted electrical actuation of the door latches toward the unlatched position after initial door closure and before takeoff. Contributing was a deficiency in the design of the cargo door locking mechanisms, which made them susceptible to deformation, allowing the door to become unlatched after being properly latched and locked. Also contributing was a lack of timely corrective actions by Boeing and the FAA following a 1987 cargo door opening incident on a Pan Am B-747.",
+  "factors": [
+    { "id": "wiring_failure", "role": "initiating", "evidence": "A faulty switch or wiring in the door control system allowed the latch actuators to be driven toward the unlatched position after the door had been closed." },
+    { "id": "design_deficiency", "role": "latent", "evidence": "The cargo door locking sectors were susceptible to deformation and could not prevent the latch cams from being back-driven open." },
+    { "id": "known_defect_unresolved", "role": "latent", "evidence": "A 1987 Pan Am 747 cargo door opening incident had shown the vulnerability but corrective actions by Boeing and the FAA were not timely." },
+    { "id": "regulatory_oversight", "role": "latent", "evidence": "The FAA's airworthiness directive after the Pan Am incident allowed up to two years for compliance." },
+    { "id": "cargo_door_failure", "role": "contributing", "evidence": "The forward lower lobe cargo door opened in flight and separated from the aircraft." },
+    { "id": "explosive_decompression", "role": "contributing", "evidence": "The door failure caused an explosive decompression that removed part of the fuselage side and cabin floor, ejecting nine passengers." },
+    { "id": "engine_failure", "role": "contributing", "evidence": "Debris from the fuselage damaged engines 3 and 4, which had to be shut down." },
+    { "id": "dark_night", "role": "contributing", "evidence": "The event occurred at about 02:09 local time." },
+    { "id": "emergency_landing", "role": "outcome", "evidence": "The crew descended, dumped fuel and landed the damaged aircraft back at Honolulu on two engines." }
+  ],
+  "chain": [
+    ["design_deficiency", "cargo_door_failure"],
+    ["known_defect_unresolved", "design_deficiency"],
+    ["regulatory_oversight", "known_defect_unresolved"],
+    ["wiring_failure", "cargo_door_failure"],
+    ["cargo_door_failure", "explosive_decompression"],
+    ["explosive_decompression", "engine_failure"],
+    ["engine_failure", "emergency_landing"],
+    ["dark_night", "emergency_landing"]
+  ],
+  "events": [
+    { "t": -3600, "clock": null, "phase": "ground", "actor": "GND", "text": "Forward lower lobe cargo door is closed and indicated latched and locked before departure; the latches are subsequently driven toward open by a fault in the door control electrics.", "factors": ["wiring_failure", "design_deficiency"], "kind": "system" },
+    { "t": -1020, "clock": "01:52", "phase": "takeoff", "actor": "CAPT", "text": "Flight 811 departs Honolulu for Auckland with 337 passengers and 18 crew.", "kind": "crew_action" },
+    { "t": -300, "clock": null, "phase": "climb", "actor": "CAPT", "text": "Crew keep the seat belt sign on while deviating around thunderstorms during the climb.", "kind": "crew_action" },
+    { "t": 0, "clock": "02:09", "phase": "climb", "actor": "SYS", "text": "Climbing through about 22,000 ft the forward cargo door swings open and separates, tearing away a section of the fuselage and cabin floor; explosive decompression follows.", "state": { "alt": 22000 }, "factors": ["cargo_door_failure", "explosive_decompression"], "kind": "system" },
+    { "t": 2, "clock": null, "phase": "climb", "actor": "ENV", "text": "Nine passengers and their seats are ejected from the aircraft; cabin debris strikes the right wing and engines.", "factors": ["explosive_decompression"], "kind": "outcome" },
+    { "t": 20, "clock": null, "phase": "descent", "actor": "SYS", "text": "Engine No. 3 suffers foreign object damage and is shut down; engine No. 4 subsequently shows fire indications and is also shut down.", "factors": ["engine_failure"], "kind": "system" },
+    { "t": 40, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Crew begin an emergency descent, don oxygen masks and declare an emergency to Honolulu Center, requesting a return.", "kind": "crew_action" },
+    { "t": 300, "clock": null, "phase": "descent", "actor": "FE", "text": "Flight engineer manages fuel dumping to reduce landing weight while the crew assess control and flap damage.", "kind": "crew_action" },
+    { "t": 900, "clock": null, "phase": "descent", "actor": "CABIN", "text": "Cabin crew move passengers away from the damaged area and prepare the cabin for an emergency landing.", "kind": "crew_action" },
+    { "t": 1500, "clock": "02:34", "phase": "landing", "actor": "CAPT", "text": "Aircraft lands on runway 8L at Honolulu on two engines with flaps only partially extended.", "factors": ["emergency_landing"], "kind": "outcome" },
+    { "t": 1560, "clock": null, "phase": "ground", "actor": "CABIN", "text": "Emergency evacuation completed on the runway; injuries occur among passengers and crew but there are no further fatalities.", "kind": "crew_action" },
+    { "t": 40000000, "clock": null, "phase": "unknown", "actor": "OTHER", "text": "In 1990 the cargo door is recovered from the Pacific seabed by the US Navy, leading the NTSB to revise the probable cause from improper latching to an electrical fault in the door system.", "factors": ["wiring_failure"], "kind": "env" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "FAA", "text": "Require modification of 747 cargo door latching and locking mechanisms so that the locks positively prevent the latch cams from being driven open, and require inspection of door electrical wiring and switches.", "status": "closed_acceptable", "outcome": "Airworthiness directives required steel locking sectors and other door modifications on the 747 fleet.", "trigger_factors": ["design_deficiency", "wiring_failure", "cargo_door_failure"] },
+    { "id": null, "to": "FAA", "text": "Evaluate cargo door designs on other transport aircraft for similar vulnerability to electrical faults and lock deformation.", "status": "unknown", "outcome": null, "trigger_factors": ["design_deficiency"] },
+    { "id": null, "to": "FAA", "text": "Act promptly on airworthiness issues revealed by in-service incidents rather than allowing long compliance times.", "status": "unknown", "outcome": null, "trigger_factors": ["known_defect_unresolved", "regulatory_oversight"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "747 cargo doors were modified with stronger locking sectors and changes to the door control electrical system.",
+    "The NTSB revised its report in 1992 after the door was recovered, an unusual reopening of an investigation prompted in part by the parents of a victim who conducted their own inquiry."
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9202.pdf", "https://www.ntsb.gov"],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+    "notes": ["t0 is set to about 02:09 HST, the approximate time of the door separation; the departure (about 01:52) and landing (about 02:34) times are approximate; other offsets are estimates.",
+              "Altitude at the time of the decompression is recalled as between 22,000 and 23,000 ft.",
+              "The final event (door recovery in 1990) is included as a note with a nominal large t value outside the flight sequence.",
+              "Occupants 355 (337 passengers, 18 crew); the number of injured is not recalled reliably.",
+              "Recommendation numbers not recalled and are left null."] }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "usair427",
+  "title": "USAir 427",
+  "flight_number": "US427",
+  "date": "1994-09-08",
+  "time_reference": "EDT (local)",
+  "t0": "1994-09-08T23:02:57Z",
+  "agency": "NTSB",
+  "agencies": [
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+      "report_id": "NTSB/AAR-99/01", "report_title": "Uncontrolled Descent and Collision With Terrain, USAir Flight 427, Boeing 737-300, N513AU, Near Aliquippa, Pennsylvania, September 8, 1994", "report_date": "1999-03-24",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9901.pdf" }
+  ],
+  "aircraft": { "type": "Boeing 737-3B7", "family": "737 Classic", "manufacturer": "Boeing", "registration": "N513AU", "msn": null, "engines": "CFM56-3B2" },
+  "operator": "USAir",
+  "route": { "from": "KORD", "from_name": "Chicago O'Hare", "to": "KPIT", "to_name": "Pittsburgh International" },
+  "location": { "name": "Hopewell Township near Aliquippa, Pennsylvania, about 6 miles northwest of Pittsburgh International Airport", "country": "USA", "lat": 40.60, "lon": -80.30 },
+  "phase": "approach",
+  "occupants": 132, "fatalities": 132, "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Descending through 6,000 ft on vectors for Pittsburgh, the 737 encountered the wake of a 727 ahead and rolled left. The main rudder power control unit servo valve jammed and the rudder moved to its blowdown limit opposite to the pilots' input; below the crossover airspeed the ailerons could not counter it. The aircraft rolled through inverted and dived into a ravine 28 seconds later, killing all 132 on board. The four-and-a-half-year investigation, together with United 585 and Eastwind 517, led to a redesign of the 737 rudder system.",
+  "probable_cause": "A loss of control of the airplane resulting from the movement of the rudder surface to its blowdown limit. The rudder surface most likely deflected in a direction opposite to that commanded by the pilots as a result of a jam of the main rudder power control unit servo valve secondary slide to the servo valve housing offset from its neutral position and overtravel of the primary slide.",
+  "factors": [
+    { "id": "rudder_hardover", "role": "initiating", "evidence": "The rudder moved to its blowdown limit, most likely reversed relative to the pilots' pedal input, after a jam in the main rudder PCU dual servo valve." },
+    { "id": "flight_control_failure", "role": "contributing", "evidence": "The jam of the servo valve secondary slide and overtravel of the primary slide caused an uncommanded rudder deflection." },
+    { "id": "design_deficiency", "role": "latent", "evidence": "The 737 main rudder PCU dual concentric servo valve could jam and reverse under thermal and mechanical conditions, and the rudder system lacked redundancy." },
+    { "id": "certification_shortfall", "role": "latent", "evidence": "The NTSB found the 737 rudder design did not adequately consider the possibility of a servo valve jam producing a reversal, and that certification standards did not require reliably recoverable rudder failures." },
+    { "id": "startle_effect", "role": "contributing", "evidence": "The crew were surprised by the wake encounter and roll and did not recognise a rudder malfunction in the seconds available." },
+    { "id": "inadequate_training", "role": "latent", "evidence": "Pilots were not trained to recognise or recover from a rudder reversal or on the crossover airspeed at which roll control cannot overcome full rudder." },
+    { "id": "loss_of_pilot_control_authority", "role": "contributing", "evidence": "Below the crossover airspeed at flaps 1 the ailerons could not counter the full rudder deflection." },
+    { "id": "stick_shaker_pusher", "role": "contributing", "evidence": "The stick shaker activated as the aircraft rolled over and the pilots pulled back on the column." },
+    { "id": "aerodynamic_stall", "role": "contributing", "evidence": "Column back pressure during the upset stalled the aircraft, deepening the loss of control." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft rolled through inverted, pitched steeply nose down and struck the ground about 28 seconds after the upset began." }
+  ],
+  "chain": [
+    ["design_deficiency", "flight_control_failure"],
+    ["certification_shortfall", "design_deficiency"],
+    ["flight_control_failure", "rudder_hardover"],
+    ["rudder_hardover", "loss_of_pilot_control_authority"],
+    ["startle_effect", "loss_of_control_inflight"],
+    ["inadequate_training", "startle_effect"],
+    ["loss_of_pilot_control_authority", "loss_of_control_inflight"],
+    ["stick_shaker_pusher", "aerodynamic_stall"],
+    ["aerodynamic_stall", "loss_of_control_inflight"]
+  ],
+  "events": [
+    { "t": -120, "clock": null, "phase": "descent", "actor": "ATC", "text": "Pittsburgh approach vectors the flight for runway 28R, sequenced about four miles behind a Delta 727 that is also descending.", "kind": "atc" },
+    { "t": -60, "clock": null, "phase": "descent", "actor": "SYS", "text": "Aircraft levels at 6,000 ft at about 190 knots with flaps 1, autopilot engaged.", "state": { "alt": 6000, "ias": 190 }, "kind": "system" },
+    { "t": 0, "clock": "19:02:57", "phase": "approach", "actor": "ENV", "text": "Aircraft encounters the wake vortex of the 727 and rolls left; a thump is heard on the CVR and the crew exclaim in surprise.", "factors": ["startle_effect"], "kind": "env" },
+    { "t": 3, "clock": null, "phase": "approach", "actor": "SYS", "text": "The rudder moves to its left blowdown limit, most likely reversed relative to the pilots' right rudder input, following a jam in the main rudder PCU servo valve.", "factors": ["rudder_hardover", "flight_control_failure"], "kind": "system" },
+    { "t": 4, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Captain tells the first officer to hang on; the autopilot disconnects and the roll continues left despite right wheel.", "factors": ["loss_of_pilot_control_authority"], "kind": "crew_speech" },
+    { "t": 7, "clock": null, "phase": "approach", "actor": "SYS", "text": "Left bank exceeds 70 degrees and the nose drops; the crew apply full right wheel and pull back on the control column.", "state": { "alt": 5900 }, "factors": ["loss_of_pilot_control_authority", "inadequate_training"], "kind": "system" },
+    { "t": 10, "clock": null, "phase": "descent", "actor": "SYS", "text": "Stick shaker activates as the angle of attack increases under the column back pressure.", "factors": ["stick_shaker_pusher", "aerodynamic_stall"], "kind": "warning" },
+    { "t": 12, "clock": null, "phase": "descent", "actor": "FO", "text": "First officer transmits an emergency call to approach control.", "kind": "crew_speech" },
+    { "t": 15, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Captain repeatedly calls to pull as the aircraft rolls through inverted and the nose falls to about 80 degrees down.", "factors": ["loss_of_control_inflight", "aerodynamic_stall"], "kind": "crew_speech" },
+    { "t": 20, "clock": null, "phase": "descent", "actor": "SYS", "text": "Aircraft accelerates in a steep dive, load factor near 4 g, with the rudder still fully deflected.", "factors": ["loss_of_control_inflight"], "kind": "system" },
+    { "t": 26, "clock": "19:03:23", "phase": "descent", "actor": "ENV", "text": "Aircraft strikes a wooded hillside near Aliquippa nose down at about 300 knots; all 132 on board are killed.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "FAA", "text": "Require Boeing to redesign the 737 main rudder power control unit so that no single jam or failure can produce a rudder reversal or hardover, and mandate retrofit of the fleet.", "status": "closed_acceptable", "outcome": "The 737 rudder PCU was redesigned with a new servo valve and later an independent standby system; the fleet was retrofitted.", "trigger_factors": ["rudder_hardover", "design_deficiency", "flight_control_failure"] },
+    { "id": null, "to": "FAA", "text": "Require air carriers to train pilots on recognition of and recovery from uncommanded rudder deflections, including the concept of crossover airspeed and increasing airspeed before rudder events at low speed.", "status": "closed_acceptable", "outcome": "Airlines adopted 737 jammed or restricted rudder procedures and unusual attitude training; minimum manoeuvring speeds were raised at flaps 1.", "trigger_factors": ["inadequate_training", "loss_of_pilot_control_authority"] },
+    { "id": null, "to": "FAA", "text": "Require flight data recorders on 737s and other transport aircraft to record more parameters, including rudder pedal and surface positions and control wheel forces.", "status": "closed_acceptable", "outcome": "FDR parameter requirements were expanded by rulemaking in 1997.", "trigger_factors": ["flight_control_failure"] },
+    { "id": null, "to": "FAA", "text": "Revise transport category certification standards so that flight control system failures producing uncommanded surface movement are shown to be recoverable.", "status": "unknown", "outcome": null, "trigger_factors": ["certification_shortfall"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Redesign of the Boeing 737 rudder power control unit servo valve and later a redundant rudder system, retrofitted across the world fleet.",
+    "Expanded flight data recorder parameter requirements for airliners.",
+    "Introduction of jammed/restricted rudder and upset recovery training and higher flaps 1 manoeuvring speeds on the 737."
+  ],
+  "related": ["alaska261", "americaneagle4184"],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9901.pdf", "https://www.ntsb.gov"],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+    "notes": ["t0 is the wake encounter at 19:02:57 EDT and impact at about 19:03:23; intermediate offsets are approximate.",
+              "The related accidents United 585 (Colorado Springs, 1991) and Eastwind 517 (Richmond, 1996) share the rudder PCU mechanism but are not in the record set; the NTSB revised its United 585 findings in 2001 on the basis of this investigation.",
+              "Crew speech is paraphrased rather than quoted; the stall during the upset and approximate 4 g and 300 knot impact values are recalled from the report.",
+              "Recommendation numbers not recalled and are left null."] }
+}

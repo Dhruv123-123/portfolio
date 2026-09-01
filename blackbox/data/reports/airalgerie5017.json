@@ -1,0 +1,91 @@
+{
+  "id": "airalgerie5017",
+  "title": "Air Algérie 5017 (Swiftair)",
+  "flight_number": "AH5017",
+  "date": "2014-07-24",
+  "time_reference": "UTC",
+  "t0": "2014-07-24T01:38:00Z",
+  "agency": "CE-MALI",
+  "agencies": [
+    { "code": "CE-MALI", "name": "Commission d'Enquête sur l'accident du vol AH5017", "country": "Mali", "role": "lead",
+      "report_id": null, "report_title": "Rapport final - Accident survenu le 24 juillet 2014 au MD-83 immatriculé EC-LTV exploité par Swiftair S.A. (vol AH5017)", "report_date": "2016-04-22",
+      "url": "https://bea.aero/" },
+    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses pour la sécurité de l'aviation civile", "country": "France", "role": "delegated",
+      "report_id": null, "report_title": null, "report_date": null, "url": "https://bea.aero/" },
+    { "code": "CIAIAC", "name": "Comisión de Investigación de Accidentes e Incidentes de Aviación Civil", "country": "Spain", "role": "accredited_representative" },
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "McDonnell Douglas MD-83", "family": "MD-80", "manufacturer": "McDonnell Douglas", "registration": "EC-LTV", "msn": "53190", "engines": "Pratt & Whitney JT8D-219" },
+  "operator": "Swiftair (operated for Air Algérie)",
+  "route": { "from": "DFFD", "from_name": "Ouagadougou", "to": "DAAG", "to_name": "Algiers Houari Boumediene" },
+  "location": { "name": "Near Gossi, Gourma-Rharous region, northern Mali", "country": "Mali", "lat": 15.6, "lon": -1.2 },
+  "phase": "cruise",
+  "occupants": 116, "fatalities": 116, "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "In cruise at FL310 at night, skirting a line of convective cloud, the MD-83 entered ice crystal conditions with engine anti-ice not selected. Ice obstructed the engine inlet pressure (Pt2) sensors, causing the EPR indications to over-read; the autothrottle reduced thrust to hold the target while the autopilot held altitude, and airspeed decayed over several minutes until the aircraft stalled. Recovery was not achieved and the aircraft struck the ground in a steep spiral descent with the loss of all 116 occupants.",
+  "probable_cause": "The accident resulted from the obstruction of the Pt2 pressure sensors by ice crystals while the engine anti-ice system was not activated, leading to erroneous EPR values and a reduction in thrust commanded by the autothrottle, the resulting decrease in speed not being detected by the crew, and the autopilot holding altitude until the aircraft stalled. The crew's late and inappropriate reaction to the buffet and stall, with nose-up inputs and no stall recovery, led to the loss of control. Contributing factors included the crew's inadequate monitoring of flight parameters, the absence of a low-speed warning at the onset, the ambiguity of the engine anti-ice procedures, and the crew's weather avoidance strategy.",
+  "factors": [
+    { "id": "convective_weather", "role": "initiating", "evidence": "The flight was routing along and through the upper part of a large mesoscale convective system over Mali at night." },
+    { "id": "high_altitude_ice_crystals", "role": "initiating", "evidence": "Ice crystals at FL310 in the anvil of the convective system accreted on the engine inlet pressure probes." },
+    { "id": "deicing_inadequate", "role": "contributing", "evidence": "The crew did not activate the engine anti-ice system, which would have heated the Pt2 sensors." },
+    { "id": "engine_instrument_error", "role": "contributing", "evidence": "The obstructed Pt2 sensors caused the EPR indications for both engines to become erroneously high." },
+    { "id": "autothrottle_mode_confusion", "role": "contributing", "evidence": "The autothrottle, in Mach hold, reduced thrust in response to the over-reading EPR, and the crew did not perceive that thrust was decaying." },
+    { "id": "low_energy_state", "role": "contributing", "evidence": "Airspeed fell from about 290 kt to about 200 kt over several minutes while the autopilot maintained FL310 by increasing pitch." },
+    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "Neither pilot noticed the airspeed decay, the decreasing N1 or the increasing pitch attitude." },
+    { "id": "aerodynamic_stall", "role": "outcome", "evidence": "The aircraft stalled at about 1.1 of the initial speed margin; buffet and roll oscillations were followed by autopilot disconnection." },
+    { "id": "inappropriate_stall_recovery", "role": "contributing", "evidence": "The crew's control inputs after the stall were predominantly nose-up and left, with no application of the stall recovery procedure." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft entered a steep, rapidly rolling descent from FL310 and struck the ground about a minute later." },
+    { "id": "manufacturer_communication", "role": "latent", "evidence": "Procedures for using engine anti-ice in icing conditions at cruise, and the effects of Pt2 icing on EPR, were not sufficiently explicit in the operator's documentation." },
+    { "id": "dark_night", "role": "contributing", "evidence": "The flight was at night, with no external visual cues during the upset." }
+  ],
+  "chain": [
+    ["convective_weather", "high_altitude_ice_crystals"],
+    ["deicing_inadequate", "engine_instrument_error"],
+    ["manufacturer_communication", "deicing_inadequate"],
+    ["high_altitude_ice_crystals", "engine_instrument_error"],
+    ["engine_instrument_error", "autothrottle_mode_confusion"],
+    ["autothrottle_mode_confusion", "low_energy_state"],
+    ["inadequate_monitoring", "low_energy_state"],
+    ["low_energy_state", "aerodynamic_stall"],
+    ["aerodynamic_stall", "inappropriate_stall_recovery"],
+    ["dark_night", "inappropriate_stall_recovery"],
+    ["inappropriate_stall_recovery", "loss_of_control_inflight"]
+  ],
+  "events": [
+    { "t": -1260, "clock": "01:17", "phase": "takeoff", "actor": "CAPT", "text": "Flight AH5017 departs Ouagadougou for Algiers with 110 passengers and 6 crew.", "kind": "crew_action" },
+    { "t": -600, "clock": "01:28", "phase": "climb", "actor": "PF", "text": "Crew request a deviation to the left to avoid weather returns; the aircraft continues its climb to FL310.", "factors": ["convective_weather"], "kind": "crew_action" },
+    { "t": -120, "clock": "01:36", "phase": "cruise", "actor": "SYS", "text": "Aircraft level at FL310 at about 290 kt with autopilot and autothrottle engaged in Mach hold; engine anti-ice is off.", "state": { "alt": 31000, "ias": 290 }, "factors": ["deicing_inadequate"], "kind": "system" },
+    { "t": 0, "clock": "01:38", "phase": "cruise", "actor": "ENV", "text": "Aircraft enters the upper part of the convective system; ice crystals begin to obstruct the engine Pt2 sensors.", "factors": ["high_altitude_ice_crystals"], "kind": "env" },
+    { "t": 30, "clock": "01:38", "phase": "cruise", "actor": "SYS", "text": "EPR indications for both engines begin to rise erroneously; the autothrottle retards the thrust levers to hold the EPR target.", "factors": ["engine_instrument_error", "autothrottle_mode_confusion"], "kind": "system" },
+    { "t": 120, "clock": "01:40", "phase": "cruise", "actor": "SYS", "text": "Airspeed decays steadily as the autopilot raises the pitch attitude to hold FL310; N1 falls towards a low value.", "factors": ["low_energy_state", "inadequate_monitoring"], "kind": "system" },
+    { "t": 270, "clock": "01:42", "phase": "cruise", "actor": "SYS", "text": "Speed reaches about 200 kt with pitch attitude above 5 degrees; no comment from the crew, who are still discussing the weather.", "state": { "alt": 31000, "ias": 200 }, "factors": ["low_energy_state", "inadequate_monitoring"], "kind": "system" },
+    { "t": 400, "clock": "01:44", "phase": "cruise", "actor": "SYS", "text": "Aircraft begins to buffet and roll; the autopilot disengages as the aircraft stalls.", "factors": ["aerodynamic_stall"], "kind": "warning" },
+    { "t": 410, "clock": "01:45", "phase": "descent", "actor": "PF", "text": "Crew inputs are mostly nose-up and left; the aircraft rolls sharply left and enters a steep descent with increasing bank.", "factors": ["inappropriate_stall_recovery"], "kind": "crew_action" },
+    { "t": 440, "clock": "01:45", "phase": "descent", "actor": "SYS", "text": "The aircraft descends in a spiral at a very high rate with bank angles beyond 60 degrees; no recovery.", "factors": ["loss_of_control_inflight"], "kind": "system" },
+    { "t": 470, "clock": "01:47", "phase": "descent", "actor": "SYS", "text": "Aircraft strikes the ground near Gossi with a high rate of descent and bank; all 116 occupants killed.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "EASA / FAA", "text": "Require that the effects of ice crystal icing on engine pressure sensors and the resulting erroneous EPR indications be addressed through design or through clear operational procedures and warnings.", "status": "unknown", "outcome": null, "trigger_factors": ["engine_instrument_error", "high_altitude_ice_crystals"] },
+    { "id": null, "to": "EASA / Boeing", "text": "Clarify the operating procedures for engine anti-ice activation in cruise icing conditions on the MD-80 family.", "status": "unknown", "outcome": null, "trigger_factors": ["deicing_inadequate", "manufacturer_communication"] },
+    { "id": null, "to": "EASA", "text": "Study the introduction of a low-speed or low-energy alert in cruise on aircraft not equipped with one, so that crews are warned before an approach to stall.", "status": "unknown", "outcome": null, "trigger_factors": ["low_energy_state", "inadequate_monitoring"] },
+    { "id": null, "to": "AESA (Spain) / operators", "text": "Reinforce crew training on monitoring of flight parameters in cruise, on the effects of ice crystals on engine sensors and on stall recovery at high altitude.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_monitoring", "inappropriate_stall_recovery"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Boeing revised MD-80 documentation on engine anti-ice use and the effect of Pt2 probe icing on EPR.",
+    "Industry attention to ice crystal icing effects on engine sensors and to low-energy alerting in cruise."
+  ],
+  "related": ["af447", "westcaribbean708", "birgenair301", "austral2553"],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "Clock times other than departure are approximate; the final loss of control occurred around 01:45-01:47 UTC. t values are estimated.",
+    "Airspeed values (about 290 kt decaying to about 200 kt) are approximate readings from the published FDR analysis.",
+    "Lead investigative body is the Malian Commission d'Enquête with BEA carrying out the technical investigation on delegation; report publication date is approximate.",
+    "MSN and lat/lon are approximate."
+  ] }
+}

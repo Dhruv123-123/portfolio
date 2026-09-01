@@ -1,0 +1,88 @@
+{
+  "id": "concorde4590",
+  "title": "Air France 4590 (Concorde)",
+  "flight_number": "AF4590",
+  "date": "2000-07-25",
+  "time_reference": "UTC",
+  "t0": "2000-07-25T14:43:13Z",
+  "agency": "BEA",
+  "agencies": [
+    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses pour la sécurité de l'aviation civile", "country": "France", "role": "lead",
+      "report_id": "f-sc000725a", "report_title": "Accident on 25 July 2000 at La Patte d'Oie in Gonesse (95) to the Concorde registered F-BTSC operated by Air France", "report_date": "2002-01-16",
+      "url": "https://bea.aero/en/investigation-reports/notified-events/detail/accident-on-25-july-2000-at-la-patte-doie-in-gonesse-95-to-the-concorde-registered-f-btsc-operated-by-air-france-en/" },
+    { "code": "AAIB", "name": "Air Accidents Investigation Branch", "country": "United Kingdom", "role": "accredited_representative" },
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "Aérospatiale-BAC Concorde 101", "family": "Concorde", "manufacturer": "Aérospatiale / BAC", "registration": "F-BTSC", "msn": "203", "engines": "Rolls-Royce/SNECMA Olympus 593 Mk 610" },
+  "operator": "Air France",
+  "route": { "from": "LFPG", "from_name": "Paris Charles de Gaulle", "to": "KJFK", "to_name": "New York JFK" },
+  "location": { "name": "Hotel at La Patte d'Oie, Gonesse, 9.5 km from Paris CDG", "country": "France", "lat": 48.9917, "lon": 2.4614 },
+  "phase": "takeoff",
+  "occupants": 109, "fatalities": 113, "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "F-NI",
+  "summary": "During the takeoff roll on runway 26R at Charles de Gaulle, Concorde F-BTSC ran over a titanium alloy strip that had fallen from a Continental Airlines DC-10 minutes earlier. The strip cut the right front tyre of the left main gear, which burst; a large piece of tyre struck the underside of the wing, causing a shock wave that ruptured fuel tank 5. Leaking fuel ignited, engines 1 and 2 lost thrust, the gear could not be retracted, and the aircraft, unable to climb or accelerate, lost control and crashed onto a hotel in Gonesse. All 109 on board and 4 on the ground died.",
+  "probable_cause": "The accident was due to: the high-speed passage of a tyre over a part lost by an aircraft that had taken off five minutes earlier and the destruction of the tyre; the ripping out of a large piece of tank 5 from the underside of the wing through a complex process of transmission of the energy from the tyre debris; ignition of the leaking fuel by an electric arc in the landing gear bay or by contact with hot parts of the engine, and the propagation of the fire; the impossibility of retracting the landing gear, which probably contributed to the loss of thrust on engine 1 and the loss of control. Contributing: the strip had been installed on the DC-10 in a non-conforming manner, and previous tyre-burst incidents on Concorde had not led to protective measures against tank rupture.",
+  "factors": [
+    { "id": "maintenance_error", "role": "initiating", "evidence": "The titanium wear strip on the Continental DC-10 thrust reverser cowl had been manufactured and fitted in a non-conforming manner and detached on takeoff, leaving it on runway 26R." },
+    { "id": "known_defect_unresolved", "role": "latent", "evidence": "Concorde had suffered numerous tyre bursts and several tank penetrations since 1979 without measures adequate to prevent fuel tank rupture." },
+    { "id": "design_deficiency", "role": "latent", "evidence": "The wing fuel tanks were vulnerable to rupture from tyre debris impacts and the tyres were prone to catastrophic destruction on foreign object damage." },
+    { "id": "certification_shortfall", "role": "latent", "evidence": "Certification did not address the risk of tank rupture from tyre debris at the energy levels shown to be possible." },
+    { "id": "fuel_leak", "role": "contributing", "evidence": "Tank 5 was ruptured from within by a pressure wave and fuel escaped at a very high rate under the left wing." },
+    { "id": "inflight_fire", "role": "contributing", "evidence": "The fuel ignited, producing a very large flame trailing from the left wing and damaging the airframe and controls." },
+    { "id": "engine_failure", "role": "contributing", "evidence": "Engine 2 surged and lost thrust and was shut down; engine 1 also lost thrust twice, the second time irrecoverably." },
+    { "id": "landing_gear_failure", "role": "contributing", "evidence": "The landing gear could not be retracted, probably because of fire damage to gear bay wiring, preventing acceleration and climb." },
+    { "id": "low_energy_state", "role": "contributing", "evidence": "With two engines lost, the gear down and the aircraft below V2, it could neither accelerate nor climb above about 200 ft." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft pitched up and rolled left beyond 100 degrees, and struck the ground at low speed and high angle of attack." },
+    { "id": "post_impact_fire", "role": "outcome", "evidence": "The aircraft was destroyed by impact and fire on striking a hotel in Gonesse, killing four people on the ground." }
+  ],
+  "chain": [
+    ["maintenance_error", "fuel_leak"],
+    ["known_defect_unresolved", "design_deficiency"],
+    ["certification_shortfall", "design_deficiency"],
+    ["design_deficiency", "fuel_leak"],
+    ["fuel_leak", "inflight_fire"],
+    ["inflight_fire", "engine_failure"],
+    ["inflight_fire", "landing_gear_failure"],
+    ["engine_failure", "low_energy_state"],
+    ["landing_gear_failure", "low_energy_state"],
+    ["low_energy_state", "loss_of_control_inflight"],
+    ["loss_of_control_inflight", "post_impact_fire"]
+  ],
+  "events": [
+    { "t": -300, "clock": "14:38", "phase": "takeoff", "actor": "OTHER", "text": "A Continental Airlines DC-10 takes off from runway 26R; a 43 cm titanium wear strip from its number 3 engine thrust reverser cowl falls onto the runway.", "factors": ["maintenance_error"], "kind": "env" },
+    { "t": -42, "clock": "14:42:31", "phase": "takeoff", "actor": "CAPT", "text": "Concorde begins its takeoff roll on runway 26R, about a tonne over the maximum takeoff weight with a light tailwind.", "kind": "crew_action" },
+    { "t": 0, "clock": "14:43:13", "phase": "takeoff", "actor": "SYS", "text": "At about 175 kt, after V1, the number 2 tyre on the left main gear runs over the metal strip and bursts; tyre debris strikes the wing and tank 5 ruptures.", "state": { "ias": 175 }, "factors": ["fuel_leak", "design_deficiency"], "kind": "system" },
+    { "t": 1, "clock": "14:43:14", "phase": "takeoff", "actor": "SYS", "text": "Leaking fuel ignites; a large flame trails from under the left wing. Engines 1 and 2 surge and lose thrust.", "factors": ["inflight_fire", "engine_failure"], "kind": "system" },
+    { "t": 7, "clock": "14:43:20", "phase": "takeoff", "actor": "ATC", "text": "Tower controller informs the crew that they have strong flames behind them.", "kind": "atc" },
+    { "t": 9, "clock": "14:43:22", "phase": "takeoff", "actor": "SYS", "text": "Engine 2 fire alarm sounds; the captain rotates and the aircraft lifts off at about 205 kt with engine 1 recovering thrust.", "state": { "ias": 205 }, "factors": ["inflight_fire"], "kind": "warning" },
+    { "t": 12, "clock": "14:43:25", "phase": "initial_climb", "actor": "FE", "text": "Flight engineer shuts down engine 2 and pulls the fire handle; the crew call for gear retraction.", "factors": ["engine_failure"], "kind": "crew_action" },
+    { "t": 20, "clock": "14:43:33", "phase": "initial_climb", "actor": "SYS", "text": "The landing gear does not retract despite the selection; the aircraft climbs slowly to about 200 ft at about 200 kt.", "state": { "alt": 200, "ias": 200 }, "factors": ["landing_gear_failure", "low_energy_state"], "kind": "system" },
+    { "t": 45, "clock": "14:43:58", "phase": "initial_climb", "actor": "CAPT", "text": "Crew declare an emergency and attempt to reach Le Bourget; the aircraft cannot accelerate or climb.", "factors": ["low_energy_state"], "kind": "crew_speech" },
+    { "t": 70, "clock": "14:44:23", "phase": "initial_climb", "actor": "SYS", "text": "Engine 1 loses thrust a second time; with only engines 3 and 4 on the right the aircraft pitches up and rolls steeply left.", "factors": ["engine_failure", "loss_of_control_inflight"], "kind": "system" },
+    { "t": 78, "clock": "14:44:31", "phase": "initial_climb", "actor": "SYS", "text": "Aircraft strikes the Hotelissimo hotel at La Patte d'Oie, Gonesse, in a nose-high left-banked attitude; all 109 occupants and 4 people on the ground killed.", "factors": ["loss_of_control_inflight", "post_impact_fire"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "DGAC / CAA", "text": "Suspend the Concorde certificate of airworthiness until measures are taken to guarantee a satisfactory level of safety with respect to tyre destruction and its consequences on the fuel tanks.", "status": "closed_acceptable", "outcome": "Certificates suspended in August 2000; Kevlar tank liners, new Michelin NZG tyres and armoured wiring were introduced before return to service in November 2001.", "trigger_factors": ["design_deficiency", "known_defect_unresolved"] },
+    { "id": null, "to": "DGAC / FAA / EASA", "text": "Strengthen the requirements and inspection of runways for foreign object debris, and ensure that repairs on aircraft parts liable to fall on runways conform to approved data.", "status": "unknown", "outcome": null, "trigger_factors": ["maintenance_error"] },
+    { "id": null, "to": "Certification authorities", "text": "Study tyre-destruction models and the effects of tyre debris on aircraft structures and fuel tanks for certification of large aircraft.", "status": "unknown", "outcome": null, "trigger_factors": ["certification_shortfall"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Kevlar-rubber liners in Concorde fuel tanks, Michelin NZG near-zero-growth tyres, armoured gear bay wiring; return to service in November 2001.",
+    "Increased runway FOD inspection frequency at Paris airports and broader FOD awareness programmes.",
+    "Concorde withdrawn from service by both operators in 2003."
+  ],
+  "related": ["manchester28m", "twa800"],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/en/investigation-reports/notified-events/detail/accident-on-25-july-2000-at-la-patte-doie-in-gonesse-95-to-the-concorde-registered-f-btsc-operated-by-air-france-en/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "Continental Airlines and its mechanics were prosecuted and Continental disputed the findings in court, but no accredited agency formally dissented; dissent is empty.",
+    "Clock times are UTC as used in the BEA report; intermediate event seconds are approximate (tyre burst about 14:43:13, impact about 14:44:31).",
+    "Occupants counts the 109 on board; fatalities of 113 include 4 persons on the ground.",
+    "Some speeds (175 kt at tyre burst, lift-off about 205 kt) are approximate values from the report."
+  ] }
+}

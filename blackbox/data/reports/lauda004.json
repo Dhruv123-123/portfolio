@@ -1,0 +1,80 @@
+{
+  "id": "lauda004",
+  "title": "Lauda Air 004",
+  "flight_number": "NG004",
+  "date": "1991-05-26",
+  "time_reference": "Thailand local time (UTC+7); clock strings approximate to the minute, t is relative to the reverser deployment at about 23:31",
+  "t0": null,
+  "agency": "AAIC-TH",
+  "agencies": [
+    { "code": "AAIC-TH", "name": "Aircraft Accident Investigation Committee", "country": "Thailand", "role": "lead",
+      "report_id": null, "report_title": "Aircraft Accident Investigation Report, Lauda Air Luftfahrt Aktiengesellschaft, Boeing 767-300ER, Registration OE-LAV, Ban Dan Chang, Suphan Buri Province, Thailand, 26 May 1991", "report_date": "1993-07-21",
+      "url": "https://www.ntsb.gov/" },
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" },
+    { "code": "BFU-AT", "name": "Flugunfalluntersuchungsstelle (Austria)", "country": "Austria", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "Boeing 767-3Z9ER", "family": "767", "manufacturer": "Boeing", "registration": "OE-LAV", "msn": "24628", "engines": "Pratt & Whitney PW4060" },
+  "operator": "Lauda Air",
+  "route": { "from": "VTBD", "from_name": "Bangkok Don Mueang", "to": "LOWW", "to_name": "Vienna Schwechat", "origin": "Hong Kong Kai Tak" },
+  "location": { "name": "Phu Toei National Park, Ban Dan Chang, Suphan Buri Province", "country": "Thailand", "lat": 14.73, "lon": 99.45 },
+  "phase": "climb",
+  "occupants": 223, "fatalities": 223, "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "SCF-NP",
+  "summary": "About 16 minutes after leaving Bangkok for Vienna, the 767's left engine thrust reverser deployed in flight while the aircraft was climbing through about 24,700 ft at Mach 0.78. The reverser plume disrupted the airflow over the left wing, the aircraft rolled and pitched down, and it broke up in flight during the ensuing dive. All 223 on board died. A REV ISLN advisory light had illuminated some 20 minutes earlier, and the checklist had indicated that no action was required.",
+  "probable_cause": "The Thai Aircraft Accident Investigation Committee determined that the probable cause was the uncommanded in-flight deployment of the left engine thrust reverser, which resulted in loss of flight path control. The specific cause of the deployment was not positively identified, but the investigation showed that the reverser could be deployed by hydraulic pressure reaching the actuator through a failure in the directional control valve or associated wiring, and that the certification assumption that an in-flight deployment was controllable was not valid at climb speed and altitude.",
+  "factors": [
+    { "id": "design_deficiency", "role": "latent", "evidence": "The 767 thrust reverser system's hydraulic isolation and directional control valves could allow deployment from a single failure; Boeing subsequently added a third, independent locking system." },
+    { "id": "certification_shortfall", "role": "latent", "evidence": "The design had been certificated on the assumption that an in-flight reverser deployment was controllable; Boeing's post-accident simulations showed a loss of about 25 percent of wing lift and that recovery was not possible at the accident conditions." },
+    { "id": "warning_system_deficiency", "role": "contributing", "evidence": "The REV ISLN advisory light that illuminated 20 minutes before the accident did not convey the possibility of an imminent deployment." },
+    { "id": "checklist_design", "role": "contributing", "evidence": "The quick reference handbook indicated that additional system failures might cause in-flight deployment but that normal reverser operation should be expected after landing, leading the crew to take no action." },
+    { "id": "thrust_reverser_inflight", "role": "initiating", "evidence": "The left engine thrust reverser deployed uncommanded during the climb at about 24,700 ft and Mach 0.78." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft rolled and pitched down into a steep dive from which the crew could not recover." },
+    { "id": "structural_failure", "role": "outcome", "evidence": "The aircraft exceeded its structural limits in the dive and broke up in flight before striking the ground." }
+  ],
+  "chain": [
+    ["certification_shortfall", "design_deficiency"],
+    ["design_deficiency", "thrust_reverser_inflight"],
+    ["warning_system_deficiency", "checklist_design"],
+    ["checklist_design", "thrust_reverser_inflight"],
+    ["thrust_reverser_inflight", "loss_of_control_inflight"],
+    ["certification_shortfall", "loss_of_control_inflight"],
+    ["loss_of_control_inflight", "structural_failure"]
+  ],
+  "events": [
+    { "t": -1740, "clock": "23:02", "phase": "takeoff", "actor": "PF", "text": "Departs Bangkok Don Mueang for Vienna, the second leg of the flight from Hong Kong, with 213 passengers and 10 crew.", "kind": "crew_action" },
+    { "t": -1380, "clock": "23:08", "phase": "climb", "actor": "SYS", "text": "The left engine REV ISLN advisory light illuminates intermittently during the climb.", "factors": ["warning_system_deficiency"], "kind": "warning" },
+    { "t": -1300, "clock": null, "phase": "climb", "actor": "FO", "text": "The first officer reads the quick reference handbook entry, which states that additional system failures may cause in-flight deployment and that normal reverser operation should be expected after landing; the crew conclude no action is required.", "factors": ["checklist_design"], "kind": "crew_speech" },
+    { "t": -900, "clock": null, "phase": "climb", "actor": "CAPT", "text": "The crew discuss the light and continue the climb; the captain regards it as an advisory only.", "factors": ["checklist_design"], "kind": "crew_speech" },
+    { "t": 0, "clock": "23:31", "phase": "climb", "actor": "SYS", "text": "Climbing through about 24,700 ft at Mach 0.78, the left engine thrust reverser deploys uncommanded. The first officer calls out that the reverser has deployed.", "state": { "alt": 24700 }, "factors": ["thrust_reverser_inflight"], "kind": "system" },
+    { "t": 4, "clock": null, "phase": "climb", "actor": "SYS", "text": "The reverser efflux disrupts airflow over the left wing; the aircraft rolls and yaws left and pitches nose-down. Autopilot disconnects.", "factors": ["loss_of_control_inflight", "certification_shortfall"], "kind": "system" },
+    { "t": 10, "clock": null, "phase": "descent", "actor": "CAPT", "text": "The crew attempt to recover; the aircraft continues into a steep, accelerating dive.", "factors": ["loss_of_control_inflight"], "kind": "crew_action" },
+    { "t": 29, "clock": null, "phase": "descent", "actor": "SYS", "text": "The aircraft exceeds its structural limits and breaks up in flight; recorders stop.", "factors": ["structural_failure"], "kind": "outcome" },
+    { "t": 60, "clock": null, "phase": "descent", "actor": "SYS", "text": "The wreckage falls into jungle in Phu Toei National Park, Suphan Buri Province; all 223 on board are killed.", "factors": ["structural_failure", "loss_of_control_inflight"], "kind": "outcome" }
+  ],
+  "cvr": [
+    { "t": 0, "clock": null, "speaker": "FO", "text": "Ah, reverser's deployed.", "translation": null }
+  ],
+  "recommendations": [
+    { "id": null, "to": "FAA / Boeing", "text": "Modify the 767 thrust reverser system to prevent uncommanded in-flight deployment, and review the reverser systems of other transport aircraft against the same failure modes.", "status": "closed_acceptable", "outcome": "The FAA required Boeing to install an additional independent sync-lock on 767 reversers, and reverser systems on other types were reviewed and modified.", "trigger_factors": ["design_deficiency", "thrust_reverser_inflight"] },
+    { "id": null, "to": "FAA", "text": "Revise the certification requirements so that in-flight reverser deployment is treated as a hazardous event to be prevented rather than assumed controllable.", "status": "closed_acceptable", "outcome": "FAA and JAA certification policy for thrust reversers was revised to require multiple independent locks and no reliance on controllability after deployment.", "trigger_factors": ["certification_shortfall"] },
+    { "id": null, "to": "Boeing / operators", "text": "Revise the REV ISLN checklist guidance and crew training so that an isolation-valve indication is treated as a warning of possible in-flight deployment.", "status": "unknown", "outcome": null, "trigger_factors": ["checklist_design", "warning_system_deficiency"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Boeing 767 aircraft with PW4000 engines were restricted from using reverse thrust until an additional independent locking system was installed.",
+    "Certification requirements for thrust reverser systems were revised worldwide to require multiple independent locks and to remove the assumption that in-flight deployment is controllable.",
+    "The failure of the flight data recorder to survive the fire led to improvements in recorder crash and fire protection standards."
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "Clock strings are approximate to the minute; the time from reverser deployment to break-up (given here as about 29 s) is approximate.",
+    "Only the first officer's 'reverser's deployed' line is quoted; other widely reported CVR lines are not included because their exact wording and timing were not verified.",
+    "The Thai AAIC report is not available at a stable URL; the NTSB (accredited representative) home page is given as the source.",
+    "The flight data recorder was destroyed by fire, so state values are limited to the altitude at deployment."
+  ] }
+}

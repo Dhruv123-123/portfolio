@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Loader from '../views/Loader.vue'
 import Office from '../views/Office.vue'
+const BlackboxPage = () => import('../views/BlackboxPage.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -220,6 +221,21 @@ const router = createRouter({
             name: 'og:locale',
             content: 'en_US'
           }
+        ]
+      }
+    },
+    {
+      path: '/blackbox',
+      name: 'Blackbox',
+      component: BlackboxPage,
+      meta: {
+        title: 'Blackbox | Aviation accident knowledge graph',
+        metaTags: [
+          { rel: 'canonical', href: 'https://dhruvramasubban.com/blackbox' },
+          { name: 'description', content: 'Blackbox: a cross-agency aviation accident knowledge graph with causal-path search, FDR replay and timeline builder.' },
+          { property: 'og:title', content: 'Blackbox | Aviation accident knowledge graph' },
+          { property: 'og:description', content: 'Search accident reports by causal chain, replay reconstructed FDR data in 3D, and build Cloudberg-style timelines.' },
+          { property: 'og:url', content: 'https://dhruvramasubban.com/blackbox' }
         ]
       }
     }

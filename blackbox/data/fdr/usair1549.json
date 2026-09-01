@@ -1,0 +1,728 @@
+{
+ "id": "usair1549",
+ "record": "usair1549",
+ "source": "NTSB AAR-10/03 (US Airways 1549, A320-214, Hudson River, 2009-01-15). Digitised from the FDR plots in section 1.11 and appendix (altitude, CAS, pitch, roll, heading, N1 per engine, sidestick, flap/slat, APU) and the section 1.1 timeline (bird strike 15:27:11 at 2818 ft / 219 kt, peak ~3060 ft, mayday 15:27:32, Hudson decision 15:29:28, flaps 2 ~15:29:45, touchdown 15:30:43 at 125 kt, 9.5 deg pitch, ~750 fpm). Heading over the river and the mid-glide altitude profile are smoothed approximations.",
+ "fidelity": "reconstructed",
+ "confidence": "medium",
+ "t_start": -30,
+ "t_end": 212,
+ "aircraft_model": "airliner_twin",
+ "params": {
+  "alt_ft": {
+   "interp": "linear",
+   "keys": [
+    [
+     -30,
+     1900
+    ],
+    [
+     -15,
+     2350
+    ],
+    [
+     0,
+     2818
+    ],
+    [
+     10,
+     2980
+    ],
+    [
+     20,
+     3060
+    ],
+    [
+     30,
+     3030
+    ],
+    [
+     45,
+     2850
+    ],
+    [
+     60,
+     2600
+    ],
+    [
+     80,
+     2250
+    ],
+    [
+     100,
+     1850
+    ],
+    [
+     120,
+     1500
+    ],
+    [
+     140,
+     1120
+    ],
+    [
+     160,
+     800
+    ],
+    [
+     180,
+     480
+    ],
+    [
+     195,
+     250
+    ],
+    [
+     205,
+     80
+    ],
+    [
+     212,
+     0
+    ]
+   ]
+  },
+  "ias_kt": {
+   "interp": "linear",
+   "keys": [
+    [
+     -30,
+     205
+    ],
+    [
+     0,
+     219
+    ],
+    [
+     10,
+     210
+    ],
+    [
+     20,
+     195
+    ],
+    [
+     30,
+     190
+    ],
+    [
+     60,
+     200
+    ],
+    [
+     100,
+     195
+    ],
+    [
+     140,
+     190
+    ],
+    [
+     155,
+     185
+    ],
+    [
+     165,
+     165
+    ],
+    [
+     180,
+     150
+    ],
+    [
+     195,
+     135
+    ],
+    [
+     205,
+     128
+    ],
+    [
+     212,
+     125
+    ]
+   ]
+  },
+  "pitch_deg": {
+   "interp": "linear",
+   "keys": [
+    [
+     -30,
+     12
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     5,
+     11
+    ],
+    [
+     12,
+     9
+    ],
+    [
+     20,
+     4
+    ],
+    [
+     30,
+     1
+    ],
+    [
+     60,
+     2
+    ],
+    [
+     100,
+     2.5
+    ],
+    [
+     140,
+     2.5
+    ],
+    [
+     160,
+     3
+    ],
+    [
+     180,
+     3.5
+    ],
+    [
+     195,
+     5
+    ],
+    [
+     205,
+     7.5
+    ],
+    [
+     210,
+     9.5
+    ],
+    [
+     212,
+     9.5
+    ]
+   ]
+  },
+  "roll_deg": {
+   "interp": "linear",
+   "keys": [
+    [
+     -30,
+     -5
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     10,
+     0
+    ],
+    [
+     18,
+     -10
+    ],
+    [
+     30,
+     -25
+    ],
+    [
+     50,
+     -30
+    ],
+    [
+     70,
+     -20
+    ],
+    [
+     85,
+     -10
+    ],
+    [
+     100,
+     -3
+    ],
+    [
+     140,
+     -2
+    ],
+    [
+     180,
+     0
+    ],
+    [
+     212,
+     0
+    ]
+   ]
+  },
+  "hdg_deg": {
+   "interp": "linear",
+   "keys": [
+    [
+     -30,
+     5
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     18,
+     0
+    ],
+    [
+     30,
+     345
+    ],
+    [
+     50,
+     310
+    ],
+    [
+     70,
+     270
+    ],
+    [
+     85,
+     240
+    ],
+    [
+     100,
+     220
+    ],
+    [
+     120,
+     210
+    ],
+    [
+     150,
+     205
+    ],
+    [
+     180,
+     200
+    ],
+    [
+     212,
+     195
+    ]
+   ]
+  },
+  "vs_fpm": {
+   "interp": "linear",
+   "keys": [
+    [
+     -30,
+     2500
+    ],
+    [
+     -5,
+     2400
+    ],
+    [
+     0,
+     2000
+    ],
+    [
+     10,
+     1200
+    ],
+    [
+     20,
+     300
+    ],
+    [
+     30,
+     -500
+    ],
+    [
+     45,
+     -800
+    ],
+    [
+     60,
+     -900
+    ],
+    [
+     80,
+     -1000
+    ],
+    [
+     100,
+     -1000
+    ],
+    [
+     120,
+     -1000
+    ],
+    [
+     140,
+     -950
+    ],
+    [
+     160,
+     -950
+    ],
+    [
+     180,
+     -950
+    ],
+    [
+     195,
+     -1000
+    ],
+    [
+     205,
+     -900
+    ],
+    [
+     212,
+     -750
+    ]
+   ]
+  },
+  "n1_pct": {
+   "interp": "linear",
+   "keys": [
+    [
+     -30,
+     92
+    ],
+    [
+     0,
+     92
+    ],
+    [
+     3,
+     60
+    ],
+    [
+     8,
+     35
+    ],
+    [
+     15,
+     27
+    ],
+    [
+     60,
+     25
+    ],
+    [
+     212,
+     25
+    ]
+   ]
+  },
+  "n1_left_pct": {
+   "interp": "linear",
+   "keys": [
+    [
+     -30,
+     92
+    ],
+    [
+     0,
+     92
+    ],
+    [
+     3,
+     70
+    ],
+    [
+     8,
+     50
+    ],
+    [
+     15,
+     36
+    ],
+    [
+     60,
+     35
+    ],
+    [
+     212,
+     35
+    ]
+   ]
+  },
+  "n1_right_pct": {
+   "interp": "linear",
+   "keys": [
+    [
+     -30,
+     92
+    ],
+    [
+     0,
+     92
+    ],
+    [
+     3,
+     50
+    ],
+    [
+     8,
+     22
+    ],
+    [
+     15,
+     16
+    ],
+    [
+     60,
+     15
+    ],
+    [
+     212,
+     15
+    ]
+   ]
+  },
+  "thrust_lever": {
+   "interp": "step",
+   "keys": [
+    [
+     -30,
+     0.75
+    ],
+    [
+     5,
+     0.75
+    ],
+    [
+     60,
+     1.0
+    ],
+    [
+     200,
+     0.0
+    ]
+   ]
+  },
+  "stick_pitch": {
+   "interp": "linear",
+   "keys": [
+    [
+     -30,
+     0.05
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     15,
+     -0.2
+    ],
+    [
+     30,
+     0
+    ],
+    [
+     100,
+     0.05
+    ],
+    [
+     180,
+     0.1
+    ],
+    [
+     195,
+     0.25
+    ],
+    [
+     205,
+     0.6
+    ],
+    [
+     209,
+     1.0
+    ],
+    [
+     212,
+     1.0
+    ]
+   ]
+  },
+  "stick_roll": {
+   "interp": "linear",
+   "keys": [
+    [
+     -30,
+     0
+    ],
+    [
+     15,
+     -0.3
+    ],
+    [
+     30,
+     -0.1
+    ],
+    [
+     70,
+     0.2
+    ],
+    [
+     90,
+     0.1
+    ],
+    [
+     100,
+     0
+    ],
+    [
+     212,
+     0
+    ]
+   ]
+  },
+  "flaps": {
+   "interp": "step",
+   "keys": [
+    [
+     -30,
+     0
+    ],
+    [
+     154,
+     2
+    ]
+   ]
+  },
+  "gear": {
+   "interp": "step",
+   "keys": [
+    [
+     -30,
+     0
+    ]
+   ]
+  },
+  "ap": {
+   "interp": "step",
+   "keys": [
+    [
+     -30,
+     1
+    ],
+    [
+     3,
+     0
+    ]
+   ]
+  },
+  "apu": {
+   "interp": "step",
+   "keys": [
+    [
+     -30,
+     0
+    ],
+    [
+     12,
+     1
+    ]
+   ]
+  },
+  "ra_ft": {
+   "interp": "linear",
+   "keys": [
+    [
+     140,
+     1050
+    ],
+    [
+     160,
+     780
+    ],
+    [
+     180,
+     470
+    ],
+    [
+     195,
+     240
+    ],
+    [
+     205,
+     80
+    ],
+    [
+     212,
+     0
+    ]
+   ]
+  }
+ },
+ "units": {
+  "flaps": "config (2 = flaps 2 / slats+flaps)",
+  "thrust_lever": "0 idle .. 1 TOGA",
+  "n1_pct": "mean of both engines",
+  "apu": "APU running",
+  "ra_ft": "radio altitude over river, low segment only"
+ },
+ "markers": [
+  {
+   "t": -30,
+   "label": "Climbing through ~1900 ft on heading 360 after LGA runway 4"
+  },
+  {
+   "t": 0,
+   "label": "Bird strike, 2818 ft, 219 kt; both engines roll back"
+  },
+  {
+   "t": 3,
+   "label": "Autopilot off; captain: \"my aircraft\""
+  },
+  {
+   "t": 12,
+   "label": "APU start"
+  },
+  {
+   "t": 20,
+   "label": "Peak altitude ~3060 ft; left turn toward Hudson begins"
+  },
+  {
+   "t": 21,
+   "label": "\"Mayday mayday mayday... hit birds, lost thrust in both engines\""
+  },
+  {
+   "t": 59,
+   "label": "Unable to return to LaGuardia"
+  },
+  {
+   "t": 120,
+   "label": "Teterboro offered; \"we can't do it\""
+  },
+  {
+   "t": 137,
+   "label": "\"We're gonna be in the Hudson\""
+  },
+  {
+   "t": 154,
+   "label": "Flaps 2"
+  },
+  {
+   "t": 193,
+   "label": "\"Brace for impact\""
+  },
+  {
+   "t": 207,
+   "label": "Full aft sidestick, alpha protection active"
+  },
+  {
+   "t": 212,
+   "label": "Ditching, 125 kt, 9.5 deg nose up"
+  }
+ ],
+ "camera_hint": "chase",
+ "terrain": "city"
+}

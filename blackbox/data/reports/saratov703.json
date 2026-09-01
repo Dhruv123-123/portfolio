@@ -1,0 +1,85 @@
+{
+  "id": "saratov703",
+  "title": "Saratov Airlines 703",
+  "flight_number": "6W703",
+  "date": "2018-02-11",
+  "time_reference": "Moscow time (UTC+3)",
+  "t0": "2018-02-11T11:21:00Z",
+  "agency": "MAK",
+  "agencies": [
+    { "code": "MAK", "name": "Interstate Aviation Committee", "country": "Russia", "role": "lead",
+      "report_id": null, "report_title": "Final report on the investigation of the accident to An-148-100B RA-61704", "report_date": null,
+      "url": "https://mak-iac.org" }
+  ],
+  "aircraft": { "type": "Antonov An-148-100B", "family": "An-148", "manufacturer": "Antonov", "registration": "RA-61704", "msn": null, "engines": "Motor Sich D-436-148" },
+  "operator": "Saratov Airlines",
+  "route": { "from": "UUDD", "from_name": "Moscow Domodedovo", "to": "UWOR", "to_name": "Orsk" },
+  "location": { "name": "Near Stepanovskoye, Ramensky district, Moscow region", "country": "Russia", "lat": 55.39, "lon": 38.18 },
+  "phase": "climb",
+  "occupants": 71, "fatalities": 71, "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "The crew took off from Domodedovo without switching on the pitot probe heaters. About two and a half minutes after takeoff, in the climb through about 1,300 m, the pitot probes iced and the captain's and first officer's airspeed indications began to disagree. The autopilot was disconnected at about 2,000 m and the crew, acting on the erroneous decreasing airspeed indication, pushed the aircraft into a steep descent; it struck the ground near Stepanovskoye about six minutes after takeoff. All 71 on board died.",
+  "probable_cause": "The MAK concluded that the accident was caused by the crew's erroneous actions in the climb after the pitot heaters had not been switched on before takeoff, which led to icing of all three pitot probes, disagreement of the airspeed indications, disconnection of the autopilot and loss of spatial/situational awareness. The crew pushed the aircraft into a steep descent in reaction to the erroneous airspeed indications and did not recover. Contributing factors included deficiencies in the crew's training and CRM, non-compliance with the checklist that included the pitot heating item, and the crew's failure to recognise and apply the unreliable airspeed procedure.",
+  "factors": [
+    { "id": "procedural_noncompliance", "role": "initiating", "evidence": "The flight data showed the pitot probe heating was not switched on before takeoff, contrary to the checklist." },
+    { "id": "pitot_blockage", "role": "initiating", "evidence": "With the heaters off, all three pitot probes iced in the climb through cloud." },
+    { "id": "unreliable_airspeed", "role": "contributing", "evidence": "About 2.5 minutes after takeoff, at about 1,300 m, the captain's and first officer's airspeed indications began to diverge; the captain's indication fell toward zero." },
+    { "id": "autopilot_disconnect", "role": "contributing", "evidence": "The autopilot was disconnected at about 2,000 m when the airspeed disagreement developed." },
+    { "id": "stall_misdiagnosis", "role": "contributing", "evidence": "The crew interpreted the falling airspeed indication as a real loss of speed and did not recognise the indications as erroneous." },
+    { "id": "inappropriate_control_input", "role": "contributing", "evidence": "The crew pushed the aircraft into a descent of 30 to 35 degrees nose down in response to the low airspeed indication." },
+    { "id": "crm_breakdown", "role": "contributing", "evidence": "The MAK found the crew did not coordinate their actions or clearly identify the failure, and neither pilot called for the unreliable airspeed procedure." },
+    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The report concluded the crew lost situational awareness as to the aircraft's true speed and attitude during the descent." },
+    { "id": "inadequate_training", "role": "latent", "evidence": "The MAK cited deficiencies in the crew's training for unreliable airspeed and in the operator's crew training and monitoring." },
+    { "id": "warning_system_deficiency", "role": "latent", "evidence": "The report noted that the aircraft did not provide a clear alert that the pitot heating was off before takeoff and that the disagree indication was not sufficiently attention-getting." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft struck the ground at high speed in a steep nose-down attitude." }
+  ],
+  "chain": [
+    ["procedural_noncompliance", "pitot_blockage"],
+    ["warning_system_deficiency", "procedural_noncompliance"],
+    ["pitot_blockage", "unreliable_airspeed"],
+    ["unreliable_airspeed", "autopilot_disconnect"],
+    ["unreliable_airspeed", "stall_misdiagnosis"],
+    ["inadequate_training", "stall_misdiagnosis"],
+    ["stall_misdiagnosis", "inappropriate_control_input"],
+    ["crm_breakdown", "inappropriate_control_input"],
+    ["inappropriate_control_input", "loss_of_situational_awareness"],
+    ["loss_of_situational_awareness", "loss_of_control_inflight"]
+  ],
+  "events": [
+    { "t": -300, "clock": null, "phase": "taxi", "actor": "CAPT", "text": "Before-takeoff checks completed without the pitot probe heaters being switched on.", "factors": ["procedural_noncompliance"], "kind": "crew_action" },
+    { "t": 0, "clock": "14:21", "phase": "takeoff", "actor": "PF", "text": "Takeoff from Domodedovo in snow conditions; pitot heating remains off.", "factors": ["procedural_noncompliance"], "kind": "crew_action" },
+    { "t": 150, "clock": null, "phase": "climb", "actor": "SYS", "text": "About 2.5 minutes after takeoff at about 1,300 m and 465 to 470 km/h, the captain's and first officer's airspeed indications begin to disagree as the pitot probes ice.", "state": { "alt": 4265 }, "factors": ["pitot_blockage", "unreliable_airspeed"], "kind": "system" },
+    { "t": 190, "clock": null, "phase": "climb", "actor": "SYS", "text": "Airspeed disagree alerting is presented to the crew; the indications continue to diverge.", "factors": ["unreliable_airspeed"], "kind": "warning" },
+    { "t": 210, "clock": null, "phase": "climb", "actor": "SYS", "text": "At about 2,000 m the autopilot is disconnected and the crew fly manually.", "state": { "alt": 6560 }, "factors": ["autopilot_disconnect"], "kind": "system" },
+    { "t": 220, "clock": null, "phase": "climb", "actor": "PF", "text": "Believing the aircraft is losing speed, the pilot flying pushes the nose down; the aircraft transitions from climb to descent.", "factors": ["stall_misdiagnosis", "inappropriate_control_input"], "kind": "crew_action" },
+    { "t": 240, "clock": null, "phase": "descent", "actor": "SYS", "text": "The captain's airspeed indication drops to zero while the first officer's shows a different, also erroneous, value.", "factors": ["unreliable_airspeed"], "kind": "system" },
+    { "t": 260, "clock": null, "phase": "descent", "actor": "CAPT", "text": "The pilots exchange confused remarks about the speed and the aircraft's behaviour; no unreliable airspeed procedure is called for.", "factors": ["crm_breakdown", "loss_of_situational_awareness"], "kind": "crew_speech" },
+    { "t": 300, "clock": null, "phase": "descent", "actor": "SYS", "text": "The aircraft is descending with 30 to 35 degrees nose down pitch; ground proximity warnings sound.", "state": { "pitch": -32 }, "factors": ["inappropriate_control_input"], "kind": "warning" },
+    { "t": 330, "clock": null, "phase": "descent", "actor": "PF", "text": "The crew pull back in the final seconds but the aircraft does not recover.", "factors": ["loss_of_situational_awareness"], "kind": "crew_action" },
+    { "t": 360, "clock": "14:27", "phase": "descent", "actor": "ENV", "text": "Impact with the ground near Stepanovskoye at a speed in excess of 800 km/h in a steep nose-down attitude.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "Rosaviatsia / operators", "text": "Reinforce flight crew training on unreliable airspeed recognition and the memory items for the procedure, including in simulator training.", "status": "unknown", "outcome": null, "trigger_factors": ["unreliable_airspeed", "inadequate_training"] },
+    { "id": null, "to": "Antonov / operators", "text": "Review the An-148 pitot heating switching logic and crew alerting so that takeoff with pitot heating off is prevented or clearly annunciated.", "status": "unknown", "outcome": null, "trigger_factors": ["warning_system_deficiency", "procedural_noncompliance"] },
+    { "id": null, "to": "Saratov Airlines / Rosaviatsia", "text": "Improve checklist discipline, crew resource management and flight operations quality monitoring at the operator.", "status": "unknown", "outcome": null, "trigger_factors": ["procedural_noncompliance", "crm_breakdown"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Russian operators of the An-148 issued additional guidance on pitot heating checks and unreliable airspeed procedures after the MAK preliminary findings.",
+    "Saratov Airlines' operating certificate was revoked by Rosaviatsia in May 2018."
+  ],
+  "related": ["af447", "birgenair301", "aeroperu603", "austral2553", "northwest6231"],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+    "notes": [
+      "Times are from the MAK preliminary information (takeoff about 14:21 Moscow time, disagreement about 2.5 minutes after takeoff, autopilot disconnected at about 2,000 m); event t values between those anchors are approximate offsets and clock strings are omitted where not stated.",
+      "The MAK final report publication date and report number were not verified and are left null.",
+      "The warning_system_deficiency factor reflects the report's discussion of the absence of a clear pitot-heat-off alert; its exact wording was not verified.",
+      "Altitudes in state objects are converted from the metric values in the report (1,300 m, 2,000 m)."
+    ] }
+}

@@ -1,0 +1,626 @@
+{
+ "id": "asiana214",
+ "record": "asiana214",
+ "source": "NTSB AAR-14/01 (Asiana 214, 777-200ER, SFO, 2013-07-06). Digitised from figures 3-6 (FDR: pressure/radio altitude, computed airspeed, pitch, thrust lever and N1, autothrottle/autopilot modes, flap position) and the section 1.1 and 2.2 timeline (500 ft at 134 kt, 200 ft at ~118 kt, 100 ft at 112 kt, throttles advanced 7 s before impact, stick shaker 4 s before, 103 kt at 3 s before). t0 = autothrottle mode change to HOLD (~1600 ft, 82 s before impact at 11:27:50 PDT). Early (t<0) values are approximate.",
+ "fidelity": "reconstructed",
+ "confidence": "medium",
+ "t_start": -60,
+ "t_end": 82,
+ "aircraft_model": "airliner_twin",
+ "params": {
+  "alt_ft": {
+   "interp": "linear",
+   "keys": [
+    [
+     -60,
+     2400
+    ],
+    [
+     -30,
+     2000
+    ],
+    [
+     -10,
+     1700
+    ],
+    [
+     0,
+     1600
+    ],
+    [
+     10,
+     1380
+    ],
+    [
+     20,
+     1180
+    ],
+    [
+     30,
+     1000
+    ],
+    [
+     40,
+     780
+    ],
+    [
+     48,
+     500
+    ],
+    [
+     56,
+     340
+    ],
+    [
+     64,
+     220
+    ],
+    [
+     68,
+     170
+    ],
+    [
+     71,
+     110
+    ],
+    [
+     75,
+     60
+    ],
+    [
+     79,
+     25
+    ],
+    [
+     82,
+     0
+    ]
+   ]
+  },
+  "ias_kt": {
+   "interp": "linear",
+   "keys": [
+    [
+     -60,
+     175
+    ],
+    [
+     -30,
+     168
+    ],
+    [
+     0,
+     162
+    ],
+    [
+     10,
+     155
+    ],
+    [
+     20,
+     148
+    ],
+    [
+     30,
+     142
+    ],
+    [
+     40,
+     137
+    ],
+    [
+     48,
+     134
+    ],
+    [
+     56,
+     128
+    ],
+    [
+     64,
+     122
+    ],
+    [
+     68,
+     118
+    ],
+    [
+     71,
+     112
+    ],
+    [
+     75,
+     108
+    ],
+    [
+     79,
+     103
+    ],
+    [
+     82,
+     106
+    ]
+   ]
+  },
+  "pitch_deg": {
+   "interp": "linear",
+   "keys": [
+    [
+     -60,
+     0.5
+    ],
+    [
+     0,
+     1.0
+    ],
+    [
+     5,
+     2.5
+    ],
+    [
+     20,
+     2.0
+    ],
+    [
+     40,
+     3.0
+    ],
+    [
+     48,
+     3.5
+    ],
+    [
+     56,
+     4.5
+    ],
+    [
+     64,
+     6.0
+    ],
+    [
+     71,
+     8.0
+    ],
+    [
+     76,
+     10.5
+    ],
+    [
+     80,
+     12.0
+    ],
+    [
+     82,
+     12.0
+    ]
+   ]
+  },
+  "roll_deg": {
+   "interp": "linear",
+   "keys": [
+    [
+     -60,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     40,
+     1
+    ],
+    [
+     60,
+     -1
+    ],
+    [
+     75,
+     0
+    ],
+    [
+     82,
+     2
+    ]
+   ]
+  },
+  "hdg_deg": {
+   "interp": "linear",
+   "keys": [
+    [
+     -60,
+     281
+    ],
+    [
+     0,
+     281
+    ],
+    [
+     82,
+     281
+    ]
+   ]
+  },
+  "vs_fpm": {
+   "interp": "linear",
+   "keys": [
+    [
+     -60,
+     -900
+    ],
+    [
+     -20,
+     -1000
+    ],
+    [
+     0,
+     -1100
+    ],
+    [
+     10,
+     -1200
+    ],
+    [
+     20,
+     -1200
+    ],
+    [
+     30,
+     -1200
+    ],
+    [
+     40,
+     -1300
+    ],
+    [
+     48,
+     -1250
+    ],
+    [
+     56,
+     -1050
+    ],
+    [
+     64,
+     -900
+    ],
+    [
+     71,
+     -800
+    ],
+    [
+     76,
+     -650
+    ],
+    [
+     82,
+     -500
+    ]
+   ]
+  },
+  "aoa_deg": {
+   "interp": "linear",
+   "keys": [
+    [
+     -60,
+     4
+    ],
+    [
+     0,
+     4.5
+    ],
+    [
+     30,
+     5.5
+    ],
+    [
+     48,
+     6.5
+    ],
+    [
+     60,
+     8
+    ],
+    [
+     68,
+     9.5
+    ],
+    [
+     74,
+     11.5
+    ],
+    [
+     78,
+     13.5
+    ],
+    [
+     82,
+     14
+    ]
+   ]
+  },
+  "n1_pct": {
+   "interp": "linear",
+   "keys": [
+    [
+     -60,
+     45
+    ],
+    [
+     -5,
+     40
+    ],
+    [
+     0,
+     32
+    ],
+    [
+     10,
+     25
+    ],
+    [
+     40,
+     24
+    ],
+    [
+     75,
+     24
+    ],
+    [
+     78,
+     35
+    ],
+    [
+     80,
+     50
+    ],
+    [
+     82,
+     65
+    ]
+   ]
+  },
+  "thrust_lever": {
+   "interp": "step",
+   "keys": [
+    [
+     -60,
+     0.35
+    ],
+    [
+     0,
+     0.0
+    ],
+    [
+     75,
+     1.0
+    ]
+   ]
+  },
+  "flaps": {
+   "interp": "step",
+   "keys": [
+    [
+     -60,
+     20
+    ],
+    [
+     16,
+     30
+    ]
+   ]
+  },
+  "gear": {
+   "interp": "step",
+   "keys": [
+    [
+     -60,
+     1
+    ]
+   ]
+  },
+  "ap": {
+   "interp": "step",
+   "keys": [
+    [
+     -60,
+     1
+    ],
+    [
+     10,
+     0
+    ]
+   ]
+  },
+  "at_mode": {
+   "interp": "step",
+   "keys": [
+    [
+     -60,
+     "SPD"
+    ],
+    [
+     0,
+     "HOLD"
+    ],
+    [
+     75,
+     "THR"
+    ]
+   ]
+  },
+  "stall_warn": {
+   "interp": "step",
+   "keys": [
+    [
+     -60,
+     0
+    ],
+    [
+     78,
+     1
+    ]
+   ]
+  },
+  "ra_ft": {
+   "interp": "linear",
+   "keys": [
+    [
+     -60,
+     2390
+    ],
+    [
+     0,
+     1590
+    ],
+    [
+     10,
+     1370
+    ],
+    [
+     20,
+     1170
+    ],
+    [
+     30,
+     990
+    ],
+    [
+     40,
+     770
+    ],
+    [
+     48,
+     500
+    ],
+    [
+     56,
+     340
+    ],
+    [
+     64,
+     220
+    ],
+    [
+     68,
+     170
+    ],
+    [
+     71,
+     110
+    ],
+    [
+     75,
+     60
+    ],
+    [
+     79,
+     25
+    ],
+    [
+     82,
+     0
+    ]
+   ]
+  },
+  "gs_kt": {
+   "interp": "linear",
+   "keys": [
+    [
+     -60,
+     170
+    ],
+    [
+     0,
+     157
+    ],
+    [
+     30,
+     138
+    ],
+    [
+     48,
+     130
+    ],
+    [
+     64,
+     118
+    ],
+    [
+     75,
+     104
+    ],
+    [
+     82,
+     102
+    ]
+   ]
+  }
+ },
+ "units": {
+  "flaps": "deg",
+  "thrust_lever": "0 idle .. 1 TOGA",
+  "at_mode": "autothrottle mode annunciation",
+  "ra_ft": "radio altitude (SFO elev 13 ft)"
+ },
+ "markers": [
+  {
+   "t": -60,
+   "label": "High and fast on visual approach 28L, flaps 20"
+  },
+  {
+   "t": -3,
+   "label": "FLCH selected at ~1600 ft; thrust levers to idle"
+  },
+  {
+   "t": 0,
+   "label": "Autothrottle mode changes to HOLD"
+  },
+  {
+   "t": 10,
+   "label": "Autopilot disconnected"
+  },
+  {
+   "t": 16,
+   "label": "Flaps 30"
+  },
+  {
+   "t": 34,
+   "label": "1000 ft"
+  },
+  {
+   "t": 48,
+   "label": "500 ft, 134 kt, sink 1200 fpm; \"on glide path\" callout"
+  },
+  {
+   "t": 68,
+   "label": "200 ft, ~118 kt, low on PAPI"
+  },
+  {
+   "t": 71,
+   "label": "100 ft, 112 kt"
+  },
+  {
+   "t": 74,
+   "label": "\"Speed\" callout"
+  },
+  {
+   "t": 75,
+   "label": "Thrust levers advanced"
+  },
+  {
+   "t": 78,
+   "label": "Stick shaker"
+  },
+  {
+   "t": 79,
+   "label": "103 kt; go-around called"
+  },
+  {
+   "t": 82,
+   "label": "Main gear and tail strike seawall"
+  }
+ ],
+ "camera_hint": "chase",
+ "terrain": "runway"
+}

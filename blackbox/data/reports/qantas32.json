@@ -1,0 +1,90 @@
+{
+  "id": "qantas32",
+  "title": "Qantas 32",
+  "flight_number": "QF32",
+  "date": "2010-11-04",
+  "time_reference": "UTC",
+  "t0": "2010-11-04T02:01:00Z",
+  "agency": "ATSB",
+  "agencies": [
+    { "code": "ATSB", "name": "Australian Transport Safety Bureau", "country": "Australia", "role": "lead",
+      "report_id": "AO-2010-089", "report_title": "In-flight uncontained engine failure, Airbus A380-842, VH-OQA, overhead Batam Island, Indonesia, 4 November 2010", "report_date": "2013-06-27",
+      "url": "https://www.atsb.gov.au/publications/investigation_reports/2010/aair/ao-2010-089" },
+    { "code": "AAIB", "name": "Air Accidents Investigation Branch", "country": "United Kingdom", "role": "accredited_representative" },
+    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses", "country": "France", "role": "accredited_representative" },
+    { "code": "KNKT", "name": "Komite Nasional Keselamatan Transportasi", "country": "Indonesia", "role": "accredited_representative" },
+    { "code": "AAIB-SG", "name": "Air Accident Investigation Bureau of Singapore", "country": "Singapore", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "Airbus A380-842", "family": "A380", "manufacturer": "Airbus", "registration": "VH-OQA", "msn": "014", "engines": "Rolls-Royce Trent 972" },
+  "operator": "Qantas",
+  "route": { "from": "WSSS", "from_name": "Singapore Changi", "to": "YSSY", "to_name": "Sydney" },
+  "location": { "name": "Over Batam Island, Indonesia, shortly after departure from Singapore", "country": "Indonesia", "lat": 1.08, "lon": 104.0 },
+  "phase": "climb",
+  "occupants": 469, "fatalities": 0, "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "SCF-PP",
+  "summary": "About four minutes after take-off from Singapore, the number 2 Trent 900 engine of the A380 suffered an uncontained failure of its intermediate-pressure turbine disc. Disc fragments punctured the wing and fuel tanks and severed wiring and hydraulic lines, degrading many aircraft systems. The five-pilot crew spent about 50 minutes working through the ECAM messages, assessed landing performance and returned to Changi for an overweight landing, stopping with about 150 m of runway remaining. Nobody was injured.",
+  "probable_cause": "The ATSB found that an oil feed stub pipe in the engine's HP/IP bearing structure had been manufactured with a misaligned counter-bore, leaving a thin wall that cracked by fatigue. Oil released through the crack ignited in the buffer space, and the fire heated the IP turbine drive arm until the disc separated from the shaft, overspeed and burst. Rolls-Royce's manufacturing quality processes had not detected the non-conforming pipes, and when the non-conformance was identified in service the company's risk assessment did not lead to the affected engines being removed.",
+  "factors": [
+    { "id": "design_deficiency", "role": "latent", "evidence": "An oil feed stub pipe was manufactured with a misaligned counter-bore, a non-conformance that produced a thin wall section susceptible to fatigue cracking." },
+    { "id": "inadequate_inspection", "role": "latent", "evidence": "Rolls-Royce's manufacturing inspection and quality processes did not detect the misaligned counter-bore before the pipe entered service." },
+    { "id": "known_defect_unresolved", "role": "latent", "evidence": "Non-conforming stub pipes had been identified in other engines before the accident, but the retrospective risk assessment did not recognise the fatigue-cracking hazard, so engines with the defect remained in service." },
+    { "id": "metal_fatigue", "role": "initiating", "evidence": "A fatigue crack developed through the thin wall of the stub pipe, releasing oil into the HP/IP bearing chamber buffer space." },
+    { "id": "inflight_fire", "role": "contributing", "evidence": "The leaking oil ignited and the resulting internal fire heated the IP turbine drive arm, leading to the separation of the disc from the shaft." },
+    { "id": "uncontained_engine_failure", "role": "contributing", "evidence": "The IP turbine disc overspeed and burst into three main fragments that penetrated the engine casing, the wing and the fuselage." },
+    { "id": "fuel_leak", "role": "contributing", "evidence": "Disc fragments punctured left-wing fuel tanks, causing a large fuel leak and preventing fuel transfer, which produced a lateral imbalance." },
+    { "id": "hydraulic_failure", "role": "contributing", "evidence": "The green hydraulic system was lost, along with parts of the electrical system, degrading brakes, spoilers, flaps, gear and other services." },
+    { "id": "high_workload", "role": "contributing", "evidence": "The crew processed dozens of ECAM messages over about 50 minutes while holding, and had to assess landing performance with degraded systems." },
+    { "id": "emergency_landing", "role": "outcome", "evidence": "The aircraft landed overweight at Changi at about 166 kt with a computed stopping margin of about 100 m, stopping with about 150 m of runway remaining." }
+  ],
+  "chain": [
+    ["inadequate_inspection", "design_deficiency"],
+    ["inadequate_inspection", "known_defect_unresolved"],
+    ["design_deficiency", "metal_fatigue"],
+    ["known_defect_unresolved", "metal_fatigue"],
+    ["metal_fatigue", "inflight_fire"],
+    ["inflight_fire", "uncontained_engine_failure"],
+    ["uncontained_engine_failure", "fuel_leak"],
+    ["uncontained_engine_failure", "hydraulic_failure"],
+    ["fuel_leak", "high_workload"],
+    ["hydraulic_failure", "high_workload"],
+    ["high_workload", "emergency_landing"],
+    ["uncontained_engine_failure", "emergency_landing"]
+  ],
+  "events": [
+    { "t": -300, "clock": "01:56", "phase": "takeoff", "actor": "PF", "text": "Departs Singapore Changi runway 20C for Sydney with 440 passengers and 29 crew, including five pilots (the operating crew plus a check captain and a supervising check captain).", "kind": "crew_action" },
+    { "t": 0, "clock": "02:01", "phase": "climb", "actor": "SYS", "text": "Climbing through about 7,000 ft over Batam Island, the engine 2 IP turbine disc fails; fragments penetrate the left wing, fuel tanks and fuselage.", "state": { "alt": 7000 }, "factors": ["uncontained_engine_failure", "metal_fatigue", "inflight_fire"], "kind": "system" },
+    { "t": 10, "clock": null, "phase": "climb", "actor": "SYS", "text": "Multiple ECAM warnings begin, including engine 2 failure and fire indications, fuel leak and transfer faults, green hydraulic system loss, electrical bus losses, and degradations of brakes, spoilers and flight controls.", "factors": ["fuel_leak", "hydraulic_failure", "high_workload"], "kind": "warning" },
+    { "t": 60, "clock": null, "phase": "climb", "actor": "CAPT", "text": "Crew declare PAN, level off and request a holding area east of Singapore to process the ECAM actions.", "factors": ["high_workload"], "kind": "crew_speech" },
+    { "t": 120, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "Engine 2 fire warning: the crew discharge both fire extinguisher bottles into engine 2, without confirmation of discharge.", "kind": "crew_action" },
+    { "t": 1800, "clock": null, "phase": "cruise", "actor": "PM", "text": "The crew work through the ECAM procedures; fuel cannot be transferred or jettisoned, fuel is leaking from the left wing and a lateral imbalance develops.", "factors": ["fuel_leak", "high_workload"], "kind": "crew_action" },
+    { "t": 3000, "clock": null, "phase": "cruise", "actor": "PM", "text": "Landing performance is computed with the landing distance performance application for the degraded configuration, giving a stopping margin of about 100 m on runway 20C.", "factors": ["high_workload"], "kind": "crew_action" },
+    { "t": 3600, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Crew perform a controllability check in the landing configuration at low speed, then commence the approach to Changi.", "kind": "crew_action" },
+    { "t": 6300, "clock": "03:46", "phase": "landing", "actor": "CAPT", "text": "Overweight landing on runway 20C at about 166 kt with limited braking and spoilers; the aircraft stops with about 150 m of runway remaining. Brake temperatures reach about 900 degrees C and four tyres deflate.", "state": { "ias": 166 }, "factors": ["emergency_landing"], "kind": "outcome" },
+    { "t": 6600, "clock": null, "phase": "ground", "actor": "GND", "text": "Fuel leaks from the left wing near the hot brakes; airport fire services apply foam. The crew keep passengers on board while the area is made safe, then disembark them by stairs.", "factors": ["fuel_leak"], "kind": "outcome" },
+    { "t": 13800, "clock": null, "phase": "ground", "actor": "GND", "text": "Engine 1 cannot be shut down from the cockpit because its control wiring was severed; it is finally stopped about two hours after landing by drowning it with fire-fighting foam.", "factors": ["uncontained_engine_failure"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "Rolls-Royce plc", "text": "Address the manufacturing quality-control deficiencies that allowed non-conforming oil feed stub pipes to enter service, and improve the process for assessing the risk of identified non-conformances.", "status": "closed_acceptable", "outcome": "Rolls-Royce revised its quality management and non-conformance risk assessment processes; affected engines were removed or modified.", "trigger_factors": ["design_deficiency", "inadequate_inspection", "known_defect_unresolved"] },
+    { "id": null, "to": "EASA", "text": "Mandate inspection and, where necessary, replacement of Trent 900 HP/IP bearing structure oil feed stub pipes, and require IP turbine overspeed protection.", "status": "closed_acceptable", "outcome": "EASA emergency airworthiness directives required repetitive inspections and engine changes; Rolls-Royce introduced an IP turbine overspeed protection software modification.", "trigger_factors": ["metal_fatigue", "uncontained_engine_failure"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "EASA emergency airworthiness directives required inspection and replacement of affected Trent 900 oil feed stub pipes across the fleet.",
+    "Rolls-Royce introduced an IP turbine overspeed protection system that shuts the engine down if the turbine begins to overspeed.",
+    "Rolls-Royce revised its manufacturing quality and non-conformance risk assessment processes.",
+    "Airbus and operators reviewed ECAM presentation and crew procedures for managing multiple system failures on the A380."
+  ],
+  "related": ["united232"],
+  "fdr": null,
+  "sources": [
+    "https://www.atsb.gov.au/publications/investigation_reports/2010/aair/ao-2010-089",
+    "https://www.atsb.gov.au/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "high", "reviewed": false, "notes": [
+    "Take-off (0156), failure (0201) and landing (0346) times are to the minute; intermediate event times are approximate offsets.",
+    "The time engine 1 was finally shut down (about two hours after landing) is approximate.",
+    "ATSB safety recommendation numbers for this investigation were not verified, so ids are null."
+  ] }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "af296",
+  "title": "Air France 296 (Habsheim)",
+  "flight_number": "AF296Q",
+  "date": "1988-06-26",
+  "time_reference": "local",
+  "t0": "1988-06-26T12:45:00Z",
+  "agency": "BEA",
+  "agencies": [
+    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses pour la sécurité de l'aviation civile", "country": "France", "role": "lead",
+      "report_id": null, "report_title": "Rapport final de la Commission d'Enquête sur l'accident survenu le 26 juin 1988 à Mulhouse-Habsheim (68) à l'Airbus A320 immatriculé F-GFKC", "report_date": "1989-11-29",
+      "url": "https://bea.aero/" }
+  ],
+  "aircraft": { "type": "Airbus A320-111", "family": "A320", "manufacturer": "Airbus", "registration": "F-GFKC", "msn": "9", "engines": "CFM International CFM56-5A1" },
+  "operator": "Air France",
+  "route": { "from": "LFSB", "from_name": "Basel-Mulhouse", "to": "LFSB", "to_name": "Basel-Mulhouse (via flypast at Habsheim)" },
+  "location": { "name": "Forest beyond runway 34R, Mulhouse-Habsheim aerodrome", "country": "France", "lat": 47.7414, "lon": 7.4325 },
+  "phase": "cruise",
+  "occupants": 136, "fatalities": 3, "injuries_serious": 34,
+  "damage": "destroyed",
+  "category": "LALT",
+  "summary": "During a sightseeing charter flight the new A320 carried out a low-speed flypast at the Habsheim airshow with landing gear down and flaps at 3. The aircraft descended to about 30 ft radio altitude, well below the 100 ft planned, at maximum angle of attack with engines at flight idle. Go-around thrust was applied late and the engines had not spooled up when the aircraft flew into trees beyond the runway. Three passengers died in the ensuing fire.",
+  "probable_cause": "The Commission concluded that the accident resulted from the combination of a flyover height lower than the surrounding obstacles, a speed which was very slow and reducing to reach the maximum possible angle of attack, engine speed at flight idle, and late application of go-around power. Contributing factors were the preparation of the flight, the late decision-making on the flypast parameters, the crew's lack of awareness of the trees at the end of the runway and their late recognition of the need to go around.",
+  "factors": [
+    { "id": "procedural_noncompliance", "role": "initiating", "evidence": "The flypast was flown at about 30 ft radio height instead of the 100 ft planned and required for the aerobatic-style flyover, with the crew relying on visual judgement of height." },
+    { "id": "low_energy_state", "role": "contributing", "evidence": "Speed was reduced to about 122 kt and angle of attack allowed to reach the alpha-max protection limit with the engines at flight idle." },
+    { "id": "operator_safety_culture", "role": "latent", "evidence": "The flight had been planned by Air France with little detail about the site, and the crew received the flypast briefing late with no clear procedures for very-low-altitude demonstration flights." },
+    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The crew were not aware of the forest at the end of the runway and recognised the need to go around too late." },
+    { "id": "automation_dependency", "role": "contributing", "evidence": "The crew relied on the aircraft's angle-of-attack protections during a manoeuvre for which alpha-floor automatic thrust was inhibited below 100 ft." },
+    { "id": "inappropriate_control_input", "role": "contributing", "evidence": "The aircraft was held at maximum angle of attack with idle thrust, leaving no margin; go-around thrust was applied about five seconds before the trees." },
+    { "id": "crm_breakdown", "role": "contributing", "evidence": "The first officer's calls about height and the reference to the trees did not lead to a timely go-around decision." },
+    { "id": "cfit", "role": "outcome", "evidence": "The aircraft, wings level and under control, sank into the trees beyond the runway as the engines accelerated." },
+    { "id": "post_impact_fire", "role": "outcome", "evidence": "Fire broke out after the aircraft came to rest in the forest; three passengers died during the evacuation." }
+  ],
+  "chain": [
+    ["operator_safety_culture", "procedural_noncompliance"],
+    ["procedural_noncompliance", "low_energy_state"],
+    ["automation_dependency", "low_energy_state"],
+    ["low_energy_state", "inappropriate_control_input"],
+    ["crm_breakdown", "loss_of_situational_awareness"],
+    ["loss_of_situational_awareness", "inappropriate_control_input"],
+    ["inappropriate_control_input", "cfit"],
+    ["cfit", "post_impact_fire"]
+  ],
+  "events": [
+    { "t": -900, "clock": "12:30", "phase": "ground", "actor": "CAPT", "text": "Crew briefed only shortly before departure for a flypast at Habsheim; the flight plan calls for a low-speed pass at 100 ft with gear and flaps down followed by a high-speed pass.", "factors": ["operator_safety_culture"], "kind": "crew_action" },
+    { "t": -300, "clock": "12:41", "phase": "takeoff", "actor": "CAPT", "text": "F-GFKC departs Basel-Mulhouse with 130 passengers and 6 crew for the short flight to Habsheim.", "kind": "crew_action" },
+    { "t": -60, "clock": "12:44", "phase": "descent", "actor": "CAPT", "text": "Aerodrome sighted late; the captain descends towards runway 34R, disconnecting the autothrust, with gear down and flap 3.", "kind": "crew_action" },
+    { "t": -30, "clock": "12:44", "phase": "descent", "actor": "SYS", "text": "Descent continues through 100 ft; thrust at flight idle and speed reducing.", "state": { "alt": 100 }, "factors": ["procedural_noncompliance", "low_energy_state"], "kind": "system" },
+    { "t": -15, "clock": "12:45", "phase": "cruise", "actor": "FO", "text": "First officer calls the radio height; the aircraft levels at about 30 ft radio altitude over the runway.", "state": { "alt": 30 }, "factors": ["procedural_noncompliance", "crm_breakdown"], "kind": "crew_speech" },
+    { "t": -8, "clock": "12:45", "phase": "cruise", "actor": "SYS", "text": "Speed falls to about 122 kt; angle of attack reaches the alpha-max limit and pitch about 15 degrees nose-up; engines at idle.", "state": { "alt": 30, "ias": 122, "pitch": 15 }, "factors": ["low_energy_state", "automation_dependency"], "kind": "system" },
+    { "t": -5, "clock": "12:45", "phase": "cruise", "actor": "CAPT", "text": "Captain advances the thrust levers to TOGA as the trees come into view; the first officer mentions the trees.", "factors": ["inappropriate_control_input", "loss_of_situational_awareness"], "kind": "crew_action" },
+    { "t": 0, "clock": "12:45", "phase": "cruise", "actor": "SYS", "text": "Engines still accelerating (about 83 percent N1) when the aircraft, wings level and controlled, sinks into the trees at the end of the runway.", "factors": ["cfit"], "kind": "outcome" },
+    { "t": 10, "clock": "12:45", "phase": "ground", "actor": "SYS", "text": "Aircraft comes to rest in the forest and fire breaks out on the right side.", "factors": ["post_impact_fire"], "kind": "outcome" },
+    { "t": 120, "clock": "12:47", "phase": "ground", "actor": "CABIN", "text": "Evacuation through the left exits; three passengers die, two of them children, and 34 are seriously injured.", "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "DGAC", "text": "Define rules and minimum heights for demonstration and airshow flypasts by public transport aircraft carrying passengers, and prohibit such flights below 170 ft or with passengers unless specifically authorised.", "status": "closed_acceptable", "outcome": "French regulations restricted passenger-carrying demonstration flights.", "trigger_factors": ["procedural_noncompliance", "operator_safety_culture"] },
+    { "id": null, "to": "DGAC / Air France", "text": "Improve preparation of special flights, including site reconnaissance and timely briefing of crews.", "status": "unknown", "outcome": null, "trigger_factors": ["operator_safety_culture", "loss_of_situational_awareness"] },
+    { "id": null, "to": "DGAC", "text": "Improve the protection and handling of flight recorders after an accident to ensure their integrity is not questioned.", "status": "unknown", "outcome": null, "trigger_factors": [] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "French rules restricting low-altitude demonstration flights carrying passengers.",
+    "Revised Air France procedures for special and demonstration flights.",
+    "Procedures for sealing and custody of flight recorders after accidents in France."
+  ],
+  "related": ["shoreham", "airinter148"],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "There is a long-running public controversy about the custody and integrity of the DFDR and CVR recordings after this accident, raised by the captain and others; no accredited agency formally dissented, so dissent is empty.",
+    "Clock strings are local time and approximate; t values are estimated relative to the impact with the trees.",
+    "The N1 value at impact (about 83 percent) and the 30 ft / 122 kt values are from the published findings; other state values are approximate.",
+    "Report date and report title wording are from memory of the Commission's report and may differ slightly."
+  ] }
+}

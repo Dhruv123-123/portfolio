@@ -1,0 +1,84 @@
+{
+  "id": "emirates407",
+  "title": "Emirates 407",
+  "flight_number": "EK407",
+  "date": "2009-03-20",
+  "time_reference": "AEDT (local); exact clock times not reproduced, t is relative to the first rotation attempt at about 22:30",
+  "t0": null,
+  "agency": "ATSB",
+  "agencies": [
+    { "code": "ATSB", "name": "Australian Transport Safety Bureau", "country": "Australia", "role": "lead",
+      "report_id": "AO-2009-012", "report_title": "Tailstrike and runway overrun, Airbus A340-541, A6-ERG, Melbourne Airport, Victoria, 20 March 2009", "report_date": "2011-12-16",
+      "url": "https://www.atsb.gov.au/publications/investigation_reports/2009/aair/ao-2009-012" },
+    { "code": "GCAA", "name": "General Civil Aviation Authority", "country": "United Arab Emirates", "role": "accredited_representative" },
+    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses", "country": "France", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "Airbus A340-541", "family": "A340", "manufacturer": "Airbus", "registration": "A6-ERG", "msn": "608", "engines": "Rolls-Royce Trent 553" },
+  "operator": "Emirates",
+  "route": { "from": "YMML", "from_name": "Melbourne Tullamarine", "to": "OMDB", "to_name": "Dubai International" },
+  "location": { "name": "Melbourne Airport, runway 16", "country": "Australia", "lat": -37.67, "lon": 144.84 },
+  "phase": "takeoff",
+  "occupants": 275, "fatalities": 0, "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "RE",
+  "summary": "During pre-flight preparation the first officer entered the A340's take-off weight into the laptop performance tool as 262.9 tonnes instead of 362.9 tonnes. The resulting reduced thrust and low reference speeds went undetected through the crew's checks. On take-off from Melbourne's runway 16 the aircraft failed to lift off at the computed rotation speed, struck its tail on the runway, and became airborne only after the captain applied full thrust, beyond the end of the runway, hitting the localiser antenna and lights. The crew dumped fuel and returned safely; nobody was injured.",
+  "probable_cause": "The ATSB found that the take-off weight was inadvertently entered 100 tonnes low in the electronic flight bag performance application, producing take-off speeds and a flex thrust setting that were too low for the actual weight, and that the crew's cross-checks did not detect the error. The design of the performance and flight management systems provided no effective gross-error check, and the operator's procedures for checking take-off performance data were vulnerable to a single undetected error. Distraction and time pressure during pre-flight contributed to the error not being caught.",
+  "factors": [
+    { "id": "takeoff_performance_error", "role": "initiating", "evidence": "The take-off weight was entered as 262.9 t instead of 362.9 t, giving V speeds well below those required and a flex temperature that reduced thrust." },
+    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "The captain's check of the first officer's performance calculation and the subsequent FMGS entry checks did not detect the 100 t discrepancy." },
+    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The ATSB found that the operator's take-off data verification procedure was not fully carried out as intended, and that the procedure itself was not robust against the error." },
+    { "id": "high_workload", "role": "contributing", "evidence": "The crew were subject to distractions and time pressure during the pre-flight period when the data were calculated and checked." },
+    { "id": "design_deficiency", "role": "latent", "evidence": "Neither the EFB performance software nor the aircraft's flight management system contained a reasonableness or gross-error check that would flag take-off speeds inconsistent with the aircraft's weight." },
+    { "id": "tail_strike", "role": "outcome", "evidence": "When the aircraft did not lift off at the computed rotation speed and pitch was increased, the tail contacted the runway, causing substantial damage to the rear fuselage." },
+    { "id": "runway_overrun", "role": "outcome", "evidence": "The aircraft became airborne beyond the end of runway 16 and struck the localiser antenna array and a strobe light." },
+    { "id": "emergency_landing", "role": "outcome", "evidence": "After declaring PAN, holding and dumping fuel, the crew returned to Melbourne and landed safely." }
+  ],
+  "chain": [
+    ["high_workload", "takeoff_performance_error"],
+    ["takeoff_performance_error", "inadequate_monitoring"],
+    ["procedural_noncompliance", "inadequate_monitoring"],
+    ["design_deficiency", "inadequate_monitoring"],
+    ["inadequate_monitoring", "tail_strike"],
+    ["takeoff_performance_error", "tail_strike"],
+    ["tail_strike", "runway_overrun"],
+    ["takeoff_performance_error", "runway_overrun"],
+    ["runway_overrun", "emergency_landing"]
+  ],
+  "events": [
+    { "t": -1800, "clock": null, "phase": "ground", "actor": "FO", "text": "During pre-flight the first officer enters the take-off weight into the laptop performance application as 262.9 t instead of 362.9 t; the resulting V speeds and flex temperature (74 degrees C) are calculated for an aircraft 100 t lighter.", "factors": ["takeoff_performance_error", "high_workload"], "kind": "crew_action" },
+    { "t": -1500, "clock": null, "phase": "ground", "actor": "CAPT", "text": "The captain checks the first officer's figures and the crew enter the speeds into the FMGS; the checks compare values derived from the same wrong input and the error is not detected.", "factors": ["inadequate_monitoring", "procedural_noncompliance", "design_deficiency"], "kind": "crew_action" },
+    { "t": -600, "clock": null, "phase": "taxi", "actor": "CAPT", "text": "The loadsheet confirms a take-off weight of about 362.9 t, but the comparison against the performance data does not reveal the discrepancy.", "factors": ["inadequate_monitoring"], "kind": "crew_action" },
+    { "t": -50, "clock": null, "phase": "takeoff", "actor": "PF", "text": "Take-off roll on runway 16 (3,657 m) with the reduced flex thrust setting; acceleration is lower than normal but not recognised as abnormal.", "factors": ["takeoff_performance_error"], "kind": "crew_action" },
+    { "t": 0, "clock": null, "phase": "takeoff", "actor": "PF", "text": "At the computed rotation speed the first officer rotates; the aircraft does not lift off. As pitch is increased the tail strikes the runway.", "factors": ["tail_strike", "takeoff_performance_error"], "kind": "crew_action" },
+    { "t": 6, "clock": null, "phase": "takeoff", "actor": "CAPT", "text": "The captain selects TOGA thrust.", "kind": "crew_action" },
+    { "t": 12, "clock": null, "phase": "takeoff", "actor": "SYS", "text": "The aircraft becomes airborne beyond the end of the runway, striking the localiser antenna array and a strobe light in the overrun area, then climbs away.", "factors": ["runway_overrun"], "kind": "outcome" },
+    { "t": 120, "clock": null, "phase": "initial_climb", "actor": "CABIN", "text": "Cabin crew report a loud bang and smell during the take-off; the flight crew suspect a tail strike and stop the climb at a safe altitude.", "kind": "crew_speech" },
+    { "t": 300, "clock": null, "phase": "climb", "actor": "CAPT", "text": "Crew declare PAN, review the aircraft's condition with the cabin crew and decide to return after dumping fuel to reduce landing weight.", "factors": ["emergency_landing"], "kind": "crew_speech" },
+    { "t": 1800, "clock": null, "phase": "cruise", "actor": "PF", "text": "Fuel dumping carried out in a holding pattern; approach briefing for the return to Melbourne.", "kind": "crew_action" },
+    { "t": 3900, "clock": null, "phase": "landing", "actor": "PF", "text": "The aircraft lands back at Melbourne about an hour after departure; substantial damage to the rear lower fuselage is found. No injuries.", "factors": ["emergency_landing"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "Airbus / EFB software suppliers", "text": "Incorporate independent gross-error or reasonableness checks in take-off performance calculation tools and flight management systems so that speeds inconsistent with aircraft weight are flagged.", "status": "unknown", "outcome": "Airbus developed a take-off securing function in the FMS that checks entered speeds against the aircraft's weight.", "trigger_factors": ["design_deficiency", "takeoff_performance_error"] },
+    { "id": null, "to": "Emirates", "text": "Revise take-off performance procedures so that the calculation is independently performed and cross-checked by both pilots, and manage pre-flight distractions.", "status": "closed_acceptable", "outcome": "Emirates changed its procedures to require independent calculations by each pilot and a comparison of results.", "trigger_factors": ["inadequate_monitoring", "procedural_noncompliance", "high_workload"] },
+    { "id": null, "to": "Regulators / industry", "text": "Pursue the development of take-off performance monitoring systems capable of warning crews of inadequate acceleration during the take-off roll.", "status": "open", "outcome": null, "trigger_factors": ["takeoff_performance_error"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Emirates revised its take-off performance calculation and cross-check procedures.",
+    "Airbus introduced a take-off securing (TOS) function in the flight management system to detect inconsistent take-off speeds and weights.",
+    "The event added impetus to regulatory and industry work on take-off performance monitoring systems and on the design of EFB performance tools."
+  ],
+  "related": ["aircanada143", "spanair5022", "airmidwest5481"],
+  "fdr": null,
+  "sources": [
+    "https://www.atsb.gov.au/publications/investigation_reports/2009/aair/ao-2009-012",
+    "https://www.atsb.gov.au/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "All event times are approximate offsets; the report's exact clock times are not reproduced.",
+    "The distance beyond the runway end at which the aircraft became airborne (reported as about 115 m) is omitted from the events because it was not verified.",
+    "The ATSB discussed possible crew fatigue; it is not listed as a factor because the report's conclusion on it was not verified.",
+    "Occupant count of 275 (257 passengers, 18 crew) is from memory of the report."
+  ] }
+}

@@ -17,6 +17,7 @@
       @toggle-doom="openWindow('doom')"
       @toggle-services="openWindow('services')"
       @toggle-terminal="openWindow('terminal')"
+      @toggle-blackbox="openWindow('blackbox')"
     />
     <DesktopAppsLayout
       :entities="entities"
@@ -28,6 +29,7 @@
       @toggle-notepad="openWindow('notepad')"
       @toggle-doom="openWindow('doom')"
       @toggle-services="openWindow('services')"
+      @toggle-blackbox="openWindow('blackbox')"
     />
     <div v-for="window in windows" :key="window.id">
       <Window
@@ -61,7 +63,7 @@
 </template>
 
 <script setup>
-import { ref, shallowRef, provide, onMounted, onUnmounted } from 'vue'
+import { ref, shallowRef, provide, onMounted, onUnmounted, defineAsyncComponent } from 'vue'
 import { useWindowsStore } from '@/stores/windowsStore.js'
 import { useVolumeStore } from '@/stores/volumeStore.js'
 import { useLocaleStore } from '@/stores/localeStore'
@@ -81,6 +83,7 @@ import Calendar from '@/components/Windows/Calendar/Calendar.vue'
 import Notepad from '@/components/Windows/Notepad.vue'
 import Doom from '@/components/Windows/Doom.vue'
 import Terminal from '@/components/Windows/Terminal.vue'
+const Blackbox = defineAsyncComponent(() => import('@/components/Windows/Blackbox/Blackbox.vue'))
 
 import DesktopAppsLayout from '@/layouts/DesktopAppsLayout.vue'
 import Window from '@/layouts/Window.vue'
@@ -127,7 +130,8 @@ const components = {
   Calendar: shallowRef(Calendar),
   Notepad: shallowRef(Notepad),
   Doom: shallowRef(Doom),
-  Terminal: shallowRef(Terminal)
+  Terminal: shallowRef(Terminal),
+  Blackbox: shallowRef(Blackbox)
 }
 
 // Create the entities array from the data.json

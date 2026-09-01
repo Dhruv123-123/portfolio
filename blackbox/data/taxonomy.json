@@ -1,0 +1,1908 @@
+{
+  "version": 1,
+  "categories": {
+    "technical": {
+      "label": "Aircraft systems",
+      "color": "#e4572e"
+    },
+    "human": {
+      "label": "Crew performance",
+      "color": "#3d7bd9"
+    },
+    "organizational": {
+      "label": "Organizational and regulatory",
+      "color": "#8e44ad"
+    },
+    "environmental": {
+      "label": "Environment",
+      "color": "#2a9d8f"
+    },
+    "atc": {
+      "label": "ATC and airspace",
+      "color": "#f4a261"
+    },
+    "maintenance": {
+      "label": "Maintenance",
+      "color": "#b5651d"
+    },
+    "design": {
+      "label": "Design and certification",
+      "color": "#c0392b"
+    },
+    "outcome": {
+      "label": "Outcome",
+      "color": "#555555"
+    }
+  },
+  "factors": [
+    {
+      "id": "pitot_blockage",
+      "category": "technical",
+      "label": "Pitot probe blockage",
+      "synonyms": [
+        "pitot",
+        "pitot tube",
+        "pitot probe",
+        "pitot icing",
+        "blocked pitot",
+        "stuck pitot",
+        "iced pitot",
+        "pitot heat off",
+        "pitot heat",
+        "pitot obstruction",
+        "wasp nest",
+        "mud dauber",
+        "pitot cover"
+      ],
+      "description": "Pitot probes blocked by ice, insects, covers or debris, or unheated, corrupting airspeed sensing."
+    },
+    {
+      "id": "static_port_blockage",
+      "category": "technical",
+      "label": "Static port blockage",
+      "synonyms": [
+        "static port",
+        "static ports",
+        "taped static",
+        "static vent",
+        "blocked static"
+      ],
+      "description": "Static ports obstructed, corrupting altitude, airspeed and vertical speed indications."
+    },
+    {
+      "id": "unreliable_airspeed",
+      "category": "technical",
+      "label": "Unreliable airspeed indication",
+      "synonyms": [
+        "unreliable airspeed",
+        "airspeed disagree",
+        "erroneous airspeed",
+        "airspeed unreliable",
+        "ias disagree",
+        "speed indication",
+        "erroneous speed",
+        "conflicting airspeed",
+        "bad airspeed",
+        "airspeed indicator"
+      ],
+      "description": "Cockpit airspeed indications inconsistent with actual airspeed, typically following pitot or static failures."
+    },
+    {
+      "id": "spurious_overspeed_warning",
+      "category": "technical",
+      "label": "Spurious overspeed warning",
+      "synonyms": [
+        "overspeed warning",
+        "overspeed",
+        "clacker",
+        "false overspeed"
+      ],
+      "description": "Overspeed warning triggered by erroneous airspeed data rather than actual overspeed."
+    },
+    {
+      "id": "aoa_sensor_failure",
+      "category": "technical",
+      "label": "Angle-of-attack sensor failure",
+      "synonyms": [
+        "aoa sensor",
+        "angle of attack vane",
+        "aoa vane",
+        "angle of attack sensor",
+        "aoa disagree",
+        "erroneous aoa"
+      ],
+      "description": "An angle-of-attack vane provided erroneous data to flight control or warning systems."
+    },
+    {
+      "id": "mcas_activation",
+      "category": "design",
+      "label": "MCAS activation",
+      "synonyms": [
+        "mcas",
+        "maneuvering characteristics augmentation",
+        "737 max",
+        "max"
+      ],
+      "description": "The 737 MAX Maneuvering Characteristics Augmentation System commanded repeated nose-down stabilizer trim from a single erroneous AoA input."
+    },
+    {
+      "id": "adiru_failure",
+      "category": "technical",
+      "label": "ADIRU data fault",
+      "synonyms": [
+        "adiru",
+        "air data inertial reference unit",
+        "air data unit",
+        "data spike"
+      ],
+      "description": "An air data inertial reference unit output corrupted data, driving spurious flight control or warning responses."
+    },
+    {
+      "id": "radio_altimeter_failure",
+      "category": "technical",
+      "label": "Radio altimeter failure",
+      "synonyms": [
+        "radio altimeter",
+        "rad alt",
+        "radalt",
+        "radio altitude"
+      ],
+      "description": "A radio altimeter provided erroneous height, typically feeding automation with a false landing condition."
+    },
+    {
+      "id": "engine_instrument_error",
+      "category": "technical",
+      "label": "Erroneous engine indication",
+      "synonyms": [
+        "epr",
+        "engine pressure ratio",
+        "erroneous epr",
+        "engine indication",
+        "pt2 probe",
+        "engine sensor icing"
+      ],
+      "description": "Engine instrumentation read incorrectly, typically from iced probes, leading the crew or autothrottle to set wrong thrust."
+    },
+    {
+      "id": "autopilot_disconnect",
+      "category": "technical",
+      "label": "Autopilot disconnect",
+      "synonyms": [
+        "autopilot disconnect",
+        "autopilot disengaged",
+        "ap off",
+        "autopilot dropped",
+        "autopilot disconnection",
+        "autopilot disengagement"
+      ],
+      "description": "The autopilot disconnected, handing the aircraft to the crew, often at the start of an upset."
+    },
+    {
+      "id": "flight_control_law_degradation",
+      "category": "technical",
+      "label": "Flight control law degradation",
+      "synonyms": [
+        "alternate law",
+        "direct law",
+        "control law",
+        "envelope protection lost",
+        "protections lost",
+        "degraded law"
+      ],
+      "description": "Fly-by-wire protections were lost or degraded, removing stall or attitude protections the crew may have relied on."
+    },
+    {
+      "id": "autothrottle_mode_confusion",
+      "category": "human",
+      "label": "Autothrottle mode confusion",
+      "synonyms": [
+        "autothrottle",
+        "autothrust",
+        "throttle hold",
+        "hold mode",
+        "flch",
+        "retard mode",
+        "thrust mode",
+        "autothrottle disengaged",
+        "a/t"
+      ],
+      "description": "The crew misunderstood what the autothrottle or autothrust was doing, allowing thrust to remain at idle or an inappropriate setting."
+    },
+    {
+      "id": "mode_confusion",
+      "category": "human",
+      "label": "Automation mode confusion",
+      "synonyms": [
+        "mode confusion",
+        "automation surprise",
+        "automation confusion",
+        "fma",
+        "flight mode annunciator",
+        "mode awareness",
+        "vertical mode"
+      ],
+      "description": "The crew's mental model of the automation's active modes diverged from the actual state."
+    },
+    {
+      "id": "automation_dependency",
+      "category": "human",
+      "label": "Automation dependency and manual skill erosion",
+      "synonyms": [
+        "automation dependency",
+        "automation reliance",
+        "manual flying skills",
+        "hand flying",
+        "over-reliance on automation",
+        "degraded manual skills"
+      ],
+      "description": "Habitual reliance on automation degraded manual flying proficiency or willingness to fly manually."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "category": "outcome",
+      "label": "Aerodynamic stall",
+      "synonyms": [
+        "stall",
+        "stalled",
+        "aerodynamic stall",
+        "wing stall",
+        "deep stall",
+        "stall warning",
+        "stalling"
+      ],
+      "description": "The wing exceeded its critical angle of attack and lost lift."
+    },
+    {
+      "id": "stall_misdiagnosis",
+      "category": "human",
+      "label": "Stall or upset misdiagnosed",
+      "synonyms": [
+        "misdiagnosed",
+        "misdiagnosis",
+        "misidentified",
+        "misinterpreted",
+        "failed to recognize",
+        "did not recognize",
+        "stall not recognized",
+        "confused",
+        "wrong diagnosis",
+        "misread",
+        "misperceived",
+        "thought it was",
+        "mistook"
+      ],
+      "description": "The crew misidentified the aircraft's state: not recognizing a stall, or treating another condition as a stall or overspeed."
+    },
+    {
+      "id": "inappropriate_stall_recovery",
+      "category": "human",
+      "label": "Inappropriate stall recovery",
+      "synonyms": [
+        "pulled back",
+        "nose up input",
+        "opposite to recovery",
+        "stall recovery",
+        "improper recovery",
+        "aft column",
+        "overrode stick pusher",
+        "power on recovery"
+      ],
+      "description": "The crew's control inputs during a stall or approach to stall deepened it, typically nose-up inputs or overriding the stick pusher."
+    },
+    {
+      "id": "stick_shaker_pusher",
+      "category": "technical",
+      "label": "Stick shaker or pusher activation",
+      "synonyms": [
+        "stick shaker",
+        "stick pusher",
+        "shaker",
+        "pusher"
+      ],
+      "description": "The stall warning stick shaker or stall protection stick pusher activated."
+    },
+    {
+      "id": "dual_sidestick_input",
+      "category": "human",
+      "label": "Dual sidestick input",
+      "synonyms": [
+        "dual input",
+        "dual sidestick",
+        "both pilots on controls",
+        "sidestick priority",
+        "takeover button"
+      ],
+      "description": "Both pilots made simultaneous sidestick inputs without clear transfer of control."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "category": "human",
+      "label": "Inappropriate flight control input",
+      "synonyms": [
+        "control input",
+        "rudder input",
+        "excessive rudder",
+        "aggressive input",
+        "rudder pedal",
+        "over-controlled",
+        "over control",
+        "pilot induced oscillation",
+        "pio"
+      ],
+      "description": "Control inputs outside what the situation required, including excessive or oscillatory inputs."
+    },
+    {
+      "id": "startle_effect",
+      "category": "human",
+      "label": "Startle and surprise",
+      "synonyms": [
+        "startle",
+        "surprise",
+        "startled",
+        "startle response",
+        "shock"
+      ],
+      "description": "A sudden unexpected event degraded the crew's cognitive performance during the critical seconds after it."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "category": "human",
+      "label": "Loss of situational awareness",
+      "synonyms": [
+        "situational awareness",
+        "lost awareness",
+        "unaware",
+        "did not notice",
+        "not monitored",
+        "failed to notice"
+      ],
+      "description": "The crew lost track of the aircraft's position, energy state, configuration or trajectory."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "category": "human",
+      "label": "Inadequate monitoring and cross-check",
+      "synonyms": [
+        "monitoring",
+        "cross-check",
+        "crosscheck",
+        "pilot monitoring",
+        "airspeed monitoring",
+        "failed to monitor",
+        "monitoring failure",
+        "callout",
+        "callouts"
+      ],
+      "description": "The pilot monitoring did not detect or call out deviations in speed, altitude, configuration or flight path."
+    },
+    {
+      "id": "crm_breakdown",
+      "category": "human",
+      "label": "CRM breakdown",
+      "synonyms": [
+        "crm",
+        "crew resource management",
+        "crew coordination",
+        "communication breakdown",
+        "assertiveness",
+        "cockpit gradient",
+        "authority gradient",
+        "crew communication",
+        "challenge"
+      ],
+      "description": "Crew coordination, communication, or challenge-and-response failed, including steep authority gradients."
+    },
+    {
+      "id": "sterile_cockpit_violation",
+      "category": "human",
+      "label": "Sterile cockpit violation",
+      "synonyms": [
+        "sterile cockpit",
+        "non-pertinent conversation",
+        "chatting",
+        "distraction",
+        "distracted"
+      ],
+      "description": "Non-essential conversation or activity during a critical phase of flight distracted the crew."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "category": "human",
+      "label": "Procedural non-compliance",
+      "synonyms": [
+        "procedure",
+        "procedures not followed",
+        "sop",
+        "standard operating procedures",
+        "checklist omitted",
+        "checklist",
+        "skipped checklist",
+        "non-compliance",
+        "deviation from procedure",
+        "improper procedure"
+      ],
+      "description": "The crew did not follow a checklist, standard operating procedure or limitation."
+    },
+    {
+      "id": "fatigue",
+      "category": "human",
+      "label": "Fatigue",
+      "synonyms": [
+        "fatigue",
+        "fatigued",
+        "tired",
+        "sleep",
+        "rest",
+        "duty time",
+        "circadian",
+        "commuting"
+      ],
+      "description": "Crew fatigue from duty time, sleep loss, commuting or circadian disruption degraded performance."
+    },
+    {
+      "id": "inadequate_training",
+      "category": "organizational",
+      "label": "Inadequate training",
+      "synonyms": [
+        "training",
+        "inadequate training",
+        "not trained",
+        "training deficiency",
+        "simulator",
+        "upset recovery training",
+        "stall training",
+        "type rating",
+        "untrained"
+      ],
+      "description": "The crew had not been trained, or trained adequately, for the situation encountered."
+    },
+    {
+      "id": "pilot_experience",
+      "category": "human",
+      "label": "Low experience on type or in role",
+      "synonyms": [
+        "experience",
+        "inexperienced",
+        "low time",
+        "hours on type",
+        "new captain",
+        "line training",
+        "first officer experience",
+        "junior"
+      ],
+      "description": "Limited experience on aircraft type or in the crew role contributed."
+    },
+    {
+      "id": "spatial_disorientation",
+      "category": "human",
+      "label": "Spatial disorientation",
+      "synonyms": [
+        "spatial disorientation",
+        "disorientation",
+        "disoriented",
+        "vestibular",
+        "leans"
+      ],
+      "description": "The crew lost accurate perception of the aircraft's attitude or motion."
+    },
+    {
+      "id": "somatogravic_illusion",
+      "category": "human",
+      "label": "Somatogravic illusion",
+      "synonyms": [
+        "somatogravic",
+        "somatogravic illusion",
+        "pitch-up illusion",
+        "acceleration illusion",
+        "false climb"
+      ],
+      "description": "Longitudinal acceleration was perceived as a pitch-up, prompting a nose-down input."
+    },
+    {
+      "id": "visual_illusion",
+      "category": "human",
+      "label": "Visual illusion",
+      "synonyms": [
+        "visual illusion",
+        "black hole",
+        "black hole approach",
+        "illusion",
+        "false horizon"
+      ],
+      "description": "Terrain, lighting or weather created a misleading visual picture of the approach path."
+    },
+    {
+      "id": "pilot_incapacitation",
+      "category": "human",
+      "label": "Pilot incapacitation",
+      "synonyms": [
+        "incapacitation",
+        "incapacitated",
+        "unconscious",
+        "medical",
+        "hypoxia incapacitation"
+      ],
+      "description": "A pilot became unable to perform duties from medical or environmental causes."
+    },
+    {
+      "id": "deliberate_act",
+      "category": "human",
+      "label": "Deliberate act by crew",
+      "synonyms": [
+        "deliberate",
+        "intentional",
+        "suicide",
+        "murder-suicide",
+        "pilot suicide",
+        "deliberately",
+        "locked out",
+        "cockpit door"
+      ],
+      "description": "Investigators concluded the accident resulted from an intentional act by a crew member."
+    },
+    {
+      "id": "unstable_approach",
+      "category": "human",
+      "label": "Unstabilized approach",
+      "synonyms": [
+        "unstable approach",
+        "unstabilized",
+        "unstabilised",
+        "high and fast",
+        "low and slow",
+        "stabilized approach criteria",
+        "approach gate"
+      ],
+      "description": "The approach was outside stabilized approach criteria and was continued."
+    },
+    {
+      "id": "go_around_not_flown",
+      "category": "human",
+      "label": "Go-around not initiated",
+      "synonyms": [
+        "did not go around",
+        "failed to go around",
+        "continued the approach",
+        "missed approach not flown",
+        "late go-around",
+        "go-around not initiated",
+        "no go-around",
+        "should have gone around"
+      ],
+      "description": "A go-around was warranted but not initiated, or initiated too late."
+    },
+    {
+      "id": "landing_long",
+      "category": "human",
+      "label": "Long landing or touchdown beyond zone",
+      "synonyms": [
+        "long landing",
+        "landed long",
+        "touchdown zone",
+        "floated",
+        "deep landing",
+        "touched down beyond"
+      ],
+      "description": "The aircraft touched down beyond the touchdown zone, consuming runway needed to stop."
+    },
+    {
+      "id": "tailwind_landing",
+      "category": "environmental",
+      "label": "Tailwind on landing",
+      "synonyms": [
+        "tailwind",
+        "tail wind",
+        "downwind landing"
+      ],
+      "description": "A tailwind component increased groundspeed and landing distance."
+    },
+    {
+      "id": "contaminated_runway",
+      "category": "environmental",
+      "label": "Wet or contaminated runway",
+      "synonyms": [
+        "wet runway",
+        "contaminated runway",
+        "standing water",
+        "snow on runway",
+        "slush",
+        "hydroplaning",
+        "aquaplaning",
+        "braking action",
+        "runway friction"
+      ],
+      "description": "Water, snow or ice on the runway degraded braking."
+    },
+    {
+      "id": "delayed_deceleration",
+      "category": "human",
+      "label": "Delayed deceleration devices",
+      "synonyms": [
+        "reverse thrust",
+        "thrust reversers",
+        "spoilers not deployed",
+        "speedbrake",
+        "delayed braking",
+        "reversers deployed late"
+      ],
+      "description": "Reverse thrust, spoilers or brakes were applied late or not at all after touchdown."
+    },
+    {
+      "id": "runway_overrun",
+      "category": "outcome",
+      "label": "Runway overrun",
+      "synonyms": [
+        "overrun",
+        "overran",
+        "runway excursion",
+        "excursion",
+        "ran off the runway",
+        "veered off"
+      ],
+      "description": "The aircraft departed the runway end or side."
+    },
+    {
+      "id": "runway_incursion",
+      "category": "atc",
+      "label": "Runway incursion",
+      "synonyms": [
+        "runway incursion",
+        "incursion",
+        "occupied runway",
+        "on the runway",
+        "runway collision",
+        "collided on the runway"
+      ],
+      "description": "An aircraft or vehicle was on a runway without authorization or in conflict with another."
+    },
+    {
+      "id": "wrong_runway",
+      "category": "human",
+      "label": "Wrong runway or taxiway used",
+      "synonyms": [
+        "wrong runway",
+        "incorrect runway",
+        "taxiway takeoff",
+        "taxiway landing",
+        "runway confusion",
+        "lined up on the wrong"
+      ],
+      "description": "The crew took off or landed on a runway or taxiway other than the one cleared."
+    },
+    {
+      "id": "takeoff_without_clearance",
+      "category": "human",
+      "label": "Takeoff without clearance",
+      "synonyms": [
+        "without clearance",
+        "no takeoff clearance",
+        "no clearance",
+        "took off without"
+      ],
+      "description": "The crew began the takeoff roll without a valid takeoff clearance."
+    },
+    {
+      "id": "atc_communication_error",
+      "category": "atc",
+      "label": "ATC communication breakdown",
+      "synonyms": [
+        "atc communication",
+        "readback",
+        "read-back",
+        "hearback",
+        "blocked transmission",
+        "ambiguous phraseology",
+        "phraseology",
+        "non-standard phraseology",
+        "language",
+        "misheard",
+        "controller error",
+        "atc error",
+        "controller"
+      ],
+      "description": "Communication between ATC and the crew failed through ambiguity, blocked transmissions, language or non-standard phraseology."
+    },
+    {
+      "id": "atc_workload_staffing",
+      "category": "atc",
+      "label": "ATC staffing and workload",
+      "synonyms": [
+        "controller workload",
+        "single controller",
+        "understaffed",
+        "staffing",
+        "atc workload",
+        "controller fatigue"
+      ],
+      "description": "Controller workload, staffing or fatigue degraded ATC performance."
+    },
+    {
+      "id": "tcas_ra_conflict",
+      "category": "atc",
+      "label": "TCAS RA versus ATC instruction conflict",
+      "synonyms": [
+        "tcas",
+        "resolution advisory",
+        "ra",
+        "traffic collision avoidance",
+        "contradictory instructions"
+      ],
+      "description": "A TCAS resolution advisory conflicted with an ATC instruction and the crew followed ATC."
+    },
+    {
+      "id": "midair_collision",
+      "category": "outcome",
+      "label": "Midair collision",
+      "synonyms": [
+        "midair",
+        "mid-air",
+        "collision in flight",
+        "collided in the air"
+      ],
+      "description": "Two aircraft collided in flight."
+    },
+    {
+      "id": "ground_collision",
+      "category": "outcome",
+      "label": "Ground collision",
+      "synonyms": [
+        "ground collision",
+        "collided on the ground",
+        "runway collision",
+        "collision on runway"
+      ],
+      "description": "The aircraft collided with another aircraft or vehicle on the ground."
+    },
+    {
+      "id": "ground_radar_unavailable",
+      "category": "atc",
+      "label": "Surface surveillance unavailable",
+      "synonyms": [
+        "ground radar",
+        "surface movement radar",
+        "asde",
+        "no ground radar",
+        "surface surveillance"
+      ],
+      "description": "ATC had no functioning surface surveillance to detect the conflict."
+    },
+    {
+      "id": "airport_infrastructure",
+      "category": "organizational",
+      "label": "Airport signage, markings or lighting deficiency",
+      "synonyms": [
+        "signage",
+        "markings",
+        "taxiway lighting",
+        "runway lighting",
+        "airport lighting",
+        "approach lights",
+        "confusing taxiway",
+        "airport layout",
+        "unlit"
+      ],
+      "description": "Airport signage, markings, lighting or layout contributed to crew or ATC error."
+    },
+    {
+      "id": "cfit",
+      "category": "outcome",
+      "label": "Controlled flight into terrain",
+      "synonyms": [
+        "cfit",
+        "controlled flight into terrain",
+        "flew into terrain",
+        "hit the mountain",
+        "terrain impact",
+        "flew into the ground",
+        "struck terrain",
+        "struck the hill"
+      ],
+      "description": "An airworthy aircraft under crew control was flown into terrain, water or an obstacle."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "category": "outcome",
+      "label": "Loss of control in flight",
+      "synonyms": [
+        "loss of control",
+        "loc-i",
+        "lost control",
+        "upset",
+        "departed controlled flight",
+        "uncontrolled descent",
+        "spiral dive"
+      ],
+      "description": "The crew lost control of the aircraft in flight."
+    },
+    {
+      "id": "gpws_warning_response",
+      "category": "human",
+      "label": "Inadequate response to GPWS/EGPWS",
+      "synonyms": [
+        "gpws",
+        "egpws",
+        "terrain warning",
+        "pull up",
+        "terrain terrain",
+        "ground proximity",
+        "ignored warning",
+        "whoop whoop"
+      ],
+      "description": "A ground proximity warning was ignored, responded to late, or was not installed or effective."
+    },
+    {
+      "id": "msaw_unavailable",
+      "category": "atc",
+      "label": "Minimum safe altitude warning inhibited",
+      "synonyms": [
+        "msaw",
+        "minimum safe altitude warning",
+        "altitude alert inhibited"
+      ],
+      "description": "The ATC minimum safe altitude warning system was inhibited or ineffective."
+    },
+    {
+      "id": "navigation_error",
+      "category": "human",
+      "label": "Navigation or lateral path error",
+      "synonyms": [
+        "navigation error",
+        "off course",
+        "off track",
+        "wrong waypoint",
+        "fms entry",
+        "lateral deviation",
+        "descended early",
+        "wrong position",
+        "premature descent",
+        "misidentified fix"
+      ],
+      "description": "The crew misjudged position or descended below safe altitude through navigation error."
+    },
+    {
+      "id": "altimeter_setting_error",
+      "category": "human",
+      "label": "Altimeter setting error",
+      "synonyms": [
+        "altimeter setting",
+        "qnh",
+        "qfe",
+        "altimeter",
+        "wrong altimeter",
+        "pressure setting"
+      ],
+      "description": "An incorrect altimeter setting or altimeter reading error caused an altitude misjudgment."
+    },
+    {
+      "id": "descent_below_minimums",
+      "category": "human",
+      "label": "Descent below minimums",
+      "synonyms": [
+        "below minimums",
+        "below mda",
+        "below decision height",
+        "minimum descent altitude",
+        "decision height",
+        "busted minimums",
+        "continued below"
+      ],
+      "description": "The crew descended below the applicable minimum altitude without required visual references."
+    },
+    {
+      "id": "low_visibility",
+      "category": "environmental",
+      "label": "Low visibility",
+      "synonyms": [
+        "fog",
+        "low visibility",
+        "poor visibility",
+        "imc",
+        "instrument conditions",
+        "cloud",
+        "mist",
+        "haze",
+        "reduced visibility",
+        "night"
+      ],
+      "description": "Fog, cloud, darkness or precipitation restricted visual references."
+    },
+    {
+      "id": "dark_night",
+      "category": "environmental",
+      "label": "Dark night conditions",
+      "synonyms": [
+        "dark night",
+        "night",
+        "no moon",
+        "darkness",
+        "unlit terrain"
+      ],
+      "description": "Darkness removed external visual references."
+    },
+    {
+      "id": "convective_weather",
+      "category": "environmental",
+      "label": "Thunderstorm or convective weather",
+      "synonyms": [
+        "thunderstorm",
+        "convective",
+        "storm",
+        "cumulonimbus",
+        "cb",
+        "squall",
+        "heavy rain",
+        "hail",
+        "turbulence",
+        "itcz",
+        "weather radar"
+      ],
+      "description": "Thunderstorms, convective activity or associated turbulence and precipitation contributed."
+    },
+    {
+      "id": "windshear",
+      "category": "environmental",
+      "label": "Windshear or microburst",
+      "synonyms": [
+        "windshear",
+        "wind shear",
+        "microburst",
+        "downburst",
+        "gust front"
+      ],
+      "description": "A sudden change in wind velocity along the flight path exceeded the aircraft's performance margin."
+    },
+    {
+      "id": "airframe_icing",
+      "category": "environmental",
+      "label": "Airframe ice accretion",
+      "synonyms": [
+        "airframe icing",
+        "ice accretion",
+        "icing conditions",
+        "wing ice",
+        "ice on the wings",
+        "tailplane icing",
+        "sld",
+        "supercooled",
+        "frost",
+        "ice contamination"
+      ],
+      "description": "Ice accreted on the airframe, degrading lift and control."
+    },
+    {
+      "id": "deicing_inadequate",
+      "category": "human",
+      "label": "Inadequate ground de-icing or anti-ice use",
+      "synonyms": [
+        "deicing",
+        "de-icing",
+        "anti-ice",
+        "anti-icing",
+        "engine anti-ice off",
+        "not deiced",
+        "holdover time",
+        "ice protection not activated"
+      ],
+      "description": "Ground de-icing was inadequate, or airframe or engine anti-ice systems were not selected on."
+    },
+    {
+      "id": "high_altitude_ice_crystals",
+      "category": "environmental",
+      "label": "High-altitude ice crystals",
+      "synonyms": [
+        "ice crystals",
+        "high altitude icing",
+        "crystal icing",
+        "convective ice"
+      ],
+      "description": "Ice crystals at altitude affected probes or engines beyond certification envelopes."
+    },
+    {
+      "id": "fuel_system_icing",
+      "category": "technical",
+      "label": "Fuel system icing",
+      "synonyms": [
+        "fuel icing",
+        "fuel oil heat exchanger",
+        "fohe",
+        "ice in fuel",
+        "fuel ice"
+      ],
+      "description": "Ice released in the fuel system restricted fuel flow to the engines."
+    },
+    {
+      "id": "volcanic_ash",
+      "category": "environmental",
+      "label": "Volcanic ash encounter",
+      "synonyms": [
+        "volcanic ash",
+        "ash cloud",
+        "volcano"
+      ],
+      "description": "The aircraft flew through volcanic ash, damaging engines or systems."
+    },
+    {
+      "id": "bird_strike",
+      "category": "environmental",
+      "label": "Bird strike",
+      "synonyms": [
+        "bird strike",
+        "birdstrike",
+        "birds",
+        "geese",
+        "bird ingestion"
+      ],
+      "description": "Birds struck the aircraft or were ingested by engines."
+    },
+    {
+      "id": "engine_failure",
+      "category": "technical",
+      "label": "Engine failure or power loss",
+      "synonyms": [
+        "engine failure",
+        "engine failed",
+        "power loss",
+        "flameout",
+        "flame out",
+        "engine rollback",
+        "loss of thrust",
+        "engine surge",
+        "engine stall",
+        "compressor stall",
+        "engine shutdown"
+      ],
+      "description": "One or more engines lost power."
+    },
+    {
+      "id": "dual_engine_failure",
+      "category": "technical",
+      "label": "All-engine power loss",
+      "synonyms": [
+        "dual engine failure",
+        "both engines",
+        "all engines",
+        "total power loss",
+        "loss of both engines",
+        "glider",
+        "glide"
+      ],
+      "description": "All engines lost thrust, forcing a glide."
+    },
+    {
+      "id": "uncontained_engine_failure",
+      "category": "technical",
+      "label": "Uncontained engine failure",
+      "synonyms": [
+        "uncontained",
+        "disc failure",
+        "disk failure",
+        "fan disk",
+        "turbine disc",
+        "engine burst",
+        "shrapnel"
+      ],
+      "description": "An engine rotor failure ejected high-energy fragments that damaged the aircraft."
+    },
+    {
+      "id": "wrong_engine_shutdown",
+      "category": "human",
+      "label": "Wrong engine shut down",
+      "synonyms": [
+        "wrong engine",
+        "shut down the wrong",
+        "shut down the good engine",
+        "misidentified engine",
+        "identified the wrong engine"
+      ],
+      "description": "The crew shut down the functioning engine instead of the failed one."
+    },
+    {
+      "id": "control_misidentification",
+      "category": "human",
+      "label": "Wrong lever or control selected",
+      "synonyms": [
+        "wrong lever",
+        "wrong control",
+        "condition lever",
+        "feathered",
+        "feather",
+        "selected the wrong",
+        "moved the wrong",
+        "control confusion",
+        "lever confusion"
+      ],
+      "description": "The crew operated the wrong lever, switch or control."
+    },
+    {
+      "id": "fuel_exhaustion",
+      "category": "technical",
+      "label": "Fuel exhaustion",
+      "synonyms": [
+        "fuel exhaustion",
+        "ran out of fuel",
+        "out of fuel",
+        "no fuel",
+        "fuel emergency",
+        "insufficient fuel",
+        "fuel reserves"
+      ],
+      "description": "All usable fuel was consumed."
+    },
+    {
+      "id": "fuel_starvation",
+      "category": "technical",
+      "label": "Fuel starvation",
+      "synonyms": [
+        "fuel starvation",
+        "fuel mismanagement",
+        "crossfeed",
+        "tank selection",
+        "fuel not reaching"
+      ],
+      "description": "Fuel was on board but did not reach the engines because of mismanagement or system failure."
+    },
+    {
+      "id": "fuel_leak",
+      "category": "technical",
+      "label": "Fuel leak",
+      "synonyms": [
+        "fuel leak",
+        "leaking fuel",
+        "fuel line",
+        "fuel imbalance"
+      ],
+      "description": "A fuel line or tank leaked in flight."
+    },
+    {
+      "id": "fuel_quantity_error",
+      "category": "human",
+      "label": "Fuel quantity calculation error",
+      "synonyms": [
+        "fuel calculation",
+        "fuel quantity",
+        "fuel gauge",
+        "metric conversion",
+        "pounds kilograms",
+        "dripstick",
+        "fuel load error",
+        "fuel planning"
+      ],
+      "description": "The fuel on board was miscalculated, misindicated or misplanned."
+    },
+    {
+      "id": "fuel_tank_explosion",
+      "category": "technical",
+      "label": "Fuel tank explosion",
+      "synonyms": [
+        "fuel tank explosion",
+        "center wing tank",
+        "cwt",
+        "flammable vapor",
+        "tank ignition",
+        "fuel vapour",
+        "explosion"
+      ],
+      "description": "Flammable vapour in a fuel tank ignited."
+    },
+    {
+      "id": "wiring_failure",
+      "category": "technical",
+      "label": "Electrical wiring failure",
+      "synonyms": [
+        "wiring",
+        "wire chafing",
+        "electrical arcing",
+        "arcing",
+        "kapton",
+        "short circuit",
+        "electrical fault",
+        "chafed"
+      ],
+      "description": "Electrical wiring chafed, arced or short-circuited."
+    },
+    {
+      "id": "flammable_material",
+      "category": "design",
+      "label": "Flammable cabin or insulation material",
+      "synonyms": [
+        "flammable insulation",
+        "metallized mylar",
+        "insulation blankets",
+        "flammable material",
+        "flammability",
+        "cabin materials"
+      ],
+      "description": "Cabin or insulation materials sustained fire propagation."
+    },
+    {
+      "id": "inflight_fire",
+      "category": "technical",
+      "label": "In-flight fire",
+      "synonyms": [
+        "in-flight fire",
+        "inflight fire",
+        "fire in flight",
+        "cockpit fire",
+        "smoke",
+        "smoke in the cockpit",
+        "fire",
+        "burning"
+      ],
+      "description": "Fire or smoke developed in flight."
+    },
+    {
+      "id": "cargo_fire",
+      "category": "technical",
+      "label": "Cargo compartment fire",
+      "synonyms": [
+        "cargo fire",
+        "cargo hold fire",
+        "hold fire",
+        "lithium battery",
+        "lithium batteries",
+        "dangerous goods",
+        "hazardous cargo",
+        "oxygen generators"
+      ],
+      "description": "Fire started in a cargo compartment, often from undeclared or improperly packaged dangerous goods."
+    },
+    {
+      "id": "smoke_checklist_delay",
+      "category": "human",
+      "label": "Delayed diversion or lengthy smoke checklist",
+      "synonyms": [
+        "delayed diversion",
+        "fuel dump",
+        "checklist too long",
+        "land immediately",
+        "diversion",
+        "did not land immediately"
+      ],
+      "description": "The crew delayed landing to complete procedures or dump fuel while a fire developed."
+    },
+    {
+      "id": "explosive_decompression",
+      "category": "technical",
+      "label": "Explosive or rapid decompression",
+      "synonyms": [
+        "decompression",
+        "explosive decompression",
+        "rapid decompression",
+        "depressurization",
+        "depressurisation",
+        "loss of pressurization"
+      ],
+      "description": "The cabin lost pressure suddenly."
+    },
+    {
+      "id": "cabin_pressurization_failure",
+      "category": "technical",
+      "label": "Cabin pressurization not maintained",
+      "synonyms": [
+        "pressurization",
+        "pressurisation",
+        "cabin altitude",
+        "pressurization mode selector",
+        "manual mode",
+        "outflow valve",
+        "cabin altitude warning"
+      ],
+      "description": "The cabin failed to pressurize or gradually depressurized without crew recognition."
+    },
+    {
+      "id": "hypoxia",
+      "category": "human",
+      "label": "Hypoxia",
+      "synonyms": [
+        "hypoxia",
+        "hypoxic",
+        "oxygen",
+        "loss of consciousness",
+        "oxygen masks"
+      ],
+      "description": "Insufficient oxygen incapacitated occupants."
+    },
+    {
+      "id": "cargo_door_failure",
+      "category": "technical",
+      "label": "Cargo door failure",
+      "synonyms": [
+        "cargo door",
+        "door opened in flight",
+        "door latch",
+        "door failure",
+        "latching"
+      ],
+      "description": "A cargo door opened or failed in flight."
+    },
+    {
+      "id": "structural_failure",
+      "category": "technical",
+      "label": "Structural failure in flight",
+      "synonyms": [
+        "structural failure",
+        "structure failed",
+        "broke up",
+        "breakup",
+        "break-up",
+        "separated in flight",
+        "wing failure",
+        "tail separation",
+        "vertical stabilizer separated",
+        "fin separated",
+        "fuselage failure",
+        "in-flight breakup",
+        "inflight breakup"
+      ],
+      "description": "Primary structure failed in flight."
+    },
+    {
+      "id": "metal_fatigue",
+      "category": "technical",
+      "label": "Metal fatigue",
+      "synonyms": [
+        "fatigue crack",
+        "metal fatigue",
+        "fatigue cracking",
+        "crack",
+        "cracks",
+        "fatigue failure",
+        "stress corrosion"
+      ],
+      "description": "Cyclic loading produced cracks that led to failure."
+    },
+    {
+      "id": "pressure_bulkhead_failure",
+      "category": "technical",
+      "label": "Pressure bulkhead failure",
+      "synonyms": [
+        "pressure bulkhead",
+        "aft pressure bulkhead",
+        "bulkhead"
+      ],
+      "description": "A pressure bulkhead failed, typically from an improper repair."
+    },
+    {
+      "id": "hydraulic_failure",
+      "category": "technical",
+      "label": "Total hydraulic failure",
+      "synonyms": [
+        "hydraulic failure",
+        "hydraulics",
+        "loss of hydraulics",
+        "all hydraulic systems",
+        "hydraulic lines severed",
+        "no hydraulics"
+      ],
+      "description": "Hydraulic power to flight controls was lost."
+    },
+    {
+      "id": "flight_control_failure",
+      "category": "technical",
+      "label": "Flight control system failure",
+      "synonyms": [
+        "flight control failure",
+        "elevator",
+        "aileron",
+        "control jam",
+        "jammed",
+        "control failure",
+        "control cable",
+        "actuator",
+        "servo",
+        "pcu",
+        "power control unit",
+        "flight control system"
+      ],
+      "description": "A flight control surface or its actuation failed or jammed."
+    },
+    {
+      "id": "rudder_hardover",
+      "category": "technical",
+      "label": "Rudder hardover or reversal",
+      "synonyms": [
+        "rudder hardover",
+        "rudder reversal",
+        "uncommanded rudder",
+        "rudder pcu",
+        "rudder deflection",
+        "rudder"
+      ],
+      "description": "The rudder moved uncommanded or opposite to input."
+    },
+    {
+      "id": "stabilizer_trim_failure",
+      "category": "technical",
+      "label": "Horizontal stabilizer trim failure",
+      "synonyms": [
+        "stabilizer",
+        "stabiliser",
+        "jackscrew",
+        "trim runaway",
+        "acme nut",
+        "stabilizer trim",
+        "horizontal stabilizer",
+        "ths",
+        "trim"
+      ],
+      "description": "The horizontal stabilizer trim system failed, jammed or ran away."
+    },
+    {
+      "id": "thrust_reverser_inflight",
+      "category": "technical",
+      "label": "In-flight thrust reverser deployment",
+      "synonyms": [
+        "thrust reverser deployed in flight",
+        "reverser deployed",
+        "reverser in flight",
+        "uncommanded reverser"
+      ],
+      "description": "A thrust reverser deployed in flight."
+    },
+    {
+      "id": "windshield_failure",
+      "category": "technical",
+      "label": "Windshield failure",
+      "synonyms": [
+        "windshield",
+        "windscreen",
+        "windscreen blew out",
+        "window failure"
+      ],
+      "description": "A cockpit windshield failed in flight."
+    },
+    {
+      "id": "landing_gear_failure",
+      "category": "technical",
+      "label": "Landing gear failure or collapse",
+      "synonyms": [
+        "landing gear",
+        "gear collapse",
+        "gear failure",
+        "gear up",
+        "gear did not extend",
+        "gear collapsed",
+        "undercarriage"
+      ],
+      "description": "The landing gear failed, collapsed or did not extend."
+    },
+    {
+      "id": "maintenance_error",
+      "category": "maintenance",
+      "label": "Maintenance error",
+      "synonyms": [
+        "maintenance",
+        "maintenance error",
+        "improperly installed",
+        "incorrect bolts",
+        "wrong bolts",
+        "wrong part",
+        "improper repair",
+        "repair",
+        "not reinstalled",
+        "misrigged",
+        "maintenance procedure",
+        "mechanic",
+        "installed incorrectly",
+        "inspection missed"
+      ],
+      "description": "A maintenance action was performed incorrectly, or a required action was omitted."
+    },
+    {
+      "id": "inadequate_lubrication",
+      "category": "maintenance",
+      "label": "Inadequate lubrication or wear inspection",
+      "synonyms": [
+        "lubrication",
+        "grease",
+        "end play",
+        "wear",
+        "excessive wear",
+        "lubrication interval"
+      ],
+      "description": "Insufficient lubrication or wear checks allowed a component to wear to failure."
+    },
+    {
+      "id": "inadequate_inspection",
+      "category": "maintenance",
+      "label": "Inadequate inspection program",
+      "synonyms": [
+        "inspection",
+        "inspection interval",
+        "not detected",
+        "inspection program",
+        "non-destructive testing",
+        "ndt",
+        "undetected crack",
+        "escaped detection",
+        "aging aircraft"
+      ],
+      "description": "Inspection intervals or methods were insufficient to detect the defect."
+    },
+    {
+      "id": "weight_and_balance_error",
+      "category": "human",
+      "label": "Weight and balance error",
+      "synonyms": [
+        "weight and balance",
+        "center of gravity",
+        "centre of gravity",
+        "cg",
+        "aft cg",
+        "overweight",
+        "average passenger weight",
+        "loading error",
+        "load sheet",
+        "loadsheet",
+        "cargo loading",
+        "load shift"
+      ],
+      "description": "The aircraft was loaded outside limits, or its weight or balance was miscalculated."
+    },
+    {
+      "id": "takeoff_performance_error",
+      "category": "human",
+      "label": "Takeoff performance data error",
+      "synonyms": [
+        "takeoff performance",
+        "wrong weight entered",
+        "data entry",
+        "performance calculation",
+        "v speeds",
+        "v1",
+        "vr",
+        "wrong takeoff weight",
+        "flex temperature",
+        "derated thrust",
+        "performance data",
+        "entered the wrong"
+      ],
+      "description": "Erroneous takeoff weight or performance data produced insufficient thrust or wrong speeds."
+    },
+    {
+      "id": "takeoff_configuration_error",
+      "category": "human",
+      "label": "Takeoff configuration error",
+      "synonyms": [
+        "flaps not set",
+        "flaps not extended",
+        "takeoff configuration",
+        "no flaps",
+        "slats retracted",
+        "configuration warning",
+        "takeoff warning",
+        "towS",
+        "takeoff warning system",
+        "config warning"
+      ],
+      "description": "The aircraft took off without flaps or slats set, typically with the takeoff warning system inoperative."
+    },
+    {
+      "id": "tail_strike",
+      "category": "outcome",
+      "label": "Tail strike",
+      "synonyms": [
+        "tail strike",
+        "tailstrike",
+        "tail scrape",
+        "tail contact"
+      ],
+      "description": "The tail contacted the runway on takeoff or landing."
+    },
+    {
+      "id": "hard_landing",
+      "category": "outcome",
+      "label": "Hard landing or bounced landing",
+      "synonyms": [
+        "hard landing",
+        "bounced",
+        "bounce",
+        "heavy landing"
+      ],
+      "description": "A high vertical speed or bounced touchdown damaged the aircraft or led to loss of control."
+    },
+    {
+      "id": "ditching",
+      "category": "outcome",
+      "label": "Ditching",
+      "synonyms": [
+        "ditching",
+        "ditched",
+        "water landing",
+        "landed on the water",
+        "hudson"
+      ],
+      "description": "The aircraft was intentionally landed on water."
+    },
+    {
+      "id": "post_impact_fire",
+      "category": "outcome",
+      "label": "Post-impact fire",
+      "synonyms": [
+        "post-crash fire",
+        "post impact fire",
+        "fire after impact",
+        "burned",
+        "fireball"
+      ],
+      "description": "Fire following impact affected survivability."
+    },
+    {
+      "id": "evacuation_deficiency",
+      "category": "organizational",
+      "label": "Evacuation or survivability deficiency",
+      "synonyms": [
+        "evacuation",
+        "evacuate",
+        "slides",
+        "exits",
+        "survivability",
+        "cabin crew",
+        "passengers took bags",
+        "exit blocked",
+        "seat failure"
+      ],
+      "description": "Evacuation or survival was hindered by equipment, procedure or behaviour."
+    },
+    {
+      "id": "design_deficiency",
+      "category": "design",
+      "label": "Design deficiency",
+      "synonyms": [
+        "design flaw",
+        "design deficiency",
+        "single point of failure",
+        "single sensor",
+        "design",
+        "poor design",
+        "design assumption",
+        "human factors design",
+        "vulnerable design",
+        "not fail-safe",
+        "confusing design"
+      ],
+      "description": "The aircraft or system design had a flaw or assumption that contributed."
+    },
+    {
+      "id": "certification_shortfall",
+      "category": "design",
+      "label": "Certification shortfall",
+      "synonyms": [
+        "certification",
+        "certified",
+        "certification assumptions",
+        "faa oversight",
+        "delegated",
+        "oda",
+        "designee",
+        "type certificate",
+        "regulator missed"
+      ],
+      "description": "The certification process failed to identify or address the hazard."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "category": "design",
+      "label": "Warning or alerting deficiency",
+      "synonyms": [
+        "warning",
+        "alert",
+        "no warning",
+        "aural warning",
+        "master caution",
+        "warning inhibited",
+        "ambiguous warning",
+        "warning design",
+        "horn",
+        "alerting"
+      ],
+      "description": "A warning was absent, inhibited, ambiguous or easily confused with another."
+    },
+    {
+      "id": "regulatory_oversight",
+      "category": "organizational",
+      "label": "Regulatory oversight deficiency",
+      "synonyms": [
+        "oversight",
+        "regulator",
+        "regulatory",
+        "faa surveillance",
+        "surveillance",
+        "civil aviation authority",
+        "dgac",
+        "caa oversight",
+        "inspector",
+        "regulatory failure"
+      ],
+      "description": "The regulator's surveillance or rule-making was insufficient."
+    },
+    {
+      "id": "operator_safety_culture",
+      "category": "organizational",
+      "label": "Operator safety culture or management",
+      "synonyms": [
+        "safety culture",
+        "management",
+        "operator",
+        "airline culture",
+        "pressure",
+        "commercial pressure",
+        "schedule pressure",
+        "safety management",
+        "sms",
+        "company policy",
+        "airline",
+        "pilot pay",
+        "pilot records"
+      ],
+      "description": "Operator management, culture, hiring or pressure contributed."
+    },
+    {
+      "id": "manufacturer_communication",
+      "category": "organizational",
+      "label": "Manufacturer communication or documentation failure",
+      "synonyms": [
+        "manufacturer",
+        "not told",
+        "not informed",
+        "documentation",
+        "flight crew operations manual",
+        "fcom",
+        "service bulletin",
+        "not documented",
+        "airbus",
+        "boeing"
+      ],
+      "description": "The manufacturer failed to inform operators or crews of a system behaviour or hazard."
+    },
+    {
+      "id": "known_defect_unresolved",
+      "category": "organizational",
+      "label": "Known defect not resolved",
+      "synonyms": [
+        "known problem",
+        "previous incidents",
+        "prior events",
+        "deferred",
+        "mel",
+        "minimum equipment list",
+        "deferred defect",
+        "recurring defect",
+        "history of",
+        "had been reported"
+      ],
+      "description": "A defect or hazard had been reported previously but not corrected before the accident."
+    },
+    {
+      "id": "terrorism_or_hostile_act",
+      "category": "environmental",
+      "label": "Hostile or criminal act",
+      "synonyms": [
+        "bomb",
+        "hijack",
+        "shot down",
+        "missile",
+        "sabotage",
+        "terrorism",
+        "explosive device"
+      ],
+      "description": "The accident resulted from a bomb, hijacking, missile or sabotage."
+    },
+    {
+      "id": "emergency_landing",
+      "category": "outcome",
+      "label": "Successful emergency landing",
+      "synonyms": [
+        "emergency landing",
+        "landed safely",
+        "survived",
+        "no fatalities",
+        "forced landing"
+      ],
+      "description": "The crew landed the aircraft with no or few fatalities despite a serious failure."
+    },
+    {
+      "id": "checklist_design",
+      "category": "design",
+      "label": "Checklist or procedure design flaw",
+      "synonyms": [
+        "checklist design",
+        "procedure design",
+        "qrh",
+        "quick reference handbook",
+        "ambiguous procedure",
+        "memory items",
+        "procedure inadequate",
+        "unreliable airspeed procedure"
+      ],
+      "description": "The published checklist or procedure was inadequate, ambiguous or too long for the situation."
+    },
+    {
+      "id": "high_workload",
+      "category": "human",
+      "label": "High workload and task saturation",
+      "synonyms": [
+        "workload",
+        "task saturation",
+        "saturated",
+        "overloaded",
+        "multiple warnings",
+        "cascading warnings",
+        "too many alerts"
+      ],
+      "description": "Simultaneous demands exceeded the crew's capacity."
+    },
+    {
+      "id": "excessive_speed",
+      "category": "human",
+      "label": "Excessive speed for phase",
+      "synonyms": [
+        "too fast",
+        "high speed",
+        "excessive speed",
+        "fast approach",
+        "overspeed",
+        "exceeded speed"
+      ],
+      "description": "The aircraft was flown faster than appropriate for the phase or configuration."
+    },
+    {
+      "id": "low_energy_state",
+      "category": "human",
+      "label": "Low energy state on approach",
+      "synonyms": [
+        "low speed",
+        "slow",
+        "airspeed decay",
+        "speed decayed",
+        "below vref",
+        "low energy",
+        "energy state",
+        "airspeed decreased"
+      ],
+      "description": "Airspeed decayed below the target during approach without correction."
+    },
+    {
+      "id": "loss_of_pilot_control_authority",
+      "category": "technical",
+      "label": "Reduced control authority",
+      "synonyms": [
+        "control authority",
+        "insufficient elevator",
+        "could not overcome",
+        "unable to raise the nose",
+        "unable to recover",
+        "insufficient control"
+      ],
+      "description": "The crew lacked sufficient control authority to recover."
+    }
+  ],
+  "phases": [
+    "ground",
+    "taxi",
+    "takeoff",
+    "initial_climb",
+    "climb",
+    "cruise",
+    "descent",
+    "approach",
+    "landing",
+    "go_around",
+    "unknown"
+  ],
+  "actors": {
+    "CAPT": "Captain",
+    "FO": "First Officer",
+    "PF": "Pilot Flying",
+    "PM": "Pilot Monitoring",
+    "PNF": "Pilot Not Flying",
+    "RELIEF": "Relief pilot",
+    "FE": "Flight Engineer",
+    "CABIN": "Cabin crew",
+    "ATC": "Air traffic control",
+    "SYS": "Aircraft system",
+    "GND": "Ground / maintenance",
+    "ENV": "Environment",
+    "OTHER": "Other aircraft or party"
+  }
+}

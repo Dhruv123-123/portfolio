@@ -1,0 +1,679 @@
+{
+ "id": "birgenair301",
+ "record": "birgenair301",
+ "source": "DGAC Dominican Republic final report (Birgenair 301, 757-225, Puerto Plata, 1996-02-06), FDR narrative and the CVR/FDR sequence: airspeed disagreement on takeoff roll, captain's ASI over-reading in climb, autopilot engaged and pitching up on false speed, rudder ratio / mach trim warnings, overspeed warning followed by stick shaker at ~7300 ft, thrust reduced, stall, left roll and spiral into the sea. No usable FDR trace figures were available to digitise, so ias_kt is the estimated actual (right-side) airspeed and the whole file is a plausible reconstruction of the narrative timeline rather than digitised data. Times relative to t0 and the impact time (about 5 min later) are approximate.",
+ "fidelity": "reconstructed",
+ "confidence": "low",
+ "t_start": -20,
+ "t_end": 300,
+ "aircraft_model": "airliner_twin",
+ "params": {
+  "alt_ft": {
+   "interp": "linear",
+   "keys": [
+    [
+     -20,
+     15
+    ],
+    [
+     30,
+     15
+    ],
+    [
+     40,
+     120
+    ],
+    [
+     60,
+     700
+    ],
+    [
+     90,
+     1700
+    ],
+    [
+     120,
+     2900
+    ],
+    [
+     150,
+     4300
+    ],
+    [
+     180,
+     5500
+    ],
+    [
+     210,
+     6500
+    ],
+    [
+     230,
+     7000
+    ],
+    [
+     245,
+     7300
+    ],
+    [
+     255,
+     7250
+    ],
+    [
+     265,
+     6600
+    ],
+    [
+     275,
+     5300
+    ],
+    [
+     285,
+     3600
+    ],
+    [
+     295,
+     1500
+    ],
+    [
+     300,
+     0
+    ]
+   ]
+  },
+  "ias_kt": {
+   "interp": "linear",
+   "keys": [
+    [
+     -20,
+     0
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     20,
+     155
+    ],
+    [
+     30,
+     165
+    ],
+    [
+     60,
+     190
+    ],
+    [
+     90,
+     215
+    ],
+    [
+     120,
+     225
+    ],
+    [
+     150,
+     225
+    ],
+    [
+     180,
+     215
+    ],
+    [
+     210,
+     200
+    ],
+    [
+     230,
+     185
+    ],
+    [
+     245,
+     165
+    ],
+    [
+     252,
+     150
+    ],
+    [
+     258,
+     145
+    ],
+    [
+     265,
+     170
+    ],
+    [
+     275,
+     220
+    ],
+    [
+     285,
+     280
+    ],
+    [
+     295,
+     330
+    ],
+    [
+     300,
+     350
+    ]
+   ]
+  },
+  "ias_capt_kt": {
+   "interp": "linear",
+   "keys": [
+    [
+     -20,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     20,
+     0
+    ],
+    [
+     30,
+     0
+    ],
+    [
+     60,
+     150
+    ],
+    [
+     90,
+     250
+    ],
+    [
+     120,
+     290
+    ],
+    [
+     150,
+     315
+    ],
+    [
+     180,
+     335
+    ],
+    [
+     210,
+     345
+    ],
+    [
+     230,
+     352
+    ],
+    [
+     245,
+     355
+    ],
+    [
+     255,
+     340
+    ],
+    [
+     265,
+     330
+    ],
+    [
+     300,
+     330
+    ]
+   ]
+  },
+  "pitch_deg": {
+   "interp": "linear",
+   "keys": [
+    [
+     -20,
+     0
+    ],
+    [
+     20,
+     0
+    ],
+    [
+     30,
+     12
+    ],
+    [
+     60,
+     15
+    ],
+    [
+     90,
+     14
+    ],
+    [
+     120,
+     14
+    ],
+    [
+     150,
+     15
+    ],
+    [
+     180,
+     16
+    ],
+    [
+     210,
+     17
+    ],
+    [
+     230,
+     18
+    ],
+    [
+     245,
+     19
+    ],
+    [
+     252,
+     12
+    ],
+    [
+     258,
+     -5
+    ],
+    [
+     265,
+     -15
+    ],
+    [
+     275,
+     -25
+    ],
+    [
+     285,
+     -30
+    ],
+    [
+     295,
+     -30
+    ],
+    [
+     300,
+     -30
+    ]
+   ]
+  },
+  "roll_deg": {
+   "interp": "linear",
+   "keys": [
+    [
+     -20,
+     0
+    ],
+    [
+     60,
+     0
+    ],
+    [
+     75,
+     -15
+    ],
+    [
+     90,
+     -20
+    ],
+    [
+     105,
+     0
+    ],
+    [
+     230,
+     0
+    ],
+    [
+     250,
+     -10
+    ],
+    [
+     255,
+     -35
+    ],
+    [
+     262,
+     -60
+    ],
+    [
+     270,
+     -80
+    ],
+    [
+     280,
+     -90
+    ],
+    [
+     290,
+     -85
+    ],
+    [
+     300,
+     -80
+    ]
+   ]
+  },
+  "hdg_deg": {
+   "interp": "linear",
+   "keys": [
+    [
+     -20,
+     80
+    ],
+    [
+     60,
+     80
+    ],
+    [
+     75,
+     70
+    ],
+    [
+     90,
+     55
+    ],
+    [
+     105,
+     40
+    ],
+    [
+     230,
+     40
+    ],
+    [
+     255,
+     30
+    ],
+    [
+     265,
+     350
+    ],
+    [
+     275,
+     300
+    ],
+    [
+     285,
+     240
+    ],
+    [
+     295,
+     180
+    ],
+    [
+     300,
+     150
+    ]
+   ]
+  },
+  "vs_fpm": {
+   "interp": "linear",
+   "keys": [
+    [
+     -20,
+     0
+    ],
+    [
+     30,
+     0
+    ],
+    [
+     40,
+     1500
+    ],
+    [
+     60,
+     2200
+    ],
+    [
+     90,
+     2300
+    ],
+    [
+     120,
+     2500
+    ],
+    [
+     150,
+     2600
+    ],
+    [
+     180,
+     2300
+    ],
+    [
+     210,
+     1800
+    ],
+    [
+     230,
+     1200
+    ],
+    [
+     245,
+     800
+    ],
+    [
+     252,
+     -500
+    ],
+    [
+     258,
+     -2500
+    ],
+    [
+     265,
+     -6000
+    ],
+    [
+     275,
+     -10000
+    ],
+    [
+     285,
+     -13000
+    ],
+    [
+     295,
+     -15000
+    ],
+    [
+     300,
+     -15000
+    ]
+   ]
+  },
+  "n1_pct": {
+   "interp": "linear",
+   "keys": [
+    [
+     -20,
+     30
+    ],
+    [
+     -10,
+     95
+    ],
+    [
+     210,
+     92
+    ],
+    [
+     235,
+     70
+    ],
+    [
+     250,
+     60
+    ],
+    [
+     255,
+     90
+    ],
+    [
+     265,
+     90
+    ],
+    [
+     300,
+     90
+    ]
+   ]
+  },
+  "thrust_lever": {
+   "interp": "step",
+   "keys": [
+    [
+     -20,
+     1.0
+    ],
+    [
+     235,
+     0.55
+    ],
+    [
+     255,
+     1.0
+    ]
+   ]
+  },
+  "gear": {
+   "interp": "step",
+   "keys": [
+    [
+     -20,
+     1
+    ],
+    [
+     40,
+     0
+    ]
+   ]
+  },
+  "ap": {
+   "interp": "step",
+   "keys": [
+    [
+     -20,
+     0
+    ],
+    [
+     90,
+     1
+    ],
+    [
+     250,
+     0
+    ]
+   ]
+  },
+  "stall_warn": {
+   "interp": "step",
+   "keys": [
+    [
+     -20,
+     0
+    ],
+    [
+     245,
+     1
+    ]
+   ]
+  },
+  "overspeed_warn": {
+   "interp": "step",
+   "keys": [
+    [
+     -20,
+     0
+    ],
+    [
+     230,
+     1
+    ],
+    [
+     250,
+     0
+    ]
+   ]
+  }
+ },
+ "units": {
+  "ias_capt_kt": "captain's (erroneous, left pitot) airspeed indication, kt",
+  "ias_kt": "estimated actual airspeed, kt",
+  "thrust_lever": "0 idle .. 1 TOGA",
+  "overspeed_warn": "overspeed clacker"
+ },
+ "markers": [
+  {
+   "t": -20,
+   "label": "Takeoff roll, runway 08 Puerto Plata"
+  },
+  {
+   "t": 0,
+   "label": "Captain: \"my airspeed indicator's not working\"; takeoff continued"
+  },
+  {
+   "t": 20,
+   "label": "Rotation"
+  },
+  {
+   "t": 60,
+   "label": "Captain's ASI comes alive and begins over-reading"
+  },
+  {
+   "t": 90,
+   "label": "Autopilot engaged on captain's air data"
+  },
+  {
+   "t": 150,
+   "label": "Rudder ratio / mach trim warnings (~4700 ft)"
+  },
+  {
+   "t": 210,
+   "label": "Autopilot pitching up to hold false speed; actual speed decaying"
+  },
+  {
+   "t": 230,
+   "label": "Overspeed warning (captain's ASI 350+ kt)"
+  },
+  {
+   "t": 235,
+   "label": "Thrust reduced"
+  },
+  {
+   "t": 245,
+   "label": "Stick shaker at ~7300 ft"
+  },
+  {
+   "t": 250,
+   "label": "Autopilot disconnects"
+  },
+  {
+   "t": 255,
+   "label": "Stall; thrust to TOGA; left roll begins"
+  },
+  {
+   "t": 270,
+   "label": "Left engine loses power; spiral descent"
+  },
+  {
+   "t": 295,
+   "label": "GPWS \"pull up\""
+  },
+  {
+   "t": 300,
+   "label": "Impact with sea"
+  }
+ ],
+ "camera_hint": "chase",
+ "terrain": "ocean"
+}

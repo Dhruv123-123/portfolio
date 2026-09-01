@@ -1,0 +1,365 @@
+{
+  "id": "eastern401",
+  "title": "Eastern Air Lines 401",
+  "flight_number": "EA401",
+  "date": "1972-12-29",
+  "time_reference": "EST (local)",
+  "t0": "1972-12-30T04:32:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "NTSB/AAR-73/14",
+      "report_title": "Eastern Air Lines, Inc., L-1011, N310EA, Miami, Florida, December 29, 1972",
+      "report_date": "1973-06-14",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7314.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Lockheed L-1011-385-1 TriStar",
+    "family": "L-1011",
+    "manufacturer": "Lockheed",
+    "registration": "N310EA",
+    "msn": null,
+    "engines": "Rolls-Royce RB211-22C"
+  },
+  "operator": "Eastern Air Lines",
+  "route": {
+    "from": "KJFK",
+    "from_name": "New York John F. Kennedy",
+    "to": "KMIA",
+    "to_name": "Miami International"
+  },
+  "location": {
+    "name": "Everglades, about 18 miles west-northwest of Miami International Airport, Florida",
+    "country": "USA",
+    "lat": 25.86,
+    "lon": -80.6
+  },
+  "phase": "approach",
+  "occupants": 176,
+  "fatalities": 101,
+  "injuries_serious": null,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "On approach to Miami the nose gear down-and-locked light failed to illuminate. The crew abandoned the approach, climbed to 2,000 ft over the Everglades on autopilot and became absorbed in the indicator bulb and in checking the gear from the avionics bay. The autopilot altitude hold was inadvertently disengaged and the aircraft descended slowly and unnoticed in the dark until it struck the swamp. The gear had been down and locked all along; 101 of the 176 on board died.",
+  "probable_cause": "The failure of the flightcrew to monitor the flight instruments during the final 4 minutes of flight, and to detect an unexpected descent soon enough to prevent impact with the ground. Preoccupation with a malfunction of the nose landing gear position indicating system distracted the crew's attention from the instruments and allowed the descent to go unnoticed.",
+  "factors": [
+    {
+      "id": "high_workload",
+      "role": "initiating",
+      "evidence": "The entire crew became engaged with the burned-out nose gear indicator light and with visually checking the gear from the forward electronics bay."
+    },
+    {
+      "id": "autopilot_disconnect",
+      "role": "contributing",
+      "evidence": "The altitude hold mode was inadvertently disengaged, probably by a light force on the captain's control column, and the autopilot descended in control wheel steering mode."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "latent",
+      "evidence": "The altitude alert chime sounded once at 1,750 ft and was not noticed; the autopilot mode annunciation and the split between the two autopilot channels made the mode change hard to detect."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "No crew member monitored the flight instruments during the final four minutes."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "No pilot was assigned to fly the aircraft while the others troubleshot the light, and duties were not delegated."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The crew believed they were still at 2,000 ft until seconds before impact."
+    },
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "Over the unlit Everglades at night there were no visual cues of the descent."
+    },
+    {
+      "id": "msaw_unavailable",
+      "role": "latent",
+      "evidence": "No minimum safe altitude warning capability existed; the controller saw an altitude readout of 900 ft but only asked how things were coming along."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft struck the Everglades in a shallow left bank while the crew were unaware of the descent."
+    }
+  ],
+  "chain": [
+    [
+      "high_workload",
+      "crm_breakdown"
+    ],
+    [
+      "crm_breakdown",
+      "inadequate_monitoring"
+    ],
+    [
+      "high_workload",
+      "autopilot_disconnect"
+    ],
+    [
+      "warning_system_deficiency",
+      "inadequate_monitoring"
+    ],
+    [
+      "autopilot_disconnect",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "inadequate_monitoring",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "dark_night",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "msaw_unavailable",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "23:32",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "On approach to runway 9L the landing gear is extended but the nose gear green down-and-locked light does not illuminate.",
+      "factors": [
+        "high_workload"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 120,
+      "clock": "23:34",
+      "phase": "go_around",
+      "actor": "CAPT",
+      "text": "Captain discontinues the approach; tower instructs the flight to climb to 2,000 ft and turn west over the Everglades.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Autopilot engaged in altitude hold at 2,000 ft while the crew work on the indicator light.",
+      "state": {
+        "alt": 2000
+      },
+      "kind": "system"
+    },
+    {
+      "t": 360,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "FO",
+      "text": "First officer tries to remove and reseat the indicator lamp assembly, which has jammed; the captain and flight engineer join the effort.",
+      "factors": [
+        "high_workload",
+        "crm_breakdown"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 410,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Altitude hold is inadvertently disengaged, probably by pressure on the control column; the autopilot begins a slow descent in control wheel steering mode.",
+      "factors": [
+        "autopilot_disconnect"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 420,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "FE",
+      "text": "Flight engineer goes down into the forward electronics bay to check the nose gear visually through the viewing port; a company technician riding in the cockpit joins him.",
+      "factors": [
+        "high_workload"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 518,
+      "clock": "23:40:38",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Altitude alert chime sounds as the aircraft passes about 1,750 ft; no crew member reacts.",
+      "state": {
+        "alt": 1750
+      },
+      "factors": [
+        "warning_system_deficiency",
+        "inadequate_monitoring"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 580,
+      "clock": "23:41:40",
+      "phase": "descent",
+      "actor": "ATC",
+      "text": "Miami approach controller, seeing a low altitude readout, asks how things are coming along; the crew reply that they would like to turn around and come back in.",
+      "factors": [
+        "msaw_unavailable"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": 605,
+      "clock": "23:42:05",
+      "phase": "descent",
+      "actor": "FO",
+      "text": "First officer notices the altitude and says they did something to the altitude; the captain asks what.",
+      "factors": [
+        "loss_of_situational_awareness"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 607,
+      "clock": "23:42:07",
+      "phase": "descent",
+      "actor": "FO",
+      "text": "First officer asks whether they are still at two thousand feet.",
+      "factors": [
+        "loss_of_situational_awareness"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 609,
+      "clock": "23:42:09",
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Captain exclaims, asking what is happening, as the radio altimeter warning sounds.",
+      "factors": [
+        "loss_of_situational_awareness",
+        "dark_night"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 612,
+      "clock": "23:42:12",
+      "phase": "descent",
+      "actor": "ENV",
+      "text": "The left wingtip strikes the Everglades and the aircraft breaks up in the swamp about 18 miles west-northwest of the airport.",
+      "factors": [
+        "cfit"
+      ],
+      "kind": "outcome"
+    }
+  ],
+  "cvr": [
+    {
+      "t": 605,
+      "clock": "23:42:05",
+      "speaker": "FO",
+      "text": "We did something to the altitude.",
+      "translation": null
+    },
+    {
+      "t": 606,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "What?",
+      "translation": null
+    },
+    {
+      "t": 607,
+      "clock": "23:42:07",
+      "speaker": "FO",
+      "text": "We're still at two thousand, right?",
+      "translation": null
+    },
+    {
+      "t": 609,
+      "clock": "23:42:09",
+      "speaker": "CAPT",
+      "text": "Hey, what's happening here?",
+      "translation": null
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Develop and install minimum safe altitude warning capability in terminal radar systems so controllers are alerted when an aircraft descends below a safe altitude.",
+      "status": "closed_acceptable",
+      "outcome": "MSAW was implemented in ARTS terminal radar systems in the late 1970s.",
+      "trigger_factors": [
+        "msaw_unavailable",
+        "cfit"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require that autopilot mode changes and altitude hold disengagement be clearly annunciated and that altitude alerting be more conspicuous.",
+      "status": "unknown",
+      "outcome": "L-1011 autopilot annunciation was modified.",
+      "trigger_factors": [
+        "warning_system_deficiency",
+        "autopilot_disconnect"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA / operators",
+      "text": "Emphasise in crew training that one pilot must continue to fly and monitor the aircraft while other crew members deal with a malfunction.",
+      "status": "unknown",
+      "outcome": "Became a foundation of later crew resource management training.",
+      "trigger_factors": [
+        "crm_breakdown",
+        "inadequate_monitoring"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Minimum safe altitude warning added to FAA terminal radar systems.",
+    "Ground proximity warning systems became mandatory on US airliners after this and other CFIT accidents in the mid-1970s.",
+    "The accident became a foundational case in crew resource management training on task management and monitoring."
+  ],
+  "related": [
+    "united173",
+    "korean801",
+    "crossair3597"
+  ],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7314.pdf",
+    "https://www.ntsb.gov"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "t0 is the approximate gear extension time of 23:32 EST; the CVR times from 23:40:38 onward are recalled from the report to within a few seconds; earlier offsets are estimates and the altitude hold disengagement is placed at its approximate time.",
+      "Fatalities: 99 died at the scene or shortly after and the widely cited total including later deaths is 101; 176 occupants (163 passengers, 13 crew).",
+      "CVR quotations are the widely published final exchange; exact punctuation may differ from the report transcript.",
+      "Recommendation numbers not recalled and are left null."
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "id": "usair1549",
+  "title": "US Airways 1549",
+  "flight_number": "US1549 (callsign Cactus 1549)",
+  "date": "2009-01-15",
+  "time_reference": "EST (local)",
+  "t0": "2009-01-15T20:27:11Z",
+  "agency": "NTSB",
+  "agencies": [
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+      "report_id": "NTSB/AAR-10/03",
+      "report_title": "Loss of Thrust in Both Engines After Encountering a Flock of Birds and Subsequent Ditching on the Hudson River, US Airways Flight 1549, Airbus A320-214, N106US, Weehawken, New Jersey, January 15, 2009",
+      "report_date": "2010-05-04",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1003.pdf" },
+    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses pour la Sécurité de l'Aviation Civile", "country": "France", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "Airbus A320-214", "family": "A320", "manufacturer": "Airbus", "registration": "N106US", "msn": "1044", "engines": "CFM International CFM56-5B4/P" },
+  "operator": "US Airways",
+  "route": { "from": "KLGA", "from_name": "New York LaGuardia", "to": "KCLT", "to_name": "Charlotte Douglas International" },
+  "location": { "name": "Hudson River off Weehawken, New Jersey / midtown Manhattan", "country": "USA", "lat": 40.769, "lon": -74.004 },
+  "phase": "initial_climb",
+  "occupants": 155,
+  "fatalities": 0,
+  "injuries_serious": 5,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "About two minutes after takeoff from LaGuardia, climbing through 2,800 feet, the A320 struck a flock of Canada geese and both engines lost almost all thrust. The captain took control, started the APU, judged that no runway was reachable and ditched on the Hudson River about three and a half minutes after the strike. All 155 occupants were rescued by ferries and emergency responders; five people were seriously injured.",
+  "probable_cause": "The ingestion of large birds into each engine, which resulted in an almost total loss of thrust in both engines and the subsequent ditching on the Hudson River. Contributing to the fuselage damage and resulting unavailability of the aft slide/rafts were (1) the Airbus engineering assumptions in the development of A320 ditching procedures and certification, the lack of industry flight crew training and guidance on ditching techniques, and (2) the captain's resulting difficulty maintaining his intended airspeed on final approach due to the task saturation resulting from the emergency situation. Contributing to the survivability of the accident were (1) the decision-making of the flight crewmembers and their use of crew resource management during the accident sequence; (2) the fortuitous use of an airplane that was equipped for an extended overwater flight, including the availability of the forward slide/rafts, even though it was not required to be so equipped; (3) the performance of the cabin crewmembers while expediting the evacuation of the airplane; and (4) the proximity of the emergency responders to the accident site and their immediate and appropriate response to the accident.",
+  "factors": [
+    { "id": "bird_strike", "role": "initiating", "evidence": "The airplane struck a flock of Canada geese at about 2,818 feet; remains of Branta canadensis were found in both engines." },
+    { "id": "dual_engine_failure", "role": "contributing", "evidence": "Ingestion of large birds into the core of each engine caused an almost total loss of thrust in both engines within seconds." },
+    { "id": "certification_shortfall", "role": "latent", "evidence": "Engine bird-ingestion certification standards at the time did not require testing for birds as large as those encountered, and A320 ditching certification assumed a descent rate and configuration (engines running, 3.5 ft/s) that could not be achieved in an all-engine-out glide." },
+    { "id": "checklist_design", "role": "contributing", "evidence": "The Engine Dual Failure checklist was written for a high-altitude event and was too long to complete before the ditching; the crew never reached the ditching items." },
+    { "id": "high_workload", "role": "contributing", "evidence": "Task saturation during the emergency contributed to the captain's difficulty maintaining his intended airspeed on final approach." },
+    { "id": "inadequate_training", "role": "latent", "evidence": "There was no industry flight crew training or guidance on ditching techniques or on managing a dual engine failure at low altitude." },
+    { "id": "loss_of_pilot_control_authority", "role": "contributing", "evidence": "In the flare the airplane entered its alpha-protection envelope, which limited the pitch-up the captain could command and prevented him from further reducing the descent rate." },
+    { "id": "evacuation_deficiency", "role": "contributing", "evidence": "Fuselage damage let water into the aft cabin, making the aft slide/rafts unusable; some passengers evacuated without life vests and one aft door was briefly opened." },
+    { "id": "ditching", "role": "outcome", "evidence": "The airplane was ditched on the Hudson River at about 125 knots with a descent rate of about 12.5 ft/s, flaps 2, and remained afloat long enough for all occupants to evacuate." },
+    { "id": "emergency_landing", "role": "outcome", "evidence": "The forced landing on the river was survived by all 155 occupants." }
+  ],
+  "chain": [
+    ["bird_strike", "dual_engine_failure"],
+    ["certification_shortfall", "dual_engine_failure"],
+    ["dual_engine_failure", "high_workload"],
+    ["checklist_design", "high_workload"],
+    ["inadequate_training", "high_workload"],
+    ["dual_engine_failure", "ditching"],
+    ["high_workload", "loss_of_pilot_control_authority"],
+    ["loss_of_pilot_control_authority", "ditching"],
+    ["certification_shortfall", "evacuation_deficiency"],
+    ["ditching", "evacuation_deficiency"],
+    ["ditching", "emergency_landing"]
+  ],
+  "events": [
+    { "t": -135, "clock": "15:24:56", "phase": "takeoff", "actor": "FO", "text": "Takeoff from LaGuardia runway 4 with the first officer as pilot flying.", "kind": "crew_action" },
+    { "t": -1, "clock": "15:27:10", "phase": "initial_climb", "actor": "CAPT", "text": "Captain sees a flock of birds ahead and says 'birds'.", "factors": ["bird_strike"], "kind": "crew_speech" },
+    { "t": 0, "clock": "15:27:11", "phase": "initial_climb", "actor": "ENV", "text": "The airplane strikes a flock of Canada geese; thumps are heard and both engines ingest birds.", "state": { "alt": 2818, "ias": 208 }, "factors": ["bird_strike", "dual_engine_failure"], "kind": "env" },
+    { "t": 3, "clock": "15:27:14", "phase": "initial_climb", "actor": "SYS", "text": "Both engines roll back; the captain notes 'both of 'em rolling back' and calls for ignition and APU start.", "factors": ["dual_engine_failure"], "kind": "system" },
+    { "t": 12, "clock": "15:27:23", "phase": "initial_climb", "actor": "CAPT", "text": "Captain takes control ('my aircraft') and starts the APU; the first officer begins the Engine Dual Failure checklist from the QRH.", "factors": ["checklist_design", "high_workload"], "kind": "crew_action" },
+    { "t": 21, "clock": "15:27:32", "phase": "descent", "actor": "CAPT", "text": "Captain declares 'mayday' to LaGuardia departure, reporting a bird strike, loss of thrust in both engines, and a turn back toward LaGuardia.", "factors": ["dual_engine_failure"], "kind": "crew_speech" },
+    { "t": 38, "clock": "15:27:49", "phase": "descent", "actor": "ATC", "text": "Departure controller instructs a left turn to heading 220 and begins arranging a return to LaGuardia.", "kind": "atc" },
+    { "t": 54, "clock": "15:28:05", "phase": "descent", "actor": "ATC", "text": "Controller offers runway 13 at LaGuardia; the captain replies 'we're unable. we may end up in the Hudson'.", "factors": ["dual_engine_failure"], "kind": "atc" },
+    { "t": 70, "clock": null, "phase": "descent", "actor": "FO", "text": "First officer attempts engine relights per the checklist; neither engine recovers usable thrust.", "factors": ["dual_engine_failure", "checklist_design"], "kind": "crew_action" },
+    { "t": 104, "clock": "15:28:55", "phase": "descent", "actor": "CAPT", "text": "Captain asks about airports to the right in New Jersey, including Teterboro; the controller offers Teterboro runway 1.", "kind": "atc" },
+    { "t": 130, "clock": "15:29:21", "phase": "descent", "actor": "CAPT", "text": "Captain tells ATC 'we can't do it' and, shortly after, 'we're gonna be in the Hudson'.", "factors": ["dual_engine_failure"], "kind": "crew_speech" },
+    { "t": 145, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Captain makes the cabin announcement 'brace for impact'; flight attendants begin brace commands.", "kind": "crew_speech" },
+    { "t": 185, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Flaps 2 are selected for the ditching; the captain asks the first officer 'got any ideas?' and he answers 'actually not'.", "factors": ["high_workload"], "kind": "crew_action" },
+    { "t": 205, "clock": null, "phase": "approach", "actor": "SYS", "text": "In the flare the airplane reaches the alpha-protection boundary, limiting further nose-up pitch; airspeed is below the captain's intended speed.", "factors": ["loss_of_pilot_control_authority", "high_workload"], "kind": "system" },
+    { "t": 212, "clock": "15:30:43", "phase": "landing", "actor": "SYS", "text": "The airplane touches down on the Hudson River at about 125 knots and a descent rate of about 12.5 ft/s; the aft fuselage is damaged and water enters the rear cabin.", "state": { "ias": 125, "pitch": 9.5 }, "factors": ["ditching", "evacuation_deficiency"], "kind": "outcome" },
+    { "t": 260, "clock": null, "phase": "ground", "actor": "CABIN", "text": "Evacuation through the forward doors and overwing exits onto the slide/rafts and wings; the aft slide/rafts are unusable because of water in the cabin. Ferries begin rescuing occupants within minutes.", "factors": ["evacuation_deficiency", "emergency_landing"], "kind": "outcome" }
+  ],
+  "cvr": [
+    { "t": -1, "clock": "15:27:10", "speaker": "CAPT", "text": "birds.", "translation": null },
+    { "t": 3, "clock": "15:27:14", "speaker": "CAPT", "text": "we got one rol- both of 'em rolling back.", "translation": null },
+    { "t": 4, "clock": "15:27:15", "speaker": "CAPT", "text": "ignition, start.", "translation": null },
+    { "t": 12, "clock": "15:27:23", "speaker": "CAPT", "text": "my aircraft.", "translation": null },
+    { "t": 13, "clock": "15:27:24", "speaker": "FO", "text": "your aircraft.", "translation": null },
+    { "t": 21, "clock": "15:27:32", "speaker": "CAPT", "text": "mayday mayday mayday. this is Cactus fifteen thirty nine hit birds, we've lost thrust in both engines we're turning back towards LaGuardia.", "translation": null },
+    { "t": 134, "clock": "15:29:25", "speaker": "CAPT", "text": "we're gonna be in the Hudson.", "translation": null },
+    { "t": 186, "clock": null, "speaker": "CAPT", "text": "got flaps two, you got any ideas?", "translation": null },
+    { "t": 187, "clock": null, "speaker": "FO", "text": "actually not.", "translation": null }
+  ],
+  "recommendations": [
+    { "id": null, "to": "FAA", "text": "Require Airbus to develop a dual engine failure checklist usable at low altitude and require operators to train on it.", "status": "closed_acceptable", "outcome": "Airbus revised the A320 Engine Dual Failure procedure and QRH.", "trigger_factors": ["checklist_design", "dual_engine_failure"] },
+    { "id": null, "to": "FAA", "text": "Revise engine bird-ingestion certification standards to reflect the size and numbers of large flocking birds actually encountered, including core ingestion.", "status": "open", "outcome": null, "trigger_factors": ["certification_shortfall", "bird_strike"] },
+    { "id": null, "to": "FAA", "text": "Require ditching training and guidance for flight crews, including the effect of flight envelope protections on the flare, and require that ditching certification consider realistic engine-out descent rates.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_training", "certification_shortfall", "loss_of_pilot_control_authority"] },
+    { "id": null, "to": "FAA", "text": "Require life vests and forward slide/rafts on all airplanes regardless of route, and improve passenger briefing on life vest use and location.", "status": "unknown", "outcome": null, "trigger_factors": ["evacuation_deficiency"] },
+    { "id": null, "to": "FAA and USDA", "text": "Improve wildlife hazard management around airports and require wildlife hazard assessments at all Part 139 airports.", "status": "closed_acceptable", "outcome": "FAA expanded wildlife hazard assessment requirements and reporting.", "trigger_factors": ["bird_strike"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Airbus revised the A320 family Engine Dual Failure procedure to add a low-altitude branch that goes directly to the essential relight and ditching items.",
+    "FAA and EASA opened reviews of engine bird-ingestion certification standards for large flocking birds, including core ingestion.",
+    "Wildlife hazard management at Part 139 airports was strengthened, including wildlife hazard assessments and Canada goose population control around New York airports.",
+    "The event became the reference case for CRM and startle-management training on low-altitude all-engine power loss."
+  ],
+  "related": ["united232", "ba38", "aircanada143", "airtransat236", "pelair", "tuninter1153"],
+  "fdr": "usair1549",
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1003.pdf",
+    "https://www.ntsb.gov"
+  ],
+  "extraction": {
+    "method": "llm", "model": "claude", "confidence": "high", "reviewed": false,
+    "notes": [
+      "Bird strike time 15:27:11 EST and ditching 15:30:43 EST are from the report; ATC exchange clocks (15:27:32 mayday, 15:27:49, 15:28:05, 15:28:55, 15:29:21, 15:29:25) follow the public transcript to within a second or two.",
+      "The clock time of the 'brace for impact' PA and of the flaps 2 selection are not recalled precisely; those events carry approximate t only.",
+      "Touchdown parameters (about 125 kt, about 12.5 ft/s, 9.5 degrees pitch, flaps 2) are as stated in the report's performance analysis; treat pitch as approximate.",
+      "ICAO category BIRD is not in the spec's list, so OTHR is used; the initiating event was a bird strike."
+    ]
+  }
+}

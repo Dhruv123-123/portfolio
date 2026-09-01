@@ -1,0 +1,225 @@
+{
+  "_comment": "Final report PDFs per accident id. 'verified' means the URL was fetched successfully by fetch_reports.py at least once. Unverified entries are the agency landing page; fetch_reports.py will try them and record failures in cache/fetch-log.json.",
+  "reports": {
+    "colgan3407": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1001.pdf",
+      "verified": true
+    },
+    "asiana214": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1401.pdf",
+      "verified": true
+    },
+    "usair1549": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1003.pdf",
+      "verified": true
+    },
+    "alaska261": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0201.pdf",
+      "verified": true
+    },
+    "aa587": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0404.pdf",
+      "verified": false
+    },
+    "twa800": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0003.pdf",
+      "verified": false
+    },
+    "comair5191": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0705.pdf",
+      "verified": false
+    },
+    "airmidwest5481": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0401.pdf",
+      "verified": false
+    },
+    "airflorida90": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8208.pdf",
+      "verified": false
+    },
+    "united232": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9006.pdf",
+      "verified": false
+    },
+    "atlas3591": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR2002.pdf",
+      "verified": false
+    },
+    "northwest6231": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7513.pdf",
+      "verified": false
+    },
+    "pinnacle3701": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0701.pdf",
+      "verified": false
+    },
+    "southwest1248": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0706.pdf",
+      "verified": false
+    },
+    "delta191": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8605.pdf",
+      "verified": false
+    },
+    "united173": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7907.pdf",
+      "verified": false
+    },
+    "valujet592": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9706.pdf",
+      "verified": false
+    },
+    "egyptair990": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0201.pdf",
+      "verified": false
+    },
+    "korean801": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0001.pdf",
+      "verified": false
+    },
+    "ups1354": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1402.pdf",
+      "verified": false
+    },
+    "united811": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9202.pdf",
+      "verified": false
+    },
+    "american1420": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0102.pdf",
+      "verified": false
+    },
+    "eastern401": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7314.pdf",
+      "verified": false
+    },
+    "usair427": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9901.pdf",
+      "verified": false
+    },
+    "americaneagle4184": {
+      "agency": "NTSB",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9601.pdf",
+      "verified": false
+    },
+    "af447": {
+      "agency": "BEA",
+      "url": "https://bea.aero/fileadmin/documents/docspa/2009/f-cp090601.en/pdf/f-cp090601.en.pdf",
+      "verified": true
+    },
+    "af296": {
+      "agency": "BEA",
+      "url": "https://bea.aero/",
+      "verified": false
+    },
+    "germanwings9525": {
+      "agency": "BEA",
+      "url": "https://bea.aero/fileadmin/documents/docspa/2015/d-px150324.en/pdf/d-px150324.en.pdf",
+      "verified": true
+    },
+    "airinter148": {
+      "agency": "BEA",
+      "url": "https://bea.aero/",
+      "verified": false
+    },
+    "concorde4590": {
+      "agency": "BEA",
+      "url": "https://bea.aero/en/investigation-reports/notified-events/detail/accident-to-the-concorde-registered-f-btsc-and-operated-by-air-france-on-25-07-2000-at-la-patte-doie-in-gonesse/",
+      "verified": false
+    },
+    "airalgerie5017": {
+      "agency": "BEA",
+      "url": "https://bea.aero/",
+      "verified": false
+    },
+    "ba38": {
+      "agency": "AAIB",
+      "url": "https://www.gov.uk/aaib-reports/1-2010-boeing-777-236er-g-ymmm-17-january-2008",
+      "verified": false
+    },
+    "kegworth": {
+      "agency": "AAIB",
+      "url": "https://www.gov.uk/aaib-reports/4-1990-boeing-737-400-g-obme-8-january-1989",
+      "verified": false
+    },
+    "ba5390": {
+      "agency": "AAIB",
+      "url": "https://www.gov.uk/aaib-reports/1-1992-bac-one-eleven-g-bjrt-10-june-1990",
+      "verified": false
+    },
+    "shoreham": {
+      "agency": "AAIB",
+      "url": "https://www.gov.uk/aaib-reports/aircraft-accident-report-aar-1-2017-g-bxfi-22-august-2015",
+      "verified": false
+    },
+    "manchester28m": {
+      "agency": "AAIB",
+      "url": "https://www.gov.uk/aaib-reports/8-1988-boeing-737-236-g-bgjl-22-august-1985",
+      "verified": false
+    },
+    "swissair111": {
+      "agency": "TSB",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1998/a98h0003/a98h0003.html",
+      "verified": false
+    },
+    "af358": {
+      "agency": "TSB",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2005/a05h0002/a05h0002.pdf",
+      "verified": false
+    },
+    "firstair6560": {
+      "agency": "TSB",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2011/a11h0002/a11h0002.pdf",
+      "verified": false
+    },
+    "aircanada143": {
+      "agency": "TSB",
+      "url": "https://www.tsb.gc.ca/",
+      "verified": false
+    },
+    "qantas32": {
+      "agency": "ATSB",
+      "url": "https://www.atsb.gov.au/publications/investigation_reports/2010/aair/ao-2010-089",
+      "verified": false
+    },
+    "qantas72": {
+      "agency": "ATSB",
+      "url": "https://www.atsb.gov.au/publications/investigation_reports/2008/aair/ao-2008-070",
+      "verified": false
+    },
+    "emirates407": {
+      "agency": "ATSB",
+      "url": "https://www.atsb.gov.au/publications/investigation_reports/2009/aair/ao-2009-012",
+      "verified": false
+    },
+    "pelair": {
+      "agency": "ATSB",
+      "url": "https://www.atsb.gov.au/publications/investigation_reports/2009/aair/ao-2009-072",
+      "verified": false
+    }
+  }
+}

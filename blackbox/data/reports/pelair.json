@@ -1,0 +1,79 @@
+{
+  "id": "pelair",
+  "title": "Pel-Air Westwind VH-NGA",
+  "flight_number": null,
+  "date": "2009-11-18",
+  "time_reference": "UTC; clock times not reproduced, t is relative to the ditching (t=0) with earlier events negative",
+  "t0": null,
+  "agency": "ATSB",
+  "agencies": [
+    { "code": "ATSB", "name": "Australian Transport Safety Bureau", "country": "Australia", "role": "lead",
+      "report_id": "AO-2009-072", "report_title": "Ditching of Israel Aircraft Industries Westwind 1124A, VH-NGA, 6 km SW of Norfolk Island Airport, 18 November 2009 (re-opened investigation, final report 2017)", "report_date": "2017-11-23",
+      "url": "https://www.atsb.gov.au/publications/investigation_reports/2009/aair/ao-2009-072" }
+  ],
+  "aircraft": { "type": "Israel Aircraft Industries Westwind 1124A", "family": "Westwind", "manufacturer": "Israel Aircraft Industries", "registration": "VH-NGA", "msn": null, "engines": "Garrett TFE731-3" },
+  "operator": "Pel-Air Aviation (air ambulance flight for CareFlight)",
+  "route": { "from": "NSFA", "from_name": "Apia Faleolo, Samoa", "to": "YSNF", "to_name": "Norfolk Island", "onward": "Melbourne" },
+  "location": { "name": "Pacific Ocean about 6 km south-west of Norfolk Island", "country": "Australia", "lat": -29.04, "lon": 167.94 },
+  "phase": "approach",
+  "occupants": 6, "fatalities": 0, "injuries_serious": null,
+  "damage": "destroyed",
+  "category": "FUEL",
+  "summary": "An air ambulance Westwind carrying a patient from Apia to Melbourne via a refuelling stop at Norfolk Island departed at night with fuel for the island but no alternate. Weather at Norfolk Island deteriorated below the landing minima after departure and the crew did not obtain the updates in time to divert. After four unsuccessful instrument approaches in cloud and rain, with fuel critical, the pilot in command ditched the aircraft in the sea near the island. All six on board escaped the sinking aircraft and were rescued about 90 minutes later.",
+  "probable_cause": "The ATSB's re-opened investigation found that the pilot in command's pre-flight planning did not adequately consider the possibility of weather deterioration at Norfolk Island and that the flight departed without an alternate or additional fuel to cope with it, which the operator's procedures and the regulations then in force permitted. Updated forecasts and reports showing conditions below the minima were not obtained by the crew until the aircraft had passed the point at which a diversion was possible. Contributing were deficiencies in Pel-Air's operational risk controls and fuel planning guidance for its air ambulance operations, and shortcomings in CASA's oversight of the operator.",
+  "factors": [
+    { "id": "operator_safety_culture", "role": "latent", "evidence": "The re-opened investigation found Pel-Air's risk controls for long over-water air ambulance flights, including fuel planning and in-flight decision guidance, were inadequate." },
+    { "id": "regulatory_oversight", "role": "latent", "evidence": "The ATSB found that CASA's surveillance of Pel-Air's operations had not identified the operator's deficiencies, and that the regulations did not require an alternate for the flight." },
+    { "id": "procedural_noncompliance", "role": "initiating", "evidence": "The pilot in command's flight planning did not make adequate provision for weather deterioration at an isolated aerodrome; the flight departed without an alternate or fuel to reach one." },
+    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The crew did not obtain the updated Norfolk Island weather in time and did not recognise the deteriorating situation until diversion was no longer possible." },
+    { "id": "low_visibility", "role": "contributing", "evidence": "Cloud and rain at Norfolk Island were below the landing minima on arrival; the crew could not see the runway on four instrument approaches." },
+    { "id": "dark_night", "role": "contributing", "evidence": "The approaches and the ditching took place at night." },
+    { "id": "emergency_landing", "role": "outcome", "evidence": "With fuel critical and no landing possible, the pilot in command elected to ditch while engine power remained available." },
+    { "id": "ditching", "role": "outcome", "evidence": "The aircraft was ditched in the sea about 6 km south-west of the airport, broke up on impact and sank; all six occupants escaped." }
+  ],
+  "chain": [
+    ["regulatory_oversight", "operator_safety_culture"],
+    ["operator_safety_culture", "procedural_noncompliance"],
+    ["procedural_noncompliance", "loss_of_situational_awareness"],
+    ["dark_night", "low_visibility"],
+    ["loss_of_situational_awareness", "emergency_landing"],
+    ["low_visibility", "emergency_landing"],
+    ["emergency_landing", "ditching"]
+  ],
+  "events": [
+    { "t": -25200, "clock": null, "phase": "ground", "actor": "CAPT", "text": "Pre-flight planning at Apia: the forecast then available indicates Norfolk Island conditions above the alternate minima, so no alternate is planned and no extra fuel is carried beyond the operator's requirement.", "factors": ["procedural_noncompliance", "operator_safety_culture"], "kind": "crew_action" },
+    { "t": -14400, "clock": null, "phase": "takeoff", "actor": "PF", "text": "Departs Apia at night for Norfolk Island with the patient, a doctor, a nurse, the patient's partner and two pilots on board.", "factors": ["dark_night"], "kind": "crew_action" },
+    { "t": -10800, "clock": null, "phase": "cruise", "actor": "ENV", "text": "After departure, updated Norfolk Island observations and forecast amendments show deteriorating cloud and visibility; the crew do not obtain them at this stage.", "factors": ["low_visibility", "loss_of_situational_awareness"], "kind": "env" },
+    { "t": -5400, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "The crew obtain the Norfolk Island weather en route; conditions are now below the landing minima but the aircraft has passed the point from which a diversion to another aerodrome is possible.", "factors": ["loss_of_situational_awareness", "procedural_noncompliance"], "kind": "crew_action" },
+    { "t": -2400, "clock": null, "phase": "approach", "actor": "PF", "text": "First instrument approach to Norfolk Island; no visual reference at the minima; missed approach.", "factors": ["low_visibility", "dark_night"], "kind": "crew_action" },
+    { "t": -1500, "clock": null, "phase": "go_around", "actor": "PF", "text": "Second approach, also unsuccessful; the crew consider options as fuel decreases.", "factors": ["low_visibility"], "kind": "crew_action" },
+    { "t": -900, "clock": null, "phase": "go_around", "actor": "PF", "text": "Third approach unsuccessful in cloud and rain.", "factors": ["low_visibility"], "kind": "crew_action" },
+    { "t": -500, "clock": null, "phase": "go_around", "actor": "PF", "text": "Fourth approach unsuccessful; fuel is now critical.", "factors": ["low_visibility"], "kind": "crew_action" },
+    { "t": -300, "clock": null, "phase": "approach", "actor": "CAPT", "text": "The pilot in command decides to ditch while fuel and engine power remain; a MAYDAY is transmitted and the cabin is prepared.", "factors": ["emergency_landing"], "kind": "crew_action" },
+    { "t": 0, "clock": null, "phase": "landing", "actor": "CAPT", "text": "The aircraft is ditched at night in the sea about 6 km south-west of the airport; the fuselage is damaged on impact and the aircraft sinks. All six occupants escape.", "factors": ["ditching"], "kind": "outcome" },
+    { "t": 5400, "clock": null, "phase": "unknown", "actor": "OTHER", "text": "After about 90 minutes in the water the survivors are located and rescued by a local vessel.", "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "CASA", "text": "Strengthen fuel, alternate and in-flight re-planning requirements for flights to isolated aerodromes, particularly for air ambulance and passenger-carrying charter operations.", "status": "closed_acceptable", "outcome": "CASA revised the fuel and alternate requirements applying to such operations and to remote island destinations.", "trigger_factors": ["procedural_noncompliance", "regulatory_oversight"] },
+    { "id": null, "to": "Pel-Air Aviation", "text": "Improve operational risk controls, fuel planning guidance and crew decision-support for long over-water air ambulance flights.", "status": "unknown", "outcome": null, "trigger_factors": ["operator_safety_culture"] },
+    { "id": null, "to": "CASA", "text": "Improve the effectiveness of regulatory surveillance so that operator deficiencies of this kind are identified.", "status": "unknown", "outcome": null, "trigger_factors": ["regulatory_oversight"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "CASA introduced stricter fuel and alternate requirements for air ambulance and passenger charter flights to isolated aerodromes.",
+    "The original 2012 ATSB report was criticised by a Senate inquiry and an independent review; the ATSB re-opened the investigation and published a revised report in 2017 with broader organisational findings.",
+    "Pel-Air revised its long-range over-water operating procedures."
+  ],
+  "related": ["usair1549", "tuninter1153"],
+  "fdr": null,
+  "sources": [
+    "https://www.atsb.gov.au/publications/investigation_reports/2009/aair/ao-2009-072",
+    "https://www.atsb.gov.au/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "All event times are approximate offsets relative to the ditching; the report's clock times and the sequence of the four approaches (types and exact timing) were not verified.",
+    "The re-opened report also discussed possible fatigue of the pilot in command and the handling of weather information by air traffic services; these are not listed as factors because their exact findings were not verified.",
+    "Injury details for the occupants are not given (injuries_serious null)."
+  ] }
+}

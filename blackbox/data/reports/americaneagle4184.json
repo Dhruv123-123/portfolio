@@ -1,0 +1,87 @@
+{
+  "id": "americaneagle4184",
+  "title": "American Eagle 4184",
+  "flight_number": "AE4184",
+  "date": "1994-10-31",
+  "time_reference": "CST (local)",
+  "t0": "1994-10-31T21:57:33Z",
+  "agency": "NTSB",
+  "agencies": [
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+      "report_id": "NTSB/AAR-96/01", "report_title": "In-Flight Icing Encounter and Loss of Control, Simmons Airlines, d.b.a. American Eagle Flight 4184, Avions de Transport Regional (ATR) Model 72-212, N401AM, Roselawn, Indiana, October 31, 1994", "report_date": "1996-07-09",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9601.pdf" },
+    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses", "country": "France", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "ATR 72-212", "family": "ATR 72", "manufacturer": "ATR (Avions de Transport Régional)", "registration": "N401AM", "msn": null, "engines": "Pratt & Whitney Canada PW127" },
+  "operator": "Simmons Airlines (American Eagle)",
+  "route": { "from": "KIND", "from_name": "Indianapolis International", "to": "KORD", "to_name": "Chicago O'Hare" },
+  "location": { "name": "Soybean field near Roselawn, Indiana", "country": "USA", "lat": 41.09, "lon": -87.30 },
+  "phase": "descent",
+  "occupants": 68, "fatalities": 68, "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "ICE",
+  "summary": "Held for over half an hour at 10,000 ft in freezing drizzle while waiting for O'Hare, the ATR 72 accumulated a ridge of ice behind its deice boots. When the flaps were retracted during the descent to 8,000 ft the ice caused an aileron hinge moment reversal; the autopilot disconnected and the aircraft rolled sharply, recovered briefly, then rolled again and dived into a field. All 68 on board died. The investigation found ATR and the French DGAC had known about the aircraft's behaviour in freezing precipitation from earlier events.",
+  "probable_cause": "The loss of control, attributed to a sudden and unexpected aileron hinge moment reversal that occurred after a ridge of ice accreted beyond the deice boots because ATR failed to completely disclose to operators, and incorporate in the ATR 72 airplane flight manual, flightcrew operating manual and flightcrew training programs, adequate information concerning previously known effects of freezing precipitation on the stability and control characteristics, autopilot and related operational procedures when the ATR 72 was operated in such conditions; the French DGAC's inadequate oversight of the ATR 42 and 72 and its failure to take the necessary corrective action to ensure continued airworthiness in icing conditions; and the DGAC's failure to provide the FAA with timely airworthiness information developed from previous ATR incidents and accidents in icing conditions. Contributing were the FAA's failure to ensure that aircraft icing certification requirements, operational requirements for flight into icing conditions and published icing information adequately accounted for the hazards of freezing rain and other conditions outside 14 CFR Part 25 Appendix C; the FAA's inadequate oversight of the ATR 42 and 72 in icing conditions; and ATR's failure to include an adequate warning in the flight manual.",
+  "factors": [
+    { "id": "airframe_icing", "role": "initiating", "evidence": "Supercooled large droplet freezing drizzle in the hold built a ridge of ice on the upper wing aft of the deice boots, ahead of the ailerons." },
+    { "id": "certification_shortfall", "role": "latent", "evidence": "Icing certification under Appendix C did not account for supercooled large droplets, so the ATR 72 was never shown to be controllable in freezing drizzle." },
+    { "id": "design_deficiency", "role": "latent", "evidence": "The unpowered ailerons of the ATR 72 were susceptible to hinge moment reversal when ice accreted behind the boots." },
+    { "id": "manufacturer_communication", "role": "latent", "evidence": "ATR did not fully disclose to operators what it knew from earlier icing incidents about roll control anomalies and did not put adequate information in the AFM and training." },
+    { "id": "regulatory_oversight", "role": "latent", "evidence": "The French DGAC and the FAA provided inadequate oversight of the ATR fleet's continued airworthiness in icing and did not exchange airworthiness information in a timely way." },
+    { "id": "known_defect_unresolved", "role": "latent", "evidence": "Previous ATR 42 and 72 roll control incidents in icing had not led to effective corrective action." },
+    { "id": "automation_dependency", "role": "contributing", "evidence": "The autopilot masked the growing aileron forces until it disconnected, giving the crew no warning of the developing control anomaly." },
+    { "id": "autopilot_disconnect", "role": "contributing", "evidence": "The autopilot disconnected when the aileron hinge moment reversed, handing the crew an aircraft already rolling rapidly." },
+    { "id": "loss_of_pilot_control_authority", "role": "contributing", "evidence": "The reversed aileron hinge moment drove the ailerons toward full deflection against the crew's inputs." },
+    { "id": "startle_effect", "role": "contributing", "evidence": "The crew were surprised by the sudden roll and had seconds to react in a situation they had not been trained for." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft rolled through more than 70 degrees, recovered briefly, rolled again and pitched steeply nose down into the ground." }
+  ],
+  "chain": [
+    ["certification_shortfall", "design_deficiency"],
+    ["known_defect_unresolved", "manufacturer_communication"],
+    ["regulatory_oversight", "known_defect_unresolved"],
+    ["manufacturer_communication", "automation_dependency"],
+    ["airframe_icing", "loss_of_pilot_control_authority"],
+    ["design_deficiency", "loss_of_pilot_control_authority"],
+    ["automation_dependency", "autopilot_disconnect"],
+    ["loss_of_pilot_control_authority", "autopilot_disconnect"],
+    ["autopilot_disconnect", "startle_effect"],
+    ["startle_effect", "loss_of_control_inflight"],
+    ["loss_of_pilot_control_authority", "loss_of_control_inflight"]
+  ],
+  "events": [
+    { "t": -2000, "clock": null, "phase": "cruise", "actor": "ATC", "text": "Chicago Center instructs the flight to hold at the LUCIT intersection at 10,000 ft because of delays into O'Hare.", "kind": "atc" },
+    { "t": -1900, "clock": null, "phase": "cruise", "actor": "ENV", "text": "Aircraft holds in cloud with freezing drizzle; the deice boots operate but a ridge of ice builds aft of the boots.", "state": { "alt": 10000 }, "factors": ["airframe_icing"], "kind": "env" },
+    { "t": -1500, "clock": null, "phase": "cruise", "actor": "PF", "text": "Crew extend flaps 15 in the hold to lower the angle of attack; the ice detection caution is noted and the crew discuss icing.", "factors": ["airframe_icing"], "kind": "crew_action" },
+    { "t": -120, "clock": null, "phase": "descent", "actor": "ATC", "text": "Center clears the flight to descend to 8,000 ft.", "kind": "atc" },
+    { "t": -60, "clock": null, "phase": "descent", "actor": "SYS", "text": "As speed increases in the descent the flap overspeed warning sounds and the flaps are retracted to 0, increasing the angle of attack of the iced wing.", "factors": ["airframe_icing"], "kind": "system" },
+    { "t": 0, "clock": "15:57:33", "phase": "descent", "actor": "SYS", "text": "Aileron hinge moment reverses; the autopilot disconnects and the aircraft rolls rapidly to the right beyond 70 degrees of bank.", "state": { "alt": 9100 }, "factors": ["loss_of_pilot_control_authority", "autopilot_disconnect", "startle_effect"], "kind": "system" },
+    { "t": 5, "clock": null, "phase": "descent", "actor": "PF", "text": "Crew apply full left aileron and the aircraft rolls back toward wings level momentarily.", "factors": ["loss_of_pilot_control_authority"], "kind": "crew_action" },
+    { "t": 10, "clock": null, "phase": "descent", "actor": "SYS", "text": "Aircraft rolls right again through inverted and the nose drops steeply.", "factors": ["loss_of_control_inflight"], "kind": "system" },
+    { "t": 15, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Captain, as pilot monitoring, takes the controls and attempts to recover; the crew pull back on the control column as speed and g increase.", "factors": ["loss_of_control_inflight"], "kind": "crew_action" },
+    { "t": 20, "clock": null, "phase": "descent", "actor": "SYS", "text": "Aircraft descends in a steep dive at high speed with the nose pitched far below the horizon.", "factors": ["loss_of_control_inflight"], "kind": "system" },
+    { "t": 27, "clock": "15:58", "phase": "descent", "actor": "ENV", "text": "Aircraft strikes a soybean field near Roselawn in a nose-down, partially inverted attitude at high speed; all 68 on board are killed.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "FAA", "text": "Revise icing certification criteria to include supercooled large droplet conditions such as freezing drizzle and freezing rain, and require aircraft to be shown controllable in those conditions or to have means to detect and exit them.", "status": "closed_acceptable", "outcome": "Led to the FAA icing rulemaking and eventually 14 CFR Part 25 Appendix O supercooled large drop icing conditions in 2014.", "trigger_factors": ["certification_shortfall", "airframe_icing"] },
+    { "id": null, "to": "FAA", "text": "Require ATR 42 and 72 aircraft to be modified with extended deice boot coverage and revised operating procedures for freezing precipitation.", "status": "closed_acceptable", "outcome": "ATR fleet was fitted with extended-chord deice boots and the AFM was revised with freezing rain procedures.", "trigger_factors": ["design_deficiency", "airframe_icing"] },
+    { "id": null, "to": "FAA", "text": "Require manufacturers and foreign airworthiness authorities to share airworthiness information from incidents in a timely manner under bilateral agreements.", "status": "unknown", "outcome": null, "trigger_factors": ["manufacturer_communication", "regulatory_oversight"] },
+    { "id": null, "to": "FAA", "text": "Require operators to provide pilots with information and training on the effects of freezing precipitation, on limiting autopilot use in icing and on recognising unusual control forces.", "status": "unknown", "outcome": null, "trigger_factors": ["automation_dependency", "startle_effect"] }
+  ],
+  "dissent": [
+    { "agency": "BEA", "position": "The French BEA, in comments appended to the NTSB report, disagreed with the emphasis on ATR and the DGAC and argued that the probable cause should give greater weight to the flight crew's actions, including holding at a speed and configuration outside the recommended envelope in known icing and relying on the autopilot, and to the failure of US air traffic and weather services.", "topic": "probable cause" }
+  ],
+  "safety_changes": [
+    "ATR 42 and 72 fleets were modified with larger deice boots and new freezing rain procedures; the FAA temporarily prohibited ATR operations in known icing.",
+    "FAA icing certification rulemaking culminated in Appendix O supercooled large drop conditions and new requirements for detecting and exiting such icing.",
+    "Renewed research into supercooled large droplet icing and ice-induced roll control anomalies across turboprop types."
+  ],
+  "related": ["colgan3407", "usair427", "airinter148"],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9601.pdf", "https://www.ntsb.gov"],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+    "notes": ["t0 is the approximate autopilot disconnect time of 15:57:33 CST; the impact time of about 15:58-15:59 and intermediate offsets are approximate.",
+              "Altitude at the upset (about 9,100 ft during the descent from 10,000 ft) and the initial bank angle are recalled from the report and may be slightly off.",
+              "The BEA dissent is recorded from memory of the appended French comments; the exact wording and scope of the disagreement should be verified against the appendix.",
+              "Recommendation numbers not recalled and are left null."] }
+}

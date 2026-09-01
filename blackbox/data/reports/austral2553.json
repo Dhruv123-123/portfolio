@@ -1,0 +1,82 @@
+{
+  "id": "austral2553",
+  "title": "Austral Líneas Aéreas 2553",
+  "flight_number": "AU2553",
+  "date": "1997-10-10",
+  "time_reference": "UTC",
+  "t0": null,
+  "agency": "CIAA-UY",
+  "agencies": [
+    { "code": "CIAA-UY", "name": "Comisión Investigadora de Accidentes de Aviación", "country": "Uruguay", "role": "lead",
+      "report_id": null, "report_title": "Final report on the accident to DC-9-32 LV-WEG near Nuevo Berlín, Río Negro, 10 October 1997", "report_date": null, "url": null },
+    { "code": "JIAAC-AR", "name": "Junta de Investigación de Accidentes de Aviación Civil", "country": "Argentina", "role": "accredited_representative",
+      "report_id": null, "report_title": null, "report_date": null, "url": "https://www.argentina.gob.ar/jst" }
+  ],
+  "aircraft": { "type": "McDonnell Douglas DC-9-32", "family": "DC-9", "manufacturer": "McDonnell Douglas", "registration": "LV-WEG", "msn": null, "engines": "Pratt & Whitney JT8D" },
+  "operator": "Austral Líneas Aéreas",
+  "route": { "from": "SARP", "from_name": "Posadas", "to": "SABE", "to_name": "Buenos Aires Aeroparque Jorge Newbery" },
+  "location": { "name": "Near Nuevo Berlín, Fray Bentos area, Río Negro department", "country": "Uruguay", "lat": -32.95, "lon": -58.05 },
+  "phase": "cruise",
+  "occupants": 74, "fatalities": 74, "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "In cruise at night the DC-9 entered an area of thunderstorms and icing. The pitot probes iced and the airspeed indications fell well below the true speed. Believing the aircraft was slowing toward a stall, the crew added thrust and extended the slats at a speed far above the slat limit. The slats were damaged or deployed asymmetrically, the aircraft rolled and pitched down, and it dived into marshland near Nuevo Berlín at very high speed. All 74 on board died.",
+  "probable_cause": "The Uruguayan commission concluded that the crew, faced with erroneous low airspeed indications caused by pitot probe icing in a thunderstorm, extended the slats at a speed well above the structural limit, which led to loss of control and an unrecoverable dive. Contributing factors included the crew's failure to identify the erroneous airspeed indications and cross-check with other parameters, inadequate training for unreliable airspeed situations, and the decision to fly through severe weather.",
+  "factors": [
+    { "id": "convective_weather", "role": "initiating", "evidence": "The aircraft was flying at night through an area of thunderstorms with icing conditions when the airspeed indications became erroneous." },
+    { "id": "pitot_blockage", "role": "initiating", "evidence": "The commission determined that the pitot probes iced, causing the indicated airspeed to fall progressively below the true airspeed." },
+    { "id": "unreliable_airspeed", "role": "contributing", "evidence": "The indicated airspeed decreased toward values suggesting an imminent stall while the aircraft was in fact flying at normal cruise speed." },
+    { "id": "stall_misdiagnosis", "role": "contributing", "evidence": "The crew believed the aircraft was slowing toward a stall and reacted to protect against it rather than recognising an instrument failure." },
+    { "id": "inappropriate_control_input", "role": "contributing", "evidence": "The crew added thrust and extended the slats at high speed, and pushed the nose down to gain speed." },
+    { "id": "excessive_speed", "role": "contributing", "evidence": "The slats were extended at a true airspeed far above their limit; the aircraft then accelerated in the dive to near or above the speed of sound." },
+    { "id": "structural_failure", "role": "contributing", "evidence": "The slats were damaged by the overspeed extension, producing an asymmetric configuration and loss of lift and control." },
+    { "id": "inadequate_training", "role": "latent", "evidence": "The report found the crew had not been adequately trained to recognise and manage unreliable airspeed indications." },
+    { "id": "dark_night", "role": "contributing", "evidence": "The accident occurred at night, removing external visual references." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft rolled and entered a steep dive from which the crew could not recover." }
+  ],
+  "chain": [
+    ["convective_weather", "pitot_blockage"],
+    ["pitot_blockage", "unreliable_airspeed"],
+    ["unreliable_airspeed", "stall_misdiagnosis"],
+    ["inadequate_training", "stall_misdiagnosis"],
+    ["dark_night", "stall_misdiagnosis"],
+    ["stall_misdiagnosis", "inappropriate_control_input"],
+    ["inappropriate_control_input", "excessive_speed"],
+    ["excessive_speed", "structural_failure"],
+    ["structural_failure", "loss_of_control_inflight"]
+  ],
+  "events": [
+    { "t": -1200, "clock": null, "phase": "cruise", "actor": "ENV", "text": "In night cruise at FL350 toward Buenos Aires the aircraft approaches a line of thunderstorms over the Uruguay river area.", "state": { "alt": 35000 }, "factors": ["convective_weather", "dark_night"], "kind": "env" },
+    { "t": -600, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "Crew request and receive clearance to descend to avoid weather, then enter an area of cloud and icing.", "factors": ["convective_weather"], "kind": "atc" },
+    { "t": 0, "clock": null, "phase": "descent", "actor": "SYS", "text": "The pitot probes ice and the indicated airspeed begins to fall below the true airspeed.", "factors": ["pitot_blockage", "unreliable_airspeed"], "kind": "system" },
+    { "t": 60, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Crew note the decreasing airspeed indication and discuss it as a real loss of speed.", "factors": ["stall_misdiagnosis"], "kind": "crew_speech" },
+    { "t": 90, "clock": null, "phase": "descent", "actor": "PF", "text": "Thrust is increased in response to the low airspeed indication; the aircraft accelerates while the indication continues to decay.", "factors": ["inappropriate_control_input", "unreliable_airspeed"], "kind": "crew_action" },
+    { "t": 120, "clock": null, "phase": "descent", "actor": "PF", "text": "With the indicated airspeed near the low-speed limit, the crew extend the slats although the true airspeed is far above the slat limit.", "factors": ["inappropriate_control_input", "excessive_speed"], "kind": "crew_action" },
+    { "t": 125, "clock": null, "phase": "descent", "actor": "SYS", "text": "The slats are damaged by the aerodynamic loads and deploy asymmetrically; the aircraft rolls and pitches nose down.", "factors": ["structural_failure"], "kind": "system" },
+    { "t": 140, "clock": null, "phase": "descent", "actor": "PF", "text": "The crew attempt to recover but the aircraft enters a steep dive and accelerates.", "factors": ["loss_of_control_inflight"], "kind": "crew_action" },
+    { "t": 170, "clock": null, "phase": "descent", "actor": "ENV", "text": "The aircraft strikes marshland near Nuevo Berlín at very high speed in a near-vertical attitude and disintegrates.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "Operators / Argentine aviation authority", "text": "Train DC-9 crews to recognise unreliable airspeed indications caused by pitot icing, to cross-check with attitude, thrust and groundspeed, and to avoid configuration changes on the basis of a suspect indication.", "status": "unknown", "outcome": null, "trigger_factors": ["unreliable_airspeed", "inadequate_training"] },
+    { "id": null, "to": "Operators", "text": "Reinforce guidance on avoiding penetration of thunderstorm areas and on the use and monitoring of pitot heat in icing conditions.", "status": "unknown", "outcome": null, "trigger_factors": ["convective_weather", "pitot_blockage"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Austral and other Argentine DC-9 operators revised training on unreliable airspeed and slat operating limits following the accident.",
+    "The accident is used as a reference case for pitot icing induced unreliable airspeed leading to inappropriate configuration changes."
+  ],
+  "related": ["birgenair301", "saratov703", "af447", "northwest6231", "aeroperu603"],
+  "fdr": null,
+  "sources": [
+    "https://www.argentina.gob.ar/jst"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+    "notes": [
+      "t0 is null and clock strings are omitted: the exact UTC times from the Uruguayan report were not verified. t values are approximate offsets from the onset of pitot icing reconstructed from the published narrative. The accident occurred at about 22:10 Argentine local time on 10 October 1997 (early 11 October UTC).",
+      "The cruise altitude before the descent (FL350) and the exact slat limit speed were not verified; the state value is indicative.",
+      "Whether the pitot heat was switched off or the probes iced despite heating was not verified; the record states only that the probes iced as the commission concluded.",
+      "The Uruguayan commission's report number, date and URL are not known; the Argentine JIAAC's successor (JST) site is given as a source.",
+      "Recommendations are summarised themes, not verified verbatim recommendations."
+    ] }
+}

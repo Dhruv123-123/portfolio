@@ -1,0 +1,91 @@
+{
+  "id": "airtransat236",
+  "title": "Air Transat 236",
+  "flight_number": "TS236",
+  "date": "2001-08-24",
+  "time_reference": "UTC",
+  "t0": "2001-08-24T04:38:00Z",
+  "agency": "GPIAA",
+  "agencies": [
+    { "code": "GPIAA", "name": "Gabinete de Prevenção e Investigação de Acidentes com Aeronaves", "country": "Portugal", "role": "lead",
+      "report_id": "22/ACCID/GPIAA/2001", "report_title": "Accident Investigation Final Report: All Engines-out Landing Due to Fuel Exhaustion, Air Transat, Airbus A330-243 marks C-GITS, Lajes, Azores, Portugal, 24 August 2001", "report_date": "2004-10-18",
+      "url": "https://www.gpiaaf.gov.pt/" },
+    { "code": "TSB", "name": "Transportation Safety Board of Canada", "country": "Canada", "role": "accredited_representative" },
+    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses", "country": "France", "role": "accredited_representative" },
+    { "code": "AAIB", "name": "Air Accidents Investigation Branch", "country": "United Kingdom", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "Airbus A330-243", "family": "A330", "manufacturer": "Airbus", "registration": "C-GITS", "msn": "271", "engines": "Rolls-Royce Trent 772B-60" },
+  "operator": "Air Transat",
+  "route": { "from": "CYYZ", "from_name": "Toronto Pearson", "to": "LPPT", "to_name": "Lisbon Portela" },
+  "location": { "name": "Lajes Air Base, Terceira, Azores", "country": "Portugal", "lat": 38.76, "lon": -27.09 },
+  "phase": "cruise",
+  "occupants": 306, "fatalities": 0, "injuries_serious": 2,
+  "damage": "substantial",
+  "category": "FUEL",
+  "summary": "During a night crossing of the Atlantic the A330's right engine fuel line, which had been installed with inadequate clearance from a hydraulic line during an engine change five days earlier, chafed through and began leaking. The crew did not recognise a leak, opened the crossfeed to correct the resulting imbalance and fed the left tank's fuel to the leak. Both engines flamed out and the crew glided about 65 nm to Lajes Air Base in the Azores, where the aircraft landed hard with all 306 occupants surviving.",
+  "probable_cause": "The GPIAA concluded that the fuel leak resulted from the fracture of the engine 2 fuel feed line after it chafed against the hydraulic line, a consequence of the mismatched hydraulic pump installed during the engine change without the clearance-adaptation called for by the manufacturer. The crew's failure to identify the leak and their opening of the crossfeed, contrary to the caution in the fuel imbalance procedure, allowed the remaining fuel to be lost, leading to the flame-out of both engines. Contributing were Air Transat's maintenance planning and procedures, the absence of a fuel-leak warning on the aircraft, and the ECAM and checklist presentation, which did not lead the crew to consider a leak.",
+  "factors": [
+    { "id": "operator_safety_culture", "role": "latent", "evidence": "Air Transat's maintenance organisation proceeded with the engine installation using a hydraulic pump configuration that did not match the engine, under time pressure and without resolving the discrepancy identified by the technicians." },
+    { "id": "regulatory_oversight", "role": "latent", "evidence": "The report noted shortcomings in the regulatory oversight of the operator's maintenance program; Transport Canada subsequently fined Air Transat." },
+    { "id": "maintenance_error", "role": "initiating", "evidence": "The replacement engine was fitted with a hydraulic pump from an earlier configuration, and the service bulletin's interim clearance adaptation was not applied, leaving the fuel line in contact with the hydraulic line." },
+    { "id": "fuel_leak", "role": "contributing", "evidence": "The fuel feed line fractured from chafing at about 04:38 UTC and fuel leaked overboard at a high rate for the rest of the flight." },
+    { "id": "design_deficiency", "role": "latent", "evidence": "The A330 had no fuel-leak detection or warning; the fuel imbalance advisory was the first indication presented to the crew." },
+    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The crew attributed the unusual oil indications and the fuel imbalance to instrument or computer problems and did not consider a leak until fuel was critically low." },
+    { "id": "checklist_design", "role": "contributing", "evidence": "The report found that the ECAM fuel imbalance procedure and QRH presentation did not effectively direct the crew to consider and rule out a fuel leak before opening the crossfeed." },
+    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The crossfeed valve was opened without first confirming that the imbalance was not due to a leak, contrary to the caution associated with the procedure." },
+    { "id": "fuel_exhaustion", "role": "contributing", "evidence": "All usable fuel was lost through the leak and the crossfeed; the right engine flamed out at 06:13 and the left at 06:26 UTC." },
+    { "id": "dual_engine_failure", "role": "contributing", "evidence": "With both engines stopped the aircraft lost normal electrical and hydraulic power, leaving the ram air turbine, and became a glider about 65 nm from Lajes." },
+    { "id": "emergency_landing", "role": "outcome", "evidence": "The crew landed the aircraft without engine power on runway 33 at Lajes; the aircraft bounced, eight main-gear tyres deflated and the occupants evacuated by slides." }
+  ],
+  "chain": [
+    ["regulatory_oversight", "operator_safety_culture"],
+    ["operator_safety_culture", "maintenance_error"],
+    ["maintenance_error", "fuel_leak"],
+    ["design_deficiency", "loss_of_situational_awareness"],
+    ["fuel_leak", "loss_of_situational_awareness"],
+    ["checklist_design", "procedural_noncompliance"],
+    ["loss_of_situational_awareness", "procedural_noncompliance"],
+    ["procedural_noncompliance", "fuel_exhaustion"],
+    ["fuel_leak", "fuel_exhaustion"],
+    ["fuel_exhaustion", "dual_engine_failure"],
+    ["dual_engine_failure", "emergency_landing"]
+  ],
+  "events": [
+    { "t": -518400, "clock": null, "phase": "ground", "actor": "GND", "text": "Five days before the flight, Air Transat maintenance in Montreal installs a replacement Trent 772B in the number 2 position. The hydraulic pump fitted is from an earlier configuration and the interim clearance adaptation in the Rolls-Royce service bulletin is not applied, leaving the fuel feed line in contact with the hydraulic line.", "factors": ["maintenance_error", "operator_safety_culture"], "kind": "system" },
+    { "t": -13560, "clock": "00:52", "phase": "takeoff", "actor": "PF", "text": "Departs Toronto for Lisbon with 46.9 tonnes of fuel, 293 passengers and 13 crew.", "kind": "crew_action" },
+    { "t": 0, "clock": "04:38", "phase": "cruise", "actor": "SYS", "text": "The engine 2 fuel feed line fractures where it has chafed against the hydraulic line; fuel begins leaking overboard from the right side at a high rate.", "factors": ["fuel_leak"], "kind": "system" },
+    { "t": 3300, "clock": "05:33", "phase": "cruise", "actor": "SYS", "text": "The crew notice abnormal engine 2 oil indications (low oil temperature, high oil pressure and quantity). They contact Air Transat maintenance control by satellite phone and are advised the indications are probably spurious.", "factors": ["loss_of_situational_awareness"], "kind": "warning" },
+    { "t": 4020, "clock": "05:45", "phase": "cruise", "actor": "SYS", "text": "ECAM FUEL IMBALANCE advisory: the right wing tank quantity is well below the left.", "factors": ["design_deficiency"], "kind": "warning" },
+    { "t": 4260, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "The crew open the crossfeed valve to balance the tanks without first considering a leak, transferring fuel from the left tank to the leaking right side.", "factors": ["procedural_noncompliance", "checklist_design"], "kind": "crew_action" },
+    { "t": 4800, "clock": "05:58", "phase": "cruise", "actor": "CAPT", "text": "Noting that total fuel is far below the planned quantity, the crew now suspect a fuel problem, declare an emergency and divert toward Lajes.", "factors": ["fuel_leak"], "kind": "crew_action" },
+    { "t": 5400, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Crew close the crossfeed and begin the descent toward Lajes with the fuel quantity falling rapidly.", "kind": "crew_action" },
+    { "t": 5700, "clock": "06:13", "phase": "descent", "actor": "SYS", "text": "Engine 2 flames out about 150 nm from Lajes.", "factors": ["fuel_exhaustion"], "kind": "system" },
+    { "t": 6480, "clock": "06:26", "phase": "descent", "actor": "SYS", "text": "Engine 1 flames out about 65 nm from Lajes; all generated electrical power is lost, the ram air turbine deploys and the crew fly the aircraft in emergency electrical configuration as a glider.", "factors": ["dual_engine_failure"], "kind": "system" },
+    { "t": 6900, "clock": null, "phase": "descent", "actor": "CAPT", "text": "With the aircraft too high for a straight-in approach, the captain flies a series of turns to lose altitude near the airfield; slats are extended and the landing gear is lowered by gravity.", "factors": ["emergency_landing"], "kind": "crew_action" },
+    { "t": 7620, "clock": "06:45", "phase": "landing", "actor": "CAPT", "text": "Hard landing on runway 33 at Lajes at about 200 kt; the aircraft bounces, eight main-gear tyres deflate under maximum braking and it stops on the runway. The occupants evacuate by slides; two are seriously injured.", "factors": ["emergency_landing"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "Airbus / EASA / DGAC", "text": "Develop and install a fuel-leak detection and warning capability on the A330 and similar aircraft, and revise the fuel imbalance ECAM and QRH procedures to require a leak check before the crossfeed is opened.", "status": "unknown", "outcome": "Airbus revised the fuel imbalance procedures to require the fuel leak procedure to be considered first and later introduced fuel-leak detection logic.", "trigger_factors": ["design_deficiency", "checklist_design", "procedural_noncompliance"] },
+    { "id": null, "to": "Transport Canada / Air Transat", "text": "Review Air Transat's maintenance planning, engine change procedures and configuration control, and Transport Canada's oversight of them.", "status": "unknown", "outcome": "Air Transat was fined by Transport Canada and revised its maintenance procedures.", "trigger_factors": ["maintenance_error", "operator_safety_culture", "regulatory_oversight"] },
+    { "id": null, "to": "Rolls-Royce", "text": "Clarify the service bulletin and engine installation documentation concerning hydraulic pump configuration and fuel/hydraulic line clearance.", "status": "unknown", "outcome": null, "trigger_factors": ["maintenance_error"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Airbus revised the fuel imbalance ECAM/QRH procedures so that a fuel leak must be considered before opening the crossfeed, and introduced fuel-leak detection logic on the A330/A340 family.",
+    "Air Transat's maintenance organisation was audited and fined by Transport Canada; engine change and configuration-control procedures were revised.",
+    "The event became the reference case for fuel-leak recognition training in airline crews."
+  ],
+  "related": ["aircanada143", "usair1549", "tuninter1153", "pinnacle3701"],
+  "fdr": null,
+  "sources": [
+    "https://www.gpiaaf.gov.pt/",
+    "https://www.tsb.gc.ca/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "Clock times for the leak onset (04:38), oil indications (05:33), fuel imbalance advisory (05:45), engine flame-outs (06:13 and 06:26) and landing (06:45) are from the published report summary; the crossfeed opening and diversion decision times are approximate.",
+    "Fuel at departure (46.9 t) and the number of serious injuries (2) are from memory of the report and should be verified.",
+    "The report date is given as October 2004; the exact day may differ.",
+    "GPIAA is now GPIAAF; the home page is given rather than a deep report URL."
+  ] }
+}

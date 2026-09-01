@@ -1,0 +1,80 @@
+{
+  "id": "valujet592",
+  "title": "ValuJet 592",
+  "flight_number": "VJ592",
+  "date": "1996-05-11",
+  "time_reference": "EDT (local)",
+  "t0": "1996-05-11T18:10:03Z",
+  "agency": "NTSB",
+  "agencies": [
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+      "report_id": "NTSB/AAR-97/06", "report_title": "In-Flight Fire and Impact With Terrain, ValuJet Airlines Flight 592, DC-9-32, N904VJ, Everglades, Near Miami, Florida, May 11, 1996", "report_date": "1997-08-19",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9706.pdf" }
+  ],
+  "aircraft": { "type": "McDonnell Douglas DC-9-32", "family": "DC-9", "manufacturer": "McDonnell Douglas", "registration": "N904VJ", "msn": null, "engines": "Pratt & Whitney JT8D-9A" },
+  "operator": "ValuJet Airlines",
+  "route": { "from": "KMIA", "from_name": "Miami International", "to": "KATL", "to_name": "Atlanta Hartsfield" },
+  "location": { "name": "Everglades, about 17 miles northwest of Miami International Airport, Florida", "country": "USA", "lat": 25.92, "lon": -80.58 },
+  "phase": "climb",
+  "occupants": 110, "fatalities": 110, "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "F-NI",
+  "summary": "Shortly after takeoff from Miami, a fire broke out in the forward class D cargo compartment of the DC-9, started by unexpended chemical oxygen generators that maintenance contractor SabreTech had boxed without safety caps and mislabelled as empty. The fire spread rapidly, produced smoke and electrical failures in the cockpit, and about ten minutes after takeoff the aircraft dived into the Everglades. All 110 on board died.",
+  "probable_cause": "A fire in the airplane's class D cargo compartment that was initiated by the actuation of one or more oxygen generators being improperly carried as cargo. The fire resulted in a loss of control of the airplane. Contributing were the failure of SabreTech to properly prepare, package, and identify unexpended chemical oxygen generators before presenting them to ValuJet for carriage; the failure of ValuJet to properly oversee its contract maintenance program to ensure compliance with maintenance, maintenance training, and hazardous materials requirements and practices; and the failure of the FAA to require smoke detection and fire suppression systems in class D cargo compartments. Also contributing were the FAA's failure to adequately monitor ValuJet's heavy maintenance programs and its oversight of contractors, the FAA's failure to adequately respond to prior chemical oxygen generator fires, and ValuJet's failure to ensure that its own and contract maintenance employees were aware of its no-carry hazardous materials policy and had received hazardous materials training.",
+  "factors": [
+    { "id": "maintenance_error", "role": "initiating", "evidence": "SabreTech employees removed unexpended oxygen generators from MD-80s, did not install safety caps, and packed them in boxes labelled as empty canisters." },
+    { "id": "cargo_fire", "role": "contributing", "evidence": "One or more generators actuated in the forward class D cargo compartment, and the intense oxygen-fed fire spread to the boxes, tyres and cabin structure." },
+    { "id": "inflight_fire", "role": "contributing", "evidence": "The fire burned through the cabin floor and produced smoke and electrical failures in the cockpit within minutes." },
+    { "id": "operator_safety_culture", "role": "latent", "evidence": "ValuJet failed to oversee its contract maintenance program and to ensure employees knew its no-carry hazardous materials policy." },
+    { "id": "regulatory_oversight", "role": "latent", "evidence": "The FAA had not required detection or suppression in class D compartments and had not adequately monitored ValuJet's rapidly expanding operation and contractors." },
+    { "id": "warning_system_deficiency", "role": "latent", "evidence": "The class D compartment had no smoke detection, so the crew had no warning until electrical failures and cabin shouts of fire." },
+    { "id": "known_defect_unresolved", "role": "latent", "evidence": "The NTSB found the FAA had not adequately responded to prior chemical oxygen generator fires, including a 1986 cargo fire on an American Trans Air DC-10." },
+    { "id": "inadequate_training", "role": "latent", "evidence": "SabreTech and ValuJet employees had not received hazardous materials training adequate to recognise the generators as hazardous." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "Fire damage and smoke in the cockpit led to loss of control; the aircraft entered a steep descent and struck the Everglades." }
+  ],
+  "chain": [
+    ["operator_safety_culture", "inadequate_training"],
+    ["inadequate_training", "maintenance_error"],
+    ["regulatory_oversight", "operator_safety_culture"],
+    ["known_defect_unresolved", "regulatory_oversight"],
+    ["maintenance_error", "cargo_fire"],
+    ["regulatory_oversight", "warning_system_deficiency"],
+    ["warning_system_deficiency", "inflight_fire"],
+    ["cargo_fire", "inflight_fire"],
+    ["inflight_fire", "loss_of_control_inflight"]
+  ],
+  "events": [
+    { "t": -3600, "clock": null, "phase": "ground", "actor": "GND", "text": "Five boxes containing unexpended chemical oxygen generators, labelled as empty, plus three aircraft tyres are loaded into the forward class D cargo compartment as company material.", "factors": ["maintenance_error", "operator_safety_culture"], "kind": "env" },
+    { "t": -339, "clock": "14:04:24", "phase": "takeoff", "actor": "CAPT", "text": "Flight 592 takes off from Miami runway 9L bound for Atlanta.", "kind": "crew_action" },
+    { "t": 0, "clock": "14:10:03", "phase": "climb", "actor": "SYS", "text": "An unidentified sound is recorded on the CVR as the aircraft climbs through about 10,600 ft.", "state": { "alt": 10634 }, "factors": ["cargo_fire"], "kind": "system" },
+    { "t": 4, "clock": "14:10:07", "phase": "climb", "actor": "CAPT", "text": "Captain asks what the sound was.", "kind": "crew_speech" },
+    { "t": 12, "clock": "14:10:15", "phase": "climb", "actor": "CAPT", "text": "Captain reports an electrical problem as instruments and systems begin to fail.", "factors": ["inflight_fire"], "kind": "crew_speech" },
+    { "t": 17, "clock": "14:10:20", "phase": "climb", "actor": "CAPT", "text": "Captain says they are losing everything and calls for a return to Miami.", "factors": ["inflight_fire"], "kind": "crew_speech" },
+    { "t": 22, "clock": "14:10:25", "phase": "climb", "actor": "FO", "text": "First officer requests an immediate return to Miami from Miami Departure control.", "kind": "crew_speech" },
+    { "t": 28, "clock": null, "phase": "climb", "actor": "CABIN", "text": "Shouts of 'fire, fire, fire' from the passenger cabin are heard on the CVR.", "factors": ["inflight_fire", "warning_system_deficiency"], "kind": "crew_speech" },
+    { "t": 42, "clock": null, "phase": "descent", "actor": "CABIN", "text": "A flight attendant tells the cockpit there is fire in the cabin and smoke is spreading.", "factors": ["inflight_fire"], "kind": "crew_speech" },
+    { "t": 60, "clock": null, "phase": "descent", "actor": "ATC", "text": "Miami Departure turns the flight back toward the airport and clears it to descend; the crew report smoke in the cockpit and cabin.", "kind": "atc" },
+    { "t": 120, "clock": null, "phase": "descent", "actor": "ATC", "text": "Controller offers runway 12 and then clears the flight direct to the airport as it descends.", "kind": "atc" },
+    { "t": 170, "clock": null, "phase": "descent", "actor": "SYS", "text": "Flight data and cockpit voice recorders stop recording as electrical power and control are lost; radar shows the aircraft in a steep descent.", "factors": ["inflight_fire", "loss_of_control_inflight"], "kind": "system" },
+    { "t": 219, "clock": "14:13:42", "phase": "descent", "actor": "ENV", "text": "Aircraft strikes the Everglades in a steep nose-down attitude at high speed; all 110 on board are killed.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "FAA", "text": "Require smoke detection and fire suppression systems in class D cargo compartments of transport category aircraft.", "status": "closed_acceptable", "outcome": "FAA rule of 1998 eliminated class D compartments on passenger aircraft, requiring detection and suppression by 2001.", "trigger_factors": ["warning_system_deficiency", "cargo_fire", "regulatory_oversight"] },
+    { "id": null, "to": "FAA", "text": "Prohibit the transportation of chemical oxygen generators as cargo on passenger aircraft and improve hazardous materials training and oversight for air carriers and their maintenance contractors.", "status": "closed_acceptable", "outcome": "Oxygen generators were banned as cargo on passenger aircraft; hazmat training requirements were strengthened.", "trigger_factors": ["maintenance_error", "inadequate_training", "operator_safety_culture"] },
+    { "id": null, "to": "FAA", "text": "Strengthen FAA surveillance of air carriers' contract maintenance and repair stations, including hazardous materials handling.", "status": "unknown", "outcome": null, "trigger_factors": ["regulatory_oversight"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Class D cargo compartments were eliminated; smoke detection and fire suppression required in all cargo compartments of passenger aircraft.",
+    "Chemical oxygen generators prohibited as cargo on passenger aircraft; hazardous materials training strengthened for carriers and contractors.",
+    "FAA oversight of contract maintenance and of rapidly growing carriers was reorganised; ValuJet was grounded and later merged into AirTran."
+  ],
+  "related": ["swissair111", "ups6", "saratov703"],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9706.pdf", "https://www.ntsb.gov"],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "high", "reviewed": false,
+    "notes": ["CVR clock times for the first 25 seconds after the sound and the 14:13:42 impact time are from the report; the times of the cabin fire shouts, ATC turns and recorder stop are approximate.",
+              "Crew speech is paraphrased rather than quoted verbatim.",
+              "Recommendation numbers not recalled and are left null."] }
+}

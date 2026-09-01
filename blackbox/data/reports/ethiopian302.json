@@ -1,0 +1,541 @@
+{
+  "id": "ethiopian302",
+  "title": "Ethiopian Airlines 302",
+  "flight_number": "ET302",
+  "date": "2019-03-10",
+  "time_reference": "UTC",
+  "t0": "2019-03-10T05:38:44Z",
+  "agency": "AIB-ET",
+  "agencies": [
+    {
+      "code": "AIB-ET",
+      "name": "Ethiopian Civil Aviation Authority Aircraft Accident Investigation Bureau",
+      "country": "Ethiopia",
+      "role": "lead",
+      "report_id": "AI-01/19",
+      "report_title": "Aircraft Accident Investigation Bureau Investigation Report on Accident to the B737-MAX8 Reg. ET-AVJ operated by Ethiopian Airlines",
+      "report_date": "2022-12-23",
+      "url": "https://www.ecaa.gov.et"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative",
+      "report_id": null,
+      "report_title": "NTSB comments on the AIB-ET final report",
+      "report_date": "2022-12-27",
+      "url": "https://www.ntsb.gov"
+    },
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses",
+      "country": "France",
+      "role": "accredited_representative",
+      "report_id": null,
+      "report_title": "BEA comments on the AIB-ET final report",
+      "report_date": null,
+      "url": "https://bea.aero"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-8 MAX",
+    "family": "737 MAX",
+    "manufacturer": "Boeing",
+    "registration": "ET-AVJ",
+    "msn": "62450",
+    "engines": "CFM LEAP-1B"
+  },
+  "operator": "Ethiopian Airlines",
+  "route": {
+    "from": "HAAB",
+    "from_name": "Addis Ababa Bole",
+    "to": "HKJK",
+    "to_name": "Nairobi Jomo Kenyatta"
+  },
+  "location": {
+    "name": "Near Bishoftu (Ejere), Oromia, about 28 nm south-east of Addis Ababa",
+    "country": "Ethiopia",
+    "lat": 8.877,
+    "lon": 39.251
+  },
+  "phase": "initial_climb",
+  "occupants": 157,
+  "fatalities": 157,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Shortly after lift-off from Addis Ababa the left angle-of-attack sensor failed and recorded about 74.5 degrees, triggering the left stick shaker and erroneous left-side airspeed and altitude. With flaps up and autopilot disengaged, MCAS repeatedly trimmed the stabilizer nose down. The crew cut out the electric stabilizer trim but, at high speed with takeoff thrust still set, could not trim manually, re-engaged electric trim, and a final MCAS activation drove the aircraft into a dive from which it did not recover. All 157 on board died.",
+  "probable_cause": "The AIB-ET concluded that repetitive and uncommanded airplane-nose-down inputs from MCAS, due to erroneous AOA input, and its unrecoverable activation system made the airplane dive close to the ground and was the most probable cause. Contributing factors included MCAS's reliance on a single AOA sensor and its unlimited repetitive authority, the absence of MCAS information and training for flight crews, the lack of an AOA DISAGREE alert on the aircraft, and the multiple simultaneous warnings and high workload the design imposed on the crew.",
+  "factors": [
+    {
+      "id": "aoa_sensor_failure",
+      "role": "initiating",
+      "evidence": "Seconds after lift-off the left AOA value deviated from the right and reached 74.5 degrees while the right AOA stayed near 15 degrees; the left value stayed erroneous to the end of the recording."
+    },
+    {
+      "id": "stick_shaker_pusher",
+      "role": "contributing",
+      "evidence": "The left stick shaker activated at the AOA failure and remained active until near the end of the recording."
+    },
+    {
+      "id": "unreliable_airspeed",
+      "role": "contributing",
+      "evidence": "Left-side airspeed, altitude and flight director pitch bar deviated from the right side; the left overspeed clacker later sounded while the left IAS read lower than the right."
+    },
+    {
+      "id": "mcas_activation",
+      "role": "contributing",
+      "evidence": "After flap retraction and autopilot disconnect the FDR recorded automatic nose-down stabilizer trim at 05:40:00 (9 s), 05:40:20, 05:40:41 (no motion, cutout) and a final activation at 05:43:20 that moved the stabilizer from 2.3 to 1.0 units."
+    },
+    {
+      "id": "autopilot_disconnect",
+      "role": "contributing",
+      "evidence": "The autopilot disengaged at 05:39:55; MCAS operates only with the autopilot off and flaps up, and the first automatic nose-down trim followed five seconds later."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "MCAS took input from a single AOA sensor and could re-activate repeatedly with full authority; the report identified the design as a contributing factor."
+    },
+    {
+      "id": "certification_shortfall",
+      "role": "latent",
+      "evidence": "The report found that the MCAS safety assessment and certification did not adequately account for a single erroneous AOA input and for pilot reaction assumptions."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "latent",
+      "evidence": "The AOA DISAGREE alert was not functional on this aircraft and multiple simultaneous alerts (stick shaker, master caution, overspeed, GPWS) did not identify the failure."
+    },
+    {
+      "id": "manufacturer_communication",
+      "role": "latent",
+      "evidence": "The report found that MCAS was not described in the flight crew operations manual and that information provided to operators after the Lion Air accident was insufficient."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "The report cited shortcomings in FAA oversight of the MCAS certification and in the post-Lion Air continued airworthiness decisions."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "The crew had received no simulator training on MCAS or on runaway stabilizer at high speed; the report cited the lack of MCAS training as contributing."
+    },
+    {
+      "id": "excessive_speed",
+      "role": "contributing",
+      "evidence": "Engine thrust remained at the takeoff setting of about 94 percent N1 throughout; indicated airspeed rose to and beyond VMO (340 kt), making manual trim impossible and finally exceeding 458 kt (left) and 500 kt (right)."
+    },
+    {
+      "id": "loss_of_pilot_control_authority",
+      "role": "contributing",
+      "evidence": "With the stabilizer trim cut out, the first officer reported the manual trim wheel was not working at high speed; aft column force on both columns could not overcome the mistrimmed stabilizer."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The crew handled stick shaker, unreliable airspeed, GPWS DON'T SINK, master caution, overspeed warning and ATC communications simultaneously during the first minutes after takeoff."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "After the final MCAS activation the pitch reached about 40 degrees nose down and the aircraft struck the ground at very high speed."
+    }
+  ],
+  "chain": [
+    [
+      "aoa_sensor_failure",
+      "stick_shaker_pusher"
+    ],
+    [
+      "aoa_sensor_failure",
+      "unreliable_airspeed"
+    ],
+    [
+      "aoa_sensor_failure",
+      "mcas_activation"
+    ],
+    [
+      "autopilot_disconnect",
+      "mcas_activation"
+    ],
+    [
+      "design_deficiency",
+      "mcas_activation"
+    ],
+    [
+      "certification_shortfall",
+      "design_deficiency"
+    ],
+    [
+      "manufacturer_communication",
+      "inadequate_training"
+    ],
+    [
+      "regulatory_oversight",
+      "certification_shortfall"
+    ],
+    [
+      "stick_shaker_pusher",
+      "high_workload"
+    ],
+    [
+      "warning_system_deficiency",
+      "high_workload"
+    ],
+    [
+      "high_workload",
+      "excessive_speed"
+    ],
+    [
+      "inadequate_training",
+      "excessive_speed"
+    ],
+    [
+      "excessive_speed",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "mcas_activation",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "loss_of_pilot_control_authority",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": -70,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "PF",
+      "text": "Takeoff roll on runway 07R; engines stabilise at about 94 percent N1, which they hold for the rest of the flight.",
+      "state": {
+        "n1": 94
+      },
+      "factors": [
+        "excessive_speed"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "05:38:44",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "Shortly after lift-off the left AOA value deviates from the right, reaching 74.5 degrees; left stick shaker activates and stays on; left airspeed and altitude begin to read low.",
+      "factors": [
+        "aoa_sensor_failure",
+        "stick_shaker_pusher",
+        "unreliable_airspeed"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 38,
+      "clock": "05:39:22",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "text": "Left autopilot engaged at about 1,000 ft radio altitude; it disengages about 33 seconds later.",
+      "state": {
+        "ra": 1000
+      },
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": 61,
+      "clock": "05:39:45",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "text": "Captain requests flaps up; flap lever moved from 5 to 0.",
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": 71,
+      "clock": "05:39:55",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "Autopilot disengages.",
+      "factors": [
+        "autopilot_disconnect"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 76,
+      "clock": "05:40:00",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "First automatic nose-down stabilizer trim (MCAS) for 9 seconds; trim moves from 4.60 to 2.1 units; the climb is arrested and the aircraft descends slightly.",
+      "factors": [
+        "mcas_activation"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 79,
+      "clock": "05:40:03",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "GPWS 'DON'T SINK' sounds for 3 seconds.",
+      "factors": [
+        "high_workload"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 88,
+      "clock": "05:40:12",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "text": "Manual electric trim nose up recorded; stabilizer moves to 2.4 units. Pitch about 2 degrees nose down.",
+      "state": {
+        "pitch": -2
+      },
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": 96,
+      "clock": "05:40:20",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "Second automatic nose-down trim; stabilizer reaches 0.4 units. Three more GPWS 'DON'T SINK' warnings follow.",
+      "factors": [
+        "mcas_activation"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 104,
+      "clock": "05:40:28",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "text": "Manual electric trim nose up; stabilizer reverses and reaches 2.3 units.",
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": 111,
+      "clock": "05:40:35",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "text": "First officer calls 'stab trim cut-out' twice; captain agrees and the stabilizer trim cutout switches are set to cutout.",
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": 117,
+      "clock": "05:40:41",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "Third automatic nose-down trim command with no stabilizer motion, consistent with the cutout switches being in cutout.",
+      "factors": [
+        "mcas_activation"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 132,
+      "clock": "05:40:56",
+      "phase": "climb",
+      "actor": "FO",
+      "text": "First officer asks ATC to maintain 14,000 ft and reports a flight control problem; ATC approves.",
+      "factors": [],
+      "kind": "atc"
+    },
+    {
+      "t": 156,
+      "clock": "05:41:20",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Right overspeed clacker sounds and remains active to the end. Left IAS has risen from about 305 kt toward 340 kt with aft force held on both columns.",
+      "state": {
+        "ias": 340
+      },
+      "factors": [
+        "excessive_speed",
+        "unreliable_airspeed"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 182,
+      "clock": "05:41:46",
+      "phase": "climb",
+      "actor": "FO",
+      "text": "Captain asks whether the trim is functional; the first officer says it is not working and tries the manual trim wheel, then reports at 05:41:54 that it is not working.",
+      "factors": [
+        "loss_of_pilot_control_authority"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 250,
+      "clock": "05:42:54",
+      "phase": "climb",
+      "actor": "CAPT",
+      "text": "Both pilots call out 'left alpha vane' after a master caution.",
+      "factors": [
+        "aoa_sensor_failure"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 267,
+      "clock": "05:43:11",
+      "phase": "climb",
+      "actor": "PF",
+      "text": "Two momentary manual electric nose-up trim inputs are recorded at about 13,400 ft pressure altitude, indicating the trim cutout switches had been returned to normal; stabilizer moves from 2.1 to 2.3 units.",
+      "state": {
+        "alt": 13400
+      },
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": 276,
+      "clock": "05:43:20",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Final automatic nose-down trim moves the stabilizer from 2.3 to 1.0 units in about 5 seconds; the aircraft pitches nose down despite aft force on both columns, reaching about 40 degrees nose down.",
+      "state": {
+        "pitch": -40
+      },
+      "factors": [
+        "mcas_activation",
+        "loss_of_pilot_control_authority"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 299,
+      "clock": "05:43:43",
+      "phase": "climb",
+      "actor": "ENV",
+      "text": "End of recording; impact near Bishoftu. Left IAS about 458 kt and right IAS about 500 kt; last recorded pressure altitude 5,419 ft (left).",
+      "state": {
+        "ias": 500,
+        "alt": 5419
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    }
+  ],
+  "cvr": [
+    {
+      "t": 111,
+      "clock": "05:40:35",
+      "speaker": "FO",
+      "text": "Stab trim cut-out.",
+      "translation": null
+    },
+    {
+      "t": 120,
+      "clock": "05:40:44",
+      "speaker": "CAPT",
+      "text": "Pull up.",
+      "translation": null
+    },
+    {
+      "t": 250,
+      "clock": "05:42:54",
+      "speaker": "CAPT",
+      "text": "Left alpha vane.",
+      "translation": null
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA / Boeing",
+      "text": "Ensure that the 737 MAX flight control system (MCAS) is redesigned so that it does not rely on a single AOA input and cannot repeatedly command stabilizer motion with full authority, and that the redesign is certified and validated before return to service.",
+      "status": "closed_acceptable",
+      "outcome": "FAA AD 2020-24-02 (November 2020) mandated flight control software using both AOA sensors, single MCAS activation per event and limited authority, plus an AOA DISAGREE alert.",
+      "trigger_factors": [
+        "mcas_activation",
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Boeing / FAA",
+      "text": "Provide flight crews with full system information and simulator training on MCAS and on runaway stabilizer and high-speed manual trim before the aircraft returns to service.",
+      "status": "closed_acceptable",
+      "outcome": "Simulator training on MCAS-related scenarios became mandatory for 737 MAX pilots before return to service.",
+      "trigger_factors": [
+        "inadequate_training",
+        "manufacturer_communication"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Review the certification process for the MCAS system and for flight-crew reaction assumptions in the aircraft safety assessment.",
+      "status": "unknown",
+      "outcome": "US Aircraft Certification, Safety, and Accountability Act (December 2020) reformed delegated certification.",
+      "trigger_factors": [
+        "certification_shortfall",
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Boeing",
+      "text": "Improve flight-deck alerting so that a single AOA failure and the resulting cascade of warnings can be quickly recognised by the crew.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "warning_system_deficiency"
+      ]
+    }
+  ],
+  "dissent": [
+    {
+      "agency": "NTSB",
+      "position": "In comments published after the final report, the NTSB stated that the report did not adequately address the flight crew's performance, in particular that thrust was left at takeoff power for the entire flight, that the crew did not perform the runaway stabilizer procedure completely or promptly, and that the crew had been trained on the MCAS-related emergency AD after the Lion Air accident. The NTSB also stated that the left AOA sensor was most likely damaged by a bird or foreign object rather than by a production quality or electrical defect as the report suggested.",
+      "topic": "probable cause and crew performance"
+    },
+    {
+      "agency": "BEA",
+      "position": "The BEA published comments stating that the report should have given weight to the crew's handling of the situation: thrust remaining at takeoff setting leading to an overspeed, the incomplete application of the runaway stabilizer procedure, the re-engagement of electric trim, and crew resource management; the BEA also considered the AOA vane most likely separated after a bird strike.",
+      "topic": "probable cause and crew performance"
+    }
+  ],
+  "safety_changes": [
+    "Worldwide grounding of the Boeing 737 MAX fleet from March 2019 until the redesigned flight control software was certified (FAA return-to-service November 2020).",
+    "MCAS redesigned to use both AOA sensors, activate only once per high-AOA event, and never command more stabilizer movement than the crew can counter with the control column.",
+    "AOA DISAGREE alert made standard on all 737 MAX aircraft and mandatory simulator training on MCAS scenarios for MAX pilots.",
+    "US Aircraft Certification, Safety, and Accountability Act (2020) reformed FAA delegation of certification work to manufacturers."
+  ],
+  "related": [
+    "lionair610",
+    "birgenair301",
+    "alaska261"
+  ],
+  "fdr": "ethiopian302",
+  "sources": [
+    "https://www.ecaa.gov.et",
+    "https://www.ntsb.gov/investigations/Pages/DCA19RA101.aspx",
+    "https://bea.aero"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Timeline clock times and stabilizer units are taken from the AIB-ET preliminary and final report narrative; the takeoff-roll event time (t=-70) is approximate.",
+      "Recommendation ids are not given because the exact AIB-ET numbering was not verified; the text reflects the report's key recommendations.",
+      "The NTSB docket URL is given from memory (DCA19RA101); the AIB-ET report URL is the agency home page.",
+      "CVR lines are the short callouts quoted in the report narrative, not a verbatim transcript."
+    ]
+  }
+}

@@ -6,6 +6,19 @@
       },
       "projects": [
         {
+          "name": "Blackbox",
+          "icon": "blackbox/blackbox-icon-lg.svg",
+          "title": {
+            "en": "Blackbox — Aviation Accident Knowledge Graph"
+          },
+          "date": {
+            "en": "2026 - Present"
+          },
+          "componentName": "BlackboxContent",
+          "isFocus": false,
+          "isActive": false
+        },
+        {
           "name": "Crucible",
           "icon": "projects/folder-clench-icon.webp",
           "title": {

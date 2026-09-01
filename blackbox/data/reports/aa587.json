@@ -1,0 +1,105 @@
+{
+  "id": "aa587",
+  "title": "American Airlines 587",
+  "flight_number": "AA587",
+  "date": "2001-11-12",
+  "time_reference": "EST (local)",
+  "t0": "2001-11-12T14:15:36Z",
+  "agency": "NTSB",
+  "agencies": [
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+      "report_id": "NTSB/AAR-04/04",
+      "report_title": "In-Flight Separation of Vertical Stabilizer, American Airlines Flight 587, Airbus Industrie A300-605R, N14053, Belle Harbor, New York, November 12, 2001",
+      "report_date": "2004-10-26",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0404.pdf" },
+    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses pour la Sécurité de l'Aviation Civile", "country": "France", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "Airbus A300B4-605R", "family": "A300", "manufacturer": "Airbus", "registration": "N14053", "msn": "420", "engines": "General Electric CF6-80C2A5" },
+  "operator": "American Airlines",
+  "route": { "from": "KJFK", "from_name": "New York John F. Kennedy International", "to": "MDSD", "to_name": "Santo Domingo Las Américas" },
+  "location": { "name": "Belle Harbor, Queens, New York", "country": "USA", "lat": 40.577, "lon": -73.850 },
+  "phase": "initial_climb",
+  "occupants": 260,
+  "fatalities": 265,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "About 100 seconds after takeoff from JFK runway 31L, the A300-600 encountered the wake of a Japan Airlines 747 that had departed ahead of it. The first officer, who was flying, responded to the second wake encounter with a series of alternating full rudder pedal inputs. The resulting sideslip loads exceeded the vertical stabilizer's ultimate design load and it separated from the fuselage; the airplane went out of control and crashed into a residential area, killing all 260 aboard and 5 on the ground.",
+  "probable_cause": "The in-flight separation of the vertical stabilizer as a result of the loads beyond ultimate design that were created by the first officer's unnecessary and excessive rudder pedal inputs. Contributing to these rudder pedal inputs were characteristics of the Airbus A300-600 rudder system design and elements of the American Airlines Advanced Aircraft Maneuvering Program (AAMP).",
+  "factors": [
+    { "id": "inappropriate_control_input", "role": "initiating", "evidence": "The first officer made five alternating full rudder pedal inputs within about seven seconds in response to a wake turbulence encounter that required no rudder input." },
+    { "id": "structural_failure", "role": "contributing", "evidence": "Aerodynamic loads from the resulting sideslip reached about twice the vertical stabilizer's design limit load and the composite fin and rudder separated from the fuselage at its attachment lugs." },
+    { "id": "design_deficiency", "role": "contributing", "evidence": "The A300-600 rudder control system's light pedal forces and small pedal travel at high speed made it unusually sensitive, so a pilot could reach full rudder deflection with little force." },
+    { "id": "inadequate_training", "role": "contributing", "evidence": "Elements of American Airlines' Advanced Aircraft Maneuvering Program, including a simulator exercise that responded to rudder input unrealistically, encouraged pilots to use rudder for upset recovery." },
+    { "id": "certification_shortfall", "role": "latent", "evidence": "Certification standards did not address rudder pedal sensitivity or the loads created by full alternating rudder inputs below maneuvering speed." },
+    { "id": "manufacturer_communication", "role": "latent", "evidence": "Prior events such as American Airlines flight 903 in 1997 and Interflug in 1991 had not led to clear communication to pilots that full alternating rudder inputs could exceed structural limits even below maneuvering speed." },
+    { "id": "known_defect_unresolved", "role": "latent", "evidence": "Airbus had earlier expressed concern to American about the AAMP's emphasis on rudder use without effective resolution before the accident." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "Without the vertical stabilizer the airplane could not be controlled; both engines separated during the descent and the airplane struck houses in Belle Harbor." },
+    { "id": "post_impact_fire", "role": "outcome", "evidence": "The wreckage was consumed by fire, which also destroyed several houses." }
+  ],
+  "chain": [
+    ["certification_shortfall", "design_deficiency"],
+    ["manufacturer_communication", "inadequate_training"],
+    ["known_defect_unresolved", "inadequate_training"],
+    ["inadequate_training", "inappropriate_control_input"],
+    ["design_deficiency", "inappropriate_control_input"],
+    ["inappropriate_control_input", "structural_failure"],
+    ["structural_failure", "loss_of_control_inflight"],
+    ["loss_of_control_inflight", "post_impact_fire"]
+  ],
+  "events": [
+    { "t": -105, "clock": null, "phase": "takeoff", "actor": "OTHER", "text": "A Japan Airlines Boeing 747-400 departs runway 31L ahead of flight 587.", "kind": "env" },
+    { "t": -67, "clock": "09:14:29", "phase": "takeoff", "actor": "FO", "text": "Flight 587 begins its takeoff roll on runway 31L about 1 minute 40 seconds behind the 747, within the required wake separation.", "kind": "crew_action" },
+    { "t": -30, "clock": null, "phase": "initial_climb", "actor": "ATC", "text": "Departure control clears the flight to climb on the Bridge Climb; the airplane turns left toward the 747's flight path.", "kind": "atc" },
+    { "t": 0, "clock": "09:15:36", "phase": "initial_climb", "actor": "ENV", "text": "First wake turbulence encounter from the preceding 747; the airplane rocks briefly and the first officer responds with wheel and modest rudder inputs.", "factors": ["inappropriate_control_input"], "kind": "env" },
+    { "t": 9, "clock": "09:15:45", "phase": "initial_climb", "actor": "CAPT", "text": "Captain remarks 'little wake turbulence, huh?'; first officer agrees.", "kind": "crew_speech" },
+    { "t": 15, "clock": "09:15:51", "phase": "initial_climb", "actor": "ENV", "text": "Second, stronger wake encounter at about 250 knots; the first officer calls for 'max power'.", "state": { "ias": 250 }, "factors": ["inappropriate_control_input"], "kind": "env" },
+    { "t": 16, "clock": "09:15:52", "phase": "initial_climb", "actor": "FO", "text": "First officer makes full right, then alternating full left and right rudder pedal inputs together with large wheel inputs over about seven seconds.", "factors": ["inappropriate_control_input", "inadequate_training", "design_deficiency"], "kind": "crew_action" },
+    { "t": 18, "clock": "09:15:54", "phase": "initial_climb", "actor": "CAPT", "text": "Captain says 'hang onto it, hang onto it' as the airplane yaws and rolls.", "factors": ["inappropriate_control_input"], "kind": "crew_speech" },
+    { "t": 22, "clock": "09:15:58", "phase": "initial_climb", "actor": "SYS", "text": "Sideslip loads exceed the vertical stabilizer's ultimate design load; the fin and rudder separate from the fuselage. A loud bang is recorded.", "factors": ["structural_failure"], "kind": "system" },
+    { "t": 25, "clock": "09:16:01", "phase": "initial_climb", "actor": "FO", "text": "First officer says 'what the hell are we into... we're stuck in it'; the airplane is now uncontrollable.", "factors": ["loss_of_control_inflight"], "kind": "crew_speech" },
+    { "t": 28, "clock": "09:16:04", "phase": "descent", "actor": "CAPT", "text": "Captain says 'get out of it, get out of it'; the airplane pitches down and yaws as both engines separate from the wings in the descent.", "factors": ["loss_of_control_inflight"], "kind": "crew_speech" },
+    { "t": 38, "clock": "09:16:14", "phase": "descent", "actor": "SYS", "text": "End of recording; the airplane strikes houses in Belle Harbor and is destroyed by impact and fire.", "factors": ["loss_of_control_inflight", "post_impact_fire"], "kind": "outcome" }
+  ],
+  "cvr": [
+    { "t": 9, "clock": "09:15:45", "speaker": "CAPT", "text": "little wake turbulence, huh?", "translation": null },
+    { "t": 10, "clock": "09:15:46", "speaker": "FO", "text": "yeah.", "translation": null },
+    { "t": 15, "clock": "09:15:51", "speaker": "FO", "text": "max power.", "translation": null },
+    { "t": 17, "clock": "09:15:53", "speaker": "CAPT", "text": "you all right?", "translation": null },
+    { "t": 17.5, "clock": "09:15:53", "speaker": "FO", "text": "yeah, I'm fine.", "translation": null },
+    { "t": 18, "clock": "09:15:54", "speaker": "CAPT", "text": "hang onto it, hang onto it.", "translation": null },
+    { "t": 19, "clock": "09:15:55", "speaker": "FO", "text": "let's go for power please.", "translation": null },
+    { "t": 25, "clock": "09:16:01", "speaker": "FO", "text": "what the hell are we into... we're stuck in it.", "translation": null },
+    { "t": 28, "clock": "09:16:04", "speaker": "CAPT", "text": "get out of it, get out of it.", "translation": null }
+  ],
+  "recommendations": [
+    { "id": null, "to": "FAA", "text": "Modify transport-category certification standards so that rudder pedal sensitivity and the risk of structural loads from full alternating rudder inputs are addressed across the flight envelope.", "status": "closed_acceptable", "outcome": "FAA and EASA adopted rulemaking on rudder control sensitivity and pedal force characteristics for new designs.", "trigger_factors": ["design_deficiency", "certification_shortfall"] },
+    { "id": null, "to": "FAA", "text": "Require that upset recovery training programs make clear that full or alternating rudder inputs can generate loads exceeding the structure's limits even below maneuvering speed, and that simulator exercises do not encourage such inputs.", "status": "closed_acceptable", "outcome": "American Airlines revised the AAMP; industry Airplane Upset Recovery Training Aid was updated to address rudder use.", "trigger_factors": ["inadequate_training"] },
+    { "id": null, "to": "FAA", "text": "Review the A300-600 and A310 rudder control system and require modifications to reduce sensitivity at high airspeed.", "status": "unknown", "outcome": "Airbus incorporated a rudder pedal travel limiter warning and revised documentation; no mandatory hardware change was made to the in-service fleet.", "trigger_factors": ["design_deficiency"] },
+    { "id": null, "to": "FAA", "text": "Develop guidance so that manufacturers and operators communicate clearly about aircraft handling characteristics and structural limits related to rudder use.", "status": "unknown", "outcome": null, "trigger_factors": ["manufacturer_communication"] }
+  ],
+  "dissent": [
+    { "agency": "BEA", "position": "In comments appended to the report the BEA, on behalf of the French accredited representative and Airbus, disagreed that the A300-600 rudder system design characteristics should be listed as contributing, holding that the rudder system met certification requirements and that the first officer's pedal inputs alone explained the loads.", "topic": "contribution of rudder system design" }
+  ],
+  "safety_changes": [
+    "American Airlines revised its Advanced Aircraft Maneuvering Program to remove the emphasis on rudder use in upset recovery.",
+    "Manufacturers and the industry Airplane Upset Recovery Training Aid clarified that maneuvering speed does not protect against full alternating control inputs and that rudder should not be used to counter roll from wake turbulence.",
+    "FAA and EASA introduced certification requirements on rudder pedal sensitivity and control force characteristics for new transport airplanes.",
+    "Airbus added a rudder pedal travel limiter monitoring and warning system to the A300-600 and A310 and revised pilot documentation on rudder use."
+  ],
+  "related": ["jal123", "alaska261", "usair427", "af447", "chinaairlines140"],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0404.pdf",
+    "https://www.ntsb.gov"
+  ],
+  "extraction": {
+    "method": "llm", "model": "claude", "confidence": "high", "reviewed": false,
+    "notes": [
+      "Fatalities (265) include 5 people on the ground; 260 were aboard.",
+      "CVR times are taken from the public transcript to within a second; the 747's departure time and the departure clearance are approximate.",
+      "Airspeed of about 250 knots at the second wake encounter is as stated in the report; altitude at that moment is not given here because the exact value is not recalled with confidence.",
+      "The BEA dissent entry summarizes the French comments appended to the report as recalled; verify against the appendix before relying on the wording."
+    ]
+  }
+}

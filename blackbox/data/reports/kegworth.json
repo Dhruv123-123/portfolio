@@ -1,0 +1,88 @@
+{
+  "id": "kegworth",
+  "title": "British Midland 092 (Kegworth)",
+  "flight_number": "BD092",
+  "date": "1989-01-08",
+  "time_reference": "UTC",
+  "t0": "1989-01-08T20:05:05Z",
+  "agency": "AAIB",
+  "agencies": [
+    { "code": "AAIB", "name": "Air Accidents Investigation Branch", "country": "United Kingdom", "role": "lead",
+      "report_id": "4/90", "report_title": "Report on the accident to Boeing 737-400 G-OBME near Kegworth, Leicestershire on 8 January 1989", "report_date": "1990-10-25",
+      "url": "https://www.gov.uk/aaib-reports/4-1990-boeing-737-400-g-obme-8-january-1989" },
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "Boeing 737-4Y0", "family": "737", "manufacturer": "Boeing", "registration": "G-OBME", "msn": "23867", "engines": "CFM International CFM56-3C1" },
+  "operator": "British Midland Airways",
+  "route": { "from": "EGLL", "from_name": "London Heathrow", "to": "EGAA", "to_name": "Belfast Aldergrove" },
+  "location": { "name": "M1 motorway embankment near Kegworth, short of East Midlands Airport runway 27", "country": "United Kingdom", "lat": 52.8311, "lon": -1.2942 },
+  "phase": "approach",
+  "occupants": 126, "fatalities": 47, "injuries_serious": 74,
+  "damage": "destroyed",
+  "category": "SCF-PP",
+  "summary": "Climbing through FL283 the outer panel of a fan blade in the No.1 (left) engine detached, causing severe vibration, a smell of fire and fluctuating engine parameters. The crew believed the No.2 (right) engine was at fault and shut it down, after which the symptoms appeared to subside. During the diversion to East Midlands the No.1 engine lost power on final approach and the aircraft struck the M1 motorway embankment short of the runway. 47 people died.",
+  "probable_cause": "The operating crew shut down the No.2 engine after a fan blade had fractured in the No.1 engine. This engine subsequently suffered a major thrust loss due to secondary fan damage after power had been increased during the final approach. Contributing factors: the combination of heavy engine vibration, noise, shuddering and smell of fire were outside the crew's training and experience; they reacted prematurely before fully assimilating the engine instrument readings; the cross-checks on the engine instruments were not adequate; the misleading response of the aircraft to the reduction of power on No.2 engine led them to believe they had acted correctly; and they were not informed of the flames from the No.1 engine seen by many passengers and cabin crew.",
+  "factors": [
+    { "id": "metal_fatigue", "role": "initiating", "evidence": "The No.1 engine fan blade failed from a fatigue crack caused by a previously unrecognised blade vibration mode within the certificated power range of the newly rated CFM56-3C engine." },
+    { "id": "engine_failure", "role": "contributing", "evidence": "The blade failure caused severe vibration, compressor stalls and fluctuating N1/fuel flow on the No.1 engine." },
+    { "id": "wrong_engine_shutdown", "role": "contributing", "evidence": "The crew throttled back and shut down the serviceable No.2 engine while the damaged No.1 engine continued to run." },
+    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "The crew did not adequately read or cross-check the engine instruments, including the vibration indicators, before identifying the failed engine." },
+    { "id": "crm_breakdown", "role": "contributing", "evidence": "Cabin crew and passengers who had seen flames from the left engine did not pass this information to the flight deck; the flight crew did not seek it." },
+    { "id": "inadequate_training", "role": "latent", "evidence": "The crew had not been trained for the combination of symptoms produced by this failure and had no simulator training on the 737-400 engine instrument presentation." },
+    { "id": "design_deficiency", "role": "latent", "evidence": "The new solid-state engine instrument display made vibration and other readings less conspicuous than on earlier 737s; the engine instrument layout led to misidentification." },
+    { "id": "certification_shortfall", "role": "latent", "evidence": "The uprated CFM56-3C engine had been certificated without full-scale flight testing at the higher thrust rating, so the blade vibration mode was not discovered." },
+    { "id": "startle_effect", "role": "contributing", "evidence": "The severe vibration, shuddering, noise and smell of fire produced a startling situation outside the crew's experience, and they reacted prematurely." },
+    { "id": "cfit", "role": "outcome", "evidence": "With the remaining engine having failed on final approach, the aircraft descended into the M1 motorway embankment 900 m short of the runway." }
+  ],
+  "chain": [
+    ["certification_shortfall", "metal_fatigue"],
+    ["metal_fatigue", "engine_failure"],
+    ["engine_failure", "startle_effect"],
+    ["startle_effect", "inadequate_monitoring"],
+    ["design_deficiency", "inadequate_monitoring"],
+    ["inadequate_training", "inadequate_monitoring"],
+    ["inadequate_monitoring", "wrong_engine_shutdown"],
+    ["crm_breakdown", "wrong_engine_shutdown"],
+    ["wrong_engine_shutdown", "cfit"],
+    ["engine_failure", "cfit"]
+  ],
+  "events": [
+    { "t": -830, "clock": "19:52", "phase": "takeoff", "actor": "PF", "text": "G-OBME departs Heathrow runway 27R for Belfast with the captain as pilot flying.", "kind": "crew_action" },
+    { "t": 0, "clock": "20:05:05", "phase": "climb", "actor": "SYS", "text": "Climbing through FL283 the outer panel of a No.1 engine fan blade detaches; severe vibration, shuddering, compressor stalls and a smell of fire in the cabin.", "state": { "alt": 28300 }, "factors": ["metal_fatigue", "engine_failure", "startle_effect"], "kind": "system" },
+    { "t": 5, "clock": "20:05:10", "phase": "climb", "actor": "SYS", "text": "Autopilot disengaged; N1 vibration indicator for the No.1 engine at maximum, fluctuating fuel flow and EGT on No.1.", "factors": ["engine_failure"], "kind": "system" },
+    { "t": 15, "clock": "20:05:20", "phase": "climb", "actor": "FO", "text": "Asked by the captain which engine has failed, the first officer answers that it is the left, then the right one.", "factors": ["inadequate_monitoring"], "kind": "crew_speech" },
+    { "t": 24, "clock": "20:05:29", "phase": "climb", "actor": "CAPT", "text": "Captain orders the No.2 (right) throttle to be closed; as thrust is reduced the vibration and shuddering appear to subside, reinforcing the misidentification.", "factors": ["wrong_engine_shutdown"], "kind": "crew_action" },
+    { "t": 120, "clock": "20:07", "phase": "descent", "actor": "CAPT", "text": "Crew request diversion; ATC offer East Midlands, the company's engineering base, and a descent is started.", "kind": "atc" },
+    { "t": 128, "clock": "20:07:13", "phase": "descent", "actor": "FO", "text": "No.2 engine shut down (fuel lever to cutoff) on the captain's instruction; the No.1 engine is left running at reduced thrust.", "factors": ["wrong_engine_shutdown"], "kind": "crew_action" },
+    { "t": 210, "clock": "20:08:36", "phase": "descent", "actor": "CAPT", "text": "Captain briefs passengers by PA that there has been trouble with the right engine, which has been shut down; cabin crew and passengers who saw fire on the left engine do not challenge this.", "factors": ["crm_breakdown"], "kind": "crew_speech" },
+    { "t": 900, "clock": "20:20", "phase": "approach", "actor": "ATC", "text": "Aircraft vectored for the ILS to East Midlands runway 27; landing gear lowered and flaps extended.", "kind": "atc" },
+    { "t": 1085, "clock": "20:23:10", "phase": "approach", "actor": "SYS", "text": "At 2.4 nm from the runway and 900 ft agl, as thrust is increased on the No.1 engine, it suffers an abrupt loss of power with compressor surges and fire warning.", "state": { "alt": 900 }, "factors": ["engine_failure"], "kind": "system" },
+    { "t": 1100, "clock": "20:23:25", "phase": "approach", "actor": "FO", "text": "First officer attempts to restart the No.2 engine; there is insufficient time for it to spool up.", "kind": "crew_action" },
+    { "t": 1105, "clock": "20:23:30", "phase": "approach", "actor": "SYS", "text": "GPWS glideslope warning as the aircraft drops below the glidepath; airspeed decays and the stick shaker operates.", "factors": ["cfit"], "kind": "warning" },
+    { "t": 1130, "clock": "20:24:33", "phase": "approach", "actor": "SYS", "text": "Aircraft strikes the field beside the M1, crosses the motorway and comes to rest against the western embankment 900 m short of the runway 27 threshold; 47 of 126 occupants die.", "factors": ["cfit"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "CAA", "text": "Require all UK-registered 737-300/400 aircraft to have engine vibration indication in the primary field of view and review the certification standards for engine instrument displays.", "status": "unknown", "outcome": null, "trigger_factors": ["design_deficiency"] },
+    { "id": null, "to": "CAA / FAA", "text": "Require that new engine variants be flight tested at the full certificated thrust rating so that vibration and fatigue characteristics are demonstrated in service conditions.", "status": "unknown", "outcome": "CFM56-3C fan blades were modified and the certification of derivative engines was reviewed.", "trigger_factors": ["certification_shortfall", "metal_fatigue"] },
+    { "id": null, "to": "CAA", "text": "Review training so that flight crews are trained in the recognition and handling of engine failures using the engine instrument displays fitted to the aircraft, and improve cabin crew to flight deck communication of relevant observations.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_training", "crm_breakdown"] },
+    { "id": null, "to": "CAA", "text": "Improve occupant survivability through review of seat and overhead bin attachment strength and the brace position.", "status": "unknown", "outcome": "Research into 16g seats and the brace position followed.", "trigger_factors": [] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Modification of CFM56-3C fan blades and revised fatigue/vibration certification testing of engine variants.",
+    "Emphasis on engine instrument presentation and vibration indication in the primary field of view.",
+    "Improved cabin crew to flight deck communication training and CRM emphasis on cross-checking engine indications before shutdown.",
+    "Research on seat strength, overhead stowage and the brace position for crash survivability."
+  ],
+  "related": ["ba38", "transasia235", "manchester28m"],
+  "fdr": null,
+  "sources": [
+    "https://www.gov.uk/aaib-reports/4-1990-boeing-737-400-g-obme-8-january-1989"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "Event times are derived from published report chronology and are approximate to within tens of seconds; the report gives 20:05:05 for the blade failure and 20:24:33 for impact.",
+    "Recommendation numbers omitted; the AAIB report issued 31 recommendations.",
+    "Serious injury count reflects the report's 74 seriously injured."
+  ] }
+}

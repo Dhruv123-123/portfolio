@@ -1,0 +1,665 @@
+{
+ "id": "colgan3407",
+ "record": "colgan3407",
+ "source": "NTSB AAR-10/01 (Colgan Air 3407, Q400, Clarence Center NY, 2009-02-12). Digitised from the FDR parameter plots in section 1.11 / figures 2-4 (altitude, airspeed, pitch, roll, control column force, power lever, flaps, gear, AP, stick shaker/pusher) and the section 1.1 narrative timeline. t0 = stick shaker at 22:16:27 EST. Values rounded; roll/pitch between shaker and impact follow the published peaks (pitch +31, roll -45 then +105, three pusher activations) with interpolation between them; the exact impact attitude is approximated.",
+ "fidelity": "reconstructed",
+ "confidence": "medium",
+ "t_start": -120,
+ "t_end": 26,
+ "aircraft_model": "regional_turboprop",
+ "params": {
+  "alt_ft": {
+   "interp": "linear",
+   "keys": [
+    [
+     -120,
+     2300
+    ],
+    [
+     -30,
+     2300
+    ],
+    [
+     0,
+     2300
+    ],
+    [
+     4,
+     2360
+    ],
+    [
+     7,
+     2380
+    ],
+    [
+     10,
+     2320
+    ],
+    [
+     13,
+     2180
+    ],
+    [
+     16,
+     1900
+    ],
+    [
+     19,
+     1550
+    ],
+    [
+     22,
+     1150
+    ],
+    [
+     25,
+     750
+    ],
+    [
+     26,
+     720
+    ]
+   ]
+  },
+  "ias_kt": {
+   "interp": "linear",
+   "keys": [
+    [
+     -120,
+     180
+    ],
+    [
+     -90,
+     172
+    ],
+    [
+     -60,
+     160
+    ],
+    [
+     -40,
+     152
+    ],
+    [
+     -27,
+     148
+    ],
+    [
+     -24,
+     145
+    ],
+    [
+     -12,
+     138
+    ],
+    [
+     -6,
+     135
+    ],
+    [
+     0,
+     131
+    ],
+    [
+     3,
+     122
+    ],
+    [
+     6,
+     108
+    ],
+    [
+     9,
+     100
+    ],
+    [
+     12,
+     95
+    ],
+    [
+     15,
+     100
+    ],
+    [
+     18,
+     105
+    ],
+    [
+     21,
+     115
+    ],
+    [
+     26,
+     125
+    ]
+   ]
+  },
+  "pitch_deg": {
+   "interp": "linear",
+   "keys": [
+    [
+     -120,
+     2
+    ],
+    [
+     -60,
+     3
+    ],
+    [
+     -30,
+     4
+    ],
+    [
+     -10,
+     5
+    ],
+    [
+     -3,
+     7
+    ],
+    [
+     0,
+     7
+    ],
+    [
+     2,
+     13
+    ],
+    [
+     4,
+     22
+    ],
+    [
+     6,
+     31
+    ],
+    [
+     8,
+     22
+    ],
+    [
+     10,
+     4
+    ],
+    [
+     12,
+     -8
+    ],
+    [
+     14,
+     -2
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     18,
+     0
+    ],
+    [
+     20,
+     -15
+    ],
+    [
+     23,
+     -25
+    ],
+    [
+     26,
+     -25
+    ]
+   ]
+  },
+  "roll_deg": {
+   "interp": "linear",
+   "keys": [
+    [
+     -120,
+     0
+    ],
+    [
+     -100,
+     -15
+    ],
+    [
+     -85,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     2,
+     -12
+    ],
+    [
+     4,
+     -45
+    ],
+    [
+     6,
+     -25
+    ],
+    [
+     8,
+     50
+    ],
+    [
+     10,
+     105
+    ],
+    [
+     12,
+     70
+    ],
+    [
+     14,
+     10
+    ],
+    [
+     16,
+     -40
+    ],
+    [
+     18,
+     -100
+    ],
+    [
+     21,
+     -70
+    ],
+    [
+     24,
+     -40
+    ],
+    [
+     26,
+     -30
+    ]
+   ]
+  },
+  "hdg_deg": {
+   "interp": "linear",
+   "keys": [
+    [
+     -120,
+     260
+    ],
+    [
+     -100,
+     245
+    ],
+    [
+     -85,
+     232
+    ],
+    [
+     -40,
+     232
+    ],
+    [
+     0,
+     232
+    ],
+    [
+     4,
+     228
+    ],
+    [
+     8,
+     232
+    ],
+    [
+     12,
+     250
+    ],
+    [
+     16,
+     240
+    ],
+    [
+     20,
+     215
+    ],
+    [
+     26,
+     200
+    ]
+   ]
+  },
+  "vs_fpm": {
+   "interp": "linear",
+   "keys": [
+    [
+     -120,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     2,
+     300
+    ],
+    [
+     4,
+     900
+    ],
+    [
+     7,
+     600
+    ],
+    [
+     9,
+     -500
+    ],
+    [
+     12,
+     -2000
+    ],
+    [
+     15,
+     -4000
+    ],
+    [
+     18,
+     -6000
+    ],
+    [
+     21,
+     -7500
+    ],
+    [
+     24,
+     -9000
+    ],
+    [
+     26,
+     -9000
+    ]
+   ]
+  },
+  "thrust_lever": {
+   "interp": "step",
+   "keys": [
+    [
+     -120,
+     0.4
+    ],
+    [
+     -24,
+     0.05
+    ],
+    [
+     2,
+     0.75
+    ],
+    [
+     10,
+     1.0
+    ]
+   ]
+  },
+  "stick_pitch": {
+   "interp": "linear",
+   "keys": [
+    [
+     -120,
+     0
+    ],
+    [
+     -1,
+     0.05
+    ],
+    [
+     0,
+     0.1
+    ],
+    [
+     1,
+     0.6
+    ],
+    [
+     3,
+     0.9
+    ],
+    [
+     5,
+     1.0
+    ],
+    [
+     6,
+     0.6
+    ],
+    [
+     8,
+     0.9
+    ],
+    [
+     10,
+     0.4
+    ],
+    [
+     12,
+     0.8
+    ],
+    [
+     14,
+     0.5
+    ],
+    [
+     16,
+     0.8
+    ],
+    [
+     18,
+     0.5
+    ],
+    [
+     20,
+     0.8
+    ],
+    [
+     26,
+     0.8
+    ]
+   ]
+  },
+  "flaps": {
+   "interp": "step",
+   "keys": [
+    [
+     -120,
+     5
+    ],
+    [
+     -6,
+     15
+    ],
+    [
+     15,
+     0
+    ]
+   ]
+  },
+  "gear": {
+   "interp": "step",
+   "keys": [
+    [
+     -120,
+     0
+    ],
+    [
+     -27,
+     1
+    ]
+   ]
+  },
+  "ap": {
+   "interp": "step",
+   "keys": [
+    [
+     -120,
+     1
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  },
+  "stall_warn": {
+   "interp": "step",
+   "keys": [
+    [
+     -120,
+     0
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  },
+  "pusher": {
+   "interp": "step",
+   "keys": [
+    [
+     -120,
+     0
+    ],
+    [
+     6,
+     1
+    ],
+    [
+     8,
+     0
+    ],
+    [
+     12,
+     1
+    ],
+    [
+     14,
+     0
+    ],
+    [
+     18,
+     1
+    ],
+    [
+     20,
+     0
+    ]
+   ]
+  },
+  "ra_ft": {
+   "interp": "linear",
+   "keys": [
+    [
+     -120,
+     1600
+    ],
+    [
+     0,
+     1600
+    ],
+    [
+     7,
+     1680
+    ],
+    [
+     13,
+     1480
+    ],
+    [
+     19,
+     850
+    ],
+    [
+     25,
+     50
+    ],
+    [
+     26,
+     0
+    ]
+   ]
+  }
+ },
+ "units": {
+  "flaps": "deg",
+  "thrust_lever": "0 idle .. 1 rating detent",
+  "stick_pitch": "control column, +aft (37 lb aft = 1.0)",
+  "pusher": "stick pusher active",
+  "ra_ft": "height above local terrain (elev ~720 ft)"
+ },
+ "markers": [
+  {
+   "t": -120,
+   "label": "Level 2300 ft, flaps 5, being vectored for ILS 23"
+  },
+  {
+   "t": -27,
+   "label": "Gear down"
+  },
+  {
+   "t": -24,
+   "label": "Power levers to flight idle, speed decaying"
+  },
+  {
+   "t": -6,
+   "label": "Flaps 15 selected (135 kt)"
+  },
+  {
+   "t": 0,
+   "label": "Stick shaker, autopilot disconnects (131 kt)"
+  },
+  {
+   "t": 1,
+   "label": "Captain pulls ~37 lb aft on column"
+  },
+  {
+   "t": 2,
+   "label": "Power advanced to ~75% torque"
+  },
+  {
+   "t": 4,
+   "label": "Roll left 45 deg"
+  },
+  {
+   "t": 6,
+   "label": "Pitch 31 deg nose up; stick pusher (1)"
+  },
+  {
+   "t": 10,
+   "label": "Roll right 105 deg"
+  },
+  {
+   "t": 12,
+   "label": "Stick pusher (2)"
+  },
+  {
+   "t": 15,
+   "label": "First officer retracts flaps"
+  },
+  {
+   "t": 18,
+   "label": "Stick pusher (3)"
+  },
+  {
+   "t": 22,
+   "label": "\"We're down\""
+  },
+  {
+   "t": 26,
+   "label": "Impact, 6038 Long Street"
+  }
+ ],
+ "camera_hint": "chase",
+ "terrain": "flat"
+}

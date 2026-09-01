@@ -1,0 +1,73 @@
+{
+  "id": "egyptair990",
+  "title": "EgyptAir 990",
+  "flight_number": "MS990",
+  "date": "1999-10-31",
+  "time_reference": "EST (local)",
+  "t0": "1999-10-31T06:49:48Z",
+  "agency": "NTSB",
+  "agencies": [
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+      "report_id": "NTSB/AAR-02/01", "report_title": "Aircraft Accident Brief: EgyptAir Flight 990, Boeing 767-366ER, SU-GAP, 60 Miles South of Nantucket, Massachusetts, October 31, 1999", "report_date": "2002-03-13",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0201.pdf" },
+    { "code": "ECAA", "name": "Egyptian Civil Aviation Authority", "country": "Egypt", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "Boeing 767-366ER", "family": "767", "manufacturer": "Boeing", "registration": "SU-GAP", "msn": null, "engines": "Pratt & Whitney PW4060" },
+  "operator": "EgyptAir",
+  "route": { "from": "KJFK", "from_name": "New York John F. Kennedy", "to": "HECA", "to_name": "Cairo" },
+  "location": { "name": "Atlantic Ocean about 60 miles south of Nantucket, Massachusetts", "country": "International waters", "lat": 40.35, "lon": -69.76 },
+  "phase": "cruise",
+  "occupants": 217, "fatalities": 217, "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "About half an hour after departing New York for Cairo, while the 767 was in cruise at FL330 and the captain had left the cockpit, the relief first officer disconnected the autopilot and applied nose-down elevator, and the aircraft entered a steep dive. The captain returned and pulled back while the relief first officer continued to push; the engines were shut down, the elevators split, and after a partial recovery the aircraft dived again into the Atlantic. All 217 on board died. The NTSB attributed the accident to the relief first officer's control inputs for undetermined reasons; the Egyptian authorities disagreed.",
+  "probable_cause": "The NTSB determined that the probable cause was the airplane's departure from normal cruise flight and subsequent impact with the Atlantic Ocean as a result of the relief first officer's flight control inputs. The reason for the relief first officer's actions was not determined.",
+  "factors": [
+    { "id": "deliberate_act", "role": "initiating", "evidence": "The NTSB found that the nose-down elevator inputs and subsequent engine shutdown were made by the relief first officer while alone in the cockpit and were not the result of any mechanical failure; the reason was not determined." },
+    { "id": "inappropriate_control_input", "role": "contributing", "evidence": "Sustained nose-down elevator input and throttles to idle drove the aircraft into a dive; the split elevator inputs after the captain returned reflected opposing column forces." },
+    { "id": "excessive_speed", "role": "contributing", "evidence": "The aircraft exceeded its maximum operating speed during the dive, reaching about Mach 0.99." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "After a partial pull-out and climb with the engines shut down, the aircraft entered a second dive and struck the ocean." }
+  ],
+  "chain": [
+    ["deliberate_act", "inappropriate_control_input"],
+    ["inappropriate_control_input", "excessive_speed"],
+    ["inappropriate_control_input", "loss_of_control_inflight"],
+    ["excessive_speed", "loss_of_control_inflight"]
+  ],
+  "events": [
+    { "t": -1770, "clock": "01:20", "phase": "takeoff", "actor": "CAPT", "text": "Flight 990 departs JFK for Cairo with a double crew for the long flight.", "kind": "crew_action" },
+    { "t": -780, "clock": null, "phase": "climb", "actor": "SYS", "text": "Aircraft levels in cruise at FL330; the relief first officer takes the right seat earlier than scheduled.", "state": { "alt": 33000 }, "kind": "system" },
+    { "t": -80, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "Captain leaves the cockpit, leaving the relief first officer alone at the controls.", "kind": "crew_action" },
+    { "t": -3, "clock": "01:49:45", "phase": "cruise", "actor": "RELIEF", "text": "Relief first officer quietly says 'I rely on God' (Tawakkalt ala Allah), a phrase he repeats several times over the following seconds.", "factors": ["deliberate_act"], "kind": "crew_speech" },
+    { "t": 0, "clock": "01:49:48", "phase": "cruise", "actor": "SYS", "text": "Autopilot is disconnected.", "state": { "alt": 33000 }, "factors": ["deliberate_act"], "kind": "system" },
+    { "t": 5, "clock": "01:49:53", "phase": "cruise", "actor": "RELIEF", "text": "Elevators move nose-down and the aircraft begins to pitch over into a dive.", "factors": ["deliberate_act", "inappropriate_control_input"], "kind": "crew_action" },
+    { "t": 9, "clock": "01:49:57", "phase": "descent", "actor": "RELIEF", "text": "Throttle levers are moved from cruise power to idle; the descent steepens and the load factor approaches zero.", "factors": ["inappropriate_control_input"], "kind": "crew_action" },
+    { "t": 18, "clock": "01:50:06", "phase": "descent", "actor": "CAPT", "text": "Captain re-enters the cockpit asking repeatedly what is happening.", "kind": "crew_speech" },
+    { "t": 20, "clock": null, "phase": "descent", "actor": "SYS", "text": "Master warning sounds; airspeed exceeds Mmo and continues to increase toward about Mach 0.99.", "factors": ["excessive_speed"], "kind": "warning" },
+    { "t": 27, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Captain pulls back on the control column and calls for the relief first officer to pull with him; the left and right elevators move in opposite directions as one column is pulled and the other pushed.", "factors": ["inappropriate_control_input"], "kind": "crew_action" },
+    { "t": 33, "clock": "01:50:21", "phase": "descent", "actor": "RELIEF", "text": "Both engine start levers are moved to cutoff, shutting down the engines.", "factors": ["deliberate_act"], "kind": "crew_action" },
+    { "t": 48, "clock": "01:50:36", "phase": "descent", "actor": "SYS", "text": "Flight data recorder and cockpit voice recorder stop as electrical power is lost; the aircraft is passing about 16,000 ft in the pull-out.", "state": { "alt": 16000 }, "factors": ["loss_of_control_inflight"], "kind": "system" },
+    { "t": 90, "clock": null, "phase": "climb", "actor": "SYS", "text": "Radar shows the aircraft climbing back to about 24,000 ft with the engines shut down.", "state": { "alt": 24000 }, "factors": ["loss_of_control_inflight"], "kind": "system" },
+    { "t": 130, "clock": null, "phase": "descent", "actor": "SYS", "text": "Aircraft enters a second steep dive; some structure separates before impact.", "factors": ["loss_of_control_inflight", "excessive_speed"], "kind": "system" },
+    { "t": 160, "clock": "01:52", "phase": "descent", "actor": "ENV", "text": "Aircraft strikes the Atlantic Ocean about 60 miles south of Nantucket; all 217 on board are killed.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "FAA", "text": "The NTSB issued no new safety recommendations in the accident brief, having found no mechanical failure; earlier recommendations on cockpit voice recorder duration and flight recorder power were referenced.", "status": "unknown", "outcome": null, "trigger_factors": [] }
+  ],
+  "dissent": [
+    { "agency": "ECAA", "position": "The Egyptian Civil Aviation Authority rejected the conclusion that the relief first officer deliberately caused the dive and argued that a failure in the elevator power control units (sheared bellcrank rivets and a jammed PCU) could explain the nose-down elevator movement, the elevator split and the sequence of events. The ECAA's comments were appended to the NTSB brief and the ECAA published its own report.", "topic": "probable cause" }
+  ],
+  "safety_changes": [
+    "Boeing evaluated 767 elevator PCU failure scenarios during the investigation; the NTSB found no failure mode that could produce the recorded control movements.",
+    "Renewed attention to cockpit door and crew presence policies and to psychological screening of pilots, although no formal regulatory change was directly attributed to this accident."
+  ],
+  "related": ["germanwings9525", "silkair185"],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0201.pdf", "https://www.ntsb.gov"],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+    "notes": ["Departure time (about 01:20 EST) and the sequence times from 01:49:45 to 01:50:36 are recalled from the aircraft accident brief to within a few seconds; the second dive, radar climb altitude and 01:52 impact time are approximate.",
+              "The peak Mach number of about 0.99 and the in-flight separation of structure during the final descent are from memory of the brief.",
+              "The NTSB issued the findings as an Aircraft Accident Brief (AAB-02/01) rather than a full AAR; the record uses the report id given by the task.",
+              "The ECAA dissent is recorded as a formal disagreement; the ECAA report and the NTSB's rebuttal are both public."] }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "aircanada143",
+  "title": "Air Canada 143 (Gimli Glider)",
+  "flight_number": "AC143",
+  "date": "1983-07-23",
+  "time_reference": "CDT (local); the report gives few exact clock times, so t is relative to the first fuel-pressure warning at about 20:00 CDT",
+  "t0": null,
+  "agency": "TSB",
+  "agencies": [
+    { "code": "TSB", "name": "Canadian Aviation Safety Board (predecessor of TSB)", "country": "Canada", "role": "lead",
+      "report_id": null, "report_title": "Final Report of the Board of Inquiry Investigating the Circumstances of an Accident Involving the Air Canada Boeing 767 Aircraft C-GAUN that Effected an Emergency Landing at Gimli, Manitoba on the 23rd Day of July, 1983 (Lockwood Board of Inquiry)", "report_date": "1985-04-30",
+      "url": "https://www.tsb.gc.ca/" }
+  ],
+  "aircraft": { "type": "Boeing 767-233", "family": "767", "manufacturer": "Boeing", "registration": "C-GAUN", "msn": "22520", "engines": "Pratt & Whitney JT9D-7R4D" },
+  "operator": "Air Canada",
+  "route": { "from": "CYUL", "from_name": "Montreal Dorval", "to": "CYEG", "to_name": "Edmonton International", "via": "CYOW Ottawa" },
+  "location": { "name": "Gimli Industrial Park Airport (former RCAF Station Gimli), Manitoba", "country": "Canada", "lat": 50.63, "lon": -97.04 },
+  "phase": "cruise",
+  "occupants": 69, "fatalities": 0, "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "FUEL",
+  "summary": "The new Boeing 767 was dispatched from Montreal with its fuel quantity indicators blank after a maintenance circuit-breaker mix-up. The fuel load was determined by dripstick, but the litres were converted to kilograms using the pounds-per-litre factor, so the aircraft carried less than half the fuel required. Both engines flamed out over Ontario at 41,000 ft; the crew glided the airliner to a dead-stick landing on a disused runway at Gimli, Manitoba, and all 69 occupants survived.",
+  "probable_cause": "The Board of Inquiry found that the aircraft ran out of fuel because the fuel quantity was calculated with an incorrect conversion factor after the fuel quantity indicating system had been rendered inoperative, and because the aircraft was dispatched contrary to the minimum equipment list. Underlying deficiencies included the unresolved FQIS defect, confusion over the maintenance log and MEL, Air Canada's incomplete transition to metric fuel measurement on its first metric aircraft, and the absence of a clearly assigned responsibility and training for fuel-quantity calculations without a flight engineer.",
+  "factors": [
+    { "id": "known_defect_unresolved", "role": "latent", "evidence": "The fuel quantity indicating system had a known intermittent fault in one processor channel that had not been rectified; a replacement part was not available." },
+    { "id": "maintenance_error", "role": "latent", "evidence": "A technician in Edmonton had deactivated the faulty channel by pulling and tagging a circuit breaker; in Montreal another technician reset it during troubleshooting, blanking the gauges, and did not restore the earlier configuration or clearly record what he had done." },
+    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The aircraft was dispatched with blank fuel gauges although the MEL did not permit it; the captain understood from the log and discussions that it had been flown that way and was acceptable." },
+    { "id": "inadequate_training", "role": "latent", "evidence": "Neither the flight crew nor the ground personnel had been trained to perform fuel-quantity calculations by dripstick in metric units for the 767, Air Canada's first metric aircraft." },
+    { "id": "operator_safety_culture", "role": "latent", "evidence": "The inquiry criticised Air Canada's corporate procedures, the ambiguity over who was responsible for fuel calculations on the two-crew 767, and the handling of the FQIS defect and MEL." },
+    { "id": "fuel_quantity_error", "role": "initiating", "evidence": "The 7,682 litres measured by dripstick were converted with a factor of 1.77 (pounds per litre) instead of 0.8 (kilograms per litre), so the crew believed they had 22,300 kg when the aircraft held roughly 10,000 kg." },
+    { "id": "fuel_exhaustion", "role": "contributing", "evidence": "The fuel was exhausted in cruise at 41,000 ft near Red Lake, Ontario, well short of Edmonton." },
+    { "id": "dual_engine_failure", "role": "contributing", "evidence": "The left engine flamed out first, followed a few minutes later by the right; the aircraft lost all generated electrical power and most instruments, leaving the ram air turbine for hydraulics." },
+    { "id": "emergency_landing", "role": "outcome", "evidence": "The crew glided the aircraft to a dead-stick landing on runway 32L at the former RCAF station at Gimli, which was in use as a motor-racing venue." }
+  ],
+  "chain": [
+    ["maintenance_error", "known_defect_unresolved"],
+    ["known_defect_unresolved", "procedural_noncompliance"],
+    ["operator_safety_culture", "procedural_noncompliance"],
+    ["procedural_noncompliance", "fuel_quantity_error"],
+    ["inadequate_training", "fuel_quantity_error"],
+    ["operator_safety_culture", "inadequate_training"],
+    ["fuel_quantity_error", "fuel_exhaustion"],
+    ["fuel_exhaustion", "dual_engine_failure"],
+    ["dual_engine_failure", "emergency_landing"]
+  ],
+  "events": [
+    { "t": -86400, "clock": null, "phase": "ground", "actor": "GND", "text": "The previous day in Edmonton a technician finds the fuel quantity processor's channel 2 faulty; he deactivates it by pulling and tagging a circuit breaker so the gauges work on one channel, and logs the fault with a reference to the MEL.", "factors": ["known_defect_unresolved", "maintenance_error"], "kind": "system" },
+    { "t": -16200, "clock": null, "phase": "ground", "actor": "GND", "text": "In Montreal a technician troubleshooting the fault resets the circuit breaker; the fuel gauges go blank. He is called away and does not pull the breaker again or make a clear log entry.", "factors": ["maintenance_error", "known_defect_unresolved"], "kind": "system" },
+    { "t": -14400, "clock": null, "phase": "ground", "actor": "CAPT", "text": "Captain Pearson sees the blank fuel gauges and the log entry; from the log and discussions with maintenance he concludes the aircraft has been flying in this condition and is dispatchable, although the MEL does not permit it.", "factors": ["procedural_noncompliance", "known_defect_unresolved"], "kind": "crew_action" },
+    { "t": -13500, "clock": null, "phase": "ground", "actor": "GND", "text": "The fuel tanks are dripsticked: 7,682 litres. Ground crew and pilots convert to mass using 1.77, the pounds-per-litre factor, instead of 0.8 kg per litre, and compute an uplift to reach 22,300 kg. The actual total after fuelling is roughly 10,000 kg.", "factors": ["fuel_quantity_error", "inadequate_training"], "kind": "crew_action" },
+    { "t": -11700, "clock": null, "phase": "takeoff", "actor": "PF", "text": "Departs Montreal for Ottawa with the erroneous fuel figure entered manually into the flight management computer.", "factors": ["fuel_quantity_error"], "kind": "crew_action" },
+    { "t": -7900, "clock": null, "phase": "takeoff", "actor": "PF", "text": "After a second dripstick check in Ottawa using the same wrong factor, the aircraft departs for Edmonton with 61 passengers and 8 crew.", "factors": ["fuel_quantity_error"], "kind": "crew_action" },
+    { "t": 0, "clock": null, "phase": "cruise", "actor": "SYS", "text": "Cruising at 41,000 ft near Red Lake, Ontario, a warning indicates low fuel pressure at the left engine's forward boost pump; the crew initially suspect a pump failure.", "state": { "alt": 41000 }, "factors": ["fuel_exhaustion"], "kind": "warning" },
+    { "t": 60, "clock": null, "phase": "cruise", "actor": "SYS", "text": "A second fuel-pressure warning follows; the crew decide to divert to Winnipeg.", "factors": ["fuel_exhaustion"], "kind": "warning" },
+    { "t": 180, "clock": null, "phase": "descent", "actor": "SYS", "text": "The left engine flames out. The crew begin a descent toward Winnipeg on one engine and declare an emergency.", "factors": ["fuel_exhaustion", "dual_engine_failure"], "kind": "system" },
+    { "t": 480, "clock": null, "phase": "descent", "actor": "SYS", "text": "The right engine flames out; the 'all engines out' condition leaves the electronic flight instruments blank. The ram air turbine deploys to provide hydraulic pressure for the flight controls; only standby instruments remain.", "factors": ["dual_engine_failure"], "kind": "system" },
+    { "t": 600, "clock": null, "phase": "descent", "actor": "FO", "text": "First Officer Quintal, using DME distance and altitude, determines the aircraft cannot reach Winnipeg and proposes the former RCAF base at Gimli, where he once served, about 12 nm away.", "factors": ["emergency_landing"], "kind": "crew_action" },
+    { "t": 800, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Captain Pearson glides the aircraft at about 220 kt toward Gimli; the landing gear is released by gravity but the nose gear fails to lock.", "kind": "crew_action" },
+    { "t": 1000, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Finding the aircraft too high and fast on final, the captain flies a forward slip to lose altitude without gaining speed.", "kind": "crew_action" },
+    { "t": 1100, "clock": null, "phase": "landing", "actor": "CAPT", "text": "Touchdown on Gimli runway 32L, which is in use as a drag-racing strip with people on it; the nose gear collapses and the aircraft stops short of the spectators. All 69 evacuate; 10 sustain minor injuries.", "factors": ["emergency_landing"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "Air Canada", "text": "Establish clear responsibility for, and training in, fuel quantity calculations for two-crew aircraft operating in metric units, and ensure MEL restrictions on the fuel quantity indicating system are unambiguous and enforced.", "status": "unknown", "outcome": "Air Canada revised its fuelling and MEL procedures and metric training.", "trigger_factors": ["fuel_quantity_error", "inadequate_training", "procedural_noncompliance"] },
+    { "id": null, "to": "Air Canada / Transport Canada", "text": "Improve the reliability and support of the 767 fuel quantity indicating system and the maintenance recording practices that led to the defect being carried unresolved.", "status": "unknown", "outcome": null, "trigger_factors": ["known_defect_unresolved", "maintenance_error"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Air Canada revised its fuel-loading procedures, metric conversion training and MEL handling for the 767 fleet.",
+    "The accident became a standard case study in unit-conversion error and in dispatch with inoperative fuel indication.",
+    "Boeing improved the fuel quantity processor's reliability on the 767."
+  ],
+  "related": ["airtransat236", "tuninter1153", "usair1549", "pinnacle3701"],
+  "fdr": null,
+  "sources": [
+    "https://www.tsb.gc.ca/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "The formal investigation was the Lockwood Board of Inquiry (report April 1985) with Transport Canada's Aviation Safety Bureau; the agency code TSB with the CASB name is used as instructed.",
+    "Event times are approximate reconstructions; the report's exact clock times were not available, so all clock fields are null and t is relative to the first fuel-pressure warning at about 20:00 CDT.",
+    "The altitude at which the second engine failed is not stated in the record because sources differ.",
+    "The actual fuel on board figure is given as roughly 10,000 kg; some accounts cite 10,100 kg or 4,916 litres uplifted."
+  ] }
+}

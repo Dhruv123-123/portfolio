@@ -1,0 +1,86 @@
+{
+  "id": "qantas72",
+  "title": "Qantas 72",
+  "flight_number": "QF72",
+  "date": "2008-10-07",
+  "time_reference": "UTC",
+  "t0": "2008-10-07T04:40:28Z",
+  "agency": "ATSB",
+  "agencies": [
+    { "code": "ATSB", "name": "Australian Transport Safety Bureau", "country": "Australia", "role": "lead",
+      "report_id": "AO-2008-070", "report_title": "In-flight upset, Airbus A330-303, VH-QPA, 154 km west of Learmonth, WA, 7 October 2008", "report_date": "2011-12-19",
+      "url": "https://www.atsb.gov.au/publications/investigation_reports/2008/aair/ao-2008-070" },
+    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses", "country": "France", "role": "accredited_representative" },
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "Airbus A330-303", "family": "A330", "manufacturer": "Airbus", "registration": "VH-QPA", "msn": "553", "engines": "General Electric CF6-80E1A4" },
+  "operator": "Qantas",
+  "route": { "from": "WSSS", "from_name": "Singapore Changi", "to": "YPPH", "to_name": "Perth" },
+  "location": { "name": "Indian Ocean, 154 km west of Learmonth, Western Australia", "country": "Australia", "lat": -22.3, "lon": 112.6 },
+  "phase": "cruise",
+  "occupants": 315, "fatalities": 0, "injuries_serious": 12,
+  "damage": "minor",
+  "category": "LOC-I",
+  "summary": "Cruising at 37,000 ft off Western Australia, the A330's number 1 air data inertial reference unit began outputting intermittent spikes on many parameters. The autopilot disconnected and a stream of spurious warnings followed. Two minutes later the flight control computers, acting on spike angle-of-attack values, commanded an abrupt nose-down pitch that threw unrestrained occupants against the ceiling; a second, smaller pitch-down followed. The crew diverted to Learmonth, where the aircraft landed safely; 12 people were seriously injured and many more hurt.",
+  "probable_cause": "The ATSB found that one of the aircraft's three ADIRUs entered a failure mode in which it output numerous spikes with incorrect data and labels, including angle-of-attack spikes. A limitation in the flight control primary computers' algorithm for processing angle-of-attack data meant that two spikes 1.2 seconds apart could pass the filtering and trigger the high-AoA protection, commanding the pitch-downs. The ADIRU failure mode's origin could not be determined; the FCPC algorithm limitation had not been identified during the design and certification safety assessment.",
+  "factors": [
+    { "id": "adiru_failure", "role": "initiating", "evidence": "ADIRU 1 began outputting spikes in many parameters with incorrect data and labels at 0440:28 UTC; the specific trigger for the failure mode could not be identified." },
+    { "id": "autopilot_disconnect", "role": "contributing", "evidence": "Autopilot 1 disconnected at the onset of the ADIRU failure, and the crew flew manually with numerous alerts active." },
+    { "id": "spurious_overspeed_warning", "role": "contributing", "evidence": "Spurious overspeed and stall warnings alternated on the flight deck as a result of the corrupted air data." },
+    { "id": "warning_system_deficiency", "role": "contributing", "evidence": "The crew received a large number of spurious warnings, cautions and fault messages that did not reflect the actual aircraft state, and no procedure existed for the ADIRU failure mode." },
+    { "id": "design_deficiency", "role": "latent", "evidence": "The FCPC angle-of-attack processing algorithm could not correctly manage a scenario with multiple spikes 1.2 seconds apart, so the spikes triggered the high-AoA protection and the pitch-down commands." },
+    { "id": "certification_shortfall", "role": "latent", "evidence": "The ATSB found that the ADIRU failure mode and the FCPC algorithm's vulnerability to it were not identified in the design and certification safety assessment process." },
+    { "id": "loss_of_pilot_control_authority", "role": "contributing", "evidence": "The two pitch-down manoeuvres were commanded by the flight control system, not the crew; the first reached about -0.8 g and 8.4 degrees nose-down." },
+    { "id": "high_workload", "role": "contributing", "evidence": "The crew dealt with continuous alerts, cabin injuries and a diversion with degraded information." },
+    { "id": "emergency_landing", "role": "outcome", "evidence": "After declaring PAN and then MAYDAY, the crew landed at Learmonth about 50 minutes after the upset." }
+  ],
+  "chain": [
+    ["adiru_failure", "autopilot_disconnect"],
+    ["adiru_failure", "spurious_overspeed_warning"],
+    ["spurious_overspeed_warning", "warning_system_deficiency"],
+    ["certification_shortfall", "design_deficiency"],
+    ["adiru_failure", "loss_of_pilot_control_authority"],
+    ["design_deficiency", "loss_of_pilot_control_authority"],
+    ["warning_system_deficiency", "high_workload"],
+    ["autopilot_disconnect", "high_workload"],
+    ["loss_of_pilot_control_authority", "emergency_landing"],
+    ["high_workload", "emergency_landing"]
+  ],
+  "events": [
+    { "t": -3000, "clock": null, "phase": "cruise", "actor": "PF", "text": "Cruising at FL370 toward Perth with 303 passengers and 12 crew; the captain is pilot flying and the first officer is on a rest break, with the second officer in the right seat.", "state": { "alt": 37000 }, "kind": "crew_action" },
+    { "t": 0, "clock": "04:40:28", "phase": "cruise", "actor": "SYS", "text": "ADIRU 1 begins outputting intermittent spikes on multiple parameters with incorrect labels; autopilot 1 disconnects and a NAV IR 1 FAULT is displayed with a master caution.", "state": { "alt": 37000 }, "factors": ["adiru_failure", "autopilot_disconnect"], "kind": "system" },
+    { "t": 5, "clock": null, "phase": "cruise", "actor": "SYS", "text": "Stall and overspeed warnings alternate, and numerous spurious ECAM cautions appear; the captain's airspeed and altitude indications show momentary spikes.", "factors": ["spurious_overspeed_warning", "warning_system_deficiency"], "kind": "warning" },
+    { "t": 30, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "The captain flies manually and the crew begin assessing the alerts; the first officer is recalled to the flight deck.", "factors": ["high_workload"], "kind": "crew_action" },
+    { "t": 119, "clock": "04:42:27", "phase": "cruise", "actor": "SYS", "text": "The flight control computers, acting on two angle-of-attack spikes 1.2 s apart, command an abrupt nose-down: about 8.4 degrees pitch-down and -0.8 g. Unrestrained passengers and crew strike the cabin ceiling; the aircraft loses about 650 ft.", "state": { "alt": 37000, "pitch": -8.4 }, "factors": ["loss_of_pilot_control_authority", "design_deficiency", "adiru_failure"], "kind": "system" },
+    { "t": 130, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "The captain applies back-stick and the aircraft returns to about FL370; the crew make a PAN call and begin considering a diversion.", "kind": "crew_action" },
+    { "t": 280, "clock": "04:45:08", "phase": "cruise", "actor": "SYS", "text": "A second, smaller uncommanded pitch-down occurs; the aircraft loses about 400 ft before the crew recover.", "factors": ["loss_of_pilot_control_authority", "design_deficiency"], "kind": "system" },
+    { "t": 420, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "The crew decide to divert to Learmonth, the nearest suitable airport, and declare PAN; on learning of serious cabin injuries they upgrade to MAYDAY.", "factors": ["emergency_landing", "high_workload"], "kind": "crew_speech" },
+    { "t": 1200, "clock": null, "phase": "descent", "actor": "PF", "text": "Descent and approach to Learmonth flown manually with the crew treating the flight control and air data indications with caution.", "kind": "crew_action" },
+    { "t": 3100, "clock": "05:32", "phase": "landing", "actor": "PF", "text": "The aircraft lands at Learmonth. Twelve people are seriously injured and many others hurt; ambulances and later aeromedical flights take the injured to Perth.", "factors": ["emergency_landing"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "Airbus / EASA", "text": "Redesign the flight control primary computer angle-of-attack processing algorithm so that erroneous spike data cannot trigger the high angle-of-attack protection, and provide crews with a procedure for the ADIRU failure mode.", "status": "closed_acceptable", "outcome": "Airbus modified the FCPC software (mandated by EASA airworthiness directive) and issued an operations engineering bulletin instructing crews to switch off the affected ADIRU.", "trigger_factors": ["design_deficiency", "adiru_failure"] },
+    { "id": null, "to": "Northrop Grumman / FAA", "text": "Investigate the ADIRU failure mode and improve the unit's internal data checking and built-in test so that corrupted output is detected and flagged.", "status": "unknown", "outcome": "The ADIRU's failure mode could not be reproduced; the manufacturer improved the unit's data-integrity checks.", "trigger_factors": ["adiru_failure", "warning_system_deficiency"] },
+    { "id": null, "to": "Operators / regulators", "text": "Reinforce advice to passengers to keep seat belts fastened while seated, since most injuries were to unrestrained occupants.", "status": "unknown", "outcome": null, "trigger_factors": ["loss_of_pilot_control_authority"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Airbus redesigned the A330/A340 FCPC angle-of-attack algorithm; the modification was mandated by airworthiness directive.",
+    "An operations engineering bulletin and later a permanent procedure instruct crews to switch off an ADIRU displaying the NAV IR fault so that its data is no longer used.",
+    "The FAA and EASA issued airworthiness directives on the affected Northrop Grumman ADIRU model.",
+    "The ATSB issued safety advice on the importance of keeping seat belts fastened when seated."
+  ],
+  "related": ["af447", "lionair610", "ethiopian302"],
+  "fdr": null,
+  "sources": [
+    "https://www.atsb.gov.au/publications/investigation_reports/2008/aair/ao-2008-070",
+    "https://www.atsb.gov.au/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "Clock times for the ADIRU failure (0440:28), first pitch-down (0442:27) and second pitch-down (0445:08) are as recalled from the ATSB report; the landing time (0532) is approximate.",
+    "Location latitude and longitude are an approximation of 154 km west of Learmonth over the Indian Ocean.",
+    "The report describes a subsequent reversion of the flight control law; this is omitted because the exact circumstances were not verified.",
+    "Serious injuries are given as 12 (one flight attendant and 11 passengers); over 100 occupants received some injury."
+  ] }
+}

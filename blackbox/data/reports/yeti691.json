@@ -1,0 +1,86 @@
+{
+  "id": "yeti691",
+  "title": "Yeti Airlines 691",
+  "flight_number": "YT691",
+  "date": "2023-01-15",
+  "time_reference": "Nepal time (UTC+5:45); clock strings approximate to the minute, t is relative to the movement of the condition levers at about 10:56",
+  "t0": null,
+  "agency": "AAIC-NP",
+  "agencies": [
+    { "code": "AAIC-NP", "name": "Aircraft Accident Investigation Commission", "country": "Nepal", "role": "lead",
+      "report_id": null, "report_title": "Final Report on the Accident Investigation of 9N-ANC ATR 72-212A (ATR 72-500), Yeti Airlines Flight 691, Pokhara, Nepal, 15 January 2023", "report_date": "2023-12-28",
+      "url": "https://www.tourism.gov.np/" },
+    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses", "country": "France", "role": "accredited_representative" },
+    { "code": "TSB", "name": "Transportation Safety Board of Canada", "country": "Canada", "role": "accredited_representative" },
+    { "code": "AAIB-SG", "name": "Transport Safety Investigation Bureau", "country": "Singapore", "role": "assisting" }
+  ],
+  "aircraft": { "type": "ATR 72-212A (ATR 72-500)", "family": "ATR 72", "manufacturer": "ATR", "registration": "9N-ANC", "msn": "754", "engines": "Pratt & Whitney Canada PW127M" },
+  "operator": "Yeti Airlines",
+  "route": { "from": "VNKT", "from_name": "Kathmandu Tribhuvan", "to": "VNPR", "to_name": "Pokhara International" },
+  "location": { "name": "Seti River gorge, about 1.5 km from the runway 12 threshold, Pokhara", "country": "Nepal", "lat": 28.19, "lon": 84.0 },
+  "phase": "approach",
+  "occupants": 72, "fatalities": 72, "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "On a visual approach to runway 12 at the newly opened Pokhara International Airport, the pilot flying called for flaps 30. The pilot monitoring, an instructor captain, instead moved both condition levers to the feather position, feathering both propellers and removing all thrust. Neither pilot noticed; the aircraft decelerated in the turn onto final, the stick shaker activated and the aircraft stalled and rolled at low altitude, crashing into the Seti River gorge. All 72 on board died.",
+  "probable_cause": "The AAIC concluded that the probable cause was the inadvertent movement of both condition levers to the feather position by the pilot monitoring, which resulted in the feathering of both propellers and a loss of thrust that led to an aerodynamic stall and collision with terrain. Contributing were high workload and stress during a non-standard visual approach to a newly opened airport, the failure of the crew to monitor and cross-check the aircraft's configuration and performance, inadequate crew coordination and non-compliance with standard operating procedures, and shortcomings in the operator's training and the validation of the visual approach procedure.",
+  "factors": [
+    { "id": "control_misidentification", "role": "initiating", "evidence": "When flaps 30 was called, the pilot monitoring moved the condition levers, located next to the flap lever on the centre pedestal, to FEATHER instead of moving the flap lever." },
+    { "id": "high_workload", "role": "contributing", "evidence": "The crew were flying a visual approach at low altitude to a new airport with a non-standard circuit, in a supervised familiarisation flight." },
+    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The approach was not flown according to a briefed and validated procedure, and the before-landing checks were not completed as required by the SOPs." },
+    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "Neither pilot detected that the flaps had remained at 15 and that both engines' torque had dropped to zero after the levers were moved." },
+    { "id": "crm_breakdown", "role": "contributing", "evidence": "There was no effective cross-check of the configuration change, and the exchange between the pilots did not identify the loss of thrust." },
+    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The crew did not understand why the aircraft was not responding to power lever movement until the stall warning activated." },
+    { "id": "inadequate_training", "role": "latent", "evidence": "The report identified deficiencies in the operator's training and in the preparation of crews for operations at the new airport." },
+    { "id": "stick_shaker_pusher", "role": "contributing", "evidence": "The stick shaker activated twice at low altitude; the crew did not recover before the aircraft rolled." },
+    { "id": "aerodynamic_stall", "role": "outcome", "evidence": "With both propellers feathered the airspeed decayed in the turn to final and the aircraft stalled." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft rolled sharply left and struck the ground in the gorge." }
+  ],
+  "chain": [
+    ["procedural_noncompliance", "high_workload"],
+    ["high_workload", "control_misidentification"],
+    ["inadequate_training", "control_misidentification"],
+    ["crm_breakdown", "inadequate_monitoring"],
+    ["control_misidentification", "loss_of_situational_awareness"],
+    ["inadequate_monitoring", "loss_of_situational_awareness"],
+    ["loss_of_situational_awareness", "aerodynamic_stall"],
+    ["control_misidentification", "stick_shaker_pusher"],
+    ["stick_shaker_pusher", "aerodynamic_stall"],
+    ["aerodynamic_stall", "loss_of_control_inflight"]
+  ],
+  "events": [
+    { "t": -1400, "clock": "10:33", "phase": "takeoff", "actor": "PF", "text": "Departs Kathmandu for Pokhara. The captain in the left seat is pilot flying on a familiarisation flight to the new airport; an instructor captain in the right seat is pilot monitoring.", "kind": "crew_action" },
+    { "t": -300, "clock": null, "phase": "approach", "actor": "CAPT", "text": "The crew request and are cleared for a visual approach to runway 12 instead of runway 30; the approach is flown at low altitude on a non-standard path without a validated procedure.", "factors": ["procedural_noncompliance", "high_workload"], "kind": "crew_action" },
+    { "t": -120, "clock": null, "phase": "approach", "actor": "PF", "text": "Flaps 15 selected and landing gear extended on the downwind leg.", "kind": "crew_action" },
+    { "t": 0, "clock": "10:56", "phase": "approach", "actor": "PM", "text": "The pilot flying calls for flaps 30. The pilot monitoring moves both condition levers to FEATHER instead of the flap lever; both propellers feather and engine torque drops to zero. The flap lever remains at 15.", "factors": ["control_misidentification", "inadequate_monitoring"], "kind": "crew_action" },
+    { "t": 5, "clock": null, "phase": "approach", "actor": "PM", "text": "The pilot monitoring reads the flaps as set; neither pilot notices the feathered propellers or the zero torque, and the before-landing checklist is not completed.", "factors": ["inadequate_monitoring", "crm_breakdown", "procedural_noncompliance"], "kind": "crew_speech" },
+    { "t": 22, "clock": null, "phase": "approach", "actor": "PF", "text": "Flaps 30 is subsequently selected; the aircraft continues the turn toward final with the propellers feathered and airspeed decreasing.", "factors": ["loss_of_situational_awareness"], "kind": "crew_action" },
+    { "t": 35, "clock": null, "phase": "approach", "actor": "PF", "text": "The pilot flying reports that the engines are not producing power; the power levers are advanced but, with the propellers feathered, no thrust results.", "factors": ["loss_of_situational_awareness"], "kind": "crew_speech" },
+    { "t": 39, "clock": null, "phase": "approach", "actor": "SYS", "text": "Stick shaker activates at low altitude in the turn to final.", "factors": ["stick_shaker_pusher", "aerodynamic_stall"], "kind": "warning" },
+    { "t": 46, "clock": null, "phase": "approach", "actor": "SYS", "text": "Stick shaker activates a second time; the aircraft rolls sharply to the left.", "factors": ["stick_shaker_pusher", "aerodynamic_stall", "loss_of_control_inflight"], "kind": "warning" },
+    { "t": 52, "clock": "10:57", "phase": "approach", "actor": "SYS", "text": "The aircraft strikes the ground in the Seti River gorge about 1.5 km from the runway 12 threshold and catches fire; all 68 passengers and 4 crew are killed.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "Civil Aviation Authority of Nepal", "text": "Ensure that visual approach procedures for new airports are properly designed, validated and published, and that operators' crews are trained on them before operations begin.", "status": "unknown", "outcome": null, "trigger_factors": ["procedural_noncompliance", "inadequate_training", "high_workload"] },
+    { "id": null, "to": "Yeti Airlines", "text": "Strengthen SOP compliance, crew coordination and monitoring, including cross-verification of configuration changes and completion of checklists, and review training and supervision on familiarisation flights.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_monitoring", "crm_breakdown", "control_misidentification"] },
+    { "id": null, "to": "ATR / EASA", "text": "Consider design or procedural measures to reduce the risk of confusing the condition levers with the flap lever on the ATR 72 pedestal.", "status": "unknown", "outcome": null, "trigger_factors": ["control_misidentification"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "The Civil Aviation Authority of Nepal revised its approach procedures and crew training requirements for Pokhara International Airport.",
+    "Yeti Airlines revised its SOPs on configuration changes and checklist discipline."
+  ],
+  "related": ["transasia235", "colgan3407", "atlas3591"],
+  "fdr": null,
+  "sources": [
+    "https://www.tourism.gov.np/",
+    "https://www.bea.aero/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "Clock strings are given only to the minute; event offsets are approximate reconstructions of the roughly 50-second sequence from the lever movement to impact.",
+    "The pilot monitoring's exact words when the levers were moved are paraphrased.",
+    "The report's findings on regulatory oversight and on the airport's procedure validation are summarised in the probable cause but regulatory_oversight is not listed as a factor because the exact wording was not verified.",
+    "The Nepal AAIC report is published through the Ministry of Culture, Tourism and Civil Aviation; its home page is used as the source."
+  ] }
+}

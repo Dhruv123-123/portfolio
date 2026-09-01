@@ -1,0 +1,102 @@
+{
+  "id": "atlas3591",
+  "title": "Atlas Air 3591",
+  "flight_number": "5Y3591 (Amazon Prime Air)",
+  "date": "2019-02-23",
+  "time_reference": "CST (local)",
+  "t0": "2019-02-23T18:38:31Z",
+  "agency": "NTSB",
+  "agencies": [
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+      "report_id": "NTSB/AAR-20/02",
+      "report_title": "Rapid Descent and Crash into Water, Atlas Air Inc. Flight 3591, Boeing 767-375BCF, N1217A, Trinity Bay, Texas, February 23, 2019",
+      "report_date": "2020-07-14",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR2002.pdf" }
+  ],
+  "aircraft": { "type": "Boeing 767-375BCF", "family": "767", "manufacturer": "Boeing", "registration": "N1217A", "msn": null, "engines": "General Electric CF6-80C2B6F" },
+  "operator": "Atlas Air (operating for Amazon Prime Air)",
+  "route": { "from": "KMIA", "from_name": "Miami International", "to": "KIAH", "to_name": "Houston George Bush Intercontinental" },
+  "location": { "name": "Trinity Bay near Anahuac, Texas", "country": "USA", "lat": 29.76, "lon": -94.70 },
+  "phase": "approach",
+  "occupants": 3,
+  "fatalities": 3,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Descending toward Houston through turbulence and cloud around a line of weather, the 767 freighter's go-around mode was inadvertently triggered, most likely when the first officer's wrist bumped the go-around switch while he was manipulating the speedbrake lever. The autopilot pitched up and thrust increased; the first officer, experiencing a somatogravic illusion that the airplane was pitching up steeply and stalling, pushed the nose down to nearly 50 degrees. The captain did not take control in time and the airplane struck Trinity Bay about 30 seconds later, killing the two pilots and a jumpseat passenger.",
+  "probable_cause": "The inappropriate response by the first officer as the pilot flying to an inadvertent activation of the go-around mode, which led to his spatial disorientation and nose-down control inputs that placed the airplane in a steep descent from which the crew did not recover. Contributing to the accident was the captain's failure to adequately monitor the airplane's flightpath and assume positive control of the airplane to effectively intervene. Also contributing were systemic deficiencies in the aviation industry's selection and performance measurement practices, which failed to address the first officer's aptitude-related deficiencies and maladaptive stress response. Also contributing to the accident was the Federal Aviation Administration's failure to implement the pilot records database in a sufficiently robust and timely manner.",
+  "factors": [
+    { "id": "control_misidentification", "role": "initiating", "evidence": "The go-around mode was most likely activated inadvertently when the first officer's wrist or watch contacted the go-around switch on the thrust lever while he was moving the speedbrake lever in turbulence." },
+    { "id": "mode_confusion", "role": "contributing", "evidence": "Neither pilot recognized that go-around mode had engaged; the resulting pitch-up and thrust increase were not understood as an automation mode change." },
+    { "id": "startle_effect", "role": "contributing", "evidence": "The unexpected pitch-up and acceleration startled the first officer, triggering a maladaptive stress response." },
+    { "id": "somatogravic_illusion", "role": "contributing", "evidence": "The forward acceleration from go-around thrust in cloud produced a false sensation of steep pitch-up; the first officer believed the airplane was pitching up excessively and stalling." },
+    { "id": "spatial_disorientation", "role": "contributing", "evidence": "The first officer became spatially disoriented and did not use the attitude indicator to correct his perception of the airplane's attitude." },
+    { "id": "stall_misdiagnosis", "role": "contributing", "evidence": "The first officer called out that the airplane was stalling although airspeed was increasing and angle of attack was low." },
+    { "id": "inappropriate_control_input", "role": "contributing", "evidence": "The first officer pushed the control column forward, driving pitch to about 49 degrees nose down with thrust still high." },
+    { "id": "convective_weather", "role": "contributing", "evidence": "The airplane was deviating around a line of convective weather in instrument conditions with light to moderate turbulence, removing outside visual references." },
+    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "The captain did not adequately monitor the flightpath as the airplane pitched down and did not recognize the developing upset for several seconds." },
+    { "id": "crm_breakdown", "role": "contributing", "evidence": "The captain did not assume positive control of the airplane in time; his eventual aft column inputs were too late to recover." },
+    { "id": "operator_safety_culture", "role": "latent", "evidence": "Atlas Air's hiring process did not obtain the first officer's full training history, which included repeated training failures at previous employers that he had not disclosed." },
+    { "id": "regulatory_oversight", "role": "latent", "evidence": "The FAA had not implemented the pilot records database required by the 2010 Airline Safety Act in a sufficiently robust and timely manner, so his record was not available to Atlas." },
+    { "id": "inadequate_training", "role": "latent", "evidence": "Industry pilot selection and performance measurement practices did not identify or address the first officer's aptitude-related deficiencies during training." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The airplane entered a steep dive at high speed and struck the water about 32 seconds after go-around mode activation." }
+  ],
+  "chain": [
+    ["convective_weather", "control_misidentification"],
+    ["control_misidentification", "mode_confusion"],
+    ["mode_confusion", "startle_effect"],
+    ["startle_effect", "somatogravic_illusion"],
+    ["convective_weather", "somatogravic_illusion"],
+    ["somatogravic_illusion", "spatial_disorientation"],
+    ["spatial_disorientation", "stall_misdiagnosis"],
+    ["stall_misdiagnosis", "inappropriate_control_input"],
+    ["regulatory_oversight", "operator_safety_culture"],
+    ["inadequate_training", "operator_safety_culture"],
+    ["operator_safety_culture", "inappropriate_control_input"],
+    ["inadequate_monitoring", "crm_breakdown"],
+    ["crm_breakdown", "loss_of_control_inflight"],
+    ["inappropriate_control_input", "loss_of_control_inflight"]
+  ],
+  "events": [
+    { "t": -300, "clock": null, "phase": "descent", "actor": "ATC", "text": "Houston approach clears the flight to descend and coordinates deviations west around a line of thunderstorms; the airplane is in cloud with turbulence.", "factors": ["convective_weather"], "kind": "atc" },
+    { "t": -60, "clock": null, "phase": "descent", "actor": "FO", "text": "The first officer, as pilot flying with the autopilot engaged, calls for flaps 1 as the airplane descends through about 6,300 feet and prepares for a turn toward the approach.", "kind": "crew_action" },
+    { "t": -5, "clock": null, "phase": "descent", "actor": "FO", "text": "The first officer moves the speedbrake lever with his left hand; turbulence jostles the airplane.", "factors": ["convective_weather"], "kind": "crew_action" },
+    { "t": 0, "clock": "12:38:31", "phase": "descent", "actor": "SYS", "text": "Go-around mode activates, most likely from inadvertent contact with the go-around switch on the thrust lever; the autothrottle advances thrust and the autopilot commands a pitch-up.", "state": { "alt": 6200 }, "factors": ["control_misidentification", "mode_confusion"], "kind": "system" },
+    { "t": 3, "clock": null, "phase": "descent", "actor": "SYS", "text": "Thrust increases toward go-around power; the airplane accelerates and begins to pitch up about 4 degrees.", "factors": ["somatogravic_illusion"], "kind": "system" },
+    { "t": 6, "clock": null, "phase": "descent", "actor": "FO", "text": "Feeling a strong sensation of pitching up, the first officer pushes the control column forward, overriding the autopilot; he says something to the effect that the airplane is stalling.", "factors": ["somatogravic_illusion", "startle_effect", "stall_misdiagnosis", "inappropriate_control_input"], "kind": "crew_action" },
+    { "t": 10, "clock": null, "phase": "descent", "actor": "SYS", "text": "The autopilot disconnects; pitch passes through nose-down and continues toward 49 degrees nose down with thrust near maximum; airspeed rises rapidly.", "state": { "pitch": -49 }, "factors": ["inappropriate_control_input", "loss_of_control_inflight"], "kind": "system" },
+    { "t": 14, "clock": null, "phase": "descent", "actor": "CAPT", "text": "The captain, who had been handling the radios and the flap selection, expresses confusion about what is happening; he does not take control.", "factors": ["inadequate_monitoring", "crm_breakdown"], "kind": "crew_speech" },
+    { "t": 20, "clock": null, "phase": "descent", "actor": "SYS", "text": "The airplane breaks out of cloud in a steep dive over the bay; the ground proximity warning sounds.", "factors": ["loss_of_control_inflight"], "kind": "warning" },
+    { "t": 24, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Both pilots pull aft on the control columns; pitch begins to recover toward about 20 degrees nose down but the airplane is too low and too fast.", "factors": ["crm_breakdown", "loss_of_control_inflight"], "kind": "crew_action" },
+    { "t": 32, "clock": null, "phase": "descent", "actor": "SYS", "text": "The airplane strikes the shallow water of Trinity Bay at high speed and is destroyed; all three occupants die.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "FAA", "text": "Complete implementation of the pilot records database so that air carriers can obtain a pilot's complete training and employment history, including records from previous employers, before hiring.", "status": "closed_acceptable", "outcome": "The Pilot Records Database final rule was issued in 2021 and became mandatory for carriers.", "trigger_factors": ["regulatory_oversight", "operator_safety_culture"] },
+    { "id": null, "to": "FAA", "text": "Require air carriers to include in pilot training a scenario-based understanding of inadvertent go-around mode activation and of somatogravic illusion, with practice in recognizing and recovering from resulting unusual attitudes.", "status": "unknown", "outcome": null, "trigger_factors": ["somatogravic_illusion", "control_misidentification", "spatial_disorientation"] },
+    { "id": null, "to": "FAA and industry", "text": "Develop pilot selection and performance measurement methods that identify aptitude-related deficiencies and maladaptive stress responses during training and before pilots enter line operations.", "status": "open", "outcome": null, "trigger_factors": ["inadequate_training", "operator_safety_culture"] },
+    { "id": null, "to": "Boeing", "text": "Evaluate the location and activation force of go-around switches on the 767 and similar types to reduce the likelihood of inadvertent activation.", "status": "unknown", "outcome": null, "trigger_factors": ["control_misidentification"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "The FAA published the Pilot Records Database final rule in 2021, requiring carriers to report and check pilot training and employment records.",
+    "Atlas Air and other carriers revised hiring practices to obtain complete training histories and strengthened monitoring of pilots with repeated training failures.",
+    "Operators added training on inadvertent go-around mode activation, somatogravic illusion and upset recovery in instrument conditions.",
+    "The report reinforced pilot monitoring and intervention guidance for captains when the first officer is pilot flying."
+  ],
+  "related": ["flydubai981", "gol1907", "tatarstan363", "af447", "airasia8501"],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR2002.pdf",
+    "https://www.ntsb.gov"
+  ],
+  "extraction": {
+    "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+    "notes": [
+      "Go-around mode activation is placed at about 12:38:31 CST and impact about 32 seconds later; both are as recalled from the report and could be off by several seconds.",
+      "Altitude at go-around activation (about 6,200 feet) and the maximum nose-down pitch (about 49 degrees) are as stated in the report; intermediate pitch values are approximate.",
+      "The first officer's stall remark and the captain's expressions of confusion are paraphrased as crew speech events rather than quoted, because the exact wording is not recalled with confidence.",
+      "Aircraft MSN is omitted because it is not recalled with confidence."
+    ]
+  }
+}

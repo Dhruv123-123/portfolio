@@ -1,0 +1,95 @@
+{
+  "id": "transasia235",
+  "title": "TransAsia Airways 235",
+  "flight_number": "GE235",
+  "date": "2015-02-04",
+  "time_reference": "Taipei local time (UTC+8)",
+  "t0": "2015-02-04T02:52:38Z",
+  "agency": "ASC",
+  "agencies": [
+    { "code": "ASC", "name": "Aviation Safety Council", "country": "Taiwan", "role": "lead",
+      "report_id": "ASC-AOR-16-06-001", "report_title": "Aviation Occurrence Report: 4 February 2015, TransAsia Airways Flight GE235, ATR72-212A, Loss of Control and Crashed into Keelung River Three Nautical Miles East of Songshan Airport", "report_date": "2016-06-30",
+      "url": "https://www.ttsb.gov.tw/" },
+    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses", "country": "France", "role": "accredited_representative" },
+    { "code": "TSB", "name": "Transportation Safety Board of Canada", "country": "Canada", "role": "accredited_representative" },
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "ATR 72-212A (ATR 72-600)", "family": "ATR 72", "manufacturer": "ATR", "registration": "B-22816", "msn": "1141", "engines": "Pratt & Whitney Canada PW127M" },
+  "operator": "TransAsia Airways",
+  "route": { "from": "RCSS", "from_name": "Taipei Songshan", "to": "RCBS", "to_name": "Kinmen" },
+  "location": { "name": "Keelung River, Nangang, Taipei, about 3 nm east of Songshan Airport", "country": "Taiwan", "lat": 25.063, "lon": 121.56 },
+  "phase": "initial_climb",
+  "occupants": 58, "fatalities": 43, "injuries_serious": null,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Shortly after take-off from Taipei Songshan, the ATR 72-600's automatic take-off power control system auto-feathered the number 2 engine following an intermittent signal from its auto-feather unit. The captain, as pilot flying, misidentified the failed engine, retarded the operating number 1 engine to idle and then shut it down. With no thrust, the aircraft stalled at low altitude, rolled steeply, clipped a taxi on an elevated road and crashed inverted into the Keelung River. Forty-three of the 58 on board died.",
+  "probable_cause": "The ASC found that the number 2 engine auto-feathered because of an intermittent signal discontinuity in its auto-feather unit, and that the captain then reduced power on the operating engine and shut it down without following the engine failure procedure or confirming the failed engine with the other pilot, leaving the aircraft with no thrust. The crew did not respond effectively to the stall warnings and lost control. Contributing were the captain's demonstrated weaknesses in handling engine failures, inadequate crew coordination, TransAsia's deficient flight crew training and safety management, and inadequate regulatory oversight.",
+  "factors": [
+    { "id": "engine_failure", "role": "initiating", "evidence": "About 37 seconds after take-off the ATPCS auto-feathered the number 2 engine following an intermittent signal from its auto-feather unit; the engine itself was serviceable." },
+    { "id": "high_workload", "role": "contributing", "evidence": "The failure occurred at about 1,200 ft during the initial climb, with a master warning and the need for immediate single-engine handling." },
+    { "id": "wrong_engine_shutdown", "role": "contributing", "evidence": "The captain retarded the number 1 (operating) engine's power lever to idle and later moved its condition lever to fuel shut-off, shutting down the only engine producing thrust." },
+    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The crew did not carry out the engine flame-out at take-off procedure as trained, which requires identification and confirmation of the failed engine before any lever is moved." },
+    { "id": "crm_breakdown", "role": "contributing", "evidence": "The pilot monitoring did not challenge the captain's actions on the wrong engine and the two pilots did not cross-check before the operating engine was shut down." },
+    { "id": "pilot_experience", "role": "latent", "evidence": "The captain's training records showed difficulties in handling engine failures after take-off; he had failed a simulator check on this before later passing." },
+    { "id": "inadequate_training", "role": "latent", "evidence": "TransAsia's ATR 72-600 differences training and its handling of pilots with unsatisfactory performance were found deficient." },
+    { "id": "operator_safety_culture", "role": "latent", "evidence": "The ASC found systemic deficiencies in TransAsia's flight operations management and safety management system." },
+    { "id": "regulatory_oversight", "role": "latent", "evidence": "The report found that the Civil Aeronautics Administration's oversight had not identified or corrected the operator's deficiencies." },
+    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The captain did not recognise until seconds before impact that he had pulled back the wrong engine." },
+    { "id": "stick_shaker_pusher", "role": "contributing", "evidence": "The stall warning and stick shaker activated repeatedly and the stick pusher operated as airspeed decayed; the crew did not recover." },
+    { "id": "aerodynamic_stall", "role": "outcome", "evidence": "With both propellers producing no thrust the aircraft stalled at low altitude." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft rolled steeply left, struck a taxi and the parapet of an elevated road and crashed inverted into the river." }
+  ],
+  "chain": [
+    ["engine_failure", "high_workload"],
+    ["engine_failure", "wrong_engine_shutdown"],
+    ["high_workload", "wrong_engine_shutdown"],
+    ["pilot_experience", "wrong_engine_shutdown"],
+    ["inadequate_training", "wrong_engine_shutdown"],
+    ["operator_safety_culture", "inadequate_training"],
+    ["regulatory_oversight", "operator_safety_culture"],
+    ["procedural_noncompliance", "wrong_engine_shutdown"],
+    ["crm_breakdown", "wrong_engine_shutdown"],
+    ["wrong_engine_shutdown", "loss_of_situational_awareness"],
+    ["wrong_engine_shutdown", "stick_shaker_pusher"],
+    ["stick_shaker_pusher", "aerodynamic_stall"],
+    ["aerodynamic_stall", "loss_of_control_inflight"]
+  ],
+  "events": [
+    { "t": -37, "clock": null, "phase": "takeoff", "actor": "PF", "text": "Take-off from Songshan runway 10 with the captain as pilot flying, a first officer as pilot monitoring and a third pilot in the observer's seat.", "kind": "crew_action" },
+    { "t": 0, "clock": "10:52:38", "phase": "initial_climb", "actor": "SYS", "text": "Climbing through about 1,200 ft, the ATPCS auto-feathers the number 2 propeller after an intermittent signal from the auto-feather unit; master warning 'ENG 2 FLAME OUT AT TAKE OFF'.", "state": { "alt": 1200 }, "factors": ["engine_failure", "high_workload"], "kind": "warning" },
+    { "t": 5, "clock": null, "phase": "initial_climb", "actor": "CAPT", "text": "The captain announces he will pull back the number 1 power lever and begins retarding the operating engine's power lever toward idle, without confirming the failed engine.", "factors": ["wrong_engine_shutdown", "procedural_noncompliance"], "kind": "crew_action" },
+    { "t": 12, "clock": null, "phase": "initial_climb", "actor": "FO", "text": "The pilot monitoring makes callouts and reads the warning but does not challenge the action on the wrong engine; no cross-check is made.", "factors": ["crm_breakdown"], "kind": "crew_speech" },
+    { "t": 25, "clock": null, "phase": "initial_climb", "actor": "SYS", "text": "With number 2 feathered and number 1 at low power the aircraft stops climbing; airspeed begins to decay and the autopilot is disconnected.", "kind": "system" },
+    { "t": 46, "clock": null, "phase": "initial_climb", "actor": "CAPT", "text": "The captain moves the number 1 condition lever to fuel shut-off; the operating engine shuts down and the aircraft has no thrust.", "factors": ["wrong_engine_shutdown"], "kind": "crew_action" },
+    { "t": 55, "clock": null, "phase": "initial_climb", "actor": "SYS", "text": "Stall warning and stick shaker activate repeatedly as airspeed decays; the stick pusher operates.", "factors": ["stick_shaker_pusher", "aerodynamic_stall"], "kind": "warning" },
+    { "t": 75, "clock": null, "phase": "descent", "actor": "CAPT", "text": "The crew declare MAYDAY, reporting an engine flame-out, and attempt to restart the number 1 engine.", "factors": ["loss_of_situational_awareness"], "kind": "crew_speech" },
+    { "t": 114, "clock": "10:54:34", "phase": "descent", "actor": "CAPT", "text": "The captain exclaims that he pulled back the wrong side throttle.", "factors": ["wrong_engine_shutdown", "loss_of_situational_awareness"], "kind": "crew_speech" },
+    { "t": 117, "clock": null, "phase": "descent", "actor": "SYS", "text": "The aircraft rolls steeply left, its left wing strikes a taxi and the parapet of the elevated Huandong Viaduct, and it crashes inverted into the Keelung River. 43 of the 58 on board die; 15 survive, and two people in the taxi are injured.", "factors": ["aerodynamic_stall", "loss_of_control_inflight"], "kind": "outcome" }
+  ],
+  "cvr": [
+    { "t": 114, "clock": "10:54:34", "speaker": "CAPT", "text": "Wow, pulled back the wrong side throttle.", "translation": null }
+  ],
+  "recommendations": [
+    { "id": null, "to": "TransAsia Airways", "text": "Review and strengthen flight crew training on engine failure after take-off, crew coordination and the management of pilots with unsatisfactory performance records, and improve the airline's safety management system.", "status": "unknown", "outcome": "TransAsia retrained its ATR crews after the accident; the airline ceased operations in November 2016.", "trigger_factors": ["inadequate_training", "pilot_experience", "crm_breakdown", "operator_safety_culture"] },
+    { "id": null, "to": "Civil Aeronautics Administration (Taiwan)", "text": "Improve the oversight of operators' flight crew training, checking and safety management.", "status": "unknown", "outcome": null, "trigger_factors": ["regulatory_oversight"] },
+    { "id": null, "to": "ATR / EASA / UTC Aerospace Systems", "text": "Address the auto-feather unit signal discontinuity that triggered the uncommanded auto-feather, including inspection of units in service.", "status": "unknown", "outcome": "The manufacturer issued service information on auto-feather unit inspection and replacement.", "trigger_factors": ["engine_failure"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Taiwan's CAA ordered proficiency checks for all TransAsia ATR pilots immediately after the accident; some pilots failed and were grounded.",
+    "TransAsia's oversight and training were overhauled; the airline ceased operations in 2016.",
+    "The auto-feather unit's soldering defect led to inspections and replacements across the ATR fleet."
+  ],
+  "related": ["kegworth", "yeti691", "colgan3407"],
+  "fdr": null,
+  "sources": [
+    "https://www.ttsb.gov.tw/",
+    "https://www.bea.aero/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "The auto-feather time (10:52:38) and the captain's final remark (10:54:34) are as recalled from the ASC report; intermediate event offsets are approximate.",
+    "The CVR line is given in the report's English translation; the original Mandarin wording is not reproduced.",
+    "The number of seriously injured survivors is not given (null).",
+    "The Aviation Safety Council is now the Taiwan Transportation Safety Board; its home page is used as the source."
+  ] }
+}

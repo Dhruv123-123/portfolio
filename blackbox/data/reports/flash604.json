@@ -1,0 +1,90 @@
+{
+  "id": "flash604",
+  "title": "Flash Airlines 604",
+  "flight_number": "FSH604",
+  "date": "2004-01-03",
+  "time_reference": "local",
+  "t0": "2004-01-03T02:42:00Z",
+  "agency": "ECAA",
+  "agencies": [
+    { "code": "ECAA", "name": "Egyptian Civil Aviation Authority", "country": "Egypt", "role": "lead",
+      "report_id": null, "report_title": "Final Report of the Accident Investigation - Flash Airlines Flight 604, Boeing 737-300 SU-ZCF, Sharm el-Sheikh, 3 January 2004", "report_date": "2006-03-25",
+      "url": "https://bea.aero/" },
+    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses pour la sécurité de l'aviation civile", "country": "France", "role": "accredited_representative", "url": "https://bea.aero/" },
+    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "Boeing 737-3Q8", "family": "737", "manufacturer": "Boeing", "registration": "SU-ZCF", "msn": "26283", "engines": "CFM International CFM56-3C1" },
+  "operator": "Flash Airlines",
+  "route": { "from": "HESH", "from_name": "Sharm el-Sheikh", "to": "HECA", "to_name": "Cairo (onward to Paris CDG)" },
+  "location": { "name": "Red Sea, about 15 km south of Sharm el-Sheikh", "country": "Egypt", "lat": 27.86, "lon": 34.37 },
+  "phase": "initial_climb",
+  "occupants": 148, "fatalities": 148, "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "After a night takeoff from Sharm el-Sheikh runway 22R, the 737 began a climbing left turn over the sea. The bank gradually reversed to the right and continued to increase, with the captain's control inputs failing to arrest it, until the aircraft reached about 111 degrees of right bank and descended into the Red Sea. All 148 people on board were killed.",
+  "probable_cause": "The Egyptian investigation could not determine a conclusive cause. It found no evidence of a failure of aircraft systems that would explain the loss of control, and considered several possibilities including a flight control or autopilot anomaly and spatial disorientation of the crew, without being able to establish which applied. The BEA and the NTSB, in formal comments appended to the report, concluded that the accident was most probably caused by the captain's spatial disorientation and loss of situational awareness during the night climbing turn over the sea, with inadequate crew coordination and monitoring.",
+  "factors": [
+    { "id": "dark_night", "role": "initiating", "evidence": "The takeoff and climbing turn were made at night over the sea with no external visual references." },
+    { "id": "spatial_disorientation", "role": "contributing", "evidence": "BEA and NTSB attributed the increasing right bank and the captain's failure to correct it to spatial disorientation; the ECAA listed it as one possibility." },
+    { "id": "somatogravic_illusion", "role": "contributing", "evidence": "The BEA analysis noted that the accelerating climb with turn could produce misleading vestibular sensations in the absence of visual references." },
+    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The captain made comments inconsistent with the aircraft's actual attitude while the bank increased beyond 40 degrees." },
+    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "The first officer called the bank angle several times but did not take control or apply corrective inputs until very late." },
+    { "id": "crm_breakdown", "role": "contributing", "evidence": "Crew coordination broke down: the captain's requests to engage the autopilot and the first officer's warnings were not resolved into a recovery." },
+    { "id": "mode_confusion", "role": "contributing", "evidence": "The autopilot was engaged briefly and disengaged during the turn, and the crew's expectations of what the automation was doing were unclear." },
+    { "id": "inappropriate_control_input", "role": "contributing", "evidence": "Right aileron inputs were recorded while the bank increased to the right; recovery inputs came only when the attitude was extreme." },
+    { "id": "inadequate_training", "role": "latent", "evidence": "The comments of the accredited representatives cited deficiencies in the operator's training on upset recovery and crew coordination." },
+    { "id": "operator_safety_culture", "role": "latent", "evidence": "Flash Airlines had been the subject of foreign audit findings and the report discussed the operator's oversight and crew scheduling." },
+    { "id": "regulatory_oversight", "role": "latent", "evidence": "Oversight of the operator by the Egyptian authority was discussed as a systemic contributor in the accredited representatives' comments." },
+    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft reached about 111 degrees of right bank and a steep nose-down attitude before striking the sea at high speed." }
+  ],
+  "chain": [
+    ["dark_night", "spatial_disorientation"],
+    ["somatogravic_illusion", "spatial_disorientation"],
+    ["spatial_disorientation", "loss_of_situational_awareness"],
+    ["mode_confusion", "loss_of_situational_awareness"],
+    ["loss_of_situational_awareness", "inappropriate_control_input"],
+    ["inadequate_training", "crm_breakdown"],
+    ["operator_safety_culture", "inadequate_training"],
+    ["regulatory_oversight", "operator_safety_culture"],
+    ["crm_breakdown", "inadequate_monitoring"],
+    ["inadequate_monitoring", "inappropriate_control_input"],
+    ["inappropriate_control_input", "loss_of_control_inflight"]
+  ],
+  "events": [
+    { "t": 0, "clock": "04:42", "phase": "takeoff", "actor": "CAPT", "text": "Flight 604 takes off from runway 22R at Sharm el-Sheikh at night with the captain as pilot flying, bound for Cairo and Paris with 135 passengers and 13 crew.", "factors": ["dark_night"], "kind": "crew_action" },
+    { "t": 60, "clock": "04:43", "phase": "initial_climb", "actor": "CAPT", "text": "Climbing through about 2,000 ft the captain initiates the planned left turn towards the departure track over the sea.", "state": { "alt": 2000 }, "kind": "crew_action" },
+    { "t": 80, "clock": "04:43", "phase": "initial_climb", "actor": "CAPT", "text": "Captain calls for the autopilot to be engaged; it engages and disengages within seconds, with the aircraft in a left bank.", "factors": ["mode_confusion"], "kind": "crew_action" },
+    { "t": 95, "clock": "04:44", "phase": "initial_climb", "actor": "SYS", "text": "Bank angle reduces from left through wings level and begins to increase to the right, with right aileron input recorded.", "factors": ["spatial_disorientation", "inappropriate_control_input"], "kind": "system" },
+    { "t": 105, "clock": "04:44", "phase": "initial_climb", "actor": "FO", "text": "First officer calls the increasing bank; the captain replies with comments suggesting he believes the aircraft is turning left.", "factors": ["loss_of_situational_awareness", "crm_breakdown"], "kind": "crew_speech" },
+    { "t": 115, "clock": "04:44", "phase": "initial_climb", "actor": "SYS", "text": "Right bank passes 40 degrees and continues to increase as the aircraft's pitch attitude falls; altitude peaks at about 5,400 ft.", "state": { "alt": 5400, "roll": 40 }, "factors": ["inadequate_monitoring"], "kind": "system" },
+    { "t": 125, "clock": "04:44", "phase": "initial_climb", "actor": "FO", "text": "First officer repeatedly calls 'overbank'; the captain finally applies left aileron and the bank momentarily reduces.", "kind": "crew_speech" },
+    { "t": 135, "clock": "04:45", "phase": "descent", "actor": "SYS", "text": "Bank angle reaches about 111 degrees right with the nose about 40 degrees below the horizon; the aircraft descends rapidly toward the sea, exceeding maximum operating speed.", "state": { "roll": 111, "pitch": -40 }, "factors": ["loss_of_control_inflight"], "kind": "system" },
+    { "t": 145, "clock": "04:45", "phase": "descent", "actor": "SYS", "text": "Crew inputs begin to roll the aircraft back toward level, but there is insufficient height; the aircraft strikes the Red Sea at high speed about 15 km south of the airport.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "ECAA / operators", "text": "Reinforce training on upset recognition and recovery, spatial disorientation and crew resource management, including transfer of control procedures.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_training", "crm_breakdown", "spatial_disorientation"] },
+    { "id": null, "to": "ECAA", "text": "Strengthen regulatory oversight of Egyptian operators, including crew scheduling, training records and flight data monitoring.", "status": "unknown", "outcome": null, "trigger_factors": ["regulatory_oversight", "operator_safety_culture"] },
+    { "id": null, "to": "Boeing / FAA", "text": "Review the 737 autopilot engagement logic and aileron control system for any anomaly that could contribute to an uncommanded roll.", "status": "unknown", "outcome": "Investigations found no system failure explaining the roll.", "trigger_factors": ["mode_confusion"] }
+  ],
+  "dissent": [
+    { "agency": "BEA", "position": "The BEA did not agree with the conclusion that no cause could be determined. It concluded that the accident was most likely due to the captain's spatial disorientation during the night climbing turn, a loss of situational awareness, and inadequate crew coordination, and criticised the report for giving undue weight to unsubstantiated technical hypotheses.", "topic": "probable cause" },
+    { "agency": "NTSB", "position": "The NTSB, in its formal comments, concurred with the BEA that the available evidence pointed to the captain's spatial disorientation and inadequate crew monitoring and intervention, with no evidence of a flight control system failure.", "topic": "probable cause" }
+  ],
+  "safety_changes": [
+    "Increased attention in Europe and France to third-country operator oversight; Flash Airlines ceased operations in 2004.",
+    "Renewed emphasis on somatogravic illusion and night departures over water in upset prevention training."
+  ],
+  "related": ["gol1907", "tatarstan363", "flydubai981", "airasia8501"],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/",
+    "https://www.ntsb.gov/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "Local clock times are approximate (takeoff about 04:42, impact about 04:45); t values are estimated from published FDR descriptions and may be off by tens of seconds.",
+    "The ECAA report date and the exact wording of the BEA and NTSB comments are paraphrased; both agencies' comments were appended to the final report.",
+    "Peak altitude (about 5,400 ft) and bank angle (about 111 degrees) are from published FDR summaries.",
+    "Lat/lon approximate; ECAA has no stable public URL for the report so agency-level sources are given."
+  ] }
+}
