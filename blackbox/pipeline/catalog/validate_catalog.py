@@ -75,6 +75,8 @@ def check_richness(rec, text_len, errors, where):
     """Records built from substantial text must not be skeletons."""
     if text_len is None:
         return
+    if rec.get("text_mismatch") is True and rec.get("extraction", {}).get("confidence") == "low" and len(rec.get("factors", [])) <= 2:
+        return  # the fetched text was not about this accident; a minimal low-confidence record is the honest output
     if text_len > 3500:
         need = (4, 2, 4, 250)
     elif text_len > 1500:
