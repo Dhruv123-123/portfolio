@@ -100,6 +100,8 @@ def main():
     ap.add_argument("--limit", type=int, default=0, help="only write the top N accidents")
     ap.add_argument("--require-text", action="store_true", help="only accidents whose Wikipedia text has been fetched")
     ap.add_argument("--exclude-batches", default="", help="comma-separated batch names whose input ids are skipped (batches still in flight)")
+    ap.add_argument("--min-text", type=int, default=0, help="only accidents with at least this much text (rich tier)")
+    ap.add_argument("--max-text", type=int, default=0, help="only accidents with less than this much text (short tier)")
     args = ap.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
     done = set()
@@ -145,6 +147,10 @@ def main():
         })
     if args.require_text:
         rows = [r for r in rows if len(r["text"]) > 300]
+    if args.min_text:
+        rows = [r for r in rows if len(r["text"]) >= args.min_text]
+    if args.max_text:
+        rows = [r for r in rows if len(r["text"]) < args.max_text]
     rows.sort(key=lambda r: (-r["interest"], r["date"]))
     if args.limit:
         rows = rows[: args.limit]

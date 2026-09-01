@@ -37,8 +37,17 @@ def check_grounding(rec, item, errors, where, seen_events):
         return
     source = content_tokens(item.get("text", "")) | content_tokens(item.get("label", "")) | content_tokens(item.get("description", ""))
     rich = len(item.get("text") or "") > 800
+    lead = (item.get("text") or "").strip().split("\n")[0][:160].lower()
+    if rec.get("summary", "").lstrip().startswith("["):
+        errors.append(f"{where}: summary starts with a section marker; write prose")
     for i, e in enumerate(rec.get("events", [])):
         text = e.get("text", "")
+        if text.lstrip().startswith("["):
+            errors.append(f"{where}: event[{i}] starts with a section marker")
+        if lead and len(lead) > 60 and text.strip().lower()[:80] == lead[:80]:
+            errors.append(f"{where}: event[{i}] is the article's lead sentence, not an event")
+        if re.search(r"\bwas a (scheduled|regular|chartered|domestic|international)\b", text, re.I):
+            errors.append(f"{where}: event[{i}] is descriptive boilerplate, not an event")
         if GENERIC.match(text.strip()):
             errors.append(f"{where}: event[{i}] is a generic template sentence ({text!r}); describe what the article says happened")
             continue
