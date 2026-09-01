@@ -1,0 +1,89 @@
+{
+  "id": "crossair3597",
+  "title": "Crossair 3597",
+  "flight_number": "LX3597",
+  "date": "2001-11-24",
+  "time_reference": "UTC",
+  "t0": "2001-11-24T21:05:00Z",
+  "agency": "AAIB-CH",
+  "agencies": [
+    { "code": "AAIB-CH", "name": "Swiss Aircraft Accident Investigation Bureau", "country": "Switzerland", "role": "lead",
+      "report_id": "1793", "report_title": "Final Report No. 1793 of the Aircraft Accident Investigation Bureau concerning the accident to the aircraft AVRO 146-RJ100, HB-IXM, operated by Crossair under flight number CRX 3597, on 24 November 2001 near Bassersdorf/ZH", "report_date": "2004-02-01",
+      "url": "https://www.sust.admin.ch/" },
+    { "code": "AAIB", "name": "Air Accidents Investigation Branch", "country": "United Kingdom", "role": "accredited_representative" },
+    { "code": "BFU", "name": "Bundesstelle für Flugunfalluntersuchung", "country": "Germany", "role": "accredited_representative" }
+  ],
+  "aircraft": { "type": "Avro 146-RJ100", "family": "BAe 146 / Avro RJ", "manufacturer": "BAE Systems", "registration": "HB-IXM", "msn": "E3291", "engines": "Honeywell LF507-1F" },
+  "operator": "Crossair",
+  "route": { "from": "EDDT", "from_name": "Berlin Tegel", "to": "LSZH", "to_name": "Zurich" },
+  "location": { "name": "Wooded hill near Bassersdorf, 4 km short of Zurich runway 28", "country": "Switzerland", "lat": 47.4433, "lon": 8.6278 },
+  "phase": "approach",
+  "occupants": 33, "fatalities": 24, "injuries_serious": 9,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "On a night VOR/DME approach to Zurich runway 28 in snow showers and low cloud, the RJ100 descended below the minimum descent altitude of 2,390 ft without the crew having the required visual reference. The aircraft struck trees on a wooded hill near Bassersdorf and crashed, killing 24 of the 33 occupants, including the two pilots.",
+  "probable_cause": "The accident is attributable to the fact that on the final approach to runway 28 the flight crew deliberately continued the descent below the minimum descent altitude without having the necessary prerequisites (visual contact with the approach lights or runway), and that the crew initiated the go-around too late. Contributing factors: the commander's inadequate performance and his pattern of not adhering to procedures, which the operator and the regulator had not adequately addressed; the co-pilot's failure to intervene; the crew's fatigue; the use of a standard VOR/DME approach at night in marginal weather; and the absence of an MSAW at Zurich for this approach.",
+  "factors": [
+    { "id": "descent_below_minimums", "role": "initiating", "evidence": "The commander continued the descent below the MDA of 2,390 ft QNH without visual reference to the runway or approach lights." },
+    { "id": "low_visibility", "role": "contributing", "evidence": "Snow showers and cloud with a base near or below the minima prevented the crew from seeing the runway environment." },
+    { "id": "dark_night", "role": "contributing", "evidence": "The approach was flown in darkness, removing terrain cues during the descent over wooded hills." },
+    { "id": "go_around_not_flown", "role": "contributing", "evidence": "The go-around was initiated only after the first officer called for it and the aircraft was already below the safe height; the terrain was struck seconds later." },
+    { "id": "crm_breakdown", "role": "contributing", "evidence": "The first officer did not intervene effectively when the commander descended below minimums, and only late called for a go-around." },
+    { "id": "fatigue", "role": "contributing", "evidence": "The crew had been on duty for a long day with an early start, and the report found that fatigue may have degraded their performance." },
+    { "id": "operator_safety_culture", "role": "latent", "evidence": "Crossair had not acted on the commander's documented history of navigation errors and disregard of procedures, nor on earlier incidents on approach." },
+    { "id": "regulatory_oversight", "role": "latent", "evidence": "The Swiss Federal Office for Civil Aviation had not ensured adequate supervision of the operator's crew standards and the commander's licence history." },
+    { "id": "pilot_experience", "role": "contributing", "evidence": "The commander's proficiency on the RJ100 and his general performance on non-precision approaches were found to be inadequate." },
+    { "id": "msaw_unavailable", "role": "latent", "evidence": "Zurich ATC had no minimum safe altitude warning for the runway 28 approach area that could have alerted the controller." },
+    { "id": "cfit", "role": "outcome", "evidence": "The aircraft, in controlled flight in landing configuration, struck treetops on a hill at about 1,780 ft and crashed." },
+    { "id": "post_impact_fire", "role": "outcome", "evidence": "The wreckage caught fire after impact; the fire contributed to the destruction of the aircraft." }
+  ],
+  "chain": [
+    ["regulatory_oversight", "operator_safety_culture"],
+    ["operator_safety_culture", "pilot_experience"],
+    ["fatigue", "descent_below_minimums"],
+    ["pilot_experience", "descent_below_minimums"],
+    ["low_visibility", "descent_below_minimums"],
+    ["dark_night", "descent_below_minimums"],
+    ["crm_breakdown", "go_around_not_flown"],
+    ["descent_below_minimums", "go_around_not_flown"],
+    ["msaw_unavailable", "cfit"],
+    ["go_around_not_flown", "cfit"],
+    ["cfit", "post_impact_fire"]
+  ],
+  "events": [
+    { "t": -4200, "clock": "19:55", "phase": "takeoff", "actor": "CAPT", "text": "Flight LX3597 departs Berlin Tegel for Zurich with 28 passengers and 5 crew; the commander is pilot flying.", "kind": "crew_action" },
+    { "t": -1200, "clock": "20:45", "phase": "descent", "actor": "ATC", "text": "Because of the night noise abatement rules ATC assigns the VOR/DME approach to runway 28 rather than the ILS to runway 14; the crew prepare the non-precision approach.", "kind": "atc" },
+    { "t": -600, "clock": "20:55", "phase": "descent", "actor": "OTHER", "text": "A preceding Crossair flight lands on runway 28 and reports the runway in sight late; the weather is snow showers with a low cloud base.", "factors": ["low_visibility", "dark_night"], "kind": "env" },
+    { "t": -240, "clock": "21:01", "phase": "approach", "actor": "CAPT", "text": "Aircraft established on the runway 28 VOR/DME final approach track, flying manually with the landing configuration set.", "kind": "crew_action" },
+    { "t": -60, "clock": "21:04", "phase": "approach", "actor": "SYS", "text": "The aircraft descends towards the MDA of 2,390 ft QNH; the commander reports visual with the ground below but not with the runway.", "state": { "alt": 2400 }, "factors": ["low_visibility"], "kind": "system" },
+    { "t": 0, "clock": "21:05", "phase": "approach", "actor": "CAPT", "text": "The aircraft descends below the MDA without the required visual reference; the first officer reads out heights and mentions the minimum.", "state": { "alt": 2390 }, "factors": ["descent_below_minimums", "crm_breakdown", "pilot_experience"], "kind": "crew_action" },
+    { "t": 40, "clock": "21:06", "phase": "approach", "actor": "SYS", "text": "The radio altimeter reaches 300 ft over the rising wooded terrain of the hill near Bassersdorf; the aircraft is at about 1,900 ft QNH.", "state": { "alt": 1900 }, "factors": ["dark_night"], "kind": "warning" },
+    { "t": 48, "clock": "21:06", "phase": "approach", "actor": "FO", "text": "The first officer calls for a go-around; the commander applies go-around power and pitches up.", "factors": ["go_around_not_flown"], "kind": "crew_speech" },
+    { "t": 52, "clock": "21:06:36", "phase": "go_around", "actor": "SYS", "text": "The aircraft strikes treetops on the hill at about 1,780 ft, about 4 km from the runway threshold, and crashes into the forest.", "state": { "alt": 1780 }, "factors": ["cfit"], "kind": "outcome" },
+    { "t": 60, "clock": "21:06", "phase": "ground", "actor": "OTHER", "text": "The wreckage catches fire; nine occupants escape, 24 including both pilots die.", "factors": ["post_impact_fire"], "kind": "outcome" }
+  ],
+  "cvr": [],
+  "recommendations": [
+    { "id": null, "to": "FOCA", "text": "Ensure that operators identify and remedy crew members whose performance shows recurring deficiencies, and that the licensing authority takes into account a pilot's record when renewing licences.", "status": "unknown", "outcome": null, "trigger_factors": ["operator_safety_culture", "regulatory_oversight", "pilot_experience"] },
+    { "id": null, "to": "Skyguide / FOCA", "text": "Introduce a minimum safe altitude warning system at Zurich covering the non-precision approaches.", "status": "closed_acceptable", "outcome": "MSAW was implemented at Zurich.", "trigger_factors": ["msaw_unavailable"] },
+    { "id": null, "to": "FOCA / Zurich Airport", "text": "Equip runway 28 with an instrument landing system or an approach with vertical guidance to reduce the risk of non-precision approaches at night in poor weather.", "status": "closed_acceptable", "outcome": "An ILS was installed on runway 28 at Zurich.", "trigger_factors": ["descent_below_minimums", "low_visibility"] },
+    { "id": null, "to": "Crossair", "text": "Strengthen CRM training so that first officers intervene decisively when minima are breached, and review crew rostering to limit fatigue.", "status": "unknown", "outcome": null, "trigger_factors": ["crm_breakdown", "fatigue"] }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "ILS installed on Zurich runway 28 and MSAW implemented at Zurich approach.",
+    "Crossair (later Swiss) revised crew performance monitoring and CRM training.",
+    "Reinforced Swiss oversight of operator crew records and licence renewals."
+  ],
+  "related": ["airinter148", "korean801", "ups1354", "firstair6560"],
+  "fdr": null,
+  "sources": [
+    "https://www.sust.admin.ch/"
+  ],
+  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
+    "Clock strings are UTC; the accident occurred at about 21:06 UTC (22:06 local). Seconds are estimated except the approximate impact time.",
+    "Altitudes (MDA 2,390 ft QNH, impact about 1,780 ft) are from the report; the 300 ft radio altitude moment is approximate.",
+    "The role of fatigue is described by the report as a possible contributing factor; the report's report number 1793 and publication date are from memory.",
+    "Recommendation ids not reproduced."
+  ] }
+}
