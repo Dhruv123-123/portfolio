@@ -46,8 +46,8 @@ function recordText(rec) {
   return parts.filter(Boolean).join(' ')
 }
 
-/** Build the search index once from graph.json. */
-export function buildIndex(graph) {
+/** Build the search index from graph.json plus optional catalog records. */
+export function buildIndex(graph, extra = []) {
   const factorById = {}
   for (const f of graph.taxonomy.factors) factorById[f.id] = f
 
@@ -59,7 +59,8 @@ export function buildIndex(graph) {
   }
   phrases.sort((a, b) => b.phrase.length - a.phrase.length)
 
-  const records = graph.records
+  const curatedIds = new Set(graph.records.map((r) => r.id))
+  const records = graph.records.concat(extra.filter((r) => !(r.curated_id && curatedIds.has(r.curated_id))))
   const byId = {}
   const docs = []
   const df = {}
@@ -86,9 +87,26 @@ export function buildIndex(graph) {
   }
 
   const agencyCodes = new Set(graph.agencies.map((a) => a.code.toLowerCase()))
+  for (const r of records) if (r.agency) agencyCodes.add(r.agency.toLowerCase())
   const families = new Set(records.map((r) => (r.aircraft?.family || '').toLowerCase()).filter(Boolean))
 
-  return { graph, records, byId, factorById, phrases, docs, df, avgLen, adjacency, agencyCodes, families }
+  // Aggregate statistics over everything loaded (curated + catalog)
+  const factor_counts = {}
+  const edgeCounts = {}
+  for (const r of records) {
+    for (const f of r.factors || []) factor_counts[f.id] = (factor_counts[f.id] || 0) + 1
+    for (const [a, b] of r.chain || []) edgeCounts[`${a}>${b}`] = (edgeCounts[`${a}>${b}`] || 0) + 1
+  }
+  const chain_edges = Object.entries(edgeCounts).map(([k, n]) => { const [from, to] = k.split('>'); return { from, to, n } }).sort((x, y) => y.n - x.n)
+  const successors = {}
+  const predecessors = {}
+  for (const e of chain_edges) {
+    ;(successors[e.from] = successors[e.from] || {})[e.to] = e.n
+    ;(predecessors[e.to] = predecessors[e.to] || {})[e.from] = e.n
+  }
+  const stats = { factor_counts, chain_edges, successors, predecessors, curated: graph.records.length, catalog: records.length - graph.records.length }
+
+  return { graph, records, byId, factorById, phrases, docs, df, avgLen, adjacency, agencyCodes, families, stats }
 }
 
 /** Find a directed path a ⇝ b in one record's chain. Returns array of ids or null. */
@@ -117,7 +135,7 @@ export function findPath(index, recId, a, b) {
   return null
 }
 
-const FILTER_RE = /\b(agency|with|phase|year|type|aircraft|operator|op|country|category|cat|fatal|fatalities):(\S+)/gi
+const FILTER_RE = /\b(agency|with|phase|year|type|aircraft|operator|op|country|category|cat|fatal|fatalities|tier|depth):(\S+)/gi
 
 /** Parse a natural-language or structured query. */
 export function parseQuery(raw, index) {
@@ -141,6 +159,8 @@ export function parseQuery(raw, index) {
     else if (k === 'country') filters.country = v
     else if (k === 'category' || k === 'cat') filters.category = v.toUpperCase()
     else if (k === 'fatal' || k === 'fatalities') filters.fatal = v
+    else if (k === 'tier') filters.tier = v
+    else if (k === 'depth') filters.depth = v
     return ' '
   })
 
@@ -207,6 +227,8 @@ function passesFilters(rec, filters) {
   if (filters.operator && !(rec.operator || '').toLowerCase().includes(filters.operator)) return false
   if (filters.country && !(rec.location?.country || '').toLowerCase().includes(filters.country)) return false
   if (filters.category && (rec.category || '').toUpperCase() !== filters.category) return false
+  if (filters.tier && (rec.tier || 'curated') !== filters.tier) return false
+  if (filters.depth && (rec.depth || 'full') !== filters.depth) return false
   if (filters.fatal) {
     const f = rec.fatalities || 0
     if (filters.fatal === 'none' || filters.fatal === '0') {
@@ -338,7 +360,7 @@ export function similarRecords(index, recId, limit = 6) {
   const myEdges = new Set(rec.chain.map(([a, b]) => `${a}>${b}`))
   const scored = []
   for (const other of index.records) {
-    if (other.id === recId) continue
+    if (other.id === recId || !(other.factors && other.factors.length)) continue
     const theirs = new Set(other.factors.map((f) => f.id))
     let shared = 0
     for (const f of mine) if (theirs.has(f)) shared++

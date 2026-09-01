@@ -10,6 +10,9 @@
           <button class="bb-btn small" type="button" :class="{ active: semanticOn }" @click="toggleSemantic" :title="semanticStatus">
             {{ semanticLabel }}
           </button>
+          <button class="bb-btn small" type="button" :class="{ active: catalog.state === 'ready' }" :disabled="catalog.state === 'loading' || catalog.state === 'ready'" @click="$emit('load-catalog')" :title="catalog.error || 'Load the full catalog: thousands of summary-level records from Wikidata/Wikipedia and the NTSB database (about 1 MB)'">
+            {{ catalog.state === 'loading' ? 'Catalog…' : catalog.state === 'ready' ? 'Catalog ' + catalog.count.toLocaleString() : catalog.state === 'error' ? 'Catalog failed' : 'Load catalog' }}
+          </button>
           <span class="bb-muted ge-status">{{ statusLine }}</span>
         </div>
       </form>
@@ -29,6 +32,7 @@
         <div v-for="r in results" :key="r.id" class="ge-result" :class="{ active: r.id === store.selectedId }" @click="selectAccident(r.id)">
           <div class="ge-result-head">
             <span class="bb-agency">{{ index.byId[r.id].agency }}</span>
+            <span v-if="index.byId[r.id].tier" class="ge-tier" :class="'tier-' + index.byId[r.id].tier">{{ index.byId[r.id].tier === 'ntsb' ? 'NTSB DB' : 'WIKI' }}{{ index.byId[r.id].depth && index.byId[r.id].depth !== 'summary' ? ' · ' + index.byId[r.id].depth : '' }}</span>
             <span class="ge-result-title">{{ index.byId[r.id].title }}</span>
             <span class="bb-muted">{{ index.byId[r.id].date.slice(0, 4) }}</span>
             <span class="ge-score" :title="'score ' + r.score.toFixed(2)">{{ r.why.fullPath ? 'FULL PATH' : r.why.hops ? r.why.hops + ' hop' + (r.why.hops > 1 ? 's' : '') : r.why.concepts.length ? r.why.concepts.length + ' concept' + (r.why.concepts.length > 1 ? 's' : '') : r.why.semantic > 0.3 ? 'semantic' : 'text' }}</span>
@@ -78,7 +82,7 @@
     <div class="ge-right bb-scroll">
       <template v-if="selectedRecord">
         <div class="ge-detail-head">
-          <span class="bb-agency">{{ selectedRecord.agency }}</span>
+          <span><span class="bb-agency">{{ selectedRecord.agency }}</span> <span v-if="selectedRecord.tier" class="ge-tier" :class="'tier-' + selectedRecord.tier">{{ selectedRecord.tier === 'ntsb' ? 'NTSB database' : 'Wikidata / Wikipedia' }} · {{ selectedRecord.depth }}</span><span v-else class="ge-tier tier-curated">curated · full report</span></span>
           <h3>{{ selectedRecord.title }}</h3>
         </div>
         <div class="bb-muted">{{ selectedRecord.date }} · {{ selectedRecord.aircraft.type }} · {{ selectedRecord.operator }}</div>
@@ -90,8 +94,14 @@
           <div><b>{{ selectedRecord.chain.length }}</b><span>causal edges</span></div>
         </div>
         <div class="ge-actions">
-          <button class="bb-btn" @click="store.openTimeline(selectedRecord.id)">Timeline ▸</button>
+          <button class="bb-btn" :disabled="!(selectedRecord.events && selectedRecord.events.length)" @click="store.openTimeline(selectedRecord.id)">Timeline ▸</button>
           <button class="bb-btn" :disabled="!selectedRecord.fdr" @click="store.openReplay(selectedRecord.id)">FDR replay ▸</button>
+          <button v-if="selectedRecord.curated_id && index.byId[selectedRecord.curated_id]" class="bb-btn" @click="selectAccident(selectedRecord.curated_id)">Hand-reviewed record ▸</button>
+        </div>
+        <div v-if="selectedRecord.stub" class="bb-muted ge-src">Loading full record…</div>
+        <div v-if="selectedRecord.wikipedia || (selectedRecord.report_links && selectedRecord.report_links.length && selectedRecord.report_links[0] !== '(see record)')" class="ge-links">
+          <a v-if="selectedRecord.wikipedia" :href="selectedRecord.wikipedia" target="_blank" rel="noopener" class="bb-link">Wikipedia</a>
+          <a v-for="(l, i) in (selectedRecord.report_links || []).filter((x) => x.startsWith('http'))" :key="i" :href="l" target="_blank" rel="noopener" class="bb-link" :title="l">report link {{ i + 1 }}</a>
         </div>
         <p class="ge-summary">{{ selectedRecord.summary }}</p>
         <div class="bb-h">Causal chain</div>
@@ -108,8 +118,8 @@
           <span class="ge-role">{{ f.role }}</span>
           <div class="bb-muted ge-evidence">{{ f.evidence }}</div>
         </div>
-        <div class="bb-h">Probable cause</div>
-        <p class="ge-summary">{{ selectedRecord.probable_cause }}</p>
+        <div class="bb-h" v-if="selectedRecord.probable_cause">Probable cause</div>
+        <p class="ge-summary" v-if="selectedRecord.probable_cause">{{ selectedRecord.probable_cause }}</p>
         <div v-if="selectedRecord.dissent && selectedRecord.dissent.length" class="ge-dissent">
           <div class="bb-h" style="color:#ff9f43">Agency dissent</div>
           <div v-for="(d, i) in selectedRecord.dissent" :key="i"><b>{{ d.agency }}</b> <span class="bb-muted">({{ d.topic }})</span>: {{ d.position }}</div>
@@ -132,26 +142,27 @@
         <p class="ge-summary">{{ selectedFactor.description }}</p>
         <div class="ge-stats">
           <div><b>{{ factorCount(selectedFactor.id) }}</b><span>accidents</span></div>
-          <div><b>{{ Object.keys(graph.stats.predecessors[selectedFactor.id] || {}).length }}</b><span>preceded by</span></div>
-          <div><b>{{ Object.keys(graph.stats.successors[selectedFactor.id] || {}).length }}</b><span>leads to</span></div>
+          <div><b>{{ Object.keys(index.stats.predecessors[selectedFactor.id] || {}).length }}</b><span>preceded by</span></div>
+          <div><b>{{ Object.keys(index.stats.successors[selectedFactor.id] || {}).length }}</b><span>leads to</span></div>
         </div>
         <div class="ge-actions">
           <button class="bb-btn" @click="queryFactor(selectedFactor.id)">Search this factor</button>
         </div>
         <div class="bb-h">What leads to it (count)</div>
         <div class="ge-chipwrap">
-          <span v-for="[id, n] in sortedCounts(graph.stats.predecessors[selectedFactor.id])" :key="id" class="bb-chip factor" :style="{ background: factorColor(id) }" @click="selectFactor(id)">{{ factorLabel(id) }} <b>{{ n }}</b></span>
-          <span v-if="!sortedCounts(graph.stats.predecessors[selectedFactor.id]).length" class="bb-muted">usually an initiating factor</span>
+          <span v-for="[id, n] in sortedCounts(index.stats.predecessors[selectedFactor.id])" :key="id" class="bb-chip factor" :style="{ background: factorColor(id) }" @click="selectFactor(id)">{{ factorLabel(id) }} <b>{{ n }}</b></span>
+          <span v-if="!sortedCounts(index.stats.predecessors[selectedFactor.id]).length" class="bb-muted">usually an initiating factor</span>
         </div>
         <div class="bb-h">What it leads to (count)</div>
         <div class="ge-chipwrap">
-          <span v-for="[id, n] in sortedCounts(graph.stats.successors[selectedFactor.id])" :key="id" class="bb-chip factor" :style="{ background: factorColor(id) }" @click="selectFactor(id)">{{ factorLabel(id) }} <b>{{ n }}</b></span>
-          <span v-if="!sortedCounts(graph.stats.successors[selectedFactor.id]).length" class="bb-muted">terminal outcome</span>
+          <span v-for="[id, n] in sortedCounts(index.stats.successors[selectedFactor.id])" :key="id" class="bb-chip factor" :style="{ background: factorColor(id) }" @click="selectFactor(id)">{{ factorLabel(id) }} <b>{{ n }}</b></span>
+          <span v-if="!sortedCounts(index.stats.successors[selectedFactor.id]).length" class="bb-muted">terminal outcome</span>
         </div>
-        <div class="bb-h">Accidents</div>
+        <div class="bb-h">Accidents ({{ factorCount(selectedFactor.id) }})</div>
         <div v-for="r in accidentsWithFactor(selectedFactor.id)" :key="r.id" class="ge-similar" @click="selectAccident(r.id)">
           <span class="bb-agency">{{ r.agency }}</span> {{ r.title }} <span class="bb-muted">· {{ r.date.slice(0, 4) }} · {{ r.role }}</span>
         </div>
+        <div v-if="factorCount(selectedFactor.id) > 60" class="bb-muted ge-src">Showing 60 of {{ factorCount(selectedFactor.id) }}; search "{{ selectedFactor.label.toLowerCase() }}" to rank them.</div>
         <div class="bb-h">Synonyms the parser understands</div>
         <div class="bb-muted ge-syn">{{ selectedFactor.synonyms.join(', ') }}</div>
       </template>
@@ -163,11 +174,14 @@
 <script setup>
 import { ref, computed, watch, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { useBlackboxStore } from '@/stores/blackboxStore'
-import { search, parseQuery, similarRecords, cosineMap } from './lib/search.js'
+import { search, similarRecords, cosineMap } from './lib/search.js'
 import { ForceGraph } from './lib/forceGraph.js'
+import { loadCatalogRecord } from './lib/catalog.js'
 
-const props = defineProps({ graph: Object, index: Object, active: Boolean })
+const props = defineProps({ graph: Object, index: Object, active: Boolean, catalog: { type: Object, default: () => ({ state: 'idle', count: 0 }) } })
+defineEmits(['load-catalog'])
 const store = useBlackboxStore()
+const detailVersion = ref(0)
 
 const canvasRef = ref(null)
 let fg = null
@@ -201,7 +215,10 @@ const examples = [
   'icing fatal:>100'
 ]
 
-const selectedRecord = computed(() => (store.selectedId && !selectedFactorId.value ? props.index.byId[store.selectedId] : null))
+const selectedRecord = computed(() => {
+  void detailVersion.value
+  return store.selectedId && !selectedFactorId.value ? props.index.byId[store.selectedId] : null
+})
 const selectedFactor = computed(() => (selectedFactorId.value ? props.index.factorById[selectedFactorId.value] : null))
 const similar = computed(() => (selectedRecord.value ? similarRecords(props.index, selectedRecord.value.id) : []))
 const semanticLabel = computed(() => (semanticState.value === 'loading' ? 'Semantic… loading' : semanticState.value === 'error' ? 'Semantic unavailable' : semanticOn.value ? 'Semantic ✓' : 'Semantic'))
@@ -215,33 +232,53 @@ const factorColor = (id) => {
 const factorLabel = (id) => props.index.factorById[id]?.label || id
 const categoryLabel = (c) => props.graph.taxonomy.categories[c]?.label || c
 const phaseLabel = (p) => (p || '').replace(/_/g, ' ')
-const factorCount = (id) => props.graph.stats.factor_counts[id] || 0
+const factorCount = (id) => props.index.stats.factor_counts[id] || 0
 const sortedCounts = (obj) => Object.entries(obj || {}).sort((a, b) => b[1] - a[1])
 const accidentsWithFactor = (id) =>
-  props.graph.records
+  props.index.records
     .filter((r) => r.factors.some((f) => f.id === id))
     .map((r) => ({ ...r, role: r.factors.find((f) => f.id === id).role }))
-    .sort((a, b) => a.date.localeCompare(b.date))
+    .sort((a, b) => (b.interest || 0) - (a.interest || 0) || a.date.localeCompare(b.date))
+    .slice(0, 60)
+
+function visibleAccidents() {
+  // Curated records always; when the catalog is loaded, add the current query's top catalog hits.
+  const base = props.graph.records.slice()
+  if (props.index.stats.catalog > 0 && results.value.length) {
+    const curated = new Set(base.map((r) => r.id))
+    let added = 0
+    for (const r of results.value) {
+      if (curated.has(r.id) || added >= 150) continue
+      const rec = props.index.byId[r.id]
+      if (rec) { base.push(rec); added++ }
+    }
+  }
+  if (store.selectedId && !base.find((r) => r.id === store.selectedId) && props.index.byId[store.selectedId]) base.push(props.index.byId[store.selectedId])
+  return base
+}
 
 function buildGraphData() {
-  const counts = props.graph.stats.factor_counts
+  const counts = props.index.stats.factor_counts
   const selected = store.selectedId
   const focusRec = focusMode.value && selected ? props.index.byId[selected] : null
   const focusFactors = focusRec ? new Set(focusRec.factors.map((f) => f.id)) : null
+  const scale = props.index.stats.catalog > 0 ? 0.6 : 2.2
   const factorNodes = props.graph.taxonomy.factors
     .filter((f) => (counts[f.id] || 0) >= (focusFactors ? 1 : minCount.value))
     .filter((f) => !focusFactors || focusFactors.has(f.id))
-    .map((f) => ({ id: f.id, kind: 'factor', label: f.label, color: props.graph.taxonomy.categories[f.category]?.color || '#888', r: 5 + Math.min(10, Math.sqrt(counts[f.id] || 1) * 2.2) }))
+    .map((f) => ({ id: f.id, kind: 'factor', label: f.label, color: props.graph.taxonomy.categories[f.category]?.color || '#888', r: 5 + Math.min(10, Math.sqrt(counts[f.id] || 1) * scale) }))
   const factorSet = new Set(factorNodes.map((n) => n.id))
-  const accidentNodes = props.graph.records
+  const accidents = visibleAccidents()
+  const accidentNodes = accidents
     .filter((r) => !focusRec || r.id === focusRec.id || (focusFactors && r.factors.filter((f) => focusFactors.has(f.id)).length >= 3))
-    .map((r) => ({ id: r.id, kind: 'accident', label: r.title, color: accidentColor(r), r: 4 + Math.min(6, Math.sqrt((r.fatalities || 0) / 20)) }))
+    .map((r) => ({ id: r.id, kind: 'accident', label: r.title, color: r.tier ? (r.tier === 'ntsb' ? '#7f8fa8' : '#b9c7e6') : accidentColor(r), r: 4 + Math.min(6, Math.sqrt((r.fatalities || 0) / 20)) }))
+  const nodeIds = new Set(accidentNodes.map((n) => n.id))
   const links = []
-  for (const r of props.graph.records) {
-    if (!accidentNodes.find((n) => n.id === r.id)) continue
+  for (const r of accidents) {
+    if (!nodeIds.has(r.id)) continue
     for (const f of r.factors) if (factorSet.has(f.id)) links.push({ source: r.id, target: f.id, kind: 'has' })
   }
-  for (const e of props.graph.stats.chain_edges) {
+  for (const e of props.index.stats.chain_edges) {
     if (factorSet.has(e.from) && factorSet.has(e.to)) links.push({ source: e.from, target: e.to, kind: 'chain', weight: e.n })
   }
   return { nodes: [...factorNodes, ...accidentNodes], links }
@@ -297,15 +334,16 @@ async function runQuery() {
       semanticStatus.value = 'Semantic query failed: ' + e.message
     }
   }
-  const res = search(props.index, queryText.value, { semantic })
+  const res = search(props.index, queryText.value, { semantic, limit: 200 })
   results.value = res.results
   parsed.value = res.query
-  statusLine.value = `${res.total} match${res.total === 1 ? '' : 'es'}${semantic ? ' · hybrid' : ''}`
+  statusLine.value = `${res.total.toLocaleString()} match${res.total === 1 ? '' : 'es'}${semantic ? ' · hybrid' : ''}`
   if (res.results.length) {
     selectedFactorId.value = null
-    store.selectedId = res.results[0].id
+    selectAccident(res.results[0].id, false)
   }
-  applyHighlight()
+  if (props.index.stats.catalog > 0) refreshGraph()
+  else applyHighlight()
 }
 
 function clearQuery() {
@@ -320,11 +358,19 @@ function queryFactor(id) {
   queryText.value = props.index.factorById[id].label.toLowerCase()
   runQuery()
 }
-function selectAccident(id) {
+async function selectAccident(id, center = true) {
   selectedFactorId.value = null
   store.selectedId = id
   applyHighlight()
-  fg && fg.centerOn(id)
+  if (center && fg) fg.centerOn(id)
+  const rec = props.index.byId[id]
+  if (rec && rec.stub) {
+    const full = await loadCatalogRecord(id, rec.date)
+    if (full) {
+      Object.assign(rec, full, { stub: false })
+      detailVersion.value++
+    }
+  }
 }
 function selectFactor(id) {
   selectedFactorId.value = id
@@ -374,6 +420,10 @@ watch([minCount, focusMode], refreshGraph)
 watch(() => store.selectedId, () => {
   if (focusMode.value) refreshGraph()
   else applyHighlight()
+})
+watch(() => props.index, () => {
+  refreshGraph()
+  if (queryText.value) runQuery()
 })
 watch(() => store.query, (q) => {
   if (q !== queryText.value) {
@@ -434,6 +484,11 @@ onBeforeUnmount(() => {
 .ge-result-head { display: flex; gap: 6px; align-items: center; }
 .ge-result-title { font-weight: 700; flex: 1; }
 .ge-score { font-size: 9px; color: var(--bb-accent); letter-spacing: 0.05em; }
+.ge-tier { font-size: 8px; letter-spacing: 0.06em; padding: 0 4px; border-radius: 2px; border: 1px solid var(--bb-line); color: var(--bb-muted); text-transform: uppercase; }
+.tier-ntsb { border-color: #55627d; color: #aab6cf; }
+.tier-wikidata { border-color: #6d7fa3; color: #c6d2ea; }
+.tier-curated { border-color: var(--bb-accent); color: var(--bb-accent); }
+.ge-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 6px; font-size: 11px; }
 .ge-result-sub { font-size: 10px; margin-top: 2px; }
 .ge-path { display: flex; flex-wrap: wrap; gap: 3px; align-items: center; margin-top: 5px; }
 .ge-snippet { font-size: 10px; color: #b8c6e3; margin-top: 5px; line-height: 1.35; }

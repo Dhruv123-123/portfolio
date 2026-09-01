@@ -4,7 +4,7 @@
       <div class="bb-brand">
         <span class="bb-brand-dot"></span>
         BLACKBOX
-        <span class="bb-brand-sub" v-if="graph">{{ graph.records.length }} accidents · {{ agencyCount }} agencies · {{ fdrCount }} replays</span>
+        <span class="bb-brand-sub" v-if="graph">{{ graph.records.length }} curated · {{ catalog.state === 'ready' ? catalog.count.toLocaleString() + ' catalog · ' : '' }}{{ fdrCount }} replays</span>
       </div>
       <button v-for="t in tabs" :key="t.id" class="bb-tab" :class="{ active: store.tab === t.id }" @click="store.tab = t.id">
         <span class="bb-tab-key">{{ t.key }}</span>{{ t.label }}
@@ -17,10 +17,10 @@
         <div>Loading accident corpus…</div>
       </div>
       <template v-else>
-        <GraphExplorer v-show="store.tab === 'graph'" :graph="graph" :index="index" :active="store.tab === 'graph'" />
+        <GraphExplorer v-show="store.tab === 'graph'" :graph="graph" :index="index" :active="store.tab === 'graph'" :catalog="catalog" @load-catalog="loadCatalog" />
         <FdrReplay v-if="store.tab === 'replay'" :graph="graph" :index="index" />
         <TimelineBuilder v-show="store.tab === 'timeline'" :graph="graph" :index="index" :active="store.tab === 'timeline'" />
-        <AboutPanel v-show="store.tab === 'about'" :graph="graph" />
+        <AboutPanel v-show="store.tab === 'about'" :graph="graph" :index="index" :catalog="catalog" />
       </template>
     </div>
   </div>
@@ -30,6 +30,7 @@
 import { ref, shallowRef, computed, onMounted } from 'vue'
 import { useBlackboxStore } from '@/stores/blackboxStore'
 import { buildIndex } from './lib/search.js'
+import { loadCatalogIndex, rowToStub } from './lib/catalog.js'
 import GraphExplorer from './GraphExplorer.vue'
 import FdrReplay from './FdrReplay.vue'
 import TimelineBuilder from './TimelineBuilder.vue'
@@ -39,6 +40,20 @@ const store = useBlackboxStore()
 const graph = shallowRef(null)
 const index = shallowRef(null)
 const error = ref(null)
+const catalog = ref({ state: 'idle', count: 0, tiers: {}, error: null })
+
+async function loadCatalog() {
+  if (catalog.value.state === 'loading' || catalog.value.state === 'ready') return
+  catalog.value = { ...catalog.value, state: 'loading' }
+  try {
+    const data = await loadCatalogIndex()
+    const stubs = data.rows.map(rowToStub)
+    index.value = buildIndex(graph.value, stubs)
+    catalog.value = { state: 'ready', count: data.count, tiers: data.tiers, error: null }
+  } catch (e) {
+    catalog.value = { state: 'error', count: 0, tiers: {}, error: e.message }
+  }
+}
 
 const tabs = [
   { id: 'graph', label: 'Graph & search', key: '1' },

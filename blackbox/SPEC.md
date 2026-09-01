@@ -132,3 +132,29 @@ the previous value (`step`).
 Every FDR file must give at least `alt_ft`, `ias_kt`, `pitch_deg`, `roll_deg`,
 `hdg_deg`, `vs_fpm`, and keyframes dense enough (roughly every 5 to 15 s during
 the dynamic part) that the replay follows the shape of the published traces.
+
+## Catalog tier (`blackbox/data/catalog/*.jsonl`)
+
+The catalog holds thousands of summary-level records built from open indexes
+(Wikidata + Wikipedia worldwide; the NTSB public database for the USA). A
+catalog record uses the same field names as a full record but is allowed to be
+sparse. Required: `id`, `title`, `date`, `tier`, `depth`, `agency`, `aircraft.type`,
+`aircraft.manufacturer`, `operator`, `phase`, `category`, `summary`, `factors`
+(may be empty for NTSB rows without findings), `chain`, `events` (at least one),
+`extraction`. Extra fields:
+
+```jsonc
+{
+  "tier": "wikidata",          // wikidata | ntsb
+  "depth": "summary",          // summary (index text only) | sections (key report sections read) | full (whole report read)
+  "qid": "Q1234", "asn_id": "19960206-0", "ntsb_no": "DCA09MA027",
+  "wikipedia": "https://en.wikipedia.org/wiki/...",
+  "report_links": ["https://..."],   // candidate official report URLs found on the source page
+  "interest": 9.3,             // ranking score used to order extraction batches
+  "curated_id": "af447"        // id of the hand-reviewed full record when one exists
+}
+```
+
+Catalog ids are `wd_<qid>` (lower-case) for Wikidata rows and `ntsb_<ev_id>` for
+NTSB rows. A catalog record is superseded in the UI by a full record with the
+same `curated_id`.

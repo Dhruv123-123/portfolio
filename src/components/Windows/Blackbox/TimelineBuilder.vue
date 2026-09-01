@@ -2,12 +2,14 @@
   <div class="tl-root">
     <div class="tl-list">
       <input v-model="filter" class="bb-input tl-filter" placeholder="Filter accidents…" />
+      <div class="bb-muted tl-count" v-if="filteredTotal > 400">showing up to 400 of {{ filteredTotal.toLocaleString() }} · type to filter</div>
       <div class="tl-list-scroll bb-scroll">
         <div v-for="r in filtered" :key="r.id" class="tl-item" :class="{ active: r.id === store.selectedId, compare: r.id === store.compareId }" @click="pick(r.id)">
           <span class="bb-agency">{{ r.agency }}</span>
           <span class="tl-item-title">{{ r.title }}</span>
           <span class="bb-muted">{{ r.date.slice(0, 4) }}</span>
           <span v-if="r.fdr" class="tl-fdr" title="FDR replay available">FDR</span>
+          <span v-if="r.tier" class="tl-tier" :title="r.tier + ' · ' + r.depth">{{ r.tier === 'ntsb' ? 'DB' : 'W' }}</span>
           <span v-if="r.dissent && r.dissent.length" class="tl-dissent" title="agency dissent">≠</span>
         </div>
       </div>
@@ -16,7 +18,7 @@
     <div class="tl-main" v-if="rec">
       <div class="tl-head">
         <div>
-          <div class="tl-title"><span class="bb-agency">{{ rec.agency }}</span> {{ rec.title }}</div>
+          <div class="tl-title"><span class="bb-agency">{{ rec.agency }}</span> {{ rec.title }} <span v-if="rec.tier" class="tl-depth">{{ rec.tier === 'ntsb' ? 'NTSB database' : 'Wikidata / Wikipedia' }} · {{ rec.depth }}</span></div>
           <div class="bb-muted">{{ rec.date }} · {{ rec.aircraft.type }} · {{ rec.operator }} · {{ rec.route?.from_name || rec.route?.from || '' }} → {{ rec.route?.to_name || rec.route?.to || '' }} · {{ rec.fatalities ?? '?' }} fatalities</div>
         </div>
         <div class="tl-modes">
@@ -28,7 +30,7 @@
       </div>
 
       <!-- Causal chain diagram -->
-      <div class="tl-dag bb-scroll" v-if="mode !== 'narrative'">
+      <div class="tl-dag bb-scroll" v-if="mode !== 'narrative' && rec.chain">
         <ChainDiagram :chain="rec.chain" :index="index" :graph="graph" :highlight="hoverFactors" @select="onFactorSelect" />
       </div>
 
@@ -71,7 +73,7 @@
             </div>
           </div>
           <div class="tl-side-section">
-            <div class="bb-h">Recommendations ({{ rec.recommendations.length }})</div>
+            <div class="bb-h">Recommendations ({{ (rec.recommendations || []).length }})</div>
             <div class="tl-recs bb-scroll">
               <div v-for="(r, i) in rec.recommendations" :key="i" class="tl-rec">
                 <div class="tl-rec-head">
@@ -106,13 +108,14 @@
             <option v-for="s in suggestions" :key="s.id" :value="s.id">{{ index.byId[s.id].title }} ({{ s.shared }} shared factors)</option>
             <option disabled>──────────</option>
             <option v-for="r in graph.records" :key="'all' + r.id" :value="r.id">{{ r.title }}</option>
+            <option v-if="rec.tier" :value="rec.id" disabled>(catalog records can be compared via suggestions above)</option>
           </select>
           <span class="tl-sim" v-if="cmp">Mechanism similarity <b>{{ Math.round(similarity * 100) }}%</b> · {{ sharedFactors.length }} shared factors · {{ sharedEdges.length }} shared causal edges</span>
         </div>
         <template v-if="cmp">
           <div class="tl-compare-grid">
             <div class="tl-compare-col">
-              <div class="tl-title"><span class="bb-agency">{{ rec.agency }}</span> {{ rec.title }}</div>
+              <div class="tl-title"><span class="bb-agency">{{ rec.agency }}</span> {{ rec.title }} <span v-if="rec.tier" class="tl-depth">{{ rec.tier === 'ntsb' ? 'NTSB database' : 'Wikidata / Wikipedia' }} · {{ rec.depth }}</span></div>
               <div class="bb-muted">{{ rec.date }} · {{ rec.aircraft.type }} · {{ rec.phase }}</div>
               <p class="tl-summary">{{ rec.summary }}</p>
             </div>
@@ -194,6 +197,7 @@ import { similarRecords } from './lib/search.js'
 import { layoutChain } from './lib/dag.js'
 import { buildNarrative, markdownToHtml } from './lib/narrative.js'
 import { formatRelative } from './lib/fdr.js'
+import { loadCatalogRecord } from './lib/catalog.js'
 
 const props = defineProps({ graph: Object, index: Object, active: Boolean })
 const store = useBlackboxStore()
@@ -206,11 +210,19 @@ const eventsEl = ref(null)
 const cvrEl = ref(null)
 const copied = ref(false)
 
-const rec = computed(() => props.index.byId[store.selectedId] || props.graph.records[0])
+const version = ref(0)
+const rec = computed(() => {
+  void version.value
+  const r = props.index.byId[store.selectedId] || props.graph.records[0]
+  return r
+})
 const filtered = computed(() => {
   const f = filter.value.toLowerCase()
-  return props.graph.records.filter((r) => !f || `${r.title} ${r.aircraft.type} ${r.operator} ${r.agency} ${r.date}`.toLowerCase().includes(f))
+  const all = props.index.records.filter((r) => !f || `${r.title} ${r.aircraft.type} ${r.operator} ${r.agency} ${r.date}`.toLowerCase().includes(f))
+  // curated first, then by interest; cap the DOM at 400 rows
+  return all.sort((a, b) => (a.tier ? 1 : 0) - (b.tier ? 1 : 0) || (b.interest || 0) - (a.interest || 0) || a.date.localeCompare(b.date)).slice(0, 400)
 })
+const filteredTotal = computed(() => props.index.records.length)
 const factorColor = (id) => props.graph.taxonomy.categories[props.index.factorById[id]?.category]?.color || '#888'
 const factorLabel = (id) => props.index.factorById[id]?.label || id
 const actorName = (a) => props.graph.taxonomy.actors[a] || a
@@ -275,10 +287,19 @@ function activeEventFromTime(t) {
   const el = eventsEl.value?.querySelectorAll('.tl-event')?.[best]
   if (el && el.scrollIntoView) el.scrollIntoView({ block: 'center', behavior: 'smooth' })
 }
-function pick(id) {
+async function pick(id) {
   store.selectedId = id
   activeEvent.value = -1
+  const r = props.index.byId[id]
+  if (r && r.stub) {
+    const full = await loadCatalogRecord(id, r.date)
+    if (full) {
+      Object.assign(r, full, { stub: false })
+      version.value++
+    }
+  }
 }
+watch(() => store.selectedId, (id) => { if (id && props.index.byId[id]?.stub) pick(id) }, { immediate: true })
 function onFactorSelect(id) {
   store.openGraph(rec.value.id, props.index.factorById[id]?.label.toLowerCase() || id)
 }
@@ -379,6 +400,9 @@ const ChainDiagram = defineComponent({
 .tl-item.active { background: #1c2a45; box-shadow: inset 3px 0 0 var(--bb-accent); }
 .tl-item.compare { box-shadow: inset 3px 0 0 #ff5cf0; }
 .tl-item-title { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tl-tier { font-size: 8px; color: var(--bb-muted); border: 1px solid var(--bb-line); border-radius: 2px; padding: 0 2px; }
+.tl-count { font-size: 10px; padding: 0 8px 4px; }
+.tl-depth { font-size: 9px; font-weight: 400; color: var(--bb-muted); border: 1px solid var(--bb-line); border-radius: 3px; padding: 0 4px; margin-left: 6px; vertical-align: middle; }
 .tl-fdr { font-size: 8px; color: var(--bb-accent-2); border: 1px solid var(--bb-accent-2); border-radius: 2px; padding: 0 2px; }
 .tl-dissent { color: #ff9f43; font-weight: 700; }
 .tl-main { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
