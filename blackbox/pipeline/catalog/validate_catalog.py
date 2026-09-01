@@ -100,6 +100,8 @@ def check(rec, errors, where):
         errors.append(f"{where}: aircraft.type and aircraft.manufacturer required")
     if not (isinstance(rec.get("date"), str) and len(rec["date"]) == 10):
         errors.append(f"{where}: date must be YYYY-MM-DD")
+    if not re.match(r"^[A-Z][A-Z0-9-]{1,14}$", str(rec.get("agency") or "")):
+        errors.append(f"{where}: agency must be a short agency code like NTSB, BEA, AAIB, CAB, IAC or UNKNOWN (got {rec.get('agency')!r})")
     if rec.get("phase") not in PHASES:
         errors.append(f"{where}: bad phase {rec.get('phase')!r}")
     if rec.get("category") not in CATEGORIES:
