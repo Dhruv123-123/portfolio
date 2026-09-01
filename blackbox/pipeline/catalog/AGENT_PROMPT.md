@@ -39,6 +39,6 @@ RULES:
 5. Keep each record under ~2,500 characters. No prose outside the JSONL file.
 6. Chain edges must be CAUSAL, not chronological: A -> B only when the text says A caused or enabled B. Environmental and latent factors (low_visibility, dark_night, regulatory_oversight, design_deficiency) point at the crew or system failure they enabled, then that failure points at the outcome. Never link two things merely because one happened before the other.
 7. RICHNESS IS ENFORCED by the validator: when an item's "text" is longer than 1,500 characters the record needs at least 3 factors, 1 chain edge, 3 events and a 180+ character summary; longer than 3,500 characters needs at least 4 factors, 2 chain edges, 4 events and a 250+ character summary. Mine the text: the accident section gives the events (departure, first sign of trouble, crew actions, impact), the investigation section gives the factors and the chain, and the agency (CAB, NTSB, AAIB, BEA, ...) is usually named there.
-8. Title: use "<Operator> <flight number>" when there is a flight number (e.g. "American 320"); otherwise keep the Wikipedia label verbatim (e.g. "1956 Grand Canyon mid-air collision").
+8. Title: copy the item's "label" verbatim, only removing the word "Flight" (e.g. "BOAC Flight 781" -> "BOAC 781"; "1956 Grand Canyon mid-air collision" stays as is). Never invent a title from the operator field.
 
 When finished, reply with one line: "{BATCH}: N records, 0 errors, confidence high/medium/low counts = a/b/c".

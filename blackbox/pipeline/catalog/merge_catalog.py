@@ -16,6 +16,15 @@ OUT = ROOT / "data" / "catalog" / "wikidata.jsonl"
 REPORTS = ROOT / "data" / "reports"
 
 
+def canonical_title(label):
+    """'BOAC Flight 781' -> 'BOAC 781'; other labels unchanged."""
+    if not label:
+        return None
+    t = re.sub(r"\s+Flight\s+(?=[A-Z0-9])", " ", label)
+    t = re.sub(r"\s+\((?:\w+\s)?\d{4}\)$", lambda m: m.group(0), t)
+    return t.strip()
+
+
 def tokens(s):
     return {t for t in re.findall(r"[a-z0-9]+", (s or "").lower()) if len(t) > 2 and t not in {"flight", "air", "airlines", "airline", "airways", "the", "and"}}
 
@@ -28,6 +37,8 @@ def main():
     rows = {}
     files = sorted(BATCHES.glob("*.out.jsonl"))
     for path in files:
+        batch_in = path.with_name(path.name.replace(".out.jsonl", ".json"))
+        inputs = {it["id"]: it for it in json.loads(batch_in.read_text())} if batch_in.exists() else {}
         for line in path.read_text().splitlines():
             if not line.strip():
                 continue
@@ -35,8 +46,15 @@ def main():
                 rec = json.loads(line)
             except json.JSONDecodeError:
                 continue
-            if rec.get("id"):
-                rows[rec["id"]] = rec
+            if not rec.get("id"):
+                continue
+            src = inputs.get(rec["id"], {})
+            if src.get("label"):
+                rec["title"] = canonical_title(src["label"])
+            if re.match(r"^Q\d+$", rec.get("operator") or ""):
+                rec["operator"] = "unknown"
+            rec["operator"] = re.sub(r"\bQ\d+\b", "", rec.get("operator") or "").strip() or "unknown"
+            rows[rec["id"]] = rec
     linked = 0
     for rec in rows.values():
         rec.pop("curated_id", None)
