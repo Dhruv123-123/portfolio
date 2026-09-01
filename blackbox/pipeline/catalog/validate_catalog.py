@@ -44,6 +44,8 @@ def check_grounding(rec, item, errors, where, seen_events):
         text = e.get("text", "")
         if text.lstrip().startswith("["):
             errors.append(f"{where}: event[{i}] starts with a section marker")
+        if "\n" in text or len(text) > 320 or not re.match(r"^[A-Z0-9\"'(]", text.strip()):
+            errors.append(f"{where}: event[{i}] is a text fragment, not a written sentence ({text[:50]!r})")
         if lead and len(lead) > 60 and text.strip().lower()[:80] == lead[:80]:
             errors.append(f"{where}: event[{i}] is the article's lead sentence, not an event")
         if re.search(r"\bwas a (scheduled|regular|chartered|domestic|international)\b", text, re.I):
@@ -107,6 +109,9 @@ def check(rec, errors, where):
     if rec.get("tier") not in {"wikidata", "ntsb"}:
         errors.append(f"{where}: bad tier {rec.get('tier')!r}")
     fids = set()
+    ids_seen = [f.get("id") for f in rec.get("factors", []) if isinstance(f, dict)]
+    if len(ids_seen) != len(set(ids_seen)):
+        errors.append(f"{where}: duplicate factor ids")
     for f in rec.get("factors", []):
         if not isinstance(f, dict) or f.get("id") not in FACTORS:
             errors.append(f"{where}: unknown factor {f.get('id') if isinstance(f, dict) else f!r}")
