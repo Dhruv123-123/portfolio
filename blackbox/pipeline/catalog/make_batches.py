@@ -99,6 +99,7 @@ def main():
     ap.add_argument("--prefix", default="batch", help="batch file prefix, e.g. wave2 -> wave2_000.json")
     ap.add_argument("--limit", type=int, default=0, help="only write the top N accidents")
     ap.add_argument("--require-text", action="store_true", help="only accidents whose Wikipedia text has been fetched")
+    ap.add_argument("--exclude-batches", default="", help="comma-separated batch names whose input ids are skipped (batches still in flight)")
     args = ap.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
     done = set()
@@ -106,6 +107,11 @@ def main():
         for line in CATALOG.read_text().splitlines():
             if line.strip():
                 done.add(json.loads(line).get("qid"))
+    for name in [n for n in args.exclude_batches.split(",") if n]:
+        path = OUT / f"{name}.json"
+        if path.exists():
+            for it in json.loads(path.read_text()):
+                done.add(it["qid"])
     items = [json.loads(l) for l in WD.read_text().splitlines()]
     rows = []
     for it in items:

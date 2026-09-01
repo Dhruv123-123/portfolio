@@ -21,6 +21,45 @@ CATEGORIES = {"LOC-I", "CFIT", "RE", "RI", "SCF-PP", "SCF-NP", "F-NI", "F-POST",
 REQUIRED = ["id", "title", "date", "tier", "depth", "agency", "aircraft", "operator", "phase", "category", "summary", "factors", "chain", "events", "extraction"]
 
 
+import re
+
+STOP = set("about after aircraft airline airlines airport approach before began cabin captain continued crashed crew during first flight flying killed landed landing minutes normal normally operated operating passengers pilot pilots proceeded reported runway scheduled second shortly takeoff which while would there their these those where after before because however".split())
+GENERIC = re.compile(r"^(aircraft|the aircraft|airplane|flight) (departed|took off|began (its )?descent|approached|proceeded|continued|crashed( with \d+ fatalities)?|impacted terrain)\.?$", re.I)
+
+
+def content_tokens(text):
+    return {w for w in re.findall(r"[a-z0-9][a-z0-9'-]{4,}", (text or "").lower()) if w not in STOP}
+
+
+def check_grounding(rec, item, errors, where, seen_events):
+    """Every event, factor evidence and the summary must reuse specific words from the source text."""
+    if not item:
+        return
+    source = content_tokens(item.get("text", "")) | content_tokens(item.get("label", "")) | content_tokens(item.get("description", ""))
+    rich = len(item.get("text") or "") > 800
+    for i, e in enumerate(rec.get("events", [])):
+        text = e.get("text", "")
+        if GENERIC.match(text.strip()):
+            errors.append(f"{where}: event[{i}] is a generic template sentence ({text!r}); describe what the article says happened")
+            continue
+        if rich and len(text) < 30:
+            errors.append(f"{where}: event[{i}] too short to be specific ({text!r})")
+        overlap = content_tokens(text) & source
+        if rich and len(overlap) < 2:
+            errors.append(f"{where}: event[{i}] not grounded in the source text ({text[:60]!r})")
+        key = text.strip().lower()
+        if key in seen_events:
+            errors.append(f"{where}: event[{i}] duplicates an event in record {seen_events[key]}")
+        else:
+            seen_events[key] = rec.get("id")
+    for f in rec.get("factors", []):
+        ev = f.get("evidence") or ""
+        if rich and (len(ev) < 20 or len(content_tokens(ev) & source) < 2):
+            errors.append(f"{where}: factor {f.get('id')} evidence not grounded in the source text ({ev[:60]!r})")
+    if rich and len(content_tokens(rec.get("summary", "")) & source) < 8:
+        errors.append(f"{where}: summary shares too few specific words with the source text")
+
+
 def check_richness(rec, text_len, errors, where):
     """Records built from substantial text must not be skeletons."""
     if text_len is None:
@@ -114,9 +153,12 @@ def main():
         ids = []
         batch_in = path.with_name(path.name.replace(".out.jsonl", ".json"))
         text_lens = {}
+        items = {}
+        seen_events = {}
         if batch_in.exists() and batch_in != path:
             for item in json.loads(batch_in.read_text()):
                 text_lens[item["id"]] = len(item.get("text") or "")
+                items[item["id"]] = item
         for n, line in enumerate(path.read_text().splitlines(), 1):
             if not line.strip():
                 continue
@@ -128,6 +170,7 @@ def main():
             ids.append(rec.get("id"))
             check(rec, errors, f"{path.name}:{n} ({rec.get('id')})")
             check_richness(rec, text_lens.get(rec.get("id")), errors, f"{path.name}:{n} ({rec.get('id')})")
+            check_grounding(rec, items.get(rec.get("id")), errors, f"{path.name}:{n} ({rec.get('id')})", seen_events)
         dup = {i for i in ids if ids.count(i) > 1}
         if dup:
             errors.append(f"{path.name}: duplicate ids {sorted(dup)}")
