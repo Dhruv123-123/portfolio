@@ -37,5 +37,7 @@ RULES:
 3. Prefer specific factors (pitot_blockage, wrong_engine_shutdown) over generic ones; add generic ones (crm_breakdown, inadequate_training) only when the text says so.
 4. Security events (bombs, hijackings, shoot-downs) use factor terrorism_or_hostile_act and category SEC.
 5. Keep each record under ~2,500 characters. No prose outside the JSONL file.
+6. Chain edges must be CAUSAL, not chronological: A -> B only when the text says A caused or enabled B. Environmental and latent factors (low_visibility, dark_night, regulatory_oversight, design_deficiency) point at the crew or system failure they enabled, then that failure points at the outcome. Never link two things merely because one happened before the other.
+7. Title: use "<Operator> <flight number>" when there is a flight number (e.g. "American 320"); otherwise keep the Wikipedia label verbatim (e.g. "1956 Grand Canyon mid-air collision").
 
 When finished, reply with one line: "{BATCH}: N records, 0 errors, confidence high/medium/low counts = a/b/c".
