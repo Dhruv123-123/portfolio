@@ -1,0 +1,161 @@
+{
+  "id": "wd_q4598489",
+  "qid": "Q4598489",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2001 Avjet Gulfstream III crash",
+  "flight_number": null,
+  "date": "2001-03-29",
+  "time_reference": "MDT",
+  "t0": "2001-03-30T01:01:57Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAB-02-03",
+      "report_title": "Aircraft Accident Brief - Avjet Corporation Gulfstream III",
+      "report_date": "2002-03-29",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0203.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Gulfstream III",
+    "family": "III",
+    "manufacturer": "Gulfstream",
+    "registration": "N303GA",
+    "msn": null,
+    "engines": null
+  },
+  "operator": "Avjet Corporation",
+  "route": {
+    "from": null,
+    "from_name": "Los Angeles International Airport",
+    "to": null,
+    "to_name": "Aspen-Pitkin County Airport"
+  },
+  "location": {
+    "name": "Aspen, Colorado, near runway 15 threshold",
+    "country": "United States",
+    "lat": 39.22319,
+    "lon": -106.87727
+  },
+  "phase": "approach",
+  "occupants": 18,
+  "fatalities": 18,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "A Gulfstream III charter flight operated by Avjet crashed near Aspen on March 29, 2001 while on final approach. The flight crew descended below the minimum descent altitude without required visual references for the runway. Contributing factors included unclear NOTAMs regarding the nighttime approach restriction, reduced visibility due to snow and darkness, and pressure to land at the destination due to a nighttime curfew and charter customer expectations.",
+  "probable_cause": "The flight crew's operation of the airplane below the minimum descent altitude without the required visual references.",
+  "factors": [
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "The captain descended below the minimum descent altitude without visual references for the runway (p. 4, 33)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Darkness and light snow showers near the airport significantly degraded the flight crew's ability to see and safely avoid terrain (p. 41)"
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "The final approach became unstable with multiple altitude deviations below prescribed minimums without visual references (p. 33)"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The captain did not discuss the instrument approach procedure during approach briefing as required and did not brief the missed approach procedure (p. 31)"
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "contributing",
+      "evidence": "Pressure from the charter customer and emphasis on landing at Aspen due to delayed departure and airport's nighttime landing restriction (p. 40)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft crashed into terrain while in a steep left bank about 2,400 feet short of the runway threshold (p. 8)"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "unstable_approach"
+    ],
+    [
+      "crm_breakdown",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "18:56",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 1856:06, the flight was cleared for the VOR/DME-C instrument approach to Aspen",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": "19:00",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "At 1900:22, when at 10,400 feet about 4.4 miles north of airport, captain stated 'okay I'm breaking out' indicating possible visual contact",
+      "state": {
+        "alt": 10400,
+        "ias": 125
+      },
+      "factors": []
+    },
+    {
+      "t": 330,
+      "clock": "19:01",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "At 1901:57, while in a steep 40-degree left bank, the aircraft crashed into terrain 2,400 feet short of runway 15 threshold",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "FAA revised NOTAM wording for Aspen nighttime restriction to be more explicit about approach prohibitions"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0203.pdf"
+  ],
+  "asn_id": "20010329-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/2001_Avjet_Gulfstream_III_crash",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0203.pdf"
+  ],
+  "interest": 11.91,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flight (lines 99-450), Analysis (lines 1621-2286), Probable Cause (lines 2288-2301)"
+    ]
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "id": "wd_q6893760",
+  "qid": "Q6893760",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Mohawk Airlines 405",
+  "flight_number": "405",
+  "date": "1972-03-03",
+  "time_reference": "EST",
+  "t0": "1972-03-03T20:48:07-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-73-8",
+      "report_title": "Aircraft Accident Report - Mohawk Airlines Flight 405",
+      "report_date": "1973-04-11",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7308.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Fairchild Hiller FH-227B",
+    "family": "FH-227",
+    "manufacturer": "Fairchild Hiller",
+    "registration": "N7818M",
+    "msn": null,
+    "engines": null
+  },
+  "operator": "Mohawk Airlines",
+  "route": {
+    "from": null,
+    "from_name": "New York City",
+    "to": null,
+    "to_name": "Albany"
+  },
+  "location": {
+    "name": "Albany, New York, house 3.5 miles south of airport",
+    "country": "United States",
+    "lat": null,
+    "lon": null
+  },
+  "phase": "approach",
+  "occupants": 48,
+  "fatalities": 17,
+  "injuries_serious": 31,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Mohawk Airlines Flight 405 crashed into a house in Albany on March 3, 1972. The left propeller was stuck in cruise pitch lock and could not be feathered, creating asymmetric drag. The crew descended below prescribed minimum altitudes while preoccupied with troubleshooting the propeller problem. The aircraft descended uncontrollably and crashed. Of 48 occupants and 1 house resident, 17 were killed.",
+  "probable_cause": "The crew inability to feather the left propeller in combination with descent below prescribed minimum altitudes for the approach. The Board was unable to determine why the propeller could not be feathered or why the crew failed to effect the standard feathering procedure.",
+  "factors": [
+    {
+      "id": "flight_control_failure",
+      "role": "initiating",
+      "evidence": "The left propeller was stuck in cruise pitch lock and could not be feathered (p. 24)"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "The flight crew descended below prescribed minimum altitudes for the approach (p. 32)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Weather at airport was ceiling indefinite 1,200 feet obscured with 2 miles visibility in light snow (p. 1)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The left propeller creating high asymmetric drag resulted in uncontrollable descent (p. 24)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft crashed into a house 3.5 miles south of runway (p. 1)"
+    }
+  ],
+  "chain": [
+    [
+      "flight_control_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "descent_below_minimums",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "20:42",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight originated in New York City for final approach to Albany airport runway 01",
+      "factors": []
+    },
+    {
+      "t": 360,
+      "clock": "20:48",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "At 8.5 miles from airport, flight crew reported left propeller was hung up in cruise pitch lock",
+      "factors": [
+        "flight_control_failure"
+      ]
+    },
+    {
+      "t": 480,
+      "clock": "20:48",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "At about 5 miles out, crew notified Approach Control they were attempting emergency feathering and would land short",
+      "factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 487,
+      "clock": "20:48",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Left propeller creating high asymmetric drag; right engine at full power could not arrest uncontrollable descent; aircraft crashed into house 3.5 miles south of runway",
+      "factors": [
+        "loss_of_control_inflight",
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-73-14",
+      "to": "FAA",
+      "text": "Conduct comprehensive review of propeller feathering procedures and emergency training",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "flight_control_failure"
+      ]
+    },
+    {
+      "id": "A-73-15",
+      "to": "FAA",
+      "text": "Require installation and use of shoulder harnesses for cockpit crew members",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced training on crew resource management and task prioritization during emergencies",
+    "Installation of shoulder harnesses in cockpit crews"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7308.pdf"
+  ],
+  "asn_id": "19720303-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Mohawk_Airlines_Flight_405",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7308.pdf",
+    "https://aviation-safety.net/database/record.php?id=19720303-0"
+  ],
+  "interest": 11.7,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Analysis and Conclusions (lines 4541-6700), Findings and Probable Cause (lines 6100-6300)",
+      "OCR quality degraded in older report; some technical details from summary record used"
+    ]
+  }
+}
