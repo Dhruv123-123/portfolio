@@ -27,6 +27,7 @@ def main():
     ap.add_argument("--prefix", default="cand")
     ap.add_argument("--limit", type=int, default=200)
     ap.add_argument("--min-chars", type=int, default=4000)
+    ap.add_argument("--offset", type=int, default=0)
     ap.add_argument("--shard", type=int, default=0)
     ap.add_argument("--nshards", type=int, default=1)
     args = ap.parse_args()
@@ -39,7 +40,7 @@ def main():
     items = []
     for path in sorted(DEEPEN.glob(f"{args.prefix}_*.json")):
         items.extend(json.loads(path.read_text()))
-    items = items[: args.limit]
+    items = items[args.offset : args.limit]
     items = [it for i, it in enumerate(items) if i % args.nshards == args.shard]
     for it in items:
         if it["id"] in done:
