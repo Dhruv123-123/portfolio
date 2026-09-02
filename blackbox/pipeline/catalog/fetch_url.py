@@ -35,9 +35,9 @@ def main():
     if not out_txt.exists():
         headers = {"User-Agent": "blackbox-pipeline/1.0 (+https://dhruvramasubban.com)"}
         resp = None
-        for url in (args.url, f"https://web.archive.org/web/2024id_/{args.url}", f"https://web.archive.org/web/2015id_/{args.url}"):
+        for url in (args.url, f"https://web.archive.org/web/2024id_/{args.url}"):
             try:
-                r = requests.get(url, headers=headers, timeout=180, allow_redirects=True)
+                r = requests.get(url, headers=headers, timeout=(20, 90) if url == args.url else (10, 30), allow_redirects=True)
                 if r.ok and len(r.content) > 2000:
                     resp = r
                     if url != args.url:
