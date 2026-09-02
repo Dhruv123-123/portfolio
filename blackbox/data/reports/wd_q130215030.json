@@ -1,0 +1,155 @@
+{
+  "id": "wd_q130215030",
+  "qid": "Q130215030",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2024 Kamchatka Mil Mi-8 crash",
+  "flight_number": null,
+  "date": "2024-08-31",
+  "time_reference": "UTC",
+  "t0": "2024-08-31T04:08:00Z",
+  "agency": "MAK",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead",
+      "report_id": "RA-25656",
+      "report_title": "Preliminary Report - Mil Mi-8T RA-25656 Accident Investigation",
+      "report_date": null,
+      "url": "https://mak-iac.org/rassledovaniya/mi-8t-ra-25656-31-08-2024/"
+    }
+  ],
+  "aircraft": {
+    "type": "Mil Mi-8T",
+    "family": "Mi-8",
+    "manufacturer": "Mil",
+    "registration": "RA-25656",
+    "msn": null,
+    "engines": null
+  },
+  "operator": "Vityaz-Aero",
+  "route": {
+    "from": null,
+    "from_name": "Vachkazhets",
+    "to": null,
+    "to_name": "Nikolaevka"
+  },
+  "location": {
+    "name": "Yelizovsky District, Kamchatka Krai, approximately 35 km west of Petropavlovsk-Kamchatsky",
+    "country": "Russia",
+    "lat": 53.048,
+    "lon": 158.081
+  },
+  "phase": "initial_climb",
+  "occupants": 22,
+  "fatalities": 22,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Mil Mi-8T helicopter operated by Vityaz-Aero disappeared from radar shortly after takeoff on August 31, 2024, during a sightseeing tour in poor weather conditions in Kamchatka. The helicopter was carrying 19 passengers and 3 crew members. Wreckage was found in mountainous terrain at 900 m elevation. Investigation determined the helicopter descended into instrument meteorological conditions contrary to ATC clearance, leading to controlled flight into terrain.",
+  "probable_cause": "The accident was caused by the flight crew's decision to descend the helicopter into mountainous terrain while operating in instrument meteorological conditions that were contrary to the air traffic control clearance, combined with inadequate crew training and organizational safety shortcomings at Vityaz-Aero.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Weather conditions at the accident site included fog and drizzle with poor visibility. The helicopter flew into IMC despite visual flight conditions being specified in the route."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Investigation revealed the crew lacked adequate preparedness for operation in instrument meteorological conditions. The operator's records showed 63 pilots not undergoing required training."
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "contributing",
+      "evidence": "Inspection of Vityaz-Aero uncovered major safety deficiencies: more than half the fleet not properly maintained, aircraft maintenance by unauthorized personnel, and numerous trained pilots not certified."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Wreckage was located in mountainous terrain at an elevation of 900 m in the Yelizovsky District, indicating the aircraft struck terrain during descent in poor visibility."
+    }
+  ],
+  "chain": [
+    ["low_visibility", "inadequate_training"],
+    ["inadequate_training", "cfit"],
+    ["operator_safety_culture", "cfit"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "03:11",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Mil Mi-8T RA-25656 took off from Nikolaevka-2 airfield with 12 passengers for sightseeing flight to Vachkazhets volcano, despite weather conditions of fog and drizzle in the area.",
+      "state": {"alt": 0},
+      "factors": ["low_visibility"]
+    },
+    {
+      "t": 30,
+      "clock": "03:11:30",
+      "phase": "initial_climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight maintained radio contact with Petropavlovsk-Kamchatsky air traffic control during climb. The planned route was cleared in class G airspace.",
+      "state": {"alt": 500},
+      "factors": []
+    },
+    {
+      "t": 600,
+      "clock": "03:21",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Helicopter disappeared from radar approximately 20 km from destination Nikolaevka, following sightseeing passes at Vachkazhets volcano. Loss of radar contact occurred during climb in deteriorating weather conditions.",
+      "state": {"alt": 900},
+      "factors": ["low_visibility", "inadequate_training"]
+    },
+    {
+      "t": 620,
+      "clock": "04:08",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft wreckage was discovered in mountainous terrain at 900 m elevation in Yelizovsky District. The helicopter had impacted terrain during descent in instrument meteorological conditions.",
+      "state": {"alt": 900},
+      "factors": ["cfit"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced oversight of helicopter operators conducting sightseeing tours in mountainous terrain",
+    "Improved weather assessment and flight planning procedures for operations in Kamchatka region"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/rassledovaniya/mi-8t-ra-25656-31-08-2024/",
+    "https://mak-iac.org/upload/iblock/dee/h0l4vjmwxekontpxqe4vwkoaj1nd1b40/report_ra-25656.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report verified: Mil Mi-8T RA-25656, 31.08.2024, Kamchatka Krai - matches all key details",
+      "This is a preliminary/intermediate MAK report (промежуточный отчет); final report may contain additional findings",
+      "Event sequence based on available information from history of flight section and summary record",
+      "No CVR data mentioned in preliminary report"
+    ]
+  },
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/2024_Kamchatka_Mil_Mi-8_crash",
+  "report_links": [
+    "https://mak-iac.org/rassledovaniya/mi-8t-ra-25656-31-08-2024/",
+    "https://mak-iac.org/upload/iblock/dee/h0l4vjmwxekontpxqe4vwkoaj1nd1b40/report_ra-25656.pdf"
+  ],
+  "interest": 12.73,
+  "curated_id": null
+}

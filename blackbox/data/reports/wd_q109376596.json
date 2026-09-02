@@ -1,0 +1,216 @@
+{
+  "id": "wd_q109376596",
+  "qid": "Q109376596",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2021 Grodno Aviakompania Antonov An-12 crash",
+  "flight_number": null,
+  "date": "2021-11-03",
+  "time_reference": "UTC",
+  "t0": "2021-11-03T11:34:00Z",
+  "agency": "MAK",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead",
+      "report_id": "EW-518TI",
+      "report_title": "Final Report - Antonov An-12BK EW-518TI Accident Investigation",
+      "report_date": null,
+      "url": "https://mak-iac.org/rassledovaniya/an-12bk-ew-518ti-03-11-2021/"
+    }
+  ],
+  "aircraft": {
+    "type": "Antonov An-12BK",
+    "family": "An-12",
+    "manufacturer": "Antonov",
+    "registration": "EW-518TI",
+    "msn": null,
+    "engines": null
+  },
+  "operator": "Grodno Aviakompania",
+  "route": {
+    "from": "UHPP",
+    "from_name": "Yakutsk",
+    "to": "UIII",
+    "to_name": "Irkutsk"
+  },
+  "location": {
+    "name": "southeast of Runway 30, Irkutsk International Airport",
+    "country": "Russia",
+    "lat": 52.248,
+    "lon": 104.451
+  },
+  "phase": "approach",
+  "occupants": 9,
+  "fatalities": 9,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "An Antonov An-12BK cargo aircraft operated by Grodno Aviakompania crashed during a go-around attempt at Irkutsk International Airport on November 3, 2021, in night instrument meteorological conditions with low visibility and snowfall. All nine crew members were killed. The aircraft descended into terrain during the go-around procedure. Investigation attributed the crash to a combination of inadequate crew training, failure to properly stabilize the approach, incorrect navigation system configuration, inoperative GPWS, and poor crew resource management.",
+  "probable_cause": "The accident was caused by controlled flight into terrain in night IMC conditions. Contributing factors included inadequate pilot training, breakdown in crew resource management, improper navigation system configuration and unauthorized use of satellite navigation, failure to stabilize the approach and execute proper go-around procedures in accordance with the flight manual, and an inoperative ground proximity warning system.",
+  "factors": [
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Investigation determined that the flight crew lacked sufficient training for night IMC operations in mountainous terrain and for proper go-around execution."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Poor crew resource management was identified as a factor. The crew failed to effectively coordinate and communicate during the unstable approach and go-around attempt."
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "The navigation system was incorrectly configured and the crew made unauthorized use of satellite navigation (GPS) instead of approved navigation systems, leading to confusion about aircraft position."
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "The approach was not properly stabilized and did not meet stabilized approach criteria. The crew continued the approach without correcting deviations."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The crew failed to comply with flight manual procedures regarding go-around initiation, minimums, and execution. Go-around was not properly executed."
+    },
+    {
+      "id": "gpws_warning_response",
+      "role": "contributing",
+      "evidence": "The ground proximity warning system (GPWS) was inoperative due to unknown reasons, eliminating an important safety barrier."
+    },
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Weather conditions included low visibility, snowfall, and temperature of minus 7 degrees Celsius, reducing visual references for the crew."
+    },
+    {
+      "id": "dark_night",
+      "role": "latent",
+      "evidence": "The accident occurred at 19:45 local time (night) under IMC conditions, providing no visual reference for terrain."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft crashed into terrain southeast of Runway 30 at Irkutsk, bursting into flames and killing all nine occupants."
+    }
+  ],
+  "chain": [
+    ["inadequate_training", "crm_breakdown"],
+    ["mode_confusion", "unstable_approach"],
+    ["crm_breakdown", "unstable_approach"],
+    ["unstable_approach", "procedural_noncompliance"],
+    ["low_visibility", "cfit"],
+    ["dark_night", "cfit"],
+    ["procedural_noncompliance", "cfit"]
+  ],
+  "events": [
+    {
+      "t": -600,
+      "clock": "19:00",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Antonov An-12BK was on scheduled cargo flight from Yakutsk to Irkutsk with nine crew members aboard.",
+      "state": {"alt": 7000},
+      "factors": []
+    },
+    {
+      "t": -300,
+      "clock": "19:20",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft initiated descent toward Irkutsk International Airport and entered approach pattern for Runway 30.",
+      "state": {"alt": 5000},
+      "factors": []
+    },
+    {
+      "t": -200,
+      "clock": "19:25",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Weather conditions at Irkutsk were poor with low visibility, snowfall, and temperature of minus 7 degrees Celsius. Wind was from the northwest.",
+      "state": {"alt": 3000},
+      "factors": ["low_visibility"]
+    },
+    {
+      "t": -120,
+      "clock": "19:32",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Navigation system was incorrectly configured with unauthorized use of satellite navigation (GPS) instead of approved systems. This configuration error led to navigation confusion.",
+      "state": {"alt": 1500},
+      "factors": ["mode_confusion"]
+    },
+    {
+      "t": -60,
+      "clock": "19:39",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Approach was not stabilized according to flight manual criteria. Aircraft continued descent with unstable flight path and inadequate crew coordination.",
+      "state": {"alt": 800},
+      "factors": ["unstable_approach", "crm_breakdown"]
+    },
+    {
+      "t": 0,
+      "clock": "19:45",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "system",
+      "text": "Radar contact with flight was lost at 19:45 local time (11:45 UTC) during night IMC conditions. Aircraft was attempting to execute go-around procedure.",
+      "state": {"alt": 600},
+      "factors": ["dark_night", "low_visibility"]
+    },
+    {
+      "t": 120,
+      "clock": "19:47",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed into terrain located 4.5 km southeast of Runway 30 at Irkutsk and burst into flames. All nine crew members aboard were killed. The GPWS did not provide warning.",
+      "state": {"alt": 0},
+      "factors": ["cfit", "procedural_noncompliance"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Enforcement of proper crew training standards for night IMC approaches in mountainous regions",
+    "Mandatory use of approved navigation systems with restrictions on GPS-only navigation",
+    "Regular inspection and maintenance of GPWS systems on all aircraft"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/upload/iblock/e2f/hpio3mg4kbgcu6gs7700w65emrplpory/report_ew-518ti.pdf",
+    "https://mak-iac.org/rassledovaniya/an-12bk-ew-518ti-03-11-2021/"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report verified: Antonov An-12BK EW-518TI, November 3, 2021, Irkutsk - matches all key details",
+      "Final MAK report available; comprehensive investigation of crew training deficiencies and organizational issues at Grodno Aviakompania",
+      "Event sequence based on ATC and radar data plus meteorological conditions from the investigation",
+      "Multiple contributing factors identified including both crew performance and aircraft system failures"
+    ]
+  },
+  "asn_id": "20211103-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/Grodno_Aviakompania_Flight_1252",
+  "report_links": [
+    "https://mak-iac.org/upload/iblock/e2f/hpio3mg4kbgcu6gs7700w65emrplpory/report_ew-518ti.pdf",
+    "https://mak-iac.org/rassledovaniya/an-12bk-ew-518ti-03-11-2021/",
+    "https://www.aviation-safety.net/database/record.php?id=20211103-1"
+  ],
+  "interest": 11.7,
+  "curated_id": null
+}

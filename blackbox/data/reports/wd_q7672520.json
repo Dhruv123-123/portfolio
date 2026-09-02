@@ -1,0 +1,138 @@
+{
+  "id": "wd_q7672520",
+  "qid": "Q7672520",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "TWA 553",
+  "flight_number": "TWA553",
+  "date": "1967-03-09",
+  "time_reference": "EST",
+  "t0": "1967-03-09T18:00:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-68-AI",
+      "report_title": "Aircraft Accident Report - Trans World Airlines, Inc., Douglas DC-9, N1063T and Beechcraft Baron, near Urbana, Ohio",
+      "report_date": "1968-06-19",
+      "url": "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AI.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-9-14",
+    "family": "DC-9",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "N1063T",
+    "msn": null,
+    "engines": "Pratt & Whitney JT8D"
+  },
+  "operator": "Trans World Airlines",
+  "route": {
+    "from": "KPIT",
+    "from_name": "Greater Pittsburgh International Airport",
+    "to": "KDAY",
+    "to_name": "Dayton Municipal Airport"
+  },
+  "location": {
+    "name": "near Urbana, Ohio",
+    "country": "United States",
+    "lat": 40.1,
+    "lon": -83.8
+  },
+  "phase": "descent",
+  "occupants": 26,
+  "fatalities": 26,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "Trans World Airlines Flight 553, a McDonnell Douglas DC-9, collided in midair with a Beechcraft Baron piloted privately near Urbana, Ohio on March 9, 1967. The DC-9 was descending at 323 knots through 4,500 feet when its front right side struck the left side of the Baron. Due to the DC-9's high descent rate, its pilots were unable to see the Baron in time to avoid the collision, killing all 26 occupants of both aircraft.",
+  "probable_cause": "The midair collision was caused by the flight crew of the DC-9 failing to see and avoid the Beechcraft Baron during descent. The DC-9's high rate of descent (estimated at 2,000+ fpm) and the crew's divided attention between descent/approach procedures and traffic surveillance made visual detection of the smaller Beechcraft difficult or impossible within the available reaction time.",
+  "factors": [
+    {
+      "id": "excessive_speed",
+      "role": "contributing",
+      "evidence": "The DC-9 was descending at 323 knots through 4,500 feet when it collided with the Baron. The high descent rate resulted in reduced visibility outside the cockpit for the DC-9 pilots."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The crew of the DC-9 failed to see the Beechcraft Baron despite a traffic advisory issued by Dayton radar approach control approximately 18 seconds before collision. The crew acknowledged the advisory but did not successfully acquire visual contact."
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "The front right side of the DC-9 collided with the left side of the Beechcraft Baron 55, resulting in the destruction of both aircraft and loss of all 26 occupants."
+    }
+  ],
+  "chain": [
+    ["excessive_speed", "inadequate_monitoring"],
+    ["inadequate_monitoring", "midair_collision"]
+  ],
+  "events": [
+    {
+      "t": -18,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Dayton radar approach control issued traffic advisory to TWA 553: uncontrolled VFR traffic ahead and slightly to the right, approximately one mile away, at about the same altitude.",
+      "state": {"alt": 4500},
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "crew_speech",
+      "text": "Flight crew of DC-9 acknowledged the traffic advisory from approach control.",
+      "state": {"alt": 4500},
+      "factors": []
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The front right side of the DC-9 collided with the left side of the Beechcraft Baron 55 during descent. The DC-9 was at 323 knots at the moment of impact. Both aircraft were destroyed.",
+      "state": {"alt": 4500, "ias": 323},
+      "factors": ["midair_collision"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Emphasis on improved visual scanning techniques during descent and approach in congested airspace",
+    "Enhanced traffic awareness training for flight crews descending into terminal areas"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AI.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report verified: McDonnell Douglas DC-9 N1063T and Beechcraft Baron, near Urbana Ohio, March 9, 1967",
+      "Limited detail extracted due to brevity - this was a classic See-and-Avoid failure with high descent rate contributing",
+      "No CVR transcript available or mentioned in this early accident report",
+      "All 26 occupants (12 on DC-9, 14 including pilot and passengers on Baron per collision data) killed"
+    ]
+  },
+  "asn_id": "19670309-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/TWA_Flight_553",
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AI.pdf",
+    "https://aviation-safety.net/database/record.php?id=19670309-0"
+  ],
+  "interest": 11.79,
+  "curated_id": null
+}
