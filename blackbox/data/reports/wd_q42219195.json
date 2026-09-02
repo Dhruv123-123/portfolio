@@ -1,0 +1,207 @@
+{
+  "id": "wd_q42219195",
+  "title": "1982 Bristow Helicopters Bell 212 crash",
+  "flight_number": null,
+  "date": "1982-09-14",
+  "time_reference": "UTC",
+  "t0": "1982-09-14T02:41:00Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "2-1984",
+      "report_date": "1984-02-29",
+      "url": "https://www.gov.uk/aaib-reports/2-1984-bell-212-g-bdil-14-september-1982"
+    }
+  ],
+  "aircraft": {
+    "type": "Bell 212",
+    "family": "212",
+    "manufacturer": "Bell",
+    "registration": "G-BDIL"
+  },
+  "operator": "Bristow Helicopters",
+  "route": {
+    "from": "Treasure Finder platform",
+    "from_name": "Treasure Finder platform",
+    "to": "Baffin Seal vessel",
+    "to_name": "Baffin Seal vessel"
+  },
+  "location": {
+    "name": "North Sea, near Murchison platform",
+    "country": "United Kingdom",
+    "lat": 60.8,
+    "lon": 1.8
+  },
+  "phase": "cruise",
+  "occupants": 6,
+  "fatalities": 6,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "UNK",
+  "summary": "Bristow Helicopters Bell 212 G-BDIL departed on a medical evacuation mission from the Treasure Finder platform on September 14, 1982 at 02:25 UTC in darkness, driving rain, and poor visibility. The helicopter searched for the Baffin Seal vessel at very low altitude over the North Sea to locate an injured crewman. The last transmission reported the helicopter five miles north of Murchison platform letting down to surface contact. The helicopter subsequently lost altitude during a right turn and crashed into the North Sea. Investigation found insufficient evidence for definitive cause but identified adverse weather, total darkness, and difficult mission profile as major contributing factors.",
+  "probable_cause": "The investigation found insufficient evidence to determine the specific cause. The helicopter was flown at critically low altitude in darkness with driving rain and high winds, searching for a difficult target, leaving no margin for error. Loss of altitude during a low-altitude right turn proved fatal.",
+  "factors": [
+    {
+      "id": "dark_night",
+      "role": "latent",
+      "evidence": "Flight took place in complete darkness (p. 4)."
+    },
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Driving rain and poor visibility throughout flight (p. 4)."
+    },
+    {
+      "id": "convective_weather",
+      "role": "latent",
+      "evidence": "High winds and adverse weather conditions in North Sea (p. 4)."
+    },
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "Aircraft crew had been recently awakened for medical evacuation mission (p. 5)."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "Crew operating at very low altitude while attempting to locate difficult target on dark night (p. 5)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Helicopter lost altitude during a right turn at low altitude while searching for vessel (p. 6)."
+    }
+  ],
+  "chain": [
+    [
+      "dark_night",
+      "loss_of_control_inflight"
+    ],
+    [
+      "low_visibility",
+      "loss_of_control_inflight"
+    ],
+    [
+      "convective_weather",
+      "loss_of_control_inflight"
+    ],
+    [
+      "fatigue",
+      "loss_of_control_inflight"
+    ],
+    [
+      "high_workload",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "02:25",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Bell 212 G-BDIL lifted off from Treasure Finder platform on course for Baffin Seal location."
+    },
+    {
+      "t": 360,
+      "clock": "02:31",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "atc",
+      "text": "Co-pilot reported unable to establish marine VHF communication with vessel; requested navigational assistance from Murchison platform."
+    },
+    {
+      "t": 660,
+      "clock": "02:36",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach control informed helicopter Baffin Seal had searchlight pointing vertically to assist location."
+    },
+    {
+      "t": 720,
+      "clock": "02:37",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Co-pilot replied they could see Baffin Seal and were in radio communication."
+    },
+    {
+      "t": 960,
+      "clock": "02:41",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach control attempted to call helicopter but received no reply."
+    },
+    {
+      "t": 1020,
+      "clock": "02:42",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Last transmission: Five miles north of Murchison platform letting down to surface contact."
+    },
+    {
+      "t": 1200,
+      "clock": "02:45",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Helicopter lost altitude during right turn at low altitude and plunged into North Sea; all 6 crew perished."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "IMCA/Industry",
+      "text": "Review procedures for medical evacuation missions in adverse weather conditions",
+      "status": "open"
+    },
+    {
+      "id": null,
+      "to": "Bristow Helicopters",
+      "text": "Implement stricter altitude and visibility minimums for helicopter operations in North Sea",
+      "status": "open"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced weather minimums for offshore helicopter medical evacuation missions",
+    "Improved crew resource management training for high-workload low-visibility operations"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.gov.uk/aaib-reports/2-1984-bell-212-g-bdil-14-september-1982"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q42219195",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/1982_Bristow_Helicopters_Bell_212_crash",
+  "report_links": [
+    "https://www.gov.uk/aaib-reports/2-1984-bell-212-g-bdil-14-september-1982",
+    "https://assets.publishing.service.gov.uk/media/5422f4c640f0b61346000579/2-1984_G-BDIL.pdf"
+  ],
+  "interest": 9.44,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "AAIB investigation explicitly concluded insufficient evidence for definitive cause",
+      "Category UNK reflects undetermined nature per SPEC.md",
+      "Environmental factors strongly implicated but no single root cause identified",
+      "All 6 crew perished in crash; no survivors"
+    ]
+  }
+}

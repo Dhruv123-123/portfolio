@@ -1,0 +1,162 @@
+{
+  "id": "wd_q7999114",
+  "title": "Wien Air Alaska Flight 99",
+  "flight_number": "WA99",
+  "date": "1975-08-30",
+  "time_reference": "AKST",
+  "t0": "1975-08-30T14:30:00-08:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-76-1",
+      "report_date": "1976-01-27",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7601.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Fairchild F-27B",
+    "family": "F-27",
+    "manufacturer": "Fairchild",
+    "registration": null
+  },
+  "operator": "Wien Air Alaska",
+  "route": {
+    "from": "OME",
+    "from_name": "Nome",
+    "to": "GMH",
+    "to_name": "Gambell"
+  },
+  "location": {
+    "name": "Sevuokuk Mountain, near Gambell",
+    "country": "United States",
+    "lat": 64.33,
+    "lon": -171.75
+  },
+  "phase": "approach",
+  "occupants": 32,
+  "fatalities": 10,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Wien Air Alaska Flight 99, a Fairchild F-27B, conducted multiple missed approaches to Gambell in fog and instrument conditions on August 30, 1975. During the final approach attempt following several go-arounds, the aircraft descended below minimum safe altitude and struck Sevuokuk Mountain near Gambell, killing the captain, first officer, and eight passengers. The NTSB determined the accident was caused by improper IFR operation and failure to adhere to prescribed instrument approach procedures.",
+  "probable_cause": "Improper IFR operation and failure to adhere to instrument approach procedures. The airplane collided with a mountain on a missed approach to landing after multiple missed approaches. The crew descended below safe altitude in instrument conditions when the prescribed procedure required them to maintain 2,800 feet minimum altitude until establishing visual contact.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Fog was prevalent in Gambell area; ceiling estimated 400 feet (p. 4)."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "initiating",
+      "evidence": "Crew failed to adhere to instrument approach procedures after multiple missed approaches (p. 5)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted Sevuokuk Mountain at 424 feet elevation (p. 6)."
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "procedural_noncompliance"
+    ],
+    [
+      "procedural_noncompliance",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "13:27",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Wien Air Alaska Flight 99 departed Savoonga for Gambell with fog prevalent in area."
+    },
+    {
+      "t": 180,
+      "clock": "13:42",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Crew discussed strategies to land at Gambell despite fog and unsafe weather conditions."
+    },
+    {
+      "t": 300,
+      "clock": "14:05",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "After several missed approaches, crew flew north over Gambell community and turned east."
+    },
+    {
+      "t": 420,
+      "clock": "14:07",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft turned south after passing north of Gambell, passed over Troutman Lake and continued southbound."
+    },
+    {
+      "t": 540,
+      "clock": "14:09",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Plane impacted Sevuokuk Mountain at 424 feet elevation; broke apart and caught fire with 10 fatalities."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-76-2",
+      "to": "FAA",
+      "text": "Develop operational procedures for precision approaches in low visibility conditions in remote areas",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-76-3",
+      "to": "FAA",
+      "text": "Enhance pilot training requirements for instrument approaches in marginal weather",
+      "status": "closed_acceptable"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced pilot training on strict adherence to instrument approach procedures",
+    "Implementation of minimum altitude enforcement procedures for remote field approaches"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7601.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q7999114",
+  "asn_id": "19750830-3",
+  "wikipedia": "https://en.wikipedia.org/wiki/Wien_Air_Alaska_Flight_99",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7601.pdf"
+  ],
+  "interest": 10.44,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "NTSB report AAR-76-1 examined multiple missed approach procedures",
+      "Fog conditions prevented visual contact throughout approach",
+      "32 occupants with 22 survivors"
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "id": "wd_q7057813",
+  "title": "Northeast Airlines 946",
+  "flight_number": "NE946",
+  "date": "1968-10-25",
+  "time_reference": "EDT",
+  "t0": "1968-10-25T18:17:00-04:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-70-7",
+      "report_date": "1970-04-01",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7007.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Fairchild Hiller FH-227C",
+    "family": "FH-227",
+    "manufacturer": "Fairchild Hiller",
+    "registration": "N380NE"
+  },
+  "operator": "Northeast Airlines",
+  "route": {
+    "from": "BOS",
+    "from_name": "Boston Logan",
+    "to": "MPV",
+    "to_name": "Montpelier",
+    "via": "LEB"
+  },
+  "location": {
+    "name": "Moose Mountain, near Hanover",
+    "country": "United States",
+    "lat": 43.8,
+    "lon": -72.3
+  },
+  "phase": "approach",
+  "occupants": 42,
+  "fatalities": 32,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Northeast Airlines Flight 946, a Fairchild Hiller FH-227C, crashed on Moose Mountain near Hanover, New Hampshire on October 25, 1968 while descending to Lebanon Regional Airport during instrument conditions. The aircraft struck the mountain at 2,237 feet, approximately 600 feet below the required minimum descent altitude of 2,800 feet. The NTSB determined that the pilots prematurely initiated descent based on ambiguous VOR navigation indicators caused by course roughness in mountainous terrain, without accurate position confirmation.",
+  "probable_cause": "The premature initiation of a descent towards the Minimum Descent Altitude, based on navigational instrument indications of an impending station passage in an area of course roughness. The crew was not able to determine accurately its position at this time because they had performed a nonstandard instrument approach and there were no supplemental navigational aids available for their use.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Ceiling was estimated at 2,000 feet overcast with 10 miles visibility (p. 6)."
+    },
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "Pilots prematurely initiated descent based on ambiguous VOR needle indications in area of course roughness (p. 30)."
+    },
+    {
+      "id": "airport_infrastructure",
+      "role": "latent",
+      "evidence": "No supplemental navigational aids available at Lebanon Regional Airport (p. 1)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck Moose Mountain at 2,237 feet MSL (p. 6)."
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "navigation_error"
+    ],
+    [
+      "airport_infrastructure",
+      "navigation_error"
+    ],
+    [
+      "navigation_error",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "17:42",
+      "phase": "taxi",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Northeast Airlines Flight 946 departed Boston Logan International Airport with 39 passengers and 3 crew."
+    },
+    {
+      "t": 1680,
+      "clock": "18:10:45",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 946 cleared for approach to Lebanon; radar service terminated."
+    },
+    {
+      "t": 1740,
+      "clock": "18:11",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Crew reported conducting Standard Instrument Approach (SIA) to Lebanon Flight Service Station."
+    },
+    {
+      "t": 1800,
+      "clock": "18:12",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Ceiling 2,000 feet overcast, visibility 10 miles, altimeter 29.553, calm winds."
+    },
+    {
+      "t": 2100,
+      "clock": "18:17",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft was at 2,237 feet MSL, already 563 feet below minimum descent altitude of 2,800 feet."
+    },
+    {
+      "t": 2400,
+      "clock": "18:17",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck Moose Mountain; 31 killed on impact, 1 additional fatality, 10 survivors."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-68-146",
+      "to": "FAA",
+      "text": "Restrict all operations using the Wilcox 806A VOR receiver to visual approaches where radar or IME was not available.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-68-147",
+      "to": "FAA",
+      "text": "Conduct long-term radio frequency monitoring of the Lebanon VOR area for signal interference.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-68-148",
+      "to": "FAA",
+      "text": "Priority consideration be given to installation of dual navigation facilities at locations where single facility exhibits problematic characteristics.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-68-149",
+      "to": "FAA",
+      "text": "Review design concept of Wilcox Model 806A receiver and its compatibility with airborne instrumentation and ground station navigational equipment.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Develop and implement industrywide operational incident reporting system.",
+      "status": "closed_acceptable"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "FAA issued Advisory Circular No. 91-18 emphasizing proper procedures for VOR station passage identification",
+    "Wilcox Electric issued service bulletins to improve 806A receiver performance and reduce interference effects",
+    "Development of stricter procedures for instrument approaches in mountainous terrain"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7007.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q7057813",
+  "asn_id": "19681025-2",
+  "wikipedia": "https://en.wikipedia.org/wiki/Northeast_Airlines_Flight_946",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7007.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-07.pdf"
+  ],
+  "interest": 12.92,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Probable cause, findings, and event timeline read from NTSB report AAR-70-7",
+      "Cockpit voice recorder badly damaged; no CVR data available",
+      "Aircraft registration confirmed as N380NE from multiple report references"
+    ]
+  }
+}

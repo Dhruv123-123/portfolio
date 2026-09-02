@@ -1,0 +1,216 @@
+{
+  "id": "wd_q7373611",
+  "title": "Royal Air Force Nimrod XV230",
+  "flight_number": null,
+  "date": "2006-09-02",
+  "time_reference": "UTC",
+  "t0": "2006-09-02T11:11:33Z",
+  "agency": "MOD",
+  "agencies": [
+    {
+      "code": "MOD",
+      "name": "Ministry of Defence",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "Haddon-Cave Review",
+      "report_title": "The Nimrod Review: An independent review into the broader issues surrounding the loss of the RAF Nimrod MR2 Aircraft XV230 in Afghanistan in 2006",
+      "report_date": "2009-10-28",
+      "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/229037/1025.pdf"
+    },
+    {
+      "code": "RAF",
+      "name": "Royal Air Force",
+      "country": "United Kingdom",
+      "role": "participant"
+    }
+  ],
+  "aircraft": {
+    "type": "Hawker Siddeley Nimrod MR2",
+    "family": "Nimrod",
+    "manufacturer": "Hawker Siddeley",
+    "registration": "XV230",
+    "msn": null
+  },
+  "operator": "Royal Air Force",
+  "route": {
+    "from": "DOB",
+    "from_name": "Deployed Operational Base",
+    "to": null,
+    "to_name": null
+  },
+  "location": {
+    "name": "Near Kandahar, Chalaghor, Panjwaye District",
+    "country": "Afghanistan",
+    "lat": 31.9,
+    "lon": 65.5
+  },
+  "phase": "cruise",
+  "occupants": 14,
+  "fatalities": 14,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "F-POST",
+  "summary": "RAF Hawker Siddeley Nimrod MR2 XV230 suffered a catastrophic in-flight fire on September 2, 2006 during a routine mission over Kandahar Province, Afghanistan, while returning from Air-to-Air Refueling. Fuel accumulated in an aft compartment near the starboard wing root and auto-ignited when contacting a hot air duct at 400 degrees Celsius. The crew immediately descended from 23,000 feet but the fire spread rapidly. The aircraft exploded at approximately 3,000 feet above ground level near Kandahar. All 14 personnel on board, including 12 RAF crew and two mission specialists, perished.",
+  "probable_cause": "Escaped fuel from the tank blow-off valve during Air-to-Air Refueling accumulated in the No. 7 Tank Dry Bay, saturating the Refrasil insulation around the Supplementary Cooling Pack air duct. The fuel auto-ignited upon contact with the 400-degree-Celsius hot air duct element. The catastrophic fire overwhelmed the crew's emergency procedures during the emergency descent to Kandahar.",
+  "factors": [
+    {
+      "id": "fuel_leak",
+      "role": "initiating",
+      "evidence": "Fuel escaped during Air-to-Air Refueling at 11:11 hours, likely from tank blow-off valve overflow (p. 6)."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "Design flaw in location of fuel tank blow-off valve and lack of fire detection/suppression in fuel tank dry bays, identified by Haddon-Cave Review (p. 8)."
+    },
+    {
+      "id": "inflight_fire",
+      "role": "contributing",
+      "evidence": "Fuel-saturated insulation in SCP muff reached auto-ignition temperature when contacting 400-degree-Celsius air duct (p. 6)."
+    },
+    {
+      "id": "metal_fatigue",
+      "role": "latent",
+      "evidence": "Aircraft aged, having been in service since 1969, first Nimrod to enter RAF service (p. 7)."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "latent",
+      "evidence": "Nimrod Safety Case failed to identify catastrophic fire risk despite hazard analysis requirements (p. 10)."
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Harrier GR7 pilot observed starboard wing exploding followed by fuselage explosion at 3,000 feet (p. 6)."
+    }
+  ],
+  "chain": [
+    [
+      "fuel_leak",
+      "inflight_fire"
+    ],
+    [
+      "design_deficiency",
+      "inflight_fire"
+    ],
+    [
+      "inflight_fire",
+      "structural_failure"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "09:13",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "RAF Nimrod XV230 took off from Deployed Operational Base in early morning with full crew of 12 plus two mission specialists."
+    },
+    {
+      "t": 7378,
+      "clock": "11:11:33",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Fuel escape during Air-to-Air Refueling from Tristar tanker; approximately 1.5 minutes after AAR completion."
+    },
+    {
+      "t": 7393,
+      "clock": "11:11:48",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Fire warning in bomb bay and smoke/hydraulic mist warning in elevator bay alert crew to emergency."
+    },
+    {
+      "t": 7453,
+      "clock": "11:12:26",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft depressurized."
+    },
+    {
+      "t": 7572,
+      "clock": "11:13:45",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Camera operator reported 'we have flames coming from the rear of the engines on the starboard side.'"
+    },
+    {
+      "t": 7637,
+      "clock": "11:14:10",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "atc",
+      "text": "Crew transmitted MAYDAY and diverted to Kandahar airfield; emergency descent initiated."
+    },
+    {
+      "t": 8214,
+      "clock": "11:16:54",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Harrier GR7 pilot observed Nimrod in descent with flames from starboard wing root and aft fuselage."
+    },
+    {
+      "t": 8366,
+      "clock": "11:17:39",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Harrier pilot reported aircraft explosion at approximately 3,000 feet above ground; wreckage struck ground near Chalaghor village."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "MOD",
+      "text": "Establish systematic airworthiness audit and independent safety advisor regime",
+      "status": "open"
+    },
+    {
+      "id": null,
+      "to": "MOD",
+      "text": "Implement proper Safety Case methodology per Defence Standard 00-56",
+      "status": "open"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "RAF implemented comprehensive review of Nimrod fleet airworthiness post-2006",
+    "MOD reformed safety case procedures for military aircraft",
+    "Enhanced focus on independent safety advisor oversight in aircraft modification programs"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/229037/1025.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q7373611",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/2006_Royal_Air_Force_Nimrod_crash",
+  "report_links": [
+    "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/229037/1025.pdf",
+    "https://news.bbc.co.uk/nol/shared/bsp/hi/pdfs/04_12_07nimrod.pdf",
+    "http://www.nimrod-review.org.uk/linkedfiles/nimrod_review/press_notice_3.pdf"
+  ],
+  "interest": 11.18,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Haddon-Cave Review (The Nimrod Review, 2009) analyzed loss of XV230",
+      "Board of Inquiry findings confirmed by AAIB and US Air Force Safety Center",
+      "No survivors; all 14 personnel killed in flight"
+    ]
+  }
+}
