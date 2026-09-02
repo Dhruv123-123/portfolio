@@ -1,0 +1,150 @@
+{
+  "id": "wd_q7191488",
+  "qid": "Q7191488",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Piedmont Airlines 22",
+  "flight_number": "PA22",
+  "date": "1967-07-19",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 727",
+    "manufacturer": "Boeing",
+    "family": "727",
+    "registration": null
+  },
+  "operator": "Piedmont Airlines",
+  "route": {
+    "from_name": "Asheville Regional Airport",
+    "to_name": "Washington, D.C."
+  },
+  "location": {
+    "name": "Hendersonville",
+    "country": "United States"
+  },
+  "phase": "climb",
+  "occupants": 82,
+  "fatalities": 82,
+  "category": "MAC",
+  "summary": "A Piedmont Airlines Boeing 727 collided with a Cessna 310 at 6,100 feet over Hendersonville, North Carolina. Both aircraft were operating under IFR on different frequencies in radio contact with the Asheville control tower. The 727 was still climbing when the collision occurred just aft of the 727's cockpit. Both aircraft were destroyed and all 82 aboard killed, including John T. McNaughton.",
+  "probable_cause": "The Cessna pilot's actions were the primary cause, with air traffic control procedures cited as a contributing factor.",
+  "factors": [
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "The aircraft were both operating under instrument flight rules and were in radio contact with the Asheville control tower, though on different frequencies"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "air traffic control procedures as a contributing factor"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "The Cessna pilot failed to maintain proper course separation"
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "the 727 was still climbing when it collided with the Cessna just aft of the 727's cockpit at an altitude of 6,100 ft, causing its disintegration"
+    }
+  ],
+  "chain": [
+    [
+      "atc_communication_error",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "midair_collision"
+    ],
+    [
+      "inappropriate_control_input",
+      "midair_collision"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "11:58",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "system",
+      "text": "Piedmont Flight 22 took off from Asheville Regional Airport Runway 16 for IFR flight to Roanoke, Virginia",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": "11:59:44",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "system",
+      "text": "Controller cleared Flight 22 to climb unrestricted to the VOR and report passing the VOR",
+      "factors": []
+    },
+    {
+      "t": 45,
+      "clock": "12:00",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "system",
+      "text": "Controller cleared Cessna N3121S for an approach to Runway 16 while 727 was still climbing",
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": "12:01",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The 727 collided with the Cessna just aft of the 727's cockpit at altitude of 6,100 ft, causing its disintegration; the 727 rolled onto its back and crashed vertically into Camp Pinewood",
+      "factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Both aircraft destroyed and all 82 people killed on impact",
+      "factors": [
+        "midair_collision"
+      ]
+    }
+  ],
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AJ.pdf",
+    "http://aviation-safety.net/database/record.php?id=19670719-0"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Piedmont_Airlines_Flight_22",
+  "asn_id": "19670719-0",
+  "interest": 14.68,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Report read from /home/user/portfolio/blackbox/cache/text/wd_q7191488.txt",
+      "2006 re-investigation raised questions about original NTSB findings but did not overturn them; primary responsibility remains with Cessna pilot per official 1968 investigation"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AJ.pdf"
+  ],
+  "recommendations": []
+}

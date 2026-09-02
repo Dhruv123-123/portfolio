@@ -1,0 +1,276 @@
+{
+  "id": "wd_q756253",
+  "qid": "Q756253",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Atlantic Southeast Airlines 529",
+  "flight_number": "ASA529",
+  "date": "1995-08-21",
+  "time_reference": "EDT",
+  "t0": "1995-08-21T12:43:25-04:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR96-06",
+      "report_title": "In-Flight Loss of Propeller Blade, Forced Landing, and Collision with Terrain, Atlantic Southeast Airlines Flight 529",
+      "report_date": "1996-11-26"
+    }
+  ],
+  "aircraft": {
+    "type": "Embraer EMB 120RT Brasilia",
+    "manufacturer": "Embraer",
+    "family": "120",
+    "registration": "N256AS",
+    "msn": "120122"
+  },
+  "operator": "Atlantic Southeast Airlines",
+  "route": {
+    "from_name": "Hartsfield-Jackson Atlanta International Airport",
+    "from": "ATL",
+    "to_name": "Gulfport-Biloxi International Airport",
+    "to": "GPT"
+  },
+  "location": {
+    "name": "Carrollton",
+    "country": "United States",
+    "lat": 33.5803,
+    "lon": -85.2138
+  },
+  "phase": "climb",
+  "occupants": 29,
+  "fatalities": 8,
+  "injuries_serious": 13,
+  "injuries_minor": 8,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Atlantic Southeast Airlines Flight 529, an Embraer EMB 120 Brasilia, experienced loss of a propeller blade from the left engine while climbing through 18,100 feet near Carrollton, Georgia. The separation resulted in severe asymmetry and excessive drag, forcing the crew to attempt emergency landing. The aircraft crashed before reaching the airport, killing 8 aboard and leading to 13 serious injuries.",
+  "probable_cause": "The in-flight fatigue fracture and separation of a propeller blade resulted in distortion of the left engine nacelle, causing excessive drag, loss of wing lift, and reduced directional control. The fracture was caused by a fatigue crack from multiple corrosion pits that were not discovered by Hamilton Standard due to inadequate and ineffective corporate inspection and repair techniques, training, documentation, and communications.",
+  "factors": [
+    {
+      "id": "metal_fatigue",
+      "role": "initiating",
+      "evidence": "Propeller blade had undiscovered metal fatigue resulting from corrosion pits in the taper bore surface (p. 76)"
+    },
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "Blade was incorrectly refurbished using unapproved extension of PS960A repair procedure at Hamilton Standard facility (p. 76-77)"
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "Failure to require recurrent on-wing ultrasonic inspections for affected propellers; borescope inspection procedure was inadequate (p. 77)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft pitched over into an uncommanded dive after losing left engine power and directional control (p. 3)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Impact with terrain destroyed the aircraft; force ripped off left wing and split fuselage in half (p. 5)"
+    }
+  ],
+  "chain": [
+    [
+      "metal_fatigue",
+      "maintenance_error"
+    ],
+    [
+      "maintenance_error",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "structural_failure"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "12:23",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 529 took off from Atlanta at 12:23 EDT and climbed normally.",
+      "factors": []
+    },
+    {
+      "t": 1220,
+      "clock": "12:43:25",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "While climbing through 18,100 feet at 160 knots, the outboard section of one blade from the left engine propeller separated with several thuds.",
+      "state": {
+        "alt": 18100,
+        "ias": 160
+      },
+      "factors": [
+        "metal_fatigue"
+      ]
+    },
+    {
+      "t": 1226,
+      "clock": "12:43:51",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft rolled left and pitched down; descent rate progressed to 5,500 feet per minute.",
+      "factors": []
+    },
+    {
+      "t": 1283,
+      "clock": "12:44:26",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "First officer declared emergency: 'we've had an engine failure'",
+      "factors": []
+    },
+    {
+      "t": 1330,
+      "clock": "12:45:00",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight crew initially attempted return to Atlanta but were vectors to West Georgia Regional Airport due to inability to maintain altitude.",
+      "factors": []
+    },
+    {
+      "t": 1620,
+      "clock": "12:50:00",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew began searching for emergency landing site in field near Carrollton.",
+      "factors": []
+    },
+    {
+      "t": 1680,
+      "clock": "12:51:47",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Last radio transmission received from flight: 'zero four zero ASE 529'",
+      "factors": []
+    },
+    {
+      "t": 1765,
+      "clock": "12:52:45",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft pitched over into an uncommanded dive, struck trees, and crashed nose-first into the ground.",
+      "factors": [
+        "loss_of_control_inflight",
+        "structural_failure"
+      ]
+    }
+  ],
+  "cvr": [
+    {
+      "t": 1226,
+      "clock": "12:43:51",
+      "speaker": "CAPT",
+      "text": "I can't hold this thing"
+    },
+    {
+      "t": 1243,
+      "clock": "12:43:51",
+      "speaker": "CAPT",
+      "text": "help me hold it"
+    },
+    {
+      "t": 1283,
+      "clock": "12:44:26",
+      "speaker": "F/O",
+      "text": "Atlanta center. AC five twenty nine, declaring an emergency. we've had an engine failure."
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-96-142",
+      "to": "FAA",
+      "text": "Require Hamilton Standard to review and evaluate the adequacy of its tools, training, and procedures for performing propeller blend repairs",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-143",
+      "to": "FAA",
+      "text": "Review the need to require inspection ('buy back') after completion of work performed by uncertificated mechanics at Part 145 repair stations",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-144",
+      "to": "FAA",
+      "text": "Revise Advisory Circular 20-66 to include vibratory testing of composite propeller blades and provide guidelines for rpm margin between natural frequencies and excitation frequencies",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-145",
+      "to": "FAA",
+      "text": "Require Hamilton Standard to consider long-term atmospheric-induced corrosion effects and amend CMM inspection procedure for taper bore corrosion detection",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-146",
+      "to": "FAA",
+      "text": "Require Hamilton Standard to review and revise policies regarding internal communication, documentation of engineering decisions, and FAA involvement",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-147",
+      "to": "FAA",
+      "text": "Include article in Air Traffic Bulletin regarding necessity of notifying crash, fire and rescue personnel upon pilot's request for emergency assistance",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-148",
+      "to": "FAA",
+      "text": "Amend Advisory Circular 120-51B (Crew Resource Management Training) to include guidance on communication of time management information among flight and cabin crewmembers during emergency",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-149",
+      "to": "FAA",
+      "text": "Evaluate necessary functions of aircraft crash ax and provide technical standard order or specification for such tools",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Hamilton Standard revised propeller maintenance procedures and inspection requirements",
+    "FAA implemented new propeller inspection and maintenance directives"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9606.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Atlantic_Southeast_Airlines_Flight_529",
+  "asn_id": "19950821-0",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9606.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR96-06.pdf",
+    "https://data.ntsb.gov/Docket?ProjectID=10997"
+  ],
+  "interest": 12.74,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Executive Summary, History of Flight (pages 1-11), Findings (pages 75-78), Probable Cause (pages 79), Recommendations (pages 80-81), CVR Transcript excerpt (pages 84-96)",
+      "8 events extracted with clock times from report",
+      "3 CVR lines extracted from transcript"
+    ]
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "id": "wd_q6475222",
+  "title": "Lake Central 527",
+  "flight_number": "527",
+  "date": "1967-03-05",
+  "time_reference": "EST",
+  "t0": "1967-03-05T20:06:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "AAR-68-AC",
+      "report_title": "Lake Central Airlines, Inc. Allison Prop-Jet Convair 340",
+      "report_date": "1968-02-26",
+      "url": "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AC.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Allison Prop-Jet Convair 340",
+    "family": "Convair",
+    "manufacturer": "Convair",
+    "registration": "N73130"
+  },
+  "operator": "Lake Central Airlines",
+  "route": {
+    "from": "KCMH",
+    "from_name": "Columbus",
+    "to": "KTOL",
+    "to_name": "Toledo"
+  },
+  "location": {
+    "name": "Marseilles, Ohio",
+    "country": "United States",
+    "lat": 40.69,
+    "lon": -83.366
+  },
+  "phase": "descent",
+  "occupants": 38,
+  "fatalities": 38,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Convair 340 crashed during descent when right propeller separated due to failed unnitrided torque piston, causing propeller overspeed, blade separation that penetrated fuselage and severed control cables, resulting in loss of control.",
+  "probable_cause": "Failure of the right propeller due to omission of the torque piston nitriding process during manufacture, and the failure of manufacturing quality control to detect the omission.",
+  "factors": [
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "Torque piston was not nitrided for surface hardening during manufacture and omission was not detected by inspection (p. 31-32)"
+    },
+    {
+      "id": "engine_failure",
+      "role": "contributing",
+      "evidence": "Right propeller separated in flight when torque piston failed causing propeller overspeed (p. 31)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "contributing",
+      "evidence": "Propeller blade penetrated fuselage, destroying structural integrity and severing control cables (p. 31)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft crashed in farm field near Marseilles due to loss of control from structural damage (p. 32)"
+    }
+  ],
+  "chain": [
+    [
+      "maintenance_error",
+      "engine_failure"
+    ],
+    [
+      "engine_failure",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "19:52",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "crew_action",
+      "text": "Flight 527 departed Columbus at 19:52 EST bound for Toledo",
+      "factors": []
+    },
+    {
+      "t": 780,
+      "clock": "20:05",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight was cleared by ATC to descend from 10,000 feet as it approached Toledo",
+      "factors": []
+    },
+    {
+      "t": 840,
+      "clock": "20:06",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Crew acknowledged leaving 10,000 feet, last transmission received",
+      "factors": []
+    },
+    {
+      "t": 900,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Right propeller separated during flight when torque piston failed",
+      "state": {
+        "alt": null
+      },
+      "factors": [
+        "engine_failure",
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 960,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed on farm near Marseilles, Ohio",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AC.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q6475222",
+  "asn_id": "19670305-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lake_Central_Airlines_Flight_527",
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AC.pdf"
+  ],
+  "interest": 13.07,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Findings and Probable Cause sections read",
+      "Early NTSB report from 1968; key sections sufficient for sections-depth extraction"
+    ]
+  }
+}

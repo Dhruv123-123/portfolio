@@ -1,0 +1,172 @@
+{
+  "id": "wd_q7116475",
+  "qid": "Q7116475",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Ozark Air Lines 809",
+  "flight_number": "809",
+  "date": "1973-07-23",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Fairchild-Hiller FH-227",
+    "manufacturer": "Fairchild-Hiller",
+    "family": "FH-227",
+    "registration": "N4215"
+  },
+  "operator": "Ozark Air Lines",
+  "route": {
+    "from_name": "Nashville International",
+    "to_name": "St. Louis International"
+  },
+  "location": {
+    "name": "Normandy",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 44,
+  "fatalities": 38,
+  "category": "CFIT",
+  "summary": "Ozark Flight 809 on approach to St. Louis encountered severe thunderstorm activity with downdrafts near the airport at 1742. The aircraft descended below the glide slope and crashed in a wooded ravine 2 miles short of the runway. Witnesses reported the aircraft ascending to 400-500 feet then rapidly descending to 200 feet before striking trees. The severe downdraft associated with the thunderstorm, combined with the crew's decision to continue the approach into the known storm, resulted in the crash.",
+  "probable_cause": "Severe downdraft encountered on approach combined with the captain's decision to continue into a known severe storm area. Contributing factors included lack of timely warning about storm severity from weather service and improper storm assessment by dispatcher.",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "contributing",
+      "evidence": "Thunderstorm cells were reported passing south of the runway directly in Flight 809's path; controller reported heavy rain and severe conditions at time of crash"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Visibility in the area was reported as hazy; witnesses reported heavy rain at time of accident"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "Aircraft descended below the glide slope and crashed short of runway"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck the ground in trees 2 miles short of runway in wooded ravine"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "contributing",
+      "evidence": "Captain reported seeing fire after impact; aircraft broke into several pieces"
+    }
+  ],
+  "chain": [
+    [
+      "convective_weather",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": -600,
+      "clock": "17:05",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight departed Marion, Illinois at 1705 bound for St. Louis; weather appeared threatening",
+      "factors": []
+    },
+    {
+      "t": -120,
+      "clock": "17:26",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight arrived vicinity of St. Louis at 1726 with hazy visibility; reported inoperative fuel pump to maintenance",
+      "factors": []
+    },
+    {
+      "t": -60,
+      "clock": "17:32",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight entered area of thunderstorm cells; pilot announced approaching turbulence to passengers",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": -30,
+      "clock": "17:42",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller reported thunderstorms passing south of runway directly in Flight 809's path; this was last transmission to aircraft",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Aircraft encountered severe downdraft and ascended to 400-500 feet then rapidly descended to 200 feet",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Aircraft struck by lightning while maneuvering",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft crashed into trees in wooded ravine in high nose-up attitude",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7405.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR74-05.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Ozark_Air_Lines_Flight_809",
+  "asn_id": "19730723-1",
+  "interest": 13.13,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report read from /home/user/portfolio/blackbox/cache/text/wd_q7116475.txt"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7405.pdf"
+  ],
+  "recommendations": []
+}

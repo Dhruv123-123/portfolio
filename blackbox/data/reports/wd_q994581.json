@@ -1,0 +1,161 @@
+{
+  "id": "wd_q994581",
+  "qid": "Q994581",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Japan Air Lines 350",
+  "flight_number": "JL350",
+  "date": "1982-02-09",
+  "agency": "JTSB",
+  "agencies": [
+    {
+      "code": "JTSB",
+      "name": "Japan Transport Safety Board",
+      "country": "Japan",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-8-61",
+    "manufacturer": "McDonnell Douglas",
+    "family": "8",
+    "registration": "JA8061"
+  },
+  "operator": "Japan Airlines",
+  "route": {
+    "from_name": "Fukuoka",
+    "to_name": "Tokyo"
+  },
+  "location": {
+    "name": "Tokyo Bay",
+    "country": "Japan"
+  },
+  "phase": "approach",
+  "occupants": 174,
+  "fatalities": 24,
+  "category": "LOC-I",
+  "summary": "Japan Air Lines Flight 350, a Douglas DC-8 on final approach to Tokyo, crashed into Tokyo Bay on 9 February 1982, killing 24 of the 174 occupants. The investigation determined the crash resulted from deliberate actions by Captain Katagiri, who disengaged the autopilot and pushed the aircraft into descent at 164 feet altitude despite efforts by the first officer and flight engineer to regain control. Investigators attributed the incident to auditory hallucinations experienced by Katagiri and the absence of proper medical examinations despite his known psychiatric condition.",
+  "probable_cause": "The accident resulted from deliberate actions of the captain experiencing auditory hallucinations, combined with the failure of medical screening and oversight that allowed him to operate the aircraft despite his mental condition.",
+  "factors": [
+    {
+      "id": "deliberate_act",
+      "role": "initiating",
+      "evidence": "Captain Katagiri disengaged the autopilot, pushed the yoke forward, and pulled the throttle to idle while engaging the thrust-reversers on the inboard engines."
+    },
+    {
+      "id": "pilot_incapacitation",
+      "role": "initiating",
+      "evidence": "Katagiri experienced auditory hallucinations during the flight and exhibited abnormal mental state."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "First Officer Ishikawa noticed Katagiri's actions and countered by pulling back the yoke on the co-pilot's side to regain control."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Despite their efforts, the DC-8's descent could not be fully arrested."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft crashed into shallow water 510 meters short of runway 33R."
+    }
+  ],
+  "chain": [
+    [
+      "pilot_incapacitation",
+      "deliberate_act"
+    ],
+    [
+      "deliberate_act",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "08:19",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 350 began descent on approach to Haneda Airport at 08:19",
+      "factors": []
+    },
+    {
+      "t": 1500,
+      "clock": "08:44",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "At 08:44, at 164 feet altitude and 130 knots, Katagiri disengaged the autopilot and pushed the yoke forward",
+      "factors": [
+        "deliberate_act",
+        "pilot_incapacitation"
+      ]
+    },
+    {
+      "t": 1505,
+      "clock": "08:44",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First Officer Ishikawa countered by pulling back the yoke on the co-pilot's side",
+      "factors": [
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 1510,
+      "clock": "08:44",
+      "phase": "approach",
+      "actor": "FE",
+      "kind": "crew_action",
+      "text": "Flight engineer Ozaki stood up from his seat and attempted to return the thrust reversers to the idle position while physically restraining Katagiri",
+      "factors": [
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 1520,
+      "clock": "08:44",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The aircraft crashed within seconds into shallow water 510 meters short of runway 33R",
+      "factors": [
+        "cfit",
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://jtsb.mlit.go.jp/aircraft/download/58-3-JA8061-01.pdf",
+    "https://www.nytimes.com/1982/02/14/world/cockpit-fight-reported-on-jet-that-crashed-in-tokyo.html",
+    "https://aviation-safety.net/wikibase/327929",
+    "https://jtsb.mlit.go.jp/aircraft/download/58-3-JA8061-02.pdf",
+    "http://jtsb.mlit.go.jp/jtsb/aircraft/download/bunkatsu.html#6"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Japan_Air_Lines_Flight_350",
+  "asn_id": "19820209-0",
+  "interest": 14.44,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report read from /home/user/portfolio/blackbox/cache/text/wd_q994581.txt"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "https://jtsb.mlit.go.jp/aircraft/download/58-3-JA8061-01.pdf"
+  ],
+  "recommendations": []
+}

@@ -1,0 +1,248 @@
+{
+  "id": "wd_q12257020",
+  "title": "National Airlines 102",
+  "flight_number": "102",
+  "date": "2013-04-29",
+  "time_reference": "local",
+  "t0": "2013-04-29T15:27:00+0430",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "AAR-15-01",
+      "report_title": "Steep Climb and Uncontrolled Descent During Takeoff",
+      "report_date": "2015-07-14",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1501.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 747-400BCF",
+    "family": "747",
+    "manufacturer": "Boeing",
+    "registration": "N949CA"
+  },
+  "operator": "National Air Cargo, Inc.",
+  "route": {
+    "from": "OAIX",
+    "from_name": "Camp Shorabak (Camp Bastion), Afghanistan",
+    "to": "OMDB",
+    "to_name": "Dubai"
+  },
+  "location": {
+    "name": "Bagram Air Base",
+    "country": "Afghanistan",
+    "lat": 34.798,
+    "lon": 69.265
+  },
+  "phase": "takeoff",
+  "occupants": 7,
+  "fatalities": 7,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Boeing 747 cargo flight crashed shortly after takeoff when improperly secured heavy vehicles shifted aft during climb, damaging hydraulic systems and the horizontal stabilizer, causing pitch-up, stall, and impact.",
+  "probable_cause": "National Airlines' inadequate procedures for restraining special cargo loads resulted in the loadmaster's improper restraint of the cargo, which moved aft and damaged hydraulic systems Nos. 1 and 2 and horizontal stabilizer drive mechanism components, rendering the airplane uncontrollable.",
+  "factors": [
+    {
+      "id": "weight_and_balance_error",
+      "role": "contributing",
+      "evidence": "Aircraft was loaded with more heavy vehicles than could safely be secured per aircraft limitations (p. 51)"
+    },
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "National Airlines' inadequate procedures for restraining special cargo loads and loadmaster's improper restraint of cargo (p. 61)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "contributing",
+      "evidence": "Cargo shift damaged hydraulic systems Nos. 1 and 2 and horizontal stabilizer mechanism (p. 61)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Damage rendered airplane uncontrollable resulting in pitch-up rotation, stall, and crash (p. 62)"
+    }
+  ],
+  "chain": [
+    [
+      "weight_and_balance_error",
+      "maintenance_error"
+    ],
+    [
+      "maintenance_error",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "15:27",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "crew_action",
+      "text": "Flight 102 took off from Bagram runway 03 with five armored vehicles",
+      "factors": []
+    },
+    {
+      "t": 52,
+      "clock": "15:27:52",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Rotate",
+      "factors": []
+    },
+    {
+      "t": 58,
+      "clock": "15:27:58",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Positive climb",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": "15:28:00",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Gear up",
+      "factors": []
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "While climbing through 1,200 ft, aircraft nose rose sharply indicating pitch-up",
+      "state": {
+        "alt": 1200
+      },
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 150,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft stalled, banked right, entered rapid descent",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck ground 590 ft northeast of runway 3 departure end and exploded",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-15-13",
+      "to": "FAA",
+      "text": "Revise guidance in AC 120-85 to specify operators should seek FAA-approved data for special cargo restraint",
+      "status": "unknown",
+      "trigger_factors": [
+        "maintenance_error"
+      ]
+    },
+    {
+      "id": "A-15-14",
+      "to": "FAA",
+      "text": "Create certification for cargo loading personnel with procedures, training, and duty hour requirements",
+      "status": "unknown",
+      "trigger_factors": [
+        "maintenance_error"
+      ]
+    },
+    {
+      "id": "A-15-15",
+      "to": "FAA",
+      "text": "Add special emphasis item for inspectors to review cargo procedures and restraint methods",
+      "status": "unknown",
+      "trigger_factors": [
+        "maintenance_error"
+      ]
+    },
+    {
+      "id": "A-15-16",
+      "to": "FAA",
+      "text": "Include guidance defining inspector responsibilities for oversight of special cargo loads",
+      "status": "unknown",
+      "trigger_factors": [
+        "maintenance_error"
+      ]
+    },
+    {
+      "id": "A-15-17",
+      "to": "FAA",
+      "text": "Provide training for inspectors on cargo procedures and special cargo restraint",
+      "status": "unknown",
+      "trigger_factors": [
+        "maintenance_error"
+      ]
+    },
+    {
+      "id": "A-15-18",
+      "to": "FAA",
+      "text": "Implement risk-reduction methods when required surveillance items are deferred",
+      "status": "unknown",
+      "trigger_factors": [
+        "maintenance_error"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1501.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q12257020",
+  "asn_id": "20130429-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/National_Airlines_Flight_102",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1501.pdf",
+    "https://data.ntsb.gov/Docket/Document/docBLOB?ID=40422061&FileExtension=.PDF&FileName=Operations%20-%20Attachment%202%20-%20Crew%20Information-Redacted.PDF",
+    "https://www.ntsb.gov/news/2013/130430.html",
+    "https://www.ntsb.gov/news/press-releases/Pages/20150714b.aspx",
+    "https://data.ntsb.gov/Docket?ProjectID=86758"
+  ],
+  "interest": 13.08,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "History of Flight section read",
+      "Conclusions, Findings, and Probable Cause sections read",
+      "Recommendations section read",
+      "Key sections sufficient for sections-depth extraction"
+    ]
+  }
+}
