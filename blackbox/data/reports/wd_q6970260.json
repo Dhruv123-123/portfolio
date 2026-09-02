@@ -1,0 +1,294 @@
+{
+  "id": "wd_q6970260",
+  "title": "National Airlines 193",
+  "flight_number": "NAL193",
+  "date": "1978-05-08",
+  "time_reference": "CDT",
+  "t0": "1978-05-09T02:20:33Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-78-13",
+      "report_title": "Aircraft Accident Report: National Airlines, Inc., Boeing 727-235, N4744, Escambia Bay, near Pensacola, Florida, May 8, 1978",
+      "report_date": "1978-11-09",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7813.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 727-235",
+    "family": "727",
+    "manufacturer": "Boeing",
+    "registration": "N4744",
+    "msn": null,
+    "engines": null
+  },
+  "operator": "National Airlines",
+  "route": {
+    "from": null,
+    "from_name": "Miami",
+    "to": null,
+    "to_name": "Pensacola"
+  },
+  "location": {
+    "name": "Escambia Bay, 3 nautical miles from runway 25",
+    "country": "United States",
+    "lat": 30.4856,
+    "lon": -87.1175
+  },
+  "phase": "approach",
+  "occupants": 58,
+  "fatalities": 3,
+  "injuries_serious": 11,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "National Airlines Flight 193, a Boeing 727 descending to Pensacola Regional Airport at night in low visibility, impacted Escambia Bay during a non-precision approach after the crew failed to monitor descent and altitude. The first officer misread his altimeter and failed to provide required altitude callouts, while the aircraft descended below minimums undetected.",
+  "probable_cause": "The National Transportation Safety Board determines that the probable cause of this accident was the flightcrew's unprofessionally conducted nonprecision instrument approach, in that the captain and the crew failed to monitor the descent rate and altitude, and the first officer failed to provide the captain with required altitude and approach performance callouts. The crew failed to check and utilize all instruments available for altitude awareness, turned off the ground proximity warning system, and failed to configure the aircraft properly and in a timely manner for the approach. Contributing to the accident was the radar controller's failure to provide advance notice of the start-descent point which accelerated the pace of the crew's cockpit activities after the passage of the final approach fix.",
+  "factors": [
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted Escambia Bay at approximately 50 feet indicated altitude during approach to runway 25 (p. 7)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Accident occurred at night in low visibility from fog; measured ceiling 400 feet overcast, surface visibility 4 miles in fog and haze (p. 5)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "initiating",
+      "evidence": "The first officer neglected to make altitude and approach fix call outs and failed to detect they passed through minimum descent altitude; captain did not monitor descent rate and altitude; neither pilot monitored IVSI readings during extended periods (p. 36, 40)"
+    },
+    {
+      "id": "altimeter_setting_error",
+      "role": "initiating",
+      "evidence": "First officer either misread altimeter as 1500 ft when actual altitude was 500 ft, or did not perceive what he saw until aircraft was at 100 feet; first officer claimed he thought altimeter read 1100 ft at 100 feet actual (p. 31-32)"
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "Radar controller misjudged aircraft distance and turned it to final at 4.5 nmi instead of recommended 8 nmi, creating situation impossible for captain to configure aircraft per flight manual; controller failed to provide advance notice of start-descent point (p. 5, 27-28)"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Each person chose not to ask for or offer additional assistance or warnings; no challenge-and-response occurred; first officer's failure to provide altitude callouts contributed in part to captain's failure to monitor descent (p. 28)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Captain failed to lower landing gear immediately after lowering flaps, delaying gear extension by 27 seconds; first officer did not make required 1000-ft callout; first officer's attention directed outside cockpit during critical portions of descent; landing flaps never extended to 30 degrees (p. 28, 31, 35)"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "Aircraft descended below minimum descent altitude of 480 feet undetected; captain could not recall observing any altitude readings during descent below 500 feet (p. 33)"
+    },
+    {
+      "id": "gpws_warning_response",
+      "role": "contributing",
+      "evidence": "Flight engineer inhibited GPWS at 2120:15; pilots believed problem was solved when captain raised nose and reduced descent rate, misleading them into continuing descent (p. 34-35)"
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "After descending below 1300 feet, captain unable to establish stable descent profile; nonstandard approach configuration with landing gear extended at 940 feet and landing flaps not extended beyond 25 degrees caused added difficulties (p. 35)"
+    }
+  ],
+  "chain": [
+    ["low_visibility", "inadequate_monitoring"],
+    ["low_visibility", "altimeter_setting_error"],
+    ["atc_communication_error", "procedural_noncompliance"],
+    ["crm_breakdown", "inadequate_monitoring"],
+    ["inadequate_monitoring", "descent_below_minimums"],
+    ["altimeter_setting_error", "descent_below_minimums"],
+    ["descent_below_minimums", "cfit"],
+    ["gpws_warning_response", "cfit"],
+    ["atc_communication_error", "unstable_approach"],
+    ["procedural_noncompliance", "unstable_approach"],
+    ["unstable_approach", "cfit"]
+  ],
+  "events": [
+    {
+      "t": -1450,
+      "clock": "2102",
+      "phase": "climb",
+      "actor": "CAPT",
+      "text": "National 193 departs Mobile on IFR flight plan to Pensacola with 52 passengers and crew of 6",
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": -900,
+      "clock": "2109:20",
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "National 193 establishes radio communications with Pensacola radar controller; cleared for ASR approach to runway 25",
+      "factors": [],
+      "kind": "atc"
+    },
+    {
+      "t": -750,
+      "clock": "2113:39",
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Vectored to descend and maintain 1700 ft; controller tells crew Twin Beech on ASR approach broke out at 450 feet",
+      "state": {"alt": 1700},
+      "factors": ["atc_communication_error"],
+      "kind": "atc"
+    },
+    {
+      "t": -400,
+      "clock": "2119:01",
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "National 193 cleared to descend to 1500 ft",
+      "state": {"alt": 1500},
+      "factors": [],
+      "kind": "atc"
+    },
+    {
+      "t": -240,
+      "clock": "2119:20",
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Told 5.5 miles from runway, continue to minimum descent altitude",
+      "factors": [],
+      "kind": "atc"
+    },
+    {
+      "t": -130,
+      "clock": "2119:49",
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Flaps extended to 25 degrees",
+      "state": {"alt": 940, "flaps": 25},
+      "factors": ["procedural_noncompliance"],
+      "kind": "crew_action"
+    },
+    {
+      "t": -60,
+      "clock": "2119:54",
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Told 4 miles from runway; Eastern 117 has executed missed approach",
+      "factors": [],
+      "kind": "atc"
+    },
+    {
+      "t": -40,
+      "clock": "2119:56",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Landing gear warning horn sounds; captain calls for landing gear",
+      "state": {"alt": 940},
+      "factors": [],
+      "kind": "warning"
+    },
+    {
+      "t": -22,
+      "clock": "2120:11",
+      "phase": "approach",
+      "actor": "FO",
+      "text": "First officer responds to checklist: landing gear down, three green",
+      "state": {"alt": 680, "gear": 1},
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": -18,
+      "clock": "2120:15",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Ground proximity warning system whooper sounds; pull up voice warning begins",
+      "state": {"alt": 500},
+      "factors": ["gpws_warning_response"],
+      "kind": "warning"
+    },
+    {
+      "t": -8,
+      "clock": "2120:25",
+      "phase": "approach",
+      "actor": "FE",
+      "text": "Flight engineer inhibits GPWS; captain raises nose and reduces descent rate; pilots believe problem is solved",
+      "state": {"alt": 300, "pitch": 3},
+      "factors": ["gpws_warning_response"],
+      "kind": "crew_action"
+    },
+    {
+      "t": -2,
+      "clock": "2120:31",
+      "phase": "approach",
+      "actor": "FO",
+      "text": "First officer says: \"...we're down to fifty feet\"",
+      "state": {"alt": 50},
+      "factors": ["inadequate_monitoring", "altimeter_setting_error"],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 0,
+      "clock": "2120:33",
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Aircraft impacts Escambia Bay in approximately 12 feet of water; 3 passengers drowned attempting to exit",
+      "state": {"alt": 0},
+      "factors": ["cfit"],
+      "kind": "outcome"
+    }
+  ],
+  "cvr": [
+    {
+      "t": -400,
+      "clock": "2119:01",
+      "speaker": "FO",
+      "text": "Descent rate's keeping it up"
+    },
+    {
+      "t": -8,
+      "clock": "2120:25",
+      "speaker": "CAPT",
+      "text": "Did you (get) your thing"
+    },
+    {
+      "t": -2,
+      "clock": "2120:31",
+      "speaker": "FO",
+      "text": "...we're down to fifty feet"
+    }
+  ],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7813.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q6970260",
+  "asn_id": "19780508-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/National_Airlines_Flight_193",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7813.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR78-13.pdf"
+  ],
+  "interest": 10.57,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read synopsis, factual information/history of flight, findings, probable cause, and analysis sections",
+      "Report from 1978 does not contain numbered recommendations section; probable cause and findings sections form the basis of the record",
+      "First officer's altitude callout at 2120:31 appears to be misreading; report indicates FO misread altimeter showing 50 feet actual as 1500 feet or similar",
+      "GPWS inhibit by flight engineer occurred at time of captain raising nose, creating false sense of problem resolution"
+    ]
+  }
+}
