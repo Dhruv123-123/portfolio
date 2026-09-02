@@ -31,6 +31,34 @@ def tokens(s):
     return {t for t in re.findall(r"[a-z0-9]+", (s or "").lower()) if len(t) > 2 and t not in {"flight", "air", "airlines", "airline", "airways", "the", "and"}}
 
 
+TAX = json.loads((ROOT / "data" / "taxonomy.json").read_text())
+FACTOR_TERMS = {f["id"]: {t.lower() for t in [f.get("name", ""), f["id"].replace("_", " ")] + list(f.get("synonyms", []))} for f in TAX["factors"]}
+
+
+def strip_unsupported_factors(rec, src):
+    """Records built from little or no text keep only factors the Wikidata label/description/text names.
+
+    Workers were told to always emit an outcome factor, which produced hundreds of
+    unevidenced loss_of_control_inflight tags on text-free items; those would pollute
+    factor queries, so they are dropped here."""
+    text = src.get("text") or ""
+    if not (rec.get("text_mismatch") is True or len(text) < 200):
+        return rec
+    hay = " ".join(str(src.get(k) or "") for k in ("label", "description", "text")).lower()
+    keep = []
+    for f in rec.get("factors", []):
+        terms = FACTOR_TERMS.get(f.get("id"), set())
+        if any(t and t in hay for t in terms):
+            keep.append(f)
+    kept = {f["id"] for f in keep}
+    rec["factors"] = keep
+    rec["chain"] = [e for e in rec.get("chain", []) if isinstance(e, (list, tuple)) and len(e) == 2 and e[0] in kept and e[1] in kept]
+    for ev in rec.get("events", []):
+        if isinstance(ev, dict) and ev.get("factors"):
+            ev["factors"] = [x for x in ev["factors"] if x in kept]
+    return rec
+
+
 def main():
     curated = [json.loads(p.read_text()) for p in REPORTS.glob("*.json")]
     by_date = {}
@@ -62,6 +90,7 @@ def main():
             if re.match(r"^Q\d+$", rec.get("operator") or ""):
                 rec["operator"] = "unknown"
             rec["operator"] = re.sub(r"\bQ\d+\b", "", rec.get("operator") or "").strip() or "unknown"
+            rec = strip_unsupported_factors(rec, src)
             rows[rec["id"]] = rec
     linked = 0
     for rec in rows.values():
