@@ -1,0 +1,234 @@
+{
+  "id": "wd_q131425516",
+  "qid": "Q131425516",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Aloha IslandAir 1712",
+  "date": "1989-10-28",
+  "time_reference": "HST",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR90-05",
+      "report_date": "1990-09-25"
+    }
+  ],
+  "aircraft": {
+    "type": "de Havilland Canada DHC-6 Twin Otter 300",
+    "family": "DHC-6",
+    "manufacturer": "de Havilland",
+    "registration": "N707PV"
+  },
+  "operator": "Aloha IslandAir",
+  "route": {
+    "from_name": "Hana",
+    "to_name": "Kaunakakai"
+  },
+  "location": {
+    "name": "H\u0101lawa Valley",
+    "country": "United States"
+  },
+  "phase": "cruise",
+  "occupants": 20,
+  "fatalities": 20,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Aloha IslandAir Flight 1712 crashed on October 28, 1989 while operating under VFR at night into instrument meteorological conditions. The captain continued VFR flight in darkness and orographic clouds obscuring mountainous terrain, resulting in controlled flight into terrain near H\u0101lawa Valley on Moloka\u02bbi.",
+  "probable_cause": "The captain's decision to continue VFR flight at night into instrument meteorological conditions which obscured rising mountainous terrain. Contributing factors included inadequate supervision of personnel, training and operations by Aloha IslandAir management and insufficient FAA oversight during rapid expansion.",
+  "factors": [
+    {
+      "id": "fatigue",
+      "role": "latent",
+      "evidence": "Captain had been accepted into Aloha Airlines and completed intensive B-737 ground school for two weeks prior, sleeping only 4-5 hours nightly (p. 23-24)."
+    },
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Orographic clouds and weather forecast failed to warn of low cloud conditions along intended route (p. 20-21)."
+    },
+    {
+      "id": "dark_night",
+      "role": "latent",
+      "evidence": "Sunset at 1753; flight departed at 1825 in darkness; civil twilight ended at 1816 (p. 8)."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "First officer lacked experience and could not influence captain's decisions; minimal CRM training at airline (p. 23)."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "contributing",
+      "evidence": "Inadequate FAA surveillance of Part 135 operator; undetected training deficiencies and ground school hour reductions (p. 30)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck mountainous terrain at approximately 600 feet altitude (p. 8)."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Aircraft descended to 500 feet during night flight, violating 14 CFR Part 135 minimum altitude requirements for night operations within 5 miles of land (p. 8, 22)."
+    }
+  ],
+  "chain": [
+    [
+      "fatigue",
+      "dark_night"
+    ],
+    [
+      "low_visibility",
+      "cfit"
+    ],
+    [
+      "dark_night",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": -900,
+      "clock": "17:53",
+      "phase": "ground",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Sunset at Kahului; official sunset; civil twilight ends at 1816; nautical twilight until 1842"
+    },
+    {
+      "t": 0,
+      "clock": "18:25",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Depart Kahului Airport on VFR flight plan; aircraft climbs to 1,000 feet; first officer remarks intended route looks quite dark"
+    },
+    {
+      "t": 90,
+      "clock": "18:26:52",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft airborne and climbing through 400 feet; radar contact established"
+    },
+    {
+      "t": 180,
+      "clock": "18:27:27",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft levels off at 1,000 feet mean sea level"
+    },
+    {
+      "t": 480,
+      "clock": "18:32:34",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft descends from 1,000 to 500 feet; does not comply with Part 135 night altitude requirements",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 540,
+      "clock": "18:33:13",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft levels at 500 feet; about 16 miles northwest of Kahului; clear of ARSA; radar contact lost; instructed to squawk 1200 code"
+    },
+    {
+      "t": 645,
+      "clock": "18:35:30",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft encounters orographic clouds and instrument meteorological conditions with low visibility"
+    },
+    {
+      "t": 720,
+      "clock": "18:37",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft strikes mountainous terrain near H\u0101lawa Valley at approximately 600 feet altitude; aircraft destroyed on impact",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-90-135",
+      "to": "FAA",
+      "text": "Require scheduled Part 135 operators develop and use CRM programs."
+    },
+    {
+      "id": "A-90-136",
+      "to": "FAA",
+      "text": "Perform special study of FSDO staffing adequacy."
+    },
+    {
+      "id": "A-90-137",
+      "to": "FAA",
+      "text": "Require Part 135 operations under IFR during darkness or low visibility/ceiling conditions."
+    },
+    {
+      "id": "A-90-138",
+      "to": "FAA",
+      "text": "Establish procedures to incorporate FAA and military radar in Hawaiian Islands."
+    },
+    {
+      "id": "A-90-141",
+      "to": "FAA",
+      "text": "Require background checks of pilot applicants including FAA records review."
+    },
+    {
+      "id": "A-90-142",
+      "to": "National Weather Service",
+      "text": "Require forecasts note possible orographic cloud formation."
+    }
+  ],
+  "dissent": [
+    {
+      "agency": "Jim Burnett",
+      "position": "Failure to require Ground Proximity Warning System for Part 135 aircraft was a contributing factor",
+      "topic": "probable cause"
+    }
+  ],
+  "safety_changes": [
+    "Enhanced requirements for Part 135 IFR training",
+    "Background check procedures for pilot hiring",
+    "Improved pilot fatigue management policies"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR90-05.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Aloha_IslandAir_Flight_1712",
+  "asn_id": null,
+  "interest": 13.52,
+  "report_links": [
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR90-05.pdf"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "History of Flight section read (p. 7-10)",
+      "Findings section with 10 findings extracted (p. 31)",
+      "Probable Cause and recommendations read (p. 33-35)",
+      "Crew performance and operational factors analysis read (p. 22-27)"
+    ]
+  }
+}

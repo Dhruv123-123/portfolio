@@ -1,0 +1,223 @@
+{
+  "id": "wd_q11345632",
+  "qid": "Q11345632",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "United Air Lines 389",
+  "flight_number": "UAL389",
+  "date": "1965-08-16",
+  "time_reference": "CDT",
+  "t0": "1965-08-16T21:20:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-67-AA",
+      "report_title": "Aircraft Accident Report - United Air Lines, Inc. B-727, N7036U, in Lake Michigan",
+      "report_date": "1967-12-19",
+      "url": "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR67-AA.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 727-100",
+    "family": "727",
+    "manufacturer": "Boeing",
+    "registration": "N7036U",
+    "msn": null,
+    "engines": "Pratt & Whitney JT8D"
+  },
+  "operator": "United Air Lines",
+  "route": {
+    "from": "KJFK",
+    "from_name": "LaGuardia Airport",
+    "to": "KORD",
+    "to_name": "Chicago O'Hare International Airport"
+  },
+  "location": {
+    "name": "Lake Michigan, approximately 19.5 miles east-northeast of Lake Forest, Illinois",
+    "country": "United States",
+    "lat": 42.251,
+    "lon": -87.466
+  },
+  "phase": "descent",
+  "occupants": 30,
+  "fatalities": 30,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "United Air Lines Flight 389, a Boeing 727-100, crashed into Lake Michigan on August 16, 1965, while descending to Chicago O'Hare. The aircraft was cleared to descend to 6,000 feet but continued descending through that altitude at approximately 2,000 feet per minute until impacting the water at 577 feet MSL, killing all 30 occupants. Investigation indicated the most likely cause was pilot misreading of the three-pointer altimeter, interpreting 6,000 feet as 16,000 feet.",
+  "probable_cause": "The Board is unable to determine the reason for the aircraft not being leveled off at its assigned altitude of 6,000 feet. The most likely explanation is that the pilots misread the altimeter, thinking they were descending through 16,000 feet when they were actually descending through only 6,000 feet. The three-pointer altimeter type used in the aircraft has been identified as highly susceptible to such misreadings.",
+  "factors": [
+    {
+      "id": "altimeter_setting_error",
+      "role": "initiating",
+      "evidence": "The crew likely misread their three-pointer altimeter by approximately 10,000 feet, perceiving an altitude of 16,000 feet when the aircraft was actually at 6,000 feet. The three-pointer altimeter design has been found to be the most susceptible to misreading of the four types used in commercial aviation."
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "The aircraft was cleared to maintain 6,000 feet MSL at 2111. By 2119:54, SAGE data showed the aircraft at approximately 2,000 feet, and the aircraft continued descending until impact with Lake Michigan at 577 feet MSL at approximately 2120."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The first officer was likely flying the aircraft while the captain was occupied with other duties or looking outside for traffic. The crew failed to level the aircraft at the assigned altitude despite receiving the descent clearance and acknowledging it."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft struck Lake Michigan in a slight nose-up attitude with a slight right-wing-down attitude at approximately 2120. The rate of descent was approximately 2,000 feet per minute."
+    }
+  ],
+  "chain": [
+    ["altimeter_setting_error", "descent_below_minimums"],
+    ["descent_below_minimums", "loss_of_control_inflight"]
+  ],
+  "events": [
+    {
+      "t": -678,
+      "clock": "2102",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Chicago ARTCC established radar contact with UAL 389 at FL 350. Flight was cleared to O'Hare via Pullman VORTAC direct to Northbrook VORTAC, direct O'Hare, and to maintain FL 350.",
+      "state": {"alt": 35000},
+      "factors": []
+    },
+    {
+      "t": -617,
+      "clock": "2103",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ARTCC cleared UAL 389 to descend to FL 240, starting descent now through FL 310.",
+      "state": {"alt": 35000},
+      "factors": []
+    },
+    {
+      "t": -494,
+      "clock": "2106",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ARTCC cleared flight to continue descent to 14,000 feet. Altimeter setting of 29.90 inches was issued for O'Hare. Crew acknowledged and reported leaving FL 280.",
+      "state": {"alt": 28000},
+      "factors": []
+    },
+    {
+      "t": -397,
+      "clock": "2109",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight changed to Chicago ARTCC approach frequency and reported out of FL 260, descending to 14,000 feet. This was the last altitude information received from the crew.",
+      "state": {"alt": 26000},
+      "factors": []
+    },
+    {
+      "t": -277,
+      "clock": "2111",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ARTCC cleared flight to descend to and maintain 6,000 feet MSL. Clearance was immediately acknowledged correctly.",
+      "state": {"alt": 20000},
+      "factors": []
+    },
+    {
+      "t": -35,
+      "clock": "2118:35",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Radar control of UAL 389 was passed to Chicago Approach Control (ORD). Radar target was in vicinity of Sturgeon Intersection, 28 miles east of Northbrook VORTAC.",
+      "state": {"alt": 10000},
+      "factors": []
+    },
+    {
+      "t": -26,
+      "clock": "2118:38",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Radar target observed approximately 2 miles east of Sturgeon Intersection.",
+      "state": {"alt": 9000},
+      "factors": []
+    },
+    {
+      "t": 36,
+      "clock": "2119:36",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Crew contacted Chicago Approach Control (ORD) and was advised radar contact had been established. Aircraft target was 2-3 miles west of Sturgeon. Flight was cleared to maintain 6,000 feet and depart Northbrook VORTAC on heading 240 degrees. ILS approaches in progress on runway 14R. Current O'Hare altimeter setting 29.93 was issued. Pilot initially read back altimeter setting incorrectly; controller corrected and pilot repeated correctly.",
+      "state": {"alt": 6000},
+      "factors": []
+    },
+    {
+      "t": 74,
+      "clock": "2119:54",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "SAGE (Semi-automatic Ground Environment) computer altitude reading recorded flight at approximately 2,000 feet MSL (±500 to -1,000 feet). Aircraft was at this time holding a clearance limiting descent to 6,000 feet and was in routine radio contact with approach controller.",
+      "state": {"alt": 2000},
+      "factors": ["altimeter_setting_error"]
+    },
+    {
+      "t": 103,
+      "clock": "2120:03",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Last radio communication from UAL 389 ended. This transmission occurred at point approximately 3-4 miles (about one minute) from accident site. Crew reported no difficulties.",
+      "state": {"alt": 1000},
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "2120:20",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacted Lake Michigan at surface elevation of 576.8 feet MSL while in descent at approximately 2,000 feet per minute. Slight nose-up attitude with slight right-wing-down attitude at impact. Fire and explosion observed by multiple witnesses.",
+      "state": {"alt": 577, "vs": -2000},
+      "factors": ["loss_of_control_inflight"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Increased focus on altimeter design improvements, particularly regarding the three-pointer altimeter configuration and its susceptibility to misreading",
+    "Enhanced pilot training on altimeter interpretation and cross-checking of altitude instruments"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR67-AA.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read sections: SYNOPSIS, History of Flight, INVESTIGATION, ANALYSIS AND CONCLUSIONS, altimeter investigation section (pages 1482-1720), PROBABLE CAUSE section (pages 2180-2350)",
+      "Depth limited to key sections as recommended by the NTSB report itself; further reading would not materially change the core findings",
+      "All events with times sourced directly from the report",
+      "Three-pointer altimeter design identified as major contributing factor; this was the first proven case of such misreading error (per summary record)"
+    ]
+  },
+  "asn_id": "19650816-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Air_Lines_Flight_389",
+  "report_links": [
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR67-AA.pdf",
+    "https://aviation-safety.net/database/record.php?id=19650816-0"
+  ],
+  "interest": 12.86,
+  "curated_id": null
+}

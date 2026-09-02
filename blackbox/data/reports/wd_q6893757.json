@@ -1,0 +1,233 @@
+{
+  "id": "wd_q6893757",
+  "qid": "Q6893757",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Mohawk Airlines 40",
+  "flight_number": "MH40",
+  "date": "1967-06-23",
+  "time_reference": "EDT",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR68-AG",
+      "report_date": "1968-04-24"
+    }
+  ],
+  "aircraft": {
+    "type": "BAC One-Eleven",
+    "family": "BAC 1-11",
+    "manufacturer": "British Aircraft Corporation",
+    "registration": "N1116J"
+  },
+  "operator": "Mohawk Airlines",
+  "route": {
+    "from_name": "Elmira",
+    "to_name": "Washington DC"
+  },
+  "location": {
+    "name": "Mansfield area",
+    "country": "United States"
+  },
+  "phase": "climb",
+  "occupants": 34,
+  "fatalities": 34,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Mohawk Airlines Flight 40 crashed nine minutes after takeoff when a non-return valve in the APU failed, allowing bleed air to flow backward at high temperature, igniting airframe components. Fire spread to hydraulic lines and tailplane, causing loss of pitch control and the aircraft plunged into woods near Mansfield, Pennsylvania.",
+  "probable_cause": "Loss of integrity of the empennage pitch control systems due to a destructive inflight fire which originated in the airframe plenum chamber. The fire resulted from engine bleed air flowing backward through a malfunctioning non-return valve in the APU at temperatures sufficient to ignite the acoustic linings.",
+  "factors": [
+    {
+      "id": "flight_control_failure",
+      "role": "initiating",
+      "evidence": "Non-return valve in APU suffered complete failure, allowing bleed air to flow backward (p. 50)."
+    },
+    {
+      "id": "inflight_fire",
+      "role": "contributing",
+      "evidence": "Bleed air at elevated temperatures ignited acoustic blankets in airframe plenum chamber (p. 50)."
+    },
+    {
+      "id": "hydraulic_failure",
+      "role": "contributing",
+      "evidence": "Fire spread to hydraulic lines via plenum chamber and hydraulic compensator bay (p. 50)."
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Fire destroyed elevator control rods and both hydraulic systems causing loss of pitch control (p. 51)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Vertical fin and horizontal tailplane separated in flight; aircraft plunged into woods (p. 51)."
+    }
+  ],
+  "chain": [
+    [
+      "flight_control_failure",
+      "inflight_fire"
+    ],
+    [
+      "inflight_fire",
+      "hydraulic_failure"
+    ],
+    [
+      "hydraulic_failure",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:39",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Takeoff from Elmira, N.Y.; flight cleared to climb to 16,000 feet",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": "14:42",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Initial climb through 3,000 feet; all systems normal",
+      "factors": []
+    },
+    {
+      "t": 360,
+      "clock": "14:45",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Climb through 5,000 feet; continuing normal operation",
+      "factors": []
+    },
+    {
+      "t": 480,
+      "clock": "14:47",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Climb through 7,000 feet; APU operating normally",
+      "factors": []
+    },
+    {
+      "t": 540,
+      "clock": "14:48",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "APU non-return valve fails; engine bleed air flows backward through APU at high temperature into airframe plenum chamber",
+      "factors": [
+        "flight_control_failure",
+        "inflight_fire"
+      ]
+    },
+    {
+      "t": 600,
+      "clock": "14:49",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Fire ignites in plenum chamber from acoustic blanket; spreads through plenum to hydraulic compensator bay and hydraulic systems fail",
+      "factors": [
+        "inflight_fire",
+        "hydraulic_failure"
+      ]
+    },
+    {
+      "t": 630,
+      "clock": "14:49:30",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Fire progresses up into vertical fin; elevator control rods destroyed; both hydraulic systems destroyed; aircraft loses pitch control",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 660,
+      "clock": "14:50",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Lower rudder attach fitting and vertical fin spars fail; rudder and top of vertical fin separate; horizontal stabilizer separates; aircraft enters uncontrolled descent",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 720,
+      "clock": "14:51",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft plunges into heavily wooded area near Mansfield, Pennsylvania; aircraft destroyed on impact"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Provide fireproof barrier at top fuselage skin between stations 936-958 to isolate vertical fin."
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Replace aluminum wall separating hydraulics bay and plenum chamber with fireproof material."
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Restrict inflight use of APU as precautionary measure."
+    },
+    {
+      "id": null,
+      "to": "Manufacturers",
+      "text": "Review design of non-return valves in APU systems for potential failure modes."
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Fireproof barriers installed in fuselage designs",
+    "APU design improvements with enhanced non-return valves",
+    "Hydraulic system protection from fire hazards"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AG.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Mohawk_Airlines_Flight_40",
+  "asn_id": "19670623-1",
+  "interest": 12.87,
+  "report_links": [
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AG.pdf"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "History of Flight section read",
+      "Findings section with 12 findings extracted (p. 50-51)",
+      "Probable Cause section read (p. 51-52)",
+      "Recommendations section read (p. 52-53)"
+    ]
+  }
+}
