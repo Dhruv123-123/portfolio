@@ -1,0 +1,168 @@
+{
+  "id": "wd_q950273",
+  "title": "1986 Mozambican Tupolev Tu-134 crash",
+  "flight_number": null,
+  "date": "1986-10-19",
+  "agencies": [
+    {
+      "code": "SACT",
+      "name": "South African Civil Aviation Authority",
+      "country": "South Africa",
+      "role": "lead"
+    }
+  ],
+  "agency": "SACT",
+  "aircraft": {
+    "type": "Tupolev Tu-134A-3",
+    "manufacturer": "Tupolev",
+    "family": "Tu-134",
+    "registration": "5N-ULM"
+  },
+  "operator": "People's Republic of Mozambique",
+  "route": {
+    "from_name": "Mbala",
+    "to_name": "Maputo International Airport"
+  },
+  "location": {
+    "name": "Mbuzini",
+    "country": "South Africa"
+  },
+  "phase": "descent",
+  "occupants": 44,
+  "fatalities": 34,
+  "category": "CFIT",
+  "summary": "A Tupolev Tu-134 with President Samora Machel and 43 others departed Mbala, Zambia at 18:38 for Maputo. The navigator used Doppler navigation to turn the aircraft based on a VOR signal, but inadvertently tuned the VOR receiver to Matsapa Airport in Swaziland instead of Maputo. This placed the aircraft on a navigation path 45\u00b0 off course. The crew failed to monitor the correct VOR or cross-check their position and continued the descent. The captain did not respond to ground proximity warnings. The aircraft crashed at Mbuzini, South Africa.",
+  "probable_cause": "Loss of control and impact with terrain due to erroneous navigation caused by crew tuning the VOR receiver to the wrong frequency, inadequate monitoring of navigation systems, and failure to respond to ground proximity warnings.",
+  "factors": [
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "Poor design of VOR frequency display with no back-lighting, unusually close frequencies, and similar appearance of displayed numerals made frequency selection error more likely"
+    },
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "Crew set first VOR receiver to Matsapa frequency instead of Maputo frequency, diverting aircraft 45 degrees off course"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Second VOR receiver correctly set to Maputo but apparently not being used or monitored by crew"
+    },
+    {
+      "id": "gpws_warning_response",
+      "role": "contributing",
+      "evidence": "Board concluded captain failed to react to ground proximity warning system"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "crashed at Mbuzini, South Africa"
+    }
+  ],
+  "chain": [
+    [
+      "design_deficiency",
+      "navigation_error"
+    ],
+    [
+      "navigation_error",
+      "gpws_warning_response"
+    ],
+    [
+      "inadequate_monitoring",
+      "cfit"
+    ],
+    [
+      "gpws_warning_response",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "18:38",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Departed Mbala for non-stop return to Maputo; weather forecast favorable, estimated time of arrival 21:25",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Navigator performed 37-degree turn using autopilot Doppler navigation mode after observing VOR signal indicating interception of Maputo VOR 45-degree radial",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Turn placed aircraft on path following 45-degree radial from Matsapa Airport VOR in Swaziland instead of Maputo",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain re-tuned first VOR receiver to ILS frequency; second VOR correctly displaying Maputo position but not being monitored",
+      "factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "t": 240,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft descended into terrain with ground proximity warning system activated; captain did not respond appropriately",
+      "factors": [
+        "gpws_warning_response",
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://caasanwebsitestorage.blob.core.windows.net/accident-report-archive/C9-CAA.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q950273",
+  "asn_id": "19861019-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/1986_Mozambican_Tupolev_Tu-134_crash",
+  "report_links": [
+    "https://caasanwebsitestorage.blob.core.windows.net/accident-report-archive/C9-CAA.pdf",
+    "http://www.caa.co.za/resource%20center/accidents%20%26%20incid/reports/OldReports/C9-CAA.pdf",
+    "https://www.caa.co.za/industry-information/accidents-and-incidents/accidents-and-incidents-archive/",
+    "http://www.caa.co.za/resource%20center/accidents%20&%20incid/reports/OldReports/C9-CAA.pdf"
+  ],
+  "interest": 14.61,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "detailed technical analysis provided by board of inquiry",
+      "multiple contributing factors identified",
+      "Read from text extraction of official report"
+    ]
+  }
+}

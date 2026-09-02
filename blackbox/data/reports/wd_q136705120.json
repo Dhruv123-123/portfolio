@@ -1,0 +1,172 @@
+{
+  "id": "wd_q136705120",
+  "title": "UPS Airlines 2976",
+  "flight_number": "2976",
+  "date": "2025-11-04",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    },
+    {
+      "code": "FAA",
+      "name": "Federal Aviation Administration",
+      "country": "United States",
+      "role": "participant"
+    }
+  ],
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "McDonnell Douglas MD-11F",
+    "manufacturer": "McDonnell Douglas",
+    "family": "MD-11",
+    "registration": "N259UP"
+  },
+  "operator": "UPS Airlines",
+  "route": {
+    "from_name": "Louisville",
+    "to_name": "Honolulu"
+  },
+  "location": {
+    "name": "Louisville Muhammad Ali International Airport",
+    "country": "United States"
+  },
+  "phase": "takeoff",
+  "occupants": 15,
+  "fatalities": 14,
+  "category": "UNK",
+  "summary": "UPS Airlines Flight 2976, an MD-11F cargo aircraft, suffered separation of its left engine during takeoff roll from runway 17R. The engine, with most of its pylon still attached, separated and tumbled over the wing. The aircraft descended rapidly, struck multiple buildings and vehicles, and crashed into an industrial area. All three crew and twelve ground occupants were killed.",
+  "probable_cause": "During takeoff, shortly after rotation, the left engine, with most of its pylon still attached, separated from the wing. NTSB revealed that Boeing asked the FAA to increase the inspection interval for lugs from 19,900 to 29,200 flight cycles even though it had received five reports of the spherical bearing fracturing long before the aircraft reached its designated inspection interval.",
+  "factors": [
+    {
+      "id": "inadequate_inspection",
+      "role": "latent",
+      "evidence": "Boeing asked the FAA to increase the inspection interval for the lugs from 19,900 to 29,200 flight cycles even though it had received five reports of the spherical bearing fracturing"
+    },
+    {
+      "id": "structural_failure",
+      "role": "initiating",
+      "evidence": "During takeoff, shortly after rotation, the left engine, with most of its pylon still attached, separated from the wing"
+    },
+    {
+      "id": "uncontained_engine_failure",
+      "role": "outcome",
+      "evidence": "the left engine, with most of its pylon still attached, separated from the wing and flipped backwards over the wing's leading edge"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "As it detached, a fire ignited on the engine"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "the airplane crashed into a semi-truck parking area and an auto scrap yard"
+    }
+  ],
+  "chain": [
+    [
+      "inadequate_inspection",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "uncontained_engine_failure"
+    ],
+    [
+      "uncontained_engine_failure",
+      "post_impact_fire"
+    ],
+    [
+      "uncontained_engine_failure",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "17:13",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft took off from runway 17R heading south at about 5:13 p.m. EST in clear weather",
+      "factors": []
+    },
+    {
+      "t": 15,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "During takeoff, shortly after rotation, the left engine separated from the wing",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "A fire ignited on the engine, and it tumbled up and over the aircraft, coming to rest on grass on right side of runway",
+      "factors": [
+        "uncontained_engine_failure"
+      ]
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Fire broke out near left pylon attachment point and aircraft entered descent",
+      "factors": [
+        "post_impact_fire"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft struck UPS warehouse, fuel tanks, and crashed into industrial area",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/Documents/Preliminary%20Report%20DCA26MA024.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q136705120",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/UPS_Airlines_Flight_2976",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/Documents/Preliminary%20Report%20DCA26MA024.pdf",
+    "https://www.ntsb.gov/investigations/Pages/DCA26MA024.aspx"
+  ],
+  "interest": 14.34,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Investigation ongoing; preliminary findings clear on engine separation; underlying cause of structural failure still under investigation but inspection interval deficiency identified",
+      "Read from text extraction of official report"
+    ]
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "id": "wd_q125489982",
+  "title": "Mal\u00e9v 355",
+  "flight_number": "MA355",
+  "date": "1962-11-23",
+  "agency": "BEA",
+  "aircraft": {
+    "type": "Ilyushin Il-18V",
+    "manufacturer": "Ilyushin",
+    "family": "Il-18",
+    "registration": "HA-MOD"
+  },
+  "operator": "Mal\u00e9v Hungarian Airlines",
+  "route": {
+    "from_name": "Budapest",
+    "to_name": "Paris"
+  },
+  "location": {
+    "name": "Roissy-en-France",
+    "country": "France"
+  },
+  "phase": "approach",
+  "occupants": 21,
+  "fatalities": 21,
+  "category": "CFIT",
+  "summary": "Mal\u00e9v Flight 355, an Ilyushin Il-18V with 21 aboard, crashed near Paris-Le Bourget Airport on November 23, 1962 during approach. Weather conditions included heavy fog and stratus cloud with visibility severely reduced. The aircraft initiated a landing on instruments with landing gear extended and engines near full power. During approach, the aircraft stalled while performing a high G-load maneuver and crashed 6.1 kilometers from the airport.",
+  "probable_cause": "The aircraft stalled during a high G-load maneuver while executing an instrument approach in foggy conditions. The investigation could not determine why the crew performed the high G-load maneuver.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Very foggy in Paris; pilot noted frequent occurrences of fog and stratus cloud with possibility of light icing; landing was initiated on instruments."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "Aircraft stalled while performing a high G-load manoeuvre during approach; the investigation concluded aircraft had stalled while performing this maneuver."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "Investigation concluded aircraft had stalled while performing a high G-load manoeuvre during the approach."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft crashed 6.1 kilometers east-northeast of Le Bourget airport near road from Paris to Soissons."
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "07:44",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 355 departed Budapest at 7:44 GMT with crew and 13 passengers bound for Frankfurt stopover.",
+      "factors": []
+    },
+    {
+      "t": 7920,
+      "clock": "09:50",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "In Frankfurt, crew spent two hours at meteorological office for briefing, noting frequent fog, stratus cloud, and light icing possibility."
+    },
+    {
+      "t": 14400,
+      "clock": "14:10",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "During approach to Paris with landing gear extended and engines nearly at full power, aircraft stalled while performing high G-load maneuver during approach."
+    },
+    {
+      "t": 14420,
+      "clock": "14:10",
+      "phase": "approach",
+      "actor": "GND",
+      "kind": "outcome",
+      "text": "Aircraft crashed 6.1 kilometres east-northeast from airport near road from Paris to Soissons; airplane exploded with high flames visible.",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/fileadmin/documents/docspa/1962/hb-d621123/pdf/hb-d621123_05.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q125489982",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Mal%C3%A9v_Flight_355",
+  "report_links": [
+    "https://bea.aero/fileadmin/documents/docspa/1962/hb-d621123/pdf/hb-d621123_05.pdf"
+  ],
+  "interest": 14.45,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "why maneuver was performed remains unexplained",
+      "fog and icing conditions contributed to crash",
+      "Read from text extraction of official report"
+    ]
+  },
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enqu\u00eates et d'Analyses",
+      "country": "France",
+      "role": "lead"
+    }
+  ]
+}

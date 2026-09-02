@@ -1,0 +1,161 @@
+{
+  "id": "wd_q107431180",
+  "title": "Petropavlovsk-Kamchatsky Air 251 (2021)",
+  "date": "2021-07-06",
+  "qid": "Q107431180",
+  "asn_id": null,
+  "tier": "wikidata",
+  "depth": "sections",
+  "agency": "MAK",
+  "aircraft": {
+    "type": "Antonov An-26B-100",
+    "manufacturer": "Antonov",
+    "family": "An-26",
+    "registration": "RA-26085"
+  },
+  "operator": "Petropavlovsk-Kamchatsky Air Enterprise",
+  "route": {
+    "from_name": "Petropavlovsk-Kamchatsky Airport",
+    "to_name": "Palana Airport"
+  },
+  "location": {
+    "name": "Palana",
+    "country": "Russia"
+  },
+  "phase": "approach",
+  "occupants": 28,
+  "fatalities": 28,
+  "category": "CFIT",
+  "summary": "Flight 251 departed Petropavlovsk-Kamchatsky at 12:56 local time for Palana. The controller informed the crew that cloud base was 720 m and recommended a land-side approach using navigation beacons. The crew rejected this, stating no published procedure existed and proceeded with a visual seaward approach. In deteriorating fog, the aircraft descended below minimums, strayed from the proper approach path, and struck a 260 m coastal cliff while at 200 m altitude.",
+  "probable_cause": "Crew performed a visual seaward approach contrary to controller recommendation, descended below published minimums without required visual references in low visibility conditions, and struck terrain.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Fog thickening around airport with cloud ceiling 720 m, below airline's 750 m minimum for visual seaward approach"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "Aircraft descended to 200 m altitude, below minimum safe altitude for approach"
+    },
+    {
+      "id": "navigation_error",
+      "role": "contributing",
+      "evidence": "Aircraft strayed outside proper approach path, flew toward cliff instead of airport"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Crew rejected controller's recommendation of land-side approach and continued seaward despite worsening conditions"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck coastal cliff at 200 m altitude, 260 m high terrain"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "navigation_error"
+    ],
+    [
+      "navigation_error",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "12:56",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 251 departed Elizovo Airport at 12:56 local time",
+      "factors": []
+    },
+    {
+      "t": 8340,
+      "clock": "14:09",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller informed crew cloud base at Palana was 720 m and recommended land-side approach from the land side",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 8400,
+      "clock": "14:10",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Crew rejected land-side approach recommendation, proceeded with visual seaward approach",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 8880,
+      "clock": "14:48",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Last contact with aircraft at 800 m altitude, 10 km from Palana airport",
+      "factors": []
+    },
+    {
+      "t": 8890,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft collided with coastal cliff at 200 m altitude outside proper approach path",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/upload/iblock/acd/zc6x2oanvrjzwe4pkfabagx0grnn5kib/report_ra-26085.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Petropavlovsk-Kamchatsky_Air_Flight_251_(2021)",
+  "report_links": [
+    "https://aviation-safety.net/database/record.php?id=20210706-0",
+    "https://mak-iac.org/upload/iblock/acd/zc6x2oanvrjzwe4pkfabagx0grnn5kib/report_ra-26085.pdf"
+  ],
+  "interest": 14.22,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from sections: history_of_flight, findings, probable_cause, analysis",
+      "Text path: /home/user/portfolio/blackbox/cache/text/wd_q107431180.txt",
+      "Depth: sections - key report sections reviewed"
+    ]
+  },
+  "flight_number": "PTK251",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead"
+    }
+  ]
+}

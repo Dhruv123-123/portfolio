@@ -1,0 +1,161 @@
+{
+  "id": "wd_q25380855",
+  "title": "Air Manila 702",
+  "date": "1976-06-04",
+  "qid": "Q25380855",
+  "asn_id": "19760604-0",
+  "tier": "wikidata",
+  "depth": "sections",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "Lockheed L-188A Electra",
+    "manufacturer": "Lockheed",
+    "family": "L-188A",
+    "registration": "RP-C1061"
+  },
+  "operator": "Air Manila",
+  "route": {
+    "from_name": "Guam",
+    "to_name": "Manila"
+  },
+  "location": {
+    "name": "Guam",
+    "country": "United States"
+  },
+  "phase": "takeoff",
+  "occupants": 46,
+  "fatalities": 46,
+  "category": "LOC-I",
+  "summary": "Air Manila Flight 702, a Lockheed L-188A Electra with 33 passengers and 12 crew, crashed during takeoff from runway 6L at Naval Air Station Agana on 4 June 1976. Seconds after lifting off, engine number three propeller feathered. The captain continued the takeoff despite not yet reaching VR speed, when company policy and safety procedures required immediate abort. The aircraft reached only 75-100 feet altitude before crashing into terrain beyond the runway.",
+  "probable_cause": "The primary cause was the flight crew's inappropriate response to the engine failure; the captain continued flight with the engine failure despite safely being able to abort takeoff before reaching VR speed.",
+  "factors": [
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "Seconds after lifting off from runway, the No. 3 propeller feathered."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The captain continued flight with engine failure despite safely being able to abort takeoff, having not yet reached VR speed, when company policy required abort."
+    },
+    {
+      "id": "low_energy_state",
+      "role": "contributing",
+      "evidence": "Aircraft flew at varying altitudes between 75 and 100 feet for a distance, then flew level for 1,600 feet before crashing."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft crashed into terrain past the end of runway, dragging across a hill before stopping."
+    }
+  ],
+  "chain": [
+    [
+      "engine_failure",
+      "procedural_noncompliance"
+    ],
+    [
+      "procedural_noncompliance",
+      "low_energy_state"
+    ],
+    [
+      "low_energy_state",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:47",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Air Manila flight 702 crashed while attempting to takeoff from runway 6L of Naval Air Station Agana at 14:47 Greenwich time on 4 June 1976.",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Seconds after lifting off from the runway the No. 3 propeller feathered.",
+      "factors": [
+        "engine_failure"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "The captain continued flight with the engine failure despite safely being able to abort takeoff, having not yet reached VR speed.",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "After the failure the plane flew at varying altitudes between 75 and 100 feet for a while, then flew level for 1,600 feet before crashing into terrain past the end of the runway.",
+      "factors": [
+        "low_energy_state",
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 240,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft dragged across a hill, pushed through a chain link fence, and struck a car on the highway before stopping in a vacant space and exploding.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7706.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR77-06.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Manila_Flight_702",
+  "report_links": [
+    "https://aviation-safety.net/database/record.php?id=19760604-0",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7706.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR77-06.pdf"
+  ],
+  "interest": 13.46,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from sections: history_of_flight, findings, probable_cause, analysis",
+      "Text path: /home/user/portfolio/blackbox/cache/text/wd_q25380855.txt",
+      "Depth: sections - key report sections reviewed"
+    ]
+  },
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "time_reference": "EDT"
+}

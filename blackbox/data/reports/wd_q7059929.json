@@ -1,0 +1,150 @@
+{
+  "id": "wd_q7059929",
+  "title": "Northwest Airlink 5719",
+  "date": "1993-12-01",
+  "qid": "Q7059929",
+  "asn_id": "19931201-0",
+  "tier": "wikidata",
+  "depth": "sections",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "British Aerospace Jetstream 31",
+    "manufacturer": "British Aerospace",
+    "family": "Jetstream",
+    "registration": null
+  },
+  "operator": "Endeavor Air",
+  "route": {
+    "from_name": "Minneapolis-Saint Paul",
+    "to_name": "Falls International"
+  },
+  "location": {
+    "name": "Hibbing",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 18,
+  "fatalities": 18,
+  "category": "CFIT",
+  "summary": "The Jetstream 31 crashed into trees during final approach to Hibbing in night instrument conditions. The captain intercepted the DME arc at 8000 feet, delaying the descent and requiring an excessive descent rate of 2000 feet per minute. The aircraft descended through the step-down altitude and struck trees 634 feet before hitting a ridge. The NTSB determined that the captain's loss of altitude awareness led to a breakdown in crew coordination during the approach.",
+  "probable_cause": "The captain's actions led to a breakdown in crew coordination and the loss of altitude awareness by the flight crew during an unstable approach in night instrument meteorological conditions. Contributing factors included the company's failure to adequately address the captain's previously identified deficiencies and inadequate surveillance and oversight by the FAA.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "night instrument meteorological conditions"
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "initiating",
+      "evidence": "the cause of the crash was the loss of altitude awareness"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "the aircraft continued its descent through the 2040 ft step-down altitude"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "the captain's actions led to a breakdown in crew coordination"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "the plane collided with two ridges and came to rest inverted"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "The flight crew requested an approach to runway 13 instead of runway 31 due to tailwind on runway 31.",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The aircraft was 1200 feet above the minimum altitude when above the Kinney final approach fix.",
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The aircraft continued its descent through the 2040 ft step-down altitude.",
+      "factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 360,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "The aircraft struck the top of a tree, continued for 634 feet, struck a group of aspen trees, then collided with two ridges.",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR94-05.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Northwest_Airlink_Flight_5719",
+  "report_links": [
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR94-05.pdf"
+  ],
+  "interest": 13.73,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from sections: history_of_flight, findings, probable_cause, analysis",
+      "Text path: /home/user/portfolio/blackbox/cache/text/wd_q7059929.txt",
+      "Depth: sections - key report sections reviewed"
+    ]
+  },
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ]
+}
