@@ -1,0 +1,181 @@
+{
+  "id": "wd_q138766846",
+  "qid": "Q138766846",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air Canada Express 8646",
+  "flight_number": "AC8646",
+  "date": "2026-03-22",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "DCA26MA161",
+      "report_title": "Aviation Investigation Preliminary Report - Jazz Aviation Flight 646 Collision with ARFF Vehicle",
+      "report_date": null,
+      "url": "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/202674/pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Bombardier CRJ900LR",
+    "manufacturer": "Bombardier",
+    "family": "CRJ900",
+    "registration": "C-GNJZ"
+  },
+  "operator": "Jazz Aviation",
+  "route": {
+    "from": "YUL",
+    "from_name": "Montreal-Trudeau",
+    "to": "LGA",
+    "to_name": "LaGuardia"
+  },
+  "location": {
+    "name": "LaGuardia Airport, runway 4",
+    "country": "United States"
+  },
+  "phase": "landing",
+  "occupants": 76,
+  "fatalities": 2,
+  "category": "RI",
+  "summary": "On 22 March 2026, a Bombardier CRJ900 operating Air Canada Express Flight 8646 collided with an airport firefighting truck (Oshkosh Striker 1500, Truck 1) on runway 4 at LaGuardia Airport while landing. The aircraft was on short final approach when air traffic control cleared the truck to cross the runway to respond to an emergency with United Airlines Flight 2384. The controller immediately ordered the truck to stop but could not prevent the collision. The aircraft's cockpit and forward galley were destroyed, killing both pilots. A flight attendant seated on a jump-seat near the cockpit was ejected onto the runway and injured.",
+  "probable_cause": "Air traffic control cleared the firefighting truck to cross an active landing runway without verifying the runway was clear, resulting in a collision with the aircraft on short final approach.",
+  "factors": [
+    {
+      "id": "atc_communication_error",
+      "role": "initiating",
+      "evidence": "controller cleared Truck 1 and company to cross runway 4 at taxiway Delta while CRJ900 was on short final"
+    },
+    {
+      "id": "runway_incursion",
+      "role": "contributing",
+      "evidence": "airport firefighting truck was on runway without authorization while aircraft was landing"
+    },
+    {
+      "id": "ground_radar_unavailable",
+      "role": "contributing",
+      "evidence": "NTSB noted the firefighting truck was not equipped with an ASDE-X transponder"
+    },
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "heavy rain and visibility reduced to 3 miles at the time of the accident"
+    },
+    {
+      "id": "ground_collision",
+      "role": "outcome",
+      "evidence": "aircraft struck the rear-right side of the truck at 90 knots ground speed while landing"
+    }
+  ],
+  "chain": [
+    [
+      "atc_communication_error",
+      "runway_incursion"
+    ],
+    [
+      "runway_incursion",
+      "ground_collision"
+    ],
+    [
+      "ground_radar_unavailable",
+      "runway_incursion"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "22:12",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 8646 departed Montreal-Trudeau International Airport 10 pm EDT, delayed over two hours",
+      "factors": []
+    },
+    {
+      "t": 3420,
+      "clock": "23:18",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "United Airlines Flight 2384 aborted takeoff twice after anti-ice warning lights and declared emergency after foul odor reported",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 4020,
+      "clock": "23:37",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Air traffic control cleared Truck 1 to cross runway 4 at taxiway Delta while CRJ900 was on short final",
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": 4040,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller issued multiple radio transmissions telling Truck 1 to stop immediately after clearing it across the runway",
+      "factors": [
+        "runway_incursion"
+      ]
+    },
+    {
+      "t": 4080,
+      "clock": "23:38",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft at 90 knots ground speed collided with rear-right side of firefighting truck on runway 4",
+      "factors": [
+        "ground_collision"
+      ]
+    },
+    {
+      "t": 4100,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft cockpit and forward galley destroyed; both pilots killed and flight attendant near cockpit ejected onto runway",
+      "factors": [
+        "ground_collision"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/202674/pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Canada_Express_Flight_8646",
+  "asn_id": null,
+  "interest": 10.82,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read key sections including executive summary, findings, probable cause, and recommendations"
+    ]
+  },
+  "time_reference": "EDT",
+  "t0": "2026-03-22T23:37:00-04:00",
+  "damage": "substantial",
+  "injuries_serious": 6,
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/202674/pdf"
+  ],
+  "curated_id": null,
+  "cvr": []
+}

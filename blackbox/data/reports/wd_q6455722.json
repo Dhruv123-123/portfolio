@@ -1,0 +1,207 @@
+{
+  "id": "wd_q6455722",
+  "qid": "Q6455722",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "L'Express Airlines 508",
+  "flight_number": "EA508",
+  "date": "1991-07-10",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-92/01",
+      "report_title": "L'Express Airlines, Inc., Flight 508 - Weather Encounter and Crash Near Birmingham, Alabama",
+      "report_date": "1992-03-03",
+      "url": "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR92-01.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Beechcraft C99",
+    "manufacturer": "Beechcraft",
+    "family": "99",
+    "registration": "N7217L"
+  },
+  "operator": "L'Express Airlines",
+  "route": {
+    "from": "MOB",
+    "from_name": "Mobile",
+    "to": "BHM",
+    "to_name": "Birmingham"
+  },
+  "location": {
+    "name": "Ensley neighborhood, Birmingham",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 15,
+  "fatalities": 13,
+  "category": "LOC-I",
+  "summary": "Strong to severe thunderstorms developed in the vicinity of Birmingham Airport. Other aircraft diverted or held, but Flight 508 crew chose to continue the approach into clearly identified thunderstorm activity. After entering a severe thunderstorm cell, the aircraft experienced a significant roll to the left and an extreme updraft, lost directional control, and crashed into two houses.",
+  "probable_cause": "The decision of the captain to initiate and continue an instrument approach into clearly identified thunderstorm activity, resulting in loss of control of the airplane and subsequent collision with terrain.",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "initiating",
+      "evidence": "strong to severe thunderstorms developed in the vicinity of the airport"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "four other aircraft either diverted to other airports or delayed their approach and entered a holding pattern until the weather had improved"
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "crew was dealing with severe thunderstorm activity during approach and landing"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "after entering a severe thunderstorm cell southwest of the airport, the crew lost directional control"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "aircraft crashed into two houses in the Ensley neighborhood of Birmingham"
+    }
+  ],
+  "chain": [
+    [
+      "convective_weather",
+      "loss_of_control_inflight"
+    ],
+    [
+      "inadequate_monitoring",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "16:05",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 508 departed New Orleans with one passenger at 4:05 p.m., landing in Mobile at 4:50 p.m.",
+      "factors": []
+    },
+    {
+      "t": 1,
+      "clock": "17:05",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "After changing crews and boarding 12 passengers, the flight departed for Birmingham at 5:05 p.m.",
+      "factors": []
+    },
+    {
+      "t": 2,
+      "clock": "18:00",
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "As the flight approached Birmingham, strong to severe thunderstorms developed in the vicinity of the airport.",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 3,
+      "clock": "18:10",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "The crew of Flight 508 was aware of the strong to severe thunderstorm activity but the crew chose to continue the approach.",
+      "factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "t": 4,
+      "clock": "18:20",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The aircraft experienced a significant roll to the left on landing approach and an extreme updraft that pushed the plane's nose into the air.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 5,
+      "clock": "18:11:27",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "After entering a severe thunderstorm cell, the crew lost directional control and was unable to recover before impacting two houses in Ensley.",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR92-01.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/L%27Express_Airlines_Flight_508",
+  "asn_id": "19910710-0",
+  "interest": 11.1,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read key sections including executive summary, findings, probable cause, and recommendations"
+    ]
+  },
+  "time_reference": "CDT",
+  "t0": "1991-07-10T18:12:00-05:00",
+  "damage": "destroyed",
+  "injuries_serious": 0,
+  "recommendations": [
+    {
+      "id": "A-92-18",
+      "to": "FAA",
+      "text": "Develop and institute criteria through a joint government/industry effort that can be used by flightcrews to evaluate or index the extent of thunderstorm hazards present to assist them in the go/no go decision-making process.",
+      "status": "unknown",
+      "trigger_factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "id": "A-92-19",
+      "to": "FAA",
+      "text": "Require that airline airborne weather radar training programs include information on the specific types of radar that the flightcrew will be using and require that information on the limitations and recommended operating procedures for the radar be referenced during the training from information provided by the manufacturer of the radar.",
+      "status": "unknown",
+      "trigger_factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "id": "A-92-20",
+      "to": "FAA",
+      "text": "Require that recurrent training and proficiency programs for instrument-rated pilots include techniques for recognizing and recovering from unusual attitudes.",
+      "status": "unknown",
+      "trigger_factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR92-01.pdf"
+  ],
+  "curated_id": null,
+  "cvr": []
+}

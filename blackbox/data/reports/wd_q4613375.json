@@ -1,0 +1,151 @@
+{
+  "id": "wd_q4613375",
+  "qid": "Q4613375",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2009 Bond Helicopters Eurocopter AS332 crash",
+  "flight_number": null,
+  "date": "2009-04-01",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "2-2011",
+      "report_title": "Report on the accident to Aerospatiale (Eurocopter) AS332 L2 Super Puma, registration G-REDL, 11 nm NE of Peterhead, Scotland on 1 April 2009",
+      "report_date": "2011-11-24",
+      "url": "http://www.aaib.gov.uk/cms_resources.cfm?file=/2-2011%20G-REDL.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Eurocopter AS332L2 Super Puma Mk 2",
+    "manufacturer": "Eurocopter",
+    "family": "AS332",
+    "registration": "G-REDL"
+  },
+  "operator": "Bond Offshore Helicopters",
+  "route": {
+    "from": "BP Miller",
+    "from_name": "BP Miller oilfield",
+    "to": "ABZ",
+    "to_name": "Aberdeen"
+  },
+  "location": {
+    "name": "North Sea, 11 nm northeast of Peterhead",
+    "country": "United Kingdom"
+  },
+  "phase": "cruise",
+  "occupants": 16,
+  "fatalities": 16,
+  "category": "OTHR",
+  "summary": "Bond Offshore Helicopters Flight 85N, an Eurocopter AS332L2 Super Puma, crashed in the North Sea on April 1, 2009 while returning from a BP oil platform. The main rotor separated following catastrophic failure of the main rotor gearbox. A fatigue fracture of a second stage planet gear in the epicyclic module caused the failure. Metallic debris had been detected on the gearbox chip detector 36 flying hours before but was not recognized as indicating degradation of the planet gear.",
+  "probable_cause": "Catastrophic failure of the main rotor gearbox resulting from fatigue fracture of a second stage planet gear, with inadequate detection and recognition of a preceding warning sign.",
+  "factors": [
+    {
+      "id": "metal_fatigue",
+      "role": "initiating",
+      "evidence": "fatigue fracture of a second stage planet gear in the epicyclic module"
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "a magnetic particle on the epicyclic module chip detector on 25 March 2009 was not recognised as an indication of degradation"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "existing detection methods did not provide further indication of planetary gear degradation after initial magnetic particle detection"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "catastrophic failure of the Main Rotor Gearbox and the consequent detachment of the main rotor"
+    }
+  ],
+  "chain": [
+    [
+      "metal_fatigue",
+      "structural_failure"
+    ],
+    [
+      "inadequate_inspection",
+      "metal_fatigue"
+    ]
+  ],
+  "events": [
+    {
+      "t": -2160,
+      "clock": "03/25",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Magnetic particle detected on the epicyclic module chip detector during routine inspection.",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "13:55",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Catastrophic failure of the main rotor gearbox occurred during cruise flight.",
+      "factors": [
+        "metal_fatigue",
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "unknown",
+      "actor": "GND",
+      "kind": "outcome",
+      "text": "The helicopter crashed 11 nautical miles northeast of Peterhead in the North Sea.",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "unknown",
+      "actor": "GND",
+      "kind": "system",
+      "text": "Investigation confirmed fatigue fracture of the second stage planet gear as root cause.",
+      "factors": [
+        "metal_fatigue"
+      ]
+    }
+  ],
+  "report_links": [
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/2-2011%20G-REDL.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Bond_Offshore_Helicopters_Flight_85N",
+  "asn_id": null,
+  "interest": 11.02,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read key sections including executive summary, findings, probable cause, and recommendations"
+    ]
+  },
+  "time_reference": "UTC",
+  "t0": "2009-04-01T13:55:00Z",
+  "damage": "destroyed",
+  "injuries_serious": 0,
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/2-2011%20G-REDL.pdf"
+  ],
+  "curated_id": null,
+  "cvr": []
+}

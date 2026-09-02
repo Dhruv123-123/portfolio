@@ -1,0 +1,161 @@
+{
+  "id": "wd_q4731274",
+  "qid": "Q4731274",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Allegheny Airlines 737",
+  "flight_number": "AL737",
+  "date": "1969-01-06",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-70-10",
+      "report_title": "Allegheny Airlines Flight 737 - Convair 440, N5825 Near Bradford, Pennsylvania",
+      "report_date": "1970-05-27",
+      "url": "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-10.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Convair 440",
+    "manufacturer": "Convair",
+    "family": "CV-440",
+    "registration": "N5825"
+  },
+  "operator": "Allegheny Airlines",
+  "route": {
+    "from": "IAD",
+    "from_name": "Washington D.C.",
+    "to": "DTW",
+    "to_name": "Detroit"
+  },
+  "location": {
+    "name": "Golf course near Bradford Regional Airport",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 28,
+  "fatalities": 11,
+  "category": "CFIT",
+  "summary": "Allegheny Airlines Flight 737, a Convair CV-580, struck treetops just under five nautical miles from Bradford Regional Airport and crashed upside down on a snow-covered golf course during an instrument approach. Weather was overcast with 1.5 miles visibility and snow showers. Eleven of the 28 occupants on board were killed.",
+  "probable_cause": "The National Transportation Safety Board was unable to determine the probable cause. Three potential causes remained after analysis: misreading of the altimeter by the captain, a malfunction of the captain's altimeter following completion of the instrument approach procedure turn, or misinterpretation of the instrument approach chart.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Weather was overcast with one and one half miles visibility and snow showers."
+    },
+    {
+      "id": "altimeter_setting_error",
+      "role": "contributing",
+      "evidence": "Three possible causes examined were misreading of the altimeter by the captain, a malfunction of the captain's altimeter, or misinterpretation of the instrument approach chart."
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "The aircraft struck treetops just under five nautical miles from the airport, indicating the crew descended below safe altitude."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The flight struck treetops and came to rest upside down on a snow-covered golf course."
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "altimeter_setting_error"
+    ],
+    [
+      "altimeter_setting_error",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 737 at ten miles from airport requested clearance to make instrument approach to runway 14",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Clearance received to make instrument approach to runway 14 instead of runway 32",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft descended on approach under instrument conditions with reduced visibility",
+      "factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck treetops just under five nautical miles from airport",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 190,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft came to rest upside down on snow-covered golf course",
+      "factors": []
+    }
+  ],
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-10.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Allegheny_Airlines_Flight_737",
+  "asn_id": "19690106-0",
+  "interest": 10.64,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read key sections including executive summary, findings, probable cause, and recommendations"
+    ]
+  },
+  "time_reference": "EST",
+  "t0": "1969-01-06T14:40:00-05:00",
+  "damage": "destroyed",
+  "injuries_serious": 0,
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-10.pdf"
+  ],
+  "curated_id": null,
+  "cvr": []
+}
