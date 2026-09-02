@@ -1,0 +1,161 @@
+{
+  "id": "wd_q47009401",
+  "title": "Nature Air Flight 9916",
+  "flight_number": "9916",
+  "date": "2017-12-31",
+  "time_reference": "local",
+  "t0": "2017-12-31T11:56:00-06:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "CEN18FA063",
+      "report_date": "2019-12-16"
+    }
+  ],
+  "aircraft": {
+    "type": "Cessna 208B Caravan",
+    "family": "208",
+    "manufacturer": "Cessna",
+    "registration": "TI-BEI",
+    "msn": "208B0900",
+    "engines": "Pratt & Whitney PT6A-114A"
+  },
+  "operator": "Nature Air",
+  "route": {
+    "from": "MRIA",
+    "from_name": "Punta Islita Airport",
+    "to": "MROC",
+    "to_name": "Juan Santamaría International Airport"
+  },
+  "location": {
+    "name": "Woods near Punta Islita Airport",
+    "country": "Costa Rica",
+    "lat": 9.865278,
+    "lon": -85.366111
+  },
+  "phase": "initial_climb",
+  "occupants": 12,
+  "fatalities": 12,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Nature Air Flight 9916, a Cessna 208B Caravan, crashed into terrain shortly after takeoff from Punta Islita Airport on December 31, 2017. The aircraft reached a maximum bank angle of 75 degrees and an airspeed below the airplane's published aerodynamic stall speed before impacting rising terrain near the airport. The wreckage was destroyed by impact forces and post-impact fire.",
+  "probable_cause": "The flight crew's failure to maintain airspeed while maneuvering to exit an area of rising terrain, which resulted in an exceedance of the airplane's critical angle of attack and an aerodynamic stall. Contributing to the accident was the flight crew's decision to continue the takeoff toward rising terrain that likely exceeded the airplane's climb capability, the lack of adequate weather reporting available for wind determination, and the lack of documented training for an airport requiring a non-standard departure.",
+  "factors": [
+    {
+      "id": "windshear",
+      "role": "latent",
+      "evidence": "Witness at airport estimated wind magnitude between 10 and 15 knots; wind models indicated 5 knots from northeast at time of accident (p. 2)"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "initiating",
+      "evidence": "Aircraft swayed to the left seconds after departure and rolled during initial climb; video analysis showed bank angle reached approximately 75 degrees (p. 1, 14)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft reached airspeed below the published aerodynamic stall speed before impacting terrain; video determined airplane reached maximum bank angle of about 75° and descended at 1,510 ft/minute (p. 1, 14)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Aircraft exploded and burst into flames on impact; extensive post-crash fire damage observed at wreckage site (p. 2, 12)"
+    }
+  ],
+  "chain": [
+    ["windshear", "inappropriate_control_input"],
+    ["inappropriate_control_input", "loss_of_control_inflight"],
+    ["loss_of_control_inflight", "post_impact_fire"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "11:56",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "system",
+      "text": "Cessna 208B Caravan departed from runway 3 at Punta Islita Airport carrying 10 passengers and 2 pilots.",
+      "factors": []
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft climbs at approximately 715 feet per minute with groundspeed of 68±3 knots.",
+      "state": {
+        "vs": 715,
+        "gs": 68
+      },
+      "factors": []
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "crew_action",
+      "text": "Seconds after departure the aircraft swayed to the left and entered a left turn.",
+      "factors": ["windshear", "inappropriate_control_input"]
+    },
+    {
+      "t": 40,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft bank angle steepened, airspeed fell below stall speed at 60° bank (98-110 knots), descent rate increased to approximately 1,510 feet per minute.",
+      "state": {
+        "vs": -1510,
+        "gs": 82,
+        "roll": 75
+      },
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 50,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacted terrain on northwest side of valley approximately 0.4 statute miles from departure end of runway 3 at elevation of 238 feet msl.",
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 1200,
+      "clock": null,
+      "phase": "unknown",
+      "actor": "GND",
+      "kind": "outcome",
+      "text": "Aircraft wreckage consumed by post-impact fire and explosion.",
+      "factors": ["post_impact_fire"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/96543/pdf"],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q47009401",
+  "asn_id": "20171231-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Nature_Air_Flight_144",
+  "report_links": ["https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/96543/pdf"],
+  "interest": 10.98,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": ["Key sections read: summary, analysis, probable cause, findings, factual information including history of flight, aircraft systems, weather, and airport information", "Video analysis section provided precise details of bank angle and descent rate", "No CVR transcript or FDR data in public report", "Report demonstrates flight crew error in terrain navigation resulting in stall"]
+  }
+}

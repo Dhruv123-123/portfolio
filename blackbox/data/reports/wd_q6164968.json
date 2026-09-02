@@ -1,0 +1,203 @@
+{
+  "id": "wd_q6164968",
+  "title": "Japan Airlines Cargo Flight 46E",
+  "flight_number": "JAL46E",
+  "date": "1993-03-31",
+  "time_reference": "local",
+  "t0": "1993-03-31T12:24:00-09:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "NTSB/AAR-93/06",
+      "report_date": "1993-09-01"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 747-121",
+    "family": "747",
+    "manufacturer": "Boeing",
+    "registration": "N473EV",
+    "engines": "General Electric CF6"
+  },
+  "operator": "Evergreen International Airlines",
+  "route": {
+    "from": "ANC",
+    "from_name": "Ted Stevens Anchorage International Airport",
+    "to": "ORD",
+    "to_name": "Chicago O'Hare International Airport"
+  },
+  "location": {
+    "name": "Near Ted Stevens Anchorage International Airport",
+    "country": "United States"
+  },
+  "phase": "initial_climb",
+  "occupants": 5,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "Japan Air Lines Cargo Flight 46E, a Boeing 747-121 wet-leased from Evergreen International Airlines, experienced severe turbulence while climbing through 2,000 feet from Anchorage. The No. 2 engine pylon detached, causing the entire engine to separate from the wing. The aircraft was substantially damaged but the experienced flight crew conducted an emergency return and successfully landed the 747 back at Anchorage without additional incident or injuries.",
+  "probable_cause": "The lateral separation of the No. 2 engine pylon resulted from encounter with severe or possibly extreme turbulence that resulted in dynamic multi-axis lateral loadings that exceeded the ultimate lateral load-carrying capability of the pylon, which was already reduced by a fatigue crack near the forward end of the pylon's forward firewall web.",
+  "factors": [
+    {
+      "id": "metal_fatigue",
+      "role": "contributing",
+      "evidence": "A 2-inch-long fatigue crack in the forward firewall web near the front engine mount bulkhead reduced the ultimate lateral load-carrying capability of the pylon structure by about 10 percent (p. 54)"
+    },
+    {
+      "id": "convective_weather",
+      "role": "contributing",
+      "evidence": "Severe turbulence was reported by other airplanes; at takeoff the local controller informed crew that another Evergreen B-747 reported severe turbulence at 2,500 feet (p. 7)"
+    },
+    {
+      "id": "uncontained_engine_failure",
+      "role": "initiating",
+      "evidence": "At altitude of about 2,000 feet, the airplane experienced an uncommanded left bank of approximately 50 degrees and the pylon for engine two detached, causing the whole engine to fall off the wing (p. 11)"
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "The flight crew declared an emergency, maintained power on No. 1 engine, and successfully landed the 747 back at Anchorage on runway 6R (p. 11)"
+    }
+  ],
+  "chain": [
+    ["metal_fatigue", "uncontained_engine_failure"],
+    ["convective_weather", "uncontained_engine_failure"],
+    ["uncontained_engine_failure", "emergency_landing"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "12:24",
+      "phase": "takeoff",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Flight 46E departed Anchorage on runway 6 right; local controller informed crew that another Evergreen B-747 reported severe turbulence at 2,500 feet while climbing out.",
+      "factors": ["convective_weather"]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "At about 2,000 feet altitude, airplane experienced uncommanded 50-degree left bank and airspeed fluctuated 75 knots from 245 to 170 knots; No. 2 throttle slammed aft and reverser deployed.",
+      "state": {
+        "alt": 2000,
+        "ias_high": 245,
+        "ias_low": 170,
+        "roll": -50
+      },
+      "factors": ["uncontained_engine_failure"]
+    },
+    {
+      "t": 65,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "No. 2 engine pylon structural failure begins at fatigue crack near forward firewall web; entire No. 2 engine separates from wing.",
+      "factors": ["uncontained_engine_failure", "metal_fatigue"]
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight crew immediately recognized the engine emergency from instrument readings and aircraft motion; performed emergency checklist memory items for engine failure.",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "12:45",
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight crew declared emergency and captain initiated large radius left turn to return; used emergency/maximum power on No. 1 engine, full rudder authority, and almost full right aileron; aircraft landed safely on runway 06R.",
+      "factors": ["emergency_landing"]
+    }
+  ],
+  "cvr": [
+    {
+      "t": 0,
+      "clock": "12:24",
+      "speaker": "GND-1",
+      "text": "Japan Air forty six Echo heavy, runway six right, cleared for takeoff."
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "speaker": "CREW",
+      "text": "Reports of severe turbulence on climbout; aircraft encounters severe turbulence with uncommanded left bank of 50 degrees and airspeed fluctuation of 75 knots."
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-93-136",
+      "to": "FAA",
+      "text": "Develop and implement a meteorological program to observe, document, and analyze potential meteorological aircraft hazards in the area of Anchorage International Airport, Anchorage, Alaska, with an emphasis on the approach and departure paths of the airport.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-93-137",
+      "to": "FAA",
+      "text": "Amend the design load requirements of 14 CFR Part 25 to consider multiple axis loads encountered during severe turbulence.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-93-138",
+      "to": "FAA",
+      "text": "Require the Boeing-proposed B-747 engine pylon structural modification program to include increasing the lateral-load capability of the pylon structure.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-93-139",
+      "to": "FAA",
+      "text": "Require any future structural modifications of existing engine pylons to consider multiple axis loading.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-93-140",
+      "to": "FAA",
+      "text": "Issue an Airworthiness Directive to require compliance with Boeing Service Bulletin 747-54-2160.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-93-141",
+      "to": "FAA",
+      "text": "Consider the necessity and feasibility of requiring the modification of the aircraft departure routes at Anchorage International Airport during periods of moderate or severe turbulence to minimize the potential of aircraft encountering mountain-induced low level turbulence.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-93-142",
+      "to": "National Weather Service",
+      "text": "Use the WSR-88D doppler weather radar system at Anchorage, Alaska, to document mountain-generated wind fields in the Anchorage area and to develop in greater detail low altitude turbulence forecasts.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9306.pdf"],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q6164968",
+  "asn_id": "19930331-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Japan_Air_Lines_Cargo_Flight_46E",
+  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9306.pdf"],
+  "interest": 8.87,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": ["Key sections read: executive summary, history of flight, aircraft accident data, engine/pylon examination, findings, probable cause, and recommendations", "CVR transcript available in report but only brief context provided as full transcript is extensive", "Report contains FDR data but detailed parameter reconstruction would require full reading of appendices", "Multiple recommendations indicate systemic issues with engine pylon design and mountainous terrain wind hazards"]
+  }
+}
