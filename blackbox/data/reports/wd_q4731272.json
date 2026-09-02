@@ -1,0 +1,246 @@
+{
+  "id": "wd_q4731272",
+  "qid": "Q4731272",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Allegheny Airlines 736",
+  "flight_number": "736",
+  "date": "1968-12-24",
+  "time_reference": "EST",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Convair CV-580",
+    "manufacturer": "Convair",
+    "family": "CV-580",
+    "registration": "N5802"
+  },
+  "operator": "Allegheny Airlines",
+  "route": {
+    "from": "DTW",
+    "from_name": "Detroit Metropolitan Airport",
+    "to": "IAD",
+    "to_name": "Washington Dulles International Airport"
+  },
+  "location": {
+    "name": "Bradford, Pennsylvania",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 47,
+  "fatalities": 20,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Flight 736 was approaching Bradford Regional Airport in a blinding snowstorm with minimal visibility when both pilots focused outside the cockpit trying to establish visual reference to the runway. The aircraft continued descending below the minimum descent altitude and struck trees 462 feet below this altitude, about 2.1 nautical miles short of the runway.",
+  "probable_cause": "Continuation of descent from the final approach fix through the Minimum Descent Altitude and into obstructing terrain at a time when both flight crewmembers were looking outside the aircraft in an attempt to establish visual reference to the ground. Contributing factors were the minimal visual references available at night on the approaches to the Bradford Regional Airport; a small but critical navigational error during the later stages of the approach; and a rapid change in visibility conditions that was not known to the crew.",
+  "factors": [
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "The aircraft passed through the Minimum Descent Altitude in a steady descent of 1,500 feet per minute, which continued until initial impact with the trees occurred."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The attention of both pilots was primarily directed outside the aircraft during the final 30 seconds of flight in an attempt to establish visual reference to the ground."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "The reported ceiling and visibility at Bradford Airport was 2,000 feet broken and 1 mile in very light snow showers and blowing snow; however, it is possible that variable conditions as low as 800 feet obscuration and 1/2-mile visibility prevailed in the final approach area."
+    },
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "Minimal visual references available at night on the approaches to the Bradford Regional Airport."
+    },
+    {
+      "id": "navigation_error",
+      "role": "contributing",
+      "evidence": "A small but critical navigational error during the later stages of the approach."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft first struck trees approximately 2-1/8 nautical miles short of the runway."
+    }
+  ],
+  "chain": [
+    [
+      "loss_of_situational_awareness",
+      "descent_below_minimums"
+    ],
+    [
+      "low_visibility",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "dark_night",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "navigation_error",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "19:57",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 736 reported passing a DME east of Erie, and was instructed to descend to 4,000 feet"
+    },
+    {
+      "t": 480,
+      "clock": "20:05",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Bradford approach controllers advised Flight 736 of light snow, blowing snow, and one mile visibility"
+    },
+    {
+      "t": 660,
+      "clock": "20:08",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Flight 736 reported that they were turning inbound for runway 32"
+    },
+    {
+      "t": 700,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The aircraft first struck trees approximately 2-1/8 nautical miles short of the runway",
+      "factors": [
+        "descent_below_minimums",
+        "cfit"
+      ]
+    },
+    {
+      "t": 710,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "The first officer yelled, Pull up but one second later the right wing struck a large tree, causing the aircraft to roll over"
+    },
+    {
+      "t": 720,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The fuselage came to rest inverted with the top portion (roof) of the fuselage torn away"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Pilots, operators and regulatory agencies should renew emphasis on, and improve wherever possible, cockpit procedures, crew discipline and flight management.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Both the air carrier industry and the FAA should review policies, procedures, practices, and training toward increasing crew efficiency and reducing distractions and nonessential crew functions during the approach and landing phase of a flight.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "During final approach, one pilot should maintain continuous vigilance of flight instruments inside the cockpit until positive visual reference is established.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "During approaches where less than full precision facilities exist, there should be a requirement that during the last 1,000 feet of final approach, the pilot flying call out altitude in 100-foot increments above airport elevation.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "The aviation community should consider expediting development and installation of audible and visible altitude warning devices and procedures for their use.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Altimetry systems should be reassessed with particular regard to their susceptibility to insidious interference by forms of precipitation.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "The possibility of development of additional altitude warning systems, external to the aircraft, should be explored.",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Development is needed in the fields of radio, radar, and inertial altimetry and CRT/microwave pictorial display as possible improved replacements for the barometric altimetry system.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Modified use of existing approach radar should be further studied with regard to its adaptability as a surveillance tool for nonprecision instrument approaches.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "There should be increased surveillance and more frequent and more rigorous inspection and maintenance of altimetry system by both the air carriers and the FAA.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Certification requirements and procedures should be re-examined to determine if there is a possibility of a single failure mode of nominally dual systems.",
+      "status": "closed_acceptable"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Installation of Instrument Landing System (ILS) at Bradford Regional Airport in fall 1969"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-04.pdf"
+  ],
+  "asn_id": "19681224-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Allegheny_Airlines_Flight_736",
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-04.pdf"
+  ],
+  "interest": 11.95,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flight, Findings, Probable Cause, Recommendations"
+    ]
+  }
+}

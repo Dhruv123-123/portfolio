@@ -160,10 +160,11 @@
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Key sections read: synopsis/summary, conclusions, probable cause, recommendations"
+      "Key sections read: synopsis, conclusions, probable cause, recommendations"
     ]
   },
   "curated_id": null,
+  "recommendations": [],
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9704.pdf"
   ]

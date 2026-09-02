@@ -1,0 +1,171 @@
+{
+  "id": "wd_q138502870",
+  "qid": "Q138502870",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2026 Bolivian Air Force Hercules C-130 crash",
+  "flight_number": null,
+  "date": "2026-02-27",
+  "time_reference": "local",
+  "agency": "DGAC",
+  "agencies": [
+    {
+      "code": "DGAC",
+      "name": "Directorate General of Civil Aeronautics",
+      "country": "Bolivia",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Lockheed C-130H Hercules",
+    "manufacturer": "Lockheed",
+    "family": "C-130",
+    "registration": "FAB-81"
+  },
+  "operator": "Bolivian Air Force",
+  "route": {
+    "from": "VVI",
+    "from_name": "Viru Viru (Santa Cruz)",
+    "to": "LPB",
+    "to_name": "El Alto (La Paz)"
+  },
+  "location": {
+    "name": "El Alto International Airport, Costanera Avenue",
+    "country": "Bolivia",
+    "lat": -16.5,
+    "lon": -68.19
+  },
+  "phase": "landing",
+  "occupants": 8,
+  "fatalities": 24,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "WSTRW",
+  "summary": "A 49-year-old Lockheed C-130H Hercules carrying newly printed banknotes for the Central Bank of Bolivia landed at El Alto during a heavy hailstorm. After landing, the aircraft veered off the runway, breached the airport perimeter fence, and collided with more than a dozen vehicles on Costanera Avenue, killing 24 people including 4 children.",
+  "probable_cause": "Aircraft was carrying load at its maximum capacity at altitude of El Alto (over 4,000 meters), with heavy hailstorm during landing. The company delivering banknotes was behind schedule and under pressure, contributing to the overloading decision.",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "contributing",
+      "evidence": "A heavy hailstorm was reported during approach and landing at El Alto."
+    },
+    {
+      "id": "weight_and_balance_error",
+      "role": "initiating",
+      "evidence": "Aircraft was carrying load at its maximum capacity and the plane was physically impossible to land with that load at the altitude of El Alto (over 4,000 meters above sea level)."
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "contributing",
+      "evidence": "The company in charge of delivering the banknotes to the Central Bank of Bolivia was behind schedule, so it was under pressure."
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "Aircraft veered off the runway after landing, destroying the west side perimeter fence and entering Costanera Avenue."
+    }
+  ],
+  "chain": [
+    [
+      "operator_safety_culture",
+      "weight_and_balance_error"
+    ],
+    [
+      "weight_and_balance_error",
+      "convective_weather"
+    ],
+    [
+      "convective_weather",
+      "runway_overrun"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "landing",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Heavy hailstorm reported during approach and landing at El Alto.",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "After landing, the aircraft veered off the runway, destroying the west side perimeter fence.",
+      "factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft entered Costanera Avenue where it hit more than a dozen vehicles, including private cars, public transport and cargo trucks."
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "landing",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "A total of 24 people died with 23 of the fatalities being people on the ground, of whom 4 were children.",
+      "factors": [
+        "runway_overrun"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "DGAC",
+      "text": "Review and strengthen weight and balance procedures, particularly for military cargo operations at high-altitude airports.",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "DGAC",
+      "text": "Implement stricter scheduling and pressure management protocols to prevent overloading for schedule compliance.",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "DGAC",
+      "text": "Enhance runway safety measures at El Alto including improved arresting systems and perimeter barriers.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.vision360.bo/noticias/2026/02/27/40688-dgac-sobre-accidente-en-el-alto-el-avion-se-salio-de-la-pista-no-se-cayo"
+  ],
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/2026_Bolivian_Air_Force_Lockheed_C-130_crash",
+  "report_links": [
+    "https://www.vision360.bo/noticias/2026/02/27/40688-dgac-sobre-accidente-en-el-alto-el-avion-se-salio-de-la-pista-no-se-cayo",
+    "https://aviation-safety.net/wikibase/567444",
+    "https://www.bcb.gob.bo/webdocs/files_noticias/28feb26%20CP%209%20BCB%20levanta%20inhabilitaci%C3%B3n%20Serie%20B.PDF"
+  ],
+  "interest": 11.76,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Source text is preliminary news article from DGAC press release, not formal final report. Detailed summary record provided from Wikidata source. This is a very recent accident (2026)."
+    ]
+  }
+}

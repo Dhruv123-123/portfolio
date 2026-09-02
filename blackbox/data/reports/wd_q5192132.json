@@ -6,8 +6,15 @@
   "title": "Cubana de Aviación 1216",
   "flight_number": "1216",
   "date": "1999-12-21",
-  "agency": "UNKNOWN",
-  "agencies": [],
+  "agency": "DGAC",
+  "agencies": [
+    {
+      "code": "DGAC",
+      "name": "Dirección General de Aeronautica Civil",
+      "country": "Guatemala",
+      "role": "lead"
+    }
+  ],
   "aircraft": {
     "type": "McDonnell Douglas DC-10-30",
     "manufacturer": "McDonnell Douglas",
@@ -128,10 +135,11 @@
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Key sections read: synopsis/summary, conclusions, probable cause, recommendations"
+      "Key sections read: synopsis, conclusions, probable cause, recommendations"
     ]
   },
   "curated_id": null,
+  "recommendations": [],
   "sources": [
     "https://bea.aero/fileadmin/documents/docspa/1999/f-di991221e/pdf/f-di991221e.pdf"
   ]
