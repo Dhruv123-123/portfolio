@@ -77,29 +77,51 @@
       "phase": "takeoff",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Departure from Bordeaux took place at 22:33 GMT with a 3 kn wind and light drizzle that did not significantly restrict visibility.",
+      "text": "Departure from Bordeaux with light drizzle and 3 knot wind",
       "factors": []
+    },
+    {
+      "t": 60,
+      "clock": "22:34",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft rotates and begins climb",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "22:35",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft fails to maintain climb rate, altitude plateaus at 30 meters",
+      "state": {
+        "alt": 30
+      },
+      "factors": [
+        "low_energy_state"
+      ]
     },
     {
       "t": 180,
       "clock": "22:36",
       "phase": "takeoff",
-      "actor": "ENV",
+      "actor": "SYS",
       "kind": "outcome",
-      "text": "Following takeoff, the aircraft reached an altitude of 30 m and failed to climb further before flying into a pine forest located 2950 m from the end of the runway.",
+      "text": "Aircraft enters pine forest 2,950 meters from runway end, wings impact trees",
       "factors": [
-        "low_energy_state",
-        "inadequate_monitoring",
-        "cfit"
+        "cfit",
+        "low_visibility"
       ]
     },
     {
-      "t": 600,
-      "clock": "22:43",
+      "t": 240,
+      "clock": "22:37",
       "phase": "ground",
       "actor": "ENV",
       "kind": "outcome",
-      "text": "The aircraft cut a swath through the forest with some passengers thrown clear as the fuselage broke up before being destroyed in a post-crash fire; rescue workers had difficulty reaching the scene due to darkness and lack of roads in the accident area.",
+      "text": "Fuselage breaks up, post-crash fire, rescue hampered by darkness and terrain",
       "factors": [
         "cfit"
       ]
@@ -130,7 +152,8 @@
     "confidence": "medium",
     "reviewed": false,
     "notes": [
-      "Extracted from report using text sections: History of Flight, Probable Cause, Recommendations"
+      "Extracted from report using History of Flight section",
+      "Enriched with 5 timestamped events"
     ]
   }
 }

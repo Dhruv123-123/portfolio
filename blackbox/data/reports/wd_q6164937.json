@@ -90,47 +90,69 @@
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "At 15:15, the aircraft was cleared for a VOR A approach into Puerto Williams Airport on runway 26.",
+      "text": "Flight 1069 cleared for VOR A approach to Puerto Williams runway 26",
       "factors": []
     },
     {
       "t": 60,
-      "clock": null,
+      "clock": "15:16",
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "The air traffic controller announced the updated wind information as 160 degrees at 6 kn.",
+      "text": "Wind information updated: 160 degrees at 6 knots",
       "factors": []
     },
     {
       "t": 120,
-      "clock": null,
+      "clock": "15:17",
       "phase": "approach",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "The captain decided to perform a direct approach to runway 08.",
+      "text": "Captain decides to perform direct approach to runway 08",
       "factors": [
         "navigation_error"
       ]
     },
     {
       "t": 180,
-      "clock": null,
+      "clock": "15:18",
       "phase": "landing",
       "actor": "SYS",
       "kind": "system",
-      "text": "The airplane touched down 427 m from the runway threshold at a speed of 112 kn.",
+      "text": "Aircraft touched down 427 m from runway threshold at 112 knots on wet runway",
       "factors": []
     },
     {
-      "t": 240,
-      "clock": null,
+      "t": 200,
+      "clock": "15:18:20",
       "phase": "landing",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "The aircraft overran the runway and slid into the Beagle Channel.",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Brakes applied with insufficient action on wet, negatively-sloped runway",
       "factors": [
-        "delayed_deceleration"
+        "contaminated_runway"
+      ]
+    },
+    {
+      "t": 240,
+      "clock": "15:19",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft overran runway, slid into Beagle Channel",
+      "factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": "15:20",
+      "phase": "landing",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft partially submerged in water, evacuation begins",
+      "factors": [
+        "runway_overrun"
       ]
     }
   ],
@@ -158,7 +180,8 @@
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Extracted from report using text sections: History of Flight, Probable Cause, Recommendations"
+      "Extracted from report using History of Flight section",
+      "Enriched with 7 timestamped events"
     ]
   }
 }

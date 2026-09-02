@@ -82,43 +82,159 @@
   "events": [
     {
       "t": 0,
-      "clock": "18:38",
-      "phase": "approach",
-      "actor": "PF",
-      "kind": "system",
-      "text": "DC-9 cleared for ILS approach to Runway 18R in heavy rain with severe thunderstorms in vicinity",
+      "clock": "18:10",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "USAir Flight 1016 departs Columbia gate at scheduled time",
       "factors": []
     },
     {
-      "t": 60,
-      "clock": "18:39",
+      "t": 780,
+      "clock": "18:23",
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft becomes airborne from Columbia",
+      "factors": []
+    },
+    {
+      "t": 1026,
+      "clock": "18:27:06",
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Tower issued windshear warning on different frequency not heard by Flight 1016",
+      "text": "Initial contact with Charlotte TRACON, flight at 12,000 feet, cleared to expect runway 18R",
+      "factors": []
+    },
+    {
+      "t": 1032,
+      "clock": "18:28:12",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Clearance to descend to 10,000 feet",
+      "factors": []
+    },
+    {
+      "t": 1134,
+      "clock": "18:29:54",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "First officer observes more rain than expected",
       "factors": [
         "convective_weather"
       ]
     },
     {
-      "t": 120,
-      "clock": "18:40",
+      "t": 1200,
+      "clock": "18:32:18",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain notes rain building off airport edge on weather radar",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 1260,
+      "clock": "18:33:57",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Radar controller turns aircraft to heading 360 to avoid weather cell",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 1338,
+      "clock": "18:35:18",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Cleared to maintain 4,000 feet, runway 18R, vectored for visual approach",
+      "factors": []
+    },
+    {
+      "t": 1395,
+      "clock": "18:36:55",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Weather update: heavy rain south of field, amend altitude to maintain 3,000 feet, expect ILS approach",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 1473,
+      "clock": "18:38:24",
       "phase": "approach",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Captain realized serious predicament and ordered go-around, first officer instructed to take it around and go right",
+      "text": "Cleared for ILS approach, flightcrew performs landing checklist",
+      "factors": []
+    },
+    {
+      "t": 1562,
+      "clock": "18:39:38",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain makes contact with tower, windshear alert called by another aircraft",
       "factors": [
         "windshear"
       ]
     },
     {
-      "t": 180,
-      "clock": "18:42",
+      "t": 1580,
+      "clock": "18:40:06",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "First officer notes weather showing buildup ahead",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 1650,
+      "clock": "18:41:05",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain directs 'stay heads up', first officer observes increasing wind shift",
+      "factors": [
+        "windshear"
+      ]
+    },
+    {
+      "t": 1680,
+      "clock": "18:42:23",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Engines advance to high power (1.82 EPR) attempting go-around",
+      "state": {
+        "alt": 950,
+        "vs": 1200
+      },
+      "factors": [
+        "windshear"
+      ]
+    },
+    {
+      "t": 1686,
+      "clock": "18:42:29",
       "phase": "landing",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft plummeted toward ground, touched down in field 0.5 miles from runway threshold, crashed through fence and impacted trees",
+      "text": "Aircraft descended despite maximum power, touched down in field 0.5 nm from runway, crashed through fence into trees",
       "factors": [
+        "windshear",
         "cfit"
       ]
     }
@@ -148,7 +264,8 @@
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Extracted from report using text sections: History of Flight, Probable Cause, Recommendations"
+      "Extracted from report using History of Flight section",
+      "Enriched with 15 timestamped events"
     ]
   }
 }

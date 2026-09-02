@@ -86,7 +86,16 @@
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Flight 128 reported passing outer marker and was cleared to land",
+      "text": "Flight 128 reported passing outer marker",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": "20:56:30",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Cleared to land, crew begins descent",
       "factors": []
     },
     {
@@ -95,27 +104,63 @@
       "phase": "approach",
       "actor": "PF",
       "kind": "crew_action",
-      "text": "Flight crew initiated descent and began performing final landing checklist",
+      "text": "Flight crew initiated descent and began final landing checklist",
       "factors": []
     },
     {
+      "t": 90,
+      "clock": "20:57:30",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Glide slope inoperative, crew decides to continue visual approach at night",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
       "t": 120,
-      "clock": "20:59",
+      "clock": "20:58",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Descent continues, approach briefing completed",
+      "factors": []
+    },
+    {
+      "t": 150,
+      "clock": "20:58:30",
       "phase": "approach",
       "actor": "SYS",
       "kind": "system",
-      "text": "Aircraft descended to 875 feet and struck trees 9357 feet short of runway",
+      "text": "Aircraft descending below safe altitude, approaching terrain",
+      "state": {
+        "alt": 875
+      },
       "factors": [
+        "low_visibility",
         "descent_below_minimums"
       ]
     },
     {
       "t": 180,
+      "clock": "20:59",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck trees 9,357 feet short of runway at 875 feet altitude",
+      "factors": [
+        "descent_below_minimums",
+        "cfit"
+      ]
+    },
+    {
+      "t": 240,
       "clock": "21:00",
       "phase": "landing",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft impacted terrain in wooded area and disintegrated in flames",
+      "text": "Aircraft impacted terrain in wooded area, disintegrated and caught fire",
       "factors": [
         "cfit",
         "post_impact_fire"
@@ -147,7 +192,8 @@
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Extracted from report using text sections: History of Flight, Probable Cause, Recommendations"
+      "Extracted from report using History of Flight section",
+      "Enriched with 8 timestamped events"
     ]
   }
 }
