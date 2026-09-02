@@ -1,0 +1,242 @@
+{
+  "id": "wd_q4355070",
+  "qid": "Q4355070",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "TWA 841 (1974)",
+  "flight_number": "TW841",
+  "date": "1974-09-08",
+  "time_reference": "UTC",
+  "t0": "1974-09-08T09:30:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-75-7",
+      "report_date": "1975-01-10"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 707-331B",
+    "manufacturer": "Boeing",
+    "family": "707",
+    "registration": "N8734"
+  },
+  "operator": "Trans World Airlines",
+  "route": {
+    "from": "TLV",
+    "from_name": "Tel Aviv",
+    "to": "JFK",
+    "to_name": "New York"
+  },
+  "location": {
+    "name": "Ionian Sea, approximately 100 nautical miles west of Araxos, Greece",
+    "country": "International waters",
+    "lat": 38.4167,
+    "lon": 19.3667
+  },
+  "phase": "cruise",
+  "occupants": 88,
+  "fatalities": 88,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "SEC",
+  "summary": "TWA Flight 841, a Boeing 707-331B operating a scheduled international flight from Tel Aviv to New York via Athens and Rome, was destroyed by an explosive device detonated in the aft cargo compartment while cruising at 28,000 feet. The explosion disabled the aircraft's control systems, causing it to pitch up steeply, stall, and enter a death spiral from which it could not recover.",
+  "probable_cause": "The National Transportation Safety Board determines that the probable cause of this accident was the detonation of an explosive device within the aft cargo compartment of the aircraft which rendered the aircraft uncontrollable.",
+  "factors": [
+    {
+      "id": "terrorism_or_hostile_act",
+      "role": "initiating",
+      "evidence": "An explosive device was detonated within the aft cargo compartment while the aircraft was cruising at 28,000 feet (p. 26, Finding 4)."
+    },
+    {
+      "id": "structural_failure",
+      "role": "contributing",
+      "evidence": "The explosion disabled the control system of the aircraft, causing structural damage that made the aircraft uncontrollable (p. 26, Finding 5)."
+    },
+    {
+      "id": "cargo_fire",
+      "role": "contributing",
+      "evidence": "The explosive device was placed in the aft cargo compartment which contained baggage and cargo (p. 6)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The out-of-control aircraft executed a steep pitch-up followed by roll and descent, with apparent engine separation observed by witnesses before impact in the Ionian Sea (p. 7)."
+    }
+  ],
+  "chain": [
+    [
+      "terrorism_or_hostile_act",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "06:13",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 841 departs Tel Aviv 43 minutes late due to passenger security procedures with 105 passengers, 9 crew members",
+      "factors": []
+    },
+    {
+      "t": 2940,
+      "clock": "07:49",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 841 lands at Athens; 56 passengers deplane and baggage offloaded",
+      "factors": []
+    },
+    {
+      "t": 3780,
+      "clock": "09:03",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 841 departs Athens with 79 passengers after loading checked baggage, cargo, and mail",
+      "factors": []
+    },
+    {
+      "t": 4680,
+      "clock": "09:18",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At 0930 UTC, TWA 841 reports level at Flight Level 280, last known radio transmission",
+      "state": {
+        "alt": 28000
+      },
+      "factors": []
+    },
+    {
+      "t": 4800,
+      "clock": "09:20",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Explosive device detonates in aft cargo compartment; aircraft becomes uncontrollable",
+      "state": {
+        "alt": 28000
+      },
+      "factors": [
+        "terrorism_or_hostile_act",
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 5100,
+      "clock": "09:25",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At 0940 UTC, Pan Am Flight 110 observes aircraft at 11 o'clock position in steep climb attitude",
+      "factors": []
+    },
+    {
+      "t": 5160,
+      "clock": "09:26",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft rolls left to steep descent with apparent engine separation observed",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 5400,
+      "clock": "09:30",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashes into Ionian Sea approximately 100 nautical miles west of Araxos; all 88 occupants killed",
+      "state": {
+        "alt": 0
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-75-2",
+      "to": "FAA",
+      "text": "Security measures for cargo compartments",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "terrorism_or_hostile_act"
+      ]
+    },
+    {
+      "id": "A-75-3",
+      "to": "FAA",
+      "text": "International cargo security procedures",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "terrorism_or_hostile_act"
+      ]
+    },
+    {
+      "id": "A-75-4",
+      "to": "FAA",
+      "text": "Enhanced luggage inspection protocols",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "terrorism_or_hostile_act"
+      ]
+    },
+    {
+      "id": "A-75-5",
+      "to": "FAA",
+      "text": "Cargo compartment design improvements",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "structural_failure"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Implementation of enhanced cargo screening and security procedures for international flights",
+    "Improved cargo compartment security measures and access controls",
+    "Standardization of explosive detection equipment at major airports",
+    "International aviation security standards strengthened following post-1974 reviews"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7507.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/TWA_Flight_841_(1974)",
+  "asn_id": "19740908-0",
+  "interest": 14.76,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7507.pdf",
+    "https://libraryonline.erau.edu:443/online-full-text/ntsb/aircraft-accident-reports/AAR75-07.pdf"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Investigation narrative (lines 441-800), Findings (lines 3275-3310), Probable Cause (lines 3320-3350), Recommendations (lines 3357-3370)",
+      "Events constructed from Flight 841 timeline and witness accounts from Pan Am Flight 110",
+      "Confirmation that explosive device was terrorist act per NTSB findings",
+      "Recommendations A-75-2 through A-75-5 issued by NTSB on January 10, 1975"
+    ]
+  }
+}

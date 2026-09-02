@@ -1,0 +1,230 @@
+{
+  "id": "wd_q5329956",
+  "qid": "Q5329956",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Eastern Air Lines 212",
+  "flight_number": "212",
+  "date": "1974-09-11",
+  "time_reference": "local",
+  "t0": "1974-09-11T07:33:58-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-75-9",
+      "report_date": "1975-05-23"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-9-31",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-9",
+    "registration": "N8984E"
+  },
+  "operator": "Eastern Air Lines",
+  "route": {
+    "from": "CHS",
+    "from_name": "Charleston",
+    "to": "ORD",
+    "to_name": "Chicago"
+  },
+  "location": {
+    "name": "Cornfield near Charlotte Douglas International Airport, Charlotte, North Carolina",
+    "country": "United States",
+    "lat": 35.1539,
+    "lon": -80.9264
+  },
+  "phase": "approach",
+  "occupants": 82,
+  "fatalities": 72,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Eastern Air Lines Flight 212, a DC-9-31 operating a scheduled flight from Charleston to Chicago via Charlotte, crashed in a cornfield 3.3 statute miles short of the runway threshold while attempting to land at Charlotte. The crew became distracted by non-operational conversation during the approach and lost altitude awareness, descending far below safe altitudes despite terrain warning alerts and altitude alert tones.",
+  "probable_cause": "The National Transportation Safety Board determines that the probable cause of the accident was the flight crew's lack of altitude awareness at critical points during the approach due to poor cockpit discipline in that the crew did not follow prescribed procedures.",
+  "factors": [
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "initiating",
+      "evidence": "The crew's nearly total lack of altitude awareness during approach, despite multiple altitude alert tones and terrain warning system activation at 1,000 feet above ground (p. 19)."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The pilot monitoring did not detect or call out the excessive descent rate, and required altitude callouts were not made at critical points (p. 20)."
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "The aircraft descended through the final approach fix altitude of 1,800 feet more than 2 miles before the fix was reached, eventually crossing at only 1,350 feet, which was 450 feet below prescribed altitude (p. 20)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft struck small trees and then impacted a cornfield about 100 feet below airport elevation, broke up, and burst into flames (p. 8)."
+    }
+  ],
+  "chain": [
+    [
+      "loss_of_situational_awareness",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "07:00",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 212 departed Charleston with 78 passengers and 4 crew members",
+      "factors": []
+    },
+    {
+      "t": 1260,
+      "clock": "07:21",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "ATIS information recorded on CVR indicating weather at Charlotte",
+      "factors": []
+    },
+    {
+      "t": 1618,
+      "clock": "07:26",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Atlanta ARTCC clears flight to descend to 8,000 feet; autopilot disconnect recorded",
+      "factors": []
+    },
+    {
+      "t": 1980,
+      "clock": "07:33",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Crew engaged in non-operational discussion and conversation on several non-operational subjects from 0723:23 through approach",
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 2015,
+      "clock": "07:33:35",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Altitude alert tone sounds, aircraft approaching 3,000 feet",
+      "factors": []
+    },
+    {
+      "t": 2040,
+      "clock": "07:33:60",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Terrain warning alert activated at 1,000 feet above ground (0732:41), aural warning sounded but was silenced",
+      "state": {
+        "alt": 1000
+      },
+      "factors": []
+    },
+    {
+      "t": 2078,
+      "clock": "07:34:38",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Second altitude alert at 2,750 feet (0731:54)",
+      "state": {
+        "alt": 2750
+      },
+      "factors": []
+    },
+    {
+      "t": 2238,
+      "clock": "07:37:18",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain identifies Carowinds Tower as approach landmark, becomes fixated on visual acquisition",
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 2398,
+      "clock": "07:39:58",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Initial impact with trees and cornfield; aircraft destroyed by impact and fire (0733:58)",
+      "state": {
+        "alt": 0
+      },
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-74-85",
+      "to": "FAA",
+      "text": "Initiate ways and means to improve professional standards among pilots",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "id": "A-74-86",
+      "to": "FAA",
+      "text": "Continue emphasis on improving professional conduct and cockpit discipline",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "loss_of_situational_awareness"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Establishment of Sterile Cockpit Rule requiring flight crews to limit non-essential conversation below 10,000 feet",
+    "Enhanced emphasis on altitude awareness and callout procedures",
+    "Standardization of terrain warning system utilization and response procedures"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7509.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Eastern_Air_Lines_Flight_212",
+  "asn_id": "19740911-1",
+  "interest": 15.05,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7509.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR75-09.pdf"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flight (lines 836-1600), Findings (lines 4169-4300), Probable Cause (lines 4312-4325), Recommendations (lines 4357-4370)",
+      "Events constructed from CVR timeline and FDR data in History of Flight section",
+      "Recommendations extracted from NTSB safety recommendation letters dated October 8, 1974"
+    ]
+  }
+}
