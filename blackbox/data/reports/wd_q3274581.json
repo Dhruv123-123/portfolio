@@ -1,0 +1,275 @@
+{
+  "id": "wd_q3274581",
+  "qid": "Q3274581",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Garuda Indonesia 865",
+  "flight_number": "GA865",
+  "date": "1996-06-13",
+  "time_reference": "JST",
+  "t0": "1996-06-13T07:07:45Z",
+  "agency": "JTSB",
+  "agencies": [
+    {
+      "code": "JTSB",
+      "name": "Japan Transport Safety Board",
+      "country": "Japan",
+      "role": "lead",
+      "report_id": "97-6",
+      "report_title": "Aircraft Accident Investigation Report - Garuda Indonesia Douglas DC-10-30, PK-GIE",
+      "report_date": "1997-11-20",
+      "url": "https://jtsb.mlit.go.jp/eng-air_report/PK-GIE.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-10-30",
+    "family": "DC-10",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "PK-GIE"
+  },
+  "operator": "Garuda Indonesia",
+  "route": {
+    "from_name": "Fukuoka Airport",
+    "to_name": "Jakarta International Airport"
+  },
+  "location": {
+    "name": "Fukuoka Airport",
+    "country": "Japan"
+  },
+  "phase": "takeoff",
+  "occupants": 275,
+  "fatalities": 3,
+  "damage": "destroyed",
+  "category": "RE",
+  "summary": "Garuda Indonesia Flight 865 aborted takeoff from runway 16 at Fukuoka Airport after the number 3 engine failed at speeds nearing V2. The abort occurred after nose rotation, and despite use of brakes, ground spoilers and thrust reversers, the aircraft could not stop within runway boundaries. The aircraft overran the runway 620 meters, striking a ditch, fence and road, resulting in structural damage that caused post-impact fire.",
+  "probable_cause": "Engine failure during takeoff at critical speed, with abort decision at rotation speed. The final report determined pilot error and failure of the airline's maintenance and flight operation sections to properly coordinate maintenance intervals resulted in the accident. The engine turbine blades had been in service for 6,182 cycles when General Electric recommended discarding after 6,000 cycles.",
+  "factors": [
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "the failure of the number 3 (right) engine during takeoff (p. 16)"
+    },
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "the engine turbine blades had been in service for 6,182 cycles when General Electric recommended discarding the blades after 6,000 cycles"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "the crew of the McDonnell Douglas DC-10-30 attempted to abort take-off after the failure of the number 3 engine at speeds nearing V2 with rotation of the nose"
+    },
+    {
+      "id": "delayed_deceleration",
+      "role": "contributing",
+      "evidence": "attempts were made to stop the aircraft on the runway by use of brakes, ground spoilers and thrust reversers, but the crew was unable to stop the aircraft within the boundaries"
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "the aircraft slid through a ditch, a fence and a road before finally coming to rest approximately 620 m beyond the runway threshold (p. 17)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "The resultant fire destroyed the areas between the hull fractures, and other areas of the aircraft"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "The fuselage broke in two places, at about the wing root trailing edge, and at approximately 10.4 m aft of the wing root trailing edge"
+    }
+  ],
+  "chain": [
+    [
+      "engine_failure",
+      "inappropriate_control_input"
+    ],
+    [
+      "maintenance_error",
+      "engine_failure"
+    ],
+    [
+      "inappropriate_control_input",
+      "delayed_deceleration"
+    ],
+    [
+      "delayed_deceleration",
+      "runway_overrun"
+    ],
+    [
+      "runway_overrun",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "12:06:53",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Fukuoka Tower cleared GA865 for takeoff from runway 16, wind 280 degrees at 7 knots",
+      "factors": []
+    },
+    {
+      "t": 8,
+      "clock": "12:07:01",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain commanded First Officer to set autothrottles on",
+      "state": {"ias": 0},
+      "factors": []
+    },
+    {
+      "t": 45,
+      "clock": "12:07:38",
+      "phase": "takeoff",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First Officer called V1 at 151.5 knots",
+      "state": {"ias": 151},
+      "factors": []
+    },
+    {
+      "t": 47,
+      "clock": "12:07:40",
+      "phase": "takeoff",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First Officer called Rotate at 158.0 knots; nose began rotation",
+      "state": {"ias": 158, "pitch": 2.6},
+      "factors": []
+    },
+    {
+      "t": 58,
+      "clock": "12:07:51",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Number 3 engine failure; N1 decreased from 112.8% to 53.3%",
+      "state": {"pitch": 11.4},
+      "factors": [
+        "engine_failure"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": "12:07:53",
+      "phase": "takeoff",
+      "actor": "FE",
+      "kind": "crew_action",
+      "text": "Flight Engineer called Engine failure number one (misidentifying the failed engine)",
+      "factors": []
+    },
+    {
+      "t": 61,
+      "clock": "12:07:54",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain decided to abort takeoff, fearing aircraft would collide with nearby buildings",
+      "factors": [
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "t": 63,
+      "clock": "12:07:56",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Thrust reversers deployed; DFDR and CVR stopped recording",
+      "factors": [
+        "delayed_deceleration"
+      ]
+    },
+    {
+      "t": 75,
+      "clock": "12:08:08",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft veered right, ran over jet barrier anchor chain, departed runway onto grass field",
+      "factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "t": 105,
+      "clock": "12:08:38",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck concrete edge of public road 320 meters south of runway; fuselage fractured",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "12:08:53",
+      "phase": "ground",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft came to rest 620 meters from runway threshold; fire broke out",
+      "factors": [
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Garuda Indonesia",
+      "text": "Reinforcement of flight training and proficiency checks for flight crew to allow pilots to make an adequate go/no-go decision in the event of aircraft anomalies such as engine failure during takeoff roll",
+      "status": "unknown",
+      "trigger_factors": ["engine_failure", "inappropriate_control_input"]
+    },
+    {
+      "id": null,
+      "to": "Garuda Indonesia",
+      "text": "Thorough implementation of emergency evacuation training for flight crew periodically and joint training with cabin attendants",
+      "status": "unknown",
+      "trigger_factors": ["post_impact_fire"]
+    },
+    {
+      "id": null,
+      "to": "Garuda Indonesia",
+      "text": "Improvement of methods of guiding passengers including study of effective measures against fire and smoke",
+      "status": "unknown",
+      "trigger_factors": ["post_impact_fire"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://jtsb.mlit.go.jp/eng-air_report/PK-GIE.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: flight history (pages 14-18), causes (page 60), safety recommendations (pages 60-61)",
+      "Engine maintenance issue identified but technical details not fully explored",
+      "CVR transcript not included in accessible report sections"
+    ]
+  },
+  "asn_id": "19960613-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Garuda_Indonesia_Flight_865",
+  "report_links": [
+    "https://jtsb.mlit.go.jp/eng-air_report/PK-GIE.pdf"
+  ],
+  "interest": 10.45,
+  "curated_id": null
+}

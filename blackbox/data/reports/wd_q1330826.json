@@ -1,0 +1,357 @@
+{
+  "id": "wd_q1330826",
+  "qid": "Q1330826",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "FedEx Express 80",
+  "flight_number": "FDX80",
+  "date": "2009-03-23",
+  "time_reference": "JST",
+  "t0": "2009-03-23T06:48:20Z",
+  "agency": "JTSB",
+  "agencies": [
+    {
+      "code": "JTSB",
+      "name": "Japan Transport Safety Board",
+      "country": "Japan",
+      "role": "lead",
+      "report_id": "AA2013-4",
+      "report_title": "Aircraft Accident Investigation Report - Crash During Landing Federal Express Corporation McDonnell Douglas MD-11F, N526FE",
+      "report_date": "2013-04-05",
+      "url": "https://jtsb.mlit.go.jp/eng-air_report/N526FE.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas MD-11F",
+    "family": "MD-11",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "N526FE"
+  },
+  "operator": "FedEx Express",
+  "route": {
+    "from_name": "Guangzhou Baiyun International Airport",
+    "to_name": "Narita International Airport"
+  },
+  "location": {
+    "name": "Narita International Airport",
+    "country": "Japan"
+  },
+  "phase": "landing",
+  "occupants": 2,
+  "fatalities": 2,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "FedEx Express Flight 80 touched down on Runway 34L at Narita in gusty winds of 26 to 40 knots. The first officer executed a delayed flare with a high sink rate; when the aircraft bounced, he applied excessive nose-down pitch input. Repeated bounces caused severe pitch oscillations until the left wing struck the ground, the landing gear collapsed, and the aircraft inverted and burned. Both pilots survived impact but died from injuries before reaching the hospital.",
+  "probable_cause": "The JTSB determined the accident was caused by porpoising oscillations that developed during touchdown following the first officer's delayed flare and high sink rate, compounded by his large nose-down inputs after the first bounce that deviated from approved MD-11 procedures of maintaining a 7.5-degree pitch angle and using thrust to control descent.",
+  "factors": [
+    {
+      "id": "windshear",
+      "role": "contributing",
+      "evidence": "surface winds 320\u00b0 at 26 knots gusting to 40 knots reported at time of accident (p. 3)"
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "high sink rate during final approach not suppressed until aircraft was nearly on runway (p. 88-90)"
+    },
+    {
+      "id": "hard_landing",
+      "role": "initiating",
+      "evidence": "first bounce resulting from high touchdown sink rate (7 fps) coupled with large nose-up inputs, much higher than average of 60 previous landings (p. 91-92)"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "large nose-down input (-4.9\u00b0) applied just before first touchdown and continuing after first bounce (-6.7\u00b0), causing touchdown on nose gear and deviating from approved procedures requiring 7.5\u00b0 pitch and thrust control (p. 92-93)"
+    },
+    {
+      "id": "landing_gear_failure",
+      "role": "contributing",
+      "evidence": "left wing transferred force into left main landing gear exceeding its design limit of 1200 ft/min touchdown (p. 3)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "left wing struck the ground as left main gear collapsed during third touchdown, causing aircraft to veer to the left, burst into flames and invert (p. 8-9)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "fire broke out near the rear of left engine at 06:48:29; aircraft engulfed in flames as it rolled inverted (p. 21)"
+    }
+  ],
+  "chain": [
+    [
+      "windshear",
+      "unstable_approach"
+    ],
+    [
+      "unstable_approach",
+      "hard_landing"
+    ],
+    [
+      "hard_landing",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "landing_gear_failure"
+    ],
+    [
+      "landing_gear_failure",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": -120,
+      "clock": "06:41:39",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Narita Tower informed wind 320\u00b0 at 28 knots gusting to 40 knots",
+      "factors": [
+        "windshear"
+      ]
+    },
+    {
+      "t": -60,
+      "clock": "06:43:57",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Narita Tower reported windshear plus/minus 15 knots on final approach below 2,000 feet",
+      "factors": []
+    },
+    {
+      "t": -50,
+      "clock": "06:45:16",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Narita Tower informed surface wind 320\u00b0 at 26 knots with maximum 38 knots",
+      "factors": []
+    },
+    {
+      "t": -30,
+      "clock": "06:46:29",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Narita Tower issued landing clearance for Runway 34L, wind 320\u00b0 at 29 knots with maximum 36 knots",
+      "factors": []
+    },
+    {
+      "t": -15,
+      "clock": "06:48:10",
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "100 feet callout; aircraft with CAS 154 knots and pitch angle 3.5\u00b0",
+      "state": {
+        "alt": 100,
+        "ias": 154,
+        "pitch": 3.5
+      },
+      "factors": []
+    },
+    {
+      "t": -8,
+      "clock": "06:48:03",
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Autopilot disconnected at 198 feet radio altitude; aircraft flying with unstable approach parameters",
+      "state": {
+        "alt": 198,
+        "ias": 178.5,
+        "pitch": 0.7
+      },
+      "factors": [
+        "unstable_approach"
+      ]
+    },
+    {
+      "t": -2,
+      "clock": "06:48:17",
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Large nose-down control column input (-3.0\u00b0) initiated at 20 feet radio altitude",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "06:48:20",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "First touchdown on right main landing gear with high sink rate of 7 feet per second; vertical acceleration 1.63 G",
+      "state": {
+        "alt": 0,
+        "ias": 166,
+        "pitch": 4.6
+      },
+      "factors": [
+        "hard_landing"
+      ]
+    },
+    {
+      "t": 1,
+      "clock": "06:48:21",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft bounced off runway; auto ground spoilers deployed at 25\u00b0",
+      "factors": []
+    },
+    {
+      "t": 2,
+      "clock": "06:48:22",
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Second touchdown on nose landing gear in nose-low attitude (-1.8\u00b0) with pitch angle decreased 6.4\u00b0 in 1.75 seconds; vertical acceleration 2.21 G",
+      "state": {
+        "ias": 161,
+        "pitch": -1.8
+      },
+      "factors": [
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "t": 3,
+      "clock": "06:48:23",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Second bounce initiated; large nose-down control inputs continued (-7.7\u00b0 to -7.4\u00b0)",
+      "factors": []
+    },
+    {
+      "t": 7,
+      "clock": "06:48:27",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Third touchdown on nose landing gear followed by main landing gears; maximum vertical acceleration 3.06 G",
+      "state": {
+        "ias": 150,
+        "pitch": -4.6
+      },
+      "factors": [
+        "landing_gear_failure"
+      ]
+    },
+    {
+      "t": 9,
+      "clock": "06:48:29",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Fire broke out near rear of left engine at pitch 10\u00b0 and roll -15\u00b0; aircraft engulfed in flames",
+      "factors": [
+        "structural_failure",
+        "post_impact_fire"
+      ]
+    },
+    {
+      "t": 11,
+      "clock": "06:48:31",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft rolled over to left and inverted off runway; came to rest in grass area with fuselage destroyed by fire except cockpit",
+      "factors": [
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "cvr": [
+    {
+      "t": -60,
+      "clock": "06:47:10",
+      "speaker": "PIC",
+      "text": "Yee haw ride 'em cowboy"
+    },
+    {
+      "t": -50,
+      "clock": "06:47:20",
+      "speaker": "PIC",
+      "text": "stabilized"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Federal Express Corporation",
+      "text": "Enhance bounce recovery training for MD-11 pilots with emphasis on proper pitch attitude control (7.5\u00b0) and thrust application procedures",
+      "status": "unknown",
+      "trigger_factors": [
+        "inappropriate_control_input",
+        "hard_landing"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Federal Express Corporation",
+      "text": "Conduct proficiency training on approaches in gusty wind conditions, including early recognition of unstable approach conditions requiring go-around",
+      "status": "unknown",
+      "trigger_factors": [
+        "unstable_approach",
+        "windshear"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Federal Express Corporation",
+      "text": "Ensure pilot monitoring performance during landing phase, including requirement for pilot monitoring to call out deviation from glide slope and prompt go-around recommendations",
+      "status": "unknown",
+      "trigger_factors": [
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "id": null,
+      "to": "MDC (McDonnell Douglas Corporation) / Airbus",
+      "text": "Review AGS (auto ground spoiler) deployment timing and effectiveness in preventing bounce-induced pitch oscillations during landing",
+      "status": "unknown",
+      "trigger_factors": [
+        "landing_gear_failure",
+        "hard_landing"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://jtsb.mlit.go.jp/eng-air_report/N526FE.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: synopsis (pages 3-4), flight history (pages 16-22), analysis including causes (pages 74-93)",
+      "Full depth reading performed due to complex porpoising sequence with multiple bounces and pitch oscillations",
+      "Detailed CVR and DFDR reconstruction provided in report showing second-by-second aircraft behavior",
+      "All major factors and contributing causes identified through comprehensive technical analysis"
+    ]
+  },
+  "asn_id": "20090323-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/FedEx_Express_Flight_80",
+  "report_links": [
+    "https://jtsb.mlit.go.jp/eng-air_report/N526FE.pdf",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0002.pdf"
+  ],
+  "interest": 10.36,
+  "curated_id": null
+}

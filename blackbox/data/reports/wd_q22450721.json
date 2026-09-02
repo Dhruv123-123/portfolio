@@ -1,0 +1,302 @@
+{
+  "id": "wd_q22450721",
+  "qid": "Q22450721",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Daallo Airlines 159",
+  "flight_number": "DAO159",
+  "date": "2016-02-02",
+  "time_reference": "UTC",
+  "t0": "2016-02-02T08:41:03Z",
+  "agency": "UNKNOWN",
+  "agencies": [
+    {
+      "code": "UNKNOWN",
+      "name": "Ministry of Transport and Civil Aviation of Federal Republic of Somalia",
+      "country": "Somalia",
+      "role": "lead",
+      "report_id": null,
+      "report_title": "Final Report - Accident to the AIRBUS A321 registered SX-BHS",
+      "report_date": "2016",
+      "url": "https://bea.aero/fileadmin/user_upload/SX-BHS.pdf"
+    },
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enqu\u00eates et d'Analyses pour la s\u00e9curit\u00e9 de l'aviation civile",
+      "country": "France",
+      "role": "accredited_representative"
+    }
+  ],
+  "aircraft": {
+    "type": "Airbus A321-111",
+    "family": "A321",
+    "manufacturer": "Airbus",
+    "registration": "SX-BHS",
+    "msn": "642"
+  },
+  "operator": "Daallo Airlines",
+  "route": {
+    "from_name": "Aden Adde International Airport (Mogadishu)",
+    "to_name": "Djibouti International Airport"
+  },
+  "location": {
+    "name": "Near Mogadishu, Somalia",
+    "country": "Somalia",
+    "lat": 2.2356,
+    "lon": 45.285
+  },
+  "phase": "climb",
+  "occupants": 81,
+  "fatalities": 1,
+  "injuries_serious": 3,
+  "damage": "substantial",
+  "category": "SEC",
+  "summary": "Daallo Airlines Flight 159, an Airbus A321, departed Mogadishu with 74 passengers and 7 crew en route to Djibouti. At 14,000 feet altitude, 20 minutes after takeoff, an explosion occurred in the cabin creating a fuselage hole near seats 15/16F at the forward wing root. Investigators confirmed explosive residue and concluded the bomb was likely concealed in a laptop and carried aboard by a person in a wheelchair. Only the suicide bomber died; the aircraft successfully returned to Mogadishu for emergency landing.",
+  "probable_cause": "The explosion was caused by a bomb detonated in a suicide attack, hidden within a laptop. The Islamist militant group Al-Shabaab claimed responsibility. The flight was delayed 20 minutes awaiting additional passengers, which prevented the aircraft from reaching cruising altitude where the explosion could have been catastrophic.",
+  "factors": [
+    {
+      "id": "terrorism_or_hostile_act",
+      "role": "initiating",
+      "evidence": "an explosion occurred on board the aircraft at 10,400 feet, 20 minutes after takeoff. The investigation indicated that the explosion was caused by a bomb detonated in a suicide attack. The Islamist militant group Al-Shabaab claimed responsibility (p. 4)"
+    },
+    {
+      "id": "explosive_decompression",
+      "role": "outcome",
+      "evidence": "The explosion created a hole in the fuselage behind the R2 door at approximately 1 square meter at the level of row 16 around frame 35.8 (p. 8)"
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "The aircraft returned to Aden Adde International Airport and performed an emergency landing safely at 08:53 UTC, 12 minutes after the explosion. There were three injuries on board (p. 5)"
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "contributing",
+      "evidence": "A bomb hidden within a laptop was carried onto the aircraft by a passenger in a wheelchair, suggesting airport security screening procedures failed to detect it (p. 4)"
+    }
+  ],
+  "chain": [
+    [
+      "terrorism_or_hostile_act",
+      "explosive_decompression"
+    ],
+    [
+      "explosive_decompression",
+      "emergency_landing"
+    ]
+  ],
+  "events": [
+    {
+      "t": -1200,
+      "clock": "08:19:03",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "system",
+      "text": "Flight delayed 20 minutes awaiting additional passengers to board",
+      "factors": []
+    },
+    {
+      "t": -480,
+      "clock": "08:34:19",
+      "phase": "ground",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight DAO159 cleared for takeoff from runway 05, wind 090 degrees at 17 knots",
+      "factors": []
+    },
+    {
+      "t": -120,
+      "clock": "08:39:03",
+      "phase": "initial_climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC cleared flight to climb to FL 300; aircraft passing 9,000 feet",
+      "state": {
+        "alt": 9000
+      },
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "08:41:03",
+      "phase": "climb",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Explosion in cabin at 10,400 feet altitude; sound heard on CVR",
+      "state": {
+        "alt": 10400,
+        "ias": 261,
+        "hdg": 359.6
+      },
+      "factors": [
+        "terrorism_or_hostile_act",
+        "explosive_decompression"
+      ]
+    },
+    {
+      "t": 5,
+      "clock": "08:41:08",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Master Warning and CAB PR EXCESS CAB ALT message triggered on ECAM",
+      "factors": []
+    },
+    {
+      "t": 10,
+      "clock": "08:41:13",
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain takes control of aircraft; applies nose down inputs and left turn orders",
+      "factors": []
+    },
+    {
+      "t": 34,
+      "clock": "08:41:37",
+      "phase": "descent",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First Officer requests ATC clearance for emergency return to Mogadishu",
+      "factors": []
+    },
+    {
+      "t": 89,
+      "clock": "08:42:32",
+      "phase": "descent",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "Flight attendant reports explosion in cabin; Captain confirms safe return",
+      "factors": []
+    },
+    {
+      "t": 432,
+      "clock": "08:47:15",
+      "phase": "descent",
+      "actor": "CABIN",
+      "kind": "system",
+      "text": "Cabin pressure warning turns off at 8,100 feet altitude",
+      "state": {
+        "alt": 8100
+      },
+      "factors": []
+    },
+    {
+      "t": 720,
+      "clock": "08:53:03",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft lands safely at Mogadishu airport in full configuration",
+      "state": {
+        "alt": 0
+      },
+      "factors": [
+        "emergency_landing"
+      ]
+    }
+  ],
+  "cvr": [
+    {
+      "t": 0,
+      "clock": "08:41:03",
+      "speaker": "SYS",
+      "text": "[sound of explosion]"
+    },
+    {
+      "t": 1,
+      "clock": "08:41:04",
+      "speaker": "CAPT",
+      "text": "I have control"
+    },
+    {
+      "t": 2,
+      "clock": "08:41:05",
+      "speaker": "FO",
+      "text": "You have control"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Somali Airport Authority",
+      "text": "Search all passenger baggage and employees at Mogadishu airport",
+      "status": "unknown",
+      "trigger_factors": [
+        "regulatory_oversight",
+        "terrorism_or_hostile_act"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Somali Airport Authority",
+      "text": "Have all laptops switched on before checking in",
+      "status": "unknown",
+      "trigger_factors": [
+        "regulatory_oversight",
+        "terrorism_or_hostile_act"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Somali Airport Authority",
+      "text": "Perform random questioning of passengers based on profiles",
+      "status": "unknown",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Somali Airport Authority",
+      "text": "Implement Somalian Police Force (SPF) watchers in uniform at each access point",
+      "status": "unknown",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Somali Airport Authority",
+      "text": "Install random swabs with disposable explosive detection kits",
+      "status": "unknown",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Somali Airport Authority",
+      "text": "Reinforce the separation between the passengers terminals and cargo areas",
+      "status": "unknown",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/fileadmin/user_upload/SX-BHS.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: synopsis (page 4-5), flight history (pages 6-7), injuries/damage (pages 8), analysis and conclusions (pages 25-26), safety recommendations (page 26)",
+      "This is a security/terrorism incident; aircraft was not damaged by mechanical failure but by deliberate hostile act",
+      "Limited CVR transcript provided; critical communications reconstructed from report text"
+    ]
+  },
+  "asn_id": "20160202-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Daallo_Airlines_Flight_159",
+  "report_links": [
+    "https://bea.aero/fileadmin/user_upload/SX-BHS.pdf"
+  ],
+  "interest": 10.45,
+  "curated_id": null
+}
