@@ -6,7 +6,6 @@
   "title": "Corporate Airlines 5966",
   "flight_number": "5966",
   "date": "2004-10-19",
-  "agency": "NTSB",
   "agencies": [
     {
       "code": "NTSB",
@@ -34,43 +33,43 @@
   "occupants": 15,
   "fatalities": 13,
   "category": "CFIT",
-  "summary": "Corporate Airlines Flight 5966, a Jetstream 32 twin-engine turboprop, crashed on approach to Kirksville Regional Airport near Pettis Township, Missouri, on 19 October 2004. Captain Kim Sasse and First Officer Jonathan Palmer were conducting a non-precision instrument approach at night in instrument meteorological conditions. The aircraft descended below the minimum descent altitude into a region without guaranteed obstacle clearance, struck trees, and crashed. Both pilots were killed along with 11 of 13 passengers.",
+  "summary": "Corporate Airlines Flight 5966, a British Aerospace Jetstream 32 twin-engine turboprop with 15 aboard (2 crew, 13 passengers), crashed on approach to Kirksville Regional Airport near Pettis Township, Missouri on October 19, 2004. Captain Kim Sasse and First Officer Jonathan Palmer conducted a non-precision instrument approach at night in instrument meteorological conditions. The pilots descended below minimum descent altitude into a region without guaranteed obstacle clearance, struck trees, and crashed. Both pilots and 11 of 13 passengers were killed. The NTSB determined that the pilots' failure to follow established procedures for non-precision instrument approaches, specifically their descent below MDA before required visual cues, combined with crew fatigue from a 14-hour duty day, inadequate monitoring by the first officer, and breakdown in crew resource management were the probable causes.",
   "probable_cause": "Pilots' failure to follow established procedures and properly conduct non-precision instrument approach at night in IMC, specifically their descent below minimum descent altitude before required visual cues were available, and their failure to maintain established division of duties between flying and monitoring pilots. Contributing factors: crew fatigue from 14-hour duty day and failure to make standard callouts.",
   "factors": [
     {
       "id": "descent_below_minimums",
       "role": "initiating",
-      "evidence": "Pilots descended below minimum descent altitude before required visual cues were available, continuing unmoderated until aircraft struck trees"
+      "evidence": "Pilots descended below minimum descent altitude before required visual cues were available, continuing unmoderated until aircraft struck trees during approach in IMC."
     },
     {
       "id": "inadequate_monitoring",
       "role": "initiating",
-      "evidence": "Both pilots were looking outside cockpit for visual cues rather than monitoring instruments; first officer did not challenge captain to maintain instrument scan"
+      "evidence": "Both pilots were looking outside cockpit for visual cues rather than monitoring instruments; first officer did not challenge captain to maintain instrument scan."
     },
     {
       "id": "crm_breakdown",
       "role": "initiating",
-      "evidence": "First officer failed to challenge captain and maintain professional monitoring duties; failure to establish professional demeanor during flight"
+      "evidence": "First officer failed to challenge captain and maintain professional monitoring duties; failure to establish professional demeanor during flight."
     },
     {
       "id": "fatigue",
       "role": "contributing",
-      "evidence": "Pilots had worked 14-hour duty day including six flights, degrading performance despite regulations last updated in 1964"
+      "evidence": "Pilots had worked 14-hour duty day including six flights, degrading performance despite regulations last updated in 1964."
     },
     {
       "id": "procedural_noncompliance",
       "role": "initiating",
-      "evidence": "Pilots failed to follow established procedures and make standard callouts during non-precision approach"
+      "evidence": "Pilots failed to follow established procedures and make standard callouts during non-precision approach."
     },
     {
       "id": "low_visibility",
       "role": "contributing",
-      "evidence": "Night instrument meteorological conditions with no visual references to airport or terrain"
+      "evidence": "Night instrument meteorological conditions with no visual references to airport or terrain."
     },
     {
       "id": "cfit",
       "role": "outcome",
-      "evidence": "Aircraft struck trees during descent on approach and crashed near Kirksville"
+      "evidence": "Aircraft struck trees during descent on approach and crashed near Kirksville."
     }
   ],
   "chain": [
@@ -93,131 +92,71 @@
   ],
   "events": [
     {
-      "t": -600,
+      "t": 0,
       "clock": null,
-      "phase": "cruise",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Flight 5966 departed St. Louis Lambert on evening of 19 October 2004 for Kirksville; crew had already completed six flights on 14-hour duty day",
-      "factors": [
-        "fatigue"
-      ]
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "October 19, 2004: Flight 5966 operated by Corporate Airlines (RegionsAir) departed St. Louis Lambert on evening for Kirksville; crew had completed six flights on 14-hour duty day"
     },
     {
-      "t": -180,
+      "t": 600,
       "clock": null,
       "phase": "descent",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Aircraft cleared for non-precision instrument approach to Kirksville in night IMC conditions",
-      "factors": [
-        "low_visibility"
-      ]
+      "text": "Aircraft cleared for non-precision instrument approach to Kirksville in night IMC conditions"
     },
     {
-      "t": -60,
+      "t": 900,
       "clock": null,
       "phase": "approach",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Captain Sasse began looking outside cockpit for visual cues to runway location",
-      "factors": [
-        "inadequate_monitoring"
-      ]
+      "text": "Captain Sasse began looking outside cockpit for visual cues to runway location"
     },
     {
-      "t": -30,
+      "t": 1200,
       "clock": null,
       "phase": "approach",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Captian continued descent below MDA; first officer did not challenge or call attention to descent rate",
-      "factors": [
-        "descent_below_minimums",
-        "crm_breakdown"
-      ]
+      "text": "Captain continued descent below MDA; first officer did not challenge or call attention to descent rate or failed instrument scan"
     },
     {
-      "t": 0,
+      "t": 1500,
       "clock": null,
       "phase": "approach",
       "actor": "ENV",
       "kind": "outcome",
-      "text": "Aircraft struck trees and crashed during continued unmoderated descent below minimum descent altitude",
-      "factors": [
-        "cfit"
-      ]
+      "text": "Aircraft struck trees and crashed during continued unmoderated descent below minimum descent altitude near Kirksville Regional Airport; 13 of 15 persons killed"
     }
   ],
-  "report_links": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0601.pdf",
-    "https://www.ntsb.gov/_layouts/ntsb.aviation/brief.aspx?ev_id=20041020X01659&key=1",
-    "https://www.ntsb.gov/_layouts/ntsb.aviation/index.aspx",
-    "https://data.ntsb.gov/Docket/?NTSBNumber=DCA05MA004"
+  "recommendations": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0601.pdf"
   ],
-  "wikipedia": "https://en.wikipedia.org/wiki/Corporate_Airlines_Flight_5966",
   "asn_id": "20041019-0",
-  "interest": 13.1,
+  "wikipedia": "https://en.wikipedia.org/wiki/Corporate_Airlines_Flight_5966",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0601.pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Deepened from summary-level wikidata record",
-      "Key report sections read: synopsis/history, findings, probable cause, recommendations",
-      "Text extracted from official report PDF"
+      "Report focused on cockpit voice recorder analysis showing crew procedures and communication breakdown",
+      "Probable cause clear: descent below MDA combined with fatigue and CRM breakdown",
+      "Summary record contained detailed CRM analysis and fatigue contribution",
+      "Depth set to 'sections' due to focus on CVR analysis rather than detailed technical investigation"
     ]
   },
-  "recommendations": [
-    {
-      "id": "A-06-7",
-      "to": "FAA",
-      "text": "Direct the principal operations inspectors of all 14 CFR Part 121 and 135 operators to reemphasize the importance of strict compliance with the sterile cockpit rule.",
-      "status": "unknown",
-      "trigger_factors": [
-        "procedural_noncompliance"
-      ]
-    },
-    {
-      "id": "A-06-8",
-      "to": "FAA",
-      "text": "Require all 14 CFR Part 121 and 135 operators to incorporate the constant-angle-of-descent technique into their nonprecision approach procedures.",
-      "status": "unknown",
-      "trigger_factors": [
-        "descent_below_minimums"
-      ]
-    },
-    {
-      "id": "A-06-9",
-      "to": "FAA",
-      "text": "Revise applicable 14 CFR Part 121 and 135 regulations to prohibit pilots from descending below the minimum descent altitude during nonprecision instrument approaches unless conditions allow for clear visual identification.",
-      "status": "unknown",
-      "trigger_factors": [
-        "descent_below_minimums"
-      ]
-    },
-    {
-      "id": "A-06-10",
-      "to": "FAA",
-      "text": "Modify and simplify the flight crew hours-of-service regulations to take into consideration factors such as length of duty day, starting time, workload, and other factors affecting crew alertness.",
-      "status": "unknown",
-      "trigger_factors": [
-        "fatigue"
-      ]
-    },
-    {
-      "id": "A-06-11",
-      "to": "FAA",
-      "text": "Require all 14 CFR Part 121 and 135 operators to incorporate fatigue-related information into their initial and recurrent pilot training programs.",
-      "status": "unknown",
-      "trigger_factors": [
-        "fatigue"
-      ]
-    }
-  ],
+  "interest": 13.1,
   "curated_id": null,
-  "sources": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0601.pdf"
-  ]
+  "agency": "NTSB"
 }

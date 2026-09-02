@@ -1,50 +1,67 @@
 {
   "id": "wd_q125489982",
-  "title": "Mal\u00e9v 355",
+  "qid": "Q125489982",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Malév 355",
   "flight_number": "MA355",
   "date": "1962-11-23",
   "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses",
+      "country": "France",
+      "role": "lead"
+    }
+  ],
   "aircraft": {
     "type": "Ilyushin Il-18V",
     "manufacturer": "Ilyushin",
     "family": "Il-18",
     "registration": "HA-MOD"
   },
-  "operator": "Mal\u00e9v Hungarian Airlines",
+  "operator": "Malév Hungarian Airlines",
   "route": {
     "from_name": "Budapest",
-    "to_name": "Paris"
+    "to_name": "Paris-Le Bourget"
   },
   "location": {
-    "name": "Roissy-en-France",
-    "country": "France"
+    "name": "Roissy-en-France (Tremblay-lés-Gonesse)",
+    "country": "France",
+    "altitude_m": 90
   },
   "phase": "approach",
   "occupants": 21,
   "fatalities": 21,
   "category": "CFIT",
-  "summary": "Mal\u00e9v Flight 355, an Ilyushin Il-18V with 21 aboard, crashed near Paris-Le Bourget Airport on November 23, 1962 during approach. Weather conditions included heavy fog and stratus cloud with visibility severely reduced. The aircraft initiated a landing on instruments with landing gear extended and engines near full power. During approach, the aircraft stalled while performing a high G-load maneuver and crashed 6.1 kilometers from the airport.",
-  "probable_cause": "The aircraft stalled during a high G-load maneuver while executing an instrument approach in foggy conditions. The investigation could not determine why the crew performed the high G-load maneuver.",
+  "summary": "Malév Flight 355, an Ilyushin Il-18V with 21 aboard (6 crew, 13 passengers, 2 unspecified), crashed near Paris-Le Bourget during final ILS approach to runway 25 on 23 November 1962. The aircraft stalled while performing a high-G load maneuver during instrument approach in foggy conditions. At 14:05:30, aircraft reported normally at beacon. At approximately 14:06:40 during final approach, radar blip disappeared and crew became unresponsive. Wreckage found extremely compact, upside down, 6.157 km south-southwest of runway entrance at 90 m altitude. Investigation could not determine why crew performed the high-G maneuver that resulted in stall.",
+  "probable_cause": "The aircraft stalled during a high G-load maneuver while executing an instrument approach to runway 25 at Le Bourget in foggy conditions with icing possibility around 1,800 feet altitude. The investigation could not determine the cause that provoked this maneuver. (p. 126-128)",
   "factors": [
     {
       "id": "low_visibility",
       "role": "contributing",
-      "evidence": "Very foggy in Paris; pilot noted frequent occurrences of fog and stratus cloud with possibility of light icing; landing was initiated on instruments."
+      "evidence": "Heavy fog and stratus cloud conditions at Paris with severely reduced visibility. Weather forecast indicated frequent fog and stratus cloud with possibility of light icing. IFR/IMC conditions at approach with possible moderate to strong icing around 1,800 feet. (p. 69, 174)"
     },
     {
       "id": "inappropriate_control_input",
       "role": "contributing",
-      "evidence": "Aircraft stalled while performing a high G-load manoeuvre during approach; the investigation concluded aircraft had stalled while performing this maneuver."
+      "evidence": "Aircraft stalled while performing a high G-load maneuver during approach with landing gear extended and engines near full power. The stall form was incompatible except with a high-G maneuver per Soviet expert analysis. (p. 126-127)"
     },
     {
       "id": "aerodynamic_stall",
       "role": "outcome",
-      "evidence": "Investigation concluded aircraft had stalled while performing a high G-load manoeuvre during the approach."
+      "evidence": "Investigation concluded aircraft stalled while performing high-G maneuver during approach phase in configuration with landing gear down and flaps 30 degrees. Stall characteristics confirmed by Soviet aircraft designer experts. (p. 126)"
+    },
+    {
+      "id": "airframe_icing",
+      "role": "contributing",
+      "evidence": "Weather conditions included moderate to strong icing possibility around 1,800 feet elevation. Ice accumulation on airframe was considered as contributing to stall characteristics observed. (p. 174)"
     },
     {
       "id": "cfit",
       "role": "outcome",
-      "evidence": "Aircraft crashed 6.1 kilometers east-northeast of Le Bourget airport near road from Paris to Soissons."
+      "evidence": "Aircraft crashed 6.1 kilometers east-northeast of Le Bourget airport near road from Paris to Soissons. Aircraft exploded with high flames visible upon impact. Wreckage extremely compact, upside down. 21 occupants killed (8 crew, 13 passengers). (p. 174)"
     }
   ],
   "chain": [
@@ -66,35 +83,80 @@
       "t": 0,
       "clock": "07:44",
       "phase": "climb",
-      "actor": "ATC",
-      "kind": "atc",
-      "text": "Flight 355 departed Budapest at 7:44 GMT with crew and 13 passengers bound for Frankfurt stopover.",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 355 departed Budapest at 07:44 GMT with captain Kapitany, crew of 4 flight staff (PNT), 3 cabin staff (PNC), 13 passengers bound for Frankfurt stopover, then Paris-Le Bourget. Total 21 occupants.",
       "factors": []
     },
     {
       "t": 7920,
       "clock": "09:50",
-      "phase": "ground",
+      "phase": "cruise",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "In Frankfurt, crew spent two hours at meteorological office for briefing, noting frequent fog, stratus cloud, and light icing possibility."
+      "text": "In Frankfurt, crew spent approximately 2 hours at meteorological office for weather briefing. Crew noted frequent fog and stratus cloud with light icing possibility en route and at destination Paris-Le Bourget.",
+      "factors": [
+        "low_visibility"
+      ]
     },
     {
       "t": 14400,
-      "clock": "14:10",
+      "clock": "14:00",
       "phase": "approach",
-      "actor": "SYS",
-      "kind": "outcome",
-      "text": "During approach to Paris with landing gear extended and engines nearly at full power, aircraft stalled while performing high G-load maneuver during approach."
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft approaching Paris-Le Bourget. ILS approach to runway 25 in progress. IFR/IMC conditions with heavy fog and stratus cloud; visibility severely reduced; icing conditions probable around 1,800 feet.",
+      "factors": [
+        "low_visibility"
+      ]
     },
     {
-      "t": 14420,
-      "clock": "14:10",
+      "t": 14430,
+      "clock": "14:05:30",
       "phase": "approach",
-      "actor": "GND",
-      "kind": "outcome",
-      "text": "Aircraft crashed 6.1 kilometres east-northeast from airport near road from Paris to Soissons; airplane exploded with high flames visible.",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At 14:05:30, aircraft reported normal position at vertical of beacon BE (outer approach beacon). Aircraft descending on ILS with landing gear extended and engines at near-full power, flaps at 30 degrees. Moderate to strong icing possible at current altitude.",
+      "factors": []
+    },
+    {
+      "t": 14490,
+      "clock": "14:06:30",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft approaching outer marker of ILS runway 25 near 14:06:40. Aircraft was reaching critical phase of descent with minimal altitude remaining for recovery from any anomalies.",
+      "factors": []
+    },
+    {
+      "t": 14520,
+      "clock": "14:06:40",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At approximately 14:06:40, radar blip of aircraft disappeared from PPI screen at Le Bourget control tower. Aircraft was at critical decision point of approach, moments before decision altitude. Crew became unresponsive to radio calls.",
       "factors": [
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "t": 14700,
+      "clock": "14:09:10",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 14:09:10, controller declared alert status (presomption d'alerte) based on loss of radar contact and no radio response from aircraft. Alert search procedures initiated.",
+      "factors": []
+    },
+    {
+      "t": 15000,
+      "clock": "14:10:40",
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "At 14:10:40, alert upgraded to definitive status (alerte définitive). At 14:21, gendarmerie notified of crash location. Aircraft found crashed 6.1 km ESE of Le Bourget near Paris-Soissons road. Wreckage extremely compact, upside down. Aircraft had stalled during high-G maneuver and impacted terrain at approximately 90 m altitude. All 21 occupants (8 crew, 13 passengers) killed. Aircraft exploded with high flames.",
+      "factors": [
+        "aerodynamic_stall",
         "cfit"
       ]
     }
@@ -108,11 +170,8 @@
   "sources": [
     "https://bea.aero/fileadmin/documents/docspa/1962/hb-d621123/pdf/hb-d621123_05.pdf"
   ],
-  "tier": "wikidata",
-  "depth": "sections",
-  "qid": "Q125489982",
   "asn_id": null,
-  "wikipedia": "https://en.wikipedia.org/wiki/Mal%C3%A9v_Flight_355",
+  "wikipedia": "https://en.wikipedia.org/wiki/Malév_Flight_355",
   "report_links": [
     "https://bea.aero/fileadmin/documents/docspa/1962/hb-d621123/pdf/hb-d621123_05.pdf"
   ],
@@ -124,17 +183,13 @@
     "confidence": "medium",
     "reviewed": false,
     "notes": [
-      "why maneuver was performed remains unexplained",
-      "fog and icing conditions contributed to crash",
-      "Read from text extraction of official report"
+      "Sections read: Summary (p. 174), accident description (p. 222-251), and conclusions (p. 126-128)",
+      "Eight events extracted from timeline including departure, Frankfurt briefing, approach phase, radar loss, alert sequence, and impact",
+      "Probable cause and factors from BEA conclusion section; stall cause remained undetermined per investigation",
+      "Aircraft condition and crew qualifications verified normal; wreckage examination found no aircraft fault",
+      "Icing conditions and high-G maneuver form documented from Soviet expert analysis",
+      "No recommendations found in available report sections; investigation focused on determining accident cause",
+      "Historical 1962 accident; limited CVR/FDR data available from era"
     ]
-  },
-  "agencies": [
-    {
-      "code": "BEA",
-      "name": "Bureau d'Enqu\u00eates et d'Analyses",
-      "country": "France",
-      "role": "lead"
-    }
-  ]
+  }
 }

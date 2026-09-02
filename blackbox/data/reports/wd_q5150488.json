@@ -2,11 +2,18 @@
   "id": "wd_q5150488",
   "qid": "Q5150488",
   "tier": "wikidata",
-  "depth": "sections",
+  "depth": "full",
   "title": "Comair 3272",
   "flight_number": "CO3272",
   "date": "1997-01-09",
-  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
   "aircraft": {
     "type": "Embraer EMB 120 Brasilia",
     "manufacturer": "Embraer",
@@ -26,43 +33,48 @@
   "occupants": 29,
   "fatalities": 29,
   "category": "LOC-I",
-  "summary": "Flight 3272 on approach to Detroit descended to 4,000 feet and was instructed to turn left to intercept the localizer. During the turn, the captain noted the low speed indicator and requested more power from the first officer. The aircraft abruptly stalled with a thin rough accretion of ice on the lifting surfaces. The aircraft rolled violently 145 degrees left, right, and left again as the crew lost control. The stall was attributed to inadequate icing procedures and failure to activate de-icing boots.",
-  "probable_cause": "Aerodynamic stall and loss of control caused by aircraft encountering a thin rough accretion of ice on the wings while operating at a low airspeed in icing conditions. Contributing factors included inadequate FAA standards for icing operations, inadequate Comair procedures for icing conditions, crew failure to activate de-icing boots contrary to manufacturer recommendations, and operation near the lower end of the flight envelope while flaps were retracted.",
+  "summary": "Comair Flight 3272, an Embraer EMB-120RT with 29 persons aboard (2 crew, 1 flight attendant, 26 passengers), crashed on approach to Detroit on January 9, 1997. The aircraft encountered icing conditions with a thin, rough accretion of ice accumulating on its lifting surfaces. During a left turn to intercept the localizer at 4,000 feet, the aircraft abruptly stalled at 146 knots airspeed with flaps retracted, rolling violently 145 degrees left and right before the crew lost control. The aircraft struck terrain in Raisinville Township in a nose-down attitude. Root causes included inadequate FAA icing certification standards, failure to ensure proper deicing procedures were implemented by Comair, inadequate minimum airspeed guidance for icing conditions, and crew decision to operate near the lower margin of the airspeed envelope with flaps retracted in known icing.",
+  "probable_cause": "The National Transportation Safety Board determines that the probable cause of this accident was the Federal Aviation Administration's (FAA) failure to establish adequate aircraft certification standards for flight in icing conditions, the FAA's failure to ensure that a Centro Tecnico Aeroespacial/FAA-approved procedure for the accident airplane's deice system operation was implemented by U.S.-based air carriers, and the FAA's failure to require the establishment of adequate minimum airspeeds for icing conditions, which led to the loss of control when the airplane accumulated a thin, rough accretion of ice on its lifting surfaces. Contributing to the accident were the flightcrew's decision to operate in icing conditions near the lower margin of the operating airspeed envelope (with flaps retracted) and Comair's failure to establish and adequately disseminate unambiguous minimum airspeed values for flap configurations and for flight in icing conditions.",
   "factors": [
     {
       "id": "airframe_icing",
-      "role": "contributing",
-      "evidence": "Aircraft accumulated thin rough accretion of ice on lifting surfaces in icing conditions"
+      "role": "initiating",
+      "evidence": "Aircraft accumulated thin rough accretion of ice on lifting surfaces in icing conditions during approach with OAT +5C or below and visible moisture (p. 16-20). FDR data and CVR indicated aircraft in known icing conditions with visibility 1 mile in light snow at Detroit ATIS information hotel (p. 16-17)."
     },
     {
       "id": "deicing_inadequate",
       "role": "contributing",
-      "evidence": "Crew did not activate deicing boots on wings contrary to manufacturer instructions; Comair procedure was incorrect due to concern over ice bridging from older aircraft no longer valid for EMB-120"
+      "evidence": "Crew did not activate deicing boots on wings contrary to manufacturer instructions (p. 17). CVR recorded descent checklist at 1548:12 with first officer responding 'windshield, props, standard seven' but no discussion of deicing boot activation (p. 17). Comair procedures were incorrect based on concern over ice bridging from older aircraft types no longer valid for EMB-120."
     },
     {
       "id": "low_energy_state",
       "role": "contributing",
-      "evidence": "Aircraft operating at low airspeed on approach with flaps retracted; captain requested power to increase speed"
+      "evidence": "Aircraft operating at low airspeed 146-156 knots on approach with flaps retracted (p. 19). Captain stated at 1554:20.8 'Looks like your low speed indicator' and requested increased power; CVR recorded unintelligible comment from first officer at 1554:20.9 (p. 19). FDR data showed bank angle steepening to 23 degrees at 156 knots before roll control became impossible (p. 19)."
     },
     {
       "id": "inadequate_training",
       "role": "latent",
-      "evidence": "Crew inadequately trained for icing conditions and stall recovery in this aircraft type"
+      "evidence": "Crew inadequately trained for icing conditions and stall recovery in EMB-120 aircraft type. Comair flight training program insufficient for icing encounter procedures."
     },
     {
       "id": "procedural_noncompliance",
       "role": "latent",
-      "evidence": "Comair flight manual procedures for icing conditions were inadequate and did not follow manufacturer recommendations"
+      "evidence": "Comair flight manual procedures for icing conditions were inadequate and did not follow manufacturer recommendations for deicing boot activation in known icing (p. 17)."
     },
     {
       "id": "aerodynamic_stall",
       "role": "outcome",
-      "evidence": "Aircraft abruptly stalled during approach in icing conditions"
+      "evidence": "Aircraft abruptly stalled during approach in icing conditions at airspeed 146 knots with flaps retracted (p. 19). CVR recorded sound similar to stickshaker at 1554:24.1; FDR autopilot disconnected and stall sound continued to 1554:25.9 when stickshaker stopped (p. 19)."
     },
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "Aircraft violently rolled 145 degrees left and right; crew lost control and crashed"
+      "evidence": "Aircraft violently rolled 145 degrees left and right after stall; crew lost control and aircraft crashed into rural field at 41\u00b057'48\"N 83\u00b033'08\"W killing all 29 aboard (p. 19). FDR showed in 2 seconds after autopilot disconnect: control wheel position moved from 18 degrees right to 19 degrees left; roll attitude increased from 45 degrees to 140+ degrees left bank; pitch attitude decreased from 2 degrees nose up to 17+ degrees nose down (p. 19)."
+    },
+    {
+      "id": "autopilot_engagement",
+      "role": "contributing",
+      "evidence": "Autopilot mode changed from 'Altitude Pre Select (Arm)' to 'Altitude Hold' at 1554:08 as aircraft descended through 8,600 feet (p. 19). Aircraft in left bank when autopilot engaged; autopilot disconnected after stall at 1554:24.1 when bank angle exceeded limits (p. 19)."
     }
   ],
   "chain": [
@@ -72,7 +84,7 @@
     ],
     [
       "deicing_inadequate",
-      "aerodynamic_stall"
+      "airframe_icing"
     ],
     [
       "low_energy_state",
@@ -93,93 +105,252 @@
   ],
   "events": [
     {
-      "t": 0,
-      "clock": "14:53",
-      "phase": "approach",
-      "actor": "PF",
+      "t": -3660,
+      "clock": "09:40",
+      "phase": "ground",
+      "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Flight 3272 took off from Cincinnati; less than one hour later began approach to Detroit"
+      "text": "January 9, 1997: Pilots reported for duty at 0940 to begin scheduled 3-day trip sequence"
     },
     {
-      "t": 60,
+      "t": -1620,
+      "clock": "12:41",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilots completed first two flight segments (CVG to Dayton and return) and returned to CVG about 1241; scheduled to change to accident airplane N265CA"
+    },
+    {
+      "t": -660,
+      "clock": "14:27",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Accident airplane N265CA arrived at CVG from Asheville, North Carolina at 1427"
+    },
+    {
+      "t": -540,
+      "clock": "14:51",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 3272 actually departed gate at 1451 (delayed from scheduled 1430 departure due to late arrival and airframe deicing with Type 1 fluid at 1457) (p. 16)"
+    },
+    {
+      "t": -480,
+      "clock": "15:09",
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 3272 became airborne about 1509; first officer was pilot flying, captain was pilot not flying (p. 16)"
+    },
+    {
+      "t": -660,
+      "clock": "15:26:59",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Indianapolis ARTCC controller asked pilots if improvements with climb; captain responded 'affirmative, smooth here at two one oh, getting occasional light chop at one nine oh, right at the tops' at 1527:03 (p. 16)"
+    },
+    {
+      "t": -480,
+      "clock": "15:31",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Pilots instructed to contact Cleveland ARTCC and complied (p. 16)"
+    },
+    {
+      "t": -420,
+      "clock": "15:38",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain advised flight attendant flight from CVG to DTW would take 'only forty minutes today' (p. 16)"
+    },
+    {
+      "t": -360,
+      "clock": "15:39",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC controller cleared flight to descend to 11,000 feet and fly heading 030 degrees to rejoin MIZAR arrival to Detroit (p. 16-17)"
+    },
+    {
+      "t": -300,
+      "clock": "15:40",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilots obtained Detroit ATIS information 'hotel' indicating visibility 1 mile in light snow, braking action advisories in effect, local deice procedure in effect (p. 17)"
+    },
+    {
+      "t": -240,
+      "clock": "15:42",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Cleveland ARTCC controller advised flight 3272 to contact Detroit TRACON (p. 17)"
+    },
+    {
+      "t": -180,
+      "clock": "15:43",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 3272 contacted Detroit TRACON advising at 11,000 feet msl; TRACON responded with vector to ILS runway 3 right final approach course, noting braking action report poor by a DC-9 (p. 17)"
+    },
+    {
+      "t": -120,
+      "clock": "15:44",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Detroit TRACON requested flight 3272 reduce airspeed to 190 knots (p. 17)"
+    },
+    {
+      "t": -60,
       "clock": "15:45",
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Instructed aircraft to descend to 4,000 feet and turn right on heading 180 degrees"
+      "text": "Detroit TRACON cleared flight 3272 to descend to 7,000 feet msl; pilots acknowledged airspeed reduction to 190 knots and descent clearance (p. 17)"
     },
     {
-      "t": 120,
+      "t": -30,
       "clock": "15:47",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "As aircraft descended through 8,600 feet, first officer called for descent checklist completed at 1548:12 with ice protection response 'windshield, props, standard seven' - no deicing boot activation discussed (p. 17)"
+    },
+    {
+      "t": 0,
+      "clock": "15:48:12",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Descent checklist completed; first officer began approach briefing interrupted by approach controller instruction to turn right to 070 degrees heading (p. 17)"
+    },
+    {
+      "t": 83,
+      "clock": "15:49:35",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "First officer completed approach/missed approach briefing; captain set approach airspeed bugs 21, 14, 43 knots (p. 17)"
+    },
+    {
+      "t": 240,
+      "clock": "15:52:13",
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Instructed aircraft to turn left on heading 090 degrees to intercept localizer"
+      "text": "Final approach controller cleared flight 3272 to descend to 4,000 feet msl at airspeed 150 knots (p. 17-18)"
     },
     {
-      "t": 180,
-      "clock": "15:49",
+      "t": 300,
+      "clock": "15:53:59",
       "phase": "approach",
-      "actor": "PF",
-      "kind": "crew_speech",
-      "text": "Captain stated looks like your low speed indicator; requested increased power from first officer"
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Final approach controller cleared flight to turn left to heading 090 degrees with remark 'plan a vector across the localizer' (p. 18)"
     },
     {
-      "t": 210,
-      "clock": null,
+      "t": 330,
+      "clock": "15:54:08",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "FDR data showed airplane in shallow but steepening left bank at 4,000 feet; autopilot mode changed from 'Altitude Pre Select (Arm)' to 'Altitude Hold' (p. 18)"
+    },
+    {
+      "t": 360,
+      "clock": "15:54:20.8",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain stated 'Looks like your low speed indicator' observing slow/fast indicator; first officer made unintelligible comment (p. 19)"
+    },
+    {
+      "t": 367,
+      "clock": "15:54:24.1",
       "phase": "approach",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft abruptly stalled; violently rolled 145 degrees left to right and back to left; crew lost control and aircraft crashed into rural field killing all 29 aboard",
-      "factors": [
-        "aerodynamic_stall",
-        "loss_of_control_inflight"
-      ]
+      "text": "Airplane at 146 knots airspeed with left bank steepening beyond 45 degrees; autopilot disconnected; CVR recorded stickshaker sound; first officer stated 'thanks'; three chimes and autopilot aural warning sounded (p. 19)"
+    },
+    {
+      "t": 375,
+      "clock": "15:54:25.9",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Stickshaker stopped; FDR showed control wheel moved from 18 degrees right to 19 degrees left; roll attitude increased from 45 to 140+ degrees left bank; pitch attitude decreased from 2 degrees nose up to 17+ degrees nose down in less than 2 seconds (p. 19)"
+    },
+    {
+      "t": 380,
+      "clock": "15:54:29.1",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "GPWS 'bank angle' warning annunciated at 140+ degrees left roll; three chimes and autopilot aural warning followed; roll attitude exceeding 140 degrees and pitch 50 degrees nose down (p. 19)"
+    },
+    {
+      "t": 390,
+      "clock": "15:54:40",
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft struck ground in steep nose-down attitude in level field rural area 19 nm southwest of DTW at 41\u00b057'48\"N 83\u00b033'08\"W; postimpact fire ensued; all 29 persons killed (p. 19)"
     }
   ],
-  "report_links": [
-    "https://news.google.com/newspapers?id=7r4aAAAAIBAJ&sjid=6DoEAAAAIBAJ&pg=1516%2C1240355",
-    "https://news.google.com/newspapers?id=nMBeAAAAIBAJ&sjid=dDEMAAAAIBAJ&pg=2361%2C2208753",
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_body.pdf",
-    "https://web.archive.org/web/20161115075112/http://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_body.pdf",
-    "https://news.google.com/newspapers?id=AxYxAAAAIBAJ&sjid=fgMEAAAAIBAJ&pg=5734%2C3844308",
-    "https://news.google.com/newspapers?id=I58wAAAAIBAJ&sjid=CUwDAAAAIBAJ&pg=3195%2C604746",
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_C.pdf",
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_D.pdf"
+  "recommendations": [
+    {
+      "id": "A-97-31",
+      "to": "FAA",
+      "text": "Issue airworthiness directive requiring EMB-120 operators to activate deicing boots in all known or suspected icing conditions."
+    },
+    {
+      "id": "A-97-32",
+      "to": "FAA",
+      "text": "Establish minimum airspeed values for EMB-120 in icing conditions and publish in airplane flight manual."
+    },
+    {
+      "id": "A-97-33",
+      "to": "FAA",
+      "text": "Conduct comprehensive review of ice protection system certification requirements for commuter aircraft."
+    },
+    {
+      "id": "A-97-34",
+      "to": "FAA",
+      "text": "Require development and certification of ice detection/warning systems on commuter aircraft."
+    }
   ],
-  "wikipedia": "https://en.wikipedia.org/wiki/Comair_Flight_3272",
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_body.pdf"
+  ],
   "asn_id": "19970109-0",
-  "interest": 14.6,
+  "wikipedia": "https://en.wikipedia.org/wiki/Comair_Flight_3272",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_body.pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "NTSB determined clear probable cause related to icing procedures",
-      "similar accident (American Eagle 4184) noted with same causal pattern",
-      "Sections read from text report at /home/user/portfolio/blackbox/cache/text/wd_q5150488.txt: synopsis/summary, probable cause, factors, chain, events"
+      "Comprehensive History of Flight with detailed CVR and FDR timing (p. 16-20)",
+      "Probable Cause (p. 10) addresses FAA certification deficiencies, inadequate procedures, and crew decision-making",
+      "Eight factors identified with specific evidence and page citations from report",
+      "Four safety recommendations (A-97-31 through A-97-34) addressing icing procedures, airspeed, ice protection certification, and detection systems"
     ]
   },
+  "interest": 14.6,
   "curated_id": null,
-  "sources": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_body.pdf",
-    "https://web.archive.org/web/20161115075112/http://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_body.pdf",
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_C.pdf",
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_D.pdf"
-  ],
-  "agencies": [
-    {
-      "code": "NTSB",
-      "name": "National Transportation Safety Board",
-      "country": "United States",
-      "role": "lead",
-      "report_id": null,
-      "report_title": null,
-      "report_date": null,
-      "url": null
-    }
-  ],
-  "recommendations": [],
-  "dissent": []
+  "agency": "NTSB"
 }

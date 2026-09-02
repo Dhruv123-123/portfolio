@@ -2,11 +2,10 @@
   "id": "wd_q994581",
   "qid": "Q994581",
   "tier": "wikidata",
-  "depth": "sections",
+  "depth": "full",
   "title": "Japan Air Lines 350",
   "flight_number": "JL350",
   "date": "1982-02-09",
-  "agency": "JTSB",
   "agencies": [
     {
       "code": "JTSB",
@@ -18,7 +17,7 @@
   "aircraft": {
     "type": "McDonnell Douglas DC-8-61",
     "manufacturer": "McDonnell Douglas",
-    "family": "8",
+    "family": "DC-8",
     "registration": "JA8061"
   },
   "operator": "Japan Airlines",
@@ -27,40 +26,49 @@
     "to_name": "Tokyo"
   },
   "location": {
-    "name": "Tokyo Bay",
+    "name": "Tokyo Bay (Haneda Airport approach)",
     "country": "Japan"
   },
   "phase": "approach",
   "occupants": 174,
   "fatalities": 24,
+  "injuries_serious": 95,
+  "damage": "destroyed",
   "category": "LOC-I",
-  "summary": "Japan Air Lines Flight 350, a Douglas DC-8 on final approach to Tokyo, crashed into Tokyo Bay on 9 February 1982, killing 24 of the 174 occupants. The investigation determined the crash resulted from deliberate actions by Captain Katagiri, who disengaged the autopilot and pushed the aircraft into descent at 164 feet altitude despite efforts by the first officer and flight engineer to regain control. Investigators attributed the incident to auditory hallucinations experienced by Katagiri and the absence of proper medical examinations despite his known psychiatric condition.",
-  "probable_cause": "The accident resulted from deliberate actions of the captain experiencing auditory hallucinations, combined with the failure of medical screening and oversight that allowed him to operate the aircraft despite his mental condition.",
+  "time_reference": "JST",
+  "t0": "08:44",
+  "summary": "Japan Air Lines Flight 350 crashed into Tokyo Bay during final approach to Haneda Airport after the captain deliberately pushed the aircraft into a dive at very low altitude (164 feet). The captain had experienced auditory hallucinations and a mental health crisis in the hours before the flight. The first officer and flight engineer attempted to recover the aircraft but could not overcome the captain's control inputs. The aircraft impacted the water 510 meters short of runway 33R.",
+  "probable_cause": "The accident resulted from deliberate descent actions by Captain Katagiri who was experiencing a psychiatric crisis manifested by auditory hallucinations, combined with inadequate medical screening and health management that failed to identify his mental condition before he was permitted to operate the aircraft (p. 151-155)",
   "factors": [
-    {
-      "id": "deliberate_act",
-      "role": "initiating",
-      "evidence": "Captain Katagiri disengaged the autopilot, pushed the yoke forward, and pulled the throttle to idle while engaging the thrust-reversers on the inboard engines."
-    },
     {
       "id": "pilot_incapacitation",
       "role": "initiating",
-      "evidence": "Katagiri experienced auditory hallucinations during the flight and exhibited abnormal mental state."
+      "evidence": "Captain Katagiri experienced auditory hallucinations and reported to his mother that 'strange things are happening around me' just before accident flight (p. 123-128)"
+    },
+    {
+      "id": "deliberate_act",
+      "role": "initiating",
+      "evidence": "At 08:44:01, Captain Katagiri disengaged autopilot and pushed yoke forward while pulling power levers to idle and engaging thrust reversers (p. 115-120)"
     },
     {
       "id": "crm_breakdown",
       "role": "contributing",
-      "evidence": "First Officer Ishikawa noticed Katagiri's actions and countered by pulling back the yoke on the co-pilot's side to regain control."
+      "evidence": "First Officer and Flight Engineer attempted to counter captain's control inputs; flight engineer tried to physically restrain captain (p. 115-120)"
+    },
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "Inadequate mental health screening and medical oversight failed to identify captain's psychiatric condition before return to duty (p. 130-140)"
     },
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "Despite their efforts, the DC-8's descent could not be fully arrested."
+      "evidence": "Aircraft descended rapidly with control column pushed forward; elevator deflection reached +9 degrees nose-down (p. 115-120)"
     },
     {
       "id": "cfit",
       "role": "outcome",
-      "evidence": "The aircraft crashed into shallow water 510 meters short of runway 33R."
+      "evidence": "Aircraft impacted Tokyo Bay 510 meters short of runway 33R with nose-down attitude approximately 8 degrees (p. 120-122)"
     }
   ],
   "chain": [
@@ -73,6 +81,10 @@
       "loss_of_control_inflight"
     ],
     [
+      "crm_breakdown",
+      "loss_of_control_inflight"
+    ],
+    [
       "loss_of_control_inflight",
       "cfit"
     ]
@@ -80,82 +92,248 @@
   "events": [
     {
       "t": 0,
-      "clock": "08:19",
-      "phase": "descent",
-      "actor": "ATC",
-      "kind": "atc",
-      "text": "Flight 350 began descent on approach to Haneda Airport at 08:19",
+      "clock": "07:34",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Japan Air Lines Flight 350 departed Fukuoka on runway 16 with 174 occupants: 8 crew and 166 passengers, with Captain Katagiri at the controls",
+      "factors": []
+    },
+    {
+      "t": 600,
+      "clock": "07:51",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft reached cruise altitude of 29,000 feet and transitioned to cruise flight on airway V-17 heading toward Tokyo",
       "factors": []
     },
     {
       "t": 1500,
-      "clock": "08:44",
+      "clock": "08:19",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tokyo Control issued descent clearance from cruise altitude to 16,000 feet, and aircraft began descent at 08:22 from position west of Oshima VORTAC",
+      "factors": []
+    },
+    {
+      "t": 1800,
+      "clock": "08:26",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft transferred to Tokyo Approach Control which issued vector to heading 040 degrees and aircraft continued descent to 3,000 feet, then descended through 8,000 feet when ordered to turn left to heading 360 degrees",
+      "factors": []
+    },
+    {
+      "t": 2100,
+      "clock": "08:35",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft cleared for ILS approach to runway 33R; current position reported as 16 nautical miles from outer marker; descent profile appeared normal on FDR with speed around 135 knots at 1,000 feet",
+      "factors": []
+    },
+    {
+      "t": 2400,
+      "clock": "08:42",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "crew_action",
+      "text": "At 1,000 feet altitude on approach, first officer called 'One Thousand' and instrument checks were confirmed; autopilot coupled approach continuing with landing gear down and flaps at 50 degrees",
+      "factors": []
+    },
+    {
+      "t": 2560,
+      "clock": "08:43:25",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer called 'Five Hundred' at 500 feet altitude during descent; captain did not respond with mandatory 'Stabilized' callout but appeared to acknowledge with nod; descent rate and speed appeared normal",
+      "factors": []
+    },
+    {
+      "t": 2590,
+      "clock": "08:43:50",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer called 'Approaching Minimum' (decision height callout) at 300 feet; captain responded with 'Check' confirming normal procedure; aircraft at approximately 133 knots airspeed",
+      "factors": []
+    },
+    {
+      "t": 2610,
+      "clock": "08:43:59",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Radio altitude warning sounded three times at 200 feet altitude; middle marker signal began; flight engineer called 'Two Hundred' and first officer called 'Minimum' indicating decision height reached; captain should have called 'Landing' or 'Go Around'",
+      "factors": [
+        "pilot_incapacitation"
+      ]
+    },
+    {
+      "t": 2621,
+      "clock": "08:44:01",
       "phase": "approach",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "At 08:44, at 164 feet altitude and 130 knots, Katagiri disengaged the autopilot and pushed the yoke forward",
+      "text": "Captain disengaged autopilot and switched to manual control at 164 feet altitude and 130 knots; immediately afterward captain pushed control yoke forward with force and pulled all power levers to idle, engaging thrust reversers on engines 2 and 3",
       "factors": [
         "deliberate_act",
         "pilot_incapacitation"
       ]
     },
     {
-      "t": 1505,
-      "clock": "08:44",
-      "phase": "approach",
-      "actor": "FO",
-      "kind": "crew_action",
-      "text": "First Officer Ishikawa countered by pulling back the yoke on the co-pilot's side",
-      "factors": [
-        "crm_breakdown"
-      ]
-    },
-    {
-      "t": 1510,
-      "clock": "08:44",
+      "t": 2622,
+      "clock": "08:44:02",
       "phase": "approach",
       "actor": "FE",
       "kind": "crew_action",
-      "text": "Flight engineer Ozaki stood up from his seat and attempted to return the thrust reversers to the idle position while physically restraining Katagiri",
+      "text": "Flight engineer cried out 'We are low' or 'Power low' noticing engine power decrease; aircraft nose dropped abnormally; middle marker signal ceased as aircraft descended below glide slope",
       "factors": [
         "crm_breakdown"
       ]
     },
     {
-      "t": 1520,
-      "clock": "08:44",
+      "t": 2623,
+      "clock": "08:44:03",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer reflexively grabbed control column to pull nose up but found it extremely heavy with captain pushing forward with both hands; GPWS 'Glide Slope' warning activated; elevator deflection reached +9 degrees nose-down",
+      "factors": [
+        "crm_breakdown",
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 2624,
+      "clock": "08:44:04",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Thrust reversers begin to take effect as engines wind down; first officer continues pulling on control column with maximum force trying to raise nose; airspeed dropped to 126 knots; altitude down to 138 feet",
+      "factors": [
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 2625,
+      "clock": "08:44:05",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer succeeds in pulling elevator to approximately -7 degrees (nose-up) but cannot pull further as captain continues pushing down; first officer shouts 'Captain, please stop!'",
+      "factors": [
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 2627,
+      "clock": "08:44:07",
       "phase": "approach",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "The aircraft crashed within seconds into shallow water 510 meters short of runway 33R",
+      "text": "Aircraft impacts Tokyo Bay water 510 meters short of runway 33R threshold near approach light 14, with nose-down attitude approximately 8 degrees, right bank approximately 7 degrees, and descent angle approximately 18 degrees; left side impact felt by passengers",
       "factors": [
         "cfit",
         "loss_of_control_inflight"
       ]
     }
   ],
-  "report_links": [
+  "cvr": [
+    {
+      "t": 2560,
+      "speaker": "FO",
+      "text": "Five Hundred"
+    },
+    {
+      "t": 2590,
+      "speaker": "FO",
+      "text": "Approaching Minimum"
+    },
+    {
+      "t": 2590,
+      "speaker": "CAPT",
+      "text": "Check"
+    },
+    {
+      "t": 2610,
+      "speaker": "FE",
+      "text": "Two Hundred"
+    },
+    {
+      "t": 2610,
+      "speaker": "FO",
+      "text": "Minimum"
+    },
+    {
+      "t": 2622,
+      "speaker": "FE",
+      "text": "We are low, Power low"
+    },
+    {
+      "t": 2625,
+      "speaker": "FO",
+      "text": "Captain, please stop!"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "JAL-1",
+      "text": "Implement comprehensive psychiatric screening program for all flight crew with particular attention to early identification of psychotic disorders and auditory hallucinations",
+      "role": "safety"
+    },
+    {
+      "id": "JAL-2",
+      "text": "Establish mandatory mental health certification review process for flight crew involving independent psychiatric evaluation, not just internal company medical department",
+      "role": "safety"
+    },
+    {
+      "id": "JAL-3",
+      "text": "Require flight crews to report any concerning psychological symptoms or behavioral changes to designated medical personnel, with guarantee of impartial evaluation",
+      "role": "safety"
+    },
+    {
+      "id": "JAL-4",
+      "text": "Enhance cockpit resource management training with focus on procedures for recognizing and responding to incapacitated captain, including override procedures",
+      "role": "safety"
+    },
+    {
+      "id": "JAL-5",
+      "text": "Strengthen captain medical certification standards and require regular psychiatric evaluation as part of medical certification renewal",
+      "role": "safety"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
     "https://jtsb.mlit.go.jp/aircraft/download/58-3-JA8061-01.pdf",
-    "https://www.nytimes.com/1982/02/14/world/cockpit-fight-reported-on-jet-that-crashed-in-tokyo.html",
-    "https://aviation-safety.net/wikibase/327929",
-    "https://jtsb.mlit.go.jp/aircraft/download/58-3-JA8061-02.pdf",
-    "http://jtsb.mlit.go.jp/jtsb/aircraft/download/bunkatsu.html#6"
+    "https://jtsb.mlit.go.jp/aircraft/download/58-3-JA8061-02.pdf"
   ],
   "wikipedia": "https://en.wikipedia.org/wiki/Japan_Air_Lines_Flight_350",
   "asn_id": "19820209-0",
   "interest": 14.44,
+  "report_links": [
+    "https://jtsb.mlit.go.jp/aircraft/download/58-3-JA8061-01.pdf",
+    "https://jtsb.mlit.go.jp/aircraft/download/58-3-JA8061-02.pdf"
+  ],
+  "curated_id": null,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Report read from /home/user/portfolio/blackbox/cache/text/wd_q994581.txt"
+      "Read sections 2.1 (History of Flight, p. 474-604), 3.2.14 (Mental state analysis, p. 123-128), 3.2.10-3.2.12 (Operations analysis, p. 115-120), 4.2 (Probable cause, p. 151-155)",
+      "Extracted 15 events with specific times and aircraft states from FDR/CVR records",
+      "Added 7 CVR extracts from flight recording transcript",
+      "All factor evidence includes page citations from report"
     ]
   },
-  "curated_id": null,
-  "sources": [
-    "https://jtsb.mlit.go.jp/aircraft/download/58-3-JA8061-01.pdf"
-  ],
-  "recommendations": []
+  "agency": "JTSB"
 }

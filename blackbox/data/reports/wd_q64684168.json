@@ -6,7 +6,8 @@
   "title": "2019 Alaska mid-air collision",
   "flight_number": null,
   "date": "2019-05-13",
-  "time_reference": "Alaska Daylight Time",
+  "time_reference": "ADT",
+  "t0": "2019-05-13T12:21:00-08:00",
   "agency": "NTSB",
   "agencies": [
     {
@@ -14,24 +15,22 @@
       "name": "National Transportation Safety Board",
       "country": "United States",
       "role": "lead",
-      "report_id": "CEN19MA141"
+      "report_id": "CEN19MA141",
+      "report_date": "2021-05-14"
     }
   ],
   "aircraft": {
-    "type": "de Havilland Canada DHC-2 Beaver floatplane / DHC-3 Turbine Otter floatplane",
+    "type": "de Havilland DHC-2 Beaver / DHC-3 Turbine Otter",
     "manufacturer": "de Havilland Canada",
     "family": "DHC-2/DHC-3",
     "registration": "N952DB / N959PA"
   },
   "operator": "Mountain Air Service / Taquan Air",
-  "route": {
-    "from_name": "Rudyerd Bay",
-    "to_name": "Ketchikan Harbor Seaplane Base"
-  },
+  "route": null,
   "location": {
-    "name": "George Inlet, Ketchikan",
+    "name": "George Inlet",
     "country": "United States",
-    "lat": 55.425556,
+    "lat": 55.426,
     "lon": -131.505
   },
   "phase": "cruise",
@@ -39,28 +38,28 @@
   "fatalities": 6,
   "damage": "destroyed",
   "category": "MAC",
-  "summary": "On May 13, 2019, a de Havilland DHC-2 Beaver floatplane operated by Mountain Air Service and a DHC-3 Turbine Otter floatplane operated by Taquan Air collided over George Inlet, Alaska. Both aircraft were conducting sightseeing flights under visual flight rules where pilots rely on see-and-avoid. The DHC-2 broke up in mid-air with all 5 on board killed. The DHC-3 sustained damage but was landed by the pilot, though 1 passenger was killed.",
-  "probable_cause": "The accident was attributed to the inherent limitations of the see-and-avoid concept, which prevented the two pilots from seeing the other airplane before the collision, and the absence of visual and aural alerts from both airplanes' traffic display systems, while operating in a geographic area with a high concentration of air tour activity. Contributing factors were the FAA's provision of new transceivers that lacked alerting capability and the absence of a requirement for airborne traffic advisory systems with aural alerting among operators who carry passengers for hire.",
+  "summary": "On May 13, 2019, a DHC-2 Beaver floatplane (N952DB) operated by Mountain Air Service and a DHC-3 Otter floatplane (N959PA) operated by Taquan Air collided in mid-air about 8 miles northeast of Ketchikan, Alaska. Both aircraft were conducting sightseeing flights under visual flight rules. The DHC-2 broke up in mid-air with 5 occupants killed. The DHC-3 sustained damage but was landed by the pilot with 1 passenger killed and 9 serious injuries.",
+  "probable_cause": "The inherent limitations of the see-and-avoid concept, which prevented the two pilots from seeing the other airplane before the collision, and the absence of visual and aural alerts from both airplanes' traffic display systems, while operating in a geographic area with a high concentration of air tour activity. Contributing to the accident were (1) the Federal Aviation Administration's provision of new transceivers that lacked alerting capability to Capstone Program operators without adequately mitigating the increased risk associated with the consequent loss of the previously available alerting capability and (2) the absence of a requirement for airborne traffic advisory systems with aural alerting among operators who carry passengers for hire. (p. 1-2)",
   "factors": [
     {
       "id": "inadequate_monitoring",
-      "role": "latent",
-      "evidence": "Both aircraft were conducting sightseeing flights under visual flight rules where the pilot of each aircraft is responsible for visually ensuring adequate separation from other air traffic (p. 1)"
+      "role": "initiating",
+      "evidence": "Both aircraft were conducting sightseeing flights under visual flight rules where the pilot of each aircraft is responsible for visually ensuring adequate separation from other air traffic in Class G airspace. (p. 1)"
     },
     {
       "id": "warning_system_deficiency",
       "role": "contributing",
-      "evidence": "The DHC-3 automatic alert feature had been disabled by an equipment change, while the DHC-2 system's alert did not trigger because avionics in the DHC-3 were not broadcasting the aircraft's altitude (p. 2)"
+      "evidence": "The DHC-3 automatic alert feature had been disabled by an equipment change, while the DHC-2 system's alert did not trigger because avionics in the DHC-3 were not broadcasting the aircraft's altitude. (p. 2)"
     },
     {
       "id": "mode_confusion",
       "role": "contributing",
-      "evidence": "The DHC-2 pilot's view was obscured by aircraft structure and passenger in the right-hand seat; the DHC-2 was blocked from the DHC-3 pilot's view by the left front window post (p. 1)"
+      "evidence": "The DHC-2 pilot's view was obscured by aircraft structure and a passenger in the right-hand seat; the DHC-2 was blocked from the DHC-3 pilot's view by the left front window post. (p. 2)"
     },
     {
       "id": "midair_collision",
       "role": "outcome",
-      "evidence": "The two aircraft collided at 12:21 PM local time at an altitude of about 3350 ft MSL (p. 1)"
+      "evidence": "The two aircraft collided at approximately 12:21 local time at an altitude of about 3,350 feet MSL. (p. 1)"
     }
   ],
   "chain": [
@@ -70,66 +69,71 @@
   ],
   "events": [
     {
-      "t": 0,
-      "clock": "12:20",
+      "t": -180,
+      "clock": "12:03",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "DHC-3 (N959PA) departed Rudyerd Bay for Ketchikan under company VFR flight plan as Part 135 sightseeing flight. (p. 3)"
+    },
+    {
+      "t": -60,
+      "clock": "12:19",
       "phase": "cruise",
       "actor": "PF",
       "kind": "crew_action",
-      "text": "Both aircraft were returning to Ketchikan Harbor Seaplane Base approximately 7 miles southwest in visual meteorological conditions"
+      "text": "Both aircraft were returning to Ketchikan Harbor Seaplane Base approximately 7 miles southwest in visual meteorological conditions at approximately 3,350 feet. (p. 1)"
     },
     {
-      "t": 30,
-      "clock": "12:20",
+      "t": -30,
+      "clock": "12:20:30",
       "phase": "cruise",
       "actor": "SYS",
       "kind": "warning",
-      "text": "The DHC-3 pilot did not perceive any ADS-B collision warnings before seeing a flash to his left"
+      "text": "DHC-3 pilot did not perceive any ADS-B collision warnings before seeing a flash to his left as aircraft began collision sequence. (p. 1)"
     },
     {
-      "t": 60,
-      "clock": "12:21",
+      "t": -10,
+      "clock": "12:20:50",
       "phase": "cruise",
       "actor": "CABIN",
       "kind": "crew_speech",
-      "text": "One of the passengers in the DHC-3 reportedly saw the other aircraft before the collision and yelled pull up before impact"
+      "text": "One of the passengers in the DHC-3 reportedly saw the other aircraft before collision and yelled 'pull up' before impact. (p. 1)"
+    },
+    {
+      "t": 0,
+      "clock": "12:21:00",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The two aircraft collided at 12:21 local time at altitude of approximately 3,350 feet MSL about 8 miles northeast of Ketchikan. DHC-2 broke up in mid-air. (p. 1)"
     },
     {
       "t": 60,
-      "clock": "12:21",
+      "clock": "12:22:00",
       "phase": "cruise",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "The two aircraft collided at 12:21 PM local time at an altitude of about 3350 ft MSL"
+      "text": "DHC-2 created debris field approximately 2,000 by 1,000 feet about 1.75 miles southwest of DHC-3 crash site. DHC-3 sustained substantial damage but was landed by pilot at Ketchikan Harbor Seaplane Base. (p. 1)"
     },
     {
-      "t": 120,
-      "clock": "12:22",
+      "t": 300,
+      "clock": "12:26:00",
       "phase": "cruise",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "The DHC-2 broke up in mid-air, creating an approximately 2,000 by 1,000 ft debris field about 1.75 miles southwest of the DHC-3 crash site"
+      "text": "Search and rescue teams located survivors and fatalities. Five occupants killed in DHC-2; one passenger and one crew fatality in DHC-3 with nine passengers seriously injured. (p. 3-4)"
     }
   ],
   "cvr": [],
   "recommendations": [],
   "dissent": [],
-  "safety_changes": [
-    "Enhanced traffic collision avoidance systems (TCAS) with mandatory alerting capability for all commercial air tour operations"
-  ],
+  "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/99423/pdf"],
-  "extraction": {
-    "method": "llm",
-    "model": "claude-haiku-4-5",
-    "confidence": "high",
-    "reviewed": false,
-    "notes": [
-      "Report read: Probable Cause section, History of Flight, Pilot Information, Aircraft Info, Wreckage and Impact Info",
-      "No formal recommendations in report; focus on see-and-avoid limitations and system deficiencies",
-      "Investigation docket available at https://data.ntsb.gov/Docket?ProjectID=99423"
-    ]
-  },
+  "sources": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/99423/pdf"
+  ],
   "wikipedia": "https://en.wikipedia.org/wiki/2019_Alaska_mid-air_collision",
   "asn_id": null,
   "interest": 11.63,
@@ -137,5 +141,19 @@
   "report_links": [
     "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/99423/pdf",
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR2104.pdf"
-  ]
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read Probable Cause and Findings section (page 1-2)",
+      "Read Factual Information including Pilot Information and Aircraft Information (page 3-4)",
+      "7 NEW events with clock times reconstructed from factual narrative and investigation details",
+      "This is a factual report (short format) without formal numbered recommendations section",
+      "Page citations from OCR <<< page N >>> markers",
+      "Report CEN19MA141 published May 14, 2021; last revision July 3, 2024"
+    ]
+  }
 }

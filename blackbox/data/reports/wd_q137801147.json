@@ -7,116 +7,254 @@
   "flight_number": null,
   "date": "2026-01-17",
   "agency": "KNKT",
-  "aircraft": {
-    "type": "ATR 42-512",
-    "manufacturer": "ATR",
-    "family": "42",
-    "registration": "PK-THT"
-  },
-  "operator": "Indonesia Air Transport",
-  "route": {
-    "from_name": "Adisucipto Airport",
-    "to_name": "Sultan Hasanuddin International Airport"
-  },
-  "location": {
-    "name": "Mount Bulusaraung",
-    "country": "Indonesia"
-  },
-  "phase": "approach",
-  "occupants": 10,
-  "fatalities": 10,
-  "category": "CFIT",
-  "summary": "An ATR 42 operating a regional service in Indonesia was not on the correct flight path during approach to Sultan Hasanuddin International Airport. The aircraft made its last contact with ATC at about 20 km from destination and subsequently crashed into Mount Bulusaraung. All 10 on board were killed. Adverse weather conditions in the mountainous area complicated the search and rescue operation.",
-  "probable_cause": "",
-  "factors": [
-    {
-      "id": "navigation_error",
-      "role": "initiating",
-      "evidence": "Sources report that the aircraft was not on the correct flight path during approach"
-    },
-    {
-      "id": "low_visibility",
-      "role": "contributing",
-      "evidence": "Search efforts were complicated by adverse weather conditions in the area"
-    },
-    {
-      "id": "cfit",
-      "role": "outcome",
-      "evidence": "the aircraft was ultimately found to have crashed in the Bulusaraung mountain area"
-    }
-  ],
-  "chain": [
-    [
-      "navigation_error",
-      "cfit"
-    ],
-    [
-      "low_visibility",
-      "navigation_error"
-    ]
-  ],
-  "events": [
-    {
-      "t": 0,
-      "clock": null,
-      "phase": "approach",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "The aircraft made its last contact with ATC at a distance of about 20 km from its destination airport, at 1:37 pm local time"
-    },
-    {
-      "t": 100,
-      "clock": null,
-      "phase": "approach",
-      "actor": "ENV",
-      "kind": "outcome",
-      "text": "Local residents reported, around the time the aircraft was declared missing, witnessing an explosion and seeing smoke in Mount Bulusaraung"
-    },
-    {
-      "t": 200,
-      "clock": null,
-      "phase": "approach",
-      "actor": "SYS",
-      "kind": "outcome",
-      "text": "The aircraft was ultimately found to have crashed in the Bulusaraung mountain area",
-      "factors": [
-        "cfit"
-      ]
-    }
-  ],
-  "report_links": [
-    "https://knkt.go.id/Repo/Files/Laporan/Penerbangan/2026/KNKT.26.01.01.04-Preliminary-Report.pdf"
-  ],
-  "wikipedia": "https://en.wikipedia.org/wiki/2026_Indonesia_Air_Transport_ATR_42_crash",
-  "asn_id": null,
-  "interest": 11.96,
-  "extraction": {
-    "method": "llm",
-    "model": "claude-haiku-4-5",
-    "confidence": "high",
-    "reviewed": false,
-    "notes": [
-      "KNKT preliminary report with findings but no final recommendations yet"
-    ]
-  },
-  "curated_id": null,
   "agencies": [
     {
       "code": "KNKT",
       "name": "Komite Nasional Keselamatan Transportasi",
       "country": "Indonesia",
       "role": "lead"
+    },
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses",
+      "country": "France",
+      "role": "participant"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "participant"
     }
   ],
-  "sources": [
-    "https://knkt.go.id/Repo/Files/Laporan/Penerbangan/2026/KNKT.26.01.01.04-Preliminary-Report.pdf"
+  "aircraft": {
+    "type": "ATR 42-512",
+    "manufacturer": "ATR",
+    "family": "ATR 42",
+    "registration": "PK-THT"
+  },
+  "operator": "PT Indonesia Air Transport",
+  "route": {
+    "from_name": "Adisutjipto Airport (Yogyakarta)",
+    "to_name": "Sultan Hasanuddin International Airport (Makassar)"
+  },
+  "location": {
+    "name": "Mount Bulusaraung, Maros",
+    "country": "Indonesia",
+    "latitude": -4.928,
+    "longitude": 119.747,
+    "elevation_ft": 4300
+  },
+  "phase": "approach",
+  "occupants": 10,
+  "fatalities": 10,
+  "category": "CFIT",
+  "summary": "ATR 42-500 PK-THT on aerial surveillance charter flight from Yogyakarta to Makassar departed 0109 UTC 17 January 2026, climbed to 11,000 feet. Aircraft had multiple navigation system degradations: GNSS in degraded mode for most of flight; FDR and ADS-B position data diverged significantly with discrepancies of 13-17 NM. Crew reported position and headings based on degraded GNSS that did not match ADS-B ground surveillance data seen by ATC. At 0348 UTC, crew contacted approach control and began descent. ATC issued descent clearances that violated minimum safe altitude of 6,000 feet in approach area; MSAW alert system did not activate despite aircraft descending below published MSA. At approximately 0422 UTC, aircraft EGPWS generated repeated terrain warnings. At 0423 UTC aircraft radar blip lost. Aircraft found crashed on Mount Bulusaraung at 4,300 feet elevation. All 10 on board (2 pilots, 2 flight attendants, 6 passengers/mission staff) killed. Investigation ongoing.",
+  "probable_cause": "Controlled Flight Into Terrain during approach phase. Contributing factors included Global Navigation Satellite System (GNSS) degradation mode throughout flight operation resulting in position information discrepancy between aircraft FDR and ground ADS-B surveillance of 13-17 NM; pilot navigation reliance on degraded GNSS position; inadequate ATC clearances for descent below minimum safe altitude (MSA); non-activation of Minimum Safe Altitude Warning (MSAW) system; flight crew not using required headsets during critical approach phase; and weather conditions with convective clouds near terrain. (KNKT Preliminary Report p. 1-40)",
+  "factors": [
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "Flight Data Recorder position and ADS-B ground surveillance position data diverged significantly from start of flight. At 0348 UTC approach contact, FDR data showed aircraft 18 NM west of Surveillance Point 4 while ADS-B showed 22 NM southwest—14 NM discrepancy. At 0401:29 UTC, FDR showed 10 NM west of Waypoint DAKAD, ADS-B showed 17 NM southwest—15 NM discrepancy. Crew continued reporting positions based on degraded GNSS/FDR display that did not match ATC surveillance picture. (p. 3, 27)"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "ATC issued descent clearances below published minimum safe altitude (MSA) of 6,000 feet for approach area. At 0420:04 UTC, aircraft at 5,000 feet entered area with MSA of 8,000 feet per ATC SMAC chart. At 0422:36 UTC, aircraft at 4,100 feet descended further in area with MSA of 6,000 feet. Minimum Safe Altitude Warning (MSAW) system did not activate despite these violations; MSAW dataset had not been updated since 2015. (p. 5, 27, 34)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Weather radar and satellite imagery at 0420 UTC showed presence of convective cumulonimbus clouds around accident site. Crew requested heading changes to avoid weather at 0405 UTC and 0410:00 UTC. IFR/IMC conditions with reduced visibility in mountainous terrain."
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "ATC dispatcher used imprecise English at 0403:42 UTC saying 'DAKAD your not, not point' to advise pilot aircraft was far from Waypoint DAKAD; PM read back only the turning instruction without acknowledging position warning. ATC on duty had non-duty-related discussion with supervisor when PK-THT was flying abeam Waypoint OPENG. Assistant controller absent from workstation from 0410 UTC until shortly after radar loss."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Pilots did not use required headsets and boom microphones during approach phase. Aircraft operator OM-A required headsets from start of descent through landing. Unintelligible pilot cockpit area microphone channel in CVR indicated both pilots not using headsets. This impaired crew communication and situational awareness during critical descent and approach."
+    },
+    {
+      "id": "gpws_warning_response",
+      "role": "contributing",
+      "evidence": "Aircraft equipped with Enhanced Ground Proximity Warning System (EGPWS) with worldwide terrain database. At approximately 0422:45 UTC, EGPWS generated repeated aural alerts 'TERRAIN - TERRAIN' followed by 'PULL UP' four times. Warnings came too late in descent sequence for effective recovery."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted Mount Bulusaraung at coordinates 4°55'44.37\" S; 119°44'50.008\" E at elevation approximately 4,300 feet AMSL. Initial impact location with wreckage scattered 700 × 200 meters on slope of approximately 80°. No evidence of in-flight fire; post-impact fire observed on wreckage. All 10 occupants fatally injured: 2 pilots, 2 flight attendants, 6 passengers/mission staff. Aircraft destroyed by impact force."
+    }
   ],
+  "chain": [
+    [
+      "navigation_error",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "gpws_warning_response"
+    ],
+    [
+      "descent_below_minimums",
+      "low_visibility"
+    ],
+    [
+      "atc_communication_error",
+      "descent_below_minimums"
+    ],
+    [
+      "procedural_noncompliance",
+      "navigation_error"
+    ],
+    [
+      "gpws_warning_response",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "08:09",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "ATR 42-500 PK-THT departed Runway 09 Adisutjipto Airport (Yogyakarta) at 0109 UTC (08:09 local) for aerial surveillance charter mission to Sultan Hasanuddin Airport (Makassar). Crew: Captain (58, ATPL, 14,956 total hours, 3,358 on type) and First Officer (25, CPL, 524 total hours, 346 on type). 2 flight attendants and 6 passengers (1 flight operations officer, 2 aircraft engineers, 3 aerial surveyors). 10 total on board.",
+      "factors": []
+    },
+    {
+      "t": 420,
+      "clock": "08:16",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft climbing. Flight Data Recorder began recording at engine start with GNSS HT1000 system in Degrade mode (GPS accuracy/integrity compromised). Aircraft position on FDR initially 1 NM southeast of Adisutjipto. ADS-B ground receiver did not yet receive aircraft broadcast data. Pilots should not navigate using degraded GNSS per FCOM procedures.",
+      "factors": []
+    },
+    {
+      "t": 780,
+      "clock": "08:22",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At 0112 UTC at altitude 5,900 feet, ADS-B ground receiver began receiving aircraft broadcast data. Position discrepancy evident: FDR showed aircraft 0.6 NM northwest of ADS-B position, distance continuing to reduce initially. At 0114 UTC (7,700 feet), GNSS Degrade parameter changed to 'Not Degrade'. FDR and ADS-B trajectories merged. Aircraft reached and maintained cruise altitude 11,000 feet at 0117 UTC.",
+      "factors": []
+    },
+    {
+      "t": 3420,
+      "clock": "09:46",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At 0143 UTC, GNSS Degrade parameter recorded as 'Degrade' again and remained degraded until end of FDR recording. About 1 minute later, aircraft descended to approximately 2,000 feet to conduct first aerial surveillance near Surveillance Point 1. FDR and ADS-B trajectories began diverging; distance between trajectories increased to 13-17 NM and remained large throughout approach phase.",
+      "factors": []
+    },
+    {
+      "t": 8280,
+      "clock": "11:18",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 0348 UTC (11:48 local), Second In Command (PM) made initial contact with Approach Control Ujung Pandang Terminal Control Area. CVR indicated SIC was PM, PIC was PF. ATC requested surveillance identification and approach clearance. Crew reported aircraft on heading for last aerial surveillance area (Surveillance Point 4) on radial 283, 63 NM from MKS VOR. At this time, FDR position 18 NM west of Surveillance Point 4, ADS-B position 22 NM southwest—14 NM discrepancy unbeknownst to ATC or crew.",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 8460,
+      "clock": "11:20",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 0401:29 UTC, ATC reconfirmed aircraft heading. PM reported aircraft on heading 083 to Waypoint DAKAD at 6,000 feet. FDR data showed aircraft 10 NM west of DAKAD; ADS-B data showed 17 NM southwest of DAKAD—15 NM position discrepancy. ATC descent clearances began, instructing descent to 5,000 feet, then 3,200 feet. Pilots proceeded with descent based on degraded GNSS position display unaware of actual lateral deviation.",
+      "factors": [
+        "navigation_error",
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 9720,
+      "clock": "11:31",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 0416 UTC, ATC instructed aircraft to turn left heading 125° to Waypoint OPENG. At 0420:04 UTC, ATC situation display showed PK-THT target descended to 5,000 feet and entered area with MSA of 8,000 feet per ATC Surveillance Minimum Altitude Chart (SMAC). Minimum Safe Altitude Warning (MSAW) from surveillance system did not activate; MSAW dataset had not been updated since 2015. At 0420:46 UTC, ATC instructed aircraft to turn right to Waypoint KABIB and descend to 3,200 feet.",
+      "factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 10140,
+      "clock": "11:37",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 0422:36 UTC, ATC situation display showed PK-THT target at 4,100 feet descending, entered area with MSA of 6,000 feet. ATC advised pilot that Waypoint KABIB had passed and confirmed pilot turning right heading 245° for final approach Runway 21. Neither crew nor ATC recognized or acted on large position discrepancy and MSA violation. Pilots were not using required headsets, impairing communication.",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 10185,
+      "clock": "11:37:45",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "At 0422:45 UTC, PM responded to ATC confirming right turn heading 245°. Seconds later, aircraft EGPWS system (terrain and obstacle awareness mode) generated aural alert 'TERRAIN - TERRAIN' followed by 'PULL UP' alert, repeated four times. Red GPWS warning lights illuminated on instrument panels. Cockpit Voice Recorder stopped recording shortly after EGPWS warnings. Aircraft at altitude of 4,100 feet or lower, well below MSA of 6,000 feet, approaching Mount Bulusaraung terrain at 4,300 feet elevation.",
+      "factors": [
+        "gpws_warning_response"
+      ]
+    },
+    {
+      "t": 10260,
+      "clock": "11:38:40",
+      "phase": "landing",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "At 0423 UTC, PK-THT radar target on ATC display changed from surveillance target to flight plan target; surveillance system no longer received aircraft broadcast data. ATC made repeated radio calls with no response from aircraft. Search and Rescue (SAR) activated. On 18 January 2026, aircraft wreckage found scattered on Mount Bulusaraung at coordinates 4°55'44.37\" S; 119°44'50.008\" E at elevation 4,300 feet AMSL. Wreckage scattered 700 × 200 meters across 80° slope. No evidence of in-flight fire; post-impact fire observed. All 10 occupants fatally injured. Aircraft destroyed by impact.",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
   "dissent": [],
   "safety_changes": [
-    "DGCA issued Circular Letter SE-DJPU 2 Tahun 2026 requiring pilots to adhere to minimum safe altitude requirements",
-    "DGCA issued Circular Letter SE-DJPU 4 Tahun 2026 requiring position verification when navigation system degradation is indicated"
+    "DGCA issued Circular Letter SE-DJPU 2 Tahun 2026 directing adherence to minimum safe altitude requirements, comprehensive flight planning, and TAWS procedures",
+    "DGCA issued Circular Letter SE-DJPU 4 Tahun 2026 requiring position verification during GNSS degradation and operator reporting of position discrepancies",
+    "AirNav Indonesia updated MSAW dataset in accordance with ATC Surveillance Minimum Altitude Chart (SMAC)",
+    "AirNav Indonesia revised ILS Runway 21 procedure from S-Type to RNP/ILS (Track to Fix), effective 19 March 2026",
+    "PT Indonesia Air Transport issued safety notice on mandatory headset use during critical flight phases"
   ],
   "related": [],
   "fdr": null,
-  "recommendations": []
+  "sources": [
+    "https://knkt.go.id/Repo/Files/Laporan/Penerbangan/2026/KNKT.26.01.01.04-Preliminary-Report.pdf"
+  ],
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/2026_Indonesia_Air_Transport_ATR_42_crash",
+  "report_links": [
+    "https://knkt.go.id/Repo/Files/Laporan/Penerbangan/2026/KNKT.26.01.01.04-Preliminary-Report.pdf"
+  ],
+  "interest": 11.96,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Preliminary KNKT report read: Synopsis (p. VI-1), Factual Information History of Flight (p. 1-6), Personnel Information (p. 5-8), and Findings (p. 26-29)",
+      "Eight events extracted from detailed flight sequence timeline with specific UTC timestamps and aircraft state from 0109 UTC departure through 0423 UTC radar loss",
+      "Navigation error supported by detailed FDR vs ADS-B position discrepancies: 14 NM at Surveillance Point 4, 15-17 NM at Waypoints DAKAD, KABIB",
+      "GNSS degradation mode documented in Findings 21-26; crew procedure noncompliance regarding headsets in Findings 44, 48 and OM-A documentation",
+      "MSAW system failure detailed in Findings 16, 39, 44-45 regarding outdated dataset and non-activation",
+      "EGPWS activation documented at Finding 40 with specific alert sequence 'TERRAIN-TERRAIN' followed by 'PULL UP' x4",
+      "Five safety actions already implemented by DGCA, AirNav Indonesia, and aircraft operator documented in Section 3, p. 30-40",
+      "Investigation ongoing per preliminary report status; no final probable cause yet, but contributing factors clearly identified"
+    ]
+  }
 }
