@@ -1,0 +1,191 @@
+{
+  "id": "wd_q17027651",
+  "qid": "Q17027651",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "United Airlines 2885",
+  "flight_number": "UA2885",
+  "date": "1983-01-11",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-8-54F",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-8",
+    "registration": null
+  },
+  "operator": "United Airlines",
+  "route": {
+    "from_name": "Cleveland",
+    "to_name": "Los Angeles"
+  },
+  "location": {
+    "name": "Detroit Metropolitan Wayne County Airport",
+    "country": "United States"
+  },
+  "phase": "takeoff",
+  "occupants": 3,
+  "fatalities": 3,
+  "category": "LOC-I",
+  "summary": "A DC-8 cargo flight crashed during takeoff from Detroit after an unauthorized seat swap placed an insufficiently trained flight engineer at the controls. The aircraft pitched nose-up to an excessive attitude, causing engine surges, wing bank, and a stall at approximately 1000 feet altitude. Investigation revealed the horizontal stabilizer was set to 7.5 units nose-up trim, likely due to inadequate pre-takeoff checklist procedures during the confusion of the crew change.",
+  "probable_cause": "An excessively high stabilizer trim setting of 7.5 units nose-up during takeoff. Contributing factors included an unauthorized flight engineer performing the takeoff, the flight engineer's inadequate training and previous failed proficiency checks, and the captain's failure to correct the situation or prevent the unauthorized seat swap.",
+  "factors": [
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "aircraft entered upset condition, stalled and fell to the ground at approximately 1000 ft"
+    },
+    {
+      "id": "stabilizer_trim_failure",
+      "role": "initiating",
+      "evidence": "excessively high stabilizer trim setting of 7.5 units airplane nose-up"
+    },
+    {
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "flight engineer had been found inadequate in first officer upgrade training; training terminated after two months; subsequent training for Boeing 737 showed inadequate abilities"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "flight engineer's instructor stated he has not made normal progress in his first full year as first officer"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "pilots failed to reset trim setting while performing takeoff checklists due to confusion from crew seat switching"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "initiating",
+      "evidence": "captain allowed flight engineer to perform takeoff contrary to United Airlines and FAA rules without objection"
+    }
+  ],
+  "chain": [
+    [
+      "stabilizer_trim_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "crm_breakdown",
+      "procedural_noncompliance"
+    ],
+    [
+      "procedural_noncompliance",
+      "stabilizer_trim_failure"
+    ],
+    [
+      "pilot_experience",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "02:51",
+      "phase": "takeoff",
+      "actor": "FE",
+      "kind": "crew_action",
+      "text": "Flight engineer performed takeoff from Detroit contrary to FAA and company rules after unauthorized seat swap",
+      "factors": [
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft nose pitched up to unusually high position with stabilizer trim at 7.5 units nose-up",
+      "factors": [
+        "stabilizer_trim_failure"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Temporary engine surges occurred; witnesses on ground reported occasional fire eruptions from engines",
+      "factors": []
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft began gradual right roll as wings reached almost 90-degree bank angle",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft at 1000 ft altitude stalled and fell to the ground, exploding on impact",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8307.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR83-07.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Airlines_Flight_2885",
+  "asn_id": "19830111-1",
+  "interest": 10.57,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: SYNOPSIS, History of the Flight, Personnel Information, Human Performance analysis, and Conclusions from NTSB AAR-83-07. Primary cause: flightcrew's failure to follow checklist procedures and detect/correct a mistrimmed stabilizer (7.5 units nose-up) before aircraft became uncontrollable. Contributing factors included unauthorized crew seat swap, inadequate flight engineer training, and crew fatigue. FDR non-functional. Reaffirmed four prior safety recommendations (A-82-64 through A-82-67) regarding digital flight recorder installation."
+    ]
+  },
+  "curated_id": null,
+  "recommendations": [
+    {
+      "id": "A-82-64",
+      "to": "FAA",
+      "text": "Installation of suitable digital flight recorder systems on air carrier aircraft",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-65",
+      "to": "FAA",
+      "text": "Installation of suitable digital flight recorder systems on air carrier aircraft",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-66",
+      "to": "FAA",
+      "text": "Installation of suitable digital flight recorder systems on air carrier aircraft",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-67",
+      "to": "FAA",
+      "text": "Installation of suitable digital flight recorder systems on air carrier aircraft",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ]
+}

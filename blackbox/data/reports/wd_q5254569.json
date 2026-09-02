@@ -1,0 +1,213 @@
+{
+  "id": "wd_q5254569",
+  "qid": "Q5254569",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Delta Air Lines 9570",
+  "flight_number": "DL9570",
+  "date": "1972-05-30",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-9-14",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-9",
+    "registration": null
+  },
+  "operator": "Delta Air Lines",
+  "route": {
+    "from_name": "Dallas Love Field",
+    "to_name": "Greater Southwest International Airport"
+  },
+  "location": {
+    "name": "Greater Southwest International Airport",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 4,
+  "fatalities": 4,
+  "category": "LOC-I",
+  "summary": "Delta Flight 9570, a DC-9 training flight with four occupants including an FAA inspector, was cleared to land behind an American DC-10 at Greater Southwest International Airport. The aircraft received an advisory about turbulence but was not explicitly advised it was following a heavy aircraft. On approach, the DC-9 began to oscillate about the roll axis, then rolled rapidly to the right, striking the runway with its wingtip and continuing to roll until the fuselage struck in a nearly inverted position. All four occupants were killed and the aircraft was destroyed.",
+  "probable_cause": "The National Transportation Safety Board determined that the accident was caused by wake turbulence from the DC-10 that the DC-9 had followed. NTSB wake vortex testing at Atlantic City Airport demonstrated that wake turbulence from a DC-10 was sufficient to upset a following DC-9 to the magnitude experienced. The accident led to sweeping changes in procedures for maintaining safe distance behind large aircraft generating substantial wake turbulence.",
+  "factors": [
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "The air traffic controller did not advise the DC-9 crew that they were following a heavy aircraft, though the controller advised they were following a DC-10 which experienced pilots should have known was a heavy aircraft"
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "Prior to Flight 9570, the Federal Aviation Administration had no specific wake turbulence based aircraft separation standards in place; separation was determined by radar resolution limits and runway occupancy restrictions"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Prior to Flight 9570, most accidents involving wake turbulence involved smaller aircraft than the DC-9, suggesting crews had not been trained to recognize wake turbulence hazard to larger twin-engine aircraft from heavy jets"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The DC-9 began to oscillate about the roll axis, then rolled rapidly to the right, with the right wingtip striking the runway and the aircraft continuing to roll until the fuselage struck the runway in a nearly inverted position"
+    }
+  ],
+  "chain": [
+    [
+      "atc_communication_error",
+      "loss_of_control_inflight"
+    ],
+    [
+      "inadequate_training",
+      "loss_of_control_inflight"
+    ],
+    [
+      "regulatory_oversight",
+      "atc_communication_error"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "06:48",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 9570 requested ILS approach to GSW Runway 13; cleared to land with advisory caution turbulence behind American DC-10 already in traffic pattern",
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "After first landing and performing training maneuvers, Flight 9570 requested approval for landing on Runway 13 behind the American DC-10; controller gave clearance with advisory caution turbulence",
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": 600,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "On approach to the runway, the DC-9 began to oscillate about the roll axis, then rolled rapidly to the right as aircraft descended through wake vortex",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 720,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "After rolling 90 degrees to the right, the right wingtip struck the runway; aircraft continued to roll right until fuselage struck runway in nearly inverted position, damaged by impact and destroyed by subsequent fire",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7303.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR73-03.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Delta_Air_Lines_Flight_9570",
+  "asn_id": "19720530-0",
+  "interest": 9.11,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Title Page, Abstract, Technical Report Documentation, and Recommendations section from NTSB AAR-73-3. Primary cause: wake vortex from preceding DC-10 during approach. Contributing factors: inadequate ATC communication (no explicit heavy aircraft warning), lack of regulatory separation standards pre-dating this accident, inadequate crew training on wake turbulence hazards. NTSB testing confirmed DC-10 wake vortex sufficient to upset DC-9. Eight formal recommendations issued addressing wake turbulence procedures, publications, training, and separation standards."
+    ]
+  },
+  "curated_id": null,
+  "recommendations": [
+    {
+      "id": "A-72-76",
+      "to": "FAA",
+      "text": "Reevaluate wake turbulence separation criteria for aircraft operating behind heavy jet aircraft",
+      "status": "unknown",
+      "trigger_factors": [
+        "atc_communication_error",
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": "A-72-77",
+      "to": "FAA",
+      "text": "Issue alert notices to all pilots and aircraft operators regarding the urgent need to maintain adequate separation from heavy jet aircraft, with special emphasis on nonradar VFR procedures",
+      "status": "unknown",
+      "trigger_factors": [
+        "atc_communication_error",
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": "A-72-213",
+      "to": "FAA",
+      "text": "Revise appropriate publications to describe more specifically desirable wake turbulence avoidance techniques (e.g., following aircraft maintain approach path above VASI or ILS guide slope, extending downwind leg)",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": "A-72-214",
+      "to": "FAA",
+      "text": "Define and publish the meteorological parameters which cause trailing vortices to persist in the vicinity of the landing runway",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-72-215",
+      "to": "FAA",
+      "text": "Include wake turbulence warnings on the ATIS broadcasts whenever meteorological conditions exist that cause vortices to persist",
+      "status": "unknown",
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "id": "A-72-216",
+      "to": "FAA",
+      "text": "Accelerate research and continue vortex turbulence detection and avoidance system development",
+      "status": "unknown",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": "A-72-217",
+      "to": "FAA",
+      "text": "Establish appropriate separation standards for both IFR and VFR terminal area operations considering vortex behavior in ground effect",
+      "status": "unknown",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": "A-72-218",
+      "to": "FAA",
+      "text": "Implement comprehensive wake turbulence awareness and avoidance program for all categories of aircraft",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_training",
+        "regulatory_oversight"
+      ]
+    }
+  ]
+}
