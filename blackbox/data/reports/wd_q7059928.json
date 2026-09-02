@@ -1,0 +1,152 @@
+{
+  "id": "wd_q7059928",
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q7059928",
+  "title": "Northwest Airlink 2268",
+  "flight_number": "NW2268",
+  "date": "1987-03-04",
+  "time_reference": "Eastern standard time",
+  "t0": "1987-03-04T14:30:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-88-08",
+      "report_date": "1988-12-20"
+    }
+  ],
+  "aircraft": {
+    "type": "CASA C-212-CC",
+    "manufacturer": "CASA",
+    "family": "C-212",
+    "registration": "N160FB"
+  },
+  "operator": "Northwest Airlink",
+  "route": {
+    "from_name": "Cleveland Hopkins International Airport",
+    "to_name": "Detroit Metropolitan Wayne County Airport"
+  },
+  "location": {
+    "name": "Detroit Metropolitan Wayne County Airport",
+    "country": "United States",
+    "state": "Michigan"
+  },
+  "phase": "landing",
+  "occupants": 19,
+  "fatalities": 9,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Northwest Airlink Flight 2268, a CASA C-212 turboprop, was cleared for a visual approach to Runway 21R at Detroit Metropolitan Airport at 14:30. At 60-70 feet above ground, the aircraft banked left and then rolled right, striking the ramp area and flipping over.",
+  "probable_cause": "The captain's inability to control the airplane in an attempt to recover from an asymmetric power condition at low speed following his intentional use of beta mode to descend and slow the airplane rapidly on final approach.",
+  "factors": [
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "Unstabilized visual approach with departing DC-9 on runway and desire for short field landing"
+    },
+    {
+      "id": "low_energy_state",
+      "role": "contributing",
+      "evidence": "Low speed condition on final approach following rapid descent in beta mode"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "Captain's inability to control airplane in attempt to recover from asymmetric power condition"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft banked left then rolled right at 60-70 feet altitude, striking ramp area"
+    }
+  ],
+  "chain": [
+    [
+      "unstable_approach",
+      "low_energy_state"
+    ],
+    [
+      "low_energy_state",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:30",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 2268 cleared for visual approach to Runway 21R"
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain using beta mode to descend and slow airplane rapidly on final approach"
+    },
+    {
+      "t": 240,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "At 60-70 feet above ground, aircraft banked left"
+    },
+    {
+      "t": 250,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft rolled right, lost control",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 260,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck ramp area and flipped over, striking catering truck"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8808.pdf"
+  ],
+  "asn_id": "19870304-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Northwest_Airlink_Flight_2268",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8808.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR88-08.pdf"
+  ],
+  "interest": 10.35,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Limited text available; read available sections"
+    ]
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "id": "wd_q4655029",
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q4655029",
+  "title": "AVAir 3378",
+  "flight_number": "VA3378",
+  "date": "1988-02-19",
+  "time_reference": "Eastern standard time",
+  "t0": "1988-02-19T21:25:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-88-10",
+      "report_date": "1988-12-20"
+    }
+  ],
+  "aircraft": {
+    "type": "Fairchild Swearingen Metroliner",
+    "manufacturer": "Fairchild",
+    "family": "Metroliner",
+    "registration": null
+  },
+  "operator": "Air Virginia",
+  "route": {
+    "from_name": "Raleigh-Durham",
+    "to_name": "Richmond"
+  },
+  "location": {
+    "name": "Cary, North Carolina",
+    "country": "United States"
+  },
+  "phase": "initial_climb",
+  "occupants": 12,
+  "fatalities": 12,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "AVAir Flight 3378, a Fairchild Swearingen Metroliner turboprop, departed Raleigh-Durham at 21:25 and climbed to only 300 feet before encountering problems. The aircraft maintained appropriate climb speed but executed an excessive rate of turn instead of the standard 22 degrees, causing the aircraft to descend. The aircraft struck water in a reservoir and continued onto land.",
+  "probable_cause": "The failure of flight crew to maintain a proper flightpath. Contributing factors were the ineffective management and supervision of flight crew training and operations and inappropriate FAA surveillance.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Weather at the time included low ceiling and low visibility"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Improper instrument scanning by the first officer"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Lack of company response to documented indications of difficulties in the first officer's piloting"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft maintained excessive rate of turn causing the plane to descend and strike water in reservoir"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "loss_of_control_inflight"
+    ],
+    [
+      "inadequate_training",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "21:25",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft took off from Raleigh-Durham International Airport"
+    },
+    {
+      "t": 30,
+      "clock": "21:26",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft climbed to 300 feet maintaining appropriate climb speed"
+    },
+    {
+      "t": 90,
+      "clock": "21:28",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft executed excessive rate of turn of 40 to 45 degrees"
+    },
+    {
+      "t": 120,
+      "clock": "21:28:45",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft descended and struck water in reservoir 100 feet from shoreline then continued onto land into forest",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8810.pdf"
+  ],
+  "asn_id": "19880219-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/AVAir_Flight_3378",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8810.pdf",
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/15896/pdf"
+  ],
+  "interest": 10.85,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Limited text available; read available sections on history of flight and conclusions"
+    ]
+  }
+}

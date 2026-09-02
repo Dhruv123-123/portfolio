@@ -1,0 +1,160 @@
+{
+  "id": "wd_q127413252",
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q127413252",
+  "title": "Gazpromavia 9608",
+  "flight_number": "GA9608",
+  "date": "2024-07-12",
+  "time_reference": "UTC",
+  "t0": "2024-07-12T11:52:58Z",
+  "agency": "MAK",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead",
+      "report_id": "RA-89049",
+      "report_date": "2025-07-16"
+    }
+  ],
+  "aircraft": {
+    "type": "Sukhoi Superjet 100-95LR",
+    "manufacturer": "Sukhoi",
+    "family": "Superjet 100",
+    "registration": "RA-89049"
+  },
+  "operator": "Gazpromavia",
+  "route": {
+    "from_name": "Lukhovitsy",
+    "to_name": "Vnukovo"
+  },
+  "location": {
+    "name": "Kolomna",
+    "country": "Russia",
+    "state": "Moscow region"
+  },
+  "phase": "cruise",
+  "occupants": 3,
+  "fatalities": 3,
+  "damage": "destroyed",
+  "category": "UNK",
+  "summary": "A Sukhoi Superjet 100-95LR crashed on July 12, 2024, during a ferry flight from Lukhovitsy to Vnukovo, approximately 80 kilometers southeast of Moscow. The aircraft climbed to only 900 meters before beginning an uncontrolled descent. The investigation found that two angle-of-attack sensors had been installed with a five-degree deviation during maintenance, causing incorrect activation of the stall warning and protection systems.",
+  "probable_cause": "Incorrect installation of angle-of-attack sensors during maintenance with approximately five-degree deviation, causing erroneous stall warning and protection system activation, resulting in uncontrolled descent and terrain impact.",
+  "factors": [
+    {
+      "id": "aoa_sensor_failure",
+      "role": "initiating",
+      "evidence": "Two of the four angle-of-attack sensors installed with a deviation of approximately five degrees"
+    },
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "An engineer at the Lukhovitsy Aviation Plant installed two AOA sensors with the deviation"
+    },
+    {
+      "id": "flight_control_law_degradation",
+      "role": "contributing",
+      "evidence": "Incorrect AOA readings caused elevator to automatically lower the nose and the aircraft to descend"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft impacted with terrain in uncontrolled dive at 365 knots"
+    }
+  ],
+  "chain": [
+    [
+      "aoa_sensor_failure",
+      "flight_control_law_degradation"
+    ],
+    [
+      "flight_control_law_degradation",
+      "loss_of_control_inflight"
+    ],
+    [
+      "maintenance_error",
+      "aoa_sensor_failure"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:52:58",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft took off from Lukhovitsy Aviation Plant"
+    },
+    {
+      "t": 240,
+      "clock": "14:56:58",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Four minutes after takeoff aircraft made last radio contact, reached maximum altitude about 900 meters"
+    },
+    {
+      "t": 300,
+      "clock": "14:57:58",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft cruising with nose pitch angle 5-6 degrees; AOA sensors showing conflicting readings (10-11.5 vs 11-13.5 degrees)"
+    },
+    {
+      "t": 360,
+      "clock": "14:58:58",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "First officer pulled nose up to nearly 14 degrees, autopilot disconnected; captain accelerated to 270 knots to arrest descent"
+    },
+    {
+      "t": 420,
+      "clock": "14:59:58",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At 4500 feet aircraft initiating to climb; crew disabled autothrottle, airspeed reached 308 knots triggering overspeed warning"
+    },
+    {
+      "t": 480,
+      "clock": "15:00:58",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "At 3000 feet crew attempted to arrest descent but elevators did not respond; aircraft impacted wooded terrain at 365 knots",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/upload/iblock/c9b/dto943svc2de1ebur7nuha3kxp2r5ws1/report_ra-89049.pdf"
+  ],
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Gazpromavia_Flight_9608",
+  "report_links": [
+    "https://mak-iac.org/upload/iblock/c9b/dto943svc2de1ebur7nuha3kxp2r5ws1/report_ra-89049.pdf",
+    "https://mak-iac.org/en/rassledovaniya/rrj-95lr-100-ra-89049-12-07-2024/"
+  ],
+  "interest": 11.05,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read report title, general information, history of flight sections (in Russian)"
+    ]
+  }
+}

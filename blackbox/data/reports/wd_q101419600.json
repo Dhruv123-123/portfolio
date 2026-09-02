@@ -1,0 +1,170 @@
+{
+  "id": "wd_q101419600",
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q101419600",
+  "title": "Vuelo 103 de Ryan Air Service",
+  "flight_number": null,
+  "date": "1987-11-23",
+  "time_reference": "Alaska standard time",
+  "t0": "1987-11-23T17:42:00-09:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-88-11",
+      "report_date": "1988-12-20"
+    }
+  ],
+  "aircraft": {
+    "type": "Beechcraft 1900C",
+    "manufacturer": "Beechcraft",
+    "family": "1900",
+    "registration": "N401RA"
+  },
+  "operator": "Ryan Air Services",
+  "route": {
+    "from_name": "Kodiak",
+    "to_name": "Homer"
+  },
+  "location": {
+    "name": "Homer Airport",
+    "country": "United States",
+    "state": "Alaska"
+  },
+  "phase": "landing",
+  "occupants": 21,
+  "fatalities": 18,
+  "injuries_serious": 3,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "A Beechcraft 1900C operated by Ryan Air Services crashed during approach to Homer Airport on November 23, 1987. The aircraft was overloaded with approximately 600 pounds more cargo than requested, displacing the center of gravity to an excessively aft position. During the landing approach, when flaps were extended, the aircraft lost control and descended steeply, striking a fence before coming to rest on its belly.",
+  "probable_cause": "The failure of the flightcrew to properly supervise the loading of the airplane which resulted in the center of gravity being displaced to such an aft location that airplane control was lost when the flaps were lowered for landing.",
+  "factors": [
+    {
+      "id": "weight_and_balance_error",
+      "role": "initiating",
+      "evidence": "The aircraft was loaded with approximately 1,800 pounds of cargo in the aft compartment, exceeding the allowable limit by 600 to 750 pounds"
+    },
+    {
+      "id": "airframe_icing",
+      "role": "latent",
+      "evidence": "Up to 3/8 inch of rime ice was found on the leading edges but had minimal effect on controllability under normal loading"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "When flaps were extended for landing, the aircraft pitched up and rolled, striking terrain in a steep descent"
+    }
+  ],
+  "chain": [
+    [
+      "weight_and_balance_error",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "17:42",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft took off from Kodiak Airport with overweight cargo"
+    },
+    {
+      "t": 300,
+      "clock": "17:49",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft climbed to 12,000 feet"
+    },
+    {
+      "t": 2280,
+      "clock": "18:18",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 103 cleared for localizer DME approach to runway 3"
+    },
+    {
+      "t": 2580,
+      "clock": "18:24",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft on 2-mile final approach"
+    },
+    {
+      "t": 2640,
+      "clock": "18:25",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Wings began to rock back and forth, aircraft dropped steeply and struck airport perimeter fence",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 2641,
+      "clock": "18:25",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft came to rest on its belly; 18 fatalities, 3 serious injuries"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Expedite rulemaking for dynamic testing of seat/restraint systems for commuter category airplanes",
+      "status": "unknown",
+      "trigger_factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "id": "A-88-159",
+      "to": "NFPA",
+      "text": "Expedite publication of information on airplane access points, fire hazard zones, and master power switch locations for airplanes with 10+ seats",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [
+    {
+      "agency": "NTSB",
+      "member": "Jim Burnett",
+      "position": "The probable cause should include that aircraft seat design contributed to injury severity",
+      "topic": "probable_cause"
+    }
+  ],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8811.pdf"
+  ],
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Ryan_Air_Services_Flight_103",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8811.pdf"
+  ],
+  "interest": 11.1,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read executive summary, conclusions, probable cause, analysis sections"
+    ]
+  }
+}
