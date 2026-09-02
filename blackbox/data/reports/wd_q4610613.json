@@ -1,0 +1,154 @@
+{
+  "id": "wd_q4610613",
+  "title": "2008 Biggin Hill Cessna Citation crash",
+  "flight_number": null,
+  "date": "2008-03-30",
+  "time_reference": "UTC",
+  "t0": "2008-03-30T13:32:00Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "S2/2008",
+      "report_title": "Special Bulletin on Cessna Citation 500 VP-BGE accident at Biggin Hill",
+      "report_date": "2008-04-01",
+      "url": "http://www.aaib.gov.uk/cms_resources.cfm?file=/S2-2008%20VP-BGE.pdf"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "accredited_representative"
+    }
+  ],
+  "aircraft": {
+    "type": "Cessna 501 Citation",
+    "manufacturer": "Cessna",
+    "family": "501",
+    "registration": "VP-BGE"
+  },
+  "operator": "unknown",
+  "route": {
+    "from_name": "Biggin Hill",
+    "to_name": "Pau"
+  },
+  "location": {
+    "name": "Farnborough",
+    "country": "United Kingdom"
+  },
+  "phase": "initial_climb",
+  "occupants": 5,
+  "fatalities": 5,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Less than two minutes after takeoff from Biggin Hill, the pilot reported engine vibrations and requested immediate return. The aircraft rapidly lost altitude and crashed into a house. AAIB investigation revealed the reported engine vibration likely came from a faulty air cycle machine, and both engines had been shut down either intentionally or inadvertently, with a failed relight attempt due to improper restart sequencing.",
+  "probable_cause": "The pilot misidentified the source of aircraft vibration as engine malfunction. Both engines were shut down during the short flight; subsequently, both relight attempts failed when the second engine was relighted before the first had reached sufficient speed.",
+  "factors": [
+    {
+      "id": "stall_misdiagnosis",
+      "role": "initiating",
+      "evidence": "the 'engine vibration' reported by the pilots most likely came not from an engine itself, but from the faulty air cycle machine"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "a missing rivet head on the left fuel cut-off lever could have resulted in the pilots shutting down that engine inadvertently"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "both engines had been shut down, and the crew had subsequently tried to restart both engines, but had attempted to relight the second engine before the first one had reached sufficient speed, causing the relight of both engines to fail"
+    },
+    {
+      "id": "dual_engine_failure",
+      "role": "outcome",
+      "evidence": "both engines had been shut down, either intentionally or not, during the course of the short flight"
+    }
+  ],
+  "chain": [
+    [
+      "stall_misdiagnosis",
+      "design_deficiency"
+    ],
+    [
+      "design_deficiency",
+      "dual_engine_failure"
+    ],
+    [
+      "procedural_noncompliance",
+      "dual_engine_failure"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:32",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "The Citation took off at 14:32 local time from runway 21 at Biggin Hill airport, with destination Pau Pyr\u00e9n\u00e9es Airport in France",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": "14:34",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Less than two minutes into the flight, the pilot radioed an emergency call, reporting engine vibrations and requesting an immediate return to Biggin Hill",
+      "factors": [
+        "stall_misdiagnosis"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "14:37",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Shortly after the radio call the aircraft rapidly lost altitude and at 14:37 crashed into a property in Romsey Close, Farnborough",
+      "factors": [
+        "dual_engine_failure"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/S2-2008%20VP-BGE.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q4610613",
+  "asn_id": "20080330-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/2008_Biggin_Hill_Cessna_Citation_crash",
+  "report_links": [
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/S2-2008%20VP-BGE.pdf",
+    "http://www.aaib.gov.uk/cms_resources/2008-04-01%20-%20Cessna%20VP-BGE%20-%20AAIB%20statement.pdf"
+  ],
+  "interest": 9.32,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "AAIB Special Bulletin S2/2008 read: pages 1-3 (complete preliminary report); history of flight, witness accounts, and technical investigation details reviewed"
+    ]
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "id": "wd_q81360866",
+  "title": "Ukraine International Airlines 752",
+  "flight_number": null,
+  "date": "2020-01-08",
+  "time_reference": "UTC",
+  "t0": "2020-01-08T02:44:56Z",
+  "agency": "CAO",
+  "agencies": [
+    {
+      "code": "CAO",
+      "name": "Civil Aviation Organization of the Islamic Republic of Iran",
+      "country": "Iran",
+      "role": "lead",
+      "report_id": null,
+      "report_title": null,
+      "report_date": null,
+      "url": null
+    },
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "accredited_representative"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-800",
+    "manufacturer": "Boeing",
+    "family": "737",
+    "registration": "UR-PSR"
+  },
+  "operator": "Ukraine International Airlines",
+  "route": {
+    "from_name": "Tehran Imam Khomeini International Airport",
+    "to_name": "Boryspil International Airport"
+  },
+  "location": {
+    "name": "Parand, Tehran Province",
+    "country": "Iran"
+  },
+  "phase": "initial_climb",
+  "occupants": 176,
+  "fatalities": 176,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "SEC",
+  "summary": "Ukraine International Airlines Flight 752 was shot down by the Iranian Islamic Revolutionary Guard Corps using surface-to-air missiles shortly after takeoff from Tehran on January 8, 2020. The crew briefly maintained control after the first missile strike for 19 seconds before the second missile struck, causing structural failure. All 176 occupants were killed. The attack occurred during heightened US-Iran tensions, with the IRGC mistaking the airliner for a cruise missile as the nation was on highest state of defensive alert.",
+  "probable_cause": "The IRGC fired surface-to-air missiles at the aircraft after mistaking it for a cruise missile during heightened tensions following US assassination of Qasem Soleimani.",
+  "factors": [
+    {
+      "id": "terrorism_or_hostile_act",
+      "role": "initiating",
+      "evidence": "IRGC fired surface-to-air missiles at the aircraft"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "aircraft struck by two short-range missiles and broke up"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "second missile strike caused aircraft to veer right and fire before disappearing"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "air defense system could not distinguish commercial aircraft from cruise missile in heightened alert conditions"
+    }
+  ],
+  "chain": [
+    [
+      "terrorism_or_hostile_act",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "design_deficiency",
+      "terrorism_or_hostile_act"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "06:12",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Flight 752 departed runway 29R at 06:12:08 local time, one hour behind schedule",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "06:14",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft turned from heading 289 degrees to 313 degrees following regular route, climbing at just under 3000 ft/min",
+      "factors": []
+    },
+    {
+      "t": 165,
+      "clock": "06:14:45",
+      "phase": "initial_climb",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "First surface-to-air missile struck aircraft, knocking out transponder",
+      "factors": [
+        "terrorism_or_hostile_act"
+      ]
+    },
+    {
+      "t": 195,
+      "clock": "06:14:57",
+      "phase": "initial_climb",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Second surface-to-air missile struck aircraft 23 seconds after first, aircraft veered right and caught fire",
+      "factors": [
+        "terrorism_or_hostile_act",
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 210,
+      "clock": "06:15",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Cockpit voice recorder showed all three cockpit crew continued attempting to fly aircraft for at least 19 seconds after first missile strike",
+      "factors": []
+    }
+  ],
+  "cvr": [
+    {
+      "t": 0,
+      "clock": "02:44:56",
+      "speaker": "CREW",
+      "text": "Detonation sound similar to outside strike heard on CVR",
+      "translation": null
+    },
+    {
+      "t": 19,
+      "clock": "02:45:15",
+      "speaker": "CREW",
+      "text": "Second detonation; CVR recording ends",
+      "translation": null
+    }
+  ],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.tsb.gc.ca/sites/default/files/eng/enquetes-investigations/aviation/2020/a20f0002/report/caoiri-recorders-20200823.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q81360866",
+  "asn_id": "20200108-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ukraine_International_Airlines_Flight_752",
+  "report_links": [
+    "https://www.tsb.gc.ca/sites/default/files/eng/enquetes-investigations/aviation/2020/a20f0002/report/caoiri-recorders-20200823.pdf"
+  ],
+  "interest": 9.5,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Flight Recorder Read-out Report read: pages 1-5 (all content); confirmed crew response 19 seconds after first missile strike; CVR and FDR data validated"
+    ]
+  }
+}
