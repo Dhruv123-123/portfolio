@@ -1,0 +1,180 @@
+{
+  "id": "wd_q2033524",
+  "qid": "Q2033524",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Red Wings Airlines 9268",
+  "flight_number": "9268",
+  "date": "2012-12-29",
+  "time_reference": "UTC",
+  "agency": "MAK",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Tupolev Tu-204-100B",
+    "manufacturer": "Tupolev",
+    "family": "Tu-204",
+    "registration": "RA-64047"
+  },
+  "operator": "Red Wings Airlines",
+  "route": {
+    "from": "PED",
+    "from_name": "Pardubice",
+    "to": "VKO",
+    "to_name": "Vnukovo"
+  },
+  "location": {
+    "name": "Moscow Vnukovo International Airport",
+    "country": "Russia",
+    "lat": 55.585,
+    "lon": 37.255
+  },
+  "phase": "landing",
+  "occupants": 8,
+  "fatalities": 5,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "RE",
+  "summary": "A Tu-204-100B on a repositioning flight touched down on runway 19 at Vnukovo between 900 and 1000 m along the runway at 230 km/h in crosswind gusts reaching 11.5 m/s. The right landing gear failed to compress, preventing reverse thrust deployment and disabling the wheel brakes. The aircraft accelerated back to 240 km/h and skidded off the runway 32 seconds after landing.",
+  "probable_cause": "Right landing gear failed to compress on touchdown, disabling automatic reverse thrust and brake systems, combined with high crosswind conditions.",
+  "factors": [
+    {
+      "id": "landing_gear_failure",
+      "role": "initiating",
+      "evidence": "At the moment of touchdown only the left side gear was in contact with the runway. At this stage the right gear strut compression signal had not yet been sensed."
+    },
+    {
+      "id": "contaminated_runway",
+      "role": "contributing",
+      "evidence": "It had been snowing prior to the accident and there was a significant cross wind with gusts of up to 11.5 m/s."
+    },
+    {
+      "id": "delayed_deceleration",
+      "role": "contributing",
+      "evidence": "Because there was no compression of the right landing gear, the reversers were never deployed. The wheel brakes were also ineffective, as they also required compression of the gear strut to function correctly."
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "The aircraft skidded off the runway 32 seconds after landing at an air speed of about 215 km/h."
+    }
+  ],
+  "chain": [
+    [
+      "landing_gear_failure",
+      "delayed_deceleration"
+    ],
+    [
+      "delayed_deceleration",
+      "runway_overrun"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft touched down between 900 and 1000 m along runway 19 at 230 km/h with right landing gear failing to compress while left gear contacted runway in 11.5 m/s crosswind gusts",
+      "factors": [
+        "landing_gear_failure",
+        "contaminated_runway"
+      ]
+    },
+    {
+      "t": 3,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Almost simultaneously with nose gear compression, crew moved engines into reverse thrust and applied mechanical brakes",
+      "factors": [
+        "landing_gear_failure",
+        "delayed_deceleration"
+      ]
+    },
+    {
+      "t": 7,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Reverse thrust did not deploy because right gear compression signal was absent, violating the safety interlock requiring simultaneous compression of both gear sets",
+      "factors": [
+        "landing_gear_failure",
+        "delayed_deceleration"
+      ]
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft reached minimum airspeed of 200-205 km/h then accelerated to 240 km/h due to ineffective braking",
+      "factors": [
+        "delayed_deceleration"
+      ]
+    },
+    {
+      "t": 32,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft skidded off runway at about 215 km/h after striking ditch and highway structures",
+      "factors": [
+        "runway_overrun"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Aircraft manufacturers",
+      "text": "Review landing gear compression signal logic to prevent single-failure modes that disable critical safety systems like reversers and brakes.",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "MAK/FAA",
+      "text": "Develop dual-path safety interlocks for reverse thrust systems to prevent failure when one landing gear does not compress.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Review of Tu-204 landing gear compression systems across the fleet"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/upload/iblock/f57/report_ra-64047.pdf"
+  ],
+  "asn_id": "20121229-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Red_Wings_Airlines_Flight_9268",
+  "report_links": [
+    "https://mak-iac.org/upload/iblock/f57/report_ra-64047.pdf",
+    "https://web.archive.org/web/20190507133934/https://mak-iac.org/upload/iblock/49c/report_ra-64047.pdf",
+    "https://mak-iac.org/rassledovaniya/tu-204-ra-64047-29-12-2012/"
+  ],
+  "interest": 11.6,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flight (brief), Aircraft technical analysis, Landing gear system analysis. Full MAK final report in Russian. Detailed FDR and technical data provided in investigation."
+    ]
+  }
+}

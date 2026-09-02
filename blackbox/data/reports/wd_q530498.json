@@ -1,0 +1,286 @@
+{
+  "id": "wd_q530498",
+  "qid": "Q530498",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Angara Airlines 9007",
+  "flight_number": "9007",
+  "date": "2011-07-11",
+  "time_reference": "UTC",
+  "t0": "2011-07-11T04:36:15Z",
+  "agency": "MAK",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead",
+      "report_id": "report_ra-47302",
+      "report_title": "Final Report on the Investigation of the Accident with An-24RV RA-47302",
+      "report_date": "2012-12-28",
+      "url": "https://mak-iac.org/upload/iblock/2ed/report_ra-47302.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Antonov An-24RV",
+    "family": "An-24",
+    "manufacturer": "Antonov",
+    "registration": "RA-47302"
+  },
+  "operator": "Angara Airlines",
+  "route": {
+    "from": "XBOG",
+    "from_name": "Bogashevo Airport",
+    "to": "XSGG",
+    "to_name": "Surgut International Airport"
+  },
+  "location": {
+    "name": "Ob River near Strezhevoy",
+    "country": "Russia"
+  },
+  "phase": "cruise",
+  "occupants": 37,
+  "fatalities": 7,
+  "injuries_serious": 30,
+  "damage": "destroyed",
+  "category": "F-NI",
+  "summary": "An Antonov An-24RV encountered an engine fire in the left engine during cruise descent on July 11, 2011. The crew, after noticing a chip warning and burning smell, eventually shut down the engine following severe vibration. Unable to extinguish the fire using onboard systems, the captain ditched the aircraft into the Ob River. The aircraft was destroyed by collision with underwater obstacles, killing 7 people on board.",
+  "probable_cause": "The engine fire originated from failure of the compressor rotor rear support bearing, likely due to improper installation during maintenance or manufacturing defect. The captain's reluctance to shut down the engine despite initial warnings allowed the fire to develop. The aircraft was destroyed when it struck underwater obstacles during the water landing.",
+  "factors": [
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "Failure of the compressor rotor rear bearing of the left engine, possibly due to incorrect bearing installation or assembly defect during maintenance."
+    },
+    {
+      "id": "maintenance_error",
+      "role": "latent",
+      "evidence": "The left engine was overhauled on 29.10.2009 at Aramil Repair Plant with violations of repair technology and inadequate quality control."
+    },
+    {
+      "id": "inflight_fire",
+      "role": "contributing",
+      "evidence": "Engine fire developed in the left engine at 04:52:12, confirmed visually by the captain at 04:52:59."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The captain's apparent reluctance to shut down the affected engine despite chip warning, burning smell, fire alarm activation, and oil pressure drops. Engine was not shut down until severe vibration forced the decision."
+    },
+    {
+      "id": "ditching",
+      "role": "outcome",
+      "evidence": "Crew ditched into the Ob River at 04:56:08 when the fire could not be extinguished and the aircraft became too damaged to continue to an airport."
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "Aircraft made emergency water landing into the Ob River."
+    }
+  ],
+  "chain": [
+    [
+      "engine_failure",
+      "maintenance_error"
+    ],
+    [
+      "engine_failure",
+      "inflight_fire"
+    ],
+    [
+      "procedural_noncompliance",
+      "inflight_fire"
+    ],
+    [
+      "inflight_fire",
+      "ditching"
+    ],
+    [
+      "ditching",
+      "emergency_landing"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "04:36:15",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Magnetic chip detector signaled presence of particles in the left engine oil system.",
+      "factors": [
+        "engine_failure"
+      ]
+    },
+    {
+      "t": 240,
+      "clock": "04:40:15",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft entered Nizhnevartovsk ATC zone and reported navigation estimates."
+    },
+    {
+      "t": 480,
+      "clock": "04:44:15",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain smelled burning odor in the cockpit."
+    },
+    {
+      "t": 540,
+      "clock": "04:45:15",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew reported chip warning and oil pressure drop to ATC, requested descent to alternate airport Nizhnevartovsk."
+    },
+    {
+      "t": 540,
+      "clock": "04:45:15",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Reduced left engine to idle and closed air bleed from left engine."
+    },
+    {
+      "t": 600,
+      "clock": "04:46:15",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain decided not to shut down the engine despite flight engineer's question about feathering.",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 660,
+      "clock": "04:47:15",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft entered clouds and crew activated engine inlet heating systems."
+    },
+    {
+      "t": 900,
+      "clock": "04:51:15",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Began descent preparation, completed pre-landing checklist."
+    },
+    {
+      "t": 1020,
+      "clock": "04:53:15",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Severe vibration detected in left engine.",
+      "factors": [
+        "inflight_fire"
+      ]
+    },
+    {
+      "t": 1020,
+      "clock": "04:53:15",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain ordered to feather (shut down) the left engine. Flight engineer executed engine shutdown and reported completion.",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 1080,
+      "clock": "04:54:15",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain reported engine fire detected visually. Crew attempted to extinguish using fire suppression systems; efforts unsuccessful."
+    },
+    {
+      "t": 1200,
+      "clock": "04:56:15",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "outcome",
+      "text": "Aircraft ditched into the Ob River at 04:56:08 UTC (11:56 local time) near Strezhevoy after the fire could not be controlled.",
+      "factors": [
+        "ditching",
+        "emergency_landing"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Russian Aviation Authority",
+      "text": "Issue directives to all operators requiring immediate action upon identification of engine failure signs (chip warning, oil pressure drop, burning smell) including engine shutdown procedures.",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Ivchenko-Progress",
+      "text": "Conduct author oversight of repair quality for AI-24 engines at Aramil Repair Plant.",
+      "status": "unknown",
+      "trigger_factors": [
+        "maintenance_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Aramil Repair Plant",
+      "text": "Coordinate with engine manufacturer on repair scope for failed engines when repair instructions are not available.",
+      "status": "unknown",
+      "trigger_factors": [
+        "maintenance_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Antonov",
+      "text": "Review and update An-24 Flight Manual Section 7.1.6 regarding crew procedures when chip warning, oil parameter changes, and burning smell are detected.",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Angara Airlines developed and implemented action plan addressing inspection findings from post-accident regulatory inspection."
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/upload/iblock/2ed/report_ra-47302.pdf"
+  ],
+  "asn_id": "20110711-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Angara_Airlines_Flight_9007",
+  "report_links": [
+    "http://aviation-safety.net/database/record.php?id=20110711-0",
+    "https://mak-iac.org/upload/iblock/2ed/report_ra-47302.pdf"
+  ],
+  "interest": 11.86,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Russian final report read: Sections 1.1 History of Flight, Section 3 Conclusion, Section 4 Deficiencies, Section 5 Recommendations",
+      "Probable cause extracted from original Russian text and translated",
+      "Events derived from detailed timeline in History of Flight section with precise UTC times from report",
+      "Factors identified from causal analysis and maintenance records in report",
+      "Recommendations translated from original Russian text; actual recommendation IDs not extracted as report uses descriptive text format"
+    ]
+  }
+}
