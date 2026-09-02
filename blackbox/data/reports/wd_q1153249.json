@@ -1,0 +1,257 @@
+{
+  "id": "wd_q1153249",
+  "qid": "Q1153249",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Kenya Airways 431",
+  "flight_number": "KQ431",
+  "date": "2000-01-30",
+  "time_reference": "UTC",
+  "t0": "2000-01-30T21:08:50Z",
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses pour la sécurité de l'aviation civile",
+      "country": "France",
+      "role": "lead",
+      "report_id": "5y-n000130a",
+      "report_date": "2002-01-25",
+      "url": "https://bea.aero/fileadmin/documents/docspa/2000/5y-n000130a/pdf/5y-n000130a_06.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Airbus A310-304",
+    "manufacturer": "Airbus",
+    "family": "A310",
+    "registration": "5Y-BEN",
+    "msn": "426",
+    "engines": "General Electric CF6-80C2A2"
+  },
+  "operator": "Kenya Airways",
+  "route": {
+    "from_name": "Abidjan",
+    "to_name": "Nairobi",
+    "from": "ABJ",
+    "to": "NBO"
+  },
+  "location": {
+    "name": "Atlantic Ocean, 1.5 nm south of Abidjan Airport",
+    "country": "Ivory Coast",
+    "lat": 5.225,
+    "lon": -3.937
+  },
+  "phase": "takeoff",
+  "occupants": 179,
+  "fatalities": 169,
+  "injuries_serious": 10,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Kenya Airways Flight 431, an Airbus A310-304, crashed into the Atlantic Ocean 33 seconds after takeoff from Abidjan on 30 January 2000. A stall warning activated during rotation at low altitude, though the aircraft was not in a true stall. The pilot flying applied only part of the stall recovery procedure by pushing the control column forward, placing the aircraft in an unintended descent. GPWS warnings were masked by priority stall and overspeed warnings, and the absence of visual references over the sea at night prevented the crew from recognizing the low altitude.",
+  "probable_cause": "The accident was caused by the pilot flying applying only part of the stall recovery procedure by pushing forward on the control column to stop the stick shaker following the initiation of a stall warning during rotation, while the airplane was not in a true stall situation. The pilot flying's action put the aircraft into a descent without the crew realizing it. The GPWS warnings that could have alerted the crew to imminent contact with the sea were masked by the priority stall and overspeed warnings. The conditions for a takeoff towards the sea at night provided no external visual references.",
+  "factors": [
+    {
+      "id": "spurious_overspeed_warning",
+      "role": "initiating",
+      "evidence": "A stall warning sounded just seconds after takeoff when the first officer requested landing gear retraction. The warning did not correspond to a true stall situation. (p. 73-74)"
+    },
+    {
+      "id": "inappropriate_stall_recovery",
+      "role": "initiating",
+      "evidence": "The pilot flying pushed the control column forward immediately after stick shaker activation, applying only part of the recommended stall recovery procedure. The crew did not apply TOGA thrust as specified in the FCOM. (p. 74-75)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The pilot flying put the aircraft into a descent without the crew realizing it, despite radio altimeter callouts from 300 feet down to 10 feet. (p. 74)"
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "contributing",
+      "evidence": "The GPWS warnings that could have alerted the crew to imminent contact with the sea were not generated in the cockpit because they were not prioritized compared to the successive stall and overspeed warnings. (p. 74-75)"
+    },
+    {
+      "id": "dark_night",
+      "role": "latent",
+      "evidence": "The conditions for a takeoff performed towards the sea at night provided no external visual references that would have allowed the crew to be aware of the proximity to the sea. (p. 75)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft descended rapidly and crashed into the Atlantic Ocean, 1.5 nautical miles south of Abidjan Airport. (p. 15)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "The aircraft was completely destroyed on impact with the sea. (p. 15)"
+    }
+  ],
+  "chain": [
+    ["spurious_overspeed_warning", "inappropriate_stall_recovery"],
+    ["inappropriate_stall_recovery", "inadequate_monitoring"],
+    ["inadequate_monitoring", "loss_of_control_inflight"],
+    ["warning_system_deficiency", "loss_of_control_inflight"],
+    ["dark_night", "loss_of_control_inflight"],
+    ["loss_of_control_inflight", "post_impact_fire"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "21:08:50",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain applied take-off power and announced 'thrust, SRS, and runway'; V1 and Rotate announced.",
+      "state": {
+        "ias": 149,
+        "alt": 0
+      },
+      "factors": []
+    },
+    {
+      "t": 7,
+      "clock": "21:08:57",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Stall warning sounded less than two seconds after 'Positive rate of climb, gear up' announcement.",
+      "factors": ["spurious_overspeed_warning"],
+      "state": {
+        "alt": 150
+      }
+    },
+    {
+      "t": 17,
+      "clock": "21:09:07",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Automatic call out announced 300 feet.",
+      "factors": []
+    },
+    {
+      "t": 24,
+      "clock": "21:09:14",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "Copilot asked 'what's the problem?'",
+      "factors": []
+    },
+    {
+      "t": 28,
+      "clock": "21:09:18",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Copilot ordered the aural warning to be cut and pushed control column forward to stop the stick shaker.",
+      "factors": ["inappropriate_stall_recovery", "inadequate_monitoring"]
+    },
+    {
+      "t": 28.5,
+      "clock": "21:09:18.5",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "GPWS sounded the 'Whoop' alarm, followed by automatic call out of 50 feet, but GPWS warning was masked by higher priority stall and overspeed warnings.",
+      "factors": ["warning_system_deficiency"]
+    },
+    {
+      "t": 32,
+      "clock": "21:09:22",
+      "phase": "initial_climb",
+      "actor": "CA",
+      "kind": "crew_action",
+      "text": "Master warning started. Captain ordered 'Go up!' preceded by automatic call out of 10 feet.",
+      "factors": []
+    },
+    {
+      "t": 33.9,
+      "clock": "21:09:24",
+      "phase": "initial_climb",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft collided with the sea with slight nose down attitude at speed above VFE, 33 seconds after takeoff.",
+      "factors": ["loss_of_control_inflight", "post_impact_fire"],
+      "state": {
+        "alt": 0
+      }
+    }
+  ],
+  "cvr": [
+    {
+      "t": 0,
+      "clock": "21:08:50",
+      "speaker": "PF",
+      "text": "V1 and Rotate"
+    },
+    {
+      "t": 7,
+      "clock": "21:08:57",
+      "speaker": "FO",
+      "text": "Positive rate of climb, gear up"
+    },
+    {
+      "t": 24,
+      "clock": "21:09:14",
+      "speaker": "FO",
+      "text": "what's the problem?"
+    },
+    {
+      "t": 32,
+      "clock": "21:09:22",
+      "speaker": "CA",
+      "text": "Go up!"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Civil Aviation Authorities",
+      "text": "Integrate into type rating and recurrent training programs for crews of all aircraft likely to be subject to false stall warnings, the elements necessary to recognize and manage such a false alarm during phases of flight close to the ground.",
+      "status": "unknown",
+      "trigger_factors": ["spurious_overspeed_warning", "inappropriate_stall_recovery"]
+    },
+    {
+      "id": null,
+      "to": "French DGAC",
+      "text": "Ensure that Airbus harmonizes the procedures in the FCOM with those taught during type rating training.",
+      "status": "unknown",
+      "trigger_factors": ["inappropriate_stall_recovery"]
+    },
+    {
+      "id": null,
+      "to": "Civil Aviation Authorities",
+      "text": "Ensure that appropriate equipment (aerial, maritime, etc.) be put in place to ensure immediate intervention at accident sites near coastal airports.",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Airbus revised stall recovery procedures to emphasize minimum altitude loss rather than minimum time recovery"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/fileadmin/documents/docspa/2000/5y-n000130a/pdf/5y-n000130a_06.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Kenya_Airways_Flight_431",
+  "asn_id": "20000130-1",
+  "interest": 18.89,
+  "curated_id": null,
+  "report_links": [
+    "https://bea.aero/fileadmin/documents/docspa/2000/5y-n000130a/pdf/5y-n000130a_06.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: SYNOPSIS, Summary, History of Flight, Findings, Causes of the accident, Safety Recommendations",
+      "CVR transcript from appendix 7 and crew callouts",
+      "FDR data available but detailed parameters not extracted"
+    ]
+  }
+}
