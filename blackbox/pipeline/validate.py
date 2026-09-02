@@ -68,13 +68,13 @@ def validate_record(path, records_by_id):
     check_type(rec, SCHEMA, path.stem, errors)
     if rec.get("id") != path.stem:
         errors.append(f"{path.name}: id '{rec.get('id')}' does not match filename")
-    factor_ids = {f.get("id") for f in rec.get("factors", [])}
+    factor_ids = {f.get("id") for f in (rec.get("factors") or [])}
     for fid in factor_ids:
         if fid not in FACTOR_IDS:
             errors.append(f"{path.stem}: unknown factor '{fid}'")
-    if len(factor_ids) != len(rec.get("factors", [])):
+    if len(factor_ids) != len((rec.get("factors") or [])):
         warnings.append(f"{path.stem}: duplicate factor ids")
-    for a, b in rec.get("chain", []):
+    for a, b in (rec.get("chain") or []):
         for x in (a, b):
             if x not in FACTOR_IDS:
                 errors.append(f"{path.stem}: chain references unknown factor '{x}'")
@@ -85,7 +85,7 @@ def validate_record(path, records_by_id):
     if rec.get("phase") not in PHASES:
         errors.append(f"{path.stem}: unknown phase '{rec.get('phase')}'")
     last_t = None
-    for i, ev in enumerate(rec.get("events", [])):
+    for i, ev in enumerate((rec.get("events") or [])):
         if ev.get("actor") not in ACTORS:
             errors.append(f"{path.stem}: event[{i}] unknown actor '{ev.get('actor')}'")
         if ev.get("phase") and ev["phase"] not in PHASES:
@@ -99,11 +99,11 @@ def validate_record(path, records_by_id):
             errors.append(f"{path.stem}: event[{i}] t={ev.get('t')} is before previous t={last_t}")
         last_t = ev.get("t", 0)
     last_t = None
-    for i, line in enumerate(rec.get("cvr", [])):
+    for i, line in enumerate((rec.get("cvr") or [])):
         if last_t is not None and line.get("t", 0) < last_t:
             errors.append(f"{path.stem}: cvr[{i}] t={line.get('t')} is before previous t={last_t}")
         last_t = line.get("t", 0)
-    for i, r in enumerate(rec.get("recommendations", [])):
+    for i, r in enumerate((rec.get("recommendations") or [])):
         for fid in r.get("trigger_factors", []):
             if fid not in FACTOR_IDS:
                 errors.append(f"{path.stem}: recommendation[{i}] unknown factor '{fid}'")
@@ -118,7 +118,7 @@ def validate_record(path, records_by_id):
         errors.append(f"{path.stem}: no lead agency")
     elif lead[0]["code"] != rec.get("agency"):
         errors.append(f"{path.stem}: agency '{rec.get('agency')}' is not the lead agency '{lead[0]['code']}'")
-    if len(rec.get("events", [])) < 5:
+    if len((rec.get("events") or [])) < 5:
         warnings.append(f"{path.stem}: only {len(rec.get('events', []))} events")
     return errors, warnings
 
