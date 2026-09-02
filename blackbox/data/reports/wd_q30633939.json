@@ -1,0 +1,143 @@
+{
+  "id": "wd_q30633939",
+  "qid": "Q30633939",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "1967 Air Ferry DC-4 accident",
+  "flight_number": null,
+  "date": "1967-06-03",
+  "agency": "BEA",
+  "aircraft": {
+    "type": "Douglas DC-4",
+    "manufacturer": "Douglas",
+    "family": "DC-4",
+    "registration": "G-APYK"
+  },
+  "operator": "Air Ferry Limited",
+  "route": {
+    "from_name": "Manston Airport",
+    "to_name": "Perpignan\u2013Rivesaltes Airport"
+  },
+  "location": {
+    "name": "Mount Canig\u00f3",
+    "country": "France"
+  },
+  "phase": "descent",
+  "occupants": 88,
+  "fatalities": 88,
+  "category": "CFIT",
+  "summary": "A Douglas DC-4 charter flight carrying 83 passengers and 5 crew on a 15-day package holiday was descending to land at Perpignan when it crashed into Mount Canig\u00f3 at 9,000 feet. The aircraft had reported all was well with good visibility moments before impact. The French Ministry of Transport investigation determined the crash resulted from a series of crew errors caused by carbon monoxide poisoning from a faulty cabin heater.",
+  "probable_cause": "Controlled flight into terrain caused by pilot incapacitation from carbon monoxide poisoning due to faulty cabin heater. Contributing factors included irrational crew behavior from CO poisoning and language difficulties between crew and French air traffic control.",
+  "factors": [
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "Faulty cabin heater allowed carbon monoxide to enter cabin"
+    },
+    {
+      "id": "pilot_incapacitation",
+      "role": "contributing",
+      "evidence": "Carbon monoxide poisoning from a faulty heater caused series of errors and irrational behavior by crew"
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "Language difficulties between the crew and the Perpignan controller"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "aircraft hit 9,000-foot Mount Canig\u00f3"
+    }
+  ],
+  "chain": [
+    [
+      "design_deficiency",
+      "pilot_incapacitation"
+    ],
+    [
+      "pilot_incapacitation",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "10:04",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Aircraft reported to Perpignan ATC that all well, visibility good, and beginning descent",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Faulty cabin heater continued to release carbon monoxide into cabin; crew began experiencing incapacitation effects",
+      "factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Crew made series of errors and irrational decisions during descent; language difficulties with Perpignan controller aggravated circumstances",
+      "factors": [
+        "pilot_incapacitation",
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck Mount Canig\u00f3; all 88 on board killed",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://bea.aero/fileadmin/documents/docspa/1967/g-yk670603/pdf/g-yk670603_05.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/1967_Air_Ferry_DC-4_accident",
+  "asn_id": "19670603-1",
+  "interest": 14.6,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "carbon monoxide poisoning as cause is stated",
+      "limited detail on heater design or maintenance history",
+      "Sections read from text report at /home/user/portfolio/blackbox/cache/text/wd_q30633939.txt: synopsis/summary, probable cause, factors, chain, events"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "https://bea.aero/fileadmin/documents/docspa/1967/g-yk670603/pdf/g-yk670603_05.pdf"
+  ],
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enqu\u00eates et d'Analyses",
+      "country": "France",
+      "role": "lead",
+      "report_id": null,
+      "report_title": null,
+      "report_date": null,
+      "url": null
+    }
+  ],
+  "recommendations": [],
+  "dissent": []
+}

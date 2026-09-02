@@ -1,0 +1,185 @@
+{
+  "id": "wd_q5150488",
+  "qid": "Q5150488",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Comair 3272",
+  "flight_number": "CO3272",
+  "date": "1997-01-09",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "Embraer EMB 120 Brasilia",
+    "manufacturer": "Embraer",
+    "family": "EMB-120",
+    "registration": "N265CA"
+  },
+  "operator": "Comair",
+  "route": {
+    "from_name": "Cincinnati/Northern Kentucky International Airport",
+    "to_name": "Detroit Metropolitan Wayne County Airport"
+  },
+  "location": {
+    "name": "Raisinville Township, Monroe County",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 29,
+  "fatalities": 29,
+  "category": "LOC-I",
+  "summary": "Flight 3272 on approach to Detroit descended to 4,000 feet and was instructed to turn left to intercept the localizer. During the turn, the captain noted the low speed indicator and requested more power from the first officer. The aircraft abruptly stalled with a thin rough accretion of ice on the lifting surfaces. The aircraft rolled violently 145 degrees left, right, and left again as the crew lost control. The stall was attributed to inadequate icing procedures and failure to activate de-icing boots.",
+  "probable_cause": "Aerodynamic stall and loss of control caused by aircraft encountering a thin rough accretion of ice on the wings while operating at a low airspeed in icing conditions. Contributing factors included inadequate FAA standards for icing operations, inadequate Comair procedures for icing conditions, crew failure to activate de-icing boots contrary to manufacturer recommendations, and operation near the lower end of the flight envelope while flaps were retracted.",
+  "factors": [
+    {
+      "id": "airframe_icing",
+      "role": "contributing",
+      "evidence": "Aircraft accumulated thin rough accretion of ice on lifting surfaces in icing conditions"
+    },
+    {
+      "id": "deicing_inadequate",
+      "role": "contributing",
+      "evidence": "Crew did not activate deicing boots on wings contrary to manufacturer instructions; Comair procedure was incorrect due to concern over ice bridging from older aircraft no longer valid for EMB-120"
+    },
+    {
+      "id": "low_energy_state",
+      "role": "contributing",
+      "evidence": "Aircraft operating at low airspeed on approach with flaps retracted; captain requested power to increase speed"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "Crew inadequately trained for icing conditions and stall recovery in this aircraft type"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "latent",
+      "evidence": "Comair flight manual procedures for icing conditions were inadequate and did not follow manufacturer recommendations"
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "Aircraft abruptly stalled during approach in icing conditions"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft violently rolled 145 degrees left and right; crew lost control and crashed"
+    }
+  ],
+  "chain": [
+    [
+      "airframe_icing",
+      "aerodynamic_stall"
+    ],
+    [
+      "deicing_inadequate",
+      "aerodynamic_stall"
+    ],
+    [
+      "low_energy_state",
+      "aerodynamic_stall"
+    ],
+    [
+      "procedural_noncompliance",
+      "deicing_inadequate"
+    ],
+    [
+      "inadequate_training",
+      "procedural_noncompliance"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:53",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 3272 took off from Cincinnati; less than one hour later began approach to Detroit"
+    },
+    {
+      "t": 60,
+      "clock": "15:45",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Instructed aircraft to descend to 4,000 feet and turn right on heading 180 degrees"
+    },
+    {
+      "t": 120,
+      "clock": "15:47",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Instructed aircraft to turn left on heading 090 degrees to intercept localizer"
+    },
+    {
+      "t": 180,
+      "clock": "15:49",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Captain stated looks like your low speed indicator; requested increased power from first officer"
+    },
+    {
+      "t": 210,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft abruptly stalled; violently rolled 145 degrees left to right and back to left; crew lost control and aircraft crashed into rural field killing all 29 aboard",
+      "factors": [
+        "aerodynamic_stall",
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://news.google.com/newspapers?id=7r4aAAAAIBAJ&sjid=6DoEAAAAIBAJ&pg=1516%2C1240355",
+    "https://news.google.com/newspapers?id=nMBeAAAAIBAJ&sjid=dDEMAAAAIBAJ&pg=2361%2C2208753",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_body.pdf",
+    "https://web.archive.org/web/20161115075112/http://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_body.pdf",
+    "https://news.google.com/newspapers?id=AxYxAAAAIBAJ&sjid=fgMEAAAAIBAJ&pg=5734%2C3844308",
+    "https://news.google.com/newspapers?id=I58wAAAAIBAJ&sjid=CUwDAAAAIBAJ&pg=3195%2C604746",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_C.pdf",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_D.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Comair_Flight_3272",
+  "asn_id": "19970109-0",
+  "interest": 14.6,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "NTSB determined clear probable cause related to icing procedures",
+      "similar accident (American Eagle 4184) noted with same causal pattern",
+      "Sections read from text report at /home/user/portfolio/blackbox/cache/text/wd_q5150488.txt: synopsis/summary, probable cause, factors, chain, events"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_body.pdf",
+    "https://web.archive.org/web/20161115075112/http://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_body.pdf",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_C.pdf",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9804_D.pdf"
+  ],
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": null,
+      "report_title": null,
+      "report_date": null,
+      "url": null
+    }
+  ],
+  "recommendations": [],
+  "dissent": []
+}

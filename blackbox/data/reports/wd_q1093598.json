@@ -1,0 +1,227 @@
+{
+  "id": "wd_q1093598",
+  "title": "USAir Flight 405",
+  "flight_number": "405",
+  "date": "1992-03-22",
+  "time_reference": "EST",
+  "t0": "1992-03-22T21:35:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-93/02",
+      "report_title": "Aircraft Accident Report - USAir Flight 405",
+      "report_date": "1993-03-23"
+    }
+  ],
+  "aircraft": {
+    "type": "Fokker F-28-4000",
+    "manufacturer": "Fokker",
+    "family": "F28",
+    "registration": "N485US"
+  },
+  "operator": "US Airways",
+  "route": {
+    "from": "JAX",
+    "from_name": "Jacksonville",
+    "to": "CLE",
+    "to_name": "Cleveland"
+  },
+  "location": {
+    "name": "Flushing, New York",
+    "country": "United States"
+  },
+  "phase": "takeoff",
+  "occupants": 51,
+  "fatalities": 27,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "USAir Flight 405, a Fokker F-28-4000, crashed during takeoff from runway 13 at LaGuardia Airport on March 22, 1992. Due to inadequate ground de-icing procedures and weather-related delays up to 35 minutes, significant ice accumulated on the wings and airframe. The flight crew was unaware of the extent of ice buildup. The aircraft lifted off but failed to gain altitude, veering off the runway into Flushing Bay. Of the 51 people on board, 27 were killed, including the captain and one cabin crew member.",
+  "probable_cause": "The failure of the airline industry and the Federal Aviation Administration to provide flightcrews with procedures, requirements, and criteria compatible with departure delays in conditions conducive to airframe icing, and the decision by the flightcrew to take off without positive assurance that the airplane's wings were free of ice accumulation after 35 minutes of exposure to precipitation following deicing. The ice contamination on the wings resulted in an aerodynamic stall and loss of control after liftoff. Contributing to the cause were the inappropriate procedures used by, and inadequate coordination between, the flightcrew that led to a takeoff rotation at a lower than prescribed airspeed.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Poor weather conditions at LaGuardia resulted in heavy ground traffic and delays up to 35 minutes (p. 10)."
+    },
+    {
+      "id": "airframe_icing",
+      "role": "initiating",
+      "evidence": "A large amount of ice had accumulated on the wings and airframe due to inadequate de-icing procedures and delays exceeding the deicing fluid holdover time (p. 10)."
+    },
+    {
+      "id": "deicing_inadequate",
+      "role": "initiating",
+      "evidence": "De-icing procedures at LaGuardia were found to be substandard by the investigation; the aircraft deiced at approximately 2026 but delays extended beyond the holdover time before takeoff at 2135 (p. 9-10)."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The flight crew was unaware of the amount of ice that had built up after the jet was delayed during taxiing to the runway; the first officer said he did not see contamination when inspecting the wing (p. 10)."
+    },
+    {
+      "id": "takeoff_configuration_error",
+      "role": "contributing",
+      "evidence": "The aircraft began its takeoff rotation at too low a speed; the specified V_R for the F-28 at this weight and flap configuration was 124 knots, but the aircraft rotated about 2.2 seconds after the V_R callout (p. 10)."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "Approximately 4.8 seconds after nose strut extension, stick shaker began; stall warnings were recorded (p. 10)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft veered off the runway, struck visual approach slope-indicator posts and other obstructions, with the left wing scraping the asphalt for 110 feet before separating from the fuselage (p. 10)."
+    },
+    {
+      "id": "ditching",
+      "role": "outcome",
+      "evidence": "The aircraft came to rest in Flushing Bay, just beyond the end of the runway, in a partially inverted position (p. 10)."
+    }
+  ],
+  "chain": [
+    ["low_visibility", "deicing_inadequate"],
+    ["deicing_inadequate", "airframe_icing"],
+    ["airframe_icing", "inadequate_monitoring"],
+    ["inadequate_monitoring", "takeoff_configuration_error"],
+    ["takeoff_configuration_error", "aerodynamic_stall"],
+    ["aerodynamic_stall", "loss_of_control_inflight"],
+    ["loss_of_control_inflight", "ditching"]
+  ],
+  "events": [
+    {
+      "t": -400,
+      "clock": "20:55",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 405 departed Jacksonville at 1715 EST, cleared into LaGuardia area without significant additional delays.",
+      "factors": []
+    },
+    {
+      "t": -200,
+      "clock": "21:10",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft deiced with Type I fluid (50/50 water/glycol mixture) at approximately 2026. First deicing truck experienced mechanical problems causing ~20 minute pushback delay.",
+      "factors": ["deicing_inadequate", "low_visibility"]
+    },
+    {
+      "t": -100,
+      "clock": "21:20",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Second deicing by single truck completed at approximately 2100. Aircraft taxied to runway 13.",
+      "factors": ["low_visibility"]
+    },
+    {
+      "t": 0,
+      "clock": "21:35:17",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft cleared for takeoff at 2134:51; engine advance and takeoff roll commence.",
+      "factors": []
+    },
+    {
+      "t": 50,
+      "clock": "21:35:17",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain and first officer call '80 knots'.",
+      "factors": []
+    },
+    {
+      "t": 58,
+      "clock": "21:35:25",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "First officer calls 'V1'.",
+      "factors": []
+    },
+    {
+      "t": 59,
+      "clock": "21:35:26",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "First officer calls 'VR'; aircraft begins rotation approximately 2.2 seconds later.",
+      "factors": []
+    },
+    {
+      "t": 61,
+      "clock": "21:35:28",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Nose strut extension sound recorded; main landing gear just left runway.",
+      "factors": []
+    },
+    {
+      "t": 66,
+      "clock": "21:35:33",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Stick shaker activates; first stall warning beep recorded.",
+      "factors": ["aerodynamic_stall"]
+    },
+    {
+      "t": 71,
+      "clock": "21:35:40",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Left wing scrapes asphalt for 110 feet with stick shaker and stall warnings continuing. Aircraft impact recorded at 2135:40.78.",
+      "factors": ["loss_of_control_inflight", "ditching"]
+    }
+  ],
+  "recommendations": [
+    {"id": "A-93-19", "to": "FAA", "text": "If gate holds are required to limit deicing fluid holdover time, encourage ATC to initiate gate holds as soon as a deicing operation begins rather than after delays have exceeded 15 minutes.", "status": "unknown", "trigger_factors": ["deicing_inadequate"]},
+    {"id": "A-93-20", "to": "FAA", "text": "Where deicing operations are conducted away from the departure runway, report taxi delays in conditions conducive to airframe icing in increments less than 15 minutes.", "status": "unknown", "trigger_factors": ["deicing_inadequate"]},
+    {"id": "A-93-21", "to": "FAA", "text": "Require flight crewmembers and appropriate ground personnel responsible for inspection of transport-category airplanes for wing contamination receive specific periodic training on what contamination looks like and feels like.", "status": "unknown", "trigger_factors": ["inadequate_monitoring"]},
+    {"id": "A-93-22", "to": "FAA", "text": "Study the effects on performance of swept-wing turbojet airplanes when specific amounts of airspeed are added to the computed rotation speed during takeoffs when wing contamination is possible.", "status": "unknown", "trigger_factors": ["takeoff_configuration_error"]},
+    {"id": "A-93-26", "to": "FAA", "text": "Require airlines to establish a way to inform flightcrews of the type of fluid and mixture used, the current moisture accumulation rate, and the available holdover time.", "status": "unknown", "trigger_factors": ["deicing_inadequate"]},
+    {"id": "A-93-28", "to": "FAA", "text": "Require that all airports which might experience freezing conditions and that are certified under Title 14 CFR Part 139 establish deicing plans for approval.", "status": "unknown", "trigger_factors": ["deicing_inadequate"]}
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced de-icing procedures and training for flight crews",
+    "Improved holdover time guidelines for de-icing fluids",
+    "More stringent requirements for wing contamination inspection"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR9302.pdf"],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q1093598",
+  "asn_id": "19920322-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/USAir_Flight_405",
+  "report_links": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR9302.pdf"],
+  "interest": 16.16,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read EXECUTIVE SUMMARY (lines 637-720), History of Flight (lines 768-1400), CVR events (lines 1117-1180)",
+      "Probable Cause section fully reviewed (lines 9931-9962)",
+      "Recommendations section reviewed (lines 9969-10200)",
+      "Ice accumulation and deicing procedures are primary technical cause",
+      "Crew awareness of wing contamination was inadequate",
+      "Takeoff rotation below prescribed airspeed contributed"
+    ]
+  }
+}

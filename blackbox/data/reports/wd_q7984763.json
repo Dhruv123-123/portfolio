@@ -1,0 +1,153 @@
+{
+  "id": "wd_q7984763",
+  "qid": "Q7984763",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "West Coast Airlines 956",
+  "flight_number": "956",
+  "date": "1966-10-01",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "Douglas DC-9-14",
+    "manufacturer": "Douglas",
+    "family": "DC-9",
+    "registration": "N9101"
+  },
+  "operator": "West Coast Airlines",
+  "route": {
+    "from_name": "Portland",
+    "to_name": "Seattle"
+  },
+  "location": {
+    "name": "Wemme",
+    "country": "United States"
+  },
+  "phase": "descent",
+  "occupants": 18,
+  "fatalities": 18,
+  "category": "CFIT",
+  "summary": "During descent via radar vector from Seattle Center, Flight 956 received instruction to descend from 14,000 feet to 9,000 feet and turn right to heading 300 degrees. The aircraft descended to approximately 4,000 feet and leveled off in a normal descent pattern. An abrupt climb was initiated two seconds before impact. The crew had only 17 to 50 hours on the DC-9 type. The specific cause of descent below clearance limits was never determined by the NTSB.",
+  "probable_cause": "The descent of the aircraft below its clearance limit and below that of surrounding obstructing terrain, but the Board was unable to determine the cause of such descent.",
+  "factors": [
+    {
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "the captain, 42-year-old Charles C. Warren, had over 18,900 flying hours, but only seventeen in the DC-9"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "The aircraft was being flown on autopilot. The flight descended in a normal manner to approximately 4000 ft and leveled off."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The controller lost radar contact with the flight while it was in the right turn"
+    },
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "more than an hour after sunset, the cloud ceiling was at 2900 ft, with the weather consisting of rain"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "crashed on October 1, 1966, approximately 5.5 mi south of Wemme, Oregon"
+    }
+  ],
+  "chain": [
+    [
+      "pilot_experience",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "descent_below_minimums"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "19:52",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 956 departed Eugene for Portland, received IFR clearance via Victor Airway 23 at 12000 feet altitude",
+      "factors": []
+    },
+    {
+      "t": 660,
+      "clock": "20:04",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Seattle Center under Air Traffic Control radar vector at 20:04:25 PDT issued descent instructions from 14000 feet to 9000 feet",
+      "factors": []
+    },
+    {
+      "t": 670,
+      "clock": "20:05",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller advised Runway 28R was in use at Portland International Airport and instructed turn right to heading 300 degrees",
+      "factors": []
+    },
+    {
+      "t": 690,
+      "clock": "20:09",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The controller lost radar contact with the flight while it was in the right turn and aircraft crashed near Wemme at 20:15 radar notification",
+      "factors": [
+        "descent_below_minimums",
+        "loss_of_situational_awareness",
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR67-AF.pdf",
+    "https://news.google.com/newspapers?id=sOVVAAAAIBAJ&sjid=IOEDAAAAIBAJ&pg=6277%2C18260",
+    "https://news.google.com/newspapers?id=SrJfAAAAIBAJ&sjid=AzMMAAAAIBAJ&pg=2296%2C112730",
+    "https://news.google.com/newspapers?id=seVVAAAAIBAJ&sjid=IOEDAAAAIBAJ&pg=6170%2C447032",
+    "https://news.google.com/newspapers?id=M_9XAAAAIBAJ&sjid=JPcDAAAAIBAJ&pg=6201%2C4638865",
+    "https://news.google.com/newspapers?id=S7JfAAAAIBAJ&sjid=AzMMAAAAIBAJ&pg=3240%2C320472"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/West_Coast_Airlines_Flight_956",
+  "asn_id": "19661001-1",
+  "interest": 13.77,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Specific cause of descent never determined; aircraft was airworthy with proper crew certification; no mechanical failure detected; crew had limited experience on DC-9 type",
+      "Sections read from text report at /home/user/portfolio/blackbox/cache/text/wd_q7984763.txt: synopsis/summary, probable cause, factors, chain, events"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR67-AF.pdf"
+  ],
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": null,
+      "report_title": null,
+      "report_date": null,
+      "url": null
+    }
+  ],
+  "recommendations": [],
+  "dissent": []
+}

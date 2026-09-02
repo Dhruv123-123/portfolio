@@ -1,0 +1,164 @@
+{
+  "id": "wd_q17017873",
+  "qid": "Q17017873",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "United Air Lines 553",
+  "flight_number": "553",
+  "date": "1972-12-08",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "Boeing 737-222",
+    "manufacturer": "Boeing",
+    "family": "737",
+    "registration": "N1832U"
+  },
+  "operator": "United Airlines",
+  "route": {
+    "from_name": "Washington, D.C.",
+    "to_name": "Omaha"
+  },
+  "location": {
+    "name": "Chicago Midway International Airport",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 61,
+  "fatalities": 45,
+  "category": "LOC-I",
+  "summary": "A Boeing 737 approaching Chicago Midway was too high on descent at the outer marker beacon. The captain extended spoilers and steepened descent to 1,550 feet per minute, well above the normal 1,000 fpm. After leveling at minimum descent altitude with engines not advanced fully and spoilers still extended, the aircraft entered an aerodynamic stall. The stick shaker activated and continued sounding until impact into a residential neighborhood. The flight data recorder was inoperative due to maintenance failure.",
+  "probable_cause": "The captain's failure to properly manage the descent and approach profile, resulting in an unstable approach that led to an aerodynamic stall at low altitude.",
+  "factors": [
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "The stick shaker, a stall warning device, activated and continued to sound as the aircraft entered an aerodynamic stall"
+    },
+    {
+      "id": "unstable_approach",
+      "role": "initiating",
+      "evidence": "When Flight 553 reached the Kedzie OMB, the aircraft was still at an altitude of 2200 ft MSL"
+    },
+    {
+      "id": "excessive_speed",
+      "role": "contributing",
+      "evidence": "steepened the aircraft's descent rate to 1550 ft per minute"
+    },
+    {
+      "id": "low_energy_state",
+      "role": "contributing",
+      "evidence": "With the spoilers still extended, thrust was not enough to maintain level flight without losing speed"
+    }
+  ],
+  "chain": [
+    [
+      "unstable_approach",
+      "excessive_speed"
+    ],
+    [
+      "excessive_speed",
+      "low_energy_state"
+    ],
+    [
+      "low_energy_state",
+      "aerodynamic_stall"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:24",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 553 was cleared by air traffic control for a nonprecision approach",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": "14:25",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "When Flight 553 reached the Kedzie OMB, the aircraft was still at 2200 ft MSL, 700 ft above minimum crossing altitude",
+      "factors": [
+        "unstable_approach"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "14:26",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Realizing the aircraft was too high, the captain extended the spoilers and steepened the descent rate to 1550 ft per minute",
+      "factors": [
+        "excessive_speed"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": "14:27",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "The captain leveled the plane off and increased engine power, but did not advance the throttles fully, with spoilers still extended thrust was not enough to maintain level flight",
+      "factors": [
+        "low_energy_state"
+      ]
+    },
+    {
+      "t": 240,
+      "clock": "14:28",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "The stick shaker activated and continued to sound as the aircraft entered an aerodynamic stall",
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    }
+  ],
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR73-16.pdf",
+    "https://news.google.com/newspapers?id=J6lVAAAAIBAJ&pg=3905%2C2159088",
+    "https://news.google.com/newspapers?id=8KFYAAAAIBAJ&pg=5659%2C2585297",
+    "https://news.google.com/newspapers?id=oOpRAAAAIBAJ&pg=2905%2C2476956",
+    "https://web.archive.org/web/20151121101555/https://news.google.com/newspapers?id=oOpRAAAAIBAJ&sjid=_nIDAAAAIBAJ&pg=2905%2C2476956",
+    "https://aviation-safety.net/database/record.php?id=19721208-1",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7231.pdf",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7211.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Air_Lines_Flight_553",
+  "asn_id": "19721208-1",
+  "interest": 13.99,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read from text report at /home/user/portfolio/blackbox/cache/text/wd_q17017873.txt: synopsis/summary, probable cause, factors, chain, events"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR73-16.pdf",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7231.pdf",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7211.pdf"
+  ],
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": null,
+      "report_title": null,
+      "report_date": null,
+      "url": null
+    }
+  ],
+  "recommendations": [],
+  "dissent": []
+}
