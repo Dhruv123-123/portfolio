@@ -1,0 +1,138 @@
+{
+  "id": "wd_q6893758",
+  "qid": "Q6893758",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Mohawk Airlines 411",
+  "flight_number": "MH411",
+  "date": "1969-11-19",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "Fairchild Hiller FH-227",
+    "manufacturer": "Fairchild Hiller",
+    "family": "FH-227",
+    "registration": "N7811M"
+  },
+  "operator": "Mohawk Airlines",
+  "route": {
+    "from_name": "Albany",
+    "to_name": "Glens Falls"
+  },
+  "location": {
+    "name": "Pilot Knob Mountain",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 14,
+  "fatalities": 14,
+  "category": "CFIT",
+  "summary": "Mohawk Airlines Flight 411, a Fairchild Hiller FH-227 turboprop, departed Albany at 20:03 EST bound for Glens Falls with 11 passengers and 3 crew. At 20:20 EST, while executing a VOR approach, the aircraft hit trees on the northwest slope of Pilot Knob Mountain at low altitude, impacted a rock cliff, and fell 34 feet before becoming lodged in trees and catching fire. The NTSB concluded the crew executed an improper instrument approach using an unauthorized modified VOR/DME procedure instead of the only legally available VOR 1 approach, combined with a severe downdraft.",
+  "probable_cause": "The captain's improper execution of an instrument approach, combined with a severe downdraft at low altitude, resulted in uncontrolled descent into terrain.",
+  "factors": [
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "crew selected an improvised and unauthorized modified version of the VOR/DME 19 approach instead of VOR 1 approach"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "aircraft descended below safe altitude while in severe turbulence"
+    },
+    {
+      "id": "windshear",
+      "role": "contributing",
+      "evidence": "severe downdraft at a low altitude"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "aircraft hit trees on the northwest slope of the Pilot Knob Mountain then impacted a rock cliff"
+    }
+  ],
+  "chain": [
+    [
+      "navigation_error",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ],
+    [
+      "windshear",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "20:07",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 411 cleared for VOR approach to runway 19 without ATC specifying which specific VOR approach procedure",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": "20:08",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Crew overflew Glens Falls airport and proceeded northbound, performing unauthorized approach",
+      "factors": []
+    },
+    {
+      "t": 240,
+      "clock": "20:20",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft hit trees on northwest slope of Pilot Knob Mountain, impacted rock cliff and fell 34 feet, caught fire",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 270,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CABIN",
+      "kind": "outcome",
+      "text": "All 14 occupants killed; Flight Data Recorder recovered intact but Cockpit Voice Recorder damaged in post-crash fire",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR7012.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-12.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Mohawk_Airlines_Flight_411",
+  "asn_id": "19691119-0",
+  "interest": 11.22,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report reviewed; no formally numbered recommendations found in main text"
+    ]
+  },
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "recommendations": [],
+  "curated_id": null,
+  "sources": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR7012.pdf"
+  ]
+}

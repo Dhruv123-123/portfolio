@@ -1,0 +1,172 @@
+{
+  "id": "wd_q16961079",
+  "qid": "Q16961079",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Allegheny Airlines 485",
+  "flight_number": "485",
+  "date": "1971-06-07",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "Convair CV-580",
+    "manufacturer": "Convair",
+    "family": "Convair",
+    "registration": null
+  },
+  "operator": "Allegheny Airlines",
+  "route": {
+    "from_name": "Washington",
+    "to_name": "Newport News"
+  },
+  "location": {
+    "name": "New Haven",
+    "country": "United States"
+  },
+  "phase": "landing",
+  "occupants": 31,
+  "fatalities": 28,
+  "category": "CFIT",
+  "summary": "Convair CV-580 Flight 485 crashed into beach cottages near New Haven Regional Airport at 29 feet altitude on approach to runway 2. The aircraft struck while descending with poor visibility in fog and the captain unable to see the runway at the minimum descent height. A fire developed immediately upon impact killing 28 of 31 occupants. Survivors were in positions with better evacuation access and the high death toll resulted from poor emergency exit access, lack of lighting and evacuation procedures.",
+  "probable_cause": "The aircraft descended below the minimum descent altitude of 380 feet without the required visual references, striking terrain in foggy conditions on a prohibited downwind approach.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "the weather around the airport was foggy, with poor visibility and the cabin filled with smoke and poor visibility"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "the pilot monitoring noted the aircraft was still descending below the minimum descent height of 380 feet which was acknowledged by the captain"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "downwind landings at Tweed New Haven Regional Airport were prohibited by an Allegheny Airlines company directive"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "the aircraft struck three adjoining beach cottages at an altitude of approximately 29 feet"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "fire developed immediately upon initial impact and 28 people died in the subsequent fire"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ],
+    [
+      "cfit",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "07:14",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "crew_action",
+      "text": "Flight 485 departed Washington D.C. at 7:14 a.m. on an IFR flight plan",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": "09:33",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "crew_action",
+      "text": "After stops at Groton with weather delays, the flight departed at 9:33 a.m. bound for New Haven",
+      "factors": []
+    },
+    {
+      "t": 2040,
+      "clock": "09:48",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tweed tower controller gave the flight a choice of runway 2 or runway 20 and the flight chose runway 2",
+      "factors": []
+    },
+    {
+      "t": 2100,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PM",
+      "kind": "crew_speech",
+      "text": "The first officer called out airspeed and descent rate and remarked you can't see down through this stuff",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 2118,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The aircraft struck three adjoining beach cottages at approximately 29 feet msl",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 2120,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Fire developed immediately upon initial impact killing 28 of 31 occupants",
+      "factors": [
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7220.pdf",
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR72-20.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Allegheny_Airlines_Flight_485",
+  "asn_id": "19710607-0",
+  "interest": 13.07,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "1 formal recommendations extracted from report sections",
+      "Recommendations identified with formal IDs from NTSB/AAIB investigation"
+    ]
+  },
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-71-59",
+      "to": "FAA",
+      "text": "See recommendation A-71-59 in full report.",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "curated_id": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7220.pdf"
+  ]
+}

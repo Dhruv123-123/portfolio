@@ -1,0 +1,144 @@
+{
+  "id": "wd_q4697725",
+  "qid": "Q4697725",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air Alg\u00e9rie 702P",
+  "flight_number": "702P",
+  "date": "1994-12-21",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-200",
+    "manufacturer": "Boeing",
+    "family": "737",
+    "registration": "7T-VEE"
+  },
+  "operator": "Air Alg\u00e9rie",
+  "route": {
+    "from_name": "Amsterdam",
+    "to_name": "Coventry"
+  },
+  "location": {
+    "name": "Coventry",
+    "country": "United Kingdom"
+  },
+  "phase": "approach",
+  "occupants": 5,
+  "fatalities": 5,
+  "category": "CFIT",
+  "summary": "A Boeing 737-200 operating a domestic cargo flight conducted a surveillance radar approach to Coventry Airport in poor visibility. During the third approach attempt, with runway visual range below regulatory minimum, the crew descended significantly below minimum descent height without visual references and collided with power transmission cables and a pylon. The aircraft overturned and crashed in a wooded area.",
+  "probable_cause": "Crew allowed aircraft to descend significantly below minimum descent height without gaining sight of approach lighting or runway, and failed to cross-check altimeter indications. Contributing factors were fatigue affecting flight crew performance and insufficient minimum descent height call-outs by the pilot monitoring.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Visibility at Coventry was poor due to fog and low cloud layer, runway visual range 1100 m"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "Crew descended significantly below minimum descent height without required visual references"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Non-handling pilot failed to call out minimum descent height as aircraft reached that altitude"
+    },
+    {
+      "id": "fatigue",
+      "role": "latent",
+      "evidence": "Flight crew performance had been impaired by effects of fatigue"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft collided with power transmission cables and pylon during approach descent"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "descent_below_minimums"
+    ],
+    [
+      "inadequate_monitoring",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "09:38",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft departed East Midlands Airport to attempt third approach to Coventry Airport with RVR of 1100 m",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Air traffic control radar operator provided surveillance radar approach guidance",
+      "factors": []
+    },
+    {
+      "t": 600,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft descended on approach with pilot monitoring failing to call out minimum descent height",
+      "factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "t": 900,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck power transmission cables and pylon, overturned and crashed in wooded area",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "http://www.aaib.gov.uk/cms_resources/1-1996%207T-VEE.pdf",
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/1-1996%207T-VEE%20Append.pdf",
+    "http://www.aaib.gov.uk/cms_resources/SUMMARY%20AAR%201-96%20%20Boeing%20737,%207T-VEE%2002-96.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Alg%C3%A9rie_Flight_702P",
+  "asn_id": "19941221-0",
+  "interest": 11.44,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report reviewed; no formally numbered recommendations found in main text"
+    ]
+  },
+  "recommendations": [],
+  "curated_id": null,
+  "sources": [
+    "http://www.aaib.gov.uk/cms_resources/1-1996%207T-VEE.pdf"
+  ]
+}

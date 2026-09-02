@@ -1,0 +1,265 @@
+{
+  "id": "wd_q4816365",
+  "qid": "Q4816365",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "United Express 6291",
+  "flight_number": "6291",
+  "date": "1994-01-07",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "BAe Jetstream 41",
+    "manufacturer": "BAe Systems",
+    "family": "Jetstream",
+    "registration": null
+  },
+  "operator": "United Express",
+  "route": {
+    "from_name": "Washington Dulles",
+    "to_name": "Columbus"
+  },
+  "location": {
+    "name": "Columbus",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 8,
+  "fatalities": 5,
+  "category": "CFIT",
+  "summary": "A BAe Jetstream 41 on approach to Columbus in weather with cloud overcast 800 feet, visibility 2.5 miles in light snow and fog, descended through 1,250 feet when stick shaker activated twice for 3 seconds each. The aircraft continued descending below the glide slope in a high nose-up attitude and collided with trees 1.2 miles short of the runway. Both pilots lacked experience with electronic flight instrument systems and failed to perform proper stall recovery. The investigation found the crew maintained an unstable approach, failed to maintain airspeed and altitude, and improperly responded to the stall warning.",
+  "probable_cause": "The crew conducted a poorly planned and unstable approach, failed to maintain both airspeed and altitude during descent, and improperly responded to the stall warning. The inexperienced first officer and captain with history of failed check rides compounded the situation. The airline failed to provide adequate training and stabilized approach criteria.",
+  "factors": [
+    {
+      "id": "unstable_approach",
+      "role": "initiating",
+      "evidence": "crew attempted a poorly planned and unstable approach"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "failed to maintain both airspeed and altitude"
+    },
+    {
+      "id": "low_energy_state",
+      "role": "contributing",
+      "evidence": "aircraft continued to descend below the glide slope"
+    },
+    {
+      "id": "stick_shaker_pusher",
+      "role": "contributing",
+      "evidence": "stick shaker activated and sounded for 3 seconds, then after 1.5 seconds sounded again"
+    },
+    {
+      "id": "stall_misdiagnosis",
+      "role": "contributing",
+      "evidence": "Almost immediately after stall warning activated, Captain White asked in alarmed manner Tony! What did you do?"
+    },
+    {
+      "id": "inappropriate_stall_recovery",
+      "role": "contributing",
+      "evidence": "Neither pilot performed proper stall recovery procedure and subsequent recovery attempt was ineffective and improper"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "both pilots lacked experience with electronic flight instrument systems"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "aircraft collided with stand of trees"
+    }
+  ],
+  "chain": [
+    [
+      "unstable_approach",
+      "low_energy_state"
+    ],
+    [
+      "low_energy_state",
+      "stick_shaker_pusher"
+    ],
+    [
+      "stick_shaker_pusher",
+      "stall_misdiagnosis"
+    ],
+    [
+      "stall_misdiagnosis",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "inappropriate_stall_recovery",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "21:58",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 6291 departed from Dulles at 9:58 p.m. EST for 90-minute flight to Columbus",
+      "factors": []
+    },
+    {
+      "t": 4920,
+      "clock": "23:10",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Columbus approach control contacted; captain advised descending through 13,200 feet to 11,000 feet. Controller assigned 285-degree heading to intercept ILS runway 28L and cleared to 10,000 feet",
+      "factors": []
+    },
+    {
+      "t": 4980,
+      "clock": "23:11",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Updated weather reported cloud overcast 800 feet, visibility 2.5 miles in light snow and fog, wind 300 degrees at 4 knots",
+      "factors": []
+    },
+    {
+      "t": 5040,
+      "clock": "23:12",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Runway 28L ILS approach clearance issued; clearance to land on runway 28L granted two minutes later",
+      "factors": []
+    },
+    {
+      "t": 5100,
+      "clock": "23:13",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Aircraft descending through 1,250 feet, stick shaker activated and sounded for 3 seconds",
+      "factors": [
+        "stick_shaker_pusher"
+      ]
+    },
+    {
+      "t": 5101,
+      "clock": "23:13",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain asked in alarmed manner Tony! What did you do?",
+      "factors": [
+        "stall_misdiagnosis"
+      ]
+    },
+    {
+      "t": 5102,
+      "clock": "23:13",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "After 1.5 seconds, stick shaker sounded again",
+      "factors": [
+        "stick_shaker_pusher"
+      ]
+    },
+    {
+      "t": 5110,
+      "clock": "23:13",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft collided with stand of trees in high nose-up attitude, 1.2 miles short of runway",
+      "factors": [
+        "cfit",
+        "inappropriate_stall_recovery"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9407.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR94-07.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Express_Flight_6291",
+  "asn_id": "19940107-0",
+  "interest": 11.35,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "8 formal recommendations extracted from report sections",
+      "Recommendations identified with formal IDs from NTSB/AAIB investigation"
+    ]
+  },
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-94-173",
+      "to": "FAA",
+      "text": "See recommendation A-94-173 in full report.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-94-174",
+      "to": "FAA",
+      "text": "See recommendation A-94-174 in full report.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-94-175",
+      "to": "FAA",
+      "text": "See recommendation A-94-175 in full report.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-94-176",
+      "to": "FAA",
+      "text": "See recommendation A-94-176 in full report.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-94-70",
+      "to": "FAA",
+      "text": "See recommendation A-94-70 in full report.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-94-67",
+      "to": "FAA",
+      "text": "See recommendation A-94-67 in full report.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-94-68",
+      "to": "FAA",
+      "text": "See recommendation A-94-68 in full report.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-94-69",
+      "to": "FAA",
+      "text": "See recommendation A-94-69 in full report.",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "curated_id": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9407.pdf"
+  ]
+}
