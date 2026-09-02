@@ -1,0 +1,264 @@
+{
+  "id": "wd_q115186737",
+  "qid": "Q115186737",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2022 Dallas airshow crash",
+  "flight_number": null,
+  "date": "2022-11-12",
+  "time_reference": "Local",
+  "t0": "2022-11-12T13:22:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "CEN23MA034"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing B-17G Flying Fortress and Bell P-63F Kingcobra",
+    "manufacturer": "Boeing and Bell",
+    "family": "B-17G and P-63F",
+    "registration": "N7227C and N6763"
+  },
+  "operator": "Commemorative Air Force",
+  "route": {
+    "from_name": "Dallas Executive Airport",
+    "to_name": "Dallas Executive Airport"
+  },
+  "location": {
+    "name": "Dallas Executive Airport",
+    "country": "United States",
+    "lat": 32.673779,
+    "lon": -96.862801
+  },
+  "phase": "approach",
+  "occupants": 6,
+  "fatalities": 6,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "Two World War II-era restored aircraft, a Boeing B-17G Flying Fortress and a Bell P-63F Kingcobra, collided in midair at 1322 local time on November 12, 2022, during the Commemorative Air Force's Wings Over Dallas air show. The P-63F, performing a high-speed descending banked turn toward the runway approach, collided with the B-17G from above and slightly behind, severing the B-17G's fuselage just aft of the wing. Both aircraft were destroyed in the impact and subsequent fires. The accident resulted from inadequate prebriefing with no altitude deconfliction procedures, reliance on real-time air boss directives and see-and-avoid strategy, and diminished pilot visibility due to aircraft structures and attention demands of the air show performance.",
+  "probable_cause": "The air boss's and air show event organizer's lack of an adequate, prebriefed aircraft separation plan for the air show performance, relying instead on the air boss's real-time deconfliction directives and the see-and-avoid strategy for collision avoidance, which allowed for the loss of separation between the two aircraft. Contributing cause: the lack of FAA guidance and oversight of air bosses and air show event organizers.",
+  "factors": [
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "Lack of FAA guidance for air bosses and air show event organizers on developing plans and performing risk assessments that ensure the separation of aircraft that are not part of an approved maneuvers package."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "A pilot on the ground speculated that the P-63F pilot might have mistaken one of the trailing bombers for the leader, leading him to believe he had already cleared the bomber formation's flight path. The P-63F pilot was executing a descending banked turn targeting the bomber formation."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "The P-63F pilot executed a high-speed descending banked turn onto the runway approach. The pilot tightened his trajectory and positioned the aircraft's belly toward the bomber line, which obscured the pilot's view of the approaching B-17G."
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "The P-63F collided with the B-17G on the rear port quarter from above at 1322 local time. The collision severed the B-17G's fuselage from a point just aft of the wings."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Both aircraft broke apart immediately after collision and fell to the ground, where both aircraft experienced in-flight and on-ground fires. The B-17G also experienced an explosion on the ground."
+    }
+  ],
+  "chain": [
+    [
+      "inadequate_training",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "midair_collision"
+    ],
+    [
+      "midair_collision",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "13:09",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Boeing B-17G departed Dallas Executive Airport for local air show flight.",
+      "factors": [],
+      "state": {}
+    },
+    {
+      "t": 300,
+      "clock": "13:14",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Bell P-63F departed Dallas Executive Airport for local air show flight, 5 minutes after B-17G departure.",
+      "factors": [],
+      "state": {}
+    },
+    {
+      "t": 660,
+      "clock": "13:22",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "crew_speech",
+      "text": "Air boss directed bomber formation (B-17G and trailing bombers) to fly parallel to spectator viewing line at 1000 feet show line.",
+      "factors": [],
+      "state": {
+        "alt": 1000
+      }
+    },
+    {
+      "t": 690,
+      "clock": "13:22:30",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "crew_speech",
+      "text": "Fighters (including P-63F) instructed to enter trail formation and fly at 500 feet show line in front of bomber formation.",
+      "factors": [],
+      "state": {
+        "alt": 500
+      }
+    },
+    {
+      "t": 720,
+      "clock": "13:22",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "P-63F pilot performing high-speed descending banked turn toward runway approach, targeting the bomber line. Pilot tightens trajectory and positions aircraft belly toward bomber line, obscuring view of approaching B-17G.",
+      "factors": [
+        "inappropriate_control_input"
+      ],
+      "state": {
+        "alt": 800,
+        "ias": 250
+      }
+    },
+    {
+      "t": 750,
+      "clock": "13:22",
+      "phase": "approach",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "P-63F collides with B-17G on rear port quarter from above. Impact severs B-17G's fuselage from point just aft of wings. B-17G pitch angle at impact approximately 10-15 degrees nose down.",
+      "factors": [
+        "midair_collision",
+        "loss_of_situational_awareness"
+      ],
+      "state": {
+        "alt": 800
+      }
+    },
+    {
+      "t": 780,
+      "clock": "13:22:30",
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Both aircraft break apart in midair and fall to ground. B-17G with 5 occupants (pilot, copilot, flight engineer, 2 scanners) destroyed in impact and in-flight fire. P-63F with 1 occupant (pilot) destroyed in impact. Both aircraft experience ground fires; B-17G experiences additional ground explosion. All 6 occupants killed. No ground injuries.",
+      "factors": [
+        "post_impact_fire"
+      ],
+      "state": {
+        "alt": 0
+      }
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Develop and publish standardized procedures and guidelines for air show directors and air bosses on aircraft separation planning, including altitude deconfliction procedures, required briefing content, and risk assessment methodology for air shows involving multiple aircraft.",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Establish and implement requirements for regular recurrent training and evaluation of air bosses, including proficiency checks on separation procedures, communication protocols, and emergency procedures.",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Implement direct FAA surveillance and oversight of air boss performance during air shows, including real-time monitoring of air boss decisions and separation management.",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": null,
+      "to": "International Council of Air Shows",
+      "text": "Recommend that all air show operators develop and implement pre-flight briefings that include specific altitude deconfliction procedures for all aircraft not part of formally approved maneuver packages, with emphasis on preventing unplanned altitude conflicts.",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Commemorative Air Force",
+      "text": "Implement enhanced crew briefings for all multi-aircraft air show performances that explicitly address separation procedures, altitude assignments, field geometry, and limitations of see-and-avoid procedures in high-performance maneuvering environments.",
+      "status": "open",
+      "trigger_factors": [
+        "loss_of_situational_awareness"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "FAA increased focus on air show safety oversight and air boss qualification standards",
+    "Emphasis on pre-flight briefing requirements for altitude separation in multi-aircraft air show performances",
+    "Enhanced industry guidance on see-and-avoid limitations in high-speed maneuvering air show environments"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/106276/pdf",
+    "https://www.ntsb.gov/investigations/Pages/CEN23MA034.aspx"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2022_Dallas_air_show_mid-air_collision",
+  "asn_id": null,
+  "interest": 11.52,
+  "report_links": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/106276/pdf",
+    "https://data.ntsb.gov/Docket?ProjectID=106276",
+    "https://www.ntsb.gov/investigations/Pages/CEN23MA034.aspx"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "NTSB Final Report published December 13, 2024; complete factual information section and probable cause findings read",
+      "Pilots: B-17G commander age 66 with 28,000 hours; co-pilot age 67 with 25,300 hours; P-63F pilot age 63 with 34,500 hours - all experienced with recent medical certifications",
+      "Weather: Visual meteorological conditions, 10 mile visibility, clear skies, 14 knots wind",
+      "Key finding: inadequate separation planning and reliance on see-and-avoid strategy proved insufficient; pilot visibility obscured by aircraft structures",
+      "Air show operated under Part 91 with certificate of waiver; no flight plan filed for either aircraft",
+      "Investigation conducted by NTSB with FAA and Commemorative Air Force participation"
+    ]
+  }
+}

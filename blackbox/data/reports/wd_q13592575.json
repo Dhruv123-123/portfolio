@@ -1,0 +1,307 @@
+{
+  "id": "wd_q13592575",
+  "qid": "Q13592575",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2013 Polar Airlines Mil Mi-8 crash",
+  "flight_number": "RA-22657",
+  "date": "2013-07-02",
+  "time_reference": "UTC",
+  "t0": "2013-07-02T00:13:00Z",
+  "agency": "MAK",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead",
+      "report_id": "report_ra-22657"
+    }
+  ],
+  "aircraft": {
+    "type": "Mil Mi-8T",
+    "manufacturer": "Mil",
+    "family": "Mi-8",
+    "registration": "RA-22657"
+  },
+  "operator": "Polar Airlines",
+  "route": {
+    "from_name": "Deputatsky Airport",
+    "to_name": "Ust-Yansk"
+  },
+  "location": {
+    "name": "Ust-Yansky District, Sakha Republic",
+    "country": "Russia",
+    "lat": 69.704,
+    "lon": 139.436
+  },
+  "phase": "initial_climb",
+  "occupants": 28,
+  "fatalities": 24,
+  "injuries_serious": 4,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "A Mil Mi-8T helicopter crashed into elevated terrain at 00:13 UTC on July 2, 2013, during the initial climb phase in darkness. The crew deviated from the filed flight plan route and altitude, descended below minimum safe altitude while attempting to maintain visual flight rules in deteriorating weather conditions including rain, snow, and icing, and struck a mountainside at 660 meters elevation during a turn to return to the departure airport. Weather forecasting deficiencies, crew resource management failures, inadequate terrain awareness systems training, and lack of guidance documentation contributed to the accident.",
+  "probable_cause": "The pilot lost control of the helicopter due to flight in instrument meteorological conditions while not approved for instrument flight rules, compounded by descent below minimum safe altitude, deviation from flight plan, lack of terrain awareness system activation, and deficient weather briefing practices.",
+  "factors": [
+    {
+      "id": "windshear",
+      "role": "contributing",
+      "evidence": "Forecast and actual weather showed strong winds (40 km/h at altitude, 5 m/s near surface) perpendicular to the mountainous terrain, which could have contributed to control difficulties during the low-altitude flight near ridges."
+    },
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "Flight took off at 23:51 local time and crashed at 00:13 UTC in complete darkness without external visual references, reducing crew's ability to detect terrain."
+    },
+    {
+      "id": "airframe_icing",
+      "role": "contributing",
+      "evidence": "Meteorological data indicated freezing level at 1000 meters; report describes crew encountering precipitation including rain, snow, and weak icing during descent."
+    },
+    {
+      "id": "spatial_disorientation",
+      "role": "contributing",
+      "evidence": "Crew descended below minimum safe altitude (1164 m for the route) to 600-800 meters and deviated from filed route while trying to maintain visual flight in clouds."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Crew made uncoordinated route changes and descended without coordinating with air traffic control; the pilot received conflicting altitude instructions and made independent navigation decisions."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "Crew lacked approval for instrument flight rules operations; training program did not emphasize decision-making for go-around procedures when weather conditions deteriorated."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "latent",
+      "evidence": "Terrain awareness and warning system (SRPBZ) was not activated and crew lacked sufficient training for its operation; regulatory oversight was insufficient in enforcing SRPBZ activation procedures."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Helicopter struck mountainside at magnetic heading 15 degrees, pitch angle 32-40 degrees nose-up, indicating loss of control during terrain avoidance attempt."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted elevated terrain (660 m elevation) at the base of a 772-meter mountain while attempting to return to departure airport."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Post-impact fire destroyed the aircraft after impact due to fuel system rupture in suspended fuel tanks."
+    }
+  ],
+  "chain": [
+    [
+      "dark_night",
+      "spatial_disorientation"
+    ],
+    [
+      "spatial_disorientation",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "airframe_icing",
+      "loss_of_control_inflight"
+    ],
+    [
+      "windshear",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ],
+    [
+      "cfit",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "22:30",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight mechanic refueled the helicopter with 2800 liters of ice-resistant fuel.",
+      "factors": [],
+      "state": {}
+    },
+    {
+      "t": 30,
+      "clock": "22:30",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilots received and signed meteorological forecast for the route with no concerns noted.",
+      "factors": [],
+      "state": {}
+    },
+    {
+      "t": 180,
+      "clock": "23:38",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Pilot in command requested takeoff clearance using visual flight rules and confirmation to start engines.",
+      "factors": [],
+      "state": {}
+    },
+    {
+      "t": 360,
+      "clock": "23:51",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 9949 received takeoff clearance and lifted off with right-hand turn.",
+      "factors": [],
+      "state": {
+        "alt": 0,
+        "ias": 0
+      }
+    },
+    {
+      "t": 480,
+      "clock": "23:58",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Flight crew reported altitude 1300 m, minimum pressure 748 mm, estimated exit time from zone 20 minutes, and arrival time 00:00 UTC.",
+      "factors": [],
+      "state": {
+        "alt": 1300
+      }
+    },
+    {
+      "t": 630,
+      "clock": "23:59:52",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain reported onboard weather conditions: westerly winds 280 degrees, 15-20 km/h; visibility more than 10 km; cloud tops at 1400 m, 1700 m respectively; temperature +8 degrees C; flight normal, no dangerous phenomena.",
+      "factors": [],
+      "state": {
+        "alt": 1300,
+        "ias": 150,
+        "temp": 8
+      }
+    },
+    {
+      "t": 720,
+      "clock": "00:00:41",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Final radio transmission: pilot reports 'Until zone exit' then radio contact terminated.",
+      "factors": [],
+      "state": {}
+    },
+    {
+      "t": 900,
+      "clock": "00:13:00",
+      "phase": "initial_climb",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Helicopter struck mountainside at 660 meters elevation during return-to-base turn in darkness, completely destroying the aircraft.",
+      "factors": [
+        "loss_of_control_inflight",
+        "cfit"
+      ],
+      "state": {
+        "alt": 660,
+        "ias": 50
+      }
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Russian Aviation Authority",
+      "text": "Develop and enforce standardized procedures for activation and use of terrain awareness and warning systems (SRPBZ) on all Mi-8 helicopters during night and instrument weather operations.",
+      "status": "open",
+      "trigger_factors": [
+        "loss_of_situational_awareness",
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Polar Airlines",
+      "text": "Establish mandatory go-around procedures and decision gates for pilots when meteorological conditions deteriorate below minimums for visual flight rules, with emphasis on returning to departure airfield rather than attempting alternate landing areas.",
+      "status": "open",
+      "trigger_factors": [
+        "spatial_disorientation"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Yakutia Meteorological Service",
+      "text": "Improve meteorological forecasting coordination with aviation companies; provide specific area forecasts for mountainous regions showing cloud height and visibility at planned flight altitudes, not just route forecasts.",
+      "status": "open",
+      "trigger_factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Polar Airlines",
+      "text": "Ensure flight crews receive briefing on planned route, intended altitude, and minimum safe altitude before departure; document this briefing in flight plan and crew records.",
+      "status": "open",
+      "trigger_factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Russian Aviation Authority",
+      "text": "Audit aviation companies operating in remote mountainous areas for compliance with instrument flight rules training requirements and enforcement of visual flight rules limitations.",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Russian aviation authorities reviewed requirements for terrain awareness system training and activation procedures on regional helicopter operations",
+    "Increased regulatory focus on meteorological briefing procedures for routes with terrain obstacles",
+    "Enhanced crew resource management training requirements for helicopter operators in remote mountainous regions"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/upload/iblock/ce7/report_ra-22657.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Polar_Airlines_Flight_9949",
+  "asn_id": null,
+  "interest": 11.56,
+  "report_links": [
+    "https://mak-iac.org/upload/iblock/ce7/report_ra-22657.pdf",
+    "https://mak-iac.org/en/rassledovaniya/mi-8t-ra-22657-02-07-2013/",
+    "https://mak-iac.org/rassledovaniya/mi-8t-ra-22657-02-07-2013/"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report in Russian; History of Flight (section 1.1) and Analysis sections read comprehensively",
+      "Key findings: crew exceeded weather minimums for VFR, descended below minimum safe altitude, terrain awareness system not activated, meteorological briefing deficiencies",
+      "Four survivors: three crew and one passenger with serious injuries",
+      "Descent trajectory analysis indicates pilot attempted terrain avoidance during low-altitude return maneuver",
+      "Report includes detailed crew interviews, meteorological analysis, and SRPBZ system simulation showing that system would have provided 26-second warning if activated"
+    ]
+  }
+}
