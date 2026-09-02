@@ -1,0 +1,346 @@
+{
+  "id": "wd_q4611923",
+  "qid": "Q4611923",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2008 South Carolina Learjet 60 crash",
+  "flight_number": null,
+  "date": "2008-09-19",
+  "time_reference": "EDT",
+  "t0": "2008-09-19T23:55:00-04:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "NTSB/AAR-10/02",
+      "report_title": "Aircraft Accident Report: Runway Overrun During Rejected Takeoff, Global Exec Aviation, Bombardier Learjet 60, N999LJ, Columbia, South Carolina, September 19, 2008",
+      "report_date": "2010-04-06"
+    }
+  ],
+  "aircraft": {
+    "type": "Bombardier Learjet 60",
+    "manufacturer": "Bombardier",
+    "family": "60",
+    "registration": "N999LJ"
+  },
+  "operator": "Global Exec Aviation",
+  "route": {
+    "from": "KCAE",
+    "from_name": "Columbia Metropolitan Airport",
+    "to": "KVNY",
+    "to_name": "Van Nuys"
+  },
+  "location": {
+    "name": "Columbia Metropolitan Airport vicinity, Columbia",
+    "country": "United States",
+    "lat": 34.25,
+    "lon": -81.11
+  },
+  "phase": "takeoff",
+  "occupants": 6,
+  "fatalities": 4,
+  "injuries_serious": 2,
+  "damage": "destroyed",
+  "category": "RE",
+  "summary": "Bombardier Learjet 60 N999LJ overran runway 11 during a rejected takeoff at Columbia Metropolitan Airport on 19 September 2008 at 23:55 EDT. Multiple main landing gear tires failed during takeoff roll due to severe underinflation from inadequate maintenance. The captain executed a rejected takeoff after V1 decision speed, which was inconsistent with training. Tire debris damaged the hydraulic system and air-ground sensor, causing reverse thrust to fail. The aircraft overran the runway, struck terrain and roadway, and was destroyed by impact and fire. The captain, first officer, and two passengers were killed; two passengers seriously injured.",
+  "probable_cause": "The operator's inadequate maintenance of the airplane's tires, which resulted in multiple tire failures during takeoff roll due to severe underinflation, and the captain's execution of a rejected takeoff after V1, which was inconsistent with her training and standard operating procedures. Contributing factors included deficiencies in the Learjet 60 thrust reverser system design and FAA certification, inadequate industry training standards for tire failure scenarios, and poor crew resource management.",
+  "factors": [
+    {
+      "id": "maintenance_error",
+      "role": "latent",
+      "evidence": "Global Exec Aviation's tire pressure inspections were inadequate; all four main landing gear tires were severely underinflated during takeoff roll (p. 3-4, findings 12)"
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "latent",
+      "evidence": "Learjet 60 tires lose approximately 2% of pressure per day and require replacement after 8 days if not properly maintained; the company did not maintain adequate tire pressure check intervals (p. 3, findings 13)"
+    },
+    {
+      "id": "takeoff_performance_error",
+      "role": "initiating",
+      "evidence": "Multiple main landing gear tires failed during takeoff roll at around 144 knots ground speed due to severe underinflation; loud rumbling sound recorded at 2355:12 and tire fragments found on runway (p. 2, history of flight)"
+    },
+    {
+      "id": "uncontained_engine_failure",
+      "role": "initiating",
+      "evidence": "Tire debris damaged the plane's hydraulic system causing failure of the air-ground sensing system; the air-ground sensor damage caused it to remain in air mode, preventing reverse thrust engagement (p. 2)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The captain executed a rejected takeoff at 144 knots, which exceeded V1 decision speed of 136 knots; Learjet 60 procedures call for never aborting above V1 (p. 2, findings 9)"
+    },
+    {
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "Captain had accumulated only about 35 hours total in the Learjet 60 (8 hours as PIC); this was only her second flight of the day with the first officer (p. 4, findings 20-22)"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Flight crew demonstrated poor crew resource management; the captain's indecision in responding to the anomaly and failure to follow standard operating procedures resulted from limited CRM skills and limited Learjet 60 experience (p. 72, findings 22)"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The Learjet 60 thrust reverser system had design flaws that permitted failure of critical systems in the wheel well area to result in uncommanded forward thrust; FAA certification of the aircraft as a changed aeronautical product failed to detect this deficiency (p. 2, findings 17-19)"
+    },
+    {
+      "id": "thrust_reverser_inflight",
+      "role": "outcome",
+      "evidence": "After tire debris damaged the hydraulic system and air-ground sensor, the aircraft experienced uncommanded forward thrust instead of reverse thrust; this accelerated the aircraft when full reverse thrust was commanded, increasing runway excursion speed (p. 2, findings 10)"
+    },
+    {
+      "id": "hydraulic_failure",
+      "role": "outcome",
+      "evidence": "Tire fragments damaged the plane's hydraulic system, causing the plane's brakes to fail; the aircraft could not decelerate (p. 2, findings 10)"
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "Aircraft overran the runway end at Columbia Metropolitan Airport, passed through the 1,000-foot runway safety area, struck airport infrastructure and lighting, descended a steep downhill slope, crossed South Carolina Highway 302, and came to rest on an embankment before striking a lighting pole and perimeter fence (p. 2-3)"
+    }
+  ],
+  "chain": [
+    ["maintenance_error", "takeoff_performance_error"],
+    ["takeoff_performance_error", "uncontained_engine_failure"],
+    ["uncontained_engine_failure", "hydraulic_failure"],
+    ["uncontained_engine_failure", "thrust_reverser_inflight"],
+    ["procedural_noncompliance", "runway_overrun"],
+    ["hydraulic_failure", "runway_overrun"],
+    ["thrust_reverser_inflight", "runway_overrun"],
+    ["design_deficiency", "thrust_reverser_inflight"]
+  ],
+  "events": [
+    {
+      "t": -240,
+      "clock": "23:47:04",
+      "phase": "ground",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Ground controller provided taxi clearance to runway 11; captain initially turned left onto taxiway U instead of following amended clearance (p. 2)"
+    },
+    {
+      "t": -135,
+      "clock": "23:51:22",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain briefed rejected takeoff procedure; stated would abort for anything below 80 knots after V1, and after V2 would treat as in-flight emergency (p. 2)"
+    },
+    {
+      "t": 0,
+      "clock": "23:55:00",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain initiated takeoff roll from runway 11 at Columbia Metropolitan Airport (p. 2)"
+    },
+    {
+      "t": 10,
+      "clock": "23:55:10",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "First officer reported V1 decision speed of 136 knots reached (p. 2)"
+    },
+    {
+      "t": 12,
+      "clock": "23:55:12",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Loud rumbling sound began; aircraft at position corresponding to first main landing gear tire fragment location; multiple tires failed during takeoff roll (p. 2)",
+      "factors": ["takeoff_performance_error", "maintenance_error"]
+    },
+    {
+      "t": 13,
+      "clock": "23:55:13",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Ground controller observed sparks from right main landing gear area (p. 2-3)"
+    },
+    {
+      "t": 14,
+      "clock": "23:55:14",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft ground speed reached peak of approximately 144 knots; captain stated 'go?' indicating uncertainty; aircraft had exceeded V1 speed (p. 2)"
+    },
+    {
+      "t": 17,
+      "clock": "23:55:17",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain stated 'I don't know. We're not goin' though.' - decision to execute rejected takeoff after V1 (p. 2)",
+      "factors": ["procedural_noncompliance"]
+    },
+    {
+      "t": 19,
+      "clock": "23:55:19",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain commanded 'full out' (full reverse thrust) (p. 2)"
+    },
+    {
+      "t": 20,
+      "clock": "23:55:20",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Tire debris damaged hydraulic system and air-ground sensor; air-ground sensor went to air mode, preventing reverse thrust engagement; uncommanded forward thrust occurred instead (p. 2)",
+      "factors": ["uncontained_engine_failure", "thrust_reverser_inflight"]
+    },
+    {
+      "t": 21,
+      "clock": "23:55:21",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft brakes failed due to hydraulic system damage; aircraft began accelerating despite reverse thrust commands (p. 2)",
+      "factors": ["hydraulic_failure"]
+    },
+    {
+      "t": 41,
+      "clock": "23:55:41",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft overran runway 11, passed through runway safety area, struck airport lighting and navigation antennas, descended steep downhill slope, crossed South Carolina Highway 302, and came to rest on embankment with aircraft destroyed by impact and fire; captain, first officer, and two passengers killed; two passengers seriously injured (p. 3)",
+      "factors": ["runway_overrun"]
+    }
+  ],
+  "cvr": [
+    {
+      "t": 10,
+      "clock": "23:55:10",
+      "speaker": "FO",
+      "text": "V-one"
+    },
+    {
+      "t": 17,
+      "clock": "23:55:17",
+      "speaker": "CAPT",
+      "text": "I don't know. We're not goin' though."
+    },
+    {
+      "t": 19,
+      "clock": "23:55:19",
+      "speaker": "CAPT",
+      "text": "full out"
+    },
+    {
+      "t": 27,
+      "clock": "23:55:27",
+      "speaker": "FO",
+      "text": "shut 'em off"
+    },
+    {
+      "t": 36,
+      "clock": "23:55:36",
+      "speaker": "FO",
+      "text": "roll the equipment we're goin' off the end"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-10-46",
+      "to": "FAA",
+      "text": "Provide pilots and maintenance personnel with information that (1) transport-category aircraft tires can lose up to 5-percent pressure per day, (2) it may take only a few days for such tires to reach an underinflation level below what the aircraft maintenance manual specifies for tire replacement, and (3) the underinflation level that would require tire replacement is not visually detectable.",
+      "status": "unknown",
+      "trigger_factors": ["maintenance_error", "inadequate_inspection"]
+    },
+    {
+      "id": "A-10-47",
+      "to": "FAA",
+      "text": "Require that all 14 Code of Federal Regulations Part 121, 135, and 91 subpart K operators perform tire pressure checks at a frequency that will ensure that the tires remain inflated to within aircraft maintenance manual-specified inflation pressures.",
+      "status": "unknown",
+      "trigger_factors": ["maintenance_error", "inadequate_inspection"]
+    },
+    {
+      "id": "A-10-48",
+      "to": "FAA",
+      "text": "Require that aircraft maintenance manuals specify, in a readily identifiable and standardized location, required maintenance intervals for tire pressure checks (as applicable to each aircraft).",
+      "status": "unknown",
+      "trigger_factors": ["maintenance_error", "inadequate_inspection"]
+    },
+    {
+      "id": "A-10-49",
+      "to": "FAA",
+      "text": "Allow pilots to perform tire pressure checks on aircraft, regardless of whether the aircraft is operating under 14 Code of Federal Regulations Part 91, Part 91 subpart K, or Part 135.",
+      "status": "unknown",
+      "trigger_factors": ["maintenance_error", "inadequate_inspection"]
+    },
+    {
+      "id": "A-10-50",
+      "to": "FAA",
+      "text": "Require tire pressure monitoring systems for all transport-category airplanes.",
+      "status": "unknown",
+      "trigger_factors": ["maintenance_error", "inadequate_inspection"]
+    },
+    {
+      "id": "A-10-51",
+      "to": "FAA",
+      "text": "Identify the deficiencies in Learjet's system safety analyses, both for the original Learjet 60 design and for the modifications after the 2001 accident, that failed to properly address the thrust reverser system design flaws related to this accident, and require Learjet to perform a system safety assessment in accordance with 14 Code of Federal Regulations 25.1309 for all other systems that also rely on air-ground signal integrity and ensure that hazards resulting from a loss of signal integrity are appropriately mitigated to fully comply with this regulation.",
+      "status": "unknown",
+      "trigger_factors": ["design_deficiency", "thrust_reverser_inflight"]
+    },
+    {
+      "id": "A-10-52",
+      "to": "FAA",
+      "text": "Revise available safety assessment guidance (such as Advisory Circular 25.1309-1A) for manufacturers to adequately address the deficiencies identified in Safety Recommendation A-10-51, require that designated engineering representatives and their Federal Aviation Administration (FAA) mentors are trained on this methodology, and modify FAA design oversight procedures to ensure that manufacturers are performing system safety analyses for all new or modified designs that effectively identify and properly mitigate hazards for all phases of flight, including foreseeable events during those phases (such as a rejected takeoff).",
+      "status": "unknown",
+      "trigger_factors": ["design_deficiency"]
+    },
+    {
+      "id": "A-10-55",
+      "to": "FAA",
+      "text": "Define and codify minimum simulator model fidelity requirements for tire failure scenarios. These requirements should include tire failure scenarios during takeoff that present the need for rapid evaluation and execution of procedures and provide realistic sound and motion cueing.",
+      "status": "unknown",
+      "trigger_factors": ["pilot_experience", "inadequate_training"]
+    },
+    {
+      "id": "A-10-56",
+      "to": "FAA",
+      "text": "Once the simulator model fidelity requirements requested in Safety Recommendation A-10-55 are implemented, require that simulator training for pilots who conduct turbojet operations include opportunities to practice responding to events other than engine failures occurring both near V1 and after V1, including, but not limited to, tire failures.",
+      "status": "unknown",
+      "trigger_factors": ["pilot_experience", "inadequate_training"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced maintenance requirements for tire pressure checks on transport-category aircraft",
+    "Improved design standards for thrust reverser system safety",
+    "Increased emphasis on tire failure recognition and response in simulator training"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1002.pdf"],
+  "asn_id": "20080919-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/2008_South_Carolina_Learjet_60_crash",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1002.pdf",
+    "https://data.ntsb.gov/Docket?ProjectID=68960"
+  ],
+  "interest": 9.25,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read key sections: Executive Summary (p. viii-12), History of Flight (p. 1-3), key findings (p. 71-72), and Probable Cause (p. 73)",
+      "Complete NTSB investigation with clear findings on all contributing factors",
+      "Multiple causal factors identified: maintenance failures, design flaws, procedural noncompliance, and crew resource management issues",
+      "CVR transcript provides precise timing of events; ground speed estimates from accident performance studies"
+    ]
+  }
+}

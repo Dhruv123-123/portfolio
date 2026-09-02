@@ -1,0 +1,172 @@
+{
+  "id": "wd_q48815366",
+  "qid": "Q48815366",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Graham Hill plane crash",
+  "flight_number": null,
+  "date": "1975-11-29",
+  "time_reference": "GMT",
+  "t0": "1975-11-29T21:29:00Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "14/1976",
+      "report_title": "Report on the accident at Arkley golf course, Arkley, Hertfordshire, on 29 November 1975",
+      "report_date": "1976-09"
+    }
+  ],
+  "aircraft": {
+    "type": "Piper PA-23-250D Aztec",
+    "manufacturer": "Piper",
+    "family": "PA-23",
+    "registration": "N6645Y"
+  },
+  "operator": "Grand Prix (Bahamas) Ltd",
+  "route": {
+    "from": "LFMR",
+    "from_name": "Le Castellet",
+    "to": "EGSL",
+    "to_name": "Elstree Airfield"
+  },
+  "location": {
+    "name": "Arkley Golf Course, Arkley, Barnet, London",
+    "country": "United Kingdom",
+    "lat": 51.65,
+    "lon": -0.233
+  },
+  "phase": "approach",
+  "occupants": 6,
+  "fatalities": 6,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Piper PA-23-250D Aztec N6645Y crashed near Arkley, London, on 29 November 1975 at 21:29 GMT during a visual contact approach to Elstree Airfield in thick fog with visibility of 800-1000 metres. The aircraft was 3 nautical miles from Elstree when it struck trees at 458 feet elevation and crashed. The pilot had descended prematurely, likely mistaking ground lights in the fog and underestimating his distance from the airfield.",
+  "probable_cause": "The pilot descended the aircraft prematurely due to misidentification of ground features and lights in thick fog, likely mistaking the lights of Barnet for Boreham Wood and believing he was closer to Elstree aerodrome than he actually was.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Thick fog prevailed at the accident site with visibility of 50-100 metres; Elstree visibility reported as 800 metres during approach (p. 2-3)."
+    },
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "Accident occurred at 21:29 hrs during a nighttime approach, removing external visual references and making ground lights more prominent (p. 2)."
+    },
+    {
+      "id": "visual_illusion",
+      "role": "contributing",
+      "evidence": "The pilot likely mistook lights of Barnet for Boreham Wood and the dark Arkley Golf Course for the unlit area next to Elstree airfield, believing himself closer to landing than actually was (p. 11)."
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "Aircraft descended to 458 feet amsl in fog without sufficient visual references to identify terrain features; cloud base was reported as 300 feet agl (p. 3)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck tree tops at 458 feet elevation 3 nautical miles east of Elstree airfield and descended further, colliding with trees and ground with all six occupants killed instantly (p. 2)."
+    }
+  ],
+  "chain": [
+    ["low_visibility", "visual_illusion"],
+    ["dark_night", "visual_illusion"],
+    ["visual_illusion", "descent_below_minimums"],
+    ["descent_below_minimums", "cfit"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "15:30",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft departed Le Castellet aerodrome with IFR flight plan filed for Elstree with Luton alternate"
+    },
+    {
+      "t": 7200,
+      "clock": "20:45",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Contacted London Air Traffic Control Centre; weather report for Elstree obtained: visibility 2000 metres, cloud base 300 feet agl (p. 2)",
+      "factors": ["low_visibility"]
+    },
+    {
+      "t": 8040,
+      "clock": "21:21",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Descended to 4000 feet; informed visibility at Elstree had decreased to 800 metres (p. 2)",
+      "factors": ["low_visibility"]
+    },
+    {
+      "t": 8100,
+      "clock": "21:28",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft reached 1500 feet on approach to Elstree; 4 nautical miles east of runway; pilot given discretion for further descent (p. 2)",
+      "state": {"alt": 1500}
+    },
+    {
+      "t": 8140,
+      "clock": "21:28",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot believed he was in contact with Elstree tower and called 'finals'; radar showed aircraft 2.75 nm from Elstree (p. 2)",
+      "factors": ["visual_illusion"]
+    },
+    {
+      "t": 8160,
+      "clock": "21:29",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck trees at 458 feet elevation on Arkley Golf Course, 3 nm east of Elstree; caught fire and was completely destroyed; all six occupants killed instantly (p. 2)",
+      "state": {"alt": 458},
+      "factors": ["cfit"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "UK",
+      "text": "Consideration should be given to the publication of recommended aerodrome operating minima for non-public transport flights at all airfields in the United Kingdom where it is reasonably practicable to do so",
+      "status": "unknown",
+      "trigger_factors": ["low_visibility", "descent_below_minimums"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["http://www.aaib.gov.uk/publications/formal_reports/14_1976__n6645y.cfm"],
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Graham_Hill_plane_crash",
+  "report_links": [
+    "http://www.aaib.gov.uk/publications/formal_reports/14_1976__n6645y.cfm",
+    "https://www.gov.uk/aaib-reports/14-1976-piper-pa-23-250-turbo-aztec-d-n6645y-29-november-1975"
+  ],
+  "interest": 9.38,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read key sections: synopsis (p. 1-2), aircraft and pilot information (p. 3-8), analysis including premature descent hypothesis (p. 10-11), and findings/recommendations (p. 13-14)",
+      "Report uncertain about exact cause but probability of premature descent due to visual misidentification is strong",
+      "Pilot's ratings had expired; aircraft was unregistered but properly maintained"
+    ]
+  }
+}
