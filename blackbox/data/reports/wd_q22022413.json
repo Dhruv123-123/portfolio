@@ -1,0 +1,157 @@
+{
+  "id": "wd_q22022413",
+  "qid": "Q22022413",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Downeast 46",
+  "flight_number": null,
+  "date": "1979-05-30",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "de Havilland Canada DHC-6 Twin Otter",
+    "manufacturer": "de Havilland Canada",
+    "family": "Twin Otter",
+    "registration": null
+  },
+  "operator": "Downeast Airlines",
+  "route": {
+    "from_name": "Boston",
+    "to_name": "Rockland"
+  },
+  "location": {
+    "name": "Rockland",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 18,
+  "fatalities": 17,
+  "category": "CFIT",
+  "summary": "Downeast Airlines Flight 46 crashed during a nonprecision approach to Rockland's Knox County Regional Airport on 30 May 1979. The crew descended the Twin Otter below minimum descent altitude in heavy fog while attempting to see the runway visually, killing all but one of 18 occupants.",
+  "probable_cause": "The flight crew failed to stop the aircraft descent below the minimum descent altitude for the non-precision approach. The crew descended below minimums attempting to see the runway in heavy fog, resulting in controlled flight into terrain.",
+  "factors": [
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "crew descended the Twin Otter below minimum descent altitude in order to see the runway in heavy fog"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "fog was extremely common at Knox County airport; fog is often thicker over the sea than over land"
+    },
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "crash occurred on night of poor visibility and fog"
+    },
+    {
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "first officer had been with airline for two months and had only flown single-engine aircraft"
+    },
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "captain exhibited symptoms of extreme stress in weeks before crash"
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "contributing",
+      "evidence": "several senior pilots had left the company due to management style"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "crashed during a nonprecision approach at Knox County airport"
+    }
+  ],
+  "chain": [
+    [
+      "descent_below_minimums",
+      "cfit"
+    ],
+    [
+      "low_visibility",
+      "descent_below_minimums"
+    ],
+    [
+      "fatigue",
+      "descent_below_minimums"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 46 began approach to Knox County Regional Airport in poor visibility",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Crew descended Twin Otter below minimum descent altitude to attempt to see runway in fog",
+      "factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed during the nonprecision approach at Knox County airport",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "All but one of 18 people on board were killed in the crash",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8005.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Downeast_Airlines_Flight_46",
+  "asn_id": "19790530-0",
+  "interest": 11.71,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read key sections from official report"
+    ]
+  },
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8005.pdf"
+  ],
+  "curated_id": null,
+  "agencies": [
+    {
+      "code": "NTSB",
+      "role": "lead"
+    }
+  ],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": []
+}

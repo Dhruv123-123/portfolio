@@ -1,0 +1,161 @@
+{
+  "id": "wd_q7887735",
+  "qid": "Q7887735",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "United Express 2415",
+  "flight_number": "UX2415",
+  "date": "1989-12-26",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "British Aerospace Jetstream 31",
+    "manufacturer": "British Aerospace",
+    "family": "Jetstream",
+    "registration": "N410UE"
+  },
+  "operator": "United Express",
+  "route": {
+    "from_name": "Seattle-Tacoma International Airport",
+    "to_name": "Tri-Cities Airport"
+  },
+  "location": {
+    "name": "Tri-Cities Airport",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 6,
+  "fatalities": 6,
+  "category": "LOC-I",
+  "summary": "United Express Flight 2415 crashed 400 feet short of runway 21R at Tri-Cities Airport on December 26, 1989, during final approach. The aircraft had accumulated airframe icing after the captain declined de-icing at Yakima, and slowed to 110 knots while descending steeply. The combination of icing, low speed, and excessive descent rate resulted in loss of control.",
+  "probable_cause": "The National Transportation Safety Board determined that the combination of airframe icing, failure to obtain ground de-icing, low airspeed, and excessive descent rate resulted in loss of control of the aircraft during approach.",
+  "factors": [
+    {
+      "id": "deicing_inadequate",
+      "role": "latent",
+      "evidence": "Captain Roberts declined de-icing at Yakima despite offers"
+    },
+    {
+      "id": "airframe_icing",
+      "role": "contributing",
+      "evidence": "Ice had likely built up on the plane's wings during the flight in light to moderate mixed icing"
+    },
+    {
+      "id": "low_energy_state",
+      "role": "contributing",
+      "evidence": "Flight 2415 had slowed to 110 knots as it attempted to descend"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The combination of an excessively steep descent, low speed, and aircraft icing likely resulted in loss of control"
+    }
+  ],
+  "chain": [
+    [
+      "deicing_inadequate",
+      "airframe_icing"
+    ],
+    [
+      "airframe_icing",
+      "loss_of_control_inflight"
+    ],
+    [
+      "low_energy_state",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": -4500,
+      "clock": "20:45",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 2415 departed Seattle at 20:45 PST",
+      "factors": []
+    },
+    {
+      "t": -720,
+      "clock": "21:48",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain Roberts declined de-icing at Yakima despite offers",
+      "factors": [
+        "deicing_inadequate"
+      ]
+    },
+    {
+      "t": 0,
+      "clock": "22:01",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 2415 departed Yakima en route to Pasco and climbed to a cruising altitude of 11000 ft",
+      "factors": []
+    },
+    {
+      "t": 1500,
+      "clock": "22:26",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 2415 was cleared for an Instrument Landing System approach to runway 21R",
+      "factors": []
+    },
+    {
+      "t": 1740,
+      "clock": "22:30",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 2415 observed flying higher than normal for final approach and descending faster than normal",
+      "factors": [
+        "airframe_icing",
+        "low_energy_state"
+      ]
+    },
+    {
+      "t": 1800,
+      "clock": "22:30",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck the ground 400 ft short of runway 21R",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR91-06.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Express_Flight_2415",
+  "asn_id": "19891226-0",
+  "interest": 11.65,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read key sections from official report"
+    ]
+  },
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR91-06.pdf"
+  ],
+  "curated_id": null,
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": []
+}

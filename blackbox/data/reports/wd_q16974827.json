@@ -1,0 +1,181 @@
+{
+  "id": "wd_q16974827",
+  "qid": "Q16974827",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Flagship Airlines 3379",
+  "flight_number": "FL3379",
+  "date": "1994-12-13",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "British Aerospace Jetstream 32",
+    "manufacturer": "British Aerospace",
+    "family": "Jetstream",
+    "registration": "N918AE"
+  },
+  "operator": "Flagship Airlines",
+  "route": {
+    "from_name": "Greensboro",
+    "to_name": "Raleigh-Durham"
+  },
+  "location": {
+    "name": "Morrisville",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 20,
+  "fatalities": 15,
+  "category": "LOC-I",
+  "summary": "On approach to Raleigh-Durham, the captain became distracted by a cockpit warning light and incorrectly assumed an engine had failed. He initiated a go-around but mishandled the procedure, allowing airspeed to decay until the aircraft entered a stall. Despite the first officer's attempts to push the nose down, there was insufficient altitude to recover before impact 4 miles southwest of the runway threshold.",
+  "probable_cause": "Captain Hillis misidentified a warning light as an engine failure, called for an incorrect go-around, and failed to follow proper procedures for stall recovery. The captain's history of procedural non-compliance and Flagship Airlines management's failure to identify and remedy training deficiencies contributed to the accident.",
+  "factors": [
+    {
+      "id": "stall_misdiagnosis",
+      "role": "initiating",
+      "evidence": "the captain became distracted by a warning light going off in the cockpit and assumed that an engine had failed"
+    },
+    {
+      "id": "go_around_not_flown",
+      "role": "contributing",
+      "evidence": "the captain called for a go-around and try the landing again. However, the captain mishandled the go-around procedure"
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "the aircraft subsequently entered a stall condition"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "airspeed continued to decrease and the aircraft entered a rapid descent of up to 10,000 feet per minute"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "crashed 4 miles southwest of the runway threshold"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "Captain Hillis (who was cited for failing to follow cockpit procedures at previous airlines) failed to follow the proper procedures for a single-engine go-around and proper stall recovery techniques"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Weather along the flight route of flight 3379 was reported to be foggy with sleet and slush"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "the captain mishandled the go-around procedure, allowing the aircraft's speed to decrease to the point where flight was no longer possible"
+    }
+  ],
+  "chain": [
+    [
+      "stall_misdiagnosis",
+      "go_around_not_flown"
+    ],
+    [
+      "go_around_not_flown",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ],
+    [
+      "inadequate_training",
+      "procedural_noncompliance"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "18:32",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight cleared to land to which crew acknowledged; this was the final transmission",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain became distracted by warning light and assumed engine had failed; called for go-around with increase in engine power",
+      "factors": [
+        "stall_misdiagnosis"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Two simultaneous stall warnings sounded and airspeed continued to decrease despite power increase",
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer pushed nose down following captain's command but insufficient altitude remained to gain speed",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft entered rapid descent up to 10,000 feet per minute and impacted ground 4 miles southwest of runway threshold, bursting into flames",
+      "factors": [
+        "loss_of_control_inflight",
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR95-07.pdf",
+    "https://www.ntsb.gov/_layouts/ntsb.aviation/Results.aspx?queryId=e199e50f-87c6-4ec6-adcd-6a6b75dbd5af"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Flagship_Airlines_Flight_3379",
+  "asn_id": "19941213-0",
+  "interest": 13.32,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read key sections from official report"
+    ]
+  },
+  "sources": [
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR95-07.pdf"
+  ],
+  "curated_id": null,
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": []
+}
