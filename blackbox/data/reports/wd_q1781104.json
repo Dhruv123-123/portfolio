@@ -1,0 +1,162 @@
+{
+  "id": "wd_q1781104",
+  "title": "Southern Airways 242",
+  "flight_number": "SA242",
+  "date": "1977-04-04",
+  "time_reference": "Local",
+  "t0": "1977-04-04T04:10:00-06:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-78-03",
+      "report_title": "Aircraft Accident Report - Southern Airways Flight 242"
+    }
+  ],
+  "aircraft": {
+    "type": "Douglas DC-9-31",
+    "manufacturer": "Douglas",
+    "family": "DC-9",
+    "registration": "N1335U"
+  },
+  "operator": "Southern Airways",
+  "route": {
+    "from": "HSV",
+    "from_name": "Huntsville",
+    "to": "ATL",
+    "to_name": "Atlanta"
+  },
+  "location": {
+    "name": "New Hope, Georgia",
+    "country": "United States"
+  },
+  "phase": "landing",
+  "occupants": 85,
+  "fatalities": 72,
+  "damage": "destroyed",
+  "category": "OTHR",
+  "summary": "Southern Airways Flight 242 suffered total loss of thrust from both engines while descending through a severe thunderstorm with embedded cells. The aircraft encountered massive rain and hail that broke the windshield and caused both engines to ingest water and hail, resulting in compressor stalling and flameout. The crew successfully glided the aircraft unpowered to a forced landing on Georgia State Route 381.",
+  "probable_cause": "Total loss of thrust from both engines caused by ingestion of massive amounts of water and hail during penetration of severe thunderstorm cell. The crew's misinterpretation of weather radar attenuation contributed to the decision to penetrate the storm. Contributing was thrust lever movement that induced severe stalling and major damage to the engine compressors.",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "latent",
+      "evidence": "The aircraft descended from cruising altitude of 17,000 feet to near Rome VOR and apparently entered a thunderstorm cell, encountering a massive amount of rain and hail"
+    },
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "The hail was so intense that it broke the aircraft's windshield"
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "The crew was apparently misled by the radar's attenuation effect and proceeded toward what they believed was a low-intensity area, when in fact it was the peak convective activity point"
+    },
+    {
+      "id": "dual_engine_failure",
+      "role": "outcome",
+      "evidence": "The Pratt & Whitney JT8D-7A engines ingested a massive amount of water and hail causing major damage to the compressors and flameout"
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "The crew glided the aircraft unpowered and executed a forced landing on Georgia State Route 381"
+    }
+  ],
+  "chain": [
+    [
+      "convective_weather",
+      "dual_engine_failure"
+    ],
+    [
+      "mode_confusion",
+      "dual_engine_failure"
+    ],
+    [
+      "dual_engine_failure",
+      "emergency_landing"
+    ]
+  ],
+  "events": [
+    {
+      "t": -300,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight cleared to proceed to Rome VOR where peak convective activity was occurring",
+      "factors": [
+        "mode_confusion"
+      ]
+    },
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Aircraft encountered severe thunderstorm with massive rain and hail",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Windshield broken by hail; both engines ingested water and hail causing compressor damage and flameout",
+      "factors": [
+        "dual_engine_failure"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Crew executed successful forced landing on Georgia State Route 381 in unpowered glide",
+      "factors": [
+        "emergency_landing"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Improved weather radar training for crews on radar attenuation effects",
+    "Enhanced severe weather avoidance procedures",
+    "Improved engine inlet protection from hail ingestion"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7803.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q1781104",
+  "asn_id": "19770404-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/Southern_Airways_Flight_242",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7803.pdf"
+  ],
+  "interest": 16.82,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Findings, Probable Cause, and event timeline from NTSB Report AAR-78-03"
+    ]
+  }
+}

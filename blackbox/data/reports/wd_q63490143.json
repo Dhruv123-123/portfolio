@@ -44,7 +44,7 @@
   "probable_cause": "At 15:08 UTC, the aircraft was struck by lightning at flight level 89, causing primary radio and autopilot to become inoperative. The flight control mode changed to DIRECT, a degraded mode of operation. The captain attempted to land with excessive crosswind and the aircraft bounced, touched down hard, causing the landing gear to collapse and fuel spillage from the wings.",
   "factors": [
     {
-      "id": "lightning_strike",
+      "id": "adiru_failure",
       "role": "initiating",
       "evidence": "The aircraft was struck by lightning at flight level 89, causing primary radio and autopilot to become inoperative"
     },
@@ -71,7 +71,7 @@
   ],
   "chain": [
     [
-      "lightning_strike",
+      "adiru_failure",
       "flight_control_law_degradation"
     ],
     [
@@ -104,7 +104,7 @@
       "kind": "system",
       "text": "At 15:08 UTC, the aircraft was struck by lightning at flight level 89 and primary radio and autopilot became inoperative.",
       "factors": [
-        "lightning_strike"
+        "adiru_failure"
       ]
     },
     {

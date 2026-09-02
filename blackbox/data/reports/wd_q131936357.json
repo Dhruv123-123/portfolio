@@ -1,0 +1,212 @@
+{
+  "id": "wd_q131936357",
+  "title": "2025 Potomac River mid-air collision",
+  "flight_number": "AA5342",
+  "date": "2025-01-29",
+  "time_reference": "EST",
+  "t0": "2025-01-29T20:47:59Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AIR-26-02",
+      "report_date": "2026-01-27",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2602.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Bombardier CRJ700",
+    "manufacturer": "Bombardier",
+    "family": "CRJ",
+    "registration": "N709PS"
+  },
+  "operator": "PSA Airlines",
+  "route": {
+    "from": "ICT",
+    "from_name": "Wichita Dwight D. Eisenhower",
+    "to": "DCA",
+    "to_name": "Ronald Reagan Washington National"
+  },
+  "location": {
+    "name": "Potomac River, Washington DC",
+    "country": "United States",
+    "lat": 38.85,
+    "lon": -77.04
+  },
+  "phase": "approach",
+  "occupants": 67,
+  "fatalities": 67,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "American Airlines Flight 5342, a CRJ700 regional jet, collided in mid-air with a U.S. Army UH-60L Black Hawk helicopter over the Potomac River near Ronald Reagan Washington National Airport. The collision occurred at 8:47 p.m. at an altitude of about 300 feet. Both aircraft were in communication with air traffic control, and the helicopter crew reported visual contact, though it remains unclear whether they were monitoring the correct aircraft. All 67 occupants of both aircraft perished.",
+  "probable_cause": "The Federal Aviation Administration's placement of a helicopter route in close proximity to a runway approach path; their failure to regularly review and evaluate helicopter routes and available data, and their failure to act on recommendations to mitigate midair collision risk near Ronald Reagan Washington National Airport; as well as the air traffic system's overreliance on visual separation without consideration for the limitations of the see-and-avoid concept. Also causal was the lack of effective pilot-applied visual separation by the helicopter crew. Additional causal factors were the tower team's loss of situation awareness and degraded performance due to high workload from combined helicopter and local control positions.",
+  "factors": [
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "Part of transmission advising CRJ was circling not captured by helicopter CVR; radio push-to-talk switch blocked controller instruction to pass behind (p. 1-6)."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "contributing",
+      "evidence": "TCAS resolution advisories disabled by design below 900 ft AGL (p. xxii)."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Helicopter crew reported visual contact with airliner and visual separation twice though unknown if monitoring correct aircraft (p. 1-7)."
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "CRJ700 airliner and UH-60L helicopter collided in mid-air; all 67 aboard both aircraft killed (p. xxi)."
+    }
+  ],
+  "chain": [
+    [
+      "atc_communication_error",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "midair_collision"
+    ]
+  ],
+  "events": [
+    {
+      "t": -240,
+      "clock": "20:43",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 5342 makes initial contact with Reagan National control tower for Mount Vernon Visual Approach to runway 1",
+      "factors": []
+    },
+    {
+      "t": -60,
+      "clock": "20:46",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller advises PAT25 of CRJ at 1200 feet south of Woodrow Wilson Bridge; helicopter crew reports visual contact and requests visual separation",
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": -26,
+      "clock": "20:47:33",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Conflict alert begins on controller's display; Flight 5342 receives TCAS traffic advisory at 448 feet radio altitude",
+      "factors": [
+        "warning_system_deficiency"
+      ]
+    },
+    {
+      "t": -15,
+      "clock": "20:47:44",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller instructs helicopter to pass behind but transmission blocked by radio push-to-talk; helicopter crew claims aircraft in sight and requests visual separation",
+      "factors": [
+        "atc_communication_error",
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 0,
+      "clock": "20:47:59",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft collide in mid-air over Potomac River at approximately 300 feet altitude about 0.5 miles from DCA runway 33 threshold",
+      "factors": [
+        "midair_collision"
+      ],
+      "state": {
+        "alt": 300
+      }
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-26-8",
+      "to": "FAA",
+      "text": "Develop and implement time-on-position limitations for supervisory air traffic control personnel"
+    },
+    {
+      "id": "A-26-25",
+      "to": "FAA",
+      "text": "Conduct safety risk management process to evaluate modifications to helicopter route structure near DCA"
+    },
+    {
+      "id": "A-26-26",
+      "to": "FAA",
+      "text": "Amend helicopter route design criteria to ensure vertical separation from airport approach paths"
+    },
+    {
+      "id": "A-26-30",
+      "to": "FAA",
+      "text": "Require existing and new TCAS I/II and airborne collision avoidance system X installations to integrate directional traffic symbols"
+    },
+    {
+      "id": "A-26-31",
+      "to": "FAA",
+      "text": "Require all aircraft in ADS-B Out airspace to also be equipped with ADS-B In with display"
+    },
+    {
+      "id": "A-26-41",
+      "to": "US Army",
+      "text": "Revise training procedures for flight crews assigned to Washington DC area operations"
+    },
+    {
+      "id": "A-25-1",
+      "to": "FAA",
+      "text": "Prohibit operations on Helicopter Route 4 between Hains Point and Wilson Bridge when runways 15 and 33 in use"
+    },
+    {
+      "id": "A-25-2",
+      "to": "FAA",
+      "text": "Designate alternative helicopter route for use between Hains Point and Wilson Bridge when Route 4 closed"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "FAA reviews helicopter routes near major airports",
+    "Enhanced TCAS requirements at low altitudes"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2602.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "full",
+  "qid": "Q131936357",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/2025_Potomac_River_mid-air_collision",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2602.pdf",
+    "https://www.ntsb.gov/investigations/Documents/DCA25MA108%20Prelim.pdf"
+  ],
+  "interest": 16.44,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Recent accident with detailed final report",
+      "Sections read: History of Flight, Findings (74 items), Probable Cause, and Recommendations (59 total)",
+      "Midair collision with complex causal factors including ATC workload and system limitations"
+    ]
+  }
+}

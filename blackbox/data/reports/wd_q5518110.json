@@ -1,0 +1,206 @@
+{
+  "id": "wd_q5518110",
+  "title": "Galaxy Airlines 203",
+  "flight_number": "GA203",
+  "date": "1985-01-21",
+  "time_reference": "PST",
+  "t0": "1985-01-21T01:04:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-86-01",
+      "report_date": "1986-02-04",
+      "url": "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR86-01.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Lockheed L-188A Electra",
+    "manufacturer": "Lockheed",
+    "family": "Electra",
+    "registration": "N5532",
+    "msn": "1121"
+  },
+  "operator": "Galaxy Airlines",
+  "route": {
+    "from": "RNO",
+    "from_name": "Reno",
+    "to": "MSP",
+    "to_name": "Minneapolis"
+  },
+  "location": {
+    "name": "Near Reno, Nevada",
+    "country": "United States"
+  },
+  "phase": "takeoff",
+  "occupants": 71,
+  "fatalities": 70,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Galaxy Airlines Flight 203, a Lockheed L-188 Electra, experienced severe vibrations shortly after takeoff from Reno. The pilots mistakenly attributed the vibrations to a faulty engine and reduced power to all four engines simultaneously. This caused loss of lift and induced an aerodynamic stall. The aircraft crashed nose-high onto Reno Field approximately 1.5 miles from the runway end.",
+  "probable_cause": "The captain's failure to control and the copilot's failure to monitor the flight path and airspeed of the aircraft. This breakdown in crew coordination followed the onset of unexpected vibration shortly after takeoff. Contributing to the accident was the failure of ground handlers to properly close an air start access door, which led to the vibration.",
+  "factors": [
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "Ground crew failed to properly close air start access door before aircraft was taxied from service ramp (p. 2, Finding 10)."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "initiating",
+      "evidence": "Aircraft stalled from insufficient engine power to maintain flight at too low altitude to effect recovery (p. 2, Finding 13)."
+    },
+    {
+      "id": "stall_misdiagnosis",
+      "role": "contributing",
+      "evidence": "Captain reacted to vibration by reducing power in all four engines, indicating belief vibration was caused by powerplants or propellers (p. 2, Finding 14)."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Flightcrew did not complete required checklists prior to flight (p. 2, Finding 6)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft crashed at 105 knots in nose-high condition 1.5 miles short of runway end (p. 2)."
+    }
+  ],
+  "chain": [
+    [
+      "maintenance_error",
+      "aerodynamic_stall"
+    ],
+    [
+      "stall_misdiagnosis",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "01:01",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Aircraft took off from Reno and immediately experienced significant vibrations due to open air start access door",
+      "factors": [
+        "maintenance_error"
+      ]
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilots reduced power to all four engines, misinterpreting vibrations as faulty engine",
+      "factors": [
+        "stall_misdiagnosis"
+      ]
+    },
+    {
+      "t": 45,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Airspeed decreased as aircraft lost thrust; aerodynamic stall developed in nose-high attitude",
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "01:04",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed onto Reno Field at 105 knots in nose-high condition 1.5 miles short of runway end",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [
+    {
+      "t": -10,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "It's gettin' choppy",
+      "translation": null
+    },
+    {
+      "t": 5,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "I'm going to try a turn",
+      "translation": null
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-86-14",
+      "to": "FAA",
+      "text": "Issue Airworthiness Directive to modify Electra air start access door to prevent inflight opening"
+    },
+    {
+      "id": "A-86-15",
+      "to": "FAA",
+      "text": "Until air start access doors are modified, inform operators of potential for open door to cause vibration and ensure information in recurrent pilot training"
+    },
+    {
+      "id": "A-86-16",
+      "to": "FAA",
+      "text": "Establish and enforce procedures for adequate surveillance when carrier operations away from responsible office"
+    },
+    {
+      "id": "A-86-17",
+      "to": "FAA",
+      "text": "Instruct Principal Operations Inspectors to verify operators' maintenance and service competence at transient locations"
+    },
+    {
+      "id": "A-86-19",
+      "to": "FAA",
+      "text": "Provide guidance and training on cockpit resource management to all operators"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Airworthiness Directive for Electra air start door modifications",
+    "Enhanced cockpit resource management training requirements"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR86-01.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q5518110",
+  "asn_id": "19850121-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Galaxy_Airlines_Flight_203",
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR86-01.pdf"
+  ],
+  "interest": 15.48,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "1986 NTSB report with clear findings (22 items) and probable cause",
+      "Sections read: History of Flight, Findings, Probable Cause, and Recommendations",
+      "Classic case of pilot error responding to maintenance-induced vibrations"
+    ]
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "id": "wd_q17143589",
+  "title": "Si Fly 325",
+  "flight_number": "KSV3275",
+  "date": "1999-11-12",
+  "time_reference": "UTC",
+  "t0": "1999-11-12T10:58:00Z",
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enqu\u00eates et d'Analyses",
+      "country": "France",
+      "role": "lead",
+      "report_id": "f-fv991112a",
+      "report_date": "2000-03-15",
+      "url": "https://www.bea.aero/fileadmin/documents/docspa/1999/f-fv991112a/pdf/f-fv991112a_05.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "ATR 42-312",
+    "manufacturer": "ATR",
+    "family": "42",
+    "registration": "F-OHFV"
+  },
+  "operator": "Si Fly",
+  "route": {
+    "from": "FCO",
+    "from_name": "Rome",
+    "to": "PRZ",
+    "to_name": "Pristina"
+  },
+  "location": {
+    "name": "Near Pristina, Kosovo",
+    "country": "Kosovo"
+  },
+  "phase": "approach",
+  "occupants": 24,
+  "fatalities": 24,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "An ATR 42 on a shuttle flight from Rome to Pristina for UN aid workers struck a mountain during approach to Pristina on November 12, 1999. The crew, experiencing fatigue from a high flight roster, failed to execute appropriate approach procedures and descent below minimum altitudes. The faulty GPWS warning system failed to alert the crew. Combined with inadequate air traffic control vectoring, the aircraft failed to clear terrain.",
+  "probable_cause": "Crew teamwork lacking procedural discipline and vigilance during maneuvers in mountainous region with poor visibility. Aircraft kept on track then forgotten by military controller unused to mountainous environment and preventing CFIT risk. Operator's critical dependence on lease contract favoring failure to respect procedures. Opening of aerodrome to civil traffic without advance evaluation of operating conditions.",
+  "factors": [
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "Crew experiencing fatigue from high flight roster influencing failure to execute appropriate approach procedure (p. 65)."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Crew not following appropriate approach procedure; hastily conducted flight preparation without mentioning safety altitudes (p. 65)."
+    },
+    {
+      "id": "atc_workload_staffing",
+      "role": "contributing",
+      "evidence": "Controller extended flight KSV3275 track and appears to have forgotten it until crew called back (p. 65)."
+    },
+    {
+      "id": "gpws_warning_response",
+      "role": "contributing",
+      "evidence": "GPWS warning alarm did not sound; system broken down or switched off (p. 65)."
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "Aircraft at 4,600 feet crashed into mountain at 4,650 feet in area where MSA is 6,900 feet (p. 65)."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "initiating",
+      "evidence": "Crew appeared influenced by routine flights to Pristina; did not strictly follow appropriate briefing (p. 65)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck mountain terrain during approach to Pristina killing all 24 aboard (p. 65)."
+    }
+  ],
+  "chain": [
+    [
+      "fatigue",
+      "procedural_noncompliance"
+    ],
+    [
+      "procedural_noncompliance",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "cfit"
+    ],
+    [
+      "atc_workload_staffing",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "09:11",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "ATR 42 departs Rome Fiumicino with 3 crew and 21 passengers, mostly UN officials and aid workers",
+      "factors": []
+    },
+    {
+      "t": 4800,
+      "clock": "10:58",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Pristina ATC vectors aircraft to intercept ILS and instructs descent to 5,200 feet then 4,600 feet",
+      "factors": [
+        "atc_workload_staffing"
+      ]
+    },
+    {
+      "t": 5000,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PM",
+      "kind": "crew_action",
+      "text": "Crew changes to visual flight rules; not following appropriate approach procedure during briefing",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 5500,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "GPWS warns crew 17 seconds before impact; crew does not react",
+      "factors": [
+        "gpws_warning_response"
+      ]
+    },
+    {
+      "t": 5517,
+      "clock": "10:58",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck mountain terrain at 4,650 feet during approach to Pristina, killing all 24 aboard",
+      "factors": [
+        "cfit",
+        "descent_below_minimums"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "ICAO",
+      "text": "Opening to international civil traffic of an aerodrome not under effective authority of contracting State be subject to complete ICAO audit"
+    },
+    {
+      "id": null,
+      "to": "Italy/JAA",
+      "text": "Apply JAR OPS regulations in shortest possible time"
+    },
+    {
+      "id": null,
+      "to": "Civil Aviation Authorities",
+      "text": "Exercise reinforced surveillance of companies with recently acquired air transport certificate"
+    },
+    {
+      "id": null,
+      "to": "Airworthiness Authorities",
+      "text": "Make modifications mandatory which improve operation of essential equipment like GPWS"
+    },
+    {
+      "id": null,
+      "to": "JAR OPS",
+      "text": "Where GPWS mode failure occurs, make aircraft takeoff subject to establishing and following alternate procedures"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "ICAO audit requirements for aerodromes opening to international civil traffic",
+    "Enhanced GPWS testing requirements"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.bea.aero/fileadmin/documents/docspa/1999/f-fv991112a/pdf/f-fv991112a_05.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q17143589",
+  "asn_id": "19991112-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Si_Fly_Flight_3275",
+  "report_links": [
+    "https://www.bea.aero/fileadmin/documents/docspa/1999/f-fv991112a/pdf/f-fv991112a_05.pdf"
+  ],
+  "interest": 15.17,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "1999 BEA French investigation",
+      "Sections read: Findings, Probable Cause, and Recommendations",
+      "CFIT with complex factors including aerodrome opening without ICAO audit"
+    ]
+  }
+}

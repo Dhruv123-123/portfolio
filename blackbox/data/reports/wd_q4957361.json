@@ -1,0 +1,181 @@
+{
+  "id": "wd_q4957361",
+  "title": "Braniff 352",
+  "flight_number": null,
+  "date": "1968-05-03",
+  "time_reference": "CDT",
+  "t0": "1968-05-03T16:47:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-69-03",
+      "report_date": "1969-02-26",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR6903.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Lockheed L-188A Electra",
+    "manufacturer": "Lockheed",
+    "family": "L-188",
+    "registration": "N9707C"
+  },
+  "operator": "Braniff International Airways",
+  "route": {
+    "from": "IAH",
+    "from_name": "Houston",
+    "to": "DAL",
+    "to_name": "Dallas"
+  },
+  "location": {
+    "name": "Near Dawson, Texas",
+    "country": "United States"
+  },
+  "phase": "cruise",
+  "occupants": 85,
+  "fatalities": 85,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Braniff Flight 352, a Lockheed L-188A Electra, departed Houston for Dallas on May 3, 1968, climbing to 20,000 feet. About 25 minutes into flight, the crew encountered severe thunderstorm activity with hail and received clearance for a 180-degree right turn to escape the weather. During the turn, the aircraft's bank angle exceeded 90 degrees and nose pitched down 40 degrees, producing 4.3g acceleration that exceeded the airframe's ultimate structural strength. The aircraft broke apart in flight.",
+  "probable_cause": "The stressing of the aircraft structure beyond its ultimate strength during an attempted recovery from an unusual attitude induced by turbulence associated with a thunderstorm. The operation in the turbulence resulted from a decision to penetrate an area of known severe weather.",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "latent",
+      "evidence": "Aircraft approached area of severe thunderstorm activity with hail reported at 16:47 (p. 38)."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "initiating",
+      "evidence": "During 180-degree turn, aircraft bank angle increased to more than 90 degrees and nose pitched down to about 40 degrees (p. 39)."
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "FDR indicated peak acceleration of 4.3 g causing overstress to airframe and breakup (p. 38)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft went into uncontrolled descent after structural failure (p. 38)."
+    }
+  ],
+  "chain": [
+    [
+      "convective_weather",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "16:11",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Departed William P. Hobby Airport for Dallas Love Field at FL200",
+      "factors": []
+    },
+    {
+      "t": 1500,
+      "clock": "16:36",
+      "phase": "cruise",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Approached area of severe thunderstorm activity with hail at FL200",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 1980,
+      "clock": "16:44",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Requested descent and asked ATC if hail had been reported in area",
+      "factors": []
+    },
+    {
+      "t": 2160,
+      "clock": "16:47",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Executed 180-degree right turn during severe weather encounter; bank angle exceeded 90 degrees with 40-degree nose-down pitch and 4.3g acceleration",
+      "factors": [
+        "convective_weather",
+        "inappropriate_control_input",
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 2175,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft broke apart in flight and crashed near Dawson, Texas",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Alert Air Carrier and General Aviation Inspectors to constant vigilance regarding operators' procedures and practices in all aspects of fluid handling"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require inspection of No. 1 wing plank at engine nacelles 2 and 3 for cracks on all Lockheed L-188 aircraft"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Thunderstorm avoidance training emphasis",
+    "Weather radar policies for storm penetration",
+    "Enhanced structural inspection procedures for Electra aircraft"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR6903.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q4957361",
+  "asn_id": "19680503-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Braniff_International_Airways_Flight_352",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR6903.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR69-03.pdf"
+  ],
+  "interest": 14.81,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "1969 NTSB report on 1968 accident",
+      "Sections read: Analysis and Conclusions, and Probable Cause",
+      "Structural failure from weather-induced upset during thunderstorm penetration"
+    ]
+  }
+}
