@@ -1,0 +1,262 @@
+{
+ "id": "wd_q2842206",
+ "qid": "Q2842206",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "Eastern Air Lines 66",
+ "flight_number": "EA66",
+ "date": "1975-06-24",
+ "agency": "NTSB",
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead"
+  }
+ ],
+ "aircraft": {
+  "type": "Boeing 727-225",
+  "manufacturer": "Boeing",
+  "family": "727",
+  "registration": "N8845E"
+ },
+ "operator": "Eastern Air Lines",
+ "route": {
+  "from_name": "New Orleans",
+  "to_name": "New York"
+ },
+ "location": {
+  "name": "Jamaica, Queens",
+  "country": "United States"
+ },
+ "phase": "approach",
+ "occupants": 124,
+ "fatalities": 113,
+ "category": "CFIT",
+ "summary": "Flight 66 descended through a microburst on approach to JFK in severe weather, striking approach lights 2400 ft from the runway threshold. The captain was aware of wind-shear reports from preceding aircraft but continued the approach, relying on visual cues rather than instruments.",
+ "probable_cause": "The aircraft's encounter with adverse winds associated with a very strong thunderstorm resulted in high descent rate into non-frangible approach light towers. The flight crew's reliance upon visual cues rather than flight instrument reference contributed to delayed recognition. Contributing was the failure of air traffic control and the flight crew to abort the landing given severe weather conditions.",
+ "factors": [
+  {
+   "id": "windshear",
+   "role": "initiating",
+   "evidence": "aircraft entered a microburst or wind shear environment caused by the severe storms"
+  },
+  {
+   "id": "convective_weather",
+   "role": "initiating",
+   "evidence": "A severe thunderstorm arrived at JFK just as Flight 66 was approaching the New York City area"
+  },
+  {
+   "id": "loss_of_situational_awareness",
+   "role": "contributing",
+   "evidence": "flight crew's delayed recognition and correction of the high descent rate"
+  },
+  {
+   "id": "visual_illusion",
+   "role": "contributing",
+   "evidence": "crew's reliance upon visual cues rather than on flight instrument reference"
+  },
+  {
+   "id": "go_around_not_flown",
+   "role": "contributing",
+   "evidence": "Captain was aware of reports of severe wind shear but decided to continue the approach"
+  },
+  {
+   "id": "cfit",
+   "role": "outcome",
+   "evidence": "aircraft struck the approach lights approximately 2400 ft from the threshold of the runway"
+  }
+ ],
+ "chain": [
+  [
+   "windshear",
+   "loss_of_situational_awareness"
+  ],
+  [
+   "windshear",
+   "visual_illusion"
+  ],
+  [
+   "windshear",
+   "go_around_not_flown"
+  ],
+  [
+   "windshear",
+   "cfit"
+  ],
+  [
+   "convective_weather",
+   "windshear"
+  ],
+  [
+   "visual_illusion",
+   "go_around_not_flown"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "15:35",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Flight 66 contacted JFK approach controller and was sequenced into pattern for Runway 22L",
+   "factors": []
+  },
+  {
+   "t": 1020,
+   "clock": "15:52",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Controller warned all incoming aircraft of a severe wind shift on final approach",
+   "factors": [
+    "windshear"
+   ]
+  },
+  {
+   "t": 1200,
+   "clock": "15:55",
+   "phase": "approach",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Flight crew continued approach to Runway 22L despite receiving warnings of severe weather",
+   "factors": [
+    "go_around_not_flown"
+   ]
+  },
+  {
+   "t": 1800,
+   "clock": "16:05",
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "env",
+   "text": "Aircraft entered microburst environment on final approach and struck approach lights",
+   "factors": [
+    "windshear",
+    "convective_weather",
+    "cfit"
+   ]
+  }
+ ],
+ "report_links": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7608.pdf"
+ ],
+ "wikipedia": "https://en.wikipedia.org/wiki/Eastern_Air_Lines_Flight_66",
+ "asn_id": "19750624-1",
+ "interest": 17.55,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Extracted from official aviation authority final report",
+   "depth relabelled to sections at merge: record carries report recommendations/events beyond the summary"
+  ]
+ },
+ "curated_id": null,
+ "fdr": null,
+ "time_reference": "local",
+ "recommendations": [
+  {
+   "id": null,
+   "to": "Federal Aviation Administration",
+   "text": "Conduct a research program to define and classify the level of flight hazard of thunderstorms using specific criteria for the severity of a thunderstorm and the magnitude of change of the wind speed components measured as a function of distance along an airplane's departure or approach flight track and establish operational limitations based upon these criteria.",
+   "status": "unknown",
+   "trigger_factors": [
+    "windshear"
+   ]
+  },
+  {
+   "id": null,
+   "to": "Federal Aviation Administration",
+   "text": "Expedite the program to develop and install equipment which would facilitate the detection and classification, by severity, of thunderstorms within 5 nmi of the departure or threshold ends of active runways at airports having precision instrument approaches.",
+   "status": "unknown",
+   "trigger_factors": [
+    "windshear"
+   ]
+  },
+  {
+   "id": null,
+   "to": "Federal Aviation Administration",
+   "text": "Install equipment capable of detecting variations in the speed of the longitudinal, lateral, and vertical components of the winds as they exist along the projected takeoff and approach flightpaths within 1 nmi of the ends of active runways which serve air carrier aircraft.",
+   "status": "unknown",
+   "trigger_factors": [
+    "windshear"
+   ]
+  },
+  {
+   "id": null,
+   "to": "Federal Aviation Administration",
+   "text": "Require inclusion of the wind shear penetration capability of an airplane as an operational limitation in the airplane's operations manual, and require that pilots apply this limitation as a criterion for the initiation of a takeoff from, or an approach to, an airport where equipment is available to measure the severity of a thunderstorm or the magnitude of change in wind velocity.",
+   "status": "unknown",
+   "trigger_factors": [
+    "windshear",
+    "go_around_not_flown"
+   ]
+  },
+  {
+   "id": null,
+   "to": "Federal Aviation Administration",
+   "text": "As an interim action, install equipment capable of measuring and transmitting to tower operators the speed and direction of the surface wind in the immediate vicinity of all runway ends and install lighted windsocks near to the side of the runway, approximately 1,000 feet from the ends, at airports serving air carrier operations.",
+   "status": "unknown",
+   "trigger_factors": [
+    "windshear"
+   ]
+  },
+  {
+   "id": null,
+   "to": "Federal Aviation Administration",
+   "text": "Develop and institute procedures whereby approach controllers, tower controllers, and pilots are provided timely information regarding the existence of thunderstorm activity near to departure or approach flightpaths.",
+   "status": "unknown",
+   "trigger_factors": [
+    "windshear"
+   ]
+  },
+  {
+   "id": null,
+   "to": "Federal Aviation Administration",
+   "text": "Revise appropriate air traffic control procedures to specify that the location and severity of thunderstorms be considered in the criteria for selecting active runways.",
+   "status": "unknown",
+   "trigger_factors": [
+    "windshear"
+   ]
+  },
+  {
+   "id": null,
+   "to": "Federal Aviation Administration",
+   "text": "Modify or expand air traffic controller training programs to include information concerning the effect that winds produced by thunderstorms can have on an airplane's flightpath control.",
+   "status": "unknown",
+   "trigger_factors": [
+    "windshear"
+   ]
+  },
+  {
+   "id": null,
+   "to": "Federal Aviation Administration",
+   "text": "Modify initial and recurrent pilot training programs and tests to require that pilots demonstrate their knowledge of the low-level wind conditions associated with mature thunderstorms and of the potential effects these winds might have on an airplane's performance.",
+   "status": "unknown",
+   "trigger_factors": [
+    "windshear"
+   ]
+  },
+  {
+   "id": null,
+   "to": "Federal Aviation Administration",
+   "text": "Expedite the program to develop, in cooperation with appropriate Government agencies and industry, typical models of environmental winds associated with mature thunderstorms which can be used for demonstration purposes in pilot training simulators.",
+   "status": "unknown",
+   "trigger_factors": [
+    "windshear"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "type": "report",
+   "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7608.pdf",
+   "title": "official investigation report"
+  }
+ ]
+}

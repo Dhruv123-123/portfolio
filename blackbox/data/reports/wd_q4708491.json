@@ -1,0 +1,190 @@
+{
+ "id": "wd_q4708491",
+ "qid": "Q4708491",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "Alaska Airlines 1866",
+ "flight_number": null,
+ "date": "1971-09-04",
+ "agency": "NTSB",
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead"
+  }
+ ],
+ "aircraft": {
+  "type": "Boeing 727-100",
+  "manufacturer": "Boeing",
+  "family": "727",
+  "registration": "N2969G"
+ },
+ "operator": "Alaska Airlines",
+ "route": {
+  "from_name": "Yakutat",
+  "to_name": "Juneau"
+ },
+ "location": {
+  "name": "Haines Borough",
+  "country": "United States"
+ },
+ "phase": "approach",
+ "occupants": 111,
+ "fatalities": 111,
+ "category": "CFIT",
+ "summary": "Alaska Airlines Flight 1866, a Boeing 727, crashed into a mountain near Juneau, Alaska while descending to Juneau airport on September 4, 1971. The crew received erroneous navigation radio indications that led them to believe they were closer to the airport than they actually were. The investigation found no mechanical cause for the misleading data, and the aircraft maintained proper configuration and crew qualifications throughout.",
+ "probable_cause": "The probable cause was the crew's descent below safe altitude due to consistently false information from the captain's navigation radio at several points along the approach path. The specific reason for the erroneous indications could not be determined.",
+ "factors": [
+  {
+   "id": "navigation_error",
+   "role": "initiating",
+   "evidence": "the captain's navigation radio had apparently presented the crew with consistently false information at several points along the approach path"
+  },
+  {
+   "id": "inadequate_monitoring",
+   "role": "contributing",
+   "evidence": "from the CVR recording it was determined that the crew did not use the audio identification features of the navigation radios and did not use all available navigational aids"
+  },
+  {
+   "id": "descent_below_minimums",
+   "role": "contributing",
+   "evidence": "the crew descended below safe altitude based on erroneous position reports"
+  },
+  {
+   "id": "cfit",
+   "role": "outcome",
+   "evidence": "the aircraft crashed into a mountain in Haines Borough, about 18 miles west of Juneau"
+  }
+ ],
+ "chain": [
+  [
+   "navigation_error",
+   "descent_below_minimums"
+  ],
+  [
+   "descent_below_minimums",
+   "cfit"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "11:46",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Controller issued clearance to descend at pilots discretion to cross PLEASANT at 10,000 feet",
+   "factors": []
+  },
+  {
+   "t": 60,
+   "clock": "11:51",
+   "phase": "descent",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Crew reported leaving FL230 descending to 10,000 feet at PLEASANT",
+   "factors": []
+  },
+  {
+   "t": 120,
+   "clock": "11:54",
+   "phase": "descent",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Controller instructed stop descent at 12,000 feet due to other traffic near Juneau",
+   "factors": []
+  },
+  {
+   "t": 180,
+   "clock": "11:58",
+   "phase": "descent",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Crew reported passing PLEASANT and entering holding pattern",
+   "factors": []
+  },
+  {
+   "t": 240,
+   "clock": "12:00",
+   "phase": "approach",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Crew received erroneous navigation indications suggesting closer proximity to airport than actual position",
+   "factors": [
+    "navigation_error"
+   ]
+  },
+  {
+   "t": 300,
+   "clock": "12:02",
+   "phase": "descent",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Crew descended below minimum safe altitude based on false position data",
+   "factors": [
+    "navigation_error",
+    "descent_below_minimums"
+   ]
+  },
+  {
+   "t": 360,
+   "clock": "12:03",
+   "phase": "descent",
+   "actor": "OTHER",
+   "kind": "outcome",
+   "text": "Aircraft impacted mountain near Juneau",
+   "factors": [
+    "cfit"
+   ]
+  }
+ ],
+ "report_links": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7228.pdf"
+ ],
+ "wikipedia": "https://en.wikipedia.org/wiki/Alaska_Airlines_Flight_1866",
+ "asn_id": "19710904-0",
+ "interest": 17.6,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Extracted from official aviation authority final report",
+   "depth relabelled to sections at merge: record carries report recommendations/events beyond the summary"
+  ]
+ },
+ "curated_id": null,
+ "fdr": null,
+ "time_reference": "local",
+ "recommendations": [
+  {
+   "id": "A-72-14",
+   "to": "Federal Aviation Administration",
+   "text": "Amend the public instrument approach procedure for the LDA approach to Juneau, Alaska, Airport to reflect the addition of Distance Measuring Equipment (DME) as a source of determining the location of fixes on the final approach course of the localizer.",
+   "status": "closed_acceptable",
+   "outcome": "The appropriate approach charts for the Juneau Airport have been amended to reflect these changes.",
+   "trigger_factors": [
+    "navigation_error"
+   ]
+  },
+  {
+   "id": "A-72-205",
+   "to": "Federal Aviation Administration",
+   "text": "Continue tests and research into the effects of possible extraneous harmonics generated by a Doppler VOR transmitter on airborne navigational receivers and associated instrument displays.",
+   "status": "unknown",
+   "trigger_factors": [
+    "navigation_error"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "type": "report",
+   "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7228.pdf",
+   "title": "official investigation report"
+  }
+ ]
+}

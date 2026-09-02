@@ -1,0 +1,195 @@
+{
+ "id": "wd_q7129571",
+ "qid": "Q7129571",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "Pan Am 806",
+ "flight_number": "PA806",
+ "date": "1974-01-30",
+ "agency": "NTSB",
+ "aircraft": {
+  "type": "Boeing 707-321B",
+  "manufacturer": "Boeing",
+  "family": "707",
+  "registration": null
+ },
+ "operator": "Pan American Airways",
+ "route": {
+  "from_name": "Auckland",
+  "to_name": "Los Angeles"
+ },
+ "location": {
+  "name": "Pago Pago International Airport",
+  "country": "American Samoa"
+ },
+ "phase": "approach",
+ "occupants": 101,
+ "fatalities": 97,
+ "category": "WSTRW",
+ "summary": "Pan Am Flight 806 departed Auckland on 30 January 1974 with 91 passengers and 10 crew for a flight to Los Angeles with stops at Pago Pago and Honolulu. On approach to Pago Pago, the aircraft encountered microburst wind shear. At 23:40:42, the 707 came into contact with trees 3865 ft short of runway 5 threshold while descending through weather. The aircraft impacted the ground 236 feet further and plowed through dense vegetation for another 539 ft before crashing into a three-foot high rock wall. All four engines were torn from the wings and a post-impact fire consumed most of the aircraft, killing 97 persons. Four crew and passengers initially survived but died later.",
+ "probable_cause": "The flight crew's tardy identification of microburst-induced wind shear. Other factors included poor visibility, lack of altitude and airspeed callouts by the aircrew.",
+ "factors": [
+  {
+   "id": "windshear",
+   "role": "initiating",
+   "evidence": "the flight crew's tardy identification of microburst-induced wind shear"
+  },
+  {
+   "id": "inadequate_monitoring",
+   "role": "contributing",
+   "evidence": "lack of altitude and airspeed callouts by the aircrew"
+  },
+  {
+   "id": "low_visibility",
+   "role": "contributing",
+   "evidence": "mean rain shower at the airport with reduced visibility on final approach"
+  },
+  {
+   "id": "landing_long",
+   "role": "contributing",
+   "evidence": "aircraft came into contact with trees 3865 feet short of runway threshold"
+  },
+  {
+   "id": "cfit",
+   "role": "outcome",
+   "evidence": "aircraft impacted ground and plowed through dense vegetation before hitting rock wall"
+  }
+ ],
+ "chain": [
+  [
+   "windshear",
+   "low_visibility"
+  ],
+  [
+   "low_visibility",
+   "inadequate_monitoring"
+  ],
+  [
+   "inadequate_monitoring",
+   "landing_long"
+  ],
+  [
+   "landing_long",
+   "cfit"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "23:34",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Flight 806 descended to 5500 ft and captured the 226 degree radial of the Pago Pago VOR, flying the reciprocal heading of 46 degrees",
+   "factors": []
+  },
+  {
+   "t": 360,
+   "clock": "23:39",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Approach controller reported mean rain shower at the airport; wind zero three zero (30) degrees at two zero (20), gusting two five (25)",
+   "factors": [
+    "low_visibility",
+    "windshear"
+   ]
+  },
+  {
+   "t": 362,
+   "clock": "23:40",
+   "phase": "approach",
+   "actor": "PM",
+   "kind": "crew_speech",
+   "text": "At 23:40:22 co-pilot said you're a little high and at 23:40:33 you're at minimums",
+   "factors": [
+    "inadequate_monitoring"
+   ]
+  },
+  {
+   "t": 365,
+   "clock": "23:40",
+   "phase": "approach",
+   "actor": "PF",
+   "kind": "crew_speech",
+   "text": "First officer stated field in sight then turn to your right followed by hundred and forty knots",
+   "factors": [
+    "inadequate_monitoring"
+   ]
+  },
+  {
+   "t": 372,
+   "clock": "23:40",
+   "phase": "landing",
+   "actor": "ENV",
+   "kind": "outcome",
+   "text": "At 23:40:42 the 707 came in contact with trees 3865 ft short of the runway 5 threshold; aircraft first impacted the ground 236 feet further and plowed through dense vegetation for another 539 ft before crashing into a three foot high rock wall",
+   "factors": [
+    "cfit"
+   ]
+  }
+ ],
+ "report_links": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7707.pdf"
+ ],
+ "wikipedia": "https://en.wikipedia.org/wiki/Pan_Am_Flight_806",
+ "asn_id": "19740130-0",
+ "interest": 16.97,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Extracted from official aviation authority final report",
+   "depth relabelled to sections at merge: record carries report recommendations/events beyond the summary"
+  ]
+ },
+ "curated_id": null,
+ "fdr": null,
+ "time_reference": "local",
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead"
+  }
+ ],
+ "recommendations": [
+  {
+   "id": "A-74-104",
+   "to": "Federal Aviation Administration",
+   "text": "Develop and require airlines to implement procedures for wind shear detection and avoidance.",
+   "status": "unknown",
+   "trigger_factors": [
+    "windshear"
+   ]
+  },
+  {
+   "id": "A-74-118",
+   "to": "Federal Aviation Administration",
+   "text": "Develop equipment for wind shear detection and warning systems.",
+   "status": "unknown",
+   "trigger_factors": [
+    "windshear"
+   ]
+  },
+  {
+   "id": "A-75-1",
+   "to": "Federal Aviation Administration",
+   "text": "Enhance wind shear detection and pilot training procedures.",
+   "status": "unknown",
+   "trigger_factors": [
+    "windshear"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "type": "report",
+   "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7707.pdf",
+   "title": "official investigation report"
+  }
+ ]
+}
