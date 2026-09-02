@@ -1,0 +1,207 @@
+{
+  "id": "wd_q6019807",
+  "title": "Indian Airlines Flight 491",
+  "flight_number": "IC491",
+  "date": "1993-04-26",
+  "time_reference": "IST",
+  "t0": "1993-04-26T13:00:00Z",
+  "agency": "DGCA",
+  "agencies": [
+    {
+      "code": "DGCA",
+      "name": "Directorate General of Civil Aviation",
+      "country": "India",
+      "role": "lead",
+      "report_id": "acc93",
+      "report_title": "Civil Aviation Aircraft Accident Summary for the Year 1993",
+      "report_date": "1994",
+      "url": "https://public-prd-dgca.s3.ap-south-1.amazonaws.com/InventoryList/dataReports/accidentIncidentData/summary/acc93.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-200",
+    "family": "737",
+    "manufacturer": "Boeing",
+    "registration": "VT-ECQ",
+    "msn": null,
+    "engines": "Pratt & Whitney JT8D"
+  },
+  "operator": "Indian Airlines",
+  "route": {
+    "from": "DEL",
+    "from_name": "Delhi",
+    "to": "BOM",
+    "to_name": "Mumbai"
+  },
+  "location": {
+    "name": "Aurangabad",
+    "country": "India",
+    "lat": null,
+    "lon": null
+  },
+  "phase": "takeoff",
+  "occupants": 118,
+  "fatalities": 55,
+  "injuries_serious": null,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Indian Airlines Flight 491, a Boeing 737-200, took off from Aurangabad Airport with 118 persons on board. The aircraft lifted off near the end of the 6,000-foot runway with inadequate rotation. Shortly after takeoff, the left landing gear and left engine struck a truck carrying cotton bales on a road adjacent to the runway at approximately 410 feet from the runway end. The impact damaged the aircraft's left landing gear, left engine thrust reverser, and control surfaces. The aircraft continued in flight but subsequently struck high-tension power lines approximately 3 km northeast of the airport and crashed, killing 55 persons.",
+  "probable_cause": "The captain's error in initiating late rotation and following wrong rotation technique resulted in inadequate climb performance. Additionally, the airport authorities failed to regulate mobile traffic on the Beed Road during flight operations, allowing a truck to remain in the hazard zone near the runway end.",
+  "factors": [
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "initiating",
+      "evidence": "Captain's false perception of takeoff technique resulted in late rotation and failure to achieve adequate liftoff altitude before the runway end (p. 1)."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Pilot did not initiate rotation at appropriate airspeed or position on runway, resulting in aircraft lifting off near end of 6,000-foot runway; error in rotation technique (p. 1)."
+    },
+    {
+      "id": "airport_infrastructure",
+      "role": "contributing",
+      "evidence": "Airport authorities failed to regulate or exclude mobile traffic from Beed Road adjacent to runway during flight operations (p. 1)."
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Aircraft's left main landing gear and left engine thrust reverser were severed; left elevator and horizontal stabilizer damaged by collision with truck (p. 1)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted high-tension electric wires approximately 3 km northeast of runway and struck ground, resulting in destruction by post-impact fire (p. 1)."
+    }
+  ],
+  "chain": [
+    [
+      "loss_of_situational_awareness",
+      "inadequate_training"
+    ],
+    [
+      "inadequate_training",
+      "structural_failure"
+    ],
+    [
+      "inadequate_training",
+      "airport_infrastructure"
+    ],
+    [
+      "structural_failure",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "13:00",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft cleared for takeoff from Aurangabad runway; 118 persons on board"
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Pilot initiated takeoff roll"
+    },
+    {
+      "t": 45,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft did not lift off until near the end of 6,000-foot runway with inadequate rotation technique",
+      "factors": [
+        "loss_of_situational_awareness",
+        "inadequate_training"
+      ]
+    },
+    {
+      "t": 65,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Left main landing gear and left engine collided with truck carrying cotton bales at approximately 410 feet from runway end",
+      "factors": [
+        "airport_infrastructure"
+      ]
+    },
+    {
+      "t": 80,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Impact severed left main landing gear and left engine thrust reverser; damaged left elevator and horizontal stabilizer",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck high-tension electric power lines approximately 3 km northeast of runway",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 140,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft descended and struck ground; fuselage separated and burst into flames due to post-impact fire",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Increased airport regulatory enforcement to control vehicular traffic near active runways",
+    "Enhanced NOTAMs and ground operations coordination at regional airports"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://public-prd-dgca.s3.ap-south-1.amazonaws.com/InventoryList/dataReports/accidentIncidentData/summary/acc93.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q6019807",
+  "asn_id": "19930426-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/Indian_Airlines_Flight_491",
+  "report_links": [
+    "https://public-prd-dgca.s3.ap-south-1.amazonaws.com/InventoryList/dataReports/accidentIncidentData/summary/acc93.pdf",
+    "https://www.dgca.gov.in/digigov-portal/Upload?flag=iframeAttachView&attachId=130617570&mainAccidentReports"
+  ],
+  "interest": 16.54,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Read section: accident summary (p. 1)",
+      "Source is a multi-accident annual summary report, not a full investigation report",
+      "Limited technical details available; timeline reconstructed from summary narrative",
+      "No CVR transcript available in public report",
+      "No detailed FDR analysis provided in summary",
+      "Probable cause attributes both pilot error (late rotation) and regulatory failure (traffic control)",
+      "Exact timing and aircraft parameters estimated based on narrative description"
+    ]
+  }
+}

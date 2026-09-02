@@ -1,0 +1,357 @@
+{
+  "id": "wd_q7672517",
+  "title": "TWA Flight 514",
+  "flight_number": "TW514",
+  "date": "1974-12-01",
+  "time_reference": "EST",
+  "t0": "1974-12-01T11:09:22Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR75-16",
+      "report_title": "Aircraft Accident Report—Trans World Airlines, Inc. Boeing 727-231, N54328",
+      "report_date": "1975-11-26",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7516.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 727-231",
+    "family": "727",
+    "manufacturer": "Boeing",
+    "registration": "N54328",
+    "engines": "Pratt & Whitney JT8D"
+  },
+  "operator": "Trans World Airlines",
+  "route": {
+    "from": "KORD",
+    "from_name": "Columbus",
+    "to": "KIAD",
+    "to_name": "Washington Dulles"
+  },
+  "location": {
+    "name": "Mount Weather, Virginia",
+    "country": "United States",
+    "lat": 39.077,
+    "lon": -77.882
+  },
+  "phase": "approach",
+  "occupants": 92,
+  "fatalities": 92,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "TWA Flight 514, a Boeing 727 diverted from Washington National Airport to Dulles due to high crosswinds, was vectored for a VOR/DME approach to runway 12. At 1104 EST, while 44 nautical miles from the airport, the crew was cleared for the approach without altitude restrictions. The captain misinterpreted the clearance and descended to 1,800 feet, the final approach fix altitude, before the aircraft reached the intermediate approach fix at Round Hill. The aircraft impacted Mount Weather at 1,670 feet elevation at 11:09:22 EST, killing all 92 occupants.",
+  "probable_cause": "The crew's decision to descend to 1,800 feet before the aircraft had reached the approach segment where that minimum altitude applied. The crew's decision to descend was a result of inadequacies and lack of clarity in the air traffic control procedures which led to a misunderstanding on the part of the pilots and of the controllers regarding each other's responsibilities during operations in terminal areas under instrument meteorological conditions. Nevertheless, the examination of the plan view of the approach chart should have disclosed to the captain that a minimum altitude of 1,800 feet was not a safe altitude.",
+  "factors": [
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "Crew descended to 1,800 feet before reaching Round Hill intersection where this altitude was authorized (p. 2-4)."
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "Controller issued approach clearance at 44 nm without altitude restrictions; terminology 'cleared for approach' was ambiguous (p. 25-28)."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Flight was not classified as radar arrival despite receiving radar service, so altitude restrictions not provided per 7110.8C procedures (p. 27)."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "Approach chart profile view did not depict intermediate fix Round Hill or its minimum altitudes, only showing 6 DME fix and final approach fix (p. 13)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted west slope of Mount Weather at 1,670 feet elevation at approximately 230 knots (p. 4)."
+    }
+  ],
+  "chain": [
+    [
+      "atc_communication_error",
+      "descent_below_minimums"
+    ],
+    [
+      "procedural_noncompliance",
+      "descent_below_minimums"
+    ],
+    [
+      "design_deficiency",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": -300,
+      "clock": "11:04",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight reported level at 7,000 feet; cleared for VOR/DME approach to runway 12",
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": -240,
+      "clock": "11:05:06",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain reviewed field elevation, minimum descent altitude of 1,800 feet, and final approach fix; announced 1,800 feet was 'the bottom'",
+      "state": {
+        "alt": 7000,
+        "ias": 240
+      },
+      "factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": -180,
+      "clock": "11:06:15",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "First officer commented on altitude fluctuations and bouncing instrument panel",
+      "state": {
+        "alt": 5800,
+        "ias": 235
+      }
+    },
+    {
+      "t": -120,
+      "clock": "11:07:27",
+      "phase": "approach",
+      "actor": "PM",
+      "kind": "crew_speech",
+      "text": "Captain noted minimum altitude to Round Hill was 3,400 feet but discussed with crew that flight was authorized to descend to 1,800 feet"
+    },
+    {
+      "t": -90,
+      "clock": "11:08:25",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Altitude alert horn sounded at 1,800 feet; captain stated 'I had ground contact a minute ago'",
+      "state": {
+        "alt": 1800,
+        "ias": 230
+      },
+      "factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": -60,
+      "clock": "11:08:57",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Altitude alert sounded again; first officer mentioned power and captain noted high sink rate",
+      "state": {
+        "alt": 1750,
+        "ias": 225
+      }
+    },
+    {
+      "t": -10,
+      "clock": "11:09:14",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Radio altimeter warning horn sounded (500 feet above terrain)",
+      "state": {
+        "alt": 1700,
+        "ias": 232,
+        "vs": -800
+      }
+    },
+    {
+      "t": -2,
+      "clock": "11:09:20",
+      "phase": "approach",
+      "actor": "PM",
+      "kind": "crew_action",
+      "text": "Captain commanded 'Get some power on'",
+      "state": {
+        "alt": 1680,
+        "ias": 228
+      }
+    },
+    {
+      "t": 0,
+      "clock": "11:09:22",
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft impacted west slope of Mount Weather at 1,670 feet elevation, heading 120 degrees magnetic, approximately 230 knots",
+      "state": {
+        "alt": 1670,
+        "ias": 230,
+        "hdg": 120
+      },
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [
+    {
+      "t": -240,
+      "clock": "11:05:06",
+      "speaker": "PM",
+      "text": "Eighteen hundred is the bottom"
+    },
+    {
+      "t": -228,
+      "clock": "11:05:18",
+      "speaker": "PF",
+      "text": "Start down"
+    },
+    {
+      "t": -174,
+      "clock": "11:06:15",
+      "speaker": "PF",
+      "text": "I hate the altitude jumping around"
+    },
+    {
+      "t": -108,
+      "clock": "11:07:27",
+      "speaker": "PM",
+      "text": "According to this dumb sheet it says thirty-four hundred to Round Hill --- is our minimum altitude"
+    },
+    {
+      "t": -90,
+      "clock": "11:08:25",
+      "speaker": "SYS",
+      "text": "[Altitude alert horn sounds]"
+    },
+    {
+      "t": -90,
+      "clock": "11:08:25",
+      "speaker": "PM",
+      "text": "I had ground contact a minute ago"
+    },
+    {
+      "t": -10,
+      "clock": "11:09:14",
+      "speaker": "SYS",
+      "text": "[Radio altimeter warning horn sounds]"
+    },
+    {
+      "t": -2,
+      "clock": "11:09:20",
+      "speaker": "PM",
+      "text": "Get some power on"
+    },
+    {
+      "t": 0,
+      "clock": "11:09:22",
+      "speaker": "SYS",
+      "text": "[Sound of impact]"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-75-147",
+      "to": "FAA",
+      "text": "Issue a notice to all operators of air carrier aircraft in terminal areas to ensure that pilots understand the meaning of 'cleared for approach' and that altitude restrictions will be provided",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "atc_communication_error",
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "A-75-148",
+      "to": "FAA",
+      "text": "Develop and implement a standardized lexicon of air traffic control words and phrases to be used by all controllers and pilots in the National Airspace System",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "id": "A-75-149",
+      "to": "FAA",
+      "text": "Establish procedures requiring controllers to provide altitude restrictions when issuing approach clearances to aircraft operating on unpublished routes",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "A-75-150",
+      "to": "FAA",
+      "text": "Modify approach charts to depict all minimum altitudes associated with approach procedures on both plan and profile views",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Mandate installation of ground proximity warning systems on all air carrier aircraft by December 1975",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "dissent": [
+    {
+      "agency": "NTSB",
+      "role": "member",
+      "names": ["Francis H. McADAMS", "William R. HALEY"],
+      "position": "The flight was a radar arrival and should have received altitude protection from ATC. The failure of the controller to issue altitude restrictions in accordance with 7110.8C paragraph 1360, combined with the captain's failure to adhere to minimum sector altitude, was the probable cause.",
+      "topic": "probable cause"
+    }
+  ],
+  "safety_changes": [
+    "Ground Proximity Warning System (GPWS) mandated on all air carrier aircraft by December 1975",
+    "FAA revised 14 CFR 91 regarding pilot responsibilities after receiving clearance for nonprecision approach",
+    "FAA established Aviation Safety Reporting Program for incident identification",
+    "FAA revised air traffic control procedures to provide altitude restrictions during nonprecision instrument approaches",
+    "ARTS III altitude deviation warning system installed at terminal radar facilities"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7516.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "full",
+  "qid": "Q7672517",
+  "asn_id": "19741201-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/TWA_Flight_514",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7516.pdf"
+  ],
+  "interest": 17.04,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read sections: synopsis (p. 1-2), history of flight (p. 3-5), analysis and conclusions (p. 25-40), probable cause and findings (p. 25-40), recommendations (p. 41-42)",
+      "Full CVR transcript analyzed; altitude alerts and crew decision-making clearly documented",
+      "Detailed timeline constructed from FDR data and CVR correlations",
+      "Two NTSB members formally dissented on probable cause analysis",
+      "This accident led to major changes in ATC procedures and CFIT prevention systems"
+    ]
+  }
+}
