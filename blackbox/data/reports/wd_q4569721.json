@@ -1,0 +1,136 @@
+{
+  "id": "wd_q4569721",
+  "qid": "Q4569721",
+  "title": "TAI 307",
+  "flight_number": "307",
+  "date": "1959-09-24",
+  "time_reference": "UTC",
+  "t0": null,
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enqu\u00eates et d'Analyses",
+      "country": "France",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Douglas DC-7C",
+    "manufacturer": "Douglas",
+    "family": "DC-7",
+    "registration": "F-BIAP"
+  },
+  "operator": "Transports A\u00e9riens Intercontinentaux",
+  "route": {
+    "from_name": "Paris",
+    "to_name": "Abidjan"
+  },
+  "location": {
+    "name": "Bordeaux\u2013M\u00e9rignac Airport",
+    "country": "France"
+  },
+  "phase": "takeoff",
+  "occupants": 56,
+  "fatalities": 54,
+  "injuries_serious": null,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "The DC-7C departed Bordeaux at night with light drizzle and limited visibility. Following takeoff, the aircraft reached only 30 m altitude and failed to climb further before flying into a pine forest 2950 m from the runway. The aircraft cut a swath through the forest, and the fuselage broke up before post-crash fire destroyed the wreckage.",
+  "probable_cause": "With lack of visual references in darkness, the pilot failed to maintain optimum climbing speed and did not carefully monitor the altimeter, allowing the aircraft to descend back to terrain level.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Darkness and a lack of visual references led the crew to have difficulty maintaining awareness of the aircraft's position and altitude."
+    },
+    {
+      "id": "low_energy_state",
+      "role": "initiating",
+      "evidence": "Evidence from a reconstructed flight showed the rate of climb would decrease if optimum climbing speed was not maintained."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "A pilot may follow a line of flight that will bring the aircraft back near the ground if the altimeter is not carefully watched."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft flew into a pine forest located 2950 m from the end of the runway after reaching only 30 m altitude."
+    }
+  ],
+  "chain": [
+    [
+      "low_energy_state",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "22:33",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Departure from Bordeaux took place at 22:33 GMT with a 3 kn wind and light drizzle that did not significantly restrict visibility.",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": "22:36",
+      "phase": "takeoff",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Following takeoff, the aircraft reached an altitude of 30 m and failed to climb further before flying into a pine forest located 2950 m from the end of the runway.",
+      "factors": [
+        "low_energy_state",
+        "inadequate_monitoring",
+        "cfit"
+      ]
+    },
+    {
+      "t": 600,
+      "clock": "22:43",
+      "phase": "ground",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "The aircraft cut a swath through the forest with some passengers thrown clear as the fuselage broke up before being destroyed in a post-crash fire; rescue workers had difficulty reaching the scene due to darkness and lack of roads in the accident area.",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.bea.aero/fileadmin/documents/docspa/1959/f-ap590924/pdf/f-ap590924.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "asn_id": null,
+  "wikipedia": null,
+  "report_links": [
+    "https://www.bea.aero/fileadmin/documents/docspa/1959/f-ap590924/pdf/f-ap590924.pdf",
+    "https://www.bea.aero/en/investigation-reports/notified-events/detail/event/le-f-biap-sest-ecrase-dans-un-bois-de-pins-assez-dense-ce-bois-est-traverse-par-une-ancienne-tr-1/"
+  ],
+  "interest": 13.68,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Extracted from report using text sections: History of Flight, Probable Cause, Recommendations"
+    ]
+  }
+}

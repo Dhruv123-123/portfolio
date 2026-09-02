@@ -1,0 +1,182 @@
+{
+  "id": "wd_q5579958",
+  "qid": "Q5579958",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Golden West Airlines Flight 261",
+  "flight_number": "GW261",
+  "date": "1975-01-09",
+  "time_reference": "PST",
+  "t0": "1975-01-09T16:07:00-08:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-75-14",
+      "report_title": "Aircraft Accident Report: Golden West Airlines, Inc., De Havilland DHC-6, N6383 and CessnAir Aviation, Inc., Cessna 150, N11421, Whittier, California, January 9, 1975",
+      "report_date": "1975-08-07",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7514.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "de Havilland Canada DHC-6 Twin Otter",
+    "family": "DHC-6",
+    "manufacturer": "de Havilland Canada",
+    "registration": "N6383"
+  },
+  "operator": "Golden West Airlines (Twin Otter); CessnAir Aviation (Cessna 150)",
+  "route": {
+    "from": "ONT",
+    "from_name": "Ontario International Airport",
+    "to": "LAX",
+    "to_name": "Los Angeles International Airport"
+  },
+  "location": {
+    "name": "Whittier, California",
+    "country": "United States"
+  },
+  "phase": "cruise",
+  "occupants": 14,
+  "fatalities": 14,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "Golden West Airlines Flight 261 (De Havilland Twin Otter N6383) and a Cessna 150 (N11421) collided in flight near Whittier, California on January 9, 1975. The Twin Otter carried 10 passengers and 2 crew; the Cessna carried an instructor and student pilot. Both aircraft were destroyed, with 14 fatalities. Neither flight crew saw the other aircraft in sufficient time to avoid the collision.",
+  "probable_cause": "The failure of both flightcrews to see the other aircraft in sufficient time to initiate evasive action. The ability of both crews to detect the other aircraft in time to avoid a collision was reduced because of the position of the sun (9 degrees above the western horizon), the closure angle of the aircraft, and the necessity for the Twin Otter's flightcrew to acquire visual contact with radar-reported traffic directly in front of them.",
+  "factors": [
+    {
+      "id": "visual_illusion",
+      "role": "contributing",
+      "evidence": "The sun was positioned 9 degrees above the western horizon at azimuth 236 degrees (south of west), directly between the Twin Otter pilots and the Cessna, making it difficult or impossible to see the Cessna against the backdrop of the setting sun (p. 14)."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The Twin Otter pilots were attempting to sight a reported helicopter traffic directly in front of them, which limited their visual search to a narrow sector ahead of the aircraft (p. 14)."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Ground witnesses stated that neither aircraft made any abrupt evasive maneuvers prior to the collision, indicating neither flightcrew saw the other aircraft in sufficient time to attempt evasive action (p. 11)."
+    },
+    {
+      "id": "ground_radar_unavailable",
+      "role": "contributing",
+      "evidence": "The Cessna 150, not equipped with a transponder, was not observed on approach control radar because its track was tangential to the radar antenna, causing its return to be cancelled by the moving target indicator (MTI) circuitry. Flight test confirmed no primary return on controller's display (p. 13)."
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "The Cessna struck the left side of the Twin Otter at an approximate 90-degree angle just back of the large plane's cockpit, causing a midair breakup with separation of a wing from the Twin Otter's fuselage (p. 11)."
+    }
+  ],
+  "chain": [
+    ["visual_illusion", "loss_of_situational_awareness"],
+    ["loss_of_situational_awareness", "inadequate_monitoring"],
+    ["inadequate_monitoring", "midair_collision"],
+    ["ground_radar_unavailable", "midair_collision"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "15:56",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Golden West Airlines Flight 261 (Twin Otter N6383) departed Ontario International Airport on VFR flight plan to Los Angeles with 10 passengers and 2 crew",
+      "factors": []
+    },
+    {
+      "t": 529,
+      "clock": "16:04:45",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Twin Otter contacted LAX arrival radar, reported over Rose Hills, 23 nmi east of airport",
+      "state": {"alt": 2800, "hdg": 250},
+      "factors": []
+    },
+    {
+      "t": 600,
+      "clock": "16:05:45",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Arrival controller advised Twin Otter of traffic 5.5 nmi in front, climbing from 1500 to 3000 ft (police helicopter on VFR flight)",
+      "factors": []
+    },
+    {
+      "t": 615,
+      "clock": "16:05:55",
+      "phase": "cruise",
+      "actor": "OTHER",
+      "kind": "crew_speech",
+      "text": "Twin Otter crew acknowledged: \"Two sixty one, we'll do it.\"",
+      "factors": []
+    },
+    {
+      "t": 695,
+      "clock": "16:07:35",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller transmitted advisory that helicopter was now at their 1130 position, 3 miles northbound. No response from Twin Otter.",
+      "factors": ["loss_of_situational_awareness"]
+    },
+    {
+      "t": 720,
+      "clock": "16:08:00",
+      "phase": "cruise",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Midair collision: Cessna 150 N11421 struck the left side of Twin Otter N6383 at approximately 90-degree angle at 2,200 ft, near Whittier. Both aircraft broke up in the air.",
+      "state": {"alt": 2200, "hdg": 250},
+      "factors": ["midair_collision", "visual_illusion", "inadequate_monitoring"]
+    },
+    {
+      "t": 780,
+      "clock": "16:09:00",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Both aircraft destroyed by collision and subsequent ground impact, with wreckage scattered over 8 to 10 city block area in Whittier. Falling debris caused substantial damage to houses and lawns but no injuries to persons on the ground.",
+      "factors": ["midair_collision"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7514.pdf"
+  ],
+  "asn_id": "19750109-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/Golden_West_Airlines_Flight_261",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7514.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR75-14.pdf"
+  ],
+  "interest": 13.16,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Synopsis (p. 4), History of Flight (p. 5-10), Aircraft Information (p. 7), Meteorological Information (p. 7), Analysis and Conclusions (p. 12-15), Findings and Probable Cause (p. 15)",
+      "Collision geometry study showed aircraft on collision course with 174 knot closing speed",
+      "Sun position 9° above horizon, 236° azimuth (south of west), directly between Twin Otter pilots and Cessna",
+      "Cessna positioned 57° right of Twin Otter, outside normal scan pattern",
+      "Cessna not equipped with transponder, causing radar detection failure due to tangential effect",
+      "Twin Otter crew distracted by helicopter traffic advisory immediately before collision",
+      "No CVR transcript available in public report",
+      "No recommendations issued in this report"
+    ]
+  }
+}

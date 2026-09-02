@@ -1,0 +1,164 @@
+{
+  "id": "wd_q6164937",
+  "qid": "Q6164937",
+  "title": "LAN Chile 1069",
+  "flight_number": "LA1069",
+  "date": "1991-02-20",
+  "time_reference": "UTC",
+  "t0": null,
+  "agency": "DGAC",
+  "agencies": [
+    {
+      "code": "DGAC",
+      "name": "Direcci\u00f3n General de Aeron\u00e1utica Civil",
+      "country": "Chile",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "British Aerospace BAe 146-200",
+    "manufacturer": "British Aerospace",
+    "family": "BAe 146",
+    "registration": "CC-CET"
+  },
+  "operator": "LAN Chile",
+  "route": {
+    "from_name": "Punta Arenas",
+    "to_name": "Puerto Williams"
+  },
+  "location": {
+    "name": "Puerto Williams Airport",
+    "country": "Chile"
+  },
+  "phase": "landing",
+  "occupants": 66,
+  "fatalities": 20,
+  "injuries_serious": null,
+  "damage": "destroyed",
+  "category": "RE",
+  "summary": "LAN Chile Flight 1069 was cleared for a VOR A approach to Puerto Williams on runway 26, but the captain decided to perform a direct approach to runway 08. The aircraft touched down 427 meters from the runway threshold at 112 knots on a wet runway with a negative slope and little braking action. The aircraft was unable to stop and overran the runway into the Beagle Channel. The investigation determined the probable cause was poor planning in changing runways and misapplication of the landing procedure.",
+  "probable_cause": "The probable cause was a failure of good planning made by the pilot during the approach when he decided to change runway and misapplication of the landing procedure. The weather conditions, negative slope, wet runway, wind and little braking action led to the overrun of the runway.",
+  "factors": [
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "the captain decided to perform a direct approach to runway 08"
+    },
+    {
+      "id": "tailwind_landing",
+      "role": "latent",
+      "evidence": "Wind was given as 180\u00b0 at 4 kn. Shortly, the air traffic controller announced the updated wind information"
+    },
+    {
+      "id": "contaminated_runway",
+      "role": "latent",
+      "evidence": "wet runway and little braking action"
+    },
+    {
+      "id": "delayed_deceleration",
+      "role": "contributing",
+      "evidence": "the aircraft overran the runway with insufficient braking action"
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "the aircraft overran the runway and slid into the Beagle Channel"
+    }
+  ],
+  "chain": [
+    [
+      "navigation_error",
+      "delayed_deceleration"
+    ],
+    [
+      "tailwind_landing",
+      "runway_overrun"
+    ],
+    [
+      "contaminated_runway",
+      "runway_overrun"
+    ],
+    [
+      "delayed_deceleration",
+      "runway_overrun"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "15:15",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 15:15, the aircraft was cleared for a VOR A approach into Puerto Williams Airport on runway 26.",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "The air traffic controller announced the updated wind information as 160 degrees at 6 kn.",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "The captain decided to perform a direct approach to runway 08.",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The airplane touched down 427 m from the runway threshold at a speed of 112 kn.",
+      "factors": []
+    },
+    {
+      "t": 240,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "The aircraft overran the runway and slid into the Beagle Channel.",
+      "factors": [
+        "delayed_deceleration"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.dgac.gob.cl/wp-content/uploads/2019/10/770.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "asn_id": null,
+  "wikipedia": null,
+  "report_links": [
+    "https://www.dgac.gob.cl/wp-content/uploads/2019/10/770.pdf"
+  ],
+  "interest": 13.7,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from report using text sections: History of Flight, Probable Cause, Recommendations"
+    ]
+  }
+}

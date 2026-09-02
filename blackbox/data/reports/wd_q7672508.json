@@ -1,0 +1,153 @@
+{
+  "id": "wd_q7672508",
+  "qid": "Q7672508",
+  "title": "TWA 128",
+  "flight_number": "TW128",
+  "date": "1967-11-20",
+  "time_reference": "UTC",
+  "t0": null,
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Convair 880",
+    "manufacturer": "Convair",
+    "family": "880",
+    "registration": "N821TW"
+  },
+  "operator": "Trans World Airlines",
+  "route": {
+    "from_name": "Los Angeles International Airport",
+    "to_name": "Logan International Airport"
+  },
+  "location": {
+    "name": "Cincinnati/Northern Kentucky International Airport",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 82,
+  "fatalities": 70,
+  "injuries_serious": null,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Flight 128 crashed on final approach to Greater Cincinnati Airport at night with the glide slope inoperative. The crew descended to 875 feet before striking trees, attempting a visual approach without adequate altimeter cross-checking. Seventy of the eighty-two people aboard were killed. The NTSB determined the likely cause to be crew error in attempting the visual approach without maintaining minimum altitude.",
+  "probable_cause": "Crew error, in attempting a visual no-glide-slope approach at night during deteriorating weather conditions, without an adequate altimeter cross-reference.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "approach conducted at night during deteriorating weather conditions"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "aircraft descended to an elevation of 875 ft, where it first struck trees in a spot 9357 ft short of runway"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "crew did not maintain adequate altimeter cross-reference"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "aircraft first struck trees and final impact was in wooded area 6878 ft short of runway"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "aircraft disintegrated and was enveloped in flames"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "20:56",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 128 reported passing outer marker and was cleared to land",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": "20:57",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight crew initiated descent and began performing final landing checklist",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "20:59",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft descended to 875 feet and struck trees 9357 feet short of runway",
+      "factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": "21:00",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacted terrain in wooded area and disintegrated in flames",
+      "factors": [
+        "cfit",
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR69-05.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "asn_id": null,
+  "wikipedia": null,
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR69-05.pdf",
+    "https://www.ntsb.gov/aviationquery/brief.aspx?ev_id=15735&key=0"
+  ],
+  "interest": 14.29,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from report using text sections: History of Flight, Probable Cause, Recommendations"
+    ]
+  }
+}
