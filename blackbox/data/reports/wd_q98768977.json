@@ -1,0 +1,130 @@
+{
+  "id": "wd_q98768977",
+  "qid": "Q98768977",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2020 South West Aviation Antonov An-26 crash",
+  "flight_number": null,
+  "date": "2020-08-22",
+  "agency": "MAK-IAC",
+  "aircraft": {
+    "type": "Antonov An-26",
+    "manufacturer": "Antonov",
+    "family": "An-26",
+    "registration": "EX-126"
+  },
+  "operator": "South West Aviation",
+  "route": {
+    "from_name": "Juba",
+    "to_name": "Wau"
+  },
+  "location": {
+    "name": "Juba",
+    "country": "South Sudan"
+  },
+  "phase": "takeoff",
+  "occupants": 9,
+  "fatalities": 8,
+  "category": "LOC-I",
+  "summary": "South West Aviation An-26 freighter EX-126 crashed during takeoff from Juba Airport on a cargo charter flight to Wau. Eyewitnesses reported the aircraft suddenly lost power shortly after departure. The aircraft lost height and impacted a farm in the Hai Referendum residential area 2.5 nautical miles from the runway. Eight occupants were killed including Russian crew and South Sudanese personnel. The investigation determined the aircraft lacked valid airworthiness and operator certificates but could not establish the cause.",
+  "probable_cause": "",
+  "factors": [
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "Eyewitnesses report that the aircraft suddenly lost power and crashed"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The Antonov An-26 freighter registration EX-126 lost height shortly after departure from Juba"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The Antonov An-26 freighter registration EX-126 performing a charter flight from Juba to Wau with six passengers and three crew lost height shortly after departure from Juba and impacted a farm about 2.5 nmi from the runway"
+    }
+  ],
+  "chain": [
+    [
+      "engine_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Antonov An-26 freighter registration EX-126 performing a charter flight from Juba to Wau",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Eyewitnesses report that the aircraft suddenly lost power and crashed",
+      "factors": [
+        "engine_failure"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Impacted a farm about 2.5 nmi from the runway in the Hai Referendum residential area",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "It burned as residents approached it",
+      "factors": []
+    }
+  ],
+  "report_links": [
+    "https://mak-iac.org/upload/iblock/c4d/yqs0mr8o87nq7gh97q6j02yic54a5r9x/report_ex-126_en.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2020_South_West_Aviation_Antonov_An-26_crash",
+  "asn_id": null,
+  "interest": 10.95,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Record created from summary; key sections verified against official report"
+    ]
+  },
+  "curated_id": null,
+  "agencies": [
+    {
+      "code": "MAK-IAC",
+      "name": "Interstate Aviation Commission",
+      "country": "Russia",
+      "role": "lead"
+    }
+  ],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "sources": [],
+  "fdr": null
+}

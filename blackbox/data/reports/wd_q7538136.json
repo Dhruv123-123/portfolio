@@ -1,0 +1,143 @@
+{
+  "id": "wd_q7538136",
+  "qid": "Q7538136",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Skywest Airlines 1834",
+  "flight_number": "SW1834",
+  "date": "1987-01-15",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Fairchild Swearingen Metroliner II",
+    "manufacturer": "Fairchild Swearingen",
+    "family": "Metro",
+    "registration": null
+  },
+  "operator": "SkyWest Airlines",
+  "route": {
+    "from_name": "Pocatello Regional Airport",
+    "to_name": "Salt Lake City International Airport"
+  },
+  "location": {
+    "name": "Kearns, Utah",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 10,
+  "fatalities": 10,
+  "category": "MAC",
+  "summary": "SkyWest Airlines Flight 1834, a Metro II on final approach to Salt Lake City, collided at 7,000 ft with a Mooney M20 that had strayed into restricted airspace. The NTSB initially blamed the small aircraft pilots for entering the radar service area, while a subsequent court judgment assigned 51% responsibility to the FAA controller who failed to recognize the collision danger on radar.",
+  "probable_cause": "The primary cause was the small aircraft pilots wandering into restricted airspace while climbing from Salt Lake City Municipal Airport. Contributing factors included the air traffic controller's failure to notice the Mooney on radar and the lack of a Mode-C transponder on the small aircraft.",
+  "factors": [
+    {
+      "id": "runway_incursion",
+      "role": "initiating",
+      "evidence": "the Mooney pilots wandered into restricted airspace"
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "The air traffic controller watching the area failed to recognize the danger when the Mooney pilots wandered into restricted airspace. The controller did not notice the small plane on the radar"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "the Mooney pilots wandered into restricted airspace into Salt Lake City airport radar service area"
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "the SkyWest plane collided with the Mooney at an approximate altitude of 7000 ft above sea level"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "after the collision at 7000 ft, the main section of the SkyWest aircraft slid through a chain-link fence"
+    }
+  ],
+  "chain": [
+    [
+      "runway_incursion",
+      "atc_communication_error"
+    ],
+    [
+      "atc_communication_error",
+      "midair_collision"
+    ]
+  ],
+  "events": [
+    {
+      "t": -180,
+      "clock": "12:22",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "SkyWest Flight 1834 was 30 minutes late from Pocatello on final approach to Runway 34 of Salt Lake City International Airport",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "12:52",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Air traffic controller directed SkyWest pilots to turn, unaware of Mooney in restricted airspace",
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "approach",
+      "actor": "OTHER",
+      "kind": "env",
+      "text": "SkyWest aircraft collided with Mooney at approximately 7000 ft altitude above sea level about half a mile above ground level",
+      "factors": [
+        "midair_collision",
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 15,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Main section of SkyWest aircraft slid through chain-link fence stopping in middle of suburban street with wreckage scattered over one-mile-square area and body parts hanging from trees",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8803.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/SkyWest_Airlines_Flight_1834",
+  "asn_id": "19870115-0",
+  "interest": 10.46,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Record created from summary; key sections verified against official report"
+    ]
+  },
+  "curated_id": null,
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "sources": [],
+  "fdr": null
+}

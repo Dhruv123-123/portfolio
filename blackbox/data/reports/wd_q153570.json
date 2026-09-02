@@ -1,0 +1,157 @@
+{
+  "id": "wd_q153570",
+  "qid": "Q153570",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2011 Reno Air Races crash",
+  "flight_number": null,
+  "date": "2011-09-16",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "North American P-51D Mustang",
+    "manufacturer": "North American",
+    "family": "P-51",
+    "registration": "N79111"
+  },
+  "operator": "Aero Trans Corp",
+  "route": {
+    "from_name": "Reno Stead Airport",
+    "to_name": "Reno Stead Airport"
+  },
+  "location": {
+    "name": "Reno Stead Airport",
+    "country": "United States"
+  },
+  "phase": "cruise",
+  "occupants": 1,
+  "fatalities": 11,
+  "category": "LOC-I",
+  "summary": "The Galloping Ghost, a highly modified North American P-51D Mustang racing aircraft piloted by Jimmy Leeward, crashed into spectators at the 2011 Reno Air Races after the aircraft abruptly pitched up, rolled inverted and nosedived. The NTSB investigation found reused single-use locknuts in the left elevator trim tab system had loosened, causing a fatigue crack in an attachment screw that allowed the trim tab to flutter. The untested modifications to the aircraft, particularly the fixed right trim tab, contributed to the loss of control. The pilot died at impact and 10 spectators were killed.",
+  "probable_cause": "Reused single-use locknuts in the left elevator trim tab system that loosened. This led to a fatigue crack in an attachment screw and allowed the trim tab to flutter, which caused the trim tab link assembly to fail and led to loss of control of the aircraft. Untested and undocumented modifications to the airplane, particularly the right trim tab being fixed in place, contributed to the accident.",
+  "factors": [
+    {
+      "id": "metal_fatigue",
+      "role": "initiating",
+      "evidence": "reused single-use locknuts loosened and fatigue crack developed in attachment screw"
+    },
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "reused single-use locknuts rather than new ones in left elevator trim tab system"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "untested and undocumented modifications; right trim tab fixed in place rather than operational"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "aircraft abruptly pitched up, rolled inverted and nosedived at over 400 mph"
+    }
+  ],
+  "chain": [
+    [
+      "metal_fatigue",
+      "loss_of_control_inflight"
+    ],
+    [
+      "maintenance_error",
+      "metal_fatigue"
+    ],
+    [
+      "design_deficiency",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "The Galloping Ghost accelerated to 530 mph during racing, approximately 40 mph faster than previous races",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Left elevator trim tab experienced flutter due to loosened locknuts and fatigue crack",
+      "factors": [
+        "metal_fatigue"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft fuselage buckled and gaps appeared between fuselage and canopy during flight",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Left elevator trim tab link assembly failed, resulting in loss of pitch control authority",
+      "factors": []
+    },
+    {
+      "t": 240,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft abruptly pitched up, rolled inverted and nosedived into apron at over 400 mph in front of grandstands",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft disintegrated on impact; pilot and 10 spectators killed; 69 more on ground injured",
+      "factors": []
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB1201.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2011_Reno_Air_Races_crash",
+  "asn_id": null,
+  "interest": 10.4,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Record created from summary; key sections verified against official report"
+    ]
+  },
+  "curated_id": null,
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "sources": [],
+  "fdr": null
+}

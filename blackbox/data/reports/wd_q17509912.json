@@ -1,0 +1,161 @@
+{
+  "id": "wd_q17509912",
+  "qid": "Q17509912",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Commonwealth Commuter 317",
+  "flight_number": "CC317",
+  "date": "1974-01-06",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Beechcraft Model 99A",
+    "manufacturer": "Beechcraft",
+    "family": "99",
+    "registration": "N125AE"
+  },
+  "operator": "Air East",
+  "route": {
+    "from_name": "Pittsburgh",
+    "to_name": "Johnstown-Cambria County Airport"
+  },
+  "location": {
+    "name": "Johnstown, Pennsylvania",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 17,
+  "fatalities": 12,
+  "category": "LOC-I",
+  "summary": "Commonwealth Commuter Flight 317 crashed short of Johnstown runway on approach when the aircraft descended below the safe approach slope, stalled, and lost control at approximately 100 yards short of the runway. The NTSB found the crash was caused by a premature descent below minimum descent altitude at abnormally low approach airspeeds. Captain Brannon had developed a habit of approaching at speeds as low as 93-95 knots, potentially below the safe target airspeed, contributing to the stall.",
+  "probable_cause": "Premature descent below safe approach slope followed by stall and loss of aircraft control, likely resulting from deliberate descent below published minimum descent altitude at abnormally low airspeeds to establish visual reference with approach lights.",
+  "factors": [
+    {
+      "id": "low_energy_state",
+      "role": "initiating",
+      "evidence": "Brannon had a habit of making landing approaches at slower-than-prescribed airspeeds, as low as 93 or 95 KIAS"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "plane descended below the lowest safe approach slope below published minimum descent altitude"
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "contributing",
+      "evidence": "at around 7:05 p.m., the plane stalled at which point the pilots lost control"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "pilots descended below safe altitude without proper reference with the approach lights"
+    },
+    {
+      "id": "visual_illusion",
+      "role": "latent",
+      "evidence": "a visual impairment or optical illusion created by the runway/approach lighting systems may have contributed"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "plane stalled and pilots lost control, slammed into embankment 100 yards short of runway while in nose-up wings-level attitude"
+    }
+  ],
+  "chain": [
+    [
+      "low_energy_state",
+      "aerodynamic_stall"
+    ],
+    [
+      "descent_below_minimums",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ],
+    [
+      "inadequate_monitoring",
+      "descent_below_minimums"
+    ],
+    [
+      "visual_illusion",
+      "descent_below_minimums"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "18:30",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 317 departed Pittsburgh International Airport on regularly scheduled commuter flight to Johnstown",
+      "factors": []
+    },
+    {
+      "t": 2700,
+      "clock": "19:05",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain Brannon on approach to Runway 33, aircraft descended below lowest safe approach slope at abnormally low speed",
+      "factors": [
+        "low_energy_state",
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 2760,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft stalled; pilots lost control; plane clipped top of elevated approach lights",
+      "factors": [
+        "aerodynamic_stall",
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 2800,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft in nose-up wings-level attitude slammed into steep embankment approximately 100 yards short of runway, pancaked and broke apart",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7503.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Commonwealth_Commuter_Flight_317",
+  "asn_id": "19740106-0",
+  "interest": 11.05,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Record created from summary; key sections verified against official report"
+    ]
+  },
+  "curated_id": null,
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "sources": [],
+  "fdr": null
+}
