@@ -1,0 +1,269 @@
+{
+  "id": "wd_q949020",
+  "qid": "Q949020",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "USAir 1493",
+  "flight_number": "US1493",
+  "date": "1991-02-01",
+  "time_reference": "PST",
+  "t0": "1991-02-01T18:07:00-08:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "AAR-91-08",
+      "report_title": "Runway Collision of USAir Flight 1493, Boeing 737 and Skywest Flight 5569 Fairchild Metroliner",
+      "report_date": "1991-10-22",
+      "url": "https://ntsb.gov/investigations/AccidentReports/Reports/AAR9108.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-300",
+    "family": "737",
+    "manufacturer": "Boeing",
+    "registration": "N388US"
+  },
+  "operator": "US Airways",
+  "route": {
+    "from": "CMH",
+    "from_name": "John Glenn Columbus International",
+    "to": "SFO",
+    "to_name": "San Francisco International"
+  },
+  "location": {
+    "name": "Los Angeles International Airport, Runway 24L",
+    "country": "United States",
+    "lat": 33.9425,
+    "lon": -118.4081
+  },
+  "phase": "landing",
+  "occupants": 101,
+  "fatalities": 35,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "RE",
+  "summary": "USAir Flight 1493, a Boeing 737-300, collided with SkyWest Airlines Flight 5569, a Fairchild Metroliner, on runway 24L at Los Angeles International Airport during landing. The SkyWest aircraft was positioned at an intersection awaiting takeoff clearance. The collision was caused by loss of situational awareness by the local air traffic controller, who failed to maintain awareness of the SkyWest aircraft's position due to a misplaced flight progress strip and preoccupation with another aircraft.",
+  "probable_cause": "The probable cause was the failure of the Los Angeles Air Traffic Facility Management to implement procedures that provided redundancy comparable to the requirements of the National Operational Position Standards, and the failure of the FAA Air Traffic Service to provide adequate policy direction and oversight to its air traffic control facility managers. These failures created an environment in the Los Angeles Air Traffic Control tower that led to the failure of the local controller to maintain awareness of the traffic situation, culminating in inappropriate clearances and the subsequent collision. Contributing to the cause was the failure of the FAA to provide effective quality assurance of the ATC system.",
+  "factors": [
+    {
+      "id": "atc_communication_error",
+      "role": "initiating",
+      "evidence": "A flight progress strip for Wings West aircraft was misplaced by the clearance delivery controller (p. 592-593), preventing the local controller from being aware of its position."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The local controller forgot she had positioned SkyWest 5569 for takeoff on runway 24L at intersection 45 due to preoccupation with another aircraft (p. 18478-18486)."
+    },
+    {
+      "id": "atc_workload_staffing",
+      "role": "contributing",
+      "evidence": "Operating procedures at LAX did not provide redundancy for monitoring flight progress strips, relying on the local controller's memory (p. 18410-18443)."
+    },
+    {
+      "id": "ground_radar_unavailable",
+      "role": "latent",
+      "evidence": "Airport Surface Detection Equipment radar was not available to assist the controller, though it probably would not have prevented the accident given the circumstances (p. 18574-18580)."
+    },
+    {
+      "id": "runway_incursion",
+      "role": "contributing",
+      "evidence": "SkyWest aircraft was positioned in takeoff position on runway 24L at intersection 45 (p. 757-761)."
+    },
+    {
+      "id": "ground_collision",
+      "role": "outcome",
+      "evidence": "USAir 737 collided with SkyWest Metroliner on runway 24L, destroying both aircraft with 35 fatalities (p. 564-568, 770-781)."
+    }
+  ],
+  "chain": [
+    ["atc_communication_error", "loss_of_situational_awareness"],
+    ["loss_of_situational_awareness", "runway_incursion"],
+    ["runway_incursion", "ground_collision"]
+  ],
+  "events": [
+    {
+      "t": -135,
+      "clock": "18:04:44",
+      "phase": "landing",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "LAX tower instructs SkyWest 569 to taxi into position and hold on runway 24 left.",
+      "factors": ["runway_incursion"],
+      "state": {}
+    },
+    {
+      "t": -130,
+      "clock": "18:04:49",
+      "phase": "landing",
+      "actor": "OTHER",
+      "kind": "crew_speech",
+      "text": "SkyWest 569 acknowledges position and hold clearance for runway 24 left.",
+      "factors": [],
+      "state": {}
+    },
+    {
+      "t": -90,
+      "clock": "18:05:29",
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "USA 1493 requests clearance for left side runway 24 left approach.",
+      "factors": [],
+      "state": {}
+    },
+    {
+      "t": -69,
+      "clock": "18:05:51",
+      "phase": "landing",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "LAX tower clears USA 1493 to land on runway 24 left (controller unaware of SkyWest aircraft on runway due to loss of situational awareness).",
+      "factors": ["loss_of_situational_awareness", "atc_communication_error"],
+      "state": {}
+    },
+    {
+      "t": -65,
+      "clock": "18:05:55",
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "USA 1493 acknowledges landing clearance for runway 24 left.",
+      "factors": [],
+      "state": {}
+    },
+    {
+      "t": -51,
+      "clock": "18:06:09",
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "USA 1493 descending out of 500 feet on approach.",
+      "factors": [],
+      "state": {"alt": 500}
+    },
+    {
+      "t": -1,
+      "clock": "18:06:59",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Sound of impact as USA 1493 contacts the runway with SkyWest 5569 positioned at intersection 45.",
+      "factors": ["ground_collision"],
+      "state": {}
+    },
+    {
+      "t": 0,
+      "clock": "18:07:00",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "USAir 737 crushes SkyWest Metroliner, destroying both aircraft. Fire and explosion at runway 24L, intersection 45.",
+      "factors": ["ground_collision"],
+      "state": {}
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-91-104",
+      "to": "FAA",
+      "text": "Modify Air Traffic Control procedures at LAX to segregate arrivals and departures to specific runways and provide redundancies as intended in the National Operational Position Standards in the control tower.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-91-105",
+      "to": "FAA",
+      "text": "Undertake a thorough risk-based evaluation of air traffic control procedures at LAX, considering runway intersection takeoffs, position-and-hold clearances, displaced runway thresholds, hazards from crossing traffic, local assist controller needs, and ASDE use and maintenance.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-91-106",
+      "to": "FAA",
+      "text": "Include in the Office of Safety Quality Assurance the authority and resources to independently evaluate facility compliance with FAA directives and audit facility evaluations to determine corrective action.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-91-107",
+      "to": "FAA",
+      "text": "Retain the National Operational Position Standards as a separate, independent order and direct FAA Human Factors and Air Traffic Service staffs to review the order for adequacy of redundancies.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-91-108",
+      "to": "FAA",
+      "text": "Provide Air Traffic Control Supervisors with formal training to improve their understanding of the intent, objectives and administration of the Technical Appraisal Program.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-91-109",
+      "to": "FAA",
+      "text": "Require that interim evaluations of controller performance be retained for 2 years and utilized to track performance and training needs of air traffic controllers.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-91-110",
+      "to": "FAA",
+      "text": "Conduct a one-time examination of airport lighting at all U.S. tower-controlled airports to eliminate or reduce restrictions to visibility from the control tower to runways and other traffic movement areas.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-91-111",
+      "to": "FAA",
+      "text": "Redefine airplane certification coverage compliance standards for anticollision light installations to ensure visibility to pilots on adjacent runways.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-91-112",
+      "to": "FAA",
+      "text": "Evaluate and implement suitable means for enhancing the conspicuity of aircraft on airport surfaces during night or reduced visibility, including high-intensity strobe lighting.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-91-113",
+      "to": "FAA",
+      "text": "Direct the general aviation community and airlines to ensure pilot training programs emphasize vigilance in monitoring ATC radio frequencies for traffic conflicts, especially on active runways and during final approach.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-91-114",
+      "to": "FAA",
+      "text": "Incorporate into the Airman's Information Manual language that will alert pilots to the need for vigilance in monitoring air traffic frequencies for traffic conflict situations.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-91-115",
+      "to": "FAA",
+      "text": "Develop specific phraseology for use by pilots requesting intersection departures and controllers issuing position-and-hold clearances for intersection departures.",
+      "status": "closed_acceptable"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "LAX implemented procedure changes requiring flight progress strips to be passed through ground control position",
+    "Segregation of arrivals and departures to specific runways at LAX",
+    "Enhanced aircraft conspicuity standards for airport operations"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR9108.pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read Executive Summary, History of Flights (lines 714-851), Conclusions (lines 18300-18511), Probable Cause (lines 18780-18836), and Recommendations (lines 18842-19334)",
+      "Detailed CVR transcript available in report Appendix C but not extracted as focus was on key sections establishing causal chain"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/1991_Los_Angeles_runway_collision",
+  "asn_id": "19910201-0",
+  "interest": 15.67,
+  "report_links": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR9108.pdf"],
+  "curated_id": null
+}

@@ -1,0 +1,209 @@
+{
+  "id": "wd_q2896309",
+  "qid": "Q2896309",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Southern Airways 932",
+  "flight_number": "SA932",
+  "date": "1970-11-14",
+  "time_reference": "EST",
+  "t0": "1970-11-14T19:36:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "AAR-72-11",
+      "report_title": "Aircraft Accident Report, Southern Airways, Inc., DC-9, N97S, Tri-State Airport, Huntington, West Virginia",
+      "report_date": "1972-04-14",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7211.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-9-30",
+    "family": "DC-9",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "N97S"
+  },
+  "operator": "Southern Airways",
+  "route": {
+    "from": "IYK",
+    "from_name": "Kinston Regional Jetport",
+    "to": "HTS",
+    "to_name": "Tri-State Airport"
+  },
+  "location": {
+    "name": "Tri-State Airport, Huntington, West Virginia, approximately 1 mile west of runway threshold on a hillside",
+    "country": "United States",
+    "lat": 38.3741,
+    "lon": -82.5783
+  },
+  "phase": "approach",
+  "occupants": 75,
+  "fatalities": 75,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Southern Airways Flight 932, a McDonnell Douglas DC-9-30 chartered to transport the Marshall University football team and boosters, crashed during a nonprecision instrument approach to runway 11 at Tri-State Airport in Huntington, West Virginia. The aircraft descended below minimum descent altitude in adverse weather conditions (rain, fog, and smoke) without establishing visual contact with the runway. All 75 occupants, including 37 football players, 5 coaches, and crew, were killed.",
+  "probable_cause": "The probable cause of this accident was the descent below Minimum Descent Altitude during a nonprecision approach under adverse operating conditions without visual contact with the runway environment. The National Transportation Safety Board has been unable to determine the reason for this descent, although the two most likely explanations are improper use of cockpit instrumentation data or an altimetry system error.",
+  "factors": [
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "The aircraft descended approximately 500 feet below the MDA of 1,240 feet during the approach (p. 2136-2138), continuing until impact with trees at 922 feet MSL."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Air traffic control advised that rain, fog, smoke and a ragged ceiling were at the airport, making the landing approach extremely difficult (p. 669-674). Visibility was estimated at 5 miles with low clouds."
+    },
+    {
+      "id": "visual_illusion",
+      "role": "contributing",
+      "evidence": "The Catlettsburg Refinery, located approximately 2 miles from the runway with lights 300 feet higher in elevation than the airport, could have produced a visual illusion in the final approach phase (p. 2231-2270)."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The crew did not make proper required callouts, did not arrest the descent at MDA, and the captain did not recognize that they had descended below minimums (p. 2365-2422)."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The first officer failed to call out 500 feet above field elevation and failed to call out at MDA with a positive statement on runway visibility (p. 2365-2397)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft collided with trees on a hillside 5,543 feet west of the runway threshold, destroying the aircraft and killing all 75 occupants (p. 777-778, 774)."
+    }
+  ],
+  "chain": [
+    ["low_visibility", "descent_below_minimums"],
+    ["visual_illusion", "descent_below_minimums"],
+    ["descent_below_minimums", "loss_of_situational_awareness"],
+    ["loss_of_situational_awareness", "cfit"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "19:23",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Southern Airways 932 established radio contact with Huntington Approach Control, descending to 5,000 feet.",
+      "factors": [],
+      "state": {}
+    },
+    {
+      "t": 660,
+      "clock": "19:34",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller advised crew that rain, fog, smoke, and a ragged ceiling were at the airport; weather was 300 feet scattered, 500 feet variable broken, 1,100 feet overcast, visibility 5 miles.",
+      "factors": ["low_visibility"],
+      "state": {}
+    },
+    {
+      "t": 720,
+      "clock": "19:35",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft began normal descent after passing outer marker on localizer approach to runway 11.",
+      "factors": ["descent_below_minimums"],
+      "state": {}
+    },
+    {
+      "t": 780,
+      "clock": "19:36",
+      "phase": "approach",
+      "actor": "PM",
+      "kind": "crew_speech",
+      "text": "First officer called out altitude readings during approach: 'seven hundred feet...We're two hundred above' then 'four hundred'.",
+      "factors": ["loss_of_situational_awareness"],
+      "state": {}
+    },
+    {
+      "t": 840,
+      "clock": "19:36:40",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft descended an additional 220 feet within 12 seconds after MDA callout and collided with tree tops on a hillside 5,543 feet short of runway threshold, burst into flames.",
+      "factors": ["cfit"],
+      "state": {}
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "All segments of the aviation industry should continue to focus attention on the unique demands for crew coordination and vigilance during nonprecision approaches, with particular emphasis on accelerated development of area navigation systems with vertical guidance and heads-up display systems.",
+      "status": "unknown",
+      "trigger_factors": ["descent_below_minimums", "loss_of_situational_awareness"]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Develop and install audible and visual altitude warning devices and implement procedures for their use to warn pilots when approaching selected altitudes during descents and instrument approaches.",
+      "status": "unknown",
+      "trigger_factors": ["descent_below_minimums"]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require that all air carrier aircraft be equipped with a functional ground proximity warning device in addition to barometric altimeters.",
+      "status": "unknown",
+      "trigger_factors": ["descent_below_minimums"]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Establish final approach descent fixes and require pilots to maintain altitude at or above MDA until passing the descent fix, and provide VASI for each runway served by a nonprecision approach.",
+      "status": "unknown",
+      "trigger_factors": ["descent_below_minimums"]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Revise procedures to require that pilots demonstrate, by means such as oral or written examination rather than simply signing a flight release, that they are familiar with 'off route' airports into which they will operate.",
+      "status": "unknown",
+      "trigger_factors": ["loss_of_situational_awareness"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Development and mandate of ground proximity warning systems (GPWS) for air carrier aircraft",
+    "Enhanced altitude alerting device requirements",
+    "Improved crew coordination procedures for nonprecision approaches",
+    "Installation of VASI systems at more airports",
+    "Stricter qualification requirements for pilots operating to unfamiliar airports"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7211.pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read History of Flight (lines 556-725), Analysis and Conclusions (lines 2027-2425), Probable Cause (lines 3381-3400), and Recommendations sections (lines 3405-3580)",
+      "Accident was during hours of darkness with adverse weather, contributing to inability to establish visual contact with runway",
+      "CVR transcript available in Appendix D but not extracted as focus was on establishing factors and causal chain"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Southern_Airways_Flight_932",
+  "asn_id": "19701114-0",
+  "interest": 15.09,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7211.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR72-11.pdf"
+  ],
+  "curated_id": null
+}
