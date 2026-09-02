@@ -1,0 +1,206 @@
+{
+  "id": "wd_q4816543",
+  "qid": "Q4816543",
+  "tier": "wikidata",
+  "title": "Atlantic Southeast Airlines 2254",
+  "flight_number": "ASA 2254",
+  "date": "1990-04-09",
+  "time_reference": "CDT (local)",
+  "t0": "1990-04-09T23:05:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "ATL90FA095A",
+      "report_title": "Midair Collision, Embraer EMB-120, N217AS and Cessna 172, N99501, Near Gadsden, Alabama, April 9, 1990",
+      "report_date": "1993-03-05",
+      "url": "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001212X22846-20170725-91135&AKey=1&RType=Final&IType=FA"
+    }
+  ],
+  "aircraft": {
+    "type": "Embraer EMB 120 Brasilia",
+    "family": "EMB 120",
+    "manufacturer": "Embraer",
+    "registration": "N217AS",
+    "msn": "120011",
+    "engines": "Pratt & Whitney PW118"
+  },
+  "operator": "Atlantic Southeast Airlines",
+  "route": {
+    "from": "KGAD",
+    "from_name": "Gadsden Regional Airport",
+    "to": "KATL",
+    "to_name": "Hartsfield-Jackson Atlanta International"
+  },
+  "location": {
+    "name": "Approximately 2.5 miles south of Gadsden Regional Airport",
+    "country": "USA",
+    "state": "Alabama",
+    "lat": null,
+    "lon": null
+  },
+  "phase": "climb",
+  "occupants": 9,
+  "fatalities": 2,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "MAC",
+  "summary": "Atlantic Southeast Airlines Flight 2254, an Embraer EMB-120 departing Gadsden, collided head-on with a Cessna 172 flown by Civil Air Patrol pilots during climb to 5,000 feet. The Cessna was westbound with the setting sun behind it, creating sun glare that restricted visibility for the Cessna pilot. The collision severed the EMB-120's right horizontal stabilizer, but the aircraft managed to return to the airport. The Cessna crashed with both occupants fatally injured.",
+  "probable_cause": "Inadequate visual lookout by the pilots of both aircraft, which resulted in their failure to see-and-avoid oncoming traffic. A factor related to the accident was the sun's glare, which restricted the vision of the Cessna 172 pilot.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "The Cessna 172 was westbound at the same altitude, facing the setting sun; the sun's glare restricted the vision of the Cessna 172 pilot. (p. 56)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The probable cause was inadequate visual lookout by the pilots of both aircraft, resulting in their failure to see and avoid oncoming traffic. Neither aircraft crew detected the other until moments before impact. (p. 41-44)"
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "The two aircraft collided head-on at approximately 1805 CDT at the same altitude about 2.5 miles south of the airport. (p. 29-30)"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "midair_collision"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "1805",
+      "phase": "climb",
+      "actor": "CAPT",
+      "text": "Flight 2254 departed Gadsden from Runway 24 with an IFR clearance, entered a left turn to a heading of east, and climbed toward assigned altitude of 5,000 feet MSL.",
+      "state": {
+        "alt": 0
+      },
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": 5,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Cessna 172 (Civil Air Patrol aircraft, N99501) was westbound heading toward the setting sun at approximately the same altitude as the climbing EMB-120.",
+      "factors": [
+        "low_visibility"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Before radar contact was established with ATC, the EMB-120 began to converge with the Cessna 172.",
+      "factors": [
+        "inadequate_monitoring"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 11,
+      "clock": "1805",
+      "phase": "climb",
+      "actor": "CAPT",
+      "text": "ASA crew reported seeing the Cessna moments before impact and captain attempted evasive action by pushing the nose down, but was unable to avoid collision.",
+      "factors": [
+        "inadequate_monitoring"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 12,
+      "clock": "1805",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Head-on collision occurred about 2.5 miles south of Gadsden airport. A flight attendant on the EMB-120 recalled hearing a 'thump' before the aircraft started a descent.",
+      "factors": [
+        "midair_collision"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 13,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "During impact, the right horizontal stabilizer of the EMB-120 separated from the aircraft, but the aircraft continued flying.",
+      "factors": [
+        "midair_collision"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 14,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "EMB-120 crew managed to recover from the initial descent and return to Gadsden airport for a safe landing with no injuries to the 3 crew members and 4 passengers.",
+      "factors": [],
+      "kind": "outcome"
+    },
+    {
+      "t": 15,
+      "clock": null,
+      "phase": "ground",
+      "actor": "SYS",
+      "text": "Cessna 172 entered an uncontrolled descent and crashed with both Civil Air Patrol occupants fatally injured.",
+      "factors": [],
+      "kind": "outcome"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Emphasis on continuous visual scanning and see-and-avoid procedures in IFR operations.",
+    "Training on collision avoidance systems and traffic awareness for aircraft operating in non-radar environments."
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001212X22846-20170725-91135&AKey=1&RType=Final&IType=FA"
+  ],
+  "depth": "sections",
+  "asn_id": "19900409-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/Atlantic_Southeast_Airlines_Flight_2254",
+  "report_links": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001212X22846-20170725-91135&AKey=1&RType=Final&IType=FA",
+    "https://www.ntsb.gov/about/employment/_layouts/ntsb.aviation/brief.aspx?ev_id=20001212X22846&key=2"
+  ],
+  "interest": 9.87,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Brief NTSB final report of 5 pages analyzed in full",
+      "All findings and probable cause extracted from report pages 40-58",
+      "Factual information about collision sequence from pages 25-38",
+      "No recommendations section in the report; only findings and probable cause",
+      "ASA crew consisted of 3 crew members; aircraft carried 4 passengers (total 7 on ASA aircraft)",
+      "Cessna 172 had 2 occupants (both fatally injured)",
+      "Aircraft damage to EMB-120: separation of right horizontal stabilizer but aircraft remained controllable",
+      "Report indicates witness did not observe evasive action by either aircraft before impact",
+      "Departure time noted as 1753 CDT, collision occurred at 1805 CDT",
+      "Weather: VFR conditions, 10 miles visibility, scattered clouds at 25,000 feet; sun glare was the critical factor"
+    ]
+  }
+}

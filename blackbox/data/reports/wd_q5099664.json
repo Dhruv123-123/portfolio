@@ -1,0 +1,572 @@
+{
+  "id": "wd_q5099664",
+  "qid": "Q5099664",
+  "tier": "wikidata",
+  "title": "China Eastern Airlines 583",
+  "flight_number": "583",
+  "date": "1993-04-06",
+  "time_reference": "HST (local)",
+  "t0": "1993-04-06T01:10:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "NTSB/AAR-93/07",
+      "report_title": "Inadvertent In-Flight Slat Deployment, China Eastern Airlines Flight 583, McDonnell Douglas MD-11, B-2171, 950 Nautical Miles South of Shemya, Alaska, April 6, 1993",
+      "report_date": "1993-10-27",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9307.pdf"
+    },
+    {
+      "code": "CAAC",
+      "name": "Civil Aviation Administration of China",
+      "country": "China",
+      "role": "accredited_representative"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas MD-11",
+    "family": "MD-11",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "B-2171",
+    "msn": null,
+    "engines": "General Electric CF6-80C2"
+  },
+  "operator": "China Eastern Airlines",
+  "route": {
+    "from": "ZBAA",
+    "from_name": "Beijing Capital International",
+    "to": "KLAX",
+    "to_name": "Los Angeles International",
+    "intermediate": "ZSHA"
+  },
+  "location": {
+    "name": "950 nautical miles south of Shemya, Aleutian Islands",
+    "country": "International waters (North Pacific)",
+    "lat": null,
+    "lon": null
+  },
+  "phase": "cruise",
+  "occupants": 255,
+  "fatalities": 2,
+  "injuries_serious": 157,
+  "damage": "substantial",
+  "category": "USOS",
+  "summary": "China Eastern Airlines Flight 583 experienced an inadvertent leading-edge slat deployment during cruise flight at FL330 over the North Pacific. The deployment caused a nose-up pitch tendency, followed by pilot-induced pitch oscillations that resulted in loss of 5,000 feet of altitude, severe structural damage to the cabin interior, and injuries to 157 occupants. The aircraft stabilized and diverted safely to Shemya Air Force Base.",
+  "probable_cause": "The inadequate design of the flap/slat actuation handle by McDonnell Douglas that allowed the handle to be easily and inadvertently dislodged from the UP/RET position, thereby causing extension of the leading edge slats during cruise flight. The captain's attempt to recover from the slat extension, given the reduced longitudinal stability and light control force characteristics of the MD-11 in cruise flight, led to several violent pitch oscillations. Contributing to the violence of the pitch oscillations were the lack of specific MD-11 pilot training in recovery from high altitude upsets and the influence of the stall warning system on the captain's control responses.",
+  "factors": [
+    {
+      "id": "design_deficiency",
+      "role": "initiating",
+      "evidence": "The flap/slat handle was inadequately designed and could be easily inadvertently dislodged from the UP/RET position during routine cockpit movements. (p. 353-359)"
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The captain was attempting to resolve a discrepancy with the FMC Mach number indication and was making inputs to the MCDU keypad, which is located near the slat handle, likely resulting in inadvertent handle contact. (p. 5195-5245)"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "Following the slat extension and nose-up pitch, the pilot pushed the control column forward with significant force, which disconnected the autopilot and caused severe nose-down elevator deflections, initiating violent oscillations. (p. 784-807)"
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "The stall warning system activated and deactivated during the pitch oscillations, influencing the pilot's control responses and contributing to the severity of the oscillations. (p. 710, 769)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "The crew lacked specific training in recovery from high-altitude upsets accompanied by stall warnings, contributing to their loss of control during the recovery attempt. (p. 375)"
+    }
+  ],
+  "chain": [
+    [
+      "design_deficiency",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "inappropriate_control_input"
+    ],
+    [
+      "design_deficiency",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "mode_confusion"
+    ],
+    [
+      "inadequate_training",
+      "mode_confusion"
+    ],
+    [
+      "mode_confusion",
+      "inappropriate_control_input"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "0110",
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Aircraft cruising at FL330 (33,000 feet), 296 knots indicated airspeed, Mach 0.82, with No. 1 autopilot engaged over Pacific Ocean about 950 nm south of Shemya, Alaska.",
+      "state": {
+        "alt": 33000,
+        "ias": 296,
+        "mach": 0.82
+      },
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": 5,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Captain observed a secondary Mach speed indication on the airspeed indicator and attempted to correct it by momentarily engaging and disengaging autopilot speed command.",
+      "factors": [
+        "loss_of_situational_awareness"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Captain made inputs to the FMC through the No. 2 MCDU keypad to attempt correction; the keypad is located near the flap/slat handle.",
+      "factors": [
+        "loss_of_situational_awareness"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 15,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "White SLAT light with down arrow illuminated on the PFD; angle of attack bars changed from cyan to red (stall condition); stall warning stick shaker activated; slat overspeed warning chime sounded.",
+      "factors": [
+        "design_deficiency"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Captain verified flap/slat handle was in retracted position by pushing it forward; flight engineer placed hand on handle twice to ensure it remained forward.",
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": 22,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "FDR recorded slat disagree indication; outboard ailerons began to move; aircraft was at 296 knots indicated airspeed with No. 1 autopilot engaged.",
+      "state": {
+        "ias": 296
+      },
+      "factors": [
+        "design_deficiency"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 29,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Airplane began pitching nose up despite autopilot-commanded nose-down elevator deflections; autopilot elevator commands insufficient to counteract nose-up pitch moment from slat deployment.",
+      "state": {
+        "pitch": 7.4
+      },
+      "factors": [
+        "design_deficiency"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 32,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Stall warning system activated while pitching nose up through 7.4 degrees at 296 knots and 1.37G vertical acceleration.",
+      "state": {
+        "ias": 296,
+        "vs_g": 1.37
+      },
+      "factors": [
+        "mode_confusion"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 33,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Airplane reached maximum nose-up pitch attitude of 9.5 degrees; airspeed decreased to 293 knots; vertical acceleration peaked at 1.50G.",
+      "state": {
+        "pitch": 9.5,
+        "ias": 293,
+        "vs_g": 1.5
+      },
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": 35,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Airplane began to pitch nose down after reaching maximum nose-up attitude.",
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": 40,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Elevators began moving in nose-up direction as nose-down pitch rate was decreasing and vertical acceleration increasing.",
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": 45,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Captain pulled elevator control with significant force; FDR recorded rapid elevator movements in nose-down and nose-up directions followed by autopilot disengagement.",
+      "state": {
+        "pitch": -5.6,
+        "ias": 286
+      },
+      "factors": [
+        "inappropriate_control_input"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 48,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Stall warning system deactivated; No. 1 autopilot disengaged; airplane reached 5.6 degrees nose-down pitch at 286 knots and -0.29G.",
+      "state": {
+        "pitch": -5.6,
+        "ias": 286,
+        "vs_g": -0.29
+      },
+      "factors": [
+        "mode_confusion"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Aircraft completed second pitch oscillation; another stall warning occurred during this cycle.",
+      "factors": [
+        "mode_confusion"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 73,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Aircraft completed third pitch oscillation; slat disagree indication deactivated.",
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": 75,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Vertical acceleration oscillating divergently with peak values of +1.53G and -1.24G during the third oscillation.",
+      "state": {
+        "vs_g": 1.53
+      },
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": 86,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Aircraft completed fourth and final major pitch oscillation; maximum nose-down pitch reached 24.3 degrees; vertical acceleration began to converge as airspeed increased through 320 knots.",
+      "state": {
+        "pitch": -24.3,
+        "ias": 320
+      },
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "FDR data became unrecoverable for undetermined reasons after fourth oscillation; aircraft reported to have descended to approximately 28,000 feet.",
+      "state": {
+        "alt": 28000
+      },
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": 125,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "FDR data recovered approximately 5 seconds later showing airplane pitching nose down through 15 degrees nose-down with vertical acceleration decreasing through +2.0G and airspeed increasing through 337 knots.",
+      "state": {
+        "pitch": -15,
+        "ias": 337
+      },
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": 155,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Airplane began to pull out of oscillating descent with pitch attitude steadily increasing; overspeed warning recorded as airspeed increased through 348 knots.",
+      "state": {
+        "ias": 348
+      },
+      "factors": [],
+      "kind": "warning"
+    },
+    {
+      "t": 160,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Airspeed peaked at 364 knots before beginning to decrease; overspeed warning deactivated as airspeed decreased through 360 knots.",
+      "state": {
+        "ias": 364
+      },
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": 175,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Pitch attitude stopped increasing at approximately 7 degrees nose-up and oscillated between 5 and 8 degrees nose-up as aircraft climbed.",
+      "state": {
+        "pitch": 7
+      },
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": 184,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CAPT",
+      "text": "No. 2 autopilot engaged approximately 30 seconds after initial slat disagree indication (94 seconds after upset began); elevator position, pitch attitude, and vertical acceleration oscillations stopped.",
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": 190,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Aircraft continued climb and then leveled out at FL330 (per crew report); FDR indicates stabilized flight during remainder of flight.",
+      "state": {
+        "alt": 33000
+      },
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": 193,
+      "clock": "0123",
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Crew requested deviation to nearest airport because of passenger injuries.",
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": 250,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Aircraft diverted to Shemya Air Force Base, Alaska; emergency landing made safely with minor landing-gear-related damage.",
+      "factors": [],
+      "kind": "outcome"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-93-143",
+      "to": "FAA",
+      "text": "Require Douglas Aircraft Company to provide data needed to upgrade MD-11 training simulators to accurately represent the aircraft's longitudinal stability and control characteristics for high altitude cruise flight; and to develop specific guidance and simulator scenarios to train pilots in optimum techniques for the recovery from high altitude upsets, including those accompanied by stall warning.",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": "A-93-144",
+      "to": "FAA",
+      "text": "Require operators to provide specific training for the recovery from high altitude upsets, including those accompanied by stall warning.",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": "A-93-145",
+      "to": "FAA",
+      "text": "Establish high altitude stall margins for MD-11 airplanes in order to limit the effects of high altitude pitch upsets.",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-93-146",
+      "to": "FAA",
+      "text": "Evaluate the dynamics of the MD-11 stall warning system to ensure that the 'on' and 'off' logic are consistent with providing the pilot timely information.",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "mode_confusion"
+      ]
+    },
+    {
+      "id": "A-93-147",
+      "to": "FAA",
+      "text": "Conduct a thorough review of the MD-11 high altitude cruise longitudinal stability and control characteristics, stall warning margins, and stall buffet susceptibility to ensure that pilot responses to routine pitch attitude upsets do not result in hazardous pitch oscillations, structural damage, or any other condition that could lead to unsafe flight.",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "design_deficiency",
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": "A-93-148",
+      "to": "FAA",
+      "text": "Require that fire-blocking materials identified as Testori 0200-316 and 0206-100 be replaced with new materials that meet the fire retardant requirements of 14 CFR 25.853.",
+      "status": "closed_acceptable",
+      "outcome": "Fire-blocking materials were replaced with materials meeting CFR requirements.",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-93-149",
+      "to": "FAA",
+      "text": "Amend 14 CFR 25.853 to include a requirement to test the fire-retardant properties of fire blocking materials after they have been subjected to in-service wear.",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": []
+    },
+    {
+      "id": "A-93-150",
+      "to": "FAA",
+      "text": "Conduct research upon the effects of actual in-service wear on the continued airworthiness of fire-blocking materials. Based on the findings, require periodic actual in-service tests of fire-blocking materials to verify compliance with the requirements of 14 CFR 25.853.",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": []
+    },
+    {
+      "id": "A-93-151",
+      "to": "FAA",
+      "text": "Inform other certification authorities of the findings regarding the deterioration of the fire-blocking materials noted in this accident investigation with the view toward replacing them, as required.",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": []
+    },
+    {
+      "id": "A-93-152",
+      "to": "FAA",
+      "text": "Direct principal maintenance inspectors to inform operators of the need to periodically inspect fire-blocking materials for wear and damage and to replace defective materials.",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": []
+    },
+    {
+      "id": "A-93-81",
+      "to": "FAA",
+      "text": "Issue an Airworthiness Directive requiring the operators of MD-11s to install an interim flap/slat handle system or device to prevent the inadvertent deployment of the wing leading edge slats, when such a system or device becomes available.",
+      "status": "closed_acceptable",
+      "outcome": "FAA issued Airworthiness Directive 93-15-03 requiring installation of retainer assembly on flap/slat control module.",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-93-82",
+      "to": "FAA",
+      "text": "Issue an Air Carrier Operations Bulletin to Principal Operations Inspectors to verify that MD-11 operators have advised flightcrews of the potential for an inadvertent in-flight slat extension if contact is made with the flap/slat handle.",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-93-83",
+      "to": "FAA",
+      "text": "Require an expeditious installation of a redesigned flap/slat actuating system, when it becomes available for retrofit, that will prevent uncommanded and inadvertent deployment of the leading edge wing slats on MD-11 airplanes.",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "FAA issued Airworthiness Directive 93-15-03 requiring installation of retainer assembly on MD-11 flap/slat control module to prevent inadvertent slat deployment.",
+    "McDonnell Douglas and FAA worked to develop training simulators better representing MD-11 high-altitude stability characteristics.",
+    "Industry emphasis on training for recovery from high-altitude upsets and stall warning system behavior."
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9307.pdf"
+  ],
+  "depth": "sections",
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report read: Executive Summary, History of Flight, Analysis (general and slat extension sections), and Recommendations",
+      "Factual information on crew actions, aircraft systems, and pitch oscillation sequence extracted from pages 296-807",
+      "Event timeline reconstructed from FDR data and narrative; clock times approximate for initial event; most subsequent times are relative to upset initiation",
+      "FDR data gap noted between t=120 and t=125; report indicates oscillations continued but specifics unavailable",
+      "Fire-blocking material recommendations included as they were part of the investigation even though not directly related to the upset",
+      "Aircraft suffered substantial cabin interior damage; no external structural damage",
+      "Vertical acceleration values from FDR data; attitude changes from FDR recordings"
+    ]
+  }
+}
