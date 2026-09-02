@@ -253,10 +253,6 @@
   }
  ],
  "sources": [
-  {
-   "type": "report",
-   "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7608.pdf",
-   "title": "official investigation report"
-  }
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7608.pdf"
  ]
 }

@@ -154,10 +154,6 @@
  ],
  "recommendations": [],
  "sources": [
-  {
-   "type": "report",
-   "url": "https://public-prd-dgca.s3.ap-south-1.amazonaws.com/InventoryList/dataReports/accidentIncidentData/summary/acc91.pdf",
-   "title": "official investigation report"
-  }
+  "https://public-prd-dgca.s3.ap-south-1.amazonaws.com/InventoryList/dataReports/accidentIncidentData/summary/acc91.pdf"
  ]
 }
