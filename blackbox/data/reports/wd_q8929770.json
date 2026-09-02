@@ -1,0 +1,225 @@
+{
+  "id": "wd_q8929770",
+  "qid": "Q8929770",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2014 Vnukovo Airport Falcon 50 crash",
+  "flight_number": "LEA074P",
+  "date": "2014-10-20",
+  "time_reference": "UTC",
+  "t0": "2014-10-20T19:58:00Z",
+  "agency": "MAK",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead",
+      "report_id": "F-GLSA"
+    },
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enqu\u00eates et d'Analyses",
+      "country": "France",
+      "role": "accredited_representative"
+    }
+  ],
+  "aircraft": {
+    "type": "Dassault Falcon 50EX",
+    "manufacturer": "Dassault",
+    "family": "Falcon",
+    "registration": "F-GLSA"
+  },
+  "operator": "Unijet",
+  "route": {
+    "from": "UUWW",
+    "from_name": "Vnukovo International Airport",
+    "to": "LFPB",
+    "to_name": "Paris (Le Bourget)"
+  },
+  "location": {
+    "name": "Vnukovo International Airport, Moscow",
+    "country": "Russia",
+    "lat": 55.595,
+    "lon": 37.261
+  },
+  "phase": "takeoff",
+  "occupants": 4,
+  "fatalities": 4,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "RAMP",
+  "summary": "Unijet Flight LEA074P, a Dassault Falcon 50EX, struck a snowplow vehicle that had strayed onto the active runway during takeoff at Vnukovo Airport near Moscow at 23:58 local time on October 20, 2014. The aircraft collided with the snowplow with its right wing and landing gear, rolled inverted, and crashed. All four occupants (pilot, co-pilot, flight attendant, and passenger) were killed. The snowplow driver, who was found to have consumed alcohol, failed to maintain situational awareness during airfield operations.",
+  "probable_cause": "The accident was caused by the collision with the snowplow that executed a runway incursion. Contributing factors included deficiencies in airport ground operations oversight, inadequate loss of control procedures for airfield vehicles, insufficient runway incursion prevention measures, poor supervision of airfield operations, violations of vehicle operation procedures, ineffective medical screening of airfield personnel for alcohol consumption, and inadequate training and procedures for airfield surveillance and control system operation by ATC.",
+  "factors": [
+    {
+      "id": "runway_incursion",
+      "role": "initiating",
+      "evidence": "Snowplow vehicle, operated by intoxicated driver, executed unauthorized runway incursion and stopped on active runway RWY 2 in use for takeoff (p. 9-11, 223-224)"
+    },
+    {
+      "id": "ground_collision",
+      "role": "outcome",
+      "evidence": "Falcon 50EX aircraft struck snowplow with right wing and landing gear during takeoff run at approximately 23:58 local time (p. 9)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Post-impact fire broke out but was quickly extinguished by airport fire crew (p. 11)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Airdrome service shift supervisor violated procedures by allowing snowplow on closed runway without requesting clearance from ground controller; supervisor had alcohol in organism (p. 223)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "ATC controllers failed to detect two runway incursions despite having radar information and alerts on airfield surveillance system screen; cleared aircraft for takeoff when runway was not clear (p. 223-224)"
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "Ground controller did not comply with SOPs to prevent incursion of closed RWY 2 despite having radar information and alerts (p. 223)"
+    }
+  ],
+  "chain": [
+    [
+      "runway_incursion",
+      "ground_collision"
+    ],
+    [
+      "ground_collision",
+      "post_impact_fire"
+    ],
+    [
+      "procedural_noncompliance",
+      "runway_incursion"
+    ],
+    [
+      "inadequate_monitoring",
+      "ground_collision"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "23:58",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight LEA074P begins takeoff run on runway RWY 2 at Vnukovo Airport in darkness and foggy conditions at 19:58 UTC (23:58 local time)",
+      "state": {
+        "alt": 0,
+        "ias": 0
+      },
+      "factors": []
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "OTHER",
+      "kind": "env",
+      "text": "Falcon 50EX strikes snowplow vehicle on runway with right wing and landing gear",
+      "factors": [
+        "runway_incursion",
+        "ground_collision"
+      ]
+    },
+    {
+      "t": 15,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "Aircraft rolls inverted and crashes onto grass area adjacent to runway",
+      "factors": [
+        "ground_collision"
+      ]
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "GND",
+      "kind": "outcome",
+      "text": "Post-impact fire erupts but is quickly extinguished by airport fire crew; all four occupants fatally injured",
+      "factors": [
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Rosaviatsiya",
+      "text": "Revise procedures for airdrome vehicle operations to include clear guidance on loss of control awareness and situational awareness for airfield service personnel",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Vnukovo AP",
+      "text": "Implement mandatory full medical checks of airfield drivers, not just exterior assessment, to detect alcohol or drug impairment prior to duty",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Vnukovo ATC Center",
+      "text": "Establish clear procedures and training for operation of airfield surveillance and control subsystem A3000 including activation/deactivation of reserved lines and alerts",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_monitoring",
+        "atc_communication_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Vnukovo AP",
+      "text": "Equip all airfield service vehicles with capability to continuously listen to Departure Control frequency to maintain situational awareness",
+      "status": "unknown",
+      "trigger_factors": [
+        "runway_incursion"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Unijet",
+      "text": "Include recommendations in Flight Operations Manual for actions when external threats appear on runway during takeoff",
+      "status": "unknown",
+      "trigger_factors": [
+        "ground_collision"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/upload/iblock/e12/Final_Report_eng_F-GLSA.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Synopsis, History of Flight, Injuries, Aircraft Information, Wreckage Information, Conclusion",
+      "Comprehensive MAK investigation report with detailed analysis of airfield operations deficiencies",
+      "Multiple systemic failures involving ground operations, ATC procedures, and airfield surveillance system identified",
+      "Snowplow driver found to have alcohol in system; airdrome shift supervisor also had alcohol in organism"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Unijet_Flight_074P",
+  "asn_id": "20141020-0",
+  "interest": 8.96,
+  "curated_id": null
+}

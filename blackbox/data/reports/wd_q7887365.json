@@ -1,0 +1,231 @@
+{
+  "id": "wd_q7887365",
+  "qid": "Q7887365",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "United Airlines 826 (1997)",
+  "flight_number": "UA826",
+  "date": "1997-12-28",
+  "time_reference": "UTC",
+  "t0": "1997-12-28T14:10:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "DCA98MA015"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 747-122",
+    "manufacturer": "Boeing",
+    "family": "747",
+    "registration": "N4723U",
+    "engines": "Pratt & Whitney JT9D"
+  },
+  "operator": "United Airlines",
+  "route": {
+    "from": "RJTT",
+    "from_name": "Tokyo (Narita)",
+    "to": "PHNL",
+    "to_name": "Honolulu"
+  },
+  "location": {
+    "name": "Pacific Ocean, about 870 nautical miles east-southeast of Narita",
+    "country": "International waters",
+    "lat": 32.5,
+    "lon": -160.0
+  },
+  "phase": "cruise",
+  "occupants": 393,
+  "fatalities": 1,
+  "injuries_serious": 18,
+  "damage": "minor",
+  "category": "TURB",
+  "summary": "United Airlines Flight 826, a Boeing 747-122, encountered severe clear-air turbulence at flight level 310 while operating from Tokyo to Honolulu on December 28, 1997. The aircraft experienced extreme accelerations of 1.814g positive and -0.824g negative, causing 1 fatality and 18 serious injuries among passengers and crew. The fasten seatbelt sign notification procedures were inadequate, leaving many passengers unrestrained during the event.",
+  "probable_cause": "The pilot-in-command's inadvertent flight into adverse weather conditions, and the difficulty of obtaining adequate weather forecasts of over-ocean turbulence. Factors contributing to the accident included the presence of clear air turbulence and the failure of the flight attendant to issue a safety advisory.",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "initiating",
+      "evidence": "Severe clear-air turbulence encounter at FL 310 causing sudden drops and rolls; aircraft experienced peak acceleration of 1.814g and minimum -0.824g (p. 3)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Japanese-speaking flight attendant did not fully translate captain's fasten seatbelt instructions to Japanese passengers; passengers could not understand the safety advisory (p. 2, 3)"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Difficulty communicating with non-English speaking medical doctors and passenger advisories due to language barriers (p. 3)"
+    },
+    {
+      "id": "hard_landing",
+      "role": "outcome",
+      "evidence": "Aircraft suddenly dropped approximately 100 feet, rolled 18 degrees right, and dropped again with extreme negative G causing injuries and fatality (p. 3)"
+    }
+  ],
+  "chain": [
+    [
+      "convective_weather",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "hard_landing"
+    ],
+    [
+      "crm_breakdown",
+      "hard_landing"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:10",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight at cruise altitude FL 310, about 870 nm east-southeast of Narita, Japan",
+      "state": {
+        "alt": 31000,
+        "ias": 490
+      },
+      "factors": []
+    },
+    {
+      "t": 1800,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain observed wave action and illuminated exterior lighting looking for clouds; no clouds visible; radioed NW 90 requesting ride report; NW 90 reported smooth ride with occasional light turbulence",
+      "factors": []
+    },
+    {
+      "t": 1860,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain turned on fasten seatbelt sign as precaution after observing stars; customary public address announcements made in English and Japanese",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 3600,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "First severe turbulence encounter: aircraft experienced wave action; captain indicated there were light green echoes on radar 50-60 miles ahead and right of course, no red echoes observed",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 3660,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Second severe turbulence encounter: aircraft dropped approximately 100 feet, pitched up, rolled 18 degrees right wing down with peak vertical acceleration 1.814g, then fell again with minimum -0.824g",
+      "factors": [
+        "convective_weather",
+        "hard_landing"
+      ]
+    },
+    {
+      "t": 3720,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain made PA announcement for flight attendants to sit down and told passengers not to be alarmed; ordered first officer to reduce speed to 330-340 knots",
+      "factors": []
+    },
+    {
+      "t": 3780,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CABIN",
+      "kind": "outcome",
+      "text": "Cabin crew found flight attendant in aisle and cabin in disarray; multiple injuries identified; two doctors on board offered assistance; one doctor stayed with flight attendants performing CPR on unconscious passenger",
+      "factors": [
+        "hard_landing"
+      ]
+    },
+    {
+      "t": 7200,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain assessed injuries and airworthiness; decided to return to Narita rather than divert to Midway Island; used emergency authority to turn off course and climb 500 feet",
+      "factors": []
+    },
+    {
+      "t": 7260,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Japanese passenger (seat 46F) died from injuries; received fatal cervical spinal injury; 15 passengers and 3 flight attendants sustained spine and neck fractures; 161 minor injuries among passengers and flight attendants",
+      "factors": [
+        "hard_landing"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Establish procedures to ensure effective communication of safety-critical information to non-English speaking passengers, particularly regarding fasten seatbelt requirements during cruise operations",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Airlines",
+      "text": "Reinforce policies encouraging passengers to wear seatbelts whenever seated, regardless of seatbelt sign status",
+      "status": "closed_acceptable",
+      "outcome": "United Airlines issued Flight Safety Information Bulletin 98-1 after the accident",
+      "trigger_factors": [
+        "hard_landing"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "United Airlines issued Flight Safety Information Bulletin 98-1 titled 'Turbulence Encounter and Passenger Fatality'",
+    "Emphasis on importance of effective communication between pilots and flight attendants",
+    "Measures to reinforce policy of encouraging passengers to wear seatbelts whenever seated"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001208X09291&AKey=1&RType=Final&IType=MA"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Factual Information (History of Flight, Injuries, Personnel), Analysis, Meteorological Information, Flight Recorders",
+      "Aircraft subsequently retired after accident; this was the aircraft's last revenue flight",
+      "Failure photoswitch in PA amplifier prevented low chime operation during fasten seatbelt sign illumination"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Airlines_Flight_826",
+  "asn_id": "19971228-0",
+  "interest": 9.21,
+  "curated_id": null
+}

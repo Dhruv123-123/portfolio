@@ -1,0 +1,226 @@
+{
+  "id": "wd_q83175978",
+  "qid": "Q83175978",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "TWA 5787",
+  "flight_number": "5787",
+  "date": "1969-07-26",
+  "time_reference": "UTC",
+  "t0": "1969-07-26T18:00:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR70-08"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 707-331C",
+    "manufacturer": "Boeing",
+    "family": "707",
+    "registration": "N787TW",
+    "engines": "Pratt & Whitney JT4A"
+  },
+  "operator": "Trans World Airlines",
+  "route": {
+    "from": "KJFK",
+    "from_name": "John F Kennedy Airport",
+    "to": "KACY",
+    "to_name": "Atlantic City Airport"
+  },
+  "location": {
+    "name": "Atlantic City, New Jersey",
+    "country": "United States",
+    "lat": 39.46,
+    "lon": -74.17
+  },
+  "phase": "go_around",
+  "occupants": 5,
+  "fatalities": 5,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Trans World Airlines Flight 5787, a Boeing 707 on a non-revenue proficiency training flight, crashed at Atlantic City on July 26, 1969, killing all five crew on board. The aircraft was conducting recurrent training and proficiency checks including simulated single-engine failure during takeoff and landing. After landing on runway 13, the crew requested immediate turnaround and go-around on runway 31. During the go-around briefed as a three-engine ILS approach with simulated engine 4 failure, the flight engineer called for flaps 25 and gear up at decision height. However, neither flaps nor landing gear moved. Approximately 16-18 seconds after the go-around call, the crew experienced a complete loss of hydraulic pressure in the utility hydraulic system due to fatigue failure in the left outboard spoiler actuator. With low airspeed, three engines, and no hydraulics for rudder control, directional control was lost, the aircraft rolled and pitched down, and impacted the ground.",
+  "probable_cause": "Loss of hydraulic power to the rudder in a critical flight condition combined with inadequate procedures for simulating engine failures and failure to apply correct hydraulic loss procedures. The loss of directional control was unrecoverable.",
+  "factors": [
+    {
+      "id": "hydraulic_failure",
+      "role": "initiating",
+      "evidence": "Fatigue failure in left outboard spoiler actuator downline dumped hydraulic fluid from utility hydraulic system overboard, resulting in loss of all hydraulic power including rudder actuator"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Crew did not call for or follow the hydraulic fluid loss checklist in accordance with current operating procedures"
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "Multiple demands during go-around with flaps and landing gear selector calls, loss of hydraulics, and need to establish three-engine climb exceeded crew's capacity"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Inadequacy of the hydraulic fluid loss emergency procedure when applied against the operating configuration of the aircraft"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "With low airspeed, three engines, undercarriage down, full flaps, and no hydraulic rudder power, aircraft was incapable of recovery; rolled and pitched down impacting ground in right wing low attitude"
+    }
+  ],
+  "chain": [
+    [
+      "hydraulic_failure",
+      "high_workload"
+    ],
+    [
+      "hydraulic_failure",
+      "procedural_noncompliance"
+    ],
+    [
+      "procedural_noncompliance",
+      "loss_of_control_inflight"
+    ],
+    [
+      "inadequate_training",
+      "procedural_noncompliance"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft landed on runway 13 with first check-ride captain at controls; crew requested 180 degree turnaround and immediate takeoff on runway 31",
+      "state": {
+        "alt": 0,
+        "ias": 0
+      },
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Takeoff initiated on runway 31 with simulated engine 4 failure; number 4 power lever retarded to idle, aircraft climbed to 1500 feet",
+      "state": {
+        "alt": 1500,
+        "ias": 200
+      },
+      "factors": []
+    },
+    {
+      "t": 480,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "At decision height proficiency checker called for go-around; check captain applied full power to engines 1, 2, and 3 leaving engine 4 at idle",
+      "factors": []
+    },
+    {
+      "t": 510,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "FE",
+      "kind": "crew_action",
+      "text": "Flight engineer called for flaps 25 and landing gear up; neither flaps nor landing gear moved from their positions",
+      "factors": [
+        "hydraulic_failure"
+      ]
+    },
+    {
+      "t": 570,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Crew discovered all hydraulic power had been lost due to rupture in utility hydraulic system; hydraulic pumps were disengaged but correct emergency procedures were not followed",
+      "state": {
+        "alt": 2000,
+        "ias": 150
+      },
+      "factors": [
+        "hydraulic_failure",
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 600,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "With low airspeed, three engines, no hydraulic rudder power, undercarriage down and full flaps, aircraft lost directional control, rolled and pitched down, impacting ground in right wing low attitude",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Review and improve procedures for simulating single engine failures during training to ensure crews do not inadvertently create unsafe conditions",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": null,
+      "to": "TWA",
+      "text": "Revise hydraulic emergency procedures to account for total hydraulic system failure and training for such scenarios",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Boeing",
+      "text": "Review spoiler actuator design to prevent catastrophic failures that result in complete hydraulic system loss",
+      "status": "unknown",
+      "trigger_factors": [
+        "hydraulic_failure"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Improved hydraulic system redundancy in Boeing 707 and subsequent aircraft",
+    "Enhanced training procedures for emergency hydraulic failures",
+    "Better procedures for simulating engine failures without creating real system hazards"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7008.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Probable Cause, History of Flight, Factual Information (OCR quality degraded)",
+      "Report text quality compromised by OCR issues; extracted information verified against summary record",
+      "Aircraft was a cargo variant (707-331C); flight was non-revenue proficiency training",
+      "Complete hydraulic system failure initiated by fatigue crack in left outboard spoiler actuator"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/TWA_Flight_5787",
+  "asn_id": "19690726-1",
+  "interest": 9.34,
+  "curated_id": null
+}
