@@ -1,0 +1,163 @@
+{
+  "id": "wd_q114069721",
+  "title": "2022 Mutiny Bay DHC-3 crash",
+  "flight_number": null,
+  "date": "2022-09-04",
+  "time_reference": "PDT",
+  "t0": "2022-09-04T15:09:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "AIR-22/08",
+      "report_date": "2022-10-26",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2208.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "de Havilland Canada DHC-3 Turbine Otter",
+    "manufacturer": "de Havilland Canada",
+    "family": "DHC-3",
+    "registration": "N725TH"
+  },
+  "operator": "Friday Harbor Seaplanes (Northwest Seaplanes dba)",
+  "route": {
+    "from": "Friday Harbor Seaplane Base",
+    "from_name": "Friday Harbor",
+    "to": "REN",
+    "to_name": "Renton Municipal Airport"
+  },
+  "location": {
+    "name": "Mutiny Bay, near Freeland, Whidbey Island",
+    "country": "United States"
+  },
+  "phase": "cruise",
+  "occupants": 10,
+  "fatalities": 10,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "A DHC-3 Turbine Otter floatplane operated by Friday Harbor Seaplanes departed Friday Harbor at 14:50 PDT on September 4, 2022, for Renton Municipal Airport. During cruise flight at 600-700 feet mean sea level, the aircraft entered a climb to about 1,000 feet then pitched down in a nose-low, near-vertical descent and impacted the water in Mutiny Bay. All 10 occupants (1 pilot and 9 passengers) were fatally injured and the aircraft was destroyed. The NTSB preliminary investigation found the horizontal stabilizer trim actuator lock ring was missing, allowing the clamp nut to unthread from the barrel and rendering pitch control uncontrollable.",
+  "probable_cause": "Loss of control of the aircraft due to the unthreading of the clamp nut from the horizontal stabilizer trim actuator barrel due to a missing lock ring, which resulted in the horizontal stabilizer moving to an extreme trailing-edge-down position rendering the airplane's pitch uncontrollable. The actuator lock ring was the only mechanism designed to prevent unthreading of the clamp nut.",
+  "factors": [
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "horizontal stabilizer actuator lock ring was missing from the aircraft; the lock ring is designed to prevent the clamp nut from unscrewing from the actuator barrel (p. 56-57)"
+    },
+    {
+      "id": "stabilizer_trim_failure",
+      "role": "contributing",
+      "evidence": "clamp nut unthreaded from horizontal stabilizer trim actuator barrel due to missing lock ring, allowing the actuator to move to an extreme trailing-edge-down position (p. 53-59)"
+    },
+    {
+      "id": "loss_of_pilot_control_authority",
+      "role": "contributing",
+      "evidence": "with the actuator unthreaded, the horizontal stabilizer moved to an extreme trailing-edge-down position rendering the airplane's pitch uncontrollable (p. 118-119)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "aircraft entered a nose-low, near-vertical descent and impacted the water in Mutiny Bay at high speed, disintegrating the aircraft (p. 34-35)"
+    }
+  ],
+  "chain": [
+    ["maintenance_error", "stabilizer_trim_failure"],
+    ["stabilizer_trim_failure", "loss_of_pilot_control_authority"],
+    ["loss_of_pilot_control_authority", "loss_of_control_inflight"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:50",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "DHC-3 departed Friday Harbor Seaplane Base bound for Renton Municipal Airport",
+      "factors": []
+    },
+    {
+      "t": 600,
+      "clock": "15:00",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft in cruise flight at altitudes between 600 and 700 feet mean sea level, groundspeed between 115 and 125 knots",
+      "state": {"alt": 650, "gs": 120},
+      "factors": []
+    },
+    {
+      "t": 1080,
+      "clock": "15:09",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft began climb, reaching maximum altitude of about 1,000 feet mean sea level",
+      "state": {"alt": 1000},
+      "factors": []
+    },
+    {
+      "t": 1095,
+      "clock": "15:09",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft entered rapid nose-low, near-vertical descent and impacted water in Mutiny Bay; wreckage sank; all 10 occupants fatally injured",
+      "factors": ["loss_of_control_inflight"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-22-23",
+      "to": "FAA",
+      "text": "Require all operators of De Havilland Canada DHC-3 airplanes to conduct an immediate one-time inspection of the horizontal stabilizer actuator lock ring in accordance with the instructions in Viking Air Limited Service Letter DHC3-SL-27-001 and report their findings to the Federal Aviation Administration",
+      "status": "unknown",
+      "trigger_factors": ["maintenance_error"],
+      "priority": "urgent"
+    },
+    {
+      "id": "A-22-24",
+      "to": "Transport Canada",
+      "text": "Require all operators of De Havilland Canada DHC-3 airplanes to conduct an immediate one-time inspection of the horizontal stabilizer actuator lock ring in accordance with the instructions in Viking Air Limited Service Letter DHC3-SL-27-001 and report their findings to Transport Canada",
+      "status": "unknown",
+      "trigger_factors": ["maintenance_error"],
+      "priority": "urgent"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Viking Air Limited published Service Letter DHC3-SL-27-001 recommending visual inspection of stabilizer actuator lock ring presence and correct seating",
+    "Urgent recommendations issued by NTSB on October 26, 2022 for immediate inspection of lock rings on all DHC-3 aircraft"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2208.pdf"],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q114069721",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/2022_Mutiny_Bay_DHC-3_crash",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2208.pdf",
+    "https://aviation-safety.net/database/record.php?id=20220904-1"
+  ],
+  "interest": 10.09,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "This is a preliminary urgent safety recommendation report (AIR-22-08) issued on October 26, 2022, during an ongoing investigation",
+      "Report date is more than 7 weeks after the accident; final accident investigation report has not yet been issued",
+      "Primary finding: missing or improperly installed horizontal stabilizer actuator lock ring causing loss of pitch control",
+      "Aircraft wreckage recovered from sea floor (85% recovered); examination confirmed clamp nut unthreaded from barrel",
+      "Lock ring itself has not been found; investigation ongoing into failure modes and maintenance records"
+    ]
+  }
+}

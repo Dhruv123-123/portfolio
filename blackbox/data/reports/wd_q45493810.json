@@ -1,0 +1,180 @@
+{
+  "id": "wd_q45493810",
+  "title": "West Wind Aviation Flight 282",
+  "flight_number": "WEW282",
+  "date": "2017-12-13",
+  "time_reference": "CST",
+  "t0": "2017-12-13T18:15:00Z",
+  "agency": "TSB",
+  "agencies": [
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "lead",
+      "report_id": "A17C0146",
+      "report_date": "2021-10-28",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2017/a17c0146/a17c0146.html"
+    }
+  ],
+  "aircraft": {
+    "type": "ATR 42-320",
+    "manufacturer": "ATR",
+    "family": "42",
+    "registration": "C-GWEA",
+    "msn": "240"
+  },
+  "operator": "West Wind Aviation L.P.",
+  "route": {
+    "from": "CZFD",
+    "from_name": "Fond-du-Lac",
+    "to": "CYSF",
+    "to_name": "Stony Rapids"
+  },
+  "location": {
+    "name": "Fond-du-Lac, Saskatchewan",
+    "country": "Canada"
+  },
+  "phase": "initial_climb",
+  "occupants": 25,
+  "fatalities": 1,
+  "injuries_serious": 2,
+  "damage": "destroyed",
+  "category": "ICE",
+  "summary": "An ATR 42-320 registered C-GWEA departed Fond-du-Lac Airport on 13 December 2017 at 18:15 CST in cloudy weather with temperature of minus 19 degrees Celsius. During the initial climb stage, the aircraft lost altitude and struck the ground 600 metres away from the runway, leaving an 800 foot trail of debris. All 25 occupants initially survived the crash, but one 19-year-old passenger died on 25 December 2017 from injuries. Ice contamination on critical surfaces during takeoff resulted in increased drag (58%) and decreased lift (25%), causing uncontrolled roll and loss of control.",
+  "probable_cause": "Ice contamination on the aircraft's critical surfaces during takeoff. The aircraft's departure from Fond-du-Lac Airport was made despite awareness of icing conditions and residual ice on the aircraft. Weather conditions on the ground were conducive to additional ice formation. The flight crew's decision to depart was influenced by continuation bias and the normalization of unsafe practices at remote airports with inadequate de-icing facilities. During takeoff, the increased drag and decreased lift from ice contamination, combined with asymmetric ice distribution causing asymmetric lift, resulted in an uncommanded left roll. The captain's control inputs, based on expectation of normal handling characteristics, were insufficient to counteract the roll due to diminished roll damping caused by the ice contamination. This loss of control in the roll axis led to collision with terrain.",
+  "factors": [
+    {
+      "id": "airframe_icing",
+      "role": "initiating",
+      "evidence": "residual ice accumulated on the aircraft during the approach due to activated ice protection systems not being designed to shed all ice, and additional ice formed on the ground during the 36-minute stop (p. 7656-7680)"
+    },
+    {
+      "id": "deicing_inadequate",
+      "role": "contributing",
+      "evidence": "Fond-du-Lac Airport had inadequate de-icing equipment and services, and the flight crew decided to continue with the planned departure route despite knowing of forecast ground icing (p. 7656-7665)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "During takeoff, the aircraft experienced uncommanded left roll due to asymmetric lift from uneven ice contamination. The control inputs were insufficient due to diminished roll damping, resulting in loss of control and collision with terrain (p. 7700-7715)"
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "The flight crew inspection was conducted in darkness on a dimly lit apron without a flashlight, limiting visibility of the full extent of ice contamination on critical surfaces (p. 7676-7681)"
+    }
+  ],
+  "chain": [
+    [
+      "deicing_inadequate",
+      "airframe_icing"
+    ],
+    [
+      "airframe_icing",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "18:15",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft began takeoff roll from Fond-du-Lac Airport runway 10 in cloudy weather with temperature minus 19 degrees Celsius",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": "18:16",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "During initial climb, aircraft experienced uncommanded left roll; roll damping was diminished due to ice contamination on critical surfaces",
+      "state": {
+        "alt": 300,
+        "ias": 140
+      },
+      "factors": [
+        "airframe_icing",
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": "18:17",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacted terrain 600 metres east-northeast of the runway in level pitch with 30 degrees left bank angle; aircraft wreckage trail extended 800 feet",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": "18:18",
+      "phase": "unknown",
+      "actor": "CABIN",
+      "kind": "outcome",
+      "text": "All aircraft occupants were rescued and evacuated within hours; one 19-year-old passenger died on 25 December 2017 from impact injuries",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A18-02",
+      "to": "Transport Canada",
+      "text": "The Department of Transport collaborate with air operators and airport authorities to identify locations where there is inadequate de-icing and anti-icing equipment and take urgent action to ensure that the proper equipment is available to reduce the likelihood of aircraft taking off with contaminated critical surfaces",
+      "status": "unknown",
+      "trigger_factors": [
+        "deicing_inadequate",
+        "airframe_icing"
+      ]
+    },
+    {
+      "id": "A18-03",
+      "to": "Transport Canada and air operators",
+      "text": "The Department of Transport and air operators take action to increase compliance with Canadian Aviation Regulations subsection 602.11(2) and reduce the likelihood of aircraft taking off with contaminated critical surfaces",
+      "status": "unknown",
+      "trigger_factors": [
+        "airframe_icing"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "West Wind implemented new risk assessment requirements for new procedures, managerial changes, and all airports where the company operates",
+    "West Wind established Safety, Operations and Customer Experience (SOCE) Committee for corporate oversight of safety culture",
+    "Increased emphasis on compliance with clean aircraft concept and de-icing procedures"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2017/a17c0146/a17c0146.html"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q45493810",
+  "asn_id": "20171213-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/West_Wind_Aviation_Flight_282",
+  "report_links": [
+    "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2017/a17c0146/a17c0146.html"
+  ],
+  "interest": 10.17,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Executive Summary (p. 283-300), History of Flight (p. 528-727), Findings as to Causes (p. 7656-7750)",
+      "Flight number in report is WEW282, not WEW280 as listed in batch title",
+      "Aircraft departed despite forecast ground icing and visible ice on critical surfaces; crew decision influenced by continuation bias and normalization of unsafe practices",
+      "Flight crew inspection inadequate: conducted at night on dimly lit apron without flashlight"
+    ]
+  }
+}

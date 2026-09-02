@@ -1,0 +1,232 @@
+{
+  "id": "wd_q5254563",
+  "title": "Delta Air Lines 1288",
+  "flight_number": "DL1288",
+  "date": "1996-07-06",
+  "time_reference": "CDT",
+  "t0": "1996-07-06T14:23:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "AAR-98/01",
+      "report_date": "1998-03-02",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9801.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas MD-88",
+    "manufacturer": "McDonnell Douglas",
+    "family": "MD-80",
+    "registration": "N927DA"
+  },
+  "operator": "Delta Air Lines",
+  "route": {
+    "from": "PNS",
+    "from_name": "Pensacola Regional Airport",
+    "to": "ATL",
+    "to_name": "Hartsfield-Jackson Atlanta International"
+  },
+  "location": {
+    "name": "Pensacola Regional Airport runway 17",
+    "country": "United States",
+    "lat": 30.474,
+    "lon": -87.188
+  },
+  "phase": "takeoff",
+  "occupants": 142,
+  "fatalities": 2,
+  "injuries_serious": 2,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "Delta Air Lines Flight 1288 experienced an uncontained catastrophic turbine engine failure of the left engine during takeoff roll at Pensacola on 6 July 1996. A fatigue crack in the front compressor fan hub, which resulted from manufacturing defects and undetected by inspection processes, caused the hub to fracture. Debris from the failure penetrated the left aft fuselage, killing two passengers. The pilot rejected the takeoff and stopped the aircraft safely on the runway.",
+  "probable_cause": "The fracture of the left engine's front compressor fan hub resulted from the failure of Delta Air Lines' fluorescent penetrant inspection process to detect a detectable fatigue crack initiating from an area of altered microstructure that was created during the drilling process by Volvo for Pratt & Whitney and that went undetected at the time of manufacture. Contributing to the accident was the lack of sufficient redundancy in the in-service inspection program.",
+  "factors": [
+    {
+      "id": "uncontained_engine_failure",
+      "role": "initiating",
+      "evidence": "uncontained catastrophic turbine engine failure of the left engine occurred during takeoff roll; the front compressor fan hub fractured and ejected high-energy fragments that penetrated the left aft fuselage (p. 194-202)"
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "failure of Delta Air Lines' fluorescent penetrant inspection process to detect a detectable fatigue crack in the fan hub; the crack was large enough to have been detected during the accident hub's last fluorescent penetrant inspection (p. 3399-3402)"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "manufacturing defect in the front compressor fan hub created during the drilling process; some form of drill breakage or drill breakdown combined with localized loss of coolant created altered microstructure and ladder cracking (p. 3319-3322)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "during a 15-minute walkthrough pre-flight inspection, the first officer noted a few drops of oil coming from the bullet of the number one engine and a couple of missing rivets on the left wing, although neither problem was considered dangerous (p. 194-228)"
+    }
+  ],
+  "chain": [
+    ["design_deficiency", "inadequate_inspection"],
+    ["inadequate_inspection", "uncontained_engine_failure"],
+    ["inadequate_monitoring", "uncontained_engine_failure"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:23",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 1288 cleared for takeoff on runway 17 at Pensacola Regional Airport",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": "14:24",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "During takeoff roll at approximately 40 knots airspeed, uncontained catastrophic engine failure of left engine occurred; loud bang heard followed by loss of cockpit lighting and instrumentation",
+      "state": {"ias": 40},
+      "factors": ["uncontained_engine_failure"]
+    },
+    {
+      "t": 40,
+      "clock": "14:24",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Debris penetrated left aft fuselage creating large hole; two passengers killed including a female passenger and her son",
+      "factors": ["uncontained_engine_failure"]
+    },
+    {
+      "t": 60,
+      "clock": "14:25",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain brought throttles to idle and engaged brakes; aircraft stopped on runway without using reversers or spoilers",
+      "factors": []
+    }
+  ],
+  "cvr": [
+    {
+      "t": 0,
+      "clock": "14:23",
+      "speaker": "FO",
+      "text": "There's oil coming out of the bullet now"
+    },
+    {
+      "t": 30,
+      "clock": "14:24",
+      "speaker": "SYS",
+      "text": "Loud bang heard followed by loss of cockpit lighting and instrumentation"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-98-09",
+      "to": "FAA",
+      "text": "Form a task force to evaluate the limitations of the blue etch anodize and other postmanufacturing etch processes and develop ways to improve the likelihood that abnormal microstructure will be detected",
+      "status": "unknown",
+      "trigger_factors": ["inadequate_inspection"]
+    },
+    {
+      "id": "A-98-10",
+      "to": "FAA",
+      "text": "Inform all manufacturers of titanium rotating engine components of the potential that current boring and honing specifications may not be sufficient to remove potential defects from holes and ask them to reevaluate their manufacturing specifications and procedures",
+      "status": "unknown",
+      "trigger_factors": ["design_deficiency"]
+    },
+    {
+      "id": "A-98-11",
+      "to": "FAA",
+      "text": "Review the efficacy of drying procedures for aqueously cleaned rotating engine parts being prepared for fluorescent penetrant inspections",
+      "status": "unknown",
+      "trigger_factors": ["inadequate_inspection"]
+    },
+    {
+      "id": "A-98-12",
+      "to": "FAA",
+      "text": "Determine whether flash drying alone is a sufficiently reliable method for removing water from cracks",
+      "status": "unknown",
+      "trigger_factors": ["inadequate_inspection"]
+    },
+    {
+      "id": "A-98-13",
+      "to": "FAA",
+      "text": "Address the need to ensure the fullest possible coverage of dry developer powder, particularly along hole walls",
+      "status": "unknown",
+      "trigger_factors": ["inadequate_inspection"]
+    },
+    {
+      "id": "A-98-14",
+      "to": "FAA",
+      "text": "Address the need for a formal system to track and control development times",
+      "status": "unknown",
+      "trigger_factors": ["inadequate_inspection"]
+    },
+    {
+      "id": "A-98-15",
+      "to": "FAA",
+      "text": "Address the need for fixtures that minimize manual handling of the part without visually masking large surfaces of the part",
+      "status": "unknown",
+      "trigger_factors": ["inadequate_inspection"]
+    },
+    {
+      "id": "A-98-16",
+      "to": "FAA",
+      "text": "Require the development of methods for inspectors to note on the part or otherwise document during a nondestructive inspection the portions of a critical rotating part that have already been inspected",
+      "status": "unknown",
+      "trigger_factors": ["inadequate_inspection"]
+    },
+    {
+      "id": "A-98-17",
+      "to": "FAA",
+      "text": "Conduct research to determine the optimum amount of time an inspector can perform nondestructive testing inspections before human performance decrements can be expected",
+      "status": "unknown",
+      "trigger_factors": ["inadequate_inspection"]
+    },
+    {
+      "id": "A-98-18",
+      "to": "FAA",
+      "text": "In conjunction with industry and human factors experts, develop test methods that can evaluate inspector skill in visual search and detection across a representative range of test pieces",
+      "status": "unknown",
+      "trigger_factors": ["inadequate_inspection"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced fluorescent penetrant inspection procedures and standards for detection of manufacturing defects",
+    "Improved drilling and honing specifications for titanium rotating engine components",
+    "Increased inspection intervals and redundancy in in-service inspection programs for critical rotating parts"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9801.pdf"],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q5254563",
+  "asn_id": "19960706-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Delta_Air_Lines_Flight_1288",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9801.pdf",
+    "https://data.ntsb.gov/Docket/Document/docBLOB?ID=40469511&FileExtension=.PDF",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR98-01.pdf"
+  ],
+  "interest": 10.11,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flight (p. 194-338), Findings (p. 3305-3440), Probable Cause (p. 3445-3452), Recommendations (p. 3457-3500+)",
+      "Manufacturing defect originated during drilling process by Volvo for Pratt & Whitney; altered microstructure and ladder cracking created",
+      "Fatigue crack initiated from ladder cracking in tierod hole and began propagating immediately after hub put into service in 1990",
+      "NTSB investigation thoroughly documented multiple procedural deficiencies in Delta's fluorescent penetrant inspection process"
+    ]
+  }
+}
