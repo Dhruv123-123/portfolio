@@ -25,10 +25,22 @@ def main():
     ap.add_argument("--size", type=int, default=4)
     ap.add_argument("--limit", type=int, default=200)
     ap.add_argument("--prefix", default="deepen")
+    ap.add_argument("--only-fetched", action="store_true", help="only items whose report text is already in cache/text (see prefetch_reports.py)")
+    ap.add_argument("--exclude-prefixes", default="", help="comma-separated batch prefixes whose items are already assigned")
     args = ap.parse_args()
     if not CATALOG.exists():
         raise SystemExit("run merge_catalog.py first")
     existing = {p.stem for p in REPORTS.glob("*.json")}
+    for pref in [x for x in args.exclude_prefixes.split(",") if x]:
+        for path in OUT.glob(f"{pref}_*.json"):
+            existing.update(it["id"] for it in json.loads(path.read_text()))
+    fetched = {}
+    if args.only_fetched:
+        log = OUT / "prefetch.jsonl"
+        for line in log.read_text().splitlines() if log.exists() else []:
+            row = json.loads(line)
+            if row.get("ok"):
+                fetched[row["id"]] = row["url"]
     rows = []
     for line in CATALOG.read_text().splitlines():
         if not line.strip():
@@ -39,7 +51,11 @@ def main():
         links = [l for l in rec.get("report_links", []) if OFFICIAL.search(l) and not re.search(r"registry\.faa\.gov|news\.google|youtube|books\.google", l, re.I)]
         if not links:
             continue
-        rows.append({"id": rec["id"], "qid": rec.get("qid"), "title": rec["title"], "date": rec["date"], "interest": rec.get("interest", 0), "report_links": links[:5], "summary_record": rec})
+        if args.only_fetched:
+            if rec["id"] not in fetched:
+                continue
+            links = [fetched[rec["id"]]] + [l for l in links if l != fetched[rec["id"]]]
+        rows.append({"id": rec["id"], "qid": rec.get("qid"), "title": rec["title"], "date": rec["date"], "interest": rec.get("interest", 0), "report_links": links[:5], "text_path": str(ROOT / "cache" / "text" / f"{rec['id']}.txt") if rec["id"] in fetched else None, "summary_record": rec})
     rows.sort(key=lambda r: -r["interest"])
     rows = rows[: args.limit]
     OUT.mkdir(parents=True, exist_ok=True)

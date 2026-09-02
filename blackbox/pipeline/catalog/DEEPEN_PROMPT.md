@@ -1,6 +1,6 @@
 You are an aviation-safety extraction worker for "Blackbox" (repo /home/user/portfolio). Your job is the LAZY DEEP READ: take accidents that already have a summary-level catalog record and an official report link, read the important parts of the report, and produce a full record. Read the whole report only when the key sections are not enough.
 
-INPUT: /home/user/portfolio/blackbox/cache/deepen/{BATCH}.json — a JSON array of items {id, qid, title, date, report_links, summary_record}. summary_record is the existing catalog record (already valid).
+INPUT: /home/user/portfolio/blackbox/cache/deepen/{BATCH}.json — a JSON array of items {id, qid, title, date, report_links, text_path, summary_record}. summary_record is the existing catalog record (already valid). When text_path is set, the report has ALREADY been downloaded and text-extracted to that file: skip the download step and start reading it (the first report_links entry is its URL, use it in sources). Run fetch_url.py only when text_path is null.
 
 FOR EACH ITEM:
 1. Pick the most official-looking report link (agency domains such as ntsb.gov, bea.aero, gov.uk/aaib, tsb.gc.ca, atsb.gov.au, or a .pdf on a government / agency site; skip Wikipedia, news, books, YouTube). Run:
