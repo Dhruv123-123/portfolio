@@ -1,0 +1,198 @@
+{
+  "id": "wd_q20715028",
+  "qid": "Q20715028",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Prinair 277",
+  "flight_number": "277",
+  "date": "1969-03-05",
+  "time_reference": "local",
+  "t0": "1969-03-05T17:15:00-04:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-70-9",
+      "report_date": "1970-04-24"
+    }
+  ],
+  "aircraft": {
+    "type": "de Havilland Heron 114-2",
+    "manufacturer": "de Havilland",
+    "family": "Heron",
+    "registration": "N563PR"
+  },
+  "operator": "Puerto Rico International Airlines",
+  "route": {
+    "from_name": "Charlotte Amalie",
+    "to_name": "San Juan"
+  },
+  "location": {
+    "name": "Sierra de Luquillo near Fajardo",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 19,
+  "fatalities": 19,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Prinair Flight 277 crashed into Sierra de Luquillo mountains near Fajardo on 5 March 1969 while being vectored for an ILS approach. The trainee approach controller mistakenly thought the aircraft was 10 miles further west than its actual position and vectored it to 3,000 feet, directing it into rising terrain with all 19 occupants killed.",
+  "probable_cause": "The vectoring of the aircraft into mountainous terrain, under IFR conditions, without adequate obstruction clearance altitude by a controller who, for reasons beyond his control, was performing beyond the safe limits of his performance capability and without adequate supervision (p. 15).",
+  "factors": [
+    {
+      "id": "atc_communication_error",
+      "role": "initiating",
+      "evidence": "Trainee controller mistakenly thought aircraft was 3 miles east of Isla Verde when it was actually 3 miles east of Fajardo (about 10 miles further east); controller's erroneous position information was provided to the aircraft (p. 3)."
+    },
+    {
+      "id": "navigation_error",
+      "role": "contributing",
+      "evidence": "Controller's erroneous indications meant he thought aircraft was 10 miles further west than actual position, resulting in vectors into terrain (p. 3-4)."
+    },
+    {
+      "id": "atc_workload_staffing",
+      "role": "contributing",
+      "evidence": "Controller was directing 5 flights; supervisor had ordered him to perform other duties; trainee controller was performing beyond safe performance limits (p. 15)."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Weather conditions during that day (IFR conditions) would have prevented pilots from seeing the mountain peaks ahead during approach (p. 3)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft crashed into Sierra de Luquillo mountains at approximately 1738 local time (p. 2)."
+    }
+  ],
+  "chain": [
+    [
+      "atc_communication_error",
+      "navigation_error"
+    ],
+    [
+      "navigation_error",
+      "cfit"
+    ],
+    [
+      "atc_workload_staffing",
+      "atc_communication_error"
+    ],
+    [
+      "low_visibility",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "17:15",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Prinair Flight 277, De Havilland Heron 114-2 N563PR, departed Charlotte Amalie (St. Thomas) on IFR clearance for San Juan",
+      "factors": []
+    },
+    {
+      "t": 813,
+      "clock": "17:28:40",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "San Juan Air Route Traffic Control Center advised San Juan Approach Control that PRINAIR 277 was estimating Isla Verde intersection at 1738 maintaining 4,000 feet",
+      "factors": []
+    },
+    {
+      "t": 915,
+      "clock": "17:30:50",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Center identified radar target of PRINAIR 277 to Approach Control as 27 miles east of San Juan on Route 2; center-to-approach control handoff effected",
+      "factors": []
+    },
+    {
+      "t": 1035,
+      "clock": "17:32:30",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "PRINAIR 277 contacted San Juan Approach Control; trainee controller on AR-1 position observed aircraft on radar scope 3 miles east of Fajardo intersection but told it was 3 miles east of Isla Verde",
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": 1035,
+      "clock": "17:32:30",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach Control instructed flight to fly heading 250 for vector to ILS final, maintain 4,000 feet",
+      "factors": []
+    },
+    {
+      "t": 1380,
+      "clock": "17:38:00",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed into Sierra de Luquillo mountains near Fajardo, Puerto Rico; all 19 occupants (2 crew + 17 passengers) fatally injured",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Prohibit operation of aircraft without distance measuring or transponder equipment in instrument flight conditions in the San Juan area",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Review approach control procedures in locations with similar topography to Sierra de Luquillo",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Expand psychiatric and psychological assessment of controllers under the Air Traffic Controller Health Program; not only personnel entering on duty should be assessed but all controller personnel should be periodically tested",
+      "status": "closed_acceptable"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "FAA implemented procedures requiring distance measuring equipment (DME) or transponders for aircraft operating IFR in the San Juan terminal area",
+    "Enhanced approach control procedures for areas with similar mountainous terrain",
+    "Improved controller psychological and medical screening and supervision"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7009.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read synopsis (p. 2-3), history of flight (p. 4-5), probable cause (p. 15), recommendations (p. 15-19)"
+    ]
+  },
+  "asn_id": "19690305-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Prinair_Flight_277",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7009.pdf",
+    "http://aviation-safety.net/database/record.php?id=19690305-0"
+  ],
+  "interest": 11.73,
+  "curated_id": null
+}

@@ -1,0 +1,223 @@
+{
+  "id": "wd_q3662192",
+  "qid": "Q3662192",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Continental Express 2574",
+  "flight_number": "2574",
+  "date": "1991-09-11",
+  "time_reference": "local",
+  "t0": "1991-09-11T09:09:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-92-04",
+      "report_date": "1992-07-21"
+    }
+  ],
+  "aircraft": {
+    "type": "Embraer EMB 120 Brasilia",
+    "manufacturer": "Embraer",
+    "family": "EMB 120",
+    "registration": "N33701"
+  },
+  "operator": "Continental Airlines",
+  "route": {
+    "from_name": "Laredo",
+    "to_name": "Houston"
+  },
+  "location": {
+    "name": "Eagle Lake",
+    "country": "United States"
+  },
+  "phase": "descent",
+  "occupants": 14,
+  "fatalities": 14,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Continental Express Flight 2574, an Embraer EMB 120 Brasilia, crashed near Eagle Lake, Texas during descent while initiating landing sequence. Investigation revealed that screws had been removed from the left horizontal stabilizer during maintenance and were not replaced following a shift change, causing the stabilizer leading edge to separate in flight and resulting in a severe nose-down pitch and structural breakup, killing all 14 on board.",
+  "probable_cause": "The failure of Continental Express maintenance and inspection personnel to adhere to proper maintenance and quality assurance procedures for the airplane's horizontal stabilizer de-ice boots led to the sudden in-flight loss of the partially secured left horizontal stabilizer leading edge. Contributing factors included failure of management to ensure compliance with approved maintenance procedures and failure of FAA surveillance to detect non-compliance (p. 50).",
+  "factors": [
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "Screws had been removed from the horizontal stabilizer leading edge during second shift maintenance but were not replaced after shift change; the bag containing the removed screws was left on the lift and not found by third shift mechanics (p. 26-27)."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "The failure of airline maintenance and inspection personnel to adhere to proper maintenance and quality-assurance procedures; third shift inspector did not see missing screws from top of left leading edge in dark conditions (p. 26)."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "The failure of FAA surveillance to detect and verify compliance with approved procedures; FAA did not conduct sufficient oversight of Continental Express maintenance practices (p. 50)."
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "The left horizontal stabilizer leading edge separated from the airframe in flight at approximately 11,800 feet during descent (p. 20)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The airplane pitched down dramatically with a negative load factor of at least -3.375 g, rolled 160+ degrees in 1 second, and broke apart in flight (p. 20-21)."
+    }
+  ],
+  "chain": [
+    [
+      "maintenance_error",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "09:09",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "EMB 120 departed Laredo International Airport at 09:09 local time under Part 135 operations",
+      "factors": []
+    },
+    {
+      "t": 2700,
+      "clock": "09:45",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight assigned cruise altitude FL250, later instructed to descend to FL240",
+      "factors": []
+    },
+    {
+      "t": 2923,
+      "clock": "09:48:43",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flightcrew made initial radio contact with Houston ARTCC radar controllers at 0948:43",
+      "factors": []
+    },
+    {
+      "t": 3214,
+      "clock": "09:54:14",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Houston ARTCC instructed flight to cross 55 miles southwest of IAH at and maintain 9,000 feet",
+      "factors": []
+    },
+    {
+      "t": 3595,
+      "clock": "09:59:51",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Houston ARTCC instructed flight to fly heading 030, join GLAND six arrival; flightcrew responded at 0959:57",
+      "factors": []
+    },
+    {
+      "t": 3602,
+      "clock": "09:59:57",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Last radio transmission from flight",
+      "state": {
+        "alt": 11500,
+        "ias": 260
+      },
+      "factors": []
+    },
+    {
+      "t": 3662,
+      "clock": "10:03:07",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "CVR recorded sounds of objects being upset in cockpit followed by human grunt; mechanical sounds indicating breakup; wind sound picked up beginning at 1003:13",
+      "state": {
+        "alt": 11800
+      },
+      "factors": [
+        "maintenance_error",
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 3720,
+      "clock": "10:03:40",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft wreckage fell in southeast Colorado County, Texas near Eagle Lake, 65 miles west-southwest of Houston; all 14 occupants fatally injured",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-92-79",
+      "to": "FAA",
+      "text": "In cooperation with aircraft manufacturers and airlines, conduct a review of the regulations, policies, and practices related to establishing required inspection items (RIIs) for airline maintenance departments with the view toward developing more specific identification of RIIs.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-92-80",
+      "to": "FAA",
+      "text": "Require that airlines operating under 14 CFR Parts 135 and 121 study the feasibility of developing a means to advise flightcrews about recent maintenance, both routine and nonroutine, on the airplanes they are about to fly.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-92-6",
+      "to": "FAA",
+      "text": "Enhance flight standards surveillance of Continental Express to include sufficient direct observation of actual maintenance shop practices.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-92-7",
+      "to": "FAA",
+      "text": "Enhance flight standards Program Guidelines to emphasize hands-on inspection of equipment and procedures, unannounced spot inspections, and observation of quality assurance functions.",
+      "status": "closed_acceptable"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced FAA surveillance of airline maintenance practices",
+    "Development of more specific identification of required inspection items (RIIs)",
+    "Airlines began notifying flight crews of recent maintenance work on their assigned aircraft"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR9204.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read history of flight (p. 1-6), maintenance section (p. 25-30), structural failure analysis (p. 18-23), probable cause (p. 50), recommendations (p. 51)"
+    ]
+  },
+  "asn_id": "19910911-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Continental_Express_Flight_2574",
+  "report_links": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR9204.pdf",
+    "https://www.ntsb.gov/investigations/AccidentReports/Pages/AAR9204.aspx",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR92-04.pdf"
+  ],
+  "interest": 13.39,
+  "curated_id": null
+}
