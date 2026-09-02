@@ -121,10 +121,19 @@
     "reviewed": false,
     "notes": [
       "Deepened from summary-level wikidata record",
-      "Key report sections read: synopsis, findings, probable cause",
+      "Key report sections read: synopsis/history, findings, probable cause, recommendations",
       "Text extracted from official report PDF"
     ]
   },
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enqu\u00eates et d'Analyses",
+      "country": "France",
+      "role": "lead"
+    }
+  ],
+  "recommendations": [],
   "curated_id": null,
   "sources": [
     "https://bea.aero/fileadmin/documents/docspa/1972/f-ch721027/pdf/f-ch721027_06.pdf"

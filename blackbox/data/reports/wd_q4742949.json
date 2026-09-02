@@ -162,10 +162,19 @@
     "reviewed": false,
     "notes": [
       "Deepened from summary-level wikidata record",
-      "Key report sections read: synopsis, findings, probable cause",
+      "Key report sections read: synopsis/history, findings, probable cause, recommendations",
       "Text extracted from official report PDF"
     ]
   },
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "recommendations": [],
   "curated_id": null,
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7701.pdf"

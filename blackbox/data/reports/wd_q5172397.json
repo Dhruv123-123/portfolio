@@ -165,15 +165,59 @@
     "reviewed": false,
     "notes": [
       "Deepened from summary-level wikidata record",
-      "Key report sections read: synopsis, findings, probable cause",
+      "Key report sections read: synopsis/history, findings, probable cause, recommendations",
       "Text extracted from official report PDF"
     ]
   },
+  "recommendations": [
+    {
+      "id": "A-06-7",
+      "to": "FAA",
+      "text": "Direct the principal operations inspectors of all 14 CFR Part 121 and 135 operators to reemphasize the importance of strict compliance with the sterile cockpit rule.",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "A-06-8",
+      "to": "FAA",
+      "text": "Require all 14 CFR Part 121 and 135 operators to incorporate the constant-angle-of-descent technique into their nonprecision approach procedures.",
+      "status": "unknown",
+      "trigger_factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "id": "A-06-9",
+      "to": "FAA",
+      "text": "Revise applicable 14 CFR Part 121 and 135 regulations to prohibit pilots from descending below the minimum descent altitude during nonprecision instrument approaches unless conditions allow for clear visual identification.",
+      "status": "unknown",
+      "trigger_factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "id": "A-06-10",
+      "to": "FAA",
+      "text": "Modify and simplify the flight crew hours-of-service regulations to take into consideration factors such as length of duty day, starting time, workload, and other factors affecting crew alertness.",
+      "status": "unknown",
+      "trigger_factors": [
+        "fatigue"
+      ]
+    },
+    {
+      "id": "A-06-11",
+      "to": "FAA",
+      "text": "Require all 14 CFR Part 121 and 135 operators to incorporate fatigue-related information into their initial and recurrent pilot training programs.",
+      "status": "unknown",
+      "trigger_factors": [
+        "fatigue"
+      ]
+    }
+  ],
   "curated_id": null,
   "sources": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0601.pdf",
-    "https://www.ntsb.gov/_layouts/ntsb.aviation/brief.aspx?ev_id=20041020X01659&key=1",
-    "https://www.ntsb.gov/_layouts/ntsb.aviation/index.aspx",
-    "https://data.ntsb.gov/Docket/?NTSBNumber=DCA05MA004"
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0601.pdf"
   ]
 }
