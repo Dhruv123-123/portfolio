@@ -160,7 +160,7 @@
       "t": 32,
       "clock": "21:09:22",
       "phase": "initial_climb",
-      "actor": "CA",
+      "actor": "CAPT",
       "kind": "crew_action",
       "text": "Master warning started. Captain ordered 'Go up!' preceded by automatic call out of 10 feet.",
       "factors": []
