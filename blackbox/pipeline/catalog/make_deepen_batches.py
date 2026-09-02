@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[2]
 CATALOG = ROOT / "data" / "catalog" / "wikidata.jsonl"
 REPORTS = ROOT / "data" / "reports"
 OUT = ROOT / "cache" / "deepen"
-OFFICIAL = re.compile(r"ntsb\.gov|bea\.aero|bea-fr|gov\.uk/(aaib|government)|aaib|tsb\.gc\.ca|atsb\.gov\.au|bfu-web|onderzoeksraad|ansv\.it|jtsb|mlit\.go\.jp|ciaiac|fomento\.gob|mitma|mak-iac|knkt|dephub|aaiu\.ie|sust\.admin\.ch|havarikommisjonen|aibn|gcaa\.gov\.ae|caa\.|dgac|aib\.gov|ecaa|faa\.gov|skybrary\.aero|fss\.aero|baaa-acro|bst-tsb|taic\.org\.nz|aaiasb|cenipa|fab\.mil\.br|jiaac|ecaa\.gov|aviation-safety\.net/.*reports", re.I)
+OFFICIAL = re.compile(r"ntsb\.gov|bea\.aero|bea-fr|gov\.uk/(aaib|government)|aaib\.gov|\.aaib\.|/aaib/|tsb\.gc\.ca|atsb\.gov\.au|bfu-web|onderzoeksraad|ansv\.it|jtsb|mlit\.go\.jp|ciaiac|fomento\.gob|mitma|mak-iac|knkt|dephub|aaiu\.ie|sust\.admin\.ch|havarikommisjonen|aibn|gcaa\.gov\.ae|caa\.|dgac|aib\.gov|ecaa|faa\.gov|bst-tsb|taic\.org\.nz|aaiasb|cenipa|fab\.mil\.br|jiaac|ecaa\.gov|ntsb\.gov|libraryonline\.erau\.edu|lessonslearned\.faa\.gov|rvs-bi\.de|bfu|enac|sia\.gov\.it|bfu\.admin\.ch|luftfahrt-bundesamt|ib\.gov|dgca|aaib\.gov|aaiu", re.I)
 
 
 def main():
@@ -36,7 +36,7 @@ def main():
         rec = json.loads(line)
         if rec["id"] in existing or rec.get("curated_id") in existing:
             continue
-        links = [l for l in rec.get("report_links", []) if OFFICIAL.search(l) or l.lower().endswith(".pdf")]
+        links = [l for l in rec.get("report_links", []) if OFFICIAL.search(l) and not re.search(r"registry\.faa\.gov|news\.google|youtube|books\.google", l, re.I)]
         if not links:
             continue
         rows.append({"id": rec["id"], "qid": rec.get("qid"), "title": rec["title"], "date": rec["date"], "interest": rec.get("interest", 0), "report_links": links[:5], "summary_record": rec})
