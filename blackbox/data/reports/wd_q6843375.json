@@ -1,0 +1,171 @@
+{
+  "id": "wd_q6843375",
+  "qid": "Q6843375",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Midwest Express Airlines 105",
+  "flight_number": "ME105",
+  "date": "1985-09-06",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-9-14",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-9",
+    "registration": "N100ME"
+  },
+  "operator": "Midwest Express Airlines",
+  "route": {
+    "from_name": "Milwaukee Mitchell International Airport",
+    "to_name": "Hartsfield–Jackson Atlanta International Airport"
+  },
+  "location": {
+    "name": "Oak Creek",
+    "country": "United States"
+  },
+  "phase": "initial_climb",
+  "occupants": 31,
+  "fatalities": 31,
+  "category": "LOC-I",
+  "summary": "Midwest Express Flight 105 departed Milwaukee on September 6, 1985, at 15:20. At 700 ft climbing, the right engine exploded due to metal fatigue in a removable sleeve spacer. Despite the controllable aircraft, the crew failed to properly control the plane during the emergency, with breakdown of crew coordination. The aircraft stalled and crashed into a wildlife preserve.",
+  "probable_cause": "Failure of crew to properly control the aircraft during engine emergency. The response of the crew to the failure was the main cause of the accident. Breakdown of the crew's coordination and poor FAA oversight also contributed to the crash.",
+  "factors": [
+    {
+      "id": "metal_fatigue",
+      "role": "initiating",
+      "evidence": "removable sleeve spacer suffered metal fatigue that caused the engine to explode"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "breakdown of the crew's coordination, and poor FAA oversight also contributed to the crash"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "plane continued climbing with a high angle of attack, which caused the airspeed to decrease significantly"
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "aircraft rolled to the right, then stalled, and abruptly continued rolling to an angle of 90 degrees"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "plane was reported to have barrel-rolled at least once while losing control"
+    }
+  ],
+  "chain": [
+    [
+      "metal_fatigue",
+      "crm_breakdown"
+    ],
+    [
+      "crm_breakdown",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "15:20",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "crew_action",
+      "text": "Flight 105, carrying 27 passengers and four crew members, departed from Mitchell's Runway 19R en route to its destination of Hartsfield–Jackson Atlanta International Airport, Atlanta, Georgia.",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": "15:21",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "With Flight 105 just 700 ft above the ground and climbing, the right engine exploded, causing Flight 105 to sway several times.",
+      "factors": [
+        "metal_fatigue"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "15:21",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain Martin immediately asked, What the hell was that, to which First Officer Weiss did not respond.",
+      "factors": [
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": "15:21",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The plane continued climbing with a high angle of attack, which caused the airspeed to decrease significantly.",
+      "factors": [
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "t": 240,
+      "clock": "15:21",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "It began to roll to the right, and then stalled, and abruptly continued rolling to an angle of 90 degrees.",
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": "15:21:41",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Flight 105 crashed into an open field in a wildlife preserve several hundred meters from runway 19R.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8701.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR87-01.pdf",
+    "https://web.archive.org/web/20230926144240/http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR87-01.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Midwest_Express_Airlines_Flight_105",
+  "asn_id": "19850906-0",
+  "interest": 13.37,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Key sections read: synopsis/summary, conclusions, probable cause, recommendations"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8701.pdf"
+  ]
+}

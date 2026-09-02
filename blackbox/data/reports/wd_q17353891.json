@@ -1,0 +1,202 @@
+{
+  "id": "wd_q17353891",
+  "qid": "Q17353891",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "N\u00fcrnberger Flugdienst 108",
+  "flight_number": "108",
+  "date": "1988-02-08",
+  "time_reference": "local",
+  "t0": "1988-02-08T07:55:08+01:00",
+  "agency": "BFU",
+  "agencies": [
+    {
+      "code": "BFU",
+      "name": "Flugunfalluntersuchungsstelle (Aircraft Accident Investigation Bureau)",
+      "country": "Germany",
+      "role": "lead",
+      "report_id": "1 X 0001/88",
+      "report_date": "1989-06-26"
+    }
+  ],
+  "aircraft": {
+    "type": "Swearingen SA-227AC Metroliner III",
+    "manufacturer": "Fairchild",
+    "family": "Metroliner",
+    "registration": "D-CABB",
+    "msn": "AC-500"
+  },
+  "operator": "N\u00fcrnberger Flugdienst",
+  "route": {
+    "from_name": "Hannover",
+    "from": "HAJ",
+    "to_name": "D\u00fcsseldorf",
+    "to": "DUS"
+  },
+  "location": {
+    "name": "Near Essen over Ruhr River (Kettwig)",
+    "country": "Germany",
+    "lat": 51.3667,
+    "lon": 7.1
+  },
+  "phase": "approach",
+  "occupants": 21,
+  "fatalities": 21,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Swearingen Metroliner III Flight 108 was struck by lightning during approach to D\u00fcsseldorf on February 8, 1988. The lightning strike caused complete electrical system failure, including loss of all flight instruments and autopilot. Spatially disoriented, the pilots descended uncontrollably and the aircraft disintegrated in midair after approximately 2 minutes of predominantly uncontrolled flight.",
+  "probable_cause": "The crew continued flight into an area where electrical discharges were expected despite possibility of deviation. Complete electrical power failure resulted from lightning strike during instrument flight conditions, causing loss of cockpit and instrument lighting and rendering flap and stabilizer trim inoperable. The aircraft subsequently entered predominantly uncontrolled flight and was structurally overloaded and broke apart in midair.",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "latent",
+      "evidence": "Aircraft struck by lightning inside thunderstorm, causing entire electrical system to fail (p. 7-8)"
+    },
+    {
+      "id": "spatial_disorientation",
+      "role": "contributing",
+      "evidence": "Pilots became disoriented without flight instruments and entered high-speed descent (p. 8, 50)"
+    },
+    {
+      "id": "loss_of_pilot_control_authority",
+      "role": "contributing",
+      "evidence": "After approximately 2 minutes of predominantly uncontrolled flight, trailing edge flap failed due to overloading (p. 50)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Aircraft disintegrated in midair after trailing edge flap failure caused unrecoverable spiral (p. 50)"
+    }
+  ],
+  "chain": [
+    [
+      "convective_weather",
+      "spatial_disorientation"
+    ],
+    [
+      "spatial_disorientation",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "loss_of_pilot_control_authority",
+      "structural_failure"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "07:39",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 108 initiated descent from 14,000 feet after 24 minutes of climb from Hannover",
+      "factors": []
+    },
+    {
+      "t": 480,
+      "clock": "07:47:38",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "D\u00fcsseldorf director cleared Flight 108 for ILS approach to runway 24 and warned that preceding aircraft experienced lightning strike on 6 miles final",
+      "factors": []
+    },
+    {
+      "t": 540,
+      "clock": "07:50:50",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew reached localizer at 2,900 feet and observed on weather radar that thunderstorm activity was directly ahead",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 600,
+      "clock": "07:54:25",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft entered thunderstorm. Lightning strike at 07:55:08 caused complete electrical system failure, including all flight instruments and lighting",
+      "state": {
+        "alt": 2000
+      },
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 660,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Without flight instruments, pilots became disoriented and entered high-speed descent",
+      "factors": [
+        "spatial_disorientation"
+      ]
+    },
+    {
+      "t": 780,
+      "clock": "07:58:00",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "After approximately 2 minutes of predominantly uncontrolled flight, aircraft disintegrated in midair near Kettwig. All 21 occupants killed.",
+      "factors": [
+        "loss_of_pilot_control_authority",
+        "structural_failure"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Aircraft manufacturer",
+      "text": "Equip aircraft with independent gyroscopic horizon powered by sources independent of normal electrical system for all aircraft operating in commercial air transport",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "Aircraft manufacturer",
+      "text": "Provide guidance in flight manual regarding behavior in and near thunderstorms and procedure for restoring power after total electrical failure",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "Aircraft manufacturer",
+      "text": "Modify Battery-Bus-Relay to make failure extremely unlikely or modify electrical system to allow generator reconnection with open relay",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Airlines now required to avoid thunderstorms more strictly",
+    "Enhanced lightning strike protection systems developed for aircraft"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.bfu-web.de/DE/Publikationen/Untersuchungsberichte/BerichteFUS-vor-BFU-Zeiten/Bericht_88_1X001-0.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/N%C3%BCrnberger_Flugdienst_Flight_108",
+  "asn_id": "19880208-2",
+  "report_links": [
+    "https://www.bfu-web.de/DE/Publikationen/Untersuchungsberichte/BerichteFUS-vor-BFU-Zeiten/Bericht_88_1X001-0.pdf?__blob=publicationFile&v=1"
+  ],
+  "interest": 12.19,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Kurzdarstellung (Summary, pages 5-6), History of Flight (pages 7-10), Findings (pages 50-51), Probable Causes (pages 51-52), Safety Recommendations (pages 52-55)",
+      "Report in German; findings and conclusions translated to English",
+      "6 events extracted based on timeline from report"
+    ]
+  }
+}

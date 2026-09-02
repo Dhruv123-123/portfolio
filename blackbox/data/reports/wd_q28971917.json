@@ -1,0 +1,221 @@
+{
+  "id": "wd_q28971917",
+  "qid": "Q28971917",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air Cara\u00efbes 1501",
+  "flight_number": "TX1501",
+  "date": "2001-03-24",
+  "time_reference": "UTC",
+  "t0": "2001-03-24T20:28:00Z",
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau of Enquiry and Analysis for Civil Aviation Safety",
+      "country": "France",
+      "role": "lead",
+      "report_id": "f-es010324a",
+      "report_title": "Accident on 24 March 2001 at Saint-Barth\u00e9lemy to the DHC-6-300 registered F-OGES",
+      "report_date": "2001-12-19"
+    }
+  ],
+  "aircraft": {
+    "type": "de Havilland Canada DHC-6-300 Twin Otter",
+    "manufacturer": "de Havilland Canada",
+    "family": "DHC-6",
+    "registration": "F-OGES"
+  },
+  "operator": "Cara\u00efbes Air Transport (on behalf of Air Cara\u00efbes)",
+  "route": {
+    "from_name": "Princess Juliana International Airport",
+    "from": "SXM",
+    "to_name": "Gustaf III Airport",
+    "to": "SBH"
+  },
+  "location": {
+    "name": "Saint Barth\u00e9lemy",
+    "country": "France",
+    "lat": 17.9,
+    "lon": -62.83
+  },
+  "phase": "approach",
+  "occupants": 19,
+  "fatalities": 20,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "De Havilland DHC-6-300 Twin Otter Flight 1501 crashed on approach to Saint-Barth\u00e9lemy on March 24, 2001. The aircraft suddenly banked steeply to the left and dove toward the ground during final approach, impacting a house. All 19 occupants and one person on the ground were killed.",
+  "probable_cause": "The accident resulted from the Captain's use of the propellers in the reverse beta range to improve control of track on short final. A strong thrust asymmetry upon coming out of reverse beta range caused loss of yaw control, then roll control. Contributing factors were the Captain's lack of recent experience on the aircraft type, difficulty of the Saint-Barth\u00e9lemy approach, time pressure during the flight, and the low altitude at which loss of control occurred.",
+  "factors": [
+    {
+      "id": "control_misidentification",
+      "role": "initiating",
+      "evidence": "Captain moved propellers into reverse beta range during final approach to improve track control (p. 51)"
+    },
+    {
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "Captain lacked recent experience on DHC-6, having primarily flown Dornier 228 in preceding three months; only 10 DHC-6 hours in previous 90 days (p. 50)"
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "Approach to runway 10 at Saint-Barth\u00e9lemy requires flying over La Tourmente pass at very low height with orographic turbulence; difficult procedure requiring great vigilance (p. 50)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft suddenly banked steeply to the left with increasingly steep bank angle, then dove toward ground (p. 50)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Aircraft crashed with steep nose-down attitude, destroyed on impact, and caught fire (p. 50-51)"
+    }
+  ],
+  "chain": [
+    [
+      "control_misidentification",
+      "loss_of_control_inflight"
+    ],
+    [
+      "pilot_experience",
+      "control_misidentification"
+    ],
+    [
+      "high_workload",
+      "control_misidentification"
+    ],
+    [
+      "loss_of_control_inflight",
+      "structural_failure"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "16:00",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 1501 departed Princess Juliana International Airport at 16:00 UTC for Saint-Barth\u00e9lemy, 19 nautical miles away, under VFR.",
+      "factors": []
+    },
+    {
+      "t": 900,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft cruised at about 1,500 feet. Crew left Saint-Martin Juliana frequency and announced passing Fourchue reporting point entry to Saint-Barth\u00e9lemy circuit.",
+      "factors": []
+    },
+    {
+      "t": 1020,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew announced passing Pain de Sucre reporting point for final approach to runway 10. Last communication received.",
+      "factors": []
+    },
+    {
+      "t": 1050,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "On short final before La Tourmente pass, captain moved propellers into reverse beta range to improve track control.",
+      "factors": [
+        "control_misidentification"
+      ]
+    },
+    {
+      "t": 1060,
+      "clock": "20:28:00",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft suddenly banked steeply to the left with progressively steeper bank angle and began diving toward ground, accompanied by loud engine noise.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 1065,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed into house with steep nose-down attitude near Saint-Barth\u00e9lemy. Massive explosion followed. All 19 occupants killed; one person in house died in fire.",
+      "factors": [
+        "loss_of_control_inflight",
+        "structural_failure"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "DGAC and JAA",
+      "text": "Make mandatory the installation of at least one flight recorder on board public transport aircraft authorized to carry more than nine passengers with maximum certified take-off weight less than or equal to 5,700 kg",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "DGAC",
+      "text": "Encourage operators to equip themselves with tools necessary to ensure rigorous follow-up of pilots' aviation activity regarding recency requirements",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "DGAC and JAA",
+      "text": "Improve wording of paragraph OPS 1.970 regarding recent experience requirements and take into account holding of site ratings",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "DGAC",
+      "text": "Put in place necessary means to ensure recordings of allocated radio frequencies at Saint-Barth\u00e9lemy without notable interruptions",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "DGAC",
+      "text": "Install a wind-sock on southern part of La Tourmente pass to provide wind information for approach pilots",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "DGAC",
+      "text": "Determine resources required for retrospective checks on medical records by CMAC and ensure they are in place",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/fileadmin/documents/docspa/2001/f-es010324a/pdf/f-es010324a_06.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Cara%C3%AFbes_Flight_1501",
+  "asn_id": "20010324-0",
+  "report_links": [
+    "https://bea.aero/fileadmin/documents/docspa/2001/f-es010324a/pdf/f-es010324a_06.pdf"
+  ],
+  "interest": 12.71,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Synopsis (pages 7-8), History of Flight (pages 9-10), Findings (pages 50-51), Probable Causes (pages 51-52), Safety Recommendations (pages 52-54)",
+      "6 events extracted based on timeline from report",
+      "No CVR transcript available in report"
+    ]
+  }
+}

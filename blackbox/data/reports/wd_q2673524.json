@@ -1,0 +1,286 @@
+{
+  "id": "wd_q2673524",
+  "title": "Sudan Airways Flight 109",
+  "flight_number": "SD109",
+  "date": "2008-06-10",
+  "time_reference": "UTC",
+  "t0": "2008-06-10T17:26:00Z",
+  "agency": "SSAC",
+  "agencies": [
+    {
+      "code": "SSAC",
+      "name": "Sudan Civil Aviation Authority",
+      "country": "Sudan",
+      "role": "lead",
+      "report_id": "ST-ATN",
+      "report_title": "Accident Investigation Report: Sudan Airways A310",
+      "report_date": "2010-11-03",
+      "url": "https://bea.aero/fileadmin/documents/docspa/2008/st-n080610.en/pdf/st-n080610.en_05.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Airbus A310-324",
+    "family": "A310",
+    "manufacturer": "Airbus",
+    "registration": "ST-ATN"
+  },
+  "operator": "Sudan Airways",
+  "route": {
+    "from": "OJAM",
+    "from_name": "Amman",
+    "to": "HSSU",
+    "to_name": "Khartoum"
+  },
+  "location": {
+    "name": "Khartoum Airport",
+    "country": "Sudan",
+    "lat": 15.59,
+    "lon": 32.18
+  },
+  "phase": "landing",
+  "occupants": 214,
+  "fatalities": 30,
+  "injuries_serious": 184,
+  "damage": "substantial",
+  "category": "RE",
+  "summary": "Airbus A310 landing at Khartoum with strong unrecognized tailwind on wet slippery runway overran runway 215m after long flaring distance when autobrake was not selected and left engine reverser was inoperative; fire erupted during evacuation.",
+  "probable_cause": "Long flaring distance on wet runway, aggravated by non-deployment of autobrake and one inoperative engine reverser; inclement weather and crew lack of weather information contributed.",
+  "factors": [
+    {
+      "id": "tailwind_landing",
+      "role": "initiating",
+      "evidence": "Aircraft was struck by 15 knot tailwind; crew did not realize this (p. 40)"
+    },
+    {
+      "id": "contaminated_runway",
+      "role": "contributing",
+      "evidence": "Runway was noted as very slippery, causing friction coefficient to be greatly decreased (p. 40)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Crew did not realize 15 knot tailwind condition affecting landing (p. 40)"
+    },
+    {
+      "id": "delayed_deceleration",
+      "role": "contributing",
+      "evidence": "Pilot decided not to deploy autobrake despite controller having informed him on slippery runway (p. 40)"
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "Aircraft overran runway and came to rest 215 meters beyond runway 36 end (p. 40)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Fire erupted on starboard side of aircraft; thick smoke and darkness hampered evacuation (p. 40)"
+    }
+  ],
+  "chain": [
+    [
+      "tailwind_landing",
+      "runway_overrun"
+    ],
+    [
+      "contaminated_runway",
+      "runway_overrun"
+    ],
+    [
+      "delayed_deceleration",
+      "runway_overrun"
+    ],
+    [
+      "runway_overrun",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "17:26",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 109 received clearance and began landing approach",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft touched down at 140 knots indicated airspeed, 155 knots ground speed with 15 knot tailwind",
+      "state": {
+        "ias": 140,
+        "alt": 0
+      },
+      "factors": [
+        "tailwind_landing",
+        "contaminated_runway"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Pilot decided not to deploy autobrake despite controller warning of slippery runway",
+      "factors": [
+        "delayed_deceleration"
+      ]
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Crew deployed thrust reversers; left engine reverser remained stowed per MEL",
+      "factors": [
+        "delayed_deceleration"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft overran runway and came to rest 215 meters beyond runway 36 end",
+      "factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "t": 150,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Fire erupted on starboard side; thick smoke and nighttime darkness hampered evacuation",
+      "factors": [
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Sudan Airways",
+      "text": "Adhere strictly to crew qualifications, periodic training and evaluation for adverse weather conditions",
+      "status": "unknown",
+      "trigger_factors": [
+        "tailwind_landing",
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Sudan Airways",
+      "text": "Revise and update aircraft maintenance schedules in zones vulnerable to destruction and failure",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "to": "Sudan Airways",
+      "text": "Reduce or stop maintenance cycle extensions, concessions and waivers",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "to": "Sudan Airways",
+      "text": "Closely monitor and control MEL and ADD approvals",
+      "status": "unknown",
+      "trigger_factors": [
+        "delayed_deceleration"
+      ]
+    },
+    {
+      "id": null,
+      "to": "CAA Sudan",
+      "text": "Increase number of fire fighting personnel with necessary protective equipment",
+      "status": "unknown",
+      "trigger_factors": [
+        "post_impact_fire"
+      ]
+    },
+    {
+      "id": null,
+      "to": "CAA Sudan",
+      "text": "Train fire fighting officers and prevent transfers",
+      "status": "unknown",
+      "trigger_factors": [
+        "post_impact_fire"
+      ]
+    },
+    {
+      "id": null,
+      "to": "CAA Sudan",
+      "text": "Establish reliable communication between fire fighting stations and vehicles",
+      "status": "unknown",
+      "trigger_factors": [
+        "post_impact_fire"
+      ]
+    },
+    {
+      "id": null,
+      "to": "CAA Sudan",
+      "text": "Establish system of measuring friction level for wet runways",
+      "status": "unknown",
+      "trigger_factors": [
+        "contaminated_runway"
+      ]
+    },
+    {
+      "id": null,
+      "to": "CAA Sudan",
+      "text": "Ensure tower controllers are properly trained and qualified",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": null,
+      "to": "CAA Sudan",
+      "text": "Urgent maintenance and calibration for ILS of both runways",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/fileadmin/documents/docspa/2008/st-n080610.en/pdf/st-n080610.en_05.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q2673524",
+  "asn_id": "20080610-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sudan_Airways_Flight_109",
+  "report_links": [
+    "https://bea.aero/fileadmin/documents/docspa/2008/st-n080610.en/pdf/st-n080610.en_05.pdf"
+  ],
+  "interest": 12.99,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Findings and Cause of Accident sections read",
+      "Safety Recommendations section read",
+      "Key sections sufficient for sections-depth extraction",
+      "Report organized differently than typical NTSB format but core information extracted"
+    ]
+  }
+}

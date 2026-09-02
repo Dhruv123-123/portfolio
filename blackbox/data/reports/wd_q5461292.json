@@ -1,0 +1,214 @@
+{
+  "id": "wd_q5461292",
+  "title": "Florida Commuter Airlines Flight 65",
+  "flight_number": "FC65",
+  "date": "1980-09-12",
+  "time_reference": "local",
+  "t0": "1980-09-12T20:35:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "AAR-81-05",
+      "report_title": "Florida Commuter Airlines, Inc., Douglas DC-3A",
+      "report_date": "1981-01-22",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8105.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Douglas DC-3A",
+    "family": "DC-3",
+    "manufacturer": "Douglas",
+    "registration": "N75KW"
+  },
+  "operator": "Florida Commuter Airlines",
+  "route": {
+    "from": "KPBI",
+    "from_name": "West Palm Beach",
+    "to": "MYGF",
+    "to_name": "Freeport, Grand Bahama Island"
+  },
+  "location": {
+    "name": "West End Settlement, Grand Bahama Island",
+    "country": "Bahamas",
+    "lat": 26.67,
+    "lon": -78.97
+  },
+  "phase": "cruise",
+  "occupants": 34,
+  "fatalities": 34,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "UNK",
+  "summary": "Douglas DC-3 crashed in Atlantic Ocean with 34 occupants when unrecovered wreckage and lack of flight recorders precluded determining probable cause; contributing factors included pitot blockage from mud dauber nests, pitot-static system discrepancies, thunderstorm activity, and inadequate airline management oversight.",
+  "probable_cause": "Probable cause could not be determined due to unrecovered wreckage and no flight recorders. Contributing factors: thunderstorm activities, pitot-static system discrepancies, and lack of operational control by management.",
+  "factors": [
+    {
+      "id": "pitot_blockage",
+      "role": "initiating",
+      "evidence": "Pitot tubes left uncovered for five weeks with mud dauber nests blocking openings; improper maintenance procedure used to clear blockage (p. 19)"
+    },
+    {
+      "id": "unreliable_airspeed",
+      "role": "contributing",
+      "evidence": "Preexisting discrepancies in pitot-static system affecting reliability of flight instruments (p. 19)"
+    },
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "Chief mechanic used screwdriver and coat hanger instead of proper procedure to clear blockage (p. 19)"
+    },
+    {
+      "id": "convective_weather",
+      "role": "contributing",
+      "evidence": "Known thunderstorm activities and turbulence in the area (p. 19)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Replacement pilot believed flight was Part 91, not required to have 6-month currency check (p. 19)"
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "latent",
+      "evidence": "Lack of operational control exercised by airline management (p. 19)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Aircraft crashed into Atlantic Ocean (p. 19)"
+    }
+  ],
+  "chain": [
+    [
+      "pitot_blockage",
+      "unreliable_airspeed"
+    ],
+    [
+      "maintenance_error",
+      "unreliable_airspeed"
+    ],
+    [
+      "convective_weather",
+      "unreliable_airspeed"
+    ],
+    [
+      "operator_safety_culture",
+      "inadequate_training"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "19:40",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 65 attempted departure but aborted due to no airspeed indication",
+      "factors": [
+        "pitot_blockage"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "ground",
+      "actor": "GND",
+      "kind": "crew_action",
+      "text": "Maintenance determined mud dauber nests blocking pitot tube openings",
+      "factors": [
+        "maintenance_error"
+      ]
+    },
+    {
+      "t": 600,
+      "clock": "20:35",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 65 departed West Palm Beach after reboarding",
+      "factors": []
+    },
+    {
+      "t": 1200,
+      "clock": "20:49",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 65 flew beyond range of Miami radar",
+      "factors": []
+    },
+    {
+      "t": 1500,
+      "clock": "20:55",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 65 made contact with approach controllers at Freeport",
+      "factors": []
+    },
+    {
+      "t": 1680,
+      "clock": "20:58",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach cleared Flight 65 to descend to 1400 feet, last communication",
+      "factors": []
+    },
+    {
+      "t": 2700,
+      "clock": "21:15",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Control tower tried to radio plane without response",
+      "factors": [
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-81-35",
+      "to": "FAA",
+      "text": "Require all aircraft in revenue passenger operations to have approved weather detection device for flight under IFR or night VFR when thunderstorms are expected",
+      "status": "unknown",
+      "trigger_factors": [
+        "convective_weather"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8105.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q5461292",
+  "asn_id": "19800912-3",
+  "wikipedia": "https://en.wikipedia.org/wiki/Florida_Commuter_Airlines_Flight_65",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8105.pdf"
+  ],
+  "interest": 13.05,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Findings and Probable Cause sections read",
+      "Wreckage not recovered; no flight recorders installed",
+      "Probable cause unable to be determined; contributing factors extracted from report"
+    ]
+  }
+}

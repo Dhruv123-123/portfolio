@@ -1,0 +1,138 @@
+{
+  "id": "wd_q5192132",
+  "qid": "Q5192132",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Cubana de Aviación 1216",
+  "flight_number": "1216",
+  "date": "1999-12-21",
+  "agency": "UNKNOWN",
+  "agencies": [],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-10-30",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-10",
+    "registration": "F-GTDI"
+  },
+  "operator": "Cubana de Aviación",
+  "route": {
+    "from_name": "Havana",
+    "to_name": "Guatemala City"
+  },
+  "location": {
+    "name": "La Aurora International Airport",
+    "country": "Guatemala"
+  },
+  "phase": "landing",
+  "occupants": 314,
+  "fatalities": 18,
+  "category": "RE",
+  "summary": "Cubana de Aviación Flight 1216 operating a McDonnell Douglas DC-10 overran the runway at La Aurora International Airport on 21 December 1999 while landing on a wet runway. The aircraft touched down too far along the wet runway with insufficient deceleration and the crew failed to initiate a go-around, causing the aircraft to run off the runway end down a slope and crash into residential houses, killing 18 people including all three flight crew members and 2 people on the ground.",
+  "probable_cause": "The aircraft touched down too far along the wet runway with insufficient deceleration, and the crew failed to initiate a go-around.",
+  "factors": [
+    {
+      "id": "contaminated_runway",
+      "role": "contributing",
+      "evidence": "Aircraft touched down too far along the wet runway"
+    },
+    {
+      "id": "landing_long",
+      "role": "initiating",
+      "evidence": "Aircraft touched down too far along the wet runway with insufficient deceleration"
+    },
+    {
+      "id": "delayed_deceleration",
+      "role": "contributing",
+      "evidence": "Insufficient deceleration during landing; spoilers were found in the down and locked position"
+    },
+    {
+      "id": "go_around_not_flown",
+      "role": "contributing",
+      "evidence": "The crew had failed to initiate a go-around"
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "Aircraft ran off the end of the runway and down a slope, crashing into ten houses"
+    }
+  ],
+  "chain": [
+    [
+      "landing_long",
+      "runway_overrun"
+    ],
+    [
+      "delayed_deceleration",
+      "runway_overrun"
+    ],
+    [
+      "contaminated_runway",
+      "landing_long"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "landing",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "After a two-hour flight, the aircraft was cleared to land on Runway 19 at La Aurora International Airport",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft touched down too far along the runway during landing approach",
+      "factors": [
+        "landing_long"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "The pilots were unable to stop the aircraft and it ran off the end of the runway and down a slope",
+      "factors": [
+        "delayed_deceleration",
+        "go_around_not_flown"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed into ten houses in La Libertad neighborhood, killing 8 passengers, 8 crew members, and 2 people on the ground",
+      "factors": [
+        "runway_overrun"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://bea.aero/fileadmin/documents/docspa/1999/f-di991221e/pdf/f-di991221e.pdf",
+    "https://bea.aero/fileadmin/documents/docspa/1999/f-di991221e/htm/f-di991221e.html"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Cubana_de_Aviaci%C3%B3n_Flight_1216",
+  "asn_id": "19991221-0",
+  "interest": 13.39,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Key sections read: synopsis/summary, conclusions, probable cause, recommendations"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "https://bea.aero/fileadmin/documents/docspa/1999/f-di991221e/pdf/f-di991221e.pdf"
+  ]
+}
