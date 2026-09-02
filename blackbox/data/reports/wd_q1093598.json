@@ -85,41 +85,100 @@
     }
   ],
   "chain": [
-    ["low_visibility", "deicing_inadequate"],
-    ["deicing_inadequate", "airframe_icing"],
-    ["airframe_icing", "inadequate_monitoring"],
-    ["inadequate_monitoring", "takeoff_configuration_error"],
-    ["takeoff_configuration_error", "aerodynamic_stall"],
-    ["aerodynamic_stall", "loss_of_control_inflight"],
-    ["loss_of_control_inflight", "ditching"]
+    [
+      "low_visibility",
+      "deicing_inadequate"
+    ],
+    [
+      "deicing_inadequate",
+      "airframe_icing"
+    ],
+    [
+      "airframe_icing",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "takeoff_configuration_error"
+    ],
+    [
+      "takeoff_configuration_error",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "ditching"
+    ]
   ],
   "events": [
     {
-      "t": -400,
+      "t": -600,
       "clock": "20:55",
       "phase": "ground",
       "actor": "SYS",
       "kind": "system",
-      "text": "Flight 405 departed Jacksonville at 1715 EST, cleared into LaGuardia area without significant additional delays.",
+      "text": "Flight 405 departs Jacksonville at 1715 EST for Cleveland via LaGuardia stopover.",
       "factors": []
     },
     {
-      "t": -200,
+      "t": -400,
       "clock": "21:10",
       "phase": "ground",
       "actor": "SYS",
       "kind": "system",
-      "text": "Aircraft deiced with Type I fluid (50/50 water/glycol mixture) at approximately 2026. First deicing truck experienced mechanical problems causing ~20 minute pushback delay.",
-      "factors": ["deicing_inadequate", "low_visibility"]
+      "text": "Aircraft lands at LaGuardia; ground delays due to poor weather conditions.",
+      "factors": [
+        "low_visibility"
+      ]
     },
     {
-      "t": -100,
+      "t": -300,
       "clock": "21:20",
       "phase": "ground",
       "actor": "SYS",
       "kind": "system",
-      "text": "Second deicing by single truck completed at approximately 2100. Aircraft taxied to runway 13.",
-      "factors": ["low_visibility"]
+      "text": "First deicing at approximately 2026; first deicing truck experiences mechanical problems.",
+      "factors": [
+        "deicing_inadequate",
+        "low_visibility"
+      ]
+    },
+    {
+      "t": -200,
+      "clock": "21:30",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft pushed away from gate; second deicing by single truck at approximately 2026-2100.",
+      "factors": [
+        "deicing_inadequate"
+      ]
+    },
+    {
+      "t": -100,
+      "clock": "21:30",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew inspects aircraft; first officer does not see contamination on wing; aircraft cleared for departure.",
+      "factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "t": -50,
+      "clock": "21:35",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft taxies to runway 13; second deicing holdover time expired by takeoff.",
+      "factors": [
+        "airframe_icing"
+      ]
     },
     {
       "t": 0,
@@ -127,25 +186,7 @@
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "system",
-      "text": "Aircraft cleared for takeoff at 2134:51; engine advance and takeoff roll commence.",
-      "factors": []
-    },
-    {
-      "t": 50,
-      "clock": "21:35:17",
-      "phase": "takeoff",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "Captain and first officer call '80 knots'.",
-      "factors": []
-    },
-    {
-      "t": 58,
-      "clock": "21:35:25",
-      "phase": "takeoff",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "First officer calls 'V1'.",
+      "text": "Aircraft cleared for takeoff at 2134:51; takeoff roll commences.",
       "factors": []
     },
     {
@@ -154,17 +195,10 @@
       "phase": "takeoff",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "First officer calls 'VR'; aircraft begins rotation approximately 2.2 seconds later.",
-      "factors": []
-    },
-    {
-      "t": 61,
-      "clock": "21:35:28",
-      "phase": "takeoff",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Nose strut extension sound recorded; main landing gear just left runway.",
-      "factors": []
+      "text": "First officer calls 'VR' at approximately 124 knots; aircraft rotates about 2.2 seconds later.",
+      "factors": [
+        "takeoff_configuration_error"
+      ]
     },
     {
       "t": 66,
@@ -172,8 +206,10 @@
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "warning",
-      "text": "Stick shaker activates; first stall warning beep recorded.",
-      "factors": ["aerodynamic_stall"]
+      "text": "Stick shaker activates; stall warning beeps recorded; aircraft at ~600 feet altitude.",
+      "factors": [
+        "aerodynamic_stall"
+      ]
     },
     {
       "t": 71,
@@ -181,17 +217,68 @@
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Left wing scrapes asphalt for 110 feet with stick shaker and stall warnings continuing. Aircraft impact recorded at 2135:40.78.",
-      "factors": ["loss_of_control_inflight", "ditching"]
+      "text": "Left wing scrapes runway for 110 feet; aircraft veers off runway into Flushing Bay.",
+      "factors": [
+        "loss_of_control_inflight",
+        "ditching"
+      ]
     }
   ],
   "recommendations": [
-    {"id": "A-93-19", "to": "FAA", "text": "If gate holds are required to limit deicing fluid holdover time, encourage ATC to initiate gate holds as soon as a deicing operation begins rather than after delays have exceeded 15 minutes.", "status": "unknown", "trigger_factors": ["deicing_inadequate"]},
-    {"id": "A-93-20", "to": "FAA", "text": "Where deicing operations are conducted away from the departure runway, report taxi delays in conditions conducive to airframe icing in increments less than 15 minutes.", "status": "unknown", "trigger_factors": ["deicing_inadequate"]},
-    {"id": "A-93-21", "to": "FAA", "text": "Require flight crewmembers and appropriate ground personnel responsible for inspection of transport-category airplanes for wing contamination receive specific periodic training on what contamination looks like and feels like.", "status": "unknown", "trigger_factors": ["inadequate_monitoring"]},
-    {"id": "A-93-22", "to": "FAA", "text": "Study the effects on performance of swept-wing turbojet airplanes when specific amounts of airspeed are added to the computed rotation speed during takeoffs when wing contamination is possible.", "status": "unknown", "trigger_factors": ["takeoff_configuration_error"]},
-    {"id": "A-93-26", "to": "FAA", "text": "Require airlines to establish a way to inform flightcrews of the type of fluid and mixture used, the current moisture accumulation rate, and the available holdover time.", "status": "unknown", "trigger_factors": ["deicing_inadequate"]},
-    {"id": "A-93-28", "to": "FAA", "text": "Require that all airports which might experience freezing conditions and that are certified under Title 14 CFR Part 139 establish deicing plans for approval.", "status": "unknown", "trigger_factors": ["deicing_inadequate"]}
+    {
+      "id": "A-93-19",
+      "to": "FAA",
+      "text": "If gate holds are required to limit deicing fluid holdover time, encourage ATC to initiate gate holds as soon as a deicing operation begins rather than after delays have exceeded 15 minutes.",
+      "status": "unknown",
+      "trigger_factors": [
+        "deicing_inadequate"
+      ]
+    },
+    {
+      "id": "A-93-20",
+      "to": "FAA",
+      "text": "Where deicing operations are conducted away from the departure runway, report taxi delays in conditions conducive to airframe icing in increments less than 15 minutes.",
+      "status": "unknown",
+      "trigger_factors": [
+        "deicing_inadequate"
+      ]
+    },
+    {
+      "id": "A-93-21",
+      "to": "FAA",
+      "text": "Require flight crewmembers and appropriate ground personnel responsible for inspection of transport-category airplanes for wing contamination receive specific periodic training on what contamination looks like and feels like.",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": "A-93-22",
+      "to": "FAA",
+      "text": "Study the effects on performance of swept-wing turbojet airplanes when specific amounts of airspeed are added to the computed rotation speed during takeoffs when wing contamination is possible.",
+      "status": "unknown",
+      "trigger_factors": [
+        "takeoff_configuration_error"
+      ]
+    },
+    {
+      "id": "A-93-26",
+      "to": "FAA",
+      "text": "Require airlines to establish a way to inform flightcrews of the type of fluid and mixture used, the current moisture accumulation rate, and the available holdover time.",
+      "status": "unknown",
+      "trigger_factors": [
+        "deicing_inadequate"
+      ]
+    },
+    {
+      "id": "A-93-28",
+      "to": "FAA",
+      "text": "Require that all airports which might experience freezing conditions and that are certified under Title 14 CFR Part 139 establish deicing plans for approval.",
+      "status": "unknown",
+      "trigger_factors": [
+        "deicing_inadequate"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -201,13 +288,17 @@
   ],
   "related": [],
   "fdr": null,
-  "sources": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR9302.pdf"],
+  "sources": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR9302.pdf"
+  ],
   "tier": "wikidata",
   "depth": "sections",
   "qid": "Q1093598",
   "asn_id": "19920322-1",
   "wikipedia": "https://en.wikipedia.org/wiki/USAir_Flight_405",
-  "report_links": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR9302.pdf"],
+  "report_links": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR9302.pdf"
+  ],
   "interest": 16.16,
   "curated_id": null,
   "extraction": {

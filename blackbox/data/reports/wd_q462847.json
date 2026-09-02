@@ -1,0 +1,242 @@
+{
+  "id": "wd_q462847",
+  "title": "United Airlines Flight 585",
+  "flight_number": "UA585",
+  "date": "1991-03-03",
+  "time_reference": "MST",
+  "t0": "1991-03-03T09:40:00-07:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-291",
+    "manufacturer": "Boeing",
+    "family": "737",
+    "registration": "N9273U"
+  },
+  "operator": "United Airlines",
+  "route": {
+    "from": "DEN",
+    "from_name": "Denver",
+    "to": "COS",
+    "to_name": "Colorado Springs"
+  },
+  "location": {
+    "name": "Colorado Springs Municipal Airport",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 25,
+  "fatalities": 25,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "United Airlines Flight 585, a Boeing 737-291, experienced a sudden rudder hardover on final approach to Colorado Springs on March 3, 1991. Prior to the fatal accident, the rudder abruptly deflected on February 25 and again on February 27, but these incidents were not fully resolved. On March 3, the aircraft rolled over and entered an uncontrolled dive on final approach, killing all 25 aboard. The NTSB eventually determined the crash resulted from a design defect in the 737's rudder power control unit.",
+  "probable_cause": "A loss of control of the airplane resulting from the movement of the rudder surface to its blowdown limit. The rudder surface most likely deflected in a direction opposite to that commanded by the pilots as a result of a jam of the main rudder power control unit servo valve secondary slide to the servo valve housing offset from its neutral position and overtravel of the primary slide (p. 158).",
+  "factors": [
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The design of the 737's rudder power control unit had a flaw allowing secondary slide overtravel (p. 158)."
+    },
+    {
+      "id": "known_defect_unresolved",
+      "role": "contributing",
+      "evidence": "On February 25, 1991, rudder abruptly deflected 10 degrees right; similar event occurred February 27, but not fully resolved before fatal accident (p. 139)."
+    },
+    {
+      "id": "rudder_hardover",
+      "role": "initiating",
+      "evidence": "The aircraft experienced rudder hardover while on final approach to runway 35 (p. 139)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The plane rolled over and entered an uncontrolled dive (p. 139)."
+    }
+  ],
+  "chain": [
+    [
+      "design_deficiency",
+      "rudder_hardover"
+    ],
+    [
+      "known_defect_unresolved",
+      "rudder_hardover"
+    ],
+    [
+      "rudder_hardover",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": -432000,
+      "clock": null,
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "February 25, 1991: Rudder deflection incident; rudder abruptly deflects 10 degrees right at 10,000 ft.",
+      "factors": [
+        "known_defect_unresolved"
+      ]
+    },
+    {
+      "t": -345600,
+      "clock": null,
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "February 27, 1991: Similar rudder deflection incident occurs; defect not fully resolved.",
+      "factors": [
+        "known_defect_unresolved"
+      ]
+    },
+    {
+      "t": -600,
+      "clock": "09:30",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 585 departs Denver International Airport on eastbound flight to Colorado Springs.",
+      "factors": []
+    },
+    {
+      "t": -300,
+      "clock": "09:35",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 585 descends to 8,000 feet; cleared for visual approach to runway 35.",
+      "factors": []
+    },
+    {
+      "t": -120,
+      "clock": "09:38",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach control continues vectoring aircraft toward runway 35 final approach.",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "09:40",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "system",
+      "text": "Tower clears Flight 585 to land on runway 35; wind is 320 degrees at 16 knots gusting to 29.",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": "09:41",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft established on final approach; descending normally to landing.",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "09:42",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Rudder servo valve secondary slide jams; rudder suddenly deflects opposite to commanded direction.",
+      "factors": [
+        "rudder_hardover",
+        "design_deficiency"
+      ]
+    },
+    {
+      "t": 130,
+      "clock": "09:42:10",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft rolls over and enters uncontrolled dive; impact occurs shortly after rudder hardover.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-92-118",
+      "to": "FAA",
+      "text": "Require repetitive maintenance test procedure for B-737 rudder power control unit servo valve until design change implemented",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-92-119",
+      "to": "FAA",
+      "text": "Require approved preflight check of rudder system for B-737 operators to verify servo valve operation",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-92-120",
+      "to": "FAA",
+      "text": "Require operators to incorporate design changes for B-737 rudder power control unit servo valve",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-92-121",
+      "to": "FAA",
+      "text": "Conduct design review of servo valves manufactured by Parker Hannifin on transport-category airplanes",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "AD 94-01-07 requiring repetitive testing of 737 main rudder PCUs",
+    "Design changes to rudder servo valves to prevent secondary slide overtravel",
+    "Enhanced preflight procedures for rudder system checks"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0101.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q462847",
+  "asn_id": "19910303-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Airlines_Flight_585",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/Pages/DCA91MA023.aspx",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0101.pdf"
+  ],
+  "interest": 14.7,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read Probable Cause section (lines 7241-7247)",
+      "Recommendations section (lines 7254-7426)",
+      "Design defect in rudder servo valve identified as root cause",
+      "Previous incidents on Feb 25 and 27 not fully addressed",
+      "All 25 occupants killed in crash on final approach"
+    ]
+  }
+}

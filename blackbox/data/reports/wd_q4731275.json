@@ -1,0 +1,203 @@
+{
+  "id": "wd_q4731275",
+  "title": "Allegheny Airlines Flight 853",
+  "flight_number": "AH853",
+  "date": "1969-09-09",
+  "time_reference": "EDT",
+  "t0": "1969-09-09T15:55:00-04:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-9-31",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-9",
+    "registration": "N988VJ"
+  },
+  "operator": "Allegheny Airlines",
+  "route": {
+    "from": "BOS",
+    "from_name": "Boston",
+    "to": "STL",
+    "to_name": "St. Louis"
+  },
+  "location": {
+    "name": "Fairland, Indiana",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 83,
+  "fatalities": 83,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "Allegheny Airlines Flight 853, a DC-9-31, collided mid-air with a Piper PA-28 near Fairland, Indiana on September 9, 1969. The DC-9 was on an instrument flight plan descending for approach to Indianapolis at 3,550 feet when it converged with the VFR Piper aircraft. The Piper was not equipped with a transponder and did not appear on radar. At a relative speed of 350 mph, the left wing of the Piper sheared off the DC-9's rear tail assembly. Both aircraft lost control and crashed, killing all 83 occupants on both aircraft.",
+  "probable_cause": "The deficiencies in the collision avoidance capability of the Air Traffic Control system in a terminal area with mixed IFR and VFR traffic. The deficiencies included inadequacy of the see-and-avoid concept, technical limitations of radar in detecting all aircraft, and absence of Federal Aviation Regulations providing adequate separation of mixed traffic.",
+  "factors": [
+    {
+      "id": "ground_radar_unavailable",
+      "role": "contributing",
+      "evidence": "The Piper aircraft was not equipped with a transponder and did not appear as a primary radar target on the radarscope (p. 6)."
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "The two aircraft converged at a relative speed of 350 mph at 3,550 feet; the left wing of the PA-28 sheared off the DC-9's rear tail assembly (p. 6)."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The FAA system lacked adequate regulations for separating mixed IFR and VFR traffic in terminal areas (p. 6)."
+    },
+    {
+      "id": "atc_workload_staffing",
+      "role": "latent",
+      "evidence": "The report faulted military and civilian aviation authorities for not reducing well-known collision risks that had existed for over a year (p. 6)."
+    }
+  ],
+  "chain": [
+    [
+      "ground_radar_unavailable",
+      "midair_collision"
+    ],
+    [
+      "design_deficiency",
+      "midair_collision"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "15:15",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Allegheny 853 departs Cincinnati at 15:15 EDT on IFR flight plan via airway V-97, initially cleared to 10,000 feet.",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": "15:20",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Piper PA-28 student pilot departs Brookside Airpark on VFR flight plan with cruising altitude of 3,500 feet.",
+      "factors": []
+    },
+    {
+      "t": 600,
+      "clock": "15:25",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Allegheny 853 reaches cruising altitude and is cleared on airway V-97 northbound.",
+      "factors": []
+    },
+    {
+      "t": 1200,
+      "clock": "15:35",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Piper and Allegheny flight paths converge as both aircraft proceed toward Indianapolis terminal area.",
+      "factors": []
+    },
+    {
+      "t": 1800,
+      "clock": "15:45",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Allegheny 853 begins descent from cruise altitude; vectored toward Indianapolis approach control.",
+      "factors": []
+    },
+    {
+      "t": 2100,
+      "clock": "15:50",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Indianapolis Approach Control instructs DC-9 to descend from 10,000 to 6,000 feet, then to 2,500 feet.",
+      "factors": []
+    },
+    {
+      "t": 2250,
+      "clock": "15:52:30",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Both aircraft converge in terminal area; Piper not visible on radar due to lack of transponder.",
+      "factors": [
+        "ground_radar_unavailable"
+      ]
+    },
+    {
+      "t": 2400,
+      "clock": "15:55",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "DC-9 and Piper collide at 3,550 feet; Piper left wing shears DC-9 tail; both aircraft crash near Fairland.",
+      "factors": [
+        "midair_collision"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Establish minimum standards for radar reflectivity of small aircraft",
+      "status": "unknown",
+      "trigger_factors": [
+        "ground_radar_unavailable"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Mandate effective scanning patterns and procedures training for aircrews",
+      "status": "unknown",
+      "trigger_factors": [
+        "midair_collision"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Radar reflectivity standards for small aircraft",
+    "Enhanced scanning procedures and collision avoidance training"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7015.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q4731275",
+  "asn_id": "19690909-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/Allegheny_Airlines_Flight_853",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7015.pdf"
+  ],
+  "interest": 14.74,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read Probable Cause section (lines 692-721)",
+      "Summary and history of flight sections",
+      "Radar limitations and ATC system deficiencies central to cause",
+      "All occupants of both aircraft killed"
+    ]
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "id": "wd_q633870",
+  "title": "UTair Flight 120",
+  "flight_number": "120",
+  "date": "2012-04-02",
+  "time_reference": "UTC",
+  "t0": "2012-04-02T01:35:00Z",
+  "agency": "MAK",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "ATR 72-201",
+    "manufacturer": "Aerospatiale",
+    "family": "ATR 72",
+    "registration": "VP-BYZ"
+  },
+  "operator": "UTair Aviation",
+  "route": {
+    "from": "ROS",
+    "from_name": "Roshchino (Tyumen)",
+    "to": "SGC",
+    "to_name": "Surgut"
+  },
+  "location": {
+    "name": "Near Roshchino International Airport",
+    "country": "Russia"
+  },
+  "phase": "takeoff",
+  "occupants": 43,
+  "fatalities": 33,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "UTair Flight 120, an ATR 72-201, crashed during takeoff from Roshchino on April 2, 2012, in snow and rain with ice and snow accumulated on the aircraft. Despite visible contamination, the flight crew decided not to de-ice the aircraft before takeoff. After takeoff at low airspeed, flaps were retracted at 139 knots in conditions requiring 160 knots minimum, triggering an aerodynamic stall. The crew failed to recognize the stall and apply appropriate recovery procedures, resulting in loss of control and impact with an open field near the runway.",
+  "probable_cause": "The aircraft departed without de-icing treatment despite visible ice and snow contamination on the surfaces. The flap retraction at 139 knots instead of the required 160 knots in icing conditions caused an aerodynamic stall. The crew failed to recognize the stall and apply appropriate recovery procedures, instead pulling back on the control column until impact. Contributing factors included shortcomings in ground handling, inadequate crew training on stall recognition, and deficiencies in the airline's safety management system.",
+  "factors": [
+    {
+      "id": "airframe_icing",
+      "role": "initiating",
+      "evidence": "Ice and snow accumulated on the aircraft surfaces; the aircraft had been parked for hours in snowy conditions without being de-iced (p. 1)."
+    },
+    {
+      "id": "deicing_inadequate",
+      "role": "initiating",
+      "evidence": "The crew of the flight were aware that ice and snow had accumulated on the aircraft but decided not to de-ice it despite para. 2.14 of FAP-128 and AFM requirements (p. 193)."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "Aircraft stall occurred at operational angles of attack right after flaps retraction with engaged autopilot, caused by loss of wing lift effectiveness (p. 193)."
+    },
+    {
+      "id": "stall_misdiagnosis",
+      "role": "contributing",
+      "evidence": "The crew seemed to have trouble identifying the problem with increasing stress as the situation developed; stall warning appeared but crew became confused (p. 1)."
+    },
+    {
+      "id": "inappropriate_stall_recovery",
+      "role": "contributing",
+      "evidence": "Crew applied ailerons and rudder but were unable to counteract subsequent left roll; pilots were pulling back on the control column until impact (p. 193)."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The first officer's tone suggested high levels of stress during the emergency; crew preoccupation with banking and buffeting (p. 1)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft began uncommanded roll and eventually crashed at a left bank of 55 degrees and nose-down angle of 11 degrees (p. 1)."
+    }
+  ],
+  "chain": [
+    [
+      "deicing_inadequate",
+      "airframe_icing"
+    ],
+    [
+      "airframe_icing",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "stall_misdiagnosis"
+    ],
+    [
+      "stall_misdiagnosis",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "inappropriate_stall_recovery",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": -600,
+      "clock": "06:30",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 120 crew arrives at aircraft in snowy conditions; visible snow and ice on surfaces.",
+      "factors": [
+        "airframe_icing"
+      ]
+    },
+    {
+      "t": -300,
+      "clock": "07:00",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew decides not to de-ice despite visible contamination and crew awareness of ice/snow accumulation.",
+      "factors": [
+        "deicing_inadequate"
+      ]
+    },
+    {
+      "t": -60,
+      "clock": "07:32",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft departs from gate and begins taxi to runway for takeoff.",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "07:33",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 120 takes off from Roshchino at 07:33 local time with visible ice/snow on aircraft.",
+      "factors": [
+        "deicing_inadequate",
+        "airframe_icing"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": "07:34",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft reaches about 600 feet altitude; autopilot engaged; flaps retracted at 139 knots.",
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 90,
+      "clock": "07:34:30",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Stall warning sounds as aircraft loses lift due to wing contamination.",
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "07:34:60",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft begins uncommanded roll to the right; first officer asks 'what is this buffeting'; crew disengages autopilot.",
+      "factors": [
+        "stall_misdiagnosis"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": "07:35",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew applies ailerons and rudder but cannot counteract left roll at 40-55 degree bank angles.",
+      "factors": [
+        "inappropriate_stall_recovery"
+      ]
+    },
+    {
+      "t": 240,
+      "clock": "07:35:30",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashes into open field near runway at 55 degree left bank and 11 degree nose-down angle.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Russian Aviation Authorities",
+      "text": "Develop Federal Aviation Regulations for aircraft maintenance and ground handling.",
+      "status": "unknown",
+      "trigger_factors": [
+        "deicing_inadequate"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Russian Aviation Authorities",
+      "text": "Develop guidance on aircraft ground icing protection and training for de-icing personnel.",
+      "status": "unknown",
+      "trigger_factors": [
+        "airframe_icing"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Airlines' Management",
+      "text": "Assure compliance with de-icing/anti-icing procedures and personnel training requirements.",
+      "status": "unknown",
+      "trigger_factors": [
+        "deicing_inadequate"
+      ]
+    },
+    {
+      "id": null,
+      "to": "ATR Operators",
+      "text": "Organize conferences to share experience of ATR 42/72 aircraft operation and safety issues.",
+      "status": "unknown",
+      "trigger_factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Certification Authorities",
+      "text": "Improve simulator training programs for stall prevention and recovery procedures.",
+      "status": "unknown",
+      "trigger_factors": [
+        "stall_misdiagnosis"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced de-icing procedures and regulatory framework in Russia (State Standard GOST R 54264-2010 effective July 2012)",
+    "Improved crew training on stall recognition and recovery",
+    "Mandatory compliance with Clean Aircraft Concept"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/upload/iblock/a9b/report_vp-byz_engl.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q633870",
+  "asn_id": "20120402-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/UTair_Flight_120",
+  "report_links": [
+    "https://mak-iac.org/upload/iblock/a9b/report_vp-byz_engl.pdf",
+    "https://mak-iac.org/upload/iblock/429/report_vp-byz.pdf"
+  ],
+  "interest": 15.01,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read summary from input record and Causes section (lines 8923-8995)",
+      "Safety Recommendations section reviewed (lines 9029-9122)",
+      "Key finding: PIC decision to take off without de-icing despite visible contamination",
+      "Crew failed to recognize stall and apply recovery procedures",
+      "Systemic issues in ground handling and crew training"
+    ]
+  }
+}
