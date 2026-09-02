@@ -1,0 +1,244 @@
+{
+  "id": "wd_q108111717",
+  "qid": "Q108111717",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "Ameristar Charters 9363",
+  "flight_number": "9363",
+  "date": "2017-03-08",
+  "time_reference": "EST",
+  "t0": "2017-03-08T14:51:12-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-19-01",
+      "report_title": "Runway Overrun During Rejected Takeoff, Ameristar Air Cargo, Inc., dba Ameristar Charters, flight 9363, Boeing MD-83, N786TW",
+      "report_date": "2019-02-14",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1901.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing MD-83",
+    "manufacturer": "McDonnell Douglas",
+    "family": "MD-80",
+    "registration": "N786TW",
+    "msn": null,
+    "engines": "Pratt & Whitney JT8D-219"
+  },
+  "operator": "Ameristar Air Cargo, Inc. (dba Ameristar Charters)",
+  "route": {
+    "from": "YIP",
+    "from_name": "Willow Run Airport",
+    "to": "IAD",
+    "to_name": "Washington Dulles International Airport"
+  },
+  "location": {
+    "name": "Willow Run Airport (YIP), Ypsilanti, Michigan, runway 23L departure end",
+    "country": "United States",
+    "lat": 42.2356,
+    "lon": -83.4544
+  },
+  "phase": "takeoff",
+  "occupants": 116,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "Boeing MD-83 experienced jammed right elevator due to wind exposure while parked at Willow Run Airport, rendering it unable to rotate during takeoff. Captain rejected takeoff 12 seconds after reaching V1 when aircraft did not respond to control column input. Aircraft overran departure end of runway but all 116 occupants evacuated safely with only one minor injury.",
+  "probable_cause": "The jammed condition of the airplane's right elevator, which resulted from exposure to localized, dynamic wind while the airplane was parked and rendered the airplane unable to rotate during takeoff. Contributing factors: (1) effect of a large hangar structure on gusting surface wind at parked location, which generated localized turbulence with vertical component causing dynamic loads sufficient to jam elevator despite wind speed being below certification design limits, and (2) lack of means to enable flight crew to detect jammed elevator during preflight checks for Boeing MD-83.",
+  "factors": [
+    {
+      "id": "flight_control_failure",
+      "role": "initiating",
+      "evidence": "Right elevator was positioned full trailing-edge-down (TED) and remained locked in overcenter position throughout accident sequence, rendering airplane incapable of rotation during takeoff (p. 467-468, 478)"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "MD-83 was not equipped with a gust lock to prevent elevator motion from wind loads while parked (p. 475)"
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "latent",
+      "evidence": "Flight crew's preflight inspection and control check could not detect overcenter position of elevator geared tab linkage; elevators cannot be inspected during typical preflight walk-around for free-floating condition (p. 3124-3127)"
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "Airplane overran departure end of runway 23L at 100 knots, traveled 950 ft across grassy runway safety area before striking airport perimeter fence and paved road (p. 577-579)"
+    }
+  ],
+  "chain": [
+    ["flight_control_failure", "runway_overrun"],
+    ["design_deficiency", "flight_control_failure"]
+  ],
+  "events": [
+    {
+      "t": -86400,
+      "clock": null,
+      "phase": "ground",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Airplane parked on ramp east of large hangar at Willow Run Airport for 2 days",
+      "factors": []
+    },
+    {
+      "t": -600,
+      "clock": "12:36",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight crew first powered up the airplane following company procedures for nontowered airports",
+      "factors": []
+    },
+    {
+      "t": -300,
+      "clock": null,
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain (pilot flying) performed preflight walkaround inspection and noticed no anomalies",
+      "factors": []
+    },
+    {
+      "t": -100,
+      "clock": "11:39",
+      "phase": "ground",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "High wind from west resulted in power outage at airport affecting weather observing equipment and prompted air traffic control tower evacuation",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "14:51:12",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Takeoff roll began at 14:51:12 EST and was normal until rotation speed at 150 knots",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "At VR, captain pulled back on control column to rotate the aircraft, but aircraft failed to respond even after captain applied additional back force",
+      "factors": ["flight_control_failure"]
+    },
+    {
+      "t": 42,
+      "clock": "14:52",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain executed rejected takeoff 12 seconds after V1 because aircraft did not respond to rotation input",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Airplane overran runway 23L at approximately 100 knots, traveled 950 ft across grassy runway safety area before striking airport perimeter fence and raised paved road",
+      "factors": ["runway_overrun"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-19-1",
+      "to": "The Boeing Company",
+      "text": "Complete the development of a modification for Boeing DC-9/MD-80 series and 717 model airplanes that will prevent the possibility of elevator jamming due to ground wind exposure.",
+      "status": "open",
+      "trigger_factors": ["flight_control_failure", "design_deficiency"]
+    },
+    {
+      "id": "A-19-2",
+      "to": "The Boeing Company",
+      "text": "Develop new preflight procedures or other mitigations for Boeing DC-9/MD-80 series and 717 model airplanes that will enable a flight crew to verify before takeoff that the elevators are not jammed.",
+      "status": "open",
+      "trigger_factors": ["inadequate_inspection"]
+    },
+    {
+      "id": "A-19-3",
+      "to": "The Boeing Company",
+      "text": "Until the actions in Safety Recommendations A-19-1 and -2 are completed, revise the Aircraft Operating Manual and Aircraft Maintenance Manual for Boeing DC-9/MD-80 series and 717 model airplanes to lower the ground gust criteria that will require physical inspections and operational checks of the elevators by maintenance personnel.",
+      "status": "open",
+      "trigger_factors": ["design_deficiency"]
+    },
+    {
+      "id": "A-19-4",
+      "to": "FAA",
+      "text": "Determine if the ground gust limit loads contained in Title 14 Code of Federal Regulations 25.415 adequately ensure that critical flight control systems are protected from hazards introduced by ground gusts that contain dynamic, vertical wind components.",
+      "status": "open",
+      "trigger_factors": ["design_deficiency"]
+    },
+    {
+      "id": "A-19-5",
+      "to": "FAA",
+      "text": "Ensure the operators of Boeing DC-9/MD-80 series and 717 model airplanes have procedures that define who is responsible for monitoring the wind that affects parked airplanes and for notifying maintenance personnel when conditions could meet or exceed the ground gust criteria specified in the Aircraft Maintenance Manual.",
+      "status": "open",
+      "trigger_factors": ["design_deficiency"]
+    },
+    {
+      "id": "A-19-6",
+      "to": "FAA",
+      "text": "Revise Order JO 7900.5D, Surface Weather Observing, Change 1, to specify sign-off procedures and backup augmentation responsibilities for all types of weather-observing personnel when they are unable to perform their prescribed duties from their normal duty station during normal duty hours.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-03-11",
+      "to": "FAA",
+      "text": "Require all 14 Code of Federal Regulations Part 139 certificated airports to upgrade all runway safety areas that could, with feasible improvements, be made to meet the minimum standards established by Advisory Circular 150/5300-13.",
+      "status": "closed_acceptable",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-03-12",
+      "to": "FAA",
+      "text": "Require all 14 Code of Federal Regulations Part 139 certificated airports to install engineered materials arresting systems in each runway safety area available for air carrier use that could not, with feasible improvements, be made to meet the minimum standards established by Advisory Circular 150/5300-13.",
+      "status": "closed_acceptable",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Ameristar implemented procedures for monitoring wind affecting parked airplanes",
+    "FAA runway safety area (RSA) upgrade program led to improvements",
+    "Evacuation slide manufacturer issued revised maintenance procedures to prevent improper cable installation"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1901.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Ameristar_Charters_Flight_9363",
+  "asn_id": "20170308-0",
+  "interest": 9.55,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1901.pdf",
+    "https://data.ntsb.gov/Docket/Document/docBLOB?ID=40461841&FileExtension=.PDF&FileName=Group+Chairman%27s+Factual+Report+-+Structures-Master.PDF",
+    "https://data.ntsb.gov/Docket/Document/docBLOB?ID=40461828&FileExtension=.PDF&FileName=Systems+Group+Chairman%27s+Factual+Report-Master.PDF"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Full report read: executive summary (lines 448-611), history of flight (lines 619-650), findings and probable cause (lines 3114-3193), safety recommendations (lines 3200-3251)",
+      "Right elevator jammed due to dynamic wind loads from large hangar nearby generating localized turbulence",
+      "Captain's timely rejected takeoff and crew's disciplined procedures contributed to survivability",
+      "All 116 occupants evacuated safely with only one minor injury despite substantial aircraft damage"
+    ]
+  },
+  "curated_id": null
+}

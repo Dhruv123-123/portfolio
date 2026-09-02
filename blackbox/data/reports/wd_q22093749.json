@@ -1,0 +1,175 @@
+{
+  "id": "wd_q22093749",
+  "qid": "Q22093749",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "2015 Fox Glacier helicopter crash",
+  "flight_number": null,
+  "date": "2015-11-21",
+  "time_reference": "NZDT",
+  "t0": "2015-11-21T09:45:00+13:00",
+  "agency": "TAIC",
+  "agencies": [
+    {
+      "code": "TAIC",
+      "name": "Transport Accident Investigation Commission",
+      "country": "New Zealand",
+      "role": "lead",
+      "report_id": "AO-2015-007",
+      "report_title": "Final Report: Airbus Helicopters AS350BA, ZK-HKU, collision with terrain, Fox Glacier, 21 November 2015",
+      "report_date": "2019-02-21",
+      "url": "https://www.taic.org.nz/sites/default/files/inquiry/documents/AO-2015-007%20Final%20Report.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Airbus Helicopters AS350D Astar",
+    "manufacturer": "Airbus",
+    "family": "AS350",
+    "registration": "ZK-HKU",
+    "msn": null,
+    "engines": "Lycoming LTS101-600A-3A"
+  },
+  "operator": "Alpine Adventures (Fox and Franz Heli Services)",
+  "route": {
+    "from": null,
+    "from_name": "Fox Glacier base",
+    "to": null,
+    "to_name": "Chancellor Shelf"
+  },
+  "location": {
+    "name": "Fox Glacier, 2500 meters up glacier near Chancellor Shelf",
+    "country": "New Zealand",
+    "lat": -43.48,
+    "lon": 170.18
+  },
+  "phase": "initial_climb",
+  "occupants": 7,
+  "fatalities": 7,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Airbus Helicopters AS350D crashed into crevasse at Fox Glacier shortly after takeoff from glacier landing zone in heavy rain and overcast conditions. Aircraft weight exceeded maximum permitted and weather was unsuitable for operations. Operator's pilot training was inadequate and regulatory oversight was deficient. All seven occupants perished.",
+  "probable_cause": "The helicopter struck the glacier surface with high forward speed and high rate of descent. The all-up weight of the helicopter almost certainly exceeded the maximum permitted weight throughout the flight. Weather conditions on the day were unstable and unsuitable for conducting a scenic flight, with the pilot's perception of height affected by cloud, precipitation, flat light and condensation. The pilot had not been properly trained and did not have appropriate experience for the role, and the operator's training system was ill-defined and lacked proper oversight.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Weather conditions were unstable and unsuitable; localised conditions very likely frequently below minimum criteria. Cloud, precipitation, flat light conditions and condensation on windscreen affected pilot's height perception (p. 2598-2607)"
+    },
+    {
+      "id": "weight_and_balance_error",
+      "role": "contributing",
+      "evidence": "Throughout the flight, the all-up weight of the helicopter almost certainly exceeded the maximum permitted weight (p. 2583-2584)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "The pilot had not been properly trained and did not have the appropriate level of experience expected under the operator's categorisation scheme for a senior pilot in this type of operation (p. 2609-2611)"
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "contributing",
+      "evidence": "The Civil Aviation Authority had identified significant and repetitive non-compliance issues with the operator's training system and managerial oversight that warranted intervention long before this accident occurred (p. 2620-2622)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The helicopter crashed into a crevasse on Fox Glacier approximately 600 m south and 800 ft below Chancellor Shelf with the engine delivering power (p. 2580-2581)"
+    }
+  ],
+  "chain": [
+    ["low_visibility", "cfit"],
+    ["weight_and_balance_error", "cfit"],
+    ["inadequate_training", "cfit"],
+    ["regulatory_oversight", "inadequate_training"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "09:45",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Helicopter departed on scenic flight from Chancellor Shelf with pilot and six passengers on board",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Weather was cloudy and changeable with heavy rain and cloud conditions",
+      "factors": ["low_visibility"]
+    },
+    {
+      "t": 300,
+      "clock": "09:50",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Helicopter observed overhead terminal face of Fox Glacier at 3,200 ft (975 m), heading east",
+      "factors": []
+    },
+    {
+      "t": 310,
+      "clock": "09:50",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Other pilot saw helicopter climbing towards Chancellor Shelf. This was last sighting of helicopter.",
+      "factors": []
+    },
+    {
+      "t": 900,
+      "clock": "10:15",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Helicopter was reported overdue. Search revealed wreckage had crashed near right edge of upper Fox Glacier, about 600 m south and 800 ft (244 m) below Chancellor Shelf",
+      "factors": ["cfit"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "002/19",
+      "to": "Director of Civil Aviation, New Zealand",
+      "text": "Initiate an independent review of CAA surveillance reports and any findings raised for Part 135 operators since 2014 to measure the effectiveness of the surveillance policies and procedures that the CAA has put in place, including the effectiveness of their implementation. If the independent review finds unidentified or unresolved safety issues with specific operators, take the appropriate urgent action to resolve those issues.",
+      "status": "open",
+      "trigger_factors": ["regulatory_oversight"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "CAA published article on helicopter weather decision making (March/April 2016)",
+    "CAA issued letter to all Part 135 operators on pilot training programmes (18 July 2016)",
+    "CAA issued revision 9 to advisory circular 61-18 clarifying Category D flight instructor privileges (3 August 2016)",
+    "Operator's air operator certificate suspended and revoked (27 May 2016 and 9 June 2016)",
+    "CAA prosecution and penalties imposed against operator senior persons"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.taic.org.nz/sites/default/files/inquiry/documents/AO-2015-007%20Final%20Report.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2015_Fox_Glacier_helicopter_crash",
+  "asn_id": null,
+  "interest": 9.77,
+  "report_links": [
+    "https://www.taic.org.nz/sites/default/files/inquiry/documents/AO-2015-007%20Final%20Report.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Full report read: executive summary (lines 595-679), narrative (lines 817-872), analysis (lines 1800-2577), findings (lines 2578-2623), safety issues (lines 2629-2638), recommendations (lines 2698-2808)",
+      "Weight and balance exceeded maximum permitted weight - key contributing factor",
+      "Pilot training inadequate and regulatory oversight deficient",
+      "All seven occupants perished in crash"
+    ]
+  },
+  "curated_id": null
+}

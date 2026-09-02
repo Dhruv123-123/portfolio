@@ -1,0 +1,142 @@
+{
+  "id": "wd_q131990794",
+  "qid": "Q131990794",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Med Jets 056",
+  "flight_number": "MTS056",
+  "date": "2025-01-31",
+  "time_reference": "EST",
+  "t0": "2025-01-31T18:06:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "ERA25MA106",
+      "report_title": "Aviation Investigation Preliminary Report - Learjet 55, XA-UCI",
+      "report_date": "2025-01-31",
+      "url": "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/199630/pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Learjet 55",
+    "manufacturer": "Learjet",
+    "family": "Learjet",
+    "registration": "XA-UCI",
+    "msn": null,
+    "engines": "Garrett TFE731-2-2B"
+  },
+  "operator": "Med Jets, S.A. DE C.V.",
+  "route": {
+    "from": "PNE",
+    "from_name": "Northeast Philadelphia Airport",
+    "to": "SGF",
+    "to_name": "Springfield-Branson National Airport"
+  },
+  "location": {
+    "name": "Castor Gardens neighborhood, Philadelphia, Pennsylvania",
+    "country": "United States",
+    "lat": 40.046461,
+    "lon": -75.057583
+  },
+  "phase": "initial_climb",
+  "occupants": 6,
+  "fatalities": 7,
+  "injuries_serious": 4,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Learjet 55 air ambulance flight crashed in Philadelphia residential area 40 seconds after takeoff from Northeast Philadelphia Airport. Aircraft climbed to 1,650 feet before disappearing from radar and descending at steep angle (22°) into residential area in night, instrument meteorological conditions. All six occupants killed plus one person on ground fatally injured.",
+  "probable_cause": "Cause under investigation. Night, instrument meteorological conditions with 400 ft overcast ceiling, 6 mile visibility, and light winds prevailed. Cockpit voice recorder had been inoperative for several years and did not record the accident flight, limiting investigation.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Night, instrument meteorological conditions prevailed with 400 ft overcast ceiling, 6 statue miles visibility, and 9 knots wind from 220° (p. 96-98)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft descended at steep angle (approximately 22°) from 1,275 ft altitude out of cloud base into residential area (p. 70)"
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "latent",
+      "evidence": "Cockpit voice recorder had been inoperative for several years and did not record the accident flight, limiting investigation and preventing recovery of crew communications (p. 78-79)"
+    }
+  ],
+  "chain": [
+    ["low_visibility", "loss_of_control_inflight"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "18:06",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Learjet 55 departed Northeast Philadelphia Airport runway 24 at 18:06 EST",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft climbed to 1,650 feet altitude and entered gradual left turn",
+      "factors": []
+    },
+    {
+      "t": 40,
+      "clock": "18:07",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Last received ADS-B data showed altitude 1,275 feet with speed 242 knots ground speed",
+      "factors": []
+    },
+    {
+      "t": 50,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Doorbell camera video recorded aircraft in steep (22°) dive out of cloud base striking concrete sidewalk in residential and commercial area at Roosevelt Mall near Cottman Avenue and Roosevelt Boulevard, less than 3 miles from airport",
+      "factors": ["loss_of_control_inflight"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/199630/pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Med_Jets_Flight_056",
+  "asn_id": null,
+  "interest": 9.66,
+  "report_links": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/199630/pdf",
+    "https://www.ntsb.gov/investigations/Pages/ERA25MA106.aspx"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "low",
+    "reviewed": false,
+    "notes": [
+      "Preliminary report only (4 pages) - investigation ongoing",
+      "CVR inoperative for several years prevented recovery of crew communications",
+      "EGPWS computer sent to manufacturer for evaluation of recovered flight data",
+      "Both pilots qualified with type ratings; accident cause under investigation",
+      "Large explosion and fire on ground impact due to fuel ignition",
+      "Flight duration approximately 1 minute from takeoff to impact"
+    ]
+  },
+  "curated_id": null
+}
