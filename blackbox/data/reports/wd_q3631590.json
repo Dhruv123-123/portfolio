@@ -1,0 +1,255 @@
+{
+  "id": "wd_q3631590",
+  "title": "Sudan Airways 2241",
+  "flight_number": "SUD 2241",
+  "date": "2009-10-21",
+  "time_reference": "UTC",
+  "t0": "2009-10-21T11:27:34Z",
+  "agency": "GCAA",
+  "agencies": [
+    {
+      "code": "GCAA",
+      "name": "General Civil Aviation Authority",
+      "country": "United Arab Emirates",
+      "role": "lead",
+      "report_id": "10/2009",
+      "report_date": "2013-03-12",
+      "url": "https://www.gcaa.gov.ae/en/departments/airaccidentinvestigation/Lists/Incidents%20Investigation%20Reports/Attachments/33/2009-Final%20Report%20B707%20-%20ST-AKW%20%20-%20Report%2010%202009.pdf"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "SCAA",
+      "name": "Sudan Civil Aviation Authority",
+      "country": "Sudan",
+      "role": "accredited_representative"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 707-330C",
+    "family": "707",
+    "manufacturer": "Boeing",
+    "registration": "ST-AKW",
+    "engines": "Pratt & Whitney JT3D-3B"
+  },
+  "operator": "Azza Air Transport",
+  "route": {
+    "from": null,
+    "from_name": "Sharjah, United Arab Emirates",
+    "to": null,
+    "to_name": "Khartoum, Sudan"
+  },
+  "location": {
+    "name": "1.6 km from end of Runway 30, Sharjah International Airport",
+    "country": "United Arab Emirates",
+    "lat": 25.33,
+    "lon": 55.48
+  },
+  "phase": "initial_climb",
+  "occupants": 6,
+  "fatalities": 6,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "A Boeing 707 cargo aircraft crashed 1.6 km from the runway at Sharjah after takeoff when the No. 4 engine core cowls separated during initial climb. The crew misinterpreted the resulting erroneous engine pressure ratio indication as engine failure, initiated a turn, and the aircraft exceeded the maximum bank angle causing an aerodynamic stall. All six crew members were killed.",
+  "probable_cause": "The aircraft exceeded the maximum bank angle during attempted recovery from a perceived No. 4 engine power loss, resulting in an aerodynamic stall and uncontrollable loss of altitude that was not recoverable. The No. 4 engine cowling had separated and damaged the engine's pressure ratio flex line.",
+  "factors": [
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "No. 4 engine core cowls departed from engine at takeoff approximately 15 seconds after liftoff (p. 1); cowls had gone through multiple skin repairs not up to aviation standards"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "Crew response to perceived engine failure was inappropriate, exceeding published maximum bank angle of 15 degrees for single-engine emergency (p. 62)"
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "Aircraft entered into a stall after the published maximum bank angle was exceeded (p. 62)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft loss of control that was not recoverable (p. 62)"
+    },
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "Aircraft was not properly maintained; No. 4 engine cowls had been through multiple skin repairs not up to aviation standards; operator's maintenance system failed to correctly address cowl latch issues (p. 62-63)"
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "SCAA safety oversight system deficiency to adequately identify operator's chronic maintenance, operations and quality management deficiencies (p. 63)"
+    }
+  ],
+  "chain": [
+    [
+      "engine_failure",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "11:27:34",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower cleared SUD 2241 for takeoff from Runway 30",
+      "factors": []
+    },
+    {
+      "t": 15,
+      "clock": "11:27:49",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Approximately 15 seconds after liftoff at 300 feet AGL, No. 4 engine core cowls detached and collapsed onto departure runway",
+      "factors": [
+        "engine_failure"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": "11:28:34",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew responded to perceived engine failure but response was inappropriate, exceeding maximum bank angle (p. 62)",
+      "factors": [
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "t": 85,
+      "clock": "11:28:59",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft at approximately 380 feet AGL with aircraft stalled after exceeding maximum bank angle",
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 107,
+      "clock": "11:29:21",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft in extreme right wing down attitude impacted ground 1.6 km from runway end with approximately 90 degree right wing down attitude",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "SR 01/2013",
+      "to": "Sudan Civil Aviation Authority",
+      "text": "Enhance its safety oversight system to assure the operations and airworthiness of Sudan operators and Sudan registered aircraft are in compliance with current applicable Air Navigation Regulations and in conformity with Annexes to ICAO Convention",
+      "status": "unknown",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": "SR 02/2013",
+      "to": "Sudan Civil Aviation Authority",
+      "text": "Ensure that all operators' maintenance management systems are in compliance with applicable current Air Navigation Regulations including proper maintenance of aircraft records, inspection systems, and flight recorders",
+      "status": "unknown",
+      "trigger_factors": [
+        "maintenance_error",
+        "inadequate_inspection"
+      ]
+    },
+    {
+      "id": "SR 03/2013",
+      "to": "Sudan Civil Aviation Authority",
+      "text": "Ensure that all operators' operations management systems are in compliance with applicable current Air Navigation Regulations including maintenance of company and aircraft manuals, crew training programs and records",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "SR 04/2013",
+      "to": "Sudan Civil Aviation Authority",
+      "text": "Ensure that all operators have a quality system to assure that operations and maintenance functions are performed in accordance with applicable regulations",
+      "status": "unknown",
+      "trigger_factors": [
+        "maintenance_error",
+        "inadequate_inspection"
+      ]
+    },
+    {
+      "id": "SR 05/2013",
+      "to": "Egyptian Company for Aircraft Maintenance",
+      "text": "Assure that inspection, maintenance and quality functions are improved including proper troubleshooting and corrective repair actions according to Aircraft Maintenance Manual and reporting of unairworthy conditions to local Civil Aviation Authority",
+      "status": "unknown",
+      "trigger_factors": [
+        "maintenance_error",
+        "inadequate_inspection"
+      ]
+    },
+    {
+      "id": "SR 06/2013",
+      "to": "General Civil Aviation Authority of United Arab Emirates",
+      "text": "Take necessary measures to facilitate adequate aviation pathology testings on deceased crew bodies and remains",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "SR 07/2013",
+      "to": "General Civil Aviation Authority of United Arab Emirates",
+      "text": "Improve Civil Aviation Regulations to contain provisions for more proactive approach to safety regarding foreign operators",
+      "status": "unknown",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced maintenance oversight for aging aircraft",
+    "Improved standards for engine cowling repairs and inspections",
+    "Enhanced crew training for single-engine emergencies"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.gcaa.gov.ae/en/departments/airaccidentinvestigation/Lists/Incidents%20Investigation%20Reports/Attachments/33/2009-Final%20Report%20B707%20-%20ST-AKW%20%20-%20Report%2010%202009.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q3631590",
+  "asn_id": "20091021-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sudan_Airways_Flight_2241",
+  "report_links": [
+    "https://www.gcaa.gov.ae/en/departments/airaccidentinvestigation/Lists/Incidents%20Investigation%20Reports/Attachments/33/2009-Final%20Report%20B707%20-%20ST-AKW%20%20-%20Report%2010%202009.pdf"
+  ],
+  "interest": 9.64,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read sections: aircraft accident brief, synopsis, history of flight, findings, causes, contributing factors, safety recommendations"
+    ]
+  }
+}

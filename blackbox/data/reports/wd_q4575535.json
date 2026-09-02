@@ -1,0 +1,228 @@
+{
+  "id": "wd_q4575535",
+  "title": "1973 DeKalb-Peachtree Airport Learjet 24 crash",
+  "flight_number": null,
+  "date": "1973-02-26",
+  "time_reference": "EST",
+  "t0": "1973-02-26T10:10:40-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-73-12",
+      "report_date": "1973-05-30",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7312.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Learjet 24",
+    "family": "24",
+    "manufacturer": "Learjet",
+    "registration": "N454RN"
+  },
+  "operator": "Machinery Buyers Corporation",
+  "route": {
+    "from": null,
+    "from_name": "Chamblee, Georgia",
+    "to": null,
+    "to_name": "Miami, Florida"
+  },
+  "location": {
+    "name": "DeKalb-Peachtree Airport, Atlanta",
+    "country": "United States",
+    "lat": 33.87,
+    "lon": -84.3
+  },
+  "phase": "initial_climb",
+  "occupants": 7,
+  "fatalities": 7,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "BIRD",
+  "summary": "A Learjet 24 struck birds during takeoff from DeKalb-Peachtree Airport in Atlanta and lost power in the left engine. Unable to maintain control with one engine failed, the aircraft stalled and impacted an apartment building roof, then crashed into a ravine. All seven occupants were killed.",
+  "probable_cause": "Loss of engine thrust during takeoff due to ingestion of birds by the engines, resulting in loss of control. The FAA and airport were aware of the bird hazard but failed to take adequate mitigating action.",
+  "factors": [
+    {
+      "id": "bird_strike",
+      "role": "initiating",
+      "evidence": "Aircraft struck birds shortly after lifting off (p. 6); 15 cowbirds found within 150 feet of runway threshold (p. 6)"
+    },
+    {
+      "id": "engine_failure",
+      "role": "contributing",
+      "evidence": "Left engine suffered catastrophic damage from bird ingestion with extensive distortion to compressor (p. 8); foreign object residue obstructed 75 percent of first-stage turbine nozzle cooling air ports (p. 8)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "With left engine producing little or no thrust, aircraft climbed to 250-300 feet then entered nose-high stall (p. 8)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted roof of three-story apartment building approximately 2 miles south-southwest of airport (p. 6)"
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "FAA and airport authorities were aware of bird hazard from adjacent municipal dump but failed to take positive action to remove the hazard (p. 6)"
+    }
+  ],
+  "chain": [
+    [
+      "bird_strike",
+      "engine_failure"
+    ],
+    [
+      "engine_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "10:10:40",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC cleared aircraft for takeoff from Runway 20L at DeKalb-Peachtree Airport",
+      "factors": []
+    },
+    {
+      "t": 5,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Witnesses observed smoke trailing from aircraft as it crossed field boundary; aircraft struck birds",
+      "factors": [
+        "bird_strike",
+        "engine_failure"
+      ]
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower controller advised crew that left engine appeared to be emitting smoke",
+      "factors": []
+    },
+    {
+      "t": 15,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Crew responded: We just hit some birds",
+      "factors": []
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower controller inquired if aircraft was returning to land",
+      "factors": []
+    },
+    {
+      "t": 25,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Crew responded: Don't believe we're gonna make it (last transmission)",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft climbed to approximately 250-300 feet above ground before nose began to rise sharply",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 35,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacted roof of three-story apartment building 2 miles southwest of airport, then crashed into wooded ravine",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-73-36",
+      "to": "FAA",
+      "text": "Develop and implement a procedure for more stringent and continued surveillance of all facilities subject to the Airports & Airways Development Act and impose timely sanctions against operators of facilities which receive Federal aid and do not fully comply with the requirements",
+      "status": "unknown",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": "A-73-37",
+      "to": "FAA",
+      "text": "Disseminate by the widest possible distribution FAA Advisory Circular 150/5200-3A to ensure that all airport operators, air carriers, air taxi operators, flying schools, fixed-base operators, and commercial, airline, private pilots and flight instructors are fully aware of the hazards to aviation associated with bird strikes",
+      "status": "unknown",
+      "trigger_factors": [
+        "bird_strike"
+      ]
+    },
+    {
+      "id": "A-73-38",
+      "to": "multiple",
+      "text": "Disseminate the contents of this report in trade publications to members to ensure that possible consequences of bird hazards to aircraft are fully known",
+      "status": "unknown",
+      "trigger_factors": [
+        "bird_strike"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced airport wildlife hazard assessment and mitigation requirements",
+    "Improved bird strike prevention programs at airports near landfills"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7312.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q4575535",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/1973_DeKalb%E2%80%93Peachtree_Airport_Learjet_crash",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7312.pdf"
+  ],
+  "interest": 9.74,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read sections: synopsis, history of flight, analysis and conclusions, probable cause, recommendations"
+    ]
+  }
+}

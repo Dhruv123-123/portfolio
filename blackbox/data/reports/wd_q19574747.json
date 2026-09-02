@@ -1,0 +1,212 @@
+{
+  "id": "wd_q19574747",
+  "title": "1999 Glasgow Airport Cessna 404 crash",
+  "flight_number": "3W",
+  "date": "1999-09-03",
+  "time_reference": "UTC",
+  "t0": "1999-09-03T11:33:43Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "2/2001",
+      "report_date": "2001-06-01",
+      "url": "http://www.aaib.gov.uk/publications/formal_reports/2_2001_g_ilgw.cfm"
+    }
+  ],
+  "aircraft": {
+    "type": "Cessna 404 Titan",
+    "family": "404",
+    "manufacturer": "Cessna",
+    "registration": "G-ILGW"
+  },
+  "operator": "Edinburgh Air Charter",
+  "route": {
+    "from": null,
+    "from_name": "Glasgow Airport, Scotland",
+    "to": null,
+    "to_name": "Aberdeen Airport, Scotland"
+  },
+  "location": {
+    "name": "Blackstoun Farm, approximately 1 nm west of Glasgow Airport",
+    "country": "United Kingdom",
+    "lat": 55.85,
+    "lon": -4.48
+  },
+  "phase": "initial_climb",
+  "occupants": 11,
+  "fatalities": 8,
+  "injuries_serious": 0,
+  "injuries_minor": 3,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Shortly after takeoff from Glasgow, the left engine of a Cessna 404 failed due to catastrophic accessory gear train failure. The commander feathered the right engine instead of the failed engine, resulting in total loss of thrust. Unable to maintain altitude or continue to destination, the commander attempted to return to Glasgow Airport but lost control of the aircraft during a right turn and crashed 1 nautical mile from the airport.",
+  "probable_cause": "The left engine suffered catastrophic failure of its accessory gear train leading to complete loss of power. The propeller of the failed engine was not feathered, and the commander feathered the right propeller instead, resulting in total loss of thrust and uncontrollable descent.",
+  "factors": [
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "Left engine suffered catastrophic failure of accessory gear train, with starter gear failing after only 255 operating hours since new (p. 65)"
+    },
+    {
+      "id": "wrong_engine_shutdown",
+      "role": "contributing",
+      "evidence": "Commander feathered right engine (which was capable of producing power) instead of failed left engine, resulting in total loss of thrust (p. 65)"
+    },
+    {
+      "id": "weight_and_balance_error",
+      "role": "latent",
+      "evidence": "Aircraft may have been as much as 200 lb above permitted maximum takeoff weight of 8,400 lb (p. 64); copy of load sheet not deposited with handling agent"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Commander lost control of aircraft during attempted right turn to return to Glasgow Airport (p. 65)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Severe post-impact fire engulfed cabin (p. 1)"
+    }
+  ],
+  "chain": [
+    [
+      "engine_failure",
+      "wrong_engine_shutdown"
+    ],
+    [
+      "wrong_engine_shutdown",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "11:33:43",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC cleared aircraft for takeoff from Runway 23 at Glasgow Airport",
+      "factors": []
+    },
+    {
+      "t": 5,
+      "clock": "11:33:48",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft lifted off ground at or just beyond intersection of runways; survivors heard a thud or bang shortly after becoming airborne",
+      "factors": [
+        "engine_failure"
+      ]
+    },
+    {
+      "t": 10,
+      "clock": "11:33:53",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Witness observed right propeller rotating slowly and then stopping; burning smell reported in cabin (p. 3)",
+      "factors": []
+    },
+    {
+      "t": 15,
+      "clock": "11:33:58",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Commander announced emergency and declared intention to return to airfield; neither engine was producing power at impact (p. 65)",
+      "factors": [
+        "wrong_engine_shutdown"
+      ]
+    },
+    {
+      "t": 45,
+      "clock": "11:34:28",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft entered steep right turn attempting to return to Glasgow Airport (p. 3)",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 85,
+      "clock": "11:35:08",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed at Blackstoun Farm approximately 1 nautical mile west of Glasgow Airport; severe post-impact fire engulfed cabin",
+      "factors": [
+        "loss_of_control_inflight",
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "2000-12",
+      "to": "FAA/CAA",
+      "text": "Make mandatory the revised Critical Service Bulletin CSB94-4B, which requires a repetitive inspection of GTSIO-520 starter gears and crankshaft gears",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "engine_failure"
+      ]
+    },
+    {
+      "id": "2001-38",
+      "to": "CAA",
+      "text": "Take forward to JAA a proposal to re-examine the criteria for the carriage of flight recorders by multi piston engine aircraft in Transport Category (Passenger) certified to carry more than 9 passengers, with a view to requiring all aircraft to carry at least a Cockpit Voice Recorder",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "2001-40",
+      "to": "CAA",
+      "text": "Undertake a study to identify elements of current JAR 23 seat standards which may be used for retrofit into existing aeroplanes with maximum certificated takeoff mass less than 5,700 kg, particularly those operated in Transport Category (Passenger)",
+      "status": "unknown",
+      "trigger_factors": [
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Mandatory inspection requirements for GTSIO-520 starter gears implemented",
+    "Enhanced flight recorder requirements for multi-engine piston aircraft",
+    "Improved seat design standards for light transport aircraft"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://www.aaib.gov.uk/publications/formal_reports/2_2001_g_ilgw.cfm"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q19574747",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Edinburgh_Air_Charter_Flight_3W",
+  "report_links": [
+    "http://www.aaib.gov.uk/publications/formal_reports/2_2001_g_ilgw.cfm"
+  ],
+  "interest": 9.56,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read sections: synopsis, history of flight (early activity, ground maneuvers, takeoff), findings and conclusions, causal factors, recommendations"
+    ]
+  }
+}

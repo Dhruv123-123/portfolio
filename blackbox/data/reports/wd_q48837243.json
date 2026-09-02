@@ -1,0 +1,216 @@
+{
+  "id": "wd_q48837243",
+  "title": "1991 Merion mid-air collision",
+  "flight_number": null,
+  "date": "1991-04-04",
+  "time_reference": "EST",
+  "t0": "1991-04-04T12:01:00-04:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-91-01S",
+      "report_date": "1991-09-17",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9101S.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Piper PA-60-601P Aerostar / Bell 412SP",
+    "family": "Aerostar",
+    "manufacturer": "Piper / Bell",
+    "registration": "N3645D / N78S"
+  },
+  "operator": "Lycoming Air Services / Sun Company Aviation Department",
+  "route": {
+    "from": null,
+    "from_name": "Williamsport, Pennsylvania",
+    "to": null,
+    "to_name": "Philadelphia, Pennsylvania"
+  },
+  "location": {
+    "name": "Merion Elementary School, Merion, Pennsylvania",
+    "country": "United States",
+    "lat": 40.01,
+    "lon": -75.27
+  },
+  "phase": "approach",
+  "occupants": 12,
+  "fatalities": 7,
+  "injuries_serious": 1,
+  "injuries_minor": 4,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "A Piper Aerostar with an inoperative nose gear indicator light requested and received a low pass from a Bell 412 helicopter to visually inspect the gear status. During this inspection maneuver, the helicopter maneuvered into a position where it could not be seen by the Aerostar pilots. The two aircraft collided over Merion Elementary School, with the helicopter's rotor blades clipping the Aerostar from underneath. Both aircraft caught fire and crashed onto school grounds, killing five occupants from both aircraft and two children on the ground.",
+  "probable_cause": "The probable causes were the poor judgment by the Aerostar captain to permit an in-flight inspection after determining the gear was extended, the poor judgment of the Bell captain to conduct the inspection, and the failure of the Bell crew to maintain safe separation. Contributing factors were incomplete training and checking of the Aerostar crew and deficient FAA principal operations inspector oversight.",
+  "factors": [
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Neither crew of the two aircraft adequately recognized and maintained situational awareness of the other aircraft's position (p. 23)"
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "Helicopter's rotor blades clipped the Aerostar from underneath, severing main rotor blade of helicopter and main wing panel of airplane (p. 5)"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "Nose gear doors of Aerostar partially close when gear extends, obscuring most of the locking mechanism from visual inspection (p. 23)"
+    },
+    {
+      "id": "checklist_design",
+      "role": "latent",
+      "evidence": "Piper flight manual emergency procedures section lacked explicit procedures if nose gear indicator light would not illuminate (p. 23)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Neither flightcrew of either aircraft had experience flying in close proximity to another aircraft; deficiencies found in Lycoming training program (p. 23)"
+    }
+  ],
+  "chain": [
+    [
+      "design_deficiency",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "midair_collision"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "12:01",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Piper pilots noticed nose landing gear locked indicator light was not illuminated",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": "12:02",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Piper pilots observed nose gear appeared to be extended based on reflection in propeller spinners",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "12:03",
+      "phase": "approach",
+      "actor": "OTHER",
+      "kind": "system",
+      "text": "Bell 412 helicopter positioned for low pass inspection of Piper's nose gear",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": "12:06",
+      "phase": "approach",
+      "actor": "OTHER",
+      "kind": "system",
+      "text": "Bell helicopter maneuvered into position where it could not be seen by Piper crew (p. 23)",
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 330,
+      "clock": "12:07",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Helicopter rotor blades clipped Aerostar from underneath during attempted inspection maneuver",
+      "factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "t": 340,
+      "clock": "12:07",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Both aircraft caught fire and disintegrated on impact in elementary school grounds",
+      "factors": [
+        "midair_collision"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-91-91",
+      "to": "FAA",
+      "text": "Include in the Airman's Information Manual advisories on potential dangers when flying aircraft in close proximity to one another, including consideration of risks involved in such maneuvers, importance of thorough planning and communication, and aerodynamic interactions",
+      "status": "unknown",
+      "trigger_factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "id": "A-91-92",
+      "to": "FAA",
+      "text": "Require that the flight manual for the Piper Aerostar PA-60 be modified so that the emergency procedures section includes information on actions to be taken in event of an unsafe landing gear indication",
+      "status": "unknown",
+      "trigger_factors": [
+        "design_deficiency",
+        "checklist_design"
+      ]
+    },
+    {
+      "id": "A-91-93",
+      "to": "FAA",
+      "text": "Disseminate more aggressively available information and materials pertaining to Aeronautical Decision Making training and actively promote its implementation among all categories of pilots",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": "A-91-94",
+      "to": "NBAA/HAI/AOPA",
+      "text": "Advise members of the circumstances of the midair collision involving Bell N78S and Piper N3645D and of the potential dangers associated with performing in-flight inspections or other close proximity maneuvers",
+      "status": "unknown",
+      "trigger_factors": [
+        "midair_collision"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced Airman training on risks of close proximity flying",
+    "Improved aircraft flight manual procedures for landing gear emergencies"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9101S.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q48837243",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/1991_Merion_mid-air_collision",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9101S.pdf"
+  ],
+  "interest": 9.73,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read sections: summary, accident description, conclusions (findings and causal factors), probable cause, recommendations"
+    ]
+  }
+}
