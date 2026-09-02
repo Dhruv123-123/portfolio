@@ -1,0 +1,193 @@
+{
+  "id": "wd_q7895381",
+  "qid": "Q7895381",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "University of Evansville men's basketball team plane crash",
+  "flight_number": "AI216",
+  "date": "1977-12-13",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "Douglas DC-3",
+    "manufacturer": "Douglas",
+    "family": "DC-3",
+    "registration": "N51071"
+  },
+  "operator": "Air Indiana",
+  "route": {
+    "from_name": "Evansville",
+    "to_name": "Nashville"
+  },
+  "location": {
+    "name": "Evansville Regional Airport",
+    "country": "United States"
+  },
+  "phase": "takeoff",
+  "occupants": 30,
+  "fatalities": 29,
+  "category": "LOC-I",
+  "summary": "The Douglas DC-3 crashed shortly after takeoff when gust locks on the right aileron and rudder were not removed before departure. The overloaded baggage compartment shifted the aircraft center of gravity aft, making it impossible to control the aircraft.",
+  "probable_cause": "Pilot failure to remove gust locks combined with overloaded baggage compartment shifting center of gravity aft.",
+  "factors": [
+    {
+      "id": "takeoff_configuration_error",
+      "role": "initiating",
+      "evidence": "Gust locks on the right aileron and rudder before takeoff, as well as an overloaded baggage compartment"
+    },
+    {
+      "id": "weight_and_balance_error",
+      "role": "contributing",
+      "evidence": "The extra baggage shifted the plane's center of gravity to the rear, making it impossible to control the overweight aircraft"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The locked rudder and aileron made it impossible to control the aircraft after takeoff"
+    }
+  ],
+  "chain": [
+    [
+      "takeoff_configuration_error",
+      "loss_of_control_inflight"
+    ],
+    [
+      "weight_and_balance_error",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "19:12",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "system",
+      "text": "Douglas DC-3 N51071 receives IFR clearance to Nashville, weather reported as 400 ft overcast, visibility 3/4 mile, light rain and fog",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": "19:15",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "system",
+      "text": "Aircraft cleared for takeoff from Runway 18 at Evansville Regional Airport, baggage compartment overloaded",
+      "factors": [
+        "weight_and_balance_error"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": "19:20",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "system",
+      "text": "Aircraft begins takeoff roll on Runway 18",
+      "factors": []
+    },
+    {
+      "t": 70,
+      "clock": "19:20:10",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Gust locks on right aileron and rudder were not removed before departure",
+      "factors": [
+        "takeoff_configuration_error"
+      ]
+    },
+    {
+      "t": 80,
+      "clock": "19:20:20",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft rotated normally to nose-high attitude for climb",
+      "state": {
+        "alt": 50,
+        "pitch": 15
+      },
+      "factors": []
+    },
+    {
+      "t": 90,
+      "clock": "19:20:30",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Rearward center of gravity from overloaded baggage and locked control surfaces rendered aircraft uncontrollable; entered region of reversed command",
+      "state": {
+        "alt": 100,
+        "ias": 65
+      },
+      "factors": [
+        "weight_and_balance_error",
+        "takeoff_configuration_error"
+      ]
+    },
+    {
+      "t": 100,
+      "clock": "19:22",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed less than 1 minute 30 seconds after takeoff within airport boundaries",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 102,
+      "clock": "19:22:22",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft destroyed in crash; all 29 persons aboard killed",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "report_links": [
+    "http://aviation-safety.net/database/record.php?id=19771213-0",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7810.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Indiana_Flight_216",
+  "asn_id": "19771213-0",
+  "interest": 12.5,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read: synopsis, probable cause, findings from AAR78-10"
+    ]
+  },
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-78-10",
+      "report_date": "1978-03-23"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Review and strengthen procedures for control lock removal before flight to ensure pilot verification",
+      "status": "unknown",
+      "trigger_factors": [
+        "takeoff_configuration_error"
+      ]
+    }
+  ],
+  "time_reference": "CST",
+  "t0": "1977-12-13T19:22:22-06:00",
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7810.pdf"
+  ]
+}

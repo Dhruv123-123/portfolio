@@ -1,0 +1,266 @@
+{
+  "id": "wd_q7054721",
+  "qid": "Q7054721",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "North Central Airlines 458",
+  "flight_number": "NCA458",
+  "date": "1968-12-27",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "Convair CV-580",
+    "manufacturer": "Convair",
+    "family": "CV-580",
+    "registration": "N2045"
+  },
+  "operator": "North Central Airlines",
+  "route": {
+    "from_name": "Minneapolis",
+    "to_name": "Chicago"
+  },
+  "location": {
+    "name": "O'Hare International Airport",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 45,
+  "fatalities": 27,
+  "category": "LOC-I",
+  "summary": "During a night approach to O'Hare in 200-foot ceilings and light rain, at 210 feet the CV-580 began climbing. The captain initiated a go-around but the aircraft continued climbing and stalled. It rolled left, struck the ground, and crashed into a hangar. The NTSB determined the captain experienced spatial disorientation from atmospheric refraction of approach lights at a critical moment when transitioning between instrument and visual reference.",
+  "probable_cause": "Spatial disorientation of the captain caused by atmospheric refraction of approach lights during transition from instrument to visual flight reference, combined with relatively low command experience in the CV-580.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "The aircraft began its approach to O'Hare, which had a 200 ft ceiling with light rain and fog"
+    },
+    {
+      "id": "spatial_disorientation",
+      "role": "initiating",
+      "evidence": "Spatial disorientation of the captain precipitated by atmospheric refraction of either the approach lights or landing lights at a critical point in the approach"
+    },
+    {
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "the captain of Flight 458, although experienced, had relatively few hours of experience as the pilot-in-command in CV-580s"
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "Flight 458 lost speed until it stalled 13 seconds after the initiation of the go-around"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft entered a steep left bank, and its left wing struck the ground"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted hangar"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "spatial_disorientation"
+    ],
+    [
+      "spatial_disorientation",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "20:14",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft at 20:14 CST began approach to O'Hare with 200 ft ceiling, light rain and fog",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": "20:15",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight cleared to descend to 3,500 ft, RVR reported as 4,500 feet",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "20:16",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight instructed to slow to 160 knots, vectored for ILS approach to Runway 14R",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": "20:17",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight vectored left to 050° then right to 090° for spacing",
+      "factors": []
+    },
+    {
+      "t": 240,
+      "clock": "20:18",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight instructed to turn right to 220° and maintain until ILS localizer interception",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": "20:19",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight reported at outer marker (Romeo), cleared for ILS approach, new RVR 2,600 feet",
+      "factors": []
+    },
+    {
+      "t": 360,
+      "clock": "20:20",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft at approximately 210 feet above airport elevation, about 4,500 feet from runway threshold, descended normally on ILS glideslope",
+      "state": {
+        "alt": 210,
+        "ias": 120,
+        "phase": "approach"
+      },
+      "factors": []
+    },
+    {
+      "t": 420,
+      "clock": "20:21",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft entered unexpected sustained climb of approximately 1,244 feet per minute",
+      "state": {
+        "alt": 210,
+        "ias": 105,
+        "vs": 1244
+      },
+      "factors": [
+        "spatial_disorientation"
+      ]
+    },
+    {
+      "t": 480,
+      "clock": "20:22",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain called for full available power (971 rpm or 4,000 hp) and initiated go-around procedures",
+      "state": {
+        "alt": 440,
+        "ias": 100
+      },
+      "factors": [
+        "spatial_disorientation"
+      ]
+    },
+    {
+      "t": 530,
+      "clock": "20:22:30",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft continued climbing despite go-around attempt, gaining additional 500 feet to 940 feet altitude, airspeed decreased to point where aerodynamic control was lost",
+      "state": {
+        "alt": 940,
+        "ias": 80
+      },
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 543,
+      "clock": "20:22:23",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft stalled 13 seconds after go-around initiation, entered steep left bank, left wing struck ground",
+      "state": {
+        "alt": 100,
+        "roll": -60
+      },
+      "factors": [
+        "aerodynamic_stall",
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 545,
+      "clock": "20:22:25",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacted main door of hangar in near-inverted position approximately 100 feet southeast of runway threshold, destroyed by impact and fire",
+      "factors": [
+        "loss_of_control_inflight",
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "http://aviation-safety.net/database/record.php?id=19681227-0",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7027.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-27.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/North_Central_Airlines_Flight_458",
+  "asn_id": "19681227-0",
+  "interest": 12.51,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read: synopsis, probable cause, findings, recommendations"
+    ]
+  },
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-70-27",
+      "report_date": "1970-11-12"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Section 121.652 of the Federal Aviation Regulations be amended to prohibit a captain from being removed from \"high\" minimums until he has accrued 100 hours as pilot-in-command in type",
+      "status": "unknown",
+      "trigger_factors": [
+        "pilot_experience"
+      ]
+    }
+  ],
+  "time_reference": "CST",
+  "t0": "1968-12-27T20:22:23-06:00",
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7027.pdf"
+  ]
+}
