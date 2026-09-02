@@ -1,0 +1,150 @@
+{
+  "id": "wd_q7887345",
+  "qid": "Q7887345",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "United Airlines 266",
+  "flight_number": "266",
+  "date": "1969-01-18",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "Boeing 727-22C",
+    "manufacturer": "Boeing",
+    "family": "727",
+    "registration": "N4724U"
+  },
+  "operator": "United Airlines",
+  "route": {
+    "from_name": "Los Angeles",
+    "to_name": "Milwaukee"
+  },
+  "location": {
+    "name": "Santa Monica Bay",
+    "country": "United States"
+  },
+  "phase": "initial_climb",
+  "occupants": 38,
+  "fatalities": 38,
+  "category": "LOC-I",
+  "summary": "United Airlines Flight 266 crashed into Santa Monica Bay four minutes after takeoff from Los Angeles. The #3 generator had been nonfunctional and masked with tape before the flight. After engine #1 fire warning and shutdown, the #2 generator also failed, resulting in total loss of electrical power. Flying at night in instrument conditions without attitude instruments, the crew became spatially disoriented and lost control of the aircraft, which impacted the ocean at a steep nose-down angle. All 38 aboard were killed.",
+  "probable_cause": "The crew lost control of the aircraft due to spatial disorientation following loss of all electrical power in night instrument conditions. The NTSB was unable to determine why the #2 generator failed.",
+  "factors": [
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "crew reported fire warning on engine #1 and shut it down"
+    },
+    {
+      "id": "autopilot_disconnect",
+      "role": "contributing",
+      "evidence": "loss of all electrical power forced manual control in night instrument conditions"
+    },
+    {
+      "id": "spatial_disorientation",
+      "role": "contributing",
+      "evidence": "flying at night in instrument conditions without attitude instruments, pilots quickly became spatially disoriented"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "crew lost control and crashed into ocean at steep nose-down angle"
+    }
+  ],
+  "chain": [
+    [
+      "engine_failure",
+      "autopilot_disconnect"
+    ],
+    [
+      "autopilot_disconnect",
+      "spatial_disorientation"
+    ],
+    [
+      "spatial_disorientation",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Engine #1 fire warning reported approximately two minutes after takeoff"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew shut down engine #1 and reported loss of all functioning generators to departure control"
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The #2 generator ceased operating after becoming the sole power source"
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "outcome",
+      "text": "With loss of all electrical power, lights and flight attitude instruments went dark; pilots became spatially disoriented flying at night in instrument conditions"
+    },
+    {
+      "t": 240,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft crashed into Pacific Ocean at steep nose-down angle, killing all 38 aboard"
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7006.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Air_Lines_Flight_266",
+  "asn_id": "19690118-0",
+  "interest": 13.42,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from official accident report",
+      "Key sections read: synopsis, findings, probable cause, recommendations"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7006.pdf"
+  ],
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "NTSB",
+      "text": ". . . 6 6",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "cvr": [],
+  "fdr": null
+}

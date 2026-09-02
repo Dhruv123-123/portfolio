@@ -1,0 +1,156 @@
+{
+  "id": "wd_q4957358",
+  "qid": "Q4957358",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Braniff 250",
+  "flight_number": "250",
+  "date": "1966-08-06",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "BAC 1-11-203AE",
+    "manufacturer": "British Aircraft Corporation",
+    "family": "BAC 1-11",
+    "registration": "N1553"
+  },
+  "operator": "Braniff International Airways",
+  "route": {
+    "from_name": "Kansas City",
+    "to_name": "Omaha"
+  },
+  "location": {
+    "name": "Falls City",
+    "country": "United States"
+  },
+  "phase": "cruise",
+  "occupants": 42,
+  "fatalities": 42,
+  "category": "LOC-I",
+  "summary": "Braniff Flight 250, a BAC 1-11-203AE operating from Kansas City to Omaha, entered an area of severe thunderstorm activity with extreme turbulence. The aircraft violently accelerated upward in an updraft with a left roll, causing the right tailplane and vertical stabilizer to fail. Within one or two seconds the right wing also failed. The aircraft tumbled from the sky in flames and impacted a soybean field near Falls City, Nebraska, killing all 42 aboard. The NTSB determined the probable cause as in-flight structural failure caused by extreme turbulence during operation in an avoidable weather hazard, compounded by inaccurate company weather forecast.",
+  "probable_cause": "In-flight structural failure due to extreme turbulence during operation of the aircraft in an area of avoidable hazardous weather.",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "initiating",
+      "evidence": "aircraft entered updraft within area of active squall line of severe thunderstorms"
+    },
+    {
+      "id": "structural_failure",
+      "role": "contributing",
+      "evidence": "right tailplane and vertical stabilizer failed, then right wing failed within seconds"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "aircraft structure could not withstand extreme turbulence forces"
+    },
+    {
+      "id": "manufacturer_communication",
+      "role": "latent",
+      "evidence": "Braniff dispatchers aware of severe weather on other flights but did not inform this crew"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "aircraft tumbled down in flames and entered flat spin before impacting ground"
+    }
+  ],
+  "chain": [
+    [
+      "convective_weather",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "convective_weather",
+      "manufacturer_communication"
+    ]
+  ],
+  "events": [
+    {
+      "t": -120,
+      "clock": "22:55",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight departed Kansas City at 22:55 on IFR clearance to FL200, but crew requested to remain at 5000 ft because of weather"
+    },
+    {
+      "t": 0,
+      "clock": "23:08",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew contacted a Braniff flight that had just departed Omaha reporting moderate to light turbulence"
+    },
+    {
+      "t": 240,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "ENV",
+      "kind": "system",
+      "text": "Flight 250 entered updraft within active squall line of severe thunderstorms, violently accelerating upward with left roll"
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Right tailplane and vertical stabilizer failed from extreme turbulence forces"
+    },
+    {
+      "t": 320,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Right wing failed within one or two seconds; aircraft pitched nose-down"
+    },
+    {
+      "t": 360,
+      "clock": "23:12",
+      "phase": "cruise",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft tumbled from sky in flames, entered flat spin, and impacted soybean field near Falls City killing all 42 aboard"
+    }
+  ],
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AL.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Braniff_International_Airways_Flight_250",
+  "asn_id": "19660806-0",
+  "interest": 13.41,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from official accident report",
+      "Key sections read: synopsis, findings, probable cause, recommendations"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AL.pdf"
+  ],
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "cvr": [],
+  "fdr": null
+}
