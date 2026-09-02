@@ -1,0 +1,187 @@
+{
+  "id": "wd_q26309846",
+  "qid": "Q26309846",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2016 Russian Ministry of Emergency Situations Il-76 crash",
+  "date": "2016-07-01",
+  "time_reference": "UTC",
+  "t0": "2016-07-01T03:13:00Z",
+  "agency": "MAK",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Ilyushin Il-76",
+    "manufacturer": "Ilyushin",
+    "family": "Il-76",
+    "registration": "RA-76840"
+  },
+  "operator": "Ministry of Emergency Situations of Russia",
+  "route": {
+    "from_name": "Irkutsk International Airport",
+    "to_name": "Irkutsk"
+  },
+  "location": {
+    "name": "Near Lake Baikal, northeast of Irkutsk, Siberia",
+    "country": "Russia"
+  },
+  "phase": "cruise",
+  "occupants": 10,
+  "fatalities": 10,
+  "category": "OTHR",
+  "summary": "An Ilyushin Il-76 aerial firefighting aircraft crashed near Lake Baikal while operating at minimum altitude over a wildfire area. The hot air from the wildfires reduced engine thrust, causing loss of altitude. The tail struck a hillock, then the aircraft collided with the hillside. All ten crew members were killed.",
+  "probable_cause": "Loss of engine thrust caused by hot air from the wildfires resulted in loss of altitude; tail struck terrain leading to collision with hillside. (p. 11-13)",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "contributing",
+      "evidence": "Wildfires in Siberia created hot air conditions in the area (p. 11)"
+    },
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "Hot air from wildfires caused loss of engine thrust, resulting in loss of altitude (p. 13)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "contributing",
+      "evidence": "SRPBZ warnings 'PULL UP' and 'TERRAIN AHEAD' registered repeatedly for 7 minutes (p. 12)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft tail struck hillock at 945m elevation, then collided with hillside (p. 13)"
+    }
+  ],
+  "chain": [
+    [
+      "convective_weather",
+      "engine_failure"
+    ],
+    [
+      "engine_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "02:19",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft departed for firefighting mission in Kachugsky District (p. 11)"
+    },
+    {
+      "t": 540,
+      "clock": "02:28",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft at 3,300m altitude on course 45 degrees, speed 450 km/h (p. 11)"
+    },
+    {
+      "t": 720,
+      "clock": "02:31",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Initial contact with dispatcher; reported ETA to work area 03:02 (p. 11)"
+    },
+    {
+      "t": 2100,
+      "clock": "02:54",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew reported arrival at work area and beginning descent to 500-50m working altitude (p. 11-12)"
+    },
+    {
+      "t": 2160,
+      "clock": "03:05",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "SRPBZ warnings activated; terrain avoidance alerts PULL UP and TERRAIN AHEAD registered continuously (p. 12)"
+    },
+    {
+      "t": 2400,
+      "clock": "03:11",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Commander decided on further descent; parameters speed 345 km/h heading 190 deg altitude 210m approaching target at 5km (p. 13)"
+    },
+    {
+      "t": 2520,
+      "clock": "03:13",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "At 55th minute of flight aircraft collided with hillside slope; broke apart and caught fire (p. 13)"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Aviation Personnel",
+      "text": "Disseminate information about this accident to flight and technical personnel operating Il-76 aircraft (p. 36)",
+      "status": "unknown",
+      "trigger_factors": [
+        "engine_failure"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Aviation Companies",
+      "text": "Conduct additional training with aviation personnel on characteristics of firefighting operations (p. 36)",
+      "status": "unknown",
+      "trigger_factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Flight Crews",
+      "text": "Study SRPBZ and EGPWS system operation and procedures for crew actions when ground proximity warnings activate (p. 36)",
+      "status": "unknown",
+      "trigger_factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/upload/iblock/0cc/report_ra-76840.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Read history of flight (p. 11-13), operative recommendations (p. 36)",
+      "Intermediate report format; full conclusions pending"
+    ]
+  },
+  "asn_id": "20160701-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/2016_Russian_Ministry_of_Emergency_Situations_Il-76_crash",
+  "report_links": [
+    "https://mak-iac.org/upload/iblock/0cc/report_ra-76840.pdf"
+  ],
+  "interest": 10.61,
+  "curated_id": null
+}

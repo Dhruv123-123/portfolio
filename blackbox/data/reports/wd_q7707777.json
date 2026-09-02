@@ -1,0 +1,159 @@
+{
+  "id": "wd_q7707777",
+  "qid": "Q7707777",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Texas International Airlines 655",
+  "flight_number": "TIA 655",
+  "date": "1973-09-27",
+  "time_reference": "CDT",
+  "t0": "1973-09-27T20:52:19-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Convair 600",
+    "manufacturer": "Convair",
+    "family": "Convair 600",
+    "registration": "N94230"
+  },
+  "operator": "Texas International Airlines",
+  "route": {
+    "from_name": "El Dorado",
+    "to_name": "Texarkana"
+  },
+  "location": {
+    "name": "Black Fork Mountain, Arkansas",
+    "country": "United States"
+  },
+  "phase": "descent",
+  "occupants": 11,
+  "fatalities": 11,
+  "category": "CFIT",
+  "summary": "Flight 655 departed El Dorado at night under visual flight rules intending to navigate around thunderstorms. The captain deviated 100 nautical miles north seeking a route and failed to establish position or activate radar vectoring. During descent to 2,000 feet the first officer noted minimum en route altitude was 4,400 feet, but the aircraft struck Black Fork Mountain. All 11 occupants perished.",
+  "probable_cause": "The captain's attempt to operate the flight under visual flight rules in night instrument meteorological conditions without using all the navigational aids and information available to him; and his deviation from the preplanned route, without adequate position information. The carrier did not monitor and control adequately the actions of the flightcrew or the progress of the flight. (p. 19)",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "latent",
+      "evidence": "Flight encountered line of thunderstorms 35 miles to the west of El Dorado with only 15-mile-wide break (p. 5)"
+    },
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "Crew deviated aircraft 100 miles north to go around storm; captain did not take advantage of navigational aids or radar vectoring to establish position (p. 5)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "First officer called out 'Minimum en route altitude here is forty-four hun' before impact indicating terrain awareness (p. 6)"
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Captain ordered descent to 2,000 feet despite first officer's concerns and unresolved position uncertainty (p. 6)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck Black Fork Mountain at elevation 2,025 feet (p. 6)"
+    }
+  ],
+  "chain": [
+    [
+      "convective_weather",
+      "navigation_error"
+    ],
+    [
+      "navigation_error",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "1951",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Crew contacted El Dorado FSS requesting airport advisory; reported painting solid line of storms 50 miles west (p. 5)"
+    },
+    {
+      "t": 600,
+      "clock": "1953",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 655 landed at El Dorado; crew examined weather radar showing 15-mile-wide break in storm line (p. 5)"
+    },
+    {
+      "t": 1200,
+      "clock": "2015",
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight departed El Dorado VFR without activating IFR flight plan; captain did not notify dispatcher of intended route (p. 5)"
+    },
+    {
+      "t": 1800,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain ordered descent to 2,000 feet; first officer consulted en-route chart and expressed concern about minimum altitude (p. 6)"
+    },
+    {
+      "t": 2100,
+      "clock": "2052:17",
+      "phase": "descent",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer called 'Minimum en route altitude here is forty-four hun...' statement terminated by sound of crash (p. 6)"
+    },
+    {
+      "t": 2400,
+      "clock": "2052:19",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck Black Fork Mountain at 2,025 feet elevation on steep north slope (p. 6)"
+    }
+  ],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Requirement for all commercial flights with passengers to operate on IFR (per extraction notes)"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7404.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read history of flight (p. 5-6), findings and probable cause (p. 19)",
+      "Report notes no final recommendations issued; states 'will be published separately'"
+    ]
+  },
+  "asn_id": "19730927-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/Texas_International_Airlines_Flight_655",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7404.pdf"
+  ],
+  "interest": 10.77,
+  "curated_id": null
+}

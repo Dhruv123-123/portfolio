@@ -1,0 +1,205 @@
+{
+  "id": "wd_q66936918",
+  "qid": "Q66936918",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "helicopter accident in Alta, Norway, in 2019",
+  "date": "2019-08-31",
+  "time_reference": "CEST",
+  "t0": "2019-08-31T15:59:00+02:00",
+  "agency": "NSIA",
+  "agencies": [
+    {
+      "code": "NSIA",
+      "name": "Norwegian Safety Investigation Authority",
+      "country": "Norway",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Airbus AS350",
+    "manufacturer": "Airbus",
+    "family": "AS350",
+    "registration": "LN-OFU"
+  },
+  "operator": "Helitrans",
+  "location": {
+    "name": "Skoddevarre Alta",
+    "country": "Norway"
+  },
+  "phase": "cruise",
+  "occupants": 6,
+  "fatalities": 6,
+  "category": "OTHR",
+  "summary": "During a sightseeing tour with a heavy load the helicopter entered servo transparency as the stresses on the rotors exceeded the hydraulic servomotor's capacity causing the controls to lock up due to rapid fluctuations in velocity and height. The pilot attempted to regain control but was unable to recover and crashed into terrain. The aircraft lacked a crash-resistant fuel system so the wreck caught fire immediately causing lethal burns to all occupants.",
+  "probable_cause": "Servo transparency resulting from excessive rotor stress combined with heavy aircraft loading and rapid velocity and height fluctuations caused control lock-up that the pilot could not overcome resulting in terrain impact followed by post-impact fire. (p. 103)",
+  "factors": [
+    {
+      "id": "pilot_experience",
+      "role": "latent",
+      "evidence": "Pilot had combined flight time of 256 hours 17 of which were in AS350 type helicopters; unskilled in detecting early servo transparency (p. 17)"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "initiating",
+      "evidence": "Servo transparency resulted from rotor stresses exceeding hydraulic servomotor capacity; helicopter more sensitive to servo transparency than commonly understood (p. 94-97)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Pilot tried to regain control but was ultimately unable to do so and crashed into terrain (p. 9-10)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Wreck caught fire immediately due to lack of crash-resistant fuel system (p. 10 52)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Crashed into hillside slope at 886m elevation in forested terrain (p. 14)"
+    }
+  ],
+  "chain": [
+    [
+      "pilot_experience",
+      "design_deficiency"
+    ],
+    [
+      "design_deficiency",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ],
+    [
+      "cfit",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "16:05",
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Departed Alta airport with pilot and loadmaster (p. 9)"
+    },
+    {
+      "t": 420,
+      "clock": "16:12",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Landed at festival area at Kvenvikmoen; first scenic flight completed without incident (p. 9-10)"
+    },
+    {
+      "t": 780,
+      "clock": "16:59",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Departed on second scenic flight with five passengers; planned flight time under 10 minutes (p. 10)"
+    },
+    {
+      "t": 840,
+      "clock": "17:02",
+      "phase": "descent",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Snapchat photo shows descent over Hjemmeluftbukta at 1525-1250 ft altitude 90 kt speed FLI 77-79% 30 deg nose-down pitch 10 deg left roll (p. 12)"
+    },
+    {
+      "t": 900,
+      "clock": "17:03",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Multiple warnings and unusual sounds reported by witnesses; aircraft descended with increasing rate (p. 14-15)"
+    },
+    {
+      "t": 960,
+      "clock": "17:04",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft at 400m horizontal distance from crash site 485 ft altitude with descent rate 3072 ft/min (p. 15)"
+    },
+    {
+      "t": 1020,
+      "clock": "17:05",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Helicopter struck terrain and caught fire on slope of Skoddevarre; all six occupants killed (p. 14-15)"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "EASA",
+      "text": "Establish technical solution for helicopters sensitive to servo transparency to prevent or warn of condition (p. 107)",
+      "status": "unknown",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Luftfartstilsynet/EASA",
+      "text": "Review training and proficiency requirements for AS 350 to ensure training includes attention training for early recognition and abort of servo transparency situations (p. 107)",
+      "status": "unknown",
+      "trigger_factors": [
+        "pilot_experience"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Helitrans AS",
+      "text": "Change standard procedures for passenger flights generally and for AS 350 specifically to better reflect challenges related to flight altitude mass and speed (p. 99)",
+      "status": "unknown",
+      "trigger_factors": [
+        "design_deficiency",
+        "pilot_experience"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Luftfartstilsynet",
+      "text": "Establish and publish industry standard for passenger flights with single-engine helicopters with particular attention to scenic flights (p. 100)",
+      "status": "unknown",
+      "trigger_factors": [
+        "pilot_experience"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Airbus Helicopters issued permanent warning in flight manual (approved December 2021)"
+  ],
+  "related": [
+    "Dalamot 2011 AS 350 accident"
+  ],
+  "fdr": null,
+  "sources": [
+    "https://havarikommisjonen.no/Luftfart/Avgitte-rapporter/2022-02?pid=SHT-Report-ReportFile&attach=1"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read event sequence (p. 9-15), analysis of servo transparency (p. 83-101), conclusions (p. 103), recommendations (p. 107)"
+    ]
+  },
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/2019_Alta_helicopter_crash",
+  "report_links": [
+    "https://havarikommisjonen.no/Luftfart/Avgitte-rapporter/2022-02?pid=SHT-Report-ReportFile&attach=1"
+  ],
+  "interest": 10.48,
+  "curated_id": null
+}

@@ -1,0 +1,172 @@
+{
+  "id": "wd_q7672526",
+  "qid": "Q7672526",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "TWA 841",
+  "flight_number": "TW841",
+  "date": "1979-04-04",
+  "time_reference": "EST",
+  "t0": "1979-04-04T21:47:35-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 727-31",
+    "manufacturer": "Boeing",
+    "family": "727",
+    "registration": "N840TW"
+  },
+  "operator": "Trans World Airlines",
+  "route": {
+    "from_name": "New York (JFK)",
+    "to_name": "Minneapolis-St. Paul"
+  },
+  "location": {
+    "name": "Near Saginaw Michigan",
+    "country": "United States"
+  },
+  "phase": "cruise",
+  "occupants": 89,
+  "fatalities": 0,
+  "category": "LOC-I",
+  "summary": "While cruising at 39,000 feet near Saginaw Michigan the No. 7 leading-edge slat extended uncommanded causing a sharp right roll and spiral dive. The aircraft descended 34,000 feet in 63 seconds. Pilots recovered at approximately 5,000 feet by extending landing gear. The aircraft made an emergency landing at Detroit with substantial structural damage.",
+  "probable_cause": "The isolation of the No. 7 leading edge slat in the fully or partially extended position after an extension of the Nos. 2 3 6 and 7 leading edge slats and the subsequent retraction of the Nos. 2 3 and 6 slats and the captain's untimely flight control inputs to counter the roll resulting from the slat asymmetry. Contributing to the cause was a preexisting misalignment of the No. 7 slat which when combined with the cruise condition airloads precluded retraction of that slat. (p. 39)",
+  "factors": [
+    {
+      "id": "flight_control_failure",
+      "role": "initiating",
+      "evidence": "No. 7 slat extended uncommanded; failure of inboard slat track T-bolt on No. 7 slat predominantly from fatigue (p. 36-39)"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "Extension of slats was result of flightcrew's manipulation of flap/slat controls (p. 39)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft descended 34,000 ft in 63 seconds rolling through 360 degrees at least twice (p. 8 39)"
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "Pilots extended landing gear around 15,000 ft and recovered at 5,000 ft; landed Detroit (p. 7 39)"
+    }
+  ],
+  "chain": [
+    [
+      "inappropriate_control_input",
+      "flight_control_failure"
+    ],
+    [
+      "flight_control_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "emergency_landing"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "21:47",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft cruising at FL 390 39,000 feet on autopilot Altitude Hold mode; captain organizing charts in flight bag (p. 7)"
+    },
+    {
+      "t": 60,
+      "clock": "21:47",
+      "phase": "cruise",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Captain felt buzzing sensation followed by light buffet; noticed autopilot commanding left turn while ADI showed right bank (p. 7)"
+    },
+    {
+      "t": 120,
+      "clock": "21:48",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Disconnected autopilot applied full left aileron and rudder; aircraft continued rolling right despite control inputs (p. 7)"
+    },
+    {
+      "t": 180,
+      "clock": "21:48",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft spiraled from 39,000 to 5,000 feet in 63 seconds; rolled through 360 degrees twice (p. 8 39)"
+    },
+    {
+      "t": 240,
+      "clock": "21:50",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Extended landing gear at approximately 15,000 feet; heard loud explosion-like sound (p. 8)"
+    },
+    {
+      "t": 300,
+      "clock": "21:51",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Recovered near wings-level attitude at 5,000 feet; used moon as visual reference to level aircraft (p. 8)"
+    },
+    {
+      "t": 3960,
+      "clock": "22:31",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Landed aircraft at Detroit Metropolitan Airport runway 3 without further incident (p. 8)"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Disseminate to all B-727 operators and flightcrews information addressing control problems associated with high-speed asymmetrical leading edge slat configuration on B-727 aircraft including Boeing Operations Manual Bulletin 75-7 and TWA Flight Operations Safety Bulletin 79-3 (p. 40)",
+      "status": "unknown",
+      "trigger_factors": [
+        "flight_control_failure"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Boeing technical bulletins issued to operators",
+    "TWA operational bulletins distributed"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8108.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read history of flight (p. 7-8), conclusions (p. 36-39), recommendations (p. 40)"
+    ]
+  },
+  "asn_id": "19790404-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/TWA_Flight_841_(1979)",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8108.pdf"
+  ],
+  "interest": 9.28,
+  "curated_id": null
+}
