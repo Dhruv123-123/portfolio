@@ -1,61 +1,74 @@
 {
   "id": "wd_q7191488",
   "qid": "Q7191488",
-  "tier": "wikidata",
-  "depth": "sections",
   "title": "Piedmont Airlines 22",
   "flight_number": "PA22",
   "date": "1967-07-19",
+  "time_reference": "EDT",
+  "t0": "1967-07-19T11:58:07-04:00",
   "agency": "NTSB",
   "agencies": [
     {
       "code": "NTSB",
       "name": "National Transportation Safety Board",
       "country": "United States",
-      "role": "lead"
+      "role": "lead",
+      "report_id": "AAR68-AJ",
+      "report_title": "Midair Collision between Piedmont Airlines Flight 22 and Lanseair Cessna 310",
+      "report_date": "1968-09-05",
+      "url": "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AJ.pdf"
     }
   ],
   "aircraft": {
-    "type": "Boeing 727",
+    "type": "Boeing 727-22C",
     "manufacturer": "Boeing",
     "family": "727",
-    "registration": null
+    "registration": "N68650"
   },
   "operator": "Piedmont Airlines",
   "route": {
+    "from": "KAVL",
     "from_name": "Asheville Regional Airport",
-    "to_name": "Washington, D.C."
+    "to": "KOANOKE",
+    "to_name": "Roanoke"
   },
   "location": {
     "name": "Hendersonville",
-    "country": "United States"
+    "country": "United States",
+    "region": "North Carolina"
   },
   "phase": "climb",
   "occupants": 82,
   "fatalities": 82,
+  "damage": "destroyed",
   "category": "MAC",
-  "summary": "A Piedmont Airlines Boeing 727 collided with a Cessna 310 at 6,100 feet over Hendersonville, North Carolina. Both aircraft were operating under IFR on different frequencies in radio contact with the Asheville control tower. The 727 was still climbing when the collision occurred just aft of the 727's cockpit. Both aircraft were destroyed and all 82 aboard killed, including John T. McNaughton.",
-  "probable_cause": "The Cessna pilot's actions were the primary cause, with air traffic control procedures cited as a contributing factor.",
+  "summary": "A Piedmont Airlines Boeing 727 collided with a Lanseair Cessna 310 at 6,132 feet over Hendersonville, North Carolina. The Cessna deviated significantly from its assigned IFR clearance, proceeding on a southwesterly course instead of heading to the Asheville radio beacon as cleared. Both aircraft were destroyed and all 85 occupants were killed.",
+  "probable_cause": "The Safety Board determines that the probable cause of this accident was the deviation of the Cessna from its IFR clearance resulting in a flightpath into airspace allocated to the Piedmont Boeing 727. The reason for such deviation cannot be specifically or positively identified. The minimum control procedures utilized by the FAA in the handling of the Cessna were a contributing factor. (p. 48)",
   "factors": [
     {
       "id": "atc_communication_error",
       "role": "contributing",
-      "evidence": "The aircraft were both operating under instrument flight rules and were in radio contact with the Asheville control tower, though on different frequencies"
+      "evidence": "Asheville Approach Control did not specify the type of approach to be used at initial contact, and the clearance to proceed from VOR to Asheville RBN did not conform to recommended phraseology in ATP7110.1B, reducing precision and creating potential for misunderstanding (p. 30-31, 33)"
     },
     {
       "id": "inadequate_monitoring",
       "role": "contributing",
-      "evidence": "air traffic control procedures as a contributing factor"
+      "evidence": "Approach Control did not monitor Cessna's progress and did not alert the crew when they deviated from the assigned clearance; no surveillance radar was available at Asheville (p. 26, 46)"
     },
     {
-      "id": "inappropriate_control_input",
+      "id": "inadequate_training",
       "role": "contributing",
-      "evidence": "The Cessna pilot failed to maintain proper course separation"
+      "evidence": "Cessna pilot may have had inadequate knowledge of the Asheville area and poor flight planning; crew anticipated ILS approach and became confused by ADF-2 clearance (p. 27, 43)"
     },
     {
       "id": "midair_collision",
       "role": "outcome",
-      "evidence": "the 727 was still climbing when it collided with the Cessna just aft of the 727's cockpit at an altitude of 6,100 ft, causing its disintegration"
+      "evidence": "At 1201:18, the 727 collided with Cessna at 6,132 feet; Cessna impacted fuselage just aft of 727 cockpit; both aircraft destroyed in collision and impact forces (p. 5, 9)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "After collision, 727 continued briefly then nosed over and fell rapidly to ground in disintegration (p. 9)"
     }
   ],
   "chain": [
@@ -64,87 +77,177 @@
       "inadequate_monitoring"
     ],
     [
+      "inadequate_training",
+      "inadequate_monitoring"
+    ],
+    [
       "inadequate_monitoring",
       "midair_collision"
     ],
     [
-      "inappropriate_control_input",
-      "midair_collision"
+      "midair_collision",
+      "loss_of_control_inflight"
     ]
   ],
   "events": [
     {
-      "t": 0,
-      "clock": "11:58",
-      "phase": "takeoff",
-      "actor": "CAPT",
-      "kind": "system",
-      "text": "Piedmont Flight 22 took off from Asheville Regional Airport Runway 16 for IFR flight to Roanoke, Virginia",
+      "t": -330,
+      "clock": "11:50:37",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Atlanta Center advises Cessna N3121S to expect ILS approach at Asheville (p. 28)",
       "factors": []
     },
     {
-      "t": 30,
-      "clock": "11:59:44",
-      "phase": "climb",
+      "t": -175,
+      "clock": "1156:28",
+      "phase": "approach",
       "actor": "ATC",
-      "kind": "system",
-      "text": "Controller cleared Flight 22 to climb unrestricted to the VOR and report passing the VOR",
-      "factors": []
-    },
-    {
-      "t": 45,
-      "clock": "12:00",
-      "phase": "climb",
-      "actor": "ATC",
-      "kind": "system",
-      "text": "Controller cleared Cessna N3121S for an approach to Runway 16 while 727 was still climbing",
+      "kind": "atc",
+      "text": "Asheville Approach Control clears Cessna: cleared over VOR to Asheville radio beacon, maintain 7000 feet, report passing VOR (p. 7)",
       "factors": [
         "atc_communication_error"
       ]
     },
     {
-      "t": 60,
-      "clock": "12:01",
+      "t": -147,
+      "clock": "1156:43",
+      "phase": "approach",
+      "actor": "OTHER",
+      "kind": "crew_action",
+      "text": "Cessna pilot acknowledges clearance with \"Three two one Sierra\" (p. 7)",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "1158:07",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "system",
+      "text": "Piedmont Flight 22 (Boeing 727 N68650) begins takeoff from Runway 16 at Asheville on IFR flight to Roanoke (p. 8)",
+      "factors": []
+    },
+    {
+      "t": 13,
+      "clock": "1158:20",
+      "phase": "climb",
+      "actor": "OTHER",
+      "kind": "crew_action",
+      "text": "Cessna reports position: \"Two one Sierra just passed over the VOR, we're headed for Asheville now\" (p. 9)",
+      "factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "t": 37,
+      "clock": "1159:44",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Asheville Tower clears Piedmont 22 to climb unrestricted to VOR, report passing VOR (p. 9)",
+      "factors": []
+    },
+    {
+      "t": 55,
+      "clock": "1200:02",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach Control clears Cessna for ADF-2 approach to Runway 16, report Asheville radio beacon inbound (p. 9)",
+      "factors": []
+    },
+    {
+      "t": 71,
+      "clock": "1201:18",
       "phase": "climb",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "The 727 collided with the Cessna just aft of the 727's cockpit at altitude of 6,100 ft, causing its disintegration; the 727 rolled onto its back and crashed vertically into Camp Pinewood",
+      "text": "Boeing 727 and Cessna collide at 6,132 feet altitude, 9 miles southwest of Asheville VOR on 243\u00b0 radial; Cessna impacts 727 fuselage just aft of cockpit; both aircraft destroyed (p. 5, 9)",
       "factors": [
         "midair_collision"
       ]
     },
     {
-      "t": 120,
-      "clock": null,
+      "t": 71,
+      "clock": "1201:18",
       "phase": "descent",
-      "actor": "SYS",
+      "actor": "ENV",
       "kind": "outcome",
-      "text": "Both aircraft destroyed and all 82 people killed on impact",
+      "text": "All 82 aboard Piedmont 22 (5 crew, 74 passengers) and all 3 aboard Cessna killed; Boeing 727 crashes near Hendersonville, NC at Camp Pinewood (p. 5, 10)",
       "factors": [
-        "midair_collision"
+        "loss_of_control_inflight"
       ]
     }
   ],
-  "report_links": [
-    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AJ.pdf",
-    "http://aviation-safety.net/database/record.php?id=19670719-0"
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Review and modify aeronautical chart displays to include pictorial display of all navigational aids and fixes applicable to the approach, including depiction of Asheville RBN on ILS approach chart for missed-approach procedures (p. 49)"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Expedite increases in ATC radar coverage in terminal areas as economics of money and manpower allow (p. 49)"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Improve communication methods and procedures for IFR aircraft in non-radar environments; study feasibility of mandatory clearance readbacks by pilots (p. 49-50)"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Revise recommended controller phraseology to provide specific instructions regarding clearances that affect flightpath changes (p. 50)"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Increase frequency of monitoring aircraft progress in non-radar terminal areas through appropriate ATC communications (p. 50)"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Review minimum levels of skill required for instrument pilot rating and evaluate against present system proficiency requisites (p. 50)"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Establish requirement for annual proficiency flight check for all instrument-rated pilots utilizing the IFR system to ensure continued proficiency (p. 50)"
+    }
   ],
-  "wikipedia": "https://en.wikipedia.org/wiki/Piedmont_Airlines_Flight_22",
-  "asn_id": "19670719-0",
-  "interest": 14.68,
-  "extraction": {
-    "method": "llm",
-    "model": "claude-haiku-4-5",
-    "confidence": "medium",
-    "reviewed": false,
-    "notes": [
-      "Report read from /home/user/portfolio/blackbox/cache/text/wd_q7191488.txt",
-      "2006 re-investigation raised questions about original NTSB findings but did not overturn them; primary responsibility remains with Cessna pilot per official 1968 investigation"
-    ]
-  },
-  "curated_id": null,
+  "dissent": [],
+  "safety_changes": [
+    "Modified aeronautical chart displays to show all navigational aids and fixes used in approach procedures",
+    "Enhanced ATC communication procedures and phraseology for non-radar terminal areas",
+    "Increased emphasis on instrument pilot proficiency and training requirements"
+  ],
+  "related": [],
+  "fdr": null,
   "sources": [
     "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AJ.pdf"
   ],
-  "recommendations": []
+  "tier": "wikidata",
+  "depth": "full",
+  "asn_id": "19670719-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Piedmont_Airlines_Flight_22",
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AJ.pdf"
+  ],
+  "interest": 14.68,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from NTSB report: History of the Flight (p. 6-10), Analysis (p. 26-35), Findings (p. 43-46), Probable Cause (p. 48), Recommendations (p. 49-50)",
+      "Events extracted with specific clock times from report; deviation of Cessna and ATC communication deficiency are primary factors",
+      "Recommendations paraphrased from narrative as numbered recommendation format not used in 1968 report",
+      "All factor evidence includes page citations from report text"
+    ]
+  }
 }

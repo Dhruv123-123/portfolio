@@ -1,12 +1,24 @@
 {
   "id": "wd_q7887345",
   "qid": "Q7887345",
-  "tier": "wikidata",
-  "depth": "sections",
   "title": "United Airlines 266",
-  "flight_number": "266",
+  "flight_number": "UA266",
   "date": "1969-01-18",
+  "time_reference": "PST",
+  "t0": "1969-01-18T18:19:00-08:00",
   "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR7006",
+      "report_title": "Aircraft Accident Report: United Airlines Flight 266, Boeing 727-22C",
+      "report_date": "1970-03-18",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7006.pdf"
+    }
+  ],
   "aircraft": {
     "type": "Boeing 727-22C",
     "manufacturer": "Boeing",
@@ -15,39 +27,43 @@
   },
   "operator": "United Airlines",
   "route": {
+    "from": "KLAX",
     "from_name": "Los Angeles",
+    "to": "KMKE",
     "to_name": "Milwaukee"
   },
   "location": {
     "name": "Santa Monica Bay",
-    "country": "United States"
+    "country": "United States",
+    "region": "California"
   },
   "phase": "initial_climb",
   "occupants": 38,
   "fatalities": 38,
+  "damage": "destroyed",
   "category": "LOC-I",
-  "summary": "United Airlines Flight 266 crashed into Santa Monica Bay four minutes after takeoff from Los Angeles. The #3 generator had been nonfunctional and masked with tape before the flight. After engine #1 fire warning and shutdown, the #2 generator also failed, resulting in total loss of electrical power. Flying at night in instrument conditions without attitude instruments, the crew became spatially disoriented and lost control of the aircraft, which impacted the ocean at a steep nose-down angle. All 38 aboard were killed.",
-  "probable_cause": "The crew lost control of the aircraft due to spatial disorientation following loss of all electrical power in night instrument conditions. The NTSB was unable to determine why the #2 generator failed.",
+  "summary": "United Airlines Flight 266 crashed into Santa Monica Bay four minutes after takeoff from Los Angeles International Airport. The No. 3 generator had been non-functional and was masked with tape before flight, masked by improper maintenance procedures. After engine No. 1 fire warning and shutdown, the No. 2 generator also failed resulting in total loss of electrical power. Flying at night in instrument conditions without attitude instruments, the crew became spatially disoriented and lost control of the aircraft. All 38 aboard were killed.",
+  "probable_cause": "The probable cause of this accident was loss of attitude orientation during a night, instrument departure in which all attitude instruments were disabled by loss of electrical power. The Board has been unable to determine why all generator power was lost or why the standby electrical power system either was not activated or failed to function. (p. 4, 33)",
   "factors": [
     {
       "id": "engine_failure",
       "role": "initiating",
-      "evidence": "crew reported fire warning on engine #1 and shut it down"
+      "evidence": "Fire warning activated on engine No. 1 approximately 2 minutes after takeoff during climb to departure control; crew shut down engine No. 1 and reported loss of all functioning generators (p. 5, 21)"
     },
     {
       "id": "autopilot_disconnect",
       "role": "contributing",
-      "evidence": "loss of all electrical power forced manual control in night instrument conditions"
+      "evidence": "Loss of all electrical power forced manual control of aircraft in night instrument conditions; standby electrical system either was not activated or failed to function (p. 32)"
     },
     {
       "id": "spatial_disorientation",
       "role": "contributing",
-      "evidence": "flying at night in instrument conditions without attitude instruments, pilots quickly became spatially disoriented"
+      "evidence": "Crew was without reliable attitude reference from point No. 2 generator was lost until impact; flying at night in instrument conditions, pilots quickly became spatially disoriented (p. 21, 32)"
     },
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "crew lost control and crashed into ocean at steep nose-down angle"
+      "evidence": "Aircraft crashed into Santa Monica Bay at steep nose-down angle with right wing low attitude; crew lost control due to spatial disorientation and loss of attitude reference instruments (p. 19-20)"
     }
   ],
   "chain": [
@@ -67,84 +83,135 @@
   "events": [
     {
       "t": 0,
-      "clock": null,
-      "phase": "initial_climb",
-      "actor": "SYS",
-      "kind": "warning",
-      "text": "Engine #1 fire warning reported approximately two minutes after takeoff"
+      "clock": "18:17",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "system",
+      "text": "United Flight 266, Boeing 727-22C N4724U, departs Runway 25L at Los Angeles International Airport for flight to Milwaukee in night instrument conditions (p. 5)"
     },
     {
       "t": 60,
-      "clock": null,
+      "clock": "18:18",
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "warning",
+      "text": "Engine No. 1 fire warning activated approximately 2 minutes after takeoff during climb; crew reports fire warning to Departure Control and requests return to airport (p. 4, 21)"
+    },
+    {
+      "t": 75,
+      "clock": "18:19:00",
       "phase": "initial_climb",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Crew shut down engine #1 and reported loss of all functioning generators to departure control"
+      "text": "Crew shuts down engine No. 1 and reports loss of all functioning generators to Departure Control (p. 5)"
     },
     {
-      "t": 120,
-      "clock": null,
+      "t": 110,
+      "clock": "18:19:50",
       "phase": "initial_climb",
       "actor": "SYS",
       "kind": "system",
-      "text": "The #2 generator ceased operating after becoming the sole power source"
+      "text": "No. 2 generator ceases operating after becoming sole power source; all electrical power is lost; attitude instruments and lights go dark (p. 19)"
     },
     {
-      "t": 180,
-      "clock": null,
+      "t": 115,
+      "clock": "18:20:00",
       "phase": "initial_climb",
       "actor": "CAPT",
-      "kind": "outcome",
-      "text": "With loss of all electrical power, lights and flight attitude instruments went dark; pilots became spatially disoriented flying at night in instrument conditions"
+      "kind": "warning",
+      "text": "With loss of all electrical power, pilots lose attitude reference; without attitude indicators, crew becomes spatially disoriented flying at night in instrument conditions (p. 19, 32)"
     },
     {
-      "t": 240,
-      "clock": null,
+      "t": 125,
+      "clock": "18:20:00",
       "phase": "initial_climb",
-      "actor": "ENV",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "First officer exclaims during final moments: Keep it going up - you're a thousand feet - pull it up (p. 20)",
+      "factors": [
+        "spatial_disorientation"
+      ]
+    },
+    {
+      "t": 130,
+      "clock": "18:20:10",
+      "phase": "initial_climb",
+      "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft crashed into Pacific Ocean at steep nose-down angle, killing all 38 aboard"
+      "text": "Aircraft crashes into Pacific Ocean at steep nose-down angle, right wing low attitude; aircraft destroyed on impact; wreckage scattered (p. 19-20)"
+    },
+    {
+      "t": 135,
+      "clock": "18:20:15",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "All 38 aboard killed (6 crew members and 32 passengers); aircraft destroyed; limited wreckage scatter and fragmentation pattern indicate high-speed impact (p. 4-5, 19)"
     }
   ],
-  "report_links": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7006.pdf"
-  ],
-  "wikipedia": "https://en.wikipedia.org/wiki/United_Air_Lines_Flight_266",
-  "asn_id": "19690118-0",
-  "interest": 13.42,
-  "extraction": {
-    "method": "llm",
-    "model": "claude-haiku-4-5",
-    "confidence": "high",
-    "reviewed": false,
-    "notes": [
-      "Extracted from official accident report",
-      "Key sections read: synopsis, findings, probable cause, recommendations"
-    ]
-  },
-  "curated_id": null,
-  "sources": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7006.pdf"
-  ],
-  "agencies": [
+  "cvr": [
     {
-      "code": "NTSB",
-      "name": "National Transportation Safety Board",
-      "country": "United States",
-      "role": "lead"
+      "t": 125,
+      "clock": "18:20",
+      "speaker": "FO",
+      "text": "Keep it going up - you're a thousand feet - pull it up"
     }
   ],
   "recommendations": [
     {
       "id": null,
-      "to": "NTSB",
-      "text": ". . . 6 6",
-      "status": "unknown"
+      "to": "FAA",
+      "text": "Make automatic switching of essential power to standby power upon loss of all generators a mandatory requirement for all turbine-powered aircraft (p. 33)"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Until automatic switching can be implemented, require emergency checklists for all airlines for Loss of All Generators procedure to ensure second officer or captain immediately switches essential power to standby or emergency position (p. 33)"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Provide positive indication to second officer on Boeing 727 panel when standby system is being powered from battery, such as illuminating light when standby system is activated (p. 34)"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Consider transfer of standby feature from essential power selector switch to separate ON-OFF toggle switch for improved accessibility (p. 34)"
     }
   ],
   "dissent": [],
-  "safety_changes": [],
+  "safety_changes": [
+    "Automatic standby power activation systems required on large transport aircraft",
+    "Boeing 727 emergency procedure revisions implemented requiring manual standby power switching",
+    "Installation of third independent attitude indicator on large turbojet aircraft",
+    "Enhanced redundancy requirements for electrical power systems in aircraft design"
+  ],
   "related": [],
-  "cvr": [],
-  "fdr": null
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7006.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "full",
+  "asn_id": "19690118-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Air_Lines_Flight_266",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7006.pdf"
+  ],
+  "interest": 13.42,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from NTSB AAR 70-06: Synopsis (p. 4), Investigation/History (p. 5), Analysis (p. 19-22), Findings (p. 32), Probable Cause (p. 33), Recommendations (p. 33-34)",
+      "Events extracted with clock times PST from report narrative and CVR transcript",
+      "Primary cause: loss of all electrical power resulting in loss of attitude reference instruments in night instrument conditions",
+      "Contributing factors: No. 3 generator pre-flight maintenance failure (masked with tape) and failure of No. 2 generator to sustain load",
+      "Standby electrical system either was not activated or failed to function - exact mechanism could not be determined",
+      "All 38 occupants killed; fire warning on No. 1 engine - whether actual fire or false warning undetermined"
+    ]
+  }
 }

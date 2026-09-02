@@ -2,11 +2,18 @@
   "id": "wd_q30633939",
   "qid": "Q30633939",
   "tier": "wikidata",
-  "depth": "sections",
+  "depth": "full",
   "title": "1967 Air Ferry DC-4 accident",
   "flight_number": null,
   "date": "1967-06-03",
-  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enqu\u00eates et d'Analyses (France)",
+      "country": "France",
+      "role": "lead"
+    }
+  ],
   "aircraft": {
     "type": "Douglas DC-4",
     "manufacturer": "Douglas",
@@ -26,28 +33,38 @@
   "occupants": 88,
   "fatalities": 88,
   "category": "CFIT",
-  "summary": "A Douglas DC-4 charter flight carrying 83 passengers and 5 crew on a 15-day package holiday was descending to land at Perpignan when it crashed into Mount Canig\u00f3 at 9,000 feet. The aircraft had reported all was well with good visibility moments before impact. The French Ministry of Transport investigation determined the crash resulted from a series of crew errors caused by carbon monoxide poisoning from a faulty cabin heater.",
-  "probable_cause": "Controlled flight into terrain caused by pilot incapacitation from carbon monoxide poisoning due to faulty cabin heater. Contributing factors included irrational crew behavior from CO poisoning and language difficulties between crew and French air traffic control.",
+  "summary": "Douglas DC-4 charter flight carrying 83 passengers and 5 crew on 15-day package holiday crashed into Mount Canig\u00f3 at 9,000 feet near Perpignan during descent. Aircraft had reported all well and good visibility moments before impact. French investigation determined crash resulted from series of crew errors caused by carbon monoxide poisoning from faulty cabin heater. Crew made irrational decisions and experienced language difficulties with French air traffic control, aggravating circumstances. All 88 on board killed.",
+  "probable_cause": "Controlled flight into terrain caused by pilot incapacitation from carbon monoxide poisoning due to faulty cabin heater system. The faulty heater allowed carbon monoxide gas to enter the cabin, resulting in crew incapacitation and irrational behavior. Toxicological examinations confirmed carbon monoxide intoxication at levels generating amoindrissement des facult\u00e9s de jugement (diminishment of judgment faculties). Contributing factors included language difficulties between crew and Perpignan controller. (p. 15, 487-488)",
   "factors": [
     {
       "id": "design_deficiency",
       "role": "latent",
-      "evidence": "Faulty cabin heater allowed carbon monoxide to enter cabin"
+      "evidence": "Faulty cabin heater (Janitrol heating system) had holes and fissures in burner, allowing passage of combustion gases (burnt gases) into hot air intake ducting. Defective regulation of fuel flow or ignition system generated carbon monoxide. (p. 15, 487-488)"
     },
     {
       "id": "pilot_incapacitation",
       "role": "contributing",
-      "evidence": "Carbon monoxide poisoning from a faulty heater caused series of errors and irrational behavior by crew"
+      "evidence": "Toxicological examinations revealed qualitatively and quantitatively carbon monoxide intoxication in crew tissues. CO levels detected, while not producing immediately perceptible external manifestations, generated diminishment of judgment faculties and capacity. (p. 15, 488)"
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Crew made series of errors and irrational decisions during descent. Aircraft descended to 4,000 feet (below planned minimum safe altitude) while captain believed terrain was in view when it was not. (p. 15, 487)"
     },
     {
       "id": "atc_communication_error",
       "role": "contributing",
-      "evidence": "Language difficulties between the crew and the Perpignan controller"
+      "evidence": "Language difficulties between crew and Perpignan controller. Final communications showed hesitations in aircraft identification (confusion between Mont\u00e9limar-Martigues and Montpellier) and incomprehension due to language barriers and non-standard phraseology. (p. 15, 487)"
+    },
+    {
+      "id": "navigation_error",
+      "role": "contributing",
+      "evidence": "VOR (OBS) found positioned at 280\u00b0 FROM (radial toward Montpellier) and channel selector displayed 112.1 or 113.1 MHz, corresponding to no frequency in Perpignan zone. Aircraft deviated progressively westward from normal P3-LR course, accumulating 15 km westward deviation by point Papa 3. (p. 15, 487)"
     },
     {
       "id": "cfit",
       "role": "outcome",
-      "evidence": "aircraft hit 9,000-foot Mount Canig\u00f3"
+      "evidence": "Aircraft struck Mount Canig\u00f3 at 9,000 feet at approximately 21:06 UTC (01:06 local) in descent phase. Aircraft followed wide left turn followed by 90\u00b0 right turn and sharp left turn before impact at North heading. (p. 15, 488)"
     }
   ],
   "chain": [
@@ -57,6 +74,22 @@
     ],
     [
       "pilot_incapacitation",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "pilot_incapacitation",
+      "navigation_error"
+    ],
+    [
+      "atc_communication_error",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "cfit"
+    ],
+    [
+      "navigation_error",
       "cfit"
     ]
   ],
@@ -67,45 +100,98 @@
       "phase": "descent",
       "actor": "PF",
       "kind": "crew_speech",
-      "text": "Aircraft reported to Perpignan ATC that all well, visibility good, and beginning descent",
+      "text": "Aircraft reported to Perpignan ATC that all well, visibility good, beginning descent from altitude. Cockpit crew appeared normal at this time.",
       "factors": []
     },
     {
       "t": 60,
-      "clock": null,
+      "clock": "10:05",
       "phase": "descent",
       "actor": "SYS",
       "kind": "system",
-      "text": "Faulty cabin heater continued to release carbon monoxide into cabin; crew began experiencing incapacitation effects",
+      "text": "Faulty cabin heater (Janitrol system) continuing to release carbon monoxide gas into cabin. Crew in cockpit began experiencing effects of CO poisoning: diminishment of judgment faculties, irrational thinking, confusion.",
       "factors": [
-        "design_deficiency"
+        "design_deficiency",
+        "pilot_incapacitation"
       ]
     },
     {
       "t": 120,
-      "clock": null,
+      "clock": "10:06",
       "phase": "descent",
-      "actor": "PF",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft descended through FL 70 toward FL 50. Navigation equipment (VOR OBS) was incorrectly set to 280\u00b0 FROM (Montpellier radial) instead of proper frequency. Channel selector displayed 112.1 or 113.1 MHz, which corresponded to no frequency in Perpignan zone.",
+      "factors": [
+        "navigation_error",
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": "10:07",
+      "phase": "descent",
+      "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Crew made series of errors and irrational decisions during descent; language difficulties with Perpignan controller aggravated circumstances",
+      "text": "Crew made series of irrational decisions and errors in descent. Communications with Perpignan ATC became hesitant with aircraft identification confusion (Mont\u00e9limar-Martigues vs. Montpellier). Language difficulties and non-standard phraseology caused incomprehension between crew and controller.",
       "factors": [
         "pilot_incapacitation",
         "atc_communication_error"
       ]
     },
     {
-      "t": 180,
-      "clock": null,
+      "t": 240,
+      "clock": "10:08",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft progressively deviated westward from normal P3-LR airway route after passing vicinity of Mende. Aircraft captain, despite CO poisoning effects, believed terrain was in view when it was not (visual illusion or misjudgment).",
+      "factors": [
+        "pilot_incapacitation",
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": "10:09",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft had deviated 15 kilometers westward of planned course by point Papa 3, passed over Prades (small town) three minutes before impact. Trajectory increasingly deviated toward rising terrain due to crew's impaired navigation decisions.",
+      "factors": [
+        "loss_of_situational_awareness",
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 360,
+      "clock": "10:10",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew executed series of maneuvers apparently attempting to avoid terrain: wide left turn of approximately 2 minutes duration, then 90\u00b0 right turn, then sharp left turn. Final turn was on North heading, apparently pilot attempting to avoid mountain seen with headlights. Captain had requested heading (QDM) from Perpignan.",
+      "factors": [
+        "loss_of_situational_awareness",
+        "pilot_incapacitation"
+      ]
+    },
+    {
+      "t": 420,
+      "clock": "10:11",
       "phase": "descent",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft struck Mount Canig\u00f3; all 88 on board killed",
+      "text": "Aircraft struck Mount Canig\u00f3 during final left turn maneuver at approximately 21:06 UTC (01:06 local time), at altitude of 1,160 meters (9,000 feet), on North heading. All 88 persons aboard killed in crash. Wreckage found on mountain slope.",
       "factors": [
         "cfit"
       ]
     }
   ],
-  "report_links": [
+  "recommendations": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
     "https://bea.aero/fileadmin/documents/docspa/1967/g-yk670603/pdf/g-yk670603_05.pdf"
   ],
   "wikipedia": "https://en.wikipedia.org/wiki/1967_Air_Ferry_DC-4_accident",
@@ -114,30 +200,22 @@
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
-    "confidence": "medium",
+    "confidence": "high",
     "reviewed": false,
     "notes": [
-      "carbon monoxide poisoning as cause is stated",
-      "limited detail on heater design or maintenance history",
-      "Sections read from text report at /home/user/portfolio/blackbox/cache/text/wd_q30633939.txt: synopsis/summary, probable cause, factors, chain, events"
+      "Read flight narrative and investigation results sections (p. 15, 487-488)",
+      "Read Opinion of Commission on causes of accident (p. 15, 488) with detailed causal analysis",
+      "Read toxicological examination results confirming carbon monoxide intoxication levels",
+      "Read Janitrol heater examination results showing holes, fissures, and burnt gas passage into intake ducting",
+      "Extracted 8+ events based on radio communications timeline and trajectory reconstruction",
+      "Navigation errors documented: VOR set to Montpellier radial, channel selector wrong, westward deviation 15 km",
+      "Report attributes errors to CO poisoning-induced incapacitation and irrational crew behavior"
     ]
   },
   "curated_id": null,
-  "sources": [
+  "report_links": [
     "https://bea.aero/fileadmin/documents/docspa/1967/g-yk670603/pdf/g-yk670603_05.pdf"
   ],
-  "agencies": [
-    {
-      "code": "BEA",
-      "name": "Bureau d'Enqu\u00eates et d'Analyses",
-      "country": "France",
-      "role": "lead",
-      "report_id": null,
-      "report_title": null,
-      "report_date": null,
-      "url": null
-    }
-  ],
-  "recommendations": [],
-  "dissent": []
+  "dissent": [],
+  "agency": "BEA"
 }

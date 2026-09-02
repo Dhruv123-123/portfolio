@@ -1,66 +1,74 @@
 {
   "id": "wd_q7538136",
   "qid": "Q7538136",
-  "tier": "wikidata",
-  "depth": "sections",
   "title": "Skywest Airlines 1834",
   "flight_number": "SW1834",
   "date": "1987-01-15",
+  "time_reference": "MST",
+  "t0": "1987-01-15T12:51:58-07:00",
   "agency": "NTSB",
   "agencies": [
     {
       "code": "NTSB",
       "name": "National Transportation Safety Board",
       "country": "United States",
-      "role": "lead"
+      "role": "lead",
+      "report_id": "AAR8803",
+      "report_title": "Midair Collision of SkyWest Airlines Swearingen Metro II and Mooney M20, Kearns, Utah",
+      "report_date": "1988-03-31",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8803.pdf"
     }
   ],
   "aircraft": {
-    "type": "Fairchild Swearingen Metroliner II",
+    "type": "Fairchild Swearingen SA-226TC Metro II",
     "manufacturer": "Fairchild Swearingen",
     "family": "Metro",
-    "registration": null
+    "registration": "N163SW"
   },
   "operator": "SkyWest Airlines",
   "route": {
+    "from": "KPIH",
     "from_name": "Pocatello Regional Airport",
+    "to": "KSLC",
     "to_name": "Salt Lake City International Airport"
   },
   "location": {
-    "name": "Kearns, Utah",
-    "country": "United States"
+    "name": "Kearns",
+    "country": "United States",
+    "region": "Utah"
   },
   "phase": "approach",
   "occupants": 10,
   "fatalities": 10,
+  "damage": "destroyed",
   "category": "MAC",
-  "summary": "SkyWest Airlines Flight 1834, a Metro II on final approach to Salt Lake City, collided at 7,000 ft with a Mooney M20 that had strayed into restricted airspace. The NTSB initially blamed the small aircraft pilots for entering the radar service area, while a subsequent court judgment assigned 51% responsibility to the FAA controller who failed to recognize the collision danger on radar.",
-  "probable_cause": "The primary cause was the small aircraft pilots wandering into restricted airspace while climbing from Salt Lake City Municipal Airport. Contributing factors included the air traffic controller's failure to notice the Mooney on radar and the lack of a Mode-C transponder on the small aircraft.",
+  "summary": "SkyWest Airlines Flight 1834, a Metro II on final approach to Salt Lake City, collided with a Mooney M20 that had intruded into the Salt Lake City Airport Radar Service Area from Salt Lake City Municipal Airport. The Mooney was operating without a mode-C transponder and without proper clearance into controlled airspace. Both aircraft were destroyed and all 10 occupants were killed.",
+  "probable_cause": "The National Transportation Safety Board determines that the probable cause of this accident was lack of navigational vigilance by the Mooney instructor pilot which led to the unauthorized intrusion into the Salt Lake City airport radar service area. Contributing to the accident were the absence of a mode-C transponder on the Mooney airplane and the limitations of the air traffic control system to provide collision protection under the circumstances of this accident. (p. 26)",
   "factors": [
     {
       "id": "runway_incursion",
       "role": "initiating",
-      "evidence": "the Mooney pilots wandered into restricted airspace"
+      "evidence": "Mooney departed SLC Municipal Airport traffic pattern and intruded into Salt Lake City ARSA without proper clearance at 1251:58 (p. 20-21)"
     },
     {
       "id": "atc_communication_error",
       "role": "contributing",
-      "evidence": "The air traffic controller watching the area failed to recognize the danger when the Mooney pilots wandered into restricted airspace. The controller did not notice the small plane on the radar"
+      "evidence": "Final approach controller did not observe Mooney radar target and failed to issue traffic advisories; Mooney target was without mode-C altitude reporting (p. 21, 26)"
     },
     {
-      "id": "inadequate_training",
+      "id": "inadequate_monitoring",
       "role": "contributing",
-      "evidence": "the Mooney pilots wandered into restricted airspace into Salt Lake City airport radar service area"
+      "evidence": "Flight instructor in Mooney did not maintain sufficient navigational vigilance to ensure aircraft remained clear of ARSA; controller did not track non-mode-C intruders (p. 26-27)"
     },
     {
       "id": "midair_collision",
       "role": "outcome",
-      "evidence": "the SkyWest plane collided with the Mooney at an approximate altitude of 7000 ft above sea level"
+      "evidence": "Metro II collided with Mooney at approximately 7,000 feet MSL in visual meteorological conditions; pilot made evasive maneuver but collision was unavoidable (p. 18-19, 26)"
     },
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "after the collision at 7000 ft, the main section of the SkyWest aircraft slid through a chain-link fence"
+      "evidence": "After collision, Metro II aircraft slid through chain-link fence stopping in middle of suburban street; wreckage scattered over one-mile square area (p. 19)"
     }
   ],
   "chain": [
@@ -69,75 +77,157 @@
       "atc_communication_error"
     ],
     [
+      "inadequate_monitoring",
+      "atc_communication_error"
+    ],
+    [
       "atc_communication_error",
       "midair_collision"
+    ],
+    [
+      "midair_collision",
+      "loss_of_control_inflight"
     ]
   ],
   "events": [
     {
-      "t": -180,
+      "t": -360,
       "clock": "12:22",
-      "phase": "approach",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "SkyWest Flight 1834 was 30 minutes late from Pocatello on final approach to Runway 34 of Salt Lake City International Airport",
-      "factors": []
-    },
-    {
-      "t": 0,
-      "clock": "12:52",
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Air traffic controller directed SkyWest pilots to turn, unaware of Mooney in restricted airspace",
-      "factors": [
-        "atc_communication_error"
-      ]
+      "text": "SkyWest Flight 1834 departs Pocatello for SLC; flight is 30 minutes late; handed off from Center to SLC TRACON Bear Sector (p. 5)"
+    },
+    {
+      "t": -330,
+      "clock": "12:27:49",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Bear Sector controller issues heading 100\u00b0 to SkyWest 1834; advises to expect vectors for visual approach to runway 34L (p. 5)"
+    },
+    {
+      "t": -240,
+      "clock": "12:47:21",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "SkyWest 1834 given frequency change to TRACON Final controller; continues receipt of descent clearances and vectors (p. 5)"
+    },
+    {
+      "t": -90,
+      "clock": "12:50:28",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Final controller advises SkyWest 1834 of traffic 10 o'clock 4 miles at 6,000 feet; crew reports traffic in sight (p. 5)"
+    },
+    {
+      "t": -26,
+      "clock": "12:51:32",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Final controller transmits: traffic 10-11 o'clock, 3 miles; SkyWest 1834 does not acknowledge (p. 5)"
+    },
+    {
+      "t": 0,
+      "clock": "12:51:58",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Metro II collides with Mooney M20 at approximately 7,000 feet MSL; radar targets merge on final controller scope; expletive recorded on ATC frequency (p. 5-6, 20)"
+    },
+    {
+      "t": 5,
+      "clock": "12:52:03",
+      "phase": "descent",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Metro II aircraft slides through chain-link fence and stops in middle of suburban street in Kearns area; wreckage scattered over one-mile-square area with body parts in trees (p. 19)"
     },
     {
       "t": 10,
-      "clock": null,
-      "phase": "approach",
-      "actor": "OTHER",
-      "kind": "env",
-      "text": "SkyWest aircraft collided with Mooney at approximately 7000 ft altitude above sea level about half a mile above ground level",
-      "factors": [
-        "midair_collision",
-        "loss_of_control_inflight"
-      ]
-    },
-    {
-      "t": 15,
-      "clock": null,
-      "phase": "approach",
-      "actor": "ENV",
+      "clock": "12:52:08",
+      "phase": "descent",
+      "actor": "SYS",
       "kind": "outcome",
-      "text": "Main section of SkyWest aircraft slid through chain-link fence stopping in middle of suburban street with wreckage scattered over one-mile-square area and body parts hanging from trees",
-      "factors": [
-        "loss_of_control_inflight"
-      ]
+      "text": "All 8 aboard Metro II (2 pilots, 6 passengers) and all 2 aboard Mooney killed; both aircraft destroyed in collision and impact (p. 19)"
     }
   ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-85-64",
+      "to": "FAA",
+      "text": "Expedite the development, operational evaluation, and final certification of the Traffic Alert and Collision Avoidance System for installation and use in certificated air carrier aircraft (p. 27)"
+    },
+    {
+      "id": "A-85-65",
+      "to": "FAA",
+      "text": "Amend 14 CFR Parts 121 and 135 to require the installation and use of Traffic Alert and Collision Avoidance System equipment in certificated air carrier aircraft when it becomes available for operational use (p. 27)"
+    },
+    {
+      "id": "A-87-96",
+      "to": "FAA",
+      "text": "Implement procedures to track, identify, and take appropriate enforcement action against pilots who intrude into Airport Radar Areas without the required Air Traffic Control communications (p. 27-28)"
+    },
+    {
+      "id": "A-87-97",
+      "to": "FAA",
+      "text": "Require transponder equipment with mode-C altitude reporting for operations around all Terminal Control Areas and within an Airport Radar Service Area after a specified date compatible with implementation of TCAS requirements for air carrier aircraft (p. 28)"
+    },
+    {
+      "id": "A-87-98",
+      "to": "FAA",
+      "text": "Take expedited action to add visual flight rules conflict alert (mode-C intruder) logic to Automated Radar Terminal System systems as an interim measure to the ultimate implementation of the Advanced Automation System (p. 28)"
+    },
+    {
+      "id": "A-88-25",
+      "to": "FAA",
+      "text": "Incorporate formal training on the dangers of the low-workload environment at all levels of air traffic controller training (p. 29)"
+    },
+    {
+      "id": "A-88-26",
+      "to": "FAA",
+      "text": "Establish an ad hoc task force including controller and human performance expertise to evaluate the extent to which radar air traffic controllers are dependent on FDB radar symbology to carry out their duties and to make appropriate improvements in initial and recurrent radar training (p. 29)"
+    },
+    {
+      "id": "A-88-46",
+      "to": "FAA",
+      "text": "Review and revise as necessary the Air Traffic Control Academy and facility terminal radar training programs to include 'real world' aspects, such as visual flight rules intruders, into the radar training facility and the electronic target generator scenarios (p. 29)"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Implementation of TCAS (Traffic Alert and Collision Avoidance System) on air carrier aircraft",
+    "Expanded Mode-C transponder requirements for aircraft operating in Terminal Control Areas and Airport Radar Service Areas",
+    "Enhanced ATC training to include VFR intruder scenarios and low-workload environment management"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8803.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "full",
+  "asn_id": "19870115-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/SkyWest_Airlines_Flight_1834",
   "report_links": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8803.pdf"
   ],
-  "wikipedia": "https://en.wikipedia.org/wiki/SkyWest_Airlines_Flight_1834",
-  "asn_id": "19870115-0",
   "interest": 10.46,
+  "curated_id": null,
   "extraction": {
     "method": "llm",
-    "model": "claude-haiku-4-5",
+    "model": "claude-haiku-4-5-20251001",
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Record created from summary; key sections verified against official report"
+      "Extracted from NTSB AAR 88-03: History of Flights (p. 5-6), Analysis (p. 17-25), Findings (p. 26-27), Probable Cause (p. 26), Recommendations (p. 27-29)",
+      "Events extracted with specific clock times MST from ATC transcript and radar data",
+      "Primary cause: Mooney instructor pilot lack of navigational vigilance causing ARSA intrusion; contributing factors: absence of Mode-C transponder and ATC system limitations",
+      "Court judgment later assigned 51% responsibility to FAA controller; NTSB findings remain as stated"
     ]
-  },
-  "curated_id": null,
-  "recommendations": [],
-  "dissent": [],
-  "safety_changes": [],
-  "related": [],
-  "sources": [],
-  "fdr": null
+  }
 }

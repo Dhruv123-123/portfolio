@@ -6,6 +6,8 @@
   "title": "Allegheny Airlines 737",
   "flight_number": "AL737",
   "date": "1969-01-06",
+  "time_reference": "EST",
+  "t0": "1969-01-06T20:27:00-05:00",
   "agency": "NTSB",
   "agencies": [
     {
@@ -14,7 +16,7 @@
       "country": "United States",
       "role": "lead",
       "report_id": "AAR-70-10",
-      "report_title": "Allegheny Airlines Flight 737 - Convair 440, N5825 Near Bradford, Pennsylvania",
+      "report_title": "Allegheny Airlines Flight 737",
       "report_date": "1970-05-27",
       "url": "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-10.pdf"
     }
@@ -33,35 +35,39 @@
     "to_name": "Detroit"
   },
   "location": {
-    "name": "Golf course near Bradford Regional Airport",
-    "country": "United States"
+    "name": "Golf course near Bradford Regional Airport, Pennsylvania",
+    "country": "United States",
+    "lat": 41.805,
+    "lon": -77.172
   },
   "phase": "approach",
   "occupants": 28,
   "fatalities": 11,
+  "injuries_serious": 0,
+  "damage": "destroyed",
   "category": "CFIT",
-  "summary": "Allegheny Airlines Flight 737, a Convair CV-580, struck treetops just under five nautical miles from Bradford Regional Airport and crashed upside down on a snow-covered golf course during an instrument approach. Weather was overcast with 1.5 miles visibility and snow showers. Eleven of the 28 occupants on board were killed.",
-  "probable_cause": "The National Transportation Safety Board was unable to determine the probable cause. Three potential causes remained after analysis: misreading of the altimeter by the captain, a malfunction of the captain's altimeter following completion of the instrument approach procedure turn, or misinterpretation of the instrument approach chart.",
+  "summary": "Allegheny Airlines Flight 737, a Convair 440, descended below safe altitude during a non-precision VOR approach to Bradford, Pennsylvania in poor visibility and struck trees on a golf course, killing 11 of 28 occupants. The NTSB could not determine whether the crew misread the altimeter, suffered an altimeter malfunction, or misinterpreted the approach chart.",
+  "probable_cause": "The National Transportation Safety Board is unable to determine precisely the probable cause of this accident. Of some 13 potential causes examined by the Board, three remain after final analysis: (1) misreading of the altimeter by the captain, (2) a malfunction of the captain's altimeter after completion of the instrument approach procedure turn, and (3) a misinterpretation of the instrument approach chart. Of these three, however, no single one can be accepted or rejected to the exclusion of another based on the available evidence. (p. 27)",
   "factors": [
     {
       "id": "low_visibility",
       "role": "contributing",
-      "evidence": "Weather was overcast with one and one half miles visibility and snow showers."
+      "evidence": "Weather was overcast with measured ceiling 800 feet, visibility 1.5 miles in light snow showers. (p. 2)"
     },
     {
       "id": "altimeter_setting_error",
       "role": "contributing",
-      "evidence": "Three possible causes examined were misreading of the altimeter by the captain, a malfunction of the captain's altimeter, or misinterpretation of the instrument approach chart."
+      "evidence": "Three potential causes examined: misreading of the altimeter by the captain, malfunction of the captain's altimeter, or misinterpretation of the instrument approach chart. The three-pointer type altimeter is difficult to read with speed and accuracy. (p. 26)"
     },
     {
       "id": "descent_below_minimums",
       "role": "initiating",
-      "evidence": "The aircraft struck treetops just under five nautical miles from the airport, indicating the crew descended below safe altitude."
+      "evidence": "The aircraft descended to tree-top level about 4.7 nautical miles from the airport, below the minimum descent altitude, striking trees about 79 feet high at a terrain elevation of 2,175 feet MSL. (p. 2)"
     },
     {
       "id": "cfit",
       "role": "outcome",
-      "evidence": "The flight struck treetops and came to rest upside down on a snow-covered golf course."
+      "evidence": "The aircraft struck the top branches of a tree about 79 feet in height, then cut a swath through trees bordering a fairway of Pine Acres Golf Course. The main portion struck the ground and came to rest inverted about 400 feet beyond initial ground impact. (p. 2)"
     }
   ],
   "chain": [
@@ -81,74 +87,181 @@
   "events": [
     {
       "t": 0,
-      "clock": null,
+      "clock": "20:27",
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Flight 737 at ten miles from airport requested clearance to make instrument approach to runway 14",
+      "text": "Flight 737 reported position as ten miles from the VOR at Bradford",
       "factors": []
     },
     {
       "t": 60,
-      "clock": null,
+      "clock": "20:28",
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Clearance received to make instrument approach to runway 14 instead of runway 32",
+      "text": "Flight reported over the VOR outbound at 4,000 feet on an IFR flight plan clearance via Airway Victor 13 to the Bradford VOR",
       "factors": []
     },
     {
-      "t": 120,
-      "clock": null,
+      "t": 90,
+      "clock": "20:28:45",
       "phase": "approach",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "Aircraft descended on approach under instrument conditions with reduced visibility",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Erie Approach Control cleared Flight 737 to make VOR runway 32 approach; Bradford FSS advised the flight of weather: partial obscuration 800 feet, visibility 1.5 miles in snow showers, wind 170 degrees at 10 knots",
       "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "20:29:30",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight requested and received clearance to change to runway 14 approach instead of runway 32",
+      "factors": []
+    },
+    {
+      "t": 240,
+      "clock": "20:31:00",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight reported completing procedure turn inbound at approximately 4,000 feet, confirmed wind 160 degrees at 14 knots",
+      "factors": []
+    },
+    {
+      "t": 270,
+      "clock": "20:31:45",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Bradford Radio acknowledged that Flight 737 was completing procedure turn inbound, and this was the last known communication from the flight",
+      "factors": []
+    },
+    {
+      "t": 660,
+      "clock": "20:39:00",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft descended below minimum descent altitude and struck trees on Pine Acres Golf Course about 4.7 nautical miles from Bradford Airport",
+      "factors": [
+        "descent_below_minimums",
+        "cfit"
+      ],
+      "state": {
+        "alt": 79
+      }
+    },
+    {
+      "t": 690,
+      "clock": "20:39:30",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft came to rest inverted on snow-covered golf course about 400 feet from initial ground impact; 11 of 28 occupants killed, 16 seriously injured, 1 uninjured",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "NTSB",
+      "text": "Crew functions not directly related to the approach and landing should be reduced or eliminated, especially during the last 1,000 feet of descent.",
+      "status": "unknown",
+      "trigger_factors": [
+        "low_visibility",
         "descent_below_minimums"
       ]
     },
     {
-      "t": 180,
-      "clock": null,
-      "phase": "approach",
-      "actor": "SYS",
-      "kind": "outcome",
-      "text": "Aircraft struck treetops just under five nautical miles from airport",
-      "factors": [
-        "cfit"
+      "id": null,
+      "to": "NTSB",
+      "text": "During the final approach, one pilot should maintain continuous vigilance of flight instruments inside the cockpit until positive visual reference is established.",
+      "status": "unknown",
+      "trigger_factors": [
+        "descent_below_minimums"
       ]
     },
     {
-      "t": 190,
-      "clock": null,
-      "phase": "approach",
-      "actor": "SYS",
-      "kind": "outcome",
-      "text": "Aircraft came to rest upside down on snow-covered golf course",
-      "factors": []
+      "id": null,
+      "to": "NTSB",
+      "text": "During the last 1,000 feet of final approach where less than full precision facilities exist, the pilot not flying should call out altitude in 100-foot increments above airport elevation.",
+      "status": "unknown",
+      "trigger_factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "id": null,
+      "to": "NTSB",
+      "text": "There should be a requirement to report indicated altitudes to Air Traffic Control at various points in the approach procedure, such as the outbound procedure turn and at the outer marker position.",
+      "status": "unknown",
+      "trigger_factors": [
+        "altimeter_setting_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "NTSB",
+      "text": "The aviation community should consider expediting development and installation of audible and visible altitude warning devices and the implementation of procedures for their use.",
+      "status": "unknown",
+      "trigger_factors": [
+        "altimeter_setting_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "NTSB",
+      "text": "Altimetry systems should be reassessed with particular regard to their susceptibility to insidious interference by forms of precipitation.",
+      "status": "unknown",
+      "trigger_factors": [
+        "altimeter_setting_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "NTSB",
+      "text": "The possibility of development of additional altitude warning systems, external to the aircraft, should be explored. One possibility is a high-intensity visual warning red light beam projected up along and slightly below the desired approach glide slope.",
+      "status": "unknown",
+      "trigger_factors": [
+        "altimeter_setting_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "NTSB",
+      "text": "Development is needed in the fields of radio/radar, and inertial altimetry and CRT/microwave pictorial display approach aids as possible improved replacements for the barometric altimetry system in the near future.",
+      "status": "unknown",
+      "trigger_factors": [
+        "altimeter_setting_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "NTSB",
+      "text": "Modified use of existing approach radar should be further studied with regard to its adaptability as a surveillance tool for nonprecision instrument approaches to monitor automatically and warn against descent below desired glidepath.",
+      "status": "unknown",
+      "trigger_factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "id": null,
+      "to": "NTSB",
+      "text": "There should be increased surveillance and more frequent and more rigorous inspection and maintenance of altimetry systems by both the air carriers and the FAA.",
+      "status": "unknown",
+      "trigger_factors": [
+        "altimeter_setting_error"
+      ]
     }
   ],
-  "report_links": [
-    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-10.pdf"
-  ],
-  "wikipedia": "https://en.wikipedia.org/wiki/Allegheny_Airlines_Flight_737",
-  "asn_id": "19690106-0",
-  "interest": 10.64,
-  "extraction": {
-    "method": "llm",
-    "model": "claude-haiku-4-5",
-    "confidence": "high",
-    "reviewed": false,
-    "notes": [
-      "Read key sections including executive summary, findings, probable cause, and recommendations"
-    ]
-  },
-  "time_reference": "EST",
-  "t0": "1969-01-06T14:40:00-05:00",
-  "damage": "destroyed",
-  "injuries_serious": 0,
-  "recommendations": [],
   "dissent": [],
   "safety_changes": [],
   "related": [],
@@ -156,6 +269,23 @@
   "sources": [
     "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-10.pdf"
   ],
-  "curated_id": null,
-  "cvr": []
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read History of Flight (p. 2-6), Findings (p. 26), Probable Cause (p. 27), Recommendations (p. 28-31)",
+      "8 events with precise clock times from ATC communications and witness reports",
+      "Probable cause text includes all three competing hypotheses",
+      "10 recommendations extracted and numbered 3-12 from report"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Allegheny_Airlines_Flight_737",
+  "asn_id": "19690106-0",
+  "interest": 10.64,
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-10.pdf"
+  ],
+  "curated_id": null
 }

@@ -2,11 +2,10 @@
   "id": "wd_q3002158",
   "qid": "Q3002158",
   "tier": "wikidata",
-  "depth": "sections",
+  "depth": "full",
   "title": "Proteus Airlines 706",
-  "flight_number": null,
+  "flight_number": "PRB 706",
   "date": "1998-07-30",
-  "agency": "BEA",
   "agencies": [
     {
       "code": "BEA",
@@ -30,32 +29,42 @@
     "name": "Quiberon Bay",
     "country": "France"
   },
-  "phase": "approach",
+  "phase": "descent",
   "occupants": 15,
   "fatalities": 15,
   "category": "MAC",
-  "summary": "Proteus Airlines Flight 706, a Beechcraft 1900D, took off from Lyon on July 30, 1998, bound for Lorient. About seventy minutes into the flight, the crew deviated to Quiberon Bay to show passengers the SS Norway cruise ship. A Cessna 177 from Vannes had taken off for a local flight to Quiberon with its transponder off. During the Beechcraft's descent to 2000 ft while making a 360\u00b0 turn around the ship, the aircraft collided with the Cessna, and both crashed into the sea.",
-  "probable_cause": "Collision occurred because the Cessna's transponder was not switched on, rendering it invisible to radar and traffic avoidance systems. The Beechcraft's TCAS had been removed and not approved for operation in France. The cockpit organization and ergonomics during the 360\u00b0 turn did not allow effective monitoring outside the turn, placing the Cessna in the Beechcraft's blind spot.",
+  "summary": "Proteus Airlines Flight 706, a Beechcraft 1900D departing Lyon bound for Lorient, deviated from planned route to conduct a 360-degree turn around the SS Norway cruise ship at 2,000 feet in Quiberon Bay. A Cessna 177 from Vannes, operating on local flight with transponder off, descended through 1,500-2,000 feet in the same airspace. The two aircraft collided at approximately 2,000 feet at 13:58 UTC. Both aircraft immediately fell into the sea. All 15 persons aboard the Beechcraft (2 crew, 12 passengers, 1 infant) and the 1 pilot aboard the Cessna were killed. Both aircraft were destroyed.",
+  "probable_cause": "Collision occurred because the Cessna's transponder was not switched on, rendering it invisible to radar and traffic avoidance systems. The Beechcraft's TCAS had been removed and not approved for operation in France. The cockpit organization and ergonomics during the 360\u00b0 turn did not allow effective monitoring outside the turn, placing the Cessna in the Beechcraft's blind spot. The decision to deviate and change flight regime from IFR to VFR placed the crew in an improvised and unusual situation. (p. 52-53)",
   "factors": [
     {
       "id": "loss_of_situational_awareness",
       "role": "contributing",
-      "evidence": "organization of activity in the Beechcraft's cockpit during the left-hand 360\u00b0 turn did not allow for effective monitoring outside the turn"
+      "evidence": "Organization of activity in the Beechcraft's cockpit during the left-hand 360\u00b0 turn did not allow for effective monitoring outside the turn. Captain was assigned to look outside while copilot (PF) handled trajectory, but blind spots prevented visual detection. (p. 53)"
     },
     {
       "id": "design_deficiency",
       "role": "contributing",
-      "evidence": "TCAS installed in the Beechcraft at the factory had been removed due to not yet being approved for operation in France"
+      "evidence": "TCAS installed in the Beechcraft at the factory had been removed because it had not yet been approved for operation in France. This collision avoidance system would have provided alerting. (p. 53)"
     },
     {
       "id": "warning_system_deficiency",
       "role": "contributing",
-      "evidence": "Cessna's transponder had not been switched on"
+      "evidence": "Cessna 177's transponder with altitude reporting was not switched on. Cessna was equipped with transponder but pilot chose not to use it, making aircraft invisible to radar. (p. 53)"
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "The two aircraft were on different frequencies: Beechcraft on Lorient Approach frequency, Cessna on Quiberon AFIS frequency. Controllers ignorant of each other's traffic could not provide traffic information. (p. 53)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Decision to cancel IFR plan and change flight regime placed crew in VFR flight rules domain within uncontrolled Class G airspace where 'see and avoid' rule applies. Crew was informed of significant VFR traffic but proceeded anyway. (p. 53)"
     },
     {
       "id": "midair_collision",
       "role": "outcome",
-      "evidence": "the Proteus aircraft collided with the Cessna and both aircraft immediately fell to the water"
+      "evidence": "The two aircraft collided at approximately 2,000 feet at 13:58 UTC. The Cessna's propeller marks were found on upper surface of Beechcraft's right wing. Both aircraft immediately fell into the sea. (p. 9, 53)"
     }
   ],
   "chain": [
@@ -68,6 +77,14 @@
       "loss_of_situational_awareness"
     ],
     [
+      "atc_communication_error",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "procedural_noncompliance",
+      "loss_of_situational_awareness"
+    ],
+    [
       "loss_of_situational_awareness",
       "midair_collision"
     ]
@@ -75,49 +92,112 @@
   "events": [
     {
       "t": 0,
-      "clock": "14:21",
+      "clock": "12:21",
       "phase": "cruise",
-      "actor": "SYS",
+      "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Flight 706 took off from Lyon\u2013Saint-Exup\u00e9ry at 14:21 local time on a flight to Lorient Lann-Bihou\u00e9 airport.",
+      "text": "Proteus Airlines Flight 706 (Beech 1900D, F-GSJM) departed Lyon\u2013Saint-Exup\u00e9ry at 12:21 UTC for Lorient Lann-Bihou\u00e9 with 2 crew and 12 passengers aboard, cruising at FL 160.",
       "factors": []
     },
     {
-      "t": 4200,
-      "clock": "15:53",
+      "t": 4904,
+      "clock": "13:41:44",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "atc",
+      "text": "Beechcraft crew in contact with Brest Control requests descent and authorization to deviate slightly west to Quiberon Bay to see the SS Norway cruise ship (formerly France) anchored there. Request approved by Brest.",
+      "factors": []
+    },
+    {
+      "t": 5220,
+      "clock": "13:48",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Beechcraft crew contacts Lorient Approach and requests descent, receiving clearance to 3,700 feet at QNH 1015 hPa. Crew expresses wish to descend lower to see the 'France' (Norway).",
+      "factors": []
+    },
+    {
+      "t": 5536,
+      "clock": "13:52:16",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Lorient Approach advises Beechcraft crew to maintain VFR conditions and advises of significant VFR traffic on the bay (Quiberon and Belle-\u00cele areas). Crew acknowledges flying in good conditions. (p. 52-53)",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 5640,
+      "clock": "13:54:00",
       "phase": "descent",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "About seventy minutes into the flight, the crew made a request to the Lorient approach controller to deviate from their route slightly to the west to Quiberon Bay.",
-      "factors": []
+      "text": "Beechcraft crew at 13:53:21 decides to make a 360\u00b0 turn around SS Norway and cancel IFR flight plan. Crew initially plans descent to 2,500 feet then changes to 2,000 feet. Lorient Approach acknowledges IFR cancellation at 13:54. (p. 9, 52)",
+      "factors": [
+        "procedural_noncompliance"
+      ]
     },
     {
-      "t": 5400,
-      "clock": "15:56",
+      "t": 5700,
+      "clock": "13:56:00",
       "phase": "descent",
       "actor": "SYS",
       "kind": "system",
-      "text": "A Cessna 177 registered F-GAJE belonging to a local flying club took off from the airfield at Vannes for a local flight to Quiberon.",
+      "text": "Cessna 177 (F-GAJE) departs Vannes airfield for local flight to Quiberon, descending from 3,000 toward 1,500 feet. Cessna pilot contacts Quiberon AFIS at 13:56 advising descent from 3,000 to 1,500 feet. Transponder with altitude reporting is not switched on. (p. 9, 52)",
       "factors": [
         "warning_system_deficiency"
       ]
     },
     {
-      "t": 6480,
-      "clock": "15:58",
+      "t": 5760,
+      "clock": "13:57:00",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Beechcraft crew task-divides: captain looks outside aircraft, copilot (PF) handles trajectory and descent. Captain has in view two other aircraft lower around the ship, but cockpit organization during 360\u00b0 turn does not allow effective surveillance, especially outside the turn. (p. 53)",
+      "factors": [
+        "loss_of_situational_awareness",
+        "design_deficiency"
+      ]
+    },
+    {
+      "t": 5880,
+      "clock": "13:58:00",
       "phase": "approach",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "After they received confirmation of this request at 15:58, the Proteus aircraft collided with the Cessna.",
+      "text": "At 13:57:10, Beechcraft crew announces approaching end of 360\u00b0 turn and requests direct course to Lorient; receives favorable response. At approximately 13:58 UTC, Beechcraft ending turn with slight left bank and Cessna in descent collide at about 2,000 feet. Two aircraft collide at right angles; Cessna propeller marks found on upper surface of Beechcraft's right wing. Both aircraft immediately fall into Quiberon Bay. (p. 9, 52-53)",
       "factors": [
+        "atc_communication_error",
         "midair_collision"
       ]
     }
   ],
-  "report_links": [
-    "https://www.bea.aero/fileadmin/documents/docspa/1998/f-je980730/pdf/f-je980730.pdf",
-    "https://bea.aero/les-enquetes/evenements-notifies/detail/accident-survenu-au-beech-1900d-immatricule-f-gsjm-exploite-par-proteus-airlines-et-au-cessna-177-immatricule-f-gaje-le-30-juillet-1998-en-baie-de-quiberon-56/",
-    "https://web.archive.org/web/20180928191002/https://www.bea.aero/docspa/1998/f-je980730/htm/f-je980730.htm"
+  "recommendations": [
+    {
+      "id": "1",
+      "text": "DGAC to ensure paragraph OPS1-100 is correctly understood and applied by operators. Provisions should specify that access to flight deck outside cruise phase be limited to crew and official technical personnel; flight deck door must be closed. Passenger presence and communications in cockpit door frame should not interfere with crew operations. (p. 54-55)"
+    },
+    {
+      "id": "2",
+      "text": "DGAC request French public air transport operators establish flight regime for each route (IFR preferred), motivate any VFR decision, specify conditions ensuring safety, prohibit IFR cancellation except for necessity, and ensure safety appears systematically and clearly in crew instructions as priority over commercial or profitability concerns. (p. 55)"
+    },
+    {
+      "id": "3",
+      "text": "DGAC take action so all public air transport crews in IFR can know any aircraft representing collision risk. Achieve through: (1) establishing appropriate airspace classes or specific protected zones for IFR trajectories, (2) equipping public transport aircraft with TCAS without awaiting regulatory deadline, (3) requiring transponder with altitude reporting for aircraft above adapted reference levels. (p. 56)"
+    },
+    {
+      "id": "4",
+      "text": "Attract attention of general aviation users to RAC 1-05 Manual provisions regarding transponder mode and code procedures for VFR flights. No control organization should request or suggest crew disable transponder emission except for safety necessity. (p. 56-57)"
+    }
+  ],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.bea.aero/fileadmin/documents/docspa/1998/f-je980730/pdf/f-je980730.pdf"
   ],
   "wikipedia": "https://en.wikipedia.org/wiki/Proteus_Airlines_Flight_706",
   "asn_id": "19980730-1",
@@ -128,20 +208,18 @@
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Extracted from official accident report",
-      "Key sections read: synopsis, findings, probable cause, recommendations"
+      "Read flight narrative section (p. 8-10, D\u00e9roulement des vols) with detailed timeline and UTC times",
+      "Read Established Facts section (p. 52-53, Faits \u00e9tablis) with 20 numbered facts",
+      "Read Probable Causes section (p. 52-53, Causes probables) with identified contributing factors",
+      "Read Recommendations section (p. 54-57) with 4 numbered recommendations",
+      "Extracted 8+ detailed events with specific UTC clock times from CVR and radar data",
+      "Report identifies both crew and Cessna pilot factors; TCAS removal key issue"
     ]
   },
   "curated_id": null,
-  "sources": [
-    "https://www.bea.aero/fileadmin/documents/docspa/1998/f-je980730/pdf/f-je980730.pdf",
-    "https://bea.aero/les-enquetes/evenements-notifies/detail/accident-survenu-au-beech-1900d-immatricule-f-gsjm-exploite-par-proteus-airlines-et-au-cessna-177-immatricule-f-gaje-le-30-juillet-1998-en-baie-de-quiberon-56/",
-    "https://web.archive.org/web/20180928191002/https://www.bea.aero/docspa/1998/f-je980730/htm/f-je980730.htm"
+  "report_links": [
+    "https://www.bea.aero/fileadmin/documents/docspa/1998/f-je980730/pdf/f-je980730.pdf"
   ],
-  "recommendations": [],
   "dissent": [],
-  "safety_changes": [],
-  "related": [],
-  "cvr": [],
-  "fdr": null
+  "agency": "BEA"
 }

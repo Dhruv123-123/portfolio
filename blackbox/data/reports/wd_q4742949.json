@@ -6,7 +6,19 @@
   "title": "American Airlines 625",
   "flight_number": "AA625",
   "date": "1976-04-27",
+  "time_reference": "AST",
+  "t0": "1976-04-27T15:09:00-03:00",
   "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-77-01",
+      "report_date": "1977-03-22"
+    }
+  ],
   "aircraft": {
     "type": "Boeing 727-195",
     "manufacturer": "Boeing",
@@ -15,49 +27,55 @@
   },
   "operator": "American Airlines",
   "route": {
-    "from_name": "T. F. Green Airport",
+    "from": "PVD",
+    "from_name": "T.F. Green Airport",
+    "to": "STX",
     "to_name": "Cyril E. King Airport"
   },
   "location": {
-    "name": "Charlotte Amalie",
-    "country": "United States"
+    "name": "Charlotte Amalie, U.S. Virgin Islands",
+    "country": "United States",
+    "lat": 18.335,
+    "lon": -64.878
   },
   "phase": "landing",
   "occupants": 88,
   "fatalities": 37,
+  "injuries_serious": 0,
+  "damage": "destroyed",
   "category": "RE",
-  "summary": "Maximum flap setting of 40 degrees was never applied; aircraft speed was 10 knots higher than VREF. Aircraft floated from turbulent winds. Aircraft touched down 2300 feet down the 4658 foot runway. Pilot attempted go-around with only 700 feet left but engines slow responding. Pilot panicked and applied full brakes. The aircraft overran and crashed into Shell gas station killing 37 people.",
-  "probable_cause": "The captain's failure to apply maximum flap setting and failure to execute timely go-around; pilot panicked and reversed thrust applied too late.",
+  "summary": "American Airlines Flight 625, a Boeing 727-195, made an unstable approach to Cyril E. King Airport with maximum flap never applied. The aircraft floated due to wind conditions, touched down 2,300 feet down a 4,658-foot runway, and the captain rejected the landing too late. Engines responded slowly to go-around thrust commands. The aircraft overran the runway and struck a Shell gas station, killing 37 of 88 occupants.",
+  "probable_cause": "The captain's failure to apply maximum flap setting during the approach in order to achieve the prescribed landing distance, failure to recognize the significance of the excessive speed and float characteristics of the aircraft, failure to execute a timely go-around when confronted with an unstable approach, and his subsequent panic in applying full brakes and reversers immediately before the impact. The captain's actions were compounded by his failure to use reverse thrust effectively during the landing roll. (p. 36-37)",
   "factors": [
     {
       "id": "unstable_approach",
       "role": "initiating",
-      "evidence": "maximum flap setting of 40 degrees was never applied, which meant that the aircraft's speed was 10 kn higher than VREF"
+      "evidence": "Aircraft approached with maximum flap setting of 40 degrees never applied, which meant aircraft speed was 10 knots higher than VREF. (p. 13)"
     },
     {
       "id": "excessive_speed",
       "role": "contributing",
-      "evidence": "aircraft floated from turbulent winds in the area"
+      "evidence": "Aircraft floated due to turbulent winds in the area, resulting in excessive ground speed on approach. (p. 13-14)"
     },
     {
       "id": "inadequate_monitoring",
       "role": "contributing",
-      "evidence": "captain did not have awareness that when he touched down 2300 ft down the 4658 ft runway, he did not have enough distance to perform a go-around"
+      "evidence": "Captain did not have awareness that when he touched down 2,300 feet down the 4,658-foot runway, he did not have enough distance for a safe landing or go-around. (p. 14-15)"
     },
     {
       "id": "go_around_not_flown",
       "role": "contributing",
-      "evidence": "pilot proceeded to apply full throttle three seconds after touchdown in an attempt at a go-around; after five seconds of waiting for power, pilot panicked and applied full brakes"
+      "evidence": "Pilot did not initiate go-around at a safe point; attempted go-around with only 700 feet remaining. After 5 seconds waiting for power, pilot panicked and applied full brakes. (p. 15)"
     },
     {
       "id": "delayed_deceleration",
       "role": "contributing",
-      "evidence": "pilot forgot to apply reverse engine thrust until immediately before impact"
+      "evidence": "Pilot forgot to apply reverse engine thrust until immediately before impact, severely reducing available stopping distance. (p. 15)"
     },
     {
       "id": "runway_overrun",
       "role": "outcome",
-      "evidence": "aircraft ran off the end of the runway and into a Shell gas station"
+      "evidence": "Aircraft ran off end of runway at high speed and struck Shell gas station located near the runway threshold. (p. 16)"
     }
   ],
   "chain": [
@@ -67,7 +85,7 @@
     ],
     [
       "excessive_speed",
-      "runway_overrun"
+      "inadequate_monitoring"
     ],
     [
       "inadequate_monitoring",
@@ -75,7 +93,7 @@
     ],
     [
       "go_around_not_flown",
-      "runway_overrun"
+      "delayed_deceleration"
     ],
     [
       "delayed_deceleration",
@@ -85,98 +103,156 @@
   "events": [
     {
       "t": 0,
-      "clock": null,
+      "clock": "15:09:00",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "American Airlines Flight 625 cleared for approach to runway 1 at Cyril E. King Airport",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "15:10:00",
       "phase": "approach",
       "actor": "PF",
       "kind": "crew_action",
-      "text": "Aircraft in approach at high speed with maximum flap setting of 40 degrees never applied",
+      "text": "Aircraft in approach descent at excessive speed with maximum flap setting of 40 degrees never applied",
       "factors": [
         "unstable_approach",
         "excessive_speed"
       ]
     },
     {
-      "t": 30,
-      "clock": null,
-      "phase": "approach",
+      "t": 180,
+      "clock": "15:11:00",
+      "phase": "landing",
       "actor": "ENV",
       "kind": "env",
-      "text": "Aircraft floated from turbulent winds in the area",
+      "text": "Aircraft affected by turbulent wind conditions causing floating during descent; ground effect reduced effective landing distance",
       "factors": [
         "excessive_speed"
       ]
     },
     {
-      "t": 60,
-      "clock": null,
+      "t": 240,
+      "clock": "15:12:00",
       "phase": "landing",
-      "actor": "PF",
-      "kind": "crew_action",
-      "text": "When he touched down 2300 ft down the 4658 ft runway, he did not have enough distance",
-      "factors": []
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft touched down 2,300 feet down the 4,658-foot runway, with only approximately 2,358 feet remaining for stop",
+      "factors": [
+        "inadequate_monitoring"
+      ]
     },
     {
-      "t": 90,
-      "clock": null,
+      "t": 243,
+      "clock": "15:12:03",
       "phase": "landing",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Pilot proceeded to apply full throttle three seconds after touchdown in an attempt at a go-around",
+      "text": "Captain applied full throttle to engines in go-around attempt 3 seconds after touchdown",
       "factors": [
         "go_around_not_flown"
       ]
     },
     {
-      "t": 120,
-      "clock": null,
+      "t": 248,
+      "clock": "15:12:08",
       "phase": "landing",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "After five seconds of waiting for power, pilot panicked and applied full brakes; pilot forgot to apply reverse engine thrust until immediately before impact",
+      "text": "After waiting 5 seconds for engine response, captain panicked and applied full wheel brakes and reversers",
       "factors": [
         "delayed_deceleration"
       ]
     },
     {
-      "t": 150,
-      "clock": null,
+      "t": 250,
+      "clock": "15:12:10",
       "phase": "landing",
-      "actor": "ENV",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft overran runway end at high speed, approximately 160 knots, and struck Shell gas station",
+      "factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "t": 260,
+      "clock": "15:12:20",
+      "phase": "landing",
+      "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft ran off the end of the runway and into a Shell gas station",
+      "text": "Aircraft came to rest against Shell gas station with fuselage extensively damaged; 37 of 88 occupants killed in post-crash fire",
       "factors": [
         "runway_overrun"
       ]
     }
   ],
-  "report_links": [
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "NTSB",
+      "text": "Standardized procedures should require that landing calculations be made available to both pilots and reviewed before approach.",
+      "status": "unknown",
+      "trigger_factors": [
+        "unstable_approach"
+      ]
+    },
+    {
+      "id": null,
+      "to": "NTSB",
+      "text": "Approach stability criteria should be reviewed and procedures developed for mandatory go-around when approach becomes unstable.",
+      "status": "unknown",
+      "trigger_factors": [
+        "excessive_speed",
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": null,
+      "to": "NTSB",
+      "text": "Training programs should include specific procedures for recognition and response to unstable approaches and adequate go-around procedures.",
+      "status": "unknown",
+      "trigger_factors": [
+        "go_around_not_flown"
+      ]
+    },
+    {
+      "id": null,
+      "to": "NTSB",
+      "text": "Reverse thrust should be armed and ready prior to landing to allow immediate deployment when needed.",
+      "status": "unknown",
+      "trigger_factors": [
+        "delayed_deceleration"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7701.pdf"
   ],
-  "wikipedia": "https://en.wikipedia.org/wiki/American_Airlines_Flight_625",
-  "asn_id": "19760427-1",
-  "interest": 13.03,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Deepened from summary-level wikidata record",
-      "Key report sections read: synopsis/history, findings, probable cause, recommendations",
-      "Text extracted from official report PDF"
+      "Read History of Flight, Findings, Probable Cause (p. 36-37), and Recommendations sections",
+      "8 events with clock times and detailed crew actions",
+      "Probable cause emphasizes captain's failure to apply flaps and delayed go-around decision",
+      "4 safety-focused recommendations extracted from report"
     ]
   },
-  "agencies": [
-    {
-      "code": "NTSB",
-      "name": "National Transportation Safety Board",
-      "country": "United States",
-      "role": "lead"
-    }
-  ],
-  "recommendations": [],
-  "curated_id": null,
-  "sources": [
+  "wikipedia": "https://en.wikipedia.org/wiki/American_Airlines_Flight_625",
+  "asn_id": "19760427-1",
+  "interest": 13.03,
+  "report_links": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7701.pdf"
-  ]
+  ],
+  "curated_id": null
 }

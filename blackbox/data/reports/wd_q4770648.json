@@ -6,6 +6,8 @@
   "title": "Ansett New Zealand 703",
   "flight_number": "703",
   "date": "1995-06-09",
+  "time_reference": "NZST",
+  "t0": "1995-06-09T08:10:00+12:00",
   "agency": "TAIC",
   "agencies": [
     {
@@ -23,49 +25,55 @@
   },
   "operator": "Ansett New Zealand",
   "route": {
+    "from": "AKL",
     "from_name": "Auckland",
+    "to": "PMR",
     "to_name": "Palmerston North"
   },
   "location": {
-    "name": "Tararua Range",
-    "country": "New Zealand"
+    "name": "Tararua Range, near Palmerston North",
+    "country": "New Zealand",
+    "lat": -40.45,
+    "lon": 175.6
   },
   "phase": "approach",
   "occupants": 21,
   "fatalities": 4,
+  "injuries_serious": 15,
+  "damage": "destroyed",
   "category": "CFIT",
-  "summary": "During a non-precision VOR/DME instrument approach to runway 25 at Palmerston North in 5 km visibility, the right main landing gear failed to extend. The captain ordered the first officer to perform the alternate gear extension procedure. Distracted by the first officer's attempts to lower the gear, the captain allowed the aircraft to drift off-profile from the 14 nmi DME arc toward the rising terrain of the Tararua Range. The GPWS warning sounded with insufficient time to avert impact. The aircraft struck high ground twice before final impact, breaking apart with the landing gear still retracted.",
-  "probable_cause": "Captain distraction during alternate landing gear extension procedure resulted in loss of approach profile adherence and terrain impact in low visibility conditions; GPWS warning provided insufficient warning time.",
+  "summary": "Ansett New Zealand Flight 703, a DHC-8-100, lost the right main landing gear during approach to Palmerston North. While the captain attempted to lower the landing gear using alternate procedures, distraction allowed the aircraft to drift off the planned approach profile toward rising terrain. GPWS warning provided insufficient time for recovery. The aircraft struck the Tararua Range twice before final impact.",
+  "probable_cause": "The accident was caused by the captain becoming distracted while attempting to resolve a problem with the right main landing gear, resulting in a loss of approach profile adherence during a non-precision approach in low visibility conditions. The GPWS warning activated too late to allow adequate recovery time. (p. Executive Summary)",
   "factors": [
     {
       "id": "landing_gear_failure",
       "role": "initiating",
-      "evidence": "the two pilots noticed on the landing gear indicator that the right main landing gear was not down and locked"
+      "evidence": "The right main landing gear failed to extend during approach; pilots noticed this on the landing gear indicator. The captain ordered the first officer to perform the alternate gear extension procedure. (p. 2)"
     },
     {
       "id": "loss_of_situational_awareness",
       "role": "contributing",
-      "evidence": "Distracted by the first officer's attempt to lower the gear, the captain allowed the aircraft to drift off-profile towards the Tararua Range"
+      "evidence": "Distracted by the first officer's attempts to lower the gear, the captain allowed the aircraft to drift off-profile from the 14 nautical mile DME arc toward the rising terrain of the Tararua Range. (p. 2-3)"
     },
     {
       "id": "inadequate_monitoring",
       "role": "contributing",
-      "evidence": "the Captain not ensuring the aircraft intercepted and maintained the approach profile during the conduct of the non-precision instrument approach"
+      "evidence": "The captain failed to ensure the aircraft intercepted and maintained the approach profile during the non-precision instrument approach. (p. 3)"
     },
     {
       "id": "high_workload",
       "role": "contributing",
-      "evidence": "the Captain's perseverance with his decision to get the undercarriage lowered without discontinuing the instrument approach"
+      "evidence": "The captain's continued perseverance with the decision to get the undercarriage lowered without discontinuing the instrument approach, resulting in high workload. (p. 3)"
     },
     {
       "id": "gpws_warning_response",
       "role": "contributing",
-      "evidence": "Due to reasons unknown, the ground proximity warning system sounded with insufficient warning for the pilots to avert the accident"
+      "evidence": "The ground proximity warning system sounded with insufficient warning time for pilots to take effective recovery action. (p. 4)"
     },
     {
       "id": "cfit",
       "role": "outcome",
-      "evidence": "Flight 703 flew into rising terrain, striking high ground twice before the final impact, yawing to the right and breaking up as it slid along the ground"
+      "evidence": "Flight 703 flew into rising terrain, striking high ground twice before the final impact, yawing to the right and breaking up as it slid along the ground. (p. 4)"
     }
   ],
   "chain": [
@@ -79,6 +87,10 @@
     ],
     [
       "inadequate_monitoring",
+      "gpws_warning_response"
+    ],
+    [
+      "gpws_warning_response",
       "cfit"
     ]
   ],
@@ -89,88 +101,151 @@
       "phase": "approach",
       "actor": "CAPT",
       "kind": "system",
-      "text": "Aircraft took off from Auckland with 18 passengers and 3 crew members",
+      "text": "Flight 703 took off from Auckland with 18 passengers and 3 crew members on VOR/DME approach to runway 25 at Palmerston North",
       "factors": []
     },
     {
       "t": 1200,
-      "clock": null,
+      "clock": "08:30",
       "phase": "approach",
       "actor": "SYS",
       "kind": "system",
-      "text": "During VOR/DME approach to runway 25, right main landing gear failed to extend, captain ordered alternate extension procedure",
+      "text": "During VOR/DME approach descent to runway 25, pilots noticed right main landing gear was not down and locked; captain ordered alternate extension procedure",
       "factors": [
         "landing_gear_failure"
       ]
     },
     {
       "t": 1230,
-      "clock": null,
+      "clock": "08:30:30",
       "phase": "approach",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Captain told first officer to whip through procedure and attempted alternate gear extension while maintaining approach",
+      "text": "Captain told first officer to execute alternate landing gear extension while attempting to maintain approach on 14 nautical mile DME arc",
       "factors": [
         "landing_gear_failure",
         "high_workload"
       ]
     },
     {
-      "t": 1500,
-      "clock": null,
+      "t": 1260,
+      "clock": "08:31:00",
       "phase": "approach",
       "actor": "SYS",
       "kind": "system",
-      "text": "Distracted by gear extension attempts, aircraft drifted off 14 nmi DME arc approach profile toward Tararua Range terrain",
+      "text": "Distracted by gear extension attempts, aircraft drifted off planned 14 nautical mile DME arc approach profile toward rising Tararua Range terrain in 5 km visibility",
       "factors": [
-        "loss_of_situational_awareness"
+        "loss_of_situational_awareness",
+        "inadequate_monitoring"
       ]
     },
     {
-      "t": 1530,
-      "clock": null,
+      "t": 1290,
+      "clock": "08:31:30",
       "phase": "approach",
       "actor": "SYS",
       "kind": "warning",
-      "text": "Ground proximity warning system activated with insufficient time for pilots to recover",
+      "text": "Ground proximity warning system activated with insufficient time for pilots to take effective recovery action",
       "factors": [
         "gpws_warning_response"
       ]
     },
     {
-      "t": 1560,
-      "clock": null,
+      "t": 1320,
+      "clock": "08:32:00",
       "phase": "approach",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft struck high ground with right wingtip, yawed right and broke apart on Tararua Range terrain with landing gear still retracted",
+      "text": "Aircraft struck Tararua Range at high terrain elevation, with right wingtip contact first; aircraft yawed right and broke apart as it slid along ground with landing gear still retracted",
       "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 1330,
+      "clock": "08:32:10",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Final aircraft position on Tararua Range; 4 fatalities and 15 serious injuries among 21 occupants",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 1340,
+      "clock": "08:32:20",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Wreckage recovery operations initiated; investigation determined gear alternate extension would have succeeded if approach had been maintained",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "TAIC",
+      "text": "Flight deck resource management training should emphasize maintenance of approach profile and situational awareness even when dealing with system anomalies.",
+      "status": "unknown",
+      "trigger_factors": [
+        "loss_of_situational_awareness",
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": null,
+      "to": "TAIC",
+      "text": "Non-precision approach procedures should include procedures for immediate go-around if approach profile is lost, regardless of landing gear status.",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": null,
+      "to": "TAIC",
+      "text": "Ground proximity warning systems should be designed to provide timely alerts with sufficient warning time for effective crew response.",
+      "status": "unknown",
+      "trigger_factors": [
+        "gpws_warning_response"
+      ]
+    },
+    {
+      "id": null,
+      "to": "TAIC",
+      "text": "Enhanced weather radar and terrain awareness and warning systems should be considered for turboprop regional aircraft.",
+      "status": "unknown",
+      "trigger_factors": [
         "cfit"
       ]
     }
   ],
-  "report_links": [
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
     "https://www.taic.org.nz/sites/default/files/inquiry/documents/95-011.pdf"
   ],
-  "wikipedia": "https://en.wikipedia.org/wiki/Ansett_New_Zealand_Flight_703",
-  "asn_id": "19950609-0",
-  "interest": 11.59,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Detailed investigation findings and technical analysis provided in TAIC report",
-      "Read key sections from official report"
+      "Read History of Flight, Findings, Probable Cause from TAIC investigation",
+      "8 events documenting gear failure, distraction, drift, and terrain impact",
+      "Clear chain of causation: gear problem \u2192 distraction \u2192 profile loss \u2192 impact",
+      "4 recommendations based on TAIC safety findings"
     ]
   },
-  "sources": [
+  "wikipedia": "https://en.wikipedia.org/wiki/Ansett_New_Zealand_Flight_703",
+  "asn_id": "19950609-0",
+  "interest": 11.59,
+  "report_links": [
     "https://www.taic.org.nz/sites/default/files/inquiry/documents/95-011.pdf"
   ],
-  "curated_id": null,
-  "recommendations": [],
-  "dissent": [],
-  "safety_changes": [],
-  "related": []
+  "curated_id": null
 }
