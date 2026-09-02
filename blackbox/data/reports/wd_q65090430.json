@@ -1,0 +1,250 @@
+{
+  "id": "wd_q65090430",
+  "qid": "Q65090430",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "1985 Teterboro collision",
+  "flight_number": null,
+  "date": "1985-11-10",
+  "time_reference": "EST",
+  "t0": "1985-11-10T22:22:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-87/05",
+      "report_title": "Aircraft Accident Report: Midair Collision of Nabisco Brands, Inc., Dassault Falcon, DASO, N784B and Air Pegasus Corporation Piper Archer, PA28-181, N1977H",
+      "report_date": "1987-06-10",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8705.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Dassault Falcon 50",
+    "manufacturer": "Dassault",
+    "family": "Falcon",
+    "registration": "N784B",
+    "msn": null,
+    "engines": null
+  },
+  "operator": "Nabisco Brands Inc.",
+  "route": {
+    "from": "KTRB",
+    "from_name": "Teterboro Airport",
+    "to": "KTRB",
+    "to_name": "Teterboro Airport"
+  },
+  "location": {
+    "name": "Fairview/Cliffside Park, New Jersey, over Teterboro Airport",
+    "country": "United States",
+    "lat": 40.869,
+    "lon": -74.062
+  },
+  "phase": "approach",
+  "occupants": 6,
+  "fatalities": 6,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "A Dassault Falcon 50 and Piper Cherokee collided mid-air over Teterboro Airport near 1,500 feet altitude at approximately 22:24 EST. The Falcon was cleared for a standard instrument approach and turned to downwind leg to runway 19. Both aircraft fell into residential areas of Fairview and Cliffside Park, causing fires and destroying buildings. The NTSB found a breakdown in ATC coordination and controller failure to follow procedures, preventing the crew from seeing and avoiding the other aircraft in darkness.",
+  "probable_cause": "The National Transportation Safety Board determines that the probable cause of the accident was a breakdown in air traffic control coordination which resulted in an air traffic conflict and the inability of the DA50 flightcrew to 'see and avoid' the other aircraft due to (1) an erroneous and inadequate traffic advisory and (2) the physiological limitations of human vision and reaction time at night. Air traffic control management contributed to the accident by failing to insure that controllers were following prescribed procedures and by failing to recognize and correct operational deficiencies.",
+  "factors": [
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "Dassault Falcon 50 and Piper Cherokee collided mid-air at approximately 1,500 feet altitude (p. 60)"
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "Local controller gave misleading traffic advisories concerning the direction of the transiting PA28 (p. 60)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "DA50 flightcrew loss of situational awareness and probably misidentified the PA28 (p. 61)"
+    },
+    {
+      "id": "dark_night",
+      "role": "latent",
+      "evidence": "Limitations to vision at night contributed to difficulty in resolving collision course geometry (p. 61)"
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Breakdown in coordination among FAA air traffic controllers and congested radio frequency (p. 61)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "TEB control tower coordinator and clearance delivery controller failed to follow prescribed procedures (p. 60)"
+    }
+  ],
+  "chain": [
+    [
+      "dark_night",
+      "inadequate_monitoring"
+    ],
+    [
+      "atc_communication_error",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "inadequate_monitoring",
+      "midair_collision"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "midair_collision"
+    ],
+    [
+      "procedural_noncompliance",
+      "atc_communication_error"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "22:22",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Dassault Falcon 50 cleared for standard instrument approach to Teterboro",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "22:24",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Falcon turned left to position on downwind leg to runway 19",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": "22:25",
+      "phase": "approach",
+      "actor": "OTHER",
+      "kind": "system",
+      "text": "Piper Cherokee flying westbound over airport at approximately 1,500 feet in VFR conditions",
+      "factors": []
+    },
+    {
+      "t": 240,
+      "clock": "22:26",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Dassault Falcon 50 and Piper Cherokee collided mid-air at approximately 1,500 feet altitude",
+      "state": {
+        "alt": 1500
+      },
+      "factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": "22:27",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Both aircraft fell into residential areas of Fairview and Cliffside Park causing fires",
+      "factors": [
+        "midair_collision"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-87-046",
+      "to": "FAA",
+      "text": "Issue a General Notice to all facilities to require briefing on importance of conducting complete position relief briefing prior to assuming duties",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": [
+        "atc_communication_error",
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "A-87-047",
+      "to": "FAA",
+      "text": "Require the implementation of traffic advisories that will help pilots to avoid collision hazards when the target is in close proximity to the hearing pilot's position",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "id": "A-87-048",
+      "to": "FAA",
+      "text": "Reassess the adequacy of current minimum safe altitude rules and procedures",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "id": "A-87-049",
+      "to": "FAA",
+      "text": "Direct the Teterboro control tower to establish and enforce mandatory procedures requiring the radar controller to ensure that every inbound or outbound aircraft is advised of known traffic",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "A-87-050",
+      "to": "FAA",
+      "text": "Require air traffic controllers and supervisors at Teterboro to receive training emphasizing the importance of operating procedures",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": [
+        "loss_of_situational_awareness",
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "A-87-051",
+      "to": "FAA",
+      "text": "Revise FAA Order 7210.3 to clarify responsibilities and procedures for radar and local controllers",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": [
+        "atc_communication_error",
+        "procedural_noncompliance"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8705.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/1985_Teterboro_mid-air_collision",
+  "asn_id": "19851110-0",
+  "interest": 10.06,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Findings (p. 59-61), Probable Cause (p. 61), Recommendations (p. 65)",
+      "Event times estimated based on controller communications and radar data",
+      "ATC coordination failure with misleading traffic advisories as key factor",
+      "Night conditions and physiological vision limitations contributed significantly"
+    ]
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "id": "wd_q28231738",
+  "qid": "Q28231738",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "World Airways Flight 802",
+  "flight_number": "WA802",
+  "date": "1973-09-08",
+  "time_reference": "UTC",
+  "t0": "1973-09-08T05:30:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-74/06",
+      "report_title": "Aircraft Accident Report: World Airways Flight 802, Douglas DC-8-63CF",
+      "report_date": "1974-06-28",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7406.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Douglas DC-8-63CF",
+    "manufacturer": "Douglas",
+    "family": "DC-8",
+    "registration": null,
+    "msn": null,
+    "engines": null
+  },
+  "operator": "World Airways",
+  "route": {
+    "from": "KTRF",
+    "from_name": "Travis Air Force Base, California",
+    "to": "PCLK",
+    "to_name": "Clark Air Base, Philippines"
+  },
+  "location": {
+    "name": "Mount Dutton, Cold Bay, Alaska",
+    "country": "United States",
+    "lat": 55.201,
+    "lon": -162.722
+  },
+  "phase": "approach",
+  "occupants": 6,
+  "fatalities": 6,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "World Airways Flight 802, a Douglas DC-8-63CF cargo aircraft, struck Mount Dutton at 3,500 feet near Cold Bay Airport, Alaska, during an instrument approach. The aircraft had strayed significantly off-course into an area of poor radio navigation coverage. All six crew members were killed. The NTSB found the captain failed to adhere to published instrument approach procedures.",
+  "probable_cause": "The captain's non-adherence to published instrument approach procedures for Cold Bay Airport, resulting in descent below safe altitude while off-course. Contributing factors included weather conditions and inadequate radio navigation reception in the area.",
+  "factors": [
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "Aircraft strayed significantly off-course into area of poor radio navigation reception (p. 3)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Aircraft descended in clouds toward Cold Bay Airport (p. 3)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "initiating",
+      "evidence": "Captain did not adhere to published instrument approach procedures (p. 3)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck Mount Dutton at 3,500 feet altitude (p. 3)"
+    }
+  ],
+  "chain": [
+    [
+      "navigation_error",
+      "cfit"
+    ],
+    [
+      "procedural_noncompliance",
+      "cfit"
+    ],
+    [
+      "low_visibility",
+      "navigation_error"
+    ]
+  ],
+  "events": [
+    {
+      "t": -300,
+      "clock": "05:00",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 802 cruising from Travis AFB toward Clark AB after uneventful flight",
+      "state": {
+        "alt": 33000
+      },
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "05:30",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Descent initiated toward Cold Bay Airport",
+      "state": {
+        "alt": 25000
+      },
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": "05:31",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain began instrument approach to Cold Bay Airport",
+      "state": {
+        "alt": 15000
+      },
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": "05:32",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft strayed significantly off-course into area of poor radio navigation reception while in clouds",
+      "state": {
+        "alt": 8000
+      },
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 90,
+      "clock": "05:33",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Continued descent while off-course, not following published approach procedures",
+      "state": {
+        "alt": 5000
+      },
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "05:42",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck Mount Dutton at altitude of 3,500 feet",
+      "state": {
+        "alt": 3500
+      },
+      "factors": [
+        "cfit",
+        "procedural_noncompliance"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Improve radio navigation coverage and procedures for approaches to remote airfields",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "ICAO",
+      "text": "Standardize instrument approach procedures and enforcement of adherence",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7406.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/World_Airways_Flight_802",
+  "asn_id": "19730908-0",
+  "interest": 9.48,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Summary, Findings, Probable Cause, Recommendations",
+      "Report is relatively concise with limited investigation details",
+      "Limited CVR and FDR data available",
+      "Navigation error combined with procedural non-compliance as key factors"
+    ]
+  }
+}
