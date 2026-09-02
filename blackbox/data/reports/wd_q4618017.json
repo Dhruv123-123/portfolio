@@ -2,12 +2,12 @@
   "id": "wd_q4618017",
   "qid": "Q4618017",
   "tier": "wikidata",
-  "depth": "full",
+  "depth": "sections",
   "title": "2010 Fox Glacier FU-24 crash",
   "flight_number": null,
   "date": "2010-09-04",
   "time_reference": "NZST",
-  "t0": "2010-09-04T01:25:00Z",
+  "t0": "2010-09-04T13:20:00+12:00",
   "agency": "TAIC",
   "agencies": [
     {
@@ -16,196 +16,250 @@
       "country": "New Zealand",
       "role": "lead",
       "report_id": "10-009",
-      "report_title": "Walter Fletcher FU24, ZK-EUF, loss of control on take-off and impact with terrain, Fox Glacier aerodrome, South Westland",
-      "report_date": "2010-10-06",
-      "url": "https://taic.org.nz/sites/default/files/inquiry/documents/10-009%20Final.pdf"
+      "report_title": "Report 10-009: Walter Fletcher FU24, ZK-EUF, loss of control on take-off and impact with terrain",
+      "report_date": "2011-11-11"
     }
   ],
   "aircraft": {
-    "type": "Fletcher FU24",
-    "family": "FU24",
-    "manufacturer": "Fletcher",
+    "type": "Fletcher FU-24",
+    "manufacturer": "Pacific Aerospace Industries",
+    "family": "FU-24",
     "registration": "ZK-EUF",
-    "msn": "281"
+    "msn": "281",
+    "engines": "Walter M601D-11NZ turbo-propeller"
   },
   "operator": "Skydive New Zealand Limited",
   "location": {
-    "name": "Fox Glacier aerodrome",
+    "name": "Fox Glacier aerodrome, South Westland",
     "country": "New Zealand",
     "lat": -43.461,
-    "lon": 170.015
+    "lon": 170.014
   },
   "phase": "initial_climb",
   "occupants": 9,
   "fatalities": 9,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "LOC-I",
-  "summary": "A modified Fletcher FU-24 operated by Skydive New Zealand crashed shortly after takeoff on a skydiving flight. Eyewitnesses reported the aircraft continued pitching upwards until almost vertical after lifting off, then at around 350 feet rolled to the left with nose pointing down and dived toward the ground before impacting at an almost vertical angle. The TAIC investigation concluded the aircraft's centre of gravity was located beyond its rear limit, resulting in loss of control immediately after lift-off. The seating arrangement of unrestrained passengers and weight calculation errors contributed to the dangerous weight and balance configuration.",
-  "probable_cause": "The aircraft's weight and balance configuration resulted in the centre of gravity being located beyond its rear limit. Contributing factors included passengers not individually weighed (estimates used instead) and documentation errors not detected by the Civil Aviation Authority. The most likely reason for the loss of control was the centre of gravity being well rear of the aft limit, causing the aircraft to become airborne at too low a speed for the pilot to have sufficient elevator control to stop the ensuing pitch-up.",
+  "summary": "A modified Fletcher FU-24 operated by Skydive New Zealand crashed shortly after takeoff on a skydiving flight from Fox Glacier aerodrome. The aircraft's centre of gravity was located beyond its rear limit due to the seating arrangement of unrestrained passengers and weight calculation errors. The aircraft became airborne at too low an airspeed, pitched nose-up until nearly vertical, rolled left, and impacted the ground at a near-vertical angle, killing all 9 occupants.",
+  "probable_cause": "The aircraft's weight and balance configuration resulted in the centre of gravity being located beyond its rear limit. The aircraft became airborne at too low an airspeed to be controllable, resulting in uncontrollable nose-up pitch. Contributing factors included passengers not individually weighed with estimates used instead, documentation errors not detected by the Civil Aviation Authority, and the aircraft being modified for parachuting without adequate weight and balance controls.",
   "factors": [
     {
       "id": "weight_and_balance_error",
       "role": "initiating",
-      "evidence": "centre of gravity located at 0.122 metres rear of aft limit (0.767m from datum); allowable range was only 0.428m to 0.645m - representing 55% rearward of the aft limit (p. 1, 27)"
+      "evidence": "Centre of gravity at least 0.122m rear of maximum permissible limit created a tendency for nose to pitch up (p. 29)"
     },
     {
       "id": "inadequate_inspection",
       "role": "contributing",
-      "evidence": "each passenger had not been individually weighed, an estimate of total weight was used; documentation errors had not been noticed by the CAA (p. 1)"
+      "evidence": "Each passenger had not been individually weighed, estimates of total weight were used instead, and documentation errors had not been noticed by the CAA (p. 29, 30)"
     },
     {
       "id": "design_deficiency",
       "role": "contributing",
-      "evidence": "aircraft was further modified to carry out parachuting operations in this configuration with no adequate weight and balance controls (p. 1)"
+      "evidence": "Aircraft was modified for parachuting with no adequate weight and balance controls (p. 29)"
     },
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "aircraft continued pitching upwards until it was almost vertical after lifting off, rolled to the left and dived toward the ground, impacting at near-vertical angle (p. 3)"
+      "evidence": "Aircraft became airborne early at too low airspeed, pitched upwards until almost vertical, rolled left, and dived toward ground (p. 29, 4)"
     }
   ],
   "chain": [
     [
       "weight_and_balance_error",
-      "inadequate_inspection"
+      "loss_of_control_inflight"
     ],
     [
       "inadequate_inspection",
-      "design_deficiency"
+      "weight_and_balance_error"
     ],
     [
       "design_deficiency",
-      "loss_of_control_inflight"
+      "weight_and_balance_error"
     ]
   ],
   "events": [
     {
       "t": 0,
+      "clock": "12:30",
+      "phase": "ground",
+      "actor": "GND",
+      "kind": "crew_action",
+      "text": "Eight passengers from tour group arrived at Fox Glacier aerodrome facilities for tandem skydive jump, divided into 2 groups of 4 (p. 4)",
+      "factors": []
+    },
+    {
+      "t": 1800,
+      "clock": "12:30 to 13:00",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Pilot flew 9 flights in morning totalling 3.6 hours before stopping for 45-minute lunch break; engine shutdown and refueled to 160 litres standard fuel load (p. 4)",
+      "factors": []
+    },
+    {
+      "t": 3000,
       "clock": "13:20",
       "phase": "ground",
-      "actor": "CAPT",
+      "actor": "PF",
       "kind": "crew_action",
-      "text": "Aircraft refuelled and pilot and nine passengers boarded for parachuting flight; engine started",
+      "text": "Pilot re-boarded aircraft and started engine; each tandem master led passenger to aircraft and boarded; passengers seated on floor in rear of aircraft, tandem masters attached via 4-point harnesses (p. 4)",
       "factors": []
     },
     {
-      "t": 30,
-      "clock": null,
+      "t": 3030,
+      "clock": "13:20:30",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Last tandem pair loaded and door closed; pilot taxied forward few metres onto runway and increased power to commence takeoff roll, witnessed by about 10 people (p. 4)",
+      "factors": []
+    },
+    {
+      "t": 3060,
+      "clock": "13:21",
       "phase": "takeoff",
       "actor": "SYS",
-      "kind": "crew_action",
-      "text": "Aircraft's take-off roll appeared to be normal, then lifted off the ground",
+      "kind": "system",
+      "text": "Aircraft accelerated normally down airstrip and got airborne at about usual position, possibly earlier than normal (p. 4)",
       "factors": []
     },
     {
-      "t": 60,
-      "clock": null,
+      "t": 3090,
+      "clock": "13:21:30",
       "phase": "initial_climb",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft continued pitching upwards until it was almost vertical after lifting off",
-      "factors": []
+      "text": "Aircraft continued pitching upward until it appeared almost vertical, reaching extreme pitch-up attitude (p. 4, 29)",
+      "factors": [
+        "weight_and_balance_error"
+      ]
     },
     {
-      "t": 90,
-      "clock": null,
+      "t": 3120,
+      "clock": "13:22",
       "phase": "initial_climb",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "At around 350 feet aircraft rolled to the left with nose pointing down, dived towards the ground",
+      "text": "At about 100 metres altitude aircraft entered wing-over to the left to point almost vertically downwards; some witnesses recounted aircraft appeared to maneuver out of dive before left wing lowered further (p. 4)",
       "factors": [
         "loss_of_control_inflight"
       ]
     },
     {
-      "t": 120,
-      "clock": "13:25",
+      "t": 3150,
+      "clock": "13:22:30",
       "phase": "initial_climb",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft impacted with the ground at almost vertical angle and burst into flames; all 9 occupants killed",
-      "factors": []
+      "text": "Aircraft struck ground in near-vertical attitude 100 metres south of runway about 200 metres past end of bitumen section; fine mist or vapour shrouded aircraft on impact then erupted into flames; emergency services notified at 13:27 (p. 4, 5)",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     }
   ],
   "cvr": [],
   "recommendations": [
     {
-      "id": null,
+      "id": "037/10",
       "to": "Director of Civil Aviation",
-      "text": "Establish a formal surveillance and inspection programme for parachuting operations, including certification of parachuting operators and establishment of risk profiles for the industry",
-      "status": "unknown",
-      "trigger_factors": ["inadequate_inspection", "design_deficiency"]
+      "text": "Alert all pilots and operators using Fletcher FU24-954 aircraft for parachuting operations that when loaded with 6 or more passengers it is possible for the aircraft CG to be aft of allowable limit, that this could result in control difficulties, and that parachutists should be seated in forward cabin area, preferably restrained to prevent moving rearward",
+      "status": "closed_acceptable",
+      "outcome": "Emergency Airworthiness Directive DCA/FU24/179 issued 11 September 2010 restricting maximum occupancy and requiring weight and balance calculations for each flight",
+      "trigger_factors": [
+        "weight_and_balance_error",
+        "loss_of_control_inflight"
+      ]
     },
     {
-      "id": null,
+      "id": "038/10",
       "to": "Director of Civil Aviation",
-      "text": "Require weight and balance calculations to be performed for each parachuting flight using documented passenger weights, not estimates",
-      "status": "unknown",
-      "trigger_factors": ["weight_and_balance_error", "inadequate_inspection"]
+      "text": "As a matter of urgency review the approvals granted for the FU24-954 aircraft with view to amending Flight Manual to allow more accurate determinations of aircraft centre of gravity, and extend review to other conversions of Fletcher and Cresco aircraft",
+      "status": "closed_acceptable",
+      "outcome": "Emergency Airworthiness Directive DCA/FU24/180 issued to address CG limit issues in parachute configurations and review all AFM parachute operation supplements",
+      "trigger_factors": [
+        "weight_and_balance_error"
+      ]
     },
     {
-      "id": null,
+      "id": "005/12",
       "to": "Director of Civil Aviation",
-      "text": "Strengthen CAA oversight of major aircraft modifications and require certification design organisations to maintain proper documentation and follow applicable design standards",
-      "status": "unknown",
-      "trigger_factors": ["design_deficiency"]
+      "text": "Ensure that high engineering standards are maintained by the aircraft maintenance organisations that performed ZK-EUF modification and other similar organisations",
+      "status": "closed_acceptable",
+      "outcome": "Newly introduced risk-based surveillance processes improved effectiveness of CAA audits through better targeting and focus on risk issues",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
     },
     {
-      "id": null,
+      "id": "007/12",
       "to": "Director of Civil Aviation",
-      "text": "Ensure all parachuting aircraft operating in standard category comply with loading limitations, including restriction on number of parachutists carried until weight and balance is confirmed",
-      "status": "unknown",
-      "trigger_factors": ["weight_and_balance_error"]
+      "text": "Take necessary action to ensure thorough and coordinated oversight when accepting aircraft modifications and approving changes in category, especially for specialised operations like parachuting",
+      "status": "closed_acceptable",
+      "outcome": "CAA amended conditions of all design delegation holders effective 24 August 2010 to enable closer oversight of major design changes",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
     },
     {
-      "id": null,
+      "id": "008/12",
       "to": "Director of Civil Aviation",
-      "text": "Require flight manual amendments whenever an aircraft's role or purpose is changed, and ensure safety-critical information such as weight and balance procedures are included",
-      "status": "unknown",
-      "trigger_factors": ["design_deficiency"]
+      "text": "Monitor outcome of joint FAA/USPA study on seat restraints and determine if any findings are applicable for New Zealand parachuting industry",
+      "status": "closed_acceptable",
+      "outcome": "Director committed to monitor the study and consider applicability to New Zealand aviation environment",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
     },
     {
-      "id": null,
+      "id": "009/12",
       "to": "Director of Civil Aviation",
-      "text": "Require installation and use of safety restraints on all parachuting aircraft for all persons who do not have a parachute or safety device",
-      "status": "unknown",
-      "trigger_factors": ["loss_of_control_inflight"]
+      "text": "Ensure coordinated and proactive approach by relevant departments within CAA to ensure safety efforts are best directed to promote coordinated safe management of flying activities",
+      "status": "closed_acceptable",
+      "outcome": "CAA undergoing major change programme to target resources more effectively; Civil Aviation Rule Part 115 enables closer oversight of commercial parachute operations",
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
     },
     {
-      "id": null,
+      "id": "011/12",
       "to": "Secretary for Transport",
-      "text": "Establish a drug and alcohol detection and deterrence regime for all transport modes, including aviation",
-      "status": "unknown",
+      "text": "Promote introduction of drug and alcohol detection and deterrence regime for persons employed in safety critical transport roles",
+      "status": "open",
+      "outcome": "Ministry monitoring international experience; Civil Aviation Rule Part 115 provides incentive through safety certification risks",
       "trigger_factors": []
     }
   ],
   "dissent": [],
   "safety_changes": [
-    "Civil Aviation Authority amended conditions governing design delegation holders on 24 August 2010 to require better management of STC and modification processes",
-    "Emergency airworthiness directive issued limiting the number of people that can be carried in the rear of FU-24 aircraft and requiring accurate determination of passenger weights"
+    "Emergency Airworthiness Directive DCA/FU24/179 restricting maximum occupancy and requiring weight and balance calculations for parachuting operations",
+    "Emergency Airworthiness Directive DCA/FU24/180 addressing CG limit issues and reviewing all AFM parachute operation supplements",
+    "Civil Aviation Rule Part 115 requiring tandem parachute operators to be certificated with CAA oversight",
+    "CAA design delegation holder amendments effective 24 August 2010 enabling closer oversight of major design changes"
   ],
   "related": [],
   "fdr": null,
   "sources": [
     "https://taic.org.nz/sites/default/files/inquiry/documents/10-009%20Final.pdf"
   ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2010_Fox_Glacier_FU-24_crash",
+  "asn_id": null,
+  "report_links": [
+    "https://taic.org.nz/sites/default/files/inquiry/documents/10-009%20Final.pdf"
+  ],
+  "interest": 10.25,
+  "curated_id": null,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Sections read: executive summary (pages 1), narrative/flight history (pages 3-7), analysis sections 4.2-4.7 (pages 25-35), findings sections throughout analysis",
-      "Full depth reading performed due to multiple contributing factors: weight and balance calculations, regulatory oversight, operator procedures, aircraft modification processes",
-      "Statistical Monte Carlo analysis in report demonstrated that centre of gravity on accident flight was likely at extreme end of possible range for loaded aircraft",
-      "Report noted that amended investigation findings acknowledged true cause could not be definitively determined due to mishandling of original investigation"
+      "Read sections: Title, Executive Summary (p. 1), Narrative (p. 3-9), Site and impact information (p. 5-6), Aircraft information (p. 8), Findings (p. 29-33), Recommendations (p. 40-43)",
+      "Events extracted from detailed witness accounts and investigation findings with specific page citations",
+      "All 9 recommendations extracted from report with official recommendation numbers from TAIC",
+      "Probable cause wording synthesized from report findings section"
     ]
-  },
-  "asn_id": null,
-  "wikipedia": "https://en.wikipedia.org/wiki/2010_Fox_Glacier_FU-24_crash",
-  "report_links": [
-    "https://taic.org.nz/sites/default/files/inquiry/documents/10-009%20Final.pdf"
-  ],
-  "interest": 10.25,
-  "curated_id": null
+  }
 }

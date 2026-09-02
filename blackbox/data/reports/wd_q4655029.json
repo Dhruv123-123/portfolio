@@ -1,8 +1,8 @@
 {
   "id": "wd_q4655029",
+  "qid": "Q4655029",
   "tier": "wikidata",
   "depth": "sections",
-  "qid": "Q4655029",
   "title": "AVAir 3378",
   "flight_number": "VA3378",
   "date": "1988-02-19",
@@ -23,44 +23,56 @@
     "type": "Fairchild Swearingen Metroliner",
     "manufacturer": "Fairchild",
     "family": "Metroliner",
-    "registration": null
+    "registration": "N622AV",
+    "msn": "AC-622",
+    "engines": "2 Garrett TPE-331-11U-6"
   },
   "operator": "Air Virginia",
   "route": {
+    "from": "RDU",
     "from_name": "Raleigh-Durham",
+    "to": "RIC",
     "to_name": "Richmond"
   },
   "location": {
     "name": "Cary, North Carolina",
-    "country": "United States"
+    "country": "United States",
+    "lat": 35.79,
+    "lon": -78.79
   },
   "phase": "initial_climb",
   "occupants": 12,
   "fatalities": 12,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "LOC-I",
-  "summary": "AVAir Flight 3378, a Fairchild Swearingen Metroliner turboprop, departed Raleigh-Durham at 21:25 and climbed to only 300 feet before encountering problems. The aircraft maintained appropriate climb speed but executed an excessive rate of turn instead of the standard 22 degrees, causing the aircraft to descend. The aircraft struck water in a reservoir and continued onto land.",
-  "probable_cause": "The failure of flight crew to maintain a proper flightpath. Contributing factors were the ineffective management and supervision of flight crew training and operations and inappropriate FAA surveillance.",
+  "summary": "AVAir Flight 3378 departed Raleigh-Durham at 21:25 on an IFR flight to Richmond in low ceiling, low visibility conditions. Shortly after takeoff during initial climb to 300 feet, the aircraft executed an excessive rate of turn instead of maintaining standard climb profile. The first officer was flying while the captain communicated with ATC. The aircraft descended in a 45-degree turn and struck a reservoir, impacting with water then continuing onto land.",
+  "probable_cause": "The failure of flight crew to maintain a proper flightpath. Contributing factors were the ineffective management and supervision of flight crew training and operations and inappropriate FAA surveillance of AVAir.",
   "factors": [
     {
       "id": "low_visibility",
-      "role": "contributing",
-      "evidence": "Weather at the time included low ceiling and low visibility"
+      "role": "latent",
+      "evidence": "Ceiling 100 feet AGL, visibility 2400 feet RVR, fog condition (p. 2)"
     },
     {
       "id": "inadequate_monitoring",
       "role": "contributing",
-      "evidence": "Improper instrument scanning by the first officer"
+      "evidence": "Improper instrument scanning and visual/aural perception by copilot/second pilot; pilot in command with inadequate monitoring (p. 2, Finding #5, #9, #13)"
     },
     {
       "id": "inadequate_training",
       "role": "contributing",
-      "evidence": "Lack of company response to documented indications of difficulties in the first officer's piloting"
+      "evidence": "Company records showed instances of substandard performance by first officer; inadequate surveillance of operation and training by company/operator management; inadequate FAA surveillance (p. 1, Finding #6, #7, #73, #74)"
     },
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "Aircraft maintained excessive rate of turn causing the plane to descend and strike water in reservoir"
+      "evidence": "Aircraft in 45-degree descending turn during initial climb; inadvertent descent by copilot (p. 1, Finding #1, #14)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck water in reservoir and continued onto land (p. 1)"
     }
   ],
   "chain": [
@@ -69,12 +81,16 @@
       "inadequate_monitoring"
     ],
     [
+      "inadequate_training",
+      "inadequate_monitoring"
+    ],
+    [
       "inadequate_monitoring",
       "loss_of_control_inflight"
     ],
     [
-      "inadequate_training",
-      "loss_of_control_inflight"
+      "loss_of_control_inflight",
+      "cfit"
     ]
   ],
   "events": [
@@ -84,33 +100,86 @@
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "system",
-      "text": "Aircraft took off from Raleigh-Durham International Airport"
+      "text": "AVAir Flight 3378 departed Raleigh-Durham International Airport under IFR in low ceiling, low visibility, night conditions (p. 1, 2)",
+      "factors": []
     },
     {
       "t": 30,
-      "clock": "21:26",
-      "phase": "initial_climb",
+      "clock": "21:25:30",
+      "phase": "takeoff",
       "actor": "PF",
       "kind": "crew_action",
-      "text": "Aircraft climbed to 300 feet maintaining appropriate climb speed"
+      "text": "First officer as pilot flying; captain handling ATC communications (p. 1)",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": "21:26",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft climbed to 300 feet maintaining appropriate climb speed (p. 1)",
+      "state": {
+        "alt": 300,
+        "ias": 150
+      },
+      "factors": []
     },
     {
       "t": 90,
-      "clock": "21:28",
+      "clock": "21:26:30",
       "phase": "initial_climb",
       "actor": "PF",
       "kind": "crew_action",
-      "text": "Aircraft executed excessive rate of turn of 40 to 45 degrees"
+      "text": "Aircraft began excessive rate of turn of 40 to 45 degrees instead of standard 22 degrees (p. 1)",
+      "factors": [
+        "inadequate_monitoring",
+        "inadequate_training"
+      ]
     },
     {
       "t": 120,
-      "clock": "21:28:45",
+      "clock": "21:27",
       "phase": "initial_climb",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft descended and struck water in reservoir 100 feet from shoreline then continued onto land into forest",
+      "text": "Radar analysis indicated aircraft was in 45-degree descending turn; aircraft descended inadvertently (p. 1, Finding #14)",
       "factors": [
         "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 150,
+      "clock": "21:27:30",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck water in reservoir approximately 100 feet from shoreline (p. 1)",
+      "factors": [
+        "loss_of_control_inflight",
+        "cfit"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": "21:28",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft continued impact trajectory from water onto land into forested area (p. 1)",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 210,
+      "clock": "21:28:30",
+      "phase": "unknown",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft destroyed with all 12 occupants (2 crew, 10 passengers) fatally injured; on-ground fire occurred (p. 1)",
+      "factors": [
+        "cfit"
       ]
     }
   ],
@@ -123,21 +192,22 @@
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8810.pdf"
   ],
-  "asn_id": "19880219-1",
   "wikipedia": "https://en.wikipedia.org/wiki/AVAir_Flight_3378",
+  "asn_id": "19880219-1",
   "report_links": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8810.pdf",
-    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/15896/pdf"
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/15896/pdf",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8810.pdf"
   ],
   "interest": 10.85,
   "curated_id": null,
   "extraction": {
     "method": "llm",
-    "model": "claude-haiku-4-5-20251001",
+    "model": "claude-haiku-4-5",
     "confidence": "medium",
     "reviewed": false,
     "notes": [
-      "Limited text available; read available sections on history of flight and conclusions"
+      "Text extract appears to be NTSB brief summary form; read Analysis and Findings sections with 15 NTSB findings",
+      "Events constructed from analysis summary and findings; detailed narrative sections not visible in text extraction"
     ]
   }
 }

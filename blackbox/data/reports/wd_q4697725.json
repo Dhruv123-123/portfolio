@@ -2,71 +2,88 @@
   "id": "wd_q4697725",
   "qid": "Q4697725",
   "tier": "wikidata",
-  "depth": "sections",
+  "depth": "full",
   "title": "Air Alg\u00e9rie 702P",
   "flight_number": "702P",
   "date": "1994-12-21",
+  "time_reference": "UTC",
+  "t0": "1994-12-21T09:52:00Z",
   "agency": "AAIB",
   "agencies": [
     {
       "code": "AAIB",
       "name": "Air Accidents Investigation Branch",
       "country": "United Kingdom",
-      "role": "lead"
+      "role": "lead",
+      "report_id": "1/96",
+      "report_title": "Aircraft Accident Report 1/96 - Boeing 737-2D6C 7T-VEE",
+      "report_date": "1995-12-21"
     }
   ],
   "aircraft": {
-    "type": "Boeing 737-200",
+    "type": "Boeing 737-2D6C",
     "manufacturer": "Boeing",
     "family": "737",
-    "registration": "7T-VEE"
+    "registration": "7T-VEE",
+    "msn": "20758",
+    "engines": "2 Pratt & Whitney JT8D-15"
   },
   "operator": "Air Alg\u00e9rie",
   "route": {
-    "from_name": "Amsterdam",
+    "from": "EMA",
+    "from_name": "East Midlands",
+    "to": "CVT",
     "to_name": "Coventry"
   },
   "location": {
-    "name": "Coventry",
-    "country": "United Kingdom"
+    "name": "Willenhall, Coventry, Warwickshire",
+    "country": "United Kingdom",
+    "lat": 52.387,
+    "lon": -1.45
   },
   "phase": "approach",
   "occupants": 5,
   "fatalities": 5,
+  "injuries_serious": 0,
+  "damage": "destroyed",
   "category": "CFIT",
-  "summary": "A Boeing 737-200 operating a domestic cargo flight conducted a surveillance radar approach to Coventry Airport in poor visibility. During the third approach attempt, with runway visual range below regulatory minimum, the crew descended significantly below minimum descent height without visual references and collided with power transmission cables and a pylon. The aircraft overturned and crashed in a wooded area.",
-  "probable_cause": "Crew allowed aircraft to descend significantly below minimum descent height without gaining sight of approach lighting or runway, and failed to cross-check altimeter indications. Contributing factors were fatigue affecting flight crew performance and insufficient minimum descent height call-outs by the pilot monitoring.",
+  "summary": "A Boeing 737-2D6C chartered for live animal export was conducting a surveillance radar approach (SRA) to Coventry Airport in patchy lifting fog. The aircraft descended significantly below the minimum descent height without adequate visual references and collided with power transmission cables and a pylon on the extended runway centerline. The collision caused catastrophic damage, leading to loss of control and a crash in woodland with all five occupants fatally injured.",
+  "probable_cause": "The flight crew allowed the aircraft to descend significantly below the minimum descent height during a surveillance radar approach in conditions of patchy lifting fog without appropriate visual references to the approach lighting or runway threshold. The crew did not observe the standard cross-checking procedure of altimeter indications and the minimum descent height was not called by the non-handling pilot. Flight crew performance was impaired by fatigue from more than 10 hours of flight duty through the night.",
   "factors": [
     {
       "id": "low_visibility",
       "role": "latent",
-      "evidence": "Visibility at Coventry was poor due to fog and low cloud layer, runway visual range 1100 m"
-    },
-    {
-      "id": "descent_below_minimums",
-      "role": "contributing",
-      "evidence": "Crew descended significantly below minimum descent height without required visual references"
-    },
-    {
-      "id": "inadequate_monitoring",
-      "role": "contributing",
-      "evidence": "Non-handling pilot failed to call out minimum descent height as aircraft reached that altitude"
+      "evidence": "Patchy lifting fog with ground-level fog bank; runway visual range 1100 metres below regulatory minimum of 1200 metres (p. 10, 14)"
     },
     {
       "id": "fatigue",
       "role": "latent",
-      "evidence": "Flight crew performance had been impaired by effects of fatigue"
+      "evidence": "Flight crew completed over 10 hours of flight duty through the night during five flight sectors including six approaches to land (p. 10, Synopsis)"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "Aircraft descended significantly below minimum descent height of approximately 650 feet without required visual references to approach lighting or runway (p. 10, 14)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Standard company operating procedure of cross-checking altimeter height indications during approach was not observed; appropriate minimum descent height was not called by non-handling pilot (p. 10, Synopsis)"
     },
     {
       "id": "cfit",
       "role": "outcome",
-      "evidence": "Aircraft collided with power transmission cables and pylon during approach descent"
+      "evidence": "Aircraft struck 132 kV suspension electricity transmission pylon 86 feet high at 1.1 miles from runway threshold at approximately 72 feet altitude (p. 10, 11)"
     }
   ],
   "chain": [
     [
       "low_visibility",
       "descent_below_minimums"
+    ],
+    [
+      "fatigue",
+      "inadequate_monitoring"
     ],
     [
       "inadequate_monitoring",
@@ -80,65 +97,208 @@
   "events": [
     {
       "t": 0,
-      "clock": "09:38",
-      "phase": "approach",
-      "actor": "CAPT",
+      "clock": "09:27",
+      "phase": "ground",
+      "actor": "PF",
       "kind": "crew_action",
-      "text": "Aircraft departed East Midlands Airport to attempt third approach to Coventry Airport with RVR of 1100 m",
+      "text": "Engines started at East Midlands Airport; crew collected from hotel 45 minutes before planned departure after rest period of over 27 hours (p. 12-13)",
       "factors": []
     },
     {
-      "t": 300,
-      "clock": null,
-      "phase": "approach",
+      "t": 660,
+      "clock": "09:38",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft departed East Midlands Runway 27 at 0938 hrs for return flight to Coventry Airport (p. 14)",
+      "factors": []
+    },
+    {
+      "t": 900,
+      "clock": "09:42",
+      "phase": "climb",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Air traffic control radar operator provided surveillance radar approach guidance",
+      "text": "After 40 seconds of takeoff cleared to turn left on direct track toward CT NDB; aircraft transferred from Aerodome to Approach control; then transferred to Birmingham Approach (p. 14)",
       "factors": []
     },
     {
-      "t": 600,
-      "clock": null,
-      "phase": "approach",
-      "actor": "CAPT",
+      "t": 1020,
+      "clock": "09:44",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Handover to Coventry Approach Radar controller at 0944 hrs; aircraft identified on primary radar; advised of surveillance radar approach to Runway 23 (p. 14)",
+      "factors": []
+    },
+    {
+      "t": 1080,
+      "clock": "09:46",
+      "phase": "descent",
+      "actor": "PF",
       "kind": "crew_action",
-      "text": "Aircraft descended on approach with pilot monitoring failing to call out minimum descent height",
+      "text": "Commander readback height and pressure setting correctly but misread heading as 080 instead of 030; controller corrected to 010 but commander replied right turn to 010 (p. 14)",
       "factors": [
         "inadequate_monitoring"
       ]
     },
     {
-      "t": 900,
-      "clock": null,
+      "t": 1200,
+      "clock": "09:48",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller advised radar vectors would take aircraft through final approach track for spacing; aircraft 12 miles from touchdown; approach would be SRA to Runway 23 terminating at 2 miles; crew told to check minima and missed approach point (p. 14-15)",
+      "factors": []
+    },
+    {
+      "t": 1500,
+      "clock": "09:52",
       "phase": "approach",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft struck power transmission cables and pylon, overturned and crashed in wooded area",
+      "text": "Aircraft descended below minimum descent height; struck 132 kV transmission pylon and cables 1.1 miles from runway threshold at approximately 72 feet altitude; collision triggered alarm signals (p. 10, 15)",
+      "state": {
+        "alt": 72
+      },
+      "factors": [
+        "descent_below_minimums",
+        "cfit"
+      ]
+    },
+    {
+      "t": 1560,
+      "clock": "09:53",
+      "phase": "unknown",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Major damage to inboard high lift devices on left wing and left engine; loss of lift on left wing and thrust asymmetry caused uncontrollable left roll; left wingtip struck house gable end at wings vertical attitude (p. 10)",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 1620,
+      "clock": "09:54",
+      "phase": "unknown",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed inverted into woodland close to edge of housing conurbation; intense fire ensued destroying large part of forward fuselage; five occupants suffered fatal multiple injuries (p. 10, 11)",
       "factors": [
         "cfit"
       ]
     }
   ],
-  "report_links": [
-    "http://www.aaib.gov.uk/cms_resources/1-1996%207T-VEE.pdf",
-    "http://www.aaib.gov.uk/cms_resources.cfm?file=/1-1996%207T-VEE%20Append.pdf",
-    "http://www.aaib.gov.uk/cms_resources/SUMMARY%20AAR%201-96%20%20Boeing%20737,%207T-VEE%2002-96.pdf"
+  "cvr": [
+    {
+      "t": 1080,
+      "clock": "09:46",
+      "speaker": "CAPT",
+      "text": "Position readback with misread heading and turn direction"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "95-19",
+      "to": "CAA",
+      "text": "Publish in the AIP relevant Aerodrome Operating Minima applicable to each aircraft category and type of approach, calculated in accordance with provisions applicable to UK Public Transport Operators",
+      "status": "unknown",
+      "trigger_factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "id": "95-20",
+      "to": "CAA",
+      "text": "Review Standard Phraseology for SRA approaches in MATS Part 1; reintroduce standard provision of Obstacle Clearance Height prior to approach commencement and seek confirmation from pilots of Missed Approach Point and Minimum Descent Height",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": "95-21",
+      "to": "CAA",
+      "text": "Review procedure whereby UK Approach Ban regulation is notified to foreign operators to improve confirmation that content has been disseminated to flight crews and that company Aerodrome Operating Minima meet UK Public Transport standards",
+      "status": "unknown",
+      "trigger_factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "id": "95-22",
+      "to": "CAA",
+      "text": "Ensure weather reporting at UK airfields used for Public Transport aircraft operations be made at half hourly intervals and disseminated accordingly",
+      "status": "unknown",
+      "trigger_factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "id": "95-23",
+      "to": "CAA",
+      "text": "Examine post-qualification training and supervision of newly qualified Meteorological Observers to ensure it is adequately carried out",
+      "status": "unknown",
+      "trigger_factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "id": "95-24",
+      "to": "Air Alg\u00e9rie",
+      "text": "Introduce programme of Crew Resource Management (CRM) training courses for all flight crews using guidelines set out in ICAO Circular 217-AN132",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_monitoring",
+        "fatigue"
+      ]
+    },
+    {
+      "id": "95-25",
+      "to": "Department of Transport / CAA",
+      "text": "Review Permit application system and devise standardised Permit application and approval scheme; applicant should submit clear statement of which Airline Operations Manuals and Flight Manuals will be applicable",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "95-26",
+      "to": "Air Alg\u00e9rie",
+      "text": "Introduce Flight Safety Management function within Operations Department",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "95-27",
+      "to": "Algerian Civil Aviation Department",
+      "text": "Review policy for monitoring operating standards of Air Alg\u00e9rie to provide more independent assessment of standards being attained",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://www.aaib.gov.uk/cms_resources/1-1996%207T-VEE.pdf"
   ],
   "wikipedia": "https://en.wikipedia.org/wiki/Air_Alg%C3%A9rie_Flight_702P",
   "asn_id": "19941221-0",
+  "report_links": [
+    "http://www.aaib.gov.uk/cms_resources/1-1996%207T-VEE.pdf"
+  ],
   "interest": 11.44,
+  "curated_id": null,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Report reviewed; no formally numbered recommendations found in main text"
+      "Read sections: Synopsis (p. 9-10), History of Flight (p. 11-17), Collision and Impact (p. 15), Personnel Information, Aircraft Information",
+      "Nine specific safety recommendations extracted with AAIB recommendation IDs 95-19 through 95-27",
+      "Events include detailed timeline from takeoff through impact with specific times and radar vectors",
+      "Aircraft struck 132 kV transmission tower 1.1 miles from runway threshold; detailed impact sequence documented"
     ]
-  },
-  "recommendations": [],
-  "curated_id": null,
-  "sources": [
-    "http://www.aaib.gov.uk/cms_resources/1-1996%207T-VEE.pdf"
-  ]
+  }
 }
