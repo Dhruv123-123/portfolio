@@ -1,0 +1,187 @@
+{
+  "id": "wd_q381558",
+  "title": "Aerom\u00e9xico 498",
+  "flight_number": "AM498",
+  "date": "1986-08-31",
+  "time_reference": "PDT",
+  "t0": "1986-08-31T11:52:00-07:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-9-32",
+    "family": "DC-9",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "XA-JED"
+  },
+  "operator": "Aerom\u00e9xico",
+  "route": {
+    "from": "MMMX",
+    "from_name": "Mexico City",
+    "to": "KLAX",
+    "to_name": "Los Angeles"
+  },
+  "location": {
+    "name": "Cerritos",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 67,
+  "fatalities": 82,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "Aerom\u00e9xico Flight 498 collided with a Piper PA-28 Cherokee that entered the Los Angeles Terminal Control Area without clearance. The Piper was not equipped with a Mode C transponder and was not visible to either crew or ATC radar. The DC-9 crashed in a residential neighborhood in Cerritos, killing 64 on the aircraft, 3 in the Piper, and 15 on the ground.",
+  "probable_cause": "The limitations of the air traffic control system to provide collision protection, through both ATC procedures and automated redundancy. Contributing factors were the inadvertent and unauthorized entry of the PA-28 into the Los Angeles Terminal Control Area and the limitations of the 'see and avoid' concept to ensure traffic separation.",
+  "factors": [
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "Piper collided nearly perpendicular with DC-9, shearing top of Piper cockpit and damaging DC-9's tail surfaces; DC-9 crashed in Cerritos."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Neither pilot sighted the other aircraft; neither appeared to attempt evasive maneuvers."
+    },
+    {
+      "id": "ground_radar_unavailable",
+      "role": "contributing",
+      "evidence": "Piper not equipped with Mode C transponder; LAX radar not equipped with automatic warning systems."
+    },
+    {
+      "id": "atc_workload_staffing",
+      "role": "contributing",
+      "evidence": "ATC was distracted by another unauthorized private aircraft (Grumman AA-5B Tiger) entering the Terminal Control Area."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Piper pilot entered the Los Angeles Terminal Control Area without required clearance; entry was inadvertent, not due to physiological disablement."
+    }
+  ],
+  "chain": [
+    [
+      "procedural_noncompliance",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "ground_radar_unavailable",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "atc_workload_staffing",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "midair_collision"
+    ]
+  ],
+  "events": [
+    {
+      "t": -5,
+      "clock": "11:51:55",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "DC-9 Flight 498 begins descent into Los Angeles with 58 passengers and 6 crew.",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "11:52",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Piper PA-28 collided nearly perpendicular with DC-9's upper left side of horizontal stabilizer support.",
+      "factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "t": 15,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Collision sheared top of Piper's cockpit and severely damaged DC-9's tail surfaces including horizontal stabilizer, rudder, and vertical stabilizer.",
+      "factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "DC-9 with damaged tail surfaces over-banked to right and entered steep dive; crashed in residential area of Cerritos.",
+      "factors": [
+        "midair_collision"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-85-64",
+      "to": "FAA",
+      "text": "Expedite development, operational evaluation, and final certification of Traffic Alert and Collision Avoidance System (TCAS)",
+      "status": "unknown",
+      "trigger_factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "id": "A-85-65",
+      "to": "FAA",
+      "text": "Amend 14 CFR Parts 121 and 135 to require TCAS installation in certificated air carrier aircraft",
+      "status": "unknown",
+      "trigger_factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "id": "A-87-96",
+      "to": "FAA",
+      "text": "Implement procedures to track, identify, and take enforcement action against pilots who intrude into ARSAs without ATC communications",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8707.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q381558",
+  "asn_id": "19860831-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Aerom\u00e9xico_Flight_498",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8707.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR87-07.pdf"
+  ],
+  "interest": 16.89,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Findings, Probable Cause, Recommendations"
+    ]
+  }
+}

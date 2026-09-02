@@ -1,0 +1,198 @@
+{
+  "id": "wd_q5213023",
+  "title": "Dan-Air 1008",
+  "flight_number": "DA1008",
+  "date": "1980-04-25",
+  "time_reference": "GMT",
+  "t0": "1980-04-25T13:21:15Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 727-46",
+    "family": "727",
+    "manufacturer": "Boeing",
+    "registration": "G-BDAN"
+  },
+  "operator": "Dan-Air",
+  "route": {
+    "from": "EGCC",
+    "from_name": "Manchester Airport",
+    "to": "GCXO",
+    "to_name": "Tenerife North Airport"
+  },
+  "location": {
+    "name": "Mount La Esperanza",
+    "country": "Spain"
+  },
+  "phase": "approach",
+  "occupants": 146,
+  "fatalities": 146,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Dan-Air Flight 1008 was cleared to join a nonstandard unpublished holding pattern without a chart. Following ambiguous ATC instructions, the captain turned toward terrain and struck Mount La Esperanza while flying in cloud at 13,500 feet in an area where MSA was 14,500 feet.",
+  "probable_cause": "The pilot in command, without taking account of the altitude at which he was flying, took the aircraft into an area of high terrain and thereby failed to maintain a safe height above terrain. Contributing factors included imprecise navigation and disorientation, ambiguous ATC directions for an unpublished procedure, lack of teamwork between crew members, and the aircraft descending to an altitude inadequate for the holding pattern terrain.",
+  "factors": [
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck Mount La Esperanza at 13:21:15 while flying in cloud at approximately 13,500 feet."
+    },
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "Pilot in command, without accounting for altitude and terrain, flew aircraft into area of high ground; failed to maintain required terrain clearance."
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "Tardy and ambiguous directions from ATC regarding the unpublished hold directly contributed to disorientation of the aircraft commander."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Aircraft was flying in cloud when it struck the mountain, reducing crew ability to see terrain."
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "Altitude clearance of 5000 feet was inadequate for this holding pattern area; MSA was 14,500 feet."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Co-pilot did not check or query the operations being carried out by the commander as required by company manual; lack of teamwork between crew."
+    }
+  ],
+  "chain": [
+    [
+      "atc_communication_error",
+      "navigation_error"
+    ],
+    [
+      "navigation_error",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": -229,
+      "clock": "13:17:06",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft cleared to join unpublished holding pattern over FP beacon with limited information.",
+      "factors": []
+    },
+    {
+      "t": -130,
+      "clock": "13:19:05",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft turned right to intercept approach but failed to maintain proper heading and turned left toward high terrain.",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": -75,
+      "clock": "13:20:00",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Ground Proximity Warning System activated as aircraft descended toward high terrain.",
+      "factors": []
+    },
+    {
+      "t": -45,
+      "clock": "13:20:30",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew initiated climb with engines at full power in response to GPWS warning.",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "13:21:15",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck Mount La Esperanza while in steep turn, totally destroyed; all 146 occupants killed.",
+      "factors": [
+        "cfit",
+        "navigation_error"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Flight Crews",
+      "text": "Flight crews should be reminded that precise navigation and adequate vertical terrain clearance are of vital importance.",
+      "status": "unknown",
+      "trigger_factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Flight Crews",
+      "text": "When there are any doubts about ATC instructions, crews must request clarification before executing maneuvers.",
+      "status": "unknown",
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "ICAO",
+      "text": "ICAO should clarify ambiguities in documents regarding published holding circuits and definition of 'standard' hold.",
+      "status": "unknown",
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
+    }
+  ],
+  "dissent": [
+    {
+      "agency": "United Kingdom",
+      "position": "ATC transmission regarding holding pattern was ambiguous and contributed directly to crew disorientation. Clearance to descend to 5000 feet was inadequate; MSA should have been 7000 feet minimum. Lack of published holding pattern contributed to accident.",
+      "topic": "probable cause"
+    }
+  ],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://www.aaib.gov.uk/sites/aaib/cms_resources/8-1981%20G-BDAN.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q5213023",
+  "asn_id": "19800425-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Dan-Air_Flight_1008",
+  "report_links": [
+    "http://www.aaib.gov.uk/sites/aaib/cms_resources/8-1981%20G-BDAN.pdf",
+    "https://web.archive.org/web/20120308060731/http://www.aaib.gov.uk/cms_resources.cfm?file=%2F8-1981%20G-BDAN.pdf"
+  ],
+  "interest": 17.94,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flight, Findings, Causes, UK Addendum"
+    ]
+  }
+}

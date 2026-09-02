@@ -1,0 +1,198 @@
+{
+  "id": "wd_q5933331",
+  "title": "Hughes Airwest 706",
+  "flight_number": null,
+  "date": "1971-06-06",
+  "time_reference": "PDT",
+  "t0": "1971-06-06T18:09:00-07:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-9-31",
+    "family": "DC-9",
+    "manufacturer": "McDonnell Douglas",
+    "registration": null
+  },
+  "operator": "Hughes Airwest",
+  "route": {
+    "from": "KLAX",
+    "from_name": "Los Angeles",
+    "to": "KSEA",
+    "to_name": "Seattle"
+  },
+  "location": {
+    "name": "San Gabriel Mountains",
+    "country": "United States"
+  },
+  "phase": "climb",
+  "occupants": 51,
+  "fatalities": 50,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "Hughes Airwest Flight 706, a DC-9 climbing from Los Angeles, collided in midair with a U.S. Marine Corps F-4B Phantom II over the San Gabriel Mountains. All 49 aboard the airliner and the F-4 pilot were killed; the F-4 radar intercept officer ejected and survived. The Phantom's right wing struck the DC-9's fuselage center and its vertical stabilizer sliced through the cockpit.",
+  "probable_cause": "The failure of both crews to see and avoid each other, though they had only marginal capability to detect, assess, and avoid the collision. Contributing factors include very high closure rate, comingling of IFR and VFR traffic where ATC system limitations preclude effective separation, and failure of the Phantom crew to request radar advisory service despite having an inoperable transponder.",
+  "factors": [
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "F-4B's right wing struck center of DC-9's fuselage; vertical stabilizer sliced through cockpit; all 49 in DC-9 and F-4 pilot killed."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Neither crew sighted the other aircraft in time to initiate evasive action; very high closure rate (approximately 1000 ft/s) compromised detection capability."
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "F-4B operating under VFR not under ATC control; military aircraft operating in civilian airspace with reduced radar detection capability."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "Lack of requirement for military aircraft to contact civilian ATC controllers operating in civilian airspace under VFR."
+    },
+    {
+      "id": "ground_radar_unavailable",
+      "role": "contributing",
+      "evidence": "F-4B not detected on radar because of inoperative transponder and low-level temperature inversion affecting radar performance."
+    }
+  ],
+  "chain": [
+    [
+      "regulatory_oversight",
+      "atc_communication_error"
+    ],
+    [
+      "atc_communication_error",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "midair_collision"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "18:09",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 706 departed Los Angeles at 6:02 pm PDT bound for Seattle with intermediate stops.",
+      "factors": []
+    },
+    {
+      "t": 240,
+      "clock": "18:06",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Los Angeles ARTCC took control of flight 706 at 6:06 pm, four minutes after takeoff.",
+      "factors": []
+    },
+    {
+      "t": 420,
+      "clock": "18:09",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 706 passed through 12,000 feet and received last radio transmission: instructed to heading 040 until Daggett VOR.",
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 450,
+      "clock": null,
+      "phase": "climb",
+      "actor": "OTHER",
+      "kind": "system",
+      "text": "F-4B Phantom, with failed radio, returning to MCAS El Toro for diagnostic tests, approached DC-9 flight path.",
+      "factors": []
+    },
+    {
+      "t": 480,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "F-4B's right wing struck center of DC-9 fuselage; vertical stabilizer sliced through cockpit; both aircraft destroyed in San Gabriel Mountains.",
+      "factors": [
+        "midair_collision"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-72-200",
+      "to": "FAA",
+      "text": "Install video tape at all FAA ATC radar displays for use as investigation tool.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-72-201",
+      "to": "FAA",
+      "text": "Install open area microphone at each terminal and center sector position to record all control position conversations.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-72-202",
+      "to": "FAA",
+      "text": "Establish climb and descent corridors from TCA tops to APC base.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-72-203",
+      "to": "FAA",
+      "text": "Establish more definitive procedures for controller guidance in handling Code 7700 aircraft.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-72-204",
+      "to": "FAA",
+      "text": "Review radar performance monitoring procedures to assure all radar facilities can receive Code 7700 transponder returns.",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7226.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q5933331",
+  "asn_id": "19710606-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Hughes_Airwest_Flight_706",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7226.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR72-26.pdf"
+  ],
+  "interest": 16.64,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Findings, Probable Cause, Recommendations"
+    ]
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "id": "wd_q783193",
+  "title": "Avianca 052",
+  "flight_number": "AV052",
+  "date": "1990-01-25",
+  "time_reference": "EST",
+  "t0": "1990-01-25T21:34:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 707-321B",
+    "family": "707",
+    "manufacturer": "Boeing",
+    "registration": "HK-2016"
+  },
+  "operator": "Avianca",
+  "route": {
+    "from": "SJON",
+    "from_name": "Bogot\u00e1",
+    "to": "KJFK",
+    "to_name": "New York"
+  },
+  "location": {
+    "name": "Cove Neck",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 158,
+  "fatalities": 73,
+  "damage": "destroyed",
+  "category": "FUEL",
+  "summary": "Avianca Flight 052 ran out of fuel after three holding patterns and a failed landing attempt at JFK, crashing onto a hillside in Cove Neck on Long Island. Poor communication between crew and controllers, inadequate fuel management, and ATC's failure to recognize the emergency contributed to the accident.",
+  "probable_cause": "The failure of the flightcrew to adequately manage the airplane's fuel load, and their failure to communicate an emergency fuel situation to air traffic control before fuel exhaustion occurred. Contributing factors: failure to use airline operational control dispatch system, inadequate traffic flow management by FAA, and lack of standardized terminology for fuel states.",
+  "factors": [
+    {
+      "id": "fuel_exhaustion",
+      "role": "initiating",
+      "evidence": "The Boeing 707 ran out of fuel and all four engines lost power while the aircraft was maneuvering for a second approach to JFK."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "First officer did not adequately communicate the critical fuel situation using standard emergency terminology, instead saying 'we need priority' which controllers interpreted as a routine request."
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "Controllers did not recognize the emergency fuel situation because the flight crew failed to use the word 'emergency' and did not use standardized fuel emergency phraseology."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The flight was placed in three holding patterns totaling more than 1 hour, with weather-related delays due to inadequate traffic flow management at JFK."
+    },
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "Crew fatigue and stress contributed to the unsuccessful completion of the first approach and thus contributed to the accident."
+    },
+    {
+      "id": "windshear",
+      "role": "contributing",
+      "evidence": "Windshear on the approach path contributed to the captain's poor performance on the ILS approach, leading to a missed approach."
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "Descent below safe altitude limits during approach contributed to the difficulty of landing."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The Boeing 707 crashed on a hillside in Cove Neck, New York, after engines lost power due to fuel exhaustion."
+    }
+  ],
+  "chain": [
+    [
+      "fuel_exhaustion",
+      "cfit"
+    ],
+    [
+      "crm_breakdown",
+      "fuel_exhaustion"
+    ],
+    [
+      "atc_communication_error",
+      "fuel_exhaustion"
+    ]
+  ],
+  "events": [
+    {
+      "t": -23400,
+      "clock": "13:10",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 052 departed Bogot\u00e1 International Airport.",
+      "factors": []
+    },
+    {
+      "t": -20400,
+      "clock": "14:04",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight landed at Medell\u00edn and was refueled for departure to JFK.",
+      "factors": []
+    },
+    {
+      "t": -18720,
+      "clock": "15:08",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 052 departed Medell\u00edn bound for JFK via oceanic route.",
+      "factors": []
+    },
+    {
+      "t": -6900,
+      "clock": "19:04",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 052 entered first holding pattern over Norfolk (ORF) at FL370.",
+      "factors": []
+    },
+    {
+      "t": -5400,
+      "clock": "19:43",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight entered second holding pattern at BOTON intersection near Atlantic City.",
+      "factors": []
+    },
+    {
+      "t": -2700,
+      "clock": "20:18",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight entered third holding pattern at CAMRN intersection, 39 nm south of JFK, at 14,000 feet.",
+      "factors": []
+    },
+    {
+      "t": -1140,
+      "clock": "20:45",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "First officer advised controller that aircraft can hold only 5 more minutes due to fuel situation.",
+      "factors": [
+        "fuel_exhaustion"
+      ]
+    },
+    {
+      "t": -840,
+      "clock": "21:01",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight cleared from holding pattern and instructed to proceed to JFK via heading 040 at 11,000 feet.",
+      "factors": []
+    },
+    {
+      "t": -540,
+      "clock": "20:56",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Windshear advisory issued: increase of 10 knots at 1500 feet and 10 knots at 500 feet.",
+      "factors": [
+        "windshear"
+      ]
+    },
+    {
+      "t": -120,
+      "clock": "21:24",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain asked first officer to tell ATC they are in an emergency.",
+      "factors": [
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 0,
+      "clock": "21:34",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed on a hillside in Cove Neck, Long Island, New York due to loss of power from fuel exhaustion.",
+      "factors": [
+        "cfit",
+        "fuel_exhaustion"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-91-33",
+      "to": "FAA",
+      "text": "Develop standardized glossary of definitions and terms for fuel communications",
+      "status": "unknown",
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "id": "A-91-34",
+      "to": "FAA",
+      "text": "Conduct comprehensive study of Central Flow Control Facility and Traffic Management System",
+      "status": "unknown",
+      "trigger_factors": [
+        "high_workload"
+      ]
+    },
+    {
+      "id": "A-91-35",
+      "to": "FAA",
+      "text": "Require transport category airplane flight manuals to include minimum fuel procedures and ATC emergency handling criteria",
+      "status": "unknown",
+      "trigger_factors": [
+        "fuel_exhaustion"
+      ]
+    },
+    {
+      "id": "A-91-36",
+      "to": "FAA",
+      "text": "Incorporate recorded broadcast of traffic management information in air route traffic control centers",
+      "status": "unknown",
+      "trigger_factors": [
+        "high_workload"
+      ]
+    },
+    {
+      "id": "A-91-37",
+      "to": "DAAC",
+      "text": "Review policies on dual responsibility of dispatchers and flightcrews",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-91-38",
+      "to": "DAAC",
+      "text": "Require Avianca to incorporate CRM and Line Oriented Flight Training into training program",
+      "status": "unknown",
+      "trigger_factors": [
+        "crm_breakdown"
+      ]
+    },
+    {
+      "id": "A-90-9",
+      "to": "FAA",
+      "text": "Notify all domestic and foreign air carriers to emphasize knowledge of flight operations, ATC rules, procedures, and standard phraseology",
+      "status": "unknown",
+      "trigger_factors": [
+        "crm_breakdown"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9104.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q783193",
+  "asn_id": "19900125-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Avianca_Flight_052",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9104.pdf",
+    "https://web.archive.org/web/20151129030647/http://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9104.pdf"
+  ],
+  "interest": 18.11,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Executive Summary, History of Flight, Findings, Probable Cause, Recommendations"
+    ]
+  }
+}
