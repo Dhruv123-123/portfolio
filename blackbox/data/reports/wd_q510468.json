@@ -1,0 +1,325 @@
+{
+  "id": "wd_q510468",
+  "qid": "Q510468",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Pacific Southwest Airlines Flight 182",
+  "flight_number": "PSA182",
+  "date": "1978-09-25",
+  "time_reference": "PST",
+  "t0": "1978-09-25T09:00:23",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR79-5"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 727-214",
+    "manufacturer": "Boeing",
+    "family": "727",
+    "registration": "N533PS"
+  },
+  "operator": "Pacific Southwest Airlines",
+  "route": {
+    "from": "KSMF",
+    "from_name": "Sacramento International",
+    "to": "KSAN",
+    "to_name": "San Diego International (Lindbergh)"
+  },
+  "location": {
+    "name": "San Diego, California (North Park)",
+    "country": "United States",
+    "lat": 32.75,
+    "lon": -117.08
+  },
+  "phase": "approach",
+  "occupants": 144,
+  "fatalities": 144,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "Boeing 727 collided mid-air with Cessna 172 on approach to San Diego during clear VFR conditions. PSA crew lost visual contact with the Cessna despite ATC instructions to maintain visual separation but failed to report loss of sight. Both aircraft were destroyed in-flight. Seven people on the ground were killed and 22 dwellings destroyed.",
+  "probable_cause": "Failure of PSA Flight 182 crew to comply with visual separation clearance and to report loss of visual contact. Contributing factors: ATC procedures authorizing visual separation when radar separation was available, controller failure to advise of Cessna's direction of movement, Cessna pilot failure to maintain assigned heading, and improper resolution of conflict alert.",
+  "factors": [
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "initiating",
+      "evidence": "PSA crew lost sight of Cessna despite ATC clearance to maintain visual separation (p. 662-672)."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "First officer reported not seeing Cessna at 0900:41, but crew did not advise controller of loss of visual contact (p. 868-880)."
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "ATC procedures authorized use of visual separation when radar clearances were available; controller did not advise of Cessna's direction of movement (p. 701-709)."
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "PSA 727 and Cessna 172 collided at 0901:47, 2600 feet altitude, 3 miles northeast of Lindbergh Field (p. 954-965)."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Both aircraft destroyed in collision and post-impact fires; 7 people killed on ground, 22 dwellings destroyed (p. 984-986)."
+    }
+  ],
+  "chain": [
+    [
+      "loss_of_situational_awareness",
+      "midair_collision"
+    ],
+    [
+      "inadequate_monitoring",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "atc_communication_error",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "midair_collision",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": -604,
+      "clock": "08:59:01",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Lindbergh tower local controller clears Cessna N7711G to maintain VFR and contact San Diego approach control after completing approaches (p. 744-745)."
+    },
+    {
+      "t": -503,
+      "clock": "09:00:15",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach controller advises PSA 182 'traffic at twelve o'clock, three miles, out of one thousand seven hundred' (p. 824-828)."
+    },
+    {
+      "t": -465,
+      "clock": "09:00:21",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer says 'Got em'', and captain informs controller 'Traffic in sight' (p. 830-836).",
+      "factors": []
+    },
+    {
+      "t": -456,
+      "clock": "09:00:23",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach controller clears Flight 182 to 'maintain visual separation' and contact Lindbergh tower (p. 837-839)."
+    },
+    {
+      "t": -385,
+      "clock": "09:00:34",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Flight 182 reports to Lindbergh tower downwind leg for landing; tower advises 'traffic, twelve o'clock, one mile, a Cessna' (p. 852-861)."
+    },
+    {
+      "t": -318,
+      "clock": "09:00:41",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer calls for 5-degree flaps, captain asks if that is the traffic being looked at; first officer responds 'Yeah, but I don't see him now' (p. 864-871).",
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": -309,
+      "clock": "09:00:44",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Flight 182 tells local controller 'Okay, we had it there a minute ago' and 'I think he's pass(ed) off to our right' but does not declare loss of visual contact (p. 874-879).",
+      "factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "t": -250,
+      "clock": "09:01:11",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer asks 'Are we clear of that Cessna?'; flight engineer says 'Suppose to be'; captain says 'I guess'; forward jumpseat occupant says 'I hope' (p. 901-909)."
+    },
+    {
+      "t": -140,
+      "clock": "09:01:21",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain says 'Oh yeah, before we turned downwind, I saw him about one o'clock, probably behind us now' (p. 916-918)."
+    },
+    {
+      "t": -104,
+      "clock": "09:01:28",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "system",
+      "text": "Conflict alert warning begins at San Diego Approach Control Facility indicating predicted flight paths would enter warning parameters (p. 931-939)."
+    },
+    {
+      "t": 0,
+      "clock": "09:01:47",
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Flight 182 and Cessna 172 collide at 2600 feet, 3 miles northeast of Lindbergh Field; Flight 182 overtaking Cessna, Cessna pitches nose-up, impacts right wing (p. 954-965).",
+      "state": {
+        "alt": 2600
+      },
+      "factors": [
+        "midair_collision"
+      ]
+    }
+  ],
+  "cvr": [
+    {
+      "t": -456,
+      "clock": "09:00:23",
+      "speaker": "FO",
+      "text": "Got em'"
+    },
+    {
+      "t": -451,
+      "clock": "09:00:23",
+      "speaker": "CAPT",
+      "text": "Traffic in sight"
+    },
+    {
+      "t": -318,
+      "clock": "09:00:41",
+      "speaker": "CAPT",
+      "text": "Is that the one (we're) looking at?"
+    },
+    {
+      "t": -318,
+      "clock": "09:00:41",
+      "speaker": "FO",
+      "text": "Yeah, but I don't see him now"
+    },
+    {
+      "t": -309,
+      "clock": "09:00:44",
+      "speaker": "CAPT",
+      "text": "Okay, we had it there a minute ago"
+    },
+    {
+      "t": -303,
+      "clock": "09:00:50",
+      "speaker": "CAPT",
+      "text": "I think he's pass(ed) off to our right"
+    },
+    {
+      "t": -250,
+      "clock": "09:01:11",
+      "speaker": "FO",
+      "text": "Are we clear of that Cessna?"
+    },
+    {
+      "t": -250,
+      "clock": "09:01:11",
+      "speaker": "FE",
+      "text": "Suppose to be"
+    },
+    {
+      "t": -250,
+      "clock": "09:01:11",
+      "speaker": "CAPT",
+      "text": "I guess"
+    },
+    {
+      "t": -140,
+      "clock": "09:01:21",
+      "speaker": "CAPT",
+      "text": "Oh yeah, before we turned downwind, I saw him about one o'clock, probably behind us now"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-78-77",
+      "to": "FAA",
+      "text": "Implement a Terminal Radar Service Area (TRSA) at Lindbergh Airport, San Diego, California",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "id": "A-78-78",
+      "to": "FAA",
+      "text": "Review procedures at all airports used regularly by air carrier and general aviation aircraft to determine which areas require terminal control area or terminal radar service area",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "id": "A-78-82",
+      "to": "FAA",
+      "text": "Use visual separation in terminal control areas and terminal radar service areas only when a pilot requests it, except for sequencing on final approach with radar monitoring",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "id": "A-78-83",
+      "to": "FAA",
+      "text": "Re-evaluate policy with regard to use of visual separation in other terminal areas",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
+    }
+  ],
+  "dissent": [
+    {
+      "agency": "NTSB",
+      "position": "Member McADAMS dissented; see dissenting statement on page 39",
+      "topic": "probable cause"
+    }
+  ],
+  "safety_changes": [
+    "Terminal Radar Service Areas (TRSA) implemented at major airports",
+    "Restrictions on visual separation procedures in terminal areas",
+    "Enhanced conflict alert resolution procedures"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7905.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Pacific_Southwest_Airlines_Flight_182",
+  "asn_id": "19780925-0",
+  "interest": 18.9,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read sections: narrative (p. 7-8), probable cause and amended probable cause (p. 36-38), safety recommendations (p. 38-41)"
+    ]
+  }
+}

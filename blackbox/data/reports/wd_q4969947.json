@@ -1,0 +1,294 @@
+{
+  "id": "wd_q4969947",
+  "qid": "Q4969947",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "British European Airways Flight 548",
+  "flight_number": "BA548",
+  "date": "1972-06-18",
+  "time_reference": "GMT",
+  "t0": "1972-06-18T16:08:30Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "4-1973",
+      "report_title": "Report on the accident to Hawker Siddeley Trident 1C G-ARPI near Staines-upon-Thames, Surrey on 18 June 1972"
+    }
+  ],
+  "aircraft": {
+    "type": "Hawker Siddeley Trident 1C",
+    "manufacturer": "Hawker Siddeley",
+    "family": "Trident",
+    "registration": "G-ARPI"
+  },
+  "operator": "British European Airways",
+  "route": {
+    "from": "EGLL",
+    "from_name": "London Heathrow",
+    "to": "EBBR",
+    "to_name": "Brussels"
+  },
+  "location": {
+    "name": "Staines-upon-Thames, Surrey",
+    "country": "United Kingdom"
+  },
+  "phase": "initial_climb",
+  "occupants": 118,
+  "fatalities": 118,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Hawker Siddeley Trident 1C G-ARPI crashed shortly after takeoff from Heathrow near Staines-upon-Thames. During the initial climb in noise-abatement configuration, the aircraft lost airspeed and the captain unintentionally retracted the leading edge droops at an insufficient airspeed of 162 knots (20 knots below minimum). The aircraft entered a deep stall from which recovery was impossible at the low altitude.",
+  "probable_cause": "The captain failed to maintain adequate airspeed during climb and failed to extend the leading edge droops properly. Contributing factors included the captain's undiagnosed heart condition, limited co-pilot experience, an aircraft design vulnerable to deep stall if droops were retracted at low speed, and inadequate stall recovery system training.",
+  "factors": [
+    {
+      "id": "procedural_noncompliance",
+      "role": "initiating",
+      "evidence": "Captain failed to maintain airspeed above 177 knots and retracted droops at 162 knots, 20 knots below minimum speed (p. 531-544)."
+    },
+    {
+      "id": "pilot_incapacitation",
+      "role": "contributing",
+      "evidence": "Captain Key had an undiagnosed heart condition that may have impaired judgment (p. 26-30)."
+    },
+    {
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "Second officer Keighley had limited experience and was not qualified to act as pilot-flying for the aircraft (p. 37-42)."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "Trident T-tail design with retractable droops made it vulnerable to deep stall if droops retracted below minimum speed (p. 660-679)."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "Aircraft entered deep stall at second 116 after droop retraction, with stick-pusher system providing insufficient warning (p. 497-507)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft descended steeply after deep stall with no recovery possible at 1772 feet altitude (p. 506-507)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted ground near Staines-upon-Thames at second 150.7 (p. 508)."
+    }
+  ],
+  "chain": [
+    [
+      "procedural_noncompliance",
+      "aerodynamic_stall"
+    ],
+    [
+      "design_deficiency",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "16:08:30",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Brake release, start of takeoff roll on runway 28R."
+    },
+    {
+      "t": 42,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft rotates at 145 knots IAS, leaves runway 2 seconds later (p. 471-472)."
+    },
+    {
+      "t": 63,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Autopilot engaged at 355 feet above runway, airspeed 170 knots IAS, 7 knots below noise-abatement target (p. 472-473).",
+      "state": {
+        "alt": 355,
+        "ias": 170,
+        "hdg": 0
+      }
+    },
+    {
+      "t": 74,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft begins 20-degree banked turn to port towards Epsom NDB (p. 474-475)."
+    },
+    {
+      "t": 83,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain reports 'Climbing as cleared', instructed to contact London ATC on 128.4 MHz (p. 476-477)."
+    },
+    {
+      "t": 93,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Noise-abatement procedure initiated: flaps retracted to fully up, power reduced. Airspeed 168 knots, still 9 knots below target (p. 487-489).",
+      "state": {
+        "ias": 168
+      }
+    },
+    {
+      "t": 105,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "After thrust reduction, airspeed drops to 157 knots, 20 knots below noise-abatement target Vy of 177 knots (p. 540-541).",
+      "state": {
+        "ias": 157
+      }
+    },
+    {
+      "t": 114,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Droop lever selected up in 20-degree banked turn at 162 knots IAS, 1772 feet altitude, 20 knots below droop retraction minimum (p. 496-498, 543-544).",
+      "state": {
+        "alt": 1772,
+        "ias": 162,
+        "roll": 20
+      },
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 116,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Stick-pusher stall recovery device operates at low airspeed, autopilot automatically disengages, nose pitches down (p. 498-500).",
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 124,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Second stick-push operates as elevator trim configuration causes pitch-up after first pitch-down (p. 503)."
+    },
+    {
+      "t": 127,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Third stick-push operates (p. 503)."
+    },
+    {
+      "t": 128,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Stall recovery system manually inhibited by pulling override lever. Aircraft pitched up rapidly, lost speed and height (p. 504-506).",
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 150.7,
+      "clock": null,
+      "phase": "unknown",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft impacted field near Staines-upon-Thames, all 118 occupants killed (p. 508).",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "ICAO/Manufacturers",
+      "text": "Speed-operated baulk to prevent retraction of leading-edge droops or slats when airspeed is below safe limit."
+    },
+    {
+      "id": null,
+      "to": "Airlines",
+      "text": "Specific instruction and training on change of configuration stalls, simultaneous stick-shaker/stick-pusher operation, and implications of design differences between stick-shaker and stick-pusher mechanisms (p. 3013-3023)."
+    },
+    {
+      "id": null,
+      "to": "Civil Aviation Authority",
+      "text": "Mandatory carriage of cockpit voice recorders on all civil passenger-carrying aircraft over 27,000 kg all-up weight (p. 3026-3028)."
+    },
+    {
+      "id": null,
+      "to": "Airlines",
+      "text": "Pilot training on possibility and dangers of subtle pilot incapacitation (p. 3030-3031)."
+    },
+    {
+      "id": null,
+      "to": "Airlines",
+      "text": "Young trainee pilots given more experience on flight deck before operating as P2 on passenger flights (p. 3033-3039)."
+    },
+    {
+      "id": null,
+      "to": "Medical",
+      "text": "Substitute stress-test electrocardiogram for resting ECG in pilot medicals when reliability improves (p. 3041-3043)."
+    },
+    {
+      "id": null,
+      "to": "Airlines",
+      "text": "P4 seat occupied only by personnel with flight function or under training during critical flight phases (p. 3045-3047)."
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Cockpit voice recorders became mandatory on large aircraft"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/4-1973%20G-ARPI.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/British_European_Airways_Flight_548",
+  "asn_id": "19720618-0",
+  "interest": 19.06,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read from sections: narrative (p. 14-16), mechanical factors speed section (p. 531-544), stall systems (p. 650-695), conclusions (p. 2891-2937), recommendations (p. 3005-3049)"
+    ]
+  }
+}
