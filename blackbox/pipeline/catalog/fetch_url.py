@@ -49,6 +49,19 @@ def main():
         if resp is None:
             raise SystemExit("download failed on the original URL and the Wayback Machine")
         is_pdf = resp.content[:5] == b"%PDF-" or "pdf" in resp.headers.get("content-type", "")
+        if not is_pdf:
+            # an agency landing page (gov.uk AAIB, ATSB, BEA) usually links the actual report PDF: follow the first one
+            from urllib.parse import urljoin
+            m = re.search(r'href=["\']([^"\']+\.pdf(?:\?[^"\']*)?)["\']', resp.text, re.I)
+            if m:
+                pdf_url = urljoin(resp.url, m.group(1))
+                try:
+                    r2 = requests.get(pdf_url, headers=headers, timeout=(20, 120), allow_redirects=True)
+                    if r2.ok and r2.content[:5] == b"%PDF-":
+                        print(f"followed report link on landing page: {pdf_url}")
+                        resp, is_pdf = r2, True
+                except Exception as exc:
+                    print(f"{pdf_url}: {exc.__class__.__name__}", file=sys.stderr)
         if is_pdf:
             import pymupdf
             path = PDF_DIR / f"{args.id}.pdf"
