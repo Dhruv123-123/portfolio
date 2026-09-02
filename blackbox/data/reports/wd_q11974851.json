@@ -1,0 +1,129 @@
+{
+  "id": "wd_q11974851",
+  "qid": "Q11974851",
+  "title": "2011 Dalamot helicopter crash",
+  "date": "2011-07-04",
+  "tier": "wikidata",
+  "depth": "sections",
+  "flight_number": null,
+  "agency": "AIBN",
+  "agencies": [
+    {
+      "code": "AIBN",
+      "name": "Norwegian Safety Investigation Authority",
+      "country": "Norway",
+      "role": "lead",
+      "report_id": "2012/13",
+      "report_date": "2012-01-01"
+    }
+  ],
+  "aircraft": {
+    "type": "Eurocopter AS350",
+    "manufacturer": "Eurocopter",
+    "family": "AS 350",
+    "registration": "LN-OXC"
+  },
+  "operator": "Airlift AS",
+  "route": {},
+  "location": {
+    "name": "Dalamot in Ullensvang, Hordaland county",
+    "country": "Norway"
+  },
+  "phase": "approach",
+  "occupants": 5,
+  "fatalities": 5,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "time_reference": "UTC",
+  "t0": "2011-07-04T00:00:00Z",
+  "summary": "An Airlift Eurocopter AS350 helicopter crashed at Dalamot in Ullensvang municipality, Norway on July 4, 2011. During descent for approach in mountainous terrain, the helicopter entered a tight right turn, lost control, and descended steeply. The aircraft impacted the ground about 500 meters short of the planned landing site and immediately caught fire, killing all five persons on board.",
+  "probable_cause": "The investigation concluded that abrupt maneuvering initiated a sequence where control of the helicopter was partly lost, and the altitude was insufficient for recovery. The Accident Investigation Board Norway determined the hydraulic system likely reached its limitation during the maneuvering, resulting in servo transparency (jack stall) occurring.",
+  "factors": [
+    {
+      "id": "loss_of_control_inflight",
+      "role": "initiating",
+      "evidence": "Abrupt maneuvering resulted in servo transparency (jack stall) causing control of the helicopter to be lost with high bank and steep descent"
+    },
+    {
+      "id": "low_energy_state",
+      "role": "contributing",
+      "evidence": "Height was insufficient for the commander to recover in time after loss of control"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Helicopter hit the ground about 500 metres short of the planned landing site"
+    }
+  ],
+  "chain": [
+    ["loss_of_control_inflight", "low_energy_state"],
+    ["low_energy_state", "cfit"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Helicopter started descent for approach in mountainous terrain",
+      "factors": []
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Helicopter observed turning tightly to the right, with loss of control and high bank and steep descent",
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Helicopter impacted ground about 500 metres short of planned landing site and immediately caught fire",
+      "factors": ["cfit"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "SL 2012/08T",
+      "to": "EASA",
+      "text": "Establish an industry standard for maneuvering limitations for passenger transport, with limits such as 30 degrees roll and 15 degrees pitch at heights below 500 feet",
+      "status": "unknown"
+    },
+    {
+      "id": "SL 2012/09T",
+      "to": "EASA",
+      "text": "Require the type certificate holder Eurocopter to issue a warning of the hazard when encountering servo transparency in a right turn, preferably as a permanent note in the Flight Manual",
+      "status": "unknown"
+    },
+    {
+      "id": "SL 2012/10T",
+      "to": "EASA",
+      "text": "Consider introducing requirements for flight recorders on more aircraft including light helicopters, beyond those covered by current regulations",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.aibn.no/Aviation/Reports/2012-13-eng"],
+  "wikipedia": "https://en.wikipedia.org/wiki/2011_Dalamot_helicopter_crash",
+  "asn_id": null,
+  "interest": 9.6,
+  "report_links": ["https://www.aibn.no/Aviation/Reports/2012-13-eng"],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": ["Report text was web-scraped summary rather than full investigation document; extracted investigation findings, causal factors, and 3 formal safety recommendations; minimal event details available from source document"]
+  }
+}

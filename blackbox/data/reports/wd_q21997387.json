@@ -1,0 +1,156 @@
+{
+  "id": "wd_q21997387",
+  "qid": "Q21997387",
+  "title": "2005 Loganair Islander accident",
+  "date": "2005-03-15",
+  "tier": "wikidata",
+  "depth": "sections",
+  "flight_number": null,
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "2/2006",
+      "report_date": "2006-11-10"
+    }
+  ],
+  "aircraft": {
+    "type": "Pilatus Britten-Norman BN2B-26 Islander",
+    "manufacturer": "Britten-Norman",
+    "family": "Islander",
+    "registration": "G-BOMG"
+  },
+  "operator": "Loganair",
+  "route": {
+    "from": "EGPF",
+    "from_name": "Glasgow",
+    "to": "EGPC",
+    "to_name": "Campbeltown"
+  },
+  "location": {
+    "name": "7.7 nm west-north-west of Campbeltown Airport, Scotland",
+    "country": "United Kingdom"
+  },
+  "phase": "approach",
+  "occupants": 2,
+  "fatalities": 2,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "time_reference": "UTC",
+  "t0": "2005-03-15T00:06:00Z",
+  "summary": "A Loganair air ambulance Islander crashed into the sea during approach to Campbeltown Airport after making several navigational errors and flying too low. The pilot, who had not flown for 32 days, was fatigued and lacked recent instrument flying experience. After reporting completion of the base turn inbound, the aircraft descended unchecked into the water. The pilot and paramedic on board were killed.",
+  "probable_cause": "The pilot allowed the aircraft to descend below the minimum safe altitude for the aircraft's position on the approach procedure, and this descent probably continued unchecked until the aircraft flew into the sea. Contributing factors were a combination of fatigue, high workload, lack of recent flying practice, and possible subtle incapacitation or disorientation that affected the pilot's ability to safely control the aircraft's flightpath.",
+  "factors": [
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "The pilot had not flown for 32 days and was probably suffering from the effects of fatigue (p. 62-63)"
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The pilot descended below minimum altitude with a steady rate of descent of about 1,000 ft/min and appeared unaware of the precise position (p. 62-63)"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "The aircraft descended 200 ft below the minimum outbound altitude of 1,540 ft and continued descending at the last radar position (p. 63)"
+    },
+    {
+      "id": "spatial_disorientation",
+      "role": "contributing",
+      "evidence": "The pilot may have been subject to spatial disorientation, distraction, or subtle incapacitation which affected the ability to safely control the aircraft's flightpath (p. 63)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted the sea west-north-west of Campbeltown Airport (p. 1)"
+    }
+  ],
+  "chain": [
+    ["fatigue", "loss_of_situational_awareness"],
+    ["fatigue", "descent_below_minimums"],
+    ["spatial_disorientation", "descent_below_minimums"],
+    ["descent_below_minimums", "cfit"],
+    ["loss_of_situational_awareness", "cfit"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "The pilot was flying the normal approach outbound on the procedure for Runway 11",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft established correctly on the 307° outbound radial with normal speed and rate of descent",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Pilot transmitted that he had completed the base turn, indicating he was inbound to the airport",
+      "factors": ["loss_of_situational_awareness"]
+    },
+    {
+      "t": 183,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacted the sea, with the wreckage located on the sea bed 7.7 nm west-north-west of the airport",
+      "factors": ["cfit"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "2006-101",
+      "to": "EASA",
+      "text": "Review the UK Civil Aviation Authority's proposal to mandate the fitment of Upper Torso Restraints on all seats of existing Transport Category (Passenger) aeroplanes below 5,700 kg being operated for public transport, and consider creating regulation to implement the intent of the proposal",
+      "status": "unknown"
+    },
+    {
+      "id": "2006-102",
+      "to": "CAA",
+      "text": "Considering the unique circumstances of air ambulance flights, review the circumstances in which a second pilot is required for public transport flights operating air ambulance services",
+      "status": "unknown"
+    },
+    {
+      "id": "2006-103",
+      "to": "CAA",
+      "text": "Consider mandating the carriage of a radio altimeter, or other independent low height warning device, for public transport IFR flights operating with a single pilot",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.gov.uk/aaib-reports/aar-2-2006-pilatus-britten-norman-bn2b-26-islander-g-bomg-15-march-2005"],
+  "wikipedia": "https://en.wikipedia.org/wiki/2005_Loganair_Britten-Norman_Islander_crash",
+  "asn_id": "20050315-0",
+  "interest": 9.7,
+  "report_links": ["https://www.gov.uk/aaib-reports/aar-2-2006-pilatus-britten-norman-bn2b-26-islander-g-bomg-15-march-2005"],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": ["Read synopsis, findings (with subsections on aircraft, flight operations, and personnel), causal factors, and safety recommendations sections; 22+ findings extracted; 3 safety recommendations from formal investigation"]
+  }
+}

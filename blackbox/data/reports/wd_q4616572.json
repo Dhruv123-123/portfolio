@@ -1,0 +1,214 @@
+{
+  "id": "wd_q4616572",
+  "qid": "Q4616572",
+  "title": "2010 Alaska Turbo Otter crash",
+  "date": "2010-08-09",
+  "tier": "wikidata",
+  "depth": "full",
+  "flight_number": null,
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-11/03",
+      "report_date": "2011-05-24"
+    }
+  ],
+  "aircraft": {
+    "type": "de Havilland DHC-3T",
+    "manufacturer": "de Havilland Canada",
+    "family": "DHC-3",
+    "registration": "N455A"
+  },
+  "operator": "GCI Communication Corp.",
+  "route": {
+    "from_name": "Lake Nerka lodge",
+    "to_name": "Nushagak River fishing camp"
+  },
+  "location": {
+    "name": "Muklung Hills near Aleknagik, Alaska",
+    "country": "United States"
+  },
+  "phase": "cruise",
+  "occupants": 9,
+  "fatalities": 5,
+  "injuries_serious": 4,
+  "damage": "substantial",
+  "category": "CFIT",
+  "time_reference": "Alaska daylight",
+  "t0": "2010-08-09T14:42:00-08:00",
+  "summary": "A de Havilland DHC-3T floatplane on a scenic/fishing trip crashed into mountainous terrain in the Muklung Hills about 10 nautical miles northeast of Aleknagik, Alaska. The aircraft was climbing and turning left when it struck terrain at approximately 950 feet elevation. The airline transport pilot and four passengers were killed; four passengers were seriously injured. The investigation could not establish the probable cause with certainty due to the lack of flight data or cockpit voice recorders, but concluded the pilot's temporary unresponsiveness was the likely cause.",
+  "probable_cause": "The National Transportation Safety Board determines that the probable cause of this accident was the pilot's temporary unresponsiveness for reasons that could not be established from the available information. Contributing to the investigation's inability to determine exactly what occurred in the final minutes of the flight was the lack of a cockpit recorder system with the ability to capture audio, images, and parametric data.",
+  "factors": [
+    {
+      "id": "pilot_incapacitation",
+      "role": "initiating",
+      "evidence": "Pilot's temporary unresponsiveness; possible medical event such as stroke recurrence or other incapacitation (p. 70)"
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Aircraft departed from expected route and turned toward rising terrain in a manner inconsistent with the pilot's reported proficiency level (p. 47-49)"
+    },
+    {
+      "id": "fatigue",
+      "role": "latent",
+      "evidence": "Although precursors for fatigue were present, insufficient evidence to determine if fatigue-related performance impairments played a role (p. 68)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Ceilings and visibility likely reduced pilot's ability to see terrain; visibility estimated between 2-5 miles with 500-1000 foot overcast (p. 48-49)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft in climbing left turn when it impacted terrain at approximately 950 feet msl elevation (p. 47)"
+    }
+  ],
+  "chain": [
+    ["pilot_incapacitation", "loss_of_situational_awareness"],
+    ["loss_of_situational_awareness", "cfit"],
+    ["low_visibility", "loss_of_situational_awareness"],
+    ["fatigue", "pilot_incapacitation"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:27",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft departed Lake Nerka lodge for Nushagak River fishing camp with 9 occupants",
+      "state": {
+        "alt": 40,
+        "vs": 300
+      },
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "14:30",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft at approximately 1,080 feet msl with changing altitudes indicating pilot maneuvering to remain below clouds",
+      "state": {
+        "alt": 1080
+      },
+      "factors": []
+    },
+    {
+      "t": 540,
+      "clock": "14:36",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Last recorded Sky Connect position at approximately 920 feet msl altitude on east-northeast heading toward Muklung Hills",
+      "state": {
+        "alt": 920
+      },
+      "factors": []
+    },
+    {
+      "t": 720,
+      "clock": "14:38",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft radar altimeter provided visual and aural altitude alerts approximately 4-6 seconds before impact, likely prompting control input",
+      "factors": ["loss_of_situational_awareness"]
+    },
+    {
+      "t": 735,
+      "clock": "14:42:15",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft in climbing left turn with nose-up pitch and left bank angles impacted terrain at approximately 950 feet msl elevation in Muklung Hills, about 500 meters short of planned landing site",
+      "state": {
+        "alt": 950,
+        "pitch": 17,
+        "roll": -30
+      },
+      "factors": ["cfit"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-11-48",
+      "to": "FAA",
+      "text": "Consult with appropriate specialists and revise the current internal Federal Aviation Administration guidance on issuance of medical certification subsequent to ischemic stroke or intracerebral hemorrhage to ensure that it is clear and includes specific requirements for a neuropsychological evaluation and assessment of risk of recurrence",
+      "status": "unknown"
+    },
+    {
+      "id": "A-11-49",
+      "to": "FAA",
+      "text": "Correct the deficiencies with the in-service automated weather sensor system (AWSS) stations, specifically the known problems with present weather sensors and ceilometers, to ensure that the AWSS stations provide accurate information as soon as practical",
+      "status": "unknown"
+    },
+    {
+      "id": "A-11-50",
+      "to": "FAA",
+      "text": "Implement a collaborative test program in Alaska between the Federal Aviation Administration, the National Weather Service (NWS), the local academic community, and private entities to establish the viability of relaying weather information collected from airborne aircraft equipped with existing data-link technology",
+      "status": "unknown"
+    },
+    {
+      "id": "A-11-51",
+      "to": "FAA",
+      "text": "If the Federal Aviation Administration's test program recommended in Safety Recommendation A-11-50 establishes that the use of existing data-link technology is a viable means of relaying collected information in real-time from an airborne platform, encourage and provide incentives to data link-equipped aircraft operators in Alaska to outfit their aircraft with weather-sensing equipment for real-time data relay",
+      "status": "unknown"
+    },
+    {
+      "id": "A-11-52",
+      "to": "AOPA",
+      "text": "Educate pilots of 14 Code of Federal Regulations Part 91 flight operations about the benefits of notifying passengers about the location and operation of survival and emergency communication equipment on board their airplanes",
+      "status": "unknown"
+    },
+    {
+      "id": "A-10-169",
+      "to": "FAA",
+      "text": "Require a detailed inspection, during annual inspections, of all emergency locator transmitters installed in general aviation aircraft to ensure that the emergency locator transmitters are mounted and retained in accordance with the manufacturer's specifications",
+      "status": "open"
+    },
+    {
+      "id": "A-10-170",
+      "to": "FAA",
+      "text": "Determine if the emergency locator transmitter (ELT) mounting requirements and retention tests specified by Technical Standard Order (TSO) C91a and TSO C126 are adequate to assess retention capabilities in ELT designs. Based on the results of this determination, revise, as necessary, TSO requirements to ensure proper retention of ELTs during airplane accidents",
+      "status": "open"
+    },
+    {
+      "id": "A-09-10",
+      "to": "FAA",
+      "text": "Require all existing turbine-powered, nonexperimental, nonrestricted-category aircraft that are not equipped with a cockpit voice recorder and are operating under 14 Code of Federal Regulations Parts 91, 121, or 135 to be retrofitted with a crash-resistant flight recorder system",
+      "status": "unknown"
+    },
+    {
+      "id": "A-09-11",
+      "to": "FAA",
+      "text": "Require all existing turbine-powered, nonexperimental, nonrestricted-category aircraft that are not equipped with a flight data recorder and are operating under 14 Code of Federal Regulations Parts 91, 121, or 135 to be retrofitted with a crash-resistant flight recorder system",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1103.pdf"],
+  "wikipedia": "https://en.wikipedia.org/wiki/2010_Alaska_DHC-3_crash",
+  "asn_id": "20100809-0",
+  "interest": 9.49,
+  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1103.pdf", "https://www.ntsb.gov/investigations/Pages/ANC10MA068.aspx", "https://data.ntsb.gov/Docket/?NTSBNumber=ANC10MA068"],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": ["Read accident history, accident sequence, human performance analysis, findings, probable cause, and all recommendations sections (both new and reiterated); 20 findings extracted; 9 recommendations from formal NTSB issuance; depth=full due to extensive detail from analysis sections"]
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "id": "wd_q14711893",
+  "qid": "Q14711893",
+  "title": "United Airlines 2860",
+  "date": "1977-12-18",
+  "tier": "wikidata",
+  "depth": "sections",
+  "flight_number": "2860",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR78-8",
+      "report_date": "1978-07-27"
+    }
+  ],
+  "aircraft": {
+    "type": "Douglas DC-8-54",
+    "manufacturer": "Douglas",
+    "family": "DC-8",
+    "registration": "N8047U"
+  },
+  "operator": "United Airlines",
+  "route": {
+    "from": "KSFO",
+    "from_name": "San Francisco",
+    "to": "KORD",
+    "to_name": "Chicago"
+  },
+  "location": {
+    "name": "Wasatch Range near Kaysville, Utah",
+    "country": "United States"
+  },
+  "phase": "descent",
+  "occupants": 3,
+  "fatalities": 3,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "time_reference": "MST",
+  "t0": "1977-12-18T01:38:00-07:00",
+  "summary": "United Airlines Flight 2860, a DC-8 cargo flight, departed San Francisco on December 17, 1977, with an intermediate stop planned at Salt Lake City. After reporting electrical trouble during descent, the crew entered a holding pattern and left the frequency to discuss the problem with maintenance. Unaware of the incomplete holding clearance, the flight drifted into mountainous terrain. When ATC warned of terrain and ordered an immediate climb, the aircraft struck a 7,665-foot mountain ridge at 7,200 feet, killing all three crew members.",
+  "probable_cause": "The National Transportation Safety Board determined the cause was the approach controller's issuance of an incomplete and ambiguous holding clearance, combined with the flightcrew's acceptance of it and failure to follow prescribed loss-of-communications procedures and holding procedures. The controller and crew's actions were attributed to habitual imprecise communication and adherence developed through years of radar environment operations. Contributing to the accident was the aircraft's No. 1 electrical system failure.",
+  "factors": [
+    {
+      "id": "atc_communication_error",
+      "role": "initiating",
+      "evidence": "The approach controller issued an incomplete holding clearance without specifying a holding radial (p. 33-34)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The flightcrew failed to adhere to prescribed loss-of-communications and holding procedures (p. 33-34)"
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Due to incomplete clearance and crew workload, the aircraft entered a hazardous area of terrain while off frequency (p. 34-35)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted 7,665-foot mountain ridge at 7,200-foot elevation (p. 3)"
+    }
+  ],
+  "chain": [
+    ["atc_communication_error", "procedural_noncompliance"],
+    ["atc_communication_error", "loss_of_situational_awareness"],
+    ["procedural_noncompliance", "loss_of_situational_awareness"],
+    ["loss_of_situational_awareness", "cfit"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "23:17",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "United Airlines Flight 2860 departed San Francisco at 2317 PST on December 17, 1977",
+      "factors": []
+    },
+    {
+      "t": 2160,
+      "clock": "00:53",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight began descent from cruise altitude toward Salt Lake City",
+      "factors": []
+    },
+    {
+      "t": 3360,
+      "clock": "01:11",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Crew reported electrical trouble and requested holding clearance",
+      "factors": ["atc_communication_error"]
+    },
+    {
+      "t": 3480,
+      "clock": "01:15",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Crew requested to leave frequency for 'little minute' to contact United maintenance",
+      "factors": ["procedural_noncompliance"]
+    },
+    {
+      "t": 3480,
+      "clock": "01:15",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller approved crew to leave frequency, believing it would be brief",
+      "factors": []
+    },
+    {
+      "t": 3930,
+      "clock": "01:36",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Flight returned to approach control frequency",
+      "factors": []
+    },
+    {
+      "t": 3960,
+      "clock": "01:37",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller warned flight of terrain on right and instructed left turn",
+      "factors": ["loss_of_situational_awareness"]
+    },
+    {
+      "t": 4020,
+      "clock": "01:38",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller instructed climb immediately to 8,000 feet",
+      "factors": []
+    },
+    {
+      "t": 4050,
+      "clock": "01:38",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Crew reported climbing from 6,000 feet to 8,000 feet",
+      "factors": []
+    },
+    {
+      "t": 4080,
+      "clock": "01:38",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck 7,665-foot mountain ridge at approximately 7,200 feet elevation",
+      "factors": ["cfit"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-78-21",
+      "to": "FAA",
+      "text": "Review the adequacy of current cockpit voice recorder preflight testing procedures to assure satisfactory system operation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-78-22",
+      "to": "FAA",
+      "text": "Review the reliability of cockpit voice recorder units to assure that the mean time between failure is not excessive",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7808.pdf"],
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Airlines_Flight_2860",
+  "asn_id": "19771218-0",
+  "interest": 10.54,
+  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7808.pdf"],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": ["Read synopsis, analysis, findings, probable cause, and recommendations sections; 24 findings extracted; 2 recommendations from formal board issuance"]
+  }
+}
