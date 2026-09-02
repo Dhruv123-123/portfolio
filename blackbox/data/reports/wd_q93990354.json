@@ -1,0 +1,235 @@
+{
+  "id": "wd_q93990354",
+  "title": "Georgian Express 126",
+  "flight_number": null,
+  "date": "2004-01-17",
+  "time_reference": "EST",
+  "t0": "2004-01-17T16:38:00-05:00",
+  "agency": "TSB",
+  "agencies": [
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "lead",
+      "report_id": "A04H0001",
+      "report_title": "Loss of Control - Georgian Express Ltd. Cessna 208B Caravan",
+      "report_date": "2004-11-25",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2004/a04h0001/a04h0001.html"
+    }
+  ],
+  "aircraft": {
+    "type": "Cessna 208B Grand Caravan",
+    "manufacturer": "Cessna",
+    "family": "208",
+    "registration": "C-FAGA",
+    "msn": "208B0658"
+  },
+  "operator": "Georgian Express",
+  "route": {
+    "from": "CYPE",
+    "from_name": "Pelee Island",
+    "to": "CYSN",
+    "to_name": "Windsor, Ontario"
+  },
+  "location": {
+    "name": "Lake Erie, 1.6 nm from Pelee Island",
+    "country": "Canada"
+  },
+  "phase": "initial_climb",
+  "occupants": 10,
+  "fatalities": 10,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Georgian Express Flight 126, a Cessna 208B, crashed into Lake Erie shortly after takeoff from Pelee Island with all 10 occupants fatally injured. The aircraft was approximately 15 percent overweight with ice accretion on the wings. Following a shallow-angle climb, the aircraft stalled as flaps were being retracted and crashed into the frozen lake surface.",
+  "probable_cause": "The aircraft was approximately 15 percent overweight at the time of departure, combined with ice accretion on the airframe and an aerodynamic stall during initial climb with flaps being retracted.",
+  "factors": [
+    {
+      "id": "weight_and_balance_error",
+      "role": "initiating",
+      "evidence": "the aircraft was approximately 15 percent overweight at the time of departure (p. 35)"
+    },
+    {
+      "id": "airframe_icing",
+      "role": "initiating",
+      "evidence": "two people on the ramp expressed their concern about ice on the wings to the pilot (p. 1)"
+    },
+    {
+      "id": "deicing_inadequate",
+      "role": "contributing",
+      "evidence": "the pilot was observed inspecting the wings but expressed no concern and continued boarding (p. 1)"
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "a stall occurred as the pilot raised the flaps over Lake Erie (p. 35)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "the aircraft rolled to the left and impacted the ice surface of the lake (p. 35)"
+    }
+  ],
+  "chain": [
+    [
+      "weight_and_balance_error",
+      "aerodynamic_stall"
+    ],
+    [
+      "airframe_icing",
+      "aerodynamic_stall"
+    ],
+    [
+      "deicing_inadequate",
+      "loss_of_control_inflight"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "16:38",
+      "phase": "ground",
+      "actor": "GND",
+      "kind": "env",
+      "text": "Before takeoff from Pelee Island, two ramp personnel expressed concern about ice on the wings to the pilot.",
+      "factors": [
+        "airframe_icing"
+      ]
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot inspected the wings but expressed no concern and continued boarding passengers.",
+      "factors": [
+        "deicing_inadequate"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft took off from Runway 27, using most of the 3,300-foot runway.",
+      "factors": [
+        "weight_and_balance_error"
+      ]
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft climbed at very shallow angle over frozen Lake Erie surface.",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot raised flaps during climb.",
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 130,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft entered aerodynamic stall.",
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 140,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Cessna rolled to the left.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 160,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck frozen surface of Lake Erie approximately 1.6 nm from departure end of runway.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A04-01",
+      "to": "Transport Canada",
+      "text": "Require that actual passenger weights be used for aircraft involved in commercial or air taxi operations with a capacity of nine or fewer passengers",
+      "status": "closed_acceptable",
+      "outcome": "Transport Canada conducted risk assessment for actual passenger weights in May 2005",
+      "trigger_factors": [
+        "weight_and_balance_error"
+      ]
+    },
+    {
+      "id": "A04-02",
+      "to": "Transport Canada",
+      "text": "Re-evaluate the standard weights for passengers and carry-on baggage and adjust them for all aircraft to reflect current realities",
+      "status": "closed_acceptable",
+      "outcome": "Effective 20 January 2005, TC adjusted standard weights to reflect current passenger weight averages",
+      "trigger_factors": [
+        "weight_and_balance_error"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Increased standard passenger weights in AIP Canada effective 20 January 2005",
+    "FAA Advisory Circular 120-27D issued addressing passenger weight calculations",
+    "FAA Airworthiness Directive 2005-07-01 for Cessna 208/208B icing conditions"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2004/a04h0001/a04h0001.html"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q93990354",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Georgian_Express_Flight_126",
+  "report_links": [
+    "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2004/a04h0001/a04h0001.html",
+    "https://www.tsb.gc.ca/sites/default/files/recommandations-recommendations/aviation/eng/rec-a0401.pdf"
+  ],
+  "interest": 9.99,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read synopsis, history of flight, conclusions, and safety actions sections",
+      "All 10 occupants (1 pilot + 9 passengers) killed in crash",
+      "Aircraft weight exceeded MTOW by ~15% with ice accretion - dual initiating factors"
+    ]
+  }
+}

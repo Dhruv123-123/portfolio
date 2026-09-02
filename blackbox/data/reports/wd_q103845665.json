@@ -1,0 +1,300 @@
+{
+  "id": "wd_q103845665",
+  "title": "Execuflight 1526",
+  "flight_number": null,
+  "date": "2015-11-10",
+  "time_reference": "EST",
+  "t0": "2015-11-10T14:53:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "NTSB/AAR-16/03",
+      "report_title": "Crash During Nonprecision Instrument Approach to Landing - Execuflight Flight 1526",
+      "report_date": "2016-10-18",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1603.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "British Aerospace HS 125-700A (Hawker 700A)",
+    "manufacturer": "British Aerospace",
+    "family": "HS 125",
+    "registration": "N237WR"
+  },
+  "operator": "Execuflight",
+  "route": {
+    "from": "MGY",
+    "from_name": "Dayton-Wright Brothers Airport",
+    "to": "AKR",
+    "to_name": "Akron Executive Airport"
+  },
+  "location": {
+    "name": "Akron, Ohio - four-unit apartment building",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 9,
+  "fatalities": 9,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Execuflight Flight 1526 crashed into a four-unit apartment building in Akron, Ohio during a nonprecision localizer approach on November 10, 2015, killing the captain, first officer, and seven passengers. The flight crew mismanaged the approach, flew significantly below minimum descent altitude, and descended below prescribed minimums without visual contact with the runway. The aircraft entered an aerodynamic stall and impacted the apartment building.",
+  "probable_cause": "The flight crew's mismanagement of the approach and multiple deviations from company standard operating procedures, which placed the airplane in an unsafe situation and led to an unstabilized approach, a descent below minimum descent altitude without visual contact with the runway environment, and an aerodynamic stall. Contributing factors included Execuflight's casual attitude toward compliance with standards, inadequate hiring, training and operational oversight, lack of formal safety program, and the FAA's insufficient oversight.",
+  "factors": [
+    {
+      "id": "unstable_approach",
+      "role": "initiating",
+      "evidence": "flight crew performed an unstabilized approach with the aircraft significantly below Vref speed (p. 72)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "captain voiced concerns about approach conditions but did not take corrective action (p. 72)"
+    },
+    {
+      "id": "low_energy_state",
+      "role": "contributing",
+      "evidence": "airspeed had decayed substantially below normal approach speed during descent (p. 2)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "flight crew deviated from standard operating procedures multiple times (p. 72)"
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "aircraft entered aerodynamic stall during nonprecision approach (p. 72)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "aircraft impacted apartment building from uncontrolled descent (p. 2)"
+    }
+  ],
+  "chain": [
+    [
+      "unstable_approach",
+      "low_energy_state"
+    ],
+    [
+      "low_energy_state",
+      "aerodynamic_stall"
+    ],
+    [
+      "procedural_noncompliance",
+      "unstable_approach"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:13",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 1526 departed Dayton-Wright Brothers Airport at 14:13 EST",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": "14:16",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight contacted Indianapolis ARTCC and received IFR clearance to climb to 17,000 ft",
+      "factors": []
+    },
+    {
+      "t": 600,
+      "clock": "14:23",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight crew began preparing for approach to Akron, attempting to obtain weather",
+      "factors": []
+    },
+    {
+      "t": 1260,
+      "clock": "14:34",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC instructed aircraft to slow down and remain at 3,000 ft due to traffic on same runway",
+      "factors": []
+    },
+    {
+      "t": 1440,
+      "clock": "14:36",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "First officer increased descent rate to 2,000 fpm and reduced airspeed to approximately 98 knots, well below normal",
+      "factors": [
+        "unstable_approach",
+        "low_energy_state"
+      ]
+    },
+    {
+      "t": 1520,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PM",
+      "kind": "crew_speech",
+      "text": "Captain expressed concerns about descent rate and airspeed but did not take corrective action",
+      "factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "t": 1680,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft descended below minimum descent altitude of 1,540 ft without visual contact with runway",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 1920,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft entered aerodynamic stall approximately 14 seconds after reaching MDA",
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 1950,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacted four-unit apartment building approximately 2 miles from runway threshold",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-16-34",
+      "to": "FAA",
+      "text": "Require 14 CFR Part 135 operators to equip their aircraft with flight data recording devices capable of supporting a flight data monitoring program",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "A-16-35",
+      "to": "FAA",
+      "text": "Require all 14 CFR Part 135 operators to establish a structured flight data monitoring program that reviews all available data sources to identify deviations from established norms and procedures",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "A-16-36",
+      "to": "FAA",
+      "text": "Require all 14 CFR Part 135 operators to establish safety management system programs",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "A-16-37",
+      "to": "Textron Aviation",
+      "text": "Develop and incorporate into Hawker 700- and 800-series pilot training programs a nonprecision approach procedure aligned with stabilized approach criteria",
+      "status": "unknown",
+      "trigger_factors": [
+        "unstable_approach"
+      ]
+    },
+    {
+      "id": "A-16-38",
+      "to": "Textron Aviation",
+      "text": "Develop and incorporate into Hawker 700- and 800-series pilot training programs a definition of 'landing assured' aligned with 14 CFR 91.175(c)(1)",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "A-16-39",
+      "to": "FAA",
+      "text": "Train flight crews in continuous descent final approach technique as primary means for conducting nonprecision approaches",
+      "status": "unknown",
+      "trigger_factors": [
+        "unstable_approach"
+      ]
+    },
+    {
+      "id": "A-16-40",
+      "to": "FAA",
+      "text": "Issue safety alert for operators describing this accident and reminding to ensure current accurate information in weight-and-balance software",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "A-16-41",
+      "to": "FAA",
+      "text": "Review Safety Assurance System to identify 14 CFR Part 135 operators not complying with standard operating procedures",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "A-16-42",
+      "to": "FAA",
+      "text": "Review problems with CVR data quality to determine why problems were not detected and corrected before accident; revise AC 20-186 if needed",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1603.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q103845665",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Execuflight_Flight_1526",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1603.pdf"
+  ],
+  "interest": 9.92,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read history of flight, probable cause, and recommendations sections",
+      "9 occupants killed - captain, first officer, 7 passengers",
+      "Aircraft impacted apartment building with no ground casualties",
+      "Both pilots had been rejected by previous employers per investigation"
+    ]
+  }
+}
