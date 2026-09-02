@@ -1,0 +1,258 @@
+{
+  "id": "wd_q4652401",
+  "qid": "Q4652401",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "ALM 980",
+  "flight_number": "ONA980",
+  "date": "1970-05-02",
+  "time_reference": "local",
+  "t0": "1970-05-02T15:49:00-04:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-71-8",
+      "report_title": "Aircraft Accident Report: Overseas National Airways, Inc., Douglas DC-9, N935F, Operating as Antilliaanse Luchtvaart Maatschappij Flight 980",
+      "report_date": "1971-03-31",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7108.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Douglas DC-9-33CF",
+    "manufacturer": "Douglas",
+    "family": "DC-9",
+    "registration": "N935F",
+    "msn": "47407",
+    "engines": "Pratt & Whitney JT8D-9"
+  },
+  "operator": "Overseas National Airways",
+  "route": {
+    "from": "JFK",
+    "from_name": "New York Kennedy International",
+    "to": "TNCS",
+    "to_name": "Juliana Airport, St. Maarten"
+  },
+  "location": {
+    "name": "Caribbean Sea, 48 km off St. Croix",
+    "country": "Netherlands Antilles",
+    "lat": 17.883,
+    "lon": -69.233
+  },
+  "phase": "approach",
+  "occupants": 63,
+  "fatalities": 23,
+  "injuries_serious": 0,
+  "injuries_minor": 40,
+  "damage": "destroyed",
+  "category": "FUEL",
+  "summary": "Overseas National Airways Flight 980, a Douglas DC-9, ditched in the Caribbean Sea on 2 May 1970 after fuel exhaustion following three unsuccessful landing attempts at St. Maarten and a diversion. The crew miscalculated fuel consumption, misread fuel gauges, and incorrectly computed fuel reserves, compounding high workload from weather and multiple approach attempts. The aircraft ditched with 23 fatalities.",
+  "probable_cause": "Fuel exhaustion which resulted from continued, unsuccessful attempts to land at St. Maarten until insufficient fuel remained to reach an alternate airport. A contributing factor was the reduced visibility in the approach zone because of rain showers, a condition not reported to the flight.",
+  "factors": [
+    {
+      "id": "fuel_quantity_error",
+      "role": "initiating",
+      "evidence": "The crew miscalculated the rate of fuel consumption (using 0.78 and LRC mach at high-power settings rather than planned procedures), misread fuel gauges, and incorrectly computed the amount of fuel expected to remain (p. 8-10)."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "Multiple unsuccessful landing attempts and diversions, combined with weather situations and ATC coordination, distracted the crew from proper fuel management (p. 2)."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Crew inattention and distraction resulted in poor fuel management throughout the descent and approach phase. The crew did not recognize that fuel margins had reached critical limits (p. 9)."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "A rain shower in the approach zone reduced visibility below announced values, forcing the aircraft to make approaches too close to the airport, complicating multiple landing attempts (p. 9)."
+    },
+    {
+      "id": "fuel_exhaustion",
+      "role": "outcome",
+      "evidence": "The aircraft's fuel was exhausted during the descent, engines flamed out, and the captain ditched the aircraft in the Caribbean Sea at approximately 1549 local time (p. 7, 15)."
+    },
+    {
+      "id": "ditching",
+      "role": "outcome",
+      "evidence": "Flight 980 ditched in the Caribbean Sea at 17 degrees 53 minutes North, 69 degrees 14 minutes West, during daylight hours (p. 7)."
+    }
+  ],
+  "chain": [
+    ["high_workload", "inadequate_monitoring"],
+    ["fuel_quantity_error", "fuel_exhaustion"],
+    ["low_visibility", "fuel_quantity_error"],
+    ["inadequate_monitoring", "fuel_quantity_error"],
+    ["fuel_exhaustion", "ditching"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:30",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC advised that weather in St. Maarten was below landing minima; captain elected to divert",
+      "factors": ["high_workload"]
+    },
+    {
+      "t": 300,
+      "clock": "14:35",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower at St. Maarten advised that the weather had improved sufficiently for landing",
+      "factors": []
+    },
+    {
+      "t": 600,
+      "clock": "14:40",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "First landing attempt - aircraft did not sight the runway in sufficient time to align for landing",
+      "factors": ["low_visibility"]
+    },
+    {
+      "t": 900,
+      "clock": "14:45",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Second landing attempt unsuccessful due to poor alignment with the runway; aircraft flown with 25 degrees flaps",
+      "factors": ["high_workload", "low_visibility"]
+    },
+    {
+      "t": 1200,
+      "clock": "14:50",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Third attempt - aircraft was too high to land safely after assessing weather and fuel situation",
+      "factors": ["inadequate_monitoring"]
+    },
+    {
+      "t": 1500,
+      "clock": "14:55",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain decided to divert to St. Thomas",
+      "factors": ["fuel_quantity_error"]
+    },
+    {
+      "t": 1790,
+      "clock": "15:09:50",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain reported to San Juan ARTCC 'Okay there's a possibility I may have to ditch this aircraft, I am now descending to the water.'",
+      "factors": ["fuel_exhaustion"]
+    },
+    {
+      "t": 1920,
+      "clock": "15:12:00",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Engines flamed out due to fuel exhaustion at approximately 500 feet altitude",
+      "state": {"alt": 500, "ias": 145},
+      "factors": ["fuel_exhaustion"]
+    },
+    {
+      "t": 1980,
+      "clock": "15:13:00",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft ditched in Caribbean Sea; captain leveled off momentarily at 500 feet, descended in 100-foot increments, lowered 15 degrees flaps, and flew onto water at approximately 90 knots",
+      "state": {"alt": 0, "ias": 90, "pitch": 5},
+      "factors": ["ditching"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require that the item 'warn passengers' be inserted as one of the last items on the emergency landing or ditching checklists of all carriers, yet sufficiently advanced on the list to insure adequate time for passengers to brace for a crash (NTSB-AAR-71-8, Recommendation (a), Appendix E).",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": ["ditching"]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require that no flight involving the briefing of passengers regarding emergency procedures be dispatched without an operable public address system. The system should be functioning so that the flightcrew can speak to the passengers and a cabin attendant can speak to the passengers from at least one cabin station (NTSB-AAR-71-8, Recommendation (b), Appendix F).",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": ["ditching"]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Take necessary steps to eliminate, within a reasonable time, the use of fabric-to-metal type seatbelts and require the metal-to-metal type of seatbelt with a standardized activating device (NTSB-AAR-71-8, Recommendation (c), Appendix G).",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": ["ditching"]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Reexamine the methods for storage of lifevests aboard aircraft to eliminate any obstructions to expeditious access in the event of an emergency requiring their use (NTSB-AAR-71-8, Recommendation (d), Appendix H).",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": ["ditching"]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Initiate action to install a VHF communications link between San Juan ARTCC and Juliana Tower. This action was scheduled for fiscal year 1972 (NTSB-AAR-71-8, Recommendation (e), Appendix I).",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Reassess the standards set forth in FAR parts 37.122 and 37.178 pertaining to the certification of liferafts and lifevests, with a view toward eliminating the deficiencies in such equipment as evidenced by the investigative record of this accident. Research and development should be undertaken, as necessary, to accomplish this reassessment and improvement of standards.",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": ["ditching"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced requirements for emergency checklists to include passenger warning before ditching",
+    "Mandatory operable public address systems on all aircraft with passenger briefing requirements",
+    "Transition from fabric-to-metal seatbelts to metal-to-metal type with standardized activating devices",
+    "Improved stowage methods for lifevests to ensure expeditious access during emergencies",
+    "Installation of VHF communications link between San Juan ARTCC and Juliana Tower"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7108.pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Key sections read: History of the Flight (p. 2-7), Injuries and Damage (p. 7-8), Analysis and Conclusions (p. 8-12), Probable Cause (p. 11-12), Recommendations (p. 12)",
+      "Events extracted from detailed timeline in History of the Flight section with clock times and aircraft state where reported",
+      "Factors identified from the report's findings section and analysis",
+      "Probable cause statement quoted from report conclusion section",
+      "Recommendations extracted from section 3 with appendix references"
+    ]
+  },
+  "asn_id": "19700502-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/ALM_Flight_980",
+  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7108.pdf", "https://aviation-safety.net/database/record.php?id=19700502-0"],
+  "interest": 14.42,
+  "curated_id": null
+}

@@ -1,0 +1,197 @@
+{
+  "id": "wd_q8186827",
+  "title": "Dan-Air 1903",
+  "flight_number": null,
+  "date": "1970-07-03",
+  "time_reference": "UTC+2",
+  "t0": "1970-07-03T17:53:00+02:00",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Aircraft Accident Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "1-1972 G-APDN"
+    }
+  ],
+  "aircraft": {
+    "type": "de Havilland DH 106 Comet 4",
+    "manufacturer": "de Havilland",
+    "family": "Comet",
+    "registration": "G-APDN"
+  },
+  "operator": "Dan-Air",
+  "route": {
+    "from": "MAN",
+    "from_name": "Manchester Airport",
+    "to": "BCN",
+    "to_name": "Josep Tarradellas Airport Barcelona-El Prat"
+  },
+  "location": {
+    "name": "Les Agudes, Serralada del Montseny, near Arb\u00facies",
+    "country": "Spain"
+  },
+  "phase": "approach",
+  "occupants": 112,
+  "fatalities": 112,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Dan-Air Flight 1903 crashed into the Serralada del Montseny near Arb\u00facies during descent toward Barcelona on 3 July 1970, killing all 112 aboard. The crew mistakenly reported passing the Sabadell NDB while still 28 nm north of it over mountainous terrain. The controller, misled by a radar echo from another aircraft over Sabadell, did not notice the error and cleared descent to 2800 ft. The aircraft struck beech trees at about 3800 ft.",
+  "probable_cause": "The combination of erroneous position reporting by the crew (who reported passing Sabadell when still 28 nm north) combined with a radar echo from another aircraft near Sabadell led the controller to believe the Comet had passed the beacon. This involuntary mutual error between crew and ATC could not be corrected before the aircraft struck high terrain.",
+  "factors": [
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "initiating",
+      "evidence": "The aircraft was still 28 nautical miles north of Sabadell at the time of the erroneous report, over the Serralada del Montseny mountainous terrain (p. 9)"
+    },
+    {
+      "id": "navigation_error",
+      "role": "contributing",
+      "evidence": "The crew reported in error that they had passed the Sabadell NDB, when they were still 28 nm north and the aircraft had drifted east of its planned route (p. 8-9)"
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "Barcelona ATC mistook a radar echo from another aircraft overflying Sabadell for that of the Dan-Air Comet and cleared descent to 2,800 feet, the minimum altitude for that sector (p. 9)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft crashed into a group of beech trees on the northeast slopes of the Les Agudes peak at an altitude of about 3,900 feet"
+    }
+  ],
+  "chain": [
+    [
+      "loss_of_situational_awareness",
+      "navigation_error"
+    ],
+    [
+      "navigation_error",
+      "atc_communication_error"
+    ],
+    [
+      "atc_communication_error",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "16:08",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 1903 departed Manchester Airport at 16:08 BST and encountered air traffic control delays in the Paris area, resulting in a change of route."
+    },
+    {
+      "t": 5760,
+      "clock": "17:53",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Radio contact was established with Barcelona Area Control Centre at 17:53 local time. Aircraft reported passing Spanish frontier and requested clearance to descend."
+    },
+    {
+      "t": 5940,
+      "clock": "17:57",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft reported passing Barcelona FIR boundary at FL160 with ETA of 1801 hrs for Point Berga."
+    },
+    {
+      "t": 6000,
+      "clock": "17:59",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft handed to Barcelona Approach. Crew reported leaving FL130 and gave ETA for Sabadell of 1807 hrs."
+    },
+    {
+      "t": 6180,
+      "clock": "18:02:30",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Crew reported passing Sabadell NDB, though they were actually still 28 nautical miles north of it, over the Serralada del Montseny.",
+      "factors": [
+        "navigation_error",
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 6240,
+      "clock": "18:02:48",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Barcelona ATC mistook a radar echo from another aircraft over Sabadell for the Dan-Air Comet and cleared descent to 2,800 feet.",
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": 6300,
+      "clock": "19:05",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The Comet struck beech trees on the northeast slopes of the Les Agudes peak at an altitude of about 3,900 feet and was destroyed in the explosion.",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "ICAO",
+      "text": "Emphasis should be given to commanders of aircraft flying on a new route to verify successive positions using all available aids rather than relying on any one aid.",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "ICAO",
+      "text": "Rules for radar identification should be revised to prevent similar situations, with identification properly checked by more than one method.",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "ICAO",
+      "text": "Radio navigation charts should incorporate spot heights of significant points along the route to be followed.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced radar identification procedures with multiple verification methods",
+    "Improved pilot training on position verification using multiple navigation aids",
+    "Radio navigation charts updated to include spot heights of significant points"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://www.aaib.gov.uk/cms_resources/1-1972%20G-APDN.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q8186827",
+  "asn_id": "19700703-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Dan-Air_Flight_1903",
+  "report_links": [
+    "http://www.aaib.gov.uk/cms_resources/1-1972%20G-APDN.pdf"
+  ],
+  "interest": 17.3,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flight, Analysis, Conclusions and Probable Causes, Recommendations from UK AAIB report"
+    ]
+  }
+}

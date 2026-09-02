@@ -1,0 +1,175 @@
+{
+  "id": "wd_q63490143",
+  "title": "Aeroflot 1492",
+  "flight_number": "1492",
+  "date": "2019-05-05",
+  "time_reference": "UTC",
+  "t0": "2019-05-05T15:30:00Z",
+  "agency": "MAK",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead",
+      "report_id": "RA-89098",
+      "report_title": "Final Report on the Air Accident Investigation"
+    }
+  ],
+  "aircraft": {
+    "type": "Sukhoi Superjet 100",
+    "manufacturer": "Sukhoi",
+    "family": "Superjet 100",
+    "registration": "RA-89098",
+    "msn": null,
+    "engines": null
+  },
+  "operator": "Aeroflot",
+  "route": {
+    "from": "SVO",
+    "from_name": "Moscow Sheremetyevo",
+    "to": "MMK",
+    "to_name": "Murmansk"
+  },
+  "location": {
+    "name": "Sheremetyevo International Airport",
+    "country": "Russia"
+  },
+  "phase": "landing",
+  "occupants": 78,
+  "fatalities": 41,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Aeroflot Flight 1492 was struck by lightning during climb-out on 5 May 2019, suffering electrical failure. The aircraft returned to Sheremetyevo for an emergency landing. It bounced on landing and touched down hard, causing the landing gear to collapse and fuel to spill. A fire erupted in the rear cabin, killing 41 of the 78 occupants.",
+  "probable_cause": "At 15:08 UTC, the aircraft was struck by lightning at flight level 89, causing primary radio and autopilot to become inoperative. The flight control mode changed to DIRECT, a degraded mode of operation. The captain attempted to land with excessive crosswind and the aircraft bounced, touched down hard, causing the landing gear to collapse and fuel spillage from the wings.",
+  "factors": [
+    {
+      "id": "lightning_strike",
+      "role": "initiating",
+      "evidence": "The aircraft was struck by lightning at flight level 89, causing primary radio and autopilot to become inoperative"
+    },
+    {
+      "id": "flight_control_law_degradation",
+      "role": "contributing",
+      "evidence": "The flight control mode changed to DIRECT, a degraded, more challenging mode of operation"
+    },
+    {
+      "id": "hard_landing",
+      "role": "contributing",
+      "evidence": "The aircraft bounced on landing and touched down hard, causing the landing gear to collapse"
+    },
+    {
+      "id": "fuel_leak",
+      "role": "contributing",
+      "evidence": "Fuel spilled out of the wings following the hard landing and landing gear collapse"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "A fire erupted and engulfed the rear of the aircraft, killing 41 of the 78 occupants"
+    }
+  ],
+  "chain": [
+    [
+      "lightning_strike",
+      "flight_control_law_degradation"
+    ],
+    [
+      "flight_control_law_degradation",
+      "hard_landing"
+    ],
+    [
+      "hard_landing",
+      "fuel_leak"
+    ],
+    [
+      "fuel_leak",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "18:03",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 1492 took off from runway 24C at Sheremetyevo International Airport, bound for Murmansk Airport."
+    },
+    {
+      "t": 300,
+      "clock": "18:08",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At 15:08 UTC, the aircraft was struck by lightning at flight level 89 and primary radio and autopilot became inoperative.",
+      "factors": [
+        "lightning_strike"
+      ]
+    },
+    {
+      "t": 360,
+      "clock": "18:09",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "The captain assumed manual control of the aircraft and the transponder code was changed to indicate emergency."
+    },
+    {
+      "t": 1080,
+      "clock": "18:18",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The aircraft bounced on landing and touched down hard, causing the landing gear to collapse and fuel to spill out of the wings.",
+      "factors": [
+        "hard_landing",
+        "fuel_leak"
+      ]
+    },
+    {
+      "t": 1140,
+      "clock": "18:19",
+      "phase": "landing",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "A fire erupted and engulfed the rear of the aircraft, killing 41 of the 78 occupants.",
+      "factors": [
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced procedures for in-flight lightning strike management",
+    "Improved training for degraded mode operations",
+    "Enhanced emergency evacuation procedures for post-landing fires"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/upload/iblock/b6e/h3kuyl83dvw2c23tetikftjbx7m54civ/report_ra-89098_eng.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q63490143",
+  "asn_id": "20190505-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Aeroflot_Flight_1492",
+  "report_links": [
+    "https://mak-iac.org/upload/iblock/b6e/h3kuyl83dvw2c23tetikftjbx7m54civ/report_ra-89098_eng.pdf",
+    "https://mak-iac.org/upload/iblock/c01/report_ra-89098_pr_en.pdf"
+  ],
+  "interest": 17.24,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Factual Information, Analysis of Crew's Condition and Actions, Analysis of Aviation Equipment from MAK final report"
+    ]
+  }
+}
