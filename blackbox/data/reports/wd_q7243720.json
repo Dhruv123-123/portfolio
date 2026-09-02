@@ -1,0 +1,179 @@
+{
+  "id": "wd_q7243720",
+  "qid": "Q7243720",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Prinair 191",
+  "flight_number": "PR191",
+  "date": "1972-06-24",
+  "time_reference": "CDT",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-75-17",
+      "report_title": "Aircraft Accident Report - Prinair Flight 191",
+      "report_date": "1975-12-17"
+    }
+  ],
+  "aircraft": {
+    "type": "de Havilland DH.114 Heron 2B",
+    "family": "Heron",
+    "manufacturer": "de Havilland",
+    "registration": "N554PR"
+  },
+  "operator": "Prinair",
+  "route": {
+    "from_name": "Luis Muñoz Marín International Airport",
+    "to_name": "Mercedita Airport"
+  },
+  "location": {
+    "name": "Mercedita Airport, Ponce",
+    "country": "Puerto Rico"
+  },
+  "phase": "landing",
+  "occupants": 28,
+  "fatalities": 5,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "De Havilland Heron Flight 191 approached Mercedita Airport in the evening on 24 June 1972 with 26 passengers and 2 crew. After a brief uneventful flight, the aircraft touched down on runway 29 but the crew decided to go around. During the go-around, the pilot over-rotated the aircraft at too low an airspeed, causing an aerodynamic stall at a low altitude. The aircraft crashed about 2,200 feet beyond the runway threshold, killing 2 crew members and 3 passengers, with 15 passengers injured.",
+  "probable_cause": "The probable cause of the accident was the loss of directional control during a go-around from a landing attempt. Control was lost when the aircraft was overrotated at too low an airspeed to sustain flight. The crew's reasons for rejecting the landing are not known.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "The accident occurred during hours of darkness with fog present in the area (p. 7-8)"
+    },
+    {
+      "id": "go_around_not_flown",
+      "role": "contributing",
+      "evidence": "Just after touching down on the runway, the flight crew made a decision to go around for unknown reasons (p. 7)"
+    },
+    {
+      "id": "inappropriate_stall_recovery",
+      "role": "initiating",
+      "evidence": "The pilot over-rotated the aircraft at too low an airspeed, causing it to stall at a low level (p. 14)"
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "The aircraft was overrotated at too low an airspeed to sustain flight, resulting in an aerodynamic stall (p. 14)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Loss of directional control occurred when the aircraft was overrotated at too low an airspeed (p. 14)"
+    }
+  ],
+  "chain": [
+    ["low_visibility", "go_around_not_flown"],
+    ["go_around_not_flown", "inappropriate_stall_recovery"],
+    ["inappropriate_stall_recovery", "aerodynamic_stall"],
+    ["aerodynamic_stall", "loss_of_control_inflight"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "23:00",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 191 departed San Juan at 2252 with 26 passengers and 2 crew. Flight was uneventful during takeoff, climb, and cruise.",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": "23:01",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "At 2301, cleared for approach to Mercedita Airport. At 2304, cancelled IFR flight plan. Aircraft was on left base leg for runway 29.",
+      "factors": []
+    },
+    {
+      "t": 360,
+      "clock": "23:15",
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft touched down on runway 29. Witnesses observed nothing unusual about the approach.",
+      "factors": []
+    },
+    {
+      "t": 420,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Just after touching down, flight crew made a decision to go around. The reasons for rejecting the landing are not known.",
+      "factors": ["go_around_not_flown"]
+    },
+    {
+      "t": 480,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft assumed a steep climbing attitude with high engine power. Witnesses observed the aircraft rock from side to side.",
+      "factors": ["inappropriate_stall_recovery"]
+    },
+    {
+      "t": 540,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft overrotated at too low an airspeed, causing an aerodynamic stall. Loss of directional control resulted.",
+      "factors": ["aerodynamic_stall", "loss_of_control_inflight"]
+    },
+    {
+      "t": 600,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed approximately 2,200 feet beyond the runway threshold and 260 feet south of runway 29, coming to rest 74 feet southwest of initial impact after knocking down chain link fence sections and striking a powerline pole.",
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 620,
+      "clock": null,
+      "phase": "landing",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "Aircraft destroyed; 2 crew members and 3 passengers killed; 15 passengers injured.",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7234.pdf"],
+  "asn_id": "19720624-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Prinair_Flight_191",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7234.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR72-34.pdf"
+  ],
+  "curated_id": null,
+  "interest": 9.27,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report finalized December 17, 1975 as AAR-75-17",
+      "Originally confused about Ports Authority truck on runway; later clarified as misinterpretation through Spanish translation",
+      "Tire marks confirmed wheels touched down before go-around",
+      "Crew's reasons for go-around rejection remain unknown",
+      "Sections read: Synopsis, History of Flight, Findings, Conclusions, Probable Cause, Analysis"
+    ]
+  }
+}

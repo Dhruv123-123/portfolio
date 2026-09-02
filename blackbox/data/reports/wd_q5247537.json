@@ -1,0 +1,157 @@
+{
+  "id": "wd_q5247537",
+  "qid": "Q5247537",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "death of Stevie Ray Vaughan",
+  "flight_number": null,
+  "date": "1990-08-26",
+  "time_reference": "CDT",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "CHI90MA244",
+      "report_title": "Aviation Accident Final Report",
+      "report_date": "1992-09-11"
+    }
+  ],
+  "aircraft": {
+    "type": "Bell 206B Jet Ranger",
+    "family": "206",
+    "manufacturer": "Bell",
+    "registration": "N16933",
+    "msn": "2338"
+  },
+  "operator": "Omniflight Helicopters",
+  "route": {
+    "from_name": "Alpine Valley Music Theatre",
+    "to_name": "Chicago"
+  },
+  "location": {
+    "name": "Elkhorn, Wisconsin",
+    "country": "United States"
+  },
+  "phase": "initial_climb",
+  "occupants": 5,
+  "fatalities": 5,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Four helicopters were being used to transport a concert group from Alpine Valley Music Theatre near Elkhorn, Wisconsin, to Chicago. On August 26, 1990, at 01:00 CDT, the pilot of the third helicopter (N16933) departed the golf course area in dense fog at a lower altitude than the other helicopters. The aircraft turned southeasterly toward rising terrain and crashed on hilly terrain about 0.6 miles from takeoff. All five occupants, including blues musician Stevie Ray Vaughan, were killed. No mechanical failures or malfunctions were found.",
+  "probable_cause": "Improper planning/decision by the pilot, and his failure to attain adequate altitude before flying over rising terrain at night. Factors related to the accident were: darkness, fog, haze, rising terrain, and the lack of visual cues that were available to the pilot.",
+  "factors": [
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "Accident occurred during hours of darkness with night/dark light conditions at 01:00 CDT (p. 1)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Dense fog at takeoff; pilots of other helicopters reported VFR conditions with some fog; ground witness reported haze and ground fog of varying intensity with patches of low clouds (p. 1)"
+    },
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "Improper planning/decision by pilot; pilot remained at lower altitude than other helicopters and turned southeasterly toward rising terrain instead of climbing away (p. 1)"
+    },
+    {
+      "id": "loss_of_pilot_control_authority",
+      "role": "initiating",
+      "evidence": "Pilot failed to attain adequate altitude before flying over rising terrain at night; aircraft could only climb to about 300 feet; lack of visual cues prevented pilot from perceiving terrain (p. 1)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Helicopter crashed on hilly terrain about 3/5 mile from takeoff point; elevation of crash site was about 100 ft above golf course and 50 ft below summit of hill (p. 1)"
+    }
+  ],
+  "chain": [
+    ["dark_night", "loss_of_pilot_control_authority"],
+    ["low_visibility", "loss_of_pilot_control_authority"],
+    ["navigation_error", "loss_of_pilot_control_authority"],
+    ["loss_of_pilot_control_authority", "cfit"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "00:59",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Bell 206B N16933 prepared for departure from Alpine Valley Music Theatre area near Elkhorn, Wisconsin with 5 occupants (pilot, musician Stevie Ray Vaughan, and 3 others).",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": "01:00",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Helicopter departed golf course area in dense fog at higher speed and slightly lower altitude than other helicopters operating the same mission.",
+      "factors": ["low_visibility", "navigation_error"]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft climbed to only about 300 feet altitude above ground before banking sharply to the left, turning southeasterly toward rising terrain.",
+      "factors": ["navigation_error", "loss_of_pilot_control_authority"]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Helicopter crashed on hilly terrain approximately 0.6 miles from takeoff point. Elevation of crash site was about 100 feet above golf course and 50 feet below the summit of the hill.",
+      "factors": ["cfit"]
+    },
+    {
+      "t": 150,
+      "clock": null,
+      "phase": "unknown",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "No pre-impact mechanical failures or malfunctions found during investigation. Aircraft destroyed. All five occupants killed instantly: pilot (age 42) and four passengers including blues musician Stevie Ray Vaughan.",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001212X23968&AKey=1&RType=HTML&IType=MA"],
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Death_of_Stevie_Ray_Vaughan",
+  "report_links": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001212X23968&AKey=1&RType=HTML&IType=MA",
+    "https://www.ntsb.gov/about/employment/_layouts/ntsb.aviation/brief.aspx?ev_id=20001212X23968&key=1"
+  ],
+  "curated_id": null,
+  "interest": 9.04,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report finalized September 11, 1992 as CHI90MA244",
+      "Date/time in report: 08/27/1990 0100 CDT which is 08/26/1990 06:00 UTC",
+      "Four helicopters total being used; N16933 was the third one; other three flights completed successfully",
+      "Pilot had 5,043 total flight hours, 1,540 hours in Bell 206B, properly certificated",
+      "Aircraft properly maintained, equipped and certified",
+      "No toxicology issues found",
+      "No recommendations listed in report",
+      "Report findings indicate improper flight planning and lack of terrain awareness",
+      "Sections read: Analysis, Probable Cause and Findings, Factual Information (Pilot, Aircraft, Meteorological, Wreckage)"
+    ]
+  }
+}
