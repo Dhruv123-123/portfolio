@@ -1,0 +1,637 @@
+{
+  "id": "wd_q66459174",
+  "qid": "Q66459174",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Ural Airlines 178",
+  "flight_number": "U6178",
+  "date": "2019-08-15",
+  "time_reference": "UTC+3",
+  "t0": "2019-08-15T03:12:58+03:00",
+  "agency": "MAK",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead",
+      "report_id": "report_vq-boz",
+      "report_date": "2020-03-18"
+    }
+  ],
+  "aircraft": {
+    "type": "Airbus A321-211",
+    "family": "A321",
+    "manufacturer": "Airbus",
+    "registration": "VQ-BOZ",
+    "msn": null,
+    "engines": "CFM56-5B"
+  },
+  "operator": "Ural Airlines",
+  "route": {
+    "from": "UUBW",
+    "from_name": "Moscow-Zhukovsky",
+    "to": "URFF",
+    "to_name": "Simferopol"
+  },
+  "location": {
+    "name": "Cornfield near Ramensky Airfield",
+    "country": "Russia",
+    "lat": 55.51083,
+    "lon": 38.252833
+  },
+  "phase": "takeoff",
+  "occupants": 233,
+  "fatalities": 0,
+  "injuries_serious": 3,
+  "damage": "substantial",
+  "category": "WSTRW",
+  "summary": "During takeoff rotation at 03:13:44 UTC+3, the aircraft struck a flock of large gulls at approximately 2 meters altitude, causing damage to both CFM56-5B engines. The damage reduced total available thrust below single-engine thrust requirements. The crew did not retract the landing gear after takeoff due to a missed callout of positive climb by the first officer, preventing the aircraft from climbing effectively. After reaching a maximum altitude of approximately 315 feet, the aircraft was unable to maintain altitude and speed, resulting in a belly landing in a corn field with landing gear partially extended and flaps in takeoff configuration.",
+  "probable_cause": "The accident resulted from a bird strike during takeoff that damaged both engines, reducing available thrust below the minimum required for single-engine climb. The inability to continue the flight was compounded by the crew's failure to retract the landing gear after takeoff due to a missed callout of positive climb, which resulted from a breakdown in crew coordination and contributed to the aircraft's inability to maintain minimum climb performance.",
+  "factors": [
+    {
+      "id": "bird_strike",
+      "role": "initiating",
+      "evidence": "Multiple seagulls with individual masses exceeding 1.13 kg struck the aircraft shortly after liftoff at approximately 2-4 feet altitude, as confirmed by CVR sound effects, eyewitness accounts, bird remains found on the aircraft and runway, and bird feather fragments located in the wing leading edge devices (p. 178-179)."
+    },
+    {
+      "id": "engine_failure",
+      "role": "contributing",
+      "evidence": "Both CFM56-5B engines sustained damage from bird ingestion, with vibration levels reaching maximum recordable values (9.8 units) within one second of impact. The left engine thrust decreased to approximately idle, and the right engine thrust decreased by approximately 20%, resulting in total available thrust below the single-engine thrust available at FLEX 49 takeoff mode (p. 177-178)."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The first officer did not properly call out 'positive climb' after liftoff, contrary to standard operating procedures. The CVR recording does not capture the word 'POSITIVE' in the FO's call, indicating a missed call that resulted in the failure to retract the landing gear as required by procedures (p. 177, 179, 219)."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The landing gear was not retracted after takeoff, remaining in the extended position throughout the flight. Standard operating procedures for engine failure after V1 require landing gear retraction, which would have reduced drag significantly and improved climb performance. The crew did not acknowledge the positive climb callout requirement due to the FO's missed callout (p. 177, 219)."
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "Unable to maintain altitude or climb performance with the damaged engines and extended landing gear, the aircraft descended at 3-4 m/s and executed a belly landing in a corn field at 03:15:17.7, touching down with landing gear partially retracted (unarmed), flaps in takeoff configuration (CONF 1+F), and pitch angle of approximately 8 degrees nose-up (p. 190-192)."
+    }
+  ],
+  "chain": [
+    ["bird_strike", "engine_failure"],
+    ["engine_failure", "procedural_noncompliance"],
+    ["crm_breakdown", "procedural_noncompliance"],
+    ["procedural_noncompliance", "emergency_landing"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "03:12:58",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Takeoff roll begins on runway 12",
+      "state": {
+        "alt": 0,
+        "ias": 0,
+        "pitch": 0,
+        "hdg": 121,
+        "vs": 0
+      },
+      "factors": []
+    },
+    {
+      "t": 42,
+      "clock": "03:13:40",
+      "phase": "takeoff",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer calls V1 and rotate",
+      "state": {
+        "alt": 0,
+        "ias": 166,
+        "pitch": 0,
+        "hdg": 121,
+        "vs": 0
+      },
+      "factors": []
+    },
+    {
+      "t": 46,
+      "clock": "03:13:44",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft rotates and lifts off runway at airspeed 181 kt",
+      "state": {
+        "alt": 10,
+        "ias": 181,
+        "pitch": 8,
+        "hdg": 121,
+        "vs": 300
+      },
+      "factors": []
+    },
+    {
+      "t": 47,
+      "clock": "03:13:45",
+      "phase": "takeoff",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Bird strike: flock of seagulls strikes aircraft at 2-4 feet altitude; rotor vibration increases to maximum levels on both engines (9.8 units); left engine thrust drops to near idle; right engine thrust decreases by approximately 20%",
+      "state": {
+        "alt": 20,
+        "ias": 181,
+        "pitch": 8,
+        "hdg": 121,
+        "vs": 300,
+        "n1_l": 91.6,
+        "n1_r": 91.7
+      },
+      "factors": ["bird_strike", "engine_failure"]
+    },
+    {
+      "t": 50,
+      "clock": "03:13:48",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "ECAM alert: 'ENG 1 REVERSE UNLOCKED' with amber caution level; Master Caution light and audio warning (single chime) activated (caused by bird strike damage to reverser position sensor, not actual reverser malfunction)",
+      "state": {
+        "alt": 30,
+        "ias": 178,
+        "pitch": 11,
+        "hdg": 120,
+        "vs": 250,
+        "n1_l": 39,
+        "n1_r": 88
+      },
+      "factors": ["bird_strike"]
+    },
+    {
+      "t": 58,
+      "clock": "03:13:56",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer: 'Climb' call (word POSITIVE not audible on CVR); Captain does not respond",
+      "state": {
+        "alt": 170,
+        "ias": 174,
+        "pitch": 10,
+        "hdg": 119,
+        "vs": 200
+      },
+      "factors": ["crm_breakdown"]
+    },
+    {
+      "t": 61,
+      "clock": "03:13:56",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Captain deflects right rudder pedal (offset 8 units); landing gear not retracted due to missed positive climb callout",
+      "state": {
+        "alt": 180,
+        "ias": 172,
+        "pitch": 11,
+        "hdg": 118,
+        "vs": 180
+      },
+      "factors": ["crm_breakdown", "procedural_noncompliance"]
+    },
+    {
+      "t": 61,
+      "clock": "03:13:59",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Captain engages Autopilot No. 1 (left); aircraft at 230 feet altitude, 171 kt airspeed",
+      "state": {
+        "alt": 230,
+        "ias": 171,
+        "pitch": 12,
+        "hdg": 117,
+        "vs": 150,
+        "n1_l": 39.7,
+        "n1_r": 88.8,
+        "ap": 1
+      },
+      "factors": []
+    },
+    {
+      "t": 66,
+      "clock": "03:14:04",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft reaches maximum altitude of approximately 315 feet (300 feet above runway); autothrottle maintains SRS (Speed Reference System) mode attempting to hold V2+10 kt",
+      "state": {
+        "alt": 315,
+        "ias": 175,
+        "pitch": 9,
+        "hdg": 117,
+        "vs": 50,
+        "ap": 1
+      },
+      "factors": []
+    },
+    {
+      "t": 68,
+      "clock": "03:14:06",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Autopilot disengages automatically due to pilot rudder pedal deflection exceeding trimmed position; AP OFF warning generated (red on ECAM); continuous Master Warning and audio alert (continuous tone)",
+      "state": {
+        "alt": 300,
+        "ias": 165,
+        "pitch": 5.6,
+        "hdg": 116,
+        "vs": 100,
+        "ap": 0
+      },
+      "factors": []
+    },
+    {
+      "t": 71,
+      "clock": "03:14:09",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "EGPWS 'DON'T SINK' warning activated",
+      "state": {
+        "alt": 280,
+        "ias": 162,
+        "pitch": 8,
+        "hdg": 115,
+        "vs": -150
+      },
+      "factors": []
+    },
+    {
+      "t": 73,
+      "clock": "03:14:11",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "Captain attempts to declare emergency: 'PAN-PAN, PAN-PAN, PAN-PAN, Свердловск...' (phrase not completed)",
+      "state": {
+        "alt": 270,
+        "ias": 160,
+        "pitch": 8,
+        "hdg": 114,
+        "vs": -200
+      },
+      "factors": []
+    },
+    {
+      "t": 79,
+      "clock": "03:14:17",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "ECAM warning: 'ENG 1 EGT OVERLIMIT' (amber) for 19 seconds as left engine exhaust gas temperature exceeds 950°C red limit for FLEX mode",
+      "state": {
+        "alt": 250,
+        "ias": 154,
+        "pitch": 10,
+        "hdg": 112,
+        "vs": -300,
+        "n1_l": 45,
+        "n1_r": 80
+      },
+      "factors": []
+    },
+    {
+      "t": 82,
+      "clock": "03:14:20",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Captain moves both throttles to TO/GA position (42 detent); commanded N1 increases to 100% (left) and 96% (right); right engine becomes unstable with oscillating N1; left engine does not respond",
+      "state": {
+        "alt": 290,
+        "ias": 152,
+        "pitch": 10,
+        "hdg": 110,
+        "vs": -350,
+        "n1_l": 39,
+        "n1_r": 88,
+        "throttle": 1.0
+      },
+      "factors": []
+    },
+    {
+      "t": 89,
+      "clock": "03:14:27",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "FDR event recorded: 'ENG 1 STALL' (but not displayed due to flight phase inhibition on ECAM)",
+      "state": {
+        "alt": 270,
+        "ias": 148,
+        "pitch": 11,
+        "hdg": 108,
+        "vs": -400
+      },
+      "factors": []
+    },
+    {
+      "t": 91,
+      "clock": "03:14:29",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "Captain to FO: 'Autopilot off. Watch speed'; Captain informs ATC of engine failure: 'PAN-PAN, PAN-PAN, PAN-PAN. Свердловск 1-7-8. One engine failure'",
+      "state": {
+        "alt": 260,
+        "ias": 147,
+        "pitch": 11,
+        "hdg": 107,
+        "vs": -450
+      },
+      "factors": []
+    },
+    {
+      "t": 99,
+      "clock": "03:14:37",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Left throttle moved to CL (idle) position (25 detent); left engine N1 remains at approximately 39% (no response); airspeed continues to decrease; aircraft altitude 260 feet",
+      "state": {
+        "alt": 260,
+        "ias": 146,
+        "pitch": 11,
+        "hdg": 106,
+        "vs": -480,
+        "n1_l": 39,
+        "n1_r": 80
+      },
+      "factors": []
+    },
+    {
+      "t": 107,
+      "clock": "03:14:45",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "FO requests reverse course approach from ATC; ATC approves reverse approach clearance at 03:15:00",
+      "state": {
+        "alt": 240,
+        "ias": 144,
+        "pitch": 11,
+        "hdg": 104,
+        "vs": -500
+      },
+      "factors": []
+    },
+    {
+      "t": 109,
+      "clock": "03:14:47",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Captain moves left throttle to IDLE (0 detent); left engine N1 begins to decrease toward idle as commanded; altitude 240 feet, airspeed 152 kt",
+      "state": {
+        "alt": 240,
+        "ias": 152,
+        "pitch": 10,
+        "hdg": 103,
+        "vs": -380,
+        "n1_l": 35,
+        "throttle_l": 0
+      },
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "03:14:58",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer warns: 'Height, height' (altitude decreasing rapidly); Captain pulls side-stick back; airspeed decreases to 145 kt",
+      "state": {
+        "alt": 240,
+        "ias": 145,
+        "pitch": 12,
+        "hdg": 102,
+        "vs": -500
+      },
+      "factors": []
+    },
+    {
+      "t": 122,
+      "clock": "03:15:00",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "ALFA PROTECTION (angle of attack protection) system activates as AOA reaches 12.5° (AOAprot); aircraft altitude 200 feet, airspeed 144 kt",
+      "state": {
+        "alt": 200,
+        "ias": 144,
+        "pitch": 11,
+        "hdg": 101,
+        "vs": -550,
+        "aoa": 12.5
+      },
+      "factors": []
+    },
+    {
+      "t": 125,
+      "clock": "03:15:03",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "EGPWS 'TERRAIN AHEAD. PULL UP' warning generated; aircraft altitude 180-170 feet, vertical speed 3-4 m/s descent",
+      "state": {
+        "alt": 175,
+        "ias": 142,
+        "pitch": 12,
+        "hdg": 100,
+        "vs": -600,
+        "aoa": 13.5
+      },
+      "factors": []
+    },
+    {
+      "t": 132,
+      "clock": "03:15:10",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Landing gear retraction begins at altitude 120 feet; no explicit command recorded",
+      "state": {
+        "alt": 120,
+        "ias": 140,
+        "pitch": 12,
+        "hdg": 99,
+        "vs": -650,
+        "gear": 0.5
+      },
+      "factors": []
+    },
+    {
+      "t": 137,
+      "clock": "03:15:15",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Captain pulls side-stick fully back ('instvictively pulled to arrest descent'); elevator trim position 5.2° right; aircraft pitch 13°, AOA reaches 16.5° (exceeds ALFAmax of 15.5°), maximum available lift coefficient established",
+      "state": {
+        "alt": 90,
+        "ias": 140,
+        "pitch": 13,
+        "hdg": 98,
+        "vs": -700,
+        "aoa": 16.5,
+        "gear": 0.3
+      },
+      "factors": []
+    },
+    {
+      "t": 139,
+      "clock": "03:15:17.7",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft touches down in corn field at magnetic heading 94°, airspeed 136 kt, pitch 8° nose-up, roll 2° right; landing gear partially retracted (unarmed); flaps in takeoff configuration (CONF 1+F); vertical speed 5+ m/s descent rate; aircraft skids and comes to rest 5300 meters from runway end",
+      "state": {
+        "alt": 0,
+        "ias": 136,
+        "pitch": 8,
+        "hdg": 94,
+        "vs": -600,
+        "gear": 0,
+        "flaps": 5
+      },
+      "factors": ["emergency_landing"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Russian Aviation Authority",
+      "text": "Information about this accident should be communicated to specialist aviation personnel in Russian civil aviation and organizations supporting flight operations",
+      "status": "open",
+      "trigger_factors": ["bird_strike"]
+    },
+    {
+      "id": null,
+      "to": "Russian Aviation Authority",
+      "text": "Develop and implement regulatory framework defining procedures for ornithological (bird hazard) support in Russian civil aviation",
+      "status": "open",
+      "trigger_factors": ["bird_strike"]
+    },
+    {
+      "id": null,
+      "to": "Russian Aviation Authority and Min of Trade/Industry",
+      "text": "Establish airport protection zones around Ramensky Airfield and evaluate similar zones at other Russian airports per Air Code article 47",
+      "status": "open",
+      "trigger_factors": ["bird_strike"]
+    },
+    {
+      "id": null,
+      "to": "Russian Aviation Authority",
+      "text": "Initiate removal of landfills and other bird attractants near Ramensky Airfield that violate ornithological safety procedures, pending establishment of airport protection zones",
+      "status": "open",
+      "trigger_factors": ["bird_strike"]
+    },
+    {
+      "id": null,
+      "to": "Russian Aviation Authority",
+      "text": "Evaluate criteria and justification for including bird strike hazard information in ATIS and other flight crew briefings to prevent 'information fatigue' that reduces effectiveness",
+      "status": "open",
+      "trigger_factors": ["bird_strike"]
+    },
+    {
+      "id": null,
+      "to": "Russian Aviation Authority",
+      "text": "Continue collection of bird strike statistics at Russian airports on a regular basis to evaluate sufficiency of bird strike risk reduction measures",
+      "status": "open",
+      "trigger_factors": ["bird_strike"]
+    },
+    {
+      "id": null,
+      "to": "Airbus",
+      "text": "Update FCOM description of ENG 1 (2) REVERSE UNLOCK alert logic to align with ECAM displays",
+      "status": "closed_acceptable",
+      "trigger_factors": ["bird_strike"]
+    },
+    {
+      "id": null,
+      "to": "Airbus",
+      "text": "Enhance autopilot engagement procedures and training material to address risks of disengagement due to residual pilot inputs; emphasize centering flight director before engagement",
+      "status": "closed_acceptable",
+      "trigger_factors": ["crm_breakdown"]
+    },
+    {
+      "id": null,
+      "to": "Airbus",
+      "text": "Enhance FCTM guidance for continued takeoff procedures when engine failure is suspected after V1, including explicit recommendation to verify landing gear retraction and consider TO/GA thrust setting",
+      "status": "closed_acceptable",
+      "trigger_factors": ["procedural_noncompliance"]
+    },
+    {
+      "id": null,
+      "to": "Airbus",
+      "text": "Revise blocking logic for ENG 1 (2) REVERSE UNLOCKED alert to block for 15 seconds after liftoff (per 400 ft radio altitude threshold recommended in FCTM)",
+      "status": "closed_acceptable",
+      "trigger_factors": ["bird_strike"]
+    },
+    {
+      "id": null,
+      "to": "Airbus",
+      "text": "Develop video training material titled 'Engine Failure After V1' for instructor pilots, posted on Airbus-WIN providing guidance from Flight Crew Operations and Training Standards departments",
+      "status": "closed_acceptable",
+      "trigger_factors": ["procedural_noncompliance"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "MAK conducted ornithological survey of Ramensky Airfield and surrounding 15 km radius",
+    "Airport technical institute (LII) deployed additional bird control measures: Bird Guard Super PRO AMP deterrents (4 units), bioaccoustic systems (6), repellent systems (6), dynamic bird dispersal units (10), mirror ball deterrents (10); increased ornithology engineer staff to 4 personnel; expanded part-time bird hazard service",
+    "Monthly helicopter monitoring implemented for waste accumulation sites and construction zones within 15 km of airport, with photographic documentation",
+    "Correspondence initiated with Ramensky and Zhukovsky administrations and prosecutors regarding landfill closure and bird hazard mitigation",
+    "Aeronautical Information Package (AIP) updated with ornithological hazard information for Ramensky and other Russian airports",
+    "Russian aviation authority analyzed ornithological conditions at all Russian aerodromes; results distributed to stakeholders via Safety Information bulletin 5/2021",
+    "Cooperation agreement established between Russian aviation authority and Institute for Ecology and Evolution, Russian Academy of Sciences (02/15/2021) to improve ornithological safety procedures, develop risk mitigation proposals, and aggregate bird strike data with species identification",
+    "Airbus revised FCOM ENG 1 (2) REVERSE UNLOCK alert description to align with ECAM logic",
+    "Airbus added autopilot engagement warnings to flight crew training manual emphasizing risks of autopilot disconnect due to pilot input and need to center flight director",
+    "Airbus enhanced continued takeoff procedures in FCTM with specific guidance for landing gear retraction and thrust management during suspected engine failure",
+    "Airbus revised blocking logic for ENG 1 (2) REVERSE UNLOCKED alert to block for 15 seconds post-liftoff",
+    "Airbus produced video training 'Engine Failure After V1' for instructor distribution via Airbus-WIN",
+    "Ural Airlines refined airport risk assessment procedures to maximize use of available information; enhanced analysis based on threat level classification from authority statistics and airline data",
+    "Ural Airlines developed instructor guidance document LS/I 6.1-104 'Characteristics of Flight Operations in Specific Areas, Routes, and Aerodromes' supplementing operational flight procedures with ornithological hazard information from published sources",
+    "Russian federal certification standards for commercial aviation aerodromes approved by Ministry of Transport order 415 (2020-10-07, registered 2021-05-31)"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/upload/iblock/7e2/280r4qbjcrtrj0zz137cj5jwh5esmwt5/report_vq-boz.pdf"
+  ],
+  "asn_id": "20190815-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ural_Airlines_Flight_178",
+  "report_links": [
+    "https://mak-iac.org/en/rassledovaniya/airbus-a-321-211-vq-boz-15-08-2019/",
+    "https://mak-iac.org/upload/iblock/7e2/280r4qbjcrtrj0zz137cj5jwh5esmwt5/report_vq-boz.pdf"
+  ],
+  "interest": 10.5,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: flight history (1.1), conclusions (3.0), hazard factors (3.2), technical analysis summary (2.2), crew analysis summary (2.3), aircraft performance analysis summary (2.4), recommendations (5.0-5.2)",
+      "Depth set to 'sections' as key report sections were read to establish timeline, probable cause, and causal factors; full analysis sections were not entirely read but sufficient information extracted from summaries and conclusions",
+      "Report is in Russian; all translations are from the extracted English translations provided within the official MAK report document",
+      "Bird strike confirmed by: vibration signature analysis, bird fragment examination (feathers between wing leading edge devices), marks on runway and aircraft, eyewitness testimony, video footage by passengers",
+      "Engine damage confirmed by: post-accident teardown inspection, NDT examination, vibration parameter analysis; both CFM56-5B engines sustained foreign object damage",
+      "Crew coordination failure: FO failed to clearly announce 'POSITIVE CLIMB' which is required callout for landing gear retraction after V1; CVR word 'POSITIVE' not audible per report footnote 41, p. 177",
+      "Safety recommendations reflect MAK position that situation exceeded known certification envelope (multiple simultaneous failures: bird strike, dual engine damage, inadequate crew procedures) and recommendations focus on system improvements rather than immediate procedure changes"
+    ]
+  }
+}
