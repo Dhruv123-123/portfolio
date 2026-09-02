@@ -1,0 +1,251 @@
+{
+  "id": "wd_q7082387",
+  "qid": "Q7082387",
+  "title": "Oklahoma State University men's basketball team plane crash",
+  "flight_number": null,
+  "date": "2001-01-27",
+  "time_reference": "MST",
+  "t0": "2001-01-27T17:37:18-07:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-03-01",
+      "report_title": "Aircraft Accident Report--In-Flight Electrical System Failure and Loss of Control, Jet Express Services, Raytheon (Beechcraft) Super King Air 200, N81PF, Near Strasburg, Colorado, January 27, 2001",
+      "report_date": "2003-01-15"
+    }
+  ],
+  "aircraft": {
+    "type": "Raytheon (Beechcraft) Super King Air 200",
+    "manufacturer": "Beechcraft",
+    "family": "King Air",
+    "registration": "N81PF",
+    "msn": "BB-158",
+    "engines": "Pratt & Whitney Canada PT6A-41"
+  },
+  "operator": "Jet Express Services",
+  "route": {
+    "from_name": "Jefferson County Airport, Broomfield, Colorado",
+    "to_name": "Stillwater Regional Airport, Stillwater, Oklahoma"
+  },
+  "location": {
+    "name": "Near Strasburg, Colorado",
+    "country": "United States",
+    "lat": 39.747,
+    "lon": -104.251
+  },
+  "phase": "descent",
+  "occupants": 10,
+  "fatalities": 10,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "A Raytheon (Beechcraft) Super King Air 200 transporting Oklahoma State University basketball team members crashed near Strasburg, Colorado on January 27, 2001 during descent in instrument meteorological conditions. The pilot lost AC electrical power and most cockpit instruments, became spatially disoriented, and lost control of the aircraft in a graveyard spiral. All ten occupants were killed.",
+  "probable_cause": "The pilot's spatial disorientation resulting from his failure to maintain positive manual control of the airplane with the available flight instrumentation. Contributing to the cause of the accident was the loss of AC electrical power during instrument meteorological conditions.",
+  "factors": [
+    {
+      "id": "spatial_disorientation",
+      "role": "initiating",
+      "evidence": "The pilot became spatially disoriented without reliable flight instruments and visual references. The airplane's estimated flightpath was consistent with a graveyard spiral resulting from pilot spatial disorientation (p. 37)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The airplane completed a 360-degree graveyard spiral turn as the pilot lost control. The pilot attempted to arrest the descent but could not recover from a steep descent rate exceeding 15,000 feet per minute (p. 37)"
+    },
+    {
+      "id": "autopilot_disconnect",
+      "role": "contributing",
+      "evidence": "Loss of AC electrical power during instrument meteorological conditions disabled most pilot-side instruments including the altimeter, attitude indicator, horizontal situation indicator, and radio altimeter (p. 36)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Weather reports indicated clouds at 200 to 400 feet with moderate rime icing to mixed icing in precipitation (p. 36)"
+    },
+    {
+      "id": "dark_night",
+      "role": "latent",
+      "evidence": "Crash occurred at 1737 MST, after official sunset at 1716. Sun was 4.7 degrees below horizon; moon was 36 degrees above horizon with 16 percent illumination (p. 13)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "The second pilot had no formal King Air type training, making him unfamiliar with the airplane's systems and emergency procedures (p. 36)"
+    }
+  ],
+  "chain": [
+    ["autopilot_disconnect", "spatial_disorientation"],
+    ["low_visibility", "spatial_disorientation"],
+    ["dark_night", "spatial_disorientation"],
+    ["spatial_disorientation", "loss_of_control_inflight"]
+  ],
+  "events": [
+    {
+      "t": -1260,
+      "clock": "17:18",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft pulled from hangar and passengers loaded at Jefferson County Airport."
+    },
+    {
+      "t": -900,
+      "clock": "17:33",
+      "phase": "taxi",
+      "actor": "ATC",
+      "kind": "system",
+      "text": "Pilot contacted ground control for taxi instructions; received ATIS information Romeo."
+    },
+    {
+      "t": -600,
+      "clock": "17:37:15",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "system",
+      "text": "Aircraft cleared for takeoff from runway 29R at 1717:49. Pilot instructed to turn right to 040-degree heading."
+    },
+    {
+      "t": -240,
+      "clock": "17:39:55",
+      "phase": "initial_climb",
+      "actor": "ATC",
+      "kind": "crew_action",
+      "text": "Pilot reported climbing through 6,500 feet to 8,000 feet. Cleared to climb to 12,000 feet and fly 060-degree heading."
+    },
+    {
+      "t": -120,
+      "clock": "17:42:09",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "system",
+      "text": "Departure controller instructed pilot to proceed to EPKEE intersection, join Garden City transition, and climb to 23,000 feet."
+    },
+    {
+      "t": -90,
+      "clock": "17:42:24",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "crew_action",
+      "text": "Pilot contacted Satellite Radar Two controller, reporting out of 16,300 feet and climbing to 23,000 feet."
+    },
+    {
+      "t": -60,
+      "clock": "17:42:50",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "crew_action",
+      "text": "Controller cleared aircraft to proceed directly to EPKEE intersection. Pilot acknowledged with requirement for 3-degree left turn."
+    },
+    {
+      "t": -30,
+      "clock": "17:44:35",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft reached cruising altitude of 23,000 feet. Climb profile normal with steady airspeeds."
+    },
+    {
+      "t": -15,
+      "clock": "17:35:44",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Last Mode C transponder return at altitude 23,200 feet. Radar data indicated normal profile."
+    },
+    {
+      "t": -2,
+      "clock": "17:36:26",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft began to deviate from assigned heading and turn right. Mode C information lost."
+    },
+    {
+      "t": 0,
+      "clock": "17:37:12",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Mode A transponder information lost. AC electrical power failure disabled most pilot-side instruments.",
+      "factors": ["autopilot_disconnect"]
+    },
+    {
+      "t": 6,
+      "clock": "17:37:18",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot became spatially disoriented without reliable flight instruments and visual references in instrument meteorological conditions.",
+      "factors": ["spatial_disorientation"]
+    },
+    {
+      "t": 18,
+      "clock": "17:37:30",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft entered graveyard spiral descent. Airplane's flightpath consistent with 360-degree spiral resulting from spatial disorientation.",
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 30,
+      "clock": "17:37:42",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot attempted forcefully to arrest the descent in final portion of flight, possibly in response to obtaining visual references after emerging from clouds.",
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 42,
+      "clock": "17:37:54",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacted rolling terrain at 5,223 feet elevation near Strasburg, Colorado. In-flight breakup occurred due to aerodynamic loading during pull-up maneuver. All ten occupants killed.",
+      "factors": ["loss_of_control_inflight"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-03-01",
+      "to": "NCAA, NAIA, ACE",
+      "text": "Review Oklahoma State University's postaccident team travel policy and develop, either independently or jointly, a model policy for member institutions to use in creating a travel policy or strengthening an existing travel policy.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0301.pdf"],
+  "tier": "wikidata",
+  "depth": "sections",
+  "asn_id": "20010127-2",
+  "wikipedia": "https://en.wikipedia.org/wiki/Oklahoma_State_Cowboys_basketball_team_plane_crash",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0301.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR03-01.pdf--"
+  ],
+  "interest": 10.58,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: history of flight, injuries, personnel information, findings, conclusions, probable cause, recommendations",
+      "Key sections on pp. 1-17, 36-38 extracted",
+      "Detailed timeline from ATC radar data with precise clock times from pp. 11-14",
+      "t values calculated from 17:37:18 reference (center of crash impact window 17:37:17-17:37:20)",
+      "Recommendation A-03-01 extracted from p. 38",
+      "No CVR transcript available in report"
+    ]
+  }
+}

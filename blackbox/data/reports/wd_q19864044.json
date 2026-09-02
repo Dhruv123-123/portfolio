@@ -1,0 +1,249 @@
+{
+  "id": "wd_q19864044",
+  "qid": "Q19864044",
+  "title": "Air Wisconsin 965",
+  "flight_number": "965",
+  "date": "1980-06-12",
+  "time_reference": "CDT",
+  "t0": "1980-06-12T15:45:02-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-80-15",
+      "report_title": "Aircraft Accident Report--Air Wisconsin, Inc., Swearingen SA-226 Metro, N650S, Valley, Nebraska, June 12, 1980",
+      "report_date": "1980-12-09"
+    }
+  ],
+  "aircraft": {
+    "type": "Swearingen SA226-TC Metro II",
+    "manufacturer": "Swearingen",
+    "family": "Metro",
+    "registration": "N650S"
+  },
+  "operator": "Air Wisconsin",
+  "route": {
+    "from_name": "Appleton, Wisconsin",
+    "to_name": "Lincoln, Nebraska"
+  },
+  "location": {
+    "name": "Valley, Nebraska",
+    "country": "United States"
+  },
+  "phase": "descent",
+  "occupants": 15,
+  "fatalities": 13,
+  "injuries_serious": 2,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Air Wisconsin Flight 965, a Swearingen SA226-TC Metro II, crashed near Valley, Nebraska on June 12, 1980 during descent after encountering severe thunderstorms. Both engines flamed out due to massive water ingestion in severe precipitation, and the crew was unable to regain control of the aircraft. Thirteen of fifteen occupants were killed.",
+  "probable_cause": "The flightcrew's continued flight into an area of severe thunderstorms, and the resultant precipitation-induced flameout or loss of power of both engines at an altitude from which recovery could not be made. Contributing factors were the failure of the flightcrew to utilize all available sources of weather information, the failure of the air traffic control system to disseminate critical weather information to the controllers and crew, failure of ATC supervisory personnel to accomplish key job functions, failure of Center Weather Service Unit meteorologists to disseminate critical weather information, and precipitation-induced X-band radar attenuation which limited the ability of airborne weather radar to detect the extent and intensity of weather disturbances.",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "initiating",
+      "evidence": "Aircraft entered a region of severe precipitation with very high levels of water ingestion at an altitude of less than 6,000 ft (p. 2)"
+    },
+    {
+      "id": "engine_failure",
+      "role": "contributing",
+      "evidence": "Both engines flamed out due to massive water ingestion from severe precipitation encountered in flight (p. 2)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Aircraft's weather radar was unable to penetrate even moderate precipitation, leaving crew unaware of extreme precipitation ahead; radar attenuation severely limited its usefulness (p. 51)"
+    },
+    {
+      "id": "atc_workload_staffing",
+      "role": "latent",
+      "evidence": "Meteorologists in Minneapolis ARTCC had alerted supervisory personnel of severity of weather but information was not disseminated to controllers or to the flight crew (p. 2-3)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Crew lost control and aircraft impacted ground in nose-down attitude and bounced (p. 2)"
+    }
+  ],
+  "chain": [
+    ["convective_weather", "engine_failure"],
+    ["engine_failure", "loss_of_control_inflight"],
+    ["inadequate_monitoring", "loss_of_control_inflight"],
+    ["atc_workload_staffing", "loss_of_control_inflight"]
+  ],
+  "events": [
+    {
+      "t": -600,
+      "clock": "12:46",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 965 departed Appleton, Wisconsin on instrument flight plan."
+    },
+    {
+      "t": -300,
+      "clock": "14:02",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 965 arrived at Minneapolis-St. Paul International Airport."
+    },
+    {
+      "t": -240,
+      "clock": "14:20",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 965 departed Minneapolis with 13 passengers and 2 crew."
+    },
+    {
+      "t": -120,
+      "clock": "14:51:08",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "system",
+      "text": "Flight 965 requested and received clearance to maintain 12,000 ft."
+    },
+    {
+      "t": -63,
+      "clock": "15:11:23",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "O'Neill low sector controller warned of large area of weather at twelve o'clock, about 35 miles, extending from east of Neola around Sioux City to Fremont. Controller advised another aircraft at FL 200 went around; another at 9,000 feet found way through.",
+      "factors": ["convective_weather"]
+    },
+    {
+      "t": -30,
+      "clock": "15:14:22",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "crew_action",
+      "text": "Flight 965 requested tower altitude and clearance to descend to 3,000 ft."
+    },
+    {
+      "t": -8,
+      "clock": "15:44:54",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft entered severe precipitation. Engines flamed out from massive water ingestion.",
+      "factors": ["convective_weather", "engine_failure"]
+    },
+    {
+      "t": 0,
+      "clock": "15:45:02",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Nine sixty-five, we have lost both engines.",
+      "factors": ["engine_failure"]
+    },
+    {
+      "t": 4,
+      "clock": "15:45:06",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller asked Flight 965 to repeat last transmission."
+    },
+    {
+      "t": 14,
+      "clock": "15:45:16",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Nine sixty-five, we gottem both, both of them going.",
+      "factors": ["engine_failure"]
+    },
+    {
+      "t": 19,
+      "clock": "15:45:19",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller transmitted altitude alert and minimum vector altitude advisory. No response received from Flight 965."
+    },
+    {
+      "t": 60,
+      "clock": "15:46:02",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed into a field near Valley, Nebraska in nose-down, right-wing-low attitude and bounced.",
+      "factors": ["loss_of_control_inflight"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-80-115",
+      "to": "NWS",
+      "text": "Expedite the delivery of NWS weather radar color remote displays to all Air Route Traffic Control Centers' Center Weather Service Units.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-80-116",
+      "to": "NWS",
+      "text": "Schedule the planned testing of NWS weather radar color remote displays at the Cleveland Air Route Traffic Control Center to encompass the next season of frequent convective meteorological activity.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-80-117",
+      "to": "FAA",
+      "text": "Expedite the development of appropriate graphic mapping techniques for correlation of the NWS weather radar color remote display and the air traffic controller's radar display presentation.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-80-118",
+      "to": "FAA",
+      "text": "Expedite the development of an integrated weather radar/air traffic control radar single video display system capable of providing multiple weather echo intensity discrimination without derogation of air traffic control radar intelligence.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-80-119",
+      "to": "FAA",
+      "text": "Require air route traffic control centers to make maximum use of the existing National Weather Service radar sites as inputs to the color remote displays at their facilities.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-80-132",
+      "to": "FAA",
+      "text": "Undertake an experimental program to analyze and evaluate the technical and operational feasibility of requiring that air traffic control provide separation between aircraft and severe meteorological conditions when the nature and location of the meteorological condition can be determined.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-80-133",
+      "to": "FAA",
+      "text": "Review the relationship and duties of ARTCC team supervisors to flow controllers/weather coordinators to insure that the nature of each job function is understood and accomplished.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR8015.pdf"],
+  "tier": "wikidata",
+  "depth": "sections",
+  "asn_id": "19800612-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Wisconsin_Flight_965",
+  "report_links": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR8015.pdf"],
+  "interest": 10.97,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: abstract/summary, history of flight, probable cause, findings, conclusions, recommendations",
+      "Key sections on pp. 1-3, 5-9, 51-56 extracted with detailed timeline",
+      "All events with clock times from report text; t values calculated from 15:45:02 reference",
+      "Recommendations extracted directly from report with IDs A-80-115 through A-80-133"
+    ]
+  }
+}
