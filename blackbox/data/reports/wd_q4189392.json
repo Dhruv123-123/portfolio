@@ -1,0 +1,209 @@
+{
+  "id": "wd_q4189392",
+  "title": "UTAGE 141",
+  "flight_number": "GIH141",
+  "date": "2003-12-25",
+  "time_reference": "UTC",
+  "t0": "2003-12-25T12:59:00Z",
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses pour la Sécurité de l'Aviation Civile",
+      "country": "France",
+      "role": "lead",
+      "report_id": "3x-o031225a"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 727-223",
+    "family": "727",
+    "manufacturer": "Boeing",
+    "registration": "3X-GDO"
+  },
+  "operator": "Union des Transports Africains",
+  "route": {
+    "from_name": "Conakry",
+    "to_name": "Dubai",
+    "from": "GQNL",
+    "to": "OMDB"
+  },
+  "location": {
+    "name": "Cotonou Cadjèhoun Aerodrome",
+    "country": "Benin"
+  },
+  "phase": "takeoff",
+  "occupants": 160,
+  "fatalities": 141,
+  "damage": "destroyed",
+  "category": "OTHR",
+  "summary": "Union des Transports Africains Flight GIH 141, a Boeing 727-223, took off from Cotonou on 25 December 2003 with overloaded cargo and an unknown center of gravity. During the takeoff roll, the aircraft struck a building containing the localizer 118 meters past the runway end and crashed into the sea, killing 141 people.",
+  "probable_cause": "The crew attempted to rotate an aircraft that was significantly overloaded (approximately 85.5 tons versus the planned 78 tons) with a forward center of gravity (14% versus the planned 19%), combined with inadequate weight and balance procedures and lack of organizational oversight by the operator.",
+  "factors": [
+    {
+      "id": "weight_and_balance_error",
+      "role": "initiating",
+      "evidence": "The aircraft was overloaded at approximately 85.5 tons with center of gravity at 14%, far forward of the planned 19%, preventing normal takeoff performance (p. 9-10)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "The operator possessed neither the material infrastructure nor the skills required to operate a large transport airplane (p. 60)"
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "latent",
+      "evidence": "Passenger boarding and baggage loading took place in conditions of great confusion with no overall supervision or rigor; no document relating to boarding and loading could be supplied (p. 9, 61)"
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "The Guinean civil aviation authority applied ICAO procedures but lacked detailed national regulations and means to inspect compliance (p. 60)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft struck the localizer building 118 meters past runway end and crashed into the Bight of Benin (p. 9)"
+    }
+  ],
+  "chain": [
+    [
+      "weight_and_balance_error",
+      "cfit"
+    ],
+    [
+      "inadequate_training",
+      "weight_and_balance_error"
+    ],
+    [
+      "operator_safety_culture",
+      "weight_and_balance_error"
+    ],
+    [
+      "regulatory_oversight",
+      "operator_safety_culture"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "12:25",
+      "phase": "ground",
+      "actor": "GND",
+      "kind": "crew_action",
+      "text": "Aircraft landed at Cotonou after departure from Conakry with 86 passengers; 9 disembarked, 63 new passengers checked in, 10 from Togo boarded; airplane at full capacity",
+      "factors": [
+        "weight_and_balance_error"
+      ]
+    },
+    {
+      "t": 900,
+      "clock": "13:47",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Pre-flight checklist began; crew selected flaps 25°, air conditioning shut down",
+      "factors": []
+    },
+    {
+      "t": 1575,
+      "clock": "13:57",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight cleared to roll; co-pilot was pilot flying",
+      "factors": []
+    },
+    {
+      "t": 1620,
+      "clock": "13:58",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Takeoff thrust requested and brake release performed; aircraft began acceleration",
+      "factors": []
+    },
+    {
+      "t": 1680,
+      "clock": "13:59",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "crew_action",
+      "text": "Speed reached 137 knots; Captain called V1 and Vr; co-pilot applied back pressure on control column with initial minimal effect on aircraft angle of attack",
+      "state": {
+        "ias": 137
+      },
+      "factors": []
+    },
+    {
+      "t": 1695,
+      "clock": "13:59",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck the localizer building at 13:59:11 UTC on the extended runway centerline, right main landing gear broke off, aircraft banked right and crashed onto beach",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Guinea and all States",
+      "text": "Urgently draw up complete regulations in accordance with ICAO recommended standards and ensure possession of structures and means to enforce these regulations",
+      "status": "unknown",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "National civil aviation authorities",
+      "text": "Ensure that aerodromes check the loading of aircraft and that a copy of the weight and balance sheet is filed with them",
+      "status": "unknown",
+      "trigger_factors": [
+        "weight_and_balance_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA and EASA",
+      "text": "Modify certification requirements to ensure presence of on-board systems to determine weight and balance on new commercial aircraft",
+      "status": "unknown",
+      "trigger_factors": [
+        "weight_and_balance_error"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/fileadmin/documents/docspa/2003/3x-o031225a/pdf/3x-o031225a_06.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read SYNOPSIS, History of Flight, Conclusions (Findings and Causes), and Recommendations sections",
+      "Fatality count uncertain due to identification issues; 141 bodies found",
+      "Actual weight was approximately 85.5 tons versus planned 78 tons",
+      "Center of gravity was 14% versus planned 19%"
+    ]
+  },
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q4189392",
+  "asn_id": "20031225-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/UTA_Flight_141",
+  "report_links": [
+    "https://bea.aero/fileadmin/documents/docspa/2003/3x-o031225a/pdf/3x-o031225a_06.pdf"
+  ],
+  "interest": 18.4,
+  "curated_id": null
+}

@@ -1,0 +1,370 @@
+{
+  "id": "wd_q104759345",
+  "title": "Sriwijaya Air 182",
+  "flight_number": "SJ182",
+  "date": "2021-01-09",
+  "time_reference": "UTC",
+  "t0": "2021-01-09T07:36:46Z",
+  "agency": "KNKT",
+  "agencies": [
+    {
+      "code": "KNKT",
+      "name": "National Transportation Safety Committee",
+      "country": "Indonesia",
+      "role": "lead",
+      "report_id": "KNKT.21.01.01.04",
+      "report_title": "Aircraft Accident Investigation Report",
+      "report_date": "2022-11-10",
+      "url": "https://knkt.go.id/Repo/Files/Laporan/Penerbangan/2021/KNKT.21.01.01.04-Final-Report.pdf"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "AAIB",
+      "name": "Air Accident Investigation Branch",
+      "country": "United Kingdom",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "TSIB",
+      "name": "Transport Safety Investigation Bureau",
+      "country": "Singapore",
+      "role": "accredited_representative"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-524",
+    "family": "737",
+    "manufacturer": "Boeing",
+    "registration": "PK-CLC",
+    "msn": "25910"
+  },
+  "operator": "Sriwijaya Air",
+  "route": {
+    "from": "WIII",
+    "from_name": "Soekarno-Hatta International Airport, Jakarta",
+    "to": "WIOO",
+    "to_name": "Supadio International Airport, Pontianak"
+  },
+  "location": {
+    "name": "Java Sea, approximately 11 nm NW of Jakarta",
+    "country": "Indonesia",
+    "lat": -5.9642,
+    "lon": 106.5753
+  },
+  "phase": "initial_climb",
+  "occupants": 62,
+  "fatalities": 62,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Boeing 737-500 crashed into Java Sea four minutes after takeoff from Jakarta during a climb to 11,000 feet. The aircraft experienced thrust asymmetry when the autopilot commanded reduced power: the left engine thrust decreased as directed, but the right engine thrust lever remained stuck at climb power due to excessive mechanical friction in the throttle cable. The resulting yaw and roll to the left caused the autopilot to reach maximum deflection. When the autopilot disengaged following the pilot's activation of the stabilizer trim switch, the aircraft entered an upset and descended rapidly into the sea. The pilots were unable to recognize the asymmetric thrust condition or recover from the upset.",
+  "probable_cause": "The accident was caused by a faulty autothrottle system that was unable to move the right thrust lever due to friction or binding within the mechanical control cable system. The thrust asymmetry resulting from this mechanical failure, combined with pilot error in failing to recognize and correct the aircraft's developing roll and yaw, and inadequate upset prevention and recovery training, led to loss of control and impact with the Java Sea.",
+  "factors": [
+    {
+      "id": "autothrottle_mode_confusion",
+      "role": "initiating",
+      "evidence": "The autothrottle attempted to move the throttle levers back when the aircraft reached 11,000 feet on ATC instruction, but the right lever remained stuck at climb power due to excessive friction in the throttle control cable (p. 1-2)"
+    },
+    {
+      "id": "engine_instrument_error",
+      "role": "contributing",
+      "evidence": "The right engine thrust lever remained stuck at climb power due to excessive friction, while the left lever moved backward as commanded, creating an asymmetric thrust condition (p. 1-2)"
+    },
+    {
+      "id": "known_defect_unresolved",
+      "role": "contributing",
+      "evidence": "The autothrottle problem had been reported 65 times since 2013 and was never resolved; maintenance troubleshooting did not identify the mechanical friction in the throttle cable (p. 131)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The pilots did not recognize the thrust lever asymmetry or the aircraft's deviation from the intended flight path before it developed into an upset condition (p. 135)"
+    },
+    {
+      "id": "startle_effect",
+      "role": "contributing",
+      "evidence": "When the bank angle reached 37 degrees, the Enhanced GPWS Bank Angle warning activated, startling the pilots (p. 1-2)"
+    },
+    {
+      "id": "automation_dependency",
+      "role": "contributing",
+      "evidence": "Automation complacency and confirmation bias led to reduced active monitoring of the thrust levers and flight path (p. 135)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Sriwijaya Air's upset recovery training program lacked detail and guidelines to ensure pilots had adequate knowledge to prevent and recover from upset conditions effectively (p. 135)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft entered an upset condition and descended rapidly into the Java Sea approximately 4 minutes after takeoff (p. 1)"
+    }
+  ],
+  "chain": [
+    [
+      "engine_instrument_error",
+      "known_defect_unresolved"
+    ],
+    [
+      "known_defect_unresolved",
+      "autothrottle_mode_confusion"
+    ],
+    [
+      "autothrottle_mode_confusion",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "startle_effect"
+    ],
+    [
+      "startle_effect",
+      "automation_dependency"
+    ],
+    [
+      "automation_dependency",
+      "inadequate_training"
+    ],
+    [
+      "inadequate_training",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "07:36:46",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight SJ182 departed from Runway 25R, Jakarta in daylight conditions with 62 occupants (2 pilots, 4 flight attendants, 56 passengers) aboard",
+      "factors": []
+    },
+    {
+      "t": 5,
+      "clock": "07:36:51",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Autopilot engaged at approximately 1,800 feet in LNAV mode and MCP SPD mode",
+      "factors": []
+    },
+    {
+      "t": 74,
+      "clock": "07:38:00",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At altitude 5,400 feet and 220 knots, pilot changed autopilot directional control from LNAV to HDG SEL mode",
+      "factors": []
+    },
+    {
+      "t": 109,
+      "clock": "07:38:35",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Autopilot vertical control changed to V/S mode and autothrottle changed from N1 mode to MCP SPD mode, requiring less engine thrust",
+      "factors": []
+    },
+    {
+      "t": 114,
+      "clock": "07:38:40",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At altitude 7,950 feet, left thrust lever began decreasing while right thrust lever remained at 46 degrees due to mechanical friction",
+      "state": {
+        "alt": 7950,
+        "ias": 220,
+        "vs": 1200
+      },
+      "factors": [
+        "engine_instrument_error",
+        "known_defect_unresolved"
+      ]
+    },
+    {
+      "t": 193,
+      "clock": "07:39:33",
+      "phase": "initial_climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC instructed aircraft to stop climbing at 11,000 feet",
+      "factors": []
+    },
+    {
+      "t": 230,
+      "clock": "07:40:16",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At altitude approximately 10,250 feet, aircraft turned left instead of right as intended due to thrust asymmetry, with calculated spoiler deflection of 3.7 degrees",
+      "state": {
+        "alt": 10250,
+        "roll": 15
+      },
+      "factors": [
+        "autothrottle_mode_confusion",
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "t": 238,
+      "clock": "07:40:24",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Enhanced GPWS Bank Angle warning activated when bank angle reached 37 degrees to the left",
+      "factors": [
+        "startle_effect"
+      ]
+    },
+    {
+      "t": 239,
+      "clock": "07:40:25",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Pilot called out 'ONE THREE ZERO' in response to new climb clearance to 13,000 feet",
+      "factors": []
+    },
+    {
+      "t": 244,
+      "clock": "07:40:30",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft entered upset condition with excessive bank angle; overspeed warning sounded; CVR recording ended as aircraft descended into Java Sea",
+      "state": {
+        "alt": 10700,
+        "roll": 150
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [
+    {
+      "t": 110,
+      "clock": "07:38:36",
+      "speaker": "SIC",
+      "text": "Heading SEL"
+    },
+    {
+      "t": 113,
+      "clock": "07:38:39",
+      "speaker": "SIC",
+      "text": "Confirm heading 070"
+    },
+    {
+      "t": 224,
+      "clock": "07:40:10",
+      "speaker": "SIC",
+      "text": "BANK ANGLE"
+    },
+    {
+      "t": 227,
+      "clock": "07:40:13",
+      "speaker": "SIC",
+      "text": "Capt... Capt... upset, upset"
+    },
+    {
+      "t": 239,
+      "clock": "07:40:25",
+      "speaker": "PF",
+      "text": "ONE THREE ZERO"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "04.R-2021-01.01",
+      "to": "DGCA",
+      "text": "Include a requirement of UPRT (Upset Prevention and Recovery Training) in the CASR Part 121 and develop detailed guidance to increase the effectiveness of upset prevention and recovery training implementation",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": "04.R-2021-01.02",
+      "to": "DGCA",
+      "text": "Review the requirements of notification of rescue coordination center in the CASR Part 170 to ensure compliance with ICAO Annex 11 standards, specifically including the alternative conjunction (or) in the determination of emergency states",
+      "status": "closed_acceptable",
+      "outcome": "DGCA reviewed and amended CASR Part 170 to align with ICAO Annex 11",
+      "trigger_factors": []
+    },
+    {
+      "id": "04.O-2021-01.03",
+      "to": "Sriwijaya Air",
+      "text": "Consult the DGCA prior to modifying any flight operation procedure and obtain No Technical Objection (NTO) from Boeing prior to modifying any existing aircraft manufacturer flight operation procedures",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": "04.O-2021-01.04",
+      "to": "Sriwijaya Air",
+      "text": "Increase the number of data retrieval in the Flight Data Analysis Program (FDAP) to improve the ability of monitoring flight operation safety performance (target above 28.1% average)",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_monitoring",
+        "known_defect_unresolved"
+      ]
+    },
+    {
+      "id": "04.O-2021-01.05",
+      "to": "Sriwijaya Air",
+      "text": "Emphasize the hazard reporting program to all employees (pilots, maintenance, dispatchers, and ground personnel) to encourage hazard reporting and identification",
+      "status": "open",
+      "trigger_factors": [
+        "known_defect_unresolved"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Sriwijaya Air implemented Upset Prevention and Recovery Training (UPRT) program starting November 2021",
+    "DGCA conducted special inspection of all Boeing 737-300/400/500 aircraft in Indonesia regarding AD compliance and pilot training",
+    "Sriwijaya Air revised Flight Data Analysis Program event definitions to include thrust asymmetry and loss of control events",
+    "Sriwijaya Air amended maintenance procedures for handling repetitive defects and autothrottle troubleshooting",
+    "DGCA amended CASR Part 170 to align with ICAO Annex 11 for emergency state determination"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://knkt.go.id/Repo/Files/Laporan/Penerbangan/2021/KNKT.21.01.01.04-Final-Report.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q104759345",
+  "asn_id": "20210109-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sriwijaya_Air_Flight_182",
+  "report_links": [
+    "https://aviation-safety.net/database/record.php?id=20210109-0",
+    "https://knkt.go.id/Repo/Files/Laporan/Penerbangan/2021/KNKT.21.01.01.04-Final-Report.pdf"
+  ],
+  "interest": 17.79,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read synopsis, findings, contributing factors, safety actions, and recommendations sections",
+      "CVR transcript data from official report included",
+      "Timeline events constructed from FDR data and CVR transcript with UTC clock times",
+      "All factor IDs and chain relationships based on official findings and analysis",
+      "Recommendations extracted from sections 5.1 (to Sriwijaya Air) and 4.1 (DGCA safety actions with KNKT recommendations 04.R-2021-01.01 and 04.R-2021-01.02)"
+    ]
+  }
+}

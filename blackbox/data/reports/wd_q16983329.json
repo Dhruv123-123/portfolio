@@ -1,0 +1,236 @@
+{
+  "id": "wd_q16983329",
+  "title": "Aviogenex 130",
+  "flight_number": "JJ130",
+  "date": "1971-05-23",
+  "time_reference": "UTC",
+  "t0": "1971-05-23T16:33:00Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Tupolev Tu-134A",
+    "family": "Tu-134",
+    "manufacturer": "Tupolev",
+    "registration": "YU-AHZ"
+  },
+  "operator": "Aviogenex",
+  "route": {
+    "from_name": "London",
+    "from": "EGLL",
+    "to_name": "Rijeka",
+    "to": "LDRI"
+  },
+  "location": {
+    "name": "Rijeka Airport",
+    "country": "Yugoslavia"
+  },
+  "phase": "landing",
+  "occupants": 83,
+  "fatalities": 78,
+  "damage": "destroyed",
+  "category": "LOC-G",
+  "summary": "Aviogenex Flight JJ130, a Tupolev Tu-134A charter from London to Rijeka, encountered severe weather during approach. Due to an optical illusion caused by rain, dusk, and water on the runway, the crew believed they were closer and higher than they actually were. The aircraft touched down hard at 260 km/h, the right wing broke off, and the aircraft turned over and caught fire, killing 78 of 83 occupants.",
+  "probable_cause": "Optical illusion caused by dusk, heavy rain, and water on the runway led the crew to perceive the aircraft as closer and higher than its actual position, resulting in a steep descent and hard landing that exceeded structural limits of the right wing attachment.",
+  "factors": [
+    {
+      "id": "visual_illusion",
+      "role": "initiating",
+      "evidence": "Refraction of light on the wet cockpit windshield during dusk and rain created an optical illusion causing the crew to believe the runway was closer and lower by approximately 60 meters (p. 4-5)"
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "The aircraft remained above the glide path despite crew efforts to reduce altitude by applying down elevator and reducing power (p. 4-5)"
+    },
+    {
+      "id": "hard_landing",
+      "role": "outcome",
+      "evidence": "The aircraft touched down at 260 km/h with excessive forces: vertical load of 4.15g and side loading of 1.46g on the right landing gear (p. 5)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "The right wing broke off at the landing gear attachment point due to the extreme loads from hard landing (p. 5)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Fire broke out after the right wing separation and the fuselage turned over and burned (p. 5)"
+    }
+  ],
+  "chain": [
+    [
+      "visual_illusion",
+      "unstable_approach"
+    ],
+    [
+      "unstable_approach",
+      "hard_landing"
+    ],
+    [
+      "hard_landing",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "16:33",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight JJ130 took off from Gatwick for Rijeka; flight proceeded normally despite unstable weather with thunderstorms and rain over Europe",
+      "factors": []
+    },
+    {
+      "t": 5400,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Zagreb Air Traffic Control provided instructions; Rijeka ATC warned crew of cumulonimbus above Uçka mountain range",
+      "factors": []
+    },
+    {
+      "t": 5700,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft too high to start ILS procedure; crew flew around cumulonimbus using airborne radar, returned over Breza NDB, then followed ILS glide path and localizer normally",
+      "factors": []
+    },
+    {
+      "t": 6300,
+      "clock": null,
+      "phase": "landing",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Approximately 4 kilometers from runway threshold at 300 meters above sea level, aircraft entered torrential rain; crew activated windscreen wipers",
+      "factors": []
+    },
+    {
+      "t": 6345,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Fifty seconds before touchdown, aircraft was carried upward and rolled right by turbulence; crew attempted to return to ILS approach",
+      "state": {
+        "alt": 300,
+        "ias": 300
+      },
+      "factors": []
+    },
+    {
+      "t": 6390,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Eighteen seconds before impact, engine power was increased and up elevator applied as captain considered discontinuing approach",
+      "factors": []
+    },
+    {
+      "t": 6393,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain decided to land; power reduced to flight idle and down elevator applied when aircraft was 800 meters from runway threshold at height over 60 meters",
+      "factors": []
+    },
+    {
+      "t": 6408,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft touched runway at 260 km/h with excessive forces; right wing broke off; aircraft turned over and caught fire",
+      "state": {
+        "ias": 260
+      },
+      "factors": [
+        "hard_landing",
+        "structural_failure",
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Charter carriers",
+      "text": "Conduct more effective inspection of charter carriers",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "text": "Study with pilots possible illusions that could be encountered during landing in heavy rain and optical illusions training",
+      "status": "unknown",
+      "trigger_factors": [
+        "visual_illusion"
+      ]
+    },
+    {
+      "id": null,
+      "text": "Enlarge the training programmes for captains",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "text": "Modernize the training programmes for fire-fighting personnel",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "text": "Reconsider meteorological minima at Rijeka airport",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/18-1973%20YU-AHZ.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read History of Flight, Analysis section, and Conclusions (Findings and Probable Cause)",
+      "Optical illusion is central to probable cause, caused by rain, dusk, and water on runway",
+      "Landing speed of 260 km/h resulted in vertical load of 4.15g",
+      "Right wing failed at landing gear attachment due to extreme loads"
+    ]
+  },
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q16983329",
+  "asn_id": "19710523-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Aviogenex_Flight_130",
+  "report_links": [
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/18-1973%20YU-AHZ.pdf"
+  ],
+  "interest": 17.95,
+  "curated_id": null
+}
