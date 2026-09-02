@@ -1,0 +1,213 @@
+{
+  "id": "wd_q84329676",
+  "qid": "Q84329676",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "PenAir 3296",
+  "flight_number": "PA3296",
+  "date": "2019-10-17",
+  "time_reference": "Alaska daylight time",
+  "t0": "2019-10-17T17:39:54-08:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Saab 2000",
+    "manufacturer": "Saab",
+    "family": "2000",
+    "registration": "N686PA"
+  },
+  "operator": "PenAir",
+  "route": {
+    "from_name": "Ted Stevens Anchorage International Airport",
+    "to_name": "Unalaska Airport"
+  },
+  "location": {
+    "name": "Unalaska Airport",
+    "country": "United States"
+  },
+  "phase": "landing",
+  "occupants": 43,
+  "fatalities": 1,
+  "damage": "substantial",
+  "category": "RE",
+  "summary": "PenAir Flight 3296, a Saab 2000, overran the runway at Unalaska Airport on October 17, 2019 after landing in tailwind conditions that exceeded the aircraft's limits. The investigation determined the accident was caused by incorrect wiring of wheel speed transducer harnesses on the left main landing gear during overhaul, combined with the crew's decision to land despite high tailwinds.",
+  "probable_cause": "Landing gear manufacturer's incorrect wiring of the wheel speed transducer harnesses on the left main landing gear during overhaul; tailwind exceeding aircraft limits; inadequate runway safety area at Unalaska Airport.",
+  "factors": [
+    {
+      "id": "tailwind_landing",
+      "role": "contributing",
+      "evidence": "The crew decided to continue with the landing despite winds reported as 300 degrees at 24 kn, which exceeded the Saab's tailwind limits"
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "Aircraft crossed a section of grass and then broke through a chain perimeter fence and crossed a ditch"
+    },
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "Landing gear manufacturer's incorrect wiring of the wheel speed transducer harnesses on the left main landing gear during overhaul"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Pilots believed there was a crosswind based on seeing waves and a windsock, but this contradicted weather control reports"
+    },
+    {
+      "id": "airport_infrastructure",
+      "role": "contributing",
+      "evidence": "FAA authorizing Unalaska Airport to operate the Saab 2000 without taking the runway safety area into consideration"
+    }
+  ],
+  "chain": [
+    [
+      "maintenance_error",
+      "runway_overrun"
+    ],
+    [
+      "tailwind_landing",
+      "runway_overrun"
+    ],
+    [
+      "inadequate_monitoring",
+      "tailwind_landing"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "15:15",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Aircraft departed from Anchorage at 15:15 AST",
+      "factors": []
+    },
+    {
+      "t": 8100,
+      "clock": "17:40",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Crew received clearance for RNAV approach to Runway 13; wind reported as 270 degrees at 10 kn initially, then changed to 300 degrees at 24 kn",
+      "factors": [
+        "tailwind_landing"
+      ]
+    },
+    {
+      "t": 8200,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Crew executed go-around after aircraft became unstable, then returned for visual approach",
+      "factors": []
+    },
+    {
+      "t": 8280,
+      "clock": "17:40",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft touched down 305 m down the runway; reverse thrust and wheel-braking applied",
+      "factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "t": 8320,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft crossed grass and broke through perimeter fence, struck rock and propeller contacted ground",
+      "factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "t": 8340,
+      "clock": null,
+      "phase": "landing",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Port propeller shattered sending debris into fuselage; one fatality occurred later from injuries",
+      "factors": [
+        "runway_overrun"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-21-46",
+      "to": "FAA",
+      "text": "Identify all currently certificated transport-category airplanes for which system safety assessments for landing gear systems did not consider human error that could lead to cross-wiring of antiskid brake system components, including the wheel speed transducers, and require manufacturers of transport-category airplanes without such assessments to perform the assessments and then implement mitigations to prevent cross-wiring of antiskid brake system components.",
+      "status": "open"
+    },
+    {
+      "id": "A-21-47",
+      "to": "FAA",
+      "text": "Require the submission and consideration of system safety assessments addressing the landing gear antiskid system for the certification of future transport-category airplane designs.",
+      "status": "open"
+    },
+    {
+      "id": "A-21-48",
+      "to": "FAA",
+      "text": "Require organizations that design, manufacture, and maintain aircraft to establish a safety management system.",
+      "status": "open"
+    },
+    {
+      "id": "A-21-49",
+      "to": "FAA",
+      "text": "Notify principal operations inspectors and frontline managers about the circumstances of this accident and emphasize the importance of existing Federal Aviation Administration guidance for detecting and mitigating the safety risks that can result when certificate holders experience significant organizational change.",
+      "status": "open"
+    },
+    {
+      "id": "A-21-50",
+      "to": "FAA",
+      "text": "Revise Order 8900.1, Flight Standards Information Management System, to include a formalized transition procedure to be used during a changeover of certificate management team personnel.",
+      "status": "open"
+    },
+    {
+      "id": "A-21-51",
+      "to": "FAA",
+      "text": "Include the runway design code for runways of intended use among the criteria assessed when authorizing a scheduled air carrier to operate its airplanes on a regular basis at an airport certificated under Title 14 Code of Federal Regulations Part 139.",
+      "status": "open"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR2105.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Findings and probable cause sections read",
+      "Event timeline extracted from history of flight section",
+      "Recommendations from section 4.1"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/PenAir_Flight_3296",
+  "asn_id": "20191017-0",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR2105.pdf",
+    "https://www.ntsb.gov/news/press-releases/Pages/mr20211102b.aspx",
+    "https://data.ntsb.gov/Docket/?NTSBNumber=DCA20MA002"
+  ],
+  "interest": 9.16,
+  "curated_id": null
+}

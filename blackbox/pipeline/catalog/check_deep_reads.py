@@ -28,4 +28,10 @@ for p in sorted((ROOT / "data" / "reports").glob("wd_*.json")):
         print(f"{p.name}: bad date {exc}"); bad += 1
     if r.get("depth") == "summary":
         print(f"{p.name}: depth summary"); bad += 1
+    cat_ev = {e.get("text") for e in c.get("events", [])}
+    new_ev = [e for e in r.get("events", []) if e.get("text") not in cat_ev]
+    cites = sum(1 for f in r.get("factors", []) if "(p." in (f.get("evidence") or ""))
+    if len(new_ev) < 3:
+        print(f"{p.name}: only {len(new_ev)} events beyond the catalog summary -> not a report read"); bad += 1
+
 print(f"{bad} problems")

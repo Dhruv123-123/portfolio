@@ -1,0 +1,225 @@
+{
+  "id": "wd_q3797640",
+  "qid": "Q3797640",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2002 Pirelli Tower plane crash",
+  "date": "2002-04-18",
+  "time_reference": "UTC",
+  "t0": "2002-04-18T15:45:00Z",
+  "agency": "ANSV",
+  "agencies": [
+    {
+      "code": "ANSV",
+      "name": "Agenzia Nazionale per la Sicurezza del Volo",
+      "country": "Italy",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Rockwell Commander 112TC",
+    "manufacturer": "Rockwell",
+    "family": "Commander",
+    "registration": "HB-NCX"
+  },
+  "operator": "Private",
+  "route": {
+    "from_name": "Locarno Airport",
+    "to_name": "Linate Airport"
+  },
+  "location": {
+    "name": "Pirelli Tower, Milan",
+    "country": "Italy"
+  },
+  "phase": "approach",
+  "occupants": 1,
+  "fatalities": 3,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "A privately operated Rockwell Commander 112TC single-engine aircraft flying from Locarno to Milan Linate crashed into the upper floors of the Pirelli Tower at 17:45 local time. The 67-year-old pilot was the aircraft's only occupant, with two building employees killed. The ANSV investigation found the pilot was likely unable to adequately manage the final phase of flight due to technical, operational, and environmental issues.",
+  "probable_cause": "The pilot was unable to adequately manage the final approach phase in the presence of technical, operational, and environmental factors. The aircraft struck the 26th and 27th floor deck beams, resulting in fuel tank explosion and fire.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "environmental issues"
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "initiating",
+      "evidence": "pilot was likely unable to adequately manage the final phase of the flight"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "aircraft crashed into the deck beams of the 26th and 27th floor of the Pirelli Tower"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "explosion of the aircraft's fuel tanks placed near the wings"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "cfit"
+    ],
+    [
+      "cfit",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "15:15",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Aircraft departed from Locarno Airport at 15:15 UTC, 15 minutes earlier than filed",
+      "factors": []
+    },
+    {
+      "t": 240,
+      "clock": "15:19:26",
+      "phase": "climb",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Pilot reports position over Ceneri waypoint, asks about Lugano airport closing time, states intent to return between 6:15-6:30 pm local time",
+      "factors": []
+    },
+    {
+      "t": 540,
+      "clock": "15:26:04",
+      "phase": "climb",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Pilot tunes Milano Information frequency, estimates Saronno VOR overflight at 15:33, maintains 1000 ft AGL altitude",
+      "factors": []
+    },
+    {
+      "t": 1089,
+      "clock": "15:39:31",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "First contact with Linate Tower; pilot requests landing on pista turistica (36L runway)",
+      "factors": []
+    },
+    {
+      "t": 1120,
+      "clock": "15:40:04",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Linate Tower instructs to set transponder code 7000; tower denies 36L landing due to NOTAM restricting it to helicopters only; directs to orbit ATA point",
+      "factors": []
+    },
+    {
+      "t": 1200,
+      "clock": "15:42:20",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower queries if pilot is establishing downwind for runway 36R",
+      "factors": []
+    },
+    {
+      "t": 1223,
+      "clock": "15:42:37",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower issues new instruction to proceed to downwind position for runway 36R after orbit on ATA",
+      "factors": []
+    },
+    {
+      "t": 1224,
+      "clock": "15:42:37",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Pilot declares small landing gear problem and states he is trying to resolve it",
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 1290,
+      "clock": "15:43:20",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower allows pilot to return to ATA if landing gear is confirmed extended",
+      "factors": []
+    },
+    {
+      "t": 1294,
+      "clock": "15:43:24",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Pilot responds 'I'm trying... one moment' (last radio transmission from HB-NCX)",
+      "factors": []
+    },
+    {
+      "t": 1800,
+      "clock": "15:45:00",
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft impacts Palazzo della Regione (Pirelli Tower) at approximately 26th-27th floor level, 340 ft AGL",
+      "factors": [
+        "cfit",
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "ANSV-38/155-1/A/02",
+      "to": "ENAV",
+      "text": "Evaluate the opportunity to update departure procedures for aircraft operating under VFR rules to avoid overflying densely populated areas, with reference to the 330-degree mandatory departure procedure from runway 36L that could lead to overflight of northern Milan at altitudes potentially below 1500 feet in case of radio failure or missed approach.",
+      "status": "unknown"
+    },
+    {
+      "id": "ANSV-39/155-2/A/02",
+      "to": "ENAV",
+      "text": "Evaluate the opportunity to establish VFR holding procedures that allow avoidance of overflying densely populated areas. Currently, circular holding patterns west of ATA result in overflight of eastern Milan.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://ansv.it/wp-content/uploads/2020/07/Rel.-A_18_02HB-NCX.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Report in Italian; findings and probable cause translated and interpreted",
+      "Pilot had history of three previous accidents including one fatal crash",
+      "Minimal recent flying experience (1h 20m in last 180 days)",
+      "Communication issues noted between tower and pilot throughout approach",
+      "Technical issue mentioned by pilot regarding landing gear but unclear nature",
+      "Sun position during landing gear procedure may have caused visual disorientation per investigation"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/2002_Pirelli_Tower_airplane_crash",
+  "report_links": [
+    "https://ansv.it/wp-content/uploads/2020/07/Rel.-A_18_02HB-NCX.pdf"
+  ],
+  "interest": 8.95,
+  "curated_id": null
+}
