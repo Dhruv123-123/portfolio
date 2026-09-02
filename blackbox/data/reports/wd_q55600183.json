@@ -1,0 +1,321 @@
+{
+  "id": "wd_q55600183",
+  "title": "Air Littoral Flight 1919",
+  "flight_number": "1919",
+  "date": "1987-12-21",
+  "time_reference": "UTC",
+  "t0": "1987-12-21T14:10:18Z",
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses",
+      "country": "France",
+      "role": "lead",
+      "report_id": "f-gh871221",
+      "report_title": "Accident d'un Brasilia EMB 120 immatriculé F-GEGH, survenu le 21 décembre 1987 à Eysines (Gironde)",
+      "report_date": "1989-08-03",
+      "url": "https://bea.aero/fileadmin/documents/docspa/1987/f-gh871221/pdf/f-gh871221_05.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Embraer EMB 120 Brasilia",
+    "family": "120",
+    "manufacturer": "Embraer",
+    "registration": "F-GEGH",
+    "msn": "120033",
+    "engines": "PW 118"
+  },
+  "operator": "Air Littoral",
+  "route": {
+    "from": "EBBR",
+    "from_name": "Brussels",
+    "to": "LFBD",
+    "to_name": "Bordeaux-Mérignac"
+  },
+  "location": {
+    "name": "Eysines, Pinsan forest",
+    "country": "France",
+    "region": "Gironde"
+  },
+  "phase": "approach",
+  "occupants": 16,
+  "fatalities": 16,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Air Littoral Flight 1919, an EMB 120 Brasilia en route from Brussels to Bordeaux, conducted an ILS approach during foggy weather. Poor crew coordination and inadequate altitude monitoring resulted in the aircraft descending below the safe approach path. The aircraft struck trees in a forest 5,100 meters short of the runway threshold, killing all 16 occupants.",
+  "probable_cause": "The accident resulted directly from poor trajectory management. The crew failed to coordinate effectively during the critical final approach phase, with neither pilot maintaining adequate vigilance over altitude and ILS compliance. When cloud base height improved to 160 feet, the crew made an optimistic decision to attempt a direct approach from an unfavorable position (too close, too high, too fast) without adequate preparation. The crew continued descending below decision height (220 feet) despite insufficient visual references and regulations requiring a go-around when cloud base fell below 150 feet. An untimely exchange of pilot duties immediately before the outer marker compounded the coordination breakdown, leaving the crew confused about the approach strategy.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Dense fog with cloud base of 100-130 feet at arrival. Visibility 200 meters (p. 8)"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Poor coordination between the two pilots. Exchange of duties exactly at the outer marker created confusion about approach strategy. The non-flying pilot provided inadequate assistance during the critical descent phase. (p. 14-15)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Neither pilot maintained adequate vigilance over altitude during approach. Altitude and ILS compliance were not properly monitored. The crew failed to recognize they were well below the glide slope. (p. 13-15)"
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "The aircraft was positioned too close to the airport, too high, and too fast (265 knots) when the crew decided to attempt the direct approach. The approach parameters were unsatisfactory. (p. 15)"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "Aircraft descended below the required decision height (220 feet) and below the safe approach trajectory. Cloud base dropped to 130 feet, below the 150-foot minimum required by regulation, but crew continued descent. (p. 13-15)"
+    },
+    {
+      "id": "go_around_not_flown",
+      "role": "contributing",
+      "evidence": "When conditions deteriorated and cloud base fell below minimums at the outer marker, regulations and procedures required an immediate go-around. The crew did not execute this procedure despite clear indications. (p. 15)"
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The final approach phase involved a rapid sequence of complex actions: weather monitoring, radio communications transfers, altitude and speed management, approach briefing changes, and pilot duties exchange. The workload was high and compressed into the critical final approach period. (p. 14-15)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted trees at 5,100 meters before the runway threshold at Eysines in the Pinsan forest. (p. 8, 11)"
+    }
+  ],
+  "chain": [
+    ["low_visibility", "inadequate_monitoring"],
+    ["crm_breakdown", "inadequate_monitoring"],
+    ["crm_breakdown", "descent_below_minimums"],
+    ["high_workload", "crm_breakdown"],
+    ["unstable_approach", "inadequate_monitoring"],
+    ["inadequate_monitoring", "go_around_not_flown"],
+    ["go_around_not_flown", "descent_below_minimums"],
+    ["descent_below_minimums", "cfit"]
+  ],
+  "events": [
+    {
+      "t": -630,
+      "clock": "13:00",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft departs Brussels for Bordeaux with 16 occupants (2 pilots, 1 flight attendant, 13 passengers). Flight conditions forecast as marginal at Bordeaux with dense fog.",
+      "factors": ["low_visibility"]
+    },
+    {
+      "t": -375,
+      "clock": "13:43",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain inquires about Bordeaux weather conditions again.",
+      "factors": []
+    },
+    {
+      "t": -149,
+      "clock": "14:04",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach control directs aircraft to waiting beacon BE, descend to FL 50.",
+      "factors": []
+    },
+    {
+      "t": -100,
+      "clock": "14:05",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach reports cloud base height 160 feet, sufficient for ILS approach.",
+      "factors": ["low_visibility"]
+    },
+    {
+      "t": -40,
+      "clock": "14:09:38",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller reports updated cloud base height 130 feet, below the 150-foot minimum required for approach.",
+      "factors": ["low_visibility", "descent_below_minimums"]
+    },
+    {
+      "t": -15,
+      "clock": "14:09:55",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain takes control from first officer with brief instruction 'Remets-moi l'ILS chez moi' (Put the ILS on my display) and acknowledges 'O.K.', indicating duties exchange is complete.",
+      "factors": ["crm_breakdown"]
+    },
+    {
+      "t": -8,
+      "clock": "14:10:10",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain orders 'Deux cents neuds, volets vers 15, le train sur sortie' (200 knots, flaps 15, gear down) to prepare for landing.",
+      "factors": []
+    },
+    {
+      "t": -6,
+      "clock": "14:10:12",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Captain queries 'Bon, où est l'axe 2?' (Where is runway 2?), showing concern about runway alignment.",
+      "factors": ["inadequate_monitoring"]
+    },
+    {
+      "t": -1,
+      "clock": "14:10:17",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Captain asks 'On passe combien là?' (How much altitude are we at?), indicating insufficient altitude surveillance during the critical final moments.",
+      "factors": ["inadequate_monitoring"]
+    },
+    {
+      "t": 0,
+      "clock": "14:10:18",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft strikes trees on approach to Bordeaux, descending at high rate with insufficient altitude and with crew still attempting to gain control. Impact occurs 5,100 meters short of runway threshold. Immediate post-impact fire destroys the aircraft.",
+      "factors": ["cfit", "descent_below_minimums"],
+      "state": {
+        "alt": 300,
+        "ias": 265,
+        "vs": -4000
+      }
+    }
+  ],
+  "cvr": [
+    {
+      "t": -600,
+      "clock": "13:10",
+      "speaker": "PF",
+      "text": "On va attendre un peu, on va calmer le jeu",
+      "translation": "Let's wait a bit, let's take it easy"
+    },
+    {
+      "t": -40,
+      "clock": "14:09:38",
+      "speaker": "SCP",
+      "text": "J'ai un problème...",
+      "translation": "I have a problem..."
+    },
+    {
+      "t": -36,
+      "clock": "14:09:42",
+      "speaker": "SCP",
+      "text": "J'ai un problème là, hein",
+      "translation": "I have a problem here, hey"
+    },
+    {
+      "t": -32,
+      "clock": "14:09:46",
+      "speaker": "PF",
+      "text": "L'ILS?",
+      "translation": "The ILS?"
+    },
+    {
+      "t": -15,
+      "clock": "14:09:55",
+      "speaker": "PF",
+      "text": "O.K.",
+      "translation": "Okay"
+    },
+    {
+      "t": -8,
+      "clock": "14:10:10",
+      "speaker": "PF",
+      "text": "Deux cents neuds, volets vers 15, le train sur sortie",
+      "translation": "Two hundred knots, flaps 15, gear down"
+    },
+    {
+      "t": -6,
+      "clock": "14:10:12",
+      "speaker": "PF",
+      "text": "Bon, où est l'axe 2?",
+      "translation": "Where is runway 2?"
+    },
+    {
+      "t": -1,
+      "clock": "14:10:17",
+      "speaker": "PF",
+      "text": "On passe combien là?",
+      "translation": "How much altitude are we at?"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "French aviation authority",
+      "text": "That regulations regarding minimum cloud base heights be revised. The regulation that prohibited approach attempts below 100 feet (later 130 feet) created an incentive for crews to plan descents for holding patterns rather than approaches, and when conditions improved slightly, made crews commit to marginal approaches without adequate preparation.",
+      "status": "closed_acceptable",
+      "outcome": "Regulation modified on 17 November 1988 to eliminate visibility vertical (sky not obscured) as a minimum requirement for ILS approaches, allowing approaches when only ceiling minima are met."
+    },
+    {
+      "id": null,
+      "to": "French aviation authority and industry",
+      "text": "That precise terminology be used in safety-critical domains. The cloudbase meter provides a cloud height value that does not correspond to true cloud base during fog conditions and can create false sense of security.",
+      "status": "unknown",
+      "outcome": null
+    },
+    {
+      "id": null,
+      "to": "Air Littoral and regional carriers",
+      "text": "That crew training emphasize decision-making during marginal weather approaches and teach pilots to recognize when an approach is becoming unstable. Training should include go-around procedures and decision height management.",
+      "status": "unknown",
+      "outcome": null
+    },
+    {
+      "id": null,
+      "to": "Regional aircraft operators",
+      "text": "That pilot training on the Embraer EMB 120 include specific preparation for high-workload terminal procedures. The aircraft's performance characteristics can lead to excessive speed retention and require active energy management during instrument approaches.",
+      "status": "unknown",
+      "outcome": null
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "French regulation on minimum cloud base for ILS approaches modified (17 November 1988) to eliminate visibility vertical requirement",
+    "Enhanced emphasis on crew resource management training in regional carrier operations",
+    "Improved terminal aerodrome forecast (TAF) terminology and dissemination to crews"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/fileadmin/documents/docspa/1987/f-gh871221/pdf/f-gh871221_05.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q55600183",
+  "asn_id": "19871221-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Littoral_Flight_1919",
+  "report_links": [
+    "https://bea.aero/fileadmin/documents/docspa/1987/f-gh871221/pdf/f-gh871221_05.pdf",
+    "https://asn.flightsafety.org/reports/1987/19871221_E120_F-GEGH.pdf"
+  ],
+  "interest": 11.26,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report read: Synopsis, Analysis du vol et de l'accident, Conclusions, Probable causes, and Recommendations sections",
+      "CVR transcript limited and poorly readable due to OCR quality; brief quotes included only",
+      "Factors identified from report analysis: poor crew coordination, inadequate altitude monitoring, descent below minimums, unstable approach, regulatory ambiguity on cloud base minimums",
+      "Captain's blood alcohol (0.35 g/l) noted in report but commission concluded it was not a significant contributing factor; crew workload and poor planning were primary causes",
+      "Aircraft systems examined post-accident and found no anomalies; both engines were operating normally at impact",
+      "Timestamps derived from CVR and radar coordination; all times in UTC"
+    ]
+  }
+}
