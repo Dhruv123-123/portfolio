@@ -1,0 +1,199 @@
+{
+  "id": "wd_q73736",
+  "qid": "Q73736",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "Petropavlovsk-Kamchatsky Air 251 (2012)",
+  "flight_number": "251",
+  "date": "2012-09-12",
+  "agency": "MAK",
+  "aircraft": {
+    "type": "Antonov An-28",
+    "manufacturer": "Antonov",
+    "family": "An-28",
+    "registration": "RA-28715"
+  },
+  "operator": "Petropavlovsk-Kamchatsky Air Enterprise",
+  "route": {
+    "from_name": "Petropavlovsk-Kamchatsky",
+    "to_name": "Palana"
+  },
+  "location": {
+    "name": "Palana, Kamchatka Krai",
+    "country": "Russia"
+  },
+  "phase": "approach",
+  "occupants": 14,
+  "fatalities": 10,
+  "category": "CFIT",
+  "summary": "The aircraft descended below minimums on approach in instrument meteorological conditions and impacted a forested slope. Both pilots were killed, together with 8 of the 12 passengers. Alcohol was found in the blood of both flight crew members. The Interstate Aviation Committee released their final report in February 2013.",
+  "probable_cause": "Descent below minimums in instrument conditions on approach, with contributing factors of pilot incapacitation due to alcohol.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "instrument meteorological conditions"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "descended below minima on approach"
+    },
+    {
+      "id": "pilot_incapacitation",
+      "role": "contributing",
+      "evidence": "Alcohol was found in the blood of both flight crew"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "impacted a forested slope"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "descent_below_minimums"
+    ],
+    [
+      "pilot_incapacitation",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "12:20",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft began approach to Palana Airport in instrument meteorological conditions",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Aircraft descended below minimums on approach",
+      "factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "00:20",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacted a forested slope",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://mak-iac.org/en/rassledovaniya/an-28-ra-28715-12-09-2012/",
+    "https://mak-iac.org/rassledovaniya/an-28-ra-28715-12-09-2012/"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Petropavlovsk-Kamchatsky_Air_Flight_251_(2012)",
+  "asn_id": "20120912-0",
+  "interest": 12.36,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "MAK full report with complete analysis and recommendations"
+    ]
+  },
+  "curated_id": null,
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead"
+    }
+  ],
+  "sources": [
+    "https://mak-iac.org/en/rassledovaniya/an-28-ra-28715-12-09-2012/",
+    "https://mak-iac.org/rassledovaniya/an-28-ra-28715-12-09-2012/"
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Russian Aviation Authorities",
+      "text": "Disseminate information about this accident to flight and command personnel of civil aviation operators and aeronautical navigation organizations",
+      "status": "unknown",
+      "trigger_factors": [
+        "descent_below_minimums",
+        "pilot_incapacitation"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Russian Aviation Authorities",
+      "text": "Consider requiring mandatory implementation of Flight Data Analysis (FDA) programs for aircraft with recording systems regardless of maximum takeoff weight",
+      "status": "unknown",
+      "trigger_factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Air Navigation Services",
+      "text": "Include limiting and control bearings in the Instructions for Flight Operations at Palana Airport to enable dispatcher control of aircraft flights in the aerodrome area",
+      "status": "unknown",
+      "trigger_factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Air Navigation Services",
+      "text": "Supplement coordination procedures between dispatcher and meteorological personnel during \"Alert\" signals",
+      "status": "unknown",
+      "trigger_factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Petropavlovsk-Kamchatsky Air",
+      "text": "Implement effective pre-flight crew checks to prevent operations by intoxicated crew members",
+      "status": "unknown",
+      "trigger_factors": [
+        "pilot_incapacitation"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Petropavlovsk-Kamchatsky Air",
+      "text": "Develop and implement Flight Data Analysis program with particular attention to adherence to approach procedures",
+      "status": "unknown",
+      "trigger_factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Petropavlovsk-Kamchatsky Air",
+      "text": "Develop and incorporate recommended procedures for flight operations without radar control in mountainous terrain",
+      "status": "unknown",
+      "trigger_factors": [
+        "descent_below_minimums"
+      ]
+    }
+  ]
+}

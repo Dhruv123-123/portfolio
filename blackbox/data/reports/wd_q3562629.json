@@ -1,0 +1,209 @@
+{
+  "id": "wd_q3562629",
+  "qid": "Q3562629",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "XL Airways Germany 888T",
+  "flight_number": null,
+  "date": "2008-11-27",
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau of Enquiry and Analysis for Civil Aviation Safety",
+      "country": "France",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Airbus A320-232",
+    "manufacturer": "Airbus",
+    "family": "A320",
+    "registration": "D-AXLA"
+  },
+  "operator": "XL Airways Germany",
+  "route": {
+    "from_name": "Perpignan",
+    "to_name": "Perpignan"
+  },
+  "location": {
+    "name": "Mediterranean Sea near Canet-en-Roussillon",
+    "country": "France"
+  },
+  "phase": "descent",
+  "occupants": 7,
+  "fatalities": 7,
+  "category": "LOC-I",
+  "summary": "XL Airways Flight 888T was an acceptance test flight of an Airbus A320 on 27 November 2008. Incorrect maintenance procedures allowed water to enter and freeze in the angle-of-attack sensors, rendering them inoperative. During descent, the crew attempted to perform a slow-flight test at approximately 8,000 to 6,000 feet, below the intended test altitude. The aircraft crashed into the Mediterranean Sea 7 km off the French coast, killing all seven people on board.",
+  "probable_cause": "The probable cause was incorrect maintenance procedures that allowed water to enter and freeze in the angle-of-attack sensors, combined with the crew's decision to perform a test maneuver at dangerously low altitude during the descent phase.",
+  "factors": [
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "incorrect maintenance procedures allowed water to enter and freeze in the angle-of-attack sensors during flight, rendering them inoperative"
+    },
+    {
+      "id": "aoa_sensor_failure",
+      "role": "outcome",
+      "evidence": "angle-of-attack sensors provided erroneous data due to ice blockage rendering them inoperative"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "crew attempted to perform slow flight check at approximately 8,000 to 6,000 feet, when procedure was supposed to be performed at approximately 14,000 feet"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "aircraft crashed into the Mediterranean Sea 7 km off Canet-en-Roussillon with all seven on board killed while attempting test maneuver at dangerously low altitude with inoperative sensors"
+    }
+  ],
+  "chain": [
+    [
+      "maintenance_error",
+      "aoa_sensor_failure"
+    ],
+    [
+      "aoa_sensor_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "procedural_noncompliance",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:44",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight took off from Perpignan Airport on acceptance flight test",
+      "factors": []
+    },
+    {
+      "t": 2940,
+      "clock": "15:33",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew requested clearance to test at 39,000 feet for auxiliary power unit testing",
+      "factors": []
+    },
+    {
+      "t": 3600,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain Horrell described actions required for slow flight check as aircraft descended through approximately 8,000 to 6,000 feet",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 4200,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft passing through cloud layers during descent with erroneous angle-of-attack sensor inputs from frozen sensors rendering them inoperative",
+      "factors": [
+        "aoa_sensor_failure"
+      ]
+    },
+    {
+      "t": 4800,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed into Mediterranean Sea 7 km off French coast Canet-en-Roussillon killing all seven people on board",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://bea.aero/fileadmin/documents/docspa/2008/d-la081127.en/pdf/d-la081127.en.pdf",
+    "https://www.ntsb.gov/ntsb/brief.asp?ev_id=20081128X43319&key=1"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/XL_Airways_Germany_Flight_888T",
+  "asn_id": "20081127-0",
+  "interest": 12.58,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "BEA full report with complete findings and recommendations"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "https://bea.aero/fileadmin/documents/docspa/2008/d-la081127.en/pdf/d-la081127.en.pdf",
+    "https://www.ntsb.gov/ntsb/brief.asp?ev_id=20081128X43319&key=1"
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "recommendations": [
+    {
+      "id": null,
+      "to": "EASA",
+      "text": "Detail in EU-OPS the various types of non-revenue flights that an operator from a EU state is authorised to perform",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": null,
+      "to": "EASA",
+      "text": "Require that non-revenue flights be described precisely in the approved parts of the operations manual, including their preparation, programme and operational framework as well as the qualifications and training of crews",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": null,
+      "to": "EASA",
+      "text": "Require that such flights be subject to an authorisation, or a declaration by the operator, on a case-by-case basis",
+      "status": "unknown",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": null,
+      "to": "EASA",
+      "text": "Ensure that equipment installation conditions during tests performed by equipment manufacturers are representative of those on the aeroplane",
+      "status": "unknown",
+      "trigger_factors": [
+        "aoa_sensor_failure"
+      ]
+    },
+    {
+      "id": null,
+      "to": "EASA",
+      "text": "Undertake a safety study with a view to improving certification standards of warning systems for crews during reconfigurations of flight control systems",
+      "status": "unknown",
+      "trigger_factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "EASA",
+      "text": "In cooperation with manufacturers, improve training exercises and techniques relating to approach-to-stall recovery",
+      "status": "unknown",
+      "trigger_factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "wd_q137801147",
+  "qid": "Q137801147",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2026 Indonesia Air Transport ATR 42 crash",
+  "flight_number": null,
+  "date": "2026-01-17",
+  "agency": "KNKT",
+  "aircraft": {
+    "type": "ATR 42-512",
+    "manufacturer": "ATR",
+    "family": "42",
+    "registration": "PK-THT"
+  },
+  "operator": "Indonesia Air Transport",
+  "route": {
+    "from_name": "Adisucipto Airport",
+    "to_name": "Sultan Hasanuddin International Airport"
+  },
+  "location": {
+    "name": "Mount Bulusaraung",
+    "country": "Indonesia"
+  },
+  "phase": "approach",
+  "occupants": 10,
+  "fatalities": 10,
+  "category": "CFIT",
+  "summary": "An ATR 42 operating a regional service in Indonesia was not on the correct flight path during approach to Sultan Hasanuddin International Airport. The aircraft made its last contact with ATC at about 20 km from destination and subsequently crashed into Mount Bulusaraung. All 10 on board were killed. Adverse weather conditions in the mountainous area complicated the search and rescue operation.",
+  "probable_cause": "",
+  "factors": [
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "Sources report that the aircraft was not on the correct flight path during approach"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Search efforts were complicated by adverse weather conditions in the area"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "the aircraft was ultimately found to have crashed in the Bulusaraung mountain area"
+    }
+  ],
+  "chain": [
+    [
+      "navigation_error",
+      "cfit"
+    ],
+    [
+      "low_visibility",
+      "navigation_error"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The aircraft made its last contact with ATC at a distance of about 20 km from its destination airport, at 1:37 pm local time"
+    },
+    {
+      "t": 100,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Local residents reported, around the time the aircraft was declared missing, witnessing an explosion and seeing smoke in Mount Bulusaraung"
+    },
+    {
+      "t": 200,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The aircraft was ultimately found to have crashed in the Bulusaraung mountain area",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://knkt.go.id/Repo/Files/Laporan/Penerbangan/2026/KNKT.26.01.01.04-Preliminary-Report.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2026_Indonesia_Air_Transport_ATR_42_crash",
+  "asn_id": null,
+  "interest": 11.96,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "KNKT preliminary report with findings but no final recommendations yet"
+    ]
+  },
+  "curated_id": null,
+  "agencies": [
+    {
+      "code": "KNKT",
+      "name": "Komite Nasional Keselamatan Transportasi",
+      "country": "Indonesia",
+      "role": "lead"
+    }
+  ],
+  "sources": [
+    "https://knkt.go.id/Repo/Files/Laporan/Penerbangan/2026/KNKT.26.01.01.04-Preliminary-Report.pdf"
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "DGCA issued Circular Letter SE-DJPU 2 Tahun 2026 requiring pilots to adhere to minimum safe altitude requirements",
+    "DGCA issued Circular Letter SE-DJPU 4 Tahun 2026 requiring position verification when navigation system degradation is indicated"
+  ],
+  "related": [],
+  "fdr": null,
+  "recommendations": []
+}
