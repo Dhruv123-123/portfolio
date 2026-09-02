@@ -1,0 +1,207 @@
+{
+  "id": "wd_q16852705",
+  "qid": "Q16852705",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Knight Air 816",
+  "flight_number": null,
+  "date": "1995-05-24",
+  "time_reference": "UTC",
+  "t0": "1995-05-24T16:47:00Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accident Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "2/96",
+      "report_title": "Report on the accident to EMB-110 Bandeirante, G-OEAA at Dunkeswick, North Yorkshire on 24 May 1995",
+      "report_date": "1996-05-31"
+    },
+    {
+      "code": "EMBRAER",
+      "name": "Embraer",
+      "country": "Brazil",
+      "role": "accredited_representative"
+    }
+  ],
+  "aircraft": {
+    "type": "Embraer EMB-110 Bandeirante",
+    "manufacturer": "Embraer",
+    "family": "110",
+    "registration": "G-OEAA"
+  },
+  "operator": "Knight Air",
+  "route": {
+    "from_name": "Leeds Bradford Airport",
+    "to_name": "Aberdeen Airport"
+  },
+  "location": {
+    "name": "Dunkeswick Moor, North Yorkshire",
+    "country": "United Kingdom"
+  },
+  "phase": "initial_climb",
+  "occupants": 12,
+  "fatalities": 12,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Knight Air Flight 816, an Embraer 110 Bandeirante, crashed shortly after takeoff from Leeds Bradford Airport in poor weather with restricted visibility and recent thunderstorm activity. One minute and 50 seconds into the flight, the crew reported problems with the artificial horizons and requested to return to the airport. While maneuvering to return, the aircraft entered a left turn, rapidly lost height and crashed at Dunkeswick Moor. The AAIB found that one or both artificial horizons failed, leading to loss of control and a spiral dive exceeding operating parameters before partial breakup on impact.",
+  "probable_cause": "One or, possibly, both of the aircraft's artificial horizons malfunctioned and, in the absence of a standby horizon for which there was no airworthiness requirement, there was no single instrument available for assured attitude reference. The commander, who was probably the handling pilot, was initially unable to maintain control of the aircraft heading without his artificial horizon and was eventually unable to retain control of the aircraft whilst flying in instrument meteorological conditions by reference to other flight instruments. The aircraft went out of control whilst flying in turbulent instrument meteorological conditions and entered a spiral dive from which the pilot, who was likely to have become spatially disoriented, was unable to recover.",
+  "factors": [
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "Aircraft entered a spiral dive exceeding operating parameters (p. 52)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft entered a left turn, rapidly lost height and crashed (p. 52)"
+    },
+    {
+      "id": "mode_confusion",
+      "role": "initiating",
+      "evidence": "One or both artificial horizons in the aircraft failed (p. 52)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Local weather was poor with restricted visibility, low cloud (p. 1)"
+    },
+    {
+      "id": "convective_weather",
+      "role": "contributing",
+      "evidence": "Recent thunderstorm activity (p. 1)"
+    },
+    {
+      "id": "spatial_disorientation",
+      "role": "contributing",
+      "evidence": "Crew experienced significant difficulties maintaining their heading (p. 52)"
+    }
+  ],
+  "chain": [
+    [
+      "mode_confusion",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "aerodynamic_stall"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "16:47",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft departed Leeds Bradford Airport at 16:47 hours UTC from runway 14.",
+      "factors": []
+    },
+    {
+      "t": 110,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "One or both artificial horizons failed, providing incorrect instrument indications to the crew.",
+      "factors": [
+        "mode_confusion"
+      ]
+    },
+    {
+      "t": 115,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer reported problems with the artificial horizons and asked to return to Leeds Bradford.",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft entered a left turn while crew attempted to return to the airport in poor visibility and turbulent conditions.",
+      "factors": []
+    },
+    {
+      "t": 200,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft rapidly lost height and crashed at Dunkeswick Moor north of Harewood, resulting in partial structural breakup on impact.",
+      "factors": [
+        "loss_of_control_inflight",
+        "aerodynamic_stall"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "95-34",
+      "to": "CAA",
+      "text": "Require the Design Authority to define suitable packaging, handling, and storage requirements to ensure the off-aircraft integrity of artificial horizons.",
+      "status": "unknown",
+      "trigger_factors": [
+        "mode_confusion"
+      ]
+    },
+    {
+      "id": "95-35",
+      "to": "CAA",
+      "text": "Require a third artificial horizon, operated from an independent power supply and protected from voltage transients, for aircraft in the Public Transport Category with more than nine seats.",
+      "status": "unknown",
+      "trigger_factors": [
+        "mode_confusion"
+      ]
+    },
+    {
+      "id": "96-6",
+      "to": "CAA",
+      "text": "Require AOC holders periodically to verify their MEL with the MMEL.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "96-7",
+      "to": "JAA",
+      "text": "Consider a requirement for all aircraft certificated in the Transport Category with two or more turbine engines and approved to carry more than nine passengers to be equipped with a four channel Cockpit Voice Recorder of at least 30 minutes duration.",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://www.aaib.gov.uk/publications/formal_reports/2_1996__g_oeaa.cfm",
+    "https://assets.digital.cabinet-office.gov.uk/media/5423045de5274a1314000bf1/2-1996_G-OEAA.pdf",
+    "https://asn.flightsafety.org/reports/1995/19950524_E110_G-OEAA.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Knight_Air_Flight_816",
+  "asn_id": "19950524-0",
+  "interest": 12.76,
+  "report_links": [
+    "http://www.aaib.gov.uk/publications/formal_reports/2_1996__g_oeaa.cfm",
+    "https://assets.digital.cabinet-office.gov.uk/media/5423045de5274a1314000bf1/2-1996_G-OEAA.pdf",
+    "https://asn.flightsafety.org/reports/1995/19950524_E110_G-OEAA.pdf"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Synopsis (p. 1), Factual Information (p. 3), History of Flight (p. 3), Findings (p. 52), Causes (p. 54), Safety Recommendations (p. 55)"
+    ]
+  }
+}

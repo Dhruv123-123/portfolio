@@ -1,0 +1,208 @@
+{
+  "id": "wd_q2633598",
+  "qid": "Q2633598",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Chalk's Ocean Airways 101",
+  "flight_number": null,
+  "date": "2005-12-19",
+  "time_reference": "EST",
+  "t0": "2005-12-19T14:39:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "NTSB/AAR-07/04",
+      "report_title": "In-flight Separation of Right Wing, Flying Boat, Inc. (doing business as Chalk's Ocean Airways) Flight 101",
+      "report_date": "2007-05-30"
+    },
+    {
+      "code": "Transportation Safety Board of Canada",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "Bahamas Ministry of Transport",
+      "name": "Bahamas Ministry of Transport",
+      "country": "Bahamas",
+      "role": "accredited_representative"
+    }
+  ],
+  "aircraft": {
+    "type": "Grumman G-73T Turbo Mallard",
+    "manufacturer": "Grumman Aircraft",
+    "family": "Mallard",
+    "registration": "N2969"
+  },
+  "operator": "Flying Boat, Inc. (doing business as Chalk's Ocean Airways)",
+  "route": {
+    "from_name": "Miami Seaplane Base",
+    "to_name": "Bimini, Bahamas"
+  },
+  "location": {
+    "name": "Government Cut channel, Port of Miami, Florida",
+    "country": "United States"
+  },
+  "phase": "takeoff",
+  "occupants": 20,
+  "fatalities": 20,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Chalk's Ocean Airways Flight 101, a Grumman G-73T Turbo Mallard, crashed shortly after takeoff from Miami Seaplane Base into a shipping channel. White smoke appeared during the initial climb and the right wing separated from the fuselage, causing the 58-year-old aircraft to plunge into the ocean. The fatigue crack had been detected and repaired previously, but the repair was ineffective. The operator applied sealant over the damaged lower stringer, concealing a fatigue crack that had been ground out in an earlier failed repair attempt.",
+  "probable_cause": "The in-flight failure and separation of the right wing during normal flight, which resulted from the failure of the Chalk's Ocean Airways maintenance program to identify and properly repair fatigue cracks in the right wing and the failure of the Federal Aviation Administration (FAA) to detect and correct deficiencies in the company's maintenance program.",
+  "factors": [
+    {
+      "id": "metal_fatigue",
+      "role": "initiating",
+      "evidence": "Fatigue failure in the right-wing initiated by a crack in a span-wise stringer (p. vii)"
+    },
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "The operator applied sealant over a damaged lower stringer in such a way as to conceal a fatigue crack (p. vii)"
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "Chalk's maintenance programme was ineffective at addressing longstanding structural problems (p. vii)"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "The Mallard was designed with a wet wing where fuel tanks are constructed from sealed-off portions of the wing structure, requiring all tank seams to be sealed (p. vii)"
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "contributing",
+      "evidence": "The FAA failed to detect and correct the airline's maintenance shortfalls (p. vii)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "The right wing ripped off and the aircraft plunged into the ocean (p. vii)"
+    }
+  ],
+  "chain": [
+    [
+      "design_deficiency",
+      "metal_fatigue"
+    ],
+    [
+      "metal_fatigue",
+      "maintenance_error"
+    ],
+    [
+      "maintenance_error",
+      "inadequate_inspection"
+    ],
+    [
+      "inadequate_inspection",
+      "structural_failure"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:39",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 101 departed Miami Seaplane Base for Bimini, Bahamas at 14:39 EST.",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "White smoke billowed from the aircraft.",
+      "factors": [
+        "metal_fatigue"
+      ]
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The right wing ripped off and the aircraft plunged into the ocean.",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed and sank in Government Cut channel.",
+      "factors": [
+        "structural_failure"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-07-39",
+      "to": "FAA",
+      "text": "Verify that the maintenance programs of commercial aircraft operators include stringent criteria to address recurring or systemic discrepancies to include, if necessary, further analysis through comprehensive engineering evaluation.",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
+    },
+    {
+      "id": "A-07-40",
+      "to": "FAA",
+      "text": "Identify the systemic deficiencies in the maintenance program oversight procedures and modify those procedures to ensure that maintenance program plans are adequate.",
+      "status": "unknown",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": "A-06-52",
+      "to": "FAA",
+      "text": "Require records reviews, aging airplane inspections, and supplemental inspections for all airplanes operated under Part 121, Part 129, and Part 135.",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0704.pdf",
+    "https://www.ntsb.gov/news/2005/051222a.htm",
+    "https://data.ntsb.gov/Docket?ProjectID=62962"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Chalk%27s_Ocean_Airways_Flight_101",
+  "asn_id": "20051219-0",
+  "interest": 12.4,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0704.pdf",
+    "https://www.ntsb.gov/news/2005/051222a.htm",
+    "https://data.ntsb.gov/Docket?ProjectID=62962"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Executive Summary (p. vii), History of Flight (p. 1), Probable Cause (p. 55), Recommendations (p. 55)"
+    ]
+  }
+}

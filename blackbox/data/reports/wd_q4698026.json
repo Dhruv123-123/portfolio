@@ -1,0 +1,214 @@
+{
+  "id": "wd_q4698026",
+  "qid": "Q4698026",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air Illinois 710",
+  "flight_number": "AI710",
+  "date": "1983-10-11",
+  "time_reference": "local",
+  "t0": "1983-10-11T20:20:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-85-03",
+      "report_title": "Aircraft Accident Report - Air Illinois Hawker Siddeley HS 748-2A, N748LL, near Pinckneyville, Illinois, October 11, 1983",
+      "report_date": "1985-03-05"
+    }
+  ],
+  "aircraft": {
+    "type": "Hawker Siddeley HS 748-2A",
+    "manufacturer": "Hawker Siddeley",
+    "family": "748",
+    "registration": "N748LL"
+  },
+  "operator": "Air Illinois",
+  "route": {
+    "from_name": "Capital Airport, Springfield",
+    "to_name": "Southern Illinois Airport, Carbondale"
+  },
+  "location": {
+    "name": "Pinckneyville, Illinois",
+    "country": "United States"
+  },
+  "phase": "descent",
+  "occupants": 10,
+  "fatalities": 10,
+  "damage": "destroyed",
+  "category": "LALT",
+  "summary": "An Air Illinois HS 748 crashed near Pinckneyville, Illinois after takeoff from Springfield. The first officer mistakenly isolated the right generator instead of the left, degrading electrical power. The crew failed to properly manage the remaining electrical load, and when the battery depleted, the aircraft lost flight instruments and navigation radios. The crew descended to 2400 feet and crashed in a hilly pasture. All 10 occupants were killed.",
+  "probable_cause": "The captain's decision to continue the flight toward the more distant destination airport after the loss of d.c. electrical power from both airplane generators instead of returning to the nearby departure airport. The captain's decision was adversely affected by self-imposed psychological factors which led him to assess inadequately the airplane's battery endurance after the loss of generator power and the magnitude of the risks involved in continuing to the destination airport. Contributing to the accident was the airline management's failure to provide and the FAA's failure to assure an adequate company recurrent flightcrew training program which contributed to the captain's inability to assess properly the battery endurance of the airplane before making the decision to continue, and led to the inability of the captain and the first officer to cope promptly and correctly with the airplane's electrical malfunction.",
+  "factors": [
+    {
+      "id": "operator_safety_culture",
+      "role": "contributing",
+      "evidence": "The captain had a habit of violating safety regulations in order to arrive on time (p. 62)"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "initiating",
+      "evidence": "The first officer mistakenly pushed the right generator isolate button instead of the left generator isolate button without checking the gauges and warning lights (p. 62)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The first officer did not check the gauges and warning lights to confirm which generator was the problem (p. 62)"
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The crew shut off excess lights in the cabin but did not further reduce the electrical load on the aircraft's battery (p. 62)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The battery was depleted resulting in failure of flight instruments and radios, and the aircraft crashed (p. 62)"
+    }
+  ],
+  "chain": [
+    [
+      "operator_safety_culture",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "high_workload"
+    ],
+    [
+      "high_workload",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "20:20",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 710 took off from Springfield Airport at 20:20 CDT.",
+      "factors": []
+    },
+    {
+      "t": 90,
+      "clock": "20:21",
+      "phase": "climb",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "The crew reported a slight electrical problem and would keep air traffic control advised.",
+      "factors": []
+    },
+    {
+      "t": 90,
+      "clock": "20:21",
+      "phase": "climb",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "The first officer mistakenly pushed the right generator isolate button instead of the left generator isolate button without checking the gauges.",
+      "factors": [
+        "inappropriate_control_input",
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "t": 720,
+      "clock": "20:32",
+      "phase": "climb",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "The first officer reported to the captain that the left generator was totally dead.",
+      "factors": []
+    },
+    {
+      "t": 1200,
+      "clock": "20:40",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "The crew shut off excess lights in the cabin but did not further reduce the electrical load on the aircraft's battery.",
+      "factors": [
+        "high_workload"
+      ]
+    },
+    {
+      "t": 1920,
+      "clock": "20:52",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "At 20:52 the captain decided to descend to 2400 feet from where the aircraft slowly descended into a hilly pasture area.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 1950,
+      "clock": "20:52",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The aircraft crashed in the hilly pasture near Pinckneyville with all ten on board perishing.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-84-14",
+      "to": "FAA",
+      "text": "Issue an air carrier maintenance bulletin to emphasize the need for air carrier airworthiness inspectors to require during certification and the need to conduct surveillance to verify conformity.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-84-15",
+      "to": "FAA",
+      "text": "Issue air carrier maintenance and operations bulletins to emphasize regulatory requirements related to recording of mechanical irregularities in maintenance logs and proper surveillance.",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [
+    {
+      "agency": "NTSB",
+      "position": "While the accident report correctly identifies training and surveillance, the pilot should never have continued the flight to the destination airport but should have returned to the nearby airport upon realizing electrical d.c. power had been lost.",
+      "topic": "probable cause",
+      "person": "Patricia A. Goldman, Vice Chairman"
+    }
+  ],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR85-03.pdf",
+    "https://aviation-safety.net/database/record.php?id=19831011-1"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Illinois_Flight_710",
+  "asn_id": "19831011-1",
+  "interest": 12.64,
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR85-03.pdf",
+    "https://aviation-safety.net/database/record.php?id=19831011-1"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Synopsis (p. 4), Factual Information (p. 5), History of Flight (p. 5), Conclusions (p. 65), Findings (p. 62), Probable Cause (p. 65), Recommendations (p. 65)",
+      "Dissenting statement from Patricia A. Goldman noted"
+    ]
+  }
+}

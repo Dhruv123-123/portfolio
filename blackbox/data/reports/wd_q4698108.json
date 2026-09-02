@@ -1,0 +1,163 @@
+{
+  "id": "wd_q4698108",
+  "qid": "Q4698108",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air New England 248",
+  "flight_number": "ANE248",
+  "date": "1979-06-17",
+  "time_reference": "EDT",
+  "t0": "1979-06-17T22:48:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-80-1",
+      "report_title": "Aircraft Accident Report - Air New England, Inc., de Havilland DHC-6-300, N383EX, Hyannis, Massachusetts, June 17, 1979",
+      "report_date": "1980-01-03"
+    }
+  ],
+  "aircraft": {
+    "type": "de Havilland Canada DHC-6-300 Twin Otter",
+    "manufacturer": "de Havilland Canada",
+    "family": "DHC-6",
+    "registration": "N383EX"
+  },
+  "operator": "Air New England, Inc.",
+  "route": {
+    "from_name": "LaGuardia Airport",
+    "to_name": "Barnstable Municipal Airport"
+  },
+  "location": {
+    "name": "Camp Greenough, Yarmouth, Massachusetts",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 10,
+  "fatalities": 1,
+  "injuries_serious": 7,
+  "injuries_minor": 2,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "A de Havilland DHC-6 Twin Otter piloted by Air New England co-founder George Parmenter conducted an ILS approach to Barnstable Municipal Airport on June 17, 1979. The aircraft crashed in heavily wooded terrain at Camp Greenough in Yarmouth, Massachusetts, approximately 1.5 miles short of the runway. Parmenter was killed instantly while the co-pilot and several passengers were injured. The National Transportation Safety Board determined that the probable cause was the failure of the flightcrew to recognize and react in a timely manner to the gross deviation from acceptable approach parameters, resulting in a continuation of the descent well below decision height during a precision approach without visual contact with the runway environment.",
+  "probable_cause": "The failure of the flightcrew to recognize and react in a timely manner to the gross deviation from acceptable approach parameters, resulting in a continuation of the descent well below decision height during a precision approach without visual contact with the runway environment. Although the Board was unable to determine conclusively the reason for the failure to recognize and react to the gross deviation, it is believed that the degraded physiological condition of the captain seriously impaired his performance. Also, the lack of adequate crew coordination practices and procedures contributed to the first officer's failure to detect and react to the situation in a timely manner.",
+  "factors": [
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "Flight 248 crashed in a heavily wooded area in Yarmouth, several miles short of the runway (p. 2)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft crashed in the middle of Camp Greenough, a heavily wooded Boy Scouts camp (p. 2)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Crash occurred at 22:48 EDT during night conditions (p. 2)"
+    },
+    {
+      "id": "navigation_error",
+      "role": "contributing",
+      "evidence": "Aircraft was several miles short of the runway during approach (p. 2)"
+    },
+    {
+      "id": "pilot_incapacitation",
+      "role": "contributing",
+      "evidence": "The degraded physiological condition of the captain seriously impaired his performance (p. 2)"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "22:48",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 248 with eight passengers and two crew began ILS approach to Barnstable Municipal Airport.",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed in the middle of Camp Greenough, a heavily wooded Boy Scouts camp in Yarmouth.",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "unknown",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "Uninjured passenger managed to make her way through thick brush to the Mid Cape Highway.",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "unknown",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "Parmenter was killed in the crash; the co-pilot and several passengers were injured.",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-79-81",
+      "to": "FAA",
+      "text": "Expedite rulemaking which would make the flight time and duty time limitations and rest requirements for commuter air carriers the same as those specified for domestic air carrier crewmembers under 14 CFR 121.",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8001.pdf",
+    "https://libraryonline.erau.edu:443/online-full-text/ntsb/aircraft-accident-reports/AAR80-01.pdf",
+    "http://aviation-safety.net/database/record.php?id=19790617-0"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_New_England_Flight_248",
+  "asn_id": "19790617-0",
+  "interest": 9.01,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8001.pdf",
+    "https://libraryonline.erau.edu:443/online-full-text/ntsb/aircraft-accident-reports/AAR80-01.pdf"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Synopsis/Probable Cause (p. 2), Factual Information (p. 2), History of Flight (p. 2), Conclusions (p. 23), Probable Cause (p. 25), Recommendations (p. 25)",
+      "Captain's medical history suggests possible incapacitation during approach"
+    ]
+  }
+}
