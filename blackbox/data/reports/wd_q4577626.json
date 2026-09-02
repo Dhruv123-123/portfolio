@@ -1,0 +1,321 @@
+{
+  "id": "wd_q4577626",
+  "title": "1977 Dan-Air Boeing 707 crash",
+  "flight_number": null,
+  "date": "1977-05-14",
+  "time_reference": "GMT",
+  "t0": "1977-05-14T09:33:17Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "9/78",
+      "report_title": "Aircraft Accident Report No. 9/78",
+      "report_date": "1979-02-08",
+      "url": "https://www.gov.uk/aaib-reports/9-1978-boeing-707-321c-g-bebp-14-may-1977"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 707-321C",
+    "family": "707",
+    "manufacturer": "Boeing",
+    "registration": "G-BEBP",
+    "msn": "18579",
+    "engines": "Rolls-Royce"
+  },
+  "operator": "Dan-Air Services Ltd",
+  "route": {
+    "from": "NRB",
+    "from_name": "Nairobi",
+    "to": "LUN",
+    "to_name": "Lusaka"
+  },
+  "location": {
+    "name": "Lusaka International Airport",
+    "country": "Zambia",
+    "lat": -15.3167,
+    "lon": 28.3833
+  },
+  "phase": "approach",
+  "occupants": 6,
+  "fatalities": 6,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "A Boeing 707-321C cargo aircraft operating for Dan-Air Services experienced an in-flight separation of its right horizontal stabilizer and elevator during approach to Lusaka on 14 May 1977, resulting in immediate loss of pitch control. The aircraft nose-dived from 800 feet and struck the ground 3,660 meters short of the runway threshold, killing all six occupants. Investigation revealed the stabilizer's rear spar had failed due to metal fatigue in a concealed internal location that was not detectable during routine maintenance.",
+  "probable_cause": "The accident was caused by a loss of pitch control following the in-flight separation of the right hand horizontal stabilizer and elevator as a result of a combination of metal fatigue and inadequate failsafe design in the rear spar structure. Shortcomings in design assessment, certification and inspection procedures were contributory factors.",
+  "factors": [
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The replacement of the horizontal stabilizer light alloy top skin by stainless steel altered the stiffness distribution of the structure, creating high fastener loadings in the rear spar top chord. The higher stiffness would result in higher skin loadings and higher fastener loads, increasing bearing stress in the chord forward flange (p. 1071-1085). Insufficient consideration had been given at the design and certification stage to stress distribution following a top chord failure outboard of the closure rib (p. 1677-1679)."
+    },
+    {
+      "id": "metal_fatigue",
+      "role": "initiating",
+      "evidence": "The right hand stabilizer rear spar top chord failed due to long term fatigue damage. The fatigue crack had existed for about 7,200 flights, of which approximately 6,750 were made on the US register (p. 1667-1670). The crack occurred at the 11th fastener on the top chord forward flange outboard of the closure rib (p. 618-620)."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "latent",
+      "evidence": "Neither the inspections detailed in the approved maintenance schedule nor those recommended by the manufacturer were adequate to detect partial cracks in the horizontal stabiliser rear spar top chord (p. 1687-1690). The inspections required by Dan-Air's UK CAA approved maintenance schedule were less specific than those recommended by the manufacturer (p. 1692-1694). The fatigue crack had gone undetected due to its concealed internal location within the structure."
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Following the failure of the stabilizer rear spar top chord, the structure could not sustain the flight loads and the entire right horizontal stabilizer and elevator assembly detached from the aircraft (p. 1672-1675). The stabilizer was found 200 meters back along the flight path, indicating in-flight separation prior to the nose-down pitch maneuver (p. 115-116)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The instantaneous loss of the right stabilizer download caused an immediate nose-down pitching moment. The elevator linkage was pulled to full up position, fracturing the stabilizer jack screw and allowing the entire left stabilizer to rotate to a large nose-up angle, resulting in a very rapid pitch-down (p. 1024-1043)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "A very rapid pitch down resulted and the aircraft struck the ground in a 50-degree dive from approximately 800 feet, with pitch attitude at approximately 100 degrees beyond vertical. Ground impact occurred 3,660 meters from the runway threshold (p. 1041-1043, p. 122-125)."
+    }
+  ],
+  "chain": [
+    [
+      "design_deficiency",
+      "metal_fatigue"
+    ],
+    [
+      "metal_fatigue",
+      "structural_failure"
+    ],
+    [
+      "inadequate_inspection",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": -8160,
+      "clock": "07:17",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Departed Nairobi for Lusaka with fresh crew on board",
+      "factors": [],
+      "state": {
+        "alt": 19000
+      }
+    },
+    {
+      "t": -1542,
+      "clock": "09:07:35",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Co-pilot contacted Lusaka Approach",
+      "factors": []
+    },
+    {
+      "t": -1299,
+      "clock": "09:11:38",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Cleared to descend to FL 110 at LW NDB",
+      "factors": []
+    },
+    {
+      "t": -617,
+      "clock": "09:23",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Levelling at FL 110 at 37 nm DME from Lusaka",
+      "factors": [],
+      "state": {
+        "alt": 11000
+      }
+    },
+    {
+      "t": -264,
+      "clock": "09:28:53",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Airfield in sight; cleared to descend to 6,000 feet",
+      "factors": [],
+      "state": {
+        "alt": 6000
+      }
+    },
+    {
+      "t": -202,
+      "clock": "09:29:55",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Turning downwind; cleared for visual approach to runway 10 as number two",
+      "factors": [],
+      "state": {
+        "alt": 5000
+      }
+    },
+    {
+      "t": -75,
+      "clock": "09:32:02",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Turning on base leg; tower clears to finals",
+      "factors": [],
+      "state": {
+        "alt": 2500
+      }
+    },
+    {
+      "t": -24,
+      "clock": "09:32:53",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "50 degrees flap selected",
+      "factors": [],
+      "state": {
+        "alt": 1500,
+        "flaps": 50
+      }
+    },
+    {
+      "t": -6,
+      "clock": "09:33:11",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Landing checks completed",
+      "factors": [],
+      "state": {
+        "alt": 800
+      }
+    },
+    {
+      "t": 0,
+      "clock": "09:33:17",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Right horizontal stabilizer and elevator assembly detaches from airframe",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 5,
+      "clock": "09:33:22",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft in rapid nose-down pitch change; CVR record terminates",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 8,
+      "clock": "09:33:25",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Ground impact in 50-degree dive from 800 feet, 3,660 m short of runway threshold; fire and destruction",
+      "factors": [
+        "cfit"
+      ],
+      "state": {
+        "alt": 0
+      }
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Airworthiness Authorities",
+      "text": "When an aircraft has been certificated against failsafe criteria, those portions of structure considered significant in the failsafe design should be identified in the approved inspection schedule and their relative importance defined.",
+      "status": "unknown",
+      "trigger_factors": [
+        "design_deficiency",
+        "inadequate_inspection"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Manufacturers and Airworthiness Authorities",
+      "text": "Defects involving the structure identified in the above recommendation should be reported to the manufacturer and airworthiness authority to enable a fleet picture to be developed and appropriate action to be taken.",
+      "status": "unknown",
+      "trigger_factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Certification Authorities",
+      "text": "When an aircraft design has evolved significantly, a critical assessment should be made by the Certification Authority in association with the manufacturer as to the validity of extrapolation of the original design data when applied to a developed aircraft variant.",
+      "status": "unknown",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Manufacturers and Certification Authorities",
+      "text": "After an aircraft type has been established in service for some years a searching mid-life review should be carried out by the manufacturer to the satisfaction of the Certification Authority when all aspects of the aircraft's structural performance should be studied in the light of fleet service experience and current design knowledge.",
+      "status": "unknown",
+      "trigger_factors": [
+        "design_deficiency",
+        "metal_fatigue"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "A post-accident fleet inspection of the 707-300 series worldwide revealed 38 aircraft (7% of fleet) with fatigue cracks present in the stabilizer rear spar top chord, of which four required chord replacement",
+    "Enhanced inspection procedures for failsafe structures on 707 aircraft, reducing inspection intervals from 21,000 to 14,000 flight hours for critical stabilizer rear spar areas"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.gov.uk/aaib-reports/9-1978-boeing-707-321c-g-bebp-14-may-1977"
+  ],
+  "tier": "wikidata",
+  "depth": "full",
+  "qid": "Q4577626",
+  "asn_id": "19770514-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/1977_Dan-Air_Boeing_707_crash",
+  "report_links": [
+    "https://www.gov.uk/aaib-reports/9-1978-boeing-707-321c-g-bebp-14-may-1977",
+    "http://www.aaib.gov.uk/publications/formal_reports/9_1978_g_bebp.cfm",
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/9-1978%20G-BEBP.pdf",
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/9-1978%20G-BEBP%20Append.pdf"
+  ],
+  "interest": 9.84,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read sections: Synopsis, History of Flight, Analysis (Sequence of events, Design, Fatigue details), Conclusions, Findings, Probable Cause, Safety Recommendations",
+      "Full report accessed; depth set to 'full' due to technical complexity and need to understand design changes and fatigue progression",
+      "Fleet inspection finding (38 aircraft with similar cracks) extracted from Conclusions section",
+      "CVR transcript details limited to factual information recorded in formal report; no direct quotes from transcript provided in public report",
+      "FDR plots referenced in appendix but no detailed parameter keyframes extracted due to data scarcity in text extract"
+    ]
+  }
+}
