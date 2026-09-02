@@ -1,0 +1,213 @@
+{
+  "id": "wd_q3180238",
+  "title": "Arrow Air 1285R",
+  "flight_number": "AA1285R",
+  "date": "1985-12-12",
+  "time_reference": "local",
+  "t0": "1985-12-12T10:15:00-03:30",
+  "agency": "TSB",
+  "agencies": [
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "lead",
+      "report_id": "85-CA009",
+      "report_title": "Final Report - Aviation Occurrence Arrow Air Inc. Flight MF1285R",
+      "report_date": "1988-10-28",
+      "url": "http://flightopsresearch.org/data/files/arrow1285.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Douglas DC-8-63CF",
+    "family": "DC-8",
+    "manufacturer": "Douglas",
+    "registration": "N950JW",
+    "msn": null,
+    "engines": "Pratt & Whitney JT3D-3B"
+  },
+  "operator": "Arrow Air",
+  "route": {
+    "from": "HECA",
+    "from_name": "Cairo International Airport",
+    "to": "KFKK",
+    "to_name": "Fort Campbell Military Airfield"
+  },
+  "location": {
+    "name": "Near Gander International Airport, approximately 0.5 miles northeast of runway 22 departure end",
+    "country": "Canada",
+    "lat": 48.95,
+    "lon": -54.57
+  },
+  "phase": "takeoff",
+  "occupants": 256,
+  "fatalities": 256,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Arrow Air Flight MF1285R crashed shortly after takeoff from Gander, Newfoundland on December 12, 1985. The aircraft accumulated ice contamination on the wings' leading edges and upper surfaces during the approach and refueling stop at Gander in freezing precipitation conditions. The aircraft was not de-iced prior to takeoff, and the ice buildup degraded lift and increased drag, resulting in a stall at low altitude from which recovery was not possible. All 256 passengers and crew were killed.",
+  "probable_cause": "The most probable cause of the stall was ice contamination on the leading edge and upper surface of the wing. Other possible factors such as a loss of thrust from the number four engine and inappropriate take-off reference speeds may have compounded the effects of the contamination.",
+  "factors": [
+    {
+      "id": "airframe_icing",
+      "role": "initiating",
+      "evidence": "Ice contamination on the leading edge and upper surface of the wing resulted from precipitation conditions favorable for ice formation and freezing and frozen precipitation (p. 10-11, 59-61)."
+    },
+    {
+      "id": "deicing_inadequate",
+      "role": "contributing",
+      "evidence": "Prior to takeoff the aircraft had not been de-iced despite exposure to freezing and frozen precipitation (p. 95)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft stalled at low altitude from which recovery was not possible, struck terrain approximately 3500 feet beyond the runway departure end (p. 95)."
+    },
+    {
+      "id": "weight_and_balance_error",
+      "role": "contributing",
+      "evidence": "Underestimated onboard weight may have compounded the effects of the contamination; incorrect determination of the aircraft's weight using standard average weights (p. 95)."
+    },
+    {
+      "id": "maintenance_error",
+      "role": "latent",
+      "evidence": "A non-functioning cockpit area microphone went undetected for an indeterminate number of flights, and no steps on standard checklists tested its functionality (p. 99)."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "latent",
+      "evidence": "The defect in the cockpit area microphone went undetected due to no testing procedure on standard checklists (p. 99)."
+    }
+  ],
+  "chain": [
+    ["airframe_icing", "loss_of_control_inflight"],
+    ["deicing_inadequate", "airframe_icing"],
+    ["weight_and_balance_error", "loss_of_control_inflight"]
+  ],
+  "events": [
+    {
+      "t": -600,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "During approach to Gander, precipitation conditions were favorable for formation of ice on wings.",
+      "factors": ["airframe_icing"]
+    },
+    {
+      "t": -300,
+      "clock": null,
+      "phase": "taxi",
+      "actor": "GND",
+      "kind": "crew_action",
+      "text": "After landing at Gander, aircraft remained exposed to freezing and frozen precipitation without de-icing.",
+      "factors": ["deicing_inadequate"]
+    },
+    {
+      "t": 0,
+      "clock": "10:15",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft began takeoff roll on runway 22, rotated at 167 knots after 51 seconds, showing difficulty gaining altitude.",
+      "state": {
+        "ias": 167
+      },
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Airspeed reached 172 knots then decreased; aircraft descended after crossing Trans-Canada Highway 900 feet from runway departure end.",
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck terrain just short of Gander Lake approximately 3500 feet beyond runway departure end, broke up and exploded.",
+      "factors": ["loss_of_control_inflight"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "CASB 88-07",
+      "to": "Transport Canada",
+      "text": "Initiate a national safety campaign to ensure that all pilots are aware of the potential consequences of attempting take-off with even minor amounts of contamination on the wings.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": ["airframe_icing", "deicing_inadequate"]
+    },
+    {
+      "id": "CASB 88-08",
+      "to": "Transport Canada",
+      "text": "Require all Canadian operators of McDonnell-Douglas DC-8 aircraft, and such other aircraft types which the Department deems appropriate, to establish detailed procedures for detecting ice on the wings prior to take-off.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": ["airframe_icing"]
+    },
+    {
+      "id": "CASB 88-09",
+      "to": "Transport Canada",
+      "text": "Review the procedures currently in place with respect to functional checks of cockpit voice recorders with a view to ensuring that the serviceability of the equipment is being tested adequately.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": ["maintenance_error"]
+    },
+    {
+      "id": "CASB 88-10",
+      "to": "NTSB",
+      "text": "Consider seeking parallel action in the United States to that outlined for Canada in CASB 88-09.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": ["maintenance_error"]
+    },
+    {
+      "id": "CASB 88-11",
+      "to": "NTSB",
+      "text": "Consider recommending a change in U.S. Federal Aviation Regulations such that the flight-time, duty-time, and crew-rest provisions of FAR Part 121 would apply to all operations of Part 121 air carriers, including non-revenue flights.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced emphasis on clean wing procedures and verification before takeoff",
+    "Improved pilot training on effects of minor wing contamination on aircraft performance",
+    "Enhanced procedures for detecting upper wing ice prior to takeoff",
+    "Mandatory functional testing of cockpit voice recorders before flight",
+    "Stricter weight and balance procedures using actual weights instead of standard averages"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://flightopsresearch.org/data/files/arrow1285.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q3180238",
+  "asn_id": "19851212-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Arrow_Air_Flight_1285R",
+  "report_links": [
+    "http://flightopsresearch.org/data/files/arrow1285.pdf"
+  ],
+  "interest": 19.34,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Synopsis, Factual Information, Conclusions and Causes sections read from TSB report (p. 1-50, 95-100)",
+      "De-icing procedures and recommendations sections reviewed (p. 97-105)"
+    ]
+  }
+}
