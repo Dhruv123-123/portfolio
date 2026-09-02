@@ -1,0 +1,254 @@
+{
+  "id": "wd_q14875706",
+  "qid": "Q14875706",
+  "title": "MK Airlines 1602",
+  "flight_number": "1602",
+  "date": "2004-10-14",
+  "time_reference": "UTC",
+  "t0": "2004-10-14T06:54:00Z",
+  "agency": "TSB",
+  "agencies": [
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "lead",
+      "report_id": "A04H0004",
+      "report_title": "Reduced Power at Take-off and Collision with Terrain",
+      "report_date": "2006-06-28"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 747-244B/SF",
+    "manufacturer": "Boeing",
+    "family": "747",
+    "registration": "9G-MKJ",
+    "msn": "22170"
+  },
+  "operator": "MK Airlines",
+  "route": {
+    "from_name": "Halifax Stanfield International Airport",
+    "from": "CYYZ",
+    "to_name": "Zaragoza Airport",
+    "to": "LEZG"
+  },
+  "location": {
+    "name": "Halifax Stanfield International Airport, Nova Scotia",
+    "country": "Canada"
+  },
+  "phase": "takeoff",
+  "occupants": 7,
+  "fatalities": 7,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "MK Airlines Flight 1602, a Boeing 747-244SF operating a cargo flight from Halifax to Zaragoza, took off from Runway 24 on October 14, 2004 at 0654 UTC. Due to incorrect takeoff weight data (240,000 kg from a previous flight at Bradley instead of 353,000 kg), the crew calculated wrong V speeds and thrust settings. During takeoff, the aircraft experienced tailstrikes at 8,000 feet and again at 420 feet remaining. The aircraft became airborne but struck an earthen berm 300 m beyond the runway and broke apart in flames.",
+  "probable_cause": "The aircraft overshot the end of the runway and struck an earthen berm due to inadequate takeoff performance caused by incorrect takeoff performance calculations. The crew calculated takeoff performance data using the Bradley weight rather than the actual Halifax takeoff weight, resulting in incorrect V speeds and insufficient thrust. Contributing factors included crew fatigue from duty time violations and inadequate training on the Boeing Laptop Tool.",
+  "factors": [
+    {
+      "id": "takeoff_performance_error",
+      "role": "initiating",
+      "evidence": "The Bradley takeoff weight (240,000 kg) was likely used to generate the Halifax takeoff performance data instead of the correct weight (353,000 kg), resulting in incorrect V speeds and thrust setting (p. 65)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "The company did not have a formal training and testing program on the Boeing Laptop Tool, and it is likely the user was not fully conversant with the software (p. 66)"
+    },
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "Crew fatigue likely increased the probability of error during calculation of takeoff performance data and degraded the flight crew's ability to detect this error; there were no regulations or company rules governing maximum duty periods for loadmasters and ground engineers (p. 65-67)"
+    },
+    {
+      "id": "tail_strike",
+      "role": "outcome",
+      "evidence": "The aircraft began to rotate and tailstrike occurred at the 8000 ft mark, and a second tailstrike took place with 420 ft of runway remaining (p. 2)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft's lower aft fuselage struck an earthen berm supporting an instrument landing system (ILS) localizer antenna 300 m beyond the end of the runway (p. 2)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "The aircraft broke into pieces and burst into flames when it struck the ground (p. 2)"
+    }
+  ],
+  "chain": [
+    [
+      "takeoff_performance_error",
+      "tail_strike"
+    ],
+    [
+      "takeoff_performance_error",
+      "cfit"
+    ],
+    [
+      "fatigue",
+      "takeoff_performance_error"
+    ],
+    [
+      "inadequate_training",
+      "takeoff_performance_error"
+    ],
+    [
+      "tail_strike",
+      "cfit"
+    ],
+    [
+      "cfit",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "06:53:22",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "MK Airlines Flight 1602 (Boeing 747-244SF 9G-MKJ) taxi to Runway 24 at Halifax International Airport for cargo flight to Zaragoza, Spain",
+      "factors": []
+    },
+    {
+      "t": 20,
+      "clock": "06:53:42",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "crew_action",
+      "text": "Takeoff roll commenced on Runway 24",
+      "factors": []
+    },
+    {
+      "t": 38,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft reached 130 knots; control column moved aft to 8.4 degrees to initiate rotation",
+      "factors": [
+        "takeoff_performance_error"
+      ]
+    },
+    {
+      "t": 50,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft began rotation; first tailstrike occurred at 8,000 feet down the runway",
+      "factors": [
+        "tail_strike",
+        "takeoff_performance_error"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Second tailstrike occurred with 420 feet of runway remaining; aircraft in ground effect with inadequate climb performance",
+      "factors": [
+        "tail_strike"
+      ]
+    },
+    {
+      "t": 75,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft became airborne approximately 670 feet beyond the paved runway surface, 825 feet from runway end",
+      "factors": []
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft lower aft fuselage struck earthen berm 300 meters beyond runway end; tail section broke away from fuselage",
+      "factors": [
+        "cfit",
+        "tail_strike"
+      ]
+    },
+    {
+      "t": 100,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft continued flight for another 1,200 feet while uncontrollable with separated tail; broke into pieces",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 110,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck terrain and burst into severe post-crash fire; all seven crew members killed",
+      "factors": [
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Transport Canada",
+      "text": "Examine the adequacy of cargo handling procedures and load weight verification",
+      "status": "unknown",
+      "trigger_factors": [
+        "takeoff_performance_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Aircraft operators",
+      "text": "Implement procedures to ensure independent verification of takeoff performance calculations",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_training",
+        "takeoff_performance_error"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced cargo weight verification procedures implemented by Canadian operators",
+    "Improved training requirements for takeoff performance calculation software"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.tsb.gc.ca/sites/default/files/rapports-reports/aviation/A04H0004/eng/A04H0004.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "asn_id": "20041014-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/MK_Airlines_Flight_1602",
+  "report_links": [
+    "https://www.tsb.gc.ca/sites/default/files/rapports-reports/aviation/A04H0004/eng/A04H0004.pdf",
+    "https://www.tsb.gc.ca/sites/default/files/rapports-reports/aviation/A04H0004/fra/A04H0004.pdf"
+  ],
+  "interest": 11.98,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Synopsis (p. 1), Findings as to Causes and Contributing Factors (pp. 65-67), Conclusions sections read",
+      "TSB report format uses 'Safety Action' rather than traditional 'Recommendations'",
+      "Clear causal chain: incorrect weight -> wrong V speeds -> inadequate performance -> tailstrike -> overrun -> impact fire"
+    ]
+  }
+}

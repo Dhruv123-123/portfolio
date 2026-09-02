@@ -1,0 +1,274 @@
+{
+  "id": "wd_q18148724",
+  "qid": "Q18148724",
+  "title": "Henson Airlines 1517",
+  "flight_number": "HA1517",
+  "date": "1985-09-23",
+  "time_reference": "EDT",
+  "t0": "1985-09-23T09:59:00-04:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-86/07",
+      "report_title": "Henson Airlines Flight 1517 Beech B99",
+      "report_date": "1986-04-23"
+    }
+  ],
+  "aircraft": {
+    "type": "Beech 99",
+    "manufacturer": "Beechcraft",
+    "family": "99",
+    "registration": "N339HA"
+  },
+  "operator": "Henson Airlines",
+  "route": {
+    "from_name": "Baltimore-Washington International Airport",
+    "from": "KBWI",
+    "to_name": "Shenandoah Valley Regional Airport",
+    "to": "KSHD"
+  },
+  "location": {
+    "name": "Hall Mountain, Grottoes, Virginia",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 14,
+  "fatalities": 14,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Henson Airlines Flight 1517, a Beech 99 with 14 aboard (12 passengers, 2 crew), crashed into Hall Mountain near Grottoes, Virginia on September 23, 1985 during approach to Shenandoah Valley Regional Airport. The crew used an incorrect VOR navigational facility and failed to adequately monitor flight instruments. The aircraft descended into terrain at 2,400 feet elevation while the crew believed they were on a proper approach path.",
+  "probable_cause": "Navigational error by the flight crew resulting from use of an incorrect navigational facility and failure to adequately monitor the flight instruments. Contributing factors included nonstandardized navigational radio systems, intracockpit communication difficulties due to high cockpit noise, inadequate training, pilot inexperience, and inadequate Federal Aviation Administration surveillance.",
+  "factors": [
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "At 10:14 am, Captain Burns told the Air Traffic Controller that he believed the plane was too far west of his course (p. 1)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Failure to adequately monitor the flight instruments during the approach (p. 1)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Inadequate training of the pilots by the airline (p. 1)"
+    },
+    {
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "The first officer's limited multiengine and instrument flying experience and pilots' limited experience in their positions in the Beech 99 (p. 1)"
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "Intracockpit communication difficulties associated with high ambient noise levels in the airplane (p. 1)"
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "Inadequate surveillance of the airline by the Federal Aviation Administration which failed to detect the deficiencies (p. 1)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Flight 1517 struck the southwest face of Hall Mountain at an elevation of 2,400 ft (p. 1)"
+    }
+  ],
+  "chain": [
+    [
+      "navigation_error",
+      "cfit"
+    ],
+    [
+      "inadequate_monitoring",
+      "cfit"
+    ],
+    [
+      "inadequate_training",
+      "pilot_experience"
+    ],
+    [
+      "pilot_experience",
+      "navigation_error"
+    ],
+    [
+      "atc_communication_error",
+      "inadequate_monitoring"
+    ],
+    [
+      "regulatory_oversight",
+      "inadequate_training"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "09:22",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 1517 cleared for takeoff from Baltimore-Washington International Airport with 12 passengers and 2 crew members",
+      "factors": []
+    },
+    {
+      "t": 660,
+      "clock": "09:33",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 1517 departed BWI on filed IFR flight plan: BWI direct to LDN VORTAC, direct to SHD, cruising altitude 6,000 feet",
+      "factors": []
+    },
+    {
+      "t": 2340,
+      "clock": "09:59:44",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach clearance issued to Shenandoah Valley Airport (SHD) with instrument meteorological conditions (overcast 1,000 ft, visibility 2 miles)",
+      "factors": []
+    },
+    {
+      "t": 2425,
+      "clock": "10:03:25",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Radar service terminated by Gordonsville Low Altitude Sector; aircraft was operating under radar guidance",
+      "factors": []
+    },
+    {
+      "t": 2635,
+      "clock": "~10:05",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 1517 made in-range call to SHD station agent to report passenger count and request fuel",
+      "factors": []
+    },
+    {
+      "t": 2795,
+      "clock": "10:11",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 1517 crossed the localizer for runway 4 eastbound at magnetic track 075 degrees; last radar return at 2,700 feet",
+      "factors": []
+    },
+    {
+      "t": 2858,
+      "clock": "10:14:18",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Gordonsville radar controller asked flight 1517 to state position; Captain replied they were 'west of course'",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 2865,
+      "clock": "10:14:25",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain acknowledged and indicated aircraft was 'turn inbound now'",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 2935,
+      "clock": "10:15:55",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Pilot inquired whether center controller showed the aircraft east of course",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 3029,
+      "clock": "10:17:49",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller suggested a missed approach if the aircraft was not established on the localizer course; no response received from flight 1517",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 3150,
+      "clock": "~10:25",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Flight 1517 crashed into Hall Mountain at elevation 2,400 feet; Civil Air Patrol located wreckage 6 miles east of airport",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-82-107",
+      "to": "FAA",
+      "text": "Require that all multiengine, turbine-powered, fixed-wing aircraft certificated to carry six or more passengers be prewired to accept cockpit voice recorders and flight data recorders",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "navigation_error",
+        "cfit"
+      ]
+    },
+    {
+      "id": "A-82-109",
+      "to": "FAA",
+      "text": "Require that general aviation cockpit voice recorders and flight data recorders be installed when commercially available on all multiengine, turbine-powered aircraft and rotorcraft",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "navigation_error"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Increased FAA surveillance of commuter and regional carriers",
+    "Enhanced training requirements for pilots on regional aircraft",
+    "Improved cockpit design to reduce ambient noise levels",
+    "Standardization of navigational radio equipment installations"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR8607.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "asn_id": "19850923-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Henson_Airlines_Flight_1517",
+  "report_links": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR8607.pdf",
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR86-07.pdf"
+  ],
+  "interest": 11.08,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Probable cause and conclusions sections read from NTSB report AAR-86/07",
+      "Limited event data available as crew became unresponsive to ATC before crash",
+      "Crew navigation error and inadequate monitoring led directly to controlled flight into terrain"
+    ]
+  }
+}

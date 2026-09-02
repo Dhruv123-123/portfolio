@@ -1,0 +1,237 @@
+{
+  "id": "wd_q2753195",
+  "qid": "Q2753195",
+  "title": "Grand Canyon Airlines 6",
+  "flight_number": null,
+  "date": "1986-06-18",
+  "time_reference": "MST",
+  "t0": "1986-06-18T08:55:00-07:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-87/03",
+      "report_title": "Grand Canyon Airlines, Inc., and Helitech Inc., Midair Collision over Grand Canyon National Park",
+      "report_date": "1987-07-24"
+    }
+  ],
+  "aircraft": {
+    "type": "de Havilland Canada DHC-6 Twin Otter",
+    "manufacturer": "de Havilland Canada",
+    "family": "DHC-6",
+    "registration": "N76GC"
+  },
+  "operator": "Grand Canyon Airlines",
+  "route": {
+    "from_name": "Grand Canyon Airport",
+    "to_name": "Grand Canyon Airport"
+  },
+  "location": {
+    "name": "Tonto Plateau, Grand Canyon National Park",
+    "country": "United States"
+  },
+  "phase": "cruise",
+  "occupants": 20,
+  "fatalities": 20,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "Grand Canyon Airlines Flight 6, a DHC-6 Twin Otter with 20 aboard (18 passengers, 2 crew), collided with a Helitech Bell 206 helicopter (5 aboard) over Grand Canyon National Park on June 18, 1986. The collision occurred at 6,500 feet at approximately 0933 MST. The helicopter's main rotor struck the Twin Otter's nose landing gear and tail, tearing off the rotor and separating the Twin Otter's tail. Both aircraft crashed.",
+  "probable_cause": "The flight crews of both aircraft failed to see and avoid each other for undetermined reasons. Contributing to the accident was the failure of the Federal Aviation Administration to exercise its oversight responsibility over flight operations in the Grand Canyon airspace and the actions of the National Park Service to influence the selection of routes by Grand Canyon scenic air tour operators. Also contributing to the accident was the modification and configuration of the routes of the rotary-wing operators resulting in their intersecting with the routes of Grand Canyon Airlines near Crystal Rapids.",
+  "factors": [
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The crews of the two aircraft failed to see and avoid each other despite operating in visual meteorological conditions (p. 7)"
+    },
+    {
+      "id": "airport_infrastructure",
+      "role": "latent",
+      "evidence": "The limited number of scenic points of interest in the Grand Canyon concentrated flights over these points, increasing the risk of collision (p. 7)"
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "contributing",
+      "evidence": "The FAA did not modify the regulations necessary to allow them to properly oversee Grand Canyon scenic air tour flight operations (p. 30)"
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "At approximately 0933, at an altitude of approximately 6,500 feet, the Bell 206 and DHC-6 collided, with the helicopter on the left of the Twin Otter (p. 8)"
+    }
+  ],
+  "chain": [
+    [
+      "airport_infrastructure",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "regulatory_oversight",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "midair_collision"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "08:55",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Grand Canyon Airlines Flight 6 (DHC-6 Twin Otter N76GC, call sign Canyon 6) took off from runway 21 of Grand Canyon Airport for a scheduled 50-minute sightseeing flight with 18 passengers and 2 crew members",
+      "factors": []
+    },
+    {
+      "t": 1080,
+      "clock": "09:13",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Helitech Flight 2 (Bell 206B Jet Ranger N6TC, call sign Tech 2) took off from its heliport in Tusayan, Arizona for an on-demand 30-minute sightseeing flight with 4 passengers and 1 crew member",
+      "factors": [
+        "airport_infrastructure"
+      ]
+    },
+    {
+      "t": 2100,
+      "clock": "~09:30",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Both aircraft operated in uncontrolled airspace under visual flight rules, making voluntary position reports on frequency 122.75 MHz over scenic landmarks",
+      "factors": []
+    },
+    {
+      "t": 2160,
+      "clock": "~09:30",
+      "phase": "cruise",
+      "actor": "OTHER",
+      "kind": "system",
+      "text": "A pilot south of Mencius Temple heard Bell 206B report 'west of Mencius at 6400 feet, southbound' and had previously heard Canyon 6 report passing Havasupai Point",
+      "factors": []
+    },
+    {
+      "t": 2180,
+      "clock": "~09:30",
+      "phase": "cruise",
+      "actor": "OTHER",
+      "kind": "system",
+      "text": "A pilot passing Havasupai Point eastbound at 7,100 feet reported seeing a 'mushroom-topped' column of smoke about 1,000 feet high and vaporous clouds rising from Tonto Plateau",
+      "factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "t": 2220,
+      "clock": "09:33",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "At 6,500 feet altitude over Tonto Plateau, the Bell 206 collided with the DHC-6; the helicopter's main rotor struck the Twin Otter's nose landing gear and tail",
+      "factors": [
+        "loss_of_situational_awareness",
+        "midair_collision"
+      ]
+    },
+    {
+      "t": 2221,
+      "clock": "09:33",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The helicopter's main rotor was torn off and the Twin Otter's tail separated from the fuselage, with both aircraft losing controllability",
+      "factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "t": 2222,
+      "clock": "09:33",
+      "phase": "descent",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "Whitewater rafters 3 miles from the accident site saw both aircraft emerge from smoke, the helicopter falling west and the DHC-6 falling east; they heard ground impact sounds and saw black smoke",
+      "factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "t": 2223,
+      "clock": "09:33",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Both aircraft impacted terrain; all 25 occupants (20 on DHC-6 and 5 on Bell 206) were killed in the collision and crash",
+      "factors": [
+        "midair_collision"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-87-91",
+      "to": "FAA",
+      "text": "Apply to revenue air tour flights the same flight and duty time limitations that apply to operations conducted under 14 CFR 135.265",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": "A-87-92",
+      "to": "FAA",
+      "text": "Require pilots of revenue air tour flights to use a public address system, intercom, or similar system while narrating air tour flights",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": "A-87-93",
+      "to": "FAA",
+      "text": "Require all revenue air tour flights, regardless of the distance flown, to be subject to the regulatory provisions of 14 CFR Part 135, and not 14 CFR Part 91",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "FAA implemented Part 135 flight and duty time limitations on scenic air tour operations",
+    "Requirement for air tour pilots to use public address or intercom systems while narrating",
+    "All scenic air tour flights brought under 14 CFR Part 135 regulatory framework"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8703.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "asn_id": "19860618-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/1986_Grand_Canyon_mid-air_collision",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8703.pdf",
+    "https://www.ntsb.gov/_layouts/ntsb.aviation/brief.aspx?ev_id=20001213X33817&key=2&queryId=fde35560-d331-4eaa-897d-826ac722ed41&pgno=1&pgsize=200"
+  ],
+  "interest": 12.18,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Executive summary and probable cause sections read",
+      "Key sections: EXECUTIVE SUMMARY (pp. 5-7), CONCLUSIONS and Probable Cause (pp. 29-31)",
+      "Cannot determine specific reason for visual miss due to lack of flight data recorders and radar data"
+    ]
+  }
+}
