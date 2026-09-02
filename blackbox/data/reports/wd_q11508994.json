@@ -1,0 +1,188 @@
+{
+  "id": "wd_q11508994",
+  "qid": "Q11508994",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "Japan Air Lines Cargo Flight 1045",
+  "flight_number": "1045",
+  "date": "1977-01-13",
+  "time_reference": "Alaska Standard Time",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "NTSB-AAR-78-7"
+    },
+    {
+      "code": "Japan",
+      "name": "Japanese Government",
+      "country": "Japan",
+      "role": "accredited_representative"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell-Douglas DC-8-62F",
+    "manufacturer": "Douglas",
+    "family": "DC-8",
+    "registration": "JA8054",
+    "msn": "46703"
+  },
+  "operator": "Japan Airlines",
+  "route": {
+    "from": "ANC",
+    "from_name": "Anchorage International Airport",
+    "to": "NRT",
+    "to_name": "Tokyo"
+  },
+  "location": {
+    "name": "Anchorage International Airport",
+    "country": "United States"
+  },
+  "phase": "initial_climb",
+  "occupants": 5,
+  "fatalities": 5,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Japan Air Lines Cargo Flight 1045 crashed during initial climb after takeoff from Anchorage on January 13, 1977. The captain was severely intoxicated with a blood alcohol level of 0.29. Airframe icing was present on engine inlet guide vanes and cowlings. The aircraft stalled shortly after reaching V2 speed during climb, with the crew making inappropriate control inputs that aggravated the stall. All five crew members perished.",
+  "probable_cause": "The accident was caused by a stall resulting from pilot control inputs that were aggravated by airframe icing, while the pilot was operating under the influence of alcohol with a blood alcohol level of 0.29. Contributing to the accident was the failure of the other crew members to prevent the intoxicated captain from attempting the flight.",
+  "factors": [
+    {
+      "id": "pilot_incapacitation",
+      "role": "initiating",
+      "evidence": "Captain was severely intoxicated with blood alcohol level of 0.29; toxicological studies indicate the captain's ability to function was impaired; captain manifested symptoms of alcohol impairment including mental confusion, dizziness, impaired balance, and slurred speech (p. 19)"
+    },
+    {
+      "id": "airframe_icing",
+      "role": "contributing",
+      "evidence": "Ice present on inlet guide vanes, engine cowlings and engine bullet noses; ice on airfoil could have reduced angle of attack needed for stall (p. 18-19)"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "latent",
+      "evidence": "Failure of other flightcrew members (first and second officers) to prevent the captain from attempting the flight; no evidence they took action to prevent flight from proceeding; captain's intoxication was apparent to crew members (p. 19-20)"
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "Aircraft stalled almost immediately after reaching V2 speed during initial climb; rotation to higher-than-normal pitch attitude (~15-18 degrees) combined with airframe icing (p. 18)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Witness saw flight climb to approximately 100 feet above ground, veer to left, and then slide out of air; aircraft descended at 3,000 fpm before impact (p. 19)"
+    }
+  ],
+  "chain": [
+    ["pilot_incapacitation", "aerodynamic_stall"],
+    ["airframe_icing", "aerodynamic_stall"],
+    ["crm_breakdown", "pilot_incapacitation"],
+    ["aerodynamic_stall", "loss_of_control_inflight"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "05:15",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Intoxicated captain boarded aircraft; crew car driver noted captain appeared in good condition externally but showed signs of impairment (mental confusion, dizziness, staggering gait)"
+    },
+    {
+      "t": 420,
+      "clock": "06:09",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew began prestart checklists; CVR data showed captain making wrong runway assignments and showing mental confusion"
+    },
+    {
+      "t": 1200,
+      "clock": "06:35",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft departed runway 24L; takeoff appeared normal until aircraft slowed acceleration from VR to V2 speed",
+      "state": {
+        "ias": 160
+      }
+    },
+    {
+      "t": 1239,
+      "clock": "06:35:39",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft stalled almost immediately after reaching V2 speed; witness saw flight climb to approximately 100 feet above ground, veer left, and slide out of air",
+      "state": {
+        "alt": 100,
+        "ias": 161
+      }
+    },
+    {
+      "t": 1260,
+      "clock": "06:35:60",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Japan Air Lines Cargo Flight 1045 crashed near Anchorage International Airport shortly after takeoff with all five crew members killed"
+    }
+  ],
+  "cvr": [
+    {
+      "t": 1200,
+      "clock": "06:35",
+      "speaker": "CAPT",
+      "text": "Captain made statements indicating mental confusion and disorientation regarding location on airport and runway assignment"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Develop an air carrier pilot program similar to the General Aviation Accident Prevention Program that emphasizes the dangers of unprofessional performance and provides means for peer group monitoring and disciplining of pilots displaying unprofessional traits (p. 20)",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "ALPA",
+      "text": "Implement a program to provide means for peer group monitoring and disciplining any air carrier pilot who may display any unprofessional traits, particularly alcohol impairment (p. 20)",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced pre-flight alcohol screening and testing procedures for air carrier pilots",
+    "Strengthened crew resource management training emphasizing second-in-command authority to challenge pilot actions when safety is at risk",
+    "Improved procedures for monitoring pilot fitness for duty before flights"
+  ],
+  "related": ["birgenair301"],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7807.pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "NTSB report AAR78-07 read in full including Analysis section and Safety Board conclusions",
+      "Sections read: History of Flight, Investigation details, Aircraft and systems analysis, Crew information, Weather analysis, Analysis section with probable cause determination",
+      "Captain's blood alcohol level of 0.29 was definitively established through toxicological testing",
+      "Clear documentation of pilot incapacitation symptoms: mental confusion, dizziness, slurred speech, staggering gait, loss of spatial orientation",
+      "Crew resource management failure critical factor - other crew members failed to challenge captain despite obvious impairment",
+      "Airframe icing present and contributing to stall susceptibility",
+      "Analysis discusses broader implications for crew coordination and second-in-command authority",
+      "No formal numbered recommendations in traditional format; Board statements about needed actions identified"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Japan_Air_Lines_Cargo_Flight_1045",
+  "asn_id": "19770113-0",
+  "interest": 11.41,
+  "curated_id": null,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7807.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR78-07.pdf"
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "id": "wd_q10748098",
+  "qid": "Q10748098",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "Cougar Helicopters Flight 91",
+  "flight_number": "91",
+  "date": "2009-03-12",
+  "time_reference": "NDT",
+  "agency": "TSB",
+  "agencies": [
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "lead",
+      "report_id": "A09A0016"
+    }
+  ],
+  "aircraft": {
+    "type": "Sikorsky S-92A",
+    "manufacturer": "Sikorsky",
+    "family": "S-92",
+    "registration": "C-GZCH"
+  },
+  "operator": "Cougar Helicopters",
+  "route": {
+    "from": "CYYT",
+    "from_name": "St. John's International Airport",
+    "to": "OFFSHORE",
+    "to_name": "Hibernia Oil Platform"
+  },
+  "location": {
+    "name": "Atlantic Ocean, 35 nm east of St. John's",
+    "country": "Canada"
+  },
+  "phase": "cruise",
+  "occupants": 18,
+  "fatalities": 17,
+  "damage": "destroyed",
+  "category": "FUEL",
+  "summary": "Cougar Helicopters Flight 91, a Sikorsky S-92A on a regular shuttle flight to offshore oil platforms, reported zero oil pressure in the main gearbox at 09:40 NDT at cruise. The crew attempted return to St. John's but ditched 8 minutes later after losing electrical power. Of 18 aboard, one survived with serious injuries; the other 17 died of drowning. A broken titanium stud in the main gearbox oil filter assembly, subject of a prior Alert Service Bulletin, initiated the failure.",
+  "probable_cause": "The accident was caused by a broken titanium stud in the main gearbox oil filter assembly that had been the subject of a prior Alert Service Bulletin recommending replacement within one year or 1,250 flight hours. The accident was contributed to by the fact that a previous similar incident in Australia in August 2008 involving total loss of oil and emergency landing did not result in industry action to correct the defect.",
+  "factors": [
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "Sikorsky issued Alert Service Bulletin on 28 January 2009 recommending replacement of titanium studs within one year or 1,250 flight hours; this defect had not been addressed on C-GZCH at the time of accident (p. 1-2)"
+    },
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "Loss of oil pressure in main gearbox at 09:40 caused by broken titanium stud; total loss of oil in transmission (p. 1)"
+    },
+    {
+      "id": "known_defect_unresolved",
+      "role": "latent",
+      "evidence": "Prior incident in Dandenong, Australia August 2008 involved total loss of oil and emergency landing but defect was not corrected industry-wide (p. 149)"
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "Crew attempted return to St. John's and ditched in Atlantic Ocean at 09:48; helicopter sank in 178 m water (p. 1)"
+    },
+    {
+      "id": "evacuation_deficiency",
+      "role": "outcome",
+      "evidence": "17 occupants died of drowning in helicopter that capsized in cold water; water temperature was approximately 0°C preventing effective escape; occupants lacked supplemental breathing apparatus (p. 149-150)"
+    }
+  ],
+  "chain": [
+    ["maintenance_error", "engine_failure"],
+    ["engine_failure", "emergency_landing"],
+    ["emergency_landing", "evacuation_deficiency"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "09:40",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Aircraft reported zero oil pressure in main gearbox at cruise altitude; crew issued mayday",
+      "state": {
+        "alt": 2300
+      }
+    },
+    {
+      "t": 30,
+      "clock": "09:40:30",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew initiated emergency procedures for main gearbox oil pressure loss"
+    },
+    {
+      "t": 120,
+      "clock": "09:42",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew descended to 800 feet and turned toward St. John's International Airport"
+    },
+    {
+      "t": 240,
+      "clock": "09:44",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Aircraft lost electrical power due to continuing gearbox degradation"
+    },
+    {
+      "t": 360,
+      "clock": "09:46",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew prepared for emergency ditching; moved to ditching position heading"
+    },
+    {
+      "t": 480,
+      "clock": "09:48",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "outcome",
+      "text": "Aircraft ditched in Atlantic Ocean after losing electrical power; high rate of descent at impact"
+    },
+    {
+      "t": 600,
+      "clock": "09:50",
+      "phase": "unknown",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Helicopter capsized and sank in 178 m water; occupants struggled to escape in 0°C water"
+    },
+    {
+      "t": 900,
+      "clock": "10:13",
+      "phase": "unknown",
+      "actor": "OTHER",
+      "kind": "env",
+      "text": "Provincial Airlines ice patrol airplane spotted aircraft floating upside down 25 minutes after ditching"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A11-01",
+      "to": "FAA",
+      "text": "The Federal Aviation Administration assess the adequacy of the 30 minute main gearbox run dry requirement for Category A transport helicopters.",
+      "status": "unknown"
+    },
+    {
+      "id": "A11-02",
+      "to": "Transport Canada",
+      "text": "Transport Canada prohibit commercial operation of Category A transport helicopters over water when the sea state will not permit safe ditching and successful evacuation.",
+      "status": "unknown"
+    },
+    {
+      "id": "A11-03",
+      "to": "Transport Canada",
+      "text": "Transport Canada require that supplemental underwater breathing apparatus be mandatory for all occupants of helicopters involved in overwater flights who are required to wear a PTSS.",
+      "status": "unknown"
+    },
+    {
+      "id": "A11-04",
+      "to": "FAA",
+      "text": "Rotorcraft manufacturers include run dry time information in rotorcraft flight manuals to assist pilots during MGB abnormal or emergency situations.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "S-92A gearbox malfunctions section amended to include statement advising pilots that total loss of MGB oil pressure may result in MGB failure in less than 10 minutes",
+    "Increased focus on emergency underwater breathing apparatus (EUBA) requirements for offshore helicopter operations",
+    "Enhanced sea state criteria for helicopter ditching capability assessments"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.tsb.gc.ca/eng/rapports-reports/aviation/2009/a09a0016/a09a0016.html"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "TSB Aviation Investigation Report A09A0016 read in full",
+      "Sections read: Occurrence Summary, Safety Issues, Findings, Causal Factors, Safety Action",
+      "Four formal recommendations identified: A11-01 through A11-04",
+      "Defect causation clearly documented with prior Alert Service Bulletin SB 329-77-1004",
+      "Drowning was immediate cause of death due to cold water and helicopter orientation after impact",
+      "One survivor recovered; this was one of TSB's most significant offshore aviation accidents"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Cougar_Helicopters_Flight_91",
+  "asn_id": null,
+  "interest": 11.58,
+  "curated_id": null,
+  "report_links": [
+    "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2009/a09a0016/a09a0016.html"
+  ]
+}

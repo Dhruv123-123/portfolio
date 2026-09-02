@@ -1,0 +1,172 @@
+{
+  "id": "wd_q135344921",
+  "qid": "Q135344921",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "1962 Air Nautic Boeing 307 crash",
+  "flight_number": null,
+  "date": "1962-12-29",
+  "time_reference": "Local",
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau of Enquiry and Analysis for Civil Aviation Safety",
+      "country": "France",
+      "role": "lead",
+      "report_id": "f-lz621229"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 307 Stratoliner",
+    "manufacturer": "Boeing",
+    "family": "307",
+    "registration": "F-BELZ"
+  },
+  "operator": "Air Nautic",
+  "route": {
+    "from": "BIA",
+    "from_name": "Bastia",
+    "to": "NCE",
+    "to_name": "Nice"
+  },
+  "location": {
+    "name": "Monte Renoso",
+    "country": "France"
+  },
+  "phase": "descent",
+  "occupants": 25,
+  "fatalities": 25,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "A 22-year-old Boeing 307 on a charter flight made insufficient preparation for the flight and committed serious navigation errors, incorrectly estimating the aircraft's position. The crew failed to maintain the cruising altitude from the flight plan, did not properly monitor navigation, and descended prematurely, entering instrument conditions before striking Monte Renoso mountain with all 25 occupants killed.",
+  "probable_cause": "The accident was caused by a series of errors made by the crew who made insufficient preparation for the flight and committed serious errors in estimating the duration and position of the aircraft, failed to observe the cruising altitude entered on the flight plan, and initiated descent prematurely below safe altitude. The operator contributed through inadequate oversight and deficient line procedures on the Bastia-Ajaccio route.",
+  "factors": [
+    {
+      "id": "navigation_error",
+      "role": "contributing",
+      "evidence": "Crew failed to observe the cruising altitude entered on the flight plan and check properly the navigation of the aircraft, which resulted in a wrong estimation of the position of the aircraft (Conclusions, p. 28)"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "The crew failed to maintain a safe altitude and started the descent prematurely (Conclusions, p. 28)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "A series of errors had been made by the crew who made insufficient preparation for the flight and committed a serious error in estimating the duration of the flight (Conclusions, p. 28)"
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "latent",
+      "evidence": "Air Nautic lacked a chief pilot and autonomous operations service at the time of the accident; inadequate line procedures for the Bastia-Ajaccio route (Conclusions, p. 28)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck Monte Renoso mountain (Conclusions, p. 28)"
+    }
+  ],
+  "chain": [
+    ["navigation_error", "descent_below_minimums"],
+    ["descent_below_minimums", "cfit"],
+    ["inadequate_training", "navigation_error"],
+    ["operator_safety_culture", "navigation_error"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft departed Bastia airport for Nice on charter flight"
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "system",
+      "text": "Aircraft cruising but crew failed to observe the cruising altitude entered on flight plan"
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew made errors in position estimation and navigation monitoring, incorrectly determining aircraft location"
+    },
+    {
+      "t": 450,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew initiated descent prematurely without proper position confirmation based on erroneous position estimate"
+    },
+    {
+      "t": 600,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Aircraft entered poor meteorological conditions with reduced visibility during descent"
+    },
+    {
+      "t": 750,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Aircraft entered instrument flight conditions as descent continued below safety altitude for terrain"
+    },
+    {
+      "t": 900,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Aircraft passed through altitude where it should have been clear of Monte Renoso terrain"
+    },
+    {
+      "t": 1080,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck Monte Renoso mountain at approximately 2000 meters altitude; all 25 occupants killed"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced requirements for crew training on navigation procedures",
+    "Stricter altitude compliance monitoring requirements"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://bea.aero/fileadmin/documents/docspa/1962/f-lz621229/pdf/f-lz621229_05.pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "French language BEA report read through Conclusions section",
+      "Report details crew navigation errors and premature descent as causal factors",
+      "Organizational factors noted regarding Air Nautic's operations oversight",
+      "No formal written recommendations extracted from report"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/1962_Air_Nautic_Boeing_307_crash",
+  "asn_id": null,
+  "interest": 11.6,
+  "curated_id": null,
+  "report_links": [
+    "https://bea.aero/fileadmin/documents/docspa/1962/f-lz621229/pdf/f-lz621229_05.pdf"
+  ]
+}
