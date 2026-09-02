@@ -33,8 +33,21 @@ def main():
     TEXT_DIR.mkdir(parents=True, exist_ok=True)
     out_txt = TEXT_DIR / f"{args.id}.txt"
     if not out_txt.exists():
-        resp = requests.get(args.url, headers={"User-Agent": "blackbox-pipeline/1.0 (+https://dhruvramasubban.com)"}, timeout=180, allow_redirects=True)
-        resp.raise_for_status()
+        headers = {"User-Agent": "blackbox-pipeline/1.0 (+https://dhruvramasubban.com)"}
+        resp = None
+        for url in (args.url, f"https://web.archive.org/web/2024id_/{args.url}", f"https://web.archive.org/web/2015id_/{args.url}"):
+            try:
+                r = requests.get(url, headers=headers, timeout=180, allow_redirects=True)
+                if r.ok and len(r.content) > 2000:
+                    resp = r
+                    if url != args.url:
+                        print(f"fetched via Wayback Machine: {url}")
+                    break
+                print(f"{url}: HTTP {r.status_code}, {len(r.content)} bytes", file=sys.stderr)
+            except Exception as exc:
+                print(f"{url}: {exc.__class__.__name__}: {str(exc)[:120]}", file=sys.stderr)
+        if resp is None:
+            raise SystemExit("download failed on the original URL and the Wayback Machine")
         is_pdf = resp.content[:5] == b"%PDF-" or "pdf" in resp.headers.get("content-type", "")
         if is_pdf:
             import pymupdf

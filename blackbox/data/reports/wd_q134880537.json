@@ -1,0 +1,216 @@
+{
+  "id": "wd_q134880537",
+  "qid": "Q134880537",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air India 171",
+  "flight_number": "AI171",
+  "date": "2025-06-12",
+  "time_reference": "UTC",
+  "t0": "2025-06-12T08:08:39Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Aircraft Accident Investigation Bureau",
+      "country": "India",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 787-8",
+    "manufacturer": "Boeing",
+    "family": "787",
+    "registration": "VT-ANB"
+  },
+  "operator": "Air India",
+  "route": {
+    "from_name": "Ahmedabad Airport",
+    "to_name": "London Gatwick Airport"
+  },
+  "location": {
+    "name": "Ahmedabad",
+    "country": "India"
+  },
+  "phase": "initial_climb",
+  "occupants": 242,
+  "fatalities": 241,
+  "damage": "destroyed",
+  "category": "SCF-PP",
+  "summary": "Air India Flight 171, a Boeing 787-8 flying from Ahmedabad to London Gatwick, crashed 32 seconds after takeoff on 12 June 2025 into a medical college hostel near the airport, killing 241 of 242 occupants and 19 people on the ground. The AAIB's preliminary report found the front flight recorder showed both engines lost thrust after their fuel control switches moved from RUN to CUTOFF three seconds after liftoff; the reason for the switch movement had not been established.",
+  "probable_cause": "The AAIB's preliminary report attributes the crash to loss of thrust in both engines after the fuel control switches transitioned from RUN to CUTOFF three seconds after liftoff; the reason the switches moved had not been determined as of the preliminary report.",
+  "factors": [
+    {
+      "id": "dual_engine_failure",
+      "role": "initiating",
+      "evidence": "The front flight recorder indicated loss of thrust in both engines after their fuel control switches transitioned from RUN to CUTOFF three seconds after liftoff at 08:08:42-43 UTC (p. 14)."
+    },
+    {
+      "id": "loss_of_pilot_control_authority",
+      "role": "contributing",
+      "evidence": "Flight recorder data showed the aircraft reached a maximum airspeed of 180 knots after a 62-second takeoff roll, leaving little margin to recover from the thrust loss (p. 14)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "contributing",
+      "evidence": "The aircraft began to lose altitude before crossing the airport perimeter wall and crashed into the hostel block of the B. J. Medical College campus 0.9 nmi from the runway (p. 14)."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Several college buildings were severely damaged by the impact and subsequent fire, including student accommodation and the resident doctors' hostel (p. 6)."
+    }
+  ],
+  "chain": [
+    ["dual_engine_failure", "loss_of_pilot_control_authority"],
+    ["loss_of_pilot_control_authority", "loss_of_control_inflight"],
+    ["loss_of_control_inflight", "post_impact_fire"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "08:08:39",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The Boeing 787-8 lifted off from runway 23 at Ahmedabad at 08:08:39 UTC after a 62-second takeoff roll, with light winds of 6 knots and visibility of 6 km."
+    },
+    {
+      "t": 3,
+      "clock": "08:08:42",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Three seconds after liftoff, Engine 1 and Engine 2 fuel control switches transitioned from RUN to CUTOFF, causing loss of thrust in both engines according to the front flight recorder.",
+      "factors": ["dual_engine_failure"],
+      "state": {
+        "alt": 180,
+        "ias": 180
+      }
+    },
+    {
+      "t": 6,
+      "clock": "08:08:45",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "One pilot asked the other why he cut off; the other pilot responded that he did not do so.",
+      "factors": ["dual_engine_failure"]
+    },
+    {
+      "t": 8,
+      "clock": "08:08:47",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The Ram Air Turbine (RAT) deployed during initial climb as both engines N2 values passed below minimum idle speed and the RAT hydraulic pump began supplying hydraulic power.",
+      "factors": []
+    },
+    {
+      "t": 13,
+      "clock": "08:08:52",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Engine 1 fuel control switch transitioned from CUTOFF to RUN at 08:08:52 UTC, and FADEC automatically initiated a relight and thrust recovery sequence.",
+      "factors": ["dual_engine_failure"]
+    },
+    {
+      "t": 15,
+      "clock": "08:08:54",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The APU inlet door began opening at 08:08:54 UTC, consistent with APU auto-start logic.",
+      "factors": []
+    },
+    {
+      "t": 17,
+      "clock": "08:08:56",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Engine 2 fuel control switch transitioned from CUTOFF to RUN; both engines attempted relight with Engine 1 recovering and Engine 2 struggling to maintain core speed.",
+      "factors": ["dual_engine_failure"]
+    },
+    {
+      "t": 26,
+      "clock": "08:09:05",
+      "phase": "initial_climb",
+      "actor": "ATC",
+      "kind": "crew_speech",
+      "text": "One of the pilots transmitted MAYDAY MAYDAY MAYDAY; the ATCO did not get a response but observed the aircraft crashing outside the airport boundary.",
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 32,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "After 32 seconds of flight the aircraft crashed into the hostel block of B. J. Medical College 0.9 nmi from the runway, initially striking trees and a chimney before impacting the building at a nose-up attitude of about 8 degrees.",
+      "factors": ["loss_of_control_inflight"],
+      "state": {
+        "alt": 0,
+        "pitch": 8
+      }
+    },
+    {
+      "t": 40,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The aircraft fragmented across five buildings with extensive thermal damage; the vertical stabilizer separated and came to rest 200 feet away; both engines were found in different buildings.",
+      "factors": ["post_impact_fire"]
+    }
+  ],
+  "cvr": [
+    {
+      "t": 6,
+      "clock": "08:08:45",
+      "speaker": "CAPT",
+      "text": "Why did you cutoff?"
+    },
+    {
+      "t": 7,
+      "clock": "08:08:46",
+      "speaker": "FO",
+      "text": "I did not do so."
+    },
+    {
+      "t": 26,
+      "clock": "08:09:05",
+      "speaker": "CAPT",
+      "text": "MAYDAY MAYDAY MAYDAY"
+    }
+  ],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://aaib.gov.in/What%27s%20New%20Assets/Preliminary%20Report%20VT-ANB.pdf"
+  ],
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_India_Flight_171",
+  "report_links": [
+    "https://aaib.gov.in/What%27s%20New%20Assets/Preliminary%20Report%20VT-ANB.pdf",
+    "https://www.gov.uk/government/news/aaib-update-air-india-flight-ai171",
+    "https://www.faa.gov/newsroom/faa-statement-air-india-flight-ai171"
+  ],
+  "interest": 20.57,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "AAIB preliminary report only; the reason the fuel control switches moved to CUTOFF had not been determined at time of writing",
+      "Key sections read: Wreckage and Impact (p. 7-10), Flight Recorders (p. 12-13), Accident Flight (p. 13-15)",
+      "CVR excerpts transcribed from report text (p. 14); reason for fuel control switch movement is the subject of ongoing investigation"
+    ]
+  }
+}

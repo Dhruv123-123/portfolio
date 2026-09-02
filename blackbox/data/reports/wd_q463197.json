@@ -1,0 +1,268 @@
+{
+  "id": "wd_q463197",
+  "qid": "Q463197",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "American Airlines 191",
+  "flight_number": "AA191",
+  "date": "1979-05-25",
+  "time_reference": "CDT",
+  "t0": "1979-05-25T15:02:46-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-10-10",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-10",
+    "registration": "N110AA",
+    "engines": "General Electric CF6-6D"
+  },
+  "operator": "American Airlines",
+  "route": {
+    "from_name": "O'Hare International Airport",
+    "to_name": "Los Angeles International Airport"
+  },
+  "location": {
+    "name": "Des Plaines",
+    "country": "United States"
+  },
+  "phase": "takeoff",
+  "occupants": 271,
+  "fatalities": 273,
+  "damage": "destroyed",
+  "category": "SCF-PP",
+  "summary": "American Airlines Flight 191, a McDonnell Douglas DC-10 departing O'Hare for Los Angeles, crashed on 25 May 1979 after its left engine and pylon separated during takeoff rotation, killing all 271 aboard and 2 people on the ground in the deadliest US aviation accident. The NTSB found improper maintenance procedures had damaged the pylon, and that the separating engine severed hydraulic lines, causing an uncommanded retraction of the left wing's slats while also cutting power to the captain's instruments, stick shaker, and slat-disagreement warning system.",
+  "probable_cause": "The NTSB found the probable cause was separation of the left engine and pylon assembly during takeoff, caused by damage from improper maintenance procedures, which led to asymmetric stall and loss of control after the slats retracted and stall-warning systems lost electrical power.",
+  "factors": [
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "The engine separation was attributed to damage to the pylon structure holding the engine to the wing, caused by improper maintenance procedures at American Airlines (p. 3, 628-631)."
+    },
+    {
+      "id": "structural_failure",
+      "role": "contributing",
+      "evidence": "As the aircraft was beginning its takeoff rotation, engine number one separated from the left wing, flipping over the top of the wing and landing on the runway (p. 3, 715-717)."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "As the engine separated it severed hydraulic lines that lock the wing's leading-edge slats in place, and aerodynamic forces resulted in an uncommanded retraction of the outboard slats (p. 3, 634-635)."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "contributing",
+      "evidence": "The number-one electrical bus failed, causing several electrical systems to go offline, most notably the captain's instruments, his stick shaker, and the slat disagreement sensors (p. 3, 621-622, 641-643)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The disrupted and unbalanced aerodynamics caused the aircraft to roll abruptly to the left until it was partially inverted, reaching a bank angle past vertical, before crashing in an open field (p. 3, 589-597)."
+    }
+  ],
+  "chain": [
+    ["maintenance_error", "structural_failure"],
+    ["structural_failure", "design_deficiency"],
+    ["structural_failure", "warning_system_deficiency"],
+    ["design_deficiency", "loss_of_control_inflight"],
+    ["warning_system_deficiency", "loss_of_control_inflight"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "15:02:46",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 191 cleared for takeoff from runway 32R; captain acknowledges 'American one ninety-one under way'.",
+      "factors": []
+    },
+    {
+      "t": 8,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "During takeoff rotation, sections of the left engine pylon structure come off the aircraft; witnesses see white smoke or vapor from the No. 1 engine pylon area.",
+      "factors": ["maintenance_error", "structural_failure"]
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The entire No. 1 engine and pylon assembly separate from the aircraft, go over the top of the wing, and fall to the runway.",
+      "factors": ["structural_failure"],
+      "state": {
+        "alt": 0,
+        "ias": 150
+      }
+    },
+    {
+      "t": 14,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "The cockpit voice recorder captures only a thump and the first officer exclaiming 'Damn!' as the engine detaches; recording then ends due to power loss.",
+      "factors": ["structural_failure"]
+    },
+    {
+      "t": 15,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The separating engine severs hydraulic lines that locked the left wing's leading-edge slats, and aerodynamic forces cause an uncommanded retraction of the outboard slats.",
+      "factors": ["design_deficiency"],
+      "state": {
+        "alt": 100,
+        "ias": 160
+      }
+    },
+    {
+      "t": 16,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The number-one electrical bus fails with the engine, knocking out the captain's instruments, his stick shaker, and the slat-disagreement warning system.",
+      "factors": ["warning_system_deficiency"]
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The aircraft lifts off about 6,000 feet down runway 32R, climbs with wings level to about 300 feet above ground.",
+      "factors": [],
+      "state": {
+        "alt": 300,
+        "ias": 160
+      }
+    },
+    {
+      "t": 35,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The aircraft begins to turn and roll to the left, nose pitches down, and aircraft begins to descend.",
+      "factors": ["loss_of_control_inflight"],
+      "state": {
+        "alt": 250,
+        "roll": -30
+      }
+    },
+    {
+      "t": 45,
+      "clock": "15:04",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft continues rolling left until wings are past the vertical position (inverted), with the nose well below the horizon.",
+      "factors": ["loss_of_control_inflight"],
+      "state": {
+        "alt": 100,
+        "roll": -120
+      }
+    },
+    {
+      "t": 58,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Flight 191 crashes in an open field and trailer park about 4,600 feet northwest of the departure end of runway 32R; the aircraft is destroyed in the impact and ground fire.",
+      "factors": ["loss_of_control_inflight"],
+      "state": {
+        "alt": 0,
+        "roll": -180
+      }
+    }
+  ],
+  "cvr": [
+    {
+      "t": 0,
+      "clock": "15:02:46",
+      "speaker": "CAPT",
+      "text": "American one ninety-one under way."
+    },
+    {
+      "t": 14,
+      "clock": null,
+      "speaker": "FO",
+      "text": "Damn!"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require a fleetwide inspection of all DC-10 pylon assemblies, including checks for proper clearances, missing or loose fasteners, and structural damage.",
+      "status": "closed_acceptable",
+      "trigger_factors": ["maintenance_error", "structural_failure", "design_deficiency"]
+    },
+    {
+      "id": null,
+      "to": "McDonnell-Douglas",
+      "text": "Establish standard minimum clearance specifications for spherical bearing assemblies and aft wing clevis to prevent interference.",
+      "status": "closed_acceptable",
+      "trigger_factors": ["design_deficiency"]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Enhance surveillance and reporting systems to detect and prevent improper maintenance procedures across the airline industry.",
+      "status": "closed_acceptable",
+      "trigger_factors": ["maintenance_error"]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Improve communications and information sharing among operators, manufacturers, and FAA regarding maintenance damage incidents.",
+      "status": "closed_acceptable",
+      "trigger_factors": ["maintenance_error"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "DC-10 Type Certificate suspension and subsequent restoration with enhanced inspection requirements",
+    "Fleetwide inspection and modification of DC-10 pylon attach points",
+    "Enhanced electrical system redundancy in DC-10 aircraft",
+    "Improved FAA surveillance procedures for maintenance practices at major carriers"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7917.pdf"
+  ],
+  "asn_id": "19790525-2",
+  "wikipedia": "https://en.wikipedia.org/wiki/American_Airlines_Flight_191",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7917.pdf"
+  ],
+  "interest": 20.33,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Comprehensive NTSB final report read; key sections: Synopsis (p. 560), History of Flight (p. 700-735), Wreckage and Impact (p. 1172+), and detailed maintenance analysis (p. 2200-2400)",
+      "CVR limited due to power loss at time of engine separation",
+      "Design deficiency and maintenance error clearly documented as causal factors",
+      "This was the deadliest aviation accident in US history at the time of occurrence"
+    ]
+  }
+}

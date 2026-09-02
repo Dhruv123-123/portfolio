@@ -1,0 +1,414 @@
+{
+  "id": "wd_q904715",
+  "qid": "Q904715",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "Yemenia 626",
+  "flight_number": "IY626",
+  "date": "2009-06-30",
+  "time_reference": "UTC",
+  "t0": "2009-06-29T22:49:41Z",
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enqu\u00eates et d'Analyses",
+      "country": "France",
+      "role": "lead",
+      "report_id": "f-cp090630",
+      "report_title": "Final Report",
+      "report_date": "2010-06-30",
+      "url": "https://bea.aero/fileadmin/uploads/tx_elydbrapports/7O-ADJ.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Airbus A310-324",
+    "family": "A310",
+    "manufacturer": "Airbus",
+    "registration": "7O-ADJ",
+    "msn": null,
+    "engines": null
+  },
+  "operator": "Yemenia",
+  "route": {
+    "from": "OOSN",
+    "from_name": "Sanaa International Airport",
+    "to": "FMMI",
+    "to_name": "Prince Said Ibrahim International Airport"
+  },
+  "location": {
+    "name": "Indian Ocean near Moroni, Comoros",
+    "country": "Comoros",
+    "lat": -11.87,
+    "lon": 43.28
+  },
+  "phase": "go_around",
+  "occupants": 153,
+  "fatalities": 152,
+  "injuries_serious": 1,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Yemenia Flight 626, an Airbus A310-324 flying from Sanaa to Moroni, crashed into the Indian Ocean on 30 June 2009 after a botched go-around. While climbing away from a failed approach, the crew's control inputs caused the autopilot to set thrust to idle; saturated by workload and lacking training, the crew made repeated nose-up inputs and failed to recover from the resulting aerodynamic stall, ignoring the aircraft's warnings. All but one of the 153 aboard were killed; a 12-year-old girl survived by clinging to wreckage.",
+  "probable_cause": "The accident was caused by inappropriate crew actions on flight controls leading to an aerodynamic stall that was not recovered. The crew, saturated by workload during an unstabilized visual approach and lacking training, failed to properly respond to multiple alarms and recover from the stall.",
+  "factors": [
+    {
+      "id": "unstable_approach",
+      "role": "initiating",
+      "evidence": "The crew executed an unstabilized visual approach which they then abandoned for a go-around (p. 36)."
+    },
+    {
+      "id": "autothrottle_mode_confusion",
+      "role": "contributing",
+      "evidence": "During the go-around climb, crew control inputs caused the autopilot to set thrust to idle, decreasing airspeed (p. 73)."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The crew was saturated by workload managing the aircraft trajectory and locating the runway while multiple alarms were triggered (p. 73)."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "The crew lacked adequate training and briefing for the Moroni MVI procedure and for handling emergency situations (p. 73)."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "contributing",
+      "evidence": "The crew's control inputs and thrust reduction led to an aerodynamic stall that developed during the climb (p. 72-73)."
+    },
+    {
+      "id": "inappropriate_stall_recovery",
+      "role": "contributing",
+      "evidence": "The crew failed to properly recover from the stall, continuing to make nose-up inputs (p. 73)."
+    },
+    {
+      "id": "gpws_warning_response",
+      "role": "contributing",
+      "evidence": "The crew did not properly respond to multiple GPWS SINK RATE and PULL UP warnings (p. 38-39)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft entered an unrecoverable stall and impacted the Indian Ocean at 65 ft altitude with 185 kt airspeed and 15\u00b0 nose-up pitch (p. 40-41)."
+    }
+  ],
+  "chain": [
+    [
+      "unstable_approach",
+      "autothrottle_mode_confusion"
+    ],
+    [
+      "autothrottle_mode_confusion",
+      "aerodynamic_stall"
+    ],
+    [
+      "high_workload",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "inadequate_training",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "aerodynamic_stall",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "inappropriate_stall_recovery",
+      "loss_of_control_inflight"
+    ],
+    [
+      "gpws_warning_response",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "22:49:41",
+      "phase": "go_around",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "The crew decided to abandon the unstabilized approach and execute a go-around.",
+      "state": {
+        "alt": 1170,
+        "ias": 160
+      },
+      "factors": [
+        "unstable_approach"
+      ]
+    },
+    {
+      "t": 235,
+      "clock": "22:53:36",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Autopilot 2 disconnected; first officer initiates right turn at 1000 ft altitude.",
+      "state": {
+        "alt": 1000,
+        "ias": 160
+      },
+      "factors": []
+    },
+    {
+      "t": 313,
+      "clock": "22:54:54",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "GPWS SINK RATE alarm triggered; aircraft at 548 ft radio altitude with -2000 ft/min descent and 27\u00b0 right bank.",
+      "state": {
+        "alt": 548,
+        "ias": null,
+        "vs": -2000,
+        "roll": 27
+      },
+      "factors": [
+        "autothrottle_mode_confusion",
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 325,
+      "clock": "22:55:06",
+      "phase": "go_around",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew levels wings to 0\u00b0 and increases pitch to 12\u00b0 in response to GPWS warnings.",
+      "state": {
+        "alt": 412,
+        "pitch": 12,
+        "roll": 0
+      },
+      "factors": [
+        "gpws_warning_response"
+      ]
+    },
+    {
+      "t": 404,
+      "clock": "22:56:25",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "GPWS TOO LOW TERRAIN alarm at 230 ft altitude with -1000 ft/min descent and 29\u00b0 right bank.",
+      "state": {
+        "alt": 230,
+        "vs": -1000,
+        "roll": 29
+      },
+      "factors": []
+    },
+    {
+      "t": 410,
+      "clock": "22:56:31",
+      "phase": "go_around",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew levels wings and increases pitch to 17\u00b0; aircraft reaches minimum altitude of 161 ft radio altitude.",
+      "state": {
+        "alt": 161,
+        "pitch": 17,
+        "roll": 0
+      },
+      "factors": [
+        "gpws_warning_response"
+      ]
+    },
+    {
+      "t": 521,
+      "clock": "22:58:22",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Landing gear retracted; gear not down warning triggers for 16 seconds.",
+      "state": {
+        "alt": 660
+      },
+      "factors": []
+    },
+    {
+      "t": 535,
+      "clock": "22:58:36",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "LVL/CH mode engaged at 700 ft with 2000 ft altitude selected; autothrottle commands TOGA power.",
+      "state": {
+        "alt": 700,
+        "ias": 158
+      },
+      "factors": [
+        "autothrottle_mode_confusion"
+      ]
+    },
+    {
+      "t": 625,
+      "clock": "23:00:06",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Stall alarm recorded in FDR at 13\u00b0 angle of attack; airspeed rapidly decreasing from 185 kt while climbing.",
+      "state": {
+        "alt": 800,
+        "ias": 185,
+        "aoa": 13
+      },
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 626,
+      "clock": "23:00:07",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Alpha Floor protection triggered at 12.1\u00b0 angle of attack and 191 kt; thrust lever speed increases to 8\u00b0/s.",
+      "state": {
+        "alt": 800,
+        "ias": 191,
+        "aoa": 12.1
+      },
+      "factors": []
+    },
+    {
+      "t": 635,
+      "clock": "23:00:16",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Autopilot disconnected; altitude 653 ft; pitch and angle of attack continue to increase; stall alarm continues.",
+      "state": {
+        "alt": 653,
+        "ias": null
+      },
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 655,
+      "clock": "23:00:36",
+      "phase": "go_around",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot applies full nose-down pitch input at 698 ft altitude (only occurrence after stall began); airspeed is 170 kt.",
+      "state": {
+        "alt": 698,
+        "ias": 170,
+        "aoa": 17.1
+      },
+      "factors": [
+        "inappropriate_stall_recovery"
+      ]
+    },
+    {
+      "t": 664,
+      "clock": "23:00:45",
+      "phase": "go_around",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew applies go-lever thrust command at 1034 ft altitude while in high-altitude stall condition with 15-23\u00b0 angle of attack.",
+      "state": {
+        "alt": 1034,
+        "pitch": 20,
+        "roll": 37
+      },
+      "factors": [
+        "inappropriate_stall_recovery"
+      ]
+    },
+    {
+      "t": 779,
+      "clock": "23:02:40",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "AP instinctive disconnect alarm ends; continuous stall warning continues until impact.",
+      "state": {
+        "alt": 972,
+        "ias": null
+      },
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 814,
+      "clock": "23:03:15",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft strikes Indian Ocean at pitch angle 15\u00b0 nose-up, 21\u00b0 right bank, 185 kt, 65 ft altitude.",
+      "state": {
+        "alt": 65,
+        "ias": 185,
+        "pitch": 15,
+        "roll": 21
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "COMOROS",
+      "text": "Establish permanent dedicated search and rescue means adapted to the search for and rescue of aircraft accident survivors at sea near aerodromes.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "to": "YEMEN",
+      "text": "Ensure that all crews performing flights to Moroni are properly trained in execution of the MVI procedure.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": null,
+      "to": "YEMEN",
+      "text": "Review pilot training conditions for Yemenia, particularly their ability to react to emergency situations.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_training",
+        "high_workload"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/fileadmin/uploads/tx_elydbrapports/7O-ADJ.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Full BEA final report read; sections 2.1 (scenario), 3.2 (causes), and 4 (recommendations) extensively reviewed",
+      "Detailed flight data timeline from FDR analysis with specific altitudes, airspeeds, pitch angles and angles of attack",
+      "CVR content not explicitly transcribed in sections read but event times precisely match FDR timestamps",
+      "Report clearly identifies inappropriate crew actions leading to stall and inadequate recovery despite multiple warnings"
+    ]
+  },
+  "asn_id": "20090630-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Yemenia_Flight_626",
+  "report_links": [
+    "https://bea.aero/fileadmin/uploads/tx_elydbrapports/7O-ADJ.pdf",
+    "http://www.bea.aero/en/enquetes/flight.iy.626/flight.iy.626.php"
+  ],
+  "interest": 19.56,
+  "curated_id": null
+}
