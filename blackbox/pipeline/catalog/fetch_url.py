@@ -8,12 +8,14 @@ numbers) so a reader can jump to Synopsis / Findings / Probable Cause /
 Recommendations without reading the whole file.
 """
 import argparse
+import os
 import re
 import sys
 from pathlib import Path
 
 import requests
 
+os.environ.setdefault("TESSDATA_PREFIX", "/usr/share/tesseract-ocr/5/tessdata")
 ROOT = Path(__file__).resolve().parents[2]
 PDF_DIR = ROOT / "cache" / "pdf"
 TEXT_DIR = ROOT / "cache" / "text"
@@ -25,6 +27,7 @@ def main():
     ap.add_argument("id")
     ap.add_argument("url")
     ap.add_argument("--max-pages", type=int, default=400)
+    ap.add_argument("--ocr-pages", type=int, default=160, help="OCR at most this many scanned pages (about 3 s per page)")
     args = ap.parse_args()
     PDF_DIR.mkdir(parents=True, exist_ok=True)
     TEXT_DIR.mkdir(parents=True, exist_ok=True)
@@ -38,7 +41,18 @@ def main():
             path = PDF_DIR / f"{args.id}.pdf"
             path.write_bytes(resp.content)
             doc = pymupdf.open(path)
-            pages = [f"\n\n<<< page {i + 1} >>>\n{page.get_text('text')}" for i, page in enumerate(doc) if i < args.max_pages]
+            pages = []
+            for i, page in enumerate(doc):
+                if i >= args.max_pages:
+                    break
+                txt = page.get_text("text")
+                if len(txt.strip()) < 40 and i < args.ocr_pages:
+                    # scanned page (older NTSB / CAB reports): OCR it with tesseract via pymupdf
+                    try:
+                        txt = page.get_text("text", textpage=page.get_textpage_ocr(language="eng", dpi=200, full=True))
+                    except Exception as exc:  # tesseract missing or page unreadable
+                        txt = f"[ocr failed: {exc}]"
+                pages.append(f"\n\n<<< page {i + 1} >>>\n{txt}")
             out_txt.write_text("".join(pages))
         else:
             path = PDF_DIR / f"{args.id}.html"
