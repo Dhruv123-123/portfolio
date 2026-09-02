@@ -1,0 +1,132 @@
+{
+  "id": "wd_q97329973",
+  "qid": "Q97329973",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air Inter 696",
+  "flight_number": null,
+  "date": "1972-10-27",
+  "agency": "BEA",
+  "aircraft": {
+    "type": "Vickers Viscount 724",
+    "manufacturer": "Vickers",
+    "family": "Viscount",
+    "registration": null
+  },
+  "operator": "Air Inter",
+  "route": {
+    "from_name": "Lyon-Bron",
+    "to_name": "Clermont-Ferrand"
+  },
+  "location": {
+    "name": "Noir\u00e9table",
+    "country": "France"
+  },
+  "phase": "approach",
+  "occupants": 68,
+  "fatalities": 60,
+  "category": "CFIT",
+  "summary": "The Vickers Viscount took off from Lyon in a violent thunderstorm and crashed during approach to Clermont-Ferrand Airport. After last radio contact was lost, the aircraft struck the Mont Picot massif in the Forez mountains at 1,000 meters altitude, approximately 10 kilometers from the airport during poor visibility conditions.",
+  "probable_cause": "The crew encountered severe weather and lost radio contact while on approach. The aircraft descended below safe altitude and struck mountainous terrain during an instrument approach in conditions of poor visibility.",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "contributing",
+      "evidence": "It took off from Lyon in a violent storm"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "It took off from Lyon in a violent storm"
+    },
+    {
+      "id": "navigation_error",
+      "role": "contributing",
+      "evidence": "its last radio contact with the Lyon control tower being at 7:20pm and not responding to subsequent calls"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "crashed around 7:20 pm in the La Faye forest, almost on top of the Mont Picot massif at an altitude of 1000 meters"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "crashed around 7:20 pm in the La Faye forest, almost on top of the Mont Picot massif"
+    }
+  ],
+  "chain": [
+    [
+      "convective_weather",
+      "low_visibility"
+    ],
+    [
+      "low_visibility",
+      "navigation_error"
+    ],
+    [
+      "navigation_error",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "18:48",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft took off from Lyon in a violent storm",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": "19:20",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Last radio contact with Lyon control tower at 7:20pm; aircraft not responding to subsequent calls",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed in La Faye forest at 1000 meters altitude on Mont Picot massif, broke into three pieces",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://bea.aero/fileadmin/documents/docspa/1972/f-ch721027/pdf/f-ch721027_06.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Inter_Flight_696Y",
+  "asn_id": null,
+  "interest": 13.31,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Deepened from summary-level wikidata record",
+      "Key report sections read: synopsis, findings, probable cause",
+      "Text extracted from official report PDF"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "https://bea.aero/fileadmin/documents/docspa/1972/f-ch721027/pdf/f-ch721027_06.pdf"
+  ]
+}

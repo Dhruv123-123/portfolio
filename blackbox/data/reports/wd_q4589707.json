@@ -1,0 +1,128 @@
+{
+  "id": "wd_q4589707",
+  "qid": "Q4589707",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "1994 Mull of Kintyre Chinook crash",
+  "flight_number": null,
+  "date": "1994-06-02",
+  "agency": "AAIB",
+  "aircraft": {
+    "type": "Chinook HC2",
+    "manufacturer": "Boeing",
+    "family": "Chinook",
+    "registration": "ZD576"
+  },
+  "operator": "Royal Air Force",
+  "route": {
+    "from_name": "Belfast",
+    "to_name": "Inverness"
+  },
+  "location": {
+    "name": "Mull of Kintyre",
+    "country": "United Kingdom"
+  },
+  "phase": "cruise",
+  "occupants": 29,
+  "fatalities": 29,
+  "category": "CFIT",
+  "summary": "RAF Chinook ZD576 flew into a hillside in dense fog on 2 June 1994. Around 18:00 Chinook crashed into terrain on Mull of Kintyre in foggy conditions. The helicopter was carrying 25 British intelligence experts from MI5 and other agencies. All twenty-five passengers and four crew on board were killed, making it the RAF's fourth-worst peacetime disaster.",
+  "probable_cause": "Controlled flight into terrain in instrument meteorological conditions. Initial 1995 board ruled cause impossible to establish. Reviewing officers stated pilots flew too fast and too low in thick fog. 2011 independent review cleared crew of negligence and found RAF falsely declared compliance with aircraft authority to fly.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "weather forecast was clear except in Mull of Kintyre area; aircraft flew into a hillside in dense fog"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "technical issues surrounding the then-new Chinook HC2 variant were uncovered; technical problems with specific airframe in weeks leading to crash"
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "contributing",
+      "evidence": "RAF had falsely declared compliance with regulations in relation to aircraft authority to fly"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Chinook ZD576 flew into a hillside in dense fog around 18:00"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "cfit"
+    ],
+    [
+      "design_deficiency",
+      "cfit"
+    ],
+    [
+      "regulatory_oversight",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "15:20",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Helicopter returned to RAF Aldergrove after trooping flight",
+      "factors": []
+    },
+    {
+      "t": 1,
+      "clock": "17:42",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Took off for Inverness from RAF Aldergrove",
+      "factors": []
+    },
+    {
+      "t": 2,
+      "clock": "17:55",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Made contact with military air traffic control in Scotland",
+      "factors": []
+    },
+    {
+      "t": 3,
+      "clock": "18:00",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Chinook ZD576 flew into a hillside in dense fog",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/554613/20161002-LEGACY_JSP886-V3P315-FaultReport-FINAL-O.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/1994_Mull_of_Kintyre_Chinook_crash",
+  "asn_id": null,
+  "interest": 12.91,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Deepened from summary-level wikidata record",
+      "Key report sections read: synopsis, findings, probable cause",
+      "Text extracted from official report PDF"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/554613/20161002-LEGACY_JSP886-V3P315-FaultReport-FINAL-O.pdf"
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "id": "wd_q5172397",
+  "qid": "Q5172397",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Corporate Airlines 5966",
+  "flight_number": "5966",
+  "date": "2004-10-19",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "British Aerospace Jetstream 32",
+    "manufacturer": "British Aerospace",
+    "family": "Jetstream",
+    "registration": "N244RA"
+  },
+  "operator": "Corporate Airlines (RegionsAir)",
+  "route": {
+    "from_name": "St. Louis Lambert",
+    "to_name": "Kirksville Regional"
+  },
+  "location": {
+    "name": "Kirksville",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 15,
+  "fatalities": 13,
+  "category": "CFIT",
+  "summary": "Corporate Airlines Flight 5966, a Jetstream 32 twin-engine turboprop, crashed on approach to Kirksville Regional Airport near Pettis Township, Missouri, on 19 October 2004. Captain Kim Sasse and First Officer Jonathan Palmer were conducting a non-precision instrument approach at night in instrument meteorological conditions. The aircraft descended below the minimum descent altitude into a region without guaranteed obstacle clearance, struck trees, and crashed. Both pilots were killed along with 11 of 13 passengers.",
+  "probable_cause": "Pilots' failure to follow established procedures and properly conduct non-precision instrument approach at night in IMC, specifically their descent below minimum descent altitude before required visual cues were available, and their failure to maintain established division of duties between flying and monitoring pilots. Contributing factors: crew fatigue from 14-hour duty day and failure to make standard callouts.",
+  "factors": [
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "Pilots descended below minimum descent altitude before required visual cues were available, continuing unmoderated until aircraft struck trees"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "initiating",
+      "evidence": "Both pilots were looking outside cockpit for visual cues rather than monitoring instruments; first officer did not challenge captain to maintain instrument scan"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "initiating",
+      "evidence": "First officer failed to challenge captain and maintain professional monitoring duties; failure to establish professional demeanor during flight"
+    },
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "Pilots had worked 14-hour duty day including six flights, degrading performance despite regulations last updated in 1964"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "initiating",
+      "evidence": "Pilots failed to follow established procedures and make standard callouts during non-precision approach"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Night instrument meteorological conditions with no visual references to airport or terrain"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck trees during descent on approach and crashed near Kirksville"
+    }
+  ],
+  "chain": [
+    [
+      "descent_below_minimums",
+      "cfit"
+    ],
+    [
+      "inadequate_monitoring",
+      "descent_below_minimums"
+    ],
+    [
+      "crm_breakdown",
+      "inadequate_monitoring"
+    ],
+    [
+      "fatigue",
+      "crm_breakdown"
+    ]
+  ],
+  "events": [
+    {
+      "t": -600,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 5966 departed St. Louis Lambert on evening of 19 October 2004 for Kirksville; crew had already completed six flights on 14-hour duty day",
+      "factors": [
+        "fatigue"
+      ]
+    },
+    {
+      "t": -180,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft cleared for non-precision instrument approach to Kirksville in night IMC conditions",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": -60,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain Sasse began looking outside cockpit for visual cues to runway location",
+      "factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "t": -30,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captian continued descent below MDA; first officer did not challenge or call attention to descent rate",
+      "factors": [
+        "descent_below_minimums",
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft struck trees and crashed during continued unmoderated descent below minimum descent altitude",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0601.pdf",
+    "https://www.ntsb.gov/_layouts/ntsb.aviation/brief.aspx?ev_id=20041020X01659&key=1",
+    "https://www.ntsb.gov/_layouts/ntsb.aviation/index.aspx",
+    "https://data.ntsb.gov/Docket/?NTSBNumber=DCA05MA004"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Corporate_Airlines_Flight_5966",
+  "asn_id": "20041019-0",
+  "interest": 13.1,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Deepened from summary-level wikidata record",
+      "Key report sections read: synopsis, findings, probable cause",
+      "Text extracted from official report PDF"
+    ]
+  },
+  "curated_id": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0601.pdf",
+    "https://www.ntsb.gov/_layouts/ntsb.aviation/brief.aspx?ev_id=20041020X01659&key=1",
+    "https://www.ntsb.gov/_layouts/ntsb.aviation/index.aspx",
+    "https://data.ntsb.gov/Docket/?NTSBNumber=DCA05MA004"
+  ]
+}

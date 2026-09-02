@@ -12,6 +12,7 @@ import argparse
 import json
 import re
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
 CATALOG = ROOT / "data" / "catalog" / "wikidata.jsonl"
@@ -48,7 +49,7 @@ def main():
         rec = json.loads(line)
         if rec["id"] in existing or rec.get("curated_id") in existing:
             continue
-        links = [l for l in rec.get("report_links", []) if OFFICIAL.search(l) and not re.search(r"registry\.faa\.gov|news\.google|youtube|books\.google", l, re.I)]
+        links = [l for l in rec.get("report_links", []) if OFFICIAL.search(urlparse(l).netloc + "/" + urlparse(l).path.strip("/").split("/")[0]) and not re.search(r"registry\.faa\.gov|news\.google|youtube|books\.google", l, re.I)]
         if not links:
             continue
         if args.only_fetched:
