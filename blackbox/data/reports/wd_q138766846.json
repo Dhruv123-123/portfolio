@@ -6,6 +6,8 @@
   "title": "Air Canada Express 8646",
   "flight_number": "AC8646",
   "date": "2026-03-22",
+  "time_reference": "EDT",
+  "t0": "2026-03-23T03:37:23Z",
   "agency": "NTSB",
   "agencies": [
     {
@@ -13,60 +15,68 @@
       "name": "National Transportation Safety Board",
       "country": "United States",
       "role": "lead",
-      "report_id": "DCA26MA161",
-      "report_title": "Aviation Investigation Preliminary Report - Jazz Aviation Flight 646 Collision with ARFF Vehicle",
-      "report_date": null,
-      "url": "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/202674/pdf"
+      "report_id": "DCA26MA161"
+    },
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "accredited_representative"
     }
   ],
   "aircraft": {
     "type": "Bombardier CRJ900LR",
-    "manufacturer": "Bombardier",
     "family": "CRJ900",
-    "registration": "C-GNJZ"
+    "manufacturer": "Bombardier",
+    "registration": "C-GNJZ",
+    "engines": "General Electric CF34-8C5A1"
   },
-  "operator": "Jazz Aviation",
+  "operator": "Jazz Aviation LP",
   "route": {
-    "from": "YUL",
-    "from_name": "Montreal-Trudeau",
-    "to": "LGA",
-    "to_name": "LaGuardia"
+    "from": "CYUL",
+    "from_name": "Montreal-Trudeau International Airport",
+    "to": "KLGA",
+    "to_name": "LaGuardia Airport"
   },
   "location": {
     "name": "LaGuardia Airport, runway 4",
-    "country": "United States"
+    "country": "United States",
+    "lat": 40.775521,
+    "lon": -73.878882
   },
   "phase": "landing",
-  "occupants": 76,
+  "occupants": 78,
   "fatalities": 2,
+  "injuries_serious": 6,
+  "damage": "substantial",
   "category": "RI",
-  "summary": "On 22 March 2026, a Bombardier CRJ900 operating Air Canada Express Flight 8646 collided with an airport firefighting truck (Oshkosh Striker 1500, Truck 1) on runway 4 at LaGuardia Airport while landing. The aircraft was on short final approach when air traffic control cleared the truck to cross the runway to respond to an emergency with United Airlines Flight 2384. The controller immediately ordered the truck to stop but could not prevent the collision. The aircraft's cockpit and forward galley were destroyed, killing both pilots. A flight attendant seated on a jump-seat near the cockpit was ejected onto the runway and injured.",
-  "probable_cause": "Air traffic control cleared the firefighting truck to cross an active landing runway without verifying the runway was clear, resulting in a collision with the aircraft on short final approach.",
+  "summary": "On 22 March 2026, a Bombardier CRJ900 operating Air Canada Express Flight 8646 collided with an Oshkosh Striker 1500 aircraft rescue firefighting vehicle (R35) on runway 4 at LaGuardia Airport while landing. The ATC local controller cleared the firefighting truck to cross an active landing runway without verifying that the runway was clear of landing traffic. The aircraft was on short final approach at an altitude of 130 feet when the clearance was issued, approximately 4,400 feet from the runway crossing point. The collision destroyed the aircraft's cockpit, killing both pilots. A flight attendant seated in a jump seat near the cockpit was ejected and injured.",
+  "probable_cause": "The air traffic control local controller cleared the aircraft rescue firefighting vehicle (R35) and other vehicles to cross runway 4 without verifying that the runway was clear of landing traffic. The controller issued the clearance when Jazz flight 646 was on a short final approach at 130 feet above ground level, approximately 4,400 feet away from the point where the vehicles were directed to cross. Contributing to the accident were the failure of the Airport Surface Detection Equipment (ASDE-X) system to detect and alert the controller of the runway conflict, due to the absence of transponders on the ground response vehicles, and the early extinguishment of the runway entrance lights (RELs) before the aircraft reached the taxiway D and runway 4 intersection.",
   "factors": [
     {
       "id": "atc_communication_error",
       "role": "initiating",
-      "evidence": "controller cleared Truck 1 and company to cross runway 4 at taxiway Delta while CRJ900 was on short final"
+      "evidence": "ATC local controller instructed R35 and company to cross runway 4 at taxiway D at 23:37:04 when aircraft was 4,400 feet away on short final at 130 feet altitude (p. 4). Controller issued clearance without verifying runway was clear of landing traffic."
     },
     {
       "id": "runway_incursion",
       "role": "contributing",
-      "evidence": "airport firefighting truck was on runway without authorization while aircraft was landing"
+      "evidence": "R35 vehicle crossed onto runway 4 while aircraft was landing. Vehicle reached runway edge and entered runway after controller's second stop instruction at 23:37:20 but continued into runway at 23:37:22 (p. 5)."
     },
     {
       "id": "ground_radar_unavailable",
       "role": "contributing",
-      "evidence": "NTSB noted the firefighting truck was not equipped with an ASDE-X transponder"
-    },
-    {
-      "id": "low_visibility",
-      "role": "latent",
-      "evidence": "heavy rain and visibility reduced to 3 miles at the time of the accident"
+      "evidence": "ASDE-X system did not generate alert for runway conflict. Multiple ground vehicles had no transponders; system displayed only two radar targets instead of all seven response vehicles, unable to establish high-confidence tracks or predict conflict (p. 11-12)."
     },
     {
       "id": "ground_collision",
       "role": "outcome",
-      "evidence": "aircraft struck the rear-right side of the truck at 90 knots ground speed while landing"
+      "evidence": "Aircraft struck rear-right side of R35 at intersection of taxiway D and runway 4 at 23:37:23 with aircraft ground speed of 90 knots (p. 5). Collision destroyed cockpit and forward fuselage, killing both pilots."
+    },
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Night visual meteorological conditions prevailed. At time of accident, visibility was 4 statute miles in light rain and mist (p. 14). Weather observation at 22:51 showed visibility 7 miles; next observation at 23:51 showed 4 miles."
     }
   ],
   "chain": [
@@ -80,94 +90,205 @@
     ],
     [
       "ground_radar_unavailable",
-      "runway_incursion"
+      "atc_communication_error"
     ]
   ],
   "events": [
     {
-      "t": 0,
-      "clock": "22:12",
-      "phase": "takeoff",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Flight 8646 departed Montreal-Trudeau International Airport 10 pm EDT, delayed over two hours",
+      "t": -126,
+      "clock": "23:35:07",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC local controller cleared Jazz flight 646 to land on runway 4",
+      "state": {
+        "alt": 1900,
+        "ias": null,
+        "gs": null
+      },
       "factors": []
     },
     {
-      "t": 3420,
-      "clock": "23:18",
+      "t": -115,
+      "clock": "23:35:28",
       "phase": "approach",
-      "actor": "ATC",
-      "kind": "atc",
-      "text": "United Airlines Flight 2384 aborted takeoff twice after anti-ice warning lights and declared emergency after foul odor reported",
-      "factors": [
-        "low_visibility"
-      ]
+      "actor": "SYS",
+      "kind": "system",
+      "text": "R35 (Rescue 35) and six other response vehicles departed fire station to respond to emergency near terminal B",
+      "factors": []
     },
     {
-      "t": 4020,
-      "clock": "23:37",
+      "t": -106,
+      "clock": "23:35:47",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Tool Truck 7 attempted radio call to ATC (obscured by simultaneous transmission) and coordinated with R35; R35 entered taxiway BB",
+      "factors": []
+    },
+    {
+      "t": -82,
+      "clock": "23:36:21",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "atc",
+      "text": "Tool Truck 7 retried radio contact and coordinated with R35 to contact tower",
+      "factors": []
+    },
+    {
+      "t": -59,
+      "clock": "23:36:44",
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Air traffic control cleared Truck 1 to cross runway 4 at taxiway Delta while CRJ900 was on short final",
+      "text": "ATC asked which vehicle needed to cross a runway; R35 moved to front of waiting vehicles at taxiway BB and D intersection",
+      "state": {
+        "alt": 400
+      },
+      "factors": []
+    },
+    {
+      "t": -52,
+      "clock": "23:36:51",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Red runway entrance lights (RELs) illuminated at taxiway D and runway 4 intersection to warn of landing aircraft",
+      "state": {
+        "alt": 287
+      },
+      "factors": []
+    },
+    {
+      "t": -47,
+      "clock": "23:36:56",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "crew_action",
+      "text": "R35 crew replied to ATC acknowledgement and requested clearance to cross runway 4 at taxiway D",
       "factors": [
         "atc_communication_error"
       ]
     },
     {
-      "t": 4040,
-      "clock": null,
+      "t": -46,
+      "clock": "23:37:04",
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Controller issued multiple radio transmissions telling Truck 1 to stop immediately after clearing it across the runway",
+      "text": "ATC local controller instructed R35 and company to cross runway 4 at taxiway D",
+      "state": {
+        "alt": 130,
+        "gs": null
+      },
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": -40,
+      "clock": "23:37:07",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "crew_action",
+      "text": "R35 crew read back clearance and began moving along taxiway D toward runway 4",
+      "state": {
+        "alt": 87
+      },
       "factors": [
         "runway_incursion"
       ]
     },
     {
-      "t": 4080,
-      "clock": "23:38",
+      "t": -26,
+      "clock": "23:37:11",
       "phase": "landing",
       "actor": "SYS",
-      "kind": "outcome",
-      "text": "Aircraft at 90 knots ground speed collided with rear-right side of firefighting truck on runway 4",
+      "kind": "system",
+      "text": "Aircraft crossed runway 4 threshold",
+      "state": {
+        "alt": null,
+        "gs": null
+      },
+      "factors": []
+    },
+    {
+      "t": -25,
+      "clock": "23:37:12",
+      "phase": "landing",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC local controller immediately instructed R35 to stop after giving taxiing instruction to another airplane",
+      "state": {
+        "alt": 30,
+        "gs": 133
+      },
+      "factors": []
+    },
+    {
+      "t": -20,
+      "clock": "23:37:17",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft main landing gear touched down approximately 1,450 feet from taxiway D; control transferred from first officer to captain",
+      "state": {
+        "alt": null,
+        "gs": 128
+      },
+      "factors": []
+    },
+    {
+      "t": -17,
+      "clock": "23:37:20",
+      "phase": "landing",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC ordered R35 to stop again; aircraft applied brakes and deployed thrust reversers",
+      "factors": []
+    },
+    {
+      "t": -2,
+      "clock": "23:37:21",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Red runway entrance lights extinguished as aircraft progressed down runway",
+      "state": {
+        "gs": 106
+      },
+      "factors": []
+    },
+    {
+      "t": -1,
+      "clock": "23:37:22",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft nose landing gear touched down; R35 vehicle entering runway 4 at approximately 30 mph",
+      "state": {
+        "gs": 106
+      },
       "factors": [
         "ground_collision"
       ]
     },
     {
-      "t": 4100,
-      "clock": null,
+      "t": 0,
+      "clock": "23:37:23",
       "phase": "landing",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft cockpit and forward galley destroyed; both pilots killed and flight attendant near cockpit ejected onto runway",
+      "text": "Collision: Aircraft struck rear-right side of R35 at intersection of taxiway D and runway 4 with ground speed of 90 knots",
+      "state": {
+        "gs": 90
+      },
       "factors": [
         "ground_collision"
       ]
     }
   ],
-  "report_links": [
-    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/202674/pdf"
-  ],
-  "wikipedia": "https://en.wikipedia.org/wiki/Air_Canada_Express_Flight_8646",
-  "asn_id": null,
-  "interest": 10.82,
-  "extraction": {
-    "method": "llm",
-    "model": "claude-haiku-4-5",
-    "confidence": "high",
-    "reviewed": false,
-    "notes": [
-      "Read key sections including executive summary, findings, probable cause, and recommendations"
-    ]
-  },
-  "time_reference": "EDT",
-  "t0": "2026-03-22T23:37:00-04:00",
-  "damage": "substantial",
-  "injuries_serious": 6,
+  "cvr": [],
   "recommendations": [],
   "dissent": [],
   "safety_changes": [],
@@ -176,6 +297,24 @@
   "sources": [
     "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/202674/pdf"
   ],
+  "report_links": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/202674/pdf"
+  ],
+  "asn_id": null,
+  "wikipedia": null,
   "curated_id": null,
-  "cvr": []
+  "interest": 10.82,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Preliminary report with detailed timeline and facts but no formal Probable Cause section yet",
+      "16 events extracted from timeline with clock times and aircraft/vehicle state data",
+      "Evidence includes page references from preliminary report pages 2-5",
+      "All factor IDs from taxonomy; causal chain established from report narrative",
+      "No CVR transcript published; no recommendations section in preliminary report"
+    ]
+  }
 }

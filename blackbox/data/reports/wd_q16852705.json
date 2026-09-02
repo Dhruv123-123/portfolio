@@ -4,204 +4,274 @@
   "tier": "wikidata",
   "depth": "sections",
   "title": "Knight Air 816",
-  "flight_number": null,
+  "flight_number": "KNIGHTWAY 816",
   "date": "1995-05-24",
   "time_reference": "UTC",
-  "t0": "1995-05-24T16:47:00Z",
+  "t0": "1995-05-24T15:52:00Z",
   "agency": "AAIB",
   "agencies": [
     {
       "code": "AAIB",
-      "name": "Air Accident Investigation Branch",
+      "name": "Air Accidents Investigation Branch",
       "country": "United Kingdom",
       "role": "lead",
-      "report_id": "2/96",
-      "report_title": "Report on the accident to EMB-110 Bandeirante, G-OEAA at Dunkeswick, North Yorkshire on 24 May 1995",
-      "report_date": "1996-05-31"
-    },
-    {
-      "code": "EMBRAER",
-      "name": "Embraer",
-      "country": "Brazil",
-      "role": "accredited_representative"
+      "report_id": "2/96"
     }
   ],
   "aircraft": {
     "type": "Embraer EMB-110 Bandeirante",
+    "family": "EMB-110",
     "manufacturer": "Embraer",
-    "family": "110",
     "registration": "G-OEAA"
   },
-  "operator": "Knight Air",
+  "operator": "Knight Air Limited",
   "route": {
+    "from": "EGGW",
     "from_name": "Leeds Bradford Airport",
+    "to": "EGPD",
     "to_name": "Aberdeen Airport"
   },
   "location": {
-    "name": "Dunkeswick Moor, North Yorkshire",
+    "name": "Dunkeswick, North Yorkshire",
     "country": "United Kingdom"
   },
-  "phase": "initial_climb",
+  "phase": "climb",
   "occupants": 12,
   "fatalities": 12,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "LOC-I",
-  "summary": "Knight Air Flight 816, an Embraer 110 Bandeirante, crashed shortly after takeoff from Leeds Bradford Airport in poor weather with restricted visibility and recent thunderstorm activity. One minute and 50 seconds into the flight, the crew reported problems with the artificial horizons and requested to return to the airport. While maneuvering to return, the aircraft entered a left turn, rapidly lost height and crashed at Dunkeswick Moor. The AAIB found that one or both artificial horizons failed, leading to loss of control and a spiral dive exceeding operating parameters before partial breakup on impact.",
-  "probable_cause": "One or, possibly, both of the aircraft's artificial horizons malfunctioned and, in the absence of a standby horizon for which there was no airworthiness requirement, there was no single instrument available for assured attitude reference. The commander, who was probably the handling pilot, was initially unable to maintain control of the aircraft heading without his artificial horizon and was eventually unable to retain control of the aircraft whilst flying in instrument meteorological conditions by reference to other flight instruments. The aircraft went out of control whilst flying in turbulent instrument meteorological conditions and entered a spiral dive from which the pilot, who was likely to have become spatially disoriented, was unable to recover.",
+  "summary": "A Bandeirante operating a scheduled passenger flight from Leeds Bradford to Aberdeen experienced failure of one or both artificial horizons shortly after takeoff. The crew reported the problem to ATC and requested to return. In deteriorating weather with poor visibility and recent thunderstorm activity, the crew, flying in instrument meteorological conditions (IMC), became unable to maintain aircraft control by reference to alternative flight instruments. The aircraft entered a spiral dive from which the spatially disoriented pilot could not recover. The aircraft broke up in flight at high speed and crashed on open ground near Dunkeswick, killing all 12 occupants.",
+  "probable_cause": "One or possibly both of the aircraft's artificial horizons malfunctioned while flying in deteriorating instrument meteorological conditions. In the absence of a standby horizon and adequate attitude reference, the commander was unable to maintain control of the aircraft by reference to alternative flight instruments and lost control of the aircraft, which entered a spiral dive. The pilot became spatially disoriented and was unable to recover from the spiral dive.",
   "factors": [
     {
-      "id": "aerodynamic_stall",
-      "role": "outcome",
-      "evidence": "Aircraft entered a spiral dive exceeding operating parameters (p. 52)"
-    },
-    {
-      "id": "loss_of_control_inflight",
-      "role": "outcome",
-      "evidence": "Aircraft entered a left turn, rapidly lost height and crashed (p. 52)"
-    },
-    {
-      "id": "mode_confusion",
-      "role": "initiating",
-      "evidence": "One or both artificial horizons in the aircraft failed (p. 52)"
+      "id": "spatial_disorientation",
+      "role": "contributing",
+      "evidence": "Pilot loss of control while flying in IMC by reference to other flight instruments. Pilot most likely became spatially disoriented and unable to recover from spiral dive (p. 2). Weather included low cloud base (400 ft), precipitation, visibility 1,100 m, and recent thunderstorm activity (p. 2)."
     },
     {
       "id": "low_visibility",
       "role": "contributing",
-      "evidence": "Local weather was poor with restricted visibility, low cloud (p. 1)"
+      "evidence": "Poor weather conditions with IMC, recent thunderstorm activity, and effects of thunderstorm activity creating turbulent conditions. Residents reported dark and stormy conditions (p. 3)."
     },
     {
-      "id": "convective_weather",
-      "role": "contributing",
-      "evidence": "Recent thunderstorm activity (p. 1)"
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft began continuous left turns and abrupt right turns during climb (p. 2). After reaching 3,600 feet, aircraft resumed left turn and entered steeply descending spiral dive (p. 3). Bank angle increased to 45\u00b0 while descending. Aircraft disappeared from radar after descending to heading 230\u00b0 (p. 3)."
     },
     {
-      "id": "spatial_disorientation",
-      "role": "contributing",
-      "evidence": "Crew experienced significant difficulties maintaining their heading (p. 52)"
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Aircraft reached airspeed in excess of design maximum during spiral dive, causing structural breakup (p. 2). Wing failed outboard of right engine, tailplane failure, and fuselage disruption noted (p. 2). Late-stage breakup occurred, with fuel-fed fire initiated (p. 3)."
     }
   ],
   "chain": [
     [
-      "mode_confusion",
+      "low_visibility",
+      "spatial_disorientation"
+    ],
+    [
+      "spatial_disorientation",
       "loss_of_control_inflight"
     ],
     [
       "loss_of_control_inflight",
-      "aerodynamic_stall"
+      "structural_failure"
+    ],
+    [
+      "spatial_disorientation",
+      "loss_of_control_inflight"
     ]
   ],
   "events": [
     {
       "t": 0,
-      "clock": "16:47",
-      "phase": "initial_climb",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Aircraft departed Leeds Bradford Airport at 16:47 hours UTC from runway 14.",
+      "clock": "16:41",
+      "phase": "ground",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Crew called ATC for permission to start engines at Leeds Bradford Airport",
       "factors": []
     },
     {
-      "t": 110,
-      "clock": null,
-      "phase": "initial_climb",
+      "t": 360,
+      "clock": "16:47",
+      "phase": "takeoff",
       "actor": "SYS",
-      "kind": "warning",
-      "text": "One or both artificial horizons failed, providing incorrect instrument indications to the crew.",
+      "kind": "system",
+      "text": "Aircraft took off from Runway 14, initially maintained runway heading (143\u00b0 M) per ATC instruction",
+      "factors": []
+    },
+    {
+      "t": 470,
+      "clock": "16:48:50",
+      "phase": "climb",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First Officer transmitted: KNIGHTWAY 816 WE'VE GOT A PROBLEM WITH THE ARTIFICIAL HORIZON SIR AND WE'D LIKE TO COME BACK",
+      "state": {
+        "alt": 1740
+      },
+      "factors": []
+    },
+    {
+      "t": 480,
+      "clock": "16:48:60",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC passed instructions for radar heading 360\u00b0 and cleared aircraft to 3,000 feet QNH",
+      "factors": []
+    },
+    {
+      "t": 530,
+      "clock": "16:49:50",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft climbing through 2,800 feet in steep right-hand turn with 30\u00b0 bank",
+      "state": {
+        "alt": 2800,
+        "bank": 30
+      },
       "factors": [
-        "mode_confusion"
+        "spatial_disorientation"
       ]
     },
     {
-      "t": 115,
-      "clock": null,
-      "phase": "initial_climb",
+      "t": 545,
+      "clock": "16:50:05",
+      "phase": "climb",
       "actor": "FO",
       "kind": "crew_speech",
-      "text": "First officer reported problems with the artificial horizons and asked to return to Leeds Bradford.",
-      "factors": []
+      "text": "First Officer: ARE WE GOING STRAIGHT AT THE MOMENT SIR (while aircraft in right turn)",
+      "factors": [
+        "spatial_disorientation"
+      ]
     },
     {
-      "t": 180,
-      "clock": null,
+      "t": 565,
+      "clock": "16:50:25",
       "phase": "climb",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "Aircraft entered a left turn while crew attempted to return to the airport in poor visibility and turbulent conditions.",
-      "factors": []
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC ordered right turn onto heading 340\u00b0, but aircraft began left-hand turn with 30-40\u00b0 bank",
+      "state": {
+        "alt": 3200
+      },
+      "factors": [
+        "spatial_disorientation"
+      ]
     },
     {
-      "t": 200,
-      "clock": null,
+      "t": 595,
+      "clock": "16:50:55",
       "phase": "climb",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First Officer again asked: ARE WE GOING STRAIGHT AT THE MOMENT SIR while aircraft on heading 360\u00b0",
+      "state": {
+        "alt": 3600
+      },
+      "factors": [
+        "spatial_disorientation"
+      ]
+    },
+    {
+      "t": 600,
+      "clock": "16:51:00",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC confirmed aircraft appeared to be going straight; aircraft immediately resumed left turn and began to descend",
+      "state": {
+        "alt": 3600,
+        "vs": -800
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 625,
+      "clock": "16:51:25",
+      "phase": "descent",
       "actor": "SYS",
-      "kind": "outcome",
-      "text": "Aircraft rapidly lost height and crashed at Dunkeswick Moor north of Harewood, resulting in partial structural breakup on impact.",
+      "kind": "system",
+      "text": "Aircraft in steeply descending left spiral with 45\u00b0 bank angle after 25 seconds of descent",
+      "state": {
+        "alt": 2900,
+        "bank": 45
+      },
       "factors": [
         "loss_of_control_inflight",
-        "aerodynamic_stall"
+        "spatial_disorientation"
+      ]
+    },
+    {
+      "t": 645,
+      "clock": "16:51:45",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft passed through heading 230\u00b0 and disappeared from secondary radar. Four primary radar returns followed before final radar contact lost.",
+      "state": {
+        "alt": 1000
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 660,
+      "clock": "16:52:00",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "COLLISION: Aircraft crashed at Dunkeswick, North Yorkshire. Structural breakup occurred in flight due to excess airspeed. Wing failed outboard of right engine, tailplane failed, fuselage disrupted, fuel-fed fire initiated. All 12 occupants killed.",
+      "factors": [
+        "structural_failure",
+        "loss_of_control_inflight"
       ]
     }
   ],
   "cvr": [],
   "recommendations": [
     {
-      "id": "95-34",
-      "to": "CAA",
-      "text": "Require the Design Authority to define suitable packaging, handling, and storage requirements to ensure the off-aircraft integrity of artificial horizons.",
-      "status": "unknown",
-      "trigger_factors": [
-        "mode_confusion"
-      ]
-    },
-    {
-      "id": "95-35",
-      "to": "CAA",
-      "text": "Require a third artificial horizon, operated from an independent power supply and protected from voltage transients, for aircraft in the Public Transport Category with more than nine seats.",
-      "status": "unknown",
-      "trigger_factors": [
-        "mode_confusion"
-      ]
-    },
-    {
-      "id": "96-6",
-      "to": "CAA",
-      "text": "Require AOC holders periodically to verify their MEL with the MMEL.",
-      "status": "unknown",
-      "trigger_factors": []
-    },
-    {
-      "id": "96-7",
-      "to": "JAA",
-      "text": "Consider a requirement for all aircraft certificated in the Transport Category with two or more turbine engines and approved to carry more than nine passengers to be equipped with a four channel Cockpit Voice Recorder of at least 30 minutes duration.",
-      "status": "unknown",
-      "trigger_factors": []
+      "id": null,
+      "to": "Civil Aviation Authority",
+      "text": "Ensure airworthiness requirement exists for standby artificial horizon or equivalent attitude reference instrument on multi-crew aircraft",
+      "status": "unknown"
     }
   ],
   "dissent": [],
-  "safety_changes": [],
+  "safety_changes": [
+    "Four safety recommendations issued by AAIB addressing artificial horizon reliability and standby instrumentation requirements"
+  ],
   "related": [],
   "fdr": null,
   "sources": [
-    "http://www.aaib.gov.uk/publications/formal_reports/2_1996__g_oeaa.cfm",
-    "https://assets.digital.cabinet-office.gov.uk/media/5423045de5274a1314000bf1/2-1996_G-OEAA.pdf",
-    "https://asn.flightsafety.org/reports/1995/19950524_E110_G-OEAA.pdf"
+    "http://www.aaib.gov.uk/publications/formal_reports/2_1996__g_oeaa.cfm"
   ],
-  "wikipedia": "https://en.wikipedia.org/wiki/Knight_Air_Flight_816",
-  "asn_id": "19950524-0",
-  "interest": 12.76,
   "report_links": [
-    "http://www.aaib.gov.uk/publications/formal_reports/2_1996__g_oeaa.cfm",
-    "https://assets.digital.cabinet-office.gov.uk/media/5423045de5274a1314000bf1/2-1996_G-OEAA.pdf",
-    "https://asn.flightsafety.org/reports/1995/19950524_E110_G-OEAA.pdf"
+    "http://www.aaib.gov.uk/publications/formal_reports/2_1996__g_oeaa.cfm"
   ],
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Knight_Air_Flight_816",
   "curated_id": null,
+  "interest": 12.76,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Sections read: Synopsis (p. 1), Factual Information (p. 3), History of Flight (p. 3), Findings (p. 52), Causes (p. 54), Safety Recommendations (p. 55)"
+      "UK AAIB formal accident report with detailed narrative of spiral dive sequence",
+      "11 events extracted from timeline showing progression from takeoff to crash, with detailed ATC radio transmissions quoted",
+      "Evidence includes page citations from AAIB report (pages 2-3) documenting instrument failure, spatial disorientation, and structural limits exceeded",
+      "Probable cause section provides clear determination of causal factors",
+      "Recommendations represented as text descriptions",
+      "No CVR transcript available"
     ]
   }
 }

@@ -4,77 +4,60 @@
   "tier": "wikidata",
   "depth": "sections",
   "title": "Mohawk Airlines 405",
-  "flight_number": "405",
+  "flight_number": null,
   "date": "1972-03-03",
-  "time_reference": "EST",
-  "t0": "1972-03-03T20:48:07-05:00",
   "agency": "NTSB",
-  "agencies": [
-    {
-      "code": "NTSB",
-      "name": "National Transportation Safety Board",
-      "country": "United States",
-      "role": "lead",
-      "report_id": "AAR-73-8",
-      "report_title": "Aircraft Accident Report - Mohawk Airlines Flight 405",
-      "report_date": "1973-04-11",
-      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7308.pdf"
-    }
-  ],
   "aircraft": {
-    "type": "Fairchild Hiller FH-227B",
-    "family": "FH-227",
+    "type": "Fairchild Hiller FH-227",
     "manufacturer": "Fairchild Hiller",
-    "registration": "N7818M",
-    "msn": null,
-    "engines": null
+    "family": "FH-227",
+    "registration": "N7818M"
   },
   "operator": "Mohawk Airlines",
   "route": {
-    "from": null,
     "from_name": "New York City",
-    "to": null,
     "to_name": "Albany"
   },
   "location": {
-    "name": "Albany, New York, house 3.5 miles south of airport",
-    "country": "United States",
-    "lat": null,
-    "lon": null
+    "name": "Albany",
+    "country": "United States"
   },
   "phase": "approach",
   "occupants": 48,
   "fatalities": 17,
-  "injuries_serious": 31,
-  "damage": "destroyed",
   "category": "LOC-I",
-  "summary": "Mohawk Airlines Flight 405 crashed into a house in Albany on March 3, 1972. The left propeller was stuck in cruise pitch lock and could not be feathered, creating asymmetric drag. The crew descended below prescribed minimum altitudes while preoccupied with troubleshooting the propeller problem. The aircraft descended uncontrollably and crashed. Of 48 occupants and 1 house resident, 17 were killed.",
-  "probable_cause": "The crew inability to feather the left propeller in combination with descent below prescribed minimum altitudes for the approach. The Board was unable to determine why the propeller could not be feathered or why the crew failed to effect the standard feathering procedure.",
+  "summary": "Mohawk Airlines Flight 405 crashed into a house in Albany on 3 March 1972. The left propeller was stuck in cruise pitch lock and could not be feathered, creating asymmetric drag that resulted in uncontrollable descent. Of 48 occupants and 1 house resident, 17 were killed.",
+  "probable_cause": "The National Transportation Safety Board determines that the probable cause of this accident was the inability of the crew to feather the left propeller, in combination with the descent of the aircraft below the prescribed minimum altitudes for the approach (p. 33). Contributing causal factors for the nonstandard approach were the captain's preoccupation with a cruise pitch lock malfunction, the first officer's failure to adhere to company altitude awareness procedures, and the captain's failure to delegate any meaningful responsibilities to the copilot which resulted in a lack of effective task sharing during the emergency (p. 33). The Board was unable to determine why the left propeller could not be feathered or why the propeller pitch lock malfunctioned during the descent (p. 33).",
   "factors": [
     {
       "id": "flight_control_failure",
       "role": "initiating",
-      "evidence": "The left propeller was stuck in cruise pitch lock and could not be feathered (p. 24)"
+      "evidence": "left propeller was stuck in cruise pitch lock and could not be feathered, with crew noting \"pitch light\" indication at 2043:26; worn cam follower roller found in pitch control unit but units tested as capable of normal operation (p. 8, p. 33)"
     },
     {
       "id": "descent_below_minimums",
       "role": "contributing",
-      "evidence": "The flight crew descended below prescribed minimum altitudes for the approach (p. 32)"
+      "evidence": "flight crew descended below prescribed minimum altitudes for the approach; crew stated \"We're gonna land short\" and descended to approximately 1,000 feet at 7-mile fix then 1,400 feet at 4-mile fix (p. 8, p. 33)"
     },
     {
       "id": "low_visibility",
       "role": "contributing",
-      "evidence": "Weather at airport was ceiling indefinite 1,200 feet obscured with 2 miles visibility in light snow (p. 1)"
+      "evidence": "weather at airport was ceiling indefinite 1,200 feet obscured with 2 miles visibility in light snow (p. 8)"
     },
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "The left propeller creating high asymmetric drag resulted in uncontrollable descent (p. 24)"
+      "evidence": "the left propeller creating high asymmetric drag resulted in uncontrollable descent; right engine at full power could not arrest descent (p. 9)"
     },
     {
       "id": "cfit",
       "role": "outcome",
-      "evidence": "The aircraft crashed into a house 3.5 miles south of runway (p. 1)"
+      "evidence": "plane crashed into house 3.5 miles south of runway with left wing down and slightly nose up; aircraft destroyed (p. 9)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "contributing",
+      "evidence": "House struck with aircraft fuel reserves; captain reported seeing fire after impact; aircraft broke into several pieces"
     }
   ],
   "chain": [
@@ -94,95 +77,164 @@
   "events": [
     {
       "t": 0,
-      "clock": "20:42",
-      "phase": "approach",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "Flight originated in New York City for final approach to Albany airport runway 01",
+      "clock": "2038:30",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Boston Air Route Traffic Control Center released M0405 to Albany Approach Control at 11,000 feet",
       "factors": []
     },
     {
-      "t": 360,
-      "clock": "20:48",
+      "t": 60,
+      "clock": "2040:09",
       "phase": "approach",
-      "actor": "PF",
-      "kind": "crew_action",
-      "text": "At 8.5 miles from airport, flight crew reported left propeller was hung up in cruise pitch lock",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach controller cleared M0405 to descend to 3,000 feet and provided weather: indefinite ceiling 1,200 ft obscured, 2 miles visibility with light snow, wind 360\u00b0 at 9 knots (p. 8)",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "2041:13",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller cleared M0405 for back course ILS localizer approach to Runway 1; 10 miles south of Greenbush (p. 8)",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": "2043:26",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain commented \"Pitch light, huh?\" regarding the pitch control light indication; first officer confirmed seeing it for the first time (p. 8)",
       "factors": [
         "flight_control_failure"
       ]
     },
     {
-      "t": 480,
-      "clock": "20:48",
+      "t": 210,
+      "clock": "2044:13",
       "phase": "approach",
-      "actor": "PF",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer stated \"We're approaching fourteen hundred feet\"; altitude was 1,400 ft at 4-mile radar fix (p. 8)",
+      "factors": []
+    },
+    {
+      "t": 240,
+      "clock": "2045:32",
+      "phase": "approach",
+      "actor": "FO",
       "kind": "crew_action",
-      "text": "At about 5 miles out, crew notified Approach Control they were attempting emergency feathering and would land short",
+      "text": "First officer reported problem with left engine to Mohawk Operations in Albany (p. 8)",
+      "factors": [
+        "flight_control_failure"
+      ]
+    },
+    {
+      "t": 270,
+      "clock": "2046:38",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain said \"Better shut it down\" to first officer; 40 seconds later decelerating engine sounds recorded on CVR (p. 8)",
+      "factors": [
+        "flight_control_failure"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": "2047:51",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain said \"Tell them we're gonna land short, we're in trouble\" indicating crew awareness of asymmetric thrust condition (p. 8)",
+      "factors": [
+        "descent_below_minimums",
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 330,
+      "clock": "2047:54.5",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer informed Approach Control that M405 was in trouble and would land short (p. 9)",
       "factors": [
         "descent_below_minimums"
       ]
     },
     {
-      "t": 487,
-      "clock": "20:48",
-      "phase": "approach",
-      "actor": "SYS",
+      "t": 360,
+      "clock": "2048:07",
+      "phase": "landing",
+      "actor": "ENV",
       "kind": "outcome",
-      "text": "Left propeller creating high asymmetric drag; right engine at full power could not arrest uncontrollable descent; aircraft crashed into house 3.5 miles south of runway",
+      "text": "Aircraft struck two-story frame residence 3.5 miles south of Albany airport at 245 ft elevation; left propeller drag uncontrollable with right engine at full power (p. 9)",
       "factors": [
-        "loss_of_control_inflight",
+        "cfit",
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 365,
+      "clock": null,
+      "phase": "landing",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft impacted house with left wing down and slightly nose up attitude; passenger section buried under collapsed house wreckage (p. 9)",
+      "factors": [
+        "cfit",
+        "post_impact_fire"
+      ]
+    },
+    {
+      "t": 370,
+      "clock": null,
+      "phase": "post_crash",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "No fire or explosion occurred; rescue operations began 10 minutes after impact and completed about 3 hours later; 17 fatalities total (p. 9)",
+      "factors": [
         "cfit"
       ]
     }
   ],
-  "cvr": [],
-  "recommendations": [
-    {
-      "id": "A-73-14",
-      "to": "FAA",
-      "text": "Conduct comprehensive review of propeller feathering procedures and emergency training",
-      "status": "unknown",
-      "outcome": null,
-      "trigger_factors": [
-        "flight_control_failure"
-      ]
-    },
-    {
-      "id": "A-73-15",
-      "to": "FAA",
-      "text": "Require installation and use of shoulder harnesses for cockpit crew members",
-      "status": "unknown",
-      "outcome": null,
-      "trigger_factors": []
-    }
-  ],
-  "dissent": [],
-  "safety_changes": [
-    "Enhanced training on crew resource management and task prioritization during emergencies",
-    "Installation of shoulder harnesses in cockpit crews"
-  ],
-  "related": [],
-  "fdr": null,
-  "sources": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7308.pdf"
-  ],
-  "asn_id": "19720303-0",
-  "wikipedia": "https://en.wikipedia.org/wiki/Mohawk_Airlines_Flight_405",
   "report_links": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7308.pdf",
     "https://aviation-safety.net/database/record.php?id=19720303-0"
   ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Mohawk_Airlines_Flight_405",
+  "asn_id": "19720303-0",
   "interest": 11.7,
-  "curated_id": null,
   "extraction": {
     "method": "llm",
-    "model": "claude-haiku-4-5-20251001",
-    "confidence": "medium",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Sections read: Analysis and Conclusions (lines 4541-6700), Findings and Probable Cause (lines 6100-6300)",
-      "OCR quality degraded in older report; some technical details from summary record used"
+      "Read History of Flight section (pages 5-21), Probable Cause section (pages 33-34), Recommendations section (pages 37-38)",
+      "Extracted 12 detailed events with clock times from CVR and FDR data in history section",
+      "Probable cause: inability to feather left propeller combined with descent below minimums (p. 33)",
+      "Contributing factors: crew preoccupation, altitude awareness failure, poor task sharing (p. 33)",
+      "Two recommendations: A-73-14 (emergency lighting), A-73-15 (task sharing training) (p. 37-38)"
     ]
-  }
+  },
+  "recommendations": [
+    {
+      "id": "A-73-14",
+      "text": "The Federal Aviation Administration take action to ensure that the arming of the emergency cabin lighting be included in checklists used before each takeoff and landing (p. 37)",
+      "addressed_by": []
+    },
+    {
+      "id": "A-73-15",
+      "text": "The Federal Aviation Administration bring this accident to the attention of appropriate FAA and air carrier personnel to ensure that aircrews are trained in task sharing during abnormal and emergency flight conditions. Established pilot training programs and operations manuals should be revised to include guidance on time and task sharing in abnormal and emergency situations, with emphasis on the need for preplanning task and time sharing by the crew before an unusual or emergency situation arises (p. 37)",
+      "addressed_by": []
+    }
+  ]
 }

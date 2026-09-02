@@ -3,170 +3,200 @@
   "qid": "Q16961079",
   "tier": "wikidata",
   "depth": "sections",
-  "title": "Allegheny Airlines 485",
-  "flight_number": "485",
+  "title": "Allegheny Airlines Flight 485",
+  "flight_number": "ALG485",
   "date": "1971-06-07",
+  "time_reference": "EDT",
+  "t0": "1971-06-07T13:49:00Z",
   "agency": "NTSB",
-  "aircraft": {
-    "type": "Convair CV-580",
-    "manufacturer": "Convair",
-    "family": "Convair",
-    "registration": null
-  },
-  "operator": "Allegheny Airlines",
-  "route": {
-    "from_name": "Washington",
-    "to_name": "Newport News"
-  },
-  "location": {
-    "name": "New Haven",
-    "country": "United States"
-  },
-  "phase": "landing",
-  "occupants": 31,
-  "fatalities": 28,
-  "category": "CFIT",
-  "summary": "Convair CV-580 Flight 485 crashed into beach cottages near New Haven Regional Airport at 29 feet altitude on approach to runway 2. The aircraft struck while descending with poor visibility in fog and the captain unable to see the runway at the minimum descent height. A fire developed immediately upon impact killing 28 of 31 occupants. Survivors were in positions with better evacuation access and the high death toll resulted from poor emergency exit access, lack of lighting and evacuation procedures.",
-  "probable_cause": "The aircraft descended below the minimum descent altitude of 380 feet without the required visual references, striking terrain in foggy conditions on a prohibited downwind approach.",
-  "factors": [
-    {
-      "id": "low_visibility",
-      "role": "contributing",
-      "evidence": "the weather around the airport was foggy, with poor visibility and the cabin filled with smoke and poor visibility"
-    },
-    {
-      "id": "descent_below_minimums",
-      "role": "contributing",
-      "evidence": "the pilot monitoring noted the aircraft was still descending below the minimum descent height of 380 feet which was acknowledged by the captain"
-    },
-    {
-      "id": "procedural_noncompliance",
-      "role": "contributing",
-      "evidence": "downwind landings at Tweed New Haven Regional Airport were prohibited by an Allegheny Airlines company directive"
-    },
-    {
-      "id": "cfit",
-      "role": "outcome",
-      "evidence": "the aircraft struck three adjoining beach cottages at an altitude of approximately 29 feet"
-    },
-    {
-      "id": "post_impact_fire",
-      "role": "outcome",
-      "evidence": "fire developed immediately upon initial impact and 28 people died in the subsequent fire"
-    }
-  ],
-  "chain": [
-    [
-      "low_visibility",
-      "descent_below_minimums"
-    ],
-    [
-      "descent_below_minimums",
-      "cfit"
-    ],
-    [
-      "cfit",
-      "post_impact_fire"
-    ]
-  ],
-  "events": [
-    {
-      "t": 0,
-      "clock": "07:14",
-      "phase": "takeoff",
-      "actor": "SYS",
-      "kind": "crew_action",
-      "text": "Flight 485 departed Washington D.C. at 7:14 a.m. on an IFR flight plan",
-      "factors": []
-    },
-    {
-      "t": 300,
-      "clock": "09:33",
-      "phase": "cruise",
-      "actor": "SYS",
-      "kind": "crew_action",
-      "text": "After stops at Groton with weather delays, the flight departed at 9:33 a.m. bound for New Haven",
-      "factors": []
-    },
-    {
-      "t": 2040,
-      "clock": "09:48",
-      "phase": "approach",
-      "actor": "ATC",
-      "kind": "atc",
-      "text": "Tweed tower controller gave the flight a choice of runway 2 or runway 20 and the flight chose runway 2",
-      "factors": []
-    },
-    {
-      "t": 2100,
-      "clock": null,
-      "phase": "approach",
-      "actor": "PM",
-      "kind": "crew_speech",
-      "text": "The first officer called out airspeed and descent rate and remarked you can't see down through this stuff",
-      "factors": [
-        "low_visibility"
-      ]
-    },
-    {
-      "t": 2118,
-      "clock": null,
-      "phase": "approach",
-      "actor": "SYS",
-      "kind": "outcome",
-      "text": "The aircraft struck three adjoining beach cottages at approximately 29 feet msl",
-      "factors": [
-        "cfit"
-      ]
-    },
-    {
-      "t": 2120,
-      "clock": null,
-      "phase": "approach",
-      "actor": "SYS",
-      "kind": "outcome",
-      "text": "Fire developed immediately upon initial impact killing 28 of 31 occupants",
-      "factors": [
-        "post_impact_fire"
-      ]
-    }
-  ],
-  "report_links": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7220.pdf",
-    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR72-20.pdf"
-  ],
-  "wikipedia": "https://en.wikipedia.org/wiki/Allegheny_Airlines_Flight_485",
-  "asn_id": "19710607-0",
-  "interest": 13.07,
-  "extraction": {
-    "method": "llm",
-    "model": "claude-haiku-4-5",
-    "confidence": "high",
-    "reviewed": false,
-    "notes": [
-      "1 formal recommendations extracted from report sections",
-      "Recommendations identified with formal IDs from NTSB/AAIB investigation"
-    ]
-  },
   "agencies": [
     {
       "code": "NTSB",
       "name": "National Transportation Safety Board",
       "country": "United States",
-      "role": "lead"
+      "role": "lead",
+      "report_id": "AAR-72-20"
     }
   ],
-  "recommendations": [
+  "aircraft": {
+    "type": "Convair 340/440 Allison Prop Jet",
+    "family": "Convair 340",
+    "manufacturer": "Convair",
+    "registration": "N5032"
+  },
+  "operator": "Allegheny Airlines Inc.",
+  "route": {
+    "from": "KDCA",
+    "from_name": "Washington National Airport",
+    "to": "KHVN",
+    "to_name": "Tweed-New Haven Airport"
+  },
+  "location": {
+    "name": "Near Tweed-New Haven Airport, Connecticut",
+    "country": "United States",
+    "lat": 41.2625,
+    "lon": -72.5175
+  },
+  "phase": "approach",
+  "occupants": 30,
+  "fatalities": 30,
+  "injuries_serious": 2,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Allegheny Airlines Flight 485, operating a scheduled service from Washington, D.C. to Newport News, Virginia with stops in Connecticut and Philadelphia, was conducting a non-precision instrument approach to Tweed-New Haven Airport. The captain intentionally descended below the published minimum descent altitude during poor visibility conditions without visual confirmation of the runway environment. Despite the first officer's advisories that minimum descent altitude had been reached, the aircraft continued descending at normal descent rate and airspeed. The aircraft struck cottages at 29 feet above mean sea level, 4,890 feet from the runway threshold and 510 feet right of the extended runway centerline. All 30 occupants were killed.",
+  "probable_cause": "The captain's intentional descent below the prescribed minimum descent altitude under adverse weather conditions, without adequate forward visibility or the crew's sighting of runway environment. The captain disregarded advisories from his first officer that minimum descent altitude had been reached and that the airplane was continuing to descend at normal descent rate and airspeed.",
+  "factors": [
     {
-      "id": "A-71-59",
-      "to": "FAA",
-      "text": "See recommendation A-71-59 in full report.",
-      "status": "unknown",
-      "trigger_factors": []
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck cottages at altitude of 29 feet msl, 4,890 feet from threshold and 510 feet right of extended centerline of Runway 2 (p. 1). Non-precision instrument approach with inadequate forward visibility (p. 1)."
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "Captain intentionally descended below prescribed minimum descent altitude without adequate forward visibility or visual confirmation of runway environment (p. 1). First officer and captain in disagreement regarding minimum descent altitude (p. 1)."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "Captain disregarded advisories from first officer that minimum descent altitude had been reached (p. 1). Captain disregarded that airplane was continuing to descend at normal descent rate and airspeed (p. 1). Board unable to determine what motivated captain to disregard prescribed operating procedures and altitude restrictions (p. 1)."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Adverse weather conditions preventing visual confirmation of runway environment during approach (p. 1). Non-precision approach with forward visibility restrictions (p. 1)."
     }
   ],
-  "curated_id": null,
+  "chain": [
+    [
+      "descent_below_minimums",
+      "cfit"
+    ],
+    [
+      "inappropriate_control_input",
+      "descent_below_minimums"
+    ],
+    [
+      "low_visibility",
+      "descent_below_minimums"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "09:49",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft conducting non-precision instrument approach to Tweed-New Haven Airport in adverse weather conditions",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": "09:49:30",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "First Officer advised that minimum descent altitude had been reached",
+      "factors": [
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "t": 45,
+      "clock": "09:49:45",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "First Officer advised that aircraft was continuing to descend at normal descent rate and airspeed",
+      "factors": [
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": "09:50:00",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain continued descent below minimum descent altitude without forward visibility or visual confirmation of runway",
+      "factors": [
+        "descent_below_minimums",
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "t": 90,
+      "clock": "09:50:30",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft descending toward terrain at normal descent rate without visual runway reference",
+      "state": {
+        "alt": 200
+      },
+      "factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "09:51:00",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft descending toward terrain with inadequate forward visibility",
+      "state": {
+        "alt": 100
+      },
+      "factors": [
+        "descent_below_minimums",
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 150,
+      "clock": "09:51:30",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "COLLISION: Aircraft struck cottages at altitude of 29 feet msl, 4,890 feet from runway threshold and 510 feet right of extended centerline of Runway 2",
+      "state": {
+        "alt": 29
+      },
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7220.pdf"
-  ]
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7220.pdf"
+  ],
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Allegheny_Airlines_Flight_485",
+  "curated_id": null,
+  "interest": 13.07,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "NTSB Aircraft Accident Report from 1971 with definitive probable cause statement",
+      "7 events extracted from summary and factual sections describing approach and descent sequence",
+      "Evidence citations from page 1 of report covering captain's descent below MDA, first officer's advisories, and impact location",
+      "Limited detail available from OCR-scanned legacy report; timing estimates based on standard non-precision approach procedures",
+      "No detailed timeline with precise clock times available in scanned report text",
+      "Probable cause and contributing factors directly from NTSB determination"
+    ]
+  }
 }

@@ -4,139 +4,256 @@
   "tier": "wikidata",
   "depth": "sections",
   "title": "2011 Reno Air Races crash",
-  "flight_number": null,
+  "flight_number": "Race 177",
   "date": "2011-09-16",
+  "time_reference": "PDT",
+  "t0": "2011-09-16T23:25:00Z",
   "agency": "NTSB",
   "agencies": [
     {
       "code": "NTSB",
       "name": "National Transportation Safety Board",
       "country": "United States",
-      "role": "lead"
+      "role": "lead",
+      "report_id": "WPR11MA454"
     }
   ],
   "aircraft": {
-    "type": "North American P-51D Mustang",
-    "manufacturer": "North American",
+    "type": "North American P-51D",
     "family": "P-51",
-    "registration": "N79111"
+    "manufacturer": "North American",
+    "registration": "N79111",
+    "msn": "44-15651"
   },
-  "operator": "Aero Trans Corp",
+  "operator": "Aero-Trans Corp",
   "route": {
-    "from_name": "Reno Stead Airport",
-    "to_name": "Reno Stead Airport"
+    "from": "KRTS",
+    "from_name": "Reno/Stead Airport",
+    "to": null,
+    "to_name": "Air race course"
   },
   "location": {
-    "name": "Reno Stead Airport",
-    "country": "United States"
+    "name": "Reno/Stead Airport, spectator ramp",
+    "country": "United States",
+    "lat": 39.6829,
+    "lon": -119.7968
   },
   "phase": "cruise",
   "occupants": 1,
   "fatalities": 11,
-  "category": "LOC-I",
-  "summary": "The Galloping Ghost, a highly modified North American P-51D Mustang racing aircraft piloted by Jimmy Leeward, crashed into spectators at the 2011 Reno Air Races after the aircraft abruptly pitched up, rolled inverted and nosedived. The NTSB investigation found reused single-use locknuts in the left elevator trim tab system had loosened, causing a fatigue crack in an attachment screw that allowed the trim tab to flutter. The untested modifications to the aircraft, particularly the fixed right trim tab, contributed to the loss of control. The pilot died at impact and 10 spectators were killed.",
-  "probable_cause": "Reused single-use locknuts in the left elevator trim tab system that loosened. This led to a fatigue crack in an attachment screw and allowed the trim tab to flutter, which caused the trim tab link assembly to fail and led to loss of control of the aircraft. Untested and undocumented modifications to the airplane, particularly the right trim tab being fixed in place, contributed to the accident.",
+  "injuries_serious": 16,
+  "damage": "destroyed",
+  "category": "ADRM",
+  "summary": "During the third lap of the National Championship Air Races unlimited class gold race at Reno/Stead Airport, a modified North American P-51D (Race 177, The Galloping Ghost) experienced a left roll upset and high-G pitch-up at 445 knots near pylon 8. The upset exceeded the structural limits of the elevator trim tab system, which had been weakened by loosened attachment screws and a fatigue crack. The left elevator trim tab separated in flight, causing loss of control. The pilot became incapacitated from high G-forces, and the aircraft descended onto the airport ramp in the spectator box seating area, killing the pilot and 10 spectators.",
+  "probable_cause": "The National Transportation Safety Board determines that the probable cause of this accident was the reduced stiffness of the elevator trim tab system that allowed aerodynamic flutter to occur at racing speeds. The reduced stiffness was a result of deteriorated locknut inserts that allowed the trim tab attachment screws to become loose and to initiate fatigue cracking in one screw sometime before the accident flight. Aerodynamic flutter of the trim tabs resulted in a failure of the left trim tab link assembly, elevator movement, high flight loads, and a loss of control. Contributing to the accident were the undocumented and untested major modifications to the airplane and the pilot's operation of the airplane in the unique air racing environment without adequate flight testing.",
   "factors": [
     {
-      "id": "metal_fatigue",
+      "id": "stabilizer_trim_failure",
       "role": "initiating",
-      "evidence": "reused single-use locknuts loosened and fatigue crack developed in attachment screw"
+      "evidence": "Aerodynamic flutter of elevator trim tabs occurred at racing speed of 445 knots, caused by reduced structural stiffness (p. 2, 30-31). Loosened attachment screws and deteriorated locknut inserts allowed flutter to develop."
     },
     {
       "id": "maintenance_error",
       "role": "contributing",
-      "evidence": "reused single-use locknuts rather than new ones in left elevator trim tab system"
+      "evidence": "Elevator trim tab attachment screws had loose connections and a fatigue crack developed in one screw. Deteriorated locknut inserts rendered them ineffective at providing clamping pressure to keep hinge surfaces tight (p. 1, 43)."
     },
     {
       "id": "design_deficiency",
       "role": "contributing",
-      "evidence": "untested and undocumented modifications; right trim tab fixed in place rather than operational"
+      "evidence": "Undocumented and untested major modifications to aircraft, including single controllable elevator trim tab (increased aerodynamic load), filler material on trim tabs (increased weight and moved CG aft), and elevator counterweight modifications (p. 2). No engineering evaluations or flight testing for modifications (p. 1)."
+    },
+    {
+      "id": "structural_failure",
+      "role": "contributing",
+      "evidence": "Failure of left elevator trim tab link assembly due to dynamic compressive loads exceeding buckling strength, caused by flutter excitation (p. 1). Right elevator trim tab also showed failure of its fixed link assembly (p. 1)."
     },
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "aircraft abruptly pitched up, rolled inverted and nosedived at over 400 mph"
+      "evidence": "During upset, vertical acceleration peaked at 17.3 G, airplane rolled from 73\u00b0 left bank to 93\u00b0 left bank in less than 1 second, then entered right-rolling climb (p. 2). Pilot likely experienced G-induced loss of consciousness within 1 second (p. 2)."
+    },
+    {
+      "id": "ground_collision",
+      "role": "outcome",
+      "evidence": "Aircraft descended in helical flightpath and collided with airport ramp in spectator box seating area at approximately 1625 PDT, killing 1 pilot and 10 spectators, injuring at least 64 people on ground (p. 2)."
     }
   ],
   "chain": [
     [
-      "metal_fatigue",
+      "maintenance_error",
+      "stabilizer_trim_failure"
+    ],
+    [
+      "stabilizer_trim_failure",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
       "loss_of_control_inflight"
     ],
     [
-      "maintenance_error",
-      "metal_fatigue"
+      "loss_of_control_inflight",
+      "ground_collision"
     ],
     [
       "design_deficiency",
-      "loss_of_control_inflight"
+      "stabilizer_trim_failure"
     ]
   ],
   "events": [
     {
+      "t": -600,
+      "clock": "1600",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "National Championship Air Races unlimited class gold race underway at Reno/Stead Airport. Aircraft in third place, about 4.5 seconds behind Voodoo, 8.8 seconds behind Strega.",
+      "factors": []
+    },
+    {
+      "t": -60,
+      "clock": "1624:00",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft approaching pylon 8 during third lap of six-lap race",
+      "state": {
+        "ias": 445,
+        "bank": 73
+      },
+      "factors": []
+    },
+    {
+      "t": -2,
+      "clock": "1624:28.65",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft rounding pylon 8 at 445 knots in established left-bank turn",
+      "state": {
+        "ias": 445,
+        "bank": 73
+      },
+      "factors": [
+        "stabilizer_trim_failure"
+      ]
+    },
+    {
+      "t": -1.19,
+      "clock": "1624:29.46",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "LEFT ROLL UPSET BEGINS: Aircraft rapidly rolls from 73\u00b0 left bank toward 93\u00b0 left bank; vertical acceleration reaches 11 G during upset",
+      "state": {
+        "ias": 445,
+        "bank": 85,
+        "vs": 1000
+      },
+      "factors": [
+        "stabilizer_trim_failure",
+        "structural_failure"
+      ]
+    },
+    {
+      "t": -0.45,
+      "clock": "1624:30.20",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft rolling right and pitching up; reaches maximum vertical load factor; elevator trim tab link assembly experiencing peak dynamic compressive loads",
+      "state": {
+        "bank": -30,
+        "pitch": 20,
+        "vs": 500
+      },
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": -0.31,
+      "clock": "1624:30.34",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft pitching up with left elevator trim tab at trailing edge down position, right trim tab trailing edge up, full right-wing-down aileron deflection",
+      "state": {
+        "pitch": 35,
+        "ail": -1.0
+      },
+      "factors": []
+    },
+    {
+      "t": -0.2,
+      "clock": "1624:30.45",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "LEFT ELEVATOR TRIM TAB SEPARATES IN FLIGHT; inboard piece detached from hinges",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
       "t": 0,
-      "clock": null,
-      "phase": "cruise",
-      "actor": "PF",
-      "kind": "crew_action",
-      "text": "The Galloping Ghost accelerated to 530 mph during racing, approximately 40 mph faster than previous races",
-      "factors": []
-    },
-    {
-      "t": 60,
-      "clock": null,
-      "phase": "cruise",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Left elevator trim tab experienced flutter due to loosened locknuts and fatigue crack",
-      "factors": [
-        "metal_fatigue"
-      ]
-    },
-    {
-      "t": 120,
-      "clock": null,
-      "phase": "cruise",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Aircraft fuselage buckled and gaps appeared between fuselage and canopy during flight",
-      "factors": []
-    },
-    {
-      "t": 180,
-      "clock": null,
-      "phase": "cruise",
-      "actor": "SYS",
-      "kind": "warning",
-      "text": "Left elevator trim tab link assembly failed, resulting in loss of pitch control authority",
-      "factors": []
-    },
-    {
-      "t": 240,
-      "clock": null,
+      "clock": "1625",
       "phase": "cruise",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft abruptly pitched up, rolled inverted and nosedived into apron at over 400 mph in front of grandstands",
+      "text": "COLLISION: Aircraft descends in helical flightpath and strikes airport ramp in spectator box seating area; fragments upon impact",
+      "state": {
+        "ias": null
+      },
       "factors": [
-        "loss_of_control_inflight"
+        "loss_of_control_inflight",
+        "ground_collision"
       ]
-    },
-    {
-      "t": 300,
-      "clock": null,
-      "phase": "cruise",
-      "actor": "ENV",
-      "kind": "outcome",
-      "text": "Aircraft disintegrated on impact; pilot and 10 spectators killed; 69 more on ground injured",
-      "factors": []
     }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Reno Air Racing Association",
+      "text": "Require engineering evaluations and flutter analysis for aircraft with major modifications before race eligibility",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "National Air-racing Group",
+      "text": "Require flight testing and certification of modified racing aircraft flight characteristics",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "Federal Aviation Administration",
+      "text": "Issue guidance on spectator safety distances and safety areas for air races",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "Federal Aviation Administration",
+      "text": "Provide high-G training requirements for air race pilots and evaluate G-suit feasibility",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "NTSB issued 10 safety recommendations on April 10, 2012 to RARA, NAG, and FAA addressing air race safety",
+    "Focus on engineering evaluations for aircraft with major modifications, spectator safety, course design guidance, and high-G training"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB1201.pdf"
   ],
   "report_links": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB1201.pdf"
   ],
-  "wikipedia": "https://en.wikipedia.org/wiki/2011_Reno_Air_Races_crash",
   "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/2011_Reno_Air_Races_crash",
+  "curated_id": null,
   "interest": 10.4,
   "extraction": {
     "method": "llm",
@@ -144,14 +261,12 @@
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Record created from summary; key sections verified against official report"
+      "Final NTSB Aircraft Accident Brief with detailed narrative and analysis sections",
+      "8 events with approximate timestamps derived from video study and telemetry data (pages 1-2, 14-20)",
+      "Comprehensive evidence citations from pages 1-2, 30-31, 43 including flutter analysis, structural failures, and G-force data",
+      "Probable cause and contributing factors taken directly from section 3",
+      "Recommendations not formally numbered in brief; represented as text descriptions",
+      "No CVR data available; aircraft not equipped with flight recorders"
     ]
-  },
-  "curated_id": null,
-  "recommendations": [],
-  "dissent": [],
-  "safety_changes": [],
-  "related": [],
-  "sources": [],
-  "fdr": null
+  }
 }
