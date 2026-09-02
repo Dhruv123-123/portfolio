@@ -1,0 +1,313 @@
+{
+  "id": "wd_q19569675",
+  "title": "Delta Air Lines 1086",
+  "flight_number": "DL1086",
+  "date": "2015-03-05",
+  "time_reference": "EST",
+  "t0": "2015-03-05T11:02:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-16-02",
+      "report_title": "Runway Excursion During Landing, Delta Air Lines Flight 1086, Boeing MD-88, N909DL, New York, New York, March 5, 2015",
+      "report_date": "2016-03-01",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1602.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing MD-88",
+    "family": "MD-80",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "N909DL",
+    "engines": "Pratt & Whitney JT8D"
+  },
+  "operator": "Delta Air Lines",
+  "route": {
+    "from": "ATL",
+    "from_name": "Hartsfield-Jackson Atlanta International",
+    "to": "LGA",
+    "to_name": "LaGuardia Airport"
+  },
+  "location": {
+    "name": "LaGuardia Airport, Runway 13",
+    "country": "United States",
+    "lat": 40.7769,
+    "lon": -73.874
+  },
+  "phase": "landing",
+  "occupants": 130,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "LOC-G",
+  "summary": "A Boeing MD-88 operated by Delta Air Lines landed on snow-contaminated Runway 13 at LaGuardia Airport in freezing fog and snow conditions. The captain applied excessive reverse thrust immediately after touchdown, reaching engine pressure ratios (EPR) of 2.07 and 1.91 (far exceeding the target of 1.3 for contaminated runways). This high reverse thrust caused rudder blanking, a loss of aerodynamic directional control. The aircraft veered left off the runway, struck the perimeter fence, and slid approximately 940 feet before coming to rest with the nose hanging over Flushing Bay. All 130 occupants evacuated with 29 passengers sustaining minor injuries.",
+  "probable_cause": "The probable cause of this accident was the captain's inability to maintain directional control of the airplane due to his application of excessive reverse thrust, which degraded the effectiveness of the rudder in controlling the airplane's heading. Contributing to the accident were the captain's (1) situational stress resulting from his concern about stopping performance and (2) attentional limitations due to the high workload during the landing, which prevented him from immediately recognizing the use of excessive reverse thrust.",
+  "factors": [
+    {
+      "id": "contaminated_runway",
+      "role": "contributing",
+      "evidence": "Runway 13 was covered with snow; runway appeared all white when aircraft descended out of clouds (p. 50)."
+    },
+    {
+      "id": "excessive_speed",
+      "role": "contributing",
+      "evidence": "Aircraft approached at 140 knots with 133 knots at touchdown, near landing limits for snow conditions (p. 1)."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "initiating",
+      "evidence": "Captain applied excessive reverse thrust immediately after touchdown, reaching maximum EPR of 2.07 on left engine and 1.91 on right engine, far exceeding the 1.3 target for contaminated runways (p. ix-x)."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "High reverse thrust on MD-80 series airplanes causes rudder blanking (disruption of smooth airflow over rudder), resulting in loss of aerodynamic directional control (p. x)."
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "Aircraft veered left off runway 3000 feet from approach end, struck perimeter fence, and slid 940 feet before stopping with nose over Flushing Bay (p. 1)."
+    }
+  ],
+  "chain": [
+    [
+      "contaminated_runway",
+      "excessive_speed"
+    ],
+    [
+      "contaminated_runway",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "design_deficiency"
+    ],
+    [
+      "design_deficiency",
+      "runway_overrun"
+    ]
+  ],
+  "events": [
+    {
+      "t": -60,
+      "clock": "11:01",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight crew completes approach and begins descent toward Runway 13 in instrument meteorological conditions with snow and freezing fog.",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "11:02",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft touched down with main landing gear near runway centerline, aligned with runway, at 133 knots.",
+      "state": {
+        "alt": 0,
+        "ias": 133
+      },
+      "factors": []
+    },
+    {
+      "t": 5,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain applies reverse thrust aggressively immediately after touchdown.",
+      "factors": [
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Reverse thrust EPR reaches 2.07 on left engine and 1.91 on right engine, causing rudder blanking and loss of directional control.",
+      "factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft veers left off runway about 3000 feet from approach end; first officer identifies rudder blanking concern; captain stows reversers.",
+      "factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft left wing strikes perimeter fence at approximately 4100 feet from approach end.",
+      "factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft forced back onto heading parallel with runway by fence and terrain, continues sliding 900 feet along fence.",
+      "factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "t": 240,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft comes to rest with nose hanging over seawall berm above Flushing Bay after sliding approximately 940 feet total from runway departure point.",
+      "factors": [
+        "runway_overrun"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-16-20",
+      "to": "FAA",
+      "text": "Collaborate with Boeing and US operators of MD-80 series airplanes to conduct a study to examine reverse thrust engine pressure ratio (EPR)-related operational data, procedures, and training and identify industry-wide best practices that have been shown to be effective in reliably preventing EPR exceedances to mitigate the risks associated with rudder blanking.",
+      "status": "open",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-16-21",
+      "to": "FAA",
+      "text": "Encourage US operators of MD-80 series airplanes to (1) implement the best practices identified in Safety Recommendation A-16-20 and (2) participate in an industry-wide monitoring program to verify the continued effectiveness of those solutions over time.",
+      "status": "open",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-16-22",
+      "to": "FAA",
+      "text": "Require operators of MD-80 series airplanes to revise operational procedures to include a callout when reverse thrust power exceeds 1.3 engine pressure ratio during landings on a contaminated runway.",
+      "status": "open",
+      "trigger_factors": [
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "id": "A-16-23",
+      "to": "FAA",
+      "text": "Continue to work with industry to develop the technology to outfit transport-category airplanes with equipment and procedures to routinely calculate, record, and convey the airplane braking ability required and/or available to slow or stop the airplane during the landing roll.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-16-24",
+      "to": "FAA",
+      "text": "If the systems described in Safety Recommendation A-16-23 are shown to be technically and operationally feasible, work with operators and the system manufacturers to develop procedures that ensure that airplane-based braking ability results can be readily conveyed to, and easily interpreted by, arriving flight crews, airport operators, air traffic control personnel, and others with a safety need for this information.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-16-25",
+      "to": "FAA",
+      "text": "Require 14 Code of Federal Regulations Part 121 operators to provide (1) guidance that instructs flight attendants to remain at their assigned exits and actively monitor exit availability in all non-normal situations in case an evacuation is necessary and (2) flight attendant training programs that include scenarios requiring crew coordination regarding active monitoring of exit availability and evacuating after a significant event that involves a loss of communications.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-16-26",
+      "to": "FAA",
+      "text": "Develop best practices related to evacuation communication, coordination, and decision-making during emergencies through the establishment of an industry working group and then issue guidance for 14 Code of Federal Regulations Part 121 air carriers to use to improve flight and cabin crew performance during evacuations.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-16-27",
+      "to": "FAA",
+      "text": "Clarify guidance to all 14 Code of Federal Regulations Part 121 air carriers to reinforce the importance of (1) having precise information about the number of passengers aboard an airplane, including lap-held children, and (2) making this information immediately available to emergency responders after an accident to facilitate timely search and rescue operations.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-16-28",
+      "to": "FAA",
+      "text": "For airports certificated under 14 Code of Federal Regulations Part 139, direct airport certification safety inspectors to ensure, before or during the airports' next scheduled annual inspection, that policies and procedures for friction measurement during winter operations are accurately and adequately described in the airports' Airport Certification Manual and Snow and Ice Control Plan.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-16-29",
+      "to": "FAA",
+      "text": "Revise Advisory Circular 150/5200-30D, 'Airport Field Condition Assessments and Winter Operations Safety,' to provide more precise guidance regarding (1) the need to issue notices to airmen (NOTAM) in a timely manner and (2) the specific changes to runway surface conditions that would prompt the issuance of updated NOTAMs.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-16-30",
+      "to": "Boeing",
+      "text": "Collaborate with the Federal Aviation Administration and US operators of MD-80 series airplanes to (1) conduct a study to examine reverse thrust engine pressure ratio (EPR)-related operational data, procedures, and training and (2) identify industry-wide best practices that have been shown to be effective in reliably preventing EPR exceedances to mitigate the risks associated with rudder blanking.",
+      "status": "open",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-16-31",
+      "to": "Boeing",
+      "text": "Explore the possibility of incorporating an alert in MD-80 series airplanes to aid pilots in preventing engine pressure ratio exceedances.",
+      "status": "open",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced training procedures for MD-80 reverse thrust operations on contaminated runways"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1602.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q19569675",
+  "asn_id": "20150305-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Delta_Air_Lines_Flight_1086",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1602.pdf",
+    "https://www.ntsb.gov/investigations/AccidentReports/Pages/AAR1602.aspx"
+  ],
+  "interest": 8.12,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Findings and probable cause extracted from section 3.1-3.2 of final report",
+      "Recommendations A-16-20 through A-16-31 extracted from section 4",
+      "Timeline from executive summary and accident sequence sections",
+      "Key safety issue: excessive reverse thrust on MD-80 series causing rudder blanking"
+    ]
+  }
+}

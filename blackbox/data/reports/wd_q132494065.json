@@ -1,0 +1,203 @@
+{
+  "id": "wd_q132494065",
+  "title": "Delta Air Lines 4819",
+  "flight_number": "DL4819",
+  "date": "2025-02-17",
+  "time_reference": "EST",
+  "t0": "2025-02-17T19:12:43Z",
+  "agency": "TSB",
+  "agencies": [
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "lead",
+      "report_id": "A25O0021",
+      "report_title": "Collision with Terrain During Landing \u2013 Preliminary Report",
+      "report_date": "2025-03-20",
+      "url": "https://www.tsb.gc.ca/sites/default/files/2025-03/A25O0021-Preliminary-Report-ENG.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Bombardier CRJ-900",
+    "family": "CRJ900",
+    "manufacturer": "Bombardier",
+    "registration": "N932XJ",
+    "msn": "15194",
+    "engines": "CF34-8C5"
+  },
+  "operator": "Endeavor Air (dba Delta Connection)",
+  "route": {
+    "from": "KMSP",
+    "from_name": "Minneapolis-Saint Paul International",
+    "to": "CYYZ",
+    "to_name": "Toronto Lester B. Pearson International"
+  },
+  "location": {
+    "name": "Toronto Pearson International Airport, Runway 23",
+    "country": "Canada",
+    "lat": 43.6766,
+    "lon": -79.6306
+  },
+  "phase": "landing",
+  "occupants": 80,
+  "fatalities": 0,
+  "injuries_serious": 2,
+  "damage": "destroyed",
+  "category": "LALT",
+  "summary": "Bombardier CRJ-900 (Endeavor Air/Delta Connection flight DL4819) crashed during landing at Toronto Pearson on 17 February 2025 while attempting to land in gusty wind conditions. The aircraft touched down with a sink rate of 1098 feet per minute (far exceeding the design limit of 720 fpm) and airspeed of 136 knots (below the landing reference speed of 144 knots). The right main landing gear side-stay fractured at touchdown, the landing gear folded inward, the right wing detached, and a fuel fire erupted. The aircraft inverted and slid down the runway. All 80 occupants evacuated successfully; 21 sustained injuries.",
+  "factors": [
+    {
+      "id": "hard_landing",
+      "role": "initiating",
+      "evidence": "Aircraft impacted runway at sink rate of 1098 feet per minute at touchdown (p. 4-5), far exceeding the landing gear design limit of 720 fpm (p. 9)."
+    },
+    {
+      "id": "low_energy_state",
+      "role": "contributing",
+      "evidence": "Aircraft touched down with indicated airspeed of 136 knots, below the landing reference speed (VREF) of 139 knots and recommended speed of 144 knots for gusty conditions (p. 3)."
+    },
+    {
+      "id": "windshear",
+      "role": "latent",
+      "evidence": "Weather at time of landing included winds from 270\u00b0 at 28 knots gusting to 35 knots with blowing snow; approach guidance called for maintaining higher speed and careful power adjustments in gusty wind conditions (p. 5-6)."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "First officer pulled back thrust levers during final descent, reducing N1 from 64% to 43%, contributing to low energy state 5 seconds before touchdown (p. 3)."
+    },
+    {
+      "id": "landing_gear_failure",
+      "role": "contributing",
+      "evidence": "The right main landing gear side-stay fractured at the connection to the landing gear strut upon touchdown; landing gear designed for 720 fpm maximum descent velocity (p. 9-10)."
+    }
+  ],
+  "chain": [
+    [
+      "windshear",
+      "low_energy_state"
+    ],
+    [
+      "low_energy_state",
+      "hard_landing"
+    ],
+    [
+      "hard_landing",
+      "landing_gear_failure"
+    ]
+  ],
+  "events": [
+    {
+      "t": -10,
+      "clock": "19:13",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft begins descent toward Runway 23 in gusty wind conditions (28 knots gusting to 35 knots) with blowing snow.",
+      "state": {
+        "alt": 500,
+        "ias": 150,
+        "hdg": 230
+      },
+      "factors": []
+    },
+    {
+      "t": -3,
+      "clock": "19:12:40",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Enhanced ground proximity warning system sounds sink rate alert at 50 feet AGL, indicating descent rate of 1114 fpm.",
+      "state": {
+        "alt": 50,
+        "ias": 145,
+        "vs": -1114
+      },
+      "factors": []
+    },
+    {
+      "t": -1,
+      "clock": "19:12:42",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft descends through 153 feet with indicated airspeed 136 knots (below VREF), ground speed 111 knots, rate of descent 1072 fpm, bank angle 5.9\u00b0 right.",
+      "state": {
+        "alt": 153,
+        "ias": 136,
+        "vs": -1072,
+        "roll": 5.9
+      },
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "19:12:43",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Right main landing gear side-stay fractures at touchdown; landing gear folds inward; wing root fractures; right wing detaches releasing fuel which ignites.",
+      "state": {
+        "alt": 0,
+        "ias": 136,
+        "vs": -1098,
+        "roll": 7.5,
+        "pitch": 1
+      },
+      "factors": [
+        "hard_landing",
+        "landing_gear_failure"
+      ]
+    },
+    {
+      "t": 5,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft slides inverted down runway; fuselage inverts; tail section detaches; aircraft comes to rest on Runway 15L approximately 75 feet beyond right runway edge near intersection.",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "All 80 occupants evacuate the aircraft safely; 21 sustain injuries including 2 serious injuries.",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.tsb.gc.ca/sites/default/files/2025-03/A25O0021-Preliminary-Report-ENG.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q132494065",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Delta_Connection_Flight_4819",
+  "report_links": [
+    "https://www.tsb.gc.ca/sites/default/files/2025-03/A25O0021-Preliminary-Report-ENG.pdf"
+  ],
+  "interest": 8.5,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Preliminary report without official findings, conclusions, or probable cause",
+      "Timeline extracted from FDR data in report",
+      "Investigation ongoing; final report pending"
+    ]
+  },
+  "probable_cause": "The accident resulted from a hard landing with an excessive sink rate of 1098 feet per minute (far exceeding the design limit of 720 fpm) and insufficient airspeed of 136 knots (below the recommended landing speed of 144 knots for gusty wind conditions). The right main landing gear side-stay fractured at touchdown due to the excessive vertical acceleration (3g), causing the landing gear to collapse, the right wing to detach, and a fuel fire to ignite. Contributing factors included strong and gusty crosswind conditions and inadequate pilot response to the wind hazards during approach."
+}

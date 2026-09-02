@@ -1,0 +1,354 @@
+{
+  "id": "wd_q5165240",
+  "title": "Continental Airlines Flight 1404",
+  "flight_number": "COA1404",
+  "date": "2008-12-20",
+  "time_reference": "MST",
+  "t0": "2008-12-20T18:18:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-10/04",
+      "report_title": "Runway Side Excursion During Attempted Takeoff in Strong and Gusty Crosswind Conditions, Continental Airlines Flight 1404, Boeing 737-500, N18611, Denver, Colorado, December 20, 2008",
+      "report_date": "2010-07-13",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1004.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-524",
+    "family": "737",
+    "manufacturer": "Boeing",
+    "registration": "N18611",
+    "engines": "CFM56-3-B1"
+  },
+  "operator": "Continental Airlines",
+  "route": {
+    "from": "DEN",
+    "from_name": "Denver International Airport",
+    "to": "IAH",
+    "to_name": "George Bush Intercontinental Airport"
+  },
+  "location": {
+    "name": "Denver International Airport, Runway 34R",
+    "country": "United States",
+    "lat": 39.8561,
+    "lon": -104.6737
+  },
+  "phase": "takeoff",
+  "occupants": 115,
+  "fatalities": 0,
+  "injuries_serious": 6,
+  "damage": "substantial",
+  "category": "RE",
+  "summary": "Boeing 737-500 operated by Continental Airlines (flight 1404) attempted to take off from Runway 34R at Denver International Airport on December 20, 2008, during strong and gusty crosswind conditions with mountain wave activity. The aircraft encountered winds exceeding 27 knots (with gusts up to 45 knots), causing the captain to lose directional control during the takeoff roll. The aircraft veered left off the runway after reaching 119 knots, became briefly airborne, and crashed into a 40-foot ravine several hundred yards from the runway. The right engine caught fire and the fuselage was engulfed in flames. All 115 occupants evacuated safely; the captain and 5 passengers sustained serious injuries, and 38 passengers had minor injuries.",
+  "probable_cause": "The probable cause of this accident was the captain's cessation of right rudder input, which was needed to maintain directional control of the airplane, about 4 seconds before the excursion, when the airplane encountered a strong and gusty crosswind that exceeded the captain's training and experience. Contributing to the accident were the following factors: 1) an air traffic control system that did not require or facilitate the dissemination of key, available wind information to the air traffic controllers and pilots; and 2) inadequate crosswind training in the airline industry due to deficient simulator wind gust modeling.",
+  "factors": [
+    {
+      "id": "windshear",
+      "role": "initiating",
+      "evidence": "Mountain wave conditions present at time of accident resulted in strong westerly winds and very localized, intermittent wind gusts as high as 45 knots crossing airplane's path during takeoff ground roll (p. 59)."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Continental's simulator training did not replicate ground-level disturbances and gusting crosswinds; captain was not adequately prepared to respond to changes in heading during this takeoff (p. 60)."
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "ATC did not provide the most adverse available wind information (35-knot crosswind with 40-knot gusts) to pilots; only reported 27-knot winds which did not exceed Continental's 33-knot crosswind guidance (p. 59-60)."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "Boeing did not adequately consider dynamic handling qualities of Boeing 737 during takeoff in strong and gusty crosswinds; enhanced crosswind guidelines were deficient (p. 60)."
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "Aircraft departed left side of runway 34R after reaching 119 knots, became briefly airborne, and crashed in 40-foot ravine several hundred yards from runway (p. ix)."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Right engine caught fire after impact; fuselage engulfed in flames (p. ix)."
+    }
+  ],
+  "chain": [
+    [
+      "windshear",
+      "inadequate_training"
+    ],
+    [
+      "windshear",
+      "atc_communication_error"
+    ],
+    [
+      "inadequate_training",
+      "runway_overrun"
+    ],
+    [
+      "atc_communication_error",
+      "runway_overrun"
+    ],
+    [
+      "runway_overrun",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "18:18",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft cleared for takeoff on runway 34R with 27-knot crosswind component reported by ATC (actual winds 28-35 knots from mountain wave conditions).",
+      "state": {
+        "alt": 0,
+        "ias": 0
+      },
+      "factors": [
+        "windshear"
+      ]
+    },
+    {
+      "t": 15,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain applies nose wheel steering tiller and full right control wheel input in response to airplane veering left.",
+      "factors": []
+    },
+    {
+      "t": 41,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Bumping or rattling sound heard in cockpit as airplane encounters gusty crosswinds.",
+      "factors": []
+    },
+    {
+      "t": 45,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Crew aborts takeoff; captain attempts rejected takeoff procedure.",
+      "factors": []
+    },
+    {
+      "t": 50,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Captain ceases right rudder input about 4 seconds before runway excursion; aircraft loses directional control.",
+      "state": {
+        "ias": 115
+      },
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft reaches 119 knots, veers left off runway 34R centerline, becomes briefly airborne.",
+      "state": {
+        "ias": 119
+      },
+      "factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashes into 40-foot ravine several hundred yards from runway; right engine catches fire; fuselage engulfed in flames.",
+      "factors": [
+        "runway_overrun",
+        "post_impact_fire"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "All 115 occupants successfully evacuate aircraft.",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-10-105",
+      "to": "FAA",
+      "text": "Conduct research into and document the effects of mountain wave and downslope conditions at airports, such as Denver International Airport, that are located downwind of mountainous terrain; identify potential mountain-wave-related hazards to ground operations; and disseminate results to pilots and airport air traffic control personnel to allow for more informed runway selection decisions.",
+      "status": "open",
+      "trigger_factors": [
+        "windshear"
+      ]
+    },
+    {
+      "id": "A-10-106",
+      "to": "FAA",
+      "text": "Archive all low-level windshear alert system (LLWAS) data obtained from Denver International Airport and other airports that experience similar wind conditions and make those data available for additional research and the potential future development of an improved LLWAS algorithm for crosswind and gusty wind alerts on air traffic control tower ribbon display terminals.",
+      "status": "open",
+      "trigger_factors": [
+        "windshear"
+      ]
+    },
+    {
+      "id": "A-10-107",
+      "to": "FAA",
+      "text": "Modify Federal Aviation Administration Order 7110.65 to require air traffic controllers at airports with multiple sources of wind information to provide pilots with the maximum wind component, including gusts, that the flight could encounter.",
+      "status": "open",
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "id": "A-10-108",
+      "to": "FAA",
+      "text": "Review the required documentation for all low-level windshear alert system (LLWAS)-equipped air traffic control towers to ensure that a letter to airmen has been published and is easily accessible describing the location and designation of the remote sensors, the capabilities and limitations of the system, and the availability of current LLWAS remote sensor wind information on the request of a pilot.",
+      "status": "open",
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "id": "A-10-109",
+      "to": "FAA",
+      "text": "Require air traffic control towers to locally develop and implement written runway selection programs that proactively consider current and developing wind conditions and include clearly defined crosswind components, including wind gusts, when considering operational advantage with respect to runway selection.",
+      "status": "open",
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "id": "A-10-110",
+      "to": "FAA",
+      "text": "Gather data on surface winds at a sample of major U.S. airports (including Denver International Airport) when high wind conditions and significant gusts are present and use these data to develop realistic, gusty crosswind profiles for use in pilot simulator training programs.",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": "A-10-111",
+      "to": "FAA",
+      "text": "Require 14 Code of Federal Regulations Part 121, 135, and 91K operators to incorporate the realistic, gusty crosswind profiles developed as a result of Safety Recommendation A-10-110 into their pilot simulator training programs.",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": "A-10-112",
+      "to": "FAA",
+      "text": "Once realistic, gusty crosswind profiles as asked for in Safety Recommendation A-10-110 are developed, develop a standard methodology including pilot-in-the-loop testing, for transport-category airplane manufacturers to establish empirically based, type-specific maximum-gusting-crosswind limitations for transport-category airplanes that account for wind gusts.",
+      "status": "open",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-10-113",
+      "to": "FAA",
+      "text": "Once a methodology as asked for in Safety Recommendation A-10-112 has been developed, require manufacturers of transport-category airplanes to develop type-specific, maximum-crosswind takeoff limitations that account for wind gusts.",
+      "status": "open",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-10-114",
+      "to": "FAA",
+      "text": "Until the actions described in Safety Recommendation A-10-113 are accomplished, require manufacturers of transport-category airplanes to provide operators with interim crosswind takeoff guidelines that account for wind gusts.",
+      "status": "open",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-10-115",
+      "to": "FAA",
+      "text": "Work with U.S. airline operators to review and analyze operational flight data to identify factors that contribute to encounters with excessive winds and use this information to develop and implement additional strategies for reducing the likelihood of wind-related runway excursions.",
+      "status": "open",
+      "trigger_factors": [
+        "windshear"
+      ]
+    },
+    {
+      "id": "A-10-116",
+      "to": "FAA",
+      "text": "Require cockpit crew seats installed in newly manufactured airplanes that were type certificated before 1988 to meet the crashworthiness standards contained in 14 Code of Federal Regulations 25.562.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-10-117",
+      "to": "FAA",
+      "text": "Require operators to perform periodic inspections on the Burns Aerospace model 2501-5 jumpseats for fatigue cracks within the jumpseat structure and replace the jumpseat if fatigue cracks are found.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-10-118",
+      "to": "FAA",
+      "text": "Require that operators of transport-category airplanes that use galley latches or latch plates secured solely by adhesives that may degrade over time modify the latches to include mechanical fasteners.",
+      "status": "open",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Improved wind information sharing between ATC and flight crews",
+    "Enhanced crosswind training protocols in simulator training programs",
+    "Development of gusty crosswind profiles for pilot training"
+  ],
+  "related": [
+    "wd_q5165240"
+  ],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1004.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q5165240",
+  "asn_id": "20081220-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Continental_Airlines_Flight_1404",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1004.pdf",
+    "https://www.ntsb.gov/safety/safety-recs/recletters/A-10-105-118.pdf",
+    "https://data.ntsb.gov/Docket?NTSBNumber=DCA09MA021"
+  ],
+  "interest": 8.02,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Findings and probable cause extracted from section 3.1-3.2 of final report",
+      "Recommendations A-10-105 through A-10-118 extracted from section 4",
+      "Timeline from executive summary and accident sequence sections",
+      "Key safety issues: mountain wave crosswind conditions, ATC wind information dissemination, inadequate simulator training"
+    ]
+  }
+}
