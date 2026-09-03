@@ -1,0 +1,249 @@
+{
+  "id": "wd_q22773990",
+  "qid": "Q22773990",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Reeve Aleutian Airways 8",
+  "flight_number": "RA8",
+  "date": "1983-06-08",
+  "time_reference": "AKD",
+  "t0": "1983-06-08T13:55:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "DCA83AA029",
+      "report_date": "1983"
+    }
+  ],
+  "aircraft": {
+    "type": "Lockheed L-188C Electra",
+    "manufacturer": "Lockheed",
+    "family": "L-188",
+    "registration": "N1968R",
+    "msn": "2007",
+    "engines": "Allison 501-D13"
+  },
+  "operator": "Reeve Aleutian",
+  "route": {
+    "from": "CDB",
+    "from_name": "Cold Bay, Alaska",
+    "to": "SEA",
+    "to_name": "Seattle, Washington"
+  },
+  "location": {
+    "name": "Anchorage, Alaska (diversion from Cold Bay)",
+    "country": "United States"
+  },
+  "phase": "climb",
+  "occupants": 15,
+  "fatalities": 0,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "During cruise climb from Cold Bay to Seattle, the No. 4 propeller separated from the Lockheed L-188C Electra, struck the fuselage creating an eight-foot gash, depressurizing the cabin and jamming flight and engine controls. The crew diverted to Anchorage using unconventional control methods including autopilot and landing gear manipulation. All 15 occupants survived.",
+  "probable_cause": "The propeller on engine No. 4 separated in flight. The exact cause of the propeller separation was not determined since the propeller fell in the ocean during the occurrence.",
+  "factors": [
+    {
+      "id": "uncontained_engine_failure",
+      "role": "initiating",
+      "evidence": "The No. 4 propeller separated from the aircraft and struck the fuselage, creating an eight-foot gash in the lower fuselage (p. 1)"
+    },
+    {
+      "id": "cabin_pressurization_failure",
+      "role": "contributing",
+      "evidence": "The propeller strike resulted in decompression of the cabin (p. 1)"
+    },
+    {
+      "id": "flight_control_failure",
+      "role": "contributing",
+      "evidence": "The flight controls became jammed and the engines would not respond to throttle movement (p. 1)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "contributing",
+      "evidence": "The crew were only able to climb and descend by retracting and extending the landing gear with the No. 2 engine shut down (p. 1)"
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "The aircraft was landed safely at Anchorage with no injuries to the 15 occupants despite severe damage (p. 1)"
+    }
+  ],
+  "chain": [
+    [
+      "uncontained_engine_failure",
+      "cabin_pressurization_failure"
+    ],
+    [
+      "uncontained_engine_failure",
+      "flight_control_failure"
+    ],
+    [
+      "flight_control_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "emergency_landing"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "1324",
+      "phase": "taxi",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft departed Cold Bay Airport for Seattle, Washington",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft climbed through FL190 toward FL250, indicating cruise climb phase",
+      "factors": []
+    },
+    {
+      "t": 600,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Aircrew noted unusual vibration; attempts to isolate the vibration were unsuccessful",
+      "factors": [
+        "uncontained_engine_failure"
+      ]
+    },
+    {
+      "t": 900,
+      "clock": null,
+      "phase": "climb",
+      "actor": "FE",
+      "kind": "crew_action",
+      "text": "Flight engineer went aft to observe the engines and propellers but noted nothing unusual",
+      "factors": []
+    },
+    {
+      "t": 1050,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "Flight attendant went forward to advise captain that nothing was observed",
+      "factors": []
+    },
+    {
+      "t": 1200,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Vibration increased in intensity",
+      "factors": [
+        "uncontained_engine_failure"
+      ]
+    },
+    {
+      "t": 1250,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "No. 4 propeller separated from the aircraft and struck the fuselage, causing major damage to the lower fuselage",
+      "factors": [
+        "uncontained_engine_failure",
+        "cabin_pressurization_failure",
+        "flight_control_failure"
+      ]
+    },
+    {
+      "t": 1260,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Cabin depressurized and flight controls became jammed; engines would not respond to throttle movement",
+      "factors": [
+        "cabin_pressurization_failure",
+        "flight_control_failure"
+      ]
+    },
+    {
+      "t": 1300,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew diverted to Anchorage International Airport and used autopilot for minimal control",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 1350,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew climbed and descended by retracting and extending the landing gear with No. 2 engine shut down to manipulate aircraft attitude",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 1920,
+      "clock": "1355",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "system",
+      "text": "Aircraft landed safely at Anchorage International Airport; veered off runway into a ditch but all occupants survived",
+      "factors": [
+        "emergency_landing"
+      ]
+    },
+    {
+      "t": 1940,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Engines were shut down to decelerate the aircraft",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001214X43286&AKey=1&RType=Final&IType=AA"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Report is brief (5 pages) with limited specific timing information",
+      "Event times t are estimated from departure (1324 AKD) and accident time (1355 AKD)",
+      "Exact cause of propeller separation not determined per report",
+      "No formal safety recommendations found in report",
+      "All events extracted from Analysis section (p. 1) and Findings section (p. 2)"
+    ]
+  },
+  "asn_id": null,
+  "wikipedia": null,
+  "report_links": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001214X43286&AKey=1&RType=Final&IType=AA"
+  ],
+  "interest": 7.81,
+  "curated_id": null
+}

@@ -1,0 +1,282 @@
+{
+  "id": "wd_q4261034",
+  "qid": "Q4261034",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Philippine Airlines 137",
+  "flight_number": "PR137",
+  "date": "1998-03-22",
+  "time_reference": "PHT",
+  "t0": "1998-03-22T19:41:00",
+  "agency": "CAB",
+  "agencies": [
+    {
+      "code": "CAB",
+      "name": "Civil Aeronautics Board",
+      "country": "Philippines",
+      "role": "lead",
+      "report_id": "CAB-RP-C3222",
+      "report_date": "2000-05-30"
+    }
+  ],
+  "aircraft": {
+    "type": "Airbus A320-214",
+    "manufacturer": "Airbus",
+    "family": "A320",
+    "registration": "RP-C3222",
+    "msn": "708",
+    "engines": "CFM56-5-84"
+  },
+  "operator": "Philippine Airlines",
+  "route": {
+    "from": "MNL",
+    "from_name": "Manila",
+    "to": "BCD",
+    "to_name": "Bacolod"
+  },
+  "location": {
+    "name": "Bacolod Airport, Runway 04",
+    "country": "Philippines",
+    "lat": 10.644,
+    "lon": 122.924
+  },
+  "phase": "landing",
+  "occupants": 124,
+  "fatalities": 0,
+  "injuries_serious": 67,
+  "damage": "destroyed",
+  "category": "RE",
+  "summary": "Philippine Airlines Airbus A320 overshot Runway 04 at Bacolod Airport during landing. The captain failed to properly assess the aircraft configuration with the No. 1 engine reverse inoperative, causing asymmetric thrust during landing roll. The aircraft veered off the runway end, crossed a river, and struck buildings before stopping 200 meters away.",
+  "probable_cause": "The inability of the pilot flying to assess properly the situational condition of the aircraft immediately upon touch down with No. 1 engine reverse inoperative, thereby causing an adverse flight condition of extreme differential power application during the landing roll resulting in runway excursion and overshoot. Contributory to this accident is the apparent lack of technical systems knowledge and lack of appreciation of the disastrous effects of misinterpreting provisions and requirements of a Minimum Equipment List (MEL).",
+  "factors": [
+    {
+      "id": "crm_breakdown",
+      "role": "initiating",
+      "evidence": "Pilot failed to properly assess the situational condition of the aircraft immediately upon touchdown with No. 1 engine reverse inoperative; inadequate crew coordination in managing engine configuration (p. 10)"
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Pilot failed to recognize the critical importance of engine configuration change and the need to adjust thrust lever position when reverse thrust was inoperative (p. 10)"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "The pilot did not retard Engine No. 1 thrust lever to idle; it remained in climb power position, while Engine No. 2 was in full reverse (p. 10)"
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "Autothrust system was engaged in SPEED mode; when No. 1 engine reverse was inoperative, it malfunctioned causing differential thrust (p. 10)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "contributing",
+      "evidence": "The significant difference in thrust caused runway excursion; at high speed, rudder and steering could not correct the situation (p. 10)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Apparent lack of technical systems knowledge and lack of appreciation of the disastrous effects of misinterpreting provisions and requirements of MEL (p. 10)"
+    }
+  ],
+  "chain": [
+    [
+      "crm_breakdown",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "mode_confusion"
+    ],
+    [
+      "mode_confusion",
+      "loss_of_control_inflight"
+    ],
+    [
+      "procedural_noncompliance",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "1840",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight PR 137 departed Manila for Bacolod, piloted by Capt. Theodore P. Facun and assisted by First Officer Johansen C. Hernandez",
+      "factors": []
+    },
+    {
+      "t": 600,
+      "clock": "1920",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "PR 137 called Bacolod Approach Control, reported passing FL 260, 55 DME to Bacolod, and requested landing instructions",
+      "factors": []
+    },
+    {
+      "t": 630,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Bacolod Approach instructed flight to descend to FL 90 after passing Iloilo and descend to 3,000 ft for VOR Runway 04 approach",
+      "factors": []
+    },
+    {
+      "t": 1020,
+      "clock": "1937",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Bacolod Tower cleared flight to land at Runway 04; pilot acknowledged clearance",
+      "factors": []
+    },
+    {
+      "t": 1060,
+      "clock": "1941",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft touched down on Runway 04 abeam Distance To Go Marker No. 3; No. 1 engine reverse was inoperative",
+      "factors": [
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 1065,
+      "clock": null,
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First Officer called out 'no spoilers, no reverse, no decel'",
+      "factors": []
+    },
+    {
+      "t": 1070,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Engine No. 1 thrust lever was not retarded to idle and remained in climb power position; Engine No. 2 was set to full reverse thrust",
+      "factors": [
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "t": 1080,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Asymmetric thrust caused significant differential power; aircraft veered to runway right shoulder with intermittent braking",
+      "factors": [
+        "inappropriate_control_input",
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 1120,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Engine No. 2 was moved out of reverse to more than 70 percent N1; aircraft swerved back to runway and exited runway end",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 1140,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft hit embankment, entered housing area with both engines in forward thrust; Engine 1 at climb power, Engine 2 at more than 70 percent N1",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 1180,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft continued through river crossing, hitting cluster of trees and shanties, detached landing gears and engines, stopped 200 meters from Runway 04 end on North 055 degrees East heading",
+      "factors": []
+    },
+    {
+      "t": 1200,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "ATO Crash Fire Rescue Team and Bacolod City Fire Brigade extinguished post-impact fire; rescue evacuation of injured passengers and ground personnel completed",
+      "factors": []
+    }
+  ],
+  "cvr": [
+    {
+      "t": 1065,
+      "clock": null,
+      "speaker": "FO",
+      "text": "no spoilers, no reverse, no decel"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Philippine Airlines",
+      "text": "Airline operators need to ensure initial and recurrent training to ensure safe and efficient operations with sophisticated automation, applying technical knowledge in close coordination with Crew Resource Management (CRM) correctly all the time",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "Philippine Airlines",
+      "text": "Airline Operators must develop a comprehensive monitoring system coupled by a correcting and enhancing system through its Flight Safety Division to ensure that technical system knowledge are well understood and correctly applied",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "Airbus",
+      "text": "Review the Airbus A320 flight technique for landing with one engine reverse inoperative, amend/revise as necessary",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://rvs-bi.de/publications/compendium/incidents_and_accidents/BacolodReport.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report is official CAB Aircraft Accident Report dated 30 May 2000",
+      "Event times t are estimated from departure (1840 PHT) and accident time (1941 PHT)",
+      "Detailed technical analysis section explains autothrust system malfunction",
+      "CVR and FDR data recovered and read out in France",
+      "Three people on ground killed in impact zone",
+      "Events extracted from Analysis section (p. 10-11) and Conclusions section (p. 12)"
+    ]
+  },
+  "asn_id": null,
+  "wikipedia": null,
+  "report_links": [
+    "https://rvs-bi.de/publications/compendium/incidents_and_accidents/BacolodReport.pdf"
+  ],
+  "interest": 8.12,
+  "curated_id": null
+}

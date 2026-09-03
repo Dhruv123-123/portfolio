@@ -1,0 +1,321 @@
+{
+  "id": "wd_q85873206",
+  "qid": "Q85873206",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Pilgrim Airlines Flight 458",
+  "flight_number": "PA458",
+  "date": "1982-02-21",
+  "time_reference": "EST",
+  "t0": "1982-02-21T15:33:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "NTSB-AAR-82-7",
+      "report_date": "1982-07-20"
+    }
+  ],
+  "aircraft": {
+    "type": "deHavilland DHC-6-100",
+    "manufacturer": "deHavilland",
+    "family": "DHC-6",
+    "registration": "N127PM",
+    "msn": "105",
+    "engines": "Pratt & Whitney PT6A-20"
+  },
+  "operator": "Pilgrim Airlines",
+  "route": {
+    "from": "GON",
+    "from_name": "Groton-New London, Connecticut",
+    "to": "BOS",
+    "to_name": "Boston, Massachusetts"
+  },
+  "location": {
+    "name": "Scituate Reservoir, near Providence, Rhode Island",
+    "country": "United States",
+    "lat": 41.791,
+    "lon": -71.637
+  },
+  "phase": "cruise",
+  "occupants": 12,
+  "fatalities": 1,
+  "injuries_serious": 10,
+  "damage": "destroyed",
+  "category": "F-NI",
+  "summary": "Pilgrim Airlines DHC-6-100 experienced an in-flight cockpit fire during cruise at 4,000 feet between Groton and Boston. A leak in the isopropyl alcohol windshield washer/deicer system allowed alcohol to accumulate below the cockpit floor and ignite. The fire spread to the cabin. The crew declared an emergency and diverted to an emergency landing on the ice of the Scituate Reservoir near Providence. One passenger died and eight others were seriously injured.",
+  "probable_cause": "The deficient design of the isopropyl alcohol windshield washer/deicer system and the inadequate maintenance of the system which resulted in an in-flight fire. The ignition source of the fire was not determined.",
+  "factors": [
+    {
+      "id": "design_deficiency",
+      "role": "initiating",
+      "evidence": "The deHavilland DHC-6-100 windshield washer/deicer system design was deficient; a leak in the system allowed isopropyl alcohol to accumulate in the compartment below the cockpit floor (p. 3, p. 7)"
+    },
+    {
+      "id": "known_defect_unresolved",
+      "role": "contributing",
+      "evidence": "Pilgrim Airlines maintenance supervisory personnel did not realize the significance of the repeated maintenance problems in the windshield washer/deicer system and take positive remedial action before the accident (p. 3)"
+    },
+    {
+      "id": "inflight_fire",
+      "role": "contributing",
+      "evidence": "When the tubing disconnected from the pressure side of the pump and the pump was activated, alcohol was sprayed through the compartment where it was ignited; the fire spread from the cockpit to the cabin in flight (p. 3, p. 6)"
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "The crew declared an emergency, diverted to an ice-covered reservoir, and made an emergency water landing; the fire destroyed the aircraft after impact but crew and most passengers survived (p. 2, p. 6)"
+    }
+  ],
+  "chain": [
+    [
+      "design_deficiency",
+      "known_defect_unresolved"
+    ],
+    [
+      "design_deficiency",
+      "inflight_fire"
+    ],
+    [
+      "known_defect_unresolved",
+      "inflight_fire"
+    ],
+    [
+      "inflight_fire",
+      "emergency_landing"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "1501",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 458 blocked out at Groton-New London Airport after crew change with 2 pilots and 10 passengers",
+      "factors": []
+    },
+    {
+      "t": 540,
+      "clock": "1510",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft took off from Groton-New London Airport, cleared to Boston via direct Norwich, V16 airway to Millis, direct Boston at 4,000 feet",
+      "factors": []
+    },
+    {
+      "t": 900,
+      "clock": "1515",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft reached cruise altitude of 4,000 feet, flight proceeding normally under instrument flight rules",
+      "factors": []
+    },
+    {
+      "t": 1440,
+      "clock": "1525",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Approximately 15 minutes after takeoff, flight crew noted light icing on front windshield; First Officer activated the windshield washer/deicer system with isopropyl alcohol deicing agent",
+      "factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "t": 1500,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First Officer moved windshield wiper to check deicing effectiveness, saw little deicing fluid; activated deicer system again for several seconds and smelled alcohol",
+      "factors": []
+    },
+    {
+      "t": 1530,
+      "clock": "1527",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Light gray-white smoke appeared coming up through the opening where the Y-shaped flight control yoke comes through the cockpit floor between the pilots",
+      "factors": [
+        "inflight_fire"
+      ]
+    },
+    {
+      "t": 1560,
+      "clock": "1528:39",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain contacted Quonset TRACON stating 'Quonset-Pilgrim 458 - we need a direct Providence - this is an emergency'",
+      "factors": []
+    },
+    {
+      "t": 1568,
+      "clock": "1528:47",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain responded 'Directly to Providence please - this is an emergency - there is a fire onboard'",
+      "factors": [
+        "inflight_fire"
+      ]
+    },
+    {
+      "t": 1580,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Light smoke changed to heavy, black smoke that filled the cockpit and restricted visibility; crew opened side windows to improve visibility and breathing",
+      "factors": [
+        "inflight_fire"
+      ]
+    },
+    {
+      "t": 1620,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "As aircraft descended below clouds, fire broke out on the cockpit floor between pilots and in the forward left part of the cabin",
+      "factors": [
+        "inflight_fire"
+      ]
+    },
+    {
+      "t": 1980,
+      "clock": "1533",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft made emergency landing on 10- to 12-inch-thick ice of the Scituate Reservoir near Providence, Rhode Island",
+      "factors": [
+        "emergency_landing"
+      ]
+    },
+    {
+      "t": 2010,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Left main landing gear and right wing with engine separated during impact; fire continued after impact and destroyed the cockpit and cabin areas",
+      "factors": [
+        "emergency_landing"
+      ]
+    },
+    {
+      "t": 2040,
+      "clock": null,
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Two pilots and 9 of 10 passengers evacuated from the wreckage; one passenger remained in the aircraft",
+      "factors": []
+    }
+  ],
+  "cvr": [
+    {
+      "t": 1560,
+      "clock": "1528:39",
+      "speaker": "CAPT",
+      "text": "Quonset-Pilgrim 458 - we need a direct Providence - this is an emergency"
+    },
+    {
+      "t": 1568,
+      "clock": "1528:47",
+      "speaker": "CAPT",
+      "text": "Directly to Providence please - this is an emergency - there is a fire onboard"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-82-56",
+      "to": "FAA",
+      "text": "Issue an Airworthiness Directive to require a redesign and modification of isopropyl alcohol windshield deicing systems installed on DHC-6 aircraft to eliminate the potential for alcohol leakage or, if practicable, to require replacement of these systems with the electrically heated windshields offered by the manufacturer as an alternative installation",
+      "status": "unknown",
+      "trigger_factors": [
+        "design_deficiency",
+        "inflight_fire"
+      ]
+    },
+    {
+      "id": "A-82-57",
+      "to": "FAA",
+      "text": "Review and evaluate the design of all isopropyl alcohol windshield deicing system installations on aircraft to verify compliance with applicable Federal Aviation Regulations pertaining to flammable fluid fire protection, and take action to correct any deficiencies found",
+      "status": "unknown",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-82-70",
+      "to": "FAA",
+      "text": "Issue an Operations Bulletin requiring Principal Operations Inspectors of 14 CFR Part 135 operators to determine that oral briefings and safety cards comply with regulations regarding seatbelt usage, that fire extinguishers and safety equipment are accessible with identified locations, and that crews stress importance of PA announcements",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-71",
+      "to": "FAA",
+      "text": "Issue a Maintenance Bulletin calling attention to the need for properly functioning public address systems to assure that safety messages by the crew are understandable in all parts of the cabin",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-72",
+      "to": "FAA",
+      "text": "Amend 14 CFR 135.155 to make the requirements regarding the accessibility and location of fire extinguishers in passenger compartments of aircraft in commuter service at least as stringent as the requirement in 14 CFR 91.193(e)(4)",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-73",
+      "to": "FAA",
+      "text": "Review the training of and the surveillance procedures followed by Federal Aviation Administration inspectors and modify them if necessary to provide increased emphasis on the provisions of 14 CFR Part 135 with regard to occupant safety and safety equipment",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Design and certification changes to windshield washer/deicer systems on turboprop aircraft",
+    "Improved fire protection standards for flammable fluid systems in aircraft",
+    "Enhanced requirements for accessibility and marking of fire extinguishers in commuter aircraft"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8207.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Official NTSB Aircraft Accident Report NTSB-AAR-82-7",
+      "Report adopted July 20, 1982",
+      "Comprehensive investigation with multiple working groups",
+      "Events extracted from History of Flight section (p. 4-5) and Findings section (p. 7-8)",
+      "CVR transcripts from communications with ATC",
+      "Six safety recommendations issued to address design, maintenance, and safety equipment deficiencies",
+      "Engine analysis showed no preimpact damage or malfunction",
+      "Fire destruction of aircraft confirmed by wreckage examination"
+    ]
+  },
+  "asn_id": null,
+  "wikipedia": null,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8207.pdf"
+  ],
+  "interest": 7.56,
+  "curated_id": null
+}

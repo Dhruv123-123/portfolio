@@ -1,0 +1,281 @@
+{
+  "id": "wd_q1134591",
+  "qid": "Q1134591",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Ryanair Flight 4102",
+  "flight_number": "FR4102",
+  "date": "2008-11-10",
+  "time_reference": "UTC",
+  "t0": "2008-11-10T05:30:00Z",
+  "agency": "ANSV",
+  "agencies": [
+    {
+      "code": "ANSV",
+      "name": "Agenzia Nazionale per la Sicurezza del Volo",
+      "country": "Italy",
+      "role": "lead",
+      "report_id": "EI-DYG",
+      "report_date": "2008"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-8AS",
+    "manufacturer": "Boeing",
+    "family": "B737",
+    "registration": "EI-DYG",
+    "msn": "33639",
+    "engines": "CFM56-7B26/3"
+  },
+  "operator": "Ryanair Limited",
+  "route": {
+    "from": "EDFH",
+    "from_name": "Frankfurt Hahn",
+    "to": "LIRA",
+    "to_name": "Rome Ciampino"
+  },
+  "location": {
+    "name": "Rome Ciampino Airport, Runway 15",
+    "country": "Italy",
+    "lat": 41.799,
+    "lon": 12.594
+  },
+  "phase": "approach",
+  "occupants": 172,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "injuries_minor": 8,
+  "damage": "substantial",
+  "category": "ATM",
+  "summary": "Boeing 737-800 encountered a massive flock of starlings during very short final approach to Rome Ciampino. Both engines lost thrust due to bird ingestion. The captain initiated a go-around maneuver but the aircraft descended rapidly due to insufficient thrust. The aircraft hit the runway heavily, causing main left landing gear to detach and left engine nacelle to contact the runway.",
+  "probable_cause": "The accident has been caused by an unexpected loss of both engines thrust as a consequence of a massive bird strike during the go-around manoeuvre. The loss of thrust prevented the aircrew from performing a successful go around and led the aircraft to an unstabilized runway contact.",
+  "factors": [
+    {
+      "id": "bird_strike",
+      "role": "initiating",
+      "evidence": "The aircraft collided with a thick flock of birds (later identified as starlings) during very short final approach with the aircraft fully configured for landing (p. 2)"
+    },
+    {
+      "id": "dual_engine_failure",
+      "role": "contributing",
+      "evidence": "Both engines not delivering the necessary thrust as a consequence of massive bird ingestion with organic residues and bird feathers on stator and rotor blades (p. 2)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "The lack of instructions to flight crew concerning the most suitable procedures to adopt in case of single or multiple bird strikes in the landing phase; absence of specific training in management of surprise and startle effects in critical flight phases (p. 113)"
+    },
+    {
+      "id": "startle_effect",
+      "role": "contributing",
+      "evidence": "The captain's decision to perform a go around when the aircraft was at approximately 7 seconds from touchdown was significantly influenced by lack of training in managing startle effect in critical phases (p. 113)"
+    },
+    {
+      "id": "hard_landing",
+      "role": "outcome",
+      "evidence": "The aircraft descended rapidly with insufficient thrust and hit the runway heavily in proximity of taxiway AC, causing main left landing gear to detach and left engine nacelle to contact runway (p. 2)"
+    }
+  ],
+  "chain": [
+    [
+      "bird_strike",
+      "dual_engine_failure"
+    ],
+    [
+      "dual_engine_failure",
+      "inadequate_training"
+    ],
+    [
+      "dual_engine_failure",
+      "startle_effect"
+    ],
+    [
+      "startle_effect",
+      "hard_landing"
+    ],
+    [
+      "dual_engine_failure",
+      "hard_landing"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "05:30",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Boeing 737-8AS registration EI-DYG (RYR41CH) took off from Frankfurt Hahn (EDFH) with 166 passengers and 6 crew members inbound to Rome Ciampino (LIRA)",
+      "factors": []
+    },
+    {
+      "t": 18600,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft established first radio contact with Ciampino Tower communicating 9 NM from runway and stabilised on ILS for Runway 15",
+      "factors": []
+    },
+    {
+      "t": 18900,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft authorized and configured for approach, proceeding for landing in very short final approach phase",
+      "factors": []
+    },
+    {
+      "t": 19000,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Aircraft collided with a thick flock of starlings during very short final approach",
+      "factors": [
+        "bird_strike"
+      ]
+    },
+    {
+      "t": 19010,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Both engines lost thrust due to bird ingestion; aircraft rapidly lost speed and height",
+      "factors": [
+        "dual_engine_failure"
+      ]
+    },
+    {
+      "t": 19020,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew interrupted landing procedure and initiated go-around manoeuvre with flight attitude set for climbing",
+      "factors": [
+        "startle_effect"
+      ]
+    },
+    {
+      "t": 19040,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "With insufficient thrust available, aircraft rapidly descended toward runway despite go-around attempt",
+      "factors": [
+        "dual_engine_failure"
+      ]
+    },
+    {
+      "t": 19050,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Main landing gear properly extended but aircraft made heavy contact with runway in proximity of taxiway AC",
+      "factors": [
+        "hard_landing"
+      ]
+    },
+    {
+      "t": 19060,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Main left landing gear detached from its anchoring during landing run; lower part of left engine nacelle came into contact with runway",
+      "factors": [
+        "hard_landing"
+      ]
+    },
+    {
+      "t": 19070,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft stopped near Runway threshold 33; fire brigade immediately arrived and sprayed extinguishing foam",
+      "factors": []
+    },
+    {
+      "t": 19100,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain arranged disembarkation of passengers and crew using ladder truck from right front door and right rear slide",
+      "factors": []
+    },
+    {
+      "t": 19200,
+      "clock": null,
+      "phase": "ground",
+      "actor": "GND",
+      "kind": "outcome",
+      "text": "All 172 occupants evacuated safely; 8 persons (6 passengers, 2 crew) with minor injuries transported to hospital",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "ANSV-12/1525-08/1/A/8",
+      "to": "EASA, FAA",
+      "text": "Provide flight crews with guidelines and operational/training procedures based on careful assessment of risks associated with bird encounters or single/multiple bird strikes in approach. Guidelines should include bird strike risk briefing, recommendation to land at lowest engine power if landing is assured rather than go-around when facing bird strike risk, and consideration that engine damages might prevent go-around completion.",
+      "status": "unknown",
+      "trigger_factors": [
+        "bird_strike",
+        "dual_engine_failure",
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": "ANSV-13/1525-08/2/A/18",
+      "to": "EASA, FAA",
+      "text": "Provide indications to adopt specific training for flight crews to cope with surprise and startle effects, particularly in critical phases of flight such as approach and landing. Training should identify unexpected but plausible events, use visualization and conditioning exercises to manage negative consequences.",
+      "status": "unknown",
+      "trigger_factors": [
+        "startle_effect",
+        "inadequate_training"
+      ]
+    }
+  ],
+  "dissent": [
+    {
+      "agency": "AAIU",
+      "position": "The report discusses the startle effect using repeated verbal communication of 'ahi' instead of 'birds ahead'. If crew were able to verbalize bird position clearly, they would not be surprised. The recommendation contradicts the finding.",
+      "topic": "startle effect analysis"
+    }
+  ],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://www.ansv.it/cgi-bin/ita/Report%20EI-DYG.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Official ANSV (Italian Civil Aviation Safety Investigation Authority) final report",
+      "Comprehensive analysis of bird strike event during approach",
+      "Events extracted from History of Flight section (p. 1-2) and Causes section (p. 113)",
+      "CVR data shows crew vocalization of surprise at bird encounter",
+      "Recommendations issued based on training deficiencies identified",
+      "Dissenting comment from AAIU regarding interpretation of startle effect"
+    ]
+  },
+  "asn_id": null,
+  "wikipedia": null,
+  "report_links": [
+    "http://www.ansv.it/cgi-bin/ita/Report%20EI-DYG.pdf"
+  ],
+  "interest": 8.45,
+  "curated_id": null
+}
