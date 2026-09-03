@@ -1,0 +1,231 @@
+{
+ "id": "wd_q65241948",
+ "qid": "Q65241948",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "FedEx Express 1478",
+ "flight_number": "FX1478",
+ "date": "2002-07-26",
+ "agency": "NTSB",
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "USA",
+   "role": "lead"
+  }
+ ],
+ "aircraft": {
+  "type": "Boeing 727-232F",
+  "manufacturer": "Boeing",
+  "family": "727",
+  "registration": "N497FE"
+ },
+ "operator": "FedEx Express",
+ "route": {
+  "from_name": "Memphis",
+  "to_name": "Tallahassee"
+ },
+ "location": {
+  "name": "Tallahassee",
+  "country": "USA"
+ },
+ "phase": "landing",
+ "occupants": 3,
+ "fatalities": 0,
+ "category": "CFIT",
+ "summary": "FedEx Express Flight 1478, a Boeing 727-232F, departed Memphis International Airport at 4:12 AM EDT bound for Tallahassee. After receiving a weather update at 5:24, the flight crew changed from runway 27 to a straight-in visual approach to Runway 09. The crew failed to maintain an appropriate flight path, descending below the glideslope while approaching in darkness with PAPI lights indicating descent below minimums. The aircraft impacted fifty-foot-tall trees 3,650 feet short of the runway and crashed to the ground. All three crew members survived with serious injuries.",
+ "probable_cause": "The flight crew's failure to maintain an appropriate flight path during a visual approach at night resulted in controlled flight into terrain. Contributing factors were crew fatigue, failure to adhere to standard operating procedures, and failure to initiate a go-around when the approach was unstable.",
+ "factors": [
+  {
+   "id": "dark_night",
+   "role": "contributing",
+   "evidence": "a visual approach at night (p. 5-6)"
+  },
+  {
+   "id": "loss_of_situational_awareness",
+   "role": "contributing",
+   "evidence": "all four PAPI lights were red, indicating the aircraft was well below the glideslope (p. 5-6)"
+  },
+  {
+   "id": "procedural_noncompliance",
+   "role": "contributing",
+   "evidence": "did not adhere to standard operating procedures (p. 6)"
+  },
+  {
+   "id": "inadequate_monitoring",
+   "role": "contributing",
+   "evidence": "none of the crew verbalized that all four PAPIs were red (p. 5)"
+  },
+  {
+   "id": "go_around_not_flown",
+   "role": "contributing",
+   "evidence": "the approach was not stabilized by 500 ft above ground level and the flight crew failed to initiate a go-around (p. 5-6)"
+  },
+  {
+   "id": "cfit",
+   "role": "outcome",
+   "evidence": "aircraft impacted 50 ft-high trees located 3,650 ft short of the runway (p. 6)"
+  }
+ ],
+ "chain": [
+  [
+   "dark_night",
+   "loss_of_situational_awareness"
+  ],
+  [
+   "procedural_noncompliance",
+   "loss_of_situational_awareness"
+  ],
+  [
+   "loss_of_situational_awareness",
+   "go_around_not_flown"
+  ],
+  [
+   "go_around_not_flown",
+   "cfit"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "04:12",
+   "phase": "takeoff",
+   "actor": "FO",
+   "kind": "system",
+   "text": "Flight 1478 departed Memphis at 4:12 AM EDT with first officer Frye as the pilot flying. (p. 5)",
+   "factors": []
+  },
+  {
+   "t": 4680,
+   "clock": "05:24",
+   "phase": "descent",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "After receiving a weather update at 5:24, the flight crew changed to a straight-in visual approach to Runway 09 from the previous plan to land on runway 27. (p. 5-6)",
+   "factors": []
+  },
+  {
+   "t": 5040,
+   "clock": "05:30",
+   "phase": "approach",
+   "actor": "FO",
+   "kind": "crew_speech",
+   "text": "First officer Frye said 'Okay, I think I got a runway now' as the aircraft descended toward Tallahassee. (p. 6)",
+   "factors": []
+  },
+  {
+   "t": 5400,
+   "clock": "05:36",
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Flight 1478 was descending through an altitude of 1,000 feet and turning towards runway 09, with PAPI lights displaying one red light and three white lights indicating the aircraft was slightly low on the approach. (p. 6)",
+   "factors": [
+    "loss_of_situational_awareness"
+   ]
+  },
+  {
+   "t": 5430,
+   "clock": "05:36",
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Thirty seconds before impact the aircraft was at 500 feet with all four PAPI lights red, indicating the aircraft was well below the glideslope. (p. 6)",
+   "factors": [
+    "loss_of_situational_awareness"
+   ]
+  },
+  {
+   "t": 5430,
+   "clock": "05:36",
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "warning",
+   "text": "The ground proximity warning system sounded a five hundred feet above ground level warning. (p. 6)",
+   "factors": []
+  },
+  {
+   "t": 5440,
+   "clock": "05:36",
+   "phase": "approach",
+   "actor": "CAPT",
+   "kind": "crew_speech",
+   "text": "Captain Walsh responded 'Stable' to indicate the approach was stable despite the warning. (p. 6)",
+   "factors": [
+    "loss_of_situational_awareness"
+   ]
+  },
+  {
+   "t": 5445,
+   "clock": "05:36",
+   "phase": "approach",
+   "actor": "FO",
+   "kind": "crew_speech",
+   "text": "First officer Frye said 'Gonna have to stay just a little bit higher... I'm gonna lose the end of the runway' indicating awareness of the low position. (p. 6)",
+   "factors": []
+  },
+  {
+   "t": 5460,
+   "clock": "05:37",
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "With the landing gear lowered and the flaps at 30 degrees, the aircraft impacted fifty-foot-high trees located 3,650 feet short of the runway. (p. 7)",
+   "factors": [
+    "cfit"
+   ]
+  },
+  {
+   "t": 5520,
+   "clock": "05:38",
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "The aircraft remained airborne for 1,000 feet and then crashed into the ground sliding 1,100 feet and striking a construction vehicle before coming to a stop. (p. 7)",
+   "factors": [
+    "cfit"
+   ]
+  }
+ ],
+ "report_links": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0402.pdf",
+  "https://data.ntsb.gov/Docket?ProjectID=55303"
+ ],
+ "wikipedia": "https://en.wikipedia.org/wiki/FedEx_Express_Flight_1478",
+ "asn_id": null,
+ "interest": 5.31,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5-20251001",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Extracted from NTSB AAR-04-02; 10 events covering departure through crash; visual approach at night with crew unable to maintain proper flight path",
+   "auto-repair: cvr was null"
+  ]
+ },
+ "curated_id": null,
+ "recommendations": [
+  {
+   "id": null,
+   "to": "FAA",
+   "text": "Enforce strict adherence to stabilized approach procedures, including mandatory go-around execution when approach is not stabilized at 500 feet AGL",
+   "status": "open",
+   "outcome": null,
+   "trigger_factors": [
+    "go_around_not_flown",
+    "cfit"
+   ]
+  }
+ ],
+ "dissent": [],
+ "safety_changes": [],
+ "related": [],
+ "fdr": null,
+ "sources": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0402.pdf",
+  "https://data.ntsb.gov/Docket?ProjectID=55303"
+ ],
+ "cvr": []
+}

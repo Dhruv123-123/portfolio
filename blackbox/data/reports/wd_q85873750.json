@@ -1,0 +1,197 @@
+{
+ "id": "wd_q85873750",
+ "qid": "Q85873750",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "Horizon Air 2658",
+ "flight_number": "Horizon 2658",
+ "date": "1988-04-15",
+ "agency": "NTSB",
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead"
+  }
+ ],
+ "aircraft": {
+  "type": "de Havilland Canada DHC-8-102",
+  "manufacturer": "de Havilland Canada",
+  "family": "DHC-8",
+  "registration": "N819PH"
+ },
+ "operator": "Horizon Air",
+ "route": {
+  "from_name": "Seattle",
+  "to_name": "Spokane"
+ },
+ "location": {
+  "name": "Seattle-Tacoma International Airport",
+  "country": "United States"
+ },
+ "phase": "landing",
+ "occupants": 40,
+ "fatalities": 0,
+ "category": "LOC-G",
+ "summary": "Horizon Air Flight 2658, a de Havilland Dash 8, experienced right engine failure during climb after departure from Seattle. Fire developed in the right engine nacelle and crew diverted back. During landing, all hydraulic systems were disabled by fire leaving crew without braking control. Aircraft veered off runway and collided with ground equipment.",
+ "probable_cause": "Right engine failure with subsequent fire that disabled all hydraulic systems, resulting in loss of braking capability during landing.",
+ "factors": [
+  {
+   "id": "engine_failure",
+   "role": "initiating",
+   "evidence": "the crew noticed a loss of power in the right engine (p. 2-3)"
+  },
+  {
+   "id": "inflight_fire",
+   "role": "contributing",
+   "evidence": "a fire broke out in the right engine nacelle and pieces of the engine cowling fell off (p. 2-3)"
+  },
+  {
+   "id": "hydraulic_failure",
+   "role": "contributing",
+   "evidence": "the fire disabled all hydraulic systems rendering all control devices nonfunctional (p. 3)"
+  },
+  {
+   "id": "flight_control_failure",
+   "role": "outcome",
+   "evidence": "the aircraft veered left off the runway and collided with several baggage carts and jetways (p. 3)"
+  },
+  {
+   "id": "runway_overrun",
+   "role": "outcome",
+   "evidence": "the aircraft collided with baggage carts and jetways after veering off runway (p. 6-7)"
+  },
+  {
+   "id": "post_impact_fire",
+   "role": "outcome",
+   "evidence": "caught fire after impact and was destroyed"
+  },
+  {
+   "id": "emergency_landing",
+   "role": "outcome",
+   "evidence": "all 40 occupants survived the crash (p. 4)"
+  }
+ ],
+ "chain": [
+  [
+   "engine_failure",
+   "inflight_fire"
+  ],
+  [
+   "inflight_fire",
+   "hydraulic_failure"
+  ],
+  [
+   "hydraulic_failure",
+   "flight_control_failure"
+  ],
+  [
+   "flight_control_failure",
+   "runway_overrun"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "18:25",
+   "phase": "takeoff",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "The aircraft was clear for takeoff at 18:25 and Captain Carlson began the takeoff run soon after. (p. 2)"
+  },
+  {
+   "t": 60,
+   "clock": "18:28",
+   "phase": "initial_climb",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "A passenger noticed a fluid leak from the right engine and the crew noticed a loss of power in the right engine. (p. 2)"
+  },
+  {
+   "t": 120,
+   "clock": "18:29",
+   "phase": "initial_climb",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "The captain increased the throttle levers to maximum and crew declared an emergency and turned back to the airport. (p. 2-3)"
+  },
+  {
+   "t": 240,
+   "clock": "18:30",
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "The First Officer observed a flash of light and fire in the right engine nacelle. (p. 3)"
+  },
+  {
+   "t": 300,
+   "clock": "18:31",
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "At 100 feet off the ground, the crew noticed that the controls were acting slower than usual. (p. 3)"
+  },
+  {
+   "t": 330,
+   "clock": "18:31:53",
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Flight 2658 landed on Runway 16L and immediately began to veer to the left of the runway centerline. (p. 3)"
+  },
+  {
+   "t": 360,
+   "clock": null,
+   "phase": "landing",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "The captain attempted to use nose wheel steering, differential braking and the rudder but discovered no directional control. (p. 3)"
+  },
+  {
+   "t": 390,
+   "clock": null,
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "The aircraft collided with several baggage carts and jetways, caught fire, and all 40 occupants survived. (p. 3-4)"
+  }
+ ],
+ "report_links": [
+  "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR89-02.pdf"
+ ],
+ "wikipedia": "https://en.wikipedia.org/wiki/Horizon_Air_Flight_2658",
+ "asn_id": null,
+ "interest": 5.5,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5-20251001",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Extracted from NTSB AAR-89-02; 8 events from key sections covering engine failure through crash sequence",
+   "auto-repair: cvr was null"
+  ]
+ },
+ "curated_id": null,
+ "recommendations": [
+  {
+   "id": null,
+   "to": null,
+   "text": "Ensure robust documentation and monitoring of engine maintenance schedules to prevent premature engine failures",
+   "status": "open",
+   "outcome": null,
+   "trigger_factors": [
+    "engine_failure"
+   ]
+  }
+ ],
+ "dissent": [],
+ "safety_changes": [],
+ "related": [],
+ "fdr": null,
+ "sources": [
+  "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR89-02.pdf"
+ ],
+ "cvr": []
+}
