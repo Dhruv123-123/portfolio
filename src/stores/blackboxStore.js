@@ -14,7 +14,8 @@ export const useBlackboxStore = defineStore('blackbox', {
     sound: false,
     crt: false,
     atlasPlayRequest: 0, // timestamp: the atlas should start playing the century
-    atlasRequiemRequest: 0
+    atlasRequiemRequest: 0,
+    replayAutoplay: 0 // timestamp: the replay should start playing in cinematic mode
   }),
   actions: {
     openTimeline(id) {

@@ -145,6 +145,14 @@ export class ReplayAudio {
     o.stop(t0 + dur + 0.02)
   }
 
+  /** Tape rewind: a short descending sweep with a little noise. */
+  rewind() {
+    if (!this.enabled) return
+    const t = this.ctx.currentTime
+    this._tone(1400, t, 0.28, { type: 'sawtooth', gain: 0.05, glideTo: 180 })
+    this._tone(700, t + 0.03, 0.22, { type: 'square', gain: 0.02, glideTo: 90 })
+  }
+
   /** Airbus cavalry charge on AP disconnect. */
   cavalryCharge() {
     if (!this.enabled) return

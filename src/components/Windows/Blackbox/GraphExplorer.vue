@@ -63,6 +63,8 @@
         <label><input type="checkbox" v-model="showChain" /> causal edges</label>
         <label><input type="checkbox" v-model="flowOn" /> flow</label>
         <label title="Draw the graph as a star chart: factors are stars, causal chains are constellation lines"><input type="checkbox" v-model="skyOn" /> constellation</label>
+        <label title="Orrery: each initiating factor becomes a sun and the accidents it started orbit it"><input type="checkbox" v-model="orreryOn" /> orrery</label>
+        <label title="Knowledge as of a year: only accidents up to then, and the factor statistics they alone support">as of <input type="range" :min="yearBounds[0]" :max="yearBounds[1]" v-model.number="asOfYear" class="ge-year" /> <b>{{ asOfYear }}</b></label>
         <label><input type="checkbox" v-model="focusMode" /> focus on selection</label>
         <label><input type="checkbox" v-model="labelsAlways" /> all labels</label>
         <label>min factor use <input type="range" min="1" max="12" v-model.number="minCount" /> {{ minCount }}</label>
@@ -107,6 +109,14 @@
           <a v-for="(l, i) in (selectedRecord.report_links || []).filter((x) => x.startsWith('http'))" :key="i" :href="l" target="_blank" rel="noopener" class="bb-link" :title="l">report link {{ i + 1 }}</a>
         </div>
         <p class="ge-summary">{{ selectedRecord.summary }}</p>
+        <template v-if="selectedRecord.audio && selectedRecord.audio.length">
+          <div class="bb-h">Recordings</div>
+          <div v-for="(a, i) in uniqueAudio(selectedRecord.audio)" :key="i" class="ge-audio">
+            <div class="ge-audio-title"><span class="ge-audio-kind">{{ a.kind === 'cvr' ? 'CVR' : a.kind === 'atc' ? 'ATC' : 'AUDIO' }}</span> {{ a.title }}</div>
+            <audio controls preload="none" :src="a.url" class="ge-audio-el"></audio>
+            <div class="bb-muted ge-src"><a :href="a.page" target="_blank" rel="noopener" class="bb-link">Wikimedia Commons</a> · {{ a.license }}</div>
+          </div>
+        </template>
         <div class="bb-h">Causal chain</div>
         <div class="ge-chain">
           <div v-for="(edge, i) in selectedRecord.chain" :key="i" class="ge-chain-row">
@@ -208,6 +218,12 @@ const tooltip = ref(null)
 const showChain = ref(true)
 const flowOn = ref(true)
 const skyOn = ref(false)
+const orreryOn = ref(false)
+const yearBounds = computed(() => {
+  const ys = props.graph.records.map((r) => +r.date.slice(0, 4)).filter(Boolean)
+  return [Math.min(...ys), Math.max(...ys)]
+})
+const asOfYear = ref(2100)
 const focusMode = ref(false)
 const labelsAlways = ref(false)
 const minCount = ref(2)
@@ -248,6 +264,17 @@ const factorColor = (id) => {
   return f ? props.graph.taxonomy.categories[f.category]?.color || '#888' : '#888'
 }
 const factorLabel = (id) => props.index.factorById[id]?.label || id
+function uniqueAudio(list) {
+  const pref = { ogg: 0, oga: 0, mp3: 1, opus: 2, webm: 3, wav: 4, flac: 5 }
+  const byBase = {}
+  for (const a of list || []) {
+    const base = a.title.replace(/\.[a-z0-9]+$/i, '')
+    const ext = (a.title.split('.').pop() || '').toLowerCase()
+    if (!(ext in pref)) continue
+    if (!byBase[base] || pref[ext] < pref[byBase[base].ext]) byBase[base] = { ...a, ext }
+  }
+  return Object.values(byBase)
+}
 const categoryLabel = (c) => props.graph.taxonomy.categories[c]?.label || c
 const phaseLabel = (p) => (p || '').replace(/_/g, ' ')
 const factorCount = (id) => props.index.stats.factor_counts[id] || 0
@@ -261,7 +288,7 @@ const accidentsWithFactor = (id) =>
 
 function visibleAccidents() {
   // Curated records always; when the catalog is loaded, add the current query's top catalog hits.
-  const base = props.graph.records.slice()
+  const base = props.graph.records.filter((r) => +r.date.slice(0, 4) <= asOfYear.value)
   if (props.index.stats.catalog > 0 && results.value.length) {
     const curated = new Set(base.map((r) => r.id))
     let added = 0
@@ -276,7 +303,14 @@ function visibleAccidents() {
 }
 
 function buildGraphData() {
-  const counts = props.index.stats.factor_counts
+  let counts = props.index.stats.factor_counts
+  if (asOfYear.value < yearBounds.value[1]) {
+    counts = {}
+    for (const r of props.graph.records) {
+      if (+r.date.slice(0, 4) > asOfYear.value) continue
+      for (const f of r.factors) counts[f.id] = (counts[f.id] || 0) + 1
+    }
+  }
   const selected = store.selectedId
   const focusRec = focusMode.value && selected ? props.index.byId[selected] : null
   const focusFactors = focusRec ? new Set(focusRec.factors.map((f) => f.id)) : null
@@ -309,7 +343,22 @@ function refreshGraph() {
   fg.showChain = showChain.value
   fg.labelsAlways = labelsAlways.value
   applyHighlight()
-  setTimeout(() => fg && fg.fit(), 600)
+  if (orreryOn.value) applyOrrery()
+  else setTimeout(() => fg && fg.fit(), 600)
+}
+/** Each accident orbits its initiating factor (first chain source, else first initiating-role factor). */
+function applyOrrery() {
+  if (!fg) return
+  if (!orreryOn.value) { fg.setOrrery(null); return }
+  const assign = new Map()
+  for (const r of visibleAccidents()) {
+    let fid = null
+    const init = r.factors.find((f) => f.role === 'initiating')
+    if (init) fid = init.id
+    else if (r.chain && r.chain.length) fid = r.chain[0][0]
+    if (fid && fg.nodeById[fid] && fg.nodeById[r.id]) assign.set(r.id, fid)
+  }
+  fg.setOrrery(assign)
 }
 
 function applyHighlight() {
@@ -442,7 +491,8 @@ watch([showChain, labelsAlways, flowOn, skyOn], () => {
   flowOn.value || skyOn.value ? fg.startFlow() : fg.stopFlow()
   fg.draw()
 })
-watch([minCount, focusMode], refreshGraph)
+watch([minCount, focusMode, asOfYear], refreshGraph)
+watch(orreryOn, (on) => { if (!on) { fg && fg.setOrrery(null); setTimeout(() => fg && fg.fit(), 700) } else applyOrrery() })
 watch(() => store.selectedId, () => {
   if (focusMode.value) refreshGraph()
   else applyHighlight()
@@ -468,6 +518,7 @@ watch(() => props.active, async (a) => {
 })
 
 onMounted(() => {
+  asOfYear.value = yearBounds.value[1]
   fg = new ForceGraph(canvasRef.value, {
     onHover: (n, p) => {
       if (!n) { tooltip.value = null; return }
@@ -516,6 +567,10 @@ onBeforeUnmount(() => {
 .tier-ntsb { border-color: #55627d; color: #aab6cf; }
 .tier-wikidata { border-color: #6d7fa3; color: #c6d2ea; }
 .tier-curated { border-color: var(--bb-accent); color: var(--bb-accent); }
+.ge-audio { margin-bottom: 6px; }
+.ge-audio-title { font-size: 11px; color: #d3ddf0; }
+.ge-audio-kind { font-size: 9px; font-weight: 700; color: #111; background: var(--bb-accent); padding: 0 4px; border-radius: 2px; margin-right: 4px; }
+.ge-audio-el { width: 100%; height: 30px; margin-top: 3px; }
 .ge-readmore { display: inline-block; color: var(--bb-accent); font-weight: 700; text-decoration: none; border: 1px solid var(--bb-accent); border-radius: 3px; padding: 3px 8px; font-size: 11px; margin: 6px 0 4px; }
 .ge-readmore:hover { background: var(--bb-accent); color: #111; }
 .ge-sp { font-size: 9px; color: #ffd166; margin-left: 6px; letter-spacing: 0.04em; cursor: help; }
@@ -533,6 +588,7 @@ onBeforeUnmount(() => {
 .ge-toolbar { position: absolute; top: 6px; left: 8px; right: 8px; z-index: 2; display: flex; gap: 12px; align-items: center; font-size: 10px; color: var(--bb-muted); flex-wrap: wrap; }
 .ge-toolbar label { display: flex; align-items: center; gap: 4px; }
 .ge-toolbar input[type='range'] { width: 70px; }
+.ge-toolbar .ge-year { width: 90px; accent-color: #ffbf00; }
 .ge-legend { margin-left: auto; display: flex; gap: 6px; align-items: center; }
 .ge-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
 .ge-diamond { width: 8px; height: 8px; background: #e4572e; transform: rotate(45deg); display: inline-block; }

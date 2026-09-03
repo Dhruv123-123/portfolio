@@ -85,6 +85,12 @@
         <div class="st-label">{{ rec.title }} · {{ rec.date.slice(0, 4) }}</div>
         <h2 class="st-h2">{{ rec.agencies?.find((a) => a.role === 'lead')?.name || rec.agency }}</h2>
         <div class="st-sub">investigated · {{ (rec.recommendations || []).length }} recommendations · {{ rec.factors.length }} factors in the graph</div>
+        <div v-if="rec.audio && rec.audio.length" class="st-audio" @click.stop>
+          <div v-for="(a, i) in rec.audio.slice(0, 2)" :key="i" class="st-audio-item">
+            <span class="st-audio-kind">{{ a.kind === 'cvr' ? 'CVR' : a.kind === 'atc' ? 'ATC' : 'AUDIO' }}</span> {{ a.title }}
+            <audio controls preload="none" :src="a.url" class="st-audio-el"></audio>
+          </div>
+        </div>
         <a :href="wikipediaUrl(rec)" target="_blank" rel="noopener" class="st-readmore" @click.stop>{{ hasWikipediaArticle(rec) ? 'Read more on Wikipedia ↗' : 'Search Wikipedia for this accident ↗' }}</a>
         <div class="st-end-actions" @click.stop>
           <button class="bb-btn" @click="go('graph')">Open in graph ▸</button>
@@ -272,6 +278,7 @@ function onKey(e) {
 
 // Background: drifting embers and a horizon that tilts with the current beat's attitude
 let particles = []
+let lastAlt = 20000
 function drawBg(ts) {
   const cv = bgRef.value
   if (!cv) return
@@ -289,6 +296,14 @@ function drawBg(ts) {
   const st = s.kind === 'beat' && s.ev.state ? s.ev.state : null
   const pitch = st && typeof st.pitch === 'number' ? st.pitch : 0
   const roll = st && typeof st.roll === 'number' ? st.roll : 0
+  // altitude paints the sky: high is deep and starry, low is warm ground glow
+  if (st && typeof st.alt === 'number') lastAlt = st.alt
+  const altK = Math.min(1, Math.max(0, lastAlt / 40000))
+  const skyGrad = ctx.createLinearGradient(0, 0, 0, h)
+  skyGrad.addColorStop(0, `rgba(${Math.round(4 + 10 * (1 - altK))},${Math.round(6 + 14 * (1 - altK))},${Math.round(12 + 40 * (1 - altK))},1)`)
+  skyGrad.addColorStop(1, `rgba(${Math.round(10 + 30 * (1 - altK))},${Math.round(8 + 14 * (1 - altK))},${Math.round(6 + 4 * (1 - altK))},1)`)
+  ctx.fillStyle = skyGrad
+  ctx.fillRect(0, 0, w, h)
   // horizon
   ctx.save()
   ctx.translate(w / 2, h * 0.62)
@@ -311,7 +326,7 @@ function drawBg(ts) {
     p.y -= p.v * dt
     p.x += Math.sin(ts / 1700 + p.a * 9) * 0.15
     if (p.y < -4) { p.y = h + 4; p.x = Math.random() * w }
-    ctx.fillStyle = `rgba(255,${180 + Math.floor(p.a * 60)},120,${0.15 + p.a * 0.35})`
+    ctx.fillStyle = altK > 0.5 ? `rgba(220,230,255,${0.15 + p.a * 0.5})` : `rgba(255,${180 + Math.floor(p.a * 60)},120,${0.15 + p.a * 0.35})`
     ctx.beginPath(); ctx.arc(p.x, p.y, p.s, 0, Math.PI * 2); ctx.fill()
   }
 }
@@ -375,6 +390,10 @@ onBeforeUnmount(() => {
 .st-list { display: flex; flex-direction: column; gap: 10px; }
 .st-list-item { font-size: 15px; line-height: 1.45; animation: st-in 0.7s ease-out both; display: flex; gap: 12px; align-items: baseline; }
 .st-list-head { font-family: Consolas, monospace; font-size: 11px; color: var(--bb-accent); white-space: nowrap; min-width: 60px; }
+.st-audio { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; cursor: default; }
+.st-audio-item { font-size: 12px; color: #d3ddf0; }
+.st-audio-kind { font-size: 9px; font-weight: 700; color: #111; background: var(--bb-accent); padding: 0 4px; border-radius: 2px; margin-right: 4px; }
+.st-audio-el { display: block; width: min(420px, 100%); height: 30px; margin-top: 3px; }
 .st-readmore { display: inline-block; align-self: flex-start; color: var(--bb-accent); font-weight: 700; text-decoration: none; border: 1px solid var(--bb-accent); border-radius: 3px; padding: 8px 14px; font-size: 14px; margin-top: 12px; cursor: pointer; }
 .st-readmore:hover { background: var(--bb-accent); color: #111; }
 .st-end-actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; cursor: default; }

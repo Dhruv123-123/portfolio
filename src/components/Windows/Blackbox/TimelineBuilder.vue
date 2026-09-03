@@ -80,6 +80,14 @@
               </div>
             </div>
           </div>
+          <div class="tl-side-section" v-if="rec.audio && rec.audio.length">
+            <div class="bb-h">Recordings</div>
+            <div v-for="(a, i) in uniqueAudio(rec.audio)" :key="i" class="tl-audio">
+              <div class="tl-audio-title"><span class="tl-audio-kind">{{ a.kind === 'cvr' ? 'CVR' : a.kind === 'atc' ? 'ATC' : 'AUDIO' }}</span> {{ a.title }}</div>
+              <audio controls preload="none" :src="a.url" class="tl-audio-el"></audio>
+              <div class="bb-muted tl-audio-credit"><a :href="a.page" target="_blank" rel="noopener" class="bb-link">Wikimedia Commons</a> · {{ a.license }}<span v-if="rec.fdr"> · <span class="bb-link" @click="store.openReplay(rec.id)">play it in sync with the replay ▸</span></span></div>
+            </div>
+          </div>
           <div class="tl-side-section">
             <div class="bb-h">Recommendations ({{ (rec.recommendations || []).length }})</div>
             <div class="tl-recs bb-scroll">
@@ -216,6 +224,17 @@ const store = useBlackboxStore()
 
 const filter = ref('')
 const mode = ref('chain')
+function uniqueAudio(list) {
+  const pref = { ogg: 0, oga: 0, mp3: 1, opus: 2, webm: 3, wav: 4, flac: 5 }
+  const byBase = {}
+  for (const a of list || []) {
+    const base = a.title.replace(/\.[a-z0-9]+$/i, '')
+    const ext = (a.title.split('.').pop() || '').toLowerCase()
+    if (!(ext in pref)) continue
+    if (!byBase[base] || pref[ext] < pref[byBase[base].ext]) byBase[base] = { ...a, ext }
+  }
+  return Object.values(byBase)
+}
 const hoverFactors = ref([])
 const activeEvent = ref(-1)
 const eventsEl = ref(null)
@@ -496,6 +515,11 @@ watch(rec, stopSeq)
 .tl-fdr { font-size: 8px; color: var(--bb-accent-2); border: 1px solid var(--bb-accent-2); border-radius: 2px; padding: 0 2px; }
 .tl-dissent { color: #ff9f43; font-weight: 700; }
 .tl-main { position: relative;  display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.tl-audio { margin-bottom: 8px; }
+.tl-audio-title { font-size: 11px; color: #d3ddf0; }
+.tl-audio-kind { font-size: 9px; font-weight: 700; color: #111; background: var(--bb-accent); padding: 0 4px; border-radius: 2px; margin-right: 4px; }
+.tl-audio-el { width: 100%; height: 30px; margin-top: 3px; }
+.tl-audio-credit { font-size: 9px; }
 .tl-live { position: absolute; right: 18px; top: 58px; z-index: 5; background: rgba(4,6,12,0.85); border: 1px solid var(--bb-accent); border-radius: 6px; padding: 8px 14px; text-align: right; cursor: pointer; box-shadow: 0 8px 30px rgba(0,0,0,0.6); animation: tl-live-in 0.4s ease-out; }
 .tl-live-clock { font-family: Consolas, monospace; font-size: 34px; color: #fff; letter-spacing: 0.08em; line-height: 1; text-shadow: 0 0 14px rgba(255,191,0,0.5); }
 .tl-live-sub { font-size: 10px; color: var(--bb-muted); margin-top: 4px; letter-spacing: 0.08em; }

@@ -26,6 +26,7 @@ export class ForceGraph {
     this.labelsAlways = false
     this.flow = true // animated particles travelling along causal edges
     this.sky = false // constellation mode: nodes as twinkling stars, chains as constellation lines
+    this.orrery = null // { suns: Map factorId -> {node, accidents[]} } when the orrery layout is active
     this.active = true // false while the tab is hidden: stops the ambient loop
     this._flowRaf = null
     this._flowT = 0
@@ -44,6 +45,8 @@ export class ForceGraph {
       return {
         vx: 0,
         vy: 0,
+        fixed: false,
+        orbit: null,
         x: old ? old.x : Math.cos(angle) * radius,
         y: old ? old.y : Math.sin(angle) * radius,
         ...n
@@ -65,13 +68,14 @@ export class ForceGraph {
 
   /** Ambient animation: particles flowing along chain edges while the graph is visible. */
   startFlow() {
-    if (this._flowRaf || !(this.flow || this.sky)) return
+    if (this._flowRaf || !(this.flow || this.sky || this.orrery)) return
     const loop = (ts) => {
       this._flowRaf = null
-      if (!(this.flow || this.sky) || !this.active) return
+      if (!(this.flow || this.sky || this.orrery) || !this.active) return
       const dt = this._flowLast ? Math.min(0.1, (ts - this._flowLast) / 1000) : 0
       this._flowLast = ts
       this._flowT += dt
+      if (this.orrery) this._tickOrrery()
       if (!this.running) this.draw()
       this._flowRaf = requestAnimationFrame(loop)
     }
@@ -148,7 +152,54 @@ export class ForceGraph {
     this.draw()
   }
 
+  /** Orrery: initiating factors are suns on a spiral; their accidents orbit them. */
+  setOrrery(assign) {
+    // assign: Map accidentId -> factorId (or null to leave the orrery)
+    if (!assign) { this.orrery = null; this.reheat(0.8); return }
+    const suns = new Map()
+    for (const [aid, fid] of assign) {
+      const f = this.nodeById[fid]
+      const a = this.nodeById[aid]
+      if (!f || !a) continue
+      if (!suns.has(fid)) suns.set(fid, { node: f, accidents: [] })
+      suns.get(fid).accidents.push(a)
+    }
+    const list = [...suns.values()].sort((x, y) => y.accidents.length - x.accidents.length)
+    list.forEach((sun, i) => {
+      const ang = i * 2.399963 // golden angle
+      const r = 60 + 70 * Math.sqrt(i)
+      sun.cx = Math.cos(ang) * r * 2.2
+      sun.cy = Math.sin(ang) * r * 2.2
+      sun.node.fixed = true
+      sun.node.x = sun.cx
+      sun.node.y = sun.cy
+      sun.accidents.forEach((a, j) => {
+        a.fixed = true
+        a.orbit = { sun, r: 22 + j * 9 + Math.min(40, Math.sqrt((a.r || 4)) * 6), phase: Math.random() * Math.PI * 2, speed: 0.25 / (1 + j * 0.35) }
+      })
+    })
+    // factors that are not suns drift to the rim, unfixed
+    for (const n of this.nodes) if (!suns.has(n.id) && n.kind === 'factor') { n.fixed = false }
+    this.orrery = { suns }
+    this.reheat(0.3)
+    this.startFlow()
+    this.fit()
+  }
+
+  _tickOrrery() {
+    const t = this._flowT
+    for (const n of this.nodes) {
+      if (n.orbit) {
+        const o = n.orbit
+        const a = o.phase + t * o.speed
+        n.x = o.sun.cx + Math.cos(a) * o.r
+        n.y = o.sun.cy + Math.sin(a) * o.r * 0.55
+      }
+    }
+  }
+
   tick() {
+    if (this.orrery) this._tickOrrery()
     const nodes = this.nodes
     const alpha = this.alpha
     const n = nodes.length
@@ -328,6 +379,23 @@ export class ForceGraph {
     const hi = this.highlight
     const dimmed = (id) => hi && !hi.has(id)
     const neighbors = this.selected ? this._neighborSet(this.selected) : null
+
+    // Orrery: orbit rings and sun halos
+    if (this.orrery) {
+      for (const sun of this.orrery.suns.values()) {
+        const g = ctx.createRadialGradient(sun.cx, sun.cy, 2, sun.cx, sun.cy, 60)
+        g.addColorStop(0, hexToRgba(sun.node.color, 0.35))
+        g.addColorStop(1, hexToRgba(sun.node.color, 0))
+        ctx.fillStyle = g
+        ctx.beginPath(); ctx.arc(sun.cx, sun.cy, 60, 0, Math.PI * 2); ctx.fill()
+        ctx.strokeStyle = 'rgba(200,215,255,0.12)'
+        ctx.lineWidth = 0.6
+        for (const a of sun.accidents) {
+          if (!a.orbit) continue
+          ctx.beginPath(); ctx.ellipse(sun.cx, sun.cy, a.orbit.r, a.orbit.r * 0.55, 0, 0, Math.PI * 2); ctx.stroke()
+        }
+      }
+    }
 
     // Soft glow behind emphasised nodes
     const glowNodes = []

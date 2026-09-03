@@ -250,6 +250,7 @@ export class ReplayScene {
     this._buildClouds()
     this.rain.material.opacity = this.env.rain * 0.7
     this.clearGhost()
+    this.clearFormation()
     this.firstFrame = true
     this._groundCam = null
     this._cine = { sub: 'chase', timer: 0, anchor: new THREE.Vector3() }
@@ -451,6 +452,97 @@ export class ReplayScene {
     arr[0] = g.x * FT; arr[1] = g.y * FT; arr[2] = g.z * FT
     arr[3] = x * FT; arr[4] = g.y * FT; arr[5] = z * FT
     this.ghostLine.geometry.getAttribute('position').needsUpdate = true
+  }
+
+  /** Project a track position (feet) to canvas pixels. Returns { x, y, visible }. */
+  project(pos) {
+    const v = new THREE.Vector3(pos.x * FT, pos.y * FT, pos.z * FT)
+    const cam = this.camera
+    const dir = v.clone().sub(cam.position)
+    const fwd = new THREE.Vector3(0, 0, -1).applyQuaternion(cam.quaternion)
+    const dist = dir.length()
+    if (dir.dot(fwd) <= 0) return { x: 0, y: 0, visible: false, dist }
+    v.project(cam)
+    const rect = this.canvas.getBoundingClientRect()
+    return { x: (v.x + 1) * 0.5 * rect.width, y: (1 - v.y) * 0.5 * rect.height, visible: v.x > -1.1 && v.x < 1.1 && v.y > -1.1 && v.y < 1.1, dist }
+  }
+
+  /**
+   * Formation: other recorded flights flown abreast of this one. Each keeps its own
+   * manoeuvres and altitude changes, measured from its own t=0 and rotated so that
+   * its initial heading matches this flight's, so at t=0 they are wingtip to wingtip
+   * and afterwards each diverges the way it really did. entries: [{ id, fdr, track, sample, trackAt }]
+   */
+  setFormation(entries) {
+    this.clearFormation()
+    if (!entries || !entries.length) return
+    const tints = [0x9fd8ff, 0xffb3e6, 0xb8ffb0, 0xffe08a, 0xd0b3ff, 0xffc7a0]
+    const p0 = this._trackAtPrimary(0)
+    const hdgP = (this.fdr.params.hdg_deg.keys[0][1] || 0) * DEG
+    const right = new THREE.Vector3(Math.cos(hdgP), 0, Math.sin(hdgP))
+    this.formation = entries.map((e, i) => {
+      const mesh = buildAircraft(e.fdr.aircraft_model || 'airliner_twin')
+      const tint = tints[i % tints.length]
+      mesh.traverse((o) => {
+        if (o.material) {
+          o.material = o.material.clone()
+          o.material.transparent = true
+          o.material.opacity = 0.6
+          if (o.material.color) o.material.color.set(tint)
+          if (o.material.emissive) o.material.emissive.set(tint).multiplyScalar(0.25)
+        }
+      })
+      this.world.add(mesh)
+      const side = i % 2 ? 1 : -1
+      const lane = Math.ceil((i + 1) / 2) * 320
+      const base = { x: p0.x + right.x * side * lane, y: p0.y, z: p0.z + right.z * side * lane }
+      const o0 = e.trackAt(0)
+      const hdgF = (e.sample(0).hdg_deg || 0) * DEG
+      const rot = hdgP - hdgF
+      const place = (t) => {
+        const q = e.trackAt(t)
+        const dx = q.x - o0.x
+        const dz = q.z - o0.z
+        return { x: base.x + dx * Math.cos(rot) - dz * Math.sin(rot), y: Math.max(6, base.y + (q.y - o0.y)), z: base.z + dx * Math.sin(rot) + dz * Math.cos(rot) }
+      }
+      const pts = []
+      for (let t = e.fdr.t_start; t <= e.fdr.t_end; t += 1) { const q = place(t); pts.push(new THREE.Vector3(q.x * FT, q.y * FT, q.z * FT)) }
+      const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: tint, transparent: true, opacity: 0.4 }))
+      line.frustumCulled = false
+      this.world.add(line)
+      return { ...e, mesh, line, place, rot, tint }
+    })
+  }
+
+  _trackAtPrimary(t) {
+    const tr = this.track
+    const dt = tr[1].t - tr[0].t
+    const i = Math.max(0, Math.min(tr.length - 1, Math.round((t - tr[0].t) / dt)))
+    return tr[i]
+  }
+
+  clearFormation() {
+    for (const f of this.formation || []) { this.world.remove(f.mesh); this.world.remove(f.line); f.line.geometry.dispose() }
+    this.formation = []
+  }
+
+  /** Move formation aircraft to time t (same relative clock). Returns their positions in feet for labels. */
+  updateFormation(t) {
+    const out = []
+    for (const f of this.formation || []) {
+      const inRange = t >= f.fdr.t_start && t <= f.fdr.t_end
+      f.mesh.visible = inRange
+      if (!inRange) { out.push(null); continue }
+      const st = f.sample(t)
+      const pos = f.place(t)
+      f.mesh.position.set(pos.x * FT, pos.y * FT, pos.z * FT)
+      f.mesh.rotation.order = 'YXZ'
+      f.mesh.rotation.y = -((st.hdg_deg || 0) * DEG + f.rot)
+      f.mesh.rotation.x = (st.pitch_deg || 0) * DEG
+      f.mesh.rotation.z = -(st.roll_deg || 0) * DEG
+      out.push({ pos, state: st })
+    }
+    return out
   }
 
   setCameraMode(mode) {

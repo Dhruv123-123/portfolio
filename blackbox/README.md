@@ -57,6 +57,15 @@ src/components/Windows/Blackbox/
   scope**, **counterfactual factor cuts**, **command palette** and **deep links**
   (`/blackbox#tab=replay&id=af447&t=120`) are all client-side; no new data is needed.
 
+### Real recordings
+
+`pipeline/catalog/fetch_audio.py` searches Wikimedia Commons for audio files that
+mention each record (Wikipedia title and record title), keeps only public-domain or
+Creative Commons files, and writes them to the record as `audio: [{title, url, page,
+license, kind, description, duration}]` with `kind` = `atc` | `cvr` | `audio`. The
+replay plays a recording in sync with its clock (offset adjustable, "align here"
+marks the current moment); the timeline, graph and story list them with credits.
+
 ## Catalog tier (thousands of accidents)
 
 On top of the hand-reviewed records, `blackbox/data/catalog/` holds summary-level

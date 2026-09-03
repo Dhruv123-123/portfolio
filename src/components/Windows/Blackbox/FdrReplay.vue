@@ -17,6 +17,8 @@
         <button class="bb-btn small" :class="{ active: voice }" :disabled="!store.sound" @click="voice = !voice" title="Read CVR lines aloud with the browser's speech synthesis">voice</button>
         <button class="bb-btn small" :class="{ active: theatre }" @click="toggleTheatre" title="Theatre mode (F)">⛶</button>
         <button class="bb-btn small" :class="{ active: !!ghost }" @click="toggleGhost" title="Ghost: a translucent aircraft that holds the altitude, heading and speed of this instant, so you can watch the real flight diverge from it (G)">{{ ghost ? 'ghost ✓' : 'ghost' }}</button>
+        <button class="bb-btn small" :class="{ active: formationOn }" @click="toggleFormation" title="Formation: every recorded flight flown alongside this one, each on its own clock aligned at t=0, the moment things went wrong">{{ formationOn ? 'formation ✓' : 'formation' }}</button>
+        <button class="bb-btn small" :class="{ active: annotationsOn }" @click="annotationsOn = !annotationsOn" title="Leave each event hanging in the sky where it happened">tags</button>
       </span>
       <span class="fr-clock" v-if="fdr">
         <b>{{ clock }}</b> <span class="bb-muted">{{ record?.time_reference || '' }} · t{{ time >= 0 ? '+' : '' }}{{ time.toFixed(1) }} s</span>
@@ -33,6 +35,9 @@
           <div class="fr-bars" v-if="camera === 'cinematic'"></div>
           <div class="fr-marker-toast" v-if="activeMarker">{{ activeMarker.label }}</div>
           <div class="fr-env bb-muted">{{ envLabel }}</div>
+          <div v-for="a in annotations" :key="a.key" class="fr-tag" :class="{ dim: a.age > 25, formation: a.kind === 'formation' }" :style="{ left: a.x + 'px', top: a.y + 'px', opacity: a.opacity, '--tint': a.tint || '' }">
+            <span class="fr-tag-dot"></span><span class="fr-tag-text">{{ a.label }}</span>
+          </div>
           <div v-if="ghost" class="fr-ghost-note">ghost holds {{ Math.round(ghost.alt).toLocaleString() }} ft · {{ Math.round(ghost.hdg) }}° · {{ Math.round(ghost.gs) }} kt from {{ formatClock(record.t0, ghost.t) }}</div>
           <div v-if="slowmo" class="fr-slowmo">slow motion</div>
           <div class="fr-scene-hint bb-muted">{{ camera === 'orbit' ? 'drag to orbit · wheel to zoom' : camera === 'cockpit' ? 'head-up display · flight path vector shows where the aircraft is actually going' : camera === 'cinematic' ? 'auto-directed cameras' : 'trail: flown path · faint: full path' }}</div>
@@ -66,6 +71,26 @@
         </div>
         <canvas ref="pfdCanvas" class="fr-pfd"></canvas>
         <canvas ref="ctlCanvas" class="fr-ctl"></canvas>
+        <div v-if="recordings.length" class="fr-deck">
+          <div class="fr-deck-head">
+            <span>Real audio</span>
+            <span class="fr-deck-kind">{{ currentRec.kind === 'cvr' ? 'cockpit voice recorder' : currentRec.kind === 'atc' ? 'air traffic control tape' : 'recording' }}</span>
+          </div>
+          <div class="fr-deck-row">
+            <select v-if="recordings.length > 1" class="bb-select fr-deck-sel" v-model="recIdx"><option v-for="(r, i) in recordings" :key="i" :value="i">{{ r.title }}</option></select>
+            <span v-else class="fr-deck-title" :title="currentRec.title">{{ currentRec.title }}</span>
+          </div>
+          <div class="fr-deck-row">
+            <button class="bb-btn small" :class="{ active: deckOn }" @click="toggleDeck" :title="deckOn ? 'stop following the replay clock' : 'play this recording in sync with the replay clock'">{{ deckOn ? '🔊 synced' : '▶ sync to replay' }}</button>
+            <button class="bb-btn small" @click="markAlign" :disabled="!deckOn" title="The recording is at this moment of the replay right now: set the offset so they stay aligned">align here</button>
+            <label class="fr-deck-off bb-muted">offset <input type="number" class="bb-input fr-deck-num" v-model.number="deckOffset" step="1" /> s</label>
+            <input type="range" class="fr-deck-vol" min="0" max="1" step="0.05" v-model.number="deckVol" title="volume" />
+          </div>
+          <div class="fr-deck-meter"><div :style="{ width: deckPct + '%' }"></div></div>
+          <div class="fr-deck-credit bb-muted">{{ deckClock }} · <a :href="currentRec.page" target="_blank" rel="noopener" class="bb-link">Wikimedia Commons</a> · {{ currentRec.license }}<span v-if="currentRec.kind === 'atc'"> · US CVR audio is never released; this is the ATC side</span></div>
+          <audio ref="deckEl" :src="currentRec.url" preload="metadata" @loadedmetadata="onDeckMeta" @error="deckError = true"></audio>
+          <div v-if="deckError" class="fr-deck-credit" style="color:var(--bb-danger)">This recording could not be loaded.</div>
+        </div>
         <div class="fr-cvr">
           <div class="fr-cvr-head">
             <span>CVR / events</span>
@@ -143,6 +168,71 @@ const gpwsText = ref('')
 const env = ref({ night: 0, rain: 0, storm: false, fog: 0 })
 const ghost = ref(null)
 const slowmo = ref(false)
+const annotationsOn = ref(true)
+// Real audio deck: an openly licensed recording played in sync with the replay clock
+const deckEl = ref(null)
+const recIdx = ref(0)
+const deckOn = ref(false)
+const deckOffset = ref(0) // replay time (s) at which the recording starts
+const deckVol = ref(0.9)
+const deckPct = ref(0)
+const deckDur = ref(0)
+const deckError = ref(false)
+const recordings = computed(() => {
+  const list = (record.value && record.value.audio) || []
+  // several encodings of the same tape: keep the one browsers play best
+  const pref = { ogg: 0, oga: 0, mp3: 1, opus: 2, webm: 3, wav: 4, flac: 5 }
+  const byBase = {}
+  for (const a of list) {
+    const base = a.title.replace(/\.[a-z0-9]+$/i, '')
+    const ext = (a.title.split('.').pop() || '').toLowerCase()
+    if (!(ext in pref)) continue
+    if (!byBase[base] || pref[ext] < pref[byBase[base].ext]) byBase[base] = { ...a, ext }
+  }
+  return Object.values(byBase)
+})
+const currentRec = computed(() => recordings.value[Math.min(recIdx.value, recordings.value.length - 1)] || {})
+const deckClock = computed(() => {
+  const el = deckEl.value
+  if (!el || !deckDur.value) return 'not loaded'
+  const c = el.currentTime || 0
+  const f = (x) => `${Math.floor(x / 60)}:${String(Math.floor(x % 60)).padStart(2, '0')}`
+  return `${f(c)} / ${f(deckDur.value)}`
+})
+function onDeckMeta() { deckDur.value = deckEl.value ? deckEl.value.duration || 0 : 0; deckError.value = false }
+function toggleDeck() {
+  deckOn.value = !deckOn.value
+  const el = deckEl.value
+  if (!el) return
+  if (deckOn.value) {
+    if (deckOffset.value === 0 && fdr.value) deckOffset.value = fdr.value.t_start
+    el.volume = deckVol.value
+    if (playing.value) el.play().catch(() => (deckError.value = true))
+  } else el.pause()
+}
+function markAlign() {
+  const el = deckEl.value
+  if (!el) return
+  deckOffset.value = Math.round((time.value - el.currentTime) * 10) / 10
+}
+function syncDeck() {
+  const el = deckEl.value
+  if (!el || !deckOn.value || !deckDur.value) return
+  const want = time.value - deckOffset.value
+  el.volume = deckVol.value
+  el.playbackRate = Math.max(0.25, Math.min(4, speed.value))
+  if (want < 0 || want > deckDur.value) { if (!el.paused) el.pause(); deckPct.value = want < 0 ? 0 : 100; return }
+  deckPct.value = (want / deckDur.value) * 100
+  if (Math.abs(el.currentTime - want) > 0.6) el.currentTime = want
+  if (playing.value && el.paused) el.play().catch(() => {})
+  if (!playing.value && !el.paused) el.pause()
+}
+watch(recIdx, () => { deckOn.value = false; deckDur.value = 0; deckPct.value = 0; deckError.value = false; deckEl.value && deckEl.value.pause() })
+watch(deckVol, (v) => { if (deckEl.value) deckEl.value.volume = v })
+const annotations = ref([])
+const formationOn = ref(false)
+let formationEntries = []
+const tintCss = ['#9fd8ff', '#ffb3e6', '#b8ffb0', '#ffe08a', '#d0b3ff', '#ffc7a0']
 let prevStall = false
 
 let scene = null
@@ -218,8 +308,13 @@ async function loadFdr(id) {
   stripCache = null
   if (audio) { audio._prev = null; audio.setRain(env.value.rain) }
   ghost.value = null
+  deckOn.value = false
+  deckOffset.value = 0
+  recIdx.value = 0
   await nextTick()
   initScene()
+  if (formationOn.value) await loadFormation()
+  if (store.replayAutoplay && Date.now() - store.replayAutoplay < 5000) { setCamera('cinematic'); playing.value = true; if (store.sound && audio) audio.enable(family()) }
   renderFrame(0)
 }
 
@@ -251,6 +346,26 @@ function initScene() {
   }
 }
 
+async function loadFormation() {
+  const others = replayable.value.filter((r) => r.id !== replayId.value)
+  const entries = []
+  for (const r of others) {
+    const key = Object.keys(fdrFiles).find((k) => k.endsWith(`/${r.fdr}.json`))
+    if (!key) continue
+    const mod = await fdrFiles[key]()
+    const f = mod.default
+    const tr = integrateTrack(f)
+    entries.push({ id: r.id, title: r.title, fdr: f, track: tr, sample: (t) => sampleAll(f, t), trackAt: (t) => trackAt(tr, t) })
+  }
+  formationEntries = entries
+  scene && scene.setFormation(entries)
+}
+async function toggleFormation() {
+  formationOn.value = !formationOn.value
+  if (formationOn.value) await loadFormation()
+  else { formationEntries = []; scene && scene.clearFormation() }
+}
+
 function toggleGhost() {
   if (!scene || !fdr.value) return
   if (ghost.value) { scene.clearGhost(); ghost.value = null; return }
@@ -276,6 +391,7 @@ function togglePlay() {
 
 function seek(t) {
   if (!fdr.value) return
+  if (audio && audio.enabled && t < time.value - 3) audio.rewind()
   time.value = Math.max(fdr.value.t_start, Math.min(fdr.value.t_end, t))
   ended.value = false
   if (audio) audio._prev = null
@@ -349,6 +465,8 @@ function renderFrame(dt) {
   const pos = trackAt(track.value, time.value)
   if (scene) scene.update(s, pos, dt)
   if (audio && audio.enabled) audio.update(s, dt, playing.value)
+  updateAnnotations(s)
+  syncDeck()
 
   // Warning state drives the vignette and the HUD annunciation
   const vs = s.vs_fpm || 0
@@ -392,6 +510,35 @@ function renderFrame(dt) {
   let m = null
   for (const mk of fdr.value.markers || []) if (mk.t <= time.value && time.value - mk.t < 4) m = mk
   activeMarker.value = m
+}
+
+/** Event tags anchored to the point in space where each marker happened, plus formation name tags. */
+function updateAnnotations(s) {
+  if (!scene || !fdr.value) { annotations.value = []; return }
+  const out = []
+  if (annotationsOn.value && camera.value !== 'cockpit') {
+    const marks = fdr.value.markers || []
+    for (let i = 0; i < marks.length; i++) {
+      const mk = marks[i]
+      if (mk.t > time.value) break
+      const age = time.value - mk.t
+      const p = scene.project(trackAt(track.value, mk.t))
+      if (!p.visible) continue
+      const opacity = Math.min(1, age / 0.6) * (age > 25 ? 0.4 : 0.92) * Math.max(0.25, 1 - p.dist / 1500)
+      out.push({ key: 'm' + i, label: mk.label, x: p.x, y: p.y, age, opacity, kind: 'marker' })
+    }
+  }
+  if (formationOn.value && formationEntries.length) {
+    const states = scene.updateFormation(time.value)
+    states.forEach((st, i) => {
+      if (!st) return
+      const p = scene.project(st.pos)
+      if (!p.visible) return
+      const e = formationEntries[i]
+      out.push({ key: 'f' + e.id, label: `${e.title} · ${Math.round(st.state.alt_ft || 0).toLocaleString()} ft`, x: p.x, y: p.y, age: 0, opacity: 0.9, kind: 'formation', tint: tintCss[i % tintCss.length] })
+    })
+  }
+  annotations.value = out
 }
 
 const STRIP_PARAMS = [
@@ -512,6 +659,11 @@ watch(() => store.replayId, (id) => {
   }
 })
 watch(panel, () => renderFrame(2))
+watch(() => store.replayAutoplay, async () => {
+  await nextTick()
+  setCamera('cinematic')
+  if (!playing.value) togglePlay()
+})
 
 onMounted(() => {
   resizeObs = new ResizeObserver(() => {
@@ -569,6 +721,13 @@ function onKey(e) {
 .fr-marker-toast { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); background: rgba(8, 12, 24, 0.85); color: var(--bb-accent); font-weight: 700; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--bb-accent); font-size: 12px; white-space: nowrap; max-width: 90%; overflow: hidden; text-overflow: ellipsis; z-index: 2; }
 .cinematic .fr-marker-toast { top: auto; bottom: 12%; background: transparent; border: none; font-size: 15px; letter-spacing: 0.06em; text-shadow: 0 1px 4px #000; }
 .fr-scene-hint { position: absolute; bottom: 6px; left: 8px; font-size: 10px; text-shadow: 0 1px 2px #000; }
+.fr-tag { position: absolute; transform: translate(-4px, -50%); pointer-events: none; display: flex; align-items: center; gap: 6px; font-size: 10px; color: #ffe6a8; text-shadow: 0 1px 3px #000; white-space: nowrap; transition: opacity 0.3s; z-index: 1; }
+.fr-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--bb-accent); box-shadow: 0 0 8px var(--bb-accent); flex: none; }
+.fr-tag-text { background: rgba(4,6,12,0.55); border: 1px solid rgba(255,191,0,0.35); border-radius: 3px; padding: 1px 6px; max-width: 260px; overflow: hidden; text-overflow: ellipsis; }
+.fr-tag.dim .fr-tag-text { border-color: rgba(255,191,0,0.15); }
+.fr-tag.formation { color: var(--tint); }
+.fr-tag.formation .fr-tag-dot { background: var(--tint); box-shadow: 0 0 8px var(--tint); }
+.fr-tag.formation .fr-tag-text { border-color: var(--tint); }
 .fr-ghost-note { position: absolute; top: 24px; right: 10px; font-size: 10px; color: #9fd8ff; text-shadow: 0 1px 2px #000; letter-spacing: 0.04em; }
 .fr-slowmo { position: absolute; bottom: 24px; right: 10px; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #fff; text-shadow: 0 1px 3px #000; animation: fr-blink 1s step-end infinite; }
 .fr-env { position: absolute; top: 8px; right: 10px; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; text-shadow: 0 1px 2px #000; }
@@ -595,6 +754,18 @@ function onKey(e) {
 .fr-panel-hint { font-size: 9px; margin-left: 4px; }
 .fr-pfd { width: 100%; height: 250px; display: block; flex: none; }
 .fr-ctl { width: 100%; height: 118px; display: block; border-top: 1px solid var(--bb-line); border-bottom: 1px solid var(--bb-line); flex: none; }
+.fr-deck { border-bottom: 1px solid var(--bb-line); padding: 4px 8px 6px; background: #0d1322; }
+.fr-deck-head { display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bb-accent); }
+.fr-deck-kind { color: var(--bb-muted); letter-spacing: 0.05em; text-transform: none; }
+.fr-deck-row { display: flex; gap: 4px; align-items: center; margin-top: 4px; flex-wrap: wrap; }
+.fr-deck-sel { max-width: 100%; font-size: 10px; }
+.fr-deck-title { font-size: 10px; color: #d3ddf0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.fr-deck-off { font-size: 10px; display: flex; align-items: center; gap: 3px; }
+.fr-deck-num { width: 54px; padding: 1px 4px; font-size: 10px; }
+.fr-deck-vol { width: 60px; accent-color: #ffbf00; }
+.fr-deck-meter { height: 3px; background: #1c2740; margin-top: 5px; border-radius: 2px; overflow: hidden; }
+.fr-deck-meter div { height: 100%; background: var(--bb-accent); transition: width 0.2s linear; }
+.fr-deck-credit { font-size: 9px; margin-top: 3px; line-height: 1.3; }
 .fr-cvr { flex: 1; min-height: 0; display: flex; flex-direction: column; }
 .fr-cvr-head { padding: 4px 8px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bb-muted); display: flex; justify-content: space-between; gap: 6px; }
 .fr-cvr-head .bb-muted { text-transform: none; letter-spacing: 0; }

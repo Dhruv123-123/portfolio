@@ -1,5 +1,5 @@
 <template>
-  <div class="bb-root" :class="{ 'bb-crt': store.crt }">
+  <div class="bb-root" :class="{ 'bb-crt': store.crt, 'bb-amber': store.crt === 'amber', 'bb-drift': drifting }" @mousedown.capture="onUserActivity" @keydown.capture="onUserActivity">
     <div v-if="booting" class="bb-boot" @click="booting = false">
       <pre class="bb-boot-text">{{ bootText }}<span class="bb-boot-cursor">▌</span></pre>
     </div>
@@ -14,7 +14,8 @@
       </button>
       <span class="bb-tabs-right">
         <button class="bb-tab bb-tab-icon" @click="palette = true" title="Command palette (Ctrl+K or /)"><span class="bb-tab-key">⌘K</span>jump</button>
-        <button class="bb-tab bb-tab-icon" :class="{ active: store.crt }" @click="store.crt = !store.crt" title="CRT look: scanlines and phosphor glow">CRT</button>
+        <button class="bb-tab bb-tab-icon" :class="{ active: store.crt }" @click="cycleCrt" title="CRT look: off, phosphor scanlines, amber monochrome">{{ store.crt === 'amber' ? 'AMBER' : 'CRT' }}</button>
+        <button class="bb-tab bb-tab-icon" :class="{ active: drifting }" @click="toggleDrift" title="Drift: the exhibit plays itself, wandering between the atlas requiem, a story and a cinematic replay until you touch anything">drift</button>
         <button v-if="deepLinks" class="bb-tab bb-tab-icon" @click="share" title="Copy a link to exactly this view">{{ shared ? 'copied ✓' : 'share' }}</button>
       </span>
     </div>
@@ -56,6 +57,57 @@ const store = useBlackboxStore()
 const graph = shallowRef(null)
 const palette = ref(false)
 const shared = ref(false)
+const drifting = ref(false)
+let driftTimer = null
+let driftStep = 0
+function cycleCrt() {
+  store.crt = store.crt === false ? true : store.crt === true ? 'amber' : false
+}
+/** Drift: an autonomous tour. Each leg hands off to the next; any click or key ends it. */
+function toggleDrift() {
+  if (drifting.value) { stopDrift(); return }
+  drifting.value = true
+  driftStep = 0
+  driftLeg()
+}
+function stopDrift() {
+  if (!drifting.value) return
+  drifting.value = false
+  clearTimeout(driftTimer)
+  if (store.storyId) store.storyId = null
+}
+function driftLeg() {
+  if (!drifting.value || !graph.value) return
+  const legs = ['requiem', 'story', 'replay', 'story', 'graph']
+  const leg = legs[driftStep % legs.length]
+  driftStep++
+  let hold = 45000
+  if (leg === 'requiem') { store.storyId = null; store.openAtlas(); store.atlasRequiemRequest = Date.now(); hold = 50000 }
+  else if (leg === 'story') {
+    const pool = graph.value.records.filter((r) => r.events && r.events.length >= 8)
+    const r = pool[Math.floor(Math.random() * pool.length)]
+    store.tab = 'graph'
+    if (r) store.openStory(r.id)
+    hold = 70000
+  } else if (leg === 'replay') {
+    store.storyId = null
+    const pool = graph.value.records.filter((r) => r.fdr)
+    const r = pool[Math.floor(Math.random() * pool.length)]
+    if (r) { store.openReplay(r.id); store.replayAutoplay = Date.now() }
+    hold = 60000
+  } else if (leg === 'graph') {
+    store.storyId = null
+    store.openGraph(null, ['unreliable airspeed misdiagnosed as a stall', 'fatigue on approach', 'wrong engine shut down', 'fuel exhaustion after a diversion'][Math.floor(Math.random() * 4)])
+    hold = 25000
+  }
+  driftTimer = setTimeout(driftLeg, hold)
+}
+function onUserActivity(e) {
+  if (!drifting.value) return
+  // the drift button itself, and the story overlay's own controls, do not end the tour
+  if (e.target && e.target.closest && e.target.closest('.bb-tab-icon')) return
+  stopDrift()
+}
 async function share() {
   writeHash()
   try {
@@ -203,6 +255,7 @@ onMounted(async () => {
 onBeforeUnmount(() => {
   window.removeEventListener('keydown', onGlobalKey)
   clearTimeout(bootTimer)
+  clearTimeout(driftTimer)
 })
 </script>
 
@@ -283,6 +336,10 @@ onBeforeUnmount(() => {
 .bb-boot-cursor { animation: bb-blink 0.6s step-end infinite; }
 @keyframes bb-blink { 50% { opacity: 0; } }
 @keyframes bb-boot-in { from { opacity: 0; } to { opacity: 1; } }
+/* Amber monochrome */
+.bb-amber { filter: sepia(1) saturate(2.4) hue-rotate(-12deg) contrast(1.05); }
+.bb-drift .bb-tabs { opacity: 0.35; transition: opacity 1.5s; }
+.bb-drift .bb-tabs:hover { opacity: 1; }
 /* CRT look */
 .bb-crt::after { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 200; background: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 2px, rgba(0,0,0,0.22) 3px), radial-gradient(ellipse at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.45) 100%); mix-blend-mode: multiply; animation: bb-flicker 4s infinite; }
 .bb-crt { text-shadow: 0 0 1px rgba(120,220,255,0.35); position: relative; }
