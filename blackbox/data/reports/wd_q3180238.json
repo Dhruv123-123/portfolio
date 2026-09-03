@@ -4,7 +4,7 @@
   "flight_number": "AA1285R",
   "date": "1985-12-12",
   "time_reference": "local",
-  "t0": "1985-12-12T10:15:00-03:30",
+  "t0": "1985-12-12T10:15:06-03:30",
   "agency": "TSB",
   "agencies": [
     {
@@ -12,8 +12,8 @@
       "name": "Transportation Safety Board of Canada",
       "country": "Canada",
       "role": "lead",
-      "report_id": "85-CA009",
-      "report_title": "Final Report - Aviation Occurrence Arrow Air Inc. Flight MF1285R",
+      "report_id": "85-H50902",
+      "report_title": "Aviation Occurrence Report - Arrow Air Inc. Flight MF1285R",
       "report_date": "1988-10-28",
       "url": "http://flightopsresearch.org/data/files/arrow1285.pdf"
     }
@@ -24,7 +24,7 @@
     "manufacturer": "Douglas",
     "registration": "N950JW",
     "msn": null,
-    "engines": "Pratt & Whitney JT3D-3B"
+    "engines": "Pratt & Whitney JT3D-7"
   },
   "operator": "Arrow Air",
   "route": {
@@ -34,10 +34,10 @@
     "to_name": "Fort Campbell Military Airfield"
   },
   "location": {
-    "name": "Near Gander International Airport, approximately 0.5 miles northeast of runway 22 departure end",
+    "name": "Near Gander International Airport, approximately 2,975 feet beyond runway 22 departure end",
     "country": "Canada",
-    "lat": 48.95,
-    "lon": -54.57
+    "lat": 48.9111,
+    "lon": -54.5764
   },
   "phase": "takeoff",
   "occupants": 256,
@@ -45,63 +45,115 @@
   "injuries_serious": 0,
   "damage": "destroyed",
   "category": "LOC-I",
-  "summary": "Arrow Air Flight MF1285R crashed shortly after takeoff from Gander, Newfoundland on December 12, 1985. The aircraft accumulated ice contamination on the wings' leading edges and upper surfaces during the approach and refueling stop at Gander in freezing precipitation conditions. The aircraft was not de-iced prior to takeoff, and the ice buildup degraded lift and increased drag, resulting in a stall at low altitude from which recovery was not possible. All 256 passengers and crew were killed.",
-  "probable_cause": "The most probable cause of the stall was ice contamination on the leading edge and upper surface of the wing. Other possible factors such as a loss of thrust from the number four engine and inappropriate take-off reference speeds may have compounded the effects of the contamination.",
+  "summary": "Arrow Air Flight MF1285R, a Douglas DC-8-63, crashed shortly after takeoff from Gander, Newfoundland on December 12, 1985. The aircraft had accumulated ice contamination on the wings' leading edges and upper surfaces during the approach and ground stop at Gander in freezing precipitation conditions. The aircraft was not de-iced prior to takeoff, and the ice buildup degraded aerodynamic efficiency while increasing drag, resulting in an aerodynamic stall at low altitude from which recovery was not possible. All 256 occupants were killed in the impact and resulting fire.",
+  "probable_cause": "The most probable cause of the stall was ice contamination on the leading edge and upper surface of the wing. The Board believes that the weight of evidence supports the conclusion that, shortly after lift-off, the aircraft experienced an increase in drag and reduction in lift which resulted in a stall at low altitude from which recovery was not possible. Other possible factors such as a loss of thrust from the number four engine and inappropriate take-off reference speeds may have compounded the effects of the contamination.",
   "factors": [
     {
       "id": "airframe_icing",
       "role": "initiating",
-      "evidence": "Ice contamination on the leading edge and upper surface of the wing resulted from precipitation conditions favorable for ice formation and freezing and frozen precipitation (p. 10-11, 59-61)."
+      "evidence": "During the approach to Gander, existing meteorological conditions were conducive to ice accretion on the leading edge of the wing (p. 93-94). While the aircraft was on the ground at Gander, the aircraft was exposed to freezing and frozen precipitation capable of producing roughening on the wing upper surface, with wing surface temperatures conducive to formation of frost (p. 93-94). The aircraft stalled at a higher than normal airspeed after leaving ground effect, and the performance was consistent with reduced aerodynamic efficiency and high drag associated with wing ice contamination (p. 94)."
     },
     {
       "id": "deicing_inadequate",
       "role": "contributing",
-      "evidence": "Prior to takeoff the aircraft had not been de-iced despite exposure to freezing and frozen precipitation (p. 95)."
+      "evidence": "The aircraft was not de-iced prior to take-off despite exposure to freezing and frozen precipitation (p. 95). Despite existing regulations and promotional material concerning clean wing procedures, numerous aircraft occurrences including this DC-8 accident confirm that leading edge and wing surface contamination due to ice and snow can degrade aircraft performance during takeoff to the point where there is little to no margin of safety (p. 97-98)."
     },
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "The aircraft stalled at low altitude from which recovery was not possible, struck terrain approximately 3500 feet beyond the runway departure end (p. 95)."
+      "evidence": "Within a few seconds of lift-off, the aircraft experienced stall buffet evidenced by extreme oscillations in altitude measurements and vertical acceleration readings reaching 1.30G and as low as 0.77G (p. 24). The aircraft struck downsloping terrain near the top of a wooded hillside approximately 2,975 feet beyond the departure end of runway 22, broke up and was destroyed by impact forces and severe fuel-fed fire, killing all 256 occupants (p. 2, 25)."
     },
     {
       "id": "weight_and_balance_error",
       "role": "contributing",
-      "evidence": "Underestimated onboard weight may have compounded the effects of the contamination; incorrect determination of the aircraft's weight using standard average weights (p. 95)."
+      "evidence": "The take-off weight at Gander calculated by the crew was approximately 14,000 pounds less than the actual take-off weight of the aircraft (p. 93). The take-off reference speeds used by the crew were applicable to a take-off weight at least 14,000 pounds less than actual, and may have been applicable to a take-off weight as much as 35,000 pounds less (p. 93). Although the use of actual passenger weights was required by Arrow Air's Operations Manual, the crew used a standard average weight which did not accurately reflect the actual weight of passengers carried (p. 93). The maximum design zero fuel weight of 230,000 pounds was exceeded on each of the MFO rotation flights in December 1985 (p. 93)."
     },
     {
       "id": "maintenance_error",
       "role": "latent",
-      "evidence": "A non-functioning cockpit area microphone went undetected for an indeterminate number of flights, and no steps on standard checklists tested its functionality (p. 99)."
+      "evidence": "A non-functioning cockpit area microphone went undetected for an indeterminate number of flights, and no steps on standard checklists tested its functionality, preventing crucial cockpit communications from being recorded during the accident (p. 99). No evidence was found to indicate that specific inspections required following a 1981 Casablanca accident had been carried out, and life-limited repairs were not replaced in accordance with Douglas Aircraft Company recommendations (p. 9)."
     },
     {
       "id": "inadequate_inspection",
       "role": "latent",
-      "evidence": "The defect in the cockpit area microphone went undetected due to no testing procedure on standard checklists (p. 99)."
+      "evidence": "Although a heavy maintenance check was accomplished after June 1984, replacement of trailing edge repairs which were nearing their life-limits had not occurred (p. 9). The cockpit voice recorder relied on functional testing by flight crews to detect unserviceabilities, but inconsistent testing procedures meant unserviceabilities could remain undetected through multiple flights (p. 99)."
     }
   ],
   "chain": [
-    ["airframe_icing", "loss_of_control_inflight"],
-    ["deicing_inadequate", "airframe_icing"],
-    ["weight_and_balance_error", "loss_of_control_inflight"]
+    [
+      "airframe_icing",
+      "loss_of_control_inflight"
+    ],
+    [
+      "deicing_inadequate",
+      "airframe_icing"
+    ],
+    [
+      "weight_and_balance_error",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
-      "t": -600,
-      "clock": null,
-      "phase": "approach",
-      "actor": "ENV",
+      "t": -43200,
+      "clock": "20:35 (11 Dec)",
+      "phase": "ground",
+      "actor": "SYS",
       "kind": "env",
-      "text": "During approach to Gander, precipitation conditions were favorable for formation of ice on wings.",
-      "factors": ["airframe_icing"]
+      "text": "Arrow Air Flight MF1285R departed Cairo, Egypt on international charter flight to Fort Campbell, Kentucky with planned stops at Cologne and Gander. Eight crew members and 248 passengers were on board, all members of 101st Airborne Division returning from peacekeeping duties in the Sinai Desert.",
+      "factors": []
     },
     {
-      "t": -300,
-      "clock": null,
+      "t": -23970,
+      "clock": "01:21 (12 Dec)",
       "phase": "taxi",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Aircraft arrived at Cologne, Germany for planned technical stop. A complete crew change took place.",
+      "factors": []
+    },
+    {
+      "t": -23370,
+      "clock": "02:50 (12 Dec)",
+      "phase": "taxi",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Aircraft departed Cologne for Gander with the replacement crew.",
+      "factors": []
+    },
+    {
+      "t": -10606,
+      "clock": "09:04 (12 Dec)",
+      "phase": "ground",
+      "actor": "GND",
+      "kind": "env",
+      "text": "Aircraft arrived at Gander International Airport under overcast conditions with light freezing drizzle and snow. Passengers were deplaned, aircraft was refueled, trash and waste water removed, catering supplies boarded. The flight engineer conducted an external inspection of portions of the aircraft while meteorological conditions with freezing precipitation were favorable for ice formation on wing leading edges.",
+      "factors": [
+        "airframe_icing"
+      ]
+    },
+    {
+      "t": -900,
+      "clock": "10:00 (12 Dec)",
+      "phase": "ground",
       "actor": "GND",
       "kind": "crew_action",
-      "text": "After landing at Gander, aircraft remained exposed to freezing and frozen precipitation without de-icing.",
-      "factors": ["deicing_inadequate"]
+      "text": "Passengers reboarded the aircraft at Gander. The aircraft remained exposed to freezing and frozen precipitation conditions on the ground for approximately 15 minutes after passengers completed boarding, allowing ice contamination to form and develop on the wing leading edges and upper surfaces.",
+      "factors": [
+        "deicing_inadequate",
+        "airframe_icing"
+      ]
+    },
+    {
+      "t": -100,
+      "clock": "10:13 (12 Dec)",
+      "phase": "taxi",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Following engine start-up, the aircraft was taxied via taxiway D and runway 13 to runway 22 for departure. No de-icing procedure was performed despite the aircraft having been exposed to freezing and frozen precipitation while on the ground.",
+      "factors": [
+        "deicing_inadequate"
+      ]
     },
     {
       "t": 0,
@@ -109,40 +161,125 @@
       "phase": "takeoff",
       "actor": "PF",
       "kind": "crew_action",
-      "text": "Aircraft began takeoff roll on runway 22, rotated at 167 knots after 51 seconds, showing difficulty gaining altitude.",
+      "text": "Take-off on runway 22 commenced from the intersection of runway 13. Takeoff roll began at 10:15:06 local time. The aircraft accelerated down the runway with first officer at the controls. Take-off reference speeds used by the crew were calculated based on incorrectly determined weight (approximately 14,000 to 35,000 pounds less than actual).",
+      "state": {
+        "ias": 0,
+        "alt": 0
+      },
+      "factors": [
+        "weight_and_balance_error"
+      ]
+    },
+    {
+      "t": 51,
+      "clock": "10:15:57",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Rotation of the aircraft occurred 51 seconds after commencement of take-off roll at approximately 167 knots indicated airspeed. Aircraft lifted off from the runway having covered approximately 8,000 feet. Vertical acceleration reached peak value of 1.26G during initial climb.",
       "state": {
         "ias": 167
       },
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
-      "t": 30,
-      "clock": null,
+      "t": 53,
+      "clock": "10:15:59",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Peak indicated airspeed of 172 knots was achieved 53 seconds after commencement of takeoff roll. Aircraft heading began to deviate to the right at approximately this time. As maximum recorded airspeed was reached, altitude measurements on flight data recorder started to oscillate in extreme manner due to stall buffet.",
+      "state": {
+        "ias": 172,
+        "vs": -300
+      },
+      "factors": [
+        "loss_of_control_inflight",
+        "airframe_icing"
+      ]
+    },
+    {
+      "t": 56,
+      "clock": "10:16:02",
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Airspeed reached 172 knots then decreased; aircraft descended after crossing Trans-Canada Highway 900 feet from runway departure end.",
-      "factors": ["loss_of_control_inflight"]
+      "text": "Aircraft crossed the end of runway 22 approximately 57 seconds after start of takeoff roll at very low altitude. Aircraft continued over the Trans-Canada Highway which is located 900 feet beyond the runway departure end at a very low altitude. Witnesses observed the aircraft in a right bank as it crossed the highway with pitch angle increasing, but aircraft continued to descend.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 60,
-      "clock": null,
+      "clock": "10:16:06",
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft struck terrain just short of Gander Lake approximately 3500 feet beyond runway departure end, broke up and exploded.",
-      "factors": ["loss_of_control_inflight"]
+      "text": "Airspeed continued to decrease following the peak of 172 knots. Vertical acceleration oscillated between values as high as 1.30G and as low as 0.77G, with final values almost entirely below 1.0G level, reaching minimum of 0.72G before impact. The aircraft struck downsloping terrain near the top of a wooded hillside at coordinates 48\u00b054'40\"N, 54\u00b034'35\"W, approximately 2,975 feet beyond the departure end of runway 22 and 720 feet to the right of the extended runway centerline.",
+      "state": {
+        "ias": 140,
+        "alt": 0
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": "10:16:06",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft broke up upon impact and was destroyed by impact forces and severe fuel-fed fire at the accident site. The aircraft had impacted in a seven-degree right bank, nine-degree pitch, and 10-degree yaw right attitude on a descending 12-degree flight path angle. All 256 occupants on board sustained fatal injuries from impact and fire.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     }
   ],
   "cvr": [],
   "recommendations": [
+    {
+      "id": "CASB 86-01",
+      "to": "Transport Canada",
+      "text": "Review company documentation for Canadian air carriers to confirm the adequacy of provisions for the use of actual weights (versus standard average weights) and that the associated load calculation forms reflect the basis for the load determinations.",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": [
+        "weight_and_balance_error"
+      ]
+    },
+    {
+      "id": "CASB 86-02",
+      "to": "Transport Canada",
+      "text": "Re-emphasize to each carrier the need to use actual weights for passengers, if the passenger load is likely to deviate from standard weights.",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": [
+        "weight_and_balance_error"
+      ]
+    },
+    {
+      "id": "CASB 86-03",
+      "to": "NTSB",
+      "text": "Consider issuing parallel recommendations to CASB 86-01 and 86-02 above, requiring similar action for American-registered air carriers.",
+      "status": "closed_acceptable",
+      "outcome": null,
+      "trigger_factors": [
+        "weight_and_balance_error"
+      ]
+    },
     {
       "id": "CASB 88-07",
       "to": "Transport Canada",
       "text": "Initiate a national safety campaign to ensure that all pilots are aware of the potential consequences of attempting take-off with even minor amounts of contamination on the wings.",
       "status": "unknown",
       "outcome": null,
-      "trigger_factors": ["airframe_icing", "deicing_inadequate"]
+      "trigger_factors": [
+        "airframe_icing",
+        "deicing_inadequate"
+      ]
     },
     {
       "id": "CASB 88-08",
@@ -150,7 +287,9 @@
       "text": "Require all Canadian operators of McDonnell-Douglas DC-8 aircraft, and such other aircraft types which the Department deems appropriate, to establish detailed procedures for detecting ice on the wings prior to take-off.",
       "status": "unknown",
       "outcome": null,
-      "trigger_factors": ["airframe_icing"]
+      "trigger_factors": [
+        "airframe_icing"
+      ]
     },
     {
       "id": "CASB 88-09",
@@ -158,7 +297,10 @@
       "text": "Review the procedures currently in place with respect to functional checks of cockpit voice recorders with a view to ensuring that the serviceability of the equipment is being tested adequately.",
       "status": "unknown",
       "outcome": null,
-      "trigger_factors": ["maintenance_error"]
+      "trigger_factors": [
+        "maintenance_error",
+        "inadequate_inspection"
+      ]
     },
     {
       "id": "CASB 88-10",
@@ -166,7 +308,9 @@
       "text": "Consider seeking parallel action in the United States to that outlined for Canada in CASB 88-09.",
       "status": "unknown",
       "outcome": null,
-      "trigger_factors": ["maintenance_error"]
+      "trigger_factors": [
+        "maintenance_error"
+      ]
     },
     {
       "id": "CASB 88-11",
@@ -181,9 +325,10 @@
   "safety_changes": [
     "Enhanced emphasis on clean wing procedures and verification before takeoff",
     "Improved pilot training on effects of minor wing contamination on aircraft performance",
-    "Enhanced procedures for detecting upper wing ice prior to takeoff",
+    "Enhanced procedures for detecting upper wing ice prior to takeoff for DC-8 aircraft",
     "Mandatory functional testing of cockpit voice recorders before flight",
-    "Stricter weight and balance procedures using actual weights instead of standard averages"
+    "Stricter weight and balance procedures using actual weights instead of standard averages",
+    "FAA Master Minimum Equipment List revised to require serviceable flight data recorders and cockpit voice recorders on all aircraft types including DC-8"
   ],
   "related": [],
   "fdr": null,
@@ -191,7 +336,7 @@
     "http://flightopsresearch.org/data/files/arrow1285.pdf"
   ],
   "tier": "wikidata",
-  "depth": "sections",
+  "depth": "full",
   "qid": "Q3180238",
   "asn_id": "19851212-0",
   "wikipedia": "https://en.wikipedia.org/wiki/Arrow_Air_Flight_1285R",
@@ -206,8 +351,13 @@
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Synopsis, Factual Information, Conclusions and Causes sections read from TSB report (p. 1-50, 95-100)",
-      "De-icing procedures and recommendations sections reviewed (p. 97-105)"
+      "History of Flight section read from TSB report (p. 1, 7-8): departure times, arrival at Gander, ground operations sequence",
+      "Meteorological Information section read (p. 16-17): freezing precipitation and icing conditions at Gander",
+      "Flight Data Recorder readout read (p. 23-24): rotation timing at 51 seconds, peak airspeed 172 KIAS at 53 seconds, vertical acceleration values, heading deviation",
+      "Wreckage and Impact Information section read (p. 25): impact location, aircraft attitude, tree strike pattern",
+      "Conclusions and Findings section read (p. 93-95): 32 findings including ice contamination, de-icing failure, weight errors, engine performance, and maintenance issues",
+      "Safety Action section read (p. 97-101): weight and balance issues, clean wing campaign, ice detection procedures, cockpit voice recorder testing, crew fatigue",
+      "All recommendations (CASB 86-01 through 88-11) extracted from report sections 4.1 and 4.2"
     ]
   }
 }
