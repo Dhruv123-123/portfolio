@@ -1,0 +1,326 @@
+{
+  "id": "wd_q1012788",
+  "qid": "Q1012788",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Bristow Helicopters Flight 56C",
+  "flight_number": "S6C",
+  "date": "1995-01-19",
+  "time_reference": "UTC",
+  "t0": "1995-01-19T12:36:00Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "2/97",
+      "report_title": "Report on the accident to Aerospatiale AS332L Super Puma, G-TIGK",
+      "report_date": "1997-07-00",
+      "url": "http://www.aaib.gov.uk/cms_resources.cfm?file=/2-1997%20G-TIGK.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Aerospatiale AS332L Super Puma",
+    "manufacturer": "Aerospatiale",
+    "family": "AS332",
+    "registration": "G-TIGK",
+    "msn": null,
+    "engines": "2x Turbomeca Makila"
+  },
+  "operator": "Bristow Helicopters",
+  "route": {
+    "from": "EGPD",
+    "from_name": "Aberdeen",
+    "to": "Brae Alpha Oil Platform",
+    "to_name": "Brae Alpha Oil Platform"
+  },
+  "location": {
+    "name": "North Sea, 6 nm south-west of Brae Alpha Oil Production Platform",
+    "country": "United Kingdom",
+    "lat": 58.6,
+    "lon": -1.167
+  },
+  "phase": "descent",
+  "occupants": 18,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "UNK",
+  "summary": "Bristow Helicopters AS332L Super Puma G-TIGK, en route from Aberdeen to Brae Alpha oil platform with 16 engineers aboard, was struck by lightning during descent through 3,000 feet in poor weather. The lightning strike caused severe damage to the carbon composite tail rotor blade, resulting in vibration that led to cyclic overstressing and detachment of the tail rotor, gearbox and pitch servo assembly approximately 3.5 minutes after the strike. The crew executed a successful autorotation and ditching into 6-7 metre seas. All 18 occupants evacuated safely via heliraft and were rescued within hours. The helicopter sank two hours after being brought alongside a safety vessel.",
+  "probable_cause": "One of the carbon composite tail rotor blades suffered a lightning strike which exceeded its lightning protection provisions, causing significant damage and mass loss. The dynamic response of the gearbox/pylon boom assembly to the tail rotor system imbalance induced rapid cyclic overstressing of the gearbox attachments, accelerated by early failure of the upper mounting bolt locking wire. The lightning strike protection provisions on this design of carbon composite tail rotor blade were inadequate due to having been developed from an earlier fibreglass blade which had been certificated to lightning test criteria which have since become obsolete. (p. 88-89)",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "initiating",
+      "evidence": "Helicopter struck by lightning while in or near thunderstorm during descent through cloud at 3,000 feet amsl, with weather forecast indicating isolated thunderstorms (p. 12-13)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "contributing",
+      "evidence": "Carbon composite tail rotor blade suffered lightning strike damage exceeding its lightning protection provisions, causing significant damage and mass loss; tail rotor, gearbox and pitch servo assembly detached due to cyclic overstressing of gearbox attachments within 3.5 minutes of strike (p. 12, 87-88)"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "Lightning strike protection provisions on carbon composite tail rotor blade were inadequate; blade design developed from earlier fibreglass blade certificated to obsolete lightning test criteria (TSS8.6) rather than current criteria (AC 20-53A); blade may have suffered lightning strike with action integral 3 times the certification level (p. 12, 88-89, 97-98)"
+    },
+    {
+      "id": "flight_control_failure",
+      "role": "contributing",
+      "evidence": "Complete loss of yaw control system and momentary pitch-down as result of detachment of tail rotor, gearbox and pitch servo assembly; dynamic response of gearbox/pylon boom assembly to tail rotor imbalance caused rapid cyclic overstressing of attachments, with failure of upper mounting bolt locking wire accelerating loosening and fatigue failure (p. 12, 88-89)"
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "Crew executed successful autorotation and ditching on rough seas despite 6-7 metre waves and 30 kt wind; helicopter remained afloat for 3 hours 30 minutes; all 18 occupants evacuated to heliraft and rescued without fatalities or serious injuries (p. 13-15, 96)"
+    }
+  ],
+  "chain": [
+    ["convective_weather", "structural_failure"],
+    ["structural_failure", "flight_control_failure"],
+    ["design_deficiency", "structural_failure"],
+    ["flight_control_failure", "emergency_landing"]
+  ],
+  "events": [
+    {
+      "t": -18360,
+      "clock": "07:30:00",
+      "phase": "ground",
+      "actor": "OTHER",
+      "kind": "crew_action",
+      "text": "Crew reported for duty at 0730 hrs and completed return flight to Forties oilfield in G-TIGK with no defects recorded",
+      "factors": []
+    },
+    {
+      "t": -3480,
+      "clock": "11:38:00",
+      "phase": "takeoff",
+      "actor": "OTHER",
+      "kind": "crew_action",
+      "text": "G-TIGK took off from Aberdeen at 1138 hrs with first officer as handling pilot, carrying 16 maintenance engineers bound for Brae oilfield",
+      "factors": []
+    },
+    {
+      "t": -1140,
+      "clock": "12:17:00",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Left Aberdeen Radar coverage at 80 nm range at 1217 hrs and changed frequency to Aberdeen Flight Information Service",
+      "factors": []
+    },
+    {
+      "t": -180,
+      "clock": "12:33:00",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew at reporting point 'Gate in', 120 nm on 062° radial from Aberdeen VOR, at 1233 hrs; changed frequency to Brae Traffic Watch",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "12:36:00",
+      "phase": "descent",
+      "actor": "ENV",
+      "kind": "system",
+      "text": "While passing through patch of cloud at about 3,000 feet amsl during normal letdown, helicopter struck by lightning accompanied by flash; severe vibration immediately began (p. 13)",
+      "factors": ["convective_weather", "structural_failure"]
+    },
+    {
+      "t": 60,
+      "clock": "12:37:00",
+      "phase": "descent",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer, as handling pilot, initiated autorotative descent and transmitted Mayday call on Brae frequency stating lightning strike, severe vibration, and intent to ditch (p. 13)",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": "12:39:00",
+      "phase": "descent",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer gently deflected yaw pedals to test directional control response; helicopter gave violent lurch to left, rolled right and pitched down steeply; first officer transmitted second Mayday with ditching decision (p. 14)",
+      "factors": ["flight_control_failure"]
+    },
+    {
+      "t": 240,
+      "clock": "12:40:00",
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer carried out tail rotor drive failure checks including engine shutdown to contain yaw and arming/inflating flotation floats (p. 14)",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": "12:41:00",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "First officer accomplished gentle touchdown on sea despite 6-7 metre waves and 30 kt southerly wind; commander applied rotor brake and both pilots activated emergency door release (p. 14-15)",
+      "factors": []
+    },
+    {
+      "t": 360,
+      "clock": "12:42:00",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Commander made radio transmission to Brae confirming safe alighting; first officer assisted passengers in evacuating into right heliraft (p. 15)",
+      "factors": []
+    },
+    {
+      "t": 420,
+      "clock": "12:43:00",
+      "phase": "landing",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "All 18 occupants boarded right heliraft despite overloading and puncture from cabin door contact; heliraft remained afloat satisfactorily (p. 15)",
+      "factors": []
+    },
+    {
+      "t": 1800,
+      "clock": "13:06:00",
+      "phase": "landing",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "Companion helicopter 56B located ditched helicopter and assumed duties of On Scene Commander, coordinating rescue assets (p. 15)",
+      "factors": []
+    },
+    {
+      "t": 3840,
+      "clock": "13:40:00",
+      "phase": "landing",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "All crew and passengers recovered from heliraft by Fast Rescue Craft of oil platform safety vessels Grampian Freedom and St Patrick; transferred to Grampian Freedom to await return to mainland (p. 15)",
+      "factors": []
+    },
+    {
+      "t": 6840,
+      "clock": "14:30:00",
+      "phase": "landing",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "RAF Nimrod aircraft assumed command of rescue coordination at 1430 hrs; 15 survivors winched aboard helicopters and put on Brae A platform for evening flight to Aberdeen; three passengers sailed to Aberdeen aboard Grampian Freedom (p. 15)",
+      "factors": []
+    },
+    {
+      "t": 12780,
+      "clock": "16:09:00",
+      "phase": "landing",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "Helicopter brought alongside safety vessel Highland Pride at 1609 hrs; three of four main rotor blades cut off and lost (p. 15)",
+      "factors": []
+    },
+    {
+      "t": 19620,
+      "clock": "18:03:00",
+      "phase": "landing",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "While secured to Highland Pride, helicopter's flotation bags punctured and aircraft sank at 1803 hrs after being released (p. 15)",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "AAIB-97-29",
+      "to": "CAA",
+      "text": "Ensure that the North Sea helicopter operating companies include in their very effective recurrent training for crews discussion and, where possible, 'hands on' practice of the procedures necessary to accomplish a successful evacuation from a floating helicopter following a ditching or alighting on the sea.",
+      "status": "unknown",
+      "trigger_factors": ["emergency_landing"]
+    },
+    {
+      "id": "AAIB-97-30",
+      "to": "Aerospatiale",
+      "text": "Review the failure modes of the cabin door upper guide roller mounting arms which can occur during door jettison in rough sea conditions, and take action to prevent such mounting arm failures which can puncture helirafts when they subsequently come into contact with floating doors.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "AAIB-97-31",
+      "to": "CAA",
+      "text": "Call for a survey of jettisonable doors, of composite construction, fitted to North Sea public transport helicopters to determine if they are initially buoyant on jettison and, if so, to inspect such doors for projections likely to puncture floating helirafts, taking into account damage likely to occur to door mountings during jettison in rough sea conditions.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "AAIB-97-32",
+      "to": "CAA",
+      "text": "In order to prevent the premature cessation of electrical power supply to helicopter combined voice/flight data recorders (CVFDRs) caused by abnormal excessive vibration effects on associated G-switches: (1) Require operators to render inoperative CVFDR G-switches, as an interim measure, and (2) Take action to identify a more suitable method of stopping such flight recorders during crash impact.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "AAIB-95-45",
+      "to": "CAA",
+      "text": "In order to provide helicopter commanders with the necessary 'real-time' information to enable them to avoid flight into areas of actual thunderstorms or lightning activity in Public Transport helicopters which have composite rotor blades, the CAA and affected operators should jointly agree the fitment of lightning discharge mapping systems to such aircraft. The Authority should also inform other airworthiness authorities of the action taken in response to this recommendation.",
+      "status": "unknown",
+      "trigger_factors": ["convective_weather", "design_deficiency"]
+    },
+    {
+      "id": "AAIB-97-33",
+      "to": "Aerospatiale",
+      "text": "Introduce improved strength locking arrangements for the mounting bolts of the tail rotor gearbox assembly such that unlocking and loosening of these bolts does not occur under conditions of excessive tail rotor vibration resultant from tail rotor damage.",
+      "status": "unknown",
+      "trigger_factors": ["structural_failure", "flight_control_failure"]
+    },
+    {
+      "id": "AAIB-97-34",
+      "to": "Aerospatiale",
+      "text": "Review the dynamic frequency responses of the tail boom/pylon assembly in relation to tail rotor rotational frequencies, with a view towards assessing the practicability of modifying the tail boom/pylon assembly to reduce associated structural dynamic coupling and related fatigue damage which may arise from in-flight tail rotor blade damage/loss of mass.",
+      "status": "unknown",
+      "trigger_factors": ["structural_failure"]
+    },
+    {
+      "id": "AAIB-97-35",
+      "to": "CAA",
+      "text": "Review aircraft lightning certification requirements, and the advisory nature of AC20-53A, to introduce the following more stringent requirements for rotary wing aircraft with composite rotor blades: (1) Increase in the specified Zone 1A action integral from 2 x 10^6 A2s to a level compatible with the highest energy positive polarity lightning discharges likely to be encountered in service. (2) Replace the existing 98% probability assurance with 100% probability target. (3) Addition of specified arc attachment points to be used in the lightning certification tests on rotor blades. (4) Specified use of representative blade root attachment assemblies during all lightning tests. Additionally, review lightning certification requirements with regard to any corresponding, or other, improvements for fixed wing aircraft with significant composite material structural elements.",
+      "status": "unknown",
+      "trigger_factors": ["design_deficiency", "structural_failure"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Development of improved lightning protection criteria for composite rotor blades",
+    "Enhanced requirements for lightning discharge mapping systems on rotary-wing aircraft with composite structures",
+    "Revised heliraft design to prevent puncturing by floating cabin door components",
+    "Improved structural analysis methods for tail boom/pylon assemblies"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/2-1997%20G-TIGK.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Bristow_Helicopters_Flight_56C",
+  "asn_id": null,
+  "interest": 5.16,
+  "report_links": [
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/2-1997%20G-TIGK.pdf",
+    "https://aviation-safety.net/wikibase/157620",
+    "https://web.archive.org/web/20070929092754/http://www.caa.co.uk/docs/33/CAP689.PDF",
+    "https://web.archive.org/web/20070927015936/http://www.caa.co.uk/docs/33/CAP674.PDF"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read sections: synopsis (p. 12), history of flight (p. 13-15), findings and causes (p. 86-89), recommendations (p. 90-92)",
+      "16 events extracted from detailed timeline with clock times from report",
+      "All factor evidence includes page citations from OCR-scanned report",
+      "Eight safety recommendations extracted with their AAIB reference numbers",
+      "Accident resulted in zero fatalities despite severe structural damage and harsh sea conditions"
+    ]
+  }
+}
