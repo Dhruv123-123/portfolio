@@ -1,0 +1,301 @@
+{
+  "id": "wd_q123171242",
+  "qid": "Q123171242",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "1991 British Army Lynx shootdown",
+  "flight_number": null,
+  "date": "1991-02-13",
+  "time_reference": "GMT",
+  "t0": "1991-02-13T15:18:00Z",
+  "agency": "MOD",
+  "agencies": [
+    {
+      "code": "MOD",
+      "name": "Ministry of Defence",
+      "country": "United Kingdom",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Westland Lynx Mk7",
+    "manufacturer": "Westland",
+    "family": "Lynx",
+    "registration": "ZE380"
+  },
+  "operator": "British Army Air Corps",
+  "route": {
+    "from_name": "Bessbrook Mills",
+    "to_name": "Crossmaglen"
+  },
+  "location": {
+    "name": "Crossmaglen",
+    "country": "Northern Ireland"
+  },
+  "phase": "descent",
+  "occupants": 4,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "SEC",
+  "summary": "Army Air Corps Lynx helicopter ZE380 was attacked by IRA units using Soviet DShK heavy machine guns while descending toward Crossmaglen base on 13 February 1991. The aircraft was struck by multiple rounds of automatic fire causing extensive damage to the airframe, hydraulic systems, and cyclic control. The crew transmitted 'We've been shot - follow us!' and jettisoned the underslung load. Despite severe control difficulties, the crew successfully made an emergency landing in an open field with no crew injuries (p. 4, 74-75).",
+  "probable_cause": "Shot down by IRA South Armagh Brigade using 12.7mm DShK heavy machine guns and 7.62mm machine guns in coordinated ambush attack (p. 1).",
+  "factors": [
+    {
+      "id": "terrorism_or_hostile_act",
+      "role": "initiating",
+      "evidence": "IRA units fired from multiple positions with Soviet 12.7mm DShK heavy machine guns and 7.62mm machine guns in coordinated ambush as aircraft descended to 500-800 feet near Crossmaglen (p. 74-75)."
+    },
+    {
+      "id": "flight_control_failure",
+      "role": "contributing",
+      "evidence": "Multiple rounds struck the aircraft causing 'severe cyclic control problems' with 'kicking' and abnormal feedbacks; hydraulic system failure indicated by loss of AFCS and zero transmission oil pressure (p. 4, 74)."
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "latent",
+      "evidence": "Bessbrook Mills heliport was the busiest in Europe with approximately 600 helicopter flights per week, creating routine reliance on low-level operations in hostile airspace (p. 1)."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "British Army board of inquiry noted that helicopter simulators offered no training in hostile engagement scenarios nor any training in battle damage assessment in flight (p. 1)."
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "Despite extensive damage and control difficulties, crew executed successful emergency landing in open field near Silverbridge with no injuries (p. 74-75)."
+    }
+  ],
+  "chain": [
+    [
+      "terrorism_or_hostile_act",
+      "flight_control_failure"
+    ],
+    [
+      "flight_control_failure",
+      "emergency_landing"
+    ],
+    [
+      "operator_safety_culture",
+      "terrorism_or_hostile_act"
+    ],
+    [
+      "inadequate_training",
+      "emergency_landing"
+    ]
+  ],
+  "events": [
+    {
+      "t": -480,
+      "clock": "15:10:00",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Lynx ZE380 tasked with underslung load flight from Bessbrook to Crossmaglen, routed via G30 for mutual support coverage (p. 4).",
+      "state": {
+        "alt": 1000
+      }
+    },
+    {
+      "t": -120,
+      "clock": "15:16:00",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft in fast descent through 500-800 feet AGL approximately 8-1000 meters northeast of firing position at 60 knots (p. 74)."
+    },
+    {
+      "t": 0,
+      "clock": "15:18:00",
+      "phase": "descent",
+      "actor": "ENV",
+      "kind": "warning",
+      "text": "Contact ground personnel report automatic fire from east; aircraft crew observes flash in front of cockpit followed by strikes hitting port side behind cockpit (p. 10, 74).",
+      "factors": [
+        "terrorism_or_hostile_act"
+      ]
+    },
+    {
+      "t": 5,
+      "clock": "15:18:05",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Cabin gunner reports aircraft hit and on fire. AFCS (autopilot flight control system) lost completely; severe cyclic control 'kicking' with strong and weak feedbacks begin; unusual rattling from main rotor gearbox area (p. 74).",
+      "factors": [
+        "flight_control_failure"
+      ]
+    },
+    {
+      "t": 15,
+      "clock": "15:18:15",
+      "phase": "descent",
+      "actor": "ENV",
+      "kind": "system",
+      "text": "During turn, aircraft hit by 2 further bursts of automatic fire. Pilot perceives engagement by 2 weapons: one high-rate 'cracking' noise, second slower 'thumping' noise (p. 74-75).",
+      "factors": [
+        "terrorism_or_hostile_act",
+        "flight_control_failure"
+      ]
+    },
+    {
+      "t": 30,
+      "clock": "15:18:30",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot transmits 'We've been shot - follow us!' to second Lynx on flight safety net; transmission acknowledged (p. 75)."
+    },
+    {
+      "t": 40,
+      "clock": "15:18:40",
+      "phase": "descent",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Co-pilot orders 'Dump it' (jettison load); pilot initially unsure of meaning but realizes instruction is to jettison underslung load. Co-pilot presses cargo release button (p. 75).",
+      "factors": [
+        "emergency_landing"
+      ]
+    },
+    {
+      "t": 50,
+      "clock": "15:18:50",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot assumes control from co-pilot; begins full instrument check. All systems appear normal except no AFCS lights and transmission oil pressure zero (p. 75).",
+      "factors": [
+        "flight_control_failure"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "15:19:00",
+      "phase": "descent",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Co-pilot also reporting cyclic control problems. Pilot states 'OK, that's it - pick a field!' Aircraft now 3-4 km from Crossmaglen (p. 75).",
+      "factors": [
+        "emergency_landing"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": "15:20:00",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot selects apparent flat long field along line of flight and starts gentle descent with minimum control movements (p. 75)."
+    },
+    {
+      "t": 240,
+      "clock": "15:22:00",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Just prior to touchdown at 20 knots, co-pilot reports additional cyclic control difficulties. During landing run, cross slope becomes apparent; pilot eases off collective pitch to halt aircraft (p. 75).",
+      "factors": [
+        "emergency_landing"
+      ]
+    },
+    {
+      "t": 260,
+      "clock": "15:22:20",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft comes to halt; feels unstable with distinct port lean. Crew completes abbreviated shutdown drills (p. 75).",
+      "factors": [
+        "emergency_landing"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": "15:23:00",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Second Lynx lands 30 meters away. Pilot confirms no crew injuries to Air Commander and directs immediate Army Rescue Flight callout with strict no-fly order for XMG area (p. 75)."
+    },
+    {
+      "t": 420,
+      "clock": "15:25:00",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "MO informs TO of Lynx 7 down status. Y30B tasked to cordon area. Underslung load reported ditched (p. 10)."
+    }
+  ],
+  "cvr": [
+    {
+      "t": 0,
+      "clock": "15:18:00",
+      "speaker": "CAPT",
+      "text": "Flash observed in front of cockpit; strikes heard on port side."
+    },
+    {
+      "t": 5,
+      "clock": "15:18:05",
+      "speaker": "GUNNER",
+      "text": "Aircraft is hit - we're on fire."
+    },
+    {
+      "t": 30,
+      "clock": "15:18:30",
+      "speaker": "CAPT",
+      "text": "We've been shot - follow us!"
+    },
+    {
+      "t": 40,
+      "clock": "15:18:40",
+      "speaker": "FO",
+      "text": "Dump it."
+    },
+    {
+      "t": 120,
+      "clock": "15:19:00",
+      "speaker": "CAPT",
+      "text": "OK, that's it - pick a field!"
+    },
+    {
+      "t": 300,
+      "clock": "15:23:00",
+      "speaker": "CAPT",
+      "text": "No injuries, other than to our pride. Call ARF immediately."
+    }
+  ],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced pilot training for hostile threat environments",
+    "Improved aircraft battle damage assessment procedures",
+    "Review of low-level flight operations in high-threat areas"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/560009/20161010_-_FOI_06484_75411_Lynx_Response_Redacted.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/1991_British_Army_Lynx_shootdown",
+  "asn_id": null,
+  "interest": 5.39,
+  "report_links": [
+    "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/560009/20161010_-_FOI_06484_75411_Lynx_Response_Redacted.pdf"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "14 events extracted from sequence of events timeline and cockpit narrative accounts",
+      "Incident report contains crew statements detailing hostile fire engagement and emergency response",
+      "Timing reconstructed from sequence of events section (p. 10) and crew post-incident reports (p. 74-75)",
+      "Battle damage assessment from pilot and co-pilot accounts of control failures",
+      "Emergency landing successfully executed despite structural damage and hydraulic system loss",
+      "No crew fatalities or injuries despite extensive airframe and system damage"
+    ]
+  }
+}

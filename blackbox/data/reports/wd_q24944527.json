@@ -1,0 +1,308 @@
+{
+  "id": "wd_q24944527",
+  "qid": "Q24944527",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "2000 Zion mid-air collision",
+  "flight_number": null,
+  "date": "2000-02-08",
+  "time_reference": "CST",
+  "t0": "2000-02-08T15:04:00-06:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "CHI00MA066A"
+    }
+  ],
+  "aircraft": {
+    "type": "Moravan Z242L",
+    "manufacturer": "Moravan",
+    "family": "Z242",
+    "registration": "N5ZA"
+  },
+  "operator": "Multiple",
+  "route": {
+    "from_name": "Sheboygan County Memorial Airport",
+    "to_name": "Waukegan Regional Airport"
+  },
+  "location": {
+    "name": "Zion, Illinois",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 4,
+  "fatalities": 3,
+  "injuries_serious": 2,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "A Moravan Z242L (N5ZA) piloted by a private pilot and a Cessna 172P (N99063) piloted by a student pilot collided in flight approximately 2 miles from Waukegan Regional Airport while both were on approach. The Zlin descended from the northwest while the Cessna was on final approach. The airport controller lost sight of the Cessna and made erroneous sequencing decisions based on time estimates. The Cessna's high-wing configuration blocked the student pilot's view of the Zlin above. Both aircraft crashed with all four occupants fatally injured and five people on the ground injured.",
+  "probable_cause": "The pilot's failure to maintain clearance from the other airplane. Contributing factors were the pilot's poor visual lookout and the airport control tower local controller's failure to provide effective sequencing (p. 2).",
+  "factors": [
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "initiating",
+      "evidence": "Both pilots failed to see the other aircraft; the Cessna pilot's high-wing blocked her view of the Zlin above (p. 6)."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Visibility was 10 miles with hazy weather conditions near Lake Michigan; the controller stated 'weather conditions got hazy near the water' (p. 5)."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The local controller lost sight of the Cessna about 1.5 miles northeast of the field and could not see the Zlin (p. 5)."
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "The controller based sequencing on elapsed time estimate rather than visual confirmation (p. 5)."
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "N5ZA struck N99063; N5ZA impacted hospital roof, N99063 crashed on residential street (p. 4)."
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "atc_communication_error",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "inadequate_monitoring",
+      "atc_communication_error"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "midair_collision"
+    ]
+  ],
+  "events": [
+    {
+      "t": -5675,
+      "clock": "13:38:34",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Cessna N99063 contacts Waukegan tower reporting 7 miles south, requesting practice touch-and-go operations (p. 4)."
+    },
+    {
+      "t": -5642,
+      "clock": "13:42:18",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower clears N99063 for touch-and-go with right-hand traffic pattern (p. 4)."
+    },
+    {
+      "t": -2735,
+      "clock": "14:26:26",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "N99063 performs full-stop landing after nine practice touch-and-go operations (p. 4)."
+    },
+    {
+      "t": -335,
+      "clock": "14:55:25",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Zlin N5ZA makes initial call to tower, reports 15 miles northeast (p. 4)."
+    },
+    {
+      "t": -198,
+      "clock": "14:57:42",
+      "phase": "ground",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "N99063 requests permission to depart; tower instructs to hold short (p. 4)."
+    },
+    {
+      "t": -163,
+      "clock": "14:57:57",
+      "phase": "ground",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower instructs N99063 to taxi and hold, then clears for takeoff (p. 4)."
+    },
+    {
+      "t": -12,
+      "clock": "14:59:48",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower asks N5ZA for position; N5ZA reports about a mile or two off the lake (p. 5)."
+    },
+    {
+      "t": -7,
+      "clock": "14:59:53",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower asks if N5ZA straight in; pilot responds yes. Tower clears to land (p. 5)."
+    },
+    {
+      "t": 38,
+      "clock": "15:00:38",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower instructs N99063 on downwind to advise when she sees red low wing aircraft (p. 5)."
+    },
+    {
+      "t": 50,
+      "clock": "15:00:50",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "N5ZA pilot identifies: zulu alpha's the white zlin (p. 5)."
+    },
+    {
+      "t": 76,
+      "clock": "15:01:16",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "N99063 pilot reports negative traffic and asks when to turn base (p. 5)."
+    },
+    {
+      "t": 101,
+      "clock": "15:01:41",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "N5ZA pilot reports just crossing the shoreline (p. 5)."
+    },
+    {
+      "t": 129,
+      "clock": "15:02:09",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower asks N99063 if she sees N5ZA; pilot responds negative (p. 5)."
+    },
+    {
+      "t": 136,
+      "clock": "15:02:16",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower instructs N99063 to start base leg (p. 5)."
+    },
+    {
+      "t": 199,
+      "clock": "15:03:19",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "N5ZA pilot reports negative contact with cessna in front (p. 6)."
+    },
+    {
+      "t": 207,
+      "clock": "15:03:27",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "N5ZA pilot states then we have the traffic in sight (p. 6)."
+    },
+    {
+      "t": 233,
+      "clock": "15:03:53",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower asks N5ZA do you see a cessna in front of you (p. 6)."
+    },
+    {
+      "t": 240,
+      "clock": "15:04:00",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "N5ZA pilot reports N5ZA just had a midair (p. 6)."
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "N5ZA dives and crashes through hospital roof; N99063 spirals down and crashes on residential street (p. 6)."
+    }
+  ],
+  "cvr": [
+    {
+      "t": 38,
+      "clock": "15:00:38",
+      "speaker": "ATC",
+      "text": "Continue on the downwind advise when you see a red low wing aircraft straight in on final."
+    },
+    {
+      "t": 50,
+      "clock": "15:00:50",
+      "speaker": "CAPT",
+      "text": "Zulu alpha's the white zlin."
+    },
+    {
+      "t": 101,
+      "clock": "15:01:41",
+      "speaker": "CAPT",
+      "text": "Just crossing the shoreline."
+    },
+    {
+      "t": 199,
+      "clock": "15:03:19",
+      "speaker": "CAPT",
+      "text": "Negative contact with the cessna in front of us."
+    },
+    {
+      "t": 207,
+      "clock": "15:03:27",
+      "speaker": "CAPT",
+      "text": "Then we have the traffic in sight, thanks."
+    },
+    {
+      "t": 240,
+      "clock": "15:04:00",
+      "speaker": "CAPT",
+      "text": "[N5ZA] just had a midair."
+    }
+  ],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001212X20469&AKey=1&RType=Final&IType=IA"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2000_Illinois_mid-air_collision",
+  "asn_id": null,
+  "interest": 5.47,
+  "report_links": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001212X20469&AKey=1&RType=Final&IType=IA"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "19 events with clock times from detailed timeline in report",
+      "Probable cause directly from NTSB findings section",
+      "All evidence cited with page numbers",
+      "Loss of situational awareness tracked through radar data vs pilot position reports"
+    ]
+  }
+}

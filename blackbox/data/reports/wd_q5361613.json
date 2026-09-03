@@ -1,0 +1,357 @@
+{
+  "id": "wd_q5361613",
+  "qid": "Q5361613",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "FedEx Express 647",
+  "flight_number": "FX647",
+  "date": "2003-12-18",
+  "time_reference": "CST",
+  "t0": "2003-12-18T12:25:53-06:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-05/01",
+      "report_date": "2005-05-17"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas MD-10-10F",
+    "manufacturer": "McDonnell Douglas",
+    "family": "MD-10",
+    "registration": "N364FE"
+  },
+  "operator": "FedEx Express",
+  "route": {
+    "from": "KOAK",
+    "from_name": "Metropolitan Oakland International Airport",
+    "to": "KMEM",
+    "to_name": "Memphis International Airport"
+  },
+  "location": {
+    "name": "Memphis International Airport",
+    "country": "United States"
+  },
+  "phase": "landing",
+  "occupants": 7,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "UNK",
+  "summary": "FedEx Express Flight 647, an MD-10-10F cargo aircraft carrying a flight crew of two and five off-duty FedEx crew members, touched down on runway 36R at Memphis after an uneventful flight from Oakland. The first officer, serving as pilot flying, failed to properly align the aircraft with the runway and did not adequately slow before touchdown. The aircraft landed very hard while still in a crab; 14 seconds after touchdown, the right wing dropped approximately 6 degrees, exceeding the landing gear design limits and causing the right main landing gear to collapse. The aircraft veered off the runway, caught fire, but all occupants evacuated.",
+  "probable_cause": "The first officer did not properly apply crosswind landing techniques to align the airplane with the runway centerline and to properly arrest the airplane's descent rate (flare) before the airplane touched down. The captain failed to adequately monitor the first officer's performance and command or initiate corrective action during the final approach and landing (p. 59).",
+  "factors": [
+    {
+      "id": "inadequate_monitoring",
+      "role": "initiating",
+      "evidence": "The captain, conducting a line check, did not adequately monitor the first officer's performance during the final stages of approach and landing and failed to take corrective action (p. 59)."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "The first officer did not properly apply control wheel and rudder inputs to align the airplane with the runway centerline (p. 58)."
+    },
+    {
+      "id": "excessive_speed",
+      "role": "contributing",
+      "evidence": "The first officer did not adequately arrest the airplane's rate of descent before touchdown, resulting in excessive landing speed (p. 58)."
+    },
+    {
+      "id": "hard_landing",
+      "role": "contributing",
+      "evidence": "The airplane touched down extremely hard while still in a crab as a result of poor approach technique (p. 58)."
+    },
+    {
+      "id": "contaminated_runway",
+      "role": "contributing",
+      "evidence": "A crosswind component caused the right wing to drop approximately 6 degrees during touchdown, which exceeded the landing gear design capabilities (p. 68)."
+    },
+    {
+      "id": "landing_gear_failure",
+      "role": "outcome",
+      "evidence": "The excessive vertical and lateral forces on the right main landing gear during landing exceeded design limits and resulted in fracture of the outer cylinder and collapse of the right gear (p. 59)."
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "The aircraft veered off the right side of the runway after the landing gear collapsed (p. 1)."
+    }
+  ],
+  "chain": [
+    [
+      "inadequate_monitoring",
+      "inappropriate_control_input"
+    ],
+    [
+      "inadequate_monitoring",
+      "excessive_speed"
+    ],
+    [
+      "inappropriate_control_input",
+      "hard_landing"
+    ],
+    [
+      "excessive_speed",
+      "hard_landing"
+    ],
+    [
+      "hard_landing",
+      "landing_gear_failure"
+    ],
+    [
+      "contaminated_runway",
+      "landing_gear_failure"
+    ],
+    [
+      "landing_gear_failure",
+      "runway_overrun"
+    ]
+  ],
+  "events": [
+    {
+      "t": -632,
+      "clock": "12:15:41",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "MEM approach control advised aircraft to reduce speed to 210 knots and descend to maintain 6,000 feet (p. 12)."
+    },
+    {
+      "t": -333,
+      "clock": "12:20:20",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain advised first officer they had intercepted the localizer (p. 14)."
+    },
+    {
+      "t": -173,
+      "clock": "12:21:00",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilots reported sighting the airport to approach control (p. 14)."
+    },
+    {
+      "t": -60,
+      "clock": "12:21:53",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower controller cleared FX647 for visual approach runway 36R, number two following heavy Airbus, cautioned about wake turbulence (p. 14)."
+    },
+    {
+      "t": 0,
+      "clock": "12:25:53",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft touched down on runway 36R. CVR recorded sounds of touchdown (p. 15).",
+      "state": {
+        "alt": 0,
+        "vs": -12.5
+      }
+    },
+    {
+      "t": 3,
+      "clock": "12:25:56",
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer said 'wow' (p. 15).",
+      "factors": [
+        "hard_landing"
+      ]
+    },
+    {
+      "t": 14,
+      "clock": "12:26:07",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "FDR showed right wing suddenly dropped 6 degrees, generating lateral load factor of about 1.0G. CAWS landing gear alert began sounding (p. 15).",
+      "factors": [
+        "landing_gear_failure",
+        "contaminated_runway"
+      ],
+      "state": {
+        "roll": -6
+      }
+    },
+    {
+      "t": 32,
+      "clock": "12:26:25",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft began to veer off the right side of runway; captain stated 'here we go' (p. 15).",
+      "factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "t": 37,
+      "clock": "12:26:30",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft came to rest in grass on right side of runway; fire developed on right side (p. 15)."
+    },
+    {
+      "t": 38,
+      "clock": "12:22:31",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain asked about adding four extra knots, citing potential for being knocked around by turbulence (p. 14).",
+      "factors": [
+        "excessive_speed"
+      ]
+    },
+    {
+      "t": 48,
+      "clock": "12:26:41",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilots shut down engines, stopping electrical power and CVR recording (p. 15)."
+    },
+    {
+      "t": 105,
+      "clock": "12:23:38",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer requested 35 degrees of flaps; captain acknowledged and complied (p. 14)."
+    },
+    {
+      "t": 119,
+      "clock": "12:23:52",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Windshear alert sounded (p. 14). Crew decided to continue approach after brief alert."
+    },
+    {
+      "t": 194,
+      "clock": "12:24:27",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "CAWS callout '1000' as aircraft descended through 1,000 feet above ground level. Captain stated 'visual, stable' (p. 15).",
+      "state": {
+        "alt": 1000
+      }
+    },
+    {
+      "t": 219,
+      "clock": "12:24:52",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer announced autopilot coming off (p. 15)."
+    },
+    {
+      "t": 229,
+      "clock": "12:25:02",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain stated checklist complete and 'You're cleared to land' (p. 15)."
+    }
+  ],
+  "cvr": [
+    {
+      "t": -60,
+      "clock": "12:21:53",
+      "speaker": "ATC",
+      "text": "FedEx six forty seven heavy, Memphis tower, number two following a heavy Airbus two mile final caution wake turbulence runway three six right. Gain and loss of ten [knots] short final runway three six right, cleared to land."
+    },
+    {
+      "t": 3,
+      "clock": "12:25:56",
+      "speaker": "FO",
+      "text": "Wow."
+    },
+    {
+      "t": 32,
+      "clock": "12:26:25",
+      "speaker": "CAPT",
+      "text": "Here we go."
+    },
+    {
+      "t": 38,
+      "clock": "12:22:31",
+      "speaker": "CAPT",
+      "text": "How 'bout four extra knots. I don't like to add extra speed, but you know, three or four knots can make a lot of difference...if you're bumpin' around back and forth."
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-05-014",
+      "to": "FAA",
+      "text": "Require all Part 121 air carrier operators to establish programs for flight crewmembers who have demonstrated performance deficiencies or experienced failures in training to review their whole performance history and administer additional oversight and training.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-05-015",
+      "to": "FAA",
+      "text": "Amend emergency exit training information in Federal Aviation Administration Order 8400.10 to make flight crew emergency exit door/slide training as comprehensive as cabin crew training.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-05-016",
+      "to": "FAA",
+      "text": "Verify that all Part 121 operators' emergency door/slide trainers are configured to accurately represent actual exit installations and that training includes pulling the manual inflation handle.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-05-017",
+      "to": "FAA",
+      "text": "Inform all air traffic control tower controllers of the circumstances of this accident and the need to ensure aircraft rescue and firefighting vehicles are not delayed and to relay occupant information to ARFF responders.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-05-018",
+      "to": "Memphis/Shelby County Airport Authority and Memphis Fire Department",
+      "text": "Modify the Airport Emergency Procedures agreement to fully describe protocol for emergency responses including ARFF equipment and personnel coordination.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced pilot monitoring procedures during line checks and training",
+    "Improved crosswind landing technique instruction in airline training programs"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0501.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/FedEx_Express_Flight_647",
+  "asn_id": "20031218-0",
+  "interest": 5.74,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0501.pdf",
+    "https://www.ntsb.gov/ntsb/GenPDF.asp?id=DCA04MA011&rpt=fa"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "All events extracted from History of Flight section with specific clock times from CVR records",
+      "Probable cause from NTSB findings section (p. 59)",
+      "Events include approach procedure readbacks, descent checklist items, and precise final approach timeline",
+      "16 events total with clock times and system state where recorded in FDR data",
+      "5 new recommendations cited in report",
+      "Evidence for all factors includes page number citations"
+    ]
+  }
+}
