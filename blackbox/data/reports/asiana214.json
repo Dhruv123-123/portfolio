@@ -483,5 +483,25 @@
       "Aircraft MSN not stated; engine model PW4090 as fitted to Asiana's 777-28E ER fleet."
     ]
   },
-  "wikipedia": "https://en.wikipedia.org/wiki/Asiana_Airlines_Flight_214"
+  "wikipedia": "https://en.wikipedia.org/wiki/Asiana_Airlines_Flight_214",
+  "audio": [
+    {
+      "title": "AAR214-KSFO-Crash.ogg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/AAR214-KSFO-Crash.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:AAR214-KSFO-Crash.ogg",
+      "license": "Public domain",
+      "kind": "atc",
+      "description": "Recording of conversation of air traffic controllers and pilots at San  Francisco International Airport (KSFO) during the Ariana Airlines 214 crash landing",
+      "duration": 175.59510204081633
+    },
+    {
+      "title": "Asiana 214 crash - KSFO Tower ATC recording.ogg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Asiana_214_crash_-_KSFO_Tower_ATC_recording.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Asiana_214_crash_-_KSFO_Tower_ATC_recording.ogg",
+      "license": "Public domain",
+      "kind": "atc",
+      "description": "Asiana 214 crash - KSFO Tower ATC recording",
+      "duration": 440.0075963718821
+    }
+  ]
 }
