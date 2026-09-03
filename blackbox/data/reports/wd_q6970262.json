@@ -1,0 +1,213 @@
+{
+ "id": "wd_q6970262",
+ "qid": "Q6970262",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "National Airlines 27",
+ "flight_number": "NA27",
+ "date": "1973-11-03",
+ "agency": "NTSB",
+ "aircraft": {
+  "type": "McDonnell Douglas DC-10-10",
+  "manufacturer": "McDonnell Douglas",
+  "family": "DC-10",
+  "registration": "N60NA"
+ },
+ "operator": "National Airlines",
+ "route": {
+  "from_name": "Houston",
+  "to_name": "Las Vegas"
+ },
+ "location": {
+  "name": "Albuquerque International Sunport",
+  "country": "United States"
+ },
+ "phase": "cruise",
+ "occupants": 127,
+ "fatalities": 1,
+ "category": "OTHR",
+ "summary": "At 39,000 feet, 65 miles southwest of Albuquerque, the No. 3 engine fan assembly disintegrated in an uncontained failure. Engine fragments penetrated the right wing, fuselage, and both remaining engine nacelles, causing explosive decompression and ejecting an adjacent passenger through a cabin window. The crew conducted an emergency descent and landed safely 19 minutes later.",
+ "probable_cause": "The disintegration of the No. 3 engine fan assembly resulted from an interaction between the fan blade tips and the fan case when blade retaining force proved insufficient at destructive vibration resonance. Bolts holding the front covering were found to be outside tolerance specifications (p. 3)",
+ "factors": [
+  {
+   "id": "uncontained_engine_failure",
+   "role": "initiating",
+   "evidence": "the No. 3 (starboard) engine fan assembly disintegrated in an uncontained engine failure"
+  },
+  {
+   "id": "maintenance_error",
+   "role": "contributing",
+   "evidence": "the bolts that had held the front covering in place, which had failed in the accident, were outside the tolerances laid down"
+  },
+  {
+   "id": "known_defect_unresolved",
+   "role": "latent",
+   "evidence": "between August 8 and September 12, 1973, there had been fifteen problems reported about the third engine, and after replacement a further twenty-six faults had been reported by the flight crew before the accident"
+  },
+  {
+   "id": "explosive_decompression",
+   "role": "outcome",
+   "evidence": "cabin window was dislodged by debris, and cabin pressure differential ejected the adjacent passenger from the aircraft"
+  },
+  {
+   "id": "emergency_landing",
+   "role": "outcome",
+   "evidence": "Outcome factor present in event timeline"
+  }
+ ],
+ "chain": [
+  [
+   "uncontained_engine_failure",
+   "explosive_decompression"
+  ],
+  [
+   "maintenance_error",
+   "uncontained_engine_failure"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "16:40",
+   "phase": "cruise",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Captain engaged autothrottle system in airspeed mode with target 257 KIAS (p. 5)",
+   "factors": []
+  },
+  {
+   "t": 60,
+   "clock": null,
+   "phase": "cruise",
+   "actor": "FE",
+   "kind": "crew_action",
+   "text": "Flight engineer pulled N1 circuit breakers during discussion of engine tachometers (p. 5)",
+   "factors": []
+  },
+  {
+   "t": 120,
+   "clock": null,
+   "phase": "cruise",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Aircraft began to buffet severely after explosion felt and heard (p. 5)",
+   "factors": [
+    "uncontained_engine_failure"
+   ]
+  },
+  {
+   "t": 180,
+   "clock": null,
+   "phase": "descent",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Pilots immediately initiated emergency descent from 39,000 feet (p. 5)",
+   "factors": []
+  },
+  {
+   "t": 240,
+   "clock": null,
+   "phase": "descent",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Emergency transponder code activated to alert Albuquerque Center (p. 5)",
+   "factors": []
+  },
+  {
+   "t": 300,
+   "clock": "16:45",
+   "phase": "descent",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Radio contact established with Albuquerque Approach Control, cleared to 8,000 feet for runway 26 (p. 5)",
+   "factors": []
+  },
+  {
+   "t": 1140,
+   "clock": "16:59",
+   "phase": "landing",
+   "actor": "CAPT",
+   "kind": "outcome",
+   "text": "Flight landed safely at Albuquerque International Airport 19 minutes after engine failure (p. 5)",
+   "factors": [
+    "emergency_landing"
+   ]
+  },
+  {
+   "t": 1200,
+   "clock": null,
+   "phase": "landing",
+   "actor": "CABIN",
+   "kind": "outcome",
+   "text": "Passengers and crew evacuated via emergency slides; all survived (p. 5)",
+   "factors": []
+  }
+ ],
+ "report_links": [
+  "https://news.google.com/newspapers?id=JTJWAAAAIBAJ&sjid=l-cDAAAAIBAJ&pg=6857%2C1066321",
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7502.pdf"
+ ],
+ "wikipedia": "https://en.wikipedia.org/wiki/National_Airlines_Flight_27",
+ "asn_id": "19731103-0",
+ "interest": 9.32,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5-20251001",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Extracted from NTSB report AAR-75-2",
+   "Sections read: History of Flight, Engine Analysis, Probable Cause, Findings",
+   "8 events with clock times from detailed accident sequence",
+   "Evidence includes page number citations",
+   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
+  ]
+ },
+ "curated_id": null,
+ "time_reference": "MST",
+ "t0": "1973-11-03T16:40:00-07:00",
+ "sources": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7502.pdf"
+ ],
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead"
+  }
+ ],
+ "recommendations": [
+  {
+   "id": null,
+   "to": "FAA",
+   "text": "Review and enhance DC-10 engine fan assembly design and certification to prevent uncontained failures",
+   "status": "unknown",
+   "trigger_factors": [
+    "uncontained_engine_failure"
+   ]
+  },
+  {
+   "id": null,
+   "to": "Douglas",
+   "text": "Conduct analysis of DC-10 engine mounting and shielding to reduce damage from future uncontained engine failures",
+   "status": "unknown",
+   "trigger_factors": [
+    "uncontained_engine_failure"
+   ]
+  },
+  {
+   "id": null,
+   "to": "FAA",
+   "text": "Enhance cabin rapid decompression procedures and equipment to improve passenger safety during explosive depressurization events",
+   "status": "unknown",
+   "trigger_factors": [
+    "explosive_decompression"
+   ]
+  }
+ ],
+ "cvr": [],
+ "dissent": [],
+ "safety_changes": [],
+ "related": []
+}

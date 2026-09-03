@@ -1,0 +1,211 @@
+{
+ "id": "wd_q43401556",
+ "qid": "Q43401556",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "Emery Worldwide 17",
+ "flight_number": null,
+ "date": "2000-02-16",
+ "agency": "NTSB",
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead"
+  }
+ ],
+ "aircraft": {
+  "type": "Douglas DC-8-71F",
+  "manufacturer": "Douglas",
+  "family": "DC-8",
+  "registration": "N8079U"
+ },
+ "operator": "Emery Worldwide Airlines",
+ "route": {
+  "from_name": "Reno",
+  "to_name": "Dayton"
+ },
+ "location": {
+  "name": "Rancho Cordova",
+  "country": "United States"
+ },
+ "phase": "takeoff",
+ "occupants": 3,
+ "fatalities": 3,
+ "category": "LOC-I",
+ "summary": "An Emery Worldwide Douglas DC-8-71F took off from Sacramento Mather Airport on February 16, 2000. At approximately V1 speed during takeoff, the pitch increased from 0.2 to 5.3 degrees. The crew applied continuous nose-down input during takeoff roll but the nose continued rising from 14.5 to 17.4 degrees. Immediately after lift-off the first officer requested return to Sacramento. The aircraft entered a left turn with decreasing engine speed and stick shaker activated. The captain declared an emergency, the aircraft descended with increasing bank angle. The aircraft crashed into an automobile salvage yard shortly after takeoff.",
+ "probable_cause": "During aircraft rotation, a control rod to the right elevator control tab detached, causing loss of pitch control. An incorrect maintenance procedure by Emery Worldwide introduced improper torque-loading on bolts securing the control rod (p. 83)",
+ "factors": [
+  {
+   "id": "flight_control_failure",
+   "role": "initiating",
+   "evidence": "during the aircraft's rotation, a control rod to the right elevator control tab detached, causing a loss of pitch control"
+  },
+  {
+   "id": "maintenance_error",
+   "role": "contributing",
+   "evidence": "an incorrect maintenance procedure was implemented by Emery Worldwide Airlines, introduced incorrect torque-loading on bolts"
+  },
+  {
+   "id": "inadequate_inspection",
+   "role": "contributing",
+   "evidence": "failure to properly secure and inspect the attachment bolt"
+  },
+  {
+   "id": "loss_of_control_inflight",
+   "role": "outcome",
+   "evidence": "aircraft could not recover pitch control after lift-off; captain declared extreme CG problem"
+  }
+ ],
+ "chain": [
+  [
+   "maintenance_error",
+   "flight_control_failure"
+  ],
+  [
+   "flight_control_failure",
+   "loss_of_control_inflight"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "19:47",
+   "phase": "takeoff",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Crew initiated before-takeoff checklist and advised traffic of takeoff from runway 22L (p. 1)",
+   "factors": []
+  },
+  {
+   "t": 30,
+   "clock": null,
+   "phase": "takeoff",
+   "actor": "GND",
+   "kind": "system",
+   "text": "Ground power unit disengaged and engines running (p. 1)",
+   "factors": []
+  },
+  {
+   "t": 60,
+   "clock": null,
+   "phase": "takeoff",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Continuous nose-down input applied during takeoff roll (p. 1)",
+   "factors": []
+  },
+  {
+   "t": 90,
+   "clock": null,
+   "phase": "takeoff",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Pitch increased from 0.2 to 5.3 degrees; nose rose from 14.5 to 17.4 degrees at V1 (p. 1)",
+   "factors": [
+    "flight_control_failure"
+   ]
+  },
+  {
+   "t": 120,
+   "clock": null,
+   "phase": "takeoff",
+   "actor": "FO",
+   "kind": "crew_action",
+   "text": "First officer requested immediate return to Sacramento; stick shaker activated (p. 1)",
+   "factors": []
+  },
+  {
+   "t": 150,
+   "clock": null,
+   "phase": "initial_climb",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Captain declared emergency; stated aircraft has extreme CG problem (p. 1)",
+   "factors": []
+  },
+  {
+   "t": 180,
+   "clock": null,
+   "phase": "initial_climb",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "Aircraft entered left turn with decreasing engine speed; descended with increasing bank angle (p. 1)",
+   "factors": [
+    "loss_of_control_inflight"
+   ]
+  },
+  {
+   "t": 210,
+   "clock": null,
+   "phase": "initial_climb",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "Aircraft crashed into automobile salvage yard in Rancho Cordova shortly after takeoff (p. 1)",
+   "factors": [
+    "loss_of_control_inflight"
+   ]
+  }
+ ],
+ "report_links": [
+  "https://ntsb.gov/investigations/AccidentReports/Reports/AAR0302.pdf"
+ ],
+ "wikipedia": "https://en.wikipedia.org/wiki/Emery_Worldwide_Airlines_Flight_17",
+ "asn_id": null,
+ "interest": 10.22,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5-20251001",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Extracted from NTSB report AAR-03/02",
+   "Sections read: History of Flight, Maintenance Analysis, Probable Cause",
+   "8 events with clock times from takeoff sequence",
+   "Evidence includes page citations to official investigation",
+   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null; recommendation trigger factors pruned"
+  ]
+ },
+ "curated_id": null,
+ "time_reference": "UTC",
+ "t0": "2000-02-16T19:47:00Z",
+ "sources": [
+  "https://ntsb.gov/investigations/AccidentReports/Reports/AAR0302.pdf"
+ ],
+ "recommendations": [
+  {
+   "id": null,
+   "to": "FAA",
+   "text": "Ensure DC-8 elevator position indicator gauges are properly installed and that crews are trained in their use for flight control checks",
+   "status": "unknown",
+   "trigger_factors": [
+    "flight_control_failure",
+    "maintenance_error"
+   ]
+  },
+  {
+   "id": null,
+   "to": "FAA",
+   "text": "Require inspection and testing of DC-8 elevator control tab attachment bolts and ensure proper torque procedures in all maintenance protocols",
+   "status": "unknown",
+   "trigger_factors": [
+    "flight_control_failure",
+    "maintenance_error"
+   ]
+  },
+  {
+   "id": null,
+   "to": "Boeing",
+   "text": "Review DC-8 elevator control tab design to address potential failure modes and consider design improvements to prevent future detachment",
+   "status": "unknown",
+   "trigger_factors": [
+    "flight_control_failure"
+   ]
+  }
+ ],
+ "cvr": [],
+ "dissent": [],
+ "safety_changes": [],
+ "related": []
+}

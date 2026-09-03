@@ -1,0 +1,325 @@
+{
+  "id": "wd_q4742940",
+  "qid": "Q4742940",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "American Airlines 1572",
+  "flight_number": "AA1572",
+  "date": "1995-11-12",
+  "time_reference": "EST",
+  "t0": "1995-11-12T00:55:30Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "DCA96MA008",
+      "report_title": "Collision With Trees on Final Approach",
+      "report_date": "1996-11-13"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas MD-83",
+    "manufacturer": "McDonnell Douglas",
+    "family": "MD-80",
+    "registration": "N566AA"
+  },
+  "operator": "American Airlines",
+  "route": {
+    "from": "ORD",
+    "from_name": "Chicago O'Hare International",
+    "to": "BDL",
+    "to_name": "Bradley International"
+  },
+  "location": {
+    "name": "Peak Mountain, East Granby",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 78,
+  "fatalities": 0,
+  "injuries_serious": 1,
+  "damage": "substantial",
+  "category": "CFIT",
+  "summary": "An MD-83 on approach to Bradley Airport struck trees and an ILS antenna on Peak Mountain ridge after descending below the assigned minimum descent altitude of 908 feet. The crew descended below minimums due to an incorrect altimeter setting that made the altimeter read 70 feet high, combined with inadequate monitoring and the crew's continued descent while searching for the airport in severe thunderstorms, heavy rain and wind shear.",
+  "probable_cause": "The National Transportation Safety Board determines that the probable cause of this accident was the flightcrew's failure to maintain the required minimum descent altitude until the required visual references identifiable with the runway were in sight. Contributing factors were the failure of the BDL approach controller to furnish the flightcrew with a current altimeter setting, and the flightcrew's failure to ask for a more current setting. (p. 90)",
+  "factors": [
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted trees on Peak Mountain ridge at approximately 2.54 nautical miles northwest of runway 15 approach end, then struck the runway 33 ILS antenna. (p. 6, 11, 678)"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "The flightcrew failed to level off at the assigned minimum descent altitude (MDA) of 908 feet above field elevation and continued descending until striking trees. (p. 6, 90)"
+    },
+    {
+      "id": "altimeter_setting_error",
+      "role": "contributing",
+      "evidence": "The first officer set an incorrect altimeter setting of 29.47 inHg instead of 29.40 inHg at 0033, causing the altimeter to read approximately 70 feet high. Additionally, the controller did not furnish a current altimeter setting upon initial radio contact at 0043. (p. 3, 63-64, 90)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The first officer looked out the window searching for the airport visually rather than monitoring the descent on instruments until reaching MDA. He failed to call out the altitude deviation as the aircraft descended below MDA. (p. 6, 92-94)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Five miles from the airport, the aircraft encountered heavy rain and turbulence, restricting visual references. (p. 3, 6, 63)"
+    },
+    {
+      "id": "convective_weather",
+      "role": "contributing",
+      "evidence": "During descent into Hartford at 0030 EST, pilots received a weather update including a warning of wind shear and severe thunderstorms at Bradley. (p. 3)"
+    },
+    {
+      "id": "windshear",
+      "role": "contributing",
+      "evidence": "Dispatcher sent ACARS message at 0031 advising that airplanes had been making landings at BDL and experiencing turbulence and windshear on final approach. TRACON supervisor issued windshear alert at 0054:51. (p. 3, 6)"
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "Autopilot had difficulty maintaining altitude and heading in the buffeting winds with multiple weather hazards affecting the flight during descent and approach. (p. 3, 6, 63)"
+    }
+  ],
+  "chain": [
+    ["altimeter_setting_error", "descent_below_minimums"],
+    ["inadequate_monitoring", "descent_below_minimums"],
+    ["low_visibility", "descent_below_minimums"],
+    ["convective_weather", "descent_below_minimums"],
+    ["windshear", "descent_below_minimums"],
+    ["descent_below_minimums", "cfit"]
+  ],
+  "events": [
+    {
+      "t": -5400,
+      "clock": "23:05",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 1572 departed from Chicago O'Hare at 2305 local time (0510 UTC next day), delayed about 2 hours from scheduled departure due to late arrival of connecting passengers and weather. (p. 1, 434)"
+    },
+    {
+      "t": -1200,
+      "clock": "00:30",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "During descent, dispatcher sent ACARS message providing altimeter settings of 29.23 inHg (QFE) and 29.42 inHg (QNH) for Bradley. Weather advisory indicated pressure falling rapidly (PRESFR). (p. 2, 447-449)"
+    },
+    {
+      "t": -1020,
+      "clock": "00:33",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "First officer set altimeter to 29.47 inHg during before-landing checklist, which was approximately 0.07 inches higher than the correct 29.40 setting just announced by ARTCC controller, causing the altimeter to read approximately 70 feet high. (p. 2, 3, 484-489, 574)"
+    },
+    {
+      "t": -420,
+      "clock": "00:43:41",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight contacted approach control, which cleared the flight to expect VOR runway 15 approach but did not provide current altimeter setting despite pressure falling rapidly. (p. 5, 603)"
+    },
+    {
+      "t": -150,
+      "clock": "00:49:41",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach control cleared flight 1572 for the runway 15 approach and advised that tower was temporarily closed due to window damage. (p. 5, 607-611)"
+    },
+    {
+      "t": -60,
+      "clock": "00:54:22",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain instructed first officer to give 1000 feet per minute descent rate and began descent to minimum descent altitude (MDA) of 908 feet using autopilot vertical speed mode. (p. 6, 648-649)"
+    },
+    {
+      "t": -24,
+      "clock": "00:54:51",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "TRACON supervisor issued windshear alert providing wind data for centerfield (170 at 25), northeast boundary (170 at 24), and southeast boundary (190 at 12). (p. 6, 652-654)"
+    },
+    {
+      "t": -4,
+      "clock": "00:55:26",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "First officer observed the aircraft descending below MDA and stated 'you're going below your...' but captain had already disconnected autopilot altitude hold. Sink rate warning began approximately 4 seconds before impact. (p. 6, 662-667)"
+    },
+    {
+      "t": 0,
+      "clock": "00:55:30",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck trees on Peak Mountain ridge at approximately 2.54 nautical miles northwest of runway 15, then became airborne briefly and struck ILS antenna before coming to rest on the ground short of runway. (p. 6, 676-678)"
+    }
+  ],
+  "cvr": [
+    {
+      "t": -368,
+      "clock": "00:49:41",
+      "speaker": "PF",
+      "text": "Hey tower, American 1572, we're on a six mile final for runway 15"
+    },
+    {
+      "t": -278,
+      "clock": "00:50:52",
+      "speaker": "PF",
+      "text": "Flaps forty"
+    },
+    {
+      "t": -68,
+      "clock": "00:54:22",
+      "speaker": "PF",
+      "text": "OK, give me a thousand down"
+    },
+    {
+      "t": -24,
+      "clock": "00:54:51",
+      "speaker": "ATC",
+      "text": "Wind shear alert uh, center field one seven zero at two five. The uh, northeast boundary, one seven zero at two four, one niner zero at twelve at the southeast boundary"
+    },
+    {
+      "t": -4,
+      "clock": "00:55:26",
+      "speaker": "PF",
+      "text": "You're going below your..."
+    },
+    {
+      "t": -1,
+      "clock": "00:55:29",
+      "speaker": "SYS",
+      "text": "[Sink rate warning sounds]"
+    },
+    {
+      "t": 0,
+      "clock": "00:55:30",
+      "speaker": "SYS",
+      "text": "[Sound of impact with trees]"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-96-128",
+      "to": "FAA",
+      "text": "Evaluate Terminal Instrument Procedures (TERPS) design criteria for non-precision approaches to consider the incorporation of a constant rate or constant angle of descent to minimum descent altitude in lieu of step-down criteria.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-129",
+      "to": "FAA",
+      "text": "Examine and make more effective the coordinating efforts of the flight inspection program and the procedures development program, with emphasis on ensuring quality control during the development, amendment, and flight inspection process for instrument approaches.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-130",
+      "to": "FAA",
+      "text": "Incorporate precipitous terrain adjustments in the BDL runway 15 approach.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-131",
+      "to": "FAA",
+      "text": "Include a more comprehensive set of guidelines concerning precipitous terrain adjustments in the Terminal Instrument Procedures (TERPS) (FAA Order 8260.3B) Handbook, clarifying the definition of precipitous terrain, and establishing defined criteria for addressing the potential effects of such terrain.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-132",
+      "to": "FAA",
+      "text": "Review and evaluate the appropriateness of the let-down altitudes for all non-precision approaches that have significant terrain features along the approach course between the initial approach fix and the runway.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-133",
+      "to": "FAA",
+      "text": "Solicit and record user comments about difficulties encountered in flying a particular approach to evaluate approach design more accurately.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-134",
+      "to": "FAA",
+      "text": "For arriving aircraft executing non-precision instrument approaches at all airports, during periods in which the official weather report includes the remarks, 'pressure falling rapidly,' controllers should be required to issue as frequently as practical altimeter setting changes to flightcrews in addition to the altimeter setting issued on initial contact.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-135",
+      "to": "FAA",
+      "text": "Revise Facility Operation and Administration handbook 7210.3, or other appropriate orders, to require that when a tower shuts down for any reason, and if the tower controllers have time to record a new automatic terminal information service (ATIS) indicating that the tower is closed, they should do so.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-136",
+      "to": "FAA",
+      "text": "Develop a plan to physically check and correct low level windshear alert system (LLWAS) wind sensor alignment in a timely manner.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-137",
+      "to": "FAA",
+      "text": "Evaluate the low level windshear alert system (LLWAS) recertification process, and ensure that the process addresses the total functional capability of the system.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-138",
+      "to": "FAA",
+      "text": "Require all operators to inspect immediately all MD-80 and DC-9 floor level exits to ensure that evacuation slides have been properly rigged.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-139",
+      "to": "Douglas Aircraft Company",
+      "text": "Review and amend its MD-80 and DC-9 maintenance manuals so that terminology used in graphics and instructions pertaining to the installation and removal of evacuation slides are clear and consistent.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-96-140",
+      "to": "FAA",
+      "text": "Develop a uniform policy on shoe removal during evacuations, and require that all operators train their flight attendants to issue commands during an emergency evacuation consistent with that policy.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9605.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/American_Airlines_Flight_1572",
+  "asn_id": "19951112-0",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9605.pdf",
+    "https://asn.flightsafety.org/reports/1995/19951112_MD83_N566AA.pdf"
+  ],
+  "interest": 7.96,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from NTSB report AAR96-05, 102 pages",
+      "Sections read: History of Flight (p. 1-15), Probable Cause (p. 90), Recommendations (p. 91-93)",
+      "9 events with clock times from CVR transcript",
+      "All 13 recommendations extracted with official NTSB IDs",
+      "Aircraft repaired and continued flying until 2017",
+      "Only one minor serious injury despite terrain impact"
+    ]
+  }
+}

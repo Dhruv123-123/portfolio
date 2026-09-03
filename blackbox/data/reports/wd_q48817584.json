@@ -1,0 +1,172 @@
+{
+  "id": "wd_q48817584",
+  "qid": "Q48817584",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Iberia Airlines 933",
+  "date": "1973-12-17",
+  "time_reference": "EST",
+  "t0": "1973-12-17T15:43:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-10-30",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-10",
+    "registration": "EC-CBN"
+  },
+  "operator": "Iberia",
+  "route": {
+    "from_name": "Madrid-Barajas",
+    "to_name": "Logan International"
+  },
+  "location": {
+    "name": "Logan International Airport",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 168,
+  "fatalities": 0,
+  "injuries_serious": 3,
+  "damage": "substantial",
+  "category": "LALT",
+  "summary": "On approach to Boston, Iberia 933 encountered low-level windshear that increased the descent rate beyond crew recognition. The DC-10 collided with approach light piers 500 feet short of the runway, breaking the right main landing gear. The aircraft became airborne again and landed on the runway safely, with all 168 on board surviving though 13 were injured. The investigation found that inadequate monitoring combined with marginal visual cues and lack of windshear information prevented the captain from arresting the excessive descent rate.",
+  "probable_cause": "The National Transportation Safety Board determines that the probable cause of this accident was that the captain did not recognize, and may have been unable to recognize, an increased rate of descent in time to arrest it before the aircraft struck the approach light piers. The increased rate of descent was induced by an encounter with a low altitude wind shear at a critical point in the landing approach where the captain was transitioning from automatic flight control under instrument conditions to manual flight control with visual references. (p. 23-24)",
+  "factors": [
+    {
+      "id": "windshear",
+      "role": "initiating",
+      "evidence": "Aircraft encountered low-level windshear with longitudinal wind shear of about 7.1 knots per 100 feet and lateral wind shear of about 6.3 knots per 100 feet during approach. (p. 19-20)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Captain did not recognize and may have been unable to recognize an increased rate of descent in time. At 1343, the aircraft descended from 500 feet to 200 feet in 20 seconds, a descent rate of approximately 900 feet per minute. (p. 23-24)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "At the time of the accident, low ceilings with obscurations and visibility of 3/4 mile in rain and fog prevailed at Logan, providing marginal visual references. (p. 24)"
+    },
+    {
+      "id": "hard_landing",
+      "role": "outcome",
+      "evidence": "Aircraft struck approach light piers approximately 500 feet short of runway threshold due to excessive descent rate. (p. 24)"
+    },
+    {
+      "id": "landing_gear_failure",
+      "role": "outcome",
+      "evidence": "Aircraft struck embankment and sheared its right main landing gear during impact. (p. 24)"
+    }
+  ],
+  "chain": [
+    ["windshear", "inadequate_monitoring"],
+    ["inadequate_monitoring", "hard_landing"],
+    ["hard_landing", "landing_gear_failure"]
+  ],
+  "events": [
+    {
+      "t": -300,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft on final approach to Logan International Airport runway 33L, transitioning from automatic flight control under instrument conditions to manual flight control with visual references. (p. 24)"
+    },
+    {
+      "t": -60,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Aircraft encountered low-level wind shear at approximately 500 feet altitude. Longitudinal wind component changed from 18-knot tailwind to 33-knot headwind, and left crosswind decreased from 23 to 4 knots. (p. 19-20)"
+    },
+    {
+      "t": -30,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Descent rate increased to approximately 1,179 feet per minute due to wind shear effects. Aircraft descended from 500 feet to 200 feet in 20 seconds with excessive descent rate. (p. 19)"
+    },
+    {
+      "t": -20,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain and first officer failed to recognize the increased rate of descent in time to arrest it. (p. 23-24)"
+    },
+    {
+      "t": 0,
+      "clock": "15:43",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck approach light piers 500 feet short of runway threshold, breaking right main landing gear. (p. 24)"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft became airborne again after impact and landed on runway 33L, skidding to a stop approximately 3,000 feet beyond threshold and 280 feet north of runway centerline. (p. 24)"
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft came to rest on airport. All 168 occupants survived, though 13 passengers and 1 flight attendant were injured. (p. 24)"
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft substantially damaged but recovered. Investigation determined wind shear was primary cause of the excessive descent rate leading to the accident. (p. 24)"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7414.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Iberia_Flight_933",
+  "asn_id": "19731217-2",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7414.pdf",
+    "https://aviation-safety.net/database/record.php?id=19731217-2",
+    "https://www.fss.aero/accident-reports/look.php?report_key=67"
+  ],
+  "interest": 7.93,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from NTSB accident report",
+      "Sections read: Probable Cause (p. 23-24), Analysis of Wind Shear (p. 19-21)",
+      "8 events based on flight data recorder analysis",
+      "No CVR transcript available in public report",
+      "All occupants survived despite substantial damage",
+      "First recorded low-level windshear accident leading to LLWAS development"
+    ]
+  }
+}

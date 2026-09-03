@@ -1,0 +1,290 @@
+{
+ "id": "wd_q4857928",
+ "qid": "Q4857928",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "Bar Harbor Airlines 1808",
+ "flight_number": "BHA1808",
+ "date": "1985-08-25",
+ "agency": "NTSB",
+ "aircraft": {
+  "type": "Beechcraft Model 99",
+  "manufacturer": "Beechcraft",
+  "family": "99",
+  "registration": null
+ },
+ "operator": "Bar Harbor Airlines",
+ "route": {
+  "from_name": "Logan International Airport",
+  "to_name": "Bangor International Airport"
+ },
+ "location": {
+  "name": "Auburn",
+  "country": "United States"
+ },
+ "phase": "approach",
+ "occupants": 8,
+ "fatalities": 8,
+ "category": "CFIT",
+ "summary": "Bar Harbor Airlines Flight 1808, a Beechcraft Model 99, departed Logan International Airport in Boston for Bangor, Maine, with planned stops in Augusta and Waterville, including an unscheduled flag stop in Auburn/Lewiston. At 22:00 EDT, weather at Auburn consisted of a 300-foot obscured indefinite ceiling, 1-mile visibility, and light drizzle. A Portland controller advised the flight it was drifting east of the ILS approach course and instructed a heading of 340 degrees. The aircraft flew through the approach course, requiring a 60-degree right turn less than 1 nautical mile from the outer marker. The aircraft did not begin descent until after passing Lewiston, already above the glide slope, causing the crew to rush the descent and approach with a steep descent profile. The aircraft crashed into trees 4,007 feet from the runway end and 440 feet to the right of centerline. All eight people on board were killed.",
+ "probable_cause": "The captain's continuation of an unstabilized approach which resulted in a descent below glideslope. Contributing to the unstabilized approach was the radar controller's issuance and the captain's acceptance of a nonstandard air traffic control radar vector resulting in an excessive intercept with the localizer (p. 59)",
+ "factors": [
+  {
+   "id": "atc_communication_error",
+   "role": "contributing",
+   "evidence": "Controller advised large 60-degree course correction less than 1 nautical mile from outer marker with poor judgment (p. 10)"
+  },
+  {
+   "id": "unstable_approach",
+   "role": "contributing",
+   "evidence": "Crew continued unstabilized approach instead of executing missed approach despite large late course correction (p. 10-11)"
+  },
+  {
+   "id": "descent_below_minimums",
+   "role": "contributing",
+   "evidence": "Crew descended below published decision height without required visual references (p. 11)"
+  },
+  {
+   "id": "altimeter_setting_error",
+   "role": "contributing",
+   "evidence": "actual altimeter settings on captain's and first officer's altimeters could not be determined due to fire and impact damage, may have contributed to altitude misjudgment"
+  },
+  {
+   "id": "low_visibility",
+   "role": "contributing",
+   "evidence": "1 mile visibility, light drizzle, 300 foot obscured indefinite ceiling at night Auburn-Lewiston (p. 8)"
+  },
+  {
+   "id": "dark_night",
+   "role": "contributing",
+   "evidence": "night approach in low visibility condition"
+  },
+  {
+   "id": "cfit",
+   "role": "outcome",
+   "evidence": "aircraft flew into trees 4,007 feet from runway end and 440 feet right of centerline"
+  }
+ ],
+ "chain": [
+  [
+   "atc_communication_error",
+   "unstable_approach"
+  ],
+  [
+   "unstable_approach",
+   "descent_below_minimums"
+  ],
+  [
+   "descent_below_minimums",
+   "cfit"
+  ],
+  [
+   "low_visibility",
+   "descent_below_minimums"
+  ],
+  [
+   "dark_night",
+   "descent_below_minimums"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "21:30",
+   "phase": "takeoff",
+   "actor": "PF",
+   "kind": "crew_action",
+   "text": "Flight 1808 departed from Boston runway 4L for Auburn via Augusta and Waterville",
+   "factors": []
+  },
+  {
+   "t": 1800,
+   "clock": "22:00",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Auburn weather reported: 300 foot obscured indefinite ceiling, 1 mile visibility, light drizzle, winds 020° at 4 mph, altimeter 30.24 inHg",
+   "factors": [
+    "low_visibility"
+   ]
+  },
+  {
+   "t": 1800,
+   "clock": "22:00",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Auburn-Lewiston weather reported: 300 foot obscured indefinite ceiling, 1 mile visibility, light drizzle, winds 020° at 4 mph, altimeter 30.24 inHg (p. 8)",
+   "factors": [
+    "low_visibility"
+   ]
+  },
+  {
+   "t": 1950,
+   "clock": null,
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Portland controller advised Flight 1808 drifting east of ILS approach course, instructed turn to heading 340 to intercept",
+   "factors": [
+    "atc_communication_error"
+   ]
+  },
+  {
+   "t": 1963,
+   "clock": "22:02",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Portland Approach controller asked if flight 1808 was receiving Lewiston localizer; captain replied not yet intercepted (p. 8)",
+   "factors": [
+    "atc_communication_error"
+   ]
+  },
+  {
+   "t": 2010,
+   "clock": null,
+   "phase": "approach",
+   "actor": "PF",
+   "kind": "crew_action",
+   "text": "Aircraft flew through approach course, made 60-degree right turn less than 1 NM from outer marker",
+   "factors": [
+    "unstable_approach"
+   ]
+  },
+  {
+   "t": 2050,
+   "clock": null,
+   "phase": "approach",
+   "actor": "PF",
+   "kind": "crew_action",
+   "text": "Aircraft did not begin descent until after passing Lewiston, already above glide slope for approach",
+   "factors": [
+    "unstable_approach"
+   ]
+  },
+  {
+   "t": 2100,
+   "clock": null,
+   "phase": "approach",
+   "actor": "PF",
+   "kind": "crew_action",
+   "text": "Crew rushed descent and continued approach with steep descent profile below glide slope",
+   "factors": [
+    "descent_below_minimums"
+   ]
+  },
+  {
+   "t": 2130,
+   "clock": null,
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "Aircraft struck trees 4,007 feet from runway end, 440 feet right of centerline",
+   "factors": [
+    "cfit"
+   ]
+  },
+  {
+   "t": 2180,
+   "clock": "22:03",
+   "phase": "approach",
+   "actor": "PF",
+   "kind": "crew_action",
+   "text": "Portland controller instructed: turn left heading 340 to intercept localizer (p. 8)",
+   "factors": [
+    "atc_communication_error"
+   ]
+  },
+  {
+   "t": 2340,
+   "clock": "22:09",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Portland Approach reported aircraft was over Lewiston, told to contact Lewiston Unicom for advisories (p. 9-10)",
+   "factors": []
+  }
+ ],
+ "report_links": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8606.pdf",
+  "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR86-06.pdf"
+ ],
+ "wikipedia": "https://en.wikipedia.org/wiki/Bar_Harbor_Airlines_Flight_1808",
+ "asn_id": "19850825-0",
+ "interest": 10.33,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5-20251001",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Extracted from NTSB report AAR-86-06",
+   "Sections read: History of Flight (p. 6-10), Probable Cause (p. 59), Recommendations (p. 60-61)",
+   "9 events with clock times extracted from detailed history",
+   "Evidence includes page number citations",
+   "Recommendations from official NTSB report",
+   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
+  ]
+ },
+ "curated_id": null,
+ "time_reference": "EDT",
+ "t0": "1985-08-25T21:30:00-04:00",
+ "sources": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8606.pdf",
+  "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR86-06.pdf"
+ ],
+ "recommendations": [
+  {
+   "id": "A-81-75",
+   "to": "FAA",
+   "text": "Establish for aircraft used in commercial operation the maximum cockpit noise levels which will permit adequate direct voice communication between flight crewmembers under all operating conditions.",
+   "status": "unknown",
+   "trigger_factors": [
+    "atc_communication_error"
+   ]
+  },
+  {
+   "id": "A-81-76",
+   "to": "FAA",
+   "text": "Require the installation and use of crew interphone systems in the cockpits of those aircraft in which noise levels reach or exceed the maximum level established for adequate direct voice communication between flight crewmembers under all operating conditions.",
+   "status": "unknown",
+   "trigger_factors": [
+    "atc_communication_error"
+   ]
+  },
+  {
+   "id": "A-82-107",
+   "to": "FAA",
+   "text": "Require that all multiengine, turbine-powered, fixed-wing aircraft certificated to carry six or more passengers manufactured on or after a specified date be prewired to accept a cockpit voice recorder and flight data recorder.",
+   "status": "unknown",
+   "trigger_factors": []
+  },
+  {
+   "id": "A-82-109",
+   "to": "FAA",
+   "text": "Require that general aviation cockpit voice recorders and flight data recorders be installed when commercially available as standard equipment in all multiengine, turbine-powered fixed-wing aircraft and rotorcraft certificated to carry six or more passengers.",
+   "status": "unknown",
+   "trigger_factors": []
+  },
+  {
+   "id": "A-82-110",
+   "to": "FAA",
+   "text": "Require that general aviation cockpit voice recorders be installed as soon as commercially available in all multiengine, turbine-powered aircraft certificated to carry six or more passengers and required to have two pilots.",
+   "status": "unknown",
+   "trigger_factors": []
+  }
+ ],
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead"
+  }
+ ],
+ "cvr": [],
+ "dissent": [],
+ "safety_changes": [],
+ "related": []
+}

@@ -1,0 +1,192 @@
+{
+  "id": "wd_q6156479",
+  "qid": "Q6156479",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Japan Air System 451",
+  "flight_number": "JAS451",
+  "date": "1993-04-18",
+  "time_reference": "JST",
+  "t0": "1993-04-18T12:43:29Z",
+  "agency": "JTSB",
+  "agencies": [
+    {
+      "code": "JTSB",
+      "name": "Japan Transportation Safety Board",
+      "country": "Japan",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-9-41",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-9",
+    "registration": "JA8448"
+  },
+  "operator": "Japan Air System",
+  "route": {
+    "from": "NGO",
+    "from_name": "Nagoya",
+    "to": "CTS",
+    "to_name": "Hanamaki via New Chitose"
+  },
+  "location": {
+    "name": "Hanamaki Airport",
+    "country": "Japan"
+  },
+  "phase": "landing",
+  "occupants": 77,
+  "fatalities": 0,
+  "injuries_serious": 3,
+  "damage": "substantial",
+  "category": "UNK",
+  "summary": "Japan Air System Flight 451, a Douglas DC-9-41 with 72 passengers and 5 crew, was landing at Hanamaki Airport on 18 April 1993 after a short flight from Nagoya when it encountered windshear on final approach. Wind suddenly changed from 240° to 320° gusting 26 to 47 knots at 300 feet altitude. The relatively inexperienced first officer, who was at the controls, failed to recognize the condition and initiate a go-around. The aircraft made a hard landing with such force that the landing gear root penetrated the wing and punctured the fuel tank, causing a fire. All 77 occupants survived and evacuated quickly, with 19 sustaining injuries.",
+  "probable_cause": "Aircraft encountered windshear on short final approach with insufficient crew experience and late recognition of the condition, causing hard landing with estimated impact force of +6G that punctured the fuel tank and ignited fire. (p. 94-96)",
+  "factors": [
+    {
+      "id": "windshear",
+      "role": "initiating",
+      "evidence": "When the aircraft reached 300 ft the wind suddenly changed and began to sink fast causing the aircraft's warning system to announce a Sink rate warning. Wind changed from 240° to 320° gusting 26 to 47 knots. (p. 94-100)"
+    },
+    {
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "The co-pilot who was at controls at this time was not sufficiently experienced according to the operator operational procedures for handling windshear approach situations. (p. 94-96)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Poor supervision on part of the captain and a too late recovery were considered as contributing factors. The captain did not immediately take control when windshear was encountered. (p. 94-96)"
+    },
+    {
+      "id": "go_around_not_flown",
+      "role": "contributing",
+      "evidence": "The pilots were faulted by the fact that they failed to initiate a go-around until it was too late in the descent sequence. (p. 94-96)"
+    },
+    {
+      "id": "hard_landing",
+      "role": "outcome",
+      "evidence": "Aircraft impacted the runway with such force that the gear was estimated to suffer up to +6G causing it to puncture the fuel tank and cause a fire. (p. 94-96)"
+    },
+    {
+      "id": "fuel_leak",
+      "role": "outcome",
+      "evidence": "The landing gear root penetrated the wing and punctured the fuel tank due to excessive impact force, causing fuel leakage and fire. (p. 94-96)"
+    },
+    {
+      "id": "inflight_fire",
+      "role": "outcome",
+      "evidence": "Fire developed from ruptured fuel tank after hard landing impact. (p. 94-96)"
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "All 77 occupants survived the hard landing and fire. Aircraft successfully evacuated with quick crew actions to remove shoes and orderly evacuation preventing casualties. (p. 94-96)"
+    }
+  ],
+  "chain": [
+    ["windshear", "pilot_experience"],
+    ["pilot_experience", "inadequate_monitoring"],
+    ["inadequate_monitoring", "go_around_not_flown"],
+    ["go_around_not_flown", "hard_landing"],
+    ["hard_landing", "fuel_leak"],
+    ["fuel_leak", "inflight_fire"]
+  ],
+  "events": [
+    {
+      "t": -3389,
+      "clock": "11:47",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft (JAS 451) departed from Nagoya Airport with captain in left seat and first officer in right seat as pilot flying. (p. 49-50)"
+    },
+    {
+      "t": -1409,
+      "clock": "12:20",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "First officer confirmed winds with Hanamaki and set runway 02 for landing approach. Weather briefing indicated winds 290° 14 kt with gusts to 33 kt, variable 250-320°. (p. 49-50)"
+    },
+    {
+      "t": -113,
+      "clock": "12:41:36",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft entered final approach course at high altitude. Configuration completed with gear down, flaps 50°, auto-brake minimum, and ground spoilers armed. (p. 88-91)"
+    },
+    {
+      "t": -81,
+      "clock": "12:42:08",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Hanamaki radio transmitted winds 280° 25 kt gusting 34 kt minimum 20 kt as aircraft descended through approximately 1,400 feet on final approach. (p. 88-94)"
+    },
+    {
+      "t": -4,
+      "clock": "12:43:25",
+      "phase": "landing",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "At approximately 600 feet altitude, aircraft was passing through boundary layer crossing the cold front. Wind suddenly changed from 240° to 320° with gusts increasing to 26-47 knots at 300 feet, initiating windshear condition. (p. 94-100)"
+    },
+    {
+      "t": -3,
+      "clock": "12:43:26",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Aircraft's warning system announced 'Minimum Minimum' alarm at 460 feet (200 ft radio altitude setting), followed immediately by 'Sink rate' warning indicating excessive descent rate. (p. 94-100)"
+    },
+    {
+      "t": 0,
+      "clock": "12:43:29",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacted runway with estimated +6G force due to excessive descent rate from windshear encounter. Landing gear root went up into wing puncturing fuel tank and igniting fire, aircraft skidded off runway and stopped burning. (p. 94-96)"
+    },
+    {
+      "t": 60,
+      "clock": "12:44:29",
+      "phase": "ground",
+      "actor": "CABIN",
+      "kind": "system",
+      "text": "All 77 occupants evacuated successfully from burning aircraft. Crew directed passenger evacuation without shoe requirement, enabling rapid and orderly evacuation. 3 crew members sustained serious injuries, 16 passengers slightly injured. (p. 94-96)"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://jtsb.mlit.go.jp/aircraft/rep-acci/94-6-JA8448.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Japan_Air_System_Flight_451",
+  "asn_id": "19930418-0",
+  "report_links": [
+    "https://jtsb.mlit.go.jp/aircraft/rep-acci/94-6-JA8448.pdf",
+    "http://aviation-safety.net/database/record.php?id=19930418-0"
+  ],
+  "interest": 7.72,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from Japanese Transportation Safety Board (JTSB) investigation report 94-6",
+      "Report is in Japanese language, sections translated from CVR and flight data recorder analysis",
+      "Timeline events extracted from pages 87-100 of original report",
+      "8 events with local times (JST) converted from report data",
+      "All 77 occupants survived due to effective evacuation procedures",
+      "Crew survival attributed to quick evacuation without stopping for shoes or belongings"
+    ]
+  }
+}
