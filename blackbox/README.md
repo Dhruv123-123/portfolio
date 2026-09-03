@@ -51,7 +51,7 @@ from the Graph tab.
 |---|---|---|---|
 | `ntsb` | NTSB public aviation database (`avall.mdb`, 2008 onward) | fatal + air-carrier events, ~6,800 | keyword rules over the Board's coded findings, no LLM |
 | `wikidata` | Wikidata accident items + English Wikipedia text | ~3,100 worldwide | Haiku subagents read the trimmed article per batch |
-| deepened | official report PDFs linked from Wikipedia | top-ranked subset | Haiku subagents read key report sections, whole report only when needed |
+| deepened | official report PDFs linked from Wikipedia (542 candidates, ~300 reachable) | ~290 records in `data/reports/wd_*.json` | Haiku subagents read the synopsis, findings, probable cause, recommendations and history of flight; a cross-check rejects records that do not add report-derived events |
 
 ```bash
 # NTSB tier (needs mdbtools: apt-get install mdbtools)
@@ -65,8 +65,14 @@ python3 blackbox/pipeline/catalog/wikipedia_fetch.py      # article text + links
 python3 blackbox/pipeline/catalog/make_batches.py --size 20   # interest-ranked batches for the workers
 #   -> run a Haiku worker per batch with catalog/AGENT_PROMPT.md, then:
 python3 blackbox/pipeline/catalog/merge_catalog.py
-python3 blackbox/pipeline/catalog/make_deepen_batches.py --limit 200
-#   -> run a Haiku worker per deepen batch with catalog/DEEPEN_PROMPT.md
+# Deep-read tier (official reports)
+python3 blackbox/pipeline/catalog/make_deepen_batches.py --limit 2000 --prefix cand   # rows with agency report links
+python3 blackbox/pipeline/catalog/prefetch_reports.py --limit 600 --shard 0 --nshards 6   # download + OCR (tesseract) in parallel shards
+python3 blackbox/pipeline/catalog/make_deepen_batches.py --only-fetched --prefix dp --size 4  # batches of items whose text is on disk
+#   -> run a Haiku worker per batch with catalog/DEEPEN_PROMPT.md; it writes data/reports/wd_<qid>.json
+python3 blackbox/pipeline/catalog/fix_records.py blackbox/data/reports/wd_*.json   # mechanical vocabulary/schema repairs
+python3 blackbox/pipeline/validate.py                     # schema + taxonomy
+python3 blackbox/pipeline/catalog/check_deep_reads.py     # rejects summary copies and wrong-report reads
 python3 blackbox/pipeline/build_graph.py                  # curated bundle + catalog index/shards
 ```
 
