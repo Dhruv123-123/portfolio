@@ -186,9 +186,9 @@ function computeEnv(rec, f) {
   }
   const ids = (rec.factors || []).map((x) => x.id).join(' ') + ' ' + (rec.summary || '').toLowerCase()
   if (/thunderstorm|convective|lightning|microburst|windshear|wind_shear/.test(ids)) { out.storm = true; out.rain = 1 }
-  else if (/heavy rain|rain|precipitation|hail/.test(ids)) out.rain = 0.7
-  else if (/icing|ice_crystal|ice crystals|snow/.test(ids)) out.rain = 0.35
-  if (/fog|low_visibility|low visibility|imc|whiteout/.test(ids)) out.fog = 0.8
+  else if (/\b(heavy rain|rain|precipitation|hail|sleet)\b/.test(ids)) out.rain = 0.7
+  else if (/\b(icing|ice_crystals?|ice crystals|snow)\b/.test(ids)) out.rain = 0.35
+  if (/\b(fog|low_visibility|low visibility|imc|whiteout)\b/.test(ids)) out.fog = 0.8
   if (f.terrain === 'ocean' && out.night === 0 && /cruise/.test(rec.phase || '')) out.night = Math.max(out.night, 0)
   if (f.env) Object.assign(out, f.env)
   return out

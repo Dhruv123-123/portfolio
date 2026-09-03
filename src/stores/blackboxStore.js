@@ -12,7 +12,8 @@ export const useBlackboxStore = defineStore('blackbox', {
     highlightFactor: null,
     storyId: null, // record shown in story mode overlay (null = closed)
     sound: false,
-    crt: false
+    crt: false,
+    atlasPlayRequest: 0 // timestamp: the atlas should start playing the century
   }),
   actions: {
     openTimeline(id) {

@@ -7,7 +7,7 @@
       <a href="https://github.com/Dhruv123-123/portfolio/tree/main/blackbox" target="_blank" rel="noopener" class="bbp-home">source</a>
     </div>
     <div class="bbp-frame">
-      <Blackbox />
+      <Blackbox :deep-links="true" />
     </div>
   </div>
 </template>

@@ -316,6 +316,7 @@ watch(() => props.active, async (a) => {
   }
 })
 watch(() => props.index, () => { year.value = Math.max(year.value, yearMax.value); pushItems() })
+watch(() => store.atlasPlayRequest, () => { if (!playing.value) { year.value = yearMin.value; togglePlay() } })
 
 onMounted(() => {
   year.value = yearMax.value
