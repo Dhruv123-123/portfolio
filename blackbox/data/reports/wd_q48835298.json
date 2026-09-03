@@ -1,0 +1,208 @@
+{
+  "id": "wd_q48835298",
+  "qid": "Q48835298",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "1993 Tennessee Fairchild Merlin crash",
+  "flight_number": null,
+  "date": "1993-04-01",
+  "time_reference": "EST",
+  "t0": "1993-04-01T21:28:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "ATL93MA068",
+      "report_title": "Aviation Accident Final Report",
+      "report_date": "1994-03-16",
+      "url": "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001211X12077&AKey=1&RType=Final&IType=MA"
+    }
+  ],
+  "aircraft": {
+    "type": "Fairchild SA227-TT Merlin",
+    "family": "SA227",
+    "manufacturer": "Fairchild",
+    "registration": "N500AK",
+    "msn": "TT-527",
+    "engines": "Garrett TPE331-10U513"
+  },
+  "operator": "Eastern Foods Inc.",
+  "route": {
+    "from": "KTYC",
+    "from_name": "McGhee Tyson Airport, Knoxville",
+    "to": "KTRI",
+    "to_name": "Tri-Cities Regional Airport, Blountville"
+  },
+  "location": {
+    "name": "Meadow near Blountville, Tennessee, 5.5 miles northeast of Tri-Cities Regional Airport",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 4,
+  "fatalities": 4,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "WSTRW",
+  "summary": "A Fairchild Merlin on approach to Tri-Cities Airport in icing conditions encountered engine failures after the pilot failed to properly engage the engine inlet anti-ice system. Both engines flamed out, the aircraft stalled during the descent, and impacted a meadow 5.5 miles northeast of the airport, destroying the aircraft and killing all four occupants.",
+  "probable_cause": "Failure of the pilot to follow procedures concerning use of the engine inlet anti-ice system and/or continuous ignition while operating in icing conditions, which resulted in probable ice ingestion and loss of engine power; and the pilot's failure to maintain sufficient airspeed while coping with the engine problem, which resulted in a stall. Factors related to the accident were: darkness, icing conditions, and engine inlet (nacelle) ice. (p. 1)",
+  "factors": [
+    {
+      "id": "airframe_icing",
+      "role": "initiating",
+      "evidence": "The aircraft encountered light to moderate icing conditions during descent from 16,000 to 11,000 feet, and again encountered icing reported by other aircraft at 10,000 feet on final approach. (p. 3, 4)"
+    },
+    {
+      "id": "deicing_inadequate",
+      "role": "contributing",
+      "evidence": "Engine inlet anti-ice annunciator lights were illuminated at impact, indicating the anti-ice system was not properly engaged. The pilot failed to follow the flight manual procedures which specified selecting continuous ignition and then selecting engine and propeller heat one engine at a time when icing was encountered. (p. 1, 9)"
+    },
+    {
+      "id": "engine_failure",
+      "role": "contributing",
+      "evidence": "Both engines were not operating at impact and both propellers were feathered. Examination revealed no mechanical failure or malfunction of the engines or propellers. The engine manufacturer reported flameouts occurred in other TPE331 aircraft during or following operation in icing conditions, sometimes after descent into warmer air. (p. 1, 9)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The pilot failed to follow procedures concerning the use of the engine inlet anti-ice system and continuous ignition while operating in icing conditions, as specified in the Fairchild SA227TT flight manual. (p. 1)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft entered a steep spiraling descent after engine power loss. Radar data showed the aircraft slowed in a manner consistent with power reduction, then entered a steep descent and crashed. The pilot's failure to maintain sufficient airspeed resulted in a stall. (p. 1, 3)"
+    }
+  ],
+  "chain": [
+    ["airframe_icing", "deicing_inadequate"],
+    ["deicing_inadequate", "engine_failure"],
+    ["engine_failure", "loss_of_control_inflight"]
+  ],
+  "events": [
+    {
+      "t": -25567,
+      "clock": "14:21:53",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Pilot telephoned Georgia Automated Flight Service Station, Macon, Georgia, requesting weather briefing for planned instrument flights from Fulton County Airport, Atlanta.",
+      "factors": []
+    },
+    {
+      "t": -12180,
+      "clock": "18:05",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Atlanta Center cleared the flight to descend from 16,000 feet to 11,000 feet; pilot was advised to expect light to moderate icing during descent.",
+      "factors": ["airframe_icing"]
+    },
+    {
+      "t": -1800,
+      "clock": "20:58",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "system",
+      "text": "Flight cleared for takeoff from Knoxville en route to Tri-City; assigned en route altitude of 7,000 feet.",
+      "factors": []
+    },
+    {
+      "t": -1080,
+      "clock": "21:10",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tri-City Approach accepted the flight as a radar handoff from Knoxville Approach Control; pilot advised to expect ILS approach to Runway 23. Approach control informed another aircraft of light icing reported by another aircraft at 10,000 feet.",
+      "factors": ["airframe_icing"]
+    },
+    {
+      "t": -300,
+      "clock": "21:23",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft encountered icing conditions on final approach; radar data showed substantial speed reduction consistent with partial loss of power.",
+      "factors": ["airframe_icing", "deicing_inadequate", "engine_failure"]
+    },
+    {
+      "t": 0,
+      "clock": "21:28",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "N500AK cleared to land at Tri-City Regional Airport on runway 23.",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": "21:28:30",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Pilot made an unintelligible radio transmission while on final approach.",
+      "factors": []
+    },
+    {
+      "t": 45,
+      "clock": "21:28:45",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft descended out of clouds in steep spiraling descent; air traffic controller observed airplane lights descending in steep spiral.",
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 60,
+      "clock": "21:29",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Radio contact lost; aircraft impacted meadow 5.5 miles northeast of Tri-City Regional Airport; both propellers feathered at impact.",
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 120,
+      "clock": "21:30",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Post-crash fire consumed cockpit, center section and left wing; all four on board killed; aircraft destroyed by impact forces and fire.",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Garrett Engine Division issued operating information letter (February 24, 1988) emphasizing engine inlet anti-ice system use and continuous ignition in icing conditions.",
+    "Fairchild revised SA227TT flight manual (June 24, 1988) to provide explicit procedures for engine anti-ice and continuous ignition when icing conditions are encountered."
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001211X12077&AKey=1&RType=Final&IType=MA"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/1993_Tennessee_Fairchild_Merlin_crash",
+  "asn_id": null,
+  "interest": 5.36,
+  "report_links": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001211X12077&AKey=1&RType=Final&IType=MA"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report sections read: Analysis/Probable Cause (p. 1), Findings (p. 2), History of Flight (p. 3-4), Personnel Information (p. 4), Aircraft Information (p. 4), Meteorological Information (p. 4-5), Wreckage and Impact Information (p. 5-7), Additional Information (p. 9).",
+      "10 events extracted with clock times from narrative timeline; t values calculated relative to 21:28 EST impact time.",
+      "All factor evidence cites page numbers from OCR-extracted text.",
+      "Aircraft had 2,294 total airframe hours and was properly maintained.",
+      "Pilot was ATP-rated with 19,105 total hours and 235 hours on SA227TT type.",
+      "No formal NTSB Safety Recommendations found in this report; safety changes documented from industry responses to TPE331 engine flameouts."
+    ]
+  }
+}
