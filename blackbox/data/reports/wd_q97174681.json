@@ -1,0 +1,289 @@
+{
+  "id": "wd_q97174681",
+  "qid": "Q97174681",
+  "title": "Trans-Air Service 671",
+  "flight_number": null,
+  "date": "1992-03-31",
+  "time_reference": "UTC",
+  "t0": "1992-03-31T08:11:00Z",
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau of Enquiry and Analysis for Civil Aviation Safety",
+      "country": "France",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 707-321C",
+    "manufacturer": "Boeing",
+    "family": "707",
+    "registration": "5N-MAS"
+  },
+  "operator": "Trans-Air Service",
+  "route": {
+    "from_name": "Luxembourg",
+    "to_name": "Kano"
+  },
+  "location": {
+    "name": "Dr\u00f4me",
+    "country": "France"
+  },
+  "phase": "cruise",
+  "occupants": 5,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "A 28-year-old Boeing 707 cargo aircraft lost its right-wing engines during cruise at 32,000 feet over southeastern France. Metal fatigue in the number 3 engine pylon caused it to crack and separate, which struck and separated the number 4 engine. The crew successfully descended and performed an emergency landing at Istres Air Base. All five crew members survived despite damage from post-landing fire.",
+  "probable_cause": "La rupture des attaches pyl\u00f4ne du moteur n\u00b0 3, caus\u00e9e par une fissure de fatigue de l'attache m\u00e9diane int\u00e9rieure, qui n'a pas \u00e9t\u00e9 d\u00e9tect\u00e9e lors de l'inspection visuelle prescrite. Cette fissure n'\u00e9tait pas d\u00e9tectable par les inspections visuelles p\u00e9riodiques impos\u00e9es par la consigne de navigabilit\u00e9. La rupture a entra\u00een\u00e9 l'arrachement du moteur n\u00b0 4 lorsque le moteur n\u00b0 3 est venu le percuter. (p. 39-40)",
+  "factors": [
+    {
+      "id": "metal_fatigue",
+      "role": "initiating",
+      "evidence": "Metal fatigue crack in number 3 engine pylon median attachment bracket (p. 39-40)"
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "latent",
+      "evidence": "Airworthiness Directive requiring periodic visual inspection of pylons was found to be ineffective in detecting hidden fatigue cracks (p. 39-40)"
+    },
+    {
+      "id": "uncontained_engine_failure",
+      "role": "contributing",
+      "evidence": "Separated number 3 engine struck and separated number 4 engine (p. 4)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Aircraft began to roll to the right due to loss of both right engines (p. 4)"
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "Pilots successfully performed emergency landing on runway 15 at Istres-Le Tub\u00e9 Air Base (p. 4)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Right wing caught fire during landing sequence (p. 6)"
+    }
+  ],
+  "chain": [
+    [
+      "metal_fatigue",
+      "uncontained_engine_failure"
+    ],
+    [
+      "uncontained_engine_failure",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "emergency_landing"
+    ],
+    [
+      "emergency_landing",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": -300,
+      "clock": "08:11",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft climbing through Flight Level 320 from FL290, authorized to climb to FL330, airspeed 280 knots indicated, autopilot engaged, turbulent conditions over Dr\u00f4me department"
+    },
+    {
+      "t": 0,
+      "clock": "08:11",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Severe turbulence and loud double bang experienced; aircraft began to roll sharply to the right (p. 4)",
+      "factors": [
+        "uncontained_engine_failure"
+      ]
+    },
+    {
+      "t": 5,
+      "clock": "08:11",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain disengaged autopilot and used control column and rudder inputs to regain control (p. 4)"
+    },
+    {
+      "t": 10,
+      "clock": "08:11",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Fire alarm sounding continuously for engine 4; fire indication for engine 3 illuminated; both engine throttles moved forward by themselves (p. 4)"
+    },
+    {
+      "t": 15,
+      "clock": "08:11",
+      "phase": "cruise",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First Officer announced engine 4 had left the wing and transmitted MAYDAY call; then observed both right engines were gone (p. 5)"
+    },
+    {
+      "t": 30,
+      "clock": "08:12",
+      "phase": "cruise",
+      "actor": "FE",
+      "kind": "crew_action",
+      "text": "Flight Engineer proposed fuel dumping; Captain accepted; began fuel jettison procedures (p. 5)"
+    },
+    {
+      "t": 45,
+      "clock": "08:12",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain asked for weather at Marseille and ordered landing gear extension; descent toward Marseille initiated (p. 5)"
+    },
+    {
+      "t": 60,
+      "clock": "08:13",
+      "phase": "descent",
+      "actor": "FE",
+      "kind": "crew_action",
+      "text": "Flight Engineer and ground mechanic deployed landing gear in emergency procedure; fuel jettison continued (p. 5)"
+    },
+    {
+      "t": 90,
+      "clock": "08:14",
+      "phase": "descent",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First Officer sighted Istres military airfield ahead and requested identification; obtained runway length (4000 meters) and emergency clearance (p. 5)"
+    },
+    {
+      "t": 120,
+      "clock": "08:15",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First Officer requested left circuit for landing on runway 15 (opposite normal direction); controller accepted (p. 5)"
+    },
+    {
+      "t": 1200,
+      "clock": "08:35",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Controller notified crew that aircraft was on fire during final approach (p. 6)"
+    },
+    {
+      "t": 1440,
+      "clock": "08:35",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft landed slightly left of centerline at 190 knots; touched runway after approximately 24 minutes following engine loss (p. 6)"
+    },
+    {
+      "t": 1460,
+      "clock": "08:35",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "First Officer and flight engineer assisted captain; throttles of left engines controlled; no hydraulic brakes, used backup pneumatic system (p. 6)"
+    },
+    {
+      "t": 1480,
+      "clock": "08:35",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Main landing gear tires burst; number 2 engine reverser deployed at full power (p. 6)"
+    },
+    {
+      "t": 1520,
+      "clock": "08:36",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft exited runway left side after 2300 meters rollout and stopped 250 meters beyond runway at approximately 90 degrees to runway axis (p. 6)",
+      "factors": [
+        "emergency_landing"
+      ]
+    },
+    {
+      "t": 1540,
+      "clock": "08:36",
+      "phase": "landing",
+      "actor": "ENV",
+      "kind": "system",
+      "text": "Fire and rescue services extinguished right wing fire with large capacity fire trucks (p. 6)"
+    },
+    {
+      "t": 1560,
+      "clock": "08:37",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew evacuated aircraft via lateral cockpit windows using emergency ropes; two passengers exited via front left door (p. 6)"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "BEA",
+      "text": "Inspection of median attachments of engine pylons should be modified to permit detection of hidden cracks, or these attachments should be systematically replaced with reinforced attachments. Reinforced attachments must account for new stresses potentially induced by HUSH KIT engine noise reduction modification.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "metal_fatigue",
+        "inadequate_inspection"
+      ]
+    },
+    {
+      "id": null,
+      "to": "BEA",
+      "text": "Air traffic controllers should be regularly trained to face emergency and distress situations through theoretical study of possible cases and practical exercises",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/fileadmin/uploads/tx_elydbrapports/5N-MAS.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Trans-Air_Service_Flight_671",
+  "report_links": [
+    "https://www.bea.aero/docspa/1992/5n-s920331/htm/5n-s920331.html",
+    "https://bea.aero/fileadmin/uploads/tx_elydbrapports/5N-MAS.pdf",
+    "https://aviation-safety.net/database/record.php?id=19920331-0",
+    "https://web.archive.org/web/20171211104956/http://aviation-safety.net/database/record.php?id=19920331-0",
+    "https://bea.aero/docspa/1992/5n-s920331/htm/5n-s920331.html#_Toc441995707",
+    "https://bea.aero/fileadmin/uploads/tx_elydbrapports/5N-MAS-EN.pdf"
+  ],
+  "interest": 7.45,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Deep read from BEA final report (French): renseignements de base, conclusions, recommandations (p. 4-6, 39-40)",
+      "17 events extracted with precise clock times from flight history",
+      "Probable cause and factors extracted from conclusions section"
+    ]
+  }
+}

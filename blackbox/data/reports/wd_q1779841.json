@@ -1,0 +1,364 @@
+{
+  "id": "wd_q1779841",
+  "qid": "Q1779841",
+  "title": "Lufthansa Cargo 8460",
+  "flight_number": "LH8460",
+  "date": "2010-07-27",
+  "time_reference": "local",
+  "t0": "2010-07-27T11:38:00+03:00",
+  "agency": "GCAA",
+  "agencies": [
+    {
+      "code": "GCAA",
+      "name": "General Authority of Civil Aviation",
+      "country": "Saudi Arabia",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas MD-11",
+    "manufacturer": "McDonnell Douglas",
+    "family": "MD-11",
+    "registration": "D-ALCQ"
+  },
+  "operator": "Lufthansa Cargo",
+  "route": {
+    "from_name": "Frankfurt",
+    "to_name": "Hong Kong"
+  },
+  "location": {
+    "name": "King Khalid International Airport",
+    "country": "Saudi Arabia"
+  },
+  "phase": "landing",
+  "occupants": 2,
+  "fatalities": 0,
+  "injuries_serious": 1,
+  "damage": "destroyed",
+  "category": "RE",
+  "summary": "A Lufthansa Cargo MD-11 touched down with excessive force at Riyadh and bounced repeatedly on the runway. The crew failed to recognize the bouncing condition and applied control inputs that worsened the bouncing. On the third and final impact, the aft fuselage ruptured, causing the aircraft to break up and veer off the runway. Post-impact fire consumed the midsection before being controlled by emergency services. Both crew members evacuated with injuries.",
+  "probable_cause": "The aircraft touched down with excessive vertical speed and bounced. The flight crew did not recognize the bouncing condition. Their control inputs, particularly a large nose-down input by the Captain during the first bounce, worsened the bouncing. Successive hard landings with increasing load factors (2.1g, 3.0g, 4.4g) culminated in the third touchdown rupturing the aft fuselage at Fuselage Station 1441. (p. 3, 52-53)",
+  "factors": [
+    {
+      "id": "hard_landing",
+      "role": "initiating",
+      "evidence": "Main gear touched down at 945 feet with descent rate of -780 ft/min (13 ft/sec), achieving 2.1g normal load factor (p. 9)"
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "contributing",
+      "evidence": "Flare was delayed and initiated between 1.7-2.0 seconds before touchdown at 23-31 feet above runway (p. 9)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Flight crew did not recognize the bounce condition after initial touchdown (p. 9, Finding 3)"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "Captain made large nose-down control column input during first bounce, unloading aircraft and causing second hard landing (p. 9, 52)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Aft fuselage ruptured at Fuselage Station 1441 due to 4.4g vertical load on third touchdown (p. 10, 51)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Fuel spilled from severed lines ignited in left wheel well and traveled to upper cargo area (p. 10)"
+    }
+  ],
+  "chain": [
+    [
+      "hard_landing",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "inappropriate_control_input"
+    ],
+    [
+      "structural_failure",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": -60,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Auto Pilot and Auto Throttle turned OFF by First Officer during approach"
+    },
+    {
+      "t": -30,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft centered on glide slope and localizer; dipped half dot below 25 seconds before touchdown"
+    },
+    {
+      "t": -15,
+      "clock": null,
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First Officer initiated flare 1.7-2.0 seconds before touchdown at 23-31 feet above runway"
+    },
+    {
+      "t": 0,
+      "clock": "11:38",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Main gear touched down 945 feet from runway threshold at -13 ft/sec descent rate, normal load factor 2.1g",
+      "state": {
+        "alt": 0,
+        "ias": 164,
+        "vs": -780
+      },
+      "factors": [
+        "hard_landing"
+      ]
+    },
+    {
+      "t": 5,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Spoilers deployed to 30 degrees; aircraft bounced to 4 feet maximum height",
+      "factors": [
+        "hard_landing"
+      ]
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain pushed forward on control column during first bounce, unloading aircraft",
+      "factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "t": 15,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Second touchdown with main and nose gear at -11 ft/sec descent rate, normal load factor 3.0g",
+      "state": {
+        "alt": 0,
+        "ias": 160,
+        "vs": -660
+      },
+      "factors": [
+        "hard_landing"
+      ]
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Both pilots pulled back creating 14 degree pitch angle during second bounce",
+      "factors": [
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Main gear reached 12 feet during second bounce; spoilers reached full 60 degree extension",
+      "factors": []
+    },
+    {
+      "t": 35,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Third and final touchdown at -17 ft/sec descent rate, normal load factor 4.4g",
+      "state": {
+        "alt": 0,
+        "ias": 155,
+        "vs": -1020
+      },
+      "factors": [
+        "hard_landing",
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 40,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aft fuselage ruptured behind wing trailing edge at Fuselage Station 1441; fuel lines severed",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 45,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain deployed thrust reversers; engines 1 and 3 responded; requested Mayday declaration",
+      "factors": []
+    },
+    {
+      "t": 50,
+      "clock": null,
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First Officer declared Mayday while aircraft departing runway",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Nose gear collapsed; aircraft stopped 8800 feet from threshold, 300 feet left of centerline",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 70,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Fire ignited from spilled fuel and traveled to upper cargo area",
+      "factors": [
+        "post_impact_fire"
+      ]
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Both pilots evacuated aircraft using left forward door slide",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-11-68",
+      "to": "FAA",
+      "text": "Require Boeing to revise MD-11 Flight Crew Operating Manual to reemphasize high sink rate awareness during landing, importance of maintaining landing pitch attitude after touchdown, and proper go-around procedures for bounced landings",
+      "status": "closed_acceptable",
+      "outcome": "MD-11 Flight Crew Operating Manual revised by Boeing 15 February 2011",
+      "trigger_factors": [
+        "hard_landing",
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": "A-11-69",
+      "to": "FAA",
+      "text": "Require all MD-11 operators to incorporate Boeing-recommended bounce recognition and recovery procedure in operating manuals and recurrent simulator training",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Lufthansa Cargo",
+      "text": "Should consider installing Head-Up Displays (HUDs) on MD-11F aircraft",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": null,
+      "to": "GACA",
+      "text": "Shall ensure all Departments using recording devices at airports synchronize time with ATC time",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "to": "GACA",
+      "text": "Shall ensure Airport Security Services properly cordon-off accident sites",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "to": "GACA",
+      "text": "Shall ensure all fire fighting personnel wear appropriate Personal Protection Equipment (PPE)",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "to": "GACA",
+      "text": "Should consider installing cameras with recording capability at all airports within KSA",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.bfu-web.de/EN/Publications/FinalReports/2010/Report_10_2X003_MD11_Riyadh.pdf?__blob=publicationFile&v=1"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "asn_id": "20100727-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lufthansa_Cargo_Flight_8460",
+  "report_links": [
+    "http://www.bfu-web.de/cln_030/nn_223532/DE/Aktuelles/Nachrichten/Aktuell/120222__Bericht__MD11F__Riyadh__Ver_C3_B6ffentlichung.html",
+    "https://web.archive.org/web/20120310041416/http://www.bfu-web.de:80/cln_030/nn_223532/DE/Aktuelles/Nachrichten/Aktuell/120222__Bericht__MD11F__Riyadh__Ver_C3_B6ffentlichung.html",
+    "http://www.bfu-web.de/EN/Publications/Investigation%20Report/2010/Report_10_2X003_MD11_Riyadh.pdf",
+    "http://aviation-safety.net/database/record.php?id=20100727-0",
+    "https://www.bfu-web.de/EN/Publications/FinalReports/2010/Report_10_2X003_MD11_Riyadh.pdf?__blob=publicationFile&v=1",
+    "http://www.bfu-web.de/EN/Publications/Investigation%20Report/2010/Report_10_2X003_MD11_Riyadh.pdf?__blob=publicationFile",
+    "https://web.archive.org/web/20121112131721/http://www.bfu-web.de/cln_030/nn_223936/EN/Publications/Investigation_20Report/2010/Report__10__2X003__MD11__Riyadh,templateId=raw,property=publicationFile.pdf/Report_10_2X003_MD11_Riyadh.pdf",
+    "http://www.skybrary.aero/bookshelf/books/1949.pdf"
+  ],
+  "interest": 7.69,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Deep read from BFU final report: synopsis, history of flight, findings, recommendations sections (p. 3-10, 52-59)",
+      "15 events extracted with descent rates and load factors",
+      "All factors include page citations"
+    ]
+  }
+}

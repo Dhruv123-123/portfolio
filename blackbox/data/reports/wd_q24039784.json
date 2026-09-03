@@ -1,0 +1,214 @@
+{
+  "id": "wd_q24039784",
+  "qid": "Q24039784",
+  "title": "Batik Air 7703",
+  "flight_number": "BA7703",
+  "date": "2016-04-04",
+  "time_reference": "local",
+  "t0": "2016-04-04T19:55:00+07:00",
+  "agency": "KNKT",
+  "agencies": [
+    {
+      "code": "KNKT",
+      "name": "National Transportation Safety Committee",
+      "country": "Indonesia",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-800",
+    "manufacturer": "Boeing",
+    "family": "737",
+    "registration": null
+  },
+  "operator": "Batik Air",
+  "route": {
+    "from_name": "Jakarta",
+    "to_name": "Makassar"
+  },
+  "location": {
+    "name": "Halim Perdanakusuma International Airport",
+    "country": "Indonesia"
+  },
+  "phase": "takeoff",
+  "occupants": 135,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "injuries_minor": 3,
+  "damage": "substantial",
+  "category": "RAMP",
+  "summary": "Batik Air Flight 7703, a Boeing 737-800, collided with a TransNusa Air Services ATR 42 during its takeoff roll on 4 April 2016 at Halim Perdanakusuma Airport in Jakarta. The ATR 42 was being towed across the active runway when the 737 was cleared for takeoff, resulting in a runway collision. The 737's left wing caught fire but all occupants evacuated safely with no fatalities, though 3 people were injured.",
+  "probable_cause": "Weak coordination between Air Traffic Control, the tow crew, and the flight crew allowed the TransNusa ATR 42 to remain on the active runway while Batik Air Flight 7703 was cleared for takeoff, resulting in a collision during the takeoff roll. The collision occurred because ATC cleared the 737 for takeoff while the ATR 42 was being towed across the runway. (p. 1-2)",
+  "factors": [
+    {
+      "id": "atc_communication_error",
+      "role": "initiating",
+      "evidence": "Batik Air cleared for takeoff while TransNusa ATR 42 was still on the runway being towed to hangar (p. 1)"
+    },
+    {
+      "id": "runway_incursion",
+      "role": "contributing",
+      "evidence": "TransNusa ATR-42 was being towed to hangar on active runway when Flight 7703 was taking off (p. 1)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Weak coordination between ATC, tow crew, and Flight 7703 crew; pilots were aware collision was inevitable (p. 1-2)"
+    },
+    {
+      "id": "ground_collision",
+      "role": "outcome",
+      "evidence": "Left wing of Flight 7703 sliced off vertical stabilizer and left outer wing of ATR 42, severely damaged Flight 7703's left wing (p. 1-2)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Left wing caught fire; survivors felt bump like hitting pothole, others heard loud bang (p. 1)"
+    }
+  ],
+  "chain": [
+    [
+      "atc_communication_error",
+      "runway_incursion"
+    ],
+    [
+      "runway_incursion",
+      "ground_collision"
+    ],
+    [
+      "inadequate_monitoring",
+      "ground_collision"
+    ],
+    [
+      "ground_collision",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": -120,
+      "clock": "19:54",
+      "phase": "taxi",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Batik Air Flight 7703 taxiing to runway at Halim Perdanakusuma Airport, Jakarta"
+    },
+    {
+      "t": -90,
+      "clock": "19:55",
+      "phase": "taxi",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC cleared Batik Air Flight 7703 for takeoff on runway; TransNusa ATR 42 still on active runway being towed to maintenance hangar"
+    },
+    {
+      "t": -60,
+      "clock": "19:55",
+      "phase": "taxi",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC did not confirm ATR 42 runway vacated before issuing takeoff clearance to Flight 7703",
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": -30,
+      "clock": "19:55",
+      "phase": "taxi",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 7703 commenced takeoff roll on runway; ATR 42 still in path of 737"
+    },
+    {
+      "t": 0,
+      "clock": "19:55",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Batik Air pilots became aware of aircraft on runway; attempted to steer left to avoid collision",
+      "factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "t": 10,
+      "clock": "19:56",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft collided; left wing of 737 sliced off vertical stabilizer and left outer wing of ATR 42",
+      "factors": [
+        "ground_collision"
+      ]
+    },
+    {
+      "t": 20,
+      "clock": "19:56",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Flight 7703 left wing ignited; fire developed on 737",
+      "factors": [
+        "post_impact_fire"
+      ]
+    },
+    {
+      "t": 50,
+      "clock": "19:57",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot attempted emergency landing at Halim; aircraft veered left due to damage"
+    },
+    {
+      "t": 80,
+      "clock": "19:57",
+      "phase": "taxi",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft came to stop on ground; fire brigade responded"
+    },
+    {
+      "t": 120,
+      "clock": "19:58",
+      "phase": "taxi",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "All 132 passengers and 3 crew evacuated safely; 3 minor injuries reported"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://knkt.dephub.go.id/knkt/ntsc_aviation/baru/PK-LBS%20and%20PK-TNJ%20Final%20Report.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "asn_id": "20160404-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/2016_Halim_Airport_runway_collision",
+  "report_links": [
+    "http://news.detik.com/berita/3179736/investigasi-tabrakan-di-halim-knkt-akan-panggil-kru-pesawat-batik-air",
+    "http://nasional.news.viva.co.id/news/read/756648-banyak-kasus-knkt-butuh-5-bulan-usut-tabrakan-batik-air",
+    "http://kemhubri.dephub.go.id/knkt/ntsc_aviation/baru/pre/Preliminary%20Report%20PK-LBS%20and%20PK-TNJ.pdf",
+    "https://aviation-safety.net/database/record.php?id=20160404-0",
+    "http://knkt.dephub.go.id/knkt/ntsc_aviation/baru/PK-LBS%20and%20PK-TNJ%20Final%20Report.pdf"
+  ],
+  "interest": 7.23,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Deep read from KNKT final report for Batik Air Flight 7703 runway collision",
+      "7 events extracted from takeoff/collision sequence",
+      "Probable cause and factors from investigation report"
+    ]
+  }
+}
