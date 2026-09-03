@@ -1,0 +1,276 @@
+{
+  "id": "wd_q56345502",
+  "qid": "Q56345502",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Overseas National Airways 032",
+  "flight_number": "ONA032",
+  "date": "1975-11-12",
+  "time_reference": "EST",
+  "t0": "1975-11-12T12:56:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR76-19",
+      "report_title": "Aircraft Accident Report",
+      "report_date": "1976-12-16"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-10-30CF",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-10",
+    "registration": "N1032F",
+    "engines": "3 x General Electric CF6-50A"
+  },
+  "operator": "Overseas National Airways",
+  "route": {
+    "from": "JFK",
+    "from_name": "New York",
+    "to": "OEJJ",
+    "to_name": "Jeddah",
+    "intermediate": "EDDF"
+  },
+  "location": {
+    "name": "John F. Kennedy International Airport",
+    "country": "United States",
+    "city": "New York"
+  },
+  "phase": "takeoff",
+  "occupants": 139,
+  "fatalities": 0,
+  "injuries_serious": 3,
+  "damage": "destroyed",
+  "category": "USOS",
+  "summary": "During takeoff roll at approximately 100 knots, a large flock of gulls rose from the runway directly in front of the DC-10. Bird ingestion into the right engine caused an uncontained engine failure that ruptured landing gear tires, disabled the number 2 hydraulic system, and partially disabled spoilers and landing gear brakes. The crew initiated a rejected takeoff but the aircraft did not decelerate normally, veered left toward a taxiway, and ran off the runway. The aircraft was destroyed by intense post-crash fire with all 139 occupants surviving.",
+  "probable_cause": "Bird ingestion into right engine resulting in uncontained engine failure that ruptured landing gear tires and disabled hydraulic system, combined with wet runway reducing braking effectiveness, contributing to runway excursion. The disintegration and subsequent fire in the No. 3 engine when it ingested a large number of sea gulls was the primary cause. Following the disintegration, the aircraft failed to decelerate effectively because: (1) The No. 3 hydraulic system was inoperative, which caused the loss of the No. 2 brake system and braking torque was reduced 50 percent; (2) the No. 3 engine thrust reverser was inoperative; (3) at least three tires disintegrated; (4) the No. 3 system spoiler panels on each wing could not deploy; and (5) the runway surface was wet. The bird-control program at John F. Kennedy Airport did not effectively control the bird hazard on the airport, and the Federal Aviation Administration and the General Electric Company failed to consider the effects of rotor imbalance on the abradable epoxy shroud material when the engine was tested for certification. (p. 2247-2270)",
+  "factors": [
+    {
+      "id": "bird_strike",
+      "role": "initiating",
+      "evidence": "During takeoff roll at about 100 knots, a flock of approximately 100 sea gulls rose from the runway and separated then grouped in front of the aircraft; crew heard one to three explosions or bangs as birds struck the aircraft (p. 704-715)"
+    },
+    {
+      "id": "uncontained_engine_failure",
+      "role": "initiating",
+      "evidence": "Bird strikes damaged the fan blades in the No. 3 engine causing rotor imbalance; damage to the fan assembly resulted in fan-booster stage blades rubbing on epoxy microballoon shroud material; pulverized material entered the HPC area, ignited, and caused the compressor case to separate; fire erupted in the right wing and pylon simultaneously with the breakup of No. 3 engine (p. 2159-2185)"
+    },
+    {
+      "id": "flight_control_failure",
+      "role": "contributing",
+      "evidence": "The No. 3 hydraulic system was inoperative following the engine failure, which caused loss of the No. 2 brake system (powered by No. 3 hydraulic) with braking torque reduced 50 percent, and the No. 3 system spoiler panels on each wing could not deploy (p. 2254-2260, 738-740)"
+    },
+    {
+      "id": "contaminated_runway",
+      "role": "contributing",
+      "evidence": "The runway surface was wet, reducing braking effectiveness and contributing to the inability to decelerate normally (p. 2261)"
+    },
+    {
+      "id": "landing_gear_failure",
+      "role": "contributing",
+      "evidence": "At least three tires on the landing gear disintegrated due to the uncontained engine failure, further impairing deceleration (p. 2258-2259)"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "The FAA and General Electric Company failed to consider the effects of rotor imbalance on the abradable epoxy shroud material during certification; two factory development engines with modified rub shroud material retained structural integrity when subjected to 122,000 gram-inches of rotor imbalance (p. 2177-2179, 2234-2237)"
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "Despite rejected takeoff procedures with thrust reversers and heavy braking, the aircraft could not be stopped on runway 13R; it veered left and left the paved surface before entering taxiway Z, coming to rest about 135 feet right of the taxiway centerline (p. 800-809, 979-980)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Fire erupted in the right wing and pylon simultaneously with the engine breakup; massive quantities of fuel were released into the fire when the right wing fuel tank was fractured; intense post-crash fire destroyed the aircraft (p. 2184-2185, 2200-2207)"
+    }
+  ],
+  "chain": [
+    ["bird_strike", "uncontained_engine_failure"],
+    ["uncontained_engine_failure", "flight_control_failure"],
+    ["uncontained_engine_failure", "landing_gear_failure"],
+    ["flight_control_failure", "contaminated_runway"],
+    ["landing_gear_failure", "contaminated_runway"],
+    ["contaminated_runway", "runway_overrun"],
+    ["runway_overrun", "post_impact_fire"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "12:56",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "ONA Flight 032, DC-10-30 (N1032F), departed gate at JFK on ferry flight to Jeddah with intermediate stop at Frankfurt; IFR computer-stored flight plan with captain, first officer, flight engineer, and observer on flight deck (p. 672-674)",
+      "state": {
+        "alt": 0
+      },
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 032 entered runway 13R (14,572 feet long, 150 feet wide) and started takeoff roll; first portion of takeoff roll was normal and aircraft accelerated as expected (p. 700-701)",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "As DC-10 accelerated on ground at around 100 knots, a flock of approximately 100 sea gulls rose from the runway, separated, and then grouped directly in front of the aircraft; captain alerted crew to watch the EGT (exhaust gas temperature) (p. 704-710)",
+      "state": {
+        "ias": 100
+      },
+      "factors": ["bird_strike"]
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Crew heard birds strike the aircraft and recalled one to three explosions or bangs; captain immediately began procedures to reject takeoff with thrust levers to idle, thrust reversal of engines, and application of heavy braking (p. 712-716, 718-719)",
+      "factors": ["bird_strike", "uncontained_engine_failure"]
+    },
+    {
+      "t": 95,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Master warning and master caution lights appeared; as engines went into reverse thrust, flight engineer stated they had lost No. 3 engine; Nos. 1 and 2 engines attained normal reverse thrust (p. 720-726)",
+      "factors": ["uncontained_engine_failure"]
+    },
+    {
+      "t": 100,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight engineer noticed No. 2 brake system pressure had dropped to zero (No. 3 hydraulic system failure); No. 1 brake system pressure remained normal with 3,000 lbs (p. 727-732)",
+      "factors": ["flight_control_failure"]
+    },
+    {
+      "t": 105,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Fire-warning light illuminated on captain's glare shield; fire lights on fire handle and fuel control lever illuminated for No. 3 engine; first officer and flight engineer attempted to shut down No. 3 engine (p. 742-749)",
+      "factors": ["uncontained_engine_failure"]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft seemed to decelerate effectively initially but rate of deceleration decreased; crew believed aircraft could be guided onto taxiway Z without striking blast fence; however during turn aircraft left paved surface before entering taxiway (p. 800-804)",
+      "factors": ["runway_overrun"]
+    },
+    {
+      "t": 140,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft proceeded northeast and stopped on shoulder of taxiway Z at approximately 40 knots; cockpit was shaken violently as aircraft rolled to stop; crew believed right gear had collapsed and did not initially know aircraft was on fire (p. 805-813)",
+      "state": {
+        "ias": 40
+      },
+      "factors": ["runway_overrun"]
+    },
+    {
+      "t": 145,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Right wing was ablaze; first officer opened right front cockpit window and saw fire on right wing; cockpit door was opened and black smoke could be seen in cabin (p. 823-826)",
+      "factors": ["post_impact_fire"]
+    },
+    {
+      "t": 150,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight engineer pulled fire handles for Nos. 1 and 2 engines; captain closed engine fuel shutoff levers for these engines before leaving cockpit; three flight crew members exited through right front cockpit window down escape rope; observer and all passengers evacuated (p. 815-829)",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-76-59",
+      "to": "FAA",
+      "text": "Require immediate retest of the General Electric CF6 engine to demonstrate its compliance with the complete bird ingestion criteria of AC 33-1A.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-76-60",
+      "to": "FAA",
+      "text": "Require that any engine modifications necessary to comply with the bird ingestion criteria of AC 33-1A be incorporated into all newly manufactured CF6 engines.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-76-61",
+      "to": "FAA",
+      "text": "Require that any engine modifications necessary to comply with the bird ingestion criteria of AC 33-1A be incorporated into all CF6 engines in service.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-76-62",
+      "to": "FAA",
+      "text": "Until the CF6 engine is modified, require that a bird patrol sweep runways at all airports which have recognized bird problems and are served by CF6-powered aircraft.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-76-63",
+      "to": "FAA",
+      "text": "Advise all operators, domestic and foreign, of CF6 engines of the catastrophic consequences of foreign objects damage and the need for appropriate caution to avoid such damage.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-76-64",
+      "to": "FAA",
+      "text": "Amend 14 CFR 33.77 to increase the maximum number of birds in the various size categories required to be ingested into turbine engines with large inlets, consistent with birds ingested during service experience of these engines.",
+      "status": "closed_acceptable"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": ["Improved bird control programs at major airports", "Enhanced engine certification requirements for bird ingestion", "Revised aircraft design standards for hydraulic redundancy"],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7619.pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report sections read: History of Flight, Findings, Probable Cause, Recommendations, Wreckage and Impact Information, Meteorological Information",
+      "Multiple events with detailed narrative extracted from OCR text with specific actions and timings",
+      "CVR tape was severely burned and not usable; FDR data usable up to 168 knots indicated airspeed",
+      "Ten distinct events documented with actor types and factor associations",
+      "Six numbered FAA safety recommendations issued (A-76-59 through A-76-64)",
+      "Largest commercial airliner destroyed by bird strike at time of accident",
+      "All 139 occupants survived despite aircraft destruction"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Overseas_National_Airways_Flight_032",
+  "asn_id": null,
+  "interest": 5.8,
+  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7619.pdf", "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR76-19.pdf", "https://www.faa.gov/sites/faa.gov/files/AAR76-19.pdf"],
+  "curated_id": null
+}

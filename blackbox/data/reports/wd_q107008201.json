@@ -1,0 +1,211 @@
+{
+  "id": "wd_q107008201",
+  "qid": "Q107008201",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "Key Lime Air 970",
+  "flight_number": null,
+  "date": "2021-05-12",
+  "time_reference": "MDT",
+  "t0": "2021-05-12T10:23:52Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "CEN21FA215",
+      "report_title": "Aviation Investigation Final Report",
+      "report_date": "2023-03-29"
+    }
+  ],
+  "aircraft": {
+    "type": "Swearingen SA226TC",
+    "manufacturer": "Swearingen",
+    "family": "Metroliner",
+    "registration": "N280KL",
+    "msn": "TC-280",
+    "engines": "2 x Honeywell TPE331-10UA-511G Turboprop"
+  },
+  "operator": "Key Lime Air",
+  "route": {
+    "from": "ANK",
+    "from_name": "Salida",
+    "to": "APA",
+    "to_name": "Centennial"
+  },
+  "location": {
+    "name": "Cherry Creek State Park, Arapahoe County",
+    "country": "United States",
+    "lat": 39.585036,
+    "lon": -104.85469
+  },
+  "phase": "approach",
+  "occupants": 3,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "MAC",
+  "summary": "A Cirrus SR22 private aircraft collided in mid-air with a Swearingen Metroliner (Key Lime Air Flight 970) on final approach to Centennial Airport near Denver, Colorado. The SR22 was flying at 140 knots on downwind and base, significantly faster than the recommended 85-95 knots, and overshot the turn from base to final, crossing into the Metroliner's approach path. Both aircraft sustained substantial damage. The Metroliner landed successfully while the Cirrus deployed its ballistic parachute system.",
+  "probable_cause": "The Cirrus pilot's failure to maintain the final approach course for the assigned runway resulted in collision with the Metroliner on final approach to the parallel runway. Contributing factors were the Cirrus pilot's excessive speed (140 knots versus 85-95 knots recommended) which increased turn radius and contributed to the overshoot, and the failure of the Swearingen's controller to issue a traffic advisory regarding the Cirrus location.",
+  "factors": [
+    {
+      "id": "excessive_speed",
+      "role": "initiating",
+      "evidence": "The SR22 was flying at 140 kts during base leg and turn to final, much faster than the manufacturer's recommended speed of 85-95 knots, which increased the airplane's radius of turn (p. 40-41, 69-70)"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "The SR22 pilot misjudged the airplane's flight path while maneuvering from base to final approach, allowing the airplane to fly through the assigned final approach course and into the parallel runway's extended centerline (p. 42-46, 71-72)"
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "The LC1 controller did not issue a traffic advisory to the Swearingen pilot regarding the location of the Cirrus, whereas FAA Order JO 7110.65Y required the issuance of traffic information during simultaneous parallel runway operations (p. 50-52, 237-239)"
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "The SR22 and Metroliner collided at 1023:52 when about 3.2 nm from APA; the Swearingen was aligned with runway 17L while the Cirrus had not completed the turn from base to final (p. 143-145)"
+    }
+  ],
+  "chain": [
+    ["excessive_speed", "inappropriate_control_input"],
+    ["inappropriate_control_input", "midair_collision"],
+    ["atc_communication_error", "midair_collision"]
+  ],
+  "events": [
+    {
+      "t": -660,
+      "clock": "09:21",
+      "phase": "ground",
+      "actor": "OTHER",
+      "kind": "crew_action",
+      "text": "Cirrus SR22 (N416DJ) departed Centennial Airport for a local flight (p. 132)",
+      "factors": []
+    },
+    {
+      "t": -510,
+      "clock": "09:56",
+      "phase": "ground",
+      "actor": "OTHER",
+      "kind": "crew_action",
+      "text": "Swearingen Metroliner (N280KL) departed Salida Airport (ANK) for positioning flight to Centennial Airport (p. 133)",
+      "factors": []
+    },
+    {
+      "t": -69,
+      "clock": "10:22:43",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Swearingen was about 5.5 nm from APA and had completed right turn to align with final approach course for runway 17L; Cirrus was on downwind leg for runway 17R before right turn to base leg (p. 134-137)",
+      "state": {
+        "alt": 6619,
+        "ias": 125
+      },
+      "factors": []
+    },
+    {
+      "t": -36,
+      "clock": "10:23:16",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Cirrus avionics system issued a traffic alert regarding the Metroliner; the alert remained active until collision (p. 197-198)",
+      "factors": []
+    },
+    {
+      "t": -15,
+      "clock": "10:23:37",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Cirrus pilot continuing right-hand traffic pattern through base leg; recorded airspeed about 148 kts with flaps still up (p. 200-201)",
+      "state": {
+        "ias": 148
+      },
+      "factors": ["excessive_speed"]
+    },
+    {
+      "t": -4,
+      "clock": "10:23:48",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Cirrus pilot maneuvering from base leg to final approach; airspeed about 140 kts with flaps lowered to 50% about 4 seconds before impact (p. 202-203)",
+      "state": {
+        "ias": 140,
+        "alt": 6619
+      },
+      "factors": ["excessive_speed", "inappropriate_control_input"]
+    },
+    {
+      "t": 0,
+      "clock": "10:23:52",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Cirrus and Swearingen collided while about 3.2 nm from APA; Swearingen aligned with runway 17L while Cirrus heading 146° and only halfway through 90° turn from base to final (p. 143-145)",
+      "state": {
+        "ias": 140,
+        "alt": 6619,
+        "hdg": 146
+      },
+      "factors": ["midair_collision"]
+    },
+    {
+      "t": 2,
+      "clock": "10:23:54",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Cirrus pilot pulled CAPS handle after determining aircraft was not controllable following impact (p. 162-163, 205)",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "10:25:52",
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Swearingen pilot declared emergency and landed successfully on runway 17L (p. 161-162)",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": "10:26:52",
+      "phase": "landing",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "Cirrus deployed CAPS system and came to rest upright about 3 nautical miles north of APA (p. 163-165)",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/103073/pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report sections read: History of Flight, Probable Cause and Findings, Pilot Information, Aircraft Information, Meteorological Information",
+      "Multiple events with precise clock times extracted from RDM data and narrative",
+      "No CVR transcript published; no safety recommendations issued (Class 3 investigation)",
+      "Both aircraft sustained substantial damage but all occupants survived"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/2021_Colorado_mid-air_collision",
+  "asn_id": "20210512-0",
+  "interest": 5.72,
+  "report_links": ["https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/103073/pdf"],
+  "curated_id": null
+}
