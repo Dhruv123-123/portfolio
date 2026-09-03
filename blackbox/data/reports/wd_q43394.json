@@ -1,0 +1,189 @@
+{
+  "id": "wd_q43394",
+  "title": "Swiss International Airlines 850",
+  "flight_number": "LX850",
+  "date": "2002-07-10",
+  "time_reference": "UTC",
+  "t0": "2002-07-10T16:09:00Z",
+  "agency": "BFU",
+  "agencies": [
+    {
+      "code": "BFU",
+      "name": "German Federal Bureau of Aircraft Accident Investigation",
+      "country": "Germany",
+      "role": "lead",
+      "report_id": "02 AX 002",
+      "report_date": "2010-10-01",
+      "url": "https://www.bfu-web.de/EN/Publications/FinalReports/2002/Report_02_AX002_Saab2000_Werneuchen.pdf?__blob=publicationFile&v=1"
+    }
+  ],
+  "aircraft": {
+    "type": "Saab 2000",
+    "family": "2000",
+    "manufacturer": "Saab",
+    "registration": "HB-IZY"
+  },
+  "operator": "Swiss International Air Lines",
+  "route": {
+    "from": "BSL",
+    "from_name": "Basel",
+    "to": "HAM",
+    "to_name": "Hamburg"
+  },
+  "location": {
+    "name": "Werneuchen Airfield",
+    "country": "Germany"
+  },
+  "phase": "landing",
+  "occupants": 20,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "LALT",
+  "summary": "Swiss International Flight 850 from Basel to Hamburg encountered severe derecho with thunderstorms. The flight was diverted multiple times due to deteriorating weather, ultimately landing at Werneuchen Airfield. The crew was unable to see the runway markings clearly due to weather and struck an earth bank on landing, ripping off all three landing gear legs. The aircraft belly-landed with an engine fire. One passenger sustained minor injuries; the aircraft was written off.",
+  "probable_cause": "The aircraft accident was caused by the crew's decision to land at Werneuchen Airfield due to cascading weather diversions compounded by inadequate runway markings that did not reflect the runway length reduction from 2400 m to 1500 m. Contributing factors included insufficient weather information prior to flight (no SIGMETs received), inaccurate METAR reports (CAVOK and NOSIG that did not reflect the approaching cold front), poor crew resource management during multiple diversions, and the crew's inability to detect the earth bank on final approach due to low visibility. (p. 43-45)",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "initiating",
+      "evidence": "A severe derecho with thunderstorms reaching FL380 developed over Germany with winds of 81 knots recorded in Berlin area, described as the worst summer storm in 50 years. (p. 43)"
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "The crew did not receive SIGMETs about the developing cold front issued at 15:00 UTC; Tegel and Schönefeld METARs contained CAVOK and NOSIG reports that did not reflect the cold front 30 km away. (p. 43)"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Investigation found inadequate crew resource management during multiple diversion decisions; crew decided to divert to Hannover then to Berlin Tegel without comprehensive weather overview of available alternatives. (p. 43)"
+    },
+    {
+      "id": "airport_infrastructure",
+      "role": "latent",
+      "evidence": "Runway markings at Werneuchen did not conform to required standards and did not reflect that the runway had been reduced in length from 2400 m to 1500 m. Active runway markings and disused runway surfaces were not marked in accordance with ICAO Annex 14. (p. 44)"
+    },
+    {
+      "id": "hard_landing",
+      "role": "outcome",
+      "evidence": "Aircraft struck an earth bank on landing due to inadequate runway markings and low visibility, ripping off all three undercarriage legs. (p. 44)"
+    }
+  ],
+  "chain": [
+    ["convective_weather", "atc_communication_error"],
+    ["atc_communication_error", "crm_breakdown"],
+    ["crm_breakdown", "hard_landing"],
+    ["airport_infrastructure", "hard_landing"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:55",
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Swiss Flight 850 departs Basel at 14:55 UTC bound for Hamburg with 4 crew and 16 passengers in Saab 2000 HB-IZY.",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": "15:18",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Weather reports indicate line of thunderstorms with winds up to 45 knots at Hamburg; number of SIGMETs issued about an hour before flight departed but flight crew did not receive these critical weather updates.",
+      "factors": ["atc_communication_error"]
+    },
+    {
+      "t": 360,
+      "clock": "15:41",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight encounters severe turbulence due to thunderstorm and crew aborts approach to Hamburg as aircraft descended through 3,300 feet.",
+      "factors": ["convective_weather"]
+    },
+    {
+      "t": 540,
+      "clock": "16:09",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew holds in Lübeck holding pattern while assessing alternatives; derecho with winds of 81 knots recorded in Berlin area during this time.",
+      "factors": ["convective_weather"]
+    },
+    {
+      "t": 720,
+      "clock": "16:37",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew diverts from Hamburg to Berlin/Tegel after receiving incorrect CAVOK and NOSIG reports; decision made without comprehensive weather overview using available resources.",
+      "factors": ["atc_communication_error", "crm_breakdown"]
+    },
+    {
+      "t": 900,
+      "clock": "17:04",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Cold front approaches Tegel; ATC guidance provided for diversion to Werneuchen Special Airfield where runway had been reduced from 2400 m to 1500 m.",
+      "factors": ["airport_infrastructure"]
+    },
+    {
+      "t": 1080,
+      "clock": "17:33",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft approached runway 08 at Werneuchen without radio communication with airfield and without visual inspection due to weather and fuel shortage; crew received incorrect aerodrome information regarding runway length from ATC.",
+      "factors": ["airport_infrastructure"]
+    },
+    {
+      "t": 1200,
+      "clock": "17:55",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck 70 cm high earth wall extending full width of runway due to inadequate runway markings that did not reflect actual reduced runway length; all three undercarriage legs ripped off.",
+      "factors": ["hard_landing"]
+    },
+    {
+      "t": 1260,
+      "clock": "18:06",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft came to rest on its belly with engine fire; one passenger sustained minor injuries and aircraft was written off. Crew and passengers successfully evacuated.",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.bfu-web.de/EN/Publications/FinalReports/2002/Report_02_AX002_Saab2000_Werneuchen.pdf?__blob=publicationFile&v=1"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q43394",
+  "asn_id": "20020710-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Swiss_International_Air_Lines_Flight_850",
+  "report_links": [
+    "https://www.bfu-web.de/EN/Publications/FinalReports/2002/Report_02_AX002_Saab2000_Werneuchen.pdf?__blob=publicationFile&v=1"
+  ],
+  "interest": 6.0,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Findings section (p. 43-45) and Causes section (p. 43-45) read from BFU final report 02 AX 002. Report explicitly states 'Safety Recommendations: None' (p. 45). The accident resulted from cascading weather diversions, inadequate weather information dissemination, and airport infrastructure failures. 9 events with clock times extracted from flight timeline and ATC communications in Appendix 3."
+    ]
+  }
+}

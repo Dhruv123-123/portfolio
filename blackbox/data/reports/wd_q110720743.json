@@ -1,0 +1,274 @@
+{
+  "id": "wd_q110720743",
+  "title": "UPS Airlines 1307",
+  "flight_number": "1307",
+  "date": "2006-02-07",
+  "time_reference": "EST",
+  "t0": "2006-02-07T23:34:39-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-07/07",
+      "report_date": "2007-12-04",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0707.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-8-71F",
+    "family": "DC-8",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "N748UP"
+  },
+  "operator": "UPS Airlines",
+  "route": {
+    "from": "ATL",
+    "from_name": "Hartsfield-Jackson Atlanta",
+    "to": "PHL",
+    "to_name": "Philadelphia International"
+  },
+  "location": {
+    "name": "Philadelphia International Airport",
+    "country": "United States"
+  },
+  "phase": "descent",
+  "occupants": 3,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "OTHR",
+  "summary": "UPS Airlines Flight 1307, a DC-8-71F, was conducting a cargo flight from Atlanta to Philadelphia. During descent, the crew detected an odor of burning wood. Despite initial consideration of diverting, the crew continued to Philadelphia as there was no visible smoke or fire warnings. At 23:54:42 during descent through 3,600 feet, a cargo smoke warning activated, followed by a lower aft cargo fire warning. The aircraft landed safely at Philadelphia with no fatalities; the airplane and cargo were destroyed by fire after landing.",
+  "probable_cause": "The probable cause of this accident was an in-flight cargo fire that initiated from an unknown source, which was most likely located within cargo container 12, 13, or 14. Contributing to the loss of the aircraft were the inadequate certification test requirements for smoke and fire detection systems and the lack of an on-board fire suppression system. (p. 66)",
+  "factors": [
+    {
+      "id": "cargo_fire",
+      "role": "initiating",
+      "evidence": "Fire initiated as a smoldering fire in cargo containers 12, 13, or 14, likely from an unknown source involving lithium batteries or other hazardous cargo. (p. 64-65)"
+    },
+    {
+      "id": "smoke_checklist_delay",
+      "role": "contributing",
+      "evidence": "Crew continued descent to Philadelphia after detecting odor similar to burning wood instead of immediately diverting when no visible evidence was apparent. (p. 2-3, 64)"
+    },
+    {
+      "id": "certification_shortfall",
+      "role": "latent",
+      "evidence": "Certification test standards for smoke and fire detection systems do not account for effects of cargo and cargo containers on airflow around detection sensors; fire detection system did not activate until 20 minutes after fire initiation, well beyond FAA 5-minute standard. (p. 64)"
+    },
+    {
+      "id": "inflight_fire",
+      "role": "outcome",
+      "evidence": "Crew received smoke warning in main cargo compartment at 23:54:42 and fire warning in aft lower cargo compartment at 23:55:57 during descent through 3,600 feet. (p. 2-3)"
+    }
+  ],
+  "chain": [
+    ["cargo_fire", "inflight_fire"],
+    ["smoke_checklist_delay", "inflight_fire"],
+    ["certification_shortfall", "inflight_fire"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "23:34:39",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "First officer detected odor similar to burning wood; crew members reported smelling it during descent through FL310, 50 nm SW of Washington DC.",
+      "factors": ["cargo_fire"]
+    },
+    {
+      "t": 60,
+      "clock": "23:35:39",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain considered diverting to another airport but decided to continue to Philadelphia because there was no visible evidence of a problem and no cargo smoke warnings illuminated.",
+      "factors": ["smoke_checklist_delay"]
+    },
+    {
+      "t": 210,
+      "clock": "23:38:09",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew conducted emergency checklist steps including increasing bleed air flow and checking bleed air switches; set air conditioning packs to maximum flow and turned off recirculation fan.",
+      "factors": ["smoke_checklist_delay"]
+    },
+    {
+      "t": 640,
+      "clock": "23:44:59",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Philadelphia approach control instructed flight to descend to 6,000 feet; crew continued troubleshooting the odor source over next 10 minutes.",
+      "factors": []
+    },
+    {
+      "t": 1203,
+      "clock": "23:54:42",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Cargo smoke warning activated while aircraft descending through about 3,600 feet; flight engineer stated 'we got cargo smoke' and captain initiated appropriate checklist.",
+      "factors": ["inflight_fire"]
+    },
+    {
+      "t": 1218,
+      "clock": "23:55:57",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Flight engineer reported lower aft cargo fire section C warning illuminated; captain instructed crew to don oxygen masks and flight engineer began Lower/Main Cargo Compartment Smoke or Fire checklist.",
+      "factors": ["inflight_fire"]
+    },
+    {
+      "t": 1353,
+      "clock": "23:57:47",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "First officer called for landing checklist; when flight engineer opened cargo air shutoff valve access panel, black smoke billowed out, indicating fire had spread significantly.",
+      "factors": ["inflight_fire"]
+    },
+    {
+      "t": 1500,
+      "clock": "23:59:00",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft touched down on runway 27R approximately 23:59; visible smoke rapidly thickening in cockpit immediately after touchdown. Crew evacuated using left forward door slide.",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-07-97",
+      "to": "FAA",
+      "text": "Provide clear guidance to operators of passenger and cargo aircraft operating under 14 CFR Parts 121, 135, and 91K on flight crew procedures for responding to evidence of a fire in the absence of a cockpit alert based on the guidance developed by the 2004 smoke, fire, and fumes industry initiative.",
+      "status": "open",
+      "trigger_factors": ["smoke_checklist_delay"]
+    },
+    {
+      "id": "A-07-98",
+      "to": "FAA",
+      "text": "Ensure that the performance requirements for smoke and fire detection systems on cargo airplanes account for the effects of cargo containers on airflow around the detection sensors and on the containment of smoke from a fire inside a container, and establish standardized methods of demonstrating compliance with those requirements.",
+      "status": "open",
+      "trigger_factors": ["certification_shortfall"]
+    },
+    {
+      "id": "A-07-99",
+      "to": "FAA",
+      "text": "Require that fire suppression systems be installed in the cargo compartments of all cargo airplanes operating under 14 CFR Part 121.",
+      "status": "open",
+      "trigger_factors": ["cargo_fire"]
+    },
+    {
+      "id": "A-07-100",
+      "to": "FAA",
+      "text": "Provide guidance to aircraft rescue and firefighting personnel on the best training methods to obtain and maintain proficiency with the high-reach extendable turret with skin-penetrating nozzle.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-07-101",
+      "to": "FAA",
+      "text": "Require airport inspectors to ensure that Part 139 airports with cargo operations include cargo aircraft in their aircraft rescue and firefighting aircraft familiarization training programs.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-07-102",
+      "to": "FAA",
+      "text": "Require cargo operators to designate at least one floor level door as a required emergency exit and equip the door with an evacuation slide, when appropriate.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-07-103",
+      "to": "FAA",
+      "text": "Require all emergency exits on cargo aircraft that are operable from the outside to have a 2-inch contrasting colored band outlining the exit.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-07-104",
+      "to": "PHMSA",
+      "text": "Require aircraft operators to implement measures to reduce the risk of primary lithium batteries becoming involved in fires on cargo-only aircraft, such as transporting such batteries in fire resistant containers and/or in restricted quantities at any single location on the aircraft.",
+      "status": "open",
+      "trigger_factors": ["cargo_fire"]
+    },
+    {
+      "id": "A-07-105",
+      "to": "PHMSA",
+      "text": "Until fire suppression systems are required on cargo-only aircraft, as asked for in Safety Recommendation A-07-99, require that cargo shipments of secondary lithium batteries, including those contained in or packed with equipment, be transported in crew-accessible locations where portable fire suppression systems can be used.",
+      "status": "open",
+      "trigger_factors": ["cargo_fire"]
+    },
+    {
+      "id": "A-07-106",
+      "to": "PHMSA",
+      "text": "Require aircraft operators that transport hazardous materials to immediately provide consolidated and specific information about hazardous materials on board an aircraft, including proper shipping name, hazard class, quantity, number of packages, and location, to on-scene emergency responders upon notification of an accident or incident.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-07-107",
+      "to": "PHMSA",
+      "text": "Require commercial cargo and passenger operators to report to the Pipeline and Hazardous Materials Safety Administration all incidents involving primary and secondary lithium batteries, including those contained in or packed with equipment, that occur either on board or during loading or unloading operations and retain the failed items for evaluation purposes.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-07-108",
+      "to": "PHMSA",
+      "text": "Analyze the causes of all thermal failures and fires involving secondary and primary lithium batteries and, based on this analysis, take appropriate action to mitigate any risks determined to be posed by transporting lithium batteries, including those contained in or packed with equipment, on board cargo and passenger aircraft as cargo, checked baggage, or carry-on items.",
+      "status": "open",
+      "trigger_factors": ["cargo_fire"]
+    },
+    {
+      "id": "A-07-109",
+      "to": "PHMSA",
+      "text": "Eliminate regulatory exemptions for the packaging, marking, and labeling of cargo shipments of small secondary lithium batteries (no more than 8 grams equivalent lithium content) until the analysis of the failures and the implementation of risk-based requirements asked for in Safety Recommendation A-07-108 are completed.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-07-110",
+      "to": "Cargo Airline Association",
+      "text": "Work with your member airlines and other groups, such as the Air Transport Association, major aircraft manufacturers, and the Aircraft Rescue and Firefighting (ARFF) Working Group, to develop and disseminate accurate and complete airplane Emergency Response diagrams for ARFF personnel at airports with cargo operations.",
+      "status": "open",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0707.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q110720743",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/UPS_Airlines_Flight_1307",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0707.pdf",
+    "https://data.ntsb.gov/Docket?ProjectID=63204"
+  ],
+  "interest": 6.1,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "History of Flight section (p. 1-6), Findings (p. 64-65), Probable Cause (p. 66), and Safety Recommendations (p. 67-70) read from NTSB report AAR-07/07. Exact origin of cargo fire not definitively determined; report states most likely containers 12, 13, or 14. Fire detection and suppression system deficiencies identified as contributing factors. 8 events with clock times extracted from CVR data and ATC transcripts."
+    ]
+  }
+}

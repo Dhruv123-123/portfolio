@@ -1,0 +1,240 @@
+{
+  "id": "wd_q107558048",
+  "title": "Siberian Light Aviation 42",
+  "flight_number": "SL42",
+  "date": "2021-07-16",
+  "time_reference": "MSK",
+  "t0": "2021-07-16T08:50:00+07:00",
+  "agency": "MAK",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee (MAK)",
+      "country": "Russia",
+      "role": "lead",
+      "report_id": "02 AX 002",
+      "report_date": "2021-12-15",
+      "url": "https://mak-iac.org/upload/iblock/dd1/pr_report_ra-28728.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Antonov An-28",
+    "family": "An-28",
+    "manufacturer": "Antonov",
+    "registration": "RA-28728"
+  },
+  "operator": "Siberian Light Aviation",
+  "route": {
+    "from": "USKD",
+    "from_name": "Kedrovy",
+    "to": "UNNT",
+    "to_name": "Tomsk"
+  },
+  "location": {
+    "name": "Vasyugan Swamp, Bakcharsky District",
+    "country": "Russia"
+  },
+  "phase": "cruise",
+  "occupants": 17,
+  "fatalities": 0,
+  "injuries_serious": 1,
+  "damage": "substantial",
+  "category": "FUEL",
+  "summary": "Siberian Light Aviation Flight SL42, an Antonov An-28, departed Kedrovy bound for Tomsk after a 10-flight duty sequence totaling over 12 hours of flight time in 24 hours. Ten minutes after takeoff at 3000 meters altitude and 70 km from origin, both engines failed due to ice accumulation from icing conditions. The pilots had not activated the anti-icing system despite operating in icing cloud layers. Pilots successfully executed an emergency landing in soft peat bog; aircraft rolled inverted during landing. Captain suffered serious injuries requiring surgery; all other occupants escaped with minor injuries.",
+  "probable_cause": "The accident occurred when both engines failed due to ice accumulation in conditions requiring anti-icing system activation. The pilots failed to activate the anti-icing system as required by the aircraft flight manual (RLE) despite operating in meteorological conditions conducive to icing. Contributing factors included crew fatigue from excessive flight duty (10 flights in 24 hours, over 13 hours of flight time), inadequate crew rest procedures, and icing sensor failure. The crew's fatigue likely contributed to the omission of anti-icing system activation. (p. 88-89)",
+  "factors": [
+    {
+      "id": "deicing_inadequate",
+      "role": "initiating",
+      "evidence": "The pilots of the aircraft did not activate the anti-icing system (ПОС), which led to an accumulation of ice on engine air intake devices. (p. 88)"
+    },
+    {
+      "id": "airframe_icing",
+      "role": "contributing",
+      "evidence": "After the aircraft entered thick cloud with icing conditions at 3000 meters, ice accumulated in the engines' intake systems, triggering dual engine failure. (p. 88)"
+    },
+    {
+      "id": "dual_engine_failure",
+      "role": "contributing",
+      "evidence": "Ten minutes into flight at altitude of 3000 m and 70 km from origin airport, both engines of the aircraft failed simultaneously when ice blockage developed in air intake systems. (p. 88)"
+    },
+    {
+      "id": "fatigue",
+      "role": "latent",
+      "evidence": "Crew experienced fatigue from completing 10 flights in less than 24 hours with cumulative flight time of 13 hours 45 minutes, irregular rest patterns, and high altitude operations without oxygen above 3000 meters. Fatigue likely contributed to omission of anti-icing system activation procedures. (p. 88-89)"
+    }
+  ],
+  "chain": [
+    ["deicing_inadequate", "airframe_icing"],
+    ["airframe_icing", "dual_engine_failure"],
+    ["fatigue", "deicing_inadequate"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "08:50",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "system",
+      "text": "Flight SL42 departed from Kedrovy airport at 08:50 MSK with second pilot as active pilot and captain as pilot monitoring; 15 passengers, 1 technician, 118 kg baggage on board.",
+      "factors": []
+    },
+    {
+      "t": 140,
+      "clock": "08:52:20",
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft completed right turn with bank angle up to 16 degrees during climb; vertical speed 5-6 m/s; flight continued on heading approximately 90-100 degrees.",
+      "factors": []
+    },
+    {
+      "t": 660,
+      "clock": "09:01:16",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At altitude 3100 meters and airspeed 210 km/h, intensive drop in right engine RPM recorded by flight data recorder, indicating ice accumulation in engine air intake.",
+      "factors": ["airframe_icing"]
+    },
+    {
+      "t": 663,
+      "clock": "09:01:19",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Three seconds after right engine failure, left engine also experienced intensive RPM drop and complete shutdown, resulting in dual engine failure.",
+      "factors": ["dual_engine_failure"]
+    },
+    {
+      "t": 720,
+      "clock": "09:02:00",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain assumed control of aircraft after dual engine failure; crew attempted engine restart procedures without success.",
+      "factors": []
+    },
+    {
+      "t": 900,
+      "clock": "09:05:00",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilots selected descent toward area with least dense trees in swamp for emergency landing; aircraft descended without engine power toward Vasyugan Swamp.",
+      "factors": []
+    },
+    {
+      "t": 1280,
+      "clock": "09:11:20",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft touched down in peat bog area; aircraft sank into mud and rolled inverted onto its roof during landing impact.",
+      "factors": []
+    },
+    {
+      "t": 1290,
+      "clock": "09:11:30",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "outcome",
+      "text": "Crew and all passengers successfully evacuated from inverted aircraft; captain sustained serious injuries requiring surgery; all other occupants escaped with minor or no injuries.",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Russian Aviation Authority",
+      "text": "Disseminate information about results of investigation to all aviation personnel.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "to": "Russian Aviation Authority",
+      "text": "Assess completeness of implementation of recommendations from interim report on this accident and take measures as necessary for their realization.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "to": "Russian Aviation Authority",
+      "text": "Given systematic violations in crew rest and duty time compliance, pay special attention to this factor during aircraft operator inspections and develop comprehensive systemic measures to eliminate this risk factor.",
+      "status": "open",
+      "trigger_factors": ["fatigue"]
+    },
+    {
+      "id": null,
+      "to": "Russian Aviation Authority",
+      "text": "Conduct one-time inspection of aircraft operator operational procedures to verify presence of provisions defining procedures for crew to refuse duty performance when experiencing fatigue.",
+      "status": "open",
+      "trigger_factors": ["fatigue"]
+    },
+    {
+      "id": null,
+      "to": "Russian Aviation Authority",
+      "text": "Consider feasibility of conducting research with scientific organizations on adequacy of current air law requirements for controlling risk related to hypoxia effects on crew performance at altitudes above 3000 meters.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "to": "Russian Aviation Authority",
+      "text": "Consider need to clarify operational-technical documentation for An-28 aircraft regarding procedures for monitoring operability of icing warning sensor DSL-40T and visual icing indicator VUO-U-1.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "to": "Siberian Light Aviation (SiLA)",
+      "text": "Conduct training with flight crews on: procedures for monitoring and managing fatigue and procedures for crew members to refuse to continue duty when experiencing fatigue, with corresponding provisions added to operations manual; operations in icing conditions with emphasis on anti-icing system use per RLE; engine restart procedures in flight and procedures for emergency landing off-airfield; operation of portable emergency locator transmitters.",
+      "status": "open",
+      "trigger_factors": ["deicing_inadequate", "fatigue"]
+    },
+    {
+      "id": null,
+      "to": "Siberian Light Aviation (SiLA)",
+      "text": "Within framework of Safety Management System, implement additional measures preventing crew rest and duty time violations during flight scheduling.",
+      "status": "open",
+      "trigger_factors": ["fatigue"]
+    },
+    {
+      "id": null,
+      "to": "Siberian Light Aviation (SiLA)",
+      "text": "Analyze adequacy of existing post-flight monitoring procedures for identifying violations by crew members regarding oxygen use during flights above 3000 meters and anti-icing system application and operability control. Implement appropriate corrective measures as needed based on analysis results.",
+      "status": "open",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/upload/iblock/dd1/pr_report_ra-28728.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q107558048",
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Siberian_Light_Aviation_Flight_42",
+  "report_links": [
+    "https://mak-iac.org/upload/iblock/dd1/pr_report_ra-28728.pdf",
+    "https://mak-iac.org/upload/iblock/7b1/ff6d5cm40e93wk50mawq6gw9u6xtoghw/report_ra-28728.pdf",
+    "https://mak-iac.org/en/rassledovaniya/an-28-ra-28728-16-07-2021/"
+  ],
+  "interest": 5.7,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "History of Flight section (p. 9-15), Conclusions section \"Заключение\" (p. 88-89), and Safety Recommendations section \"Рекомендации\" (p. 90-91) read from MAK final report. Report in Russian. Crew fatigue from 10 flights in 24 hours identified as contributing factor to omission of anti-icing system activation. Ice sensor failure also noted as latent factor. 8 events with clock times extracted from flight timeline and aircraft systems data."
+    ]
+  }
+}
