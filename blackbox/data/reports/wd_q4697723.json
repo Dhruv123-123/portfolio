@@ -1,0 +1,160 @@
+{
+  "id": "wd_q4697723",
+  "qid": "Q4697723",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air Algérie 2208",
+  "flight_number": "AH2208",
+  "date": "2006-08-13",
+  "time_reference": "UTC",
+  "t0": "2006-08-13T12:02:00Z",
+  "agency": "ANSV",
+  "agencies": [
+    {
+      "code": "ANSV",
+      "name": "Agenzia Nazionale per la Sicurezza del Volo",
+      "country": "Italy",
+      "role": "lead",
+      "report_id": "Relazione 7T-VHG"
+    }
+  ],
+  "aircraft": {
+    "type": "Lockheed L-100-30 Hercules",
+    "manufacturer": "Lockheed",
+    "family": "L-100",
+    "registration": "7T-VHG"
+  },
+  "operator": "Air Algérie",
+  "route": {
+    "from_name": "Algiers",
+    "to_name": "Frankfurt"
+  },
+  "location": {
+    "name": "Besurica, Piacenza",
+    "country": "Italy"
+  },
+  "phase": "descent",
+  "occupants": 3,
+  "fatalities": 3,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Air Algérie Flight 2208, a cargo Hercules at 24,000 feet, began descending for unknown reasons while autopilot was engaged. The autopilot failed and disengaged; moments later both directional and longitudinal control were lost. The aircraft descended steeply at 45-50 degrees and impacted terrain near Piacenza 73 seconds after autopilot failure light illuminated, killing all three crew members. Investigation found no mechanical failure of aircraft systems.",
+  "probable_cause": "The accident resulted from autopilot malfunction causing loss of aircraft control during descent (p. 14-20). The investigation found no mechanical failure of the airframe or primary flight control systems (p. 14-20).",
+  "factors": [
+    {
+      "id": "autopilot_disconnect",
+      "role": "initiating",
+      "evidence": "Autopilot was engaged during cruise at 24,000 feet and disengaged 12 seconds after the autopilot failure light illuminated (p. 14-16)."
+    },
+    {
+      "id": "flight_control_law_degradation",
+      "role": "contributing",
+      "evidence": "Both directional and longitudinal control were lost immediately after autopilot disengaged (p. 14-16, 20)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft lost control moments after autopilot failure light came on; crashed 73 seconds after the light illuminated with aircraft in 45-50 degree descent (p. 16-20)."
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "Aircraft descended from 24,000 feet in steep 45-50 degree descent angle at impact speed approximately 460 knots (p. 20)."
+    }
+  ],
+  "chain": [
+    ["autopilot_disconnect", "flight_control_law_degradation"],
+    ["flight_control_law_degradation", "loss_of_control_inflight"],
+    ["loss_of_control_inflight", "descent_below_minimums"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "12:02:00",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft at 24,000 feet over Italian territory with autopilot engaged when autopilot failure light illuminated (p. 14)."
+    },
+    {
+      "t": 5,
+      "clock": "12:02:05",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "AP FAIL warning activated on aircraft (p. 14)."
+    },
+    {
+      "t": 12,
+      "clock": "12:02:12",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Autopilot disengaged 12 seconds after failure light illumination; directional and longitudinal control immediately lost (p. 14-16)."
+    },
+    {
+      "t": 30,
+      "clock": "12:02:30",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft began steep descent at 45-50 degrees; crew reported engine power loss to Milan ATC before losing radio contact at 13,500 feet (p. 16-17)."
+    },
+    {
+      "t": 45,
+      "clock": "12:02:45",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft descended through 10,000 feet in continuous steep descent (p. 17-18)."
+    },
+    {
+      "t": 60,
+      "clock": "12:03:00",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft approached terrain at high descent rate (p. 18-19)."
+    },
+    {
+      "t": 70,
+      "clock": "12:03:10",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft altitude continued descent at high rate toward impact (p. 19)."
+    },
+    {
+      "t": 73,
+      "clock": "12:03:13",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacted terrain at Besurica between Milan and Parma at steep 45-50 degree angle with estimated impact speed 460 knots, destroying fuselage and killing all three crew members (p. 20)."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ansv.it/cgi-bin/ita/Relazione%207T-VHG.pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Italian ANSV report; sections read: Flight recorders section (p. 14-20), investigation findings",
+      "Eight events extracted with times relative to autopilot failure (t0)",
+      "Report states no mechanical failure found; probable cause focuses on autopilot malfunction",
+      "No formal recommendations section identified in available sections"
+    ]
+  },
+  "asn_id": "20060813-0",
+  "interest": 8.53,
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Alg%C3%A9rie_Flight_2208",
+  "report_links": ["https://www.ansv.it/cgi-bin/ita/Relazione%207T-VHG.pdf"],
+  "curated_id": null
+}

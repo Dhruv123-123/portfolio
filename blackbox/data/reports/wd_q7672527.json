@@ -1,0 +1,189 @@
+{
+  "id": "wd_q7672527",
+  "qid": "Q7672527",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "TWA 843",
+  "flight_number": "TW843",
+  "date": "1992-07-30",
+  "time_reference": "EDT",
+  "t0": "1992-07-30T21:41:13Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-93-04",
+      "report_date": "1993-03-31"
+    }
+  ],
+  "aircraft": {
+    "type": "Lockheed L-1011 TriStar",
+    "manufacturer": "Lockheed",
+    "family": "L-1011",
+    "registration": "N11002"
+  },
+  "operator": "Trans World Airlines",
+  "route": {
+    "from_name": "New York JFK",
+    "to_name": "San Francisco"
+  },
+  "location": {
+    "name": "John F. Kennedy International Airport",
+    "country": "United States"
+  },
+  "phase": "takeoff",
+  "occupants": 280,
+  "fatalities": 0,
+  "injuries_serious": 10,
+  "damage": "destroyed",
+  "category": "OTHR",
+  "summary": "TWA Flight 843 aborted takeoff from JFK on July 30, 1992 when stick shaker stall warning activated just after rotation at 14 feet altitude and 170 knots. The first officer, startled, transferred control to the captain, who aborted the takeoff. The aircraft touched down hard, overran the runway into grass, and caught fire. All 280 passengers were evacuated within two minutes. Ten passengers and crew suffered injuries.",
+  "probable_cause": "An angle-of-attack sensor with an intermittent fault triggered a spurious stick shaker stall warning (p. 24-28). The first officer transferred control to the captain without clear handover during the unexpected warning (p. 24-28). The captain, sensing aircraft sinking from relaxed control during the transfer, aborted the takeoff (p. 24-28). The aircraft was performing normally and could have climbed away safely (p. 28-32).",
+  "factors": [
+    {
+      "id": "aoa_sensor_failure",
+      "role": "initiating",
+      "evidence": "The Angle of Attack sensor had been found unserviceable on nine previous occasions; it had an intermittent fault that triggered spurious stall warning (p. 25-28)."
+    },
+    {
+      "id": "stall_misdiagnosis",
+      "role": "contributing",
+      "evidence": "First Officer Hergert announced 'Gettin' a stall' when stick shaker activated just after rotation; the aircraft was not actually stalled (p. 24-28)."
+    },
+    {
+      "id": "dual_sidestick_input",
+      "role": "contributing",
+      "evidence": "First Officer made exclamation of surprise and transferred control to captain without clear handover; both pilots may have been providing control inputs during transfer (p. 24-28)."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "latent",
+      "evidence": "Handover techniques clearly defined in procedures were not followed; unclear communication between captain and first officer during unexpected warning (p. 24-32)."
+    }
+  ],
+  "chain": [
+    ["aoa_sensor_failure", "stall_misdiagnosis"],
+    ["stall_misdiagnosis", "dual_sidestick_input"],
+    ["dual_sidestick_input", "crm_breakdown"]
+  ],
+  "events": [
+    {
+      "t": -600,
+      "clock": "17:40",
+      "phase": "taxi",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 843 pushed back from gate at JFK and taxied to runway 13R at 17:40 EDT (p. 1, 11)."
+    },
+    {
+      "t": -75,
+      "clock": "17:40:58",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft began to rotate at 158 knots and reached V1 and VR at 17:40:58 and 17:41:03 respectively (p. 12-13)."
+    },
+    {
+      "t": -10,
+      "clock": "17:41:03",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "First officer rotated aircraft; aircraft became airborne, climbing to approximately 14 feet altitude (p. 12-13)."
+    },
+    {
+      "t": 0,
+      "clock": "17:41:11",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Stick shaker activated at 17:41:11 seconds as the first abnormality after rotation; aircraft was 14 feet above runway, 170 knots (p. 13, 25-28)."
+    },
+    {
+      "t": 2,
+      "clock": "17:41:13",
+      "phase": "takeoff",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First Officer Hergert announced 'Gettin' a stall. You got it' at 17:41:13, transferring control of aircraft back to Captain Kinkead (p. 13)."
+    },
+    {
+      "t": 7,
+      "clock": "17:41:18",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain Kinkead retarded the thrust levers and aborted the takeoff just 6 seconds after rotation (p. 13)."
+    },
+    {
+      "t": 600,
+      "clock": "17:50",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft overran the runway after aborting, traveled 296 feet from runway 13R, crossed grass and ditch, and stopped while burning (p. 13-14)."
+    },
+    {
+      "t": 700,
+      "clock": "17:52",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Fire spread in aircraft; emergency evacuation of all 280 passengers and crew completed within 2 minutes; 10 passengers and crew sustained injuries (p. 1, 13-14)."
+    }
+  ],
+  "cvr": [
+    {
+      "t": 0,
+      "clock": "17:41:11",
+      "speaker": "FO",
+      "text": "Gettin' a stall. You got it."
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require airlines to establish and implement procedures for clearly establishing and maintaining control of the aircraft during all takeoffs, with particular emphasis on training for abnormal situations during takeoff and initial climb (p. 48-52).",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require airlines to establish trend monitoring programs to track component failures and intermittent malfunctions to identify components requiring replacement (p. 48-52).",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "PABT",
+      "text": "Modify the location of the blast fence at JFK runway 13R to protect adjacent facilities from future takeoff accidents (p. 52-53).",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9304.pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "NTSB final report; sections read: History of Flight (p. 1, 11-14), Findings (p. 24-32), CVR transcript (p. 12-13)",
+      "Eight events extracted with precise clock times from pushback through evacuation",
+      "All events are new sentences written from report; CVR quote directly cited",
+      "Intermittent AOA sensor failure had 9 previous unserviceable findings",
+      "Probable cause focuses on spurious warning, control transfer, and pilot response"
+    ]
+  },
+  "asn_id": "19920730-0",
+  "interest": 8.02,
+  "wikipedia": "https://en.wikipedia.org/wiki/TWA_Flight_843",
+  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9304.pdf"],
+  "curated_id": null
+}

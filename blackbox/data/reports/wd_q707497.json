@@ -1,0 +1,166 @@
+{
+  "id": "wd_q707497",
+  "qid": "Q707497",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "China Airlines 120",
+  "flight_number": "CI120",
+  "date": "2007-08-20",
+  "time_reference": "JST",
+  "t0": "2007-08-20T10:26:00Z",
+  "agency": "JTSB",
+  "agencies": [
+    {
+      "code": "JTSB",
+      "name": "Japan Transport Safety Board",
+      "country": "Japan",
+      "role": "lead",
+      "report_id": "B18616"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-809",
+    "manufacturer": "Boeing",
+    "family": "737",
+    "registration": "B-18616"
+  },
+  "operator": "China Airlines",
+  "route": {
+    "from_name": "Taoyuan International Airport",
+    "to_name": "Naha Airport"
+  },
+  "location": {
+    "name": "Naha Airport",
+    "country": "Japan"
+  },
+  "phase": "landing",
+  "occupants": 165,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "RAMP",
+  "summary": "China Airlines Boeing 737-800 caught fire at gate shortly after landing at Naha Airport. During slat retraction, a downstop assembly that had detached during maintenance punctured the wing fuel tank. Fuel leaked onto tarmac and ignited when contacting hot right engine, causing explosions and fire. All 165 occupants evacuated safely with only minor injuries.",
+  "probable_cause": "A maintenance procedure to prevent nut loosening resulted in loss of the washer during maintenance, causing the downstop assembly to fall off. The detached assembly subsequently punctured the fuel tank during slat retraction, leading to fuel leak and fire (p. 22-30).",
+  "factors": [
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "During maintenance on the downstop assembly, the washer fell off the nut side of the assembly; maintenance procedure did not include verification that washer remained properly secured (p. 22-25)."
+    },
+    {
+      "id": "structural_failure",
+      "role": "contributing",
+      "evidence": "The detached downstop assembly was pressed by slat track against track can and punctured the right wing fuel tank when slat retracted during landing approach (p. 25-26)."
+    },
+    {
+      "id": "fuel_leak",
+      "role": "contributing",
+      "evidence": "Fuel leaked from punctured right wing fuel tank and reached the outside of the wing surface (p. 26-27)."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Leaked fuel ignited on contact with high-temperature areas on right engine after aircraft stopped at gate; explosions and fire consumed much of fuselage (p. 27-30)."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "latent",
+      "evidence": "Maintenance procedure did not include inspection or verification that critical washer remained properly secured after assembly (p. 22-25)."
+    }
+  ],
+  "chain": [
+    ["maintenance_error", "structural_failure"],
+    ["structural_failure", "fuel_leak"],
+    ["fuel_leak", "post_impact_fire"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "10:26",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft landed normally at Naha Airport at 10:26 a.m. local time (p. 1, 8)."
+    },
+    {
+      "t": 120,
+      "clock": "10:28",
+      "phase": "taxi",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft taxied toward the gate; slats began retracting; detached downstop assembly contacted wing structure (p. 8-9)."
+    },
+    {
+      "t": 240,
+      "clock": "10:30",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Downstop assembly punctured right wing fuel tank during slat retraction as aircraft taxied to gate (p. 9, 25-26)."
+    },
+    {
+      "t": 300,
+      "clock": "10:31",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Fuel leaked from punctured tank onto tarmac and outer wing surface near right engine intake (p. 9-10, 26-27)."
+    },
+    {
+      "t": 360,
+      "clock": "10:32",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft stopped at gate; ground crew noticed flames from engine number 2; Captain ordered emergency evacuation (p. 10)."
+    },
+    {
+      "t": 420,
+      "clock": "10:33",
+      "phase": "ground",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "All passengers and flight attendants evacuated safely through four hatches using slides (p. 10, 30)."
+    },
+    {
+      "t": 540,
+      "clock": "10:35",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Engine number 2 and right wing fuel tanks exploded, triggering large fireball that consumed much of fuselage (p. 10, 30)."
+    },
+    {
+      "t": 600,
+      "clock": "10:36",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Fire continued to burn aircraft; all occupants safely off the aircraft with no serious injuries (p. 30)."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://jtsb.mlit.go.jp/eng-air_report/B18616.pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "JTSB final report; sections read: History of flight (p. 1-10), Aircraft maintenance (p. 22-25), Findings/probable cause (p. 25-30)",
+      "Eight events extracted with clock times from landing through evacuation and fire",
+      "All new sentences extracted from report sections; no copying from summary",
+      "No formal numbered recommendations section in available sections"
+    ]
+  },
+  "asn_id": "20070820-0",
+  "interest": 8.14,
+  "wikipedia": "https://en.wikipedia.org/wiki/China_Airlines_Flight_120",
+  "report_links": ["https://jtsb.mlit.go.jp/eng-air_report/B18616.pdf"],
+  "curated_id": null
+}

@@ -1,0 +1,187 @@
+{
+  "id": "wd_q4574979",
+  "qid": "Q4574979",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "1972 Chicago-O'Hare runway collision",
+  "flight_number": null,
+  "date": "1972-12-20",
+  "time_reference": "CST",
+  "t0": "1972-12-20T18:00:08Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-73-15",
+      "report_date": "1973-07-05"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-9-31",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-9",
+    "registration": "N954N"
+  },
+  "operator": "North Central Airlines",
+  "route": {
+    "from_name": "Chicago O'Hare",
+    "to_name": "Duluth"
+  },
+  "location": {
+    "name": "O'Hare International Airport, Chicago",
+    "country": "United States"
+  },
+  "phase": "takeoff",
+  "occupants": 93,
+  "fatalities": 10,
+  "injuries_serious": 17,
+  "damage": "destroyed",
+  "category": "RAMP",
+  "summary": "North Central Airlines Flight 575 (DC-9) collided with Delta Air Lines Flight 954 (CV-880) on Runway 27L at O'Hare International Airport during takeoff in fog with one-quarter mile visibility. The collision resulted from ATC communication errors and ambiguous holding clearance that led both aircraft crews to misunderstand their positions. Ten passengers on the DC-9 died in post-collision fire.",
+  "probable_cause": "The probable cause was the failure of the traffic control system to ensure separation of aircraft during a period of restricted visibility (p. 20-21). This failure included: (1) the controller omitted a critical word which made his transmission to the Delta CV-880 ambiguous; (2) the controller did not use all available information to determine the location of the CV-880; and (3) the CV-880 flightcrew did not request clarification of the controller's communications (p. 20-21).",
+  "factors": [
+    {
+      "id": "atc_communication_error",
+      "role": "initiating",
+      "evidence": "Ground controller issued ambiguous holding clearance without specifying which of two similarly numbered runup pads to use, and did not hear 'inside the bridge' in the flightcrew's transmission (p. 6, 20)."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Weather at O'Hare was ceiling indefinite 200 feet, sky obscured, with visibility one-quarter mile in fog (p. 4, 8). Airport traffic could not be observed visually from control tower (p. 20)."
+    },
+    {
+      "id": "runway_incursion",
+      "role": "initiating",
+      "evidence": "Delta Flight 954 was taxiing across Runway 27L when North Central Flight 575 was cleared for takeoff on that runway, resulting in collision during takeoff roll (p. 6-7, 20)."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Fire broke out in aft part of DC-9 and cabin rapidly filled with smoke; ten passengers received fatal injuries (p. 4, 7, 20)."
+    }
+  ],
+  "chain": [
+    ["atc_communication_error", "runway_incursion"],
+    ["low_visibility", "atc_communication_error"],
+    ["runway_incursion", "post_impact_fire"]
+  ],
+  "events": [
+    {
+      "t": -2000,
+      "clock": "17:23",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 954 established radio communication with Chicago Approach Control at 17:23:10 CST (p. 5)."
+    },
+    {
+      "t": -1300,
+      "clock": "17:38",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "CAC controller informed all flights that parallel ILS approaches would be conducted to Runways 14L and 14R at 17:39:10 CST (p. 5)."
+    },
+    {
+      "t": -650,
+      "clock": "17:50",
+      "phase": "taxi",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "O'Hare ground controller cleared Flight 575 to taxi to Runway 27L for departure at approximately 17:50 CST (p. 6)."
+    },
+    {
+      "t": -370,
+      "clock": "17:55",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Flight 954 landed on Runway 14L; reported clear of runway at 17:56:18 CST (p. 5)."
+    },
+    {
+      "t": -160,
+      "clock": "17:57",
+      "phase": "taxi",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Ground controller issued ambiguous holding clearance to Flight 954 at 17:57:29 CST, without clearly specifying which runup pad to use (p. 5-6)."
+    },
+    {
+      "t": -55,
+      "clock": "17:58",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Local controller cleared Flight 575 into takeoff position on Runway 27L at 17:58:52 CST; advised visibility was one-quarter mile (p. 6)."
+    },
+    {
+      "t": -30,
+      "clock": "17:59",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 575 cleared for takeoff approximately 26 seconds after being positioned (p. 6)."
+    },
+    {
+      "t": 0,
+      "clock": "17:59:24",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain of Flight 575 reported beginning takeoff roll at 17:59:24 CST; FO was flying (p. 6)."
+    },
+    {
+      "t": 44,
+      "clock": "18:00:08",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "DC-9 and CV-880 collided at Runway 27L and North-South taxiway at 18:00:08.7 CST at approximately 14 feet altitude (p. 1, 6-7)."
+    },
+    {
+      "t": 120,
+      "clock": "18:01",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Post-collision fire broke out in aft section of DC-9; cabin filled with smoke; ten passengers and two crew sustained injuries in DC-9 (p. 7)."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {"id": "A-73-21", "to": "FAA", "text": "Standardize ASDE 'BRITE' equipment configurations and alignment techniques at three existing facilities (p. 34).", "status": "unknown"},
+    {"id": "A-73-22", "to": "FAA", "text": "Do not proceed with 'BRITE' installation at other ASDE facilities until satisfactory operation achieved at existing three (p. 34).", "status": "unknown"},
+    {"id": "A-73-23", "to": "FAA", "text": "Install improved ASDE 'BRITE' equipment first at three existing locations (p. 34).", "status": "unknown"},
+    {"id": "A-73-24", "to": "FAA", "text": "Establish standard procedures for ASDE radar use and publish in Air Traffic Handbooks (p. 34).", "status": "unknown"},
+    {"id": "A-73-25", "to": "FAA", "text": "Establish and publish taxi routes for arrival/departure aircraft during restricted visibility of 1/4 mile or less (p. 34).", "status": "unknown"},
+    {"id": "A-73-26", "to": "FAA", "text": "Require pilots to obtain controller approval before crossing lighted runways in visibility of 1/4 mile or less (p. 35).", "status": "unknown"},
+    {"id": "A-73-53", "to": "FAA", "text": "Amend certification rules to require tactile guidance, improved visual guidance to emergency exits, and better location indication in dark/smoke (p. 24-25).", "status": "unknown"},
+    {"id": "A-73-54", "to": "FAA", "text": "Require flightcrews to report aircraft position on airport and controllers to read back when not verified by visual/radar (p. 25).", "status": "unknown"},
+    {"id": "A-73-55", "to": "FAA", "text": "Require flightcrews to read back taxi clearances when visibility is less than 1/2 mile (p. 25).", "status": "unknown"}
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR7315.pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flights (p. 5-7), Findings (p. 20), Probable Cause (p. 20-21), Recommendations (p. 24-25, 34-35)",
+      "Ten events extracted with precise clock times, all new sentences from report",
+      "All recommendations from Appendix E with proper IDs"
+    ]
+  },
+  "asn_id": null,
+  "interest": 10.55,
+  "wikipedia": "https://en.wikipedia.org/wiki/1972_Chicago%E2%80%93O%27Hare_runway_collision",
+  "report_links": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR7315.pdf"],
+  "curated_id": null
+}
