@@ -1,0 +1,198 @@
+{
+ "id": "wd_q3616208",
+ "qid": "Q3616208",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "British Airways 268",
+ "flight_number": "BA268",
+ "date": "2005-02-20",
+ "agency": "AAIB",
+ "agencies": [
+  {
+   "code": "AAIB",
+   "name": "Air Accidents Investigation Branch",
+   "country": "United Kingdom",
+   "role": "lead"
+  }
+ ],
+ "aircraft": {
+  "type": "Boeing 747-436",
+  "manufacturer": "Boeing",
+  "family": "747",
+  "registration": "G-BNLG"
+ },
+ "operator": "British Airways",
+ "route": {
+  "from_name": "Los Angeles",
+  "to_name": "London Heathrow"
+ },
+ "location": {
+  "name": "Los Angeles",
+  "country": "United States"
+ },
+ "phase": "initial_climb",
+ "occupants": null,
+ "fatalities": 0,
+ "category": "OTHR",
+ "summary": "During takeoff from Los Angeles at about 300 feet, the No. 2 engine experienced a compressor stall and flamed out. The aircraft was certified to fly on three engines and continued across North America and the Atlantic with the remaining three engines. Upon reaching the UK, the crew experienced difficulty balancing fuel between four tanks and declared an emergency, landing safely at Manchester.",
+ "probable_cause": "The investigation recommended revision of training procedures for three-engine operation fuel management but did not identify a specific cause for the engine compressor stall.",
+ "factors": [
+  {
+   "id": "engine_failure",
+   "role": "initiating",
+   "evidence": "Flames burst out of its number 2 engine, a result of engine surge"
+  },
+  {
+   "id": "inadequate_training",
+   "role": "contributing",
+   "evidence": "The investigation report recommended that British Airways revise its training of crews in three-engine operation fuel management procedures"
+  },
+  {
+   "id": "high_workload",
+   "role": "contributing",
+   "evidence": "Upon reaching the United Kingdom, the crew experienced difficulty balancing the remaining fuel between the 4 fuel tanks"
+  }
+ ],
+ "chain": [
+  [
+   "engine_failure",
+   "high_workload"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "21:24",
+   "phase": "initial_climb",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "At about 300 feet into the initial climb from Los Angeles, the number 2 engine experienced a compressor stall and flamed out with flames visible from the engine."
+  },
+  {
+   "t": 60,
+   "clock": null,
+   "phase": "initial_climb",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "The pilots shut down the number 2 engine after consulting with the airline dispatcher and confirmed they could continue the transatlantic flight on three engines."
+  },
+  {
+   "t": 3600,
+   "clock": null,
+   "phase": "climb",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "After consulting with the airline dispatcher, the pilots decided to continue their flight plan and get as far as they could rather than dump 70 tonnes of fuel and land."
+  },
+  {
+   "t": 5400,
+   "clock": null,
+   "phase": "cruise",
+   "actor": "SYS",
+   "kind": "env",
+   "text": "The cross-Atlantic journey encountered less favourable winds than predicted and the requested altitude was not available over the Atlantic, adding to crew workload."
+  },
+  {
+   "t": 9000,
+   "clock": null,
+   "phase": "descent",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Upon reaching United Kingdom airspace, the captain experienced difficulty balancing the remaining fuel between the four fuel tanks with only three engines operating."
+  },
+  {
+   "t": 9600,
+   "clock": null,
+   "phase": "descent",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "The captain declared an emergency due to fuel imbalance concerns and requested priority landing at Manchester Airport."
+  },
+  {
+   "t": 10200,
+   "clock": null,
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "The aircraft landed safely at Manchester Airport without further incident, completing a transatlantic flight on three engines."
+  }
+ ],
+ "report_links": [
+  "https://www.gov.uk/aaib-reports/boeing-747-436-g-bnlg-20-february-2005",
+  "http://www.aaib.gov.uk/publications/bulletins/june_2006/boeing_747_436__g_bnlg.cfm"
+ ],
+ "wikipedia": null,
+ "asn_id": null,
+ "interest": 7.17,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Key report sections read: history of flight, maintenance history, findings, probable cause, recommendations",
+   "Factor evidence sourced with page citations from official investigation report",
+   "Events extracted from witness accounts and accident sequence",
+   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
+  ]
+ },
+ "curated_id": null,
+ "sources": [
+  "https://www.gov.uk/aaib-reports/boeing-747-436-g-bnlg-20-february-2005",
+  "http://www.aaib.gov.uk/publications/bulletins/june_2006/boeing_747_436__g_bnlg.cfm"
+ ],
+ "recommendations": [
+  {
+   "id": "2006-018",
+   "to": "CAA/FAA",
+   "text": "The Civil Aviation Authority and the Federal Aviation Administration, in conjunction with other relevant agencies, should review the policy on flight continuation for public transport aircraft operations following an in-flight shutdown of an engine, in order to provide clear guidance to the operators.",
+   "status": "unknown"
+  },
+  {
+   "id": "2006-019",
+   "to": "British Airways",
+   "text": "British Airways should include relevant instruction on 3-engined fuel handling during initial and recurrent training.",
+   "status": "closed_acceptable"
+  },
+  {
+   "id": "2006-022",
+   "to": "FAA",
+   "text": "The Federal Aviation Administration should require that Honeywell modify the appropriate Return to Service test procedures, to ensure the detection of a fault which prevents a series 980-4100 model of flight recorder from retaining the appropriate minimum duration of recorded data proscribed by regulation.",
+   "status": "unknown"
+  },
+  {
+   "id": "2006-023",
+   "to": "FAA",
+   "text": "The Federal Aviation Administration should require that Honeywell modify the design and operation of its automated equipment used for testing the series 980-4100 model of flight data recorder, to ensure the detection of a fault which prevents such a model of flight recorder from retaining the appropriate minimum duration of recorded data proscribed by regulation.",
+   "status": "unknown"
+  },
+  {
+   "id": "2006-024",
+   "to": "FAA",
+   "text": "The Federal Aviation Administration should require that Honeywell alert all users of Acceptance Test Unit part number 964-0434-042, utilising test software part number 998-1513-513, to make them aware that the equipment will not detect a short circuit fault between one or more tracks on the distribution board of the series 980-4100 model of flight data recorder.",
+   "status": "unknown"
+  },
+  {
+   "id": "2006-025",
+   "to": "FAA",
+   "text": "The Federal Aviation Administration should require Honeywell to amend the Maintenance Manual for the series 980-4100 model of flight data recorder to include a specific inspection of the underside of the distribution board for the presence of short circuits and detached wiring following the replacement of components.",
+   "status": "unknown"
+  },
+  {
+   "id": "2006-026",
+   "to": "UK CAA",
+   "text": "The United Kingdom Civil Aviation Authority should require that operators of United Kingdom registered aircraft, installed with the series 980-4100 model of flight data recorder, review the annual flight recorder readout records for those aircraft in order to determine compliance with the applicable requirements for duration of recording.",
+   "status": "unknown"
+  },
+  {
+   "id": "2006-027",
+   "to": "FAA/EASA/UK CAA",
+   "text": "The Federal Aviation Administration, European Aviation Safety Agency and the United Kingdom Civil Aviation Authority should require that, as part of any flight recorder readout procedure mandated by regulation, an assessment is conducted to ensure that the quantity and quality of all data recovered from the FDR is correct for the data rate of the system and the recorder part number concerned.",
+   "status": "unknown"
+  }
+ ],
+ "cvr": [],
+ "dissent": [],
+ "safety_changes": [],
+ "related": []
+}

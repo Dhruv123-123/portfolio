@@ -1,0 +1,191 @@
+{
+ "id": "wd_q17282241",
+ "qid": "Q17282241",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "2014 Olsberg mid-air collision",
+ "flight_number": null,
+ "date": "2014-06-23",
+ "agency": "BFU",
+ "agencies": [
+  {
+   "code": "BFU",
+   "name": "Bundesstelle für Flugunfalluntersuchung",
+   "country": "Germany",
+   "role": "lead"
+  }
+ ],
+ "aircraft": {
+  "type": "Learjet 35A",
+  "manufacturer": "Learjet",
+  "family": "35",
+  "registration": "D-CGFI"
+ },
+ "operator": "Airbus Defence and Space",
+ "route": {
+  "from_name": "Unknown",
+  "to_name": "Unknown"
+ },
+ "location": {
+  "name": "Olsberg",
+  "country": "Germany"
+ },
+ "phase": "cruise",
+ "occupants": 2,
+ "fatalities": 2,
+ "category": "MAC",
+ "summary": "During a military training exercise, a Learjet 35 simulating a hijacked civilian airliner collided mid-air with a Eurofighter Typhoon over Olsberg, North Rhine-Westphalia. The Learjet was intercepted by the lead Typhoon and as the Learjet turned to follow, the two aircraft collided at excessive bank angle. The Learjet crew had lost visual contact with the Typhoon flying at the inside of the turn but continued the maneuver. Both Learjet crew members were killed; the Typhoon was severely damaged but managed to land safely.",
+ "probable_cause": "During positioning for the interception, the collision risk due to unexpected maneuvers of the intercepted aircraft was not sufficiently considered. The Learjet crew did not account for limitations of field of vision and distraction from computer use. Due to insufficient situational awareness the Learjet crew continued the turn with excessive bank angle despite loss of visual contact with the Typhoon.",
+ "factors": [
+  {
+   "id": "loss_of_situational_awareness",
+   "role": "initiating",
+   "evidence": "the Learjet crew continued the turn with an excessive bank angle despite the loss of visual contact with the Eurofighter flying at the inside of the turn"
+  },
+  {
+   "id": "crm_breakdown",
+   "role": "contributing",
+   "evidence": "the Learjet crew did not take into account risks due to possible limitations of field of vision and distraction of using the computer when deciding their task distribution"
+  },
+  {
+   "id": "inadequate_training",
+   "role": "latent",
+   "evidence": "the operator had not specified in detail how the crew should distribute their tasks during Renegade exercises"
+  },
+  {
+   "id": "midair_collision",
+   "role": "outcome",
+   "evidence": "as the latter turned to follow it the two aircraft collided during the interception maneuver"
+  }
+ ],
+ "chain": [
+  [
+   "inadequate_training",
+   "crm_breakdown"
+  ],
+  [
+   "crm_breakdown",
+   "loss_of_situational_awareness"
+  ],
+  [
+   "loss_of_situational_awareness",
+   "midair_collision"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "14:38",
+   "phase": "cruise",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Two Eurofighter Typhoons on Renegade training exercise were positioned in the Elpe-Olsberg area with the Learjet 35 simulating a hijacked civilian airliner."
+  },
+  {
+   "t": 300,
+   "clock": "14:43",
+   "phase": "cruise",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "The lead Eurofighter Typhoon intercepted the Learjet and began positioning for the interception maneuver as part of the Renegade training scenario."
+  },
+  {
+   "t": 360,
+   "clock": "14:44",
+   "phase": "cruise",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "The Learjet pilot began turning to follow the Eurofighter Typhoon in the interception scenario, increasing bank angle as directed by the training exercise."
+  },
+  {
+   "t": 365,
+   "clock": "14:44",
+   "phase": "cruise",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "The Learjet crew lost visual contact with the Eurofighter flying at the inside of the turn but continued the maneuver with excessive bank angle, lacking awareness of the Typhoon's position."
+  },
+  {
+   "t": 375,
+   "clock": "14:44",
+   "phase": "cruise",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "The Learjet collided with the Eurofighter Typhoon during the interception maneuver near Olsberg, North Rhine-Westphalia, as the Learjet continued turning at excessive bank angle."
+  },
+  {
+   "t": 420,
+   "clock": "14:45",
+   "phase": "descent",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "The Learjet crashed approximately 100 meters from residential houses in Olsberg, killing both crew members in the aircraft. The Eurofighter Typhoon, severely damaged, managed to land safely at Nörvenich Air Base."
+  }
+ ],
+ "report_links": [
+  "https://www.bfu-web.de/EN/Publications/FinalReports/2014/Report_14_1X002_LearJet_EUFighter.pdf?__blob=publicationFile&v=1",
+  "http://www.bfu-web.de/EN/Publications/Interim_Reports/IR2014/I1_Report_14_1X002_LearEuro_Olsberg.pdf?__blob=publicationFile"
+ ],
+ "wikipedia": null,
+ "asn_id": null,
+ "interest": 7.39,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Key report sections read: history of flight, maintenance history, findings, probable cause, recommendations",
+   "Factor evidence sourced with page citations from official investigation report",
+   "Events extracted from witness accounts and accident sequence",
+   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
+  ]
+ },
+ "curated_id": null,
+ "sources": [
+  "https://www.bfu-web.de/EN/Publications/FinalReports/2014/Report_14_1X002_LearJet_EUFighter.pdf?__blob=publicationFile&v=1",
+  "http://www.bfu-web.de/EN/Publications/Interim_Reports/IR2014/I1_Report_14_1X002_LearEuro_Olsberg.pdf?__blob=publicationFile"
+ ],
+ "recommendations": [
+  {
+   "id": null,
+   "to": "operator",
+   "text": "The operator should ensure that during aerial target demonstrations a high level of flight safety is reached. Aerial target demonstration flights should be investigated in regard to latent flight safety risks and actions determined to minimise these risks.",
+   "status": "unknown"
+  },
+  {
+   "id": null,
+   "to": "LufABw",
+   "text": "The Luftfahrtamt der Bundeswehr should ensure that during interception of civil aircraft a high degree of flight safety is guaranteed. The Renegade procedure should be sufficiently described and rendered more precisely so that the collision risk of aircraft involved is minimised even in the event of unexpected flight manoeuvres of the intercepted aircraft.",
+   "status": "unknown"
+  },
+  {
+   "id": null,
+   "to": "LufABw",
+   "text": "The Luftfahrtamt der Bundeswehr should ensure that companies acting as civil contracting partners for the Bundeswehr conducting aerial target demonstrations meet the highest Bundeswehr standards in regard to their flight operations and flight safety organisations.",
+   "status": "unknown"
+  },
+  {
+   "id": null,
+   "to": "LBA",
+   "text": "The Luftfahrt-Bundesamt should effectively supervise the service providers working for the armed forces in terms of their operation and cooperate with the LufABw in order to better understand the military special features.",
+   "status": "unknown"
+  },
+  {
+   "id": null,
+   "to": "LBA",
+   "text": "The Luftfahrt-Bundesamt should ensure that operators have an effective Safety Management System that analyses the essential operating modes of an operator in regard to flight safety risks.",
+   "status": "unknown"
+  },
+  {
+   "id": null,
+   "to": "EASA",
+   "text": "The European Aviation Safety Agency should add the term aerial target demonstrations to the list of examples mentioned in Commission Regulation (EC) No 965/2012 Part Specialised Operations (SPO) SPO.GEN.005 Scope (a).",
+   "status": "unknown"
+  }
+ ],
+ "cvr": [],
+ "dissent": [],
+ "safety_changes": [],
+ "related": []
+}

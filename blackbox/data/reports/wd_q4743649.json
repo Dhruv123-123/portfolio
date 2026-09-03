@@ -1,0 +1,273 @@
+{
+ "id": "wd_q4743649",
+ "qid": "Q4743649",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "American Eagle 5452",
+ "flight_number": "AE5452",
+ "date": "1987-05-08",
+ "agency": "NTSB",
+ "aircraft": {
+  "type": "CASA C-212 Aviocar",
+  "manufacturer": "CASA",
+  "family": "C-212",
+  "registration": "N432CA"
+ },
+ "operator": "American Eagle",
+ "route": {
+  "from_name": "Luis Muñoz Marín International Airport",
+  "to_name": "Eugenio María de Hostos Airport"
+ },
+ "location": {
+  "name": "Eugenio María de Hostos Airport",
+  "country": "Puerto Rico"
+ },
+ "phase": "approach",
+ "occupants": 6,
+ "fatalities": 2,
+ "category": "UNK",
+ "summary": "An American Eagle CASA C-212 Aviocar crashed on 8 May 1987 on approach to Eugenio María de Hostos Airport in Mayagüez, Puerto Rico. The aircraft made an unstable, steep descent and touched down 600 feet short of the runway. Both pilots were killed but all four passengers survived with only minor injuries. The crash resulted from maintenance defects and inadequate inspection procedures by Executive Air Charter.",
+ "probable_cause": "The aircraft likely had one engine slip to idle during approach, causing asymmetrical thrust and loss of speed. Executive Air Charter failed to perform scheduled maintenance and inspections in conformance with its approved maintenance program, and required inspections were not conducted in accordance with proper maintenance practices.",
+ "factors": [
+  {
+   "id": "maintenance_error",
+   "role": "initiating",
+   "evidence": "Scheduled maintenance and inspections of the airplane were not performed in conformance with its approved maintenance program (p. 2, 7)"
+  },
+  {
+   "id": "engine_failure",
+   "role": "contributing",
+   "evidence": "The right engine propeller and fuel flow settings were improper, likely causing one engine to slip to idle during approach, causing asymmetrical thrust and loss of speed (p. 5, 10-15)"
+  },
+  {
+   "id": "unstable_approach",
+   "role": "contributing",
+   "evidence": "The captain had flown an unstable approach, descending steeply and too close to the runway. Witnesses reported the airplane seemed too fast, overshot the extended centerline, and made a violent turn (p. 5-6, 42)"
+  },
+  {
+   "id": "takeoff_configuration_error",
+   "role": "contributing",
+   "evidence": "The plane's flaps were found to be in the up (retracted) position at impact, which is improper for approach and landing (p. 9)"
+  },
+  {
+   "id": "cfit",
+   "role": "outcome",
+   "evidence": "plane crashed 600 feet short of the runway"
+  }
+ ],
+ "chain": [
+  [
+   "maintenance_error",
+   "engine_failure"
+  ],
+  [
+   "engine_failure",
+   "unstable_approach"
+  ],
+  [
+   "unstable_approach",
+   "cfit"
+  ]
+ ],
+ "events": [
+  {
+   "t": -600,
+   "clock": "06:20",
+   "phase": "ground",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "The captain arrived 15 minutes late at 0600 local time while the first officer arrived on time at 0545 for flight 5452 scheduled departure at 0615 local time."
+  },
+  {
+   "t": -300,
+   "clock": "06:20",
+   "phase": "taxi",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Flight 5452 departed San Juan at 0620 local time with four passengers and two crewmembers aboard the CASA C-212-CC, registration N432CA, on a visual flight rules flight plan."
+  },
+  {
+   "t": 0,
+   "clock": "06:50",
+   "phase": "approach",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "While in the vicinity of Mayaguez, the captain cancelled the visual flight rules flight plan and proceeded to make a visual approach to runway 9 without making the customary in-range call to operations."
+  },
+  {
+   "t": 1200,
+   "clock": null,
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Witnesses who observed the airplane on its downwind leg reported it appeared normal, though one witness said it seemed too fast and appeared to overshoot the extended centerline on the base leg."
+  },
+  {
+   "t": 1500,
+   "clock": null,
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "warning",
+   "text": "A crop duster pilot reported everything appeared normal until the airplane was about 1,000 feet from the runway and 100 feet above ground, when he heard a sound similar to reverse pitch being applied."
+  },
+  {
+   "t": 1595,
+   "clock": "06:50",
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "The airplane yawed to the right followed by a roll to the left, then rolled back to the right as the right wing tip struck the ground 643 feet short of the runway threshold and 67 feet right of centerline."
+  },
+  {
+   "t": 1600,
+   "clock": null,
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "The airplane traveled about 100 feet after initial ground impact, with the nose striking a chain-link fence and ditch before pivoting about 180 degrees and coming to rest upright."
+  },
+  {
+   "t": 1650,
+   "clock": null,
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "The right wing separated about midspan and the cockpit was demolished up to the forward cabin bulkhead. Postcrash fire destroyed portions of the airframe. Both pilots were killed but all four passengers survived with minor injuries."
+  }
+ ],
+ "report_links": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8807.pdf"
+ ],
+ "wikipedia": null,
+ "asn_id": null,
+ "interest": 7.98,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Key report sections read: history of flight, maintenance history, findings, probable cause, recommendations",
+   "Factor evidence sourced with page citations from official investigation report",
+   "Events extracted from witness accounts and accident sequence",
+   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null; actor CREW -> CAPT; actor CREW -> CAPT"
+  ]
+ },
+ "curated_id": null,
+ "sources": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8807.pdf"
+ ],
+ "recommendations": [
+  {
+   "id": "A-87-27",
+   "to": "FAA",
+   "text": "Issue a general notice (GENOT) immediately to all U.S. owners and operators of the CASA C-212 airplane describing the background and significant findings of recent flight tests, evaluation of stall characteristics, operational precautions, and training procedures.",
+   "status": "closed_acceptable"
+  },
+  {
+   "id": "A-87-28",
+   "to": "FAA",
+   "text": "Expedite the rulemaking action to require installation of an artificial stall warning system on the CASA C-212 airplanes.",
+   "status": "closed_acceptable"
+  },
+  {
+   "id": "A-88-92",
+   "to": "FAA",
+   "text": "Correct any deficiencies in compliance with Title 14 CFR 25.813 regarding the installation of passenger seats adjacent to Type II and III exits in CASA C-212 airplanes with 19 seats or less.",
+   "status": "unknown"
+  },
+  {
+   "id": "A-88-93",
+   "to": "FAA",
+   "text": "Remedy the deficiencies in compliance with Title 14 CFR 25.809, .811, and .813 of the supplemental type certificate for the CASA C-212-CC main door regarding accessibility to door controls during emergency conditions.",
+   "status": "unknown"
+  },
+  {
+   "id": "A-88-94",
+   "to": "FAA",
+   "text": "Require in accordance with Title 14 CFR 25.785(c) adequate head clearance between passenger seats and bulkheads/partitions installed in CASA C-212 airplanes.",
+   "status": "unknown"
+  },
+  {
+   "id": "A-88-95",
+   "to": "FAA",
+   "text": "Inspect flightcrew restraints in CASA C-212 airplanes to verify the adequacy of operation, convenience, and comfort based on anthropomorphic criteria, and take appropriate remedial action.",
+   "status": "unknown"
+  },
+  {
+   "id": "A-88-96",
+   "to": "FAA",
+   "text": "Require fire-blocking materials on all passenger and crew seats on Title 14 CFR Part 21 and Special Federal Aviation Regulations No. 41 and Title 14 CFR Part 23 commuter category airplanes operated under Title 14 CFR Part 135.",
+   "status": "unknown"
+  },
+  {
+   "id": "A-88-97",
+   "to": "FAA",
+   "text": "Conduct a special surveillance inspection of approved Hartzell Propeller overhaul facilities and of other propeller manufacturer overhaul facilities to determine that proper quality control organization and procedures are in place and are being followed.",
+   "status": "unknown"
+  },
+  {
+   "id": "A-88-98",
+   "to": "FAA",
+   "text": "Alert all principal operations and maintenance inspectors to emphasize in their surveillance of operators of turbopropeller airplanes the need to adhere to prescribed manufacturer instructions in maintaining flight idle blade angles and to emphasize to operators the criticalness of maintaining them properly.",
+   "status": "unknown"
+  },
+  {
+   "id": "A-88-99",
+   "to": "FAA",
+   "text": "Reissue to operations and maintenance inspectors Federal Aviation Administration Notice N8320.301 of September 17, 1984, prompted by Safety Board Recommendation A-84-15.",
+   "status": "unknown"
+  },
+  {
+   "id": "A-88-100",
+   "to": "FAA",
+   "text": "Complete as soon as possible and make the findings available to the Safety Board the report on the in-house review of the bilateral aircraft type certification program and the corrective actions taken or contemplated as a result of the review.",
+   "status": "unknown"
+  },
+  {
+   "id": "A-88-101",
+   "to": "FAA",
+   "text": "Amend Title 14 CFR 23.207 and 25.207 to require a stall warning device and eliminate the use of inherent aerodynamic qualities (aerodynamic buffeting) as a stall warning.",
+   "status": "unknown"
+  },
+  {
+   "id": "A-88-102",
+   "to": "FAA",
+   "text": "Amend Title 14 CFR Parts 121 and 135 to require a stall warning device on those airplanes that currently use inherent aerodynamic qualities (aerodynamic buffeting) as a stall warning.",
+   "status": "unknown"
+  },
+  {
+   "id": "A-88-103",
+   "to": "FAA",
+   "text": "Require the aircraft evaluation group during the type certification process of turbopropeller airplanes to review carefully the design of propeller pitch controls in order to identify and establish appropriate flightcrew training guidelines and to emphasize the proper use of these controls to prevent inadvertent operation in the beta mode in flight where prohibited by the airplane manufacturer.",
+   "status": "unknown"
+  },
+  {
+   "id": "A-88-104",
+   "to": "FAA",
+   "text": "Require the principal operations inspectors for operators of turbopropeller airplanes to review carefully flightcrew training programs to verify that appropriate information is provided by the operators on the proper use of propeller pitch controls to prevent inadvertent operation in the beta mode in flight.",
+   "status": "unknown"
+  },
+  {
+   "id": "A-88-105",
+   "to": "FAA",
+   "text": "Amend Title 14 CFR 25.1155 and 23.1155 to provide for a positive means to prevent inadvertent operation of the propellers at blade pitch settings below the flight regime in those airplanes where such operation of the propellers is prohibited.",
+   "status": "unknown"
+  }
+ ],
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead",
+   "report_id": "AAR-88/07",
+   "report_date": "1988-08-02",
+   "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8807.pdf"
+  }
+ ],
+ "cvr": [],
+ "dissent": [],
+ "safety_changes": [],
+ "related": []
+}
