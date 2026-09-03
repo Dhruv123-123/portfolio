@@ -9,7 +9,10 @@ export const useBlackboxStore = defineStore('blackbox', {
     query: '',
     replayId: null,
     replayTime: null, // seek request in seconds from t0
-    highlightFactor: null
+    highlightFactor: null,
+    storyId: null, // record shown in story mode overlay (null = closed)
+    sound: false,
+    crt: false
   }),
   actions: {
     openTimeline(id) {
@@ -20,6 +23,14 @@ export const useBlackboxStore = defineStore('blackbox', {
       this.replayId = id
       this.replayTime = t
       this.tab = 'replay'
+    },
+    openAtlas(id = null) {
+      if (id) this.selectedId = id
+      this.tab = 'atlas'
+    },
+    openStory(id) {
+      this.selectedId = id
+      this.storyId = id
     },
     openGraph(id = null, query = null) {
       if (id) this.selectedId = id

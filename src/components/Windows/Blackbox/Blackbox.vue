@@ -18,6 +18,7 @@
       </div>
       <template v-else>
         <GraphExplorer v-show="store.tab === 'graph'" :graph="graph" :index="index" :active="store.tab === 'graph'" :catalog="catalog" @load-catalog="loadCatalog" />
+        <Atlas v-if="atlasMounted" v-show="store.tab === 'atlas'" :graph="graph" :index="index" :active="store.tab === 'atlas'" :catalog="catalog" @load-catalog="loadCatalog" />
         <FdrReplay v-if="store.tab === 'replay'" :graph="graph" :index="index" />
         <TimelineBuilder v-show="store.tab === 'timeline'" :graph="graph" :index="index" :active="store.tab === 'timeline'" />
         <AboutPanel v-show="store.tab === 'about'" :graph="graph" :index="index" :catalog="catalog" />
@@ -27,11 +28,12 @@
 </template>
 
 <script setup>
-import { ref, shallowRef, computed, onMounted } from 'vue'
+import { ref, shallowRef, computed, onMounted, watch } from 'vue'
 import { useBlackboxStore } from '@/stores/blackboxStore'
 import { buildIndex } from './lib/search.js'
 import { loadCatalogIndex, rowToStub } from './lib/catalog.js'
 import GraphExplorer from './GraphExplorer.vue'
+import Atlas from './Atlas.vue'
 import FdrReplay from './FdrReplay.vue'
 import TimelineBuilder from './TimelineBuilder.vue'
 import AboutPanel from './AboutPanel.vue'
@@ -57,10 +59,14 @@ async function loadCatalog() {
 
 const tabs = [
   { id: 'graph', label: 'Graph & search', key: '1' },
-  { id: 'replay', label: 'FDR replay', key: '2' },
-  { id: 'timeline', label: 'Timeline', key: '3' },
-  { id: 'about', label: 'Method', key: '4' }
+  { id: 'atlas', label: 'Atlas', key: '2' },
+  { id: 'replay', label: 'FDR replay', key: '3' },
+  { id: 'timeline', label: 'Timeline', key: '4' },
+  { id: 'about', label: 'Method', key: '5' }
 ]
+// The globe is heavy: mount it the first time the tab is opened, then keep it warm.
+const atlasMounted = ref(false)
+watch(() => store.tab, (t) => { if (t === 'atlas') atlasMounted.value = true }, { immediate: true })
 
 const agencyCount = computed(() => (graph.value ? graph.value.agencies.length : 0))
 const fdrCount = computed(() => (graph.value ? graph.value.records.filter((r) => r.fdr).length : 0))

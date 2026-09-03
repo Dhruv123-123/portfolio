@@ -29,7 +29,7 @@ export function rowToStub(row) {
     agencies: row.agency ? [{ code: row.agency, role: 'lead' }] : [],
     operator: row.operator || '',
     aircraft: { type: row.ac || '', manufacturer: row.mf || '' },
-    location: { country: row.cty || '' },
+    location: { country: row.cty || '', lat: typeof row.la === 'number' ? row.la : null, lon: typeof row.lo === 'number' ? row.lo : null },
     phase: row.phase || 'unknown',
     category: row.category || 'UNK',
     fatalities: row.fatalities ?? null,
@@ -46,6 +46,7 @@ export function rowToStub(row) {
     interest: row.interest || 0,
     curated_id: row.curated_id || null,
     qid: row.qid || null,
+    wikipedia: row.w ? `https://en.wikipedia.org/wiki/${row.w}` : null,
     asn_id: row.asn_id || null,
     ntsb_no: row.ntsb_no || null,
     extraction: { method: row.tier === 'ntsb' ? 'rules' : 'llm', confidence: 'medium', reviewed: false }
