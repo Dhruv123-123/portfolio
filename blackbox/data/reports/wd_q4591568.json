@@ -1,0 +1,226 @@
+{
+  "id": "wd_q4591568",
+  "qid": "Q4591568",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "1996 New Hampshire Learjet crash",
+  "flight_number": null,
+  "date": "1996-12-24",
+  "time_reference": "EST",
+  "t0": "1996-12-24T10:05:25Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "NYC97FA194"
+    }
+  ],
+  "aircraft": {
+    "type": "Learjet 35A",
+    "manufacturer": "Learjet",
+    "family": "35",
+    "registration": "N388LS"
+  },
+  "operator": "Aircraft Charter Group",
+  "route": {
+    "from": "BDR",
+    "from_name": "Bridgeport",
+    "to": "LEB",
+    "to_name": "Lebanon"
+  },
+  "location": {
+    "name": "Dorchester, near Smarts Mountain",
+    "country": "United States",
+    "lat": 43.826,
+    "lon": -72.0125
+  },
+  "phase": "approach",
+  "occupants": 2,
+  "fatalities": 2,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "A Learjet 35A repositioning flight departed Bridgeport for Lebanon, NH. During an instrument approach in low visibility and fog, the crew became disoriented and misidentified navigation aids, incorrectly estimating their position. The crew descended below safe altitude and struck terrain approximately 10.3 nautical miles short of the airport.",
+  "probable_cause": "The captain's failure to maintain situational awareness, which resulted in the airplane being outside the confines of the instrument approach; and the crew's misinterpretation of a step-down fix passage, which resulted in an early descent into rising terrain. Factors included the captain's misreading of the instrument approach procedure, the crew's rushed and incomplete instrument approach briefing, their failure to use additional, available navigational aids, and their failure to account for the winds at altitude. (p. 2)",
+  "factors": [
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "The captain reported not receiving the localizer when the airplane was actually about 5 nautical miles to the left of it and at BURGR intersection when still 5 nautical miles away from it. (p. 1)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Instrument meteorological conditions with rain, fog, and overcast sky at 1,200 feet agl at the time of approach. (p. 16)"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "The crew descended the aircraft to 2,300 feet when located 10.3 nautical miles prior to where descent to 2,300 feet was authorized. The aircraft impacted terrain at the 2,300-foot level. (p. 1)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The Learjet impacted trees then terrain while at an altitude of 2,300 feet on rising mountainous terrain near Smarts Mountain. (p. 1)"
+    }
+  ],
+  "chain": [
+    [
+      "navigation_error",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ],
+    [
+      "low_visibility",
+      "navigation_error"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "09:19",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Learjet 35A departed Igor I. Sikorsky Memorial Airport, Bridgeport, Connecticut for positioning flight to Lebanon Municipal Airport.",
+      "factors": []
+    },
+    {
+      "t": 480,
+      "clock": "09:27",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Center controller cleared flight to proceed direct to Lebanon. Aircraft climbed to Flight Level 190 then was stepped down to 7,000 feet.",
+      "factors": []
+    },
+    {
+      "t": 720,
+      "clock": "09:33",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain copied ATIS information and briefed first officer on ILS approach to Lebanon.",
+      "factors": []
+    },
+    {
+      "t": 1440,
+      "clock": "09:43",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Crew instructed to maintain heading 050 degrees magnetic and issued descent clearance from 7,000 feet to 4,700 feet, with direction to proceed direct to BURGR for ILS approach.",
+      "factors": []
+    },
+    {
+      "t": 1500,
+      "clock": "09:45",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew configured airplane to flaps eight as last radar contact occurred at 4,900 feet, about 3 nautical miles northeast of Lebanon VOR.",
+      "factors": []
+    },
+    {
+      "t": 1620,
+      "clock": "09:47",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain reported to tower unable to receive localizer, stating position 7 nautical miles outside BURGR. Tower reported localizer was in the green.",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 1680,
+      "clock": "09:48",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain told first officer to execute missed approach. Radar data showed airplane 2 nautical miles southeast of VOR proceeding southeast at 4,500 feet.",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 1950,
+      "clock": "09:52",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain requested VOR RWY 25 approach with circle to land and was cleared to proceed direct to VOR.",
+      "factors": []
+    },
+    {
+      "t": 2640,
+      "clock": "10:03",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain told first officer could descend to 2,300 feet after calling out outer marker. First officer noted VOR indications were fluctuating.",
+      "factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 2686,
+      "clock": "10:04",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer stated VOR was fluctuating and said it was all over the place. First officer then stated he was descending airplane to 2,300 feet.",
+      "factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 2706,
+      "clock": "10:05",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Learjet impacted trees then terrain on rising mountainous terrain near Smarts Mountain at 2,300-foot level, 12.5 nautical miles from Lebanon VOR and 10.3 nautical miles before authorized descent point.",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001208X07226&AKey=1&RType=Final&IType=FA"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/1996_New_Hampshire_Learjet_35_crash",
+  "asn_id": null,
+  "interest": 7.4,
+  "report_links": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001208X07226&AKey=1&RType=Final&IType=FA",
+    "http://www.nhahs.org/Newsletters/SummerAeronautR61.pdf",
+    "https://dartmed.dartmouth.edu/winter00/pdf/Plane_Crash.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report read: key sections (history of flight, findings, probable cause)",
+      "11 events extracted from detailed timeline with clock times from 0919 to 1005 EST",
+      "Multiple navigation errors leading to disorientation and early descent",
+      "Page citations from 17-page NTSB final report (NYC97FA194)",
+      "No formal recommendations section in this brief report; depth set to sections"
+    ]
+  },
+  "curated_id": null
+}

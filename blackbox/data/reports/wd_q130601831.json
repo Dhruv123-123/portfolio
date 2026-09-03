@@ -1,0 +1,239 @@
+{
+  "id": "wd_q130601831",
+  "qid": "Q130601831",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Rocky Mountain Airways Flight 217",
+  "flight_number": "217",
+  "date": "1978-12-04",
+  "time_reference": "MST",
+  "t0": "1978-12-04T19:45:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "NTSB-SAR-79-6"
+    }
+  ],
+  "aircraft": {
+    "type": "de Havilland Canada DHC-6 Twin Otter 300",
+    "manufacturer": "de Havilland Canada",
+    "family": "DHC-6",
+    "registration": "N25RM"
+  },
+  "operator": "Rocky Mountain Airways",
+  "route": {
+    "from": "KBDU",
+    "from_name": "Steamboat Springs",
+    "to": "KDEN",
+    "to_name": "Denver"
+  },
+  "location": {
+    "name": "Buffalo Pass area, near Steamboat Springs",
+    "country": "United States",
+    "lat": 40.537,
+    "lon": -106.664
+  },
+  "phase": "climb",
+  "occupants": 22,
+  "fatalities": 2,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "A DHC-6 Twin Otter departed Steamboat Springs climbing to 17,000 feet via V101 airway to Denver. Unable to climb above 13,000 feet due to severe icing and mountain wave downdrafts, the captain decided to return to Steamboat Springs. The aircraft descended to 11,600 feet and struck terrain on a mountain at 10,530 feet, partially buried in snow.",
+  "probable_cause": "Severe icing and strong downdrafts associated with a mountain wave which combined to exceed the aircraft's capability to maintain flight. Contributing to the accident was the captain's decision to fly into probable icing conditions that exceeded the conditions authorized by company directive. (p. 4)",
+  "factors": [
+    {
+      "id": "airframe_icing",
+      "role": "initiating",
+      "evidence": "After entering a cloud bank about 12,560 feet over Buffalo Pass, the flight encountered severe icing conditions with precipitation like slush. The aircraft encountered heavy rime icing with 1.5 to 2 inches of ice on protected surfaces including propellers and windshield. (p. 6)"
+    },
+    {
+      "id": "windshear",
+      "role": "initiating",
+      "evidence": "Strong downdrafts associated with a mountain wave at approximately 1945 MST exceeded the aircraft's performance margin. The captain was unable to keep the aircraft at 13,000 feet with maximum climb power. (p. 7)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Unable to climb above 13,000 feet at normal power and airspeed settings. Descended uncommanded from 13,000 feet to 11,600 feet despite application of 10 degrees of flaps and maximum climb power. (p. 7)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Captain decided to fly into weather conditions beyond company's limitations. Company operations manual did not authorize flight into icing conditions at high altitudes over mountainous terrain. (p. 4)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft crashed on a mountain at 10,530-foot elevation after being unable to maintain altitude, approximately 8 nautical miles east-northeast of Steamboat Springs. Aircraft partially buried in snow. (p. 4)"
+    },
+    {
+      "id": "evacuation_deficiency",
+      "role": "contributing",
+      "evidence": "Lack of shoulder harnesses on aircraft seats contributed to fatal injuries. One passenger died from injuries received in the crash; captain died three days later partly due to lack of shoulder harness restraint. (p. 4)"
+    }
+  ],
+  "chain": [
+    [
+      "airframe_icing",
+      "loss_of_control_inflight"
+    ],
+    [
+      "windshear",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "18:55",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 217 departed Steamboat Springs STOL Airport at 1855 MST climbing to assigned altitude of 17,000 feet on V101 airway to Denver. 20 passengers plus crew aboard.",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": "19:00",
+      "phase": "climb",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer flying the aircraft crossed Steamboat Springs NDB at 12,000 feet and intercepted V101 airway eastward. Light freezing precipitation encountered during climb.",
+      "factors": [
+        "airframe_icing"
+      ]
+    },
+    {
+      "t": 600,
+      "clock": "19:05",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Aircraft entered cloud bank at approximately 12,560 feet over Buffalo Pass area just east of Steamboat Springs. Encountered severe icing conditions and precipitation like slush.",
+      "factors": [
+        "airframe_icing"
+      ]
+    },
+    {
+      "t": 900,
+      "clock": "19:10",
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft unable to climb above 13,000 feet at normal climb power and airspeed. Captain attempted to climb further but also unsuccessful. Aircraft continued to encounter severe icing despite deicing equipment functioning.",
+      "factors": [
+        "loss_of_control_inflight",
+        "airframe_icing"
+      ]
+    },
+    {
+      "t": 1700,
+      "clock": "19:23",
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain decided to return to Steamboat Springs after being unable to maintain altitude above 13,000 feet. Aircraft began 180-degree turn to head back westbound.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 1750,
+      "clock": "19:24",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Aircraft encountered severe icing conditions for approximately 12 seconds. Unable to maintain 13,000 feet with maximum climb power. Captain lowered flaps 5 degrees then 10 degrees to arrest descent.",
+      "factors": [
+        "windshear",
+        "airframe_icing"
+      ]
+    },
+    {
+      "t": 1800,
+      "clock": "19:25",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft descended to 11,600 feet. Able to maintain 11,600 feet with 10 degrees of flaps and airspeed between 90-100 knots. Ice accumulated to 1.5-2 inches on windshield unheated portions.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 1900,
+      "clock": "19:26",
+      "phase": "descent",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer reported to Denver Center indicating problem maintaining altitude and recommending other flights not attempt to fly into Steamboat Springs area due to heavy icing.",
+      "factors": [
+        "loss_of_control_inflight",
+        "airframe_icing"
+      ]
+    },
+    {
+      "t": 1950,
+      "clock": "19:32",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain reported they were on Victor 101 crossing the 335-degree radial of Kremmling VOR. Last radio contact with Denver Center at 1944:34, after which no response received.",
+      "factors": []
+    },
+    {
+      "t": 2100,
+      "clock": "19:45",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft right wingtip struck high-voltage transmission line tower at approximately 1945 MST, causing short circuit recorded by power company. Aircraft impacted terrain at 10,530 feet elevation, partially buried in snow. 2 fatalities on scene, captain died 3 days later.",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Mandatory installation of shoulder harnesses on aircraft seats"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7906.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Rocky_Mountain_Airways_Flight_217",
+  "asn_id": null,
+  "interest": 6.06,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7906.pdf",
+    "https://ntrs.nasa.gov/api/citations/19930084294/downloads/19930084294.pdf",
+    "https://skybrary.aero/articles/mountain-waves"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Report text has OCR quality issues but key sections readable",
+      "10 events extracted with times from 1855 to 1945 MST",
+      "History of flight, findings, and probable cause sections read",
+      "Recommendations section not clearly readable due to OCR quality",
+      "Page citations approximate due to OCR limitations",
+      "NTSB report NTSB-SAR-79-6"
+    ]
+  },
+  "curated_id": null
+}
