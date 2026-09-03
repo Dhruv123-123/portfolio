@@ -1,0 +1,293 @@
+{
+  "id": "wd_q48742715",
+  "qid": "Q48742715",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Scandinavian Airlines System 901",
+  "flight_number": "SK901",
+  "date": "1984-02-28",
+  "time_reference": "UTC",
+  "t0": "1984-02-28T21:18:21Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-84/15",
+      "report_date": "1984-11-15"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-10-30",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-10",
+    "registration": "LN-RKB"
+  },
+  "operator": "Scandinavian Airlines",
+  "route": {
+    "from": "ARN",
+    "from_name": "Stockholm",
+    "to": "JFK",
+    "to_name": "New York"
+  },
+  "location": {
+    "name": "John F. Kennedy International Airport",
+    "country": "United States",
+    "lat": 40.6349,
+    "lon": -73.7781
+  },
+  "phase": "landing",
+  "occupants": 177,
+  "fatalities": 0,
+  "injuries_serious": 1,
+  "damage": "substantial",
+  "category": "CFIT",
+  "summary": "Scandinavian Airlines DC-10 overran Runway 04R at JFK while landing from Stockholm after a stopover in Oslo. All 177 occupants survived, though 12 were injured. The crew approached at an unusually high speed of 205 knots due to autothrottle malfunction and failure to monitor airspeed, touching down long and veering into shallow water 650 feet from the runway.",
+  "probable_cause": "The flightcrew's disregard for prescribed procedures for monitoring and controlling airspeed during the final stages of the approach, decision to continue the landing rather than to execute a missed approach, and overreliance on the autothrottle speed control system which had a history of recent malfunctions. (p. 3)",
+  "factors": [
+    {
+      "id": "autothrottle_mode_confusion",
+      "role": "initiating",
+      "evidence": "The autothrottle system had undergone recent malfunctions, and the crew relied heavily on it for speed control during final approach rather than monitoring actual airspeed. (p. 24)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "During descent from 700 to 70 feet, indicated airspeed climbed to a peak of 209 knots, significantly above the desired approach speed, but the crew did not detect or respond to this excessive airspeed. (p. 24)"
+    },
+    {
+      "id": "automation_dependency",
+      "role": "contributing",
+      "evidence": "The captain stated 'It didn't take power off,' indicating he expected the autothrottle to manage the approach automatically, but the system failed to retard throttles at the proper time. (p. 24)"
+    },
+    {
+      "id": "go_around_not_flown",
+      "role": "contributing",
+      "evidence": "Despite the unstable approach with excessive airspeed, the crew decided to continue the landing rather than execute a missed approach. (p. 3)"
+    },
+    {
+      "id": "landing_long",
+      "role": "contributing",
+      "evidence": "The aircraft touched down approximately 4,600 feet down the 10,000-foot runway due to the high approach speed, leaving insufficient distance to stop. (p. 24)"
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "The aircraft overran Runway 04R and came to rest in shallow water 650 feet beyond the runway after passing through and damaging the approach light structure. (p. 11)"
+    }
+  ],
+  "chain": [
+    ["autothrottle_mode_confusion", "inadequate_monitoring"],
+    ["inadequate_monitoring", "landing_long"],
+    ["automation_dependency", "go_around_not_flown"],
+    ["landing_long", "runway_overrun"]
+  ],
+  "events": [
+    {
+      "t": -240,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft was approximately 2,000 feet above ground level, tracking 015° true at about 130 knots indicated airspeed with autothrottles engaged in speed mode.",
+      "state": {"alt": 2000, "ias": 130, "hdg": 15},
+      "factors": ["autothrottle_mode_confusion"],
+      "kind": "system"
+    },
+    {
+      "t": -180,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft descended to 1,500 feet AGL and No. 2 autopilot ILS mode was selected; aircraft began turning toward runway heading.",
+      "state": {"alt": 1500, "ias": 180},
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": -90,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flaps began descent from 15° to 22° position; autopilot switched to glideslope capture mode; N1 began decreasing to flight idle and aircraft pitched over to begin descent.",
+      "state": {"alt": 1200, "ias": 180, "flaps": 22},
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": -60,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "During first 30 seconds of descent from 1,500 to 870 feet AGL, throttle position and engine N1 went to flight idle, indicated airspeed increased to 190 knots then began to decrease, and flaps started down to 35° position.",
+      "state": {"alt": 870, "ias": 190, "flaps": 35},
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": -32,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "From 870 to 700 feet, throttles and engine N1 came up to about 84 percent and indicated airspeed began climbing from 189 knots; flaps reached 35° position.",
+      "state": {"alt": 700, "ias": 189, "n1_pct": 84},
+      "factors": [],
+      "kind": "system"
+    },
+    {
+      "t": -20,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "For 32 seconds from 700 to 70 feet radio altitude, throttle position and N1 remained at about 84 percent while indicated airspeed continued to climb to a peak of 209 knots. As airspeed increased past 193 knots, flap limiting system began to retract flaps. Autopilot switched from command to control wheel steering mode.",
+      "state": {"alt": 70, "ias": 209, "n1_pct": 84, "flaps": 27},
+      "factors": ["inadequate_monitoring", "autothrottle_mode_confusion"],
+      "kind": "system"
+    },
+    {
+      "t": -15,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain stated 'It didn't take power off,' indicating the autothrottle failed to retard throttles as expected.",
+      "factors": ["automation_dependency"],
+      "kind": "crew_speech"
+    },
+    {
+      "t": -15,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At approximately 50 feet radio altitude, pitch began increasing, airspeed began decreasing from peak of 209 knots, flaps began to extend back to 35° setting, and autothrottles went from speed mode to retard mode.",
+      "state": {"alt": 50, "ias": 200, "pitch": 4},
+      "factors": ["go_around_not_flown"],
+      "kind": "system"
+    },
+    {
+      "t": -5,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flaps arrived at 35° setting, airspeed had decreased to 185 knots at approximately 20 feet radio altitude, aircraft well below desired glide path for continuation of approach.",
+      "state": {"alt": 20, "ias": 185, "flaps": 35},
+      "factors": ["landing_long"],
+      "kind": "system"
+    },
+    {
+      "t": 0,
+      "clock": "21:18:21.6",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft touched down on Runway 04R at indicated airspeed of approximately 179 knots and groundspeed of 179 knots at 4,600 feet down the 10,000-foot runway.",
+      "state": {"alt": 0, "ias": 179, "gs": 179},
+      "factors": ["landing_long"],
+      "kind": "outcome"
+    },
+    {
+      "t": 0.7,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Within 0.7 second after touchdown, spoiler handle came out of retract position, spoiler panels deployed from zero degree position, vertical acceleration peaked, and thrust reversers on engines 1 and 3 were recorded in stowed position.",
+      "factors": ["runway_overrun"],
+      "kind": "system"
+    },
+    {
+      "t": 2.0,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Nose gear strut switch transitioned to ground position; wheel brakes still in off position; spoiler panels deployed to approximately 60 degrees.",
+      "factors": ["runway_overrun"],
+      "kind": "system"
+    },
+    {
+      "t": 2.8,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Recorded data showed both wheel brakes activated; No. 1 thrust reverser in stowed position with N1 at flight idle on all three engines.",
+      "factors": ["runway_overrun"],
+      "kind": "system"
+    },
+    {
+      "t": 6.4,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft came to rest in shallow water 650 feet beyond end of Runway 04R after passing through approach light structure.",
+      "factors": ["runway_overrun"],
+      "kind": "outcome"
+    }
+  ],
+  "cvr": [
+    {
+      "t": -15,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "It didn't take power off."
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-84-123",
+      "to": "FAA",
+      "text": "Apply the findings of behavioral research programs and accident/incident investigations regarding degradation of pilot performance as a result of automation to modify pilot training programs and flight procedures so as to take full advantage of the safety benefits of automation technology.",
+      "status": "unknown",
+      "trigger_factors": ["autothrottle_mode_confusion", "automation_dependency"]
+    },
+    {
+      "id": "A-84-124",
+      "to": "FAA",
+      "text": "Direct air carrier principal operations inspectors to review the airspeed callout procedures of assigned air carriers and, where necessary, to require that these procedures specify the actual speed deviations (in appropriate increments, e.g., +10, +20, -10, -20, etc.) from computed reference speeds.",
+      "status": "unknown",
+      "trigger_factors": ["inadequate_monitoring"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Scandinavian Airlines modified DC-10 flight procedures to require manual backup of autothrottle and emphasize airspeed as primary control reference",
+    "Increased emphasis in pilot training on automation limitations and the need for continuous airspeed monitoring"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8415.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Scandinavian_Airlines_System_Flight_901",
+  "asn_id": null,
+  "interest": 5.28,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8415.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR84-15.pdf"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted comprehensive timeline from key sections: Factual Information (pp. 4-24), particularly sections 1.16.8 Approach Profile and Configuration and 1.16.4 Summary of Landing Roll",
+      "Probable cause and recommendations from pp. 3, 53-54",
+      "All events derived from report; several clock times inferred from relative timing information in Flight Data Recorder analysis",
+      "Airspeed values (179-209 knots) and altitude references from detailed FDR correlation analysis",
+      "First 8 events cover approach descent and landing; additional events cover landing rollout sequence"
+    ]
+  }
+}
