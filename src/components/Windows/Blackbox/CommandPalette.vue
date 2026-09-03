@@ -30,6 +30,8 @@ const inputRef = ref(null)
 const activeIdx = ref(0)
 
 const ACTIONS = [
+  { key: 'a-surprise', icon: '🎲', title: 'Surprise me', sub: 'the story of a random fully-documented accident', run: () => { const pool = props.graph.records.filter((r) => r.events && r.events.length >= 6); const r = pool[Math.floor(Math.random() * pool.length)]; if (r) store.openStory(r.id) } },
+  { key: 'a-requiem', icon: '🕯', title: 'Requiem', sub: 'the century as a memorial on the atlas', run: () => emit('action', 'requiem') },
   { key: 'a-atlas', icon: '🌐', title: 'Open the atlas', sub: 'every accident on a globe', run: () => store.openAtlas() },
   { key: 'a-century', icon: '⏵', title: 'Play the century', sub: 'atlas time-lapse from the first record to today', run: () => emit('action', 'century') },
   { key: 'a-story', icon: '🎬', title: 'Tell the story of the selected accident', sub: 'documentary walkthrough', run: () => store.selectedId && store.openStory(store.selectedId) },

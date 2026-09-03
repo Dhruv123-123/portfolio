@@ -22,6 +22,7 @@
           <div class="bb-muted">{{ rec.date }} · {{ rec.aircraft.type }} · {{ rec.operator }} · {{ rec.route?.from_name || rec.route?.from || '' }} → {{ rec.route?.to_name || rec.route?.to || '' }} · {{ rec.fatalities ?? '?' }} fatalities</div>
         </div>
         <div class="tl-modes">
+          <button class="bb-btn" :class="{ active: seqPlaying }" :disabled="!(rec.events && rec.events.length)" @click="toggleSeq" title="Step through the events in order with a ticking clock">{{ seqPlaying ? '❚❚ stop' : '▶ play sequence' }}</button>
           <button class="bb-btn" :class="{ active: mode === 'chain' }" @click="mode = 'chain'">Event chain</button>
           <button class="bb-btn" :class="{ active: mode === 'compare' }" @click="mode = 'compare'">Compare</button>
           <button class="bb-btn" :class="{ active: mode === 'narrative' }" @click="mode = 'narrative'">Narrative</button>
@@ -29,6 +30,11 @@
           <button class="bb-btn" :disabled="!(rec.events && rec.events.length)" @click="store.openStory(rec.id)" title="Documentary-style walkthrough">Story ▸</button>
           <a :href="wikipediaUrl(rec)" target="_blank" rel="noopener" class="tl-readmore">{{ hasWikipediaArticle(rec) ? 'Read more on Wikipedia ↗' : 'Search Wikipedia ↗' }}</a>
         </div>
+      </div>
+
+      <div v-if="seqPlaying" class="tl-live" @click="toggleSeq">
+        <div class="tl-live-clock">{{ liveClock }}</div>
+        <div class="tl-live-sub">{{ liveSub }}</div>
       </div>
 
       <!-- Causal chain diagram -->
@@ -201,6 +207,9 @@ import { buildNarrative, markdownToHtml } from './lib/narrative.js'
 import { formatRelative } from './lib/fdr.js'
 import { loadCatalogRecord } from './lib/catalog.js'
 import { wikipediaUrl, hasWikipediaArticle } from './lib/geo.js'
+import { formatClock } from './lib/fdr.js'
+import { note } from './lib/synth.js'
+import { onBeforeUnmount } from 'vue'
 
 const props = defineProps({ graph: Object, index: Object, active: Boolean })
 const store = useBlackboxStore()
@@ -212,6 +221,81 @@ const activeEvent = ref(-1)
 const eventsEl = ref(null)
 const cvrEl = ref(null)
 const copied = ref(false)
+
+// Auto-play: the events in order, with a clock that counts between them
+const seqPlaying = ref(false)
+const liveT = ref(0)
+let seqRaf = null
+let seqIdx = 0
+let seqStart = 0
+let seqDwell = 0
+let lastTickSec = null
+const liveClock = computed(() => {
+  const r = rec.value
+  if (r && r.t0) return formatClock(r.t0, liveT.value)
+  const e = r?.events?.[activeEvent.value]
+  return e?.clock || formatRelative(Math.round(liveT.value))
+})
+const liveSub = computed(() => {
+  const r = rec.value
+  const e = r?.events?.[activeEvent.value]
+  return e ? `${formatRelative(Math.round(liveT.value))} · ${(e.phase || '').replace(/_/g, ' ')} · ${activeEvent.value + 1} of ${r.events.length}` : ''
+})
+function toggleSeq() {
+  if (seqPlaying.value) { stopSeq(); return }
+  const evs = rec.value?.events || []
+  if (!evs.length) return
+  seqPlaying.value = true
+  mode.value = 'chain'
+  seqIdx = Math.max(0, activeEvent.value)
+  startBeat()
+  seqRaf = requestAnimationFrame(seqTick)
+}
+function stopSeq() {
+  seqPlaying.value = false
+  if (seqRaf) cancelAnimationFrame(seqRaf)
+  seqRaf = null
+}
+function startBeat() {
+  const evs = rec.value.events
+  const e = evs[seqIdx]
+  activeEvent.value = seqIdx
+  liveT.value = e.t
+  seqStart = performance.now()
+  seqDwell = Math.min(7, Math.max(2.4, 1.6 + (e.text || '').length / 55)) * 1000
+  lastTickSec = null
+  nextTick(() => {
+    const el = eventsEl.value?.querySelectorAll('.tl-event')?.[seqIdx]
+    if (el && el.scrollIntoView) el.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    const c = cvrEl.value?.children?.[nearestCvr.value]
+    if (c && c.scrollIntoView) c.scrollIntoView({ block: 'center', behavior: 'smooth' })
+  })
+  if (store.sound) note(e.kind === 'outcome' ? 220 : e.kind === 'warning' ? 660 : 440, { dur: 0.25, gain: 0.05, type: 'triangle' })
+}
+function seqTick() {
+  if (!seqPlaying.value) return
+  seqRaf = requestAnimationFrame(seqTick)
+  const evs = rec.value?.events || []
+  if (!evs.length) { stopSeq(); return }
+  const f = Math.min(1, (performance.now() - seqStart) / seqDwell)
+  const e = evs[seqIdx]
+  const n = evs[seqIdx + 1]
+  // the clock runs from this event towards the next; long gaps are compressed
+  if (n) {
+    const gap = n.t - e.t
+    const shown = gap > 120 ? e.t + gap * f : e.t + Math.min(gap, gap * f)
+    liveT.value = shown
+    const sec = Math.floor(shown)
+    if (store.sound && gap <= 120 && lastTickSec !== null && sec !== lastTickSec) note(1200, { dur: 0.03, gain: 0.02, type: 'square' })
+    lastTickSec = sec
+  }
+  if (f >= 1) {
+    if (seqIdx >= evs.length - 1) { stopSeq(); return }
+    seqIdx++
+    startBeat()
+  }
+}
+onBeforeUnmount(stopSeq)
 
 const version = ref(0)
 const rec = computed(() => {
@@ -391,6 +475,7 @@ const ChainDiagram = defineComponent({
     }
   }
 })
+watch(rec, stopSeq)
 </script>
 
 <style scoped>
@@ -410,7 +495,11 @@ const ChainDiagram = defineComponent({
 .tl-depth { font-size: 9px; font-weight: 400; color: var(--bb-muted); border: 1px solid var(--bb-line); border-radius: 3px; padding: 0 4px; margin-left: 6px; vertical-align: middle; }
 .tl-fdr { font-size: 8px; color: var(--bb-accent-2); border: 1px solid var(--bb-accent-2); border-radius: 2px; padding: 0 2px; }
 .tl-dissent { color: #ff9f43; font-weight: 700; }
-.tl-main { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.tl-main { position: relative;  display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.tl-live { position: absolute; right: 18px; top: 58px; z-index: 5; background: rgba(4,6,12,0.85); border: 1px solid var(--bb-accent); border-radius: 6px; padding: 8px 14px; text-align: right; cursor: pointer; box-shadow: 0 8px 30px rgba(0,0,0,0.6); animation: tl-live-in 0.4s ease-out; }
+.tl-live-clock { font-family: Consolas, monospace; font-size: 34px; color: #fff; letter-spacing: 0.08em; line-height: 1; text-shadow: 0 0 14px rgba(255,191,0,0.5); }
+.tl-live-sub { font-size: 10px; color: var(--bb-muted); margin-top: 4px; letter-spacing: 0.08em; }
+@keyframes tl-live-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
 .tl-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; padding: 8px 12px; border-bottom: 1px solid var(--bb-line); background: var(--bb-panel); }
 .tl-title { font-size: 14px; font-weight: 700; }
 .tl-modes { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }

@@ -76,6 +76,10 @@ function onPaletteAction(a) {
     store.atlasPlayRequest = Date.now()
   }
   if (a === 'sound') store.sound = !store.sound
+  if (a === 'requiem') {
+    store.openAtlas()
+    store.atlasRequiemRequest = Date.now()
+  }
 }
 
 /** Boot sequence: once per browser session, a short console-style start-up. */

@@ -26,6 +26,12 @@
       <div class="at-tiers">
         <span v-for="t in tierList" :key="t.id" class="bb-chip ghost" :class="{ on: tiers.has(t.id) }" @click="toggleTier(t.id)"><span class="at-dot" :style="{ background: t.color }"></span>{{ t.label }} {{ t.n.toLocaleString() }}</span>
       </div>
+      <div v-if="onThisDay.length" class="at-today">
+        <div class="at-today-h" @click="todayOpen = !todayOpen">On this day · {{ onThisDay.length }} {{ todayOpen ? '▾' : '▸' }}</div>
+        <div v-if="todayOpen" class="at-today-list bb-scroll">
+          <div v-for="r in onThisDay" :key="r.id" class="at-today-item" @click="select(r.id, true)"><span class="at-today-year">{{ r.date.slice(0, 4) }}</span> {{ r.title }} <span class="bb-muted">· {{ r.fatalities ?? '?' }}</span></div>
+        </div>
+      </div>
       <div class="bb-muted at-hint" v-if="catalog.state !== 'ready'">{{ catalog.state === 'loading' ? 'Loading the full catalog…' : catalog.state === 'error' ? 'Catalog failed: ' + catalog.error : 'Curated records only' }}</div>
       <div class="bb-muted at-hint" v-else>{{ items.length.toLocaleString() }} plotted · faint points sit at country level · drag to spin, wheel to zoom</div>
     </div>
@@ -118,6 +124,12 @@ const speed = ref(3)
 const hover = ref(null)
 const histYear = ref(null)
 const version = ref(0)
+const todayOpen = ref(false)
+const onThisDay = computed(() => {
+  const d = new Date()
+  const md = `-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+  return props.index.records.filter((r) => r.date && r.date.slice(4) === md && recordPosition(r)).sort((a, b) => (b.fatalities || 0) - (a.fatalities || 0)).slice(0, 40)
+})
 
 const TIER_COLORS = { curated: '#ffbf00', deep: '#ffd97a', wikidata: '#8fb3ff', ntsb: '#5f7396' }
 function tierOf(rec) {
@@ -428,6 +440,7 @@ watch(() => props.active, async (a) => {
 })
 watch(() => props.index, () => { year.value = Math.max(year.value, yearMax.value); pushItems() })
 watch(() => store.atlasPlayRequest, () => { if (!playing.value) { year.value = yearMin.value; togglePlay() } })
+watch(() => store.atlasRequiemRequest, () => nextTick(startRequiem))
 
 onMounted(() => {
   year.value = yearMax.value
@@ -476,6 +489,12 @@ onBeforeUnmount(() => {
 .at-tiers .bb-chip.on { opacity: 1; border-color: #3a4a6a; }
 .at-dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
 .at-hint { line-height: 1.35; }
+.at-today { border-top: 1px solid var(--bb-line); padding-top: 6px; }
+.at-today-h { cursor: pointer; color: var(--bb-accent); letter-spacing: 0.08em; text-transform: uppercase; font-size: 9px; }
+.at-today-list { max-height: 140px; overflow: auto; margin-top: 4px; }
+.at-today-item { cursor: pointer; padding: 2px 0; font-size: 10px; color: #d3ddf0; }
+.at-today-item:hover { color: var(--bb-accent); }
+.at-today-year { font-family: Consolas, monospace; color: var(--bb-muted); margin-right: 4px; }
 .at-tip { position: absolute; pointer-events: none; background: rgba(8,12,24,0.95); border: 1px solid var(--bb-line); padding: 6px 8px; border-radius: 4px; font-size: 11px; max-width: 260px; z-index: 3; }
 .at-tip-title { font-weight: 700; }
 .at-card { position: absolute; right: 14px; top: 130px; bottom: 80px; width: 300px; background: rgba(10,15,28,0.88); border: 1px solid var(--bb-line); border-radius: 6px; padding: 10px 12px; overflow: auto; backdrop-filter: blur(6px); box-shadow: 0 8px 40px rgba(0,0,0,0.6); }
