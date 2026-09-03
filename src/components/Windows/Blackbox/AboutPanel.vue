@@ -33,8 +33,17 @@
         <li>CVR excerpts are limited to lines that appear in the public reports.</li>
         <li>Recommendation statuses change; treat them as a snapshot. Always go back to the report before citing anything.</li>
       </ul>
+      <h2>The immersive layer</h2>
+      <ul>
+        <li><b>Atlas</b>: every record with a position is a point of light on a globe; scrub or play the century and watch the accidents draw the coastlines. Records without coordinates sit faintly at their country's centroid.</li>
+        <li><b>Story</b>: any record with an event sequence can be told as a documentary: title card, the flight, one beat per event with instrument readouts and nearby CVR lines, the chain revealed edge by edge, findings, what changed, earlier and later echoes.</li>
+        <li><b>Replay</b>: cockpit camera with a conformal head-up display, auto-directed cinematic cameras, a radar scope, and a scene whose night, rain, thunderstorms and fog come from the record itself. Sound is synthesized live (engine hum follows N1, slipstream follows airspeed, stall cricket or stick shaker, cavalry charge, GPWS call-outs); no audio files.</li>
+        <li><b>Counterfactuals</b>: a factor's page counts the accidents where every encoded path from an initiating factor to the outcome runs through it, so removing it would break the chain as written.</li>
+        <li><b>Read more</b>: every record links to its Wikipedia article (or a Wikipedia search when none is linked), as a way in, not as a source. The sources remain the agency reports.</li>
+      </ul>
       <h2>Keys</h2>
-      <p><span class="bb-kbd">Space</span> play / pause · <span class="bb-kbd">←</span> <span class="bb-kbd">→</span> step 1 s (shift: 10 s) in the replay.</p>
+      <p><span class="bb-kbd">1</span>–<span class="bb-kbd">5</span> switch tabs · <span class="bb-kbd">Ctrl K</span> or <span class="bb-kbd">/</span> command palette · replay: <span class="bb-kbd">Space</span> play / pause, <span class="bb-kbd">←</span> <span class="bb-kbd">→</span> step 1 s (shift: 10 s), <span class="bb-kbd">C</span> camera, <span class="bb-kbd">M</span> sound, <span class="bb-kbd">F</span> theatre · story: <span class="bb-kbd">→</span> next, <span class="bb-kbd">Esc</span> close.</p>
+      <p class="bb-muted">On <code>/blackbox</code> the URL hash carries the tab, record, query and story, so any view can be shared.</p>
     </div>
     <div class="ab-col">
       <h2>Corpus</h2>

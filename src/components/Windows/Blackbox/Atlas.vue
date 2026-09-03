@@ -10,6 +10,7 @@
         <button class="bb-btn small" @click="togglePlay">{{ playing ? '❚❚' : '▶ play the century' }}</button>
         <button class="bb-btn small" @click="setYear(yearMin)" title="rewind">⟲</button>
         <button class="bb-btn small" @click="setYear(yearMax)" title="show everything">all</button>
+        <button class="bb-btn small" :class="{ active: store.sound }" @click="store.sound = !store.sound" title="a blip for every accident as the century plays">{{ store.sound ? '🔊' : '🔈' }}</button>
         <span class="at-speed">
           <button v-for="s in [1, 3, 8]" :key="s" class="bb-btn small" :class="{ active: speed === s }" @click="speed = s">{{ s }}y/s</button>
         </span>
@@ -202,9 +203,37 @@ function togglePlay() {
     const now = performance.now()
     const dt = (now - lastTick) / 1000
     lastTick = now
+    const before = year.value
     setYear(year.value + dt * speed.value)
+    if (store.sound) blipsBetween(before, year.value)
     if (year.value >= yearMax.value) togglePlay()
   }, 40)
+}
+
+// A soft blip for each accident that appears while the century plays (only with sound on)
+let actx = null
+function blipsBetween(y0, y1) {
+  try {
+    if (!actx) actx = new (window.AudioContext || window.webkitAudioContext)()
+    if (actx.state === 'suspended') actx.resume()
+  } catch (e) { return }
+  let n = 0
+  for (const it of items.value) {
+    if (it.year <= y0 || it.year > y1) continue
+    if (++n > 10) break
+    const t = actx.currentTime + Math.random() * 0.04
+    const o = actx.createOscillator()
+    const g = actx.createGain()
+    o.type = 'sine'
+    o.frequency.value = it.fat > 0 ? 180 + Math.min(500, it.fat) * 0.5 : 720
+    g.gain.setValueAtTime(0, t)
+    g.gain.linearRampToValueAtTime(it.fat > 100 ? 0.12 : 0.05, t + 0.01)
+    g.gain.exponentialRampToValueAtTime(0.0001, t + (it.fat > 0 ? 0.35 : 0.12))
+    o.connect(g)
+    g.connect(actx.destination)
+    o.start(t)
+    o.stop(t + 0.4)
+  }
 }
 
 async function select(id, fly = false) {
@@ -339,6 +368,7 @@ onMounted(() => {
 })
 onBeforeUnmount(() => {
   clearInterval(playTimer)
+  if (actx) { try { actx.close() } catch (e) { /* ignore */ } actx = null }
   resizeObs && resizeObs.disconnect()
   globe && globe.dispose()
   globe = null

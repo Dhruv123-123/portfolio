@@ -26,6 +26,14 @@
       <li><strong>Timeline builder</strong> — Cloudberg-style event chains with aircraft state at each step, linked recommendations, a causal DAG, agency dissent, side-by-side comparison of two accidents, and a generated narrative</li>
     </ul>
     <br />
+    <h3 class="mt-2 mb-2 font-bold">And the immersive layer</h3>
+    <ul class="list-disc ml-3">
+      <li><strong>Atlas</strong> — a globe of nearly ten thousand accidents; play the century and the crashes draw the coastlines</li>
+      <li><strong>Story mode</strong> — any accident told as a documentary, beat by beat, with instrument readouts and CVR lines</li>
+      <li><strong>Cockpit &amp; sound</strong> — head-up display, cinematic cameras, night, weather and lightning from the record; engines, warnings and GPWS call-outs synthesized live in the browser</li>
+      <li><strong>Counterfactuals</strong> — which factor, if absent, would have broken the causal chain, across the whole corpus</li>
+    </ul>
+    <br />
     <h3 class="mt-2 mb-2 font-bold">Pipeline</h3>
     <pre class="text-xxs bg-gray-100 p-2 rounded overflow-x-auto font-mono leading-relaxed">pip install -r blackbox/pipeline/requirements.txt
 python3 blackbox/pipeline/fetch_reports.py af447     # download the final report

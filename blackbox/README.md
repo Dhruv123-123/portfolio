@@ -26,19 +26,36 @@ blackbox/
     build_embeddings.mjs  sentence embeddings -> src/data/blackbox/embeddings.json
     test_search.mjs       query-engine regression cases
 src/components/Windows/Blackbox/
-  Blackbox.vue            shell (tabs, data loading)
-  GraphExplorer.vue       force graph + query engine UI
-  FdrReplay.vue           three.js replay, PFD, control panel, strips, CVR
+  Blackbox.vue            shell (tabs, data loading, boot, palette, deep links, CRT)
+  GraphExplorer.vue       force graph + query engine UI + counterfactuals
+  Atlas.vue               globe of every positioned record, century time-scrub
+  FdrReplay.vue           three.js replay, PFD/radar, HUD, audio, CVR
   TimelineBuilder.vue     event chain, compare, narrative
+  StoryMode.vue           documentary-style walkthrough of one record
+  CommandPalette.vue      Ctrl+K jump to accidents, factors, actions
   AboutPanel.vue          method and corpus statistics
   lib/search.js           concept/path/BM25/semantic query engine
-  lib/forceGraph.js       canvas force layout
+  lib/forceGraph.js       canvas force layout with flowing causation particles
+  lib/counterfactual.js   single-point factors and corpus-wide chain cuts
+  lib/globe.js            three.js globe, point shader, picking, arcs
+  lib/geo.js              country centroids, Wikipedia 'read more' links
   lib/fdr.js              keyframe interpolation, track integration
   lib/pfd.js              primary flight display drawing
-  lib/scene.js            three.js aircraft, terrain, cameras
+  lib/hud.js              head-up display and radar scope drawing
+  lib/audio.js            synthesized cockpit soundscape (Web Audio + speech)
+  lib/scene.js            three.js aircraft, terrain, weather, day/night, cameras
   lib/dag.js              layered layout for causal chains
   lib/narrative.js        markdown narrative generator
 ```
+
+## Immersive layer
+
+- **Atlas**: `enrich_geo.py` copies Wikidata coordinates (P625) and article links into
+  the catalog and records; `build_graph.py` writes them as `la`/`lo`/`w` on index rows.
+  Records without coordinates fall back to a country centroid in `lib/geo.js` (drawn faint).
+- **Story mode**, **cockpit HUD**, **cinematic cameras**, **synthesized sound**, **radar
+  scope**, **counterfactual factor cuts**, **command palette** and **deep links**
+  (`/blackbox#tab=replay&id=af447&t=120`) are all client-side; no new data is needed.
 
 ## Catalog tier (thousands of accidents)
 

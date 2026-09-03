@@ -15,6 +15,7 @@
       <span class="bb-tabs-right">
         <button class="bb-tab bb-tab-icon" @click="palette = true" title="Command palette (Ctrl+K or /)"><span class="bb-tab-key">⌘K</span>jump</button>
         <button class="bb-tab bb-tab-icon" :class="{ active: store.crt }" @click="store.crt = !store.crt" title="CRT look: scanlines and phosphor glow">CRT</button>
+        <button v-if="deepLinks" class="bb-tab bb-tab-icon" @click="share" title="Copy a link to exactly this view">{{ shared ? 'copied ✓' : 'share' }}</button>
       </span>
     </div>
     <div class="bb-body">
@@ -50,9 +51,21 @@ import StoryMode from './StoryMode.vue'
 import CommandPalette from './CommandPalette.vue'
 
 const props = defineProps({ deepLinks: { type: Boolean, default: false } })
+const deepLinks = computed(() => props.deepLinks)
 const store = useBlackboxStore()
 const graph = shallowRef(null)
 const palette = ref(false)
+const shared = ref(false)
+async function share() {
+  writeHash()
+  try {
+    await navigator.clipboard.writeText(window.location.href)
+    shared.value = true
+    setTimeout(() => (shared.value = false), 1800)
+  } catch (e) {
+    window.prompt('Copy this link', window.location.href)
+  }
+}
 const booting = ref(false)
 const bootText = ref('')
 let bootTimer = null
