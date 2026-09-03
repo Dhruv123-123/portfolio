@@ -89,13 +89,34 @@
     }
   ],
   "chain": [
-    ["unstable_approach", "hard_landing"],
-    ["hard_landing", "inappropriate_control_input"],
-    ["inappropriate_control_input", "runway_overrun"],
-    ["crm_breakdown", "runway_overrun"],
-    ["engine_failure", "runway_overrun"],
-    ["runway_overrun", "ground_collision"],
-    ["ground_collision", "post_impact_fire"]
+    [
+      "unstable_approach",
+      "hard_landing"
+    ],
+    [
+      "hard_landing",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "runway_overrun"
+    ],
+    [
+      "crm_breakdown",
+      "runway_overrun"
+    ],
+    [
+      "engine_failure",
+      "runway_overrun"
+    ],
+    [
+      "runway_overrun",
+      "ground_collision"
+    ],
+    [
+      "ground_collision",
+      "post_impact_fire"
+    ]
   ],
   "events": [
     {
@@ -105,9 +126,13 @@
       "actor": "SYS",
       "kind": "env",
       "text": "Aircraft was at 30 feet above runway during final flare phase; airspeed had decreased to 5 knots below reference approach speed.",
-      "state": {"alt": 30, "ias": 95},
-      "factors": ["unstable_approach"],
-      "kind": "env"
+      "state": {
+        "alt": 30,
+        "ias": 95
+      },
+      "factors": [
+        "unstable_approach"
+      ]
     },
     {
       "t": 1,
@@ -116,9 +141,13 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft touched down hard on runway; first officer noted airspeed dropped rapidly to 5 knots below reference speed.",
-      "state": {"alt": 0, "ias": 95},
-      "factors": ["hard_landing"],
-      "kind": "outcome"
+      "state": {
+        "alt": 0,
+        "ias": 95
+      },
+      "factors": [
+        "hard_landing"
+      ]
     },
     {
       "t": 2,
@@ -127,9 +156,13 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft rebounded into the air immediately, ascending to an estimated 30-50 feet altitude with nose-up attitude described by flight engineer as more pronounced than typical.",
-      "state": {"alt": 40, "pitch": 8},
-      "factors": ["hard_landing"],
-      "kind": "system"
+      "state": {
+        "alt": 40,
+        "pitch": 8
+      },
+      "factors": [
+        "hard_landing"
+      ]
     },
     {
       "t": 4,
@@ -138,8 +171,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "During the first bounce, captain reached for speed brake handle, paused, then pulled it back, increasing the rate of descent.",
-      "factors": ["inappropriate_control_input"],
-      "kind": "crew_action"
+      "factors": [
+        "inappropriate_control_input"
+      ]
     },
     {
       "t": 5,
@@ -148,8 +182,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Captain returned speed brake to retracted position just before or as aircraft touched down for second time.",
-      "factors": ["inappropriate_control_input"],
-      "kind": "crew_action"
+      "factors": [
+        "inappropriate_control_input"
+      ]
     },
     {
       "t": 6,
@@ -158,9 +193,12 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Second touchdown occurred approximately 1,700 feet from runway threshold and was described as extremely hard by eyewitnesses and passengers; grinding metal sound heard.",
-      "state": {"alt": 0},
-      "factors": ["hard_landing"],
-      "kind": "outcome"
+      "state": {
+        "alt": 0
+      },
+      "factors": [
+        "hard_landing"
+      ]
     },
     {
       "t": 7,
@@ -169,9 +207,13 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft bounced again to an estimated 15-30 feet altitude with nose rotating upward.",
-      "state": {"alt": 22, "pitch": 6},
-      "factors": ["hard_landing"],
-      "kind": "system"
+      "state": {
+        "alt": 22,
+        "pitch": 6
+      },
+      "factors": [
+        "hard_landing"
+      ]
     },
     {
       "t": 8,
@@ -180,8 +222,9 @@
       "actor": "FO",
       "kind": "crew_action",
       "text": "First officer took firm hold of control yoke and pushed forward, then at crest of bounce pulled all the way back on yoke.",
-      "factors": ["inappropriate_control_input"],
-      "kind": "crew_action"
+      "factors": [
+        "inappropriate_control_input"
+      ]
     },
     {
       "t": 9,
@@ -190,9 +233,13 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft touched down for third time approximately 2,700 feet from runway threshold and remained on ground; right wing tip began to drag on runway.",
-      "state": {"alt": 0},
-      "factors": ["hard_landing", "runway_overrun"],
-      "kind": "outcome"
+      "state": {
+        "alt": 0
+      },
+      "factors": [
+        "hard_landing",
+        "runway_overrun"
+      ]
     },
     {
       "t": 10,
@@ -201,8 +248,9 @@
       "actor": "CAPT",
       "kind": "crew_speech",
       "text": "Captain called for a go-around.",
-      "factors": ["crm_breakdown"],
-      "kind": "crew_speech"
+      "factors": [
+        "crm_breakdown"
+      ]
     },
     {
       "t": 11,
@@ -211,8 +259,9 @@
       "actor": "FE",
       "kind": "crew_speech",
       "text": "Flight engineer advised against executing a go-around.",
-      "factors": ["crm_breakdown"],
-      "kind": "crew_speech"
+      "factors": [
+        "crm_breakdown"
+      ]
     },
     {
       "t": 12,
@@ -221,8 +270,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Captain advanced thrust lever and called for flaps to be raised to 25°.",
-      "factors": ["runway_overrun"],
-      "kind": "crew_action"
+      "factors": [
+        "runway_overrun"
+      ]
     },
     {
       "t": 14,
@@ -231,8 +281,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft veered off runway at 3,800 feet beyond threshold; first officer helped captain regain directional control.",
-      "factors": ["runway_overrun"],
-      "kind": "system"
+      "factors": [
+        "runway_overrun"
+      ]
     },
     {
       "t": 15,
@@ -241,8 +292,10 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Witnesses heard 'muted popping sounds' or 'backfire' noises and saw flames extending from engine tailpipes; aircraft mechanic witness confirmed No. 3 engine compressor stalling.",
-      "factors": ["engine_failure", "runway_overrun"],
-      "kind": "system"
+      "factors": [
+        "engine_failure",
+        "runway_overrun"
+      ]
     },
     {
       "t": 16,
@@ -251,8 +304,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft continued almost parallel to runway across access taxiway to Runway 27 and through chain-link boundary fence at point 4,950 feet from runway threshold.",
-      "factors": ["runway_overrun"],
-      "kind": "system"
+      "factors": [
+        "runway_overrun"
+      ]
     },
     {
       "t": 17,
@@ -261,8 +315,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Landing gear and right wing tip struck raised concrete sidewalk located 4 feet beyond fence; aircraft passed over sidewalk and adjacent highway.",
-      "factors": ["ground_collision"],
-      "kind": "outcome"
+      "factors": [
+        "ground_collision"
+      ]
     },
     {
       "t": 18,
@@ -271,8 +326,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft crushed truck that had been hastily abandoned on highway by its driver seconds earlier.",
-      "factors": ["ground_collision"],
-      "kind": "outcome"
+      "factors": [
+        "ground_collision"
+      ]
     },
     {
       "t": 20,
@@ -281,8 +337,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft continued up incline of hill east of highway and began to break apart.",
-      "factors": ["ground_collision"],
-      "kind": "outcome"
+      "factors": [
+        "ground_collision"
+      ]
     },
     {
       "t": 21,
@@ -291,8 +348,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Explosion occurred in vicinity of left wing root immediately after aircraft stopped.",
-      "factors": ["post_impact_fire"],
-      "kind": "outcome"
+      "factors": [
+        "post_impact_fire"
+      ]
     },
     {
       "t": 22,
@@ -301,8 +359,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Sizable fire started in left wing root area as passenger evacuation began.",
-      "factors": ["post_impact_fire"],
-      "kind": "outcome"
+      "factors": [
+        "post_impact_fire"
+      ]
     }
   ],
   "cvr": [
@@ -331,8 +390,10 @@
     "Increased emphasis on stabilized approach criteria in pilot training and procedures",
     "Enhanced crew resource management training focusing on appropriate captain command structure during emergencies"
   ],
-  "related": ["wd_q48742715"],
-  "fdr": null,
+  "related": [
+    "wd_q48742715"
+  ],
+  "fdr": "wd_q134376219",
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7208.pdf"
   ],

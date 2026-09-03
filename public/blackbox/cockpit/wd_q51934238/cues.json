@@ -1,0 +1,30 @@
+{
+ "id": "wd_q51934238",
+ "cues": [
+  {
+   "t": 0.5,
+   "file": "w_wailer.mp3",
+   "kind": "ap_disconnect",
+   "speaker": "SYS",
+   "text": "wailer",
+   "dur": 0.88
+  },
+  {
+   "t": 71,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "CAP",
+   "text": "Southwest thirteen eighty has an engine fire descending",
+   "dur": 2.98
+  },
+  {
+   "t": 79,
+   "file": "cvr_003.mp3",
+   "kind": "cvr",
+   "speaker": "CAP",
+   "text": "we're single engine descending have fire in number one",
+   "dur": 2.71
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

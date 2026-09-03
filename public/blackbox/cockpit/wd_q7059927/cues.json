@@ -1,0 +1,14 @@
+{
+ "id": "wd_q7059927",
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "w_clacker.mp3",
+   "kind": "overspeed",
+   "speaker": "SYS",
+   "text": "clacker",
+   "dur": 1.2
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

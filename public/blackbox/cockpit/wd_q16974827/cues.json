@@ -1,0 +1,22 @@
+{
+ "id": "wd_q16974827",
+ "cues": [
+  {
+   "t": 56.3,
+   "file": "w_shaker.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 109.4,
+   "file": "w_shaker.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

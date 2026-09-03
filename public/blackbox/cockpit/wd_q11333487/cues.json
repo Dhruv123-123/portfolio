@@ -1,0 +1,22 @@
+{
+ "id": "wd_q11333487",
+ "cues": [
+  {
+   "t": -105.0,
+   "file": "w_too_low.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "too low",
+   "dur": 1.72
+  },
+  {
+   "t": -2.5,
+   "file": "w_minimums.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "minimums",
+   "dur": 1.86
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

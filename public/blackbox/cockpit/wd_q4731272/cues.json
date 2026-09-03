@@ -1,0 +1,14 @@
+{
+ "id": "wd_q4731272",
+ "cues": [
+  {
+   "t": -30.0,
+   "file": "w_minimums.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "minimums",
+   "dur": 1.83
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

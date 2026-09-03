@@ -1,0 +1,270 @@
+{
+  "id": "wd_q17017873",
+  "record": "wd_q17017873",
+  "source": "NTSB report AAR-73-16, Appendix G (ARTS-III approach profile) and sections 1.15.1-1.15.3",
+  "fidelity": "narrative",
+  "confidence": "medium",
+  "t_start": -245,
+  "t_end": 0,
+  "aircraft_model": "regional_jet",
+  "terrain": "city",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -245,
+          4000
+        ],
+        [
+          -195,
+          4000
+        ],
+        [
+          -145,
+          3200
+        ],
+        [
+          -95,
+          2400
+        ],
+        [
+          -80,
+          2200
+        ],
+        [
+          -60,
+          1800
+        ],
+        [
+          -22,
+          1000
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -245,
+          195
+        ],
+        [
+          -195,
+          180
+        ],
+        [
+          -113,
+          140
+        ],
+        [
+          -85,
+          152
+        ],
+        [
+          -60,
+          126
+        ],
+        [
+          -22,
+          120
+        ],
+        [
+          0,
+          120
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -245,
+          0
+        ],
+        [
+          -195,
+          -3
+        ],
+        [
+          -80,
+          -6
+        ],
+        [
+          -22,
+          0
+        ],
+        [
+          0,
+          30
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -245,
+          0
+        ],
+        [
+          -22,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -245,
+          290
+        ],
+        [
+          -22,
+          290
+        ],
+        [
+          0,
+          338
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -245,
+          -1000
+        ],
+        [
+          -195,
+          -750
+        ],
+        [
+          -80,
+          -1550
+        ],
+        [
+          -22,
+          0
+        ],
+        [
+          0,
+          -1000
+        ]
+      ]
+    },
+    "flaps": {
+      "interp": "step",
+      "keys": [
+        [
+          -245,
+          15
+        ],
+        [
+          -85,
+          30
+        ],
+        [
+          0,
+          37
+        ]
+      ]
+    },
+    "gear": {
+      "interp": "step",
+      "keys": [
+        [
+          -245,
+          0
+        ],
+        [
+          -95,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "stall_warn": {
+      "interp": "step",
+      "keys": [
+        [
+          -245,
+          0
+        ],
+        [
+          -22,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "n1_pct": {
+      "interp": "linear",
+      "keys": [
+        [
+          -245,
+          59.1
+        ],
+        [
+          -200,
+          52.7
+        ],
+        [
+          -80,
+          51.2
+        ],
+        [
+          -22,
+          72
+        ],
+        [
+          0,
+          75
+        ]
+      ]
+    }
+  },
+  "markers": [
+    {
+      "t": -245,
+      "label": "15° flaps extended"
+    },
+    {
+      "t": -195,
+      "label": "descent from 4,000 ft at 750 fpm"
+    },
+    {
+      "t": -85,
+      "label": "landing gear extended, flaps repositioned"
+    },
+    {
+      "t": -22,
+      "label": "level-off at MDA (1,000 ft), stickshaker activation"
+    },
+    {
+      "t": 0,
+      "label": "impact in residential area"
+    }
+  ],
+  "camera_hint": "chase",
+  "units": {
+    "flaps": "deg",
+    "n1_pct": "% N1"
+  }
+}

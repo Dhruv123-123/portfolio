@@ -1,0 +1,198 @@
+{
+ "id": "wd_q994581",
+ "cues": [
+  {
+   "t": 2362.5,
+   "file": "w_callout_2500.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 2500",
+   "dur": 1.76
+  },
+  {
+   "t": 2400.0,
+   "file": "w_callout_1000.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 1000",
+   "dur": 1.1
+  },
+  {
+   "t": 2560,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "Five Hundred",
+   "dur": 1.1
+  },
+  {
+   "t": 2560.0,
+   "file": "w_callout_500.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 500",
+   "dur": 1.15
+  },
+  {
+   "t": 2575.0,
+   "file": "w_callout_400.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 400",
+   "dur": 1.02
+  },
+  {
+   "t": 2590,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "Approaching Minimum",
+   "dur": 1.25
+  },
+  {
+   "t": 2590,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "Check",
+   "dur": 0.15
+  },
+  {
+   "t": 2590.0,
+   "file": "w_callout_300.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 300",
+   "dur": 1.15
+  },
+  {
+   "t": 2610,
+   "file": "cvr_003.mp3",
+   "kind": "cvr",
+   "speaker": "FE",
+   "text": "Two Hundred",
+   "dur": 0.75
+  },
+  {
+   "t": 2610,
+   "file": "cvr_004.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "Minimum",
+   "dur": 0.72
+  },
+  {
+   "t": 2610.0,
+   "file": "w_callout_200.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 200",
+   "dur": 1.0
+  },
+  {
+   "t": 2610.0,
+   "file": "w_c_chord.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "c chord",
+   "dur": 1.15
+  },
+  {
+   "t": 2610.0,
+   "file": "w_minimums.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "minimums",
+   "dur": 1.84
+  },
+  {
+   "t": 2621.5,
+   "file": "w_wailer.mp3",
+   "kind": "ap_disconnect",
+   "speaker": "SYS",
+   "text": "wailer",
+   "dur": 0.88
+  },
+  {
+   "t": 2621.5,
+   "file": "w_sink_rate.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "sink rate",
+   "dur": 1.12
+  },
+  {
+   "t": 2622,
+   "file": "cvr_005.mp3",
+   "kind": "cvr",
+   "speaker": "FE",
+   "text": "We are low, Power low",
+   "dur": 1.54
+  },
+  {
+   "t": 2623.5,
+   "file": "w_callout_100.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 100",
+   "dur": 1.07
+  },
+  {
+   "t": 2624.0,
+   "file": "w_whoop_pull_up.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "whoop pull up",
+   "dur": 1.49
+  },
+  {
+   "t": 2625,
+   "file": "cvr_006.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "Captain, please stop!",
+   "dur": 1.64
+  },
+  {
+   "t": 2625.5,
+   "file": "w_callout_50.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 50",
+   "dur": 0.85
+  },
+  {
+   "t": 2626.0,
+   "file": "w_callout_40.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 40",
+   "dur": 0.78
+  },
+  {
+   "t": 2626.5,
+   "file": "w_whoop_pull_up.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "whoop pull up",
+   "dur": 1.49
+  },
+  {
+   "t": 2626.5,
+   "file": "w_callout_20.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 20",
+   "dur": 0.73
+  },
+  {
+   "t": 2627.0,
+   "file": "w_callout_10.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 10",
+   "dur": 0.66
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

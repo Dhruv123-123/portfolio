@@ -6,7 +6,7 @@
   "title": "1962 Air Nautic Boeing 307 crash",
   "flight_number": null,
   "date": "1962-12-29",
-  "time_reference": "Local",
+  "time_reference": "UTC",
   "agency": "BEA",
   "agencies": [
     {
@@ -184,5 +184,6 @@
   "curated_id": null,
   "report_links": [
     "https://bea.aero/fileadmin/documents/docspa/1962/f-lz621229/pdf/f-lz621229_05.pdf"
-  ]
+  ],
+  "t0": "1962-03-18T11:00:00Z"
 }

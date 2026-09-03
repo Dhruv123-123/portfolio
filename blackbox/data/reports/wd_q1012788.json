@@ -78,10 +78,22 @@
     }
   ],
   "chain": [
-    ["convective_weather", "structural_failure"],
-    ["structural_failure", "flight_control_failure"],
-    ["design_deficiency", "structural_failure"],
-    ["flight_control_failure", "emergency_landing"]
+    [
+      "convective_weather",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "flight_control_failure"
+    ],
+    [
+      "design_deficiency",
+      "structural_failure"
+    ],
+    [
+      "flight_control_failure",
+      "emergency_landing"
+    ]
   ],
   "events": [
     {
@@ -127,7 +139,10 @@
       "actor": "ENV",
       "kind": "system",
       "text": "While passing through patch of cloud at about 3,000 feet amsl during normal letdown, helicopter struck by lightning accompanied by flash; severe vibration immediately began (p. 13)",
-      "factors": ["convective_weather", "structural_failure"]
+      "factors": [
+        "convective_weather",
+        "structural_failure"
+      ]
     },
     {
       "t": 60,
@@ -145,7 +160,9 @@
       "actor": "FO",
       "kind": "crew_action",
       "text": "First officer gently deflected yaw pedals to test directional control response; helicopter gave violent lurch to left, rolled right and pitched down steeply; first officer transmitted second Mayday with ditching decision (p. 14)",
-      "factors": ["flight_control_failure"]
+      "factors": [
+        "flight_control_failure"
+      ]
     },
     {
       "t": 240,
@@ -236,7 +253,9 @@
       "to": "CAA",
       "text": "Ensure that the North Sea helicopter operating companies include in their very effective recurrent training for crews discussion and, where possible, 'hands on' practice of the procedures necessary to accomplish a successful evacuation from a floating helicopter following a ditching or alighting on the sea.",
       "status": "unknown",
-      "trigger_factors": ["emergency_landing"]
+      "trigger_factors": [
+        "emergency_landing"
+      ]
     },
     {
       "id": "AAIB-97-30",
@@ -264,28 +283,39 @@
       "to": "CAA",
       "text": "In order to provide helicopter commanders with the necessary 'real-time' information to enable them to avoid flight into areas of actual thunderstorms or lightning activity in Public Transport helicopters which have composite rotor blades, the CAA and affected operators should jointly agree the fitment of lightning discharge mapping systems to such aircraft. The Authority should also inform other airworthiness authorities of the action taken in response to this recommendation.",
       "status": "unknown",
-      "trigger_factors": ["convective_weather", "design_deficiency"]
+      "trigger_factors": [
+        "convective_weather",
+        "design_deficiency"
+      ]
     },
     {
       "id": "AAIB-97-33",
       "to": "Aerospatiale",
       "text": "Introduce improved strength locking arrangements for the mounting bolts of the tail rotor gearbox assembly such that unlocking and loosening of these bolts does not occur under conditions of excessive tail rotor vibration resultant from tail rotor damage.",
       "status": "unknown",
-      "trigger_factors": ["structural_failure", "flight_control_failure"]
+      "trigger_factors": [
+        "structural_failure",
+        "flight_control_failure"
+      ]
     },
     {
       "id": "AAIB-97-34",
       "to": "Aerospatiale",
       "text": "Review the dynamic frequency responses of the tail boom/pylon assembly in relation to tail rotor rotational frequencies, with a view towards assessing the practicability of modifying the tail boom/pylon assembly to reduce associated structural dynamic coupling and related fatigue damage which may arise from in-flight tail rotor blade damage/loss of mass.",
       "status": "unknown",
-      "trigger_factors": ["structural_failure"]
+      "trigger_factors": [
+        "structural_failure"
+      ]
     },
     {
       "id": "AAIB-97-35",
       "to": "CAA",
       "text": "Review aircraft lightning certification requirements, and the advisory nature of AC20-53A, to introduce the following more stringent requirements for rotary wing aircraft with composite rotor blades: (1) Increase in the specified Zone 1A action integral from 2 x 10^6 A2s to a level compatible with the highest energy positive polarity lightning discharges likely to be encountered in service. (2) Replace the existing 98% probability assurance with 100% probability target. (3) Addition of specified arc attachment points to be used in the lightning certification tests on rotor blades. (4) Specified use of representative blade root attachment assemblies during all lightning tests. Additionally, review lightning certification requirements with regard to any corresponding, or other, improvements for fixed wing aircraft with significant composite material structural elements.",
       "status": "unknown",
-      "trigger_factors": ["design_deficiency", "structural_failure"]
+      "trigger_factors": [
+        "design_deficiency",
+        "structural_failure"
+      ]
     }
   ],
   "dissent": [],

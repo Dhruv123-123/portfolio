@@ -1,0 +1,22 @@
+{
+ "id": "wd_q6156479",
+ "cues": [
+  {
+   "t": -113.0,
+   "file": "w_minimums.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "minimums",
+   "dur": 1.81
+  },
+  {
+   "t": -3.0,
+   "file": "w_sink_rate.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "sink rate",
+   "dur": 1.09
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

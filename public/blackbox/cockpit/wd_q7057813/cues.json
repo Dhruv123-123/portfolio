@@ -1,0 +1,22 @@
+{
+ "id": "wd_q7057813",
+ "cues": [
+  {
+   "t": 2100.0,
+   "file": "w_minimums.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "minimums",
+   "dur": 1.86
+  },
+  {
+   "t": 2200.0,
+   "file": "w_terrain.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "terrain",
+   "dur": 1.54
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

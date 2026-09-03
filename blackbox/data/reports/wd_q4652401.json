@@ -84,11 +84,26 @@
     }
   ],
   "chain": [
-    ["high_workload", "inadequate_monitoring"],
-    ["fuel_quantity_error", "fuel_exhaustion"],
-    ["low_visibility", "fuel_quantity_error"],
-    ["inadequate_monitoring", "fuel_quantity_error"],
-    ["fuel_exhaustion", "ditching"]
+    [
+      "high_workload",
+      "inadequate_monitoring"
+    ],
+    [
+      "fuel_quantity_error",
+      "fuel_exhaustion"
+    ],
+    [
+      "low_visibility",
+      "fuel_quantity_error"
+    ],
+    [
+      "inadequate_monitoring",
+      "fuel_quantity_error"
+    ],
+    [
+      "fuel_exhaustion",
+      "ditching"
+    ]
   ],
   "events": [
     {
@@ -98,7 +113,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "ATC advised that weather in St. Maarten was below landing minima; captain elected to divert",
-      "factors": ["high_workload"]
+      "factors": [
+        "high_workload"
+      ]
     },
     {
       "t": 300,
@@ -116,7 +133,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "First landing attempt - aircraft did not sight the runway in sufficient time to align for landing",
-      "factors": ["low_visibility"]
+      "factors": [
+        "low_visibility"
+      ]
     },
     {
       "t": 900,
@@ -125,7 +144,10 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Second landing attempt unsuccessful due to poor alignment with the runway; aircraft flown with 25 degrees flaps",
-      "factors": ["high_workload", "low_visibility"]
+      "factors": [
+        "high_workload",
+        "low_visibility"
+      ]
     },
     {
       "t": 1200,
@@ -134,7 +156,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Third attempt - aircraft was too high to land safely after assessing weather and fuel situation",
-      "factors": ["inadequate_monitoring"]
+      "factors": [
+        "inadequate_monitoring"
+      ]
     },
     {
       "t": 1500,
@@ -143,7 +167,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Captain decided to divert to St. Thomas",
-      "factors": ["fuel_quantity_error"]
+      "factors": [
+        "fuel_quantity_error"
+      ]
     },
     {
       "t": 1790,
@@ -152,7 +178,9 @@
       "actor": "CAPT",
       "kind": "crew_speech",
       "text": "Captain reported to San Juan ARTCC 'Okay there's a possibility I may have to ditch this aircraft, I am now descending to the water.'",
-      "factors": ["fuel_exhaustion"]
+      "factors": [
+        "fuel_exhaustion"
+      ]
     },
     {
       "t": 1920,
@@ -161,8 +189,13 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Engines flamed out due to fuel exhaustion at approximately 500 feet altitude",
-      "state": {"alt": 500, "ias": 145},
-      "factors": ["fuel_exhaustion"]
+      "state": {
+        "alt": 500,
+        "ias": 145
+      },
+      "factors": [
+        "fuel_exhaustion"
+      ]
     },
     {
       "t": 1980,
@@ -171,8 +204,14 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Aircraft ditched in Caribbean Sea; captain leveled off momentarily at 500 feet, descended in 100-foot increments, lowered 15 degrees flaps, and flew onto water at approximately 90 knots",
-      "state": {"alt": 0, "ias": 90, "pitch": 5},
-      "factors": ["ditching"]
+      "state": {
+        "alt": 0,
+        "ias": 90,
+        "pitch": 5
+      },
+      "factors": [
+        "ditching"
+      ]
     }
   ],
   "cvr": [],
@@ -183,7 +222,9 @@
       "text": "Require that the item 'warn passengers' be inserted as one of the last items on the emergency landing or ditching checklists of all carriers, yet sufficiently advanced on the list to insure adequate time for passengers to brace for a crash (NTSB-AAR-71-8, Recommendation (a), Appendix E).",
       "status": "closed_acceptable",
       "outcome": null,
-      "trigger_factors": ["ditching"]
+      "trigger_factors": [
+        "ditching"
+      ]
     },
     {
       "id": null,
@@ -191,7 +232,9 @@
       "text": "Require that no flight involving the briefing of passengers regarding emergency procedures be dispatched without an operable public address system. The system should be functioning so that the flightcrew can speak to the passengers and a cabin attendant can speak to the passengers from at least one cabin station (NTSB-AAR-71-8, Recommendation (b), Appendix F).",
       "status": "closed_acceptable",
       "outcome": null,
-      "trigger_factors": ["ditching"]
+      "trigger_factors": [
+        "ditching"
+      ]
     },
     {
       "id": null,
@@ -199,7 +242,9 @@
       "text": "Take necessary steps to eliminate, within a reasonable time, the use of fabric-to-metal type seatbelts and require the metal-to-metal type of seatbelt with a standardized activating device (NTSB-AAR-71-8, Recommendation (c), Appendix G).",
       "status": "closed_acceptable",
       "outcome": null,
-      "trigger_factors": ["ditching"]
+      "trigger_factors": [
+        "ditching"
+      ]
     },
     {
       "id": null,
@@ -207,7 +252,9 @@
       "text": "Reexamine the methods for storage of lifevests aboard aircraft to eliminate any obstructions to expeditious access in the event of an emergency requiring their use (NTSB-AAR-71-8, Recommendation (d), Appendix H).",
       "status": "closed_acceptable",
       "outcome": null,
-      "trigger_factors": ["ditching"]
+      "trigger_factors": [
+        "ditching"
+      ]
     },
     {
       "id": null,
@@ -223,7 +270,9 @@
       "text": "Reassess the standards set forth in FAR parts 37.122 and 37.178 pertaining to the certification of liferafts and lifevests, with a view toward eliminating the deficiencies in such equipment as evidenced by the investigative record of this accident. Research and development should be undertaken, as necessary, to accomplish this reassessment and improvement of standards.",
       "status": "closed_acceptable",
       "outcome": null,
-      "trigger_factors": ["ditching"]
+      "trigger_factors": [
+        "ditching"
+      ]
     }
   ],
   "dissent": [],
@@ -235,8 +284,10 @@
     "Installation of VHF communications link between San Juan ARTCC and Juliana Tower"
   ],
   "related": [],
-  "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7108.pdf"],
+  "fdr": "wd_q4652401",
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7108.pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5-20251001",
@@ -252,7 +303,10 @@
   },
   "asn_id": "19700502-0",
   "wikipedia": "https://en.wikipedia.org/wiki/ALM_Flight_980",
-  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7108.pdf", "https://aviation-safety.net/database/record.php?id=19700502-0"],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7108.pdf",
+    "https://aviation-safety.net/database/record.php?id=19700502-0"
+  ],
   "interest": 14.42,
   "curated_id": null
 }

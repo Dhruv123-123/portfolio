@@ -12,7 +12,7 @@
   "agencies": [
     {
       "code": "BEA",
-      "name": "Bureau d'Enqu\u00eates et d'Analyses",
+      "name": "Bureau d'Enquêtes et d'Analyses",
       "country": "France",
       "role": "lead",
       "report_id": "f-cp090630",
@@ -89,7 +89,7 @@
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "The aircraft entered an unrecoverable stall and impacted the Indian Ocean at 65 ft altitude with 185 kt airspeed and 15\u00b0 nose-up pitch (p. 40-41)."
+      "evidence": "The aircraft entered an unrecoverable stall and impacted the Indian Ocean at 65 ft altitude with 185 kt airspeed and 15° nose-up pitch (p. 40-41)."
     }
   ],
   "chain": [
@@ -157,7 +157,7 @@
       "phase": "go_around",
       "actor": "SYS",
       "kind": "warning",
-      "text": "GPWS SINK RATE alarm triggered; aircraft at 548 ft radio altitude with -2000 ft/min descent and 27\u00b0 right bank.",
+      "text": "GPWS SINK RATE alarm triggered; aircraft at 548 ft radio altitude with -2000 ft/min descent and 27° right bank.",
       "state": {
         "alt": 548,
         "ias": null,
@@ -175,7 +175,7 @@
       "phase": "go_around",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Crew levels wings to 0\u00b0 and increases pitch to 12\u00b0 in response to GPWS warnings.",
+      "text": "Crew levels wings to 0° and increases pitch to 12° in response to GPWS warnings.",
       "state": {
         "alt": 412,
         "pitch": 12,
@@ -191,7 +191,7 @@
       "phase": "go_around",
       "actor": "SYS",
       "kind": "warning",
-      "text": "GPWS TOO LOW TERRAIN alarm at 230 ft altitude with -1000 ft/min descent and 29\u00b0 right bank.",
+      "text": "GPWS TOO LOW TERRAIN alarm at 230 ft altitude with -1000 ft/min descent and 29° right bank.",
       "state": {
         "alt": 230,
         "vs": -1000,
@@ -205,7 +205,7 @@
       "phase": "go_around",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Crew levels wings and increases pitch to 17\u00b0; aircraft reaches minimum altitude of 161 ft radio altitude.",
+      "text": "Crew levels wings and increases pitch to 17°; aircraft reaches minimum altitude of 161 ft radio altitude.",
       "state": {
         "alt": 161,
         "pitch": 17,
@@ -248,7 +248,7 @@
       "phase": "go_around",
       "actor": "SYS",
       "kind": "system",
-      "text": "Stall alarm recorded in FDR at 13\u00b0 angle of attack; airspeed rapidly decreasing from 185 kt while climbing.",
+      "text": "Stall alarm recorded in FDR at 13° angle of attack; airspeed rapidly decreasing from 185 kt while climbing.",
       "state": {
         "alt": 800,
         "ias": 185,
@@ -264,7 +264,7 @@
       "phase": "go_around",
       "actor": "SYS",
       "kind": "warning",
-      "text": "Alpha Floor protection triggered at 12.1\u00b0 angle of attack and 191 kt; thrust lever speed increases to 8\u00b0/s.",
+      "text": "Alpha Floor protection triggered at 12.1° angle of attack and 191 kt; thrust lever speed increases to 8°/s.",
       "state": {
         "alt": 800,
         "ias": 191,
@@ -309,7 +309,7 @@
       "phase": "go_around",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Crew applies go-lever thrust command at 1034 ft altitude while in high-altitude stall condition with 15-23\u00b0 angle of attack.",
+      "text": "Crew applies go-lever thrust command at 1034 ft altitude while in high-altitude stall condition with 15-23° angle of attack.",
       "state": {
         "alt": 1034,
         "pitch": 20,
@@ -340,7 +340,7 @@
       "phase": "go_around",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft strikes Indian Ocean at pitch angle 15\u00b0 nose-up, 21\u00b0 right bank, 185 kt, 65 ft altitude.",
+      "text": "Aircraft strikes Indian Ocean at pitch angle 15° nose-up, 21° right bank, 185 kt, 65 ft altitude.",
       "state": {
         "alt": 65,
         "ias": 185,
@@ -387,7 +387,7 @@
   "dissent": [],
   "safety_changes": [],
   "related": [],
-  "fdr": null,
+  "fdr": "wd_q904715",
   "sources": [
     "https://bea.aero/fileadmin/uploads/tx_elydbrapports/7O-ADJ.pdf"
   ],

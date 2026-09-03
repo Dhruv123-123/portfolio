@@ -1,0 +1,189 @@
+{
+  "id": "wd_q107008201",
+  "record": "wd_q107008201",
+  "source": "Record events with extracted state data",
+  "fidelity": "schematic",
+  "confidence": "low",
+  "t_start": -69,
+  "t_end": 180,
+  "aircraft_model": "regional_turboprop",
+  "terrain": "flat",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -69,
+          6619
+        ],
+        [
+          -4,
+          6619
+        ],
+        [
+          0,
+          6619
+        ],
+        [
+          60,
+          6000
+        ],
+        [
+          120,
+          4500
+        ],
+        [
+          180,
+          2000
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -69,
+          125
+        ],
+        [
+          -15,
+          148
+        ],
+        [
+          -4,
+          140
+        ],
+        [
+          0,
+          140
+        ],
+        [
+          60,
+          140
+        ],
+        [
+          120,
+          150
+        ],
+        [
+          180,
+          100
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -69,
+          -4
+        ],
+        [
+          0,
+          -4
+        ],
+        [
+          60,
+          -6
+        ],
+        [
+          120,
+          -8
+        ],
+        [
+          180,
+          0
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -69,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          120,
+          5
+        ],
+        [
+          180,
+          0
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -69,
+          146
+        ],
+        [
+          0,
+          146
+        ],
+        [
+          120,
+          140
+        ],
+        [
+          180,
+          140
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -69,
+          -300
+        ],
+        [
+          0,
+          -300
+        ],
+        [
+          60,
+          -400
+        ],
+        [
+          120,
+          -500
+        ],
+        [
+          180,
+          -200
+        ]
+      ]
+    }
+  },
+  "markers": [
+    {
+      "t": -36,
+      "label": "Traffic alert"
+    },
+    {
+      "t": 0,
+      "label": "T0 reference"
+    },
+    {
+      "t": 2,
+      "label": "CAPS deployed"
+    },
+    {
+      "t": 120,
+      "label": "Metroliner emergency landing"
+    },
+    {
+      "t": 180,
+      "label": "Cirrus landed"
+    }
+  ]
+}

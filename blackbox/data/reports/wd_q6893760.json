@@ -255,5 +255,8 @@
       "country": "unknown",
       "role": "lead"
     }
-  ]
+  ],
+  "t0": "1972-03-04T01:38:30Z",
+  "time_reference": "UTC",
+  "fdr": null
 }

@@ -104,8 +104,16 @@ def main():
         successors[a][b] += n
         predecessors[b][a] += n
 
+    fdr_fidelity = {}
+    for p in FDR.glob("*.json"):
+        try:
+            f = json.loads(p.read_text())
+            fdr_fidelity[p.stem] = f.get("fidelity", "")
+        except Exception:
+            pass
     graph = {
         "version": 1,
+        "fdr_fidelity": fdr_fidelity,
         "built_from": {"records": len(records), "fdr": len(list(FDR.glob("*.json")))},
         "taxonomy": taxonomy,
         "agencies": sorted(agencies.values(), key=lambda a: a["code"]),

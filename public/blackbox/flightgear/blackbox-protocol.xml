@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- Blackbox replay: FlightGear generic protocol. Feed with
+     --fdm=null --generic=file,in,10,track.csv,blackbox-protocol -->
+<PropertyList>
+ <generic>
+  <input>
+   <line_separator>newline</line_separator>
+   <var_separator>,</var_separator>
+   <chunk><name>t</name><type>float</type><node>/blackbox/t-sec</node></chunk>
+   <chunk><name>latitude</name><type>double</type><node>/position/latitude-deg</node></chunk>
+   <chunk><name>longitude</name><type>double</type><node>/position/longitude-deg</node></chunk>
+   <chunk><name>altitude</name><type>float</type><node>/position/altitude-ft</node></chunk>
+   <chunk><name>heading</name><type>float</type><node>/orientation/heading-deg</node></chunk>
+   <chunk><name>pitch</name><type>float</type><node>/orientation/pitch-deg</node></chunk>
+   <chunk><name>roll</name><type>float</type><node>/orientation/roll-deg</node></chunk>
+   <chunk><name>airspeed</name><type>float</type><node>/velocities/airspeed-kt</node></chunk>
+   <chunk><name>vertical-speed</name><type>float</type><node>/velocities/vertical-speed-fps</node></chunk>
+   <chunk><name>gear</name><type>float</type><node>/gear/gear[0]/position-norm</node></chunk>
+   <chunk><name>flaps</name><type>float</type><node>/surface-positions/flap-pos-norm</node></chunk>
+   <chunk><name>elevator</name><type>float</type><node>/surface-positions/elevator-pos-norm</node></chunk>
+   <chunk><name>aileron</name><type>float</type><node>/surface-positions/left-aileron-pos-norm</node></chunk>
+   <chunk><name>throttle</name><type>float</type><node>/controls/engines/engine[0]/throttle</node></chunk>
+   <chunk><name>n1</name><type>float</type><node>/engines/engine[0]/n1</node></chunk>
+   <chunk><name>stall</name><type>int</type><node>/blackbox/stall-warning</node></chunk>
+  </input>
+ </generic>
+</PropertyList>

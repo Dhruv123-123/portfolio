@@ -1,0 +1,62 @@
+{
+ "id": "wd_q104759345",
+ "cues": [
+  {
+   "t": 110,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "SIC",
+   "text": "Heading SEL",
+   "dur": 1.1
+  },
+  {
+   "t": 113,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "SIC",
+   "text": "Confirm heading 070",
+   "dur": 1.8
+  },
+  {
+   "t": 197.0,
+   "file": "w_bank_angle.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "bank angle",
+   "dur": 1.15
+  },
+  {
+   "t": 199.5,
+   "file": "w_wailer.mp3",
+   "kind": "ap_disconnect",
+   "speaker": "SYS",
+   "text": "wailer",
+   "dur": 0.88
+  },
+  {
+   "t": 224,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "SIC",
+   "text": "BANK ANGLE",
+   "dur": 1.07
+  },
+  {
+   "t": 227,
+   "file": "cvr_003.mp3",
+   "kind": "cvr",
+   "speaker": "SIC",
+   "text": "Capt... Capt... upset, upset",
+   "dur": 1.97
+  },
+  {
+   "t": 239,
+   "file": "cvr_004.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "ONE THREE ZERO",
+   "dur": 1.22
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

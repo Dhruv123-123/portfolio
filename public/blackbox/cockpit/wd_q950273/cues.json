@@ -1,0 +1,86 @@
+{
+ "id": "wd_q950273",
+ "cues": [
+  {
+   "t": -58,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "NAV",
+   "text": "VOR indicates that way",
+   "dur": 1.68
+  },
+  {
+   "t": -18,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "It is necessary to find out and tell them about RV",
+   "dur": 2.71
+  },
+  {
+   "t": -11,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "There is no Maputo",
+   "dur": 1.14
+  },
+  {
+   "t": -11,
+   "file": "cvr_003.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "Electrical power is off, chaps",
+   "dur": 2.18
+  },
+  {
+   "t": -11,
+   "file": "cvr_004.mp3",
+   "kind": "cvr",
+   "speaker": "NAV",
+   "text": "ILS switched off and DME",
+   "dur": 1.67
+  },
+  {
+   "t": -11,
+   "file": "cvr_005.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "Everything switched off",
+   "dur": 1.17
+  },
+  {
+   "t": -11,
+   "file": "cvr_006.mp3",
+   "kind": "cvr",
+   "speaker": "NAV",
+   "text": "And NDBs do not work",
+   "dur": 1.56
+  },
+  {
+   "t": 0,
+   "file": "cvr_008.mp3",
+   "kind": "cvr",
+   "speaker": "NAV",
+   "text": "No, no, there's nowhere to go, no NDBs, there's nothing",
+   "dur": 3.39
+  },
+  {
+   "t": 0,
+   "file": "cvr_009.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "Neither NDBs, nor ILS",
+   "dur": 1.78
+  },
+  {
+   "t": 8400.0,
+   "file": "w_clacker.mp3",
+   "kind": "overspeed",
+   "speaker": "SYS",
+   "text": "clacker",
+   "dur": 1.2
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

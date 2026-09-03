@@ -91,10 +91,22 @@
     }
   ],
   "chain": [
-    ["fuel_starvation", "engine_failure"],
-    ["engine_failure", "loss_of_control_inflight"],
-    ["inadequate_training", "loss_of_control_inflight"],
-    ["weight_and_balance_error", "loss_of_control_inflight"]
+    [
+      "fuel_starvation",
+      "engine_failure"
+    ],
+    [
+      "engine_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "inadequate_training",
+      "loss_of_control_inflight"
+    ],
+    [
+      "weight_and_balance_error",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
@@ -114,7 +126,9 @@
       "actor": "GND",
       "kind": "system",
       "text": "Ramp inspector drained the gasoline pump filter and tested the fuel storage tanks for water. No. 2 tank indicated 1.5 inches of water, which was higher than the previous day and the highest in recent recorded history",
-      "factors": ["fuel_starvation"],
+      "factors": [
+        "fuel_starvation"
+      ],
       "state": {}
     },
     {
@@ -134,7 +148,9 @@
       "actor": "GND",
       "kind": "system",
       "text": "After deplaning passengers in Vieques, pilot taxied N589SA to the gas pump where 30 U.S. gallons of 103/130 octane low lead fuel were added to each wing tank from the contaminated No. 2 tank. Pilot did not drain fuel tank sumps and no witness saw pilot check for water or drain the sumps",
-      "factors": ["fuel_starvation"],
+      "factors": [
+        "fuel_starvation"
+      ],
       "state": {}
     },
     {
@@ -154,8 +170,13 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft appeared to climb out normally after takeoff. As aircraft turned left in a crosswind departure pattern at approximately 200 feet altitude, it appeared to lose power in the left engine due to water in the fuel system",
-      "factors": ["engine_failure", "fuel_starvation"],
-      "state": {"alt": 200}
+      "factors": [
+        "engine_failure",
+        "fuel_starvation"
+      ],
+      "state": {
+        "alt": 200
+      }
     },
     {
       "t": 15,
@@ -164,8 +185,12 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft gained approximately 50 feet of altitude while in a nose-high attitude as pilot may have attempted recovery, then engines appeared to develop more power momentarily",
-      "factors": ["engine_failure"],
-      "state": {"alt": 250}
+      "factors": [
+        "engine_failure"
+      ],
+      "state": {
+        "alt": 250
+      }
     },
     {
       "t": 20,
@@ -174,7 +199,10 @@
       "actor": "PF",
       "kind": "crew_action",
       "text": "With left propeller not feathered and flaps found full down (at 25 degrees takeoff configuration), pilot did not execute prescribed emergency engine-out procedures including feathering propeller, allowing airspeed to increase to best single-engine rate of climb speed of 65 KIAS, and retracting takeoff flaps",
-      "factors": ["loss_of_control_inflight", "inadequate_training"],
+      "factors": [
+        "loss_of_control_inflight",
+        "inadequate_training"
+      ],
       "state": {}
     },
     {
@@ -184,8 +212,12 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft rolled abruptly to the left and pitched down steeply, indicating loss of directional control when airspeed decreased below minimum control speed (Vmc) of 39 KIAS. Aircraft crashed into the Atlantic Ocean approximately 1/2 mile north of runway 9. Wreckage sank in approximately 18 feet of water",
-      "factors": ["loss_of_control_inflight"],
-      "state": {"alt": 0}
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "state": {
+        "alt": 0
+      }
     }
   ],
   "cvr": [],
@@ -195,34 +227,42 @@
       "to": "FAA",
       "text": "Issue an Airworthiness Directive applicable to Pilatus Britten-Norman BN-2, BN-2A, BN-2B, BN-2T, and BN-2A Mk I model airplanes requiring the incorporation of Britten Norman modification NB/M/350 to provide increased protection from fuel contamination",
       "status": "unknown",
-      "trigger_factors": ["fuel_starvation"]
+      "trigger_factors": [
+        "fuel_starvation"
+      ]
     },
     {
       "id": "A-85-74",
       "to": "FAA",
       "text": "Amend the FAA's operations specifications applicable to Vieques Air Link, Inc., and other U.S. operators of Pilatus Britten-Norman BN-2, BN-2A, BN-2B, BN-2T, and BN-2A Mk III model airplanes engaged in commuter/air taxi operations, to require that preflight checks for fuel contamination be made before the first flight of the day and after each refueling operation in strict accordance with the manufacturer's instructions",
       "status": "unknown",
-      "trigger_factors": ["fuel_starvation"]
+      "trigger_factors": [
+        "fuel_starvation"
+      ]
     },
     {
       "id": "A-85-75",
       "to": "FAA",
       "text": "Require Pilatus Britten-Norman to install a device to measure airplane attitude, e.g., a small bubble-level, on all BN-2, BN-2A, BN-2B, BN-2T, and BN-2A Mk III model airplanes delivered in the United States in order to provide a ready means for ensuring the airplane is level during preflight checks for fuel contamination. Concurrently, require Britten Norman to develop a service kit or modification instructions to retrofit existing BN-2, BN-2A, BN-2B, BN-2T, and BN-2A Mk II mode airplanes with a similar device",
       "status": "unknown",
-      "trigger_factors": ["fuel_starvation"]
+      "trigger_factors": [
+        "fuel_starvation"
+      ]
     },
     {
       "id": "A-85-76",
       "to": "FAA",
       "text": "Require Pilatus Britten-Norman to prepare and disseminate a Safety Advisory relating to water in the fuel to all operators of BN-2, BN-2A, BN-2B, BN-2T, and BN-2A Mk III model airplanes. The advisory should outline the circumstances relating to the Vieques Air Link accident of August 2, 1984, and the criticality of proper preflight fuel tank drainage procedures, and should urge operators to incorporate Britten Norman Modification NB/M/380 in their airplanes",
       "status": "unknown",
-      "trigger_factors": ["fuel_starvation"]
+      "trigger_factors": [
+        "fuel_starvation"
+      ]
     }
   ],
   "dissent": [],
   "safety_changes": [],
   "related": [],
-  "fdr": null,
+  "fdr": "wd_q7928392",
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8508.pdf"
   ],

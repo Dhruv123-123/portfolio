@@ -1,0 +1,102 @@
+{
+ "id": "wd_q463197",
+ "cues": [
+  {
+   "t": 0,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "American one ninety-one under way.",
+   "dur": 1.93
+  },
+  {
+   "t": 14,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "Damn!",
+   "dur": 0.64
+  },
+  {
+   "t": 16.0,
+   "file": "w_shaker.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 41.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 43.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 45.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 47.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 49.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 51.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 53.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 55.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 57.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

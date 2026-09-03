@@ -1,0 +1,325 @@
+{
+  "id": "wd_q7672527",
+  "record": "wd_q7672527",
+  "source": "NTSB AAR-93-04, section 1.16.6 (FDR Data as Used in the Performance Study), pitch/airspeed/altitude parameters",
+  "fidelity": "reconstructed",
+  "t_start": -5,
+  "t_end": 15,
+  "aircraft_model": "narrowbody_tri",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          5.5,
+          50
+        ],
+        [
+          8,
+          80
+        ],
+        [
+          10.5,
+          30
+        ],
+        [
+          11.5,
+          5
+        ],
+        [
+          15,
+          0
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          100
+        ],
+        [
+          0,
+          155
+        ],
+        [
+          3,
+          158
+        ],
+        [
+          5.5,
+          170
+        ],
+        [
+          8,
+          170
+        ],
+        [
+          10,
+          165
+        ],
+        [
+          11.5,
+          160
+        ],
+        [
+          15,
+          80
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5.5,
+          11
+        ],
+        [
+          6.5,
+          12.6
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          10.5,
+          7
+        ],
+        [
+          11.5,
+          5
+        ],
+        [
+          15,
+          0
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          5.5,
+          -8
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          11.5,
+          -5
+        ],
+        [
+          15,
+          0
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          130
+        ],
+        [
+          0,
+          130
+        ],
+        [
+          15,
+          100
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          0
+        ],
+        [
+          0,
+          50
+        ],
+        [
+          5.5,
+          200
+        ],
+        [
+          8,
+          150
+        ],
+        [
+          10.5,
+          -100
+        ],
+        [
+          11.5,
+          -200
+        ],
+        [
+          15,
+          0
+        ]
+      ]
+    },
+    "n1_pct": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          20
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          8,
+          100
+        ],
+        [
+          10,
+          30
+        ],
+        [
+          15,
+          0
+        ]
+      ]
+    },
+    "thrust_lever": {
+      "interp": "step",
+      "keys": [
+        [
+          -5,
+          "idle"
+        ],
+        [
+          0,
+          "toga"
+        ],
+        [
+          10,
+          "idle"
+        ]
+      ]
+    },
+    "aoa_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          5.5,
+          12
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          11.5,
+          7.68
+        ],
+        [
+          15,
+          5
+        ]
+      ]
+    },
+    "stall_warn": {
+      "interp": "step",
+      "keys": [
+        [
+          -5,
+          0
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    }
+  },
+  "units": {
+    "flaps": "detent",
+    "n1_pct": "% N1"
+  },
+  "markers": [
+    {
+      "t": 0,
+      "label": "Rotation at 155 KIAS"
+    },
+    {
+      "t": 5.5,
+      "label": "Liftoff at 11 degrees"
+    },
+    {
+      "t": 8,
+      "label": "Stick shaker activates (spurious)"
+    },
+    {
+      "t": 10,
+      "label": "Abort decision"
+    },
+    {
+      "t": 11.5,
+      "label": "Touchdown"
+    },
+    {
+      "t": 15,
+      "label": "Runway overrun ends"
+    }
+  ],
+  "camera_hint": "chase",
+  "terrain": "runway"
+}

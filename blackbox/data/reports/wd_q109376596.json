@@ -98,13 +98,34 @@
     }
   ],
   "chain": [
-    ["inadequate_training", "crm_breakdown"],
-    ["mode_confusion", "unstable_approach"],
-    ["crm_breakdown", "unstable_approach"],
-    ["unstable_approach", "procedural_noncompliance"],
-    ["low_visibility", "cfit"],
-    ["dark_night", "cfit"],
-    ["procedural_noncompliance", "cfit"]
+    [
+      "inadequate_training",
+      "crm_breakdown"
+    ],
+    [
+      "mode_confusion",
+      "unstable_approach"
+    ],
+    [
+      "crm_breakdown",
+      "unstable_approach"
+    ],
+    [
+      "unstable_approach",
+      "procedural_noncompliance"
+    ],
+    [
+      "low_visibility",
+      "cfit"
+    ],
+    [
+      "dark_night",
+      "cfit"
+    ],
+    [
+      "procedural_noncompliance",
+      "cfit"
+    ]
   ],
   "events": [
     {
@@ -114,7 +135,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Antonov An-12BK was on scheduled cargo flight from Yakutsk to Irkutsk with nine crew members aboard.",
-      "state": {"alt": 7000},
+      "state": {
+        "alt": 7000
+      },
       "factors": []
     },
     {
@@ -124,7 +147,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Aircraft initiated descent toward Irkutsk International Airport and entered approach pattern for Runway 30.",
-      "state": {"alt": 5000},
+      "state": {
+        "alt": 5000
+      },
       "factors": []
     },
     {
@@ -134,8 +159,12 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Weather conditions at Irkutsk were poor with low visibility, snowfall, and temperature of minus 7 degrees Celsius. Wind was from the northwest.",
-      "state": {"alt": 3000},
-      "factors": ["low_visibility"]
+      "state": {
+        "alt": 3000
+      },
+      "factors": [
+        "low_visibility"
+      ]
     },
     {
       "t": -120,
@@ -144,8 +173,12 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Navigation system was incorrectly configured with unauthorized use of satellite navigation (GPS) instead of approved systems. This configuration error led to navigation confusion.",
-      "state": {"alt": 1500},
-      "factors": ["mode_confusion"]
+      "state": {
+        "alt": 1500
+      },
+      "factors": [
+        "mode_confusion"
+      ]
     },
     {
       "t": -60,
@@ -154,8 +187,13 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Approach was not stabilized according to flight manual criteria. Aircraft continued descent with unstable flight path and inadequate crew coordination.",
-      "state": {"alt": 800},
-      "factors": ["unstable_approach", "crm_breakdown"]
+      "state": {
+        "alt": 800
+      },
+      "factors": [
+        "unstable_approach",
+        "crm_breakdown"
+      ]
     },
     {
       "t": 0,
@@ -164,8 +202,13 @@
       "actor": "ATC",
       "kind": "system",
       "text": "Radar contact with flight was lost at 19:45 local time (11:45 UTC) during night IMC conditions. Aircraft was attempting to execute go-around procedure.",
-      "state": {"alt": 600},
-      "factors": ["dark_night", "low_visibility"]
+      "state": {
+        "alt": 600
+      },
+      "factors": [
+        "dark_night",
+        "low_visibility"
+      ]
     },
     {
       "t": 120,
@@ -174,8 +217,13 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft crashed into terrain located 4.5 km southeast of Runway 30 at Irkutsk and burst into flames. All nine crew members aboard were killed. The GPWS did not provide warning.",
-      "state": {"alt": 0},
-      "factors": ["cfit", "procedural_noncompliance"]
+      "state": {
+        "alt": 0
+      },
+      "factors": [
+        "cfit",
+        "procedural_noncompliance"
+      ]
     }
   ],
   "cvr": [],
@@ -187,7 +235,7 @@
     "Regular inspection and maintenance of GPWS systems on all aircraft"
   ],
   "related": [],
-  "fdr": null,
+  "fdr": "wd_q109376596",
   "sources": [
     "https://mak-iac.org/upload/iblock/e2f/hpio3mg4kbgcu6gs7700w65emrplpory/report_ew-518ti.pdf",
     "https://mak-iac.org/rassledovaniya/an-12bk-ew-518ti-03-11-2021/"

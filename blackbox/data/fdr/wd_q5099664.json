@@ -1,0 +1,380 @@
+{
+  "id": "wd_q5099664",
+  "record": "wd_q5099664",
+  "source": "NTSB AAR-93/07, section 1.5 (Flight Data Recorder), pitch/altitude/airspeed oscillations from FDR readout",
+  "fidelity": "reconstructed",
+  "t_start": -10,
+  "t_end": 100,
+  "aircraft_model": "airliner_twin",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -10,
+          33000
+        ],
+        [
+          0,
+          33000
+        ],
+        [
+          10,
+          32800
+        ],
+        [
+          20,
+          32500
+        ],
+        [
+          30,
+          31500
+        ],
+        [
+          35,
+          28000
+        ],
+        [
+          40,
+          28500
+        ],
+        [
+          60,
+          30000
+        ],
+        [
+          94,
+          33000
+        ],
+        [
+          100,
+          33000
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -10,
+          296
+        ],
+        [
+          0,
+          296
+        ],
+        [
+          10,
+          295
+        ],
+        [
+          11,
+          293
+        ],
+        [
+          13,
+          286
+        ],
+        [
+          30,
+          300
+        ],
+        [
+          31,
+          337
+        ],
+        [
+          40,
+          348
+        ],
+        [
+          45,
+          364
+        ],
+        [
+          47,
+          360
+        ],
+        [
+          60,
+          330
+        ],
+        [
+          100,
+          300
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -10,
+          0
+        ],
+        [
+          0,
+          0.5
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          10,
+          7.4
+        ],
+        [
+          11,
+          9.5
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          13.5,
+          -5.6
+        ],
+        [
+          15,
+          0
+        ],
+        [
+          18,
+          -10
+        ],
+        [
+          20,
+          0
+        ],
+        [
+          23,
+          -15
+        ],
+        [
+          26,
+          -24.3
+        ],
+        [
+          31,
+          -15
+        ],
+        [
+          40,
+          7
+        ],
+        [
+          60,
+          5
+        ],
+        [
+          94,
+          0
+        ],
+        [
+          100,
+          0
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -10,
+          0
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          50,
+          -10
+        ],
+        [
+          100,
+          0
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -10,
+          270
+        ],
+        [
+          0,
+          280
+        ],
+        [
+          100,
+          280
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -10,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          100
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          13,
+          -1000
+        ],
+        [
+          26,
+          -3000
+        ],
+        [
+          31,
+          -1500
+        ],
+        [
+          40,
+          500
+        ],
+        [
+          60,
+          1000
+        ],
+        [
+          94,
+          0
+        ],
+        [
+          100,
+          0
+        ]
+      ]
+    },
+    "n1_pct": {
+      "interp": "linear",
+      "keys": [
+        [
+          -10,
+          75
+        ],
+        [
+          0,
+          75
+        ],
+        [
+          50,
+          80
+        ],
+        [
+          100,
+          75
+        ]
+      ]
+    },
+    "stall_warn": {
+      "interp": "step",
+      "keys": [
+        [
+          -10,
+          0
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          17,
+          0
+        ],
+        [
+          40,
+          0
+        ]
+      ]
+    },
+    "slats": {
+      "interp": "step",
+      "keys": [
+        [
+          -10,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          100,
+          1
+        ]
+      ]
+    }
+  },
+  "units": {
+    "flaps": "detent",
+    "n1_pct": "% N1"
+  },
+  "markers": [
+    {
+      "t": 0,
+      "label": "Slat disagree indication, 296 KIAS, FL330"
+    },
+    {
+      "t": 7,
+      "label": "Nose-up pitch begins"
+    },
+    {
+      "t": 10,
+      "label": "Stall warning activates at 7.4 degrees"
+    },
+    {
+      "t": 11,
+      "label": "Max nose-up pitch 9.5 degrees"
+    },
+    {
+      "t": 13,
+      "label": "Pilot input causes rapid oscillations"
+    },
+    {
+      "t": 26,
+      "label": "Fourth oscillation, max 24.3 degrees nose-down"
+    },
+    {
+      "t": 35,
+      "label": "Bottom of descent at 28000 feet"
+    },
+    {
+      "t": 45,
+      "label": "Peak speed 364 KIAS, overspeed warning"
+    },
+    {
+      "t": 94,
+      "label": "Autopilot reengaged, oscillations stop"
+    }
+  ],
+  "camera_hint": "cabin",
+  "terrain": "ocean"
+}

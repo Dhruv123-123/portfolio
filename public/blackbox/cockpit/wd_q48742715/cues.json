@@ -1,0 +1,30 @@
+{
+ "id": "wd_q48742715",
+ "cues": [
+  {
+   "t": -90.0,
+   "file": "w_glideslope.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "glideslope",
+   "dur": 1.07
+  },
+  {
+   "t": -15,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "It didn't take power off.",
+   "dur": 1.27
+  },
+  {
+   "t": -15.0,
+   "file": "w_retard.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "retard",
+   "dur": 1.66
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

@@ -81,9 +81,18 @@
     }
   ],
   "chain": [
-    ["atc_communication_error", "loss_of_situational_awareness"],
-    ["loss_of_situational_awareness", "runway_incursion"],
-    ["runway_incursion", "ground_collision"]
+    [
+      "atc_communication_error",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "runway_incursion"
+    ],
+    [
+      "runway_incursion",
+      "ground_collision"
+    ]
   ],
   "events": [
     {
@@ -93,7 +102,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "LAX tower instructs SkyWest 569 to taxi into position and hold on runway 24 left.",
-      "factors": ["runway_incursion"],
+      "factors": [
+        "runway_incursion"
+      ],
       "state": {}
     },
     {
@@ -123,7 +134,10 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "LAX tower clears USA 1493 to land on runway 24 left (controller unaware of SkyWest aircraft on runway due to loss of situational awareness).",
-      "factors": ["loss_of_situational_awareness", "atc_communication_error"],
+      "factors": [
+        "loss_of_situational_awareness",
+        "atc_communication_error"
+      ],
       "state": {}
     },
     {
@@ -144,7 +158,9 @@
       "kind": "crew_speech",
       "text": "USA 1493 descending out of 500 feet on approach.",
       "factors": [],
-      "state": {"alt": 500}
+      "state": {
+        "alt": 500
+      }
     },
     {
       "t": -1,
@@ -153,7 +169,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Sound of impact as USA 1493 contacts the runway with SkyWest 5569 positioned at intersection 45.",
-      "factors": ["ground_collision"],
+      "factors": [
+        "ground_collision"
+      ],
       "state": {}
     },
     {
@@ -163,7 +181,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "USAir 737 crushes SkyWest Metroliner, destroying both aircraft. Fire and explosion at runway 24L, intersection 45.",
-      "factors": ["ground_collision"],
+      "factors": [
+        "ground_collision"
+      ],
       "state": {}
     }
   ],
@@ -249,8 +269,10 @@
     "Enhanced aircraft conspicuity standards for airport operations"
   ],
   "related": [],
-  "fdr": null,
-  "sources": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR9108.pdf"],
+  "fdr": "wd_q949020",
+  "sources": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR9108.pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
@@ -264,6 +286,8 @@
   "wikipedia": "https://en.wikipedia.org/wiki/1991_Los_Angeles_runway_collision",
   "asn_id": "19910201-0",
   "interest": 15.67,
-  "report_links": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR9108.pdf"],
+  "report_links": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR9108.pdf"
+  ],
   "curated_id": null
 }

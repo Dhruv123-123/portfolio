@@ -100,6 +100,7 @@
         <div class="ge-actions">
           <button class="bb-btn" :disabled="!(selectedRecord.events && selectedRecord.events.length)" @click="store.openTimeline(selectedRecord.id)">Timeline ▸</button>
           <button class="bb-btn" :disabled="!selectedRecord.fdr" @click="store.openReplay(selectedRecord.id)">FDR replay ▸</button>
+          <button class="bb-btn" :disabled="!selectedRecord.fdr" @click="store.openFlightGear(selectedRecord.id)" title="FlightGear package or live bridge">FlightGear ▸</button>
           <button class="bb-btn" :disabled="!(selectedRecord.events && selectedRecord.events.length)" @click="store.openStory(selectedRecord.id)" title="Documentary-style walkthrough">Story ▸</button>
           <button v-if="selectedRecord.curated_id && index.byId[selectedRecord.curated_id]" class="bb-btn" @click="selectAccident(selectedRecord.curated_id)">Hand-reviewed record ▸</button>
         </div>

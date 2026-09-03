@@ -1,0 +1,266 @@
+{
+  "id": "wd_q134376219",
+  "record": "wd_q134376219",
+  "source": "Record events describing approach and hard landing with multiple bounces at Harry S. Truman Airport",
+  "fidelity": "schematic",
+  "confidence": "low",
+  "t_start": -30,
+  "t_end": 30,
+  "aircraft_model": "narrowbody_tri",
+  "terrain": "runway",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          150
+        ],
+        [
+          -10,
+          50
+        ],
+        [
+          0,
+          30
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          40
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          22
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          30,
+          0
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          100
+        ],
+        [
+          -10,
+          100
+        ],
+        [
+          0,
+          95
+        ],
+        [
+          1,
+          95
+        ],
+        [
+          2,
+          90
+        ],
+        [
+          6,
+          85
+        ],
+        [
+          7,
+          80
+        ],
+        [
+          9,
+          60
+        ],
+        [
+          30,
+          0
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          -2
+        ],
+        [
+          0,
+          -3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          6,
+          -2
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          30,
+          0
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          30,
+          0
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          360
+        ],
+        [
+          0,
+          360
+        ],
+        [
+          30,
+          360
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          -800
+        ],
+        [
+          0,
+          -600
+        ],
+        [
+          1,
+          -600
+        ],
+        [
+          2,
+          1200
+        ],
+        [
+          6,
+          -800
+        ],
+        [
+          7,
+          800
+        ],
+        [
+          9,
+          -600
+        ],
+        [
+          30,
+          0
+        ]
+      ]
+    },
+    "gear": {
+      "interp": "step",
+      "keys": [
+        [
+          -30,
+          1
+        ],
+        [
+          30,
+          1
+        ]
+      ]
+    }
+  },
+  "units": {
+    "flaps": "detent"
+  },
+  "markers": [
+    {
+      "t": 0,
+      "label": "30 feet on approach"
+    },
+    {
+      "t": 1,
+      "label": "Hard touchdown, first impact"
+    },
+    {
+      "t": 2,
+      "label": "Aircraft bounces to 40 feet"
+    },
+    {
+      "t": 6,
+      "label": "Second touchdown"
+    },
+    {
+      "t": 7,
+      "label": "Aircraft bounces to 22 feet"
+    },
+    {
+      "t": 9,
+      "label": "Third touchdown"
+    }
+  ],
+  "camera_hint": "chase"
+}

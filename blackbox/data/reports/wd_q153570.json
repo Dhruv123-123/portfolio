@@ -70,7 +70,7 @@
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "During upset, vertical acceleration peaked at 17.3 G, airplane rolled from 73\u00b0 left bank to 93\u00b0 left bank in less than 1 second, then entered right-rolling climb (p. 2). Pilot likely experienced G-induced loss of consciousness within 1 second (p. 2)."
+      "evidence": "During upset, vertical acceleration peaked at 17.3 G, airplane rolled from 73° left bank to 93° left bank in less than 1 second, then entered right-rolling climb (p. 2). Pilot likely experienced G-induced loss of consciousness within 1 second (p. 2)."
     },
     {
       "id": "ground_collision",
@@ -144,7 +144,7 @@
       "phase": "cruise",
       "actor": "SYS",
       "kind": "system",
-      "text": "LEFT ROLL UPSET BEGINS: Aircraft rapidly rolls from 73\u00b0 left bank toward 93\u00b0 left bank; vertical acceleration reaches 11 G during upset",
+      "text": "LEFT ROLL UPSET BEGINS: Aircraft rapidly rolls from 73° left bank toward 93° left bank; vertical acceleration reaches 11 G during upset",
       "state": {
         "ias": 445,
         "bank": 85,
@@ -244,7 +244,7 @@
     "Focus on engineering evaluations for aircraft with major modifications, spectator safety, course design guidance, and high-G training"
   ],
   "related": [],
-  "fdr": null,
+  "fdr": "wd_q153570",
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB1201.pdf"
   ],

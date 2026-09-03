@@ -76,9 +76,18 @@
     }
   ],
   "chain": [
-    ["engine_failure", "inflight_fire"],
-    ["inflight_fire", "ditching"],
-    ["warning_system_deficiency", "inflight_fire"]
+    [
+      "engine_failure",
+      "inflight_fire"
+    ],
+    [
+      "inflight_fire",
+      "ditching"
+    ],
+    [
+      "warning_system_deficiency",
+      "inflight_fire"
+    ]
   ],
   "events": [
     {
@@ -104,7 +113,9 @@
       "actor": "PNF",
       "kind": "outcome",
       "text": "Co-pilot (handling pilot) heard a muffled crack or 'bang' from the area of the No. 2 engine drive train, also heard by a number of passengers. Both crew felt a slight change in the vibratory feel of the aircraft.",
-      "factors": ["engine_failure"]
+      "factors": [
+        "engine_failure"
+      ]
     },
     {
       "t": -714,
@@ -113,7 +124,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Approximately 6 seconds after the bang, No. 2 engine fire warning lights illuminated brightly. Engine instrument checks revealed nothing unusual and no visible signs of smoke or fire were observed by the crew.",
-      "factors": ["inflight_fire"]
+      "factors": [
+        "inflight_fire"
+      ]
     },
     {
       "t": -705,
@@ -146,7 +159,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Approximately 90 seconds after the initial noise, No. 1 engine fire warning lights also illuminated. No. 2 engine fire warning lights remained illuminated. Passengers observed oil streaking down cabin trim panels and smoke issuing from ceiling panels.",
-      "factors": ["inflight_fire"]
+      "factors": [
+        "inflight_fire"
+      ]
     },
     {
       "t": -180,
@@ -179,7 +194,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Gentle power-on ditching was made 11 nm off the Shetland Island Coast. The aircraft floated satisfactorily with flotation bags correctly deployed. By this time the cabin had filled with smoke.",
-      "factors": ["ditching"]
+      "factors": [
+        "ditching"
+      ]
     },
     {
       "t": 60,
@@ -204,7 +221,9 @@
       "actor": "CABIN",
       "kind": "outcome",
       "text": "Approximately 4 minutes after ditching, passengers in the forward liferaft saw signs of a growing fire at the right side of the main gearbox housing. Crew and passengers paddled liferafts away from the burning aircraft and linked them together.",
-      "factors": ["emergency_landing"]
+      "factors": [
+        "emergency_landing"
+      ]
     },
     {
       "t": 348,
@@ -230,28 +249,36 @@
       "to": "CAA",
       "text": "Enhance fire detection and suppression systems in the main gearbox bay of S-61N helicopters.",
       "status": "closed_acceptable",
-      "trigger_factors": ["warning_system_deficiency"]
+      "trigger_factors": [
+        "warning_system_deficiency"
+      ]
     },
     {
       "id": "2",
       "to": "CAA",
       "text": "Review and improve bearing condition monitoring procedures for power turbine No. 5 bearings in CT58 engines.",
       "status": "closed_acceptable",
-      "trigger_factors": ["engine_failure"]
+      "trigger_factors": [
+        "engine_failure"
+      ]
     },
     {
       "id": "3",
       "to": "BIH",
       "text": "Implement magnetic chip detector (MCD) inspection procedures with specific guidance for debris found during 50-hour inspections.",
       "status": "closed_acceptable",
-      "trigger_factors": ["engine_failure"]
+      "trigger_factors": [
+        "engine_failure"
+      ]
     },
     {
       "id": "4",
       "to": "CAA",
       "text": "Establish mandatory procedures for Installed Engine Vibration Checks after power turbine module or drive train component replacement.",
       "status": "closed_acceptable",
-      "trigger_factors": ["engine_failure"]
+      "trigger_factors": [
+        "engine_failure"
+      ]
     }
   ],
   "dissent": [],

@@ -78,6 +78,7 @@
         <button class="bb-btn" @click="store.openGraph(selected.id)">Graph ▸</button>
         <button class="bb-btn" :disabled="!(selected.events && selected.events.length)" @click="store.openTimeline(selected.id)">Timeline ▸</button>
         <button class="bb-btn" :disabled="!selected.fdr" @click="store.openReplay(selected.id)">Replay ▸</button>
+        <button class="bb-btn" :disabled="!selected.fdr" @click="store.openFlightGear(selected.id)" title="FlightGear package or live bridge">FlightGear ▸</button>
         <button class="bb-btn" :disabled="!(selected.events && selected.events.length)" @click="store.openStory(selected.id)">Story ▸</button>
       </div>
       <div v-if="selected.audio && selected.audio.length" class="at-listen" @click="selected.fdr ? store.openReplay(selected.id) : store.openTimeline(selected.id)">♪ {{ selected.audio.length }} real recording{{ selected.audio.length > 1 ? 's' : '' }} · {{ selected.fdr ? 'play in sync with the replay ▸' : 'listen on the timeline ▸' }}</div>

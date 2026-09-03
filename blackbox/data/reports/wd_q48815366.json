@@ -74,10 +74,22 @@
     }
   ],
   "chain": [
-    ["low_visibility", "visual_illusion"],
-    ["dark_night", "visual_illusion"],
-    ["visual_illusion", "descent_below_minimums"],
-    ["descent_below_minimums", "cfit"]
+    [
+      "low_visibility",
+      "visual_illusion"
+    ],
+    [
+      "dark_night",
+      "visual_illusion"
+    ],
+    [
+      "visual_illusion",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
   ],
   "events": [
     {
@@ -95,7 +107,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Contacted London Air Traffic Control Centre; weather report for Elstree obtained: visibility 2000 metres, cloud base 300 feet agl (p. 2)",
-      "factors": ["low_visibility"]
+      "factors": [
+        "low_visibility"
+      ]
     },
     {
       "t": 8040,
@@ -104,7 +118,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Descended to 4000 feet; informed visibility at Elstree had decreased to 800 metres (p. 2)",
-      "factors": ["low_visibility"]
+      "factors": [
+        "low_visibility"
+      ]
     },
     {
       "t": 8100,
@@ -113,7 +129,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Aircraft reached 1500 feet on approach to Elstree; 4 nautical miles east of runway; pilot given discretion for further descent (p. 2)",
-      "state": {"alt": 1500}
+      "state": {
+        "alt": 1500
+      }
     },
     {
       "t": 8140,
@@ -122,7 +140,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Pilot believed he was in contact with Elstree tower and called 'finals'; radar showed aircraft 2.75 nm from Elstree (p. 2)",
-      "factors": ["visual_illusion"]
+      "factors": [
+        "visual_illusion"
+      ]
     },
     {
       "t": 8160,
@@ -131,8 +151,12 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft struck trees at 458 feet elevation on Arkley Golf Course, 3 nm east of Elstree; caught fire and was completely destroyed; all six occupants killed instantly (p. 2)",
-      "state": {"alt": 458},
-      "factors": ["cfit"]
+      "state": {
+        "alt": 458
+      },
+      "factors": [
+        "cfit"
+      ]
     }
   ],
   "cvr": [],
@@ -142,14 +166,19 @@
       "to": "UK",
       "text": "Consideration should be given to the publication of recommended aerodrome operating minima for non-public transport flights at all airfields in the United Kingdom where it is reasonably practicable to do so",
       "status": "unknown",
-      "trigger_factors": ["low_visibility", "descent_below_minimums"]
+      "trigger_factors": [
+        "low_visibility",
+        "descent_below_minimums"
+      ]
     }
   ],
   "dissent": [],
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["http://www.aaib.gov.uk/publications/formal_reports/14_1976__n6645y.cfm"],
+  "sources": [
+    "http://www.aaib.gov.uk/publications/formal_reports/14_1976__n6645y.cfm"
+  ],
   "asn_id": null,
   "wikipedia": "https://en.wikipedia.org/wiki/Graham_Hill_plane_crash",
   "report_links": [

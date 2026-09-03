@@ -1,0 +1,38 @@
+{
+ "id": "westcaribbean708",
+ "cues": [
+  {
+   "t": 0.0,
+   "file": "w_shaker.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 10.0,
+   "file": "w_wailer.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "wailer",
+   "dur": 0.88
+  },
+  {
+   "t": 120.0,
+   "file": "w_shaker.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 180.0,
+   "file": "w_terrain.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "terrain",
+   "dur": 1.59
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

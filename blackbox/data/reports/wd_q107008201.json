@@ -72,9 +72,18 @@
     }
   ],
   "chain": [
-    ["excessive_speed", "inappropriate_control_input"],
-    ["inappropriate_control_input", "midair_collision"],
-    ["atc_communication_error", "midair_collision"]
+    [
+      "excessive_speed",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "midair_collision"
+    ],
+    [
+      "atc_communication_error",
+      "midair_collision"
+    ]
   ],
   "events": [
     {
@@ -127,7 +136,9 @@
       "state": {
         "ias": 148
       },
-      "factors": ["excessive_speed"]
+      "factors": [
+        "excessive_speed"
+      ]
     },
     {
       "t": -4,
@@ -140,7 +151,10 @@
         "ias": 140,
         "alt": 6619
       },
-      "factors": ["excessive_speed", "inappropriate_control_input"]
+      "factors": [
+        "excessive_speed",
+        "inappropriate_control_input"
+      ]
     },
     {
       "t": 0,
@@ -154,7 +168,9 @@
         "alt": 6619,
         "hdg": 146
       },
-      "factors": ["midair_collision"]
+      "factors": [
+        "midair_collision"
+      ]
     },
     {
       "t": 2,
@@ -189,8 +205,10 @@
   "dissent": [],
   "safety_changes": [],
   "related": [],
-  "fdr": null,
-  "sources": ["https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/103073/pdf"],
+  "fdr": "wd_q107008201",
+  "sources": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/103073/pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
@@ -206,6 +224,8 @@
   "wikipedia": "https://en.wikipedia.org/wiki/2021_Colorado_mid-air_collision",
   "asn_id": "20210512-0",
   "interest": 5.72,
-  "report_links": ["https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/103073/pdf"],
+  "report_links": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/103073/pdf"
+  ],
   "curated_id": null
 }

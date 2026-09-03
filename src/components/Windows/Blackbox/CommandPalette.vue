@@ -36,6 +36,7 @@ const ACTIONS = [
   { key: 'a-century', icon: '⏵', title: 'Play the century', sub: 'atlas time-lapse from the first record to today', run: () => emit('action', 'century') },
   { key: 'a-story', icon: '🎬', title: 'Tell the story of the selected accident', sub: 'documentary walkthrough', run: () => store.selectedId && store.openStory(store.selectedId) },
   { key: 'a-replay', icon: '✈', title: 'FDR replay', sub: 'flight data recorder replay', run: () => (store.tab = 'replay') },
+  { key: 'a-fg', icon: '🛩', title: 'Fly the selected accident in FlightGear', sub: 'download a package or drive a running FlightGear live', run: () => { const id = store.selectedId; const r = id && props.index.byId[id]; if (r && r.fdr) store.openFlightGear(id); else store.tab = 'replay' } },
   { key: 'a-timeline', icon: '⏱', title: 'Timeline of the selected accident', sub: 'event chain, compare, narrative', run: () => store.selectedId && store.openTimeline(store.selectedId) },
   { key: 'a-sound', icon: '🔊', title: 'Toggle cockpit sound', sub: 'synthesized engines, warnings and call-outs in the replay', run: () => emit('action', 'sound') },
   { key: 'a-crt', icon: '📺', title: 'Toggle CRT look', sub: 'scanlines and phosphor glow', run: () => (store.crt = !store.crt) },

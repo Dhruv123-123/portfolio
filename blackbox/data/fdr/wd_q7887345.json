@@ -1,0 +1,316 @@
+{
+  "id": "wd_q7887345",
+  "record": "wd_q7887345",
+  "source": "NTSB final report, flight data recorder analysis, sections 1.11.1-1.11.3",
+  "fidelity": "narrative",
+  "confidence": "low",
+  "t_start": -30,
+  "t_end": 240,
+  "aircraft_model": "narrowbody_tri",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          30,
+          750
+        ],
+        [
+          60,
+          1500
+        ],
+        [
+          90,
+          2200
+        ],
+        [
+          94,
+          2300
+        ],
+        [
+          110,
+          1800
+        ],
+        [
+          150,
+          1200
+        ],
+        [
+          165,
+          630
+        ],
+        [
+          240,
+          0
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          120
+        ],
+        [
+          0,
+          142
+        ],
+        [
+          60,
+          212
+        ],
+        [
+          73,
+          203
+        ],
+        [
+          94,
+          217
+        ],
+        [
+          150,
+          240
+        ],
+        [
+          165,
+          220
+        ],
+        [
+          240,
+          150
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          30,
+          10
+        ],
+        [
+          60,
+          8
+        ],
+        [
+          94,
+          5
+        ],
+        [
+          110,
+          -5
+        ],
+        [
+          150,
+          -20
+        ],
+        [
+          165,
+          -45
+        ],
+        [
+          240,
+          -90
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          30,
+          2
+        ],
+        [
+          60,
+          0
+        ],
+        [
+          94,
+          0
+        ],
+        [
+          110,
+          5
+        ],
+        [
+          150,
+          30
+        ],
+        [
+          165,
+          60
+        ],
+        [
+          240,
+          90
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          270
+        ],
+        [
+          0,
+          270
+        ],
+        [
+          30,
+          250
+        ],
+        [
+          60,
+          270
+        ],
+        [
+          94,
+          270
+        ],
+        [
+          110,
+          280
+        ],
+        [
+          150,
+          290
+        ],
+        [
+          165,
+          264
+        ],
+        [
+          240,
+          264
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          1500
+        ],
+        [
+          30,
+          1500
+        ],
+        [
+          60,
+          1500
+        ],
+        [
+          90,
+          1200
+        ],
+        [
+          94,
+          0
+        ],
+        [
+          110,
+          -1000
+        ],
+        [
+          150,
+          -2000
+        ],
+        [
+          165,
+          -3000
+        ],
+        [
+          240,
+          -5000
+        ]
+      ]
+    },
+    "flaps": {
+      "interp": "step",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "gear": {
+      "interp": "step",
+      "keys": [
+        [
+          -30,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  },
+  "units": {
+    "flaps": "degrees",
+    "n1_pct": "% N1"
+  },
+  "markers": [
+    {
+      "t": 0,
+      "label": "Takeoff"
+    },
+    {
+      "t": 60,
+      "label": "Engine No. 1 fire warning"
+    },
+    {
+      "t": 75,
+      "label": "Engine No. 1 shutdown, generators fail"
+    },
+    {
+      "t": 94,
+      "label": "Total electrical power loss, attitude reference lost"
+    },
+    {
+      "t": 240,
+      "label": "Impact into Pacific Ocean"
+    }
+  ],
+  "camera_hint": "chase",
+  "terrain": "ocean"
+}

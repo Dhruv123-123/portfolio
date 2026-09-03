@@ -1,0 +1,390 @@
+{
+  "id": "wd_q5172397",
+  "record": "wd_q5172397",
+  "source": "NTSB accident report AAR-06-01, FDR data from sections 1.1 and 1.11.2; descent profile reconstruction",
+  "fidelity": "narrative",
+  "confidence": "medium",
+  "t_start": -100,
+  "t_end": 85,
+  "aircraft_model": "regional_turboprop",
+  "terrain": "flat",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -100,
+          3100
+        ],
+        [
+          -60,
+          2800
+        ],
+        [
+          0,
+          2500
+        ],
+        [
+          10,
+          2400
+        ],
+        [
+          20,
+          2100
+        ],
+        [
+          30,
+          1800
+        ],
+        [
+          40,
+          1500
+        ],
+        [
+          50,
+          1320
+        ],
+        [
+          60,
+          1200
+        ],
+        [
+          70,
+          1050
+        ],
+        [
+          82,
+          996
+        ],
+        [
+          85,
+          0
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -100,
+          160
+        ],
+        [
+          0,
+          155
+        ],
+        [
+          20,
+          150
+        ],
+        [
+          50,
+          148
+        ],
+        [
+          70,
+          145
+        ],
+        [
+          82,
+          140
+        ],
+        [
+          85,
+          120
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -100,
+          -2.5
+        ],
+        [
+          0,
+          -3
+        ],
+        [
+          20,
+          -4
+        ],
+        [
+          50,
+          -5
+        ],
+        [
+          70,
+          -4.5
+        ],
+        [
+          78,
+          -3
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          82,
+          5
+        ],
+        [
+          85,
+          10
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -100,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          40,
+          0
+        ],
+        [
+          82,
+          2
+        ],
+        [
+          85,
+          5
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -100,
+          330
+        ],
+        [
+          0,
+          330
+        ],
+        [
+          85,
+          330
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -100,
+          -600
+        ],
+        [
+          0,
+          -1200
+        ],
+        [
+          20,
+          -1200
+        ],
+        [
+          50,
+          -1200
+        ],
+        [
+          70,
+          -1200
+        ],
+        [
+          78,
+          -800
+        ],
+        [
+          80,
+          -400
+        ],
+        [
+          82,
+          -200
+        ],
+        [
+          85,
+          -3000
+        ]
+      ]
+    },
+    "n1_pct": {
+      "interp": "linear",
+      "keys": [
+        [
+          -100,
+          65
+        ],
+        [
+          0,
+          60
+        ],
+        [
+          50,
+          55
+        ],
+        [
+          70,
+          50
+        ],
+        [
+          85,
+          45
+        ]
+      ]
+    },
+    "thrust_lever": {
+      "interp": "step",
+      "keys": [
+        [
+          -100,
+          0.4
+        ],
+        [
+          0,
+          0.3
+        ],
+        [
+          85,
+          0.2
+        ]
+      ]
+    },
+    "flaps": {
+      "interp": "step",
+      "keys": [
+        [
+          -100,
+          10
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          50,
+          20
+        ],
+        [
+          85,
+          20
+        ]
+      ]
+    },
+    "gear": {
+      "interp": "step",
+      "keys": [
+        [
+          -100,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          85,
+          1
+        ]
+      ]
+    },
+    "ra_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -100,
+          2500
+        ],
+        [
+          0,
+          2500
+        ],
+        [
+          20,
+          2100
+        ],
+        [
+          40,
+          1500
+        ],
+        [
+          50,
+          1300
+        ],
+        [
+          60,
+          1100
+        ],
+        [
+          70,
+          900
+        ],
+        [
+          80,
+          300
+        ],
+        [
+          82,
+          50
+        ],
+        [
+          85,
+          0
+        ]
+      ]
+    }
+  },
+  "units": {
+    "flaps": "deg",
+    "n1_pct": "% N1"
+  },
+  "markers": [
+    {
+      "t": 0,
+      "label": "Crossed final approach fix (FAF) at 2,500 ft; cleared to descend to MDA 1,320 ft at 1,200 fpm"
+    },
+    {
+      "t": 30,
+      "label": "Descending through 1,800 ft; GPWS 'five hundred' warning"
+    },
+    {
+      "t": 50,
+      "label": "Reached MDA 1,320 ft; GPWS 'minimums, minimums'; captain reports ground in sight"
+    },
+    {
+      "t": 65,
+      "label": "Aircraft 160 ft below MDA; captain reports approach lights in sight; GPWS 'two hundred' feet agl"
+    },
+    {
+      "t": 75,
+      "label": "Descent continuing at 1,200 fpm below MDA in violation of procedures"
+    },
+    {
+      "t": 79,
+      "label": "GPWS 'sink rate' warning as descent rate threatens terrain"
+    },
+    {
+      "t": 80,
+      "label": "First officer calls 'trees'; captain says 'no, stop'"
+    },
+    {
+      "t": 82,
+      "label": "First impact with trees at approximately 996 ft msl (50 ft agl), 1.3 nm south of runway"
+    },
+    {
+      "t": 85,
+      "label": "Aircraft destroyed; 13 of 15 occupants killed"
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   "qid": "Q28971917",
   "tier": "wikidata",
   "depth": "sections",
-  "title": "Air Cara\u00efbes 1501",
+  "title": "Air Caraïbes 1501",
   "flight_number": "TX1501",
   "date": "2001-03-24",
   "time_reference": "UTC",
@@ -16,7 +16,7 @@
       "country": "France",
       "role": "lead",
       "report_id": "f-es010324a",
-      "report_title": "Accident on 24 March 2001 at Saint-Barth\u00e9lemy to the DHC-6-300 registered F-OGES",
+      "report_title": "Accident on 24 March 2001 at Saint-Barthélemy to the DHC-6-300 registered F-OGES",
       "report_date": "2001-12-19"
     }
   ],
@@ -26,7 +26,7 @@
     "family": "DHC-6",
     "registration": "F-OGES"
   },
-  "operator": "Cara\u00efbes Air Transport (on behalf of Air Cara\u00efbes)",
+  "operator": "Caraïbes Air Transport (on behalf of Air Caraïbes)",
   "route": {
     "from_name": "Princess Juliana International Airport",
     "from": "SXM",
@@ -34,7 +34,7 @@
     "to": "SBH"
   },
   "location": {
-    "name": "Saint Barth\u00e9lemy",
+    "name": "Saint Barthélemy",
     "country": "France",
     "lat": 17.9,
     "lon": -62.83
@@ -44,8 +44,8 @@
   "fatalities": 20,
   "damage": "destroyed",
   "category": "LOC-I",
-  "summary": "De Havilland DHC-6-300 Twin Otter Flight 1501 crashed on approach to Saint-Barth\u00e9lemy on March 24, 2001. The aircraft suddenly banked steeply to the left and dove toward the ground during final approach, impacting a house. All 19 occupants and one person on the ground were killed.",
-  "probable_cause": "The accident resulted from the Captain's use of the propellers in the reverse beta range to improve control of track on short final. A strong thrust asymmetry upon coming out of reverse beta range caused loss of yaw control, then roll control. Contributing factors were the Captain's lack of recent experience on the aircraft type, difficulty of the Saint-Barth\u00e9lemy approach, time pressure during the flight, and the low altitude at which loss of control occurred.",
+  "summary": "De Havilland DHC-6-300 Twin Otter Flight 1501 crashed on approach to Saint-Barthélemy on March 24, 2001. The aircraft suddenly banked steeply to the left and dove toward the ground during final approach, impacting a house. All 19 occupants and one person on the ground were killed.",
+  "probable_cause": "The accident resulted from the Captain's use of the propellers in the reverse beta range to improve control of track on short final. A strong thrust asymmetry upon coming out of reverse beta range caused loss of yaw control, then roll control. Contributing factors were the Captain's lack of recent experience on the aircraft type, difficulty of the Saint-Barthélemy approach, time pressure during the flight, and the low altitude at which loss of control occurred.",
   "factors": [
     {
       "id": "control_misidentification",
@@ -60,7 +60,7 @@
     {
       "id": "high_workload",
       "role": "contributing",
-      "evidence": "Approach to runway 10 at Saint-Barth\u00e9lemy requires flying over La Tourmente pass at very low height with orographic turbulence; difficult procedure requiring great vigilance (p. 50)"
+      "evidence": "Approach to runway 10 at Saint-Barthélemy requires flying over La Tourmente pass at very low height with orographic turbulence; difficult procedure requiring great vigilance (p. 50)"
     },
     {
       "id": "loss_of_control_inflight",
@@ -98,7 +98,7 @@
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "system",
-      "text": "Flight 1501 departed Princess Juliana International Airport at 16:00 UTC for Saint-Barth\u00e9lemy, 19 nautical miles away, under VFR.",
+      "text": "Flight 1501 departed Princess Juliana International Airport at 16:00 UTC for Saint-Barthélemy, 19 nautical miles away, under VFR.",
       "factors": []
     },
     {
@@ -107,7 +107,7 @@
       "phase": "cruise",
       "actor": "SYS",
       "kind": "system",
-      "text": "Aircraft cruised at about 1,500 feet. Crew left Saint-Martin Juliana frequency and announced passing Fourchue reporting point entry to Saint-Barth\u00e9lemy circuit.",
+      "text": "Aircraft cruised at about 1,500 feet. Crew left Saint-Martin Juliana frequency and announced passing Fourchue reporting point entry to Saint-Barthélemy circuit.",
       "factors": []
     },
     {
@@ -147,7 +147,7 @@
       "phase": "approach",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft crashed into house with steep nose-down attitude near Saint-Barth\u00e9lemy. Massive explosion followed. All 19 occupants killed; one person in house died in fire.",
+      "text": "Aircraft crashed into house with steep nose-down attitude near Saint-Barthélemy. Massive explosion followed. All 19 occupants killed; one person in house died in fire.",
       "factors": [
         "loss_of_control_inflight",
         "structural_failure"
@@ -177,7 +177,7 @@
     {
       "id": null,
       "to": "DGAC",
-      "text": "Put in place necessary means to ensure recordings of allocated radio frequencies at Saint-Barth\u00e9lemy without notable interruptions",
+      "text": "Put in place necessary means to ensure recordings of allocated radio frequencies at Saint-Barthélemy without notable interruptions",
       "status": "unknown"
     },
     {

@@ -1,0 +1,286 @@
+{
+ "id": "colgan3407",
+ "cues": [
+  {
+   "t": -6,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "gear down.",
+   "dur": 0.95
+  },
+  {
+   "t": 0,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "Jesus Christ.",
+   "dur": 0.89
+  },
+  {
+   "t": 0.5,
+   "file": "w_wailer.mp3",
+   "kind": "ap_disconnect",
+   "speaker": "SYS",
+   "text": "wailer",
+   "dur": 0.88
+  },
+  {
+   "t": 0.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 2.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 4.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 6.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 8.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 10,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "I put the flaps up.",
+   "dur": 1.57
+  },
+  {
+   "t": 10.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 11.0,
+   "file": "w_sink_rate.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "sink rate",
+   "dur": 1.14
+  },
+  {
+   "t": 12.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 13.5,
+   "file": "w_sink_rate.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "sink rate",
+   "dur": 1.14
+  },
+  {
+   "t": 14.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 16.0,
+   "file": "w_whoop_pull_up.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "whoop pull up",
+   "dur": 1.46
+  },
+  {
+   "t": 16.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 18,
+   "file": "cvr_003.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "should I put the gear up?",
+   "dur": 1.42
+  },
+  {
+   "t": 18.0,
+   "file": "w_callout_1000.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 1000",
+   "dur": 1.1
+  },
+  {
+   "t": 18.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 18.5,
+   "file": "w_whoop_pull_up.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "whoop pull up",
+   "dur": 1.46
+  },
+  {
+   "t": 19,
+   "file": "cvr_004.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "gear up.",
+   "dur": 0.49
+  },
+  {
+   "t": 20.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 21.0,
+   "file": "w_whoop_pull_up.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "whoop pull up",
+   "dur": 1.46
+  },
+  {
+   "t": 22.0,
+   "file": "w_callout_500.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 500",
+   "dur": 1.14
+  },
+  {
+   "t": 22.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 22.5,
+   "file": "w_callout_400.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 400",
+   "dur": 1.05
+  },
+  {
+   "t": 23,
+   "file": "cvr_005.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "we're down.",
+   "dur": 0.81
+  },
+  {
+   "t": 23.5,
+   "file": "w_whoop_pull_up.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "whoop pull up",
+   "dur": 1.46
+  },
+  {
+   "t": 23.5,
+   "file": "w_callout_300.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 300",
+   "dur": 1.18
+  },
+  {
+   "t": 24.0,
+   "file": "w_callout_200.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 200",
+   "dur": 1.02
+  },
+  {
+   "t": 24.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 25.0,
+   "file": "w_callout_100.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 100",
+   "dur": 1.18
+  },
+  {
+   "t": 25.5,
+   "file": "w_callout_40.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 40",
+   "dur": 0.78
+  },
+  {
+   "t": 26.0,
+   "file": "w_whoop_pull_up.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "whoop pull up",
+   "dur": 1.46
+  },
+  {
+   "t": 26.0,
+   "file": "w_callout_20.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 20",
+   "dur": 0.74
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

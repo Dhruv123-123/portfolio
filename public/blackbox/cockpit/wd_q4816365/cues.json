@@ -1,0 +1,14 @@
+{
+ "id": "wd_q4816365",
+ "cues": [
+  {
+   "t": 5101,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "Tony! What did you do?",
+   "dur": 1.01
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

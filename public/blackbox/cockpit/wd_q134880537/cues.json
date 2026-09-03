@@ -1,0 +1,38 @@
+{
+ "id": "wd_q134880537",
+ "cues": [
+  {
+   "t": 6,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "Why did you cutoff?",
+   "dur": 0.93
+  },
+  {
+   "t": 7,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "I did not do so.",
+   "dur": 1.4
+  },
+  {
+   "t": 8.0,
+   "file": "w_minimums.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "minimums",
+   "dur": 1.81
+  },
+  {
+   "t": 26,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "MAYDAY MAYDAY MAYDAY",
+   "dur": 0.94
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

@@ -78,10 +78,22 @@
     }
   ],
   "chain": [
-    ["autopilot_disconnect", "spatial_disorientation"],
-    ["low_visibility", "spatial_disorientation"],
-    ["dark_night", "spatial_disorientation"],
-    ["spatial_disorientation", "loss_of_control_inflight"]
+    [
+      "autopilot_disconnect",
+      "spatial_disorientation"
+    ],
+    [
+      "low_visibility",
+      "spatial_disorientation"
+    ],
+    [
+      "dark_night",
+      "spatial_disorientation"
+    ],
+    [
+      "spatial_disorientation",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
@@ -171,7 +183,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Mode A transponder information lost. AC electrical power failure disabled most pilot-side instruments.",
-      "factors": ["autopilot_disconnect"]
+      "factors": [
+        "autopilot_disconnect"
+      ]
     },
     {
       "t": 6,
@@ -180,7 +194,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Pilot became spatially disoriented without reliable flight instruments and visual references in instrument meteorological conditions.",
-      "factors": ["spatial_disorientation"]
+      "factors": [
+        "spatial_disorientation"
+      ]
     },
     {
       "t": 18,
@@ -189,7 +205,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Aircraft entered graveyard spiral descent. Airplane's flightpath consistent with 360-degree spiral resulting from spatial disorientation.",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 30,
@@ -198,7 +216,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Pilot attempted forcefully to arrest the descent in final portion of flight, possibly in response to obtaining visual references after emerging from clouds.",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 42,
@@ -207,7 +227,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft impacted rolling terrain at 5,223 feet elevation near Strasburg, Colorado. In-flight breakup occurred due to aerodynamic loading during pull-up maneuver. All ten occupants killed.",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     }
   ],
   "cvr": [],
@@ -223,7 +245,9 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0301.pdf"],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0301.pdf"
+  ],
   "tier": "wikidata",
   "depth": "sections",
   "asn_id": "20010127-2",

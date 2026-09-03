@@ -1,0 +1,22 @@
+{
+ "id": "wd_q4857928",
+ "cues": [
+  {
+   "t": 1800.5,
+   "file": "w_wailer.mp3",
+   "kind": "ap_disconnect",
+   "speaker": "SYS",
+   "text": "wailer",
+   "dur": 0.88
+  },
+  {
+   "t": 2042.0,
+   "file": "w_glideslope.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "glideslope",
+   "dur": 1.02
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

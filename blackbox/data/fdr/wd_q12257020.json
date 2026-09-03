@@ -1,0 +1,385 @@
+{
+  "id": "wd_q12257020",
+  "record": "wd_q12257020",
+  "source": "NTSB AAR-15-01, FDR data from section 1.6 and 2.2.1; final data at liftoff and climb",
+  "fidelity": "narrative",
+  "confidence": "medium",
+  "t_start": -30,
+  "t_end": 30,
+  "aircraft_model": "airliner_quad",
+  "terrain": "flat",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          -10,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          50
+        ],
+        [
+          15,
+          100
+        ],
+        [
+          20,
+          250
+        ],
+        [
+          23,
+          500
+        ],
+        [
+          25,
+          800
+        ],
+        [
+          27,
+          1000
+        ],
+        [
+          28,
+          1100
+        ],
+        [
+          29,
+          900
+        ],
+        [
+          30,
+          0
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          10,
+          130
+        ],
+        [
+          15,
+          155
+        ],
+        [
+          20,
+          165
+        ],
+        [
+          23,
+          170
+        ],
+        [
+          25,
+          171
+        ],
+        [
+          28,
+          165
+        ],
+        [
+          30,
+          80
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          15,
+          14.5
+        ],
+        [
+          20,
+          16
+        ],
+        [
+          23,
+          16.2
+        ],
+        [
+          25,
+          18
+        ],
+        [
+          27,
+          20
+        ],
+        [
+          28,
+          22
+        ],
+        [
+          29,
+          35
+        ],
+        [
+          30,
+          45
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          27,
+          5
+        ],
+        [
+          28,
+          15
+        ],
+        [
+          29,
+          30
+        ],
+        [
+          30,
+          45
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          30
+        ],
+        [
+          30,
+          30
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          300
+        ],
+        [
+          10,
+          800
+        ],
+        [
+          15,
+          1000
+        ],
+        [
+          20,
+          1200
+        ],
+        [
+          23,
+          1300
+        ],
+        [
+          25,
+          1200
+        ],
+        [
+          27,
+          800
+        ],
+        [
+          28,
+          400
+        ],
+        [
+          29,
+          -500
+        ],
+        [
+          30,
+          -3000
+        ]
+      ]
+    },
+    "n1_pct": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          50
+        ],
+        [
+          5,
+          70
+        ],
+        [
+          10,
+          85
+        ],
+        [
+          20,
+          95
+        ],
+        [
+          23,
+          98
+        ],
+        [
+          30,
+          100
+        ]
+      ]
+    },
+    "thrust_lever": {
+      "interp": "step",
+      "keys": [
+        [
+          -30,
+          0.0
+        ],
+        [
+          0,
+          0.8
+        ],
+        [
+          20,
+          1.0
+        ],
+        [
+          30,
+          1.0
+        ]
+      ]
+    },
+    "flaps": {
+      "interp": "step",
+      "keys": [
+        [
+          -30,
+          20
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          30,
+          10
+        ]
+      ]
+    },
+    "gear": {
+      "interp": "step",
+      "keys": [
+        [
+          -30,
+          1
+        ],
+        [
+          15,
+          0
+        ],
+        [
+          30,
+          0
+        ]
+      ]
+    }
+  },
+  "units": {
+    "flaps": "deg",
+    "n1_pct": "% N1"
+  },
+  "markers": [
+    {
+      "t": 0,
+      "label": "Takeoff roll begins; engines at high thrust"
+    },
+    {
+      "t": 10,
+      "label": "Rotation; nose rises to 12° pitch; aircraft lifts off"
+    },
+    {
+      "t": 15,
+      "label": "Gear up commanded; positive climb; pitch 14.5°; altitude 100 ft"
+    },
+    {
+      "t": 20,
+      "label": "Climbing through altitude with high pitch attitude (16°); climb rate 1,200 fpm"
+    },
+    {
+      "t": 23,
+      "label": "Pitch attitude reaches 16.2° (trimmed); airspeed 171 knots; altitude 500 ft; FDR shows steeper climb than previous flight"
+    },
+    {
+      "t": 25,
+      "label": "Pitch attitude continues to increase to 18°; cargo shift causing pitch-up; hydraulic systems damaged"
+    },
+    {
+      "t": 28,
+      "label": "Pitch attitude 22°; aircraft approaching stall; nose rises sharply; roll angle increasing"
+    },
+    {
+      "t": 29,
+      "label": "Aerodynamic stall; aircraft rolls right sharply; vertical velocity reverses to descent"
+    },
+    {
+      "t": 30,
+      "label": "Aircraft descending rapidly at 3,000 fpm in nose-down attitude; impact with terrain; all 7 occupants killed"
+    }
+  ]
+}

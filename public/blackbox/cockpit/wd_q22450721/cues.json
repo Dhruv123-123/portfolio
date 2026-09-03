@@ -1,0 +1,30 @@
+{
+ "id": "wd_q22450721",
+ "cues": [
+  {
+   "t": 1,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "I have control",
+   "dur": 0.86
+  },
+  {
+   "t": 2,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "You have control",
+   "dur": 1.18
+  },
+  {
+   "t": 5.0,
+   "file": "w_crc.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "crc",
+   "dur": 1.28
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

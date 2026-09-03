@@ -3,7 +3,7 @@
   "qid": "Q17353891",
   "tier": "wikidata",
   "depth": "sections",
-  "title": "N\u00fcrnberger Flugdienst 108",
+  "title": "Nürnberger Flugdienst 108",
   "flight_number": "108",
   "date": "1988-02-08",
   "time_reference": "local",
@@ -26,11 +26,11 @@
     "registration": "D-CABB",
     "msn": "AC-500"
   },
-  "operator": "N\u00fcrnberger Flugdienst",
+  "operator": "Nürnberger Flugdienst",
   "route": {
     "from_name": "Hannover",
     "from": "HAJ",
-    "to_name": "D\u00fcsseldorf",
+    "to_name": "Düsseldorf",
     "to": "DUS"
   },
   "location": {
@@ -44,7 +44,7 @@
   "fatalities": 21,
   "damage": "destroyed",
   "category": "LOC-I",
-  "summary": "Swearingen Metroliner III Flight 108 was struck by lightning during approach to D\u00fcsseldorf on February 8, 1988. The lightning strike caused complete electrical system failure, including loss of all flight instruments and autopilot. Spatially disoriented, the pilots descended uncontrollably and the aircraft disintegrated in midair after approximately 2 minutes of predominantly uncontrolled flight.",
+  "summary": "Swearingen Metroliner III Flight 108 was struck by lightning during approach to Düsseldorf on February 8, 1988. The lightning strike caused complete electrical system failure, including loss of all flight instruments and autopilot. Spatially disoriented, the pilots descended uncontrollably and the aircraft disintegrated in midair after approximately 2 minutes of predominantly uncontrolled flight.",
   "probable_cause": "The crew continued flight into an area where electrical discharges were expected despite possibility of deviation. Complete electrical power failure resulted from lightning strike during instrument flight conditions, causing loss of cockpit and instrument lighting and rendering flap and stabilizer trim inoperable. The aircraft subsequently entered predominantly uncontrolled flight and was structurally overloaded and broke apart in midair.",
   "factors": [
     {
@@ -98,7 +98,7 @@
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "D\u00fcsseldorf director cleared Flight 108 for ILS approach to runway 24 and warned that preceding aircraft experienced lightning strike on 6 miles final",
+      "text": "Düsseldorf director cleared Flight 108 for ILS approach to runway 24 and warned that preceding aircraft experienced lightning strike on 6 miles final",
       "factors": []
     },
     {

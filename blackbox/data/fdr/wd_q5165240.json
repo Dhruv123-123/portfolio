@@ -1,0 +1,313 @@
+{
+  "id": "wd_q5165240",
+  "record": "wd_q5165240",
+  "source": "NTSB AAR-10/04, section 1.16.1.1 (Airplane Performance), FDR parameters and control positions",
+  "fidelity": "reconstructed",
+  "t_start": -5,
+  "t_end": 27,
+  "aircraft_model": "airliner_twin",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          5280
+        ],
+        [
+          0,
+          5280
+        ],
+        [
+          7,
+          5280
+        ],
+        [
+          17,
+          5350
+        ],
+        [
+          27,
+          5100
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          7,
+          70
+        ],
+        [
+          12,
+          85
+        ],
+        [
+          17,
+          110
+        ],
+        [
+          20,
+          120
+        ],
+        [
+          27,
+          90
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          0
+        ],
+        [
+          0,
+          0.75
+        ],
+        [
+          7,
+          1.5
+        ],
+        [
+          17,
+          5
+        ],
+        [
+          27,
+          -5
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          7,
+          -30
+        ],
+        [
+          12,
+          -20
+        ],
+        [
+          14,
+          80
+        ],
+        [
+          17,
+          40
+        ],
+        [
+          27,
+          -45
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          346
+        ],
+        [
+          0,
+          346
+        ],
+        [
+          7,
+          346
+        ],
+        [
+          12,
+          340
+        ],
+        [
+          17,
+          330
+        ],
+        [
+          27,
+          315
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          7,
+          100
+        ],
+        [
+          17,
+          200
+        ],
+        [
+          20,
+          100
+        ],
+        [
+          27,
+          -500
+        ]
+      ]
+    },
+    "n1_pct": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          7,
+          85
+        ],
+        [
+          17,
+          100
+        ],
+        [
+          20,
+          100
+        ],
+        [
+          24,
+          50
+        ],
+        [
+          27,
+          30
+        ]
+      ]
+    },
+    "thrust_lever": {
+      "interp": "step",
+      "keys": [
+        [
+          -5,
+          "idle"
+        ],
+        [
+          0,
+          "toga"
+        ],
+        [
+          20,
+          "reverse"
+        ]
+      ]
+    },
+    "stick_roll": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          0
+        ],
+        [
+          7,
+          -0.8
+        ],
+        [
+          14,
+          1.0
+        ],
+        [
+          17,
+          0.8
+        ],
+        [
+          27,
+          -1.0
+        ]
+      ]
+    },
+    "stick_pitch": {
+      "interp": "linear",
+      "keys": [
+        [
+          -5,
+          0
+        ],
+        [
+          0,
+          0.1
+        ],
+        [
+          7,
+          0.15
+        ],
+        [
+          17,
+          0.3
+        ],
+        [
+          27,
+          -0.5
+        ]
+      ]
+    }
+  },
+  "units": {
+    "flaps": "detent",
+    "n1_pct": "% N1"
+  },
+  "markers": [
+    {
+      "t": 0,
+      "label": "Takeoff clearance"
+    },
+    {
+      "t": 12,
+      "label": "Heading moves left"
+    },
+    {
+      "t": 17,
+      "label": "Runway departure, 110 knots"
+    },
+    {
+      "t": 20,
+      "label": "Maximum airspeed 120 knots"
+    },
+    {
+      "t": 27,
+      "label": "Impact, FDR stops"
+    }
+  ],
+  "camera_hint": "chase",
+  "terrain": "runway"
+}

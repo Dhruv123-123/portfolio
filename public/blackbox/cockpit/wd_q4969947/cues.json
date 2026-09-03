@@ -1,0 +1,206 @@
+{
+ "id": "wd_q4969947",
+ "cues": [
+  {
+   "t": 105.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 107.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 109.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 111.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 113.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 114.0,
+   "file": "w_minimums.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "minimums",
+   "dur": 1.83
+  },
+  {
+   "t": 115.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 116.5,
+   "file": "w_wailer.mp3",
+   "kind": "ap_disconnect",
+   "speaker": "SYS",
+   "text": "wailer",
+   "dur": 0.88
+  },
+  {
+   "t": 117.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 119.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 121.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 123.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 125.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 127.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 129.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 131.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 133.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 135.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 137.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 139.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 141.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 143.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 145.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 147.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  },
+  {
+   "t": 149.5,
+   "file": "w_shaker.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

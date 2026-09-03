@@ -1,0 +1,350 @@
+{
+  "id": "wd_q6893757",
+  "record": "wd_q6893757",
+  "source": "NTSB report, flight recorder: climb profile, pitch oscillations, airspeed buildup after APU fire begins",
+  "fidelity": "narrative",
+  "confidence": "medium",
+  "t_start": -60,
+  "t_end": 720,
+  "aircraft_model": "regional_jet",
+  "terrain": "mountains",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          500
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          60,
+          1000
+        ],
+        [
+          120,
+          2000
+        ],
+        [
+          180,
+          3000
+        ],
+        [
+          240,
+          4500
+        ],
+        [
+          300,
+          5500
+        ],
+        [
+          360,
+          6000
+        ],
+        [
+          420,
+          6500
+        ],
+        [
+          480,
+          7500
+        ],
+        [
+          540,
+          7500
+        ],
+        [
+          600,
+          5100
+        ],
+        [
+          630,
+          3800
+        ],
+        [
+          660,
+          2700
+        ],
+        [
+          690,
+          1500
+        ],
+        [
+          720,
+          0
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          0
+        ],
+        [
+          0,
+          90
+        ],
+        [
+          30,
+          156
+        ],
+        [
+          60,
+          180
+        ],
+        [
+          120,
+          210
+        ],
+        [
+          180,
+          240
+        ],
+        [
+          240,
+          260
+        ],
+        [
+          300,
+          250
+        ],
+        [
+          360,
+          243
+        ],
+        [
+          420,
+          240
+        ],
+        [
+          480,
+          240
+        ],
+        [
+          540,
+          240
+        ],
+        [
+          600,
+          224
+        ],
+        [
+          630,
+          260
+        ],
+        [
+          660,
+          280
+        ],
+        [
+          690,
+          300
+        ],
+        [
+          720,
+          315
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          0
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          60,
+          12
+        ],
+        [
+          120,
+          10
+        ],
+        [
+          180,
+          8
+        ],
+        [
+          240,
+          6
+        ],
+        [
+          360,
+          2
+        ],
+        [
+          480,
+          0
+        ],
+        [
+          540,
+          -2
+        ],
+        [
+          600,
+          -8
+        ],
+        [
+          630,
+          -5
+        ],
+        [
+          660,
+          -10
+        ],
+        [
+          690,
+          -20
+        ],
+        [
+          720,
+          -30
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          0
+        ],
+        [
+          300,
+          0
+        ],
+        [
+          540,
+          5
+        ],
+        [
+          600,
+          15
+        ],
+        [
+          660,
+          25
+        ],
+        [
+          720,
+          30
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          180
+        ],
+        [
+          720,
+          160
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          120,
+          1200
+        ],
+        [
+          240,
+          1200
+        ],
+        [
+          360,
+          1000
+        ],
+        [
+          480,
+          1500
+        ],
+        [
+          540,
+          0
+        ],
+        [
+          600,
+          -4000
+        ],
+        [
+          630,
+          -3600
+        ],
+        [
+          660,
+          -3000
+        ],
+        [
+          720,
+          -2200
+        ]
+      ]
+    }
+  },
+  "markers": [
+    {
+      "t": 0,
+      "label": "Takeoff from Elmira; cleared to climb to 16000 ft"
+    },
+    {
+      "t": 60,
+      "label": "Initial climb, 156 kt airspeed"
+    },
+    {
+      "t": 240,
+      "label": "Climb through 6000 ft at 1200 fpm"
+    },
+    {
+      "t": 360,
+      "label": "Climb through 5000 ft"
+    },
+    {
+      "t": 480,
+      "label": "Climb through 7000 ft, APU operating normally"
+    },
+    {
+      "t": 540,
+      "label": "APU non-return valve fails; fire ignites in plenum"
+    },
+    {
+      "t": 600,
+      "label": "Fire spreads through plenum; hydraulic systems fail"
+    },
+    {
+      "t": 630,
+      "label": "Elevator control destroyed; aircraft loses pitch control"
+    },
+    {
+      "t": 660,
+      "label": "Vertical fin fails; rudder separates; uncontrolled descent begins"
+    },
+    {
+      "t": 720,
+      "label": "Impact with wooded area near Mansfield, PA"
+    }
+  ],
+  "units": {}
+}

@@ -1,0 +1,54 @@
+{
+ "id": "wd_q19801342",
+ "cues": [
+  {
+   "t": -75.5,
+   "file": "w_cavalry.mp3",
+   "kind": "ap_disconnect",
+   "speaker": "SYS",
+   "text": "cavalry",
+   "dur": 1.28
+  },
+  {
+   "t": -30.0,
+   "file": "w_minimums.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "minimums",
+   "dur": 1.78
+  },
+  {
+   "t": -26,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "Wait a second (in Korean)",
+   "dur": 0.73
+  },
+  {
+   "t": -25,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "Ah (in Korean), runway not insight",
+   "dur": 1.94
+  },
+  {
+   "t": 0,
+   "file": "cvr_003.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "No runway, go-around",
+   "dur": 1.46
+  },
+  {
+   "t": 1,
+   "file": "cvr_004.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "Yes. (in Korean) Go-around",
+   "dur": 1.61
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

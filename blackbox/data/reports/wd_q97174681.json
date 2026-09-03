@@ -27,7 +27,7 @@
     "to_name": "Kano"
   },
   "location": {
-    "name": "Dr\u00f4me",
+    "name": "Drôme",
     "country": "France"
   },
   "phase": "cruise",
@@ -37,7 +37,7 @@
   "damage": "substantial",
   "category": "OTHR",
   "summary": "A 28-year-old Boeing 707 cargo aircraft lost its right-wing engines during cruise at 32,000 feet over southeastern France. Metal fatigue in the number 3 engine pylon caused it to crack and separate, which struck and separated the number 4 engine. The crew successfully descended and performed an emergency landing at Istres Air Base. All five crew members survived despite damage from post-landing fire.",
-  "probable_cause": "La rupture des attaches pyl\u00f4ne du moteur n\u00b0 3, caus\u00e9e par une fissure de fatigue de l'attache m\u00e9diane int\u00e9rieure, qui n'a pas \u00e9t\u00e9 d\u00e9tect\u00e9e lors de l'inspection visuelle prescrite. Cette fissure n'\u00e9tait pas d\u00e9tectable par les inspections visuelles p\u00e9riodiques impos\u00e9es par la consigne de navigabilit\u00e9. La rupture a entra\u00een\u00e9 l'arrachement du moteur n\u00b0 4 lorsque le moteur n\u00b0 3 est venu le percuter. (p. 39-40)",
+  "probable_cause": "La rupture des attaches pylône du moteur n° 3, causée par une fissure de fatigue de l'attache médiane intérieure, qui n'a pas été détectée lors de l'inspection visuelle prescrite. Cette fissure n'était pas détectable par les inspections visuelles périodiques imposées par la consigne de navigabilité. La rupture a entraîné l'arrachement du moteur n° 4 lorsque le moteur n° 3 est venu le percuter. (p. 39-40)",
   "factors": [
     {
       "id": "metal_fatigue",
@@ -62,7 +62,7 @@
     {
       "id": "emergency_landing",
       "role": "outcome",
-      "evidence": "Pilots successfully performed emergency landing on runway 15 at Istres-Le Tub\u00e9 Air Base (p. 4)"
+      "evidence": "Pilots successfully performed emergency landing on runway 15 at Istres-Le Tubé Air Base (p. 4)"
     },
     {
       "id": "post_impact_fire",
@@ -95,7 +95,7 @@
       "phase": "cruise",
       "actor": "SYS",
       "kind": "system",
-      "text": "Aircraft climbing through Flight Level 320 from FL290, authorized to climb to FL330, airspeed 280 knots indicated, autopilot engaged, turbulent conditions over Dr\u00f4me department"
+      "text": "Aircraft climbing through Flight Level 320 from FL290, authorized to climb to FL330, airspeed 280 knots indicated, autopilot engaged, turbulent conditions over Drôme department"
     },
     {
       "t": 0,

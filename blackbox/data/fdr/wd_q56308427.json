@@ -1,0 +1,295 @@
+{
+  "id": "wd_q56308427",
+  "record": "wd_q56308427",
+  "source": "NTSB AAR-94-04, section 1.5 (Flight Data Recorder), FDR indicated airspeed, heading, altitude, load factor data",
+  "fidelity": "reconstructed",
+  "t_start": -60,
+  "t_end": 10,
+  "aircraft_model": "airliner_quad",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          1200
+        ],
+        [
+          -52,
+          829
+        ],
+        [
+          -40,
+          700
+        ],
+        [
+          -30,
+          600
+        ],
+        [
+          -14,
+          400
+        ],
+        [
+          -5,
+          300
+        ],
+        [
+          0,
+          200
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          160
+        ],
+        [
+          -52,
+          150
+        ],
+        [
+          -40,
+          145
+        ],
+        [
+          -30,
+          140
+        ],
+        [
+          -14,
+          136
+        ],
+        [
+          -10,
+          130
+        ],
+        [
+          -5,
+          120
+        ],
+        [
+          0,
+          113.12
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          -5
+        ],
+        [
+          -40,
+          -8
+        ],
+        [
+          -20,
+          -10
+        ],
+        [
+          -5,
+          -5
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          -15
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          0
+        ],
+        [
+          -52,
+          5
+        ],
+        [
+          -40,
+          25
+        ],
+        [
+          -30,
+          40
+        ],
+        [
+          -20,
+          55
+        ],
+        [
+          -10,
+          55
+        ],
+        [
+          0,
+          50
+        ],
+        [
+          10,
+          90
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          321
+        ],
+        [
+          -52,
+          321
+        ],
+        [
+          -40,
+          330
+        ],
+        [
+          -30,
+          340
+        ],
+        [
+          -14,
+          360
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          10,
+          100
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          -1000
+        ],
+        [
+          -52,
+          -1500
+        ],
+        [
+          -40,
+          -2000
+        ],
+        [
+          -20,
+          -2500
+        ],
+        [
+          -5,
+          -1000
+        ],
+        [
+          0,
+          -500
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    "n1_pct": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          50
+        ],
+        [
+          -40,
+          45
+        ],
+        [
+          -5,
+          65
+        ],
+        [
+          0,
+          70
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    "stall_warn": {
+      "interp": "step",
+      "keys": [
+        [
+          -60,
+          0
+        ],
+        [
+          -5,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    }
+  },
+  "units": {
+    "flaps": "detent",
+    "n1_pct": "% N1"
+  },
+  "markers": [
+    {
+      "t": -52,
+      "label": "Descending through 829 feet, heading 321 degrees"
+    },
+    {
+      "t": -14,
+      "label": "Heading 360, airspeed 136 KIAS, altitude 400 feet"
+    },
+    {
+      "t": -5,
+      "label": "Stick shaker warning, excessive bank angle"
+    },
+    {
+      "t": 0,
+      "label": "Right wing stall at 113 knots, 200 feet AGL"
+    },
+    {
+      "t": 1,
+      "label": "Impact with terrain at 327 feet pressure altitude"
+    }
+  ],
+  "camera_hint": "chase",
+  "terrain": "mountains"
+}

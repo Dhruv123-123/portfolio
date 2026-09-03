@@ -1,0 +1,383 @@
+{
+  "id": "wd_q6843375",
+  "record": "wd_q6843375",
+  "source": "NTSB AAR-87-01, Aircraft Flight Profile section (p. 17-18), FDR and CVR correlation (p. 13-16), Static Pressure Error analysis (p. 17)",
+  "fidelity": "narrative",
+  "confidence": "medium",
+  "t_start": -58,
+  "t_end": 15,
+  "aircraft_model": "regional_jet",
+  "terrain": "flat",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -58,
+          0
+        ],
+        [
+          -45,
+          300
+        ],
+        [
+          -30,
+          800
+        ],
+        [
+          -15,
+          1400
+        ],
+        [
+          0,
+          1400
+        ],
+        [
+          3,
+          1380
+        ],
+        [
+          7,
+          1420
+        ],
+        [
+          10,
+          1390
+        ],
+        [
+          15,
+          900
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -58,
+          0
+        ],
+        [
+          -45,
+          100
+        ],
+        [
+          -30,
+          150
+        ],
+        [
+          -15,
+          188
+        ],
+        [
+          0,
+          188
+        ],
+        [
+          2,
+          180
+        ],
+        [
+          5,
+          165
+        ],
+        [
+          8,
+          156
+        ],
+        [
+          12,
+          120
+        ],
+        [
+          15,
+          80
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -58,
+          0
+        ],
+        [
+          -45,
+          12
+        ],
+        [
+          -30,
+          15
+        ],
+        [
+          -15,
+          12
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          10,
+          20
+        ],
+        [
+          12,
+          45
+        ],
+        [
+          15,
+          60
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -58,
+          0
+        ],
+        [
+          -45,
+          0
+        ],
+        [
+          -30,
+          0
+        ],
+        [
+          -15,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          10,
+          50
+        ],
+        [
+          12,
+          80
+        ],
+        [
+          15,
+          90
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -58,
+          187
+        ],
+        [
+          -45,
+          187
+        ],
+        [
+          -30,
+          187
+        ],
+        [
+          -15,
+          187
+        ],
+        [
+          0,
+          187
+        ],
+        [
+          4,
+          194
+        ],
+        [
+          9,
+          214
+        ],
+        [
+          12,
+          260
+        ],
+        [
+          15,
+          280
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -58,
+          0
+        ],
+        [
+          -45,
+          1500
+        ],
+        [
+          -30,
+          3000
+        ],
+        [
+          -15,
+          2500
+        ],
+        [
+          0,
+          2000
+        ],
+        [
+          3,
+          1000
+        ],
+        [
+          7,
+          500
+        ],
+        [
+          10,
+          -500
+        ],
+        [
+          15,
+          -2000
+        ]
+      ]
+    },
+    "n1_pct": {
+      "interp": "linear",
+      "keys": [
+        [
+          -58,
+          50
+        ],
+        [
+          -45,
+          90
+        ],
+        [
+          -30,
+          95
+        ],
+        [
+          -15,
+          88
+        ],
+        [
+          0,
+          50
+        ],
+        [
+          15,
+          30
+        ]
+      ]
+    },
+    "flaps": {
+      "interp": "step",
+      "keys": [
+        [
+          -58,
+          20
+        ],
+        [
+          15,
+          20
+        ]
+      ]
+    },
+    "gear": {
+      "interp": "step",
+      "keys": [
+        [
+          -58,
+          1
+        ],
+        [
+          -45,
+          0
+        ]
+      ]
+    },
+    "ap": {
+      "interp": "step",
+      "keys": [
+        [
+          -58,
+          0
+        ]
+      ]
+    },
+    "athr": {
+      "interp": "step",
+      "keys": [
+        [
+          -58,
+          1
+        ],
+        [
+          -30,
+          0
+        ]
+      ]
+    }
+  },
+  "units": {
+    "flaps": "detent",
+    "n1_pct": "% N1"
+  },
+  "markers": [
+    {
+      "t": -58,
+      "label": "Liftoff from runway 19R"
+    },
+    {
+      "t": -45,
+      "label": "Rotation to climb attitude at 140 knots"
+    },
+    {
+      "t": -15,
+      "label": "Right engine catastrophic failure at 450 feet AGL, 188 knots"
+    },
+    {
+      "t": 0,
+      "label": "Aerodynamic stall begins, aircraft banks right"
+    },
+    {
+      "t": 5,
+      "label": "Sideslip developing, heading deviation to right"
+    },
+    {
+      "t": 10,
+      "label": "Aircraft in near-vertical right bank (90°)"
+    },
+    {
+      "t": 15,
+      "label": "Impact in wooded area 1,686 feet SW of runway 19R"
+    }
+  ],
+  "camera_hint": "chase"
+}

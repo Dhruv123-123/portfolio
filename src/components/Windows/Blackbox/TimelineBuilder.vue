@@ -27,6 +27,7 @@
           <button class="bb-btn" :class="{ active: mode === 'compare' }" @click="mode = 'compare'">Compare</button>
           <button class="bb-btn" :class="{ active: mode === 'narrative' }" @click="mode = 'narrative'">Narrative</button>
           <button class="bb-btn" :disabled="!rec.fdr" @click="store.openReplay(rec.id)">Replay ▸</button>
+          <button class="bb-btn" :disabled="!rec.fdr" @click="store.openFlightGear(rec.id)" title="Export this replay as a FlightGear package or drive FlightGear live">FlightGear ▸</button>
           <button class="bb-btn" :disabled="!(rec.events && rec.events.length)" @click="store.openStory(rec.id)" title="Documentary-style walkthrough">Story ▸</button>
           <a :href="wikipediaUrl(rec)" target="_blank" rel="noopener" class="tl-readmore">{{ hasWikipediaArticle(rec) ? 'Read more on Wikipedia ↗' : 'Search Wikipedia ↗' }}</a>
         </div>

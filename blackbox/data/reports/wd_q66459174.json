@@ -76,10 +76,22 @@
     }
   ],
   "chain": [
-    ["bird_strike", "engine_failure"],
-    ["engine_failure", "procedural_noncompliance"],
-    ["crm_breakdown", "procedural_noncompliance"],
-    ["procedural_noncompliance", "emergency_landing"]
+    [
+      "bird_strike",
+      "engine_failure"
+    ],
+    [
+      "engine_failure",
+      "procedural_noncompliance"
+    ],
+    [
+      "crm_breakdown",
+      "procedural_noncompliance"
+    ],
+    [
+      "procedural_noncompliance",
+      "emergency_landing"
+    ]
   ],
   "events": [
     {
@@ -146,7 +158,10 @@
         "n1_l": 91.6,
         "n1_r": 91.7
       },
-      "factors": ["bird_strike", "engine_failure"]
+      "factors": [
+        "bird_strike",
+        "engine_failure"
+      ]
     },
     {
       "t": 50,
@@ -164,7 +179,9 @@
         "n1_l": 39,
         "n1_r": 88
       },
-      "factors": ["bird_strike"]
+      "factors": [
+        "bird_strike"
+      ]
     },
     {
       "t": 58,
@@ -180,7 +197,9 @@
         "hdg": 119,
         "vs": 200
       },
-      "factors": ["crm_breakdown"]
+      "factors": [
+        "crm_breakdown"
+      ]
     },
     {
       "t": 61,
@@ -196,7 +215,10 @@
         "hdg": 118,
         "vs": 180
       },
-      "factors": ["crm_breakdown", "procedural_noncompliance"]
+      "factors": [
+        "crm_breakdown",
+        "procedural_noncompliance"
+      ]
     },
     {
       "t": 61,
@@ -505,7 +527,9 @@
         "gear": 0,
         "flaps": 5
       },
-      "factors": ["emergency_landing"]
+      "factors": [
+        "emergency_landing"
+      ]
     }
   ],
   "cvr": [],
@@ -515,77 +539,99 @@
       "to": "Russian Aviation Authority",
       "text": "Information about this accident should be communicated to specialist aviation personnel in Russian civil aviation and organizations supporting flight operations",
       "status": "open",
-      "trigger_factors": ["bird_strike"]
+      "trigger_factors": [
+        "bird_strike"
+      ]
     },
     {
       "id": null,
       "to": "Russian Aviation Authority",
       "text": "Develop and implement regulatory framework defining procedures for ornithological (bird hazard) support in Russian civil aviation",
       "status": "open",
-      "trigger_factors": ["bird_strike"]
+      "trigger_factors": [
+        "bird_strike"
+      ]
     },
     {
       "id": null,
       "to": "Russian Aviation Authority and Min of Trade/Industry",
       "text": "Establish airport protection zones around Ramensky Airfield and evaluate similar zones at other Russian airports per Air Code article 47",
       "status": "open",
-      "trigger_factors": ["bird_strike"]
+      "trigger_factors": [
+        "bird_strike"
+      ]
     },
     {
       "id": null,
       "to": "Russian Aviation Authority",
       "text": "Initiate removal of landfills and other bird attractants near Ramensky Airfield that violate ornithological safety procedures, pending establishment of airport protection zones",
       "status": "open",
-      "trigger_factors": ["bird_strike"]
+      "trigger_factors": [
+        "bird_strike"
+      ]
     },
     {
       "id": null,
       "to": "Russian Aviation Authority",
       "text": "Evaluate criteria and justification for including bird strike hazard information in ATIS and other flight crew briefings to prevent 'information fatigue' that reduces effectiveness",
       "status": "open",
-      "trigger_factors": ["bird_strike"]
+      "trigger_factors": [
+        "bird_strike"
+      ]
     },
     {
       "id": null,
       "to": "Russian Aviation Authority",
       "text": "Continue collection of bird strike statistics at Russian airports on a regular basis to evaluate sufficiency of bird strike risk reduction measures",
       "status": "open",
-      "trigger_factors": ["bird_strike"]
+      "trigger_factors": [
+        "bird_strike"
+      ]
     },
     {
       "id": null,
       "to": "Airbus",
       "text": "Update FCOM description of ENG 1 (2) REVERSE UNLOCK alert logic to align with ECAM displays",
       "status": "closed_acceptable",
-      "trigger_factors": ["bird_strike"]
+      "trigger_factors": [
+        "bird_strike"
+      ]
     },
     {
       "id": null,
       "to": "Airbus",
       "text": "Enhance autopilot engagement procedures and training material to address risks of disengagement due to residual pilot inputs; emphasize centering flight director before engagement",
       "status": "closed_acceptable",
-      "trigger_factors": ["crm_breakdown"]
+      "trigger_factors": [
+        "crm_breakdown"
+      ]
     },
     {
       "id": null,
       "to": "Airbus",
       "text": "Enhance FCTM guidance for continued takeoff procedures when engine failure is suspected after V1, including explicit recommendation to verify landing gear retraction and consider TO/GA thrust setting",
       "status": "closed_acceptable",
-      "trigger_factors": ["procedural_noncompliance"]
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
     },
     {
       "id": null,
       "to": "Airbus",
       "text": "Revise blocking logic for ENG 1 (2) REVERSE UNLOCKED alert to block for 15 seconds after liftoff (per 400 ft radio altitude threshold recommended in FCTM)",
       "status": "closed_acceptable",
-      "trigger_factors": ["bird_strike"]
+      "trigger_factors": [
+        "bird_strike"
+      ]
     },
     {
       "id": null,
       "to": "Airbus",
       "text": "Develop video training material titled 'Engine Failure After V1' for instructor pilots, posted on Airbus-WIN providing guidance from Flight Crew Operations and Training Standards departments",
       "status": "closed_acceptable",
-      "trigger_factors": ["procedural_noncompliance"]
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
     }
   ],
   "dissent": [],
@@ -607,7 +653,7 @@
     "Russian federal certification standards for commercial aviation aerodromes approved by Ministry of Transport order 415 (2020-10-07, registered 2021-05-31)"
   ],
   "related": [],
-  "fdr": null,
+  "fdr": "wd_q66459174",
   "sources": [
     "https://mak-iac.org/upload/iblock/7e2/280r4qbjcrtrj0zz137cj5jwh5esmwt5/report_vq-boz.pdf"
   ],

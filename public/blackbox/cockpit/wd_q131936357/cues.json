@@ -1,0 +1,22 @@
+{
+ "id": "wd_q131936357",
+ "cues": [
+  {
+   "t": -26.0,
+   "file": "w_traffic.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "traffic",
+   "dur": 1.63
+  },
+  {
+   "t": -13.5,
+   "file": "w_callout_400.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 400",
+   "dur": 1.04
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

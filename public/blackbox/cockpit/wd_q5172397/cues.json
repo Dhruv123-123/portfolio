@@ -1,0 +1,110 @@
+{
+ "id": "wd_q5172397",
+ "cues": [
+  {
+   "t": 50.0,
+   "file": "w_minimums.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "minimums",
+   "dur": 1.77
+  },
+  {
+   "t": 65.0,
+   "file": "w_callout_1000.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 1000",
+   "dur": 1.19
+  },
+  {
+   "t": 77.0,
+   "file": "w_callout_500.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 500",
+   "dur": 1.17
+  },
+  {
+   "t": 78.5,
+   "file": "w_callout_400.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 400",
+   "dur": 1.0
+  },
+  {
+   "t": 79.0,
+   "file": "w_terrain.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "terrain",
+   "dur": 1.6
+  },
+  {
+   "t": 80.0,
+   "file": "w_callout_300.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 300",
+   "dur": 1.22
+  },
+  {
+   "t": 81.0,
+   "file": "w_callout_200.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 200",
+   "dur": 0.97
+  },
+  {
+   "t": 82.0,
+   "file": "w_callout_100.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 100",
+   "dur": 1.09
+  },
+  {
+   "t": 83.0,
+   "file": "w_callout_40.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 40",
+   "dur": 0.76
+  },
+  {
+   "t": 83.5,
+   "file": "w_sink_rate.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "sink rate",
+   "dur": 1.1
+  },
+  {
+   "t": 83.5,
+   "file": "w_callout_30.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 30",
+   "dur": 0.63
+  },
+  {
+   "t": 84.0,
+   "file": "w_callout_20.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 20",
+   "dur": 0.68
+  },
+  {
+   "t": 84.5,
+   "file": "w_callout_10.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 10",
+   "dur": 0.55
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

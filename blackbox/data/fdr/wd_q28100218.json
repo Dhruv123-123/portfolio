@@ -1,0 +1,276 @@
+{
+  "id": "wd_q28100218",
+  "record": "wd_q28100218",
+  "source": "NTSB AAR-18-01, FDR parameters: longitudinal/vertical acceleration, airspeed, throttle position, brake activation",
+  "fidelity": "reconstructed",
+  "t_start": -70,
+  "t_end": 35,
+  "aircraft_model": "airliner_twin",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -70,
+          680
+        ],
+        [
+          -20,
+          680
+        ],
+        [
+          0,
+          680
+        ],
+        [
+          26.4,
+          680
+        ],
+        [
+          35,
+          680
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -70,
+          0
+        ],
+        [
+          -60,
+          20
+        ],
+        [
+          -40,
+          50
+        ],
+        [
+          -20,
+          80
+        ],
+        [
+          -11.4,
+          80
+        ],
+        [
+          0,
+          128
+        ],
+        [
+          3.2,
+          134
+        ],
+        [
+          5,
+          130
+        ],
+        [
+          10,
+          80
+        ],
+        [
+          16,
+          35
+        ],
+        [
+          26.4,
+          0
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -70,
+          0
+        ],
+        [
+          -20,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          26.4,
+          0
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -70,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          26.4,
+          5
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -70,
+          280
+        ],
+        [
+          0,
+          280
+        ],
+        [
+          10,
+          285
+        ],
+        [
+          26.4,
+          290
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -70,
+          0
+        ],
+        [
+          0,
+          50
+        ],
+        [
+          26.4,
+          0
+        ]
+      ]
+    },
+    "n1_pct": {
+      "interp": "linear",
+      "keys": [
+        [
+          -70,
+          20
+        ],
+        [
+          -11.4,
+          100
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          2.2,
+          50
+        ],
+        [
+          26.4,
+          20
+        ]
+      ]
+    },
+    "thrust_lever": {
+      "interp": "step",
+      "keys": [
+        [
+          -70,
+          "idle"
+        ],
+        [
+          -11.4,
+          "toga"
+        ],
+        [
+          2.2,
+          "idle"
+        ],
+        [
+          26.4,
+          "idle"
+        ]
+      ]
+    },
+    "accel_longitudinal": {
+      "interp": "linear",
+      "keys": [
+        [
+          -20,
+          0.25
+        ],
+        [
+          0,
+          0.23
+        ],
+        [
+          0.2,
+          0.13
+        ],
+        [
+          3.2,
+          -0.2
+        ],
+        [
+          26.4,
+          0
+        ]
+      ]
+    }
+  },
+  "units": {
+    "flaps": "detent",
+    "n1_pct": "% N1"
+  },
+  "markers": [
+    {
+      "t": 0,
+      "label": "HPT stage 2 disk failure, 128 knots"
+    },
+    {
+      "t": 2.2,
+      "label": "Throttles to idle, RTO initiated"
+    },
+    {
+      "t": 3.2,
+      "label": "Autobrakes activate at V1 (134 knots)"
+    },
+    {
+      "t": 5.2,
+      "label": "Speedbrakes deploy"
+    },
+    {
+      "t": 6.6,
+      "label": "ENG FIRE warning, fire observed off right wing"
+    },
+    {
+      "t": 26.4,
+      "label": "Aircraft stops on runway"
+    }
+  ],
+  "camera_hint": "chase",
+  "terrain": "runway"
+}

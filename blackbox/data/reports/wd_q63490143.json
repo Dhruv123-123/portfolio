@@ -248,5 +248,6 @@
       "Safety recommendations derived from standard investigation recommendations for this accident type"
     ]
   },
-  "curated_id": null
+  "curated_id": null,
+  "fdr": "wd_q63490143"
 }

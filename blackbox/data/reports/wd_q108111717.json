@@ -73,8 +73,14 @@
     }
   ],
   "chain": [
-    ["flight_control_failure", "runway_overrun"],
-    ["design_deficiency", "flight_control_failure"]
+    [
+      "flight_control_failure",
+      "runway_overrun"
+    ],
+    [
+      "design_deficiency",
+      "flight_control_failure"
+    ]
   ],
   "events": [
     {
@@ -129,7 +135,9 @@
       "actor": "PF",
       "kind": "crew_action",
       "text": "At VR, captain pulled back on control column to rotate the aircraft, but aircraft failed to respond even after captain applied additional back force",
-      "factors": ["flight_control_failure"]
+      "factors": [
+        "flight_control_failure"
+      ]
     },
     {
       "t": 42,
@@ -147,7 +155,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Airplane overran runway 23L at approximately 100 knots, traveled 950 ft across grassy runway safety area before striking airport perimeter fence and raised paved road",
-      "factors": ["runway_overrun"]
+      "factors": [
+        "runway_overrun"
+      ]
     }
   ],
   "cvr": [],
@@ -157,35 +167,46 @@
       "to": "The Boeing Company",
       "text": "Complete the development of a modification for Boeing DC-9/MD-80 series and 717 model airplanes that will prevent the possibility of elevator jamming due to ground wind exposure.",
       "status": "open",
-      "trigger_factors": ["flight_control_failure", "design_deficiency"]
+      "trigger_factors": [
+        "flight_control_failure",
+        "design_deficiency"
+      ]
     },
     {
       "id": "A-19-2",
       "to": "The Boeing Company",
       "text": "Develop new preflight procedures or other mitigations for Boeing DC-9/MD-80 series and 717 model airplanes that will enable a flight crew to verify before takeoff that the elevators are not jammed.",
       "status": "open",
-      "trigger_factors": ["inadequate_inspection"]
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
     },
     {
       "id": "A-19-3",
       "to": "The Boeing Company",
       "text": "Until the actions in Safety Recommendations A-19-1 and -2 are completed, revise the Aircraft Operating Manual and Aircraft Maintenance Manual for Boeing DC-9/MD-80 series and 717 model airplanes to lower the ground gust criteria that will require physical inspections and operational checks of the elevators by maintenance personnel.",
       "status": "open",
-      "trigger_factors": ["design_deficiency"]
+      "trigger_factors": [
+        "design_deficiency"
+      ]
     },
     {
       "id": "A-19-4",
       "to": "FAA",
       "text": "Determine if the ground gust limit loads contained in Title 14 Code of Federal Regulations 25.415 adequately ensure that critical flight control systems are protected from hazards introduced by ground gusts that contain dynamic, vertical wind components.",
       "status": "open",
-      "trigger_factors": ["design_deficiency"]
+      "trigger_factors": [
+        "design_deficiency"
+      ]
     },
     {
       "id": "A-19-5",
       "to": "FAA",
       "text": "Ensure the operators of Boeing DC-9/MD-80 series and 717 model airplanes have procedures that define who is responsible for monitoring the wind that affects parked airplanes and for notifying maintenance personnel when conditions could meet or exceed the ground gust criteria specified in the Aircraft Maintenance Manual.",
       "status": "open",
-      "trigger_factors": ["design_deficiency"]
+      "trigger_factors": [
+        "design_deficiency"
+      ]
     },
     {
       "id": "A-19-6",
@@ -216,7 +237,7 @@
     "Evacuation slide manufacturer issued revised maintenance procedures to prevent improper cable installation"
   ],
   "related": [],
-  "fdr": null,
+  "fdr": "wd_q108111717",
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1901.pdf"
   ],

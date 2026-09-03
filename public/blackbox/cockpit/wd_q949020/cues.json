@@ -1,0 +1,70 @@
+{
+ "id": "wd_q949020",
+ "cues": [
+  {
+   "t": -42.5,
+   "file": "w_callout_400.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 400",
+   "dur": 1.04
+  },
+  {
+   "t": -33.5,
+   "file": "w_callout_300.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 300",
+   "dur": 1.23
+  },
+  {
+   "t": -24.5,
+   "file": "w_callout_200.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 200",
+   "dur": 0.94
+  },
+  {
+   "t": -14.5,
+   "file": "w_callout_100.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 100",
+   "dur": 1.05
+  },
+  {
+   "t": -9.0,
+   "file": "w_callout_50.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 50",
+   "dur": 0.85
+  },
+  {
+   "t": -8.0,
+   "file": "w_callout_40.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 40",
+   "dur": 0.8
+  },
+  {
+   "t": -7.0,
+   "file": "w_callout_30.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 30",
+   "dur": 0.63
+  },
+  {
+   "t": 0.0,
+   "file": "w_callout_20.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 20",
+   "dur": 0.65
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

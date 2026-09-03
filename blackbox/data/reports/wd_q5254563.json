@@ -67,9 +67,18 @@
     }
   ],
   "chain": [
-    ["design_deficiency", "inadequate_inspection"],
-    ["inadequate_inspection", "uncontained_engine_failure"],
-    ["inadequate_monitoring", "uncontained_engine_failure"]
+    [
+      "design_deficiency",
+      "inadequate_inspection"
+    ],
+    [
+      "inadequate_inspection",
+      "uncontained_engine_failure"
+    ],
+    [
+      "inadequate_monitoring",
+      "uncontained_engine_failure"
+    ]
   ],
   "events": [
     {
@@ -88,8 +97,12 @@
       "actor": "SYS",
       "kind": "system",
       "text": "During takeoff roll at approximately 40 knots airspeed, uncontained catastrophic engine failure of left engine occurred; loud bang heard followed by loss of cockpit lighting and instrumentation",
-      "state": {"ias": 40},
-      "factors": ["uncontained_engine_failure"]
+      "state": {
+        "ias": 40
+      },
+      "factors": [
+        "uncontained_engine_failure"
+      ]
     },
     {
       "t": 40,
@@ -98,7 +111,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Debris penetrated left aft fuselage creating large hole; two passengers killed including a female passenger and her son",
-      "factors": ["uncontained_engine_failure"]
+      "factors": [
+        "uncontained_engine_failure"
+      ]
     },
     {
       "t": 60,
@@ -130,70 +145,90 @@
       "to": "FAA",
       "text": "Form a task force to evaluate the limitations of the blue etch anodize and other postmanufacturing etch processes and develop ways to improve the likelihood that abnormal microstructure will be detected",
       "status": "unknown",
-      "trigger_factors": ["inadequate_inspection"]
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
     },
     {
       "id": "A-98-10",
       "to": "FAA",
       "text": "Inform all manufacturers of titanium rotating engine components of the potential that current boring and honing specifications may not be sufficient to remove potential defects from holes and ask them to reevaluate their manufacturing specifications and procedures",
       "status": "unknown",
-      "trigger_factors": ["design_deficiency"]
+      "trigger_factors": [
+        "design_deficiency"
+      ]
     },
     {
       "id": "A-98-11",
       "to": "FAA",
       "text": "Review the efficacy of drying procedures for aqueously cleaned rotating engine parts being prepared for fluorescent penetrant inspections",
       "status": "unknown",
-      "trigger_factors": ["inadequate_inspection"]
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
     },
     {
       "id": "A-98-12",
       "to": "FAA",
       "text": "Determine whether flash drying alone is a sufficiently reliable method for removing water from cracks",
       "status": "unknown",
-      "trigger_factors": ["inadequate_inspection"]
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
     },
     {
       "id": "A-98-13",
       "to": "FAA",
       "text": "Address the need to ensure the fullest possible coverage of dry developer powder, particularly along hole walls",
       "status": "unknown",
-      "trigger_factors": ["inadequate_inspection"]
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
     },
     {
       "id": "A-98-14",
       "to": "FAA",
       "text": "Address the need for a formal system to track and control development times",
       "status": "unknown",
-      "trigger_factors": ["inadequate_inspection"]
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
     },
     {
       "id": "A-98-15",
       "to": "FAA",
       "text": "Address the need for fixtures that minimize manual handling of the part without visually masking large surfaces of the part",
       "status": "unknown",
-      "trigger_factors": ["inadequate_inspection"]
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
     },
     {
       "id": "A-98-16",
       "to": "FAA",
       "text": "Require the development of methods for inspectors to note on the part or otherwise document during a nondestructive inspection the portions of a critical rotating part that have already been inspected",
       "status": "unknown",
-      "trigger_factors": ["inadequate_inspection"]
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
     },
     {
       "id": "A-98-17",
       "to": "FAA",
       "text": "Conduct research to determine the optimum amount of time an inspector can perform nondestructive testing inspections before human performance decrements can be expected",
       "status": "unknown",
-      "trigger_factors": ["inadequate_inspection"]
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
     },
     {
       "id": "A-98-18",
       "to": "FAA",
       "text": "In conjunction with industry and human factors experts, develop test methods that can evaluate inspector skill in visual search and detection across a representative range of test pieces",
       "status": "unknown",
-      "trigger_factors": ["inadequate_inspection"]
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
     }
   ],
   "dissent": [],
@@ -204,7 +239,9 @@
   ],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9801.pdf"],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9801.pdf"
+  ],
   "tier": "wikidata",
   "depth": "sections",
   "qid": "Q5254563",

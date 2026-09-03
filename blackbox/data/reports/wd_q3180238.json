@@ -217,7 +217,7 @@
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Airspeed continued to decrease following the peak of 172 knots. Vertical acceleration oscillated between values as high as 1.30G and as low as 0.77G, with final values almost entirely below 1.0G level, reaching minimum of 0.72G before impact. The aircraft struck downsloping terrain near the top of a wooded hillside at coordinates 48\u00b054'40\"N, 54\u00b034'35\"W, approximately 2,975 feet beyond the departure end of runway 22 and 720 feet to the right of the extended runway centerline.",
+      "text": "Airspeed continued to decrease following the peak of 172 knots. Vertical acceleration oscillated between values as high as 1.30G and as low as 0.77G, with final values almost entirely below 1.0G level, reaching minimum of 0.72G before impact. The aircraft struck downsloping terrain near the top of a wooded hillside at coordinates 48°54'40\"N, 54°34'35\"W, approximately 2,975 feet beyond the departure end of runway 22 and 720 feet to the right of the extended runway centerline.",
       "state": {
         "ias": 140,
         "alt": 0
@@ -331,7 +331,7 @@
     "FAA Master Minimum Equipment List revised to require serviceable flight data recorders and cockpit voice recorders on all aircraft types including DC-8"
   ],
   "related": [],
-  "fdr": null,
+  "fdr": "wd_q3180238",
   "sources": [
     "http://flightopsresearch.org/data/files/arrow1285.pdf"
   ],

@@ -1,0 +1,54 @@
+{
+ "id": "alaska261",
+ "cues": [
+  {
+   "t": 0.5,
+   "file": "w_wailer.mp3",
+   "kind": "ap_disconnect",
+   "speaker": "SYS",
+   "text": "wailer",
+   "dur": 0.88
+  },
+  {
+   "t": 630,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "mayday.",
+   "dur": 0.36
+  },
+  {
+   "t": 640,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "push and roll, push and roll.",
+   "dur": 1.73
+  },
+  {
+   "t": 650,
+   "file": "cvr_003.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "ok, we are inverted... and now we gotta get it.",
+   "dur": 2.5
+  },
+  {
+   "t": 670,
+   "file": "cvr_004.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "push push push... push the blue side up.",
+   "dur": 2.35
+  },
+  {
+   "t": 690,
+   "file": "cvr_005.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "at least upside down we're flyin'.",
+   "dur": 1.56
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

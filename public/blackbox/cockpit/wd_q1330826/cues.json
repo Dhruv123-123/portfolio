@@ -1,0 +1,38 @@
+{
+ "id": "wd_q1330826",
+ "cues": [
+  {
+   "t": -60,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "PIC",
+   "text": "Yee haw ride 'em cowboy",
+   "dur": 1.61
+  },
+  {
+   "t": -50,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "PIC",
+   "text": "stabilized",
+   "dur": 0.79
+  },
+  {
+   "t": -9.0,
+   "file": "w_sink_rate.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "sink rate",
+   "dur": 1.09
+  },
+  {
+   "t": 0.0,
+   "file": "w_sink_rate.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "sink rate",
+   "dur": 1.09
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

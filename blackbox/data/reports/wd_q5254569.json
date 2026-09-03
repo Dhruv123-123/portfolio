@@ -220,5 +220,6 @@
       "All 8 numbered recommendations extracted from official NTSB report sections"
     ]
   },
-  "curated_id": null
+  "curated_id": null,
+  "fdr": null
 }

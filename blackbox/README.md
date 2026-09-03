@@ -66,6 +66,25 @@ license, kind, description, duration}]` with `kind` = `atc` | `cvr` | `audio`. T
 replay plays a recording in sync with its clock (offset adjustable, "align here"
 marks the current moment); the timeline, graph and story list them with credits.
 
+## Replays at scale, cockpit tracks and FlightGear
+
+```bash
+python3 blackbox/pipeline/fdr/check_fdr.py blackbox/data/fdr/<id>.json   # keyframe sanity
+python3 blackbox/pipeline/fdr/audit_fdr.py --apply                       # drop files without evidence
+python3 blackbox/pipeline/audio/render_cockpit_audio.py                  # Piper voices + numpy warnings -> public/blackbox/cockpit
+python3 blackbox/pipeline/flightgear/export_flightgear.py                # FlightGear packages -> public/blackbox/flightgear
+```
+
+- `pipeline/fdr/FDR_PROMPT.md` drives Haiku workers that mine each cached report text for
+  timed altitude, speed, attitude and configuration values and write keyframe files
+  (fidelity `narrative`), or build a `schematic` profile from the record's timed states.
+- `pipeline/audio/render_cockpit_audio.py` needs `piper` voices in `blackbox/cache/voices`
+  (see the script header) and writes a cue sheet plus one MP3 per cue.
+- `pipeline/flightgear/export_flightgear.py` writes, per replay, `track.csv` in the generic
+  protocol, `blackbox-protocol.xml`, `run.sh` / `run.bat` and a README. The app can also
+  build the same package in the browser and drive a running FlightGear live
+  (`--httpd=8080 --fdm=null`) through `ws://localhost:8080/PropertyListener`.
+
 ## Catalog tier (thousands of accidents)
 
 On top of the hand-reviewed records, `blackbox/data/catalog/` holds summary-level

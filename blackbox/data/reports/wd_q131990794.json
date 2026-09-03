@@ -68,7 +68,10 @@
     }
   ],
   "chain": [
-    ["low_visibility", "loss_of_control_inflight"]
+    [
+      "low_visibility",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
@@ -105,7 +108,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Doorbell camera video recorded aircraft in steep (22°) dive out of cloud base striking concrete sidewalk in residential and commercial area at Roosevelt Mall near Cottman Avenue and Roosevelt Boulevard, less than 3 miles from airport",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     }
   ],
   "cvr": [],

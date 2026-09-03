@@ -1,0 +1,686 @@
+{
+ "id": "af447",
+ "cues": [
+  {
+   "t": 0.5,
+   "file": "w_cavalry.mp3",
+   "kind": "ap_disconnect",
+   "speaker": "SYS",
+   "text": "cavalry",
+   "dur": 1.28
+  },
+  {
+   "t": 0.5,
+   "file": "w_single_chime.mp3",
+   "kind": "master_caution",
+   "speaker": "SYS",
+   "text": "single chime",
+   "dur": 0.35
+  },
+  {
+   "t": 1,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "J'ai les commandes.",
+   "dur": 0.94
+  },
+  {
+   "t": 4.5,
+   "file": "w_crc.mp3",
+   "kind": "master_warning",
+   "speaker": "SYS",
+   "text": "crc",
+   "dur": 1.28
+  },
+  {
+   "t": 5.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 11,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "PNF",
+   "text": "On a perdu les vitesses.",
+   "dur": 1.59
+  },
+  {
+   "t": 46.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 48.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 50.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 52.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 54.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 56.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 58.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 60.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 62.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 64.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 66.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 68.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 70.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 72.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 74.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 76.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 78.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 80.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 82.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 84.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 86.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 88.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 90.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 92.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 94.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 96.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 98.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 112.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 114.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 116.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 117,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "Je n'ai plus aucune indication.",
+   "dur": 1.89
+  },
+  {
+   "t": 118.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 120.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 122.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 124.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 128.0,
+   "file": "w_cricket_stall.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 128.5,
+   "file": "w_crc.mp3",
+   "kind": "master_warning",
+   "speaker": "SYS",
+   "text": "crc",
+   "dur": 1.28
+  },
+  {
+   "t": 195.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 197.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 199.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 201.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 203.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 205.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 207.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 209.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 211.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 213.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 215,
+   "file": "cvr_003.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "Mais je suis à fond à cabrer depuis tout à l'heure.",
+   "dur": 2.5
+  },
+  {
+   "t": 215.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 217.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 218,
+   "file": "cvr_004.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "Non non non ne remonte pas.",
+   "dur": 1.68
+  },
+  {
+   "t": 219.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 221.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 223.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 228.5,
+   "file": "w_crc.mp3",
+   "kind": "master_warning",
+   "speaker": "SYS",
+   "text": "crc",
+   "dur": 1.28
+  },
+  {
+   "t": 245.0,
+   "file": "w_whoop_pull_up.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "whoop pull up",
+   "dur": 1.54
+  },
+  {
+   "t": 245.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 247.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 248.5,
+   "file": "w_sink_rate.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "sink rate",
+   "dur": 1.08
+  },
+  {
+   "t": 249.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 251.0,
+   "file": "w_sink_rate.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "sink rate",
+   "dur": 1.08
+  },
+  {
+   "t": 251.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 253.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 253.5,
+   "file": "w_sink_rate.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "sink rate",
+   "dur": 1.08
+  },
+  {
+   "t": 255.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 256.0,
+   "file": "w_whoop_pull_up.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "whoop pull up",
+   "dur": 1.54
+  },
+  {
+   "t": 257.0,
+   "file": "w_callout_1000.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 1000",
+   "dur": 1.12
+  },
+  {
+   "t": 257.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 258,
+   "file": "cvr_005.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "On va taper.",
+   "dur": 0.8
+  },
+  {
+   "t": 258.5,
+   "file": "w_whoop_pull_up.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "whoop pull up",
+   "dur": 1.54
+  },
+  {
+   "t": 259.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 260.0,
+   "file": "w_callout_500.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 500",
+   "dur": 1.09
+  },
+  {
+   "t": 261.0,
+   "file": "w_whoop_pull_up.mp3",
+   "kind": "gpws",
+   "speaker": "SYS",
+   "text": "whoop pull up",
+   "dur": 1.54
+  },
+  {
+   "t": 261.0,
+   "file": "w_callout_400.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 400",
+   "dur": 1.02
+  },
+  {
+   "t": 261.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.83
+  },
+  {
+   "t": 261.5,
+   "file": "w_callout_300.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 300",
+   "dur": 1.14
+  },
+  {
+   "t": 262.0,
+   "file": "w_callout_200.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 200",
+   "dur": 1.02
+  },
+  {
+   "t": 262.5,
+   "file": "w_callout_100.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 100",
+   "dur": 1.09
+  },
+  {
+   "t": 263.0,
+   "file": "w_callout_50.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 50",
+   "dur": 0.8
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

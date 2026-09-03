@@ -9,14 +9,25 @@
         BLACKBOX
         <span class="bb-brand-sub" v-if="graph">{{ graph.records.length }} curated · {{ catalog.state === 'ready' ? catalog.count.toLocaleString() + ' catalog · ' : '' }}{{ fdrCount }} replays</span>
       </div>
-      <button v-for="t in tabs" :key="t.id" class="bb-tab" :class="{ active: store.tab === t.id }" @click="store.tab = t.id">
-        <span class="bb-tab-key">{{ t.key }}</span>{{ t.label }}
-      </button>
+      <button v-for="t in tabs" :key="t.id" class="bb-tab" :class="{ active: store.tab === t.id }" @click="store.tab = t.id" :title="t.label + ' · key ' + t.key">{{ t.label }}</button>
       <span class="bb-tabs-right">
-        <button class="bb-tab bb-tab-icon" @click="palette = true" title="Command palette (Ctrl+K or /)"><span class="bb-tab-key">⌘K</span>jump</button>
-        <button class="bb-tab bb-tab-icon" :class="{ active: store.crt }" @click="cycleCrt" title="CRT look: off, phosphor scanlines, amber monochrome">{{ store.crt === 'amber' ? 'AMBER' : 'CRT' }}</button>
-        <button class="bb-tab bb-tab-icon" :class="{ active: drifting }" @click="toggleDrift" title="Drift: the exhibit plays itself, wandering between the atlas requiem, a story and a cinematic replay until you touch anything">drift</button>
-        <button v-if="deepLinks" class="bb-tab bb-tab-icon" @click="share" title="Copy a link to exactly this view">{{ shared ? 'copied ✓' : 'share' }}</button>
+        <button class="bb-search" @click="palette = true" title="Jump to an accident, factor or action (Ctrl+K or /)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+          <span class="bb-search-text">Jump to an accident, factor or action</span>
+          <span class="bb-kbd">⌘K</span>
+        </button>
+        <span class="bb-menu-wrap">
+          <button class="bb-icon-btn" :class="{ active: menuOpen }" @click="menuOpen = !menuOpen" title="More">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></svg>
+          </button>
+          <div v-if="menuOpen" class="bb-menu" @click="menuOpen = false">
+            <button class="bb-menu-item" @click="cycleCrt"><span>Screen look</span><span class="bb-muted">{{ store.crt === 'amber' ? 'amber' : store.crt ? 'CRT' : 'plain' }} ▸</span></button>
+            <button class="bb-menu-item" @click="toggleDrift"><span>Drift</span><span class="bb-muted">{{ drifting ? 'on' : 'the exhibit plays itself' }}</span></button>
+            <button v-if="deepLinks" class="bb-menu-item" @click="share"><span>Share this view</span><span class="bb-muted">{{ shared ? 'copied ✓' : 'copy link' }}</span></button>
+            <button class="bb-menu-item" @click="store.tab = 'about'"><span>Method and sources</span><span class="bb-muted">tab 5</span></button>
+            <a class="bb-menu-item" href="https://www.flightgear.org/" target="_blank" rel="noopener"><span>FlightGear</span><span class="bb-muted">replays export to it ↗</span></a>
+          </div>
+        </span>
       </span>
     </div>
     <div class="bb-body">
@@ -57,6 +68,7 @@ const store = useBlackboxStore()
 const graph = shallowRef(null)
 const palette = ref(false)
 const shared = ref(false)
+const menuOpen = ref(false)
 const drifting = ref(false)
 let driftTimer = null
 let driftStep = 0
@@ -328,8 +340,17 @@ onBeforeUnmount(() => {
 .bb-tab:hover { color: var(--bb-text); background: #0f1524; }
 .bb-tab.active { color: var(--bb-text); background: var(--bb-panel); box-shadow: inset 0 -2px 0 var(--bb-accent); }
 .bb-tab-key { display: inline-block; font-size: 9px; color: #566a92; margin-right: 6px; border: 1px solid #2a3550; border-radius: 3px; padding: 0 3px; }
-.bb-tabs-right { margin-left: auto; display: flex; }
-.bb-tab-icon { border-right: none; border-left: 1px solid var(--bb-line); }
+.bb-tabs-right { margin-left: auto; display: flex; align-items: center; gap: 8px; padding: 0 10px; }
+.bb-search { display: flex; align-items: center; gap: 8px; height: 24px; width: 260px; max-width: 34vw; background: #0f1524; border: 1px solid var(--bb-line); border-radius: 4px; padding: 0 8px; color: #566a92; font: inherit; font-size: 11px; cursor: pointer; text-align: left; }
+.bb-search:hover { border-color: #3a4a6a; color: var(--bb-muted); }
+.bb-search-text { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bb-icon-btn { width: 26px; height: 24px; display: flex; align-items: center; justify-content: center; background: transparent; border: 1px solid var(--bb-line); border-radius: 4px; color: var(--bb-muted); cursor: pointer; }
+.bb-icon-btn:hover, .bb-icon-btn.active { color: var(--bb-text); border-color: #3a4a6a; }
+.bb-menu-wrap { position: relative; }
+.bb-menu { position: absolute; right: 0; top: 30px; z-index: 80; width: 250px; background: #0f1524; border: 1px solid var(--bb-line); border-radius: 6px; box-shadow: 0 12px 40px rgba(0,0,0,0.6); padding: 4px 0; }
+.bb-menu-item { display: flex; justify-content: space-between; gap: 10px; width: 100%; padding: 7px 12px; background: none; border: none; color: var(--bb-text); font: inherit; font-size: 11px; text-align: left; cursor: pointer; text-decoration: none; }
+.bb-menu-item:hover { background: #1c2a45; }
+@media (max-width: 700px) { .bb-search { width: 34px; } .bb-search-text, .bb-search .bb-kbd { display: none; } }
 .bb-body { flex: 1; min-height: 0; position: relative; }
 .bb-boot { position: absolute; inset: 0; z-index: 100; background: #03050a; display: flex; align-items: center; justify-content: center; cursor: pointer; animation: bb-boot-in 0.2s; }
 .bb-boot-text { font-family: Consolas, 'Courier New', monospace; font-size: 12px; line-height: 1.7; color: #ffbf00; text-shadow: 0 0 6px rgba(255,191,0,0.6); margin: 0; letter-spacing: 0.04em; }

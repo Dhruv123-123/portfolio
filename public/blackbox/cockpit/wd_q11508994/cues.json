@@ -1,0 +1,14 @@
+{
+ "id": "wd_q11508994",
+ "cues": [
+  {
+   "t": 1200,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "Captain made statements indicating mental confusion and disorientation regarding location on airport and runway assignment",
+   "dur": 6.83
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

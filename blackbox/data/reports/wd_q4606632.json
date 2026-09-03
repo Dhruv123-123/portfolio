@@ -114,7 +114,7 @@
       "phase": "approach",
       "actor": "PF",
       "kind": "crew_action",
-      "text": "Helicopter makes initial approach to North Morecambe platform on heading of 120\u00b0(M); approach appears normal to helideck team",
+      "text": "Helicopter makes initial approach to North Morecambe platform on heading of 120°(M); approach appears normal to helideck team",
       "factors": []
     },
     {
@@ -161,7 +161,7 @@
       "phase": "landing",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "One second after commander assumes control, helicopter attains maximum nose-down pitch attitude of 38\u00b0 coincident with 38\u00b0 bank angle to right; indicated airspeed 80 knots, radio altitude 300 feet, rate of descent 1,400 feet per minute",
+      "text": "One second after commander assumes control, helicopter attains maximum nose-down pitch attitude of 38° coincident with 38° bank angle to right; indicated airspeed 80 knots, radio altitude 300 feet, rate of descent 1,400 feet per minute",
       "state": {
         "pitch": -38,
         "roll": -38,
@@ -177,7 +177,7 @@
       "phase": "landing",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Over next 2.5 seconds, helicopter rolls level and pitch attitude reduces to 13\u00b0 nose down; radio altitude 170 feet, indicated airspeed over 100 knots, rate of descent approximately 1,400 feet per minute",
+      "text": "Over next 2.5 seconds, helicopter rolls level and pitch attitude reduces to 13° nose down; radio altitude 170 feet, indicated airspeed over 100 knots, rate of descent approximately 1,400 feet per minute",
       "state": {
         "pitch": -13,
         "roll": 0,
@@ -208,7 +208,7 @@
       "phase": "landing",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Last recorded parameters indicate radio altitude of 30 feet, 12\u00b0 nose-down pitch attitude, indicated airspeed 126 knots, and angle of bank 20\u00b0 to right",
+      "text": "Last recorded parameters indicate radio altitude of 30 feet, 12° nose-down pitch attitude, indicated airspeed 126 knots, and angle of bank 20° to right",
       "state": {
         "alt": 30,
         "pitch": -12,
@@ -243,7 +243,7 @@
   "dissent": [],
   "safety_changes": [],
   "related": [],
-  "fdr": null,
+  "fdr": "wd_q4606632",
   "sources": [
     "https://www.gov.uk/aaib-reports/special-bulletin-s1-2007-aerospatiale-sa365n-dauphin-2-g-blun-27-december-2006"
   ],

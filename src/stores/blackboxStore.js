@@ -15,12 +15,19 @@ export const useBlackboxStore = defineStore('blackbox', {
     crt: false,
     atlasPlayRequest: 0, // timestamp: the atlas should start playing the century
     atlasRequiemRequest: 0,
-    replayAutoplay: 0 // timestamp: the replay should start playing in cinematic mode
+    replayAutoplay: 0, // timestamp: the replay should start playing in cinematic mode
+    layersRequest: 0 // timestamp: the replay should open its Layers popover (FlightGear, sound)
   }),
   actions: {
     openTimeline(id) {
       this.selectedId = id
       this.tab = 'timeline'
+    },
+    openFlightGear(id) {
+      this.replayId = id
+      this.replayTime = null
+      this.tab = 'replay'
+      this.layersRequest = Date.now()
     },
     openReplay(id, t = null) {
       this.replayId = id

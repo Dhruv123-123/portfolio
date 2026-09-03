@@ -73,8 +73,14 @@
     }
   ],
   "chain": [
-    ["altimeter_setting_error", "descent_below_minimums"],
-    ["descent_below_minimums", "loss_of_control_inflight"]
+    [
+      "altimeter_setting_error",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
@@ -84,7 +90,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Chicago ARTCC established radar contact with UAL 389 at FL 350. Flight was cleared to O'Hare via Pullman VORTAC direct to Northbrook VORTAC, direct O'Hare, and to maintain FL 350.",
-      "state": {"alt": 35000},
+      "state": {
+        "alt": 35000
+      },
       "factors": []
     },
     {
@@ -94,7 +102,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "ARTCC cleared UAL 389 to descend to FL 240, starting descent now through FL 310.",
-      "state": {"alt": 35000},
+      "state": {
+        "alt": 35000
+      },
       "factors": []
     },
     {
@@ -104,7 +114,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "ARTCC cleared flight to continue descent to 14,000 feet. Altimeter setting of 29.90 inches was issued for O'Hare. Crew acknowledged and reported leaving FL 280.",
-      "state": {"alt": 28000},
+      "state": {
+        "alt": 28000
+      },
       "factors": []
     },
     {
@@ -114,7 +126,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Flight changed to Chicago ARTCC approach frequency and reported out of FL 260, descending to 14,000 feet. This was the last altitude information received from the crew.",
-      "state": {"alt": 26000},
+      "state": {
+        "alt": 26000
+      },
       "factors": []
     },
     {
@@ -124,7 +138,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "ARTCC cleared flight to descend to and maintain 6,000 feet MSL. Clearance was immediately acknowledged correctly.",
-      "state": {"alt": 20000},
+      "state": {
+        "alt": 20000
+      },
       "factors": []
     },
     {
@@ -134,7 +150,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Radar control of UAL 389 was passed to Chicago Approach Control (ORD). Radar target was in vicinity of Sturgeon Intersection, 28 miles east of Northbrook VORTAC.",
-      "state": {"alt": 10000},
+      "state": {
+        "alt": 10000
+      },
       "factors": []
     },
     {
@@ -144,7 +162,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Radar target observed approximately 2 miles east of Sturgeon Intersection.",
-      "state": {"alt": 9000},
+      "state": {
+        "alt": 9000
+      },
       "factors": []
     },
     {
@@ -154,7 +174,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Crew contacted Chicago Approach Control (ORD) and was advised radar contact had been established. Aircraft target was 2-3 miles west of Sturgeon. Flight was cleared to maintain 6,000 feet and depart Northbrook VORTAC on heading 240 degrees. ILS approaches in progress on runway 14R. Current O'Hare altimeter setting 29.93 was issued. Pilot initially read back altimeter setting incorrectly; controller corrected and pilot repeated correctly.",
-      "state": {"alt": 6000},
+      "state": {
+        "alt": 6000
+      },
       "factors": []
     },
     {
@@ -164,8 +186,12 @@
       "actor": "SYS",
       "kind": "system",
       "text": "SAGE (Semi-automatic Ground Environment) computer altitude reading recorded flight at approximately 2,000 feet MSL (±500 to -1,000 feet). Aircraft was at this time holding a clearance limiting descent to 6,000 feet and was in routine radio contact with approach controller.",
-      "state": {"alt": 2000},
-      "factors": ["altimeter_setting_error"]
+      "state": {
+        "alt": 2000
+      },
+      "factors": [
+        "altimeter_setting_error"
+      ]
     },
     {
       "t": 103,
@@ -174,7 +200,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Last radio communication from UAL 389 ended. This transmission occurred at point approximately 3-4 miles (about one minute) from accident site. Crew reported no difficulties.",
-      "state": {"alt": 1000},
+      "state": {
+        "alt": 1000
+      },
       "factors": []
     },
     {
@@ -184,8 +212,13 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft impacted Lake Michigan at surface elevation of 576.8 feet MSL while in descent at approximately 2,000 feet per minute. Slight nose-up attitude with slight right-wing-down attitude at impact. Fire and explosion observed by multiple witnesses.",
-      "state": {"alt": 577, "vs": -2000},
-      "factors": ["loss_of_control_inflight"]
+      "state": {
+        "alt": 577,
+        "vs": -2000
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     }
   ],
   "cvr": [],
@@ -196,7 +229,7 @@
     "Enhanced pilot training on altimeter interpretation and cross-checking of altitude instruments"
   ],
   "related": [],
-  "fdr": null,
+  "fdr": "wd_q11345632",
   "sources": [
     "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR67-AA.pdf"
   ],

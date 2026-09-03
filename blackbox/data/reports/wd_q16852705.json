@@ -251,7 +251,7 @@
     "Four safety recommendations issued by AAIB addressing artificial horizon reliability and standby instrumentation requirements"
   ],
   "related": [],
-  "fdr": null,
+  "fdr": "wd_q16852705",
   "sources": [
     "http://www.aaib.gov.uk/publications/formal_reports/2_1996__g_oeaa.cfm"
   ],

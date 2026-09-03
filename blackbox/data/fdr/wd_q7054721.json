@@ -1,0 +1,152 @@
+{
+  "id": "wd_q7054721",
+  "record": "wd_q7054721",
+  "source": "Record events; interpolated between stated values",
+  "fidelity": "schematic",
+  "aircraft_model": "regional_turboprop",
+  "terrain": "runway",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          300,
+          210.0
+        ],
+        [
+          360,
+          210.0
+        ],
+        [
+          420,
+          210.0
+        ],
+        [
+          480,
+          440.0
+        ],
+        [
+          530,
+          940.0
+        ],
+        [
+          543,
+          100.0
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          300,
+          120.0
+        ],
+        [
+          360,
+          120.0
+        ],
+        [
+          420,
+          105.0
+        ],
+        [
+          480,
+          100.0
+        ],
+        [
+          530,
+          80.0
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          300,
+          0
+        ],
+        [
+          360,
+          0.0
+        ],
+        [
+          420,
+          12.44
+        ],
+        [
+          480,
+          0.0
+        ],
+        [
+          530,
+          0.0
+        ],
+        [
+          543,
+          0.0
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          300,
+          0
+        ],
+        [
+          543,
+          -60.0
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          300,
+          0
+        ],
+        [
+          543,
+          0
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          300,
+          0
+        ],
+        [
+          420,
+          1244.0
+        ]
+      ]
+    }
+  },
+  "markers": [
+    {
+      "t": 420,
+      "label": "Aircraft entered unexpected sustained climb of approximately"
+    },
+    {
+      "t": 530,
+      "label": "Aircraft continued climbing despite go-around attempt, gaini"
+    },
+    {
+      "t": 543,
+      "label": "Aircraft stalled 13 seconds after go-around initiation, ente"
+    },
+    {
+      "t": 545,
+      "label": "Aircraft impacted main door of hangar in near-inverted posit"
+    }
+  ],
+  "t_start": 300,
+  "t_end": 543
+}

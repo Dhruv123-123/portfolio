@@ -1,0 +1,70 @@
+{
+ "id": "wd_q4698206",
+ "cues": [
+  {
+   "t": 780,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "Just going to balance out the fuel here.",
+   "dur": 1.73
+  },
+  {
+   "t": 3900,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "Something's messed up with this thing. Feels like I need a lot of force.",
+   "dur": 4.24
+  },
+  {
+   "t": 3960,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "What in the world is going on with this plane? Sucker is acting so funny.",
+   "dur": 4.53
+  },
+  {
+   "t": 4290,
+   "file": "cvr_003.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "What is wrong with this plane? It is really funny.",
+   "dur": 2.88
+  },
+  {
+   "t": 4295,
+   "file": "cvr_004.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "We've got an imbalance on this... crossfeed I left open.",
+   "dur": 2.57
+  },
+  {
+   "t": 4300,
+   "file": "cvr_005.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "We're gonna flame out.",
+   "dur": 1.61
+  },
+  {
+   "t": 4305,
+   "file": "cvr_006.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "We're losing power.",
+   "dur": 1.36
+  },
+  {
+   "t": 4312,
+   "file": "cvr_007.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "We've lost both of them. Did we?",
+   "dur": 2.23
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

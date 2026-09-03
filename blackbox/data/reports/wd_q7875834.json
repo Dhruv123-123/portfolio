@@ -5,7 +5,7 @@
   "flight_number": "1016",
   "date": "1994-07-02",
   "time_reference": "UTC",
-  "t0": null,
+  "t0": "1994-07-02T22:14:23Z",
   "agency": "NTSB",
   "agencies": [
     {
@@ -246,7 +246,7 @@
   "dissent": [],
   "safety_changes": [],
   "related": [],
-  "fdr": null,
+  "fdr": "wd_q7875834",
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9503.pdf"
   ],

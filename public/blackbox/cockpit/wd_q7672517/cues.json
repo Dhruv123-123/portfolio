@@ -1,0 +1,78 @@
+{
+ "id": "wd_q7672517",
+ "cues": [
+  {
+   "t": -240,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "PM",
+   "text": "Eighteen hundred is the bottom",
+   "dur": 2.07
+  },
+  {
+   "t": -228,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "Start down",
+   "dur": 0.74
+  },
+  {
+   "t": -174,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "I hate the altitude jumping around",
+   "dur": 1.94
+  },
+  {
+   "t": -108,
+   "file": "cvr_003.mp3",
+   "kind": "cvr",
+   "speaker": "PM",
+   "text": "According to this dumb sheet it says thirty-four hundred to Round Hill --- is our minimum altitude",
+   "dur": 5.92
+  },
+  {
+   "t": -90,
+   "file": "cvr_005.mp3",
+   "kind": "cvr",
+   "speaker": "PM",
+   "text": "I had ground contact a minute ago",
+   "dur": 2.6
+  },
+  {
+   "t": -90.0,
+   "file": "w_c_chord.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "c chord",
+   "dur": 1.15
+  },
+  {
+   "t": -60.0,
+   "file": "w_sink_rate.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "sink rate",
+   "dur": 1.09
+  },
+  {
+   "t": -10.0,
+   "file": "w_terrain.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "terrain",
+   "dur": 1.66
+  },
+  {
+   "t": -2,
+   "file": "cvr_007.mp3",
+   "kind": "cvr",
+   "speaker": "PM",
+   "text": "Get some power on",
+   "dur": 1.29
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

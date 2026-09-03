@@ -1,0 +1,287 @@
+{
+  "id": "wd_q2673524",
+  "record": "wd_q2673524",
+  "source": "BEA report, DFDR data: approach speed, touchdown, ground speed deceleration, braking",
+  "fidelity": "narrative",
+  "confidence": "medium",
+  "t_start": -60,
+  "t_end": 150,
+  "aircraft_model": "airliner_twin",
+  "terrain": "runway",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          500
+        ],
+        [
+          -30,
+          200
+        ],
+        [
+          -10,
+          50
+        ],
+        [
+          0,
+          30
+        ],
+        [
+          10,
+          20
+        ],
+        [
+          30,
+          0
+        ],
+        [
+          60,
+          -10
+        ],
+        [
+          150,
+          -50
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          160
+        ],
+        [
+          -30,
+          145
+        ],
+        [
+          0,
+          140
+        ],
+        [
+          10,
+          138
+        ],
+        [
+          20,
+          130
+        ],
+        [
+          30,
+          120
+        ],
+        [
+          60,
+          100
+        ],
+        [
+          90,
+          87
+        ],
+        [
+          120,
+          76
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          -3
+        ],
+        [
+          -30,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          30,
+          -2
+        ],
+        [
+          60,
+          -3
+        ],
+        [
+          120,
+          -5
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          30,
+          -3
+        ],
+        [
+          120,
+          0
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          36
+        ],
+        [
+          120,
+          36
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -60,
+          -500
+        ],
+        [
+          -30,
+          -300
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          30,
+          0
+        ],
+        [
+          120,
+          0
+        ]
+      ]
+    },
+    "gs_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          150
+        ],
+        [
+          0,
+          155
+        ],
+        [
+          10,
+          150
+        ],
+        [
+          20,
+          140
+        ],
+        [
+          30,
+          124
+        ],
+        [
+          40,
+          111
+        ],
+        [
+          50,
+          106
+        ],
+        [
+          60,
+          95
+        ],
+        [
+          90,
+          87
+        ],
+        [
+          120,
+          76
+        ]
+      ]
+    },
+    "flaps": {
+      "interp": "step",
+      "keys": [
+        [
+          -60,
+          40
+        ],
+        [
+          120,
+          40
+        ]
+      ]
+    },
+    "gear": {
+      "interp": "step",
+      "keys": [
+        [
+          -60,
+          1
+        ],
+        [
+          120,
+          1
+        ]
+      ]
+    }
+  },
+  "markers": [
+    {
+      "t": -30,
+      "label": "Final approach descent"
+    },
+    {
+      "t": 0,
+      "label": "Touchdown at 140 kt IAS, 155 kt GS, 15 kt tailwind"
+    },
+    {
+      "t": 10,
+      "label": "Main landing gears compressed"
+    },
+    {
+      "t": 20,
+      "label": "Nose landing gear compressed"
+    },
+    {
+      "t": 60,
+      "label": "Autobrake not selected despite warning"
+    },
+    {
+      "t": 90,
+      "label": "Thrust reversers deployed"
+    },
+    {
+      "t": 120,
+      "label": "Runway overran at 76 knots"
+    },
+    {
+      "t": 150,
+      "label": "Fire erupted on starboard side"
+    }
+  ],
+  "units": {
+    "flaps": "deg"
+  }
+}

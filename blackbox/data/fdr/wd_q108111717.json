@@ -1,0 +1,307 @@
+{
+  "id": "wd_q108111717",
+  "record": "wd_q108111717",
+  "source": "Section 1.10.1 (Airplane Performance Study), FDR data",
+  "fidelity": "narrative",
+  "confidence": "medium",
+  "t_start": -30,
+  "t_end": 72,
+  "aircraft_model": "regional_jet",
+  "terrain": "runway",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          44,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          56,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          72,
+          0
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          44,
+          138
+        ],
+        [
+          49,
+          151
+        ],
+        [
+          56,
+          173
+        ],
+        [
+          64,
+          100
+        ],
+        [
+          72,
+          40
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          44,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          56,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          72,
+          0
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          44,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          56,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          72,
+          0
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          230
+        ],
+        [
+          0,
+          230
+        ],
+        [
+          44,
+          230
+        ],
+        [
+          49,
+          230
+        ],
+        [
+          56,
+          230
+        ],
+        [
+          64,
+          230
+        ],
+        [
+          72,
+          230
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          44,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          56,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          72,
+          0
+        ]
+      ]
+    },
+    "gs_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          44,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          56,
+          163
+        ],
+        [
+          64,
+          100
+        ],
+        [
+          72,
+          40
+        ]
+      ]
+    },
+    "flaps": {
+      "interp": "step",
+      "keys": [
+        [
+          -30,
+          15
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          72,
+          15
+        ]
+      ]
+    },
+    "gear": {
+      "interp": "step",
+      "keys": [
+        [
+          -30,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          72,
+          1
+        ]
+      ]
+    }
+  },
+  "units": {
+    "flaps": "detent"
+  },
+  "markers": [
+    {
+      "t": 0,
+      "label": "Takeoff roll begins"
+    },
+    {
+      "t": 44,
+      "label": "V1 speed reached (138 kts)"
+    },
+    {
+      "t": 49,
+      "label": "Rotation attempted, aircraft does not pitch up"
+    },
+    {
+      "t": 56,
+      "label": "Brakes applied, rejected takeoff"
+    },
+    {
+      "t": 64,
+      "label": "Left paved runway surface"
+    },
+    {
+      "t": 72,
+      "label": "Struck perimeter road, impact"
+    }
+  ]
+}

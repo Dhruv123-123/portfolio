@@ -35,3 +35,6 @@ logs/
 tests_output/
 .vercel
 .env*.local
+
+# FlightGear packages are generated (export_flightgear.py) and built in-browser; keep only the protocol file
+public/blackbox/flightgear/*/

@@ -1,0 +1,38 @@
+{
+ "id": "wd_q66459174",
+ "cues": [
+  {
+   "t": 50.0,
+   "file": "w_single_chime.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "single chime",
+   "dur": 0.35
+  },
+  {
+   "t": 68.0,
+   "file": "w_crc.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "crc",
+   "dur": 1.28
+  },
+  {
+   "t": 71.0,
+   "file": "w_dont_sink.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "dont sink",
+   "dur": 1.25
+  },
+  {
+   "t": 125.0,
+   "file": "w_whoop_pull_up.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "whoop pull up",
+   "dur": 1.51
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

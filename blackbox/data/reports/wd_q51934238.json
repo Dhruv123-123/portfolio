@@ -77,10 +77,22 @@
     }
   ],
   "chain": [
-    ["metal_fatigue", "uncontained_engine_failure"],
-    ["uncontained_engine_failure", "structural_failure"],
-    ["structural_failure", "explosive_decompression"],
-    ["explosive_decompression", "loss_of_control_inflight"]
+    [
+      "metal_fatigue",
+      "uncontained_engine_failure"
+    ],
+    [
+      "uncontained_engine_failure",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "explosive_decompression"
+    ],
+    [
+      "explosive_decompression",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
@@ -90,8 +102,14 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Fan blade No. 13 in left CFM56-7B engine fractured due to low-cycle fatigue crack at the dovetail",
-      "state": {"alt": 32648, "ias": 280},
-      "factors": ["metal_fatigue", "uncontained_engine_failure"]
+      "state": {
+        "alt": 32648,
+        "ias": 280
+      },
+      "factors": [
+        "metal_fatigue",
+        "uncontained_engine_failure"
+      ]
     },
     {
       "t": 6,
@@ -100,7 +118,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Cabin altitude warning horn activated; cabin altitude exceeded 10,000 ft due to window breach",
-      "factors": ["explosive_decompression"]
+      "factors": [
+        "explosive_decompression"
+      ]
     },
     {
       "t": 11,
@@ -109,8 +129,12 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft uncommanded left roll reached maximum of 41.3°",
-      "state": {"roll": -41.3},
-      "factors": ["loss_of_control_inflight"]
+      "state": {
+        "roll": -41.3
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 25,
@@ -172,35 +196,47 @@
       "to": "FAA",
       "text": "Require Boeing to determine the critical fan blade impact location(s) on the CFM56-7B engine fan case and redesign the fan cowl structure on all Boeing 737 next-generation-series airplanes to ensure the structural integrity of the fan cowl after a fan-blade-out event",
       "status": "unknown",
-      "trigger_factors": ["metal_fatigue", "structural_failure"]
+      "trigger_factors": [
+        "metal_fatigue",
+        "structural_failure"
+      ]
     },
     {
       "id": "A-19-18",
       "to": "FAA",
       "text": "Once the actions requested in Safety Recommendation A-19-17 are completed, require Boeing to install the redesigned fan cowl structure on new-production 737 next-generation-series airplanes",
       "status": "unknown",
-      "trigger_factors": ["structural_failure"]
+      "trigger_factors": [
+        "structural_failure"
+      ]
     },
     {
       "id": "A-19-19",
       "to": "FAA",
       "text": "Once the actions requested in Safety Recommendation A-19-17 are completed, require operators of Boeing 737 next-generation-series airplanes to retrofit their airplanes with the redesigned fan cowl structure",
       "status": "unknown",
-      "trigger_factors": ["structural_failure"]
+      "trigger_factors": [
+        "structural_failure"
+      ]
     },
     {
       "id": "A-19-20",
       "to": "FAA",
       "text": "Expand the Title 14 Code of Federal Regulations Part 25 and 33 certification requirements to mandate that airplane and engine manufacturers work collaboratively to analyze all critical fan blade impact locations for all engine operating conditions, the resulting fan blade fragmentation, and the effects of the fan-blade-out-generated loads on the nacelle structure",
       "status": "unknown",
-      "trigger_factors": ["metal_fatigue", "uncontained_engine_failure"]
+      "trigger_factors": [
+        "metal_fatigue",
+        "uncontained_engine_failure"
+      ]
     },
     {
       "id": "A-19-21",
       "to": "FAA",
       "text": "Develop and issue guidance on ways that air carriers can mitigate hazards to passengers affected by an in-flight loss of seating capacity",
       "status": "unknown",
-      "trigger_factors": ["explosive_decompression"]
+      "trigger_factors": [
+        "explosive_decompression"
+      ]
     },
     {
       "id": "A-19-22",
@@ -214,7 +250,10 @@
       "to": "EASA",
       "text": "Expand your certification requirements for transport-category airplanes and aircraft engines to mandate that airplane and engine manufacturers work collaboratively to analyze all critical fan blade impact locations for all engine operating conditions, the resulting fan blade fragmentation, and the effects of the fan-blade-out-generated loads on the nacelle structure",
       "status": "unknown",
-      "trigger_factors": ["metal_fatigue", "uncontained_engine_failure"]
+      "trigger_factors": [
+        "metal_fatigue",
+        "uncontained_engine_failure"
+      ]
     }
   ],
   "dissent": [],
@@ -224,8 +263,10 @@
     "FAA and EASA issued multiple airworthiness directives requiring enhanced fan blade inspections on CFM56-7B engines"
   ],
   "related": [],
-  "fdr": null,
-  "sources": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR1903.pdf"],
+  "fdr": "wd_q51934238",
+  "sources": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR1903.pdf"
+  ],
   "tier": "wikidata",
   "depth": "sections",
   "qid": "Q51934238",

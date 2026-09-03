@@ -1,0 +1,2070 @@
+{
+ "id": "wd_q904715",
+ "cues": [
+  {
+   "t": 150.0,
+   "file": "w_sink_rate.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "sink rate",
+   "dur": 1.09
+  },
+  {
+   "t": 190.0,
+   "file": "w_terrain.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "terrain",
+   "dur": 1.55
+  },
+  {
+   "t": 200.0,
+   "file": "w_minimums.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "minimums",
+   "dur": 1.79
+  },
+  {
+   "t": 235.5,
+   "file": "w_cavalry.mp3",
+   "kind": "ap_disconnect",
+   "speaker": "SYS",
+   "text": "cavalry",
+   "dur": 1.28
+  },
+  {
+   "t": 295.5,
+   "file": "w_cavalry.mp3",
+   "kind": "ap_disconnect",
+   "speaker": "SYS",
+   "text": "cavalry",
+   "dur": 1.28
+  },
+  {
+   "t": 313.0,
+   "file": "w_sink_rate.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "sink rate",
+   "dur": 1.09
+  },
+  {
+   "t": 314.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 316.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 318.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 320.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 322.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 324.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 326.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 328.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 330.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 332.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 334.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 336.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 338.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 340.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 342.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 344.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 346.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 348.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 350.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 352.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 354.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 356.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 358.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 360.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 362.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 364.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 366.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 368.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 370.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 372.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 374.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 376.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 378.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 380.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 382.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 384.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 386.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 388.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 390.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 392.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 394.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 396.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 398.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 400.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 402.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 404.0,
+   "file": "w_terrain.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "terrain",
+   "dur": 1.55
+  },
+  {
+   "t": 404.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 406.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 408.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 410.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 412.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 414.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 416.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 418.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 420.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 422.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 424.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 426.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 428.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 430.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 432.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 434.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 436.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 438.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 440.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 442.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 444.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 446.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 448.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 450.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 452.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 454.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 456.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 458.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 460.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 462.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 464.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 466.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 468.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 470.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 472.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 474.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 476.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 478.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 480.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 482.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 484.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 486.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 488.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 490.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 492.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 494.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 496.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 498.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 500.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 502.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 504.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 506.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 508.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 510.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 512.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 514.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 516.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 518.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 520.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 522.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 524.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 526.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 528.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 530.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 532.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 534.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 536.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 538.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 540.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 542.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 544.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 546.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 548.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 550.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 552.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 554.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 556.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 558.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 560.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 562.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 564.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 566.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 568.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 570.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 572.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 574.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 576.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 578.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 580.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 582.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 584.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 586.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 588.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 590.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 592.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 594.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 596.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 598.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 600.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 602.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 604.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 606.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 608.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 610.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 612.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 614.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 616.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 618.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 620.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 622.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 624.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 626.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 628.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 630.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 632.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 634.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 635.0,
+   "file": "w_cavalry.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "cavalry",
+   "dur": 1.28
+  },
+  {
+   "t": 636.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 638.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 640.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 642.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 644.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 646.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 648.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 650.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 652.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 654.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 656.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 658.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 660.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 662.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 664.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 666.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 668.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 670.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 672.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 674.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 676.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 678.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 680.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 682.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 684.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 686.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 688.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 690.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 692.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 694.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 696.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 698.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 700.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 702.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 704.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 706.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 708.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 710.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 712.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 714.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 716.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 718.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 720.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 722.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 724.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 726.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 728.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 730.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 732.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 734.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 736.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 738.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 740.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 742.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 744.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 746.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 748.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 750.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 752.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 754.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 756.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 758.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 760.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 762.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 764.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 766.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 768.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 770.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 772.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 774.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 776.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 778.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 780.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 782.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 784.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 786.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 788.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 790.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 792.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 794.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 796.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 798.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 800.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 802.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 804.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 806.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 808.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 810.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  },
+  {
+   "t": 812.5,
+   "file": "w_cricket_stall.mp3",
+   "kind": "stall",
+   "speaker": "SYS",
+   "text": "cricket stall",
+   "dur": 1.7
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

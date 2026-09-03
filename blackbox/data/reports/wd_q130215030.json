@@ -73,9 +73,18 @@
     }
   ],
   "chain": [
-    ["low_visibility", "inadequate_training"],
-    ["inadequate_training", "cfit"],
-    ["operator_safety_culture", "cfit"]
+    [
+      "low_visibility",
+      "inadequate_training"
+    ],
+    [
+      "inadequate_training",
+      "cfit"
+    ],
+    [
+      "operator_safety_culture",
+      "cfit"
+    ]
   ],
   "events": [
     {
@@ -85,8 +94,12 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Mil Mi-8T RA-25656 took off from Nikolaevka-2 airfield with 12 passengers for sightseeing flight to Vachkazhets volcano, despite weather conditions of fog and drizzle in the area.",
-      "state": {"alt": 0},
-      "factors": ["low_visibility"]
+      "state": {
+        "alt": 0
+      },
+      "factors": [
+        "low_visibility"
+      ]
     },
     {
       "t": 30,
@@ -95,7 +108,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Flight maintained radio contact with Petropavlovsk-Kamchatsky air traffic control during climb. The planned route was cleared in class G airspace.",
-      "state": {"alt": 500},
+      "state": {
+        "alt": 500
+      },
       "factors": []
     },
     {
@@ -105,8 +120,13 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Helicopter disappeared from radar approximately 20 km from destination Nikolaevka, following sightseeing passes at Vachkazhets volcano. Loss of radar contact occurred during climb in deteriorating weather conditions.",
-      "state": {"alt": 900},
-      "factors": ["low_visibility", "inadequate_training"]
+      "state": {
+        "alt": 900
+      },
+      "factors": [
+        "low_visibility",
+        "inadequate_training"
+      ]
     },
     {
       "t": 620,
@@ -115,8 +135,12 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft wreckage was discovered in mountainous terrain at 900 m elevation in Yelizovsky District. The helicopter had impacted terrain during descent in instrument meteorological conditions.",
-      "state": {"alt": 900},
-      "factors": ["cfit"]
+      "state": {
+        "alt": 900
+      },
+      "factors": [
+        "cfit"
+      ]
     }
   ],
   "cvr": [],
@@ -127,7 +151,7 @@
     "Improved weather assessment and flight planning procedures for operations in Kamchatka region"
   ],
   "related": [],
-  "fdr": null,
+  "fdr": "wd_q130215030",
   "sources": [
     "https://mak-iac.org/rassledovaniya/mi-8t-ra-25656-31-08-2024/",
     "https://mak-iac.org/upload/iblock/dee/h0l4vjmwxekontpxqe4vwkoaj1nd1b40/report_ra-25656.pdf"

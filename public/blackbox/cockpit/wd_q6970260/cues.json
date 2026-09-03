@@ -1,0 +1,38 @@
+{
+ "id": "wd_q6970260",
+ "cues": [
+  {
+   "t": -400,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "Descent rate's keeping it up",
+   "dur": 1.83
+  },
+  {
+   "t": -18.0,
+   "file": "w_whoop_pull_up.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "whoop pull up",
+   "dur": 1.51
+  },
+  {
+   "t": -8,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "Did you (get) your thing",
+   "dur": 0.84
+  },
+  {
+   "t": -2,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "...we're down to fifty feet",
+   "dur": 1.64
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

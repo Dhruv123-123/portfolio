@@ -1,0 +1,70 @@
+{
+ "id": "wd_q131328202",
+ "cues": [
+  {
+   "t": 1950,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "follow the glideslope. do not go below fifteen",
+   "dur": 2.24
+  },
+  {
+   "t": 2745,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "SIC",
+   "text": "your flight controls",
+   "dur": 1.28
+  },
+  {
+   "t": 2760,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "Disregard",
+   "dur": 0.59
+  },
+  {
+   "t": 2763.0,
+   "file": "w_whoop_pull_up.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "whoop pull up",
+   "dur": 1.47
+  },
+  {
+   "t": 2835,
+   "file": "cvr_003.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "alright. my controls",
+   "dur": 1.0
+  },
+  {
+   "t": 2842,
+   "file": "cvr_004.mp3",
+   "kind": "cvr",
+   "speaker": "SIC",
+   "text": "V-ref",
+   "dur": 0.6
+  },
+  {
+   "t": 2847,
+   "file": "cvr_005.mp3",
+   "kind": "cvr",
+   "speaker": "SIC",
+   "text": "add airspeed",
+   "dur": 0.85
+  },
+  {
+   "t": 2852,
+   "file": "cvr_006.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "stall",
+   "dur": 0.42
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

@@ -1,0 +1,30 @@
+{
+ "id": "wd_q134376219",
+ "cues": [
+  {
+   "t": 4,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "CAPT",
+   "text": "Called for go-around",
+   "dur": 1.29
+  },
+  {
+   "t": 4,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "FE",
+   "text": "Advised against the go-around",
+   "dur": 1.73
+  },
+  {
+   "t": 10,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "The aircraft bounced a second time, the nose over rotating upwards. It was at this point that I took firm hold of the yoke and pushed forward. As the aircraft reached the crest of the bounce I pulled all the way back on the yoke. The aircraft touched down the third time and stayed on the ground.",
+   "dur": 18.66
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

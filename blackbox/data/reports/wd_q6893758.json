@@ -1,182 +1,182 @@
 {
- "id": "wd_q6893758",
- "qid": "Q6893758",
- "tier": "wikidata",
- "depth": "sections",
- "title": "Mohawk Airlines 411",
- "flight_number": "MH411",
- "date": "1969-11-19",
- "time_reference": "EST",
- "t0": "1969-11-19T20:20:00-05:00",
- "agency": "NTSB",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead",
-   "report_id": "AAR-70-12",
-   "report_date": "1970-09-16"
-  }
- ],
- "aircraft": {
-  "type": "Fairchild Hiller FH-227B",
-  "manufacturer": "Fairchild Hiller",
-  "family": "FH-227",
-  "registration": "N7811M"
- },
- "operator": "Mohawk Airlines",
- "route": {
-  "from_name": "Albany",
-  "to_name": "Glens Falls"
- },
- "location": {
-  "name": "Pilot Knob Mountain",
-  "country": "United States",
-  "lat": 43.491667,
-  "lon": -73.611083
- },
- "phase": "approach",
- "occupants": 14,
- "fatalities": 14,
- "damage": "destroyed",
- "category": "CFIT",
- "summary": "Mohawk Airlines Flight 411, a Fairchild Hiller FH-227 turboprop, departed Albany at 20:03 EST on November 19, 1969, bound for Glens Falls. While conducting a VOR approach, the captain exceeded his clearance limits, descended into a severe lee-of-mountain downdraft at insufficient altitude for recovery, and impacted the northwest slope of Pilot Knob Mountain at an elevation of 1,960 feet. All 14 occupants were killed.",
- "probable_cause": "The captain, while conducting an approach, exceeded his clearance limits and, thereafter, flew the aircraft into a severe 'lee of the mountain downdraft' at an altitude insufficient for recovery. (p. 7)",
- "factors": [
-  {
-   "id": "navigation_error",
-   "role": "initiating",
-   "evidence": "Crew selected an improvised and unauthorized modified version of the VOR/DME 19 approach instead of the authorized VOR-1 approach for Warren County Airport. Aircraft proceeded north of Glens Falls VORTAC at 3,000 feet while operating on an IFR flight plan. (p. 20)"
-  },
-  {
-   "id": "descent_below_minimums",
-   "role": "contributing",
-   "evidence": "Aircraft descended below safe minimum altitude while in severe turbulence. Captain exceeded his clearance limits and continued descent into terrain. (p. 7)"
-  },
-  {
-   "id": "windshear",
-   "role": "contributing",
-   "evidence": "Severe downdraft in the lee of Pilot Knob Mountain with strong winds 150° at 12 knots with gusts to 22 knots. Heavy rain and moderate to strong winds reported at Pilot Knob area. (p. 10)"
-  },
-  {
-   "id": "cfit",
-   "role": "outcome",
-   "evidence": "Aircraft first impacted evergreen trees then struck near-vertical rock cliff face of Pilot Knob Mountain approximately 200 feet below summit, northwest slope, at elevation 1,960 feet. (p. 9-10)"
-  }
- ],
- "chain": [
-  [
-   "navigation_error",
-   "descent_below_minimums"
+  "id": "wd_q6893758",
+  "qid": "Q6893758",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Mohawk Airlines 411",
+  "flight_number": "MH411",
+  "date": "1969-11-19",
+  "time_reference": "EST",
+  "t0": "1969-11-19T20:20:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-70-12",
+      "report_date": "1970-09-16"
+    }
   ],
-  [
-   "descent_below_minimums",
-   "cfit"
+  "aircraft": {
+    "type": "Fairchild Hiller FH-227B",
+    "manufacturer": "Fairchild Hiller",
+    "family": "FH-227",
+    "registration": "N7811M"
+  },
+  "operator": "Mohawk Airlines",
+  "route": {
+    "from_name": "Albany",
+    "to_name": "Glens Falls"
+  },
+  "location": {
+    "name": "Pilot Knob Mountain",
+    "country": "United States",
+    "lat": 43.491667,
+    "lon": -73.611083
+  },
+  "phase": "approach",
+  "occupants": 14,
+  "fatalities": 14,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Mohawk Airlines Flight 411, a Fairchild Hiller FH-227 turboprop, departed Albany at 20:03 EST on November 19, 1969, bound for Glens Falls. While conducting a VOR approach, the captain exceeded his clearance limits, descended into a severe lee-of-mountain downdraft at insufficient altitude for recovery, and impacted the northwest slope of Pilot Knob Mountain at an elevation of 1,960 feet. All 14 occupants were killed.",
+  "probable_cause": "The captain, while conducting an approach, exceeded his clearance limits and, thereafter, flew the aircraft into a severe 'lee of the mountain downdraft' at an altitude insufficient for recovery. (p. 7)",
+  "factors": [
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "Crew selected an improvised and unauthorized modified version of the VOR/DME 19 approach instead of the authorized VOR-1 approach for Warren County Airport. Aircraft proceeded north of Glens Falls VORTAC at 3,000 feet while operating on an IFR flight plan. (p. 20)"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "Aircraft descended below safe minimum altitude while in severe turbulence. Captain exceeded his clearance limits and continued descent into terrain. (p. 7)"
+    },
+    {
+      "id": "windshear",
+      "role": "contributing",
+      "evidence": "Severe downdraft in the lee of Pilot Knob Mountain with strong winds 150° at 12 knots with gusts to 22 knots. Heavy rain and moderate to strong winds reported at Pilot Knob area. (p. 10)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft first impacted evergreen trees then struck near-vertical rock cliff face of Pilot Knob Mountain approximately 200 feet below summit, northwest slope, at elevation 1,960 feet. (p. 9-10)"
+    }
   ],
-  [
-   "windshear",
-   "cfit"
-  ]
- ],
- "events": [
-  {
-   "t": -1020,
-   "clock": "20:03",
-   "phase": "climb",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Mohawk Airlines Flight 411, Fairchild-Hiller FH-227B, departed Albany, New York, on an Instrument Flight Rules flight plan for Warren County Airport, Glens Falls. (p. 8)"
-  },
-  {
-   "t": -851,
-   "clock": "20:05:49",
-   "phase": "climb",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Albany Departure Control issued clearance: 'Mohawk Four Eleven, you are cleared to the-for a VOR approach at the Warren County Airport.' (p. 8)"
-  },
-  {
-   "t": -652,
-   "clock": "20:09:08",
-   "phase": "descent",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Flight 411 reported at Miller Intersection to Albany Departure Control, then contacted Glens Falls Radio requesting weather. Flight Service Station agent provided current weather: ceiling 2,100 feet overcast, visibility 7 miles, light rain, wind 180° at 12 knots with gusts to 22 knots. (p. 8)"
-  },
-  {
-   "t": -500,
-   "clock": "20:12:20",
-   "phase": "approach",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Aircraft continued on course and headed toward Glens Falls VORTAC at 3,000 feet. Flight Recorder data indicated reduction in airspeed commenced shortly after approach clearance receipt, stabilizing between 165-170 knots. (p. 21)"
-  },
-  {
-   "t": -240,
-   "clock": "20:16:00",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "env",
-   "text": "Flight proceeded northbound beyond Glens Falls VORTAC at approximately 3,000 feet for 1 minute 15 seconds (7 NM DME). Three witnesses in Glens Falls area observed aircraft. Light rain with moderate winds at Bolton and Diamond Point; heavy rain with strong winds at Pilot Knob area. (p. 10)"
-  },
-  {
-   "t": -60,
-   "clock": "20:19:00",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "warning",
-   "text": "Aircraft initiated course reversal, beginning descent toward Pilot Knob Mountain while in severe downdraft conditions. Winds were 150° at 12-17 knots with gusts to 22-24 knots. (p. 10)"
-  },
-  {
-   "t": 0,
-   "clock": "20:20:00",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Aircraft impacted evergreen trees on northwest slope of Pilot Knob Mountain at 1,960 feet elevation, approximately 200 feet below summit. First impact with trees, then approximately 20 feet farther along flightpath, aircraft impacted near-vertical rock cliff face. Aircraft had right 12-degree wing-down attitude and was descending at 10-degree angle at impact. (p. 9-10)"
-  },
-  {
-   "t": 10,
-   "clock": "20:20:10",
-   "phase": "landing",
-   "actor": "CABIN",
-   "kind": "outcome",
-   "text": "Aircraft destroyed by impact and ensuing fire. All 14 occupants killed: 3 crew members and 11 passengers. Only damage to surroundings was to several large trees. (p. 9)"
+  "chain": [
+    [
+      "navigation_error",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ],
+    [
+      "windshear",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": -1020,
+      "clock": "20:03",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Mohawk Airlines Flight 411, Fairchild-Hiller FH-227B, departed Albany, New York, on an Instrument Flight Rules flight plan for Warren County Airport, Glens Falls. (p. 8)"
+    },
+    {
+      "t": -851,
+      "clock": "20:05:49",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Albany Departure Control issued clearance: 'Mohawk Four Eleven, you are cleared to the-for a VOR approach at the Warren County Airport.' (p. 8)"
+    },
+    {
+      "t": -652,
+      "clock": "20:09:08",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 411 reported at Miller Intersection to Albany Departure Control, then contacted Glens Falls Radio requesting weather. Flight Service Station agent provided current weather: ceiling 2,100 feet overcast, visibility 7 miles, light rain, wind 180° at 12 knots with gusts to 22 knots. (p. 8)"
+    },
+    {
+      "t": -500,
+      "clock": "20:12:20",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft continued on course and headed toward Glens Falls VORTAC at 3,000 feet. Flight Recorder data indicated reduction in airspeed commenced shortly after approach clearance receipt, stabilizing between 165-170 knots. (p. 21)"
+    },
+    {
+      "t": -240,
+      "clock": "20:16:00",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Flight proceeded northbound beyond Glens Falls VORTAC at approximately 3,000 feet for 1 minute 15 seconds (7 NM DME). Three witnesses in Glens Falls area observed aircraft. Light rain with moderate winds at Bolton and Diamond Point; heavy rain with strong winds at Pilot Knob area. (p. 10)"
+    },
+    {
+      "t": -60,
+      "clock": "20:19:00",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Aircraft initiated course reversal, beginning descent toward Pilot Knob Mountain while in severe downdraft conditions. Winds were 150° at 12-17 knots with gusts to 22-24 knots. (p. 10)"
+    },
+    {
+      "t": 0,
+      "clock": "20:20:00",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacted evergreen trees on northwest slope of Pilot Knob Mountain at 1,960 feet elevation, approximately 200 feet below summit. First impact with trees, then approximately 20 feet farther along flightpath, aircraft impacted near-vertical rock cliff face. Aircraft had right 12-degree wing-down attitude and was descending at 10-degree angle at impact. (p. 9-10)"
+    },
+    {
+      "t": 10,
+      "clock": "20:20:10",
+      "phase": "landing",
+      "actor": "CABIN",
+      "kind": "outcome",
+      "text": "Aircraft destroyed by impact and ensuing fire. All 14 occupants killed: 3 crew members and 11 passengers. Only damage to surroundings was to several large trees. (p. 9)"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": "wd_q6893758",
+  "sources": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR7012.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Mohawk_Airlines_Flight_411",
+  "asn_id": "19691119-0",
+  "interest": 11.22,
+  "curated_id": null,
+  "report_links": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR7012.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-12.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read abstract and summary (pages 1-8)",
+      "Read Analysis and Conclusions section (pages 20-23)",
+      "Read Probable Cause statement (page 7)",
+      "Read Injuries, Aircraft Damage, and Meteorological Information sections (pages 9-11)",
+      "8 NEW events with clock times from detailed report narrative",
+      "Page citations from OCR <<< page N >>> markers",
+      "This 1970 report uses older NTSB format without formal numbered recommendations section",
+      "All 14 occupants killed; Fairchild-Hiller FH-227B destroyed",
+      "auto-repair: phase impact -> landing"
+    ]
   }
- ],
- "cvr": [],
- "recommendations": [],
- "dissent": [],
- "safety_changes": [],
- "related": [],
- "fdr": null,
- "sources": [
-  "https://ntsb.gov/investigations/AccidentReports/Reports/AAR7012.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/Mohawk_Airlines_Flight_411",
- "asn_id": "19691119-0",
- "interest": 11.22,
- "curated_id": null,
- "report_links": [
-  "https://ntsb.gov/investigations/AccidentReports/Reports/AAR7012.pdf",
-  "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-12.pdf"
- ],
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5-20251001",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Read abstract and summary (pages 1-8)",
-   "Read Analysis and Conclusions section (pages 20-23)",
-   "Read Probable Cause statement (page 7)",
-   "Read Injuries, Aircraft Damage, and Meteorological Information sections (pages 9-11)",
-   "8 NEW events with clock times from detailed report narrative",
-   "Page citations from OCR <<< page N >>> markers",
-   "This 1970 report uses older NTSB format without formal numbered recommendations section",
-   "All 14 occupants killed; Fairchild-Hiller FH-227B destroyed",
-   "auto-repair: phase impact -> landing"
-  ]
- }
 }

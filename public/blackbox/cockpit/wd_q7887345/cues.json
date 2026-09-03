@@ -1,0 +1,22 @@
+{
+ "id": "wd_q7887345",
+ "cues": [
+  {
+   "t": 60.0,
+   "file": "w_crc.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "crc",
+   "dur": 1.28
+  },
+  {
+   "t": 125,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "Keep it going up - you're a thousand feet - pull it up",
+   "dur": 2.97
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

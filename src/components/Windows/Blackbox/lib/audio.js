@@ -23,6 +23,7 @@ export class ReplayAudio {
     this.ctx = null
     this.enabled = false
     this.voice = true
+    this.warnings = true // false when a pre-rendered cockpit track carries the warnings
     this.ready = false
     this._prev = null
     this._lastRa = null
@@ -291,6 +292,7 @@ export class ReplayAudio {
     this.windGain.gain.setTargetAtTime(live * Math.min(0.28, (ias / 320) * 0.22), now, 0.25)
 
     const prev = this._prev
+    if (!this.warnings) { this._prev = { ...s }; return }
     if (prev && playing) {
       if (s.ap === 0 && prev.ap === 1) { this.cavalryCharge(); this.say('autopilot', { pitch: 0.6, rate: 1.1, delay: 900 }) }
       if (s.stall_warn && !prev.stall_warn) { this._startStall(); if (this.family !== 'boeing') this.say('stall stall', { pitch: 0.55, rate: 1.05, urgent: true }) }

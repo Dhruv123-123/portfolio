@@ -1,0 +1,323 @@
+{
+  "id": "wd_q138766846",
+  "record": "wd_q138766846",
+  "source": "NTSB preliminary report, flight data recorder data and surveillance video analysis",
+  "fidelity": "narrative",
+  "confidence": "medium",
+  "t_start": -140,
+  "t_end": 0,
+  "aircraft_model": "regional_jet",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -140,
+          2200
+        ],
+        [
+          -126,
+          1900
+        ],
+        [
+          -80,
+          600
+        ],
+        [
+          -59,
+          400
+        ],
+        [
+          -52,
+          287
+        ],
+        [
+          -46,
+          130
+        ],
+        [
+          -40,
+          87
+        ],
+        [
+          -25,
+          30
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -140,
+          180
+        ],
+        [
+          -80,
+          160
+        ],
+        [
+          -40,
+          140
+        ],
+        [
+          -25,
+          133
+        ],
+        [
+          -2,
+          125
+        ],
+        [
+          0,
+          90
+        ]
+      ]
+    },
+    "gs_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -140,
+          160
+        ],
+        [
+          -80,
+          145
+        ],
+        [
+          -40,
+          135
+        ],
+        [
+          -25,
+          133
+        ],
+        [
+          -2,
+          120
+        ],
+        [
+          -1,
+          106
+        ],
+        [
+          0,
+          90
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -140,
+          0
+        ],
+        [
+          -80,
+          -2
+        ],
+        [
+          -40,
+          -3
+        ],
+        [
+          -25,
+          -2
+        ],
+        [
+          -2,
+          -0.5
+        ],
+        [
+          0,
+          -2
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -140,
+          0
+        ],
+        [
+          -80,
+          0
+        ],
+        [
+          -40,
+          0
+        ],
+        [
+          -25,
+          1
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -140,
+          40
+        ],
+        [
+          -80,
+          38
+        ],
+        [
+          -40,
+          35
+        ],
+        [
+          -25,
+          32
+        ],
+        [
+          -2,
+          28
+        ],
+        [
+          0,
+          28
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -140,
+          -500
+        ],
+        [
+          -80,
+          -800
+        ],
+        [
+          -40,
+          -600
+        ],
+        [
+          -25,
+          -100
+        ],
+        [
+          -2,
+          -50
+        ],
+        [
+          0,
+          -200
+        ]
+      ]
+    },
+    "flaps": {
+      "interp": "step",
+      "keys": [
+        [
+          -140,
+          15
+        ],
+        [
+          -25,
+          30
+        ]
+      ]
+    },
+    "gear": {
+      "interp": "step",
+      "keys": [
+        [
+          -140,
+          1
+        ],
+        [
+          -2,
+          1
+        ]
+      ]
+    },
+    "thrust_lever": {
+      "interp": "step",
+      "keys": [
+        [
+          -140,
+          0.3
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          -1,
+          -0.5
+        ]
+      ]
+    },
+    "ground_spoilers": {
+      "interp": "step",
+      "keys": [
+        [
+          -140,
+          0
+        ],
+        [
+          -6,
+          1
+        ]
+      ]
+    }
+  },
+  "units": {
+    "flaps": "degrees",
+    "n1_pct": "% N1"
+  },
+  "markers": [
+    {
+      "t": -126,
+      "label": "5-mile final, 1900 ft"
+    },
+    {
+      "t": -40,
+      "label": "Final approach, 87 ft"
+    },
+    {
+      "t": -2,
+      "label": "Main landing gear touchdown"
+    },
+    {
+      "t": -1,
+      "label": "Nose gear touchdown, thrust reverser deployed"
+    },
+    {
+      "t": -6,
+      "label": "Ground spoilers activated"
+    },
+    {
+      "t": 0,
+      "label": "Collision with rescue vehicle on runway"
+    }
+  ],
+  "camera_hint": "overhead",
+  "terrain": "runway"
+}

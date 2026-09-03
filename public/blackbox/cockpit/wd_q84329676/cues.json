@@ -1,0 +1,198 @@
+{
+ "id": "wd_q84329676",
+ "cues": [
+  {
+   "t": 25.0,
+   "file": "w_callout_1000.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 1000",
+   "dur": 1.12
+  },
+  {
+   "t": 87.5,
+   "file": "w_callout_500.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 500",
+   "dur": 1.14
+  },
+  {
+   "t": 100.0,
+   "file": "w_callout_400.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 400",
+   "dur": 1.09
+  },
+  {
+   "t": 120.0,
+   "file": "w_callout_300.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 300",
+   "dur": 1.09
+  },
+  {
+   "t": 140.0,
+   "file": "w_callout_200.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 200",
+   "dur": 0.98
+  },
+  {
+   "t": 160.0,
+   "file": "w_callout_100.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 100",
+   "dur": 1.04
+  },
+  {
+   "t": 189.0,
+   "file": "w_callout_50.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 50",
+   "dur": 0.84
+  },
+  {
+   "t": 194.5,
+   "file": "w_callout_40.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 40",
+   "dur": 0.74
+  },
+  {
+   "t": 200.0,
+   "file": "w_callout_30.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 30",
+   "dur": 0.66
+  },
+  {
+   "t": 212.0,
+   "file": "w_callout_20.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 20",
+   "dur": 0.74
+  },
+  {
+   "t": 223.5,
+   "file": "w_callout_10.mp3",
+   "kind": "callout",
+   "speaker": "SYS",
+   "text": "callout 10",
+   "dur": 0.63
+  },
+  {
+   "t": 7200,
+   "file": "cvr_000.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "we can either go straight in if not we can make an early decision to go through the back door off of this approach if we have to",
+   "dur": 5.22
+  },
+  {
+   "t": 7380,
+   "file": "cvr_001.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "wind is from 310 at 6 knots",
+   "dur": 2.5
+  },
+  {
+   "t": 8340,
+   "file": "cvr_002.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "if it gets too sheer-y just say go around and we'll go out the back door",
+   "dur": 3.8
+  },
+  {
+   "t": 8356,
+   "file": "cvr_003.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "whad'ya think",
+   "dur": 0.74
+  },
+  {
+   "t": 8358,
+   "file": "cvr_004.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "go around",
+   "dur": 1.04
+  },
+  {
+   "t": 8400,
+   "file": "cvr_005.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "we're gonna go out here and do a one eighty and come back in",
+   "dur": 2.8
+  },
+  {
+   "t": 8510,
+   "file": "cvr_006.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "oh God",
+   "dur": 1.22
+  },
+  {
+   "t": 8525,
+   "file": "cvr_008.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "do you wanna back out, do it again",
+   "dur": 2.46
+  },
+  {
+   "t": 8531,
+   "file": "cvr_009.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "keep talking to weather... last try",
+   "dur": 1.59
+  },
+  {
+   "t": 8605,
+   "file": "cvr_010.mp3",
+   "kind": "cvr",
+   "speaker": "FO",
+   "text": "brakes",
+   "dur": 0.77
+  },
+  {
+   "t": 8607,
+   "file": "cvr_011.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "I got em all the way",
+   "dur": 1.21
+  },
+  {
+   "t": 8618,
+   "file": "cvr_012.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "hang on",
+   "dur": 0.39
+  },
+  {
+   "t": 8620,
+   "file": "cvr_013.mp3",
+   "kind": "cvr",
+   "speaker": "PF",
+   "text": "I'm sliding",
+   "dur": 0.75
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

@@ -1,0 +1,230 @@
+{
+  "id": "wd_q7928392",
+  "record": "wd_q7928392",
+  "source": "NTSB Aircraft Accident Report AAR85-08, section 2.2 (The Accident), witness observations and aircraft performance analysis; altitudes from altitude 200 ft at engine failure and subsequent 50 ft gain",
+  "fidelity": "narrative",
+  "t_start": -30,
+  "t_end": 30,
+  "aircraft_model": "regional_turboprop",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          50
+        ],
+        [
+          -10,
+          150
+        ],
+        [
+          0,
+          200
+        ],
+        [
+          15,
+          250
+        ],
+        [
+          30,
+          0
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          50
+        ],
+        [
+          -10,
+          60
+        ],
+        [
+          0,
+          65
+        ],
+        [
+          15,
+          60
+        ],
+        [
+          30,
+          35
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          10
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          20,
+          -10
+        ],
+        [
+          30,
+          -25
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          20,
+          -30
+        ],
+        [
+          30,
+          -90
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          180
+        ],
+        [
+          0,
+          180
+        ],
+        [
+          15,
+          175
+        ],
+        [
+          20,
+          160
+        ],
+        [
+          30,
+          140
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          500
+        ],
+        [
+          0,
+          400
+        ],
+        [
+          15,
+          200
+        ],
+        [
+          20,
+          -1000
+        ],
+        [
+          30,
+          -3000
+        ]
+      ]
+    },
+    "n1_pct": {
+      "interp": "linear",
+      "keys": [
+        [
+          -30,
+          95
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          15,
+          50
+        ],
+        [
+          30,
+          0
+        ]
+      ]
+    },
+    "flaps": {
+      "interp": "step",
+      "keys": [
+        [
+          -30,
+          1
+        ],
+        [
+          30,
+          1
+        ]
+      ]
+    },
+    "gear": {
+      "interp": "step",
+      "keys": [
+        [
+          -30,
+          1
+        ],
+        [
+          30,
+          1
+        ]
+      ]
+    }
+  },
+  "units": {
+    "flaps": "detent"
+  },
+  "markers": [
+    {
+      "t": 0,
+      "label": "Left engine failure at 200 feet due to fuel contamination"
+    },
+    {
+      "t": 15,
+      "label": "Gained 50 feet; pilot did not execute emergency procedures"
+    },
+    {
+      "t": 20,
+      "label": "Aircraft rolled left abruptly, pitched down steeply"
+    },
+    {
+      "t": 30,
+      "label": "Impact with Atlantic Ocean, loss of control below Vmc (39 KIAS)"
+    }
+  ],
+  "terrain": "ocean"
+}

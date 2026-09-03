@@ -1,0 +1,163 @@
+{
+  "id": "wd_q949020",
+  "record": "wd_q949020",
+  "source": "NTSB Final Report AAR-91-08, section 1.11.1 Flight Data Recorder; FDR data from final 45 seconds of approach and landing",
+  "fidelity": "narrative",
+  "t_start": -51,
+  "t_end": 0,
+  "aircraft_model": "airliner_twin",
+  "params": {
+    "alt_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -51,
+          500
+        ],
+        [
+          -45,
+          425
+        ],
+        [
+          -20,
+          150
+        ],
+        [
+          -7,
+          30
+        ],
+        [
+          0,
+          20
+        ]
+      ]
+    },
+    "ias_kt": {
+      "interp": "linear",
+      "keys": [
+        [
+          -51,
+          140
+        ],
+        [
+          -45,
+          135
+        ],
+        [
+          -7,
+          135
+        ],
+        [
+          0,
+          120
+        ]
+      ]
+    },
+    "pitch_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -51,
+          -3.0
+        ],
+        [
+          -7,
+          0.0
+        ],
+        [
+          0,
+          2.0
+        ]
+      ]
+    },
+    "roll_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -51,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "hdg_deg": {
+      "interp": "linear",
+      "keys": [
+        [
+          -51,
+          248
+        ],
+        [
+          0,
+          248
+        ]
+      ]
+    },
+    "vs_fpm": {
+      "interp": "linear",
+      "keys": [
+        [
+          -51,
+          -500
+        ],
+        [
+          -20,
+          -400
+        ],
+        [
+          -7,
+          -100
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "ra_ft": {
+      "interp": "linear",
+      "keys": [
+        [
+          -51,
+          500
+        ],
+        [
+          -45,
+          425
+        ],
+        [
+          -20,
+          150
+        ],
+        [
+          -7,
+          30
+        ],
+        [
+          0,
+          20
+        ]
+      ]
+    }
+  },
+  "units": {},
+  "markers": [
+    {
+      "t": -51,
+      "label": "Descending out of 500 feet"
+    },
+    {
+      "t": -7,
+      "label": "Landing gear touchdown; descent stops"
+    },
+    {
+      "t": 0,
+      "label": "Collision with SkyWest 5569 on runway 24L"
+    }
+  ],
+  "camera_hint": "chase",
+  "terrain": "runway"
+}

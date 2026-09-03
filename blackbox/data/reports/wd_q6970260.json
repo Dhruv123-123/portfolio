@@ -100,17 +100,50 @@
     }
   ],
   "chain": [
-    ["low_visibility", "inadequate_monitoring"],
-    ["low_visibility", "altimeter_setting_error"],
-    ["atc_communication_error", "procedural_noncompliance"],
-    ["crm_breakdown", "inadequate_monitoring"],
-    ["inadequate_monitoring", "descent_below_minimums"],
-    ["altimeter_setting_error", "descent_below_minimums"],
-    ["descent_below_minimums", "cfit"],
-    ["gpws_warning_response", "cfit"],
-    ["atc_communication_error", "unstable_approach"],
-    ["procedural_noncompliance", "unstable_approach"],
-    ["unstable_approach", "cfit"]
+    [
+      "low_visibility",
+      "inadequate_monitoring"
+    ],
+    [
+      "low_visibility",
+      "altimeter_setting_error"
+    ],
+    [
+      "atc_communication_error",
+      "procedural_noncompliance"
+    ],
+    [
+      "crm_breakdown",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "descent_below_minimums"
+    ],
+    [
+      "altimeter_setting_error",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ],
+    [
+      "gpws_warning_response",
+      "cfit"
+    ],
+    [
+      "atc_communication_error",
+      "unstable_approach"
+    ],
+    [
+      "procedural_noncompliance",
+      "unstable_approach"
+    ],
+    [
+      "unstable_approach",
+      "cfit"
+    ]
   ],
   "events": [
     {
@@ -137,8 +170,12 @@
       "phase": "approach",
       "actor": "ATC",
       "text": "Vectored to descend and maintain 1700 ft; controller tells crew Twin Beech on ASR approach broke out at 450 feet",
-      "state": {"alt": 1700},
-      "factors": ["atc_communication_error"],
+      "state": {
+        "alt": 1700
+      },
+      "factors": [
+        "atc_communication_error"
+      ],
       "kind": "atc"
     },
     {
@@ -147,7 +184,9 @@
       "phase": "approach",
       "actor": "ATC",
       "text": "National 193 cleared to descend to 1500 ft",
-      "state": {"alt": 1500},
+      "state": {
+        "alt": 1500
+      },
       "factors": [],
       "kind": "atc"
     },
@@ -166,8 +205,13 @@
       "phase": "approach",
       "actor": "CAPT",
       "text": "Flaps extended to 25 degrees",
-      "state": {"alt": 940, "flaps": 25},
-      "factors": ["procedural_noncompliance"],
+      "state": {
+        "alt": 940,
+        "flaps": 25
+      },
+      "factors": [
+        "procedural_noncompliance"
+      ],
       "kind": "crew_action"
     },
     {
@@ -185,7 +229,9 @@
       "phase": "approach",
       "actor": "SYS",
       "text": "Landing gear warning horn sounds; captain calls for landing gear",
-      "state": {"alt": 940},
+      "state": {
+        "alt": 940
+      },
       "factors": [],
       "kind": "warning"
     },
@@ -195,7 +241,10 @@
       "phase": "approach",
       "actor": "FO",
       "text": "First officer responds to checklist: landing gear down, three green",
-      "state": {"alt": 680, "gear": 1},
+      "state": {
+        "alt": 680,
+        "gear": 1
+      },
       "factors": [],
       "kind": "crew_action"
     },
@@ -205,8 +254,12 @@
       "phase": "approach",
       "actor": "SYS",
       "text": "Ground proximity warning system whooper sounds; pull up voice warning begins",
-      "state": {"alt": 500},
-      "factors": ["gpws_warning_response"],
+      "state": {
+        "alt": 500
+      },
+      "factors": [
+        "gpws_warning_response"
+      ],
       "kind": "warning"
     },
     {
@@ -215,8 +268,13 @@
       "phase": "approach",
       "actor": "FE",
       "text": "Flight engineer inhibits GPWS; captain raises nose and reduces descent rate; pilots believe problem is solved",
-      "state": {"alt": 300, "pitch": 3},
-      "factors": ["gpws_warning_response"],
+      "state": {
+        "alt": 300,
+        "pitch": 3
+      },
+      "factors": [
+        "gpws_warning_response"
+      ],
       "kind": "crew_action"
     },
     {
@@ -225,8 +283,13 @@
       "phase": "approach",
       "actor": "FO",
       "text": "First officer says: \"...we're down to fifty feet\"",
-      "state": {"alt": 50},
-      "factors": ["inadequate_monitoring", "altimeter_setting_error"],
+      "state": {
+        "alt": 50
+      },
+      "factors": [
+        "inadequate_monitoring",
+        "altimeter_setting_error"
+      ],
       "kind": "crew_speech"
     },
     {
@@ -235,8 +298,12 @@
       "phase": "approach",
       "actor": "CAPT",
       "text": "Aircraft impacts Escambia Bay in approximately 12 feet of water; 3 passengers drowned attempting to exit",
-      "state": {"alt": 0},
-      "factors": ["cfit"],
+      "state": {
+        "alt": 0
+      },
+      "factors": [
+        "cfit"
+      ],
       "kind": "outcome"
     }
   ],
@@ -264,7 +331,7 @@
   "dissent": [],
   "safety_changes": [],
   "related": [],
-  "fdr": null,
+  "fdr": "wd_q6970260",
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7813.pdf"
   ],

@@ -1,0 +1,38 @@
+{
+ "id": "turkish1951",
+ "cues": [
+  {
+   "t": -420.0,
+   "file": "w_single_chime.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "single chime",
+   "dur": 0.35
+  },
+  {
+   "t": 0.0,
+   "file": "w_retard.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "retard",
+   "dur": 1.63
+  },
+  {
+   "t": 30.0,
+   "file": "w_glideslope.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "glideslope",
+   "dur": 1.05
+  },
+  {
+   "t": 100.0,
+   "file": "w_shaker.mp3",
+   "kind": "warning",
+   "speaker": "SYS",
+   "text": "shaker",
+   "dur": 1.6
+  }
+ ],
+ "note": "Speech is synthesized from the published transcript with a voice per seat; warnings are synthesized to the recorded flags. Nothing here is the real recording."
+}

@@ -314,7 +314,10 @@
     {
       "agency": "NTSB",
       "role": "member",
-      "names": ["Francis H. McADAMS", "William R. HALEY"],
+      "names": [
+        "Francis H. McADAMS",
+        "William R. HALEY"
+      ],
       "position": "The flight was a radar arrival and should have received altitude protection from ATC. The failure of the controller to issue altitude restrictions in accordance with 7110.8C paragraph 1360, combined with the captain's failure to adhere to minimum sector altitude, was the probable cause.",
       "topic": "probable cause"
     }
@@ -327,7 +330,7 @@
     "ARTS III altitude deviation warning system installed at terminal radar facilities"
   ],
   "related": [],
-  "fdr": null,
+  "fdr": "wd_q7672517",
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7516.pdf"
   ],

@@ -175,7 +175,7 @@
   "related": [
     "birgenair301"
   ],
-  "fdr": null,
+  "fdr": "wd_q11508994",
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7807.pdf"
   ],
@@ -202,5 +202,6 @@
   "report_links": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7807.pdf",
     "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR78-07.pdf"
-  ]
+  ],
+  "t0": "1977-01-13T15:35:00Z"
 }
