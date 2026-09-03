@@ -1,0 +1,251 @@
+{
+  "id": "wd_q7928392",
+  "qid": "Q7928392",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "Vieques Air Link 901A",
+  "flight_number": "901A",
+  "date": "1984-08-02",
+  "time_reference": "Atlantic Standard Time",
+  "t0": "1984-08-02T12:05:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR85-08",
+      "report_title": "Aircraft Accident Report - Vieques Air Link, Inc. Flight 901A",
+      "report_date": "1985-09-27",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8508.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Britten-Norman BN-2A-6 Islander",
+    "family": "Islander",
+    "manufacturer": "Britten-Norman",
+    "registration": "N589SA",
+    "engines": "Lycoming O-540"
+  },
+  "operator": "Vieques Air Link",
+  "route": {
+    "from": "PRPA",
+    "from_name": "Antonio Rivera Rodríguez Airport (Vieques)",
+    "to": "USVI",
+    "to_name": "Saint Croix"
+  },
+  "location": {
+    "name": "Atlantic Ocean, approximately 1/2 mile north of runway 9 at Vieques Airport",
+    "country": "United States Virgin Islands",
+    "lat": 18.14444,
+    "lon": -65.4425
+  },
+  "phase": "initial_climb",
+  "occupants": 9,
+  "fatalities": 9,
+  "damage": "destroyed",
+  "category": "FUEL",
+  "summary": "Vieques Air Link Flight 901A, a Britten-Norman Islander, crashed into the Atlantic Ocean shortly after takeoff from Vieques Airport on August 2, 1984. The pilot and eight passengers were killed. Investigation revealed the left engine failed due to water-contaminated fuel that had entered the airport's underground fuel storage tank following heavy rains. The pilot, inadequately trained for multi-engine operations, failed to execute proper emergency procedures after engine failure, leading to loss of control and impact with the sea.",
+  "probable_cause": "The accident resulted from the failure of the pilot to execute the emergency engine-out procedure properly shortly after takeoff following a loss of power in the left engine because of water in the airplane's fuel system and the failure of the Puerto Rico Ports Authority to remove excess water known to be in the airport's in-ground fuel tank before conducting fueling operations. The pilot's failure to execute the engine-out procedure properly was due to his inexperience in multi-engine airplanes. Contributing to the accident were: (1) the air carrier's use of a pilot not certificated for the flight; (2) the air carrier's failure to train the pilot adequately; (3) the pilot's failure to follow proper practices to detect water in the airplane's fuel tanks; (4) the out of weight and balance condition of the airplane; (5) the FAA's incorrect application of 14 CFR Part 135 Rules to commuter air carriers; and (6) the FAA's generally inadequate surveillance of the air carrier.",
+  "factors": [
+    {
+      "id": "fuel_starvation",
+      "role": "initiating",
+      "evidence": "Left fuel tank filled with water-contaminated fuel from the airport's underground storage tank on August 2 at approximately 0740 AST. The No. 2 tank at Vieques showed 1.5 inches of water when tested at 0645 AST on the morning of the accident following heavy rains (p. 6)."
+    },
+    {
+      "id": "engine_failure",
+      "role": "contributing",
+      "evidence": "No. 1 (left) engine lost power when aircraft was at approximately 200 feet during initial climb, shortly after takeoff. Physical evidence revealed conclusively that the left engine was not producing power on impact, and fresh water was found in the left engine fuel system (p. 4, 29)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft appeared to lose power when about 200 feet above the ocean, then gained about 50 feet before descending into the ocean. The left propeller was not feathered and flaps were found full down, indicating pilot did not follow prescribed emergency procedures. Aircraft rolled left abruptly and pitched down steeply, indicating loss of control when airspeed decreased below minimum control speed (p. 4, 29-30)."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "Pilot claimed 1,088 hours total flying time and 480 hours in the BN-2A Islander but investigation disclosed he had at most only 72 total hours, 182 of which were multi-engine experience with only 37 hours of dual instruction. He was inadequately trained in multi-engine emergency procedures (p. 8, 30)."
+    },
+    {
+      "id": "weight_and_balance_error",
+      "role": "contributing",
+      "evidence": "Aircraft was estimated to be as much as 600 to 700 pounds over its certificated TOGW, and its center of gravity was as much as 5 inches aft of its 25.6 inch rearmost limit. This adverse weight and balance condition would decrease response time available for pilot to maintain control and reduce performance capabilities (p. 30)."
+    },
+    {
+      "id": "certification_shortfall",
+      "role": "contributing",
+      "evidence": "Pilot was not qualified to fly as pilot-in-command of a commuter air carrier flight or as pilot-in-command of an extra section of a commuter air carrier flight. He was restricted to on-demand flights only per his Certificate of Proficiency (p. 8)."
+    },
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "The Puerto Rico Ports Authority failed to remove the 1.5 inches of water from the No. 2 tank before allowing the aircraft to be fueled. Water had accumulated due to heavy rains and was known to be present at 0645 AST before the aircraft was refueled (p. 6)."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "FAA's generally inadequate surveillance of the air carrier and incorrect application of 14 CFR Part 135 Rules to commuter air carriers contributed to the accident (p. 4)."
+    }
+  ],
+  "chain": [
+    ["fuel_starvation", "engine_failure"],
+    ["engine_failure", "loss_of_control_inflight"],
+    ["inadequate_training", "loss_of_control_inflight"],
+    ["weight_and_balance_error", "loss_of_control_inflight"]
+  ],
+  "events": [
+    {
+      "t": -7200,
+      "clock": "0630",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Pilot reported for duty at Vieques Airport for the day's operations",
+      "factors": [],
+      "state": {}
+    },
+    {
+      "t": -5400,
+      "clock": "0645",
+      "phase": "ground",
+      "actor": "GND",
+      "kind": "system",
+      "text": "Ramp inspector drained the gasoline pump filter and tested the fuel storage tanks for water. No. 2 tank indicated 1.5 inches of water, which was higher than the previous day and the highest in recent recorded history",
+      "factors": ["fuel_starvation"],
+      "state": {}
+    },
+    {
+      "t": -4200,
+      "clock": "0705",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Pilot flew aircraft N589SA to Fajardo, Puerto Rico, with nine passengers stowed and returned to Vieques at 0736",
+      "factors": [],
+      "state": {}
+    },
+    {
+      "t": -1200,
+      "clock": "0745",
+      "phase": "ground",
+      "actor": "GND",
+      "kind": "system",
+      "text": "After deplaning passengers in Vieques, pilot taxied N589SA to the gas pump where 30 U.S. gallons of 103/130 octane low lead fuel were added to each wing tank from the contaminated No. 2 tank. Pilot did not drain fuel tank sumps and no witness saw pilot check for water or drain the sumps",
+      "factors": ["fuel_starvation"],
+      "state": {}
+    },
+    {
+      "t": -600,
+      "clock": "0755",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 901A departed from the ramp at Vieques with eight passengers aboard, all of whom had reserved seats and purchased tickets for Flight 901. Pilot contacted UNICOM as he taxied out to the takeoff end of runway 9",
+      "factors": [],
+      "state": {}
+    },
+    {
+      "t": 0,
+      "clock": "0805",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft appeared to climb out normally after takeoff. As aircraft turned left in a crosswind departure pattern at approximately 200 feet altitude, it appeared to lose power in the left engine due to water in the fuel system",
+      "factors": ["engine_failure", "fuel_starvation"],
+      "state": {"alt": 200}
+    },
+    {
+      "t": 15,
+      "clock": "0805",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft gained approximately 50 feet of altitude while in a nose-high attitude as pilot may have attempted recovery, then engines appeared to develop more power momentarily",
+      "factors": ["engine_failure"],
+      "state": {"alt": 250}
+    },
+    {
+      "t": 20,
+      "clock": "0805",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "With left propeller not feathered and flaps found full down (at 25 degrees takeoff configuration), pilot did not execute prescribed emergency engine-out procedures including feathering propeller, allowing airspeed to increase to best single-engine rate of climb speed of 65 KIAS, and retracting takeoff flaps",
+      "factors": ["loss_of_control_inflight", "inadequate_training"],
+      "state": {}
+    },
+    {
+      "t": 30,
+      "clock": "0805",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft rolled abruptly to the left and pitched down steeply, indicating loss of directional control when airspeed decreased below minimum control speed (Vmc) of 39 KIAS. Aircraft crashed into the Atlantic Ocean approximately 1/2 mile north of runway 9. Wreckage sank in approximately 18 feet of water",
+      "factors": ["loss_of_control_inflight"],
+      "state": {"alt": 0}
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-85-73",
+      "to": "FAA",
+      "text": "Issue an Airworthiness Directive applicable to Pilatus Britten-Norman BN-2, BN-2A, BN-2B, BN-2T, and BN-2A Mk I model airplanes requiring the incorporation of Britten Norman modification NB/M/350 to provide increased protection from fuel contamination",
+      "status": "unknown",
+      "trigger_factors": ["fuel_starvation"]
+    },
+    {
+      "id": "A-85-74",
+      "to": "FAA",
+      "text": "Amend the FAA's operations specifications applicable to Vieques Air Link, Inc., and other U.S. operators of Pilatus Britten-Norman BN-2, BN-2A, BN-2B, BN-2T, and BN-2A Mk III model airplanes engaged in commuter/air taxi operations, to require that preflight checks for fuel contamination be made before the first flight of the day and after each refueling operation in strict accordance with the manufacturer's instructions",
+      "status": "unknown",
+      "trigger_factors": ["fuel_starvation"]
+    },
+    {
+      "id": "A-85-75",
+      "to": "FAA",
+      "text": "Require Pilatus Britten-Norman to install a device to measure airplane attitude, e.g., a small bubble-level, on all BN-2, BN-2A, BN-2B, BN-2T, and BN-2A Mk III model airplanes delivered in the United States in order to provide a ready means for ensuring the airplane is level during preflight checks for fuel contamination. Concurrently, require Britten Norman to develop a service kit or modification instructions to retrofit existing BN-2, BN-2A, BN-2B, BN-2T, and BN-2A Mk II mode airplanes with a similar device",
+      "status": "unknown",
+      "trigger_factors": ["fuel_starvation"]
+    },
+    {
+      "id": "A-85-76",
+      "to": "FAA",
+      "text": "Require Pilatus Britten-Norman to prepare and disseminate a Safety Advisory relating to water in the fuel to all operators of BN-2, BN-2A, BN-2B, BN-2T, and BN-2A Mk III model airplanes. The advisory should outline the circumstances relating to the Vieques Air Link accident of August 2, 1984, and the criticality of proper preflight fuel tank drainage procedures, and should urge operators to incorporate Britten Norman Modification NB/M/380 in their airplanes",
+      "status": "unknown",
+      "trigger_factors": ["fuel_starvation"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8508.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Vieques_Air_Link_Flight_901A",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8508.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR85-08.pdf"
+  ],
+  "asn_id": "19840802-0",
+  "interest": 10.34,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Deep read extracted from NTSB AAR85-08 report",
+      "Sections read: Synopsis (p. 4), History of Flight (p. 4-7), Factual Information including Personnel, Aircraft, and Fuel System (p. 6-14), Analysis including The Accident (p. 29-30), Probable Cause and Contributing Factors (p. 4), Recommendations (p. 38-39)",
+      "8 events extracted with clock times from narrative; minimum control speed Vmc calculated as 39 KIAS from text",
+      "All factor evidence includes page citations from OCR'd report text",
+      "Probable cause text condensed from official NTSB statement",
+      "Four recommendations with official IDs from report (A-85-73 through A-85-76)"
+    ]
+  }
+}
