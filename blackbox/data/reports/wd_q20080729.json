@@ -1,0 +1,206 @@
+{
+  "id": "wd_q20080729",
+  "qid": "Q20080729",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Sierra Pacific Airlines Flight 802",
+  "flight_number": "SP802",
+  "date": "1974-03-13",
+  "time_reference": "local",
+  "t0": "1974-03-13T20:20:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-75-1",
+      "report_date": "1975-01-10"
+    }
+  ],
+  "aircraft": {
+    "type": "Convair 340/440-38",
+    "manufacturer": "Convair",
+    "family": "CV-440",
+    "registration": "N4819C",
+    "msn": null,
+    "engines": "2x Pratt & Whitney R-2800"
+  },
+  "operator": "Sierra Pacific Airlines",
+  "route": {
+    "from": "KBIH",
+    "from_name": "Bishop Airport",
+    "to": "KBUR",
+    "to_name": "Hollywood-Burbank Airport"
+  },
+  "location": {
+    "name": "White Mountains north slope, near Bishop, California",
+    "country": "United States",
+    "lat": 37.33,
+    "lon": -118.27
+  },
+  "phase": "initial_climb",
+  "occupants": 36,
+  "fatalities": 36,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Sierra Pacific Airlines Charter Flight 802, a Convair 340/440 carrying a movie production crew, crashed into a mountainside near Bishop, California during night VFR climb-out on March 13, 1974. All 36 occupants were killed. The National Transportation Safety Board was unable to determine the probable cause of the accident.",
+  "probable_cause": "The National Transportation Safety Board is unable to determine the probable cause of this accident. The reason why the flightcrew did not maintain a safe distance from hazardous terrain during night visual flight conditions could not be established. (p. 3, 18)",
+  "factors": [
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "It was an extremely dark night with no moon. Witnesses agreed the mountains to the east could not be seen against the sky during the night. Official sunset was at 1905 and astronomical twilight ended at 2026. The moon rose at 0104 on March 14. (p. 1, 7)"
+    },
+    {
+      "id": "navigation_error",
+      "role": "contributing",
+      "evidence": "No specific climb-out procedures from Eastern Sierra Regional Airport (Bishop) existed. Pilots typically made initial right turn towards Bishop away from mountains. Flight maintenance a right turn pattern around the airport, believed to circle back over or near the BIH VOR and proceed outbound in an east-southeasterly direction. (p. 3, 7, 17)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "No specific procedures are set forth in the Sierra Pacific Airlines Operation Manual for a climbout from the Bishop Airport. The consensus of company crews was to make an initial right turn toward Bishop regardless of runway used, but no formal procedures existed. (p. 8, 17)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft struck the northern slope of a mountain ridge at 6,100 feet elevation, 5.2 statute miles southeast of the Bishop Airport. Imprint marks showed aircraft was on heading of approximately 175 degrees magnetic with 25 degree right wing-down attitude at impact. (p. 7, 11)"
+    }
+  ],
+  "chain": [
+    ["dark_night", "navigation_error"],
+    ["inadequate_training", "navigation_error"],
+    ["navigation_error", "loss_of_control_inflight"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "20:20",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 802 departed the gate at approximately 20:20 with 36 persons on board (32 passengers and crew of 4). Aircraft taxied north toward runway 12."
+    },
+    {
+      "t": 60,
+      "clock": "20:21",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 20:21, Tonapah Flight Service Station records show the crew contacted the station and requested their IFR clearance be activated."
+    },
+    {
+      "t": 72,
+      "clock": "20:22",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft took off on runway 12. Airport manager saw aircraft takeoff; after aircraft passed abeam of his position, a hangar blocked his view and he neither saw nor heard the aircraft again."
+    },
+    {
+      "t": 240,
+      "clock": "20:24",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "atc",
+      "text": "Crew contacted Tonapah FSS on Bishop radio frequency 122.6 MHz and reported they were off Bishop and climbing VFR over Bishop, awaiting clearance."
+    },
+    {
+      "t": 480,
+      "clock": "20:28",
+      "phase": "initial_climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 20:28:40, Tonapah FSS specialist received IFR clearance from Oakland Center and attempted to radio Flight 802. Contact could not be established. Specialist tried repeatedly but flight did not respond."
+    },
+    {
+      "t": 600,
+      "clock": "20:30",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "outcome",
+      "text": "Several ground witnesses saw aircraft during the last few moments before crash, located near base of mountains east of airport. They observed green and white lights proceeding in southerly direction parallel to mountain range."
+    },
+    {
+      "t": 660,
+      "clock": "20:31",
+      "phase": "initial_climb",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Witnesses observed aircraft for about 1 minute when they saw burst of flames and heard explosion. Witness about 2 miles southwest of airport heard large twin-engine aircraft pass nearly overhead just before the accident.",
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 720,
+      "clock": "20:32",
+      "phase": "initial_climb",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft struck foothill in the White Mountain range at 6,100 feet elevation, 5.2 statute miles southeast of Bishop Airport, at coordinates 37°19'57\" north, 118°16'14\" west.",
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 840,
+      "clock": "20:34",
+      "phase": "initial_climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 20:36, Bishop Airport manager called Tonapah FSS and requested status of Flight 802, advising FSS of explosion and fire in White Mountains east of airport. FSS specialist assumed accident had occurred and initiated accident notification procedures."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-74-92",
+      "to": "FAA",
+      "text": "Establish specific VFR departure procedures for Bishop Airport that limit initial climb-out to proximity of airport during hours of darkness until minimum altitude and heading clearance of terrain are assured.",
+      "status": "unknown",
+      "trigger_factors": ["inadequate_training", "navigation_error"]
+    },
+    {
+      "id": "A-74-93",
+      "to": "FAA",
+      "text": "Require all terrain-constrained airports with night VFR operations to publish standard departure procedures specific to terrain avoidance.",
+      "status": "unknown",
+      "trigger_factors": ["inadequate_training"]
+    },
+    {
+      "id": "A-74-94",
+      "to": "FAA",
+      "text": "Establish minimum lighting and visual cues at terrain-constrained airports to enhance terrain avoidance during night VFR operations, or restrict night VFR operations in mountainous areas without specific terrain avoidance procedures.",
+      "status": "unknown",
+      "trigger_factors": ["dark_night", "navigation_error"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "FAA issued guidance on development of standard instrument departure procedures (SIDs) for mountainous terrain airports.",
+    "Increased emphasis on formal VFR departure procedures at uncontrolled terrain-constrained airports."
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7501.pdf"
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7501.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Sierra_Pacific_Airlines_Flight_802",
+  "asn_id": "19740313-0",
+  "interest": 5.68,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Synopsis (p. 1), History of Flight (p. 2-5), Meteorological Information (p. 6), Aids to Navigation (p. 6-8), Aircraft Wreckage (p. 8-10), Analysis and Conclusions (p. 13-18), Recommendations (p. 18). Page extraction limited by OCR quality of 1974 report.",
+      "Eight events with clock times extracted from flight service station communications and witness observations.",
+      "Probable cause unsolved by NTSB; conclusions based on contributing factors and analysis of terrain features, weather, and procedures.",
+      "Report quality: Old NTSB report with moderate OCR errors; extracted information validated against multiple sections of report."
+    ]
+  }
+}

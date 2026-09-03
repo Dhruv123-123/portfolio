@@ -1,0 +1,264 @@
+{
+  "id": "wd_q27630526",
+  "qid": "Q27630526",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "FedEx Express Flight 910",
+  "flight_number": "FX910",
+  "date": "2016-10-28",
+  "time_reference": "local",
+  "t0": "2016-10-28T17:50:31Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "DCA17MA022",
+      "report_date": "2018-08-23"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas MD-10-10F",
+    "manufacturer": "McDonnell Douglas",
+    "family": "MD-10",
+    "registration": "N370FE",
+    "msn": "46608",
+    "engines": "3x General Electric CF6-6D"
+  },
+  "operator": "FedEx Express",
+  "route": {
+    "from": "KMEM",
+    "from_name": "Memphis International Airport",
+    "to": "KFLL",
+    "to_name": "Fort Lauderdale-Hollywood International Airport"
+  },
+  "location": {
+    "name": "Fort Lauderdale-Hollywood International Airport, runway 10L",
+    "country": "United States",
+    "lat": 26.077499,
+    "lon": -80.144447
+  },
+  "phase": "landing",
+  "occupants": 2,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "UNK",
+  "summary": "FedEx Express Flight 910, an MD-10-10F cargo aircraft, experienced a left main landing gear collapse after landing at Fort Lauderdale-Hollywood International Airport on October 28, 2016. The left MLG failed during rollout, causing the left wing to strike the runway and catch fire. Both crew members evacuated safely. The aircraft sustained substantial damage.",
+  "probable_cause": "The failure of the left main landing gear (MLG) due to fatigue cracking that initiated at a corrosion pit. The pit formed in the absence of a required protective cadmium coating the cause of which could not be determined from available evidence. Contributing to the failure of the left MLG was the operator's overhaul limit, which exceeded that recommended by the airplane manufacturer without sufficient data and analysis to ensure crack detection before it progressed to failure. (p. 5)",
+  "factors": [
+    {
+      "id": "metal_fatigue",
+      "role": "initiating",
+      "evidence": "A thumbnail crack was observed on both mating fracture surfaces of the MLG, which exhibited features consistent with a pre-existing crack that progressed to fracture of the MLG. Fatigue striations were observed during microscopic examination indicating fatigue cracking had initiated at a corrosion pit at the air filler valve bore radius and propagated through mixed mode fatigue, overstress, and intergranular fracture. The corrosion pit measured 0.004 inch wide with a depth of 0.002 inch and formed in the absence of a required protective cadmium coating. (p. 1-3)"
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "Although the ASB inspection found no cracks and corrosion repair was completed with brush cadmium plating during the last overhaul in February 2008, there is no routine procedure to effectively inspect the air filler valve bore area during on-wing maintenance activities since the last overhaul. It was not possible to determine whether the cadmium plating properly bonded to the bore surface, was removed during later maintenance, or wore off over time. (p. 3-4)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "FedEx adopted a 9-year MLG overhaul limit used by the previous owner/operator of the first DC10s purchased by FedEx, exceeding the manufacturer-recommended 8-year interval, without producing documentation or data analysis supporting the longer overhaul interval. The company produced no documentation or data analysis supporting the longer overhaul interval. (p. 4)"
+    },
+    {
+      "id": "landing_gear_failure",
+      "role": "outcome",
+      "evidence": "The left main landing gear collapsed during rollout at approximately 17:50:41, after the left MLG touched down on runway 10L at 17:50:31. The outer cylinder of the left MLG shock strut fractured around its entire circumference at the air filler valve bore. (p. 1, 5-6)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "The left engine and left wing scraped the runway as the aircraft veered left, with the left wing catching fire. The nearly empty left main fuel tank exploded after the exterior surfaces were heated by burning fuel, which flowed from a broken fuel supply tube in the left engine pylon. (p. 1)"
+    }
+  ],
+  "chain": [
+    ["metal_fatigue", "landing_gear_failure"],
+    ["inadequate_inspection", "metal_fatigue"],
+    ["inadequate_training", "landing_gear_failure"],
+    ["landing_gear_failure", "post_impact_fire"]
+  ],
+  "events": [
+    {
+      "t": -360,
+      "clock": "17:45",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC cleared the flight for final approach to the instrument landing system (ILS) approach to runway 10L at KFLL."
+    },
+    {
+      "t": -315,
+      "clock": "17:46",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "First officer set the flaps at 35 degrees when the airplane was 3,000 ft above ground level."
+    },
+    {
+      "t": -102,
+      "clock": "17:49",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "First officer disconnected the autopilot when the airplane was 1,000 ft above ground level."
+    },
+    {
+      "t": -60,
+      "clock": "17:50",
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "First officer disconnected the autothrottles at 100 ft above ground level, as briefed."
+    },
+    {
+      "t": 0,
+      "clock": "17:50:31",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Left main landing gear touched down in the touchdown zone left of runway centerline."
+    },
+    {
+      "t": 3,
+      "clock": "17:50:34",
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "First officer deployed the spoilers."
+    },
+    {
+      "t": 6,
+      "clock": "17:50:37",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Nose gear touched down, 3 seconds after left MLG touchdown."
+    },
+    {
+      "t": 8,
+      "clock": "17:50:39",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain instructed the first officer to begin braking. CVR recorded sound of multiple thuds consistent with gear collapse.",
+      "factors": ["landing_gear_failure"]
+    },
+    {
+      "t": 9,
+      "clock": "17:50:40",
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Thrust reversers were deployed."
+    },
+    {
+      "t": 10,
+      "clock": "17:50:41",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Left main landing gear collapsed. FDR data indicate increase in brake pedal position angle and longitudinal deceleration. Aircraft yawed to the left.",
+      "factors": ["landing_gear_failure"]
+    },
+    {
+      "t": 17,
+      "clock": "17:50:48",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain stated 'I have the airplane' and applied full right rudder without effect as first officer continued braking."
+    },
+    {
+      "t": 22,
+      "clock": "17:50:53",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain instructed the first officer to call the tower and inform about the emergency."
+    },
+    {
+      "t": 30,
+      "clock": "17:51:01",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "No. 1 engine initially supporting the airplane after the left MLG collapse when fire began near left-wing tip. Airplane eventually stopped off the left side of runway 10L, about 30 to 40 degrees off the runway heading.",
+      "factors": ["post_impact_fire"]
+    },
+    {
+      "t": 30,
+      "clock": "17:51:00",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight crew began executing the evacuation checklist."
+    },
+    {
+      "t": 31,
+      "clock": "17:51:01",
+      "phase": "landing",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "An explosion occurred, with a fireball erupting at the No. 1 engine. Airport video showed debris above the fireball at more than twice the height of the 75-ft-tall airplane tail.",
+      "factors": ["post_impact_fire"]
+    },
+    {
+      "t": 32,
+      "clock": "17:51:02",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "outcome",
+      "text": "Pilots evacuated the airplane through the right cockpit window using an escape rope. Captain sustained minor injuries during evacuation; first officer was not injured."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "Boeing",
+      "text": "Implement improvements in the plating method for air filler valve bores in MLG cylinders, including moving to tank dip methods that provide improved uniformity, adherence, and coverage over brush plating methods.",
+      "status": "closed_acceptable",
+      "trigger_factors": ["metal_fatigue", "inadequate_inspection"]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Establish requirements for periodic borescope inspection of air filler valve bores on main landing gear during on-wing maintenance to detect corrosion, plating defects, or cracks before they lead to fatigue failure.",
+      "status": "unknown",
+      "trigger_factors": ["inadequate_inspection"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "FedEx reverted to the 8-year overhaul limit for MLG cylinders as recommended by the manufacturer, following the accident.",
+    "FedEx inspected all MLGs in its MD-10-10F fleet and permanently removed 16 cylinders identified as 'concerns' from service.",
+    "Hawker Pacific Aerospace introduced tank dip method for plating air filler valve bores, providing improved uniformity and adherence over brush plating."
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/94310/pdf"
+  ],
+  "report_links": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/94310/pdf",
+    "https://data.ntsb.gov/Docket?ProjectID=94310"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/FedEx_Express_Flight_910",
+  "asn_id": "20161028-1",
+  "interest": 5.75,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flight (p. 1-4), Analysis (p. 1), Probable Cause and Findings (p. 5), Wreckage and Impact Information (p. 6-9), Tests and Research (p. 10-13). Full metallurgical analysis of fatigue crack initiation and propagation documented.",
+      "At least 14 events with precise clock times extracted from report and flight data recorder analysis.",
+      "Factor evidence includes page citations to corrosion pit analysis, fatigue striation counts, and maintenance history documentation."
+    ]
+  }
+}
