@@ -1,0 +1,180 @@
+{
+  "id": "wd_q5390512",
+  "qid": "Q5390512",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Southwest Airlines 812",
+  "flight_number": "SW812",
+  "date": "2011-04-01",
+  "time_reference": "MST",
+  "t0": "2011-04-01T15:58:05Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "DCA11MA039",
+      "report_title": "Rapid Depressurization and Structural Failure",
+      "report_date": "2013-09-24",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB1302.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-3H4",
+    "family": "737",
+    "manufacturer": "Boeing",
+    "registration": "N632SW",
+    "msn": "27707"
+  },
+  "operator": "Southwest Airlines",
+  "route": {
+    "from": "PHX",
+    "from_name": "Phoenix Sky Harbor",
+    "to": "SMF",
+    "to_name": "Sacramento International"
+  },
+  "location": {
+    "name": "Yuma",
+    "country": "United States"
+  },
+  "phase": "cruise",
+  "occupants": 122,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "Southwest Airlines Flight 812 experienced rapid depressurization while climbing through 34,400 feet on April 1, 2011. A 60-inch section of fuselage skin fractured and flapped open due to metal fatigue at a manufacturing lap joint. The crew conducted an emergency descent to 11,000 feet and diverted safely to Yuma.",
+  "probable_cause": "The probable cause was the improper installation of the fuselage crown skin panel at the S-4L lap joint during the manufacturing process, which resulted in multiple site damage fatigue cracking and eventual failure of the lower skin panel. Contributing to the injuries was flight attendant A's incorrect assessment of his time of useful consciousness, which led to his failure to follow procedures requiring immediate donning of an oxygen mask when cabin pressure is lost.",
+  "factors": [
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "Improper installation of fuselage crown skin panel at S-4L lap joint; misaligned panels caused misdrilled holes (p. 14)."
+    },
+    {
+      "id": "metal_fatigue",
+      "role": "contributing",
+      "evidence": "Multiple site damage fatigue cracking initiated at rivet hole 85 almost immediately after manufacture; longest fatigue crack grew over 38,261 cycles (p. 9, 14)."
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Cumulative fatigue cracking reached critical length; panel residual strength insufficient to carry pressurization loads, hole flapped open (p. 14)."
+    },
+    {
+      "id": "explosive_decompression",
+      "role": "outcome",
+      "evidence": "Rapid depressurization when fuselage skin fractured and separated (p. 1)."
+    }
+  ],
+  "chain": [
+    [
+      "maintenance_error",
+      "metal_fatigue"
+    ],
+    [
+      "metal_fatigue",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "explosive_decompression"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "15:58:05",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Unidentified sound recorded on cockpit microphone at FL340 during climb to FL360 (p. 1)."
+    },
+    {
+      "t": 2,
+      "clock": "15:58:07",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain announced cabin pressurization lost and called for oxygen masks (p. 1)."
+    },
+    {
+      "t": 60,
+      "clock": "15:59:05",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain declared emergency with ATC and requested lower altitude (p. 1)."
+    },
+    {
+      "t": 180,
+      "clock": "16:00:25",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Cabin oxygen masks deployed; aircraft descended to 11,000 feet within 5 minutes (p. 1)."
+    },
+    {
+      "t": 420,
+      "clock": "16:03:25",
+      "phase": "descent",
+      "actor": "CABIN",
+      "kind": "crew_speech",
+      "text": "About 16:05, cabin crew relayed reports of 2-foot fuselage hole and broken-nose injury (p. 1)."
+    },
+    {
+      "t": 600,
+      "clock": "16:05:45",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Airplane cleared to descend to 9,000 feet; captain requested radar vectors to Yuma (p. 1)."
+    },
+    {
+      "t": 1260,
+      "clock": "16:19:05",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft landed at runway 21R at Yuma International Airport without incident (p. 1)."
+    },
+    {
+      "t": 1320,
+      "clock": "16:20:05",
+      "phase": "landing",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "Passengers deplaned via airstairs; flight attendant A struck nose on forward partition (p. 2)."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB1302.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections: History of Flight (p. 1), Analysis (p. 13-14), Probable Cause (p. 15)",
+      "8 events with times from CVR and narrative",
+      "Manufacturing fatigue analysis from materials examination"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Southwest_Airlines_Flight_812",
+  "asn_id": "20110401-0",
+  "interest": 8.04,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB1302.pdf",
+    "https://www.ntsb.gov/doclib/reports/2013/AAB1302.pdf"
+  ],
+  "curated_id": null
+}

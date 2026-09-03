@@ -1,0 +1,273 @@
+{
+  "id": "wd_q28100218",
+  "qid": "Q28100218",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "American Airlines 383",
+  "flight_number": "AA383",
+  "date": "2016-10-28",
+  "time_reference": "CDT",
+  "t0": "2016-10-28T14:31:43Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "DCA17FA021",
+      "report_title": "Uncontained Engine Failure and Subsequent Fire",
+      "report_date": "2018-01-30",
+      "url": "https://ntsb.gov/investigations/AccidentReports/Reports/AAR1801.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 767-323(ER)",
+    "family": "767",
+    "manufacturer": "Boeing",
+    "registration": "N345AN",
+    "msn": "33084"
+  },
+  "operator": "American Airlines",
+  "route": {
+    "from": "ORD",
+    "from_name": "Chicago O'Hare International",
+    "to": "MIA",
+    "to_name": "Miami International"
+  },
+  "location": {
+    "name": "Chicago O'Hare International Airport",
+    "country": "United States"
+  },
+  "phase": "takeoff",
+  "occupants": 170,
+  "fatalities": 0,
+  "injuries_serious": 1,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "American Airlines Flight 383 suffered an uncontained right engine failure during takeoff roll at O'Hare on October 28, 2016. The HPT stage 2 disk ruptured, penetrating the wing fuel tank and causing a severe fire. Captain rejected takeoff and crew evacuated all 170 occupants; 21 sustained injuries.",
+  "probable_cause": "The probable cause was the failure of the high-pressure turbine stage 2 disk, which severed the main engine fuel feed line and breached the right main wing fuel tank, releasing fuel that resulted in a fire during the takeoff roll. The HPT stage 2 disk failed because of low-cycle fatigue cracks that initiated from an internal subsurface manufacturing anomaly that was most likely not detectable during production and in-service inspections. Contributing factors included lack of a separate engine fire checklist for ground operations and lack of communication between flight and cabin crews.",
+  "factors": [
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "HPT stage 2 disk rupture during takeoff power at 1431:43.4 when airspeed was 128 knots; sudden engine imbalance detected (p. 2, 16)."
+    },
+    {
+      "id": "uncontained_engine_failure",
+      "role": "initiating",
+      "evidence": "Right engine suffered uncontained failure with disk fragment penetrating inboard section of right wing, severing fuel feed line and breaching fuel tank (p. 1, 2)."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "HPT stage 2 disk had discrete dirty white spot manufacturing anomaly undetectable by production inspection methods; fatigue cracks not detectable at last in-service inspection (p. 75)."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Severe fire on right side of airplane following engine failure and fuel tank breach (p. 1, 2)."
+    }
+  ],
+  "chain": [
+    [
+      "inadequate_inspection",
+      "engine_failure"
+    ],
+    [
+      "engine_failure",
+      "uncontained_engine_failure"
+    ],
+    [
+      "uncontained_engine_failure",
+      "post_impact_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:30:57",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower controller cleared airplane for takeoff; first officer acknowledged (p. 1)."
+    },
+    {
+      "t": 11,
+      "clock": "14:31:08",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "At 14:31:19, CVR recorded sound of increasing engine RPM; at 14:31:24 engines achieved takeoff power (p. 1-2)."
+    },
+    {
+      "t": 25,
+      "clock": "14:31:18",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "At 14:31:32, first officer made routine callout of 80 knots airspeed; crew described spool-up as normal (p. 2)."
+    },
+    {
+      "t": 46,
+      "clock": "14:31:29",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "At 14:31:43.4, with 128 knots indicated, longitudinal acceleration decreased suddenly from 0.23 to 0.13 G; CVR recorded 'bang' sound (p. 2)."
+    },
+    {
+      "t": 50,
+      "clock": "14:31:33",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain initiated rejected takeoff maneuver; throttles moved to idle at 14:31:45.6 (p. 2)."
+    },
+    {
+      "t": 60,
+      "clock": "14:31:43",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Autobrakes activated at rejected takeoff airspeed of 134 knots (V1); speedbrakes activated about 2 seconds later (p. 2)."
+    },
+    {
+      "t": 66,
+      "clock": "14:31:49",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 14:31:50, first officer contacted ATC stating airplane stopping on runway; controller responded with fire warning (p. 2)."
+    },
+    {
+      "t": 70,
+      "clock": "14:31:53",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "At 14:32:00, CVR recorded engine fire warning; FDR showed 'ENG FIRE R' annunciated; airplane decelerated to 35 knots (p. 2-3)."
+    },
+    {
+      "t": 80,
+      "clock": "14:32:03",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "At 14:32:04.1, captain called for engine fire checklist (20.6 seconds after engine failure); fuel switch shut off (p. 3)."
+    },
+    {
+      "t": 97,
+      "clock": "14:32:20",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "FDR showed airplane came to stop at 14:32:09.8, 26.4 seconds after engine failure; captain could smell smoke (p. 3)."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-18-3",
+      "to": "FAA",
+      "text": "Establish and lead an industry group to evaluate current and enhanced inspection technologies for nickel alloys and issue guidance for nickel alloy rotating engine components.",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
+    },
+    {
+      "id": "A-18-4",
+      "to": "FAA",
+      "text": "Require subsurface in-service inspection techniques such as ultrasonic inspections for critical high-energy, life-limited rotating parts for all engines.",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
+    },
+    {
+      "id": "A-18-5",
+      "to": "FAA",
+      "text": "Revise Advisory Circular 20-128A to minimize hazards from uncontained engine failures based on analysis of recent uncontained engine failure data.",
+      "status": "open",
+      "trigger_factors": [
+        "uncontained_engine_failure"
+      ]
+    },
+    {
+      "id": "A-18-6",
+      "to": "FAA",
+      "text": "Require operators to develop emergency checklist procedures for engine fire on the ground to expeditiously address fire hazard.",
+      "status": "open",
+      "trigger_factors": [
+        "post_impact_fire"
+      ]
+    },
+    {
+      "id": "A-18-7",
+      "to": "FAA",
+      "text": "Develop guidance for flight attendant training regarding assessing exits during emergencies and identifying conditions that preclude opening exits.",
+      "status": "open",
+      "trigger_factors": [
+        "post_impact_fire"
+      ]
+    },
+    {
+      "id": "A-18-8",
+      "to": "FAA",
+      "text": "Review training programs to ensure flight attendants and crews receive training on different interphone systems.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-18-9",
+      "to": "FAA",
+      "text": "Conduct research on effects of carry-on baggage on evacuation times and identify countermeasures.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-18-10",
+      "to": "Boeing",
+      "text": "Work with operators to develop engine fire checklist procedures for ground operations.",
+      "status": "open",
+      "trigger_factors": [
+        "post_impact_fire"
+      ]
+    },
+    {
+      "id": "A-18-11",
+      "to": "American Airlines",
+      "text": "Review engine fire checklists and ensure procedures expeditiously address ground engine fires without delaying evacuation.",
+      "status": "open",
+      "trigger_factors": [
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR1801.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections: History of Flight (p. 1-4), Findings (p. 75-76), Probable Cause (p. 75-76), Recommendations (p. 77-78)",
+      "10 events extracted with precise times from CVR and FDR data",
+      "9 formal safety recommendations extracted with IDs"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/American_Airlines_Flight_383_(2016)",
+  "asn_id": "20161028-2",
+  "interest": 8.01,
+  "report_links": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR1801.pdf"
+  ],
+  "curated_id": null
+}

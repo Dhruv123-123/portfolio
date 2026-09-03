@@ -1,0 +1,192 @@
+{
+  "id": "wd_q66827793",
+  "qid": "Q66827793",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Pan Am 160",
+  "flight_number": "PA160",
+  "date": "1973-11-03",
+  "time_reference": "EST",
+  "t0": "1973-11-03T08:25:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "AAR74-16",
+      "report_title": "Pan American World Airways, Inc., Boeing 707-371C Crash, Boston",
+      "report_date": "1974-12-02",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7416.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 707",
+    "family": "707",
+    "manufacturer": "Boeing",
+    "registration": "N458PA"
+  },
+  "operator": "Pan Am",
+  "route": {
+    "from": "JFK",
+    "from_name": "New York JFK",
+    "to": "FRA",
+    "to_name": "Frankfurt"
+  },
+  "location": {
+    "name": "Boston Logan International Airport",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 3,
+  "fatalities": 3,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "A Pan Am Boeing 707 cargo flight diverted to Boston after smoke developed in the cockpit electrical compartment from a nitric acid leak in improperly packed hazardous cargo. During emergency procedures, the crew deactivated the yaw damper. The aircraft lost yaw control at low speed during final approach and stalled in a near-vertical nose-down attitude.",
+  "probable_cause": "The accident resulted from smoke in the cockpit caused by an in-flight fire from nitric acid and sawdust reaction in improperly packed hazardous cargo, which forced the crew to make critical procedural mistakes including yaw damper disengagement, resulting in loss of aircraft control during final approach. The dense smoke in the cockpit seriously impaired the flight crew's vision and ability to function effectively during the emergency.",
+  "factors": [
+    {
+      "id": "inflight_fire",
+      "role": "initiating",
+      "evidence": "Smoke in lower 41 electrical compartment from reaction between nitric acid and sawdust packing material reported at 09:04 EST."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "Nitric acid improperly packaged and stowed in improper sawdust packing; violation of hazardous materials transportation regulations."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "Continued generation of smoke in cockpit led to uncontrollable emergency situation during final approach."
+    },
+    {
+      "id": "flight_control_failure",
+      "role": "contributing",
+      "evidence": "Yaw damper was disengaged during emergency procedures, resulting in loss of yaw control."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft stalled out and crashed in near vertical position with nose facing down."
+    }
+  ],
+  "chain": [
+    [
+      "inflight_fire",
+      "high_workload"
+    ],
+    [
+      "high_workload",
+      "flight_control_failure"
+    ],
+    [
+      "flight_control_failure",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "08:25",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Pan Am flight 160 departed John F. Kennedy International Airport for Frankfurt with stop in Prestwick, Scotland."
+    },
+    {
+      "t": 1200,
+      "clock": "08:45",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight reached cruise altitude and proceeded normally toward Prestwick."
+    },
+    {
+      "t": 2340,
+      "clock": "09:04",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "First sign of trouble: smoke in lower 41 electrical compartment reported to air traffic control."
+    },
+    {
+      "t": 2400,
+      "clock": "09:05",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain initiated diversion to Logan International Airport in Boston for emergency landing."
+    },
+    {
+      "t": 2700,
+      "clock": "09:50",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "To reduce aircraft weight for landing, crew descended to 2,000 feet and shut off all non-essential systems to increase fuel burn rate."
+    },
+    {
+      "t": 2900,
+      "clock": "10:10",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew requested to land on Runway 33 Left; smoke continued pouring into cockpit."
+    },
+    {
+      "t": 3000,
+      "clock": "10:15",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Yaw damper was disengaged as critical mistake during emergency procedures execution."
+    },
+    {
+      "t": 3100,
+      "clock": "10:25",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft lost yaw control; witnesses saw smoke pouring from cockpit windows."
+    },
+    {
+      "t": 3120,
+      "clock": "10:27",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft stalled and crashed in near vertical position with nose facing downward; all three crew members killed."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7416.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "5 events reconstructed from summary and available narrative",
+      "Historic 1973 accident; Pan Am later indicted for criminal negligence (1976)",
+      "OCR quality limitations on source document"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Pan_Am_Flight_160",
+  "asn_id": null,
+  "interest": 7.96,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7416.pdf",
+    "https://aviation-safety.net/database/record.php?id=19731103-1"
+  ],
+  "curated_id": null
+}

@@ -1,0 +1,172 @@
+{
+  "id": "wd_q67569815",
+  "qid": "Q67569815",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "IBC Airways 405",
+  "flight_number": null,
+  "date": "2013-12-02",
+  "time_reference": "AST",
+  "t0": "2013-12-02T20:08:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "ERA14MA060",
+      "report_title": "IBC Airways Maintenance Records Review",
+      "report_date": "2015-02-12",
+      "url": "https://data.ntsb.gov/Docket/Document/docBLOB?ID=40441848"
+    }
+  ],
+  "aircraft": {
+    "type": "Fairchild SA227-AC Metro III",
+    "family": "Metro",
+    "manufacturer": "Fairchild",
+    "registration": "N831BC",
+    "msn": "AC-654B"
+  },
+  "operator": "IBC Airways",
+  "route": {
+    "from": "SDQ",
+    "from_name": "Las Americas International Airport, Santo Domingo",
+    "to": "SJU",
+    "to_name": "Luis Munoz Marin International Airport, San Juan"
+  },
+  "location": {
+    "name": "La Alianza",
+    "country": "Puerto Rico"
+  },
+  "phase": "descent",
+  "occupants": 2,
+  "fatalities": 2,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "IBC Airways Flight 405, a Fairchild Metro III cargo flight, experienced initial loss of control during descent on December 2, 2013. The crew made excessively abrupt elevator control inputs during rapid descent at night, causing structural overload and in-flight breakup. Both crew members were killed.",
+  "probable_cause": "The probable cause was the flight crew's excessively abrupt use of the elevator controls during a rapid descent at night, which led to structural overload and subsequent in-flight breakup of the aircraft. A contributing factor was an initial loss of control of undetermined cause.",
+  "factors": [
+    {
+      "id": "loss_of_control_inflight",
+      "role": "initiating",
+      "evidence": "Initial loss of control of undetermined cause during descent."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "Excessively abrupt use of elevator controls during rapid descent at night."
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Subsequent in-flight breakup of the aircraft from structural overload."
+    }
+  ],
+  "chain": [
+    [
+      "loss_of_control_inflight",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "structural_failure"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "20:08",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Air traffic control instructed crew to maintain 3,000 feet until reaching TNNER waypoint and prepare for ILS approach."
+    },
+    {
+      "t": 60,
+      "clock": "20:09",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Between 20:10:08 and 20:10:13, aircraft descended at 12,000 feet per minute rate during 20-degree left turn."
+    },
+    {
+      "t": 65,
+      "clock": "20:09:05",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Initial loss of control event occurred during rapid descent at night."
+    },
+    {
+      "t": 120,
+      "clock": "20:10",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "During following five seconds, aircraft descended at 21,000 feet per minute during 45-degree right turn with abrupt elevator movements."
+    },
+    {
+      "t": 125,
+      "clock": "20:10:05",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft structural loads exceeded maximum design limits due to abrupt control inputs."
+    },
+    {
+      "t": 175,
+      "clock": "20:10:55",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Structural failure initiated in aircraft fuselage and wing attachment points."
+    },
+    {
+      "t": 180,
+      "clock": "20:11",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft experienced in-flight breakup from excessive structural loads."
+    },
+    {
+      "t": 185,
+      "clock": "20:11:05",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft wreckage found on terrain near La Alianza, Puerto Rico; both flight crew fatally injured."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://data.ntsb.gov/Docket/Document/docBLOB?ID=40441848"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "4 events reconstructed from maintenance records and summary narrative",
+      "Initial loss of control cause not determined",
+      "Primary investigation: excessive elevator control inputs during rapid descent"
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/IBC_Airways_Flight_405",
+  "asn_id": "20131202-0",
+  "interest": 7.87,
+  "report_links": [
+    "https://data.ntsb.gov/Docket/Document/docBLOB?ID=40441848&FileExtension=.PDF&FileName=Maintenance%20Records-Master.PDF",
+    "https://data.ntsb.gov/Docket/Document/docBLOB?ID=40441806&FileExtension=.PDF&FileName=Airworthiness%20Group%20Chairman%27s%20Factual%20Report-Master.PDF",
+    "https://www.baaa-acro.com/sites/default/files/2019-10/N831BC.pdf"
+  ],
+  "curated_id": null
+}
