@@ -1,0 +1,250 @@
+{
+  "id": "wd_q85809330",
+  "qid": "Q85809330",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Thomson Airways 1526",
+  "flight_number": "TOM1526",
+  "date": "2017-07-21",
+  "time_reference": "UTC",
+  "t0": "2017-07-21T15:39:00Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "2/2018",
+      "report_title": "Aircraft Accident Report: 2/2018",
+      "report_date": "2018-10-04",
+      "url": "https://www.gov.uk/aaib-reports/aircraft-accident-report-aar-2-2018-c-fwgh-21july-2017"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-86J(WL)",
+    "manufacturer": "Boeing",
+    "family": "737",
+    "registration": "C-FWGH",
+    "engines": "CFM56-7B"
+  },
+  "operator": "Sunwing Airlines",
+  "route": {
+    "from": "BFS",
+    "from_name": "Belfast International Airport",
+    "to": "CFU",
+    "to_name": "Corfu International Airport"
+  },
+  "location": {
+    "name": "Belfast International Airport",
+    "country": "United Kingdom"
+  },
+  "phase": "takeoff",
+  "occupants": 185,
+  "fatalities": null,
+  "injuries_serious": null,
+  "damage": "none",
+  "category": "UNK",
+  "summary": "A Boeing 737-86J (C-FWGH) operated by Sunwing Airlines departed Belfast International Airport for Corfu on 21 July 2017. During pre-flight setup, the crew incorrectly entered -52\u00b0C (instead of the actual 16\u00b0C) as the outside air temperature in the Flight Management Computer. This caused the FMC to calculate an N1 setting of only 81.5%, approximately 60% of the required thrust. During takeoff, the aircraft accelerated abnormally slowly and reached rotation speed near the runway end. After liftoff, the landing gear struck a runway approach light. The aircraft climbed away at a very low rate but continued without further incident. There was no damage and no injuries.",
+  "probable_cause": "An incorrect outside air temperature (-52\u00b0C instead of 16\u00b0C) was entered into the flight management computer, causing the FMC to calculate a significantly reduced N1 setting for takeoff. The crew did not detect this error, and the abnormally slow acceleration was not recognized until the aircraft was rapidly approaching the runway end. The aircraft's systems lacked automated safeguards to alert the crew to the data entry error or the abnormal takeoff performance.",
+  "factors": [
+    {
+      "id": "takeoff_performance_error",
+      "role": "initiating",
+      "evidence": "An incorrect outside air temperature of -52\u00b0C was entered into the flight management computer instead of the actual OAT of 16\u00b0C, causing the FMC to calculate an N1 setting for takeoff of only 81.5%, significantly below the required 92.7% (p. 2)."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "contributing",
+      "evidence": "The aircraft's FMC software (revision U10.8A) did not include an automated crosscheck of manually-entered OAT against the actual ambient temperature sensed by the aircraft; a later software standard (U12.0) included this capability (p. 2-3)."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "The Electronic Flight Bags used by the crew did not display the calculated N1 value, preventing the crew from comparing the FMC-calculated N1 against an independently-calculated value to detect the discrepancy (p. 3)."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Although both pilot and manufacturer required crews to crosscheck FMC entries, neither pilot detected the incorrect -52\u00b0C OAT entry during pre-flight checks (p. 6)."
+    }
+  ],
+  "chain": [
+    [
+      "takeoff_performance_error",
+      "warning_system_deficiency"
+    ],
+    [
+      "takeoff_performance_error",
+      "design_deficiency"
+    ],
+    [
+      "takeoff_performance_error",
+      "procedural_noncompliance"
+    ]
+  ],
+  "events": [
+    {
+      "t": -300,
+      "clock": "13:15",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight crew reported for duty at Belfast International Airport for scheduled departure at 14:15 hrs (p. 5)."
+    },
+    {
+      "t": -120,
+      "clock": "13:55",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "During pre-flight FMC programming, the commander entered an incorrect OAT of -47\u00b0C into the n1 limit page instead of the actual value (p. 5-6)."
+    },
+    {
+      "t": -60,
+      "clock": "14:12",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft began to push back from the parking stand; ground crew noticed worn nose landing gear tyre and aircraft returned for tyre change (p. 6)."
+    },
+    {
+      "t": -30,
+      "clock": "14:25",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Co-pilot updated weather from ATIS and recalculated takeoff performance; commander entered a second incorrect OAT of -52\u00b0C into the FMC along with a corrected assumed temperature of 48\u00b0C (p. 6)."
+    },
+    {
+      "t": 0,
+      "clock": "15:39",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft cleared for takeoff from Runway 07; takeoff roll began with FMC set to 81.5% N1, only 60% of maximum thrust (p. 7).",
+      "state": {
+        "alt": 0,
+        "ias": 0
+      }
+    },
+    {
+      "t": 30,
+      "clock": "15:39:30",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "At approximately 120-130 knots, crew realized aircraft was not accelerating normally; rotation speed (V1) reached with approximately 900 meters of runway remaining (p. 7)."
+    },
+    {
+      "t": 45,
+      "clock": "15:39:45",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft rotated and lifted off the runway, taking a significant time to lift off and climbing at a very low rate (p. 7)."
+    },
+    {
+      "t": 50,
+      "clock": "15:39:50",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft's landing gear tire struck a 36-cm tall runway approach light located 29 meters beyond the end of the runway (p. 7)."
+    },
+    {
+      "t": 120,
+      "clock": "15:41:00",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Crew checked FMC and noted N1 of 81.5% had been used; this figure was significantly below the required N1 setting of 92.7% (p. 7)."
+    },
+    {
+      "t": 240,
+      "clock": "15:43:00",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Full thrust was applied when aircraft was approximately 4 km from the end of the runway at 800 feet above airfield level (p. 7)."
+    },
+    {
+      "t": 1800,
+      "clock": "16:09:00",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft continued to Corfu without further incident; no damage found on inspection (p. 8)."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "2018-012",
+      "to": "FAA",
+      "text": "Mandate the use of Flight Management Computer OPS software revision U12.0, or later, and the Common Display System Block Point 15 update where this is required, to enable the automated outside air temperature crosscheck on all applicable Boeing 737 aircraft.",
+      "status": "open",
+      "trigger_factors": [
+        "takeoff_performance_error",
+        "warning_system_deficiency"
+      ]
+    },
+    {
+      "id": "2018-013",
+      "to": "Boeing",
+      "text": "Give guidance to operators of Boeing 737 aircraft on how they might verify the FMC-calculated value of N1 against an independently-calculated value.",
+      "status": "open",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "2018-014",
+      "to": "EASA",
+      "text": "In conjunction with the Federal Aviation Administration, sponsor the development of technical specifications and, subsequently, develop certification standards for a Takeoff Acceleration Monitoring System which will alert the crew of an aircraft to abnormally low acceleration during takeoff.",
+      "status": "open",
+      "trigger_factors": [
+        "warning_system_deficiency"
+      ]
+    },
+    {
+      "id": "2018-015",
+      "to": "ICAO",
+      "text": "Note the conclusions of this report and introduce provisions addressing Takeoff Acceleration Monitoring Systems.",
+      "status": "open",
+      "trigger_factors": [
+        "warning_system_deficiency"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Sunwing Airlines upgraded their Boeing 737 fleet to FMC Update 13 and CDU BP15 to enable OAT alerting",
+    "Sunwing Airlines updated EFB software to display N1 and added N1 crosscheck to standard operating procedures",
+    "UK CAA amended MATS Part 1 to require senior controllers to notify the AAIB by telephone following aircraft accidents or serious incidents"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.gov.uk/aaib-reports/aircraft-accident-report-aar-2-2018-c-fwgh-21july-2017"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Thomson_Airways_Flight_1526",
+  "asn_id": null,
+  "interest": 5.29,
+  "report_links": [
+    "https://www.gov.uk/aaib-reports/aircraft-accident-report-aar-2-2018-c-fwgh-21july-2017"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flight (lines 666-750), Findings (lines 3757-3940), Conclusions (lines 3748-4040)",
+      "All clock times in UTC per report",
+      "N1 setting 81.5% vs required 92.7% sourced from page 7",
+      "Four numbered safety recommendations from final report"
+    ]
+  }
+}

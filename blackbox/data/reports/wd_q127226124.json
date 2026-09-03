@@ -1,0 +1,230 @@
+{
+  "id": "wd_q127226124",
+  "qid": "Q127226124",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air Tindi 200",
+  "flight_number": "AT200",
+  "date": "2011-10-04",
+  "time_reference": "MDT",
+  "t0": "2011-10-04T11:03:00-06:00",
+  "agency": "TSB",
+  "agencies": [
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "lead",
+      "report_id": "A11W0151",
+      "report_title": "Aviation Investigation Report - Controlled Flight into Terrain",
+      "report_date": "2013-03-20",
+      "url": "https://tsb.gc.ca/sites/default/files/rapports-reports/aviation/a11w0151/eng/a11w0151.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Cessna 208B Grand Caravan",
+    "manufacturer": "Cessna",
+    "family": "208",
+    "registration": "C-GATV",
+    "msn": "208B0308",
+    "engines": "Pratt & Whitney PT6A-114A"
+  },
+  "operator": "Air Tindi Ltd.",
+  "route": {
+    "from": "CYZF",
+    "from_name": "Yellowknife",
+    "to": "CYLK",
+    "to_name": "Lutsel K'e"
+  },
+  "location": {
+    "name": "Pehtei Peninsula, 26 nautical miles west of Lutsel K'e",
+    "country": "Canada",
+    "lat": 62.4,
+    "lon": -109.5
+  },
+  "phase": "descent",
+  "occupants": 5,
+  "fatalities": 2,
+  "injuries_serious": 2,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "A Cessna 208B operated by Air Tindi Ltd. departed Yellowknife for Lutsel K'e on 4 October 2011, conducting a visual flight rules flight at low altitude to maintain visual contact with the ground. The aircraft encountered low forward visibility and fog as it approached Pehtei Peninsula. The aircraft struck rising terrain at cruise speed in a wings-level attitude. The pilot and one passenger were fatally injured; two passengers were seriously injured. The investigation found that the pilot was impaired by cannabinoids, and combined with low visibility, this prevented the detection and avoidance of terrain.",
+  "probable_cause": "The aircraft was flown at low altitude into an area of low forward visibility during a day VFR flight, which prevented the pilot from seeing and avoiding terrain. The pilot was impaired by concentrations of cannabinoids that were sufficient to cause impairment in pilot performance and decision-making.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Low cloud persisted for the entire flight, flown at low level so the pilot could maintain visual contact with the ground; in the last minutes of flight, visibility had become reduced, with forecast showing temporary lower broken cloud height of 500 feet agl (p. 4, 13)."
+    },
+    {
+      "id": "pilot_incapacitation",
+      "role": "latent",
+      "evidence": "Toxicology analysis revealed concentrations of cannabinoids in the pilot's system that were sufficient to have caused impairment in pilot performance and decision-making on the accident flight (p. 4, 13)."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The aircraft was flying on a direct track at low level in marginal VFR conditions; due to low visibility and the obscured terrain crest, the pilot did not see or detect the terrain and made no effective evasive maneuvers before impact (p. 4, 13)."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The pilot elected to conduct VFR flight in marginal weather conditions suitable for IFR operations; the aircraft and company were qualified for IFR, and safe IFR altitude would have provided 2000 feet of terrain clearance (p. 4, 13)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck rising terrain on Pehtei Peninsula at 1013 feet above sea level in a wings-level attitude at cruise speed, with landing gear striking terrain first, followed by continuation down an eastern slope where it came to rest inverted (p. 3)."
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "pilot_incapacitation",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "procedural_noncompliance",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "11:03",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft departed Yellowknife under visual flight rules clearance with visibility at VFR minimums of 3 statute miles in rain and mist; altitude varied between 850 and 1470 feet above sea level during flight (p. 3).",
+      "state": {
+        "alt": 850,
+        "ias": 100
+      }
+    },
+    {
+      "t": 600,
+      "clock": "11:13",
+      "phase": "climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft established direct track to Lutsel K'e while maintaining low level flight below low ragged cloud base; ground speed varied with slight variations in track (p. 3-4)."
+    },
+    {
+      "t": 1800,
+      "clock": "11:33",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft continued on low-level direct track in marginal VFR conditions; forward visibility was reduced due to low forward visibility during the descent phase (p. 4, 13-14)."
+    },
+    {
+      "t": 2160,
+      "clock": "11:39",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Pilot transmitted position report stating aircraft was 20 nautical miles from Lutsel K'e, though actual position was 26 nautical miles away; report did not include usual information such as arrival intentions and estimated time of arrival (p. 3)."
+    },
+    {
+      "t": 2220,
+      "clock": "11:40",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "One minute before impact, aircraft was at 1325 feet above sea level, 500 feet above ground level, 136 knots ground speed, on track 091 degrees true (p. 3)."
+    },
+    {
+      "t": 2250,
+      "clock": "11:40:30",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft descended further; immediately before impact altitude was 1060 feet above sea level, ground speed 141 knots, track 098 degrees true (p. 3)."
+    },
+    {
+      "t": 2256,
+      "clock": "11:40:36",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Crest of Pehtei Peninsula became visible; pilot applied increased engine power in response to suddenly visible terrain (p. 4, 13)."
+    },
+    {
+      "t": 2260,
+      "clock": "11:40:40",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck rising terrain on the west side of Pehtei Peninsula at 1013 feet above sea level in a wings-level attitude; first impact was by landing gear, followed by belly cargo pod and propeller (p. 3)."
+    },
+    {
+      "t": 2280,
+      "clock": "11:40:60",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft continued over crest of hill and became airborne again before coming to rest inverted 477 feet down the eastern slope; cockpit was crushed and forward cabin distorted (p. 3)."
+    },
+    {
+      "t": 3600,
+      "clock": "12:23",
+      "phase": "ground",
+      "actor": "OTHER",
+      "kind": "system",
+      "text": "When aircraft failed to arrive at scheduled time of 11:45, Air Tindi representative at Lutsel K'e alerted the company at 12:23; company emergency response plan activated at 12:45 (p. 3)."
+    },
+    {
+      "t": 4200,
+      "clock": "12:30",
+      "phase": "ground",
+      "actor": "OTHER",
+      "kind": "system",
+      "text": "SkyTrac GPS tracking system showed last transmission at 11:40 indicating aircraft at rest, marking time of accident; device data recorded at 5-second intervals had recorded entire flight path (p. 3)."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Air Tindi initiated dispatch policy requiring all scheduled flights to be dispatched under IFR with VFR only with management authorization",
+    "Air Tindi no longer dispatches scheduled passenger flights when observed weather is at or forecast to be lower than alternate minimums",
+    "Air Tindi revised drug and alcohol policy to include random testing of employees in safety-sensitive positions",
+    "Air Tindi commenced installation of Appareo Vision 1000 Systems cockpit imaging and flight data monitoring devices",
+    "Transportation Safety Board issued Safety Advisory 825-A11W0151-D1-A1 regarding loose ELT attachment",
+    "FAA issued Special Airworthiness Information Bulletin HQ-12-32 regarding hook and loop style ELT fasteners",
+    "Kannad Aviation developed new Integra ELT with internal antenna and automatic fallback capability",
+    "Transport Canada committed to publish article in Aviation Safety Letter highlighting ELT installation requirements"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://tsb.gc.ca/sites/default/files/rapports-reports/aviation/a11w0151/eng/a11w0151.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Tindi_Flight_200",
+  "asn_id": null,
+  "interest": 5.22,
+  "report_links": [
+    "https://tsb.gc.ca/sites/default/files/rapports-reports/aviation/a11w0151/eng/a11w0151.pdf"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flight (p. 2-3), Meteorological Conditions (p. 3-4), Analysis (p. 13-15), Findings (p. 14-15)",
+      "All clock times in Mountain Daylight Time (UTC-6) per report",
+      "Aircraft registration verified as C-GATV (not C-GATH as in batch summary)",
+      "Pilot impairment from cannabinoids documented via toxicology",
+      "11 events with varying detail levels extracted from accident flight profile and timing"
+    ]
+  }
+}
