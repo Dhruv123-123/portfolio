@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main, claude/portfolio-redesign-research-5rt7ki]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
