@@ -255,6 +255,13 @@ function drawTape(ctx, x, y, w, h, value, opt) {
       ctx.fillText(String(v), opt.left ? x + w - 11 : x + 11, yy)
     }
   }
+  if (opt.invalid) {
+    // data dropout: the tape breaks into static
+    for (let i = 0; i < 60; i++) {
+      ctx.fillStyle = `rgba(255,255,255,${0.04 + Math.random() * 0.16})`
+      ctx.fillRect(x + Math.random() * w, y + Math.random() * h, 2 + Math.random() * 12, 1 + Math.random() * 2)
+    }
+  }
   // current value box
   ctx.fillStyle = opt.invalid ? '#7a1010' : '#000'
   roundRect(ctx, x + 2, cy - 12, w - 4, 24, 3)

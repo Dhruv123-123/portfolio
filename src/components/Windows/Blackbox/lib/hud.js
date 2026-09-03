@@ -227,3 +227,112 @@ export function drawRadar(ctx, w, h, track, t, fdr, s, label = '') {
   ctx.textBaseline = 'top'
   ctx.fillText(`RNG ${ringNm} NM`, 6, 5)
 }
+
+
+/**
+ * Weather radar / navigation display: heading-up, aircraft at the bottom, the
+ * flown and future track drawn ahead, and procedural precipitation cells whose
+ * intensity follows the record's weather. Cells are fixed in world space.
+ */
+const wxCache = new Map()
+function wxCells(key, track, env) {
+  if (wxCache.has(key)) return wxCache.get(key)
+  const cells = []
+  const level = env.storm ? 1 : env.rain
+  if (level > 0) {
+    let seed = 7
+    const rnd = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647 }
+    const n = Math.round(14 + level * 30)
+    for (let i = 0; i < n; i++) {
+      const p = track[Math.floor(rnd() * track.length)]
+      const ang = rnd() * Math.PI * 2
+      const dist = 6076 * (2 + rnd() * 26)
+      cells.push({ x: p.x + Math.cos(ang) * dist, z: p.z + Math.sin(ang) * dist, r: 6076 * (1.5 + rnd() * 4), i: Math.min(1, level * (0.4 + rnd() * 0.8)) })
+    }
+    if (env.storm) for (let i = 0; i < 6; i++) { const p = track[Math.floor(track.length * (0.3 + rnd() * 0.6))]; cells.push({ x: p.x + (rnd() - 0.5) * 6076 * 8, z: p.z + (rnd() - 0.5) * 6076 * 8, r: 6076 * (2 + rnd() * 3), i: 1 }) }
+  }
+  wxCache.set(key, cells)
+  return cells
+}
+
+export function drawWeatherRadar(ctx, w, h, track, t, s, env, key) {
+  ctx.save()
+  ctx.clearRect(0, 0, w, h)
+  ctx.fillStyle = '#05080f'
+  ctx.fillRect(0, 0, w, h)
+  const cx = w / 2
+  const cy = h - 14
+  const rangeNm = 40
+  const rad = Math.min(w * 0.48, h - 40)
+  const pxPerFt = rad / (rangeNm * 6076)
+  const hdg = ((s.hdg_deg || 0) * Math.PI) / 180
+  let cur = track[0]
+  for (const p of track) { if (p.t <= t) cur = p; else break }
+  // world (feet, north = -z) -> screen (heading up)
+  const toScreen = (x, z) => {
+    const dx = x - cur.x
+    const dz = z - cur.z
+    // rotate so heading points up: east/north components relative to heading
+    const east = dx
+    const north = -dz
+    const fwd = north * Math.cos(hdg) + east * Math.sin(hdg)
+    const rgt = east * Math.cos(hdg) - north * Math.sin(hdg)
+    return [cx + rgt * pxPerFt, cy - fwd * pxPerFt]
+  }
+  ctx.save()
+  ctx.beginPath(); ctx.moveTo(cx, cy); ctx.arc(cx, cy, rad, Math.PI * 1.08, Math.PI * 1.92); ctx.closePath(); ctx.clip()
+  // precipitation
+  const cells = wxCells(key, track, env)
+  for (const c of cells) {
+    const [px, py] = toScreen(c.x, c.z)
+    const pr = c.r * pxPerFt
+    const g = ctx.createRadialGradient(px, py, 0, px, py, pr)
+    const col = c.i > 0.8 ? '255,40,40' : c.i > 0.5 ? '255,200,0' : '40,220,80'
+    g.addColorStop(0, `rgba(${col},${0.55 + c.i * 0.3})`)
+    g.addColorStop(0.55, `rgba(${c.i > 0.5 ? '255,200,0' : '40,220,80'},0.45)`)
+    g.addColorStop(1, 'rgba(40,220,80,0)')
+    ctx.fillStyle = g
+    ctx.beginPath(); ctx.arc(px, py, pr, 0, Math.PI * 2); ctx.fill()
+  }
+  // range arcs
+  ctx.strokeStyle = 'rgba(120,180,255,0.35)'
+  ctx.lineWidth = 1
+  for (const nm of [10, 20, 30, 40]) { ctx.beginPath(); ctx.arc(cx, cy, nm * 6076 * pxPerFt, Math.PI * 1.08, Math.PI * 1.92); ctx.stroke() }
+  // track: flown (solid) and ahead (dashed)
+  ctx.strokeStyle = 'rgba(255,191,0,0.7)'
+  ctx.lineWidth = 1.5
+  ctx.beginPath()
+  let started = false
+  for (const p of track) { if (p.t > t) break; const [px, py] = toScreen(p.x, p.z); started ? ctx.lineTo(px, py) : ctx.moveTo(px, py); started = true }
+  ctx.stroke()
+  ctx.setLineDash([3, 4])
+  ctx.strokeStyle = 'rgba(255,255,255,0.45)'
+  ctx.beginPath()
+  started = false
+  for (const p of track) { if (p.t < t) continue; const [px, py] = toScreen(p.x, p.z); started ? ctx.lineTo(px, py) : ctx.moveTo(px, py); started = true }
+  ctx.stroke()
+  ctx.setLineDash([])
+  ctx.restore()
+  // aircraft symbol
+  ctx.strokeStyle = '#fff'
+  ctx.lineWidth = 2
+  ctx.beginPath(); ctx.moveTo(cx, cy - 8); ctx.lineTo(cx, cy + 4); ctx.moveTo(cx - 7, cy - 2); ctx.lineTo(cx + 7, cy - 2); ctx.moveTo(cx - 3, cy + 3); ctx.lineTo(cx + 3, cy + 3); ctx.stroke()
+  // heading readout and labels
+  ctx.fillStyle = '#9fd8ff'
+  ctx.font = 'bold 12px Consolas, monospace'
+  ctx.textAlign = 'center'
+  ctx.textBaseline = 'top'
+  ctx.fillText(`HDG ${String(Math.round((((s.hdg_deg || 0) % 360) + 360) % 360)).padStart(3, '0')}`, cx, 4)
+  ctx.font = '9px Consolas, monospace'
+  ctx.textAlign = 'left'
+  ctx.fillStyle = 'rgba(159,216,255,0.8)'
+  ctx.fillText(`WX  ${rangeNm} NM`, 6, 5)
+  ctx.textAlign = 'right'
+  ctx.fillText(env.storm ? 'WX: CONVECTIVE' : env.rain > 0 ? 'WX: PRECIP' : 'WX: CLEAR', w - 6, 5)
+  ctx.textBaseline = 'bottom'
+  ctx.textAlign = 'left'
+  ctx.fillText(`GS ${Math.round(s.gs_kt || s.ias_kt || 0)}`, 6, h - 3)
+  ctx.textAlign = 'right'
+  ctx.fillText(`${Math.round((s.alt_ft || 0) / 100)} FL`, w - 6, h - 3)
+  ctx.restore()
+}

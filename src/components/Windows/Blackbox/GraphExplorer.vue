@@ -58,10 +58,11 @@
     </div>
 
     <!-- Center: graph canvas -->
-    <div class="ge-center">
+    <div class="ge-center" :class="{ sky: skyOn }">
       <div class="ge-toolbar">
         <label><input type="checkbox" v-model="showChain" /> causal edges</label>
         <label><input type="checkbox" v-model="flowOn" /> flow</label>
+        <label title="Draw the graph as a star chart: factors are stars, causal chains are constellation lines"><input type="checkbox" v-model="skyOn" /> constellation</label>
         <label><input type="checkbox" v-model="focusMode" /> focus on selection</label>
         <label><input type="checkbox" v-model="labelsAlways" /> all labels</label>
         <label>min factor use <input type="range" min="1" max="12" v-model.number="minCount" /> {{ minCount }}</label>
@@ -189,6 +190,7 @@ import { ForceGraph } from './lib/forceGraph.js'
 import { loadCatalogRecord } from './lib/catalog.js'
 import { wikipediaUrl, hasWikipediaArticle } from './lib/geo.js'
 import { factorCut, singlePointsCached } from './lib/counterfactual.js'
+import { arpeggio } from './lib/synth.js'
 
 const props = defineProps({ graph: Object, index: Object, active: Boolean, catalog: { type: Object, default: () => ({ state: 'idle', count: 0 }) } })
 defineEmits(['load-catalog'])
@@ -205,6 +207,7 @@ const parsed = ref(null)
 const tooltip = ref(null)
 const showChain = ref(true)
 const flowOn = ref(true)
+const skyOn = ref(false)
 const focusMode = ref(false)
 const labelsAlways = ref(false)
 const minCount = ref(2)
@@ -353,6 +356,11 @@ async function runQuery() {
   results.value = res.results
   parsed.value = res.query
   statusLine.value = `${res.total.toLocaleString()} match${res.total === 1 ? '' : 'es'}${semantic ? ' · hybrid' : ''}`
+  // A query's concepts play as a short arpeggio: one note per factor, pitched by category
+  if (store.sound && res.query.concepts.length) {
+    const cats = Object.keys(props.graph.taxonomy.categories)
+    arpeggio(res.query.concepts.map((c, i) => cats.indexOf(props.index.factorById[c.id]?.category) * 2 + i + 3), { root: 196, gap: 0.14 })
+  }
   if (res.results.length) {
     selectedFactorId.value = null
     selectAccident(res.results[0].id, false)
@@ -425,12 +433,13 @@ async function toggleSemantic() {
   }
 }
 
-watch([showChain, labelsAlways, flowOn], () => {
+watch([showChain, labelsAlways, flowOn, skyOn], () => {
   if (!fg) return
   fg.showChain = showChain.value
   fg.labelsAlways = labelsAlways.value
   fg.flow = flowOn.value
-  flowOn.value ? fg.startFlow() : fg.stopFlow()
+  fg.sky = skyOn.value
+  flowOn.value || skyOn.value ? fg.startFlow() : fg.stopFlow()
   fg.draw()
 })
 watch([minCount, focusMode], refreshGraph)
@@ -519,7 +528,8 @@ onBeforeUnmount(() => {
 .ge-path { display: flex; flex-wrap: wrap; gap: 3px; align-items: center; margin-top: 5px; }
 .ge-snippet { font-size: 10px; color: #b8c6e3; margin-top: 5px; line-height: 1.35; }
 .ge-empty { padding: 10px; line-height: 1.5; }
-.ge-center { position: relative; background: radial-gradient(ellipse at center, #0f1626 0%, #070a12 100%); min-width: 0; }
+.ge-center { position: relative; background: radial-gradient(ellipse at center, #0f1626 0%, #070a12 100%); min-width: 0; transition: background 1s; }
+.ge-center.sky { background: radial-gradient(ellipse at 30% 40%, #0d1230 0%, #04060e 55%, #02030a 100%); }
 .ge-toolbar { position: absolute; top: 6px; left: 8px; right: 8px; z-index: 2; display: flex; gap: 12px; align-items: center; font-size: 10px; color: var(--bb-muted); flex-wrap: wrap; }
 .ge-toolbar label { display: flex; align-items: center; gap: 4px; }
 .ge-toolbar input[type='range'] { width: 70px; }

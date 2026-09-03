@@ -249,6 +249,7 @@ export class ReplayScene {
     this._buildTrail()
     this._buildClouds()
     this.rain.material.opacity = this.env.rain * 0.7
+    this.clearGhost()
     this.firstFrame = true
     this._groundCam = null
     this._cine = { sub: 'chase', timer: 0, anchor: new THREE.Vector3() }
@@ -394,6 +395,64 @@ export class ReplayScene {
     }
   }
 
+  /**
+   * Counterfactual ghost: from time t the ghost holds the altitude, heading and
+   * ground speed the aircraft had at that instant, so the divergence is visible.
+   */
+  setGhost(t, pos, state) {
+    this.clearGhost()
+    const g = buildAircraft(this.fdr.aircraft_model || 'airliner_twin')
+    g.traverse((o) => {
+      if (o.material) {
+        o.material = o.material.clone()
+        o.material.transparent = true
+        o.material.opacity = 0.28
+        o.material.depthWrite = false
+        if (o.material.color) o.material.color.set(0x9fd8ff)
+        if (o.material.emissive) o.material.emissive.set(0x2a6aa0)
+      }
+    })
+    this.world.add(g)
+    const hdg = (state.hdg_deg || 0) * DEG
+    this.ghost = {
+      mesh: g,
+      t,
+      x: pos.x, y: Math.max(pos.y, 6), z: pos.z,
+      hdg,
+      gs: (state.gs_kt || state.ias_kt || 250) * 1.68781
+    }
+    const geo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(), new THREE.Vector3()])
+    this.ghostLine = new THREE.Line(geo, new THREE.LineBasicMaterial({ color: 0x9fd8ff, transparent: true, opacity: 0.5 }))
+    this.ghostLine.frustumCulled = false
+    this.world.add(this.ghostLine)
+  }
+
+  clearGhost() {
+    if (this.ghost) { this.world.remove(this.ghost.mesh); this.ghost = null }
+    if (this.ghostLine) { this.world.remove(this.ghostLine); this.ghostLine.geometry.dispose(); this.ghostLine = null }
+  }
+
+  _updateGhost(state) {
+    if (!this.ghost) return
+    const g = this.ghost
+    const dtg = state.t - g.t
+    g.mesh.visible = dtg >= 0
+    if (dtg < 0) { this.ghostLine.visible = false; return }
+    this.ghostLine.visible = true
+    const d = g.gs * dtg
+    const x = g.x + Math.sin(g.hdg) * d
+    const z = g.z - Math.cos(g.hdg) * d
+    g.mesh.position.set(x * FT, g.y * FT, z * FT)
+    g.mesh.rotation.order = 'YXZ'
+    g.mesh.rotation.y = -g.hdg
+    g.mesh.rotation.x = 0
+    g.mesh.rotation.z = 0
+    const arr = this.ghostLine.geometry.getAttribute('position').array
+    arr[0] = g.x * FT; arr[1] = g.y * FT; arr[2] = g.z * FT
+    arr[3] = x * FT; arr[4] = g.y * FT; arr[5] = z * FT
+    this.ghostLine.geometry.getAttribute('position').needsUpdate = true
+  }
+
   setCameraMode(mode) {
     this.cameraMode = mode
     this.controls.enabled = mode === 'orbit'
@@ -483,6 +542,7 @@ export class ReplayScene {
     this.trail.geometry.setDrawRange(0, idx)
 
     this._updateAtmosphere(state, dt)
+    this._updateGhost(state)
     this._updateRain(dt, ac.position, (state.gs_kt || state.ias_kt || 0) * 1.68781)
     this.stars.position.copy(ac.position)
 

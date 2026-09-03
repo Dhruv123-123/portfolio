@@ -1,5 +1,5 @@
 <template>
-  <div class="at-root">
+  <div class="at-root" :class="{ 'at-requiem': requiem }">
     <canvas ref="canvasRef" class="at-canvas"></canvas>
 
     <!-- Year + playback -->
@@ -11,6 +11,7 @@
         <button class="bb-btn small" @click="setYear(yearMin)" title="rewind">⟲</button>
         <button class="bb-btn small" @click="setYear(yearMax)" title="show everything">all</button>
         <button class="bb-btn small" :class="{ active: store.sound }" @click="store.sound = !store.sound" title="a blip for every accident as the century plays">{{ store.sound ? '🔊' : '🔈' }}</button>
+        <button class="bb-btn small at-requiem-btn" @click="startRequiem" title="Requiem: the century plays itself as a memorial, with a drone and a camera that visits each major accident (esc to leave)">requiem</button>
         <span class="at-speed">
           <button v-for="s in [1, 3, 8]" :key="s" class="bb-btn small" :class="{ active: speed === s }" @click="speed = s">{{ s }}y/s</button>
         </span>
@@ -28,6 +29,18 @@
       <div class="bb-muted at-hint" v-if="catalog.state !== 'ready'">{{ catalog.state === 'loading' ? 'Loading the full catalog…' : catalog.state === 'error' ? 'Catalog failed: ' + catalog.error : 'Curated records only' }}</div>
       <div class="bb-muted at-hint" v-else>{{ items.length.toLocaleString() }} plotted · faint points sit at country level · drag to spin, wheel to zoom</div>
     </div>
+
+    <div v-if="requiem" class="at-requiem-ui" @click.stop>
+      <button class="bb-btn small" @click="stopRequiem">leave requiem · esc</button>
+    </div>
+    <transition name="at-cap">
+      <div v-if="requiem && caption" :key="caption.id" class="at-caption">
+        <div class="at-caption-year">{{ caption.year }}</div>
+        <div class="at-caption-title">{{ caption.title }}</div>
+        <div class="at-caption-sub">{{ caption.sub }}</div>
+      </div>
+    </transition>
+    <div v-if="selected && sunNote && !requiem" class="at-sunnote bb-muted">{{ sunNote }}</div>
 
     <!-- Hover tooltip -->
     <div v-if="hover" class="at-tip" :style="{ left: hover.x + 14 + 'px', top: hover.y + 14 + 'px' }">
@@ -83,6 +96,7 @@ import { Globe } from './lib/globe.js'
 import { recordPosition, wikipediaUrl, hasWikipediaArticle } from './lib/geo.js'
 import { similarRecords } from './lib/search.js'
 import { loadCatalogRecord } from './lib/catalog.js'
+import { note, drone } from './lib/synth.js'
 
 const props = defineProps({ graph: Object, index: Object, active: Boolean, catalog: { type: Object, default: () => ({ state: 'idle', count: 0 }) } })
 const emit = defineEmits(['load-catalog'])
@@ -205,34 +219,99 @@ function togglePlay() {
     lastTick = now
     const before = year.value
     setYear(year.value + dt * speed.value)
-    if (store.sound) blipsBetween(before, year.value)
-    if (year.value >= yearMax.value) togglePlay()
+    if (store.sound || requiem.value) blipsBetween(before, year.value)
+    if (year.value >= yearMax.value) {
+      togglePlay()
+      if (requiem.value) setTimeout(stopRequiem, 6000)
+    }
   }, 40)
 }
 
-// A soft blip for each accident that appears while the century plays (only with sound on)
-let actx = null
+// Sound and requiem: a soft note for each accident that appears while the century plays
+const requiem = ref(false)
+const caption = ref(null)
+const sunNote = ref('')
+let droneCtl = null
+let lastFly = 0
+let captionTimer = null
+const DRONE_ROOTS = [55, 49, 65.4, 58.3, 73.4, 61.7]
+
 function blipsBetween(y0, y1) {
-  try {
-    if (!actx) actx = new (window.AudioContext || window.webkitAudioContext)()
-    if (actx.state === 'suspended') actx.resume()
-  } catch (e) { return }
   let n = 0
+  let major = null
   for (const it of items.value) {
     if (it.year <= y0 || it.year > y1) continue
-    if (++n > 10) break
-    const t = actx.currentTime + Math.random() * 0.04
-    const o = actx.createOscillator()
-    const g = actx.createGain()
-    o.type = 'sine'
-    o.frequency.value = it.fat > 0 ? 180 + Math.min(500, it.fat) * 0.5 : 720
-    g.gain.setValueAtTime(0, t)
-    g.gain.linearRampToValueAtTime(it.fat > 100 ? 0.12 : 0.05, t + 0.01)
-    g.gain.exponentialRampToValueAtTime(0.0001, t + (it.fat > 0 ? 0.35 : 0.12))
-    o.connect(g)
-    g.connect(actx.destination)
-    o.start(t)
-    o.stop(t + 0.4)
+    if (++n <= 10) {
+      const f = it.fat > 0 ? 160 + Math.min(600, it.fat) * 0.6 : 880
+      note(f, { dur: it.fat > 0 ? 0.45 : 0.14, gain: it.fat > 100 ? 0.11 : 0.045, type: it.fat > 0 ? 'triangle' : 'sine', delay: Math.random() * 0.05 })
+    }
+    if (requiem.value && (it.fat >= 100 || props.index.byId[it.id]?.tier === undefined) && (!major || it.fat > major.fat)) major = it
+  }
+  if (requiem.value && major) showMajor(major)
+  if (requiem.value && droneCtl) droneCtl.setRoot(DRONE_ROOTS[Math.floor(y1 / 10) % DRONE_ROOTS.length])
+}
+
+function showMajor(it) {
+  const rec = props.index.byId[it.id]
+  if (!rec) return
+  caption.value = { id: it.id, year: rec.date.slice(0, 4), title: rec.title, sub: `${rec.aircraft?.type || ''}${rec.location?.country ? ' · ' + rec.location.country : ''} · ${rec.fatalities ?? '?'} lives` }
+  clearTimeout(captionTimer)
+  captionTimer = setTimeout(() => (caption.value = null), 4200)
+  const now = performance.now()
+  if (globe && now - lastFly > 2600) {
+    lastFly = now
+    globe.setSelected(it.id, true)
+  }
+}
+
+function startRequiem() {
+  if (requiem.value) return
+  requiem.value = true
+  store.sound = true
+  droneCtl = drone(55)
+  droneCtl.setLevel(0.7)
+  speed.value = 2
+  year.value = yearMin.value
+  if (!playing.value) togglePlay()
+  if (globe) { globe.controls.autoRotate = true; globe.controls.autoRotateSpeed = 0.15; globe.setSun(null) }
+}
+function stopRequiem() {
+  if (!requiem.value) return
+  requiem.value = false
+  caption.value = null
+  clearTimeout(captionTimer)
+  if (droneCtl) { droneCtl.stop(); droneCtl = null }
+  if (playing.value) togglePlay()
+  if (globe) { globe.controls.autoRotateSpeed = 0.35; globe.setSelected(store.selectedId, false) }
+}
+function onKey(e) {
+  if (e.key === 'Escape' && requiem.value) { e.preventDefault(); stopRequiem() }
+}
+
+/** Sub-solar point for the record's t0 (or noon UTC on its date): where the sun stood at that moment. */
+function subsolar(rec) {
+  const iso = rec.t0 || (rec.date ? rec.date + 'T12:00:00Z' : null)
+  if (!iso) return null
+  const d = new Date(iso)
+  if (isNaN(d.getTime())) return null
+  const start = Date.UTC(d.getUTCFullYear(), 0, 1)
+  const doy = Math.floor((d.getTime() - start) / 86400000) + 1
+  const decl = 23.44 * Math.sin((2 * Math.PI * (doy - 81)) / 365)
+  const hours = d.getUTCHours() + d.getUTCMinutes() / 60
+  let lon = (12 - hours) * 15
+  lon = ((lon + 540) % 360) - 180
+  return { lat: decl, lon, exact: !!rec.t0, time: `${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')} UTC` }
+}
+function applySun() {
+  if (!globe) return
+  const rec = selected.value
+  const sp = rec ? subsolar(rec) : null
+  if (sp) {
+    globe.setSun(sp.lat, sp.lon)
+    sunNote.value = sp.exact ? `The globe is lit as the sun stood at ${sp.time} on ${rec.date}` : `The globe is lit as the sun stood at noon UTC on ${rec.date}`
+  } else {
+    globe.setSun(null)
+    sunNote.value = ''
   }
 }
 
@@ -251,6 +330,8 @@ async function select(id, fly = false) {
 }
 function clearSelection() {
   store.selectedId = null
+  globe && globe.setSun(null)
+  sunNote.value = ''
   globe && globe.setSelected(null)
   globe && globe.setArcs([])
 }
@@ -331,7 +412,7 @@ watch(() => store.selectedId, (id) => {
   globe.setSelected(id, true)
   updateArcs()
 })
-watch(selected, updateArcs)
+watch(selected, () => { updateArcs(); applySun() })
 watch(() => props.active, async (a) => {
   if (a) {
     await nextTick()
@@ -340,6 +421,7 @@ watch(() => props.active, async (a) => {
     if (props.catalog.state === 'idle') emit('load-catalog')
     drawHist()
   } else {
+    stopRequiem()
     globe && globe.stop()
     if (playing.value) togglePlay()
   }
@@ -361,6 +443,8 @@ onMounted(() => {
   globe.resize()
   pushItems()
   if (store.selectedId) globe.setSelected(store.selectedId, true)
+  applySun()
+  window.addEventListener('keydown', onKey)
   if (props.active) {
     globe.start()
     if (props.catalog.state === 'idle') emit('load-catalog')
@@ -368,7 +452,8 @@ onMounted(() => {
 })
 onBeforeUnmount(() => {
   clearInterval(playTimer)
-  if (actx) { try { actx.close() } catch (e) { /* ignore */ } actx = null }
+  window.removeEventListener('keydown', onKey)
+  stopRequiem()
   resizeObs && resizeObs.disconnect()
   globe && globe.dispose()
   globe = null
@@ -414,6 +499,21 @@ onBeforeUnmount(() => {
 .at-hist { width: 100%; height: 46px; display: block; cursor: pointer; }
 .at-hist-tip { position: absolute; top: -22px; transform: translateX(-50%); background: rgba(8,12,24,0.95); border: 1px solid var(--bb-line); padding: 2px 6px; border-radius: 3px; font-size: 10px; white-space: nowrap; pointer-events: none; }
 .at-range { width: 100%; margin: 0; height: 14px; accent-color: #ffbf00; }
+/* Requiem: the interface fades away and the century plays itself */
+.at-requiem .at-filters, .at-requiem .at-card, .at-requiem .at-strip, .at-requiem .at-year-ctl, .at-requiem .at-tip { opacity: 0; pointer-events: none; transition: opacity 1.2s; }
+.at-requiem .at-year-num { font-size: 84px; text-shadow: 0 0 40px rgba(255,191,0,0.5); transition: font-size 1.2s; }
+.at-requiem .at-year-sub { font-size: 12px; }
+.at-requiem-ui { position: absolute; top: 12px; left: 12px; z-index: 3; opacity: 0.7; }
+.at-requiem-ui:hover { opacity: 1; }
+.at-caption { position: absolute; left: 50%; bottom: 14%; transform: translateX(-50%); text-align: center; pointer-events: none; z-index: 3; }
+.at-caption-year { font-family: Consolas, monospace; font-size: 12px; letter-spacing: 0.4em; color: var(--bb-accent); }
+.at-caption-title { font-size: clamp(20px, 3.2vw, 34px); font-weight: 700; color: #fff; text-shadow: 0 2px 20px rgba(0,0,0,0.9), 0 0 30px rgba(255,191,0,0.25); margin: 4px 0; }
+.at-caption-sub { font-size: 12px; color: #b8c6e3; letter-spacing: 0.08em; }
+.at-cap-enter-active { transition: opacity 1.2s, transform 1.2s; }
+.at-cap-leave-active { transition: opacity 2s; }
+.at-cap-enter-from { opacity: 0; transform: translateX(-50%) translateY(14px); }
+.at-cap-leave-to { opacity: 0; }
+.at-sunnote { position: absolute; left: 12px; bottom: 78px; font-size: 10px; font-style: italic; max-width: 260px; text-shadow: 0 1px 2px #000; }
 @media (max-width: 900px) {
   .at-filters { width: 200px; }
   .at-card { left: 12px; right: 12px; width: auto; top: auto; bottom: 80px; max-height: 45%; }

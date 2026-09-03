@@ -25,6 +25,7 @@ export class ForceGraph {
     this.showChain = true
     this.labelsAlways = false
     this.flow = true // animated particles travelling along causal edges
+    this.sky = false // constellation mode: nodes as twinkling stars, chains as constellation lines
     this.active = true // false while the tab is hidden: stops the ambient loop
     this._flowRaf = null
     this._flowT = 0
@@ -64,10 +65,10 @@ export class ForceGraph {
 
   /** Ambient animation: particles flowing along chain edges while the graph is visible. */
   startFlow() {
-    if (this._flowRaf || !this.flow) return
+    if (this._flowRaf || !(this.flow || this.sky)) return
     const loop = (ts) => {
       this._flowRaf = null
-      if (!this.flow || !this.active) return
+      if (!(this.flow || this.sky) || !this.active) return
       const dt = this._flowLast ? Math.min(0.1, (ts - this._flowLast) / 1000) : 0
       this._flowLast = ts
       this._flowT += dt
@@ -351,6 +352,18 @@ export class ForceGraph {
       if (neighbors && !(neighbors.has(a.id) && neighbors.has(b.id))) alpha *= 0.15
       if (this.hover && (a === this.hover || b === this.hover)) alpha = 1
       const emph = this.emphasisLinks && this.emphasisLinks.has(`${a.id}>${b.id}`)
+      if (this.sky) {
+        if (l.kind === 'chain') {
+          ctx.strokeStyle = emph ? `rgba(255,230,160,${Math.min(1, alpha + 0.3)})` : `rgba(190,210,255,${alpha * 0.45})`
+          ctx.lineWidth = emph ? 1.6 : 0.8
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke()
+        } else {
+          ctx.strokeStyle = `rgba(150,170,210,${alpha * 0.08})`
+          ctx.lineWidth = 0.5
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke()
+        }
+        continue
+      }
       if (l.kind === 'chain') {
         ctx.strokeStyle = emph ? `rgba(255,196,0,${Math.min(1, alpha + 0.3)})` : `rgba(255,150,40,${alpha * 0.55})`
         ctx.lineWidth = emph ? 2.5 : Math.min(4, 0.6 + Math.log2(1 + (l.weight || 1)))
@@ -396,6 +409,22 @@ export class ForceGraph {
       if (neighbors && !neighbors.has(n.id) && n !== this.selected) alpha = Math.min(alpha, 0.25)
       if (n === this.hover) alpha = 1
       ctx.globalAlpha = alpha
+      if (this.sky) {
+        this._star(ctx, n, k)
+        const showLabel = n.kind !== 'accident' || this.labelsAlways || k > 0.9 || n === this.hover || n === this.selected || (hi && hi.has(n.id)) || (neighbors && neighbors.has(n.id))
+        if (showLabel) {
+          ctx.font = `${n.kind === 'factor' ? 'italic 11px' : '10px'} Georgia, 'Times New Roman', serif`
+          ctx.fillStyle = n.kind === 'factor' ? '#e8eeff' : '#aab8d8'
+          ctx.textAlign = 'center'
+          ctx.textBaseline = 'top'
+          ctx.lineWidth = 3
+          ctx.strokeStyle = 'rgba(3,5,12,0.9)'
+          ctx.strokeText(n.label, n.x, n.y + n.r + 3)
+          ctx.fillText(n.label, n.x, n.y + n.r + 3)
+        }
+        ctx.globalAlpha = 1
+        continue
+      }
       ctx.beginPath()
       if (n.kind === 'factor') {
         ctx.moveTo(n.x, n.y - n.r); ctx.lineTo(n.x + n.r, n.y); ctx.lineTo(n.x, n.y + n.r); ctx.lineTo(n.x - n.r, n.y); ctx.closePath()
@@ -461,6 +490,28 @@ export class ForceGraph {
     ctx.closePath()
     ctx.fillStyle = ctx.strokeStyle
     ctx.fill()
+  }
+
+  /** A twinkling star for constellation mode. */
+  _star(ctx, n, k) {
+    const seed = (n.id.charCodeAt(0) + n.id.length * 7) % 13
+    const tw = 0.7 + 0.3 * Math.sin(this._flowT * (1.5 + seed * 0.2) + seed)
+    const r = (n.kind === 'factor' ? n.r * 0.9 : Math.max(1.5, n.r * 0.6)) * tw
+    const core = n === this.selected || n === this.hover ? '#ffffff' : n.kind === 'factor' ? n.color : '#dbe6ff'
+    const g = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, r * 3)
+    g.addColorStop(0, core)
+    g.addColorStop(0.25, hexToRgba(n.kind === 'factor' ? n.color : '#9fb8ff', 0.5))
+    g.addColorStop(1, 'rgba(0,0,0,0)')
+    ctx.fillStyle = g
+    ctx.beginPath(); ctx.arc(n.x, n.y, r * 3, 0, Math.PI * 2); ctx.fill()
+    if (n.kind === 'factor') {
+      ctx.strokeStyle = hexToRgba('#ffffff', 0.7 * tw)
+      ctx.lineWidth = 0.8 / Math.max(0.5, k)
+      const L = r * 2.6
+      ctx.beginPath(); ctx.moveTo(n.x - L, n.y); ctx.lineTo(n.x + L, n.y); ctx.moveTo(n.x, n.y - L); ctx.lineTo(n.x, n.y + L); ctx.stroke()
+    }
+    ctx.fillStyle = core
+    ctx.beginPath(); ctx.arc(n.x, n.y, Math.max(1, r * 0.7), 0, Math.PI * 2); ctx.fill()
   }
 
   /** Point at fraction f along the same quadratic curve _arrow draws. */

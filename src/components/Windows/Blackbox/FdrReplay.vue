@@ -16,6 +16,7 @@
         <button class="bb-btn small" :class="{ active: store.sound }" @click="toggleSound" title="Synthesized cockpit audio: engines, slipstream, warnings, GPWS call-outs (M)">{{ store.sound ? '🔊 sound' : '🔈 sound' }}</button>
         <button class="bb-btn small" :class="{ active: voice }" :disabled="!store.sound" @click="voice = !voice" title="Read CVR lines aloud with the browser's speech synthesis">voice</button>
         <button class="bb-btn small" :class="{ active: theatre }" @click="toggleTheatre" title="Theatre mode (F)">⛶</button>
+        <button class="bb-btn small" :class="{ active: !!ghost }" @click="toggleGhost" title="Ghost: a translucent aircraft that holds the altitude, heading and speed of this instant, so you can watch the real flight diverge from it (G)">{{ ghost ? 'ghost ✓' : 'ghost' }}</button>
       </span>
       <span class="fr-clock" v-if="fdr">
         <b>{{ clock }}</b> <span class="bb-muted">{{ record?.time_reference || '' }} · t{{ time >= 0 ? '+' : '' }}{{ time.toFixed(1) }} s</span>
@@ -32,6 +33,8 @@
           <div class="fr-bars" v-if="camera === 'cinematic'"></div>
           <div class="fr-marker-toast" v-if="activeMarker">{{ activeMarker.label }}</div>
           <div class="fr-env bb-muted">{{ envLabel }}</div>
+          <div v-if="ghost" class="fr-ghost-note">ghost holds {{ Math.round(ghost.alt).toLocaleString() }} ft · {{ Math.round(ghost.hdg) }}° · {{ Math.round(ghost.gs) }} kt from {{ formatClock(record.t0, ghost.t) }}</div>
+          <div v-if="slowmo" class="fr-slowmo">slow motion</div>
           <div class="fr-scene-hint bb-muted">{{ camera === 'orbit' ? 'drag to orbit · wheel to zoom' : camera === 'cockpit' ? 'head-up display · flight path vector shows where the aircraft is actually going' : camera === 'cinematic' ? 'auto-directed cameras' : 'trail: flown path · faint: full path' }}</div>
           <div v-if="ended" class="fr-ended" @click="seek(fdr.t_start)">
             <div class="fr-ended-t">{{ clock }}</div>
@@ -58,7 +61,8 @@
         <div class="fr-panel-tabs">
           <button class="bb-btn small" :class="{ active: panel === 'pfd' }" @click="panel = 'pfd'">PFD</button>
           <button class="bb-btn small" :class="{ active: panel === 'radar' }" @click="panel = 'radar'">RADAR</button>
-          <span class="bb-muted fr-panel-hint">{{ panel === 'pfd' ? 'primary flight display' : 'ATC scope · whole track' }}</span>
+          <button class="bb-btn small" :class="{ active: panel === 'wx' }" @click="panel = 'wx'">WX</button>
+          <span class="bb-muted fr-panel-hint">{{ panel === 'pfd' ? 'primary flight display' : panel === 'wx' ? 'weather radar · heading up' : 'ATC scope · whole track' }}</span>
         </div>
         <canvas ref="pfdCanvas" class="fr-pfd"></canvas>
         <canvas ref="ctlCanvas" class="fr-ctl"></canvas>
@@ -95,7 +99,7 @@ import { ref, computed, watch, onMounted, onBeforeUnmount, nextTick, shallowRef 
 import { useBlackboxStore } from '@/stores/blackboxStore'
 import { sampleAll, integrateTrack, trackAt, series, paramRange, formatClock, formatRelative } from './lib/fdr.js'
 import { drawPFD, drawControls } from './lib/pfd.js'
-import { drawHUD, drawRadar } from './lib/hud.js'
+import { drawHUD, drawRadar, drawWeatherRadar } from './lib/hud.js'
 import { ReplayScene } from './lib/scene.js'
 import { ReplayAudio } from './lib/audio.js'
 
@@ -137,6 +141,9 @@ const vignette = ref(0)
 const warnLevel = ref(0)
 const gpwsText = ref('')
 const env = ref({ night: 0, rain: 0, storm: false, fog: 0 })
+const ghost = ref(null)
+const slowmo = ref(false)
+let prevStall = false
 
 let scene = null
 let raf = null
@@ -210,6 +217,7 @@ async function loadFdr(id) {
   ended.value = false
   stripCache = null
   if (audio) { audio._prev = null; audio.setRain(env.value.rain) }
+  ghost.value = null
   await nextTick()
   initScene()
   renderFrame(0)
@@ -241,6 +249,15 @@ function initScene() {
     console.error('WebGL scene failed', e)
     scene = null
   }
+}
+
+function toggleGhost() {
+  if (!scene || !fdr.value) return
+  if (ghost.value) { scene.clearGhost(); ghost.value = null; return }
+  const s = sampleAll(fdr.value, time.value)
+  const pos = trackAt(track.value, time.value)
+  scene.setGhost(time.value, pos, s)
+  ghost.value = { t: time.value, alt: pos.y, hdg: (((s.hdg_deg || 0) % 360) + 360) % 360, gs: s.gs_kt || s.ias_kt || 0 }
 }
 
 function setCamera(c) {
@@ -344,6 +361,8 @@ function renderFrame(dt) {
   else if (s.law && s.law !== 'NORMAL') level = Math.max(level, 1)
   warnLevel.value = level
   gpwsText.value = g
+  if (s.stall_warn && !prevStall && playing.value && navigator.vibrate) { try { navigator.vibrate([120, 60, 120]) } catch (e) { /* ignore */ } }
+  prevStall = !!s.stall_warn
   const pulse = level > 1 ? 0.35 + 0.25 * Math.abs(Math.sin(performance.now() / 180)) : level === 1 ? 0.2 : 0
   vignette.value = Math.max(pulse, lightningFlash * 0.9)
   lightningFlash *= Math.exp(-dt * 6)
@@ -355,6 +374,7 @@ function renderFrame(dt) {
   if (pfdCanvas.value) {
     const { ctx, w, h } = fit(pfdCanvas.value)
     if (panel.value === 'radar') drawRadar(ctx, w, h, track.value, time.value, fdr.value, s, record.value.flight_number || record.value.aircraft.registration || '')
+    else if (panel.value === 'wx') drawWeatherRadar(ctx, w, h, track.value, time.value, s, env.value, record.value.id)
     else drawPFD(ctx, w, h, s)
   }
   if (ctlCanvas.value) {
@@ -453,7 +473,16 @@ function loop(ts) {
   const dt = lastTs ? Math.min(0.1, (ts - lastTs) / 1000) : 0
   lastTs = ts
   if (playing.value && fdr.value) {
-    time.value += dt * speed.value
+    // bullet time: in cinematic mode the clock eases to a third around each marker
+    let k = 1
+    if (camera.value === 'cinematic') {
+      for (const mk of fdr.value.markers || []) {
+        const d = Math.abs(time.value - mk.t)
+        if (d < 2.5) { k = Math.min(k, 0.3 + 0.7 * (d / 2.5)); break }
+      }
+    }
+    slowmo.value = k < 0.95
+    time.value += dt * speed.value * k
     if (time.value >= fdr.value.t_end) {
       time.value = fdr.value.t_end
       playing.value = false
@@ -516,6 +545,7 @@ function onKey(e) {
   if (e.key === 'c' || e.key === 'C') cycleCamera()
   if (e.key === 'm' || e.key === 'M') toggleSound()
   if (e.key === 'f' || e.key === 'F') toggleTheatre()
+  if (e.key === 'g' || e.key === 'G') toggleGhost()
 }
 </script>
 
@@ -539,6 +569,8 @@ function onKey(e) {
 .fr-marker-toast { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); background: rgba(8, 12, 24, 0.85); color: var(--bb-accent); font-weight: 700; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--bb-accent); font-size: 12px; white-space: nowrap; max-width: 90%; overflow: hidden; text-overflow: ellipsis; z-index: 2; }
 .cinematic .fr-marker-toast { top: auto; bottom: 12%; background: transparent; border: none; font-size: 15px; letter-spacing: 0.06em; text-shadow: 0 1px 4px #000; }
 .fr-scene-hint { position: absolute; bottom: 6px; left: 8px; font-size: 10px; text-shadow: 0 1px 2px #000; }
+.fr-ghost-note { position: absolute; top: 24px; right: 10px; font-size: 10px; color: #9fd8ff; text-shadow: 0 1px 2px #000; letter-spacing: 0.04em; }
+.fr-slowmo { position: absolute; bottom: 24px; right: 10px; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #fff; text-shadow: 0 1px 3px #000; animation: fr-blink 1s step-end infinite; }
 .fr-env { position: absolute; top: 8px; right: 10px; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; text-shadow: 0 1px 2px #000; }
 .fr-ended { position: absolute; inset: 0; background: rgba(0,0,0,0.88); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; cursor: pointer; z-index: 3; animation: fr-fade 2.2s ease-out; }
 .fr-ended-t { font-family: Consolas, monospace; font-size: 42px; color: #fff; letter-spacing: 0.08em; }

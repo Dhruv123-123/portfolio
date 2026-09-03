@@ -108,10 +108,12 @@ export class Globe {
     const body = new THREE.Mesh(new THREE.SphereGeometry(R, 96, 96), new THREE.MeshPhongMaterial({ color: 0x0b1222, emissive: 0x050912, specular: 0x1a2a4a, shininess: 18 }))
     this.scene.add(body)
     this.body = body
-    const sun = new THREE.DirectionalLight(0x9fb8ff, 1.1)
-    sun.position.set(-300, 200, 260)
-    this.scene.add(sun)
-    this.scene.add(new THREE.AmbientLight(0x2a3a5a, 0.9))
+    this.sun = new THREE.DirectionalLight(0x9fb8ff, 1.1)
+    this.sun.position.set(-300, 200, 260)
+    this.scene.add(this.sun)
+    this.ambient = new THREE.AmbientLight(0x2a3a5a, 0.9)
+    this.scene.add(this.ambient)
+    this._sunTarget = null
 
     // Graticule
     const gridPts = []
@@ -256,6 +258,19 @@ export class Globe {
     }
   }
 
+  /** Light the globe from the sub-solar point (lat, lon) as a warm sun; null restores the ambient look. */
+  setSun(lat, lon) {
+    if (lat === null || lat === undefined) {
+      this._sunTarget = { pos: new THREE.Vector3(-300, 200, 260), color: new THREE.Color(0x9fb8ff), intensity: 1.1, ambient: 0.9 }
+      return
+    }
+    this._sunTarget = { pos: latLonToVec3(lat, lon, 600), color: new THREE.Color(0xffe2b0), intensity: 1.9, ambient: 0.35 }
+  }
+
+  flyToLatLon(lat, lon) {
+    this.flyTo(latLonToVec3(lat, lon, R))
+  }
+
   flyTo(v) {
     const dist = Math.max(this.controls.minDistance, Math.min(260, this.camera.position.length()))
     this._fly = { from: this.camera.position.clone(), to: v.clone().normalize().multiplyScalar(dist), t: 0 }
@@ -307,6 +322,13 @@ export class Globe {
     } else {
       this._idleTimer += dt
       if (this._idleTimer > 8) this.controls.autoRotate = true
+    }
+    if (this._sunTarget) {
+      const k = 1 - Math.exp(-dt * 1.5)
+      this.sun.position.lerp(this._sunTarget.pos, k)
+      this.sun.color.lerp(this._sunTarget.color, k)
+      this.sun.intensity += (this._sunTarget.intensity - this.sun.intensity) * k
+      this.ambient.intensity += (this._sunTarget.ambient - this.ambient.intensity) * k
     }
     const s = 1 + 0.12 * Math.sin(t * 3)
     this.markerRings[0].scale.setScalar(s)
