@@ -1,0 +1,361 @@
+{
+  "id": "wd_q4582884",
+  "qid": "Q4582884",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "1986 British International Helicopters Chinook crash",
+  "flight_number": null,
+  "date": "1986-11-06",
+  "time_reference": "UTC",
+  "t0": "1986-11-06T11:30:21Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "2/88",
+      "report_title": "Aircraft Accident Report: Boeing Vertol 234 LR, G-BWFC",
+      "report_date": "1988-01-13"
+    },
+    {
+      "code": "FAA",
+      "name": "Federal Aviation Administration",
+      "country": "USA",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "CAA",
+      "name": "Civil Aviation Authority",
+      "country": "United Kingdom",
+      "role": "accredited_representative"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing-Vertol Model 234LR",
+    "manufacturer": "Boeing",
+    "family": "234",
+    "registration": "G-BWFC",
+    "msn": null,
+    "engines": null
+  },
+  "operator": "British International Helicopters",
+  "route": {
+    "from": null,
+    "from_name": "Brent oilfield",
+    "to": null,
+    "to_name": "Sumburgh Airport"
+  },
+  "location": {
+    "name": "2.5 nautical miles east of Sumburgh Airport, Shetland Isles",
+    "country": "United Kingdom",
+    "lat": 59.8917,
+    "lon": -1.2
+  },
+  "phase": "approach",
+  "occupants": 46,
+  "fatalities": 44,
+  "injuries_serious": 2,
+  "damage": "destroyed",
+  "category": "ARC",
+  "summary": "A Boeing-Vertol 234LR helicopter departing the Brent oilfield with 44 passengers and 2 crew experienced catastrophic failure of the forward transmission bevel ring gear while on approach to Sumburgh Airport. Loss of rotor synchronization caused the rotor blades to collide, the aft rotor assembly to detach, and the aircraft to crash into the sea from 150 feet, killing 44 occupants.",
+  "probable_cause": "The immediate cause of the accident was the failure of the modified spiral bevel ring gear in the forward transmission which allowed the twin rotors to collide when synchronisation was lost. Underlying causes were the inadequacy of the hitherto accepted aircraft industry standard of test programme carried out by the manufacturers and the insufficiently stringent inspection programmes required by the FAA and the CAA (p. 41).",
+  "factors": [
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The modified bevel ring gear was redesigned to increase clamping force by introducing larger diameter bolts installed at higher torque (p. 24). The manufacturer and airworthiness authorities failed to perceive that the change in the design of the bolted joint might lead to it performing in a radically different way to that previously experienced (p. 39)."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "latent",
+      "evidence": "The hitherto accepted aircraft industry standard of test performed on an aft transmission was inadequate to expose the behaviour of the modified joint in the forward transmission (p. 40). The in-service inspection programme based on aft transmission test results was not adequate to reveal the impending failure of the forward bolted joint (p. 40)."
+    },
+    {
+      "id": "metal_fatigue",
+      "role": "initiating",
+      "evidence": "The ring gear failure stemmed from corrosion fatigue which was initiated by the unpredicted wear and corrosion characteristics of the bolted joint attaching the gear to its shaft (p. 39). The radial crack progressed by fatigue until the remaining section available to transfer meshing loads circumferentially failed in overload (p. 31). Modified spiral bevel ring gears consistently suffered wear and corrosion which gave rise to conditions in which fatigue could readily initiate in the bolted joint flange (p. 40)."
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "The spiral bevel ring gear in the forward transmission fractured and synchronisation between the rotors was lost (p. 40). The tip of an aft rotor blade struck the root end of a forward rotor blade and the resultant forces tore the complete aft rotor assembly from the aircraft (p. 40)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The helicopter was largely broken up by the clashing rotor blades in mid air and fell towards the sea from a height of 150 feet (p. 3)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft struck the sea in a tail down attitude with considerable force, broke up and sank (p. 1)."
+    }
+  ],
+  "chain": [
+    ["design_deficiency", "metal_fatigue"],
+    ["inadequate_inspection", "metal_fatigue"],
+    ["metal_fatigue", "structural_failure"],
+    ["structural_failure", "loss_of_control_inflight"],
+    ["loss_of_control_inflight", "cfit"]
+  ],
+  "events": [
+    {
+      "t": -9141,
+      "clock": "08:58",
+      "phase": "cruise",
+      "actor": "PF",
+      "kind": "env",
+      "text": "Aircraft departed Sumburgh with 40 passengers for Brent Field (p. 11)",
+      "factors": []
+    },
+    {
+      "t": -4101,
+      "clock": "10:22",
+      "phase": "cruise",
+      "actor": "PF",
+      "kind": "env",
+      "text": "Aircraft departed Brent Platform C with full complement of 44 passengers on board (p. 11)",
+      "factors": []
+    },
+    {
+      "t": -3700,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Aircraft climbed to 2,500 feet and proceeded towards Sumburgh along track M of the Helicopter Main Routes (p. 11)",
+      "factors": []
+    },
+    {
+      "t": -1341,
+      "clock": "11:08",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 40 miles from Sumburgh VHF omni range, crew reported position to Sumburgh approach controller and were given permission to descend to 1,000 feet at approximately 100 knots (p. 11)",
+      "factors": []
+    },
+    {
+      "t": -501,
+      "clock": "11:22",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight was handed over to the Sumburgh aerodrome controller (p. 11)",
+      "factors": []
+    },
+    {
+      "t": -31,
+      "clock": "11:29:50",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "atc",
+      "text": "Commander informed controller he was four and a half miles from the airfield; controller gave clearance to land on helicopter runway 24 (p. 11)",
+      "factors": []
+    },
+    {
+      "t": -31,
+      "clock": "11:29:50",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Sumburgh based HM Coastguard Sikorsky S61N helicopter departed for routine training flight; information about this helicopter was radioed to the commander of G-BWFC (p. 11)",
+      "factors": []
+    },
+    {
+      "t": -25,
+      "clock": "11:29:56",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Co-pilot remarked the aircraft had become very noisy all of a sudden; the noise was described as a roaring noise audible to the crew and cabin (p. 12)",
+      "factors": ["metal_fatigue"],
+      "state": {
+        "alt": 500,
+        "ias": 100
+      }
+    },
+    {
+      "t": -24,
+      "clock": "11:29:57",
+      "phase": "approach",
+      "actor": "CABIN",
+      "kind": "crew_speech",
+      "text": "Cabin attendant making pre-landing report agreed with the noise, saying it's in the cabin as well just behind the box (p. 12)",
+      "factors": ["metal_fatigue"]
+    },
+    {
+      "t": -21,
+      "clock": "11:30:00",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Co-pilot said it's quite a loud noise, a roaring noise (p. 12)",
+      "factors": ["metal_fatigue"]
+    },
+    {
+      "t": 0,
+      "clock": "11:30:21",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "CVR recording stopped 25 seconds after first noise observation; frequency analysis showed sudden appearance of new harmonic of fundamental ring gear frequency at 64.7 Hz indicative of complete radial separation of the gear rim (p. 21, 32)",
+      "factors": ["metal_fatigue", "structural_failure"],
+      "state": {
+        "alt": 500
+      }
+    },
+    {
+      "t": 2,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "General noise increased dramatically in final 0.6 seconds of CVR recording consistent with gears in foul mesh as gap in rim equivalent to approximately two teeth caused rotor desynchronization within 1.5 seconds (p. 21, 32)",
+      "factors": ["structural_failure", "loss_of_control_inflight"]
+    },
+    {
+      "t": 3,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Following bang and aircraft loss of control with tail dropping to near vertical attitude, commander immediately applied full forward cyclic pitch control but aircraft did not respond (p. 11)",
+      "factors": ["loss_of_control_inflight"],
+      "state": {
+        "alt": 400,
+        "pitch": -70
+      }
+    },
+    {
+      "t": 6,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Rotor blade damage from collisions leading to loss of rotor balance and severe loading of rotor supports; aft pylon structure unable to sustain imbalance and collision reaction forces and separated from rear fuselage carrying aft transmission components (p. 32)",
+      "factors": ["loss_of_control_inflight"],
+      "state": {
+        "alt": 250
+      }
+    },
+    {
+      "t": 8,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft nose dived towards the sea from approximately 150 feet altitude (p. 11)",
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "landing",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Witness at Compass Head summit observed orange coloured object falling and weaving from side to side at height of 300-400 feet; lower set of rotor blades flew off to the right (p. 12)",
+      "factors": ["loss_of_control_inflight", "cfit"]
+    },
+    {
+      "t": 12,
+      "clock": "11:31",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck the sea making a large splash, broke up and sank rapidly (p. 1, 12)",
+      "factors": ["cfit"]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "landing",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "Coastguard helicopter crew noticed two inflated liferafts floating in sea east of Sumburgh Airport; two survivors were spotted and winched aboard the rescue helicopter (p. 12)",
+      "factors": []
+    }
+  ],
+  "cvr": [
+    {
+      "t": -25,
+      "clock": "11:29:56",
+      "speaker": "FO",
+      "text": "Seems to have got very noisy in here all of a sudden"
+    },
+    {
+      "t": -24,
+      "clock": "11:29:57",
+      "speaker": "CABIN",
+      "text": "It's in the cabin as well just behind this bloody box"
+    },
+    {
+      "t": -21,
+      "clock": "11:30:00",
+      "speaker": "FO",
+      "text": "It's quite a loud noise, a roaring noise"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "4.1",
+      "to": "FAA/CAA",
+      "text": "Certification procedures be reviewed so that all modifications to vital components are adequately scrutinised and tested before approval and more closely monitored after their introduction into service",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": ["design_deficiency", "inadequate_inspection"]
+    },
+    {
+      "id": "4.2",
+      "to": "CAA",
+      "text": "The CAA should report on the progress that has been made towards the early incorporation of a specification for suitable condition monitoring systems into airworthiness requirements for helicopters and indicate the time scale and scope of likely developments",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": ["metal_fatigue", "structural_failure"]
+    },
+    {
+      "id": "4.3",
+      "to": "FAA/CAA",
+      "text": "Requirements relating to the ADELT equipment, including location, crashworthiness, protection and power supplies, be reviewed in the light of this accident",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced certification procedures for modifications to critical helicopter components requiring more rigorous testing before approval",
+    "Improved transmission inspection and monitoring requirements for helicopter operators",
+    "Stricter test requirements for modified aircraft components to ensure forward and aft transmission behavior is validated identically"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.gov.uk/aaib-reports/2-1988-boeing-vertol-bv-234-lr-g-bwfc-6-november-1986",
+    "https://assets.publishing.service.gov.uk/media/5422fdb840f0b61342000861/2-1988_G-BWFC.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/1986_British_International_Helicopters_Chinook_crash",
+  "asn_id": null,
+  "interest": 5.37,
+  "report_links": [
+    "https://www.gov.uk/aaib-reports/2-1988-boeing-vertol-bv-234-lr-g-bwfc-6-november-1986",
+    "https://assets.publishing.service.gov.uk/media/5422fdb840f0b61342000861/2-1988_G-BWFC.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read sections 1.1 History of Flight (p. 11), 1.11 Cockpit Voice Recorder (p. 12-13), 2.8 Summary (p. 39), 3 Conclusions with Findings (p. 40-41)",
+      "Read 1.17.2 Factors affecting failure mechanism (p. 24-26) for wear and corrosion details",
+      "Read 2.4.1 and 2.4.2 sections (p. 30-33) for detailed failure sequence analysis",
+      "18 events extracted with precise timing from CVR records and flight history showing complete sequence from departure to rescue",
+      "12 new events beyond summary record with specific quotes from CVR and technical findings showing failure progression",
+      "All factor evidence cited with page numbers from report sections where findings were documented"
+    ]
+  },
+  "curated_id": null
+}
