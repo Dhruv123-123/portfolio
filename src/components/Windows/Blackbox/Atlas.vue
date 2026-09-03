@@ -38,6 +38,7 @@
 
     <div v-if="requiem" class="at-requiem-ui" @click.stop>
       <button class="bb-btn small" @click="stopRequiem">leave requiem · esc</button>
+      <button class="bb-btn small" :class="{ active: rollCall }" @click="rollCall = !rollCall" title="read each name aloud as it appears">roll call</button>
     </div>
     <transition name="at-cap">
       <div v-if="requiem && caption" :key="caption.id" class="at-caption">
@@ -79,6 +80,7 @@
         <button class="bb-btn" :disabled="!selected.fdr" @click="store.openReplay(selected.id)">Replay ▸</button>
         <button class="bb-btn" :disabled="!(selected.events && selected.events.length)" @click="store.openStory(selected.id)">Story ▸</button>
       </div>
+      <div v-if="selected.audio && selected.audio.length" class="at-listen" @click="selected.fdr ? store.openReplay(selected.id) : store.openTimeline(selected.id)">♪ {{ selected.audio.length }} real recording{{ selected.audio.length > 1 ? 's' : '' }} · {{ selected.fdr ? 'play in sync with the replay ▸' : 'listen on the timeline ▸' }}</div>
       <a :href="wikipediaUrl(selected)" target="_blank" rel="noopener" class="at-readmore">{{ hasWikipediaArticle(selected) ? 'Read more on Wikipedia ↗' : 'Search Wikipedia for this accident ↗' }}</a>
       <div class="bb-h" v-if="similar.length">Same mechanism elsewhere</div>
       <div v-for="s in similar" :key="s.id" class="at-similar" @click="select(s.id, true)">
@@ -241,6 +243,7 @@ function togglePlay() {
 
 // Sound and requiem: a soft note for each accident that appears while the century plays
 const requiem = ref(false)
+const rollCall = ref(false)
 const caption = ref(null)
 const sunNote = ref('')
 let droneCtl = null
@@ -266,6 +269,13 @@ function blipsBetween(y0, y1) {
 function showMajor(it) {
   const rec = props.index.byId[it.id]
   if (!rec) return
+  if (rollCall.value && typeof speechSynthesis !== 'undefined') {
+    const u = new SpeechSynthesisUtterance(`${rec.date.slice(0, 4)}. ${rec.title}.`)
+    u.rate = 0.85
+    u.pitch = 0.8
+    u.volume = 0.8
+    speechSynthesis.speak(u)
+  }
   caption.value = { id: it.id, year: rec.date.slice(0, 4), title: rec.title, sub: `${rec.aircraft?.type || ''}${rec.location?.country ? ' · ' + rec.location.country : ''} · ${rec.fatalities ?? '?'} lives` }
   clearTimeout(captionTimer)
   captionTimer = setTimeout(() => (caption.value = null), 4200)
@@ -290,6 +300,7 @@ function startRequiem() {
 function stopRequiem() {
   if (!requiem.value) return
   requiem.value = false
+  if (typeof speechSynthesis !== 'undefined') speechSynthesis.cancel()
   caption.value = null
   clearTimeout(captionTimer)
   if (droneCtl) { droneCtl.stop(); droneCtl = null }
@@ -510,6 +521,8 @@ onBeforeUnmount(() => {
 .at-summary { line-height: 1.45; margin: 4px 0; color: #d3ddf0; font-size: 11px; }
 .at-factors { display: flex; flex-wrap: wrap; gap: 3px; margin: 6px 0; }
 .at-actions { display: flex; gap: 4px; flex-wrap: wrap; margin: 8px 0 6px; }
+.at-listen { font-size: 11px; color: #9fd8ff; cursor: pointer; margin: 4px 0 6px; }
+.at-listen:hover { color: #fff; }
 .at-readmore { display: inline-block; color: var(--bb-accent); font-weight: 700; text-decoration: none; border: 1px solid var(--bb-accent); border-radius: 3px; padding: 4px 8px; font-size: 11px; }
 .at-readmore:hover { background: var(--bb-accent); color: #111; }
 .at-similar { cursor: pointer; padding: 3px 0; border-bottom: 1px dashed var(--bb-line); font-size: 11px; }
@@ -522,7 +535,7 @@ onBeforeUnmount(() => {
 .at-requiem .at-filters, .at-requiem .at-card, .at-requiem .at-strip, .at-requiem .at-year-ctl, .at-requiem .at-tip { opacity: 0; pointer-events: none; transition: opacity 1.2s; }
 .at-requiem .at-year-num { font-size: 84px; text-shadow: 0 0 40px rgba(255,191,0,0.5); transition: font-size 1.2s; }
 .at-requiem .at-year-sub { font-size: 12px; }
-.at-requiem-ui { position: absolute; top: 12px; left: 12px; z-index: 3; opacity: 0.7; }
+.at-requiem-ui { position: absolute; top: 12px; left: 12px; z-index: 3; opacity: 0.7; display: flex; gap: 4px; }
 .at-requiem-ui:hover { opacity: 1; }
 .at-caption { position: absolute; left: 50%; bottom: 14%; transform: translateX(-50%); text-align: center; pointer-events: none; z-index: 3; }
 .at-caption-year { font-family: Consolas, monospace; font-size: 12px; letter-spacing: 0.4em; color: var(--bb-accent); }

@@ -77,6 +77,9 @@ const groups = computed(() => {
   }
   facs.sort((a, b) => b.s - a.s)
   out.push({ label: 'Factors', items: facs.slice(0, 6).map(({ f }) => ({ key: 'f-' + f.id, flat: flat++, icon: '◆', title: f.label, sub: `${props.index.stats.factor_counts[f.id] || 0} accidents · search the graph`, run: () => store.openGraph(null, f.label.toLowerCase()) })) })
+  // real recordings
+  const withAudio = props.graph.records.filter((r) => r.audio && r.audio.length && (!terms.length || score(`${r.title} ${r.operator || ''} recording audio atc cvr listen`, terms)))
+  out.push({ label: 'Real recordings', items: withAudio.slice(0, terms.length ? 8 : 4).map((r) => ({ key: 'au-' + r.id, flat: flat++, icon: '♪', title: r.title, sub: `${r.audio.some((a) => a.kind === 'cvr') ? 'CVR' : 'ATC'} · ${r.fdr ? 'synced replay' : 'timeline'}`, run: () => (r.fdr ? store.openReplay(r.id) : store.openTimeline(r.id)) })) })
   // actions
   const acts = ACTIONS.filter((a) => !terms.length || score(`${a.title} ${a.sub}`, terms))
   out.push({ label: 'Actions', items: acts.map((a) => ({ ...a, flat: flat++ })) })
