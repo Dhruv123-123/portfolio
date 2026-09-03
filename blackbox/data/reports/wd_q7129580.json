@@ -1,0 +1,264 @@
+{
+  "id": "wd_q7129580",
+  "qid": "Q7129580",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Pan Am 845",
+  "flight_number": "PA845",
+  "date": "1971-07-30",
+  "time_reference": "PDT",
+  "t0": "1971-07-30T15:29:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-72-17"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 747-121",
+    "manufacturer": "Boeing",
+    "family": "747",
+    "registration": "N747PA"
+  },
+  "operator": "Pan American World Airways",
+  "route": {
+    "from": "KLAX",
+    "from_name": "Los Angeles International Airport",
+    "to": "RJTT",
+    "to_name": "Tokyo International Airport"
+  },
+  "location": {
+    "name": "San Francisco",
+    "country": "United States"
+  },
+  "phase": "takeoff",
+  "occupants": null,
+  "fatalities": 0,
+  "injuries_serious": 10,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "Pan American Flight 845, a Boeing 747-121, struck the approach lighting structure for Runway 19L while taking off from Runway 01R at San Francisco International Airport on July 30, 1971. The crew, intending to depart from Runway 28L, discovered only after pushback that the runway was closed. Without recalculating takeoff reference speeds, the crew selected 20 degrees of flaps instead of the planned 10 degrees. The aircraft continued takeoff, impacting ALS structures, and the crew circled to dump fuel before returning to San Francisco for an emergency evacuation.",
+  "probable_cause": "The pilot's use of incorrect takeoff reference speeds, which resulted from a series of irregularities involving: (1) the collection and dissemination of airport information; (2) aircraft dispatching; and (3) crew management and discipline; which collectively rendered ineffective the air carrier's operational control system.",
+  "factors": [
+    {
+      "id": "takeoff_configuration_error",
+      "role": "contributing",
+      "evidence": "The crew selected 20 degrees of flaps for takeoff from Runway 01R, instead of the originally planned 10 degree setting (p. 9)."
+    },
+    {
+      "id": "takeoff_performance_error",
+      "role": "initiating",
+      "evidence": "The crew did not recalculate takeoff reference speeds after changing to the shorter runway, leaving the speed bugs at the 10-degree flap settings despite the 20-degree configuration (p. 9)."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The flight crew failed to recompute required takeoff reference speeds (V-speeds) for the 20 degree flap condition (p. 29-30)."
+    },
+    {
+      "id": "airport_infrastructure",
+      "role": "latent",
+      "evidence": "Runway 28L had been closed for maintenance since 0830 and was forecast to remain closed past the scheduled departure time (p. 10-11)."
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "The tower controller did not clearly communicate to the flight dispatcher the existing runway restrictions on Runway 01R regarding full takeoff power limitations (p. 11)."
+    }
+  ],
+  "chain": [
+    [
+      "airport_infrastructure",
+      "takeoff_performance_error"
+    ],
+    [
+      "takeoff_configuration_error",
+      "takeoff_performance_error"
+    ],
+    [
+      "takeoff_performance_error",
+      "atc_communication_error"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "13:11",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 845 departed Los Angeles International Airport bound for Tokyo via San Francisco."
+    },
+    {
+      "t": 2820,
+      "clock": "13:58",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft arrived at San Francisco International Airport."
+    },
+    {
+      "t": 4380,
+      "clock": "14:30",
+      "phase": "ground",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "Flight crew boarded the aircraft and began preparations for flight."
+    },
+    {
+      "t": 5400,
+      "clock": "15:01",
+      "phase": "taxi",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft was pushed back from the gate. First officer monitored ATIS for latest information and became aware that Runway 28L was closed and first 1,000 feet of Runway 01R was also closed."
+    },
+    {
+      "t": 7564,
+      "clock": "15:12:44",
+      "phase": "taxi",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Upon confirmation of Runway 28L closure, crew contacted Pan American Operations to check limitations for use of Runway 01R with clearway."
+    },
+    {
+      "t": 8229,
+      "clock": "15:17:09",
+      "phase": "taxi",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight controller advised crew that Runway 01R with clearway could be used for takeoff with zero wind component. Crew confirmed they were prepared for takeoff on this runway at planned gross weight with 20 degree flaps and 3A-Wet power."
+    },
+    {
+      "t": 8340,
+      "clock": "15:19",
+      "phase": "taxi",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Crew requested and received taxi clearance to Runway 01R and was cleared to hold momentarily prior to being positioned on the runway."
+    },
+    {
+      "t": 8820,
+      "clock": "15:26",
+      "phase": "taxi",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower reported wind from 270 degrees at 22 knots."
+    },
+    {
+      "t": 8940,
+      "clock": "15:28",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Takeoff clearance was issued. The crew did not recalculate takeoff reference speeds for the 20-degree flap configuration; the speed bugs remained set at values for 10-degree flaps."
+    },
+    {
+      "t": 9000,
+      "clock": "15:29",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "system",
+      "text": "Aircraft rotated. First officer called Vy at the bug setting of 156 knots and Vp at approximately 160 or 161 knots. The aircraft struck the Approach Light System structure located at the departure end of Runway 01R.",
+      "factors": [
+        "takeoff_performance_error"
+      ]
+    },
+    {
+      "t": 9060,
+      "clock": "15:29:60",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "kind": "system",
+      "text": "First officer felt a bump or jolt as the aircraft passed through 165 knots. Two passengers in seats 47G and 48G were seriously injured by parts of the ALS structure that penetrated the passenger compartment. The flight engineer reported loss of hydraulic fluid from systems 1, 3, and 4."
+    },
+    {
+      "t": 9300,
+      "clock": "15:33",
+      "phase": "climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain climbed aircraft to 1,500 feet then subsequently to between 2,500 and 3,060 feet to assess damage. Aircraft was maneuvered out over the ocean in preparation for fuel dumping."
+    },
+    {
+      "t": 12420,
+      "clock": "15:58",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "After approximately 45 minutes, crew dumped approximately 180,000 pounds of fuel to achieve a landing weight of about 430,000 pounds. Captain decided to return to San Francisco."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-72-1",
+      "to": "FAA",
+      "text": "Review the procedures for the issuance of NOTAM and ASRAD for standardized implementation within the appropriate FAA facilities and modify the procedures to ensure that information pertinent to Safety of Flight is disseminated without delay.",
+      "trigger_factors": [
+        "airport_infrastructure"
+      ]
+    },
+    {
+      "id": "A-72-2",
+      "to": "FAA",
+      "text": "Require that V-reference speed checks be included on the last checklist used immediately prior to takeoff.",
+      "trigger_factors": [
+        "takeoff_performance_error"
+      ]
+    },
+    {
+      "id": "A-72-3",
+      "to": "FAA",
+      "text": "Require the installation of runway distance markers at all civil airports where air carrier aircraft are authorized to operate.",
+      "trigger_factors": [
+        "takeoff_configuration_error"
+      ]
+    },
+    {
+      "id": "A-72-4",
+      "to": "FAA",
+      "text": "Require the use of takeoff procedures which will provide the flight crew with time and distance reference to associate with acceleration to V1 speed.",
+      "trigger_factors": [
+        "takeoff_performance_error"
+      ]
+    },
+    {
+      "id": "A-72-5",
+      "to": "Manufacturers",
+      "text": "Require manufacturers to include in aircraft operating manuals information concerning the aircraft controllability and performance characteristics with the loss of any system that involves flight controls.",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7217.pdf"
+  ],
+  "asn_id": "19710730-2",
+  "wikipedia": "https://en.wikipedia.org/wiki/Pan_Am_Flight_845",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7217.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR72-17.pdf"
+  ],
+  "interest": 8.15,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flight (lines 1049-1700), Findings (lines 5878-5960), Probable Cause (lines 6124-6169), Recommendations (lines 6185-6600)",
+      "12 events extracted with clock times",
+      "All 5 recommendations (A-72-1 through A-72-5) included"
+    ]
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "id": "wd_q703762",
+  "qid": "Q703762",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "China Airlines 006",
+  "flight_number": "CI006",
+  "date": "1985-02-19",
+  "time_reference": "PST",
+  "t0": "1985-02-19T16:22:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-86-03"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 747SP-09",
+    "manufacturer": "Boeing",
+    "family": "747",
+    "registration": "N4522V"
+  },
+  "operator": "China Airlines",
+  "route": {
+    "from": "RCTP",
+    "from_name": "Taipei International Airport",
+    "to": "KLAX",
+    "to_name": "Los Angeles International Airport"
+  },
+  "location": {
+    "name": "Pacific Ocean",
+    "country": "International waters"
+  },
+  "phase": "cruise",
+  "occupants": 274,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "LOC-I",
+  "summary": "China Airlines Flight 006, a Boeing 747SP, lost thrust in the No. 4 engine at 41,000 feet over the Pacific. During an engine restart attempt, the autopilot masked the approaching loss of control. As airspeed decreased, the autopilot reached maximum aileron trim while the aircraft began to roll. The captain disconnected the autopilot and recovered from a 31,500-foot dive experiencing g-forces as high as 5g. The aircraft diverted to San Francisco with substantial structural damage.",
+  "probable_cause": "The captain's preoccupation with an inflight malfunction and his failure to monitor properly the airplane's flight instruments which resulted in his losing control of the airplane. Contributing to the accident was the captain's over-reliance on the autopilot after the loss of thrust on the No. 4 engine.",
+  "factors": [
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "The No. 4 engine lost thrust at 41,000 feet while cruising west of reporting point Redoo (p. 5)."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The flight engineer did not close the required bleed valve during the restart attempt at 41,000 feet, which exceeded the maximum engine restart altitude of 30,000 feet (p. 5-6)."
+    },
+    {
+      "id": "automation_dependency",
+      "role": "contributing",
+      "evidence": "The captain over-relied on the autopilot after engine loss, and the autopilot effectively masked the approaching onset of loss of control by maintaining altitude hold while airspeed decreased (p. 7)."
+    },
+    {
+      "id": "unreliable_airspeed",
+      "role": "contributing",
+      "evidence": "During engine restart, airspeed began decreasing as the Performance Management System retarded throttles to maintain Mach number (p. 5-6)."
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "The autopilot slowly applied more aileron to keep wings level until maximum 23 degree aileron limit was reached. As speed decreased, the aircraft rolled right despite maximum left roll input from autopilot (p. 6-7)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "By the time the captain disconnected the autopilot, the aircraft had rolled over and plunged 31,500 feet while experiencing g-forces as high as 5g before recovery (p. 7)."
+    }
+  ],
+  "chain": [
+    [
+      "engine_failure",
+      "procedural_noncompliance"
+    ],
+    [
+      "unreliable_airspeed",
+      "mode_confusion"
+    ],
+    [
+      "mode_confusion",
+      "loss_of_control_inflight"
+    ],
+    [
+      "automation_dependency",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "06:22",
+      "phase": "climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "China Airlines Flight 006 departed Taipei at 06:22 PST (16:22 Taipei local time) with 251 passengers and 23 crewmembers en route to Los Angeles via Pacific routing."
+    },
+    {
+      "t": 6840,
+      "clock": "08:56",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft was cruising at FL 410 (41,000 feet) west of reporting point Redoo, about 300 nm northwest of San Francisco, at 0.85 Mach and 254 KIAS. Autopilot was in Performance Management System (PMS) mode providing pitch and altitude guidance."
+    },
+    {
+      "t": 6960,
+      "clock": "09:00",
+      "phase": "cruise",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Aircraft encountered light clear air turbulence. Airspeed began fluctuating between 0.84 Mach (251 KIAS) and 0.88 Mach (264 KIAS)."
+    },
+    {
+      "t": 7200,
+      "clock": "09:06",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "At approximately 10:10, as Mach number increased to 0.88 M, PMS retarded throttles and engine thrust decreased to about 1.0 EPR. Flight engineer observed that No. 4 engine instruments did not indicate corresponding acceleration when PMS moved throttles forward. Engines 1, 2, and 3 responded normally."
+    },
+    {
+      "t": 7440,
+      "clock": "09:14",
+      "phase": "cruise",
+      "actor": "FE",
+      "kind": "crew_action",
+      "text": "Flight engineer moved No. 4 throttle forward and aft manually but saw no response on engine instruments. Flight engineer reported to captain that No. 4 engine had flamed out and noted that No. 4 generator control breaker open light was lit (p. 5-6)."
+    },
+    {
+      "t": 7800,
+      "clock": "09:22",
+      "phase": "cruise",
+      "actor": "FE",
+      "kind": "crew_action",
+      "text": "Captain directed flight engineer to attempt engine restart at 41,000 feet (exceeding maximum restart altitude of 30,000 feet). Flight engineer placed No. 2 ignition switch to flight start, putting both ignition systems in continuous ignition, but restart attempt was unsuccessful."
+    },
+    {
+      "t": 8451,
+      "clock": "09:34:11",
+      "phase": "cruise",
+      "actor": "FO",
+      "kind": "atc",
+      "text": "First officer called Oakland ARTCC requesting lower altitude but did not declare emergency or mention engine failure. Oakland ARTCC cleared descent to FL 240 at 10:15:01, but flight did not acknowledge (p. 6)."
+    },
+    {
+      "t": 8700,
+      "clock": "09:40",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain switched autopilot from PMS to OFF mode when airspeed dropped below 240 KIAS, transitioning to pitch attitude hold. Captain rotated nose-down to arrest airspeed loss but airspeed continued decreasing."
+    },
+    {
+      "t": 8760,
+      "clock": "09:41",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain disengaged autopilot to lower nose faster. First officer observed airplane banking right slightly. Captain disengaged autopilot and airplane rolled further right."
+    },
+    {
+      "t": 8850,
+      "clock": "09:43",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "As airplane continued banking right, attitude director indicators (ADIs) rotated rapidly. Airplane's three remaining engines lost thrust simultaneously. Indicated airspeed increased rapidly and exceeded Vmo (maximum operating speed)."
+    },
+    {
+      "t": 9000,
+      "clock": "09:46",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain pulled control column back hard, trying to arrest overspeed and regain control during steep bank in clouds. Airspeed decreased to 80-100 KIAS momentarily, then increased again beyond Vmo."
+    },
+    {
+      "t": 9300,
+      "clock": "09:52",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain, assisted by first officer, continued pulling back on control column. Airplane decelerated. Captain lowered nose smoothly and airplane began accelerating slowly. At 11,000 feet, aircraft emerged from clouds and captain could see horizon."
+    },
+    {
+      "t": 9600,
+      "clock": "09:58",
+      "phase": "descent",
+      "actor": "FE",
+      "kind": "system",
+      "text": "As aircraft descended through 10,000 feet, engines 1, 2, and 3 restarted but No. 4 engine did not. Flight engineer placed No. 4 ignition switch in ground start position and engine started in accordance with checklist procedures."
+    },
+    {
+      "t": 10023,
+      "clock": "10:06:03",
+      "phase": "descent",
+      "actor": "FO",
+      "kind": "atc",
+      "text": "After airplane stabilized at 9,500 feet, Oakland ARTCC was contacted and Flight 006 reported 'flameout, ah, we have emergency...we are niner thousand feet' (p. 7)."
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR8603.pdf"
+  ],
+  "asn_id": "19850219-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/China_Airlines_Flight_006",
+  "report_links": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR8603.pdf"
+  ],
+  "interest": 8.08,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flight (lines 631-1398), Findings section, Probable Cause (lines 7132-7154)",
+      "14 events extracted with clock times",
+      "Report contained no formal recommendations section"
+    ]
+  }
+}
