@@ -356,5 +356,16 @@
   "curated_id": null,
   "agency": "NTSB",
   "cvr": [],
-  "dissent": []
+  "dissent": [],
+  "audio": [
+    {
+      "title": "Comair Flight 3272 CVR recording.mp3",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Comair_Flight_3272_CVR_recording.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Comair_Flight_3272_CVR_recording.mp3",
+      "license": "Public domain",
+      "description": "Comair Flight 3272 CVR Recording",
+      "duration": 44.056004354926515,
+      "kind": "cvr"
+    }
+  ]
 }
