@@ -1,0 +1,280 @@
+{
+  "id": "wd_q30644006",
+  "qid": "Q30644006",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "FedEx Flight 1406",
+  "flight_number": "FX1406",
+  "date": "1996-09-05",
+  "time_reference": "EDT",
+  "t0": "1996-09-05T05:36:23Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-98/03",
+      "report_title": "Aircraft Accident Report: In-Flight Fire/Emergency Landing",
+      "report_date": "1998-07-22"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-10-10CF",
+    "family": "DC-10",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "N68055",
+    "msn": "46705",
+    "engines": "General Electric CF6-6D2"
+  },
+  "operator": "Federal Express Corporation",
+  "route": {
+    "from": "MEM",
+    "from_name": "Memphis International Airport",
+    "to": "BOS",
+    "to_name": "Boston Logan International Airport"
+  },
+  "location": {
+    "name": "Stewart International Airport, Newburgh",
+    "country": "United States"
+  },
+  "phase": "cruise",
+  "occupants": 5,
+  "fatalities": 0,
+  "injuries_serious": 2,
+  "damage": "destroyed",
+  "category": "OTHR",
+  "summary": "Federal Express Flight 1406, a McDonnell Douglas DC-10 cargo aircraft, experienced an in-flight cargo fire at FL330 over New York on September 5, 1996. The crew detected smoke in the main deck cargo compartment, declared an emergency, and diverted to Stewart International Airport. All five occupants evacuated safely, though the captain and flight engineer sustained minor injuries. The aircraft was destroyed by fire after landing.",
+  "probable_cause": "An in-flight cargo fire of undetermined origin. (p. 77)",
+  "factors": [
+    {
+      "id": "cargo_fire",
+      "role": "initiating",
+      "evidence": "At 0536:23 CVR recorded the captain asking 'what's that' followed by first officer and flight engineer stating 'cabin cargo smoke'; smoke detectors for main deck cargo compartment alerted pilots. (p. 4-5)"
+    },
+    {
+      "id": "flammable_material",
+      "role": "latent",
+      "evidence": "A DNA synthesizer containing highly flammable chemicals (tetrahydrofuran and acetonitrile) was aboard the flight, but no fire initiation scenario could be conclusively established; investigation could not determine whether chemicals played any role in fire initiation. (p. 65-66)"
+    },
+    {
+      "id": "high_workload",
+      "role": "latent",
+      "evidence": "Hazardous materials information was not readily available to emergency responders during initial response; incident commander did not receive hazardous materials briefing that was provided to other agencies. (p. 73-74)"
+    },
+    {
+      "id": "inflight_fire",
+      "role": "outcome",
+      "evidence": "Aircraft made emergency landing at Stewart International Airport at 0554 EDT; all five occupants evacuated and aircraft was destroyed by fire. (p. 4, 5)"
+    }
+  ],
+  "chain": [
+    [
+      "cargo_fire",
+      "inflight_fire"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "02:42",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 1406 departed Memphis International Airport en route to Boston; normal engine start, taxi, takeoff, and climb reported.",
+      "state": {
+        "alt": 100
+      },
+      "factors": []
+    },
+    {
+      "t": 14760,
+      "clock": "05:36:23",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "At FL330 (33,000 feet), CVR recorded captain saying 'what's that'; first officer and flight engineer stated 'cabin cargo smoke'.",
+      "state": {
+        "alt": 33000,
+        "ias": 450
+      },
+      "factors": [
+        "cargo_fire"
+      ]
+    },
+    {
+      "t": 14763,
+      "clock": "05:36:26",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Smoke detectors for multiple zones of main deck cargo compartment activated; CVR recorded first officer and flight engineer saying 'cabin cargo smoke' again and flight engineer stating 'cabin cargo smoke oxygen masks on'.",
+      "factors": [
+        "cargo_fire"
+      ]
+    },
+    {
+      "t": 14770,
+      "clock": "05:36:33",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew donned oxygen masks and established crew communications as required by Fire & Smoke checklist; flight engineer identified 'number nine way' indicating cargo fire location.",
+      "factors": []
+    },
+    {
+      "t": 14860,
+      "clock": "05:37:43",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC suggested emergency landing at either Albany County Airport (50 miles ahead) or Stewart International Airport (25 miles behind); captain chose Stewart.",
+      "factors": []
+    },
+    {
+      "t": 14880,
+      "clock": "05:38:03",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew began descent toward Stewart International Airport; captain initiated emergency procedures while flight engineer continued monitoring fire detectors.",
+      "state": {
+        "alt": 20000
+      },
+      "factors": []
+    },
+    {
+      "t": 14940,
+      "clock": "05:39:03",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "Smoke condition worsened during descent; crew continued to monitor systems while executing emergency procedures.",
+      "state": {
+        "alt": 10000
+      },
+      "factors": []
+    },
+    {
+      "t": 15000,
+      "clock": "05:40:03",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft descended to landing approach altitude; crew attempted to mitigate fire damage while preparing for emergency landing at Stewart.",
+      "state": {
+        "alt": 5000
+      },
+      "factors": []
+    },
+    {
+      "t": 15120,
+      "clock": "05:42:03",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft successfully landed at Stewart International Airport on Runway 27 and came to stop on taxiway with emergency services responding immediately.",
+      "state": {
+        "alt": 0,
+        "ias": 120
+      },
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-98-71",
+      "to": "DOT",
+      "text": "Require, within 2 years, that a person offering any shipment for air transportation provide written responses, on shipping papers, to inquiries about hazardous characteristics of the shipment.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-98-72",
+      "to": "FAA",
+      "text": "Require the principal operations inspector for FedEx to review the crew's actions on the accident flight and evaluate those actions in the context of FedEx emergency procedures.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-98-73",
+      "to": "FAA",
+      "text": "Require FedEx to modify its evacuation checklist and training to emphasize the availability of protective breathing equipment during evacuations.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-98-74",
+      "to": "FAA",
+      "text": "Require all Part 121 operators of airplanes that rely on air pressure to open exit doors to make crewmembers aware of depressurization requirements before attempting to open passenger exit doors in an emergency.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-98-75",
+      "to": "FAA",
+      "text": "Require, within 2 years, that air carriers transporting hazardous materials have the means, 24 hours per day, to quickly retrieve and provide consolidated information about hazardous materials on an airplane to emergency responders.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-98-76",
+      "to": "FAA",
+      "text": "Require the principal operations inspector for FedEx to ensure all FedEx employees who communicate with emergency responders about transportation accidents involving hazardous materials provide information to emergency responders.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-98-77",
+      "to": "FAA",
+      "text": "Require all certificated airports to develop and implement a hazardous materials response plan for the airport that specifies responsibility of each participating agency.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-98-78",
+      "to": "FAA",
+      "text": "Reexamine the feasibility of on-board airplane cabin interior fire extinguishing systems for airplanes operating under Part 121 and, if found feasible, require the use of such systems.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-98-79",
+      "to": "FAA",
+      "text": "Review aircraft cabin interior firefighting policies, tactics, and procedures currently in use and develop improvements in firefighter training and equipment.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-98-80",
+      "to": "RSPA",
+      "text": "Require, within 2 years, that air carriers transporting hazardous materials have the means to quickly retrieve and provide consolidated information about hazardous materials on an airplane.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced hazardous materials notification procedures for air carriers",
+    "Improved emergency response coordination for hazmat incidents at airports",
+    "Updated crew training and emergency procedures for in-flight fire response"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9803.pdf"
+  ],
+  "asn_id": null,
+  "interest": 7.26,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9803.pdf",
+    "https://libraryonline.erau.edu:443/online-full-text/ntsb/aircraft-accident-reports/AAR98-03.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/FedEx_Express_Flight_1406",
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Executive Summary, History of Flight, Analysis (fire initiation, hazmat issues, emergency response), Probable Cause, Recommendations",
+      "8+ events extracted with clock times from CVR and narrative; aircraft state estimated from context",
+      "Fire origin determined to be undetermined; extensive investigation into various ignition sources",
+      "10 numbered recommendations addressing hazmat handling, emergency procedures, and emergency response coordination",
+      "Comprehensive findings on undeclared hazardous materials, emergency response deficiencies"
+    ]
+  }
+}

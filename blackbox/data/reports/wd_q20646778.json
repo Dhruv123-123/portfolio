@@ -1,0 +1,194 @@
+{
+  "id": "wd_q20646778",
+  "qid": "Q20646778",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2015 Moncks Corner mid-air collision",
+  "flight_number": null,
+  "date": "2015-07-07",
+  "time_reference": "EDT",
+  "t0": "2015-07-07T11:01:16Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "General Dynamics F-16C Fighting Falcon",
+    "family": "F-16",
+    "manufacturer": "General Dynamics",
+    "registration": null
+  },
+  "operator": "United States Air Force",
+  "route": {
+    "from_name": "Berkeley County Airport / Shaw Air Force Base",
+    "to_name": "Grand Strand Airport / Charleston AFB"
+  },
+  "location": {
+    "name": "Moncks Corner",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 3,
+  "fatalities": 2,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "An F-16 fighter jet descending for an instrument landing system approach collided in flight with a Cessna 150 climbing from Berkeley County Airport. Despite air traffic control warnings of opposite-direction traffic, the F-16 pilot was unable to locate the Cessna visually. The two aircraft collided at 1,450 feet over Moncks Corner, South Carolina. Both Cessna occupants were killed; the F-16 pilot ejected safely.",
+  "probable_cause": "The approach controller's failure to provide an appropriate resolution to the conflict between the F-16 and the Cessna. (p. 2)",
+  "factors": [
+    {
+      "id": "atc_communication_error",
+      "role": "initiating",
+      "evidence": "The controller issued an ambiguous conditional instruction to turn left if traffic not in sight, then directed the F-16 pilot to turn left heading 180 immediately without ensuring the pilot had acquired visual contact. (p. 2)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The F-16 pilot responded that he was looking for the traffic but did not visually locate the Cessna before the collision; the pilot initiated a standard rate left turn using autopilot to continue visual search. (p. 2)"
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The Cessna was climbing under visual flight rules and was not in communication with FAA air traffic control, nor was the pilot required to be; the Cessna had not requested flight-following services. (p. 2)"
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "The F-16 and Cessna 150 collided in-flight over Moncks Corner at approximately 1,450 feet altitude, about 40 seconds after the initial traffic advisory. (p. 2)"
+    }
+  ],
+  "chain": [
+    [
+      "atc_communication_error",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "midair_collision"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "11:00:16",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Charleston Approach controller issued traffic advisory to F-16 pilot: traffic 12 o'clock 2 miles opposite direction 1,200 feet, type unknown.",
+      "state": {
+        "alt": 1600
+      },
+      "factors": []
+    },
+    {
+      "t": 8,
+      "clock": "11:00:24",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "F-16 pilot responded looking for the traffic.",
+      "factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "t": 10,
+      "clock": "11:00:26",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller issued conditional instruction to turn left heading 180 if traffic not in sight.",
+      "factors": []
+    },
+    {
+      "t": 17,
+      "clock": "11:00:33",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller issued direct instruction: if F-16 pilot did not have traffic in sight turn left heading 180 immediately.",
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": 18,
+      "clock": "11:00:34",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "F-16 pilot initiated standard rate left turn using autopilot to continue visual search for traffic.",
+      "state": {
+        "alt": 1500
+      },
+      "factors": []
+    },
+    {
+      "t": 33,
+      "clock": "11:00:49",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Radar showed F-16 at 1/2 nautical mile northeast of Cessna at 1,500 feet while Cessna was at 1,400 feet on opposite track; airplanes continued to converge.",
+      "state": {
+        "alt": 1450
+      },
+      "factors": []
+    },
+    {
+      "t": 40,
+      "clock": "11:01:00",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The two aircraft collided at approximately 1,450 feet altitude.",
+      "factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": "11:01:20",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "F-16 pilot ejected from aircraft and descended safely by parachute with minor injuries; Cessna destroyed with both occupants killed.",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/ASR1606.pdf"
+  ],
+  "asn_id": null,
+  "interest": 7.4,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/ASR1606.pdf",
+    "https://www.ntsb.gov/_layouts/ntsb.aviation/brief2.aspx?ev_id=20150707X22207&ntsbno=ERA15MA259A&akey=1"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2015_Moncks_Corner_mid-air_collision",
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Text read is a Safety Recommendation Report (ASR-16-006), not the full accident investigation report",
+      "8 events extracted from narrative with clock times",
+      "Report focuses on controller judgment errors in ATC handling of conflict",
+      "No CVR transcript or FDR data included in the Safety Recommendation Report",
+      "No numbered recommendations specific to this accident in this report"
+    ]
+  }
+}

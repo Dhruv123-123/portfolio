@@ -1,0 +1,310 @@
+{
+  "id": "wd_q4698206",
+  "qid": "Q4698206",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air Tahoma Flight 185",
+  "flight_number": "185",
+  "date": "2004-08-13",
+  "time_reference": "EDT",
+  "t0": "2004-08-13T00:46:45-04:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-06/03",
+      "report_title": "Aircraft Accident Report",
+      "report_date": "2006-05-02"
+    }
+  ],
+  "aircraft": {
+    "type": "Convair 580",
+    "family": "580",
+    "manufacturer": "Convair",
+    "registration": "N586P"
+  },
+  "operator": "Air Tahoma Inc.",
+  "route": {
+    "from": "MEM",
+    "from_name": "Memphis International Airport",
+    "to": "CVG",
+    "to_name": "Cincinnati/Northern Kentucky International Airport"
+  },
+  "location": {
+    "name": "Florence, Kentucky (near Cincinnati)",
+    "country": "United States"
+  },
+  "phase": "descent",
+  "occupants": 2,
+  "fatalities": 1,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Air Tahoma Flight 185, a cargo flight operated by a Convair 580, crashed one mile south of Cincinnati during descent after dual-engine flameout. The captain failed to follow approved fuel crossfeed procedures; different boost pump pressure settings caused both engines to draw fuel from the left tank, which became exhausted during descent.",
+  "probable_cause": "Fuel starvation resulting from the captain's decision not to follow approved fuel crossfeed procedures. Contributing to the accident were the captain's inadequate preflight planning, his subsequent distraction during the flight, and his late initiation of the in-range checklist. Further contributing was the flight crew's failure to monitor the fuel gauges and recognize that the airplane's changing handling characteristics were caused by a fuel imbalance. (p. 38)",
+  "factors": [
+    {
+      "id": "fuel_starvation",
+      "role": "initiating",
+      "evidence": "Both engine-driven fuel pumps drew fuel from the exhausted left tank into the fuel system, resulting in a dual-engine flameout; FDR data showed descent rate of about 900 feet per minute after power interruption at approximately 2,400 feet altitude. (p. 11-13)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "initiating",
+      "evidence": "Captain's decision not to follow approved fuel crossfeed procedures; different output pressure settings on the fuel boost pumps coupled with an open crossfeed valve resulted in both engines drawing fuel from left tank. (p. 38)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Flight crew's failure to monitor the fuel gauges and to recognize that the airplane's changing handling characteristics (control wheel feeling funny, swinging back and forth) were caused by a fuel imbalance. (p. 12, 38)"
+    },
+    {
+      "id": "dual_engine_failure",
+      "role": "outcome",
+      "evidence": "Both engines flamed out during approach descent; CVR recorded 'we're losing power' at 0046:45 and 'we've lost both of them' at 0046:52 EDT. (p. 11)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft crashed approximately one mile south of Cincinnati/Northern Kentucky International Airport while at about 2,400 feet altitude. (p. 11)"
+    }
+  ],
+  "chain": [
+    [
+      "procedural_noncompliance",
+      "fuel_starvation"
+    ],
+    [
+      "inadequate_monitoring",
+      "fuel_starvation"
+    ],
+    [
+      "fuel_starvation",
+      "dual_engine_failure"
+    ],
+    [
+      "dual_engine_failure",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "00:49",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Air Tahoma Flight 185 began descent toward Cincinnati from cruise altitude.",
+      "state": {
+        "alt": 11000
+      },
+      "factors": []
+    },
+    {
+      "t": 780,
+      "clock": "00:42",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain stated intent to 'balance out the fuel' while discussing weight and balance calculations with first officer.",
+      "state": {
+        "alt": 11000
+      },
+      "factors": []
+    },
+    {
+      "t": 3600,
+      "clock": "04:30",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain contacted Cincinnati TRACON at 11,000 feet mean sea level.",
+      "factors": []
+    },
+    {
+      "t": 3900,
+      "clock": "04:30",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "system",
+      "text": "First officer noted control wheel felt 'funny' and required 'a lot of force'; aircraft was 'acting so funny'; captain responded they would do full control check on ground.",
+      "state": {
+        "alt": 4000
+      },
+      "factors": []
+    },
+    {
+      "t": 4260,
+      "clock": "04:37",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach controller cleared Flight 185 for visual approach to runway 36R and instructed to 'keep your speed up'.",
+      "state": {
+        "alt": 4000
+      },
+      "factors": []
+    },
+    {
+      "t": 4290,
+      "clock": "04:40",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain stated he had crossfeed valve open; first officer responded 'oh is that what it is'; first officer then stated 'we're gonna flame out'.",
+      "state": {
+        "alt": 3000
+      },
+      "factors": [
+        "fuel_starvation"
+      ]
+    },
+    {
+      "t": 4305,
+      "clock": "04:42",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "CVR recorded sound similar to decreasing engine RPM; first officer stated 'we're losing power'.",
+      "state": {
+        "alt": 2800
+      },
+      "factors": [
+        "dual_engine_failure"
+      ]
+    },
+    {
+      "t": 4320,
+      "clock": "04:44",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Both engines flamed out during approach; FDR recorded momentary electrical power interruption at approximately 2,400 feet altitude; descent rate approximately 900 feet per minute.",
+      "state": {
+        "alt": 2400
+      },
+      "factors": [
+        "dual_engine_failure"
+      ]
+    },
+    {
+      "t": 4445,
+      "clock": "05:00",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed approximately one mile south of Cincinnati/Northern Kentucky International Airport; first officer killed; captain received minor injuries.",
+      "state": {
+        "alt": 0
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "cvr": [
+    {
+      "t": 780,
+      "clock": "00:42",
+      "speaker": "CAPT",
+      "text": "Just going to balance out the fuel here."
+    },
+    {
+      "t": 3900,
+      "clock": "04:30",
+      "speaker": "FO",
+      "text": "Something's messed up with this thing. Feels like I need a lot of force."
+    },
+    {
+      "t": 3960,
+      "clock": "04:31",
+      "speaker": "FO",
+      "text": "What in the world is going on with this plane? Sucker is acting so funny."
+    },
+    {
+      "t": 4290,
+      "clock": "04:40",
+      "speaker": "FO",
+      "text": "What is wrong with this plane? It is really funny."
+    },
+    {
+      "t": 4295,
+      "clock": "04:40",
+      "speaker": "CAPT",
+      "text": "We've got an imbalance on this... crossfeed I left open."
+    },
+    {
+      "t": 4300,
+      "clock": "04:41",
+      "speaker": "FO",
+      "text": "We're gonna flame out."
+    },
+    {
+      "t": 4305,
+      "clock": "04:42",
+      "speaker": "FO",
+      "text": "We're losing power."
+    },
+    {
+      "t": 4312,
+      "clock": "04:43",
+      "speaker": "FO",
+      "text": "We've lost both of them. Did we?"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-06-39",
+      "to": "FAA",
+      "text": "Issue a flight standards information bulletin to all principal operations inspectors of Convair 580 operators that familiarizes operators with the circumstances of the Air Tahoma flight 185 accident, including the importance of closing the fuel tank shutoff valve.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-06-40",
+      "to": "FAA",
+      "text": "Require Convair 580 operators to set the left and right fuel boost pump output pressure settings on their airplanes to the same setting.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-06-41",
+      "to": "Transport Canada",
+      "text": "Require Convair 580 operators to set the left and right fuel boost pump output pressure settings on their airplanes to the same setting.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Improved training for fuel management procedures on Convair 580 aircraft",
+    "Standardized fuel boost pump pressure settings across operators"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0603.pdf"
+  ],
+  "asn_id": "20040813-0",
+  "interest": 7.1,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0603.pdf",
+    "https://www.ntsb.gov/_layouts/ntsb.aviation/brief2.aspx?ev_id=20040825X01286&ntsbno=DCA04MA068&akey=1",
+    "https://data.ntsb.gov/Docket?ProjectID=59897"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Tahoma_Flight_185",
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flight, Analysis, Probable Cause, Recommendations",
+      "9 events extracted with clock times from CVR transcript and FDR data",
+      "8 CVR lines quoted from public transcript showing crew awareness of fuel imbalance",
+      "Detailed fuel system analysis showing how mismatched boost pump pressures with open crossfeed caused both engines to draw from left tank",
+      "3 numbered recommendations for Convair 580 operator training and equipment standardization"
+    ]
+  }
+}
