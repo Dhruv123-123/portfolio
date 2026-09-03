@@ -26,6 +26,8 @@
           <button class="bb-btn" :class="{ active: mode === 'compare' }" @click="mode = 'compare'">Compare</button>
           <button class="bb-btn" :class="{ active: mode === 'narrative' }" @click="mode = 'narrative'">Narrative</button>
           <button class="bb-btn" :disabled="!rec.fdr" @click="store.openReplay(rec.id)">Replay ▸</button>
+          <button class="bb-btn" :disabled="!(rec.events && rec.events.length)" @click="store.openStory(rec.id)" title="Documentary-style walkthrough">Story ▸</button>
+          <a :href="wikipediaUrl(rec)" target="_blank" rel="noopener" class="tl-readmore">{{ hasWikipediaArticle(rec) ? 'Read more on Wikipedia ↗' : 'Search Wikipedia ↗' }}</a>
         </div>
       </div>
 
@@ -198,6 +200,7 @@ import { layoutChain } from './lib/dag.js'
 import { buildNarrative, markdownToHtml } from './lib/narrative.js'
 import { formatRelative } from './lib/fdr.js'
 import { loadCatalogRecord } from './lib/catalog.js'
+import { wikipediaUrl, hasWikipediaArticle } from './lib/geo.js'
 
 const props = defineProps({ graph: Object, index: Object, active: Boolean })
 const store = useBlackboxStore()
@@ -391,6 +394,8 @@ const ChainDiagram = defineComponent({
 </script>
 
 <style scoped>
+.tl-readmore { display: inline-flex; align-items: center; color: var(--bb-accent); font-weight: 700; text-decoration: none; border: 1px solid var(--bb-accent); border-radius: 3px; padding: 3px 8px; font-size: 11px; }
+.tl-readmore:hover { background: var(--bb-accent); color: #111; }
 .tl-root { position: absolute; inset: 0; display: grid; grid-template-columns: 250px 1fr; }
 .tl-list { background: var(--bb-panel); border-right: 1px solid var(--bb-line); display: flex; flex-direction: column; min-height: 0; }
 .tl-filter { margin: 8px; width: calc(100% - 16px); }

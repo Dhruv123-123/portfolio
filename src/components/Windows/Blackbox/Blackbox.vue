@@ -22,6 +22,7 @@
         <FdrReplay v-if="store.tab === 'replay'" :graph="graph" :index="index" />
         <TimelineBuilder v-show="store.tab === 'timeline'" :graph="graph" :index="index" :active="store.tab === 'timeline'" />
         <AboutPanel v-show="store.tab === 'about'" :graph="graph" :index="index" :catalog="catalog" />
+        <StoryMode v-if="store.storyId && index.byId[store.storyId]" :graph="graph" :index="index" :record-id="store.storyId" />
       </template>
     </div>
   </div>
@@ -37,6 +38,7 @@ import Atlas from './Atlas.vue'
 import FdrReplay from './FdrReplay.vue'
 import TimelineBuilder from './TimelineBuilder.vue'
 import AboutPanel from './AboutPanel.vue'
+import StoryMode from './StoryMode.vue'
 
 const store = useBlackboxStore()
 const graph = shallowRef(null)
