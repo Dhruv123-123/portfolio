@@ -1,0 +1,300 @@
+{
+ "id": "wd_q86733032",
+ "qid": "Q86733032",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "Evergreen International Airlines 17",
+ "flight_number": "17",
+ "date": "1989-03-18",
+ "agency": "NTSB",
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead"
+  }
+ ],
+ "aircraft": {
+  "type": "McDonnell Douglas DC-9-33F",
+  "manufacturer": "McDonnell Douglas",
+  "family": "DC-9",
+  "registration": "N931F"
+ },
+ "operator": "Evergreen International Airlines",
+ "route": {
+  "from_name": "Carswell Air Force Base, Fort Worth",
+  "to_name": "Tinker Air Force Base, Oklahoma City"
+ },
+ "location": {
+  "name": "Saginaw, Texas",
+  "country": "United States"
+ },
+ "phase": "takeoff",
+ "occupants": 2,
+ "fatalities": 2,
+ "category": "LOC-I",
+ "summary": "Shortly after takeoff from Carswell Air Force Base, the main cargo door on Evergreen International Airlines Flight 17 (a DC-9-33F) began to open. As the aircraft climbed to 2,500 ft and began a return to the departure airport, the cargo door fully opened, causing uncontrollable yaw and roll. The aircraft inverted and crashed in a pasture near Saginaw, killing both pilots. Investigation found the door was not fully latched and a design flaw prevented the warning light from illuminating.",
+ "probable_cause": "Failure of the main cargo door to remain latched during flight due to inadequate closure by the first officer, combined with design deficiencies in the door warning light circuit that prevented cockpit awareness of the door opening.",
+ "factors": [
+  {
+   "id": "procedural_noncompliance",
+   "role": "initiating",
+   "evidence": "First Officer Johnston did not fully close the cargo door; he held the control valve handle in the closed position for an inadequate period of time (p. 4)"
+  },
+  {
+   "id": "warning_system_deficiency",
+   "role": "contributing",
+   "evidence": "a design flaw in the cargo door warning light circuit caused the door-open warning light in the cockpit not to illuminate (p. 11)"
+  },
+  {
+   "id": "loss_of_control_inflight",
+   "role": "outcome",
+   "evidence": "the main cargo door completely opened, causing the aircraft to yaw and roll uncontrollably. The aircraft then banked to the left, inverted, and crashed into a pasture (p. 2)"
+  },
+  {
+   "id": "design_deficiency",
+   "role": "latent",
+   "evidence": "the door lockpin switch in N931F was damaged and corroded, and the warning light circuit was designed in such a way that if the switch failed, the warning light would stop working (p. 2)"
+  }
+ ],
+ "chain": [
+  [
+   "procedural_noncompliance",
+   "loss_of_control_inflight"
+  ],
+  [
+   "warning_system_deficiency",
+   "loss_of_control_inflight"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "02:09",
+   "phase": "takeoff",
+   "actor": "PF",
+   "kind": "system",
+   "text": "First officer Johnston left the cockpit to close the main cargo door, then returned two minutes later.",
+   "factors": []
+  },
+  {
+   "t": 10,
+   "clock": "0142:36",
+   "phase": "ground",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Cockpit voice recording began as crew progressed through Before Start abbreviated checklist.",
+   "factors": []
+  },
+  {
+   "t": 33,
+   "clock": "02:09:46",
+   "phase": "takeoff",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "At 02:09:49, three seconds after rotation, the main cargo door partially opened, which was indicated by the CVR recording a sudden increase in background noise.",
+   "factors": [
+    "procedural_noncompliance"
+   ]
+  },
+  {
+   "t": 36,
+   "clock": "02:09:49",
+   "phase": "takeoff",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "The ground proximity warning system (GPWS) activated, sounding a whoop whoop terrain four times.",
+   "factors": []
+  },
+  {
+   "t": 40,
+   "clock": null,
+   "phase": "takeoff",
+   "actor": "FO",
+   "kind": "crew_action",
+   "text": "First officer Johnston declared an emergency to air traffic control (ATC).",
+   "factors": []
+  },
+  {
+   "t": 120,
+   "clock": null,
+   "phase": "initial_climb",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "The flight climbed to 2,500 ft and then began a right turn back towards Carswell.",
+   "factors": []
+  },
+  {
+   "t": 120,
+   "clock": "0200:54",
+   "phase": "ground",
+   "actor": "CAPT",
+   "kind": "crew_speech",
+   "text": "Captain stated \"Well, I guess he's done\" indicating cargo loading was complete.",
+   "factors": []
+  },
+  {
+   "t": 130,
+   "clock": "0202:07",
+   "phase": "ground",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Sound similar to auxiliary power unit (APU) start-up was recorded.",
+   "factors": []
+  },
+  {
+   "t": 150,
+   "clock": "0202:27",
+   "phase": "ground",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Electrical power transferred from ground power unit to APU.",
+   "factors": []
+  },
+  {
+   "t": 163,
+   "clock": "0204:00",
+   "phase": "ground",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Starting Engines abbreviated checklist commenced and was completed uneventfully.",
+   "factors": []
+  },
+  {
+   "t": 180,
+   "clock": null,
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "During the downwind leg, the main cargo door completely opened, causing the aircraft to yaw and roll uncontrollably.",
+   "factors": [
+    "loss_of_control_inflight"
+   ]
+  },
+  {
+   "t": 200,
+   "clock": null,
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "The aircraft then banked to the left, inverted, and crashed into a pasture near Saginaw.",
+   "factors": [
+    "loss_of_control_inflight"
+   ]
+  },
+  {
+   "t": 210,
+   "clock": "0206:21",
+   "phase": "ground",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "After Start checklist was called complete.",
+   "factors": []
+  },
+  {
+   "t": 214,
+   "clock": "0206:25",
+   "phase": "ground",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Logair 931 contacted ground control for taxi instructions.",
+   "factors": []
+  },
+  {
+   "t": 240,
+   "clock": "0208:18",
+   "phase": "taxi",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Taxi checklist was completed; flaps set to 15 degrees.",
+   "factors": []
+  },
+  {
+   "t": 246,
+   "clock": "0208:34",
+   "phase": "taxi",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Local controller cleared flight for takeoff on runway 17.",
+   "factors": []
+  },
+  {
+   "t": 340,
+   "clock": "0210:00",
+   "phase": "takeoff",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Rotation speed of 116 knots called out; aircraft broke ground three seconds later.",
+   "factors": []
+  },
+  {
+   "t": 380,
+   "clock": "0210:36",
+   "phase": "climb",
+   "actor": "FO",
+   "kind": "crew_speech",
+   "text": "First officer asked captain \"Want some help on the rudder?\"",
+   "factors": []
+  },
+  {
+   "t": 400,
+   "clock": "0211:00",
+   "phase": "climb",
+   "actor": "FO",
+   "kind": "crew_speech",
+   "text": "First officer asked if Missed Approach/Quick Return checklist should be accomplished; captain replied affirmatively.",
+   "factors": []
+  },
+  {
+   "clock": "21:11:51",
+   "text": "7) 2:10:36 CAM2- WANT SOME HELP ON i 4 = /m- THE RUODER 4 a / a 6) 2:11:25 TWR = .., (LAST COMMUNICATION 4 4 / i WITH THE CONTROL TOWER) : 4 [ / 2 9) 21:11:51 GPWS~ WHOOP WHOOP TERRAIN : 4 @ = (REPEAT",
+   "kind": "system",
+   "actor": "SYS",
+   "phase": "unknown",
+   "factors": [],
+   "t": 76311
+  }
+ ],
+ "report_links": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9002.pdf",
+  "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR90-02.pdf"
+ ],
+ "wikipedia": null,
+ "asn_id": null,
+ "interest": 7.59,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Extracted from NTSB report: detailed history of flight timeline",
+   "Added 12 new events with detailed CVR timestamps",
+   "Probable cause and factors extracted from investigation findings",
+   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
+  ]
+ },
+ "curated_id": null,
+ "sources": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9002.pdf"
+ ],
+ "recommendations": [
+  {
+   "id": "A-90-86",
+   "to": "FAA",
+   "text": "NTSB safety recommendation",
+   "status": "unknown"
+  },
+  {
+   "id": "A-90-87",
+   "to": "FAA",
+   "text": "NTSB safety recommendation",
+   "status": "unknown"
+  }
+ ],
+ "cvr": [],
+ "dissent": [],
+ "safety_changes": [],
+ "related": []
+}

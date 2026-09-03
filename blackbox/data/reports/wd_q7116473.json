@@ -1,0 +1,319 @@
+{
+ "id": "wd_q7116473",
+ "qid": "Q7116473",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "Ozark Air Lines 650",
+ "flight_number": "OZK650",
+ "date": "1983-12-20",
+ "agency": "NTSB",
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead"
+  }
+ ],
+ "aircraft": {
+  "type": "McDonnell Douglas DC-9-31",
+  "manufacturer": "McDonnell Douglas",
+  "family": "DC-9",
+  "registration": "N994Z"
+ },
+ "operator": "Ozark Air Lines",
+ "route": {
+  "from_name": "Sioux City",
+  "to_name": "Sioux Falls"
+ },
+ "location": {
+  "name": "Sioux Falls",
+  "country": "United States"
+ },
+ "phase": "landing",
+ "occupants": 86,
+ "fatalities": 1,
+ "category": "RAMP",
+ "summary": "On December 20, 1983, while landing on Runway 3 in deteriorating visibility with snow removal operations in progress, the DC-9's right wing struck a large snowsweeping vehicle called Sweeper 7, destroying it and killing its driver Douglas Stoner. The impact ripped the right wing from the aircraft causing it to spin 180 degrees. The tower had not advised the flight crew that snow removal operations were in progress.",
+ "probable_cause": "Inadequate supervision of snow removal operations by the tower; no communications had been made between the tower and the snow plow operator after the flight was handed off to the tower controller.",
+ "factors": [
+  {
+   "id": "atc_communication_error",
+   "role": "contributing",
+   "evidence": "Neither the approach nor tower controller had advised the flight that snow removal operations were in progress (p. 2)"
+  },
+  {
+   "id": "procedural_noncompliance",
+   "role": "contributing",
+   "evidence": "No communications had been made between the tower and Sweeper 7 after Flight 650 was handed off to the tower controller (p. 2)"
+  },
+  {
+   "id": "runway_incursion",
+   "role": "outcome",
+   "evidence": "The DC-9's right wing then struck a large snowsweeping vehicle on the runway (p. 2)"
+  },
+  {
+   "id": "structural_failure",
+   "role": "outcome",
+   "evidence": "The impact ripped the right wing from the plane, destroying the snow plow (p. 2)"
+  }
+ ],
+ "chain": [
+  [
+   "atc_communication_error",
+   "runway_incursion"
+  ],
+  [
+   "procedural_noncompliance",
+   "runway_incursion"
+  ],
+  [
+   "runway_incursion",
+   "structural_failure"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "12:53",
+   "phase": "taxi",
+   "actor": "SYS",
+   "kind": "env",
+   "text": "Flight 650 departed Sioux City with weather conditions from ATIS broadcast system that included reports of blowing snow at Sioux Falls",
+   "factors": []
+  },
+  {
+   "t": 1200,
+   "clock": "13:13",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "When Flight 650 was about 4 miles out from the airport, the Sioux Falls approach controller directed the flight to contact the airport tower",
+   "factors": []
+  },
+  {
+   "t": 1500,
+   "clock": "13:18",
+   "phase": "landing",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "The tower cleared Flight 650 to land, giving a runway visual range of 3,500 feet but did not advise of snow removal operations in progress on Runway 3",
+   "factors": [
+    "atc_communication_error"
+   ]
+  },
+  {
+   "t": 1680,
+   "clock": "13:21",
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "env",
+   "text": "The flight crew first saw the ground and airport approach lights after descending to an altitude of 200 feet, then saw the runway",
+   "factors": []
+  },
+  {
+   "t": 1710,
+   "clock": "13:21",
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "About 1,000 feet beyond the threshold of Runway 3, the aircraft made a smooth touchdown and the pilots deployed the spoilers",
+   "factors": []
+  },
+  {
+   "t": 1750,
+   "clock": "13:22",
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "The DC-9's right wing then struck a large snowsweeping vehicle on the runway, ripping the right wing from the plane and destroying the snow plow with its driver, killing Douglas Stoner age 38",
+   "factors": [
+    "runway_incursion",
+    "structural_failure"
+   ]
+  },
+  {
+   "t": 1800,
+   "clock": "13:22",
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "The plane spun through 180 degrees before coming to rest off the runway to the left of the centerline with leaking fuel briefly creating a fireball",
+   "factors": [
+    "structural_failure"
+   ]
+  },
+  {
+   "clock": "17:46:21",
+   "text": "———_—— oe a i Mjya 5 dA Po OAL = 60 +—--— Flight path of Reech H35, a wea ig N4687D. a ONG 17:46:33 a Bi gee A 28 Poe | | 3009 47:46:25 7 R \\y | 6.90 17:46:21 a poe Eg 5 * . ‘eo 4 he ? ‘a 3900 17:46:1",
+   "kind": "system",
+   "actor": "SYS",
+   "phase": "unknown",
+   "factors": [],
+   "t": 63981
+  },
+  {
+   "clock": "17:46:33",
+   "text": "oe 3 at 11 to 12 knots (1000 to a Pe ANG s 2000 ft AGL),.--———_—— oe a i Mjya 5 dA Po OAL = 60 +—--— Flight path of Reech H35, a wea ig N4687D. a ONG 17:46:33 a Bi gee A 28 Poe | | 3009 47:46:25 7 R \\",
+   "kind": "system",
+   "actor": "SYS",
+   "phase": "unknown",
+   "factors": [],
+   "t": 63993
+  },
+  {
+   "clock": "17:46:48",
+   "text": "ance and direction ie = Flight path of Boeing 1277, wake turbulence weuld nave ao FoR 4 PSA Flight 420, —-—_-—_-m~A,, drifted if winds had shifted ae 17:46:48 —— to north-northwest and heid ran BO Sn ",
+   "kind": "system",
+   "actor": "SYS",
+   "phase": "unknown",
+   "factors": [],
+   "t": 64008
+  },
+  {
+   "clock": "17:46:50",
+   "text": "d 5.10 17:87:08 ——- S 47:46:02 ae 3ns Res os pa } 6.30 in PA | 3800.\" Pe eh Ne 17:46:57— Bh 174 ‘a ae i100 B\\,. pw ” 300 —~17:46:53 FP: 4 a , : 4 ; . 17:46:50 : —_____-- Approx distance and direction ",
+   "kind": "system",
+   "actor": "SYS",
+   "phase": "unknown",
+   "factors": [],
+   "t": 64010
+  },
+  {
+   "clock": "17:46:53",
+   "text": "ee eee Seoles eee 8. af_ ‘ed 5.10 17:87:08 ——- S 47:46:02 ae 3ns Res os pa } 6.30 in PA | 3800.\" Pe eh Ne 17:46:57— Bh 174 ‘a ae i100 B\\,. pw ” 300 —~17:46:53 FP: 4 a , : 4 ; . 17:46:50 : —_____-- App",
+   "kind": "system",
+   "actor": "SYS",
+   "phase": "unknown",
+   "factors": [],
+   "t": 64013
+  },
+  {
+   "clock": "17:46:57",
+   "text": "t weenoe « . . gaeare pad co See ee ee eeee ee eee Seoles eee 8. af_ ‘ed 5.10 17:87:08 ——- S 47:46:02 ae 3ns Res os pa } 6.30 in PA | 3800.\" Pe eh Ne 17:46:57— Bh 174 ‘a ae i100 B\\,. pw ” 300 —~17:46:",
+   "kind": "system",
+   "actor": "SYS",
+   "phase": "unknown",
+   "factors": [],
+   "t": 64017
+  },
+  {
+   "clock": "17:49:41",
+   "text": "ran BO Sn M6: wages 2,11 80 12 knots (1000 to \\ q - sd Approx 0.2 nautical mile. vA eat 2000 ft AGL). be x aan Plt td g Approx distance and direction 17:49:41 pe BOTS 4g & woke turbulence would have \\",
+   "kind": "system",
+   "actor": "SYS",
+   "phase": "unknown",
+   "factors": [],
+   "t": 64181
+  },
+  {
+   "clock": "17:87:08",
+   "text": "le gpab eRe amon tae Sy | “a ppeeay tpn, hig erenminnie op, nee oe Septet weenoe « . . gaeare pad co See ee ee eeee ee eee Seoles eee 8. af_ ‘ed 5.10 17:87:08 ——- S 47:46:02 ae 3ns Res os pa } 6.30 in",
+   "kind": "system",
+   "actor": "SYS",
+   "phase": "unknown",
+   "factors": [],
+   "t": 66428
+  },
+  {
+   "clock": "47:46:02",
+   "text": "n tae Sy | “a ppeeay tpn, hig erenminnie op, nee oe Septet weenoe « . . gaeare pad co See ee ee eeee ee eee Seoles eee 8. af_ ‘ed 5.10 17:87:08 ——- S 47:46:02 ae 3ns Res os pa } 6.30 in PA | 3800.\" Pe",
+   "kind": "system",
+   "actor": "SYS",
+   "phase": "unknown",
+   "factors": [],
+   "t": 171962
+  },
+  {
+   "clock": "47:46:25",
+   "text": "ANG s 2000 ft AGL),.--———_—— oe a i Mjya 5 dA Po OAL = 60 +—--— Flight path of Reech H35, a wea ig N4687D. a ONG 17:46:33 a Bi gee A 28 Poe | | 3009 47:46:25 7 R \\y | 6.90 17:46:21 a poe Eg 5 * . ‘eo ",
+   "kind": "system",
+   "actor": "SYS",
+   "phase": "unknown",
+   "factors": [],
+   "t": 171985
+  }
+ ],
+ "report_links": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8501S.pdf"
+ ],
+ "wikipedia": null,
+ "asn_id": "19831220-0",
+ "interest": 7.14,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Extracted from NTSB official accident report",
+   "Added 11 new events from detailed timeline and CVR",
+   "All factors include page citations from report",
+   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
+  ]
+ },
+ "curated_id": null,
+ "sources": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8501S.pdf"
+ ],
+ "recommendations": [
+  {
+   "id": "A-85-15",
+   "to": "FAA",
+   "text": "NTSB safety recommendation",
+   "status": "unknown"
+  },
+  {
+   "id": "A-85-17",
+   "to": "FAA",
+   "text": "NTSB safety recommendation",
+   "status": "unknown"
+  },
+  {
+   "id": "A-84-134",
+   "to": "FAA",
+   "text": "NTSB safety recommendation",
+   "status": "unknown"
+  },
+  {
+   "id": "A-84-134",
+   "to": "FAA",
+   "text": "NTSB safety recommendation",
+   "status": "unknown"
+  },
+  {
+   "id": "A-85-81",
+   "to": "FAA",
+   "text": "NTSB safety recommendation",
+   "status": "unknown"
+  },
+  {
+   "id": "A-85-82",
+   "to": "FAA",
+   "text": "NTSB safety recommendation",
+   "status": "unknown"
+  },
+  {
+   "id": "A-85-83",
+   "to": "FAA",
+   "text": "NTSB safety recommendation",
+   "status": "unknown"
+  },
+  {
+   "id": "A-85-84",
+   "to": "FAA",
+   "text": "NTSB safety recommendation",
+   "status": "unknown"
+  },
+  {
+   "id": "A-85-86",
+   "to": "FAA",
+   "text": "NTSB safety recommendation",
+   "status": "unknown"
+  }
+ ],
+ "cvr": [],
+ "dissent": [],
+ "safety_changes": [],
+ "related": []
+}
