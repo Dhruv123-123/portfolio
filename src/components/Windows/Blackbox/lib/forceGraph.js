@@ -24,6 +24,11 @@ export class ForceGraph {
     this.onBackgroundClick = onBackgroundClick
     this.showChain = true
     this.labelsAlways = false
+    this.flow = true // animated particles travelling along causal edges
+    this.active = true // false while the tab is hidden: stops the ambient loop
+    this._flowRaf = null
+    this._flowT = 0
+    this._flowLast = 0
     this._bind()
     this._raf = null
     this.dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1))
@@ -54,6 +59,34 @@ export class ForceGraph {
       this.degree[l.t.id] = (this.degree[l.t.id] || 0) + 1
     }
     this.reheat(1)
+    this.startFlow()
+  }
+
+  /** Ambient animation: particles flowing along chain edges while the graph is visible. */
+  startFlow() {
+    if (this._flowRaf || !this.flow) return
+    const loop = (ts) => {
+      this._flowRaf = null
+      if (!this.flow || !this.active) return
+      const dt = this._flowLast ? Math.min(0.1, (ts - this._flowLast) / 1000) : 0
+      this._flowLast = ts
+      this._flowT += dt
+      if (!this.running) this.draw()
+      this._flowRaf = requestAnimationFrame(loop)
+    }
+    this._flowRaf = requestAnimationFrame(loop)
+  }
+
+  stopFlow() {
+    if (this._flowRaf) cancelAnimationFrame(this._flowRaf)
+    this._flowRaf = null
+    this._flowLast = 0
+  }
+
+  setActive(a) {
+    this.active = a
+    if (a) this.startFlow()
+    else this.stopFlow()
   }
 
   reheat(alpha = 0.6) {
@@ -295,6 +328,20 @@ export class ForceGraph {
     const dimmed = (id) => hi && !hi.has(id)
     const neighbors = this.selected ? this._neighborSet(this.selected) : null
 
+    // Soft glow behind emphasised nodes
+    const glowNodes = []
+    if (this.selected) glowNodes.push([this.selected, 1])
+    if (this.hover && this.hover !== this.selected) glowNodes.push([this.hover, 0.6])
+    if (hi) for (const n of this.nodes) if (hi.has(n.id) && n !== this.selected) glowNodes.push([n, 0.35])
+    for (const [n, str] of glowNodes.slice(0, 80)) {
+      const rr = n.r * 4
+      const g = ctx.createRadialGradient(n.x, n.y, n.r * 0.5, n.x, n.y, rr)
+      g.addColorStop(0, hexToRgba(n.color, 0.55 * str))
+      g.addColorStop(1, hexToRgba(n.color, 0))
+      ctx.fillStyle = g
+      ctx.beginPath(); ctx.arc(n.x, n.y, rr, 0, Math.PI * 2); ctx.fill()
+    }
+
     // Links
     for (const l of this.links) {
       if (l.kind === 'chain' && !this.showChain) continue
@@ -317,6 +364,31 @@ export class ForceGraph {
         ctx.stroke()
       }
     }
+    // Particles: causation flows from cause to effect along chain edges
+    if (this.flow && this.showChain) {
+      ctx.save()
+      ctx.globalCompositeOperation = 'lighter'
+      const t = this._flowT
+      for (const l of this.links) {
+        if (l.kind !== 'chain') continue
+        const a = l.s, b = l.t
+        const emph = this.emphasisLinks && this.emphasisLinks.has(`${a.id}>${b.id}`)
+        let alpha = emph ? 1 : hi ? (dimmed(a.id) || dimmed(b.id) ? 0 : 0.5) : 0.55
+        if (neighbors && !(neighbors.has(a.id) && neighbors.has(b.id))) alpha *= 0.15
+        if (alpha < 0.03) continue
+        const count = Math.min(4, 1 + Math.floor(Math.log2(1 + (l.weight || 1))))
+        const speed = 0.18 + Math.min(0.25, (l.weight || 1) * 0.02)
+        for (let i = 0; i < count; i++) {
+          const f = (t * speed + i / count + (l._phase || (l._phase = Math.random()))) % 1
+          const p = this._curvePoint(a, b, f)
+          const size = (emph ? 3.2 : 2.2) * (0.6 + 0.4 * Math.sin(f * Math.PI))
+          ctx.fillStyle = emph ? `rgba(255,220,120,${alpha})` : `rgba(255,170,70,${alpha})`
+          ctx.beginPath(); ctx.arc(p.x, p.y, size, 0, Math.PI * 2); ctx.fill()
+        }
+      }
+      ctx.restore()
+    }
+
     // Nodes
     for (const n of this.nodes) {
       let alpha = 1
@@ -391,6 +463,21 @@ export class ForceGraph {
     ctx.fill()
   }
 
+  /** Point at fraction f along the same quadratic curve _arrow draws. */
+  _curvePoint(a, b, f) {
+    const dx = b.x - a.x
+    const dy = b.y - a.y
+    const d = Math.max(1, Math.sqrt(dx * dx + dy * dy))
+    const ux = dx / d
+    const uy = dy / d
+    const mx = (a.x + b.x) / 2 - uy * d * 0.12
+    const my = (a.y + b.y) / 2 + ux * d * 0.12
+    const x0 = a.x + ux * a.r, y0 = a.y + uy * a.r
+    const x2 = b.x - ux * (b.r + 2), y2 = b.y - uy * (b.r + 2)
+    const g = 1 - f
+    return { x: g * g * x0 + 2 * g * f * mx + f * f * x2, y: g * g * y0 + 2 * g * f * my + f * f * y2 }
+  }
+
   _neighborSet(node) {
     const s = new Set([node.id])
     for (const l of this.links) {
@@ -411,5 +498,13 @@ export class ForceGraph {
 
   destroy() {
     this.stop()
+    this.stopFlow()
   }
+}
+
+function hexToRgba(hex, a) {
+  const m = /^#?([0-9a-f]{6})$/i.exec(hex || '')
+  if (!m) return `rgba(200,200,200,${a})`
+  const v = parseInt(m[1], 16)
+  return `rgba(${(v >> 16) & 255},${(v >> 8) & 255},${v & 255},${a})`
 }

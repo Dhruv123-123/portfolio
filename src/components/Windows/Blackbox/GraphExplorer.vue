@@ -61,6 +61,7 @@
     <div class="ge-center">
       <div class="ge-toolbar">
         <label><input type="checkbox" v-model="showChain" /> causal edges</label>
+        <label><input type="checkbox" v-model="flowOn" /> flow</label>
         <label><input type="checkbox" v-model="focusMode" /> focus on selection</label>
         <label><input type="checkbox" v-model="labelsAlways" /> all labels</label>
         <label>min factor use <input type="range" min="1" max="12" v-model.number="minCount" /> {{ minCount }}</label>
@@ -96,11 +97,12 @@
         <div class="ge-actions">
           <button class="bb-btn" :disabled="!(selectedRecord.events && selectedRecord.events.length)" @click="store.openTimeline(selectedRecord.id)">Timeline ▸</button>
           <button class="bb-btn" :disabled="!selectedRecord.fdr" @click="store.openReplay(selectedRecord.id)">FDR replay ▸</button>
+          <button class="bb-btn" :disabled="!(selectedRecord.events && selectedRecord.events.length)" @click="store.openStory(selectedRecord.id)" title="Documentary-style walkthrough">Story ▸</button>
           <button v-if="selectedRecord.curated_id && index.byId[selectedRecord.curated_id]" class="bb-btn" @click="selectAccident(selectedRecord.curated_id)">Hand-reviewed record ▸</button>
         </div>
         <div v-if="selectedRecord.stub" class="bb-muted ge-src">Loading full record…</div>
-        <div v-if="selectedRecord.wikipedia || (selectedRecord.report_links && selectedRecord.report_links.length && selectedRecord.report_links[0] !== '(see record)')" class="ge-links">
-          <a v-if="selectedRecord.wikipedia" :href="selectedRecord.wikipedia" target="_blank" rel="noopener" class="bb-link">Wikipedia</a>
+        <a :href="wikipediaUrl(selectedRecord)" target="_blank" rel="noopener" class="ge-readmore">{{ hasWikipediaArticle(selectedRecord) ? 'Read more on Wikipedia ↗' : 'Search Wikipedia for this accident ↗' }}</a>
+        <div v-if="selectedRecord.report_links && selectedRecord.report_links.length && selectedRecord.report_links[0] !== '(see record)'" class="ge-links">
           <a v-for="(l, i) in (selectedRecord.report_links || []).filter((x) => x.startsWith('http'))" :key="i" :href="l" target="_blank" rel="noopener" class="bb-link" :title="l">report link {{ i + 1 }}</a>
         </div>
         <p class="ge-summary">{{ selectedRecord.summary }}</p>
@@ -116,6 +118,7 @@
         <div v-for="f in selectedRecord.factors" :key="f.id" class="ge-factor">
           <span class="bb-chip factor" :style="{ background: factorColor(f.id) }" @click="selectFactor(f.id)">{{ factorLabel(f.id) }}</span>
           <span class="ge-role">{{ f.role }}</span>
+          <span v-if="singlePointSet.has(f.id)" class="ge-sp" title="Every encoded path from an initiating factor to the outcome runs through this factor: remove it and the chain, as written, breaks.">⚡ single point</span>
           <div class="bb-muted ge-evidence">{{ f.evidence }}</div>
         </div>
         <div class="bb-h" v-if="selectedRecord.probable_cause">Probable cause</div>
@@ -148,6 +151,13 @@
         <div class="ge-actions">
           <button class="bb-btn" @click="queryFactor(selectedFactor.id)">Search this factor</button>
         </div>
+        <div class="ge-cut" v-if="cut">
+          <div class="bb-h" style="color:var(--bb-accent)">What if it had been absent</div>
+          <div class="ge-cut-line">Appears in <b>{{ cut.contains }}</b> accidents. In <b>{{ cut.severed.length }}</b> of them every encoded path from cause to outcome runs through it: as the chain is written, removing it breaks the accident.</div>
+          <div class="ge-cut-bar"><div :style="{ width: (cut.contains ? (cut.severed.length / cut.contains) * 100 : 0) + '%' }"></div></div>
+          <div v-for="id in cut.severed.slice(0, 12)" :key="id" class="ge-similar" @click="selectAccident(id)"><span class="bb-agency">{{ index.byId[id].agency }}</span> {{ index.byId[id].title }} <span class="bb-muted">· {{ index.byId[id].date.slice(0, 4) }}</span></div>
+          <div v-if="cut.severed.length > 12" class="bb-muted ge-src">and {{ cut.severed.length - 12 }} more</div>
+        </div>
         <div class="bb-h">What leads to it (count)</div>
         <div class="ge-chipwrap">
           <span v-for="[id, n] in sortedCounts(index.stats.predecessors[selectedFactor.id])" :key="id" class="bb-chip factor" :style="{ background: factorColor(id) }" @click="selectFactor(id)">{{ factorLabel(id) }} <b>{{ n }}</b></span>
@@ -177,6 +187,8 @@ import { useBlackboxStore } from '@/stores/blackboxStore'
 import { search, similarRecords, cosineMap } from './lib/search.js'
 import { ForceGraph } from './lib/forceGraph.js'
 import { loadCatalogRecord } from './lib/catalog.js'
+import { wikipediaUrl, hasWikipediaArticle } from './lib/geo.js'
+import { factorCut, singlePointsCached } from './lib/counterfactual.js'
 
 const props = defineProps({ graph: Object, index: Object, active: Boolean, catalog: { type: Object, default: () => ({ state: 'idle', count: 0 }) } })
 defineEmits(['load-catalog'])
@@ -192,6 +204,7 @@ const results = ref([])
 const parsed = ref(null)
 const tooltip = ref(null)
 const showChain = ref(true)
+const flowOn = ref(true)
 const focusMode = ref(false)
 const labelsAlways = ref(false)
 const minCount = ref(2)
@@ -221,6 +234,8 @@ const selectedRecord = computed(() => {
 })
 const selectedFactor = computed(() => (selectedFactorId.value ? props.index.factorById[selectedFactorId.value] : null))
 const similar = computed(() => (selectedRecord.value ? similarRecords(props.index, selectedRecord.value.id) : []))
+const singlePointSet = computed(() => new Set(selectedRecord.value && !selectedRecord.value.stub ? singlePointsCached(selectedRecord.value) : []))
+const cut = computed(() => (selectedFactor.value ? factorCut(props.index, selectedFactor.value.id) : null))
 const semanticLabel = computed(() => (semanticState.value === 'loading' ? 'Semantic… loading' : semanticState.value === 'error' ? 'Semantic unavailable' : semanticOn.value ? 'Semantic ✓' : 'Semantic'))
 
 const agencyColors = { NTSB: '#4c8dff', BEA: '#6ac0ff', AAIB: '#9b7bff', TSB: '#ff7b9c', ATSB: '#2fd4c0', DSB: '#ffa94d' }
@@ -410,10 +425,12 @@ async function toggleSemantic() {
   }
 }
 
-watch([showChain, labelsAlways], () => {
+watch([showChain, labelsAlways, flowOn], () => {
   if (!fg) return
   fg.showChain = showChain.value
   fg.labelsAlways = labelsAlways.value
+  fg.flow = flowOn.value
+  flowOn.value ? fg.startFlow() : fg.stopFlow()
   fg.draw()
 })
 watch([minCount, focusMode], refreshGraph)
@@ -422,6 +439,7 @@ watch(() => store.selectedId, () => {
   else applyHighlight()
 })
 watch(() => props.index, () => {
+  delete props.index._cutCache
   refreshGraph()
   if (queryText.value) runQuery()
 })
@@ -437,6 +455,7 @@ watch(() => props.active, async (a) => {
     fg && fg.resize()
     fg && fg.reheat(0.05)
   }
+  fg && fg.setActive(a)
 })
 
 onMounted(() => {
@@ -488,6 +507,13 @@ onBeforeUnmount(() => {
 .tier-ntsb { border-color: #55627d; color: #aab6cf; }
 .tier-wikidata { border-color: #6d7fa3; color: #c6d2ea; }
 .tier-curated { border-color: var(--bb-accent); color: var(--bb-accent); }
+.ge-readmore { display: inline-block; color: var(--bb-accent); font-weight: 700; text-decoration: none; border: 1px solid var(--bb-accent); border-radius: 3px; padding: 3px 8px; font-size: 11px; margin: 6px 0 4px; }
+.ge-readmore:hover { background: var(--bb-accent); color: #111; }
+.ge-sp { font-size: 9px; color: #ffd166; margin-left: 6px; letter-spacing: 0.04em; cursor: help; }
+.ge-cut { background: #1a1a0e; border: 1px solid #4a3d14; border-radius: 4px; padding: 2px 8px 8px; margin: 8px 0; }
+.ge-cut-line { font-size: 11px; line-height: 1.4; color: #e9e2c8; }
+.ge-cut-bar { height: 5px; background: #2a2a1a; border-radius: 3px; margin: 6px 0; overflow: hidden; }
+.ge-cut-bar div { height: 100%; background: var(--bb-accent); }
 .ge-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 6px; font-size: 11px; }
 .ge-result-sub { font-size: 10px; margin-top: 2px; }
 .ge-path { display: flex; flex-wrap: wrap; gap: 3px; align-items: center; margin-top: 5px; }
