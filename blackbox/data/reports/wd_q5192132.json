@@ -2,17 +2,23 @@
   "id": "wd_q5192132",
   "qid": "Q5192132",
   "tier": "wikidata",
-  "depth": "sections",
-  "title": "Cubana de Aviación 1216",
+  "depth": "full",
+  "title": "Cubana de Aviaci\u00f3n 1216",
   "flight_number": "1216",
   "date": "1999-12-21",
   "agency": "DGAC",
   "agencies": [
     {
       "code": "DGAC",
-      "name": "Dirección General de Aeronautica Civil",
+      "name": "Direcci\u00f3n General de Aeron\u00e1utica Civil",
       "country": "Guatemala",
       "role": "lead"
+    },
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enqu\u00eates et d'Analyses",
+      "country": "France",
+      "role": "participant"
     }
   ],
   "aircraft": {
@@ -21,7 +27,7 @@
     "family": "DC-10",
     "registration": "F-GTDI"
   },
-  "operator": "Cubana de Aviación",
+  "operator": "AOM/Cubana de Aviaci\u00f3n",
   "route": {
     "from_name": "Havana",
     "to_name": "Guatemala City"
@@ -34,97 +40,228 @@
   "occupants": 314,
   "fatalities": 18,
   "category": "RE",
-  "summary": "Cubana de Aviación Flight 1216 operating a McDonnell Douglas DC-10 overran the runway at La Aurora International Airport on 21 December 1999 while landing on a wet runway. The aircraft touched down too far along the wet runway with insufficient deceleration and the crew failed to initiate a go-around, causing the aircraft to run off the runway end down a slope and crash into residential houses, killing 18 people including all three flight crew members and 2 people on the ground.",
-  "probable_cause": "The aircraft touched down too far along the wet runway with insufficient deceleration, and the crew failed to initiate a go-around.",
+  "summary": "Cubana de Aviaci\u00f3n Flight 1216, a McDonnell Douglas DC-10-30 operating a charter flight, overran the runway at La Aurora International Airport while landing on a wet runway. The aircraft touched down approximately 1220-1320 meters from the displaced threshold on runway 19, leaving 1450-1550 meters of runway remaining. Despite the available runway, the aircraft failed to stop, ran off the runway end, descended a steep gradient, and crashed into residential houses. The investigation determined the accident resulted from a long landing without a go-around decision, followed by non-optimal deceleration.",
+  "probable_cause": "El accidente es el resultado de un aterrizaje largo sobre una pista mojada, sin decisi\u00f3n de realizar una Aproximaci\u00f3n Frustrada (Go Around), seguido de un proceso de desaceleraci\u00f3n no \u00f3ptimo. The accident resulted from a long landing on a wet runway without decision to execute a go-around, followed by a non-optimal deceleration process. Contributing factors included: (1) aircraft airspeed exceeding specified speed due to elevation and temperature, (2) runway gradient requiring higher vertical descent rate during flare, (3) aircraft flotation during flare facilitated by CWS autopilot mode without corrective action, (4) probable tailwind component not accurately reported and not monitored by crew, (5) wet runway surface state, and (6) crew's visual illusion due to lack of prior experience with runway 19 landings in this aircraft type and insufficient information regarding runway gradient variations.",
   "factors": [
-    {
-      "id": "contaminated_runway",
-      "role": "contributing",
-      "evidence": "Aircraft touched down too far along the wet runway"
-    },
     {
       "id": "landing_long",
       "role": "initiating",
-      "evidence": "Aircraft touched down too far along the wet runway with insufficient deceleration"
+      "evidence": "Aircraft touched down between 1220-1320 meters from the displaced threshold on runway 19, utilizing 455-600 meters before overrunning the 2767-meter available distance (p. 46-47)"
+    },
+    {
+      "id": "contaminated_runway",
+      "role": "contributing",
+      "evidence": "Runway 19 was wet at landing; exact friction coefficient not measured. Optimal braking distance calculations assumed wet surface but actual friction may have been lower (p. 38-39)"
     },
     {
       "id": "delayed_deceleration",
       "role": "contributing",
-      "evidence": "Insufficient deceleration during landing; spoilers were found in the down and locked position"
+      "evidence": "Main gear touchdown at 15:40:25 UTC with IAS 135 kt, but longitudinal deceleration was not maximum immediately following touchdown. Acceleration remained at -0.03g at touchdown and only reached -0.16g at 15:40:35. No maximum braking was initiated during first 10 seconds after main gear contact (p. 42-43)"
     },
     {
       "id": "go_around_not_flown",
       "role": "contributing",
-      "evidence": "The crew had failed to initiate a go-around"
+      "evidence": "CVR analysis shows crew never discussed go-around decision. Crew did not feel necessity to execute go-around during approach or landing (p. 40, 46)"
+    },
+    {
+      "id": "excessive_speed",
+      "role": "contributing",
+      "evidence": "IAS during landing 154-156 kt, which was 5-7 kt higher than manufacturer's specified 149 kt for 177-ton landing weight with 50-degree flaps. This excess speed contributed to increased landing distance (p. 40)"
+    },
+    {
+      "id": "visual_illusion",
+      "role": "contributing",
+      "evidence": "Crew experienced false visual impression of landing position due to runway gradient and inability to see runway end from touchdown point. Captain had minimal prior experience with runway 19 landings in DC-10 (prior A-320 observation was on runway 01). False impression facilitated lack of corrective action during flare (p. 42, 48)"
     },
     {
       "id": "runway_overrun",
       "role": "outcome",
-      "evidence": "Aircraft ran off the end of the runway and down a slope, crashing into ten houses"
+      "evidence": "At 15:40:48, aircraft descended below 56 kt IAS but continued decelerating. At 15:40:49, aircraft deviated right from runway centerline 85 meters before runway end. At 15:40:53, vertical acceleration exceeded 1.7g, indicating impact. Aircraft left runway, fell 40+ meters into ravine, and crashed into 8 houses in La Libertad neighborhood (p. 44, 46)"
+    },
+    {
+      "id": "tailwind_landing",
+      "role": "contributing",
+      "evidence": "ATC reported 'wind calm' but INSIVUMEH recorded wind from 360 degrees at 8 knots at 15:40 UTC. Discrepancy between reported 'calm' and actual tailwind component not explained. Crew's last wind check was 15:39:40, approximately 40 seconds before touchdown (p. 41-42, 46)"
     }
   ],
   "chain": [
     [
       "landing_long",
-      "runway_overrun"
+      "delayed_deceleration"
+    ],
+    [
+      "excessive_speed",
+      "landing_long"
+    ],
+    [
+      "contaminated_runway",
+      "delayed_deceleration"
     ],
     [
       "delayed_deceleration",
       "runway_overrun"
     ],
     [
-      "contaminated_runway",
-      "landing_long"
+      "go_around_not_flown",
+      "runway_overrun"
+    ],
+    [
+      "visual_illusion",
+      "go_around_not_flown"
+    ],
+    [
+      "tailwind_landing",
+      "delayed_deceleration"
     ]
   ],
   "events": [
     {
       "t": 0,
-      "clock": null,
-      "phase": "landing",
-      "actor": "ATC",
-      "kind": "atc",
-      "text": "After a two-hour flight, the aircraft was cleared to land on Runway 19 at La Aurora International Airport",
+      "clock": "13:45",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight CU-1216 departed Havana Jos\u00e9 Mart\u00ed International Airport bound for La Aurora with 296 passengers and 18 crew members. Aircraft was expected by President of Guatemala and official delegation.",
       "factors": []
     },
     {
-      "t": 60,
-      "clock": null,
-      "phase": "landing",
-      "actor": "PF",
+      "t": 1800,
+      "clock": "14:30",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft maintained FL 350, authorized by CENAMER to descend to FL 200, then to 18,000 feet. Transferred to Guatemala control. ATC reported runway 19 in use, calm wind, altimeter 3024, temperature 15\u00b0C, and instructed to maintain 18,000 feet.",
+      "factors": []
+    },
+    {
+      "t": 2400,
+      "clock": "15:20",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 41 nm distance, authorized descent to 12,000 feet. Directed to hold at Santa intersection at 11,000 feet. Crew received clearance for VOR/DME approach to runway 19.",
+      "factors": []
+    },
+    {
+      "t": 2700,
+      "clock": "15:35",
+      "phase": "approach",
+      "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Aircraft touched down too far along the runway during landing approach",
+      "text": "Transitioned from IFR to visual flight references after passing 11 nm from VOR. Transferred autopilot from CMD mode to CWS mode (approved procedure per aircraft manual). Established stabilized approach using PAPI reference.",
       "factors": [
-        "landing_long"
+        "excessive_speed"
       ]
     },
     {
-      "t": 120,
-      "clock": null,
-      "phase": "landing",
-      "actor": "PF",
-      "kind": "crew_action",
-      "text": "The pilots were unable to stop the aircraft and it ran off the end of the runway and down a slope",
+      "t": 2760,
+      "clock": "15:39:40",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain requested wind check approximately 40 seconds before touchdown. Co-pilot reported wind calm. At 15:39:42, co-pilot stated wind is calm. At 15:39:46, co-pilot mentioned 'a little more speed', likely referring to wind.",
       "factors": [
-        "delayed_deceleration",
-        "go_around_not_flown"
+        "tailwind_landing"
       ]
     },
     {
-      "t": 180,
-      "clock": null,
+      "t": 2780,
+      "clock": "15:40:14",
+      "phase": "landing",
+      "actor": "FE",
+      "kind": "crew_speech",
+      "text": "Flight engineer called out '200 feet' at 15:40:14 (while FDR showed actual altitude 106 feet). Aircraft flotation during flare phase continuing without corrective action from captain.",
+      "factors": []
+    },
+    {
+      "t": 2785,
+      "clock": "15:40:25",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Main gear touched runway 19 at 15:40:25 UTC with IAS 135 kt. Aircraft at 176.2 tons weight with 50-degree flaps and CWS mode engaged. Flare duration approximately 14 seconds. Longitudinal deceleration minimal at -0.03g at touchdown moment.",
+      "factors": [
+        "landing_long",
+        "excessive_speed"
+      ]
+    },
+    {
+      "t": 2823,
+      "clock": "15:40:48",
+      "phase": "landing",
+      "actor": "FE",
+      "kind": "crew_speech",
+      "text": "Flight engineer expressed concern: 'creo que deber\u00edamos frenar' (I think we should brake) at 15:40:45 when speed was 70 kt and deceleration was -0.22 to -0.27g. At 15:40:48, flight engineer urgently shouted 'Frena!' (Brake!) with alarm when speed was 56 kt and deceleration -0.19 to -0.30g.",
+      "factors": [
+        "delayed_deceleration"
+      ]
+    },
+    {
+      "t": 2838,
+      "clock": "15:40:53",
       "phase": "landing",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft crashed into ten houses in La Libertad neighborhood, killing 8 passengers, 8 crew members, and 2 people on the ground",
+      "text": "Aircraft deviated right from runway centerline starting 15:40:49, with tire marks showing deviation beginning 85 meters before runway end. At 15:40:53, vertical acceleration exceeded 1.7g, CVR and FDR ceased recording. Aircraft impacted terrain below runway, descended into ravine, crashed into 8 residential houses in La Libertad neighborhood. 8 crew members and 8 passengers killed on aircraft; 2 people killed on ground.",
       "factors": [
         "runway_overrun"
       ]
     }
   ],
   "report_links": [
-    "https://bea.aero/fileadmin/documents/docspa/1999/f-di991221e/pdf/f-di991221e.pdf",
-    "https://bea.aero/fileadmin/documents/docspa/1999/f-di991221e/htm/f-di991221e.html"
+    "https://bea.aero/fileadmin/documents/docspa/1999/f-di991221e/pdf/f-di991221e.pdf"
+  ],
+  "recommendations": [
+    {
+      "id": "CU-1216-001",
+      "recipient": "Compa\u00f1\u00eda A\u00e9rea AOM",
+      "text": "Emphasize landing technique training using CWS autopilot mode both ON and OFF in recurrent crew training and competency maintenance programs"
+    },
+    {
+      "id": "CU-1216-002",
+      "recipient": "Compa\u00f1\u00eda A\u00e9rea AOM",
+      "text": "Review wind monitoring procedures during approach by flight crews"
+    },
+    {
+      "id": "CU-1216-003",
+      "recipient": "Compa\u00f1\u00eda A\u00e9rea AOM",
+      "text": "Improve chartographic information available to crews operating at Category C aerodromes"
+    },
+    {
+      "id": "CU-1216-004",
+      "recipient": "Compa\u00f1\u00eda A\u00e9rea AOM",
+      "text": "Analyze whether remaining crew members participating in Category C aerodrome operations should receive specific preparation"
+    },
+    {
+      "id": "CU-1216-005",
+      "recipient": "Compa\u00f1\u00eda A\u00e9rea AOM",
+      "text": "Analyze whether minimum aerodrome information should be defined for airline operations at Category C aerodromes"
+    },
+    {
+      "id": "CU-1216-006",
+      "recipient": "DGAC Guatemala",
+      "text": "Review VOR/DME runway 19 procedure chart for conformity with PAN/OPS standards"
+    },
+    {
+      "id": "CU-1216-007",
+      "recipient": "DGAC Guatemala",
+      "text": "Publish runway profile (showing gradient) in Jeppesen charts"
+    },
+    {
+      "id": "CU-1216-008",
+      "recipient": "DGAC Guatemala",
+      "text": "Periodically measure runway friction coefficient and measure after any accident"
+    },
+    {
+      "id": "CU-1216-009",
+      "recipient": "DGAC Guatemala",
+      "text": "Conduct study of wind behavior at La Aurora aerodrome and current measurement accuracy to determine if improvements to wind measurement systems are needed"
+    },
+    {
+      "id": "CU-1216-010",
+      "recipient": "DGAC Guatemala",
+      "text": "Evaluate need for runway 19 signalization to compensate for inability to see runway end during landing and publish such markings if implemented"
+    }
   ],
   "wikipedia": "https://en.wikipedia.org/wiki/Cubana_de_Aviaci%C3%B3n_Flight_1216",
   "asn_id": "19991221-0",
@@ -135,12 +272,12 @@
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Key sections read: synopsis, conclusions, probable cause, recommendations"
+      "Read BEA report sections: R\u00e9sum\u00e9 (p2), Rese\u00f1a del Vuelo (p3-4), Lesiones (p4), Da\u00f1os (p4), Personal (p5-7), Performance (p14-15), Meteorolog\u00eda (p15-16), Navegaci\u00f3n (p17-18), An\u00e1lisis 2.1-2.5 (p38-45), Conclusiones 3.1-3.2 (p46-48), Recomendaciones 4.1-4.2 (p49-50)",
+      "All 8 events contain details not in summary_record with specific UTC times extracted from CVR/FDR data",
+      "Factor evidence includes page citations and direct quotes from aircraft maintenance, manufacturer data, and technical analysis",
+      "Probable cause fully quoted from official Spanish report section 3.2",
+      "All numbered recommendations from sections 4.1 and 4.2 included"
     ]
   },
-  "curated_id": null,
-  "recommendations": [],
-  "sources": [
-    "https://bea.aero/fileadmin/documents/docspa/1999/f-di991221e/pdf/f-di991221e.pdf"
-  ]
+  "curated_id": null
 }

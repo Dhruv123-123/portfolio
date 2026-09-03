@@ -6,6 +6,8 @@
   "title": "United Airlines 2885",
   "flight_number": "UA2885",
   "date": "1983-01-11",
+  "time_reference": "EST",
+  "t0": "1983-01-11T07:51:15Z",
   "agency": "NTSB",
   "agencies": [
     {
@@ -33,159 +35,199 @@
   "phase": "takeoff",
   "occupants": 3,
   "fatalities": 3,
+  "damage": "destroyed",
   "category": "LOC-I",
-  "summary": "A DC-8 cargo flight crashed during takeoff from Detroit after an unauthorized seat swap placed an insufficiently trained flight engineer at the controls. The aircraft pitched nose-up to an excessive attitude, causing engine surges, wing bank, and a stall at approximately 1000 feet altitude. Investigation revealed the horizontal stabilizer was set to 7.5 units nose-up trim, likely due to inadequate pre-takeoff checklist procedures during the confusion of the crew change.",
-  "probable_cause": "An excessively high stabilizer trim setting of 7.5 units nose-up during takeoff. Contributing factors included an unauthorized flight engineer performing the takeoff, the flight engineer's inadequate training and previous failed proficiency checks, and the captain's failure to correct the situation or prevent the unauthorized seat swap.",
+  "summary": "A McDonnell Douglas DC-8-54F cargo flight experienced an unstabilized takeoff from Detroit with the horizontal stabilizer incorrectly trimmed to landing configuration instead of takeoff configuration. The crew failed to follow procedural checklists to detect the error. After takeoff, the aircraft climbed to about 1,000 feet with an abnormally steep pitch attitude, then rolled right and descended rapidly into terrain (p. 3-4).",
+  "probable_cause": "The flightcrew's failure to follow procedural checklist requirements and to detect and correct a mistrimmed stabilizer before the airplane became uncontrollable. Contributing to the accident was the captain's allowing the second officer, who was not qualified to act as a pilot, to occupy the seat of the first officer and to conduct the takeoff (p. 28).",
   "factors": [
-    {
-      "id": "loss_of_control_inflight",
-      "role": "outcome",
-      "evidence": "aircraft entered upset condition, stalled and fell to the ground at approximately 1000 ft"
-    },
     {
       "id": "stabilizer_trim_failure",
       "role": "initiating",
-      "evidence": "excessively high stabilizer trim setting of 7.5 units airplane nose-up"
-    },
-    {
-      "id": "pilot_experience",
-      "role": "contributing",
-      "evidence": "flight engineer had been found inadequate in first officer upgrade training; training terminated after two months; subsequent training for Boeing 737 showed inadequate abilities"
-    },
-    {
-      "id": "inadequate_training",
-      "role": "contributing",
-      "evidence": "flight engineer's instructor stated he has not made normal progress in his first full year as first officer"
+      "evidence": "The horizontal stabilizer trim was at 7.6 units ANU at impact, which was the previous landing trim setting instead of takeoff configuration (p. 28). The flightcrew inadvertently overlooked setting the stabilizer trim for takeoff (p. 28)."
     },
     {
       "id": "procedural_noncompliance",
       "role": "contributing",
-      "evidence": "pilots failed to reset trim setting while performing takeoff checklists due to confusion from crew seat switching"
+      "evidence": "The flightcrew failed to follow procedural checklist requirements to detect and correct the mistrimmed stabilizer (p. 28). Had any one of six distinct procedural requirements involving all three crewmembers been followed, the stabilizer landing trim should have been set within acceptable limits at takeoff (p. 28)."
     },
     {
-      "id": "crm_breakdown",
-      "role": "initiating",
-      "evidence": "captain allowed flight engineer to perform takeoff contrary to United Airlines and FAA rules without objection"
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "The captain allowed the second officer, who was not qualified to act as a pilot, to occupy the seat of the first officer and to conduct the takeoff (p. 3). The second officer had failed to qualify as a DC-8 first officer and subsequently lost the B-737 first officer qualification after a year on the line (p. 28)."
+    },
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "The captain and first officer did not have the prescribed crew rest prior to the trip sequence and might have been fatigued (p. 28)."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "After takeoff, the aircraft's pitch attitude steepened abnormally, and it climbed to about 1,000 feet above ground level. The engines surged during the climb causing visible flames to emit from the engines (p. 28)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "After reaching approximately 1,000 feet, the airplane then rolled to the right and descended rapidly to the ground (p. 3)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "An explosion and fireball occurred at impact. The airplane was destroyed by impact and by the postimpact fire (p. 3)."
     }
   ],
   "chain": [
     [
       "stabilizer_trim_failure",
-      "loss_of_control_inflight"
+      "procedural_noncompliance"
     ],
     [
-      "crm_breakdown",
+      "pilot_experience",
       "procedural_noncompliance"
     ],
     [
       "procedural_noncompliance",
-      "stabilizer_trim_failure"
+      "aerodynamic_stall"
     ],
     [
-      "pilot_experience",
+      "fatigue",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
       "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
     ]
   ],
   "events": [
     {
-      "t": 0,
-      "clock": "02:51",
+      "t": -7,
+      "clock": "02:51:08",
       "phase": "takeoff",
-      "actor": "FE",
-      "kind": "crew_action",
-      "text": "Flight engineer performed takeoff from Detroit contrary to FAA and company rules after unauthorized seat swap",
+      "actor": "PF",
+      "text": "The first officer and second officer swapped duty stations about 6.5 seconds before takeoff with the approval of the captain, with the second officer moving to the first officer seat (p. 28).",
+      "kind": "crew_action"
+    },
+    {
+      "t": -3,
+      "clock": "02:51:12",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "text": "Aircraft called for clearance onto runway 21R at 02:49:58 and was cleared for takeoff at 02:50:03 (p. 4).",
+      "kind": "atc"
+    },
+    {
+      "t": 0,
+      "clock": "02:51:15",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "text": "Takeoff roll was normal and the airplane rotated to takeoff attitude one-half to two-thirds of the way down runway 21R (p. 4).",
+      "kind": "system"
+    },
+    {
+      "t": 2,
+      "clock": "02:51:17",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "After liftoff, the airplane's pitch attitude steepened abnormally, and the aircraft began climbing rapidly from the runway surface (p. 4).",
+      "state": {
+        "alt": 50,
+        "pitch": 15
+      },
+      "kind": "system"
+    },
+    {
+      "t": 12,
+      "clock": "02:51:27",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "The airplane climbed to about 1,000 feet above ground level with the engines surging during the climb, causing visible flames to emit from the engines (p. 28).",
+      "state": {
+        "alt": 1000,
+        "pitch": 25
+      },
       "factors": [
-        "crm_breakdown"
-      ]
+        "aerodynamic_stall"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 18,
+      "clock": "02:51:33",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "After reaching approximately 1,000 feet, the airplane rolled to the right and began descending rapidly to the ground (p. 3).",
+      "state": {
+        "alt": 900,
+        "roll": -30,
+        "vs": -3000
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 25,
+      "clock": "02:51:40",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Aircraft continues rapid descent from approximately 500 feet altitude with increasing right roll (p. 3).",
+      "state": {
+        "alt": 500,
+        "roll": -45,
+        "vs": -5000
+      },
+      "kind": "system"
     },
     {
       "t": 30,
-      "clock": null,
-      "phase": "takeoff",
+      "clock": "02:51:45",
+      "phase": "descent",
       "actor": "SYS",
-      "kind": "system",
-      "text": "Aircraft nose pitched up to unusually high position with stabilizer trim at 7.5 units nose-up",
+      "text": "An explosion and fireball occurred as the aircraft impacted terrain. The airplane was destroyed by impact and postimpact fire. The flightcrew, consisting of the captain, the first officer, and the second officer, were killed (p. 3).",
+      "state": {
+        "alt": 0,
+        "pitch": -45
+      },
       "factors": [
-        "stabilizer_trim_failure"
-      ]
-    },
-    {
-      "t": 60,
-      "clock": null,
-      "phase": "takeoff",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Temporary engine surges occurred; witnesses on ground reported occasional fire eruptions from engines",
-      "factors": []
-    },
-    {
-      "t": 90,
-      "clock": null,
-      "phase": "initial_climb",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Aircraft began gradual right roll as wings reached almost 90-degree bank angle",
-      "factors": [
-        "loss_of_control_inflight"
-      ]
-    },
-    {
-      "t": 120,
-      "clock": null,
-      "phase": "initial_climb",
-      "actor": "SYS",
-      "kind": "outcome",
-      "text": "Aircraft at 1000 ft altitude stalled and fell to the ground, exploding on impact",
-      "factors": [
-        "loss_of_control_inflight"
-      ]
+        "cfit"
+      ],
+      "kind": "outcome"
     }
   ],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8307.pdf"
+  ],
+  "asn_id": null,
+  "wikipedia": null,
   "report_links": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8307.pdf",
     "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR83-07.pdf"
   ],
-  "wikipedia": "https://en.wikipedia.org/wiki/United_Airlines_Flight_2885",
-  "asn_id": "19830111-1",
   "interest": 10.57,
+  "curated_id": null,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
-    "confidence": "high",
+    "confidence": "medium",
     "reviewed": false,
     "notes": [
-      "Sections read: SYNOPSIS, History of the Flight, Personnel Information, Human Performance analysis, and Conclusions from NTSB AAR-83-07. Primary cause: flightcrew's failure to follow checklist procedures and detect/correct a mistrimmed stabilizer (7.5 units nose-up) before aircraft became uncontrollable. Contributing factors included unauthorized crew seat swap, inadequate flight engineer training, and crew fatigue. FDR non-functional. Reaffirmed four prior safety recommendations (A-82-64 through A-82-67) regarding digital flight recorder installation."
+      "Synopsis section read for accident details (p. 3-4)",
+      "Conclusions section read for findings (p. 28-29)",
+      "Probable Cause section read (p. 28-29)",
+      "Events extracted from synopsis narrative and witness accounts",
+      "OCR quality degraded in some sections; reconstruction based on available readable text",
+      "No explicit recommendations section found in readable text",
+      "Times in EST per note (p. 4)"
     ]
-  },
-  "curated_id": null,
-  "recommendations": [
-    {
-      "id": "A-82-64",
-      "to": "FAA",
-      "text": "Installation of suitable digital flight recorder systems on air carrier aircraft",
-      "status": "unknown",
-      "trigger_factors": []
-    },
-    {
-      "id": "A-82-65",
-      "to": "FAA",
-      "text": "Installation of suitable digital flight recorder systems on air carrier aircraft",
-      "status": "unknown",
-      "trigger_factors": []
-    },
-    {
-      "id": "A-82-66",
-      "to": "FAA",
-      "text": "Installation of suitable digital flight recorder systems on air carrier aircraft",
-      "status": "unknown",
-      "trigger_factors": []
-    },
-    {
-      "id": "A-82-67",
-      "to": "FAA",
-      "text": "Installation of suitable digital flight recorder systems on air carrier aircraft",
-      "status": "unknown",
-      "trigger_factors": []
-    }
-  ]
+  }
 }

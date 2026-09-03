@@ -100,11 +100,17 @@ def validate_record(path, records_by_id):
         last_t = ev.get("t", 0)
     last_t = None
     for i, line in enumerate((rec.get("cvr") or [])):
-        if last_t is not None and line.get("t", 0) < last_t:
+        if not isinstance(line, dict):
+            errors.append(f"{path.stem}: cvr[{i}] is not an object")
+            continue
+        if last_t is not None and isinstance(line.get("t"), (int, float)) and isinstance(last_t, (int, float)) and line.get("t", 0) < last_t:
             errors.append(f"{path.stem}: cvr[{i}] t={line.get('t')} is before previous t={last_t}")
         last_t = line.get("t", 0)
     for i, r in enumerate((rec.get("recommendations") or [])):
-        for fid in r.get("trigger_factors", []):
+        if not isinstance(r, dict):
+            errors.append(f"{path.stem}: recommendation[{i}] is not an object")
+            continue
+        for fid in (r.get("trigger_factors") or []):
             if fid not in FACTOR_IDS:
                 errors.append(f"{path.stem}: recommendation[{i}] unknown factor '{fid}'")
     for rid in rec.get("related", []):

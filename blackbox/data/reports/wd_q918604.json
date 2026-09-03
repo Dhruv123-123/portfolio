@@ -1,58 +1,77 @@
 {
   "id": "wd_q918604",
-  "qid": "Q918604",
-  "tier": "wikidata",
-  "depth": "sections",
   "title": "British European Airways 706",
   "flight_number": "BE706",
   "date": "1971-10-02",
+  "time_reference": "UTC",
+  "t0": "1971-10-02T10:09:46Z",
   "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "15/72",
+      "report_title": "Civil Aircraft Accident Report 15/72 - British European Airways Vanguard G-APEC",
+      "report_date": "1972-08",
+      "url": "http://www.aaib.gov.uk/cms_resources.cfm?file=/15-1972%20G-APEC.pdf"
+    }
+  ],
   "aircraft": {
     "type": "Vickers Vanguard 951",
-    "manufacturer": "Vickers",
     "family": "Vanguard",
-    "registration": "G-APEC"
+    "manufacturer": "Vickers",
+    "registration": "G-APEC",
+    "msn": "706",
+    "engines": "4 x Rolls-Royce Tyne Type 506"
   },
   "operator": "British European Airways",
   "route": {
+    "from": "LHR",
     "from_name": "London Heathrow Airport",
+    "to": "SZG",
     "to_name": "Salzburg Airport"
   },
   "location": {
     "name": "Aarsele",
-    "country": "Belgium"
+    "country": "Belgium",
+    "lat": null,
+    "lon": null
   },
   "phase": "cruise",
   "occupants": 63,
   "fatalities": 63,
+  "injuries_serious": 0,
+  "damage": "destroyed",
   "category": "LOC-I",
-  "summary": "Flight 706 took off from Heathrow and was handed over to Brussels Air Traffic Control. The aircraft was climbing through 19,000 feet when the crew suddenly transmitted we are going down and mayday multiple times, stating the aircraft was out of control with no rudder control. Witnesses on the ground saw the tailplane detach and the aircraft enter a nose dive. The crash resulted from failure of the rear pressure bulkhead due to undetected metal fatigue corrosion.",
-  "probable_cause": "Failure of the rear pressure bulkhead caused by corrosion at the rear of the aircraft from repeated pressurization cycles. The corrosion was undetected due to inadequate inspection techniques and intervals. The resulting rapid depressurization of the tail section caused the tailplane to separate, resulting in loss of control.",
+  "summary": "British European Airways Flight 706, a Vickers Vanguard, crashed near Aarsele, Belgium on October 2, 1971 while climbing through flight level 190. The rear pressure bulkhead failed due to undetected metal fatigue corrosion, causing rapid depressurization of the tail section and separation of both horizontal tailplanes. The aircraft entered an uncontrollable dive from which recovery was impossible. All 63 occupants perished.",
+  "probable_cause": "The accident was caused by the rupture of the rear pressure bulkhead, which led to the separation of both tailplanes in flight and caused the aircraft to dive into the ground. The rupture occurred due to undetected metal fatigue corrosion at the rear pressure bulkhead. (p. 36)",
   "factors": [
     {
       "id": "inadequate_inspection",
       "role": "latent",
-      "evidence": "Inspection intervals were too long and radiographic data could not be properly interpreted; corrosion visible from outside but not regularly inspected by staff"
+      "evidence": "Inspection techniques used for detecting corrosion at station 1223 were inadequate; radiographic technique used was ineffective at detecting corrosion due to difficulty interpreting photographic plates from complex structure (p. 34)"
     },
     {
       "id": "metal_fatigue",
       "role": "contributing",
-      "evidence": "Repeated pressurization cycles caused crack to grow weakening the pressure bulkhead structure until unable to withstand further stress"
+      "evidence": "Severe corrosion present at joint between fuselage skin and rear pressure bulkhead for unknown period prior to accident; progressive crack in bulkhead grew through at least fourteen successive pressurization cycles (p. 34)"
     },
     {
       "id": "pressure_bulkhead_failure",
-      "role": "contributing",
-      "evidence": "Rear pressure bulkhead failed from undetected corrosion and stress"
+      "role": "initiating",
+      "evidence": "Rear pressure bulkhead ruptured in cruising flight at FL 190 when corrosion-initiated crack exceeded critical crack length (p. 36)"
     },
     {
       "id": "structural_failure",
       "role": "outcome",
-      "evidence": "Tailplane separated following depressurization of tail section"
+      "evidence": "Rapid inflation of tailcone and empennages from bulkhead rupture imposed high differential pressure causing upper tailplane skin panels to detach from main structure; both horizontal tailplanes and elevators separated in flight (p. 33)"
     },
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "Aircraft entered uncontrollable dive and crashed after tail separation"
+      "evidence": "Loss of aerodynamic download from horizontal tail surfaces caused aircraft to pitch rapidly nose-down; entered steep dive from which it was not possible to recover (p. 33)"
     }
   ],
   "chain": [
@@ -75,50 +94,162 @@
   ],
   "events": [
     {
-      "t": 0,
+      "t": -400,
       "clock": "09:34",
       "phase": "takeoff",
       "actor": "PF",
-      "kind": "crew_action",
-      "text": "Flight 706 took off from runway 28L of London Heathrow with 55 passengers and 8 crew; climbed through 14,200 feet at Dover VOR"
+      "kind": "system",
+      "text": "Flight 706 took off from runway 28L at London Heathrow with 55 passengers and 8 crew members; climbed through 14,200 feet at Dover VOR (p. 3)",
+      "factors": []
     },
     {
-      "t": 60,
+      "t": -290,
       "clock": "10:01",
       "phase": "climb",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Handed over to Brussels Air Traffic Control; aircraft climbing toward flight level 190"
+      "text": "Aircraft handed over to Brussels Air Traffic Control at mid-channel on airway Green One; satisfactory two-way communications established; aircraft climbing toward flight level 190 (p. 3)",
+      "factors": []
     },
     {
-      "t": 120,
-      "clock": "10:05",
-      "phase": "cruise",
-      "actor": "PF",
-      "kind": "crew_speech",
-      "text": "Crew reported over Wulpen VOR level at flight level 190; all appeared normal"
+      "t": -240,
+      "clock": "10:04",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft reported passing over Wulpen VOR with aircraft level at FL 190; flight proceeding normally with no indication of abnormality (p. 3)",
+      "factors": []
     },
     {
-      "t": 180,
+      "t": -10,
       "clock": "10:09",
       "phase": "cruise",
       "actor": "PF",
       "kind": "crew_speech",
-      "text": "Crew transmitted we are going down multiple times; mayday mayday mayday; out of control; no rudder control"
+      "text": "Aircraft in level flight at FL 190 with flight proceeding normally; flight recorder ceased to function indicating start of structural failure sequence (p. 33)",
+      "factors": []
     },
     {
-      "t": 210,
-      "clock": "10:10",
+      "t": 0,
+      "clock": "10:09:46",
+      "phase": "cruise",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Rear pressure bulkhead ruptured due to corrosion-initiated crack exceeding critical length; rapid inflation of tailcone and empennages imposed high differential pressure across tailplane skins (p. 36)",
+      "factors": [
+        "pressure_bulkhead_failure"
+      ]
+    },
+    {
+      "t": 1,
+      "clock": "10:09:47",
+      "phase": "cruise",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Crew transmitted we are going down, 706, we're going down immediately followed by MAYDAY call repeated several times (p. 3)",
+      "factors": []
+    },
+    {
+      "t": 2,
+      "clock": "10:09:48",
+      "phase": "cruise",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Fragmented and garbled transmissions continuing with phrases we're going down vertically and out of control (p. 3)",
+      "factors": []
+    },
+    {
+      "t": 5,
+      "clock": "10:09:51",
       "phase": "cruise",
       "actor": "SYS",
-      "kind": "outcome",
-      "text": "Witnesses saw tailplane detach; aircraft entered nose-dive and crashed into farmland near Aarsele Belgium with all 63 on board killed",
+      "kind": "system",
+      "text": "Upper tailplane skin panels became detached from main structure as differential pressure imposed high loads; existing aerodynamic loads caused both horizontal tailplanes to become detached in flight (p. 33)",
       "factors": [
-        "structural_failure",
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 7,
+      "clock": "10:09:53",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Loss of aerodynamic download from separated tailplanes caused aircraft to pitch rapidly nose-down (p. 33)",
+      "factors": []
+    },
+    {
+      "t": 54,
+      "clock": "10:10:40",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft in steep dive with longitudinal attitude between 20\u00b0 and 30\u00b0 over vertical, rotating slowly in clockwise direction about longitudinal axis at high forward speed; transmissions ceased abruptly at ground impact (p. 3)",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 55,
+      "clock": "10:10:41",
+      "phase": "descent",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft struck open farmland near Aarsele Belgium in steep dive; completely destroyed by ground impact and subsequent fire; all 63 occupants killed (p. 3)",
+      "factors": [
         "loss_of_control_inflight"
       ]
     }
   ],
+  "cvr": [
+    {
+      "t": 0,
+      "clock": "10:09:46",
+      "speaker": "PF",
+      "text": "we are going down, 706, we're going down",
+      "translation": null
+    },
+    {
+      "t": 1,
+      "clock": "10:09:47",
+      "speaker": "PF",
+      "text": "MAYDAY MAYDAY MAYDAY",
+      "translation": null
+    },
+    {
+      "t": 5,
+      "clock": "10:09:51",
+      "speaker": "PF",
+      "text": "we're going down vertically",
+      "translation": null
+    },
+    {
+      "t": 8,
+      "clock": "10:09:54",
+      "speaker": "PF",
+      "text": "out of control",
+      "translation": null
+    }
+  ],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Introduction of improved inspection techniques for detecting corrosion in rear pressure bulkhead",
+    "Modification to Vanguard aircraft to improve inspection access to station 1223 area",
+    "Increased frequency of inspection of bonded joints in pressure bulkheads",
+    "Recommendation to install modification L 40 on Vanguard aircraft to strengthen tailplane attachments"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/15-1972%20G-APEC.pdf",
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/15-1972%20G-APEC%20Append.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "sections",
+  "qid": "Q918604",
+  "asn_id": "19711002-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/British_European_Airways_Flight_706",
   "report_links": [
     "https://news.google.com/newspapers?id=3KlOAAAAIBAJ&sjid=tQkEAAAAIBAJ&pg=4143,409534&dq=british+european+airways+belgi+um&hl=en",
     "http://aviation-safety.net/database/record.php?id=19711002-1",
@@ -129,31 +260,20 @@
     "http://www.aaib.gov.uk/cms_resources.cfm?file=/15-1972%20G-APEC.pdf",
     "http://www.aaib.gov.uk/cms_resources.cfm?file=/15-1972%20G-APEC%20Append.pdf"
   ],
-  "wikipedia": "https://en.wikipedia.org/wiki/British_European_Airways_Flight_706",
-  "asn_id": "19711002-1",
   "interest": 14.59,
+  "curated_id": null,
   "extraction": {
     "method": "llm",
-    "model": "claude-haiku-4-5",
+    "model": "claude-haiku-4-5-20251001",
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Report read from /home/user/portfolio/blackbox/cache/text/wd_q918604.txt",
-      "AAIB investigation established clear cause from corrosion and inadequate inspection",
-      "sabotage theories investigated and ruled out"
+      "AAIB Civil Aircraft Accident Report 15/72 read from sections 1.1 (History of the flight), 2.1 (Analysis), 2.2 (Conclusions)",
+      "11 events extracted from investigation timeline with UTC times",
+      "Key structural analysis from section 2.1.2 establishing rupture sequence",
+      "Corrosion and inspection findings from sections 2.1.4 and 2.1.5",
+      "CVR excerpts quoted from report transmissions",
+      "Safety changes implemented following accident"
     ]
-  },
-  "curated_id": null,
-  "sources": [
-    "http://www.aaib.gov.uk/cms_resources.cfm?file=/15-1972%20G-APEC.pdf"
-  ],
-  "recommendations": [],
-  "agencies": [
-    {
-      "code": "AAIB",
-      "name": "Air Accidents Investigation Branch",
-      "country": "United Kingdom",
-      "role": "lead"
-    }
-  ]
+  }
 }

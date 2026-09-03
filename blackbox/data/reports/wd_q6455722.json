@@ -1,213 +1,220 @@
 {
-  "id": "wd_q6455722",
-  "qid": "Q6455722",
-  "tier": "wikidata",
-  "depth": "sections",
-  "title": "L'Express Airlines 508",
-  "flight_number": "EA508",
-  "date": "1991-07-10",
-  "time_reference": "CDT",
-  "t0": "1991-07-10T18:11:27-05:00",
-  "agency": "NTSB",
-  "agencies": [
-    {
-      "code": "NTSB",
-      "name": "National Transportation Safety Board",
-      "country": "United States",
-      "role": "lead",
-      "report_id": "AAR-92-01",
-      "report_date": "1992-03-03"
-    }
-  ],
-  "aircraft": {
-    "type": "Beechcraft C99",
-    "manufacturer": "Beechcraft",
-    "family": "99",
-    "registration": "N7217L"
-  },
-  "operator": "L'Express Airlines",
-  "route": {
-    "from_name": "Mobile",
-    "to_name": "Birmingham"
-  },
-  "location": {
-    "name": "Ensley neighborhood",
-    "country": "United States"
-  },
-  "phase": "approach",
-  "occupants": 15,
-  "fatalities": 13,
-  "damage": "destroyed",
-  "category": "LOC-I",
-  "summary": "L'Express Flight 508, a Beech C99 turboprop, crashed on July 10, 1991, while conducting an ILS approach to Birmingham Airport in severe thunderstorm activity. The aircraft experienced a significant roll to the left, an extreme updraft, loss of directional control, and crashed into residential areas in the Ensley neighborhood.",
-  "probable_cause": "The decision of the captain to initiate and continue an instrument approach into clearly identified thunderstorm activity, resulting in a loss of control of the airplane from which the flightcrew was unable to recover and subsequent collision with obstacles and the terrain. (p. 81)",
-  "factors": [
-    {
-      "id": "convective_weather",
-      "role": "initiating",
-      "evidence": "Strong to severe thunderstorms developed in the vicinity of the Birmingham Airport showing VIP 3 level cells along the final approach course. (p. 73)"
-    },
-    {
-      "id": "crew_decision_error",
-      "role": "contributing",
-      "evidence": "Despite ATIS broadcasts mentioning thunderstorms and explicit weather warnings from ATC, the captain elected to continue the approach instead of diverting or holding. (p. 73)"
-    },
-    {
-      "id": "loss_of_control_inflight",
-      "role": "outcome",
-      "evidence": "After entering severe thunderstorm cell, aircraft experienced significant roll to left and extreme updraft, crew lost directional control unable to recover. (p. 54)"
-    },
-    {
-      "id": "cfit",
-      "role": "outcome",
-      "evidence": "Aircraft crashed into trees on northwest slope then impacted two houses in Ensley residential area of Birmingham. (p. 54)"
-    }
-  ],
-  "chain": [
-    ["convective_weather", "loss_of_control_inflight"],
-    ["crew_decision_error", "loss_of_control_inflight"],
-    ["loss_of_control_inflight", "cfit"]
-  ],
-  "events": [
-    {
-      "t": -3300,
-      "clock": "16:05",
-      "phase": "climb",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Flight 508 departed New Orleans International Airport carrying one passenger."
-    },
-    {
-      "t": -2700,
-      "clock": "16:50",
-      "phase": "cruise",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Flight arrived at Mobile Bates Field on schedule after routine flight."
-    },
-    {
-      "t": -2400,
-      "clock": "17:05",
-      "phase": "climb",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "After crew change and boarding 12 additional passengers, Flight 508 departed Mobile for Birmingham as Part 135 commuter flight. (p. 2)"
-    },
-    {
-      "t": -960,
-      "clock": "17:49",
-      "phase": "cruise",
-      "actor": "PF",
-      "kind": "crew_action",
-      "text": "First officer listened to Birmingham ATIS; flightcrew requested and received authorization to deviate around cloud buildup. (p. 2)"
-    },
-    {
-      "t": -660,
-      "clock": "17:54",
-      "phase": "descent",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Flightcrew began descent checklist and listened to updated ATIS information. (p. 2)"
-    },
-    {
-      "t": -252,
-      "clock": "18:05:57",
-      "phase": "approach",
-      "actor": "PF",
-      "kind": "crew_action",
-      "text": "Flightcrew heard ATIS information X-ray: 'visibility two and one-half miles with thunderstorm and rain shower...Thunderstorm overhead moving southeast.' (p. 5)"
-    },
-    {
-      "t": -149,
-      "clock": "18:08:18",
-      "phase": "approach",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "Captain alerted first officer who was flying: 'Okay watch out for windshear okay.' Approach flaps were lowered. (p. 6)"
-    },
-    {
-      "t": -87,
-      "clock": "18:09",
-      "phase": "approach",
-      "actor": "CAPT",
-      "kind": "crew_speech",
-      "text": "Captain told first officer: 'If you don't feel comfortable about this let me know.' First officer responded: 'Okay, so far it's all right.' Rain sound recorded on CVR. (p. 6)"
-    },
-    {
-      "t": -22,
-      "clock": "18:10:02",
-      "phase": "approach",
-      "actor": "PF",
-      "kind": "crew_speech",
-      "text": "Flightcrew reported to radar controller: 'So far it's good, little bit of rain and pretty light.' Airplane entering IFR conditions. (p. 3)"
-    },
-    {
-      "t": -11,
-      "clock": "18:10:52",
-      "phase": "approach",
-      "actor": "ATC",
-      "kind": "atc",
-      "text": "Radar controller instructed LEX508 to contact the Birmingham tower."
-    },
-    {
-      "t": 0,
-      "clock": "18:11:27",
-      "phase": "approach",
-      "actor": "SYS",
-      "kind": "outcome",
-      "text": "Aircraft impacted terrain at 330 30'10\" N, 860 52'28\" W. Structural examination showed all components intact prior to impact, left wing initially struck tree in descent greater than 20 degrees. (p. 54)"
-    }
-  ],
-  "cvr": [],
-  "recommendations": [
-    {
-      "id": "A-92-18",
-      "to": "FAA",
-      "text": "Develop and institute criteria through a joint government/industry effort that can be used by flightcrews to evaluate or index the extent of thunderstorm hazards present to assist them in the go/no go decision-making process.",
-      "status": "closed_acceptable",
-      "trigger_factors": ["convective_weather"]
-    },
-    {
-      "id": "A-92-19",
-      "to": "FAA",
-      "text": "Require that airline airborne weather radar training programs include information on the specific types of radar that the flightcrew will be using and require that information on the limitations and recommended operating procedures for the radar be referenced during the training.",
-      "status": "closed_acceptable",
-      "trigger_factors": ["convective_weather"]
-    },
-    {
-      "id": "A-92-20",
-      "to": "FAA",
-      "text": "Require that recurrent training and proficiency programs for instrument-rated pilots include techniques for recognizing and recovering from unusual attitudes.",
-      "status": "closed_acceptable",
-      "trigger_factors": ["loss_of_control_inflight"]
-    }
-  ],
-  "dissent": [],
-  "safety_changes": [],
-  "related": [],
-  "fdr": null,
-  "sources": [
-    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR92-01.pdf"
-  ],
-  "wikipedia": "https://en.wikipedia.org/wiki/L%27Express_Airlines_Flight_508",
-  "asn_id": "19910710-0",
-  "interest": 11.1,
-  "curated_id": null,
-  "report_links": [
-    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR92-01.pdf"
-  ],
-  "extraction": {
-    "method": "llm",
-    "model": "claude-haiku-4-5-20251001",
-    "confidence": "high",
-    "reviewed": false,
-    "notes": [
-      "Read History of Flight (pages 1-15 with CVR details)",
-      "Read Analysis section (pages 54-70)",
-      "Read Conclusions, Findings, and Probable Cause (pages 73-81)",
-      "Read Recommendations (pages 81-82)",
-      "11 NEW events with clock times from detailed report narrative",
-      "Page citations from OCR <<< page N >>> markers"
-    ]
+ "id": "wd_q6455722",
+ "qid": "Q6455722",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "L'Express Airlines 508",
+ "flight_number": "EA508",
+ "date": "1991-07-10",
+ "time_reference": "CDT",
+ "t0": "1991-07-10T18:11:27-05:00",
+ "agency": "NTSB",
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead",
+   "report_id": "AAR-92-01",
+   "report_date": "1992-03-03"
   }
+ ],
+ "aircraft": {
+  "type": "Beechcraft C99",
+  "manufacturer": "Beechcraft",
+  "family": "99",
+  "registration": "N7217L"
+ },
+ "operator": "L'Express Airlines",
+ "route": {
+  "from_name": "Mobile",
+  "to_name": "Birmingham"
+ },
+ "location": {
+  "name": "Ensley neighborhood",
+  "country": "United States"
+ },
+ "phase": "approach",
+ "occupants": 15,
+ "fatalities": 13,
+ "damage": "destroyed",
+ "category": "LOC-I",
+ "summary": "L'Express Flight 508, a Beech C99 turboprop, crashed on July 10, 1991, while conducting an ILS approach to Birmingham Airport in severe thunderstorm activity. The aircraft experienced a significant roll to the left, an extreme updraft, loss of directional control, and crashed into residential areas in the Ensley neighborhood.",
+ "probable_cause": "The decision of the captain to initiate and continue an instrument approach into clearly identified thunderstorm activity, resulting in a loss of control of the airplane from which the flightcrew was unable to recover and subsequent collision with obstacles and the terrain. (p. 81)",
+ "factors": [
+  {
+   "id": "convective_weather",
+   "role": "initiating",
+   "evidence": "Strong to severe thunderstorms developed in the vicinity of the Birmingham Airport showing VIP 3 level cells along the final approach course. (p. 73)"
+  },
+  {
+   "id": "loss_of_control_inflight",
+   "role": "outcome",
+   "evidence": "After entering severe thunderstorm cell, aircraft experienced significant roll to left and extreme updraft, crew lost directional control unable to recover. (p. 54)"
+  },
+  {
+   "id": "cfit",
+   "role": "outcome",
+   "evidence": "Aircraft crashed into trees on northwest slope then impacted two houses in Ensley residential area of Birmingham. (p. 54)"
+  }
+ ],
+ "chain": [
+  [
+   "convective_weather",
+   "loss_of_control_inflight"
+  ],
+  [
+   "loss_of_control_inflight",
+   "cfit"
+  ]
+ ],
+ "events": [
+  {
+   "t": -3300,
+   "clock": "16:05",
+   "phase": "climb",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Flight 508 departed New Orleans International Airport carrying one passenger."
+  },
+  {
+   "t": -2700,
+   "clock": "16:50",
+   "phase": "cruise",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Flight arrived at Mobile Bates Field on schedule after routine flight."
+  },
+  {
+   "t": -2400,
+   "clock": "17:05",
+   "phase": "climb",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "After crew change and boarding 12 additional passengers, Flight 508 departed Mobile for Birmingham as Part 135 commuter flight. (p. 2)"
+  },
+  {
+   "t": -960,
+   "clock": "17:49",
+   "phase": "cruise",
+   "actor": "PF",
+   "kind": "crew_action",
+   "text": "First officer listened to Birmingham ATIS; flightcrew requested and received authorization to deviate around cloud buildup. (p. 2)"
+  },
+  {
+   "t": -660,
+   "clock": "17:54",
+   "phase": "descent",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Flightcrew began descent checklist and listened to updated ATIS information. (p. 2)"
+  },
+  {
+   "t": -252,
+   "clock": "18:05:57",
+   "phase": "approach",
+   "actor": "PF",
+   "kind": "crew_action",
+   "text": "Flightcrew heard ATIS information X-ray: 'visibility two and one-half miles with thunderstorm and rain shower...Thunderstorm overhead moving southeast.' (p. 5)"
+  },
+  {
+   "t": -149,
+   "clock": "18:08:18",
+   "phase": "approach",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Captain alerted first officer who was flying: 'Okay watch out for windshear okay.' Approach flaps were lowered. (p. 6)"
+  },
+  {
+   "t": -87,
+   "clock": "18:09",
+   "phase": "approach",
+   "actor": "CAPT",
+   "kind": "crew_speech",
+   "text": "Captain told first officer: 'If you don't feel comfortable about this let me know.' First officer responded: 'Okay, so far it's all right.' Rain sound recorded on CVR. (p. 6)"
+  },
+  {
+   "t": -22,
+   "clock": "18:10:02",
+   "phase": "approach",
+   "actor": "PF",
+   "kind": "crew_speech",
+   "text": "Flightcrew reported to radar controller: 'So far it's good, little bit of rain and pretty light.' Airplane entering IFR conditions. (p. 3)"
+  },
+  {
+   "t": -11,
+   "clock": "18:10:52",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Radar controller instructed LEX508 to contact the Birmingham tower."
+  },
+  {
+   "t": 0,
+   "clock": "18:11:27",
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "Aircraft impacted terrain at 330 30'10\" N, 860 52'28\" W. Structural examination showed all components intact prior to impact, left wing initially struck tree in descent greater than 20 degrees. (p. 54)"
+  }
+ ],
+ "cvr": [],
+ "recommendations": [
+  {
+   "id": "A-92-18",
+   "to": "FAA",
+   "text": "Develop and institute criteria through a joint government/industry effort that can be used by flightcrews to evaluate or index the extent of thunderstorm hazards present to assist them in the go/no go decision-making process.",
+   "status": "closed_acceptable",
+   "trigger_factors": [
+    "convective_weather"
+   ]
+  },
+  {
+   "id": "A-92-19",
+   "to": "FAA",
+   "text": "Require that airline airborne weather radar training programs include information on the specific types of radar that the flightcrew will be using and require that information on the limitations and recommended operating procedures for the radar be referenced during the training.",
+   "status": "closed_acceptable",
+   "trigger_factors": [
+    "convective_weather"
+   ]
+  },
+  {
+   "id": "A-92-20",
+   "to": "FAA",
+   "text": "Require that recurrent training and proficiency programs for instrument-rated pilots include techniques for recognizing and recovering from unusual attitudes.",
+   "status": "closed_acceptable",
+   "trigger_factors": [
+    "loss_of_control_inflight"
+   ]
+  }
+ ],
+ "dissent": [],
+ "safety_changes": [],
+ "related": [],
+ "fdr": null,
+ "sources": [
+  "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR92-01.pdf"
+ ],
+ "wikipedia": "https://en.wikipedia.org/wiki/L%27Express_Airlines_Flight_508",
+ "asn_id": "19910710-0",
+ "interest": 11.1,
+ "curated_id": null,
+ "report_links": [
+  "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR92-01.pdf"
+ ],
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5-20251001",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Read History of Flight (pages 1-15 with CVR details)",
+   "Read Analysis section (pages 54-70)",
+   "Read Conclusions, Findings, and Probable Cause (pages 73-81)",
+   "Read Recommendations (pages 81-82)",
+   "11 NEW events with clock times from detailed report narrative",
+   "Page citations from OCR <<< page N >>> markers",
+   "auto-repair: dropped unknown factor crew_decision_error"
+  ]
+ }
 }

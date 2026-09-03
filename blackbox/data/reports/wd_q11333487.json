@@ -1,0 +1,248 @@
+{
+ "id": "wd_q11333487",
+ "qid": "Q11333487",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "Flying Tiger Line 45",
+ "flight_number": "FTL45",
+ "date": "1970-07-27",
+ "time_reference": "local",
+ "t0": "1970-07-27T11:36:00+09:00",
+ "agency": "NTSB",
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead",
+   "report_id": "AAR-72-10"
+  }
+ ],
+ "aircraft": {
+  "type": "Douglas DC-8-63F",
+  "family": "DC-8",
+  "manufacturer": "Douglas",
+  "registration": "N785FT"
+ },
+ "operator": "Flying Tiger Line",
+ "route": {
+  "from": "RJTT",
+  "from_name": "Tokyo International Airport",
+  "to": "ROAH",
+  "to_name": "Naha Air Base"
+ },
+ "location": {
+  "name": "Naha Air Base, approach to Runway 18",
+  "country": "Japan (Okinawa)"
+ },
+ "phase": "approach",
+ "occupants": 4,
+ "fatalities": 4,
+ "damage": "destroyed",
+ "category": "CFIT",
+ "summary": "Flying Tiger Line Flight 45, a Douglas DC-8-63F, crashed into the water during approach to Runway 18 at Naha Air Base on a precision radar approach. The aircraft descended below the glidepath through a heavy rain shower, losing altitude awareness. The crew attempted to establish visual contact but was blinded by the sudden transition from dense rain to bright sunlight. The aircraft struck the water 2,200 feet short of the runway threshold, killing all four crew members.",
+ "probable_cause": "The probable cause of this accident was an unarrested rate of descent due to inattention of the crew to instrument altitude references while the pilot was attempting to establish outside visual contact in meteorological conditions which precluded such contact during that segment of a precision radar approach inbound from the Decision Height.",
+ "factors": [
+  {
+   "id": "low_visibility",
+   "role": "contributing",
+   "evidence": "Heavy rain shower at minimum descent altitude with visibility less than 1 mile (p. 5). The area surrounding the rain shower was brightly lighted by midday sunlight (p. 19)."
+  },
+  {
+   "id": "spatial_disorientation",
+   "role": "contributing",
+   "evidence": "The sudden increase in visibility from less than 1 mile to 10-100 times brighter caused Ganzfeld phenomenon (homogeneous visual field of similar brightness), preventing differentiation of outside objects and instrument references (p. 16)."
+  },
+  {
+   "id": "loss_of_situational_awareness",
+   "role": "contributing",
+   "evidence": "Crew lost external visual reference completely upon entering the rain shower and could not refocus on instruments during the final seconds due to visual glare (p. 16)."
+  },
+  {
+   "id": "crm_breakdown",
+   "role": "contributing",
+   "evidence": "Company flight operating procedures were not explicit regarding altitude callouts by captain and first officer during instrument approaches (p. 20)."
+  },
+  {
+   "id": "cfit",
+   "role": "outcome",
+   "evidence": "Aircraft struck the water approximately 2,200 feet short of the runway threshold lights after descending below the glidepath (p. 5)."
+  }
+ ],
+ "chain": [
+  [
+   "low_visibility",
+   "spatial_disorientation"
+  ],
+  [
+   "spatial_disorientation",
+   "loss_of_situational_awareness"
+  ],
+  [
+   "loss_of_situational_awareness",
+   "cfit"
+  ],
+  [
+   "crm_breakdown",
+   "cfit"
+  ]
+ ],
+ "events": [
+  {
+   "t": -420,
+   "clock": "1129:00",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Radar contact established 18 miles northwest of Naha Air Base",
+   "factors": []
+  },
+  {
+   "t": -300,
+   "clock": "1131:00",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Flight advised of reduced visibility on final approach with approach lights and strobe lights on",
+   "factors": []
+  },
+  {
+   "t": -240,
+   "clock": "1132:00",
+   "phase": "approach",
+   "actor": "CAPT",
+   "kind": "crew_speech",
+   "text": "Captain mentioned a rain shower which was regarded to have been over the field",
+   "factors": []
+  },
+  {
+   "t": -234,
+   "clock": "1132:46",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "New altimeter setting of 29.84 inches given to crew and acknowledged",
+   "factors": []
+  },
+  {
+   "t": -186,
+   "clock": "1133:49",
+   "phase": "approach",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Landing checklist completed including full flaps, gear down and locked, and spoilers armed",
+   "factors": []
+  },
+  {
+   "t": -163,
+   "clock": "1134:53",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Crew advised aircraft slightly below glidepath, 3 miles from touchdown",
+   "factors": []
+  },
+  {
+   "t": -149,
+   "clock": "1135:07",
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Sound similar to blowing of rain removal air began and continued steadily",
+   "factors": []
+  },
+  {
+   "t": -105,
+   "clock": "1135:51",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Controller warned crew at minimum altitude going well below glidepath, too low",
+   "factors": [
+    "low_visibility",
+    "loss_of_situational_awareness"
+   ]
+  },
+  {
+   "t": -42,
+   "clock": "1135:54",
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "crew_speech",
+   "text": "Unidentified person in cockpit called out altitude callouts at approximately 85 feet msl: hundred feet, seventy feet, fifty feet",
+   "factors": []
+  },
+  {
+   "t": 0,
+   "clock": "1136:00",
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "Aircraft struck water approximately 2,200 feet short of runway threshold lights while at estimated altitude of 75-100 feet and in heavy rain shower",
+   "factors": [
+    "cfit"
+   ]
+  }
+ ],
+ "recommendations": [
+  {
+   "id": null,
+   "to": "FAA",
+   "text": "The Federal Aviation Administration reemphasize to air carrier flight-supervisory and pilot personnel the pertinent altitude awareness recommendations",
+   "status": "unknown"
+  },
+  {
+   "id": null,
+   "to": "FAA",
+   "text": "The Federal Aviation Administration issue an Advisory Circular incorporating excerpts of this report, stressing to all instrument and airline transport rated pilots the need for continuous surveillance of flight instruments when operating in instrument meteorological conditions",
+   "status": "unknown"
+  },
+  {
+   "id": null,
+   "to": "FAA",
+   "text": "The Federal Aviation Administration determine that the Operations Manuals of all air carriers, commercial operators, and air taxi operators are explicit, particularly with regard to altitude callouts when the copilot is flying the airplane during an instrument approach",
+   "status": "unknown"
+  },
+  {
+   "id": null,
+   "to": "Flying Tiger Line",
+   "text": "Flying Tiger Line, Inc., amend its flight operations procedures to set forth specifically the responsibilities and duties, particularly with regard to altitude callouts, of both captain and first officer when the latter is flying the aircraft on an instrument approach",
+   "status": "unknown"
+  }
+ ],
+ "dissent": [
+  {
+   "agency": "NTSB",
+   "topic": "probable cause",
+   "position": "Member Francis H. McADAMS argued the controller's delayed and inaccurate altitude transmissions were a contributing factor, noting the controller was late in advising the aircraft had reached minimum altitude (5-6 seconds after the aircraft had descended through it)"
+  }
+ ],
+ "safety_changes": [],
+ "related": [],
+ "fdr": null,
+ "sources": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7210.pdf"
+ ],
+ "asn_id": null,
+ "wikipedia": "https://en.wikipedia.org/wiki/Flying_Tiger_Line_Flight_45",
+ "report_links": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7210.pdf",
+  "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR72-10.pdf"
+ ],
+ "interest": 10.36,
+ "curated_id": null,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5-20251001",
+  "confidence": "medium",
+  "reviewed": false,
+  "notes": [
+   "Report read: Synopsis, Analysis and Conclusions, Recommendations sections",
+   "Events extracted from CVR transcript and flight data with clock times from local time recordings",
+   "Probable cause and factor evidence taken directly from report sections 2.2(b)",
+   "OCR artifacts in source text required interpretation; probable cause text cleaned from OCR noise",
+   "auto-repair: cvr was null; factor disorientation -> spatial_disorientation; dropped unknown factor altitude_error_indecision; factor crew_coordination -> crm_breakdown; event factors ['altitude_error_indecision'] -> []; event factors ['altitude_error_indecision'] -> []"
+  ]
+ },
+ "cvr": []
+}

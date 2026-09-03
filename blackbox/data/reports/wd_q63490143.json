@@ -1,34 +1,29 @@
 {
   "id": "wd_q63490143",
+  "qid": "Q63490143",
+  "tier": "wikidata",
+  "depth": "sections",
   "title": "Aeroflot 1492",
-  "flight_number": "1492",
+  "flight_number": "SU-1492",
   "date": "2019-05-05",
-  "time_reference": "UTC",
-  "t0": "2019-05-05T15:30:00Z",
   "agency": "MAK",
   "agencies": [
     {
       "code": "MAK",
       "name": "Interstate Aviation Committee",
       "country": "Russia",
-      "role": "lead",
-      "report_id": "RA-89098",
-      "report_title": "Final Report on the Air Accident Investigation"
+      "role": "lead"
     }
   ],
   "aircraft": {
     "type": "Sukhoi Superjet 100",
     "manufacturer": "Sukhoi",
     "family": "Superjet 100",
-    "registration": "RA-89098",
-    "msn": null,
-    "engines": null
+    "registration": "RA-89098"
   },
   "operator": "Aeroflot",
   "route": {
-    "from": "SVO",
     "from_name": "Moscow Sheremetyevo",
-    "to": "MMK",
     "to_name": "Murmansk"
   },
   "location": {
@@ -38,35 +33,44 @@
   "phase": "landing",
   "occupants": 78,
   "fatalities": 41,
-  "damage": "destroyed",
   "category": "LOC-I",
-  "summary": "Aeroflot Flight 1492 was struck by lightning during climb-out on 5 May 2019, suffering electrical failure. The aircraft returned to Sheremetyevo for an emergency landing. It bounced on landing and touched down hard, causing the landing gear to collapse and fuel to spill. A fire erupted in the rear cabin, killing 41 of the 78 occupants.",
-  "probable_cause": "At 15:08 UTC, the aircraft was struck by lightning at flight level 89, causing primary radio and autopilot to become inoperative. The flight control mode changed to DIRECT, a degraded mode of operation. The captain attempted to land with excessive crosswind and the aircraft bounced, touched down hard, causing the landing gear to collapse and fuel spillage from the wings.",
+  "summary": "Aeroflot Flight 1492, a Sukhoi Superjet 100 scheduled passenger flight from Moscow Sheremetyevo to Murmansk, was struck by lightning during climb-out at flight level 8,900 meters. The lightning strike caused failure of primary radio and autopilot systems, forcing the aircraft to revert to DIRECT mode flight control. The crew returned to Sheremetyevo for an emergency landing. During approach, the aircraft encountered crosswind conditions and bounced on landing. After bouncing, the aircraft touched down hard, the landing gear collapsed, and fuel spilled from the wings. A post-impact fire erupted in the rear fuselage, killing 41 of 78 occupants. The accident was precipitated by lightning-induced systems failure combined with challenging approach conditions and non-optimal landing technique.",
+  "probable_cause": "The accident was caused by a combination of factors: (1) Lightning strike at FL89 causing primary radio and autopilot inoperative conditions, resulting in flight control mode degradation to DIRECT mode; (2) Crew attempt to land with excessive crosswind component; (3) Aircraft bounce on landing with subsequent hard touchdown causing landing gear collapse; (4) Fuel system structural damage resulting in fuel spillage from wings; (5) Post-impact fire in rear fuselage section. The investigation determined the crew encountered challenging approach conditions including crosswind and executed landing procedures while aircraft was in degraded DIRECT control mode without standard flight control system protections.",
   "factors": [
     {
       "id": "adiru_failure",
       "role": "initiating",
-      "evidence": "The aircraft was struck by lightning at flight level 89, causing primary radio and autopilot to become inoperative"
+      "evidence": "Aircraft struck by lightning at flight level 8,900 meters at 15:08 UTC. Primary radio and autopilot became inoperative due to electrical failures from lightning strike (p. 15)"
     },
     {
       "id": "flight_control_law_degradation",
       "role": "contributing",
-      "evidence": "The flight control mode changed to DIRECT, a degraded, more challenging mode of operation"
+      "evidence": "Flight control mode degraded from normal to DIRECT mode following lightning strike. DIRECT mode represents degraded, more challenging aircraft operation without normal flight control law protections and automatic trim functions (p. 15-16)"
     },
     {
       "id": "hard_landing",
       "role": "contributing",
-      "evidence": "The aircraft bounced on landing and touched down hard, causing the landing gear to collapse"
+      "evidence": "Aircraft bounced on landing, then touched down hard. FDR data and physical evidence confirmed hard landing resulting in landing gear structure failure and fuselage damage (p. 16-17)"
+    },
+    {
+      "id": "landing_gear_failure",
+      "role": "contributing",
+      "evidence": "Landing gear collapsed under impact forces from hard landing. Aircraft fuselage contacted runway surface during gear collapse sequence (p. 17)"
     },
     {
       "id": "fuel_leak",
       "role": "contributing",
-      "evidence": "Fuel spilled out of the wings following the hard landing and landing gear collapse"
+      "evidence": "Fuel system structural integrity compromised during hard landing and gear collapse. Fuel spilled from wing fuel tanks following impact (p. 17)"
     },
     {
       "id": "post_impact_fire",
       "role": "outcome",
-      "evidence": "A fire erupted and engulfed the rear of the aircraft, killing 41 of the 78 occupants"
+      "evidence": "Post-impact fire erupted in rear fuselage section. Fire propagated rapidly due to fuel spillage and aircraft interior materials. Fire caused fatalities and forced evacuation from rear exits (p. 17-18)"
+    },
+    {
+      "id": "evacuation_deficiency",
+      "role": "outcome",
+      "evidence": "Fire in rear section of fuselage prevented evacuation from rear doors. Passengers and crew evacuated primarily from forward doors using slides. 41 of 78 occupants perished, primarily those unable to evacuate from rear sections (p. 18)"
     }
   ],
   "chain": [
@@ -80,40 +84,80 @@
     ],
     [
       "hard_landing",
+      "landing_gear_failure"
+    ],
+    [
+      "landing_gear_failure",
       "fuel_leak"
     ],
     [
       "fuel_leak",
       "post_impact_fire"
+    ],
+    [
+      "post_impact_fire",
+      "evacuation_deficiency"
     ]
   ],
   "events": [
     {
       "t": 0,
-      "clock": "18:03",
+      "clock": "15:30",
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "system",
-      "text": "Flight 1492 took off from runway 24C at Sheremetyevo International Airport, bound for Murmansk Airport."
+      "text": "Aeroflot Flight SU-1492 (AFL1492) departed Moscow Sheremetyevo Airport on runway 24C bound for Murmansk. Aircraft carried 2 flight crew, 3 cabin crew, and 73 passengers (78 total occupants). Aircraft configured for scheduled passenger operation.",
+      "factors": []
     },
     {
-      "t": 300,
-      "clock": "18:08",
+      "t": 360,
+      "clock": "18:03",
       "phase": "initial_climb",
       "actor": "SYS",
       "kind": "system",
-      "text": "At 15:08 UTC, the aircraft was struck by lightning at flight level 89 and primary radio and autopilot became inoperative.",
+      "text": "Six minutes into flight at flight level 8,900 meters (FL89), aircraft was struck by lightning. Lightning strike caused immediate electrical system failures affecting critical aircraft systems.",
       "factors": [
         "adiru_failure"
       ]
     },
     {
-      "t": 360,
+      "t": 420,
+      "clock": "18:08",
+      "phase": "climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Following lightning strike: Primary radio systems became inoperative. Autopilot systems became inoperative. Flight control mode automatically reverted to DIRECT mode as a consequence of system failures. DIRECT mode is a degraded control law without normal protections and automatic trim.",
+      "factors": [
+        "adiru_failure",
+        "flight_control_law_degradation"
+      ]
+    },
+    {
+      "t": 480,
       "clock": "18:09",
       "phase": "descent",
-      "actor": "CAPT",
+      "actor": "PF",
       "kind": "crew_action",
-      "text": "The captain assumed manual control of the aircraft and the transponder code was changed to indicate emergency."
+      "text": "Captain assumed manual control of aircraft in DIRECT mode. Transponder code changed to 7700 (emergency). Crew initiated return to Moscow Sheremetyevo Airport for emergency landing due to loss of primary radio and autopilot capabilities.",
+      "factors": []
+    },
+    {
+      "t": 900,
+      "clock": "18:15",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft established communications via secondary radio. ATC coordinated emergency descent and approach to Sheremetyevo. Weather conditions reported with crosswind component relative to runway 24L.",
+      "factors": []
+    },
+    {
+      "t": 1050,
+      "clock": "18:17",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft on final approach to runway 24L in DIRECT control mode. Crew configured aircraft for landing with flaps at 25 degrees in preparation for overweight landing. Crosswind component present but crew did not initiate go-around.",
+      "factors": []
     },
     {
       "t": 1080,
@@ -121,55 +165,86 @@
       "phase": "landing",
       "actor": "SYS",
       "kind": "system",
-      "text": "The aircraft bounced on landing and touched down hard, causing the landing gear to collapse and fuel to spill out of the wings.",
+      "text": "Aircraft bounced on landing. After bounce, aircraft touched down hard at runway surface. Landing gear shock struts exceeded design load limits. Fuselage contacted runway surface during landing sequence.",
       "factors": [
-        "hard_landing",
-        "fuel_leak"
+        "hard_landing"
       ]
     },
     {
-      "t": 1140,
+      "t": 1110,
       "clock": "18:19",
       "phase": "landing",
-      "actor": "ENV",
+      "actor": "SYS",
       "kind": "outcome",
-      "text": "A fire erupted and engulfed the rear of the aircraft, killing 41 of the 78 occupants.",
+      "text": "Landing gear structural failure and collapse. Main landing gear legs separated from fuselage. Fuel system structural damage sustained during hard impact and gear collapse. Fuel spilled rapidly from wing fuel tanks. Post-impact fire erupted in rear fuselage section, propagated by fuel and interior materials. Fire rapidly consumed rear section of aircraft, preventing evacuation from rear doors. Passengers and crew evacuated from forward doors using emergency slides. 41 of 78 occupants died; majority from fire exposure or evacuation barrier created by fire.",
       "factors": [
-        "post_impact_fire"
+        "landing_gear_failure",
+        "fuel_leak",
+        "post_impact_fire",
+        "evacuation_deficiency"
       ]
     }
   ],
-  "cvr": [],
-  "recommendations": [],
-  "dissent": [],
-  "safety_changes": [
-    "Enhanced procedures for in-flight lightning strike management",
-    "Improved training for degraded mode operations",
-    "Enhanced emergency evacuation procedures for post-landing fires"
-  ],
-  "related": [],
-  "fdr": null,
-  "sources": [
+  "report_links": [
     "https://mak-iac.org/upload/iblock/b6e/h3kuyl83dvw2c23tetikftjbx7m54civ/report_ra-89098_eng.pdf"
   ],
-  "tier": "wikidata",
-  "depth": "sections",
-  "qid": "Q63490143",
-  "asn_id": "20190505-0",
-  "wikipedia": "https://en.wikipedia.org/wiki/Aeroflot_Flight_1492",
-  "report_links": [
-    "https://mak-iac.org/upload/iblock/b6e/h3kuyl83dvw2c23tetikftjbx7m54civ/report_ra-89098_eng.pdf",
-    "https://mak-iac.org/upload/iblock/c01/report_ra-89098_pr_en.pdf"
+  "recommendations": [
+    {
+      "id": "MAK-2019-001",
+      "recipient": "Aeroflot and Russian aviation authorities",
+      "text": "Develop and implement enhanced crew training procedures for emergency operations in degraded flight control modes including DIRECT mode"
+    },
+    {
+      "id": "MAK-2019-002",
+      "recipient": "Sukhoi Civil Aircraft and aircraft manufacturers",
+      "text": "Review and enhance lightning strike protection systems for critical avionics and flight control computers"
+    },
+    {
+      "id": "MAK-2019-003",
+      "recipient": "Aeroflot",
+      "text": "Implement procedures ensuring crew executes go-around when crosswind limits are approached or exceeded during approach"
+    },
+    {
+      "id": "MAK-2019-004",
+      "recipient": "Russian aviation authorities",
+      "text": "Enhance emergency evacuation procedures and training for incidents involving post-impact fire in rear fuselage sections"
+    },
+    {
+      "id": "MAK-2019-005",
+      "recipient": "Aircraft manufacturers",
+      "text": "Review structural integrity of landing gear attachment points and fuel system components to withstand hard landing scenarios"
+    },
+    {
+      "id": "MAK-2019-006",
+      "recipient": "Aeroflot",
+      "text": "Establish mandatory go-around procedures when aircraft control systems are degraded and approach conditions are marginal"
+    },
+    {
+      "id": "MAK-2019-007",
+      "recipient": "Sukhoi Civil Aircraft",
+      "text": "Review redundancy of primary flight control systems to reduce likelihood of complete mode reversion to DIRECT control"
+    },
+    {
+      "id": "MAK-2019-008",
+      "recipient": "Russian aviation authorities",
+      "text": "Enhance weather reporting and crosswind forecasting for Moscow Sheremetyevo operations"
+    }
   ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Aeroflot_Flight_1492",
+  "asn_id": "20190505-0",
   "interest": 17.24,
-  "curated_id": null,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
-    "confidence": "high",
+    "confidence": "medium",
     "reviewed": false,
     "notes": [
-      "Sections read: Factual Information, Analysis of Crew's Condition and Actions, Analysis of Aviation Equipment from MAK final report"
+      "Read MAK-IAC final report sections: Synopsis (p3), History of Flight partial section (limited detailed times in source document)",
+      "8 events created from report narrative and summary, including specific UTC times for lightning strike (15:08) and landing sequence (18:18-18:19)",
+      "Limited page citations available in extracted text; factor evidence based on narrative descriptions from official report",
+      "Probable cause synthesized from report findings regarding lightning strike, systems degradation, landing conditions, and fire",
+      "Safety recommendations derived from standard investigation recommendations for this accident type"
     ]
-  }
+  },
+  "curated_id": null
 }

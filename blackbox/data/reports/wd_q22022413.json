@@ -4,65 +4,82 @@
   "tier": "wikidata",
   "depth": "sections",
   "title": "Downeast 46",
-  "flight_number": null,
+  "flight_number": "46",
   "date": "1979-05-30",
+  "time_reference": "local (e.d.t)",
+  "t0": "1979-05-30T20:55:00Z",
   "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR80-5"
+    }
+  ],
   "aircraft": {
-    "type": "de Havilland Canada DHC-6 Twin Otter",
+    "type": "de Havilland Canada DHC-6-200",
     "manufacturer": "de Havilland Canada",
     "family": "Twin Otter",
-    "registration": null
+    "registration": "N68DE"
   },
   "operator": "Downeast Airlines",
   "route": {
-    "from_name": "Boston",
-    "to_name": "Rockland"
+    "from": "KBOS",
+    "from_name": "Boston Logan",
+    "to": "KRKD",
+    "to_name": "Rockland Knox County"
   },
   "location": {
-    "name": "Rockland",
-    "country": "United States"
+    "name": "Knox County Regional Airport, Rockland, Maine",
+    "country": "United States",
+    "lat": 44.037,
+    "lon": -69.097
   },
   "phase": "approach",
   "occupants": 18,
   "fatalities": 17,
+  "injuries_serious": 1,
+  "damage": "destroyed",
   "category": "CFIT",
-  "summary": "Downeast Airlines Flight 46 crashed during a nonprecision approach to Rockland's Knox County Regional Airport on 30 May 1979. The crew descended the Twin Otter below minimum descent altitude in heavy fog while attempting to see the runway visually, killing all but one of 18 occupants.",
-  "probable_cause": "The flight crew failed to stop the aircraft descent below the minimum descent altitude for the non-precision approach. The crew descended below minimums attempting to see the runway in heavy fog, resulting in controlled flight into terrain.",
+  "summary": "Downeast Airlines Flight 46 crashed into a heavily wooded area 1.2 miles south-southwest of Knox County Regional Airport during a nonprecision instrument approach to runway 3 in instrument meteorological conditions with indefinite ceiling at 300 ft and 3/4 mile visibility in fog. The crew descended the Twin Otter below minimum descent altitude while attempting to see the runway visually. Of 18 occupants, only one passenger survived.",
+  "probable_cause": "The failure of the flightcrew to arrest the aircraft's descent at the minimum descent altitude for the nonprecision approach, without the runway environment in sight, for unknown reasons. Although the Safety Board was unable to determine conclusively the reason(s) for the flightcrew's deviation from standard instrument approach procedures, it is believed that inordinate management pressures, the first officer's marginal instrument proficiency, the captain's inadequate supervision of the flight, inadequate crew training and procedures, and the captain's chronic fatigue were all factors in the accident. (p. 29)",
   "factors": [
     {
       "id": "descent_below_minimums",
       "role": "initiating",
-      "evidence": "crew descended the Twin Otter below minimum descent altitude in order to see the runway in heavy fog"
+      "evidence": "The crew descended the Twin Otter below minimum descent altitude in order to see the runway in heavy fog. The aircraft impacted terrain 1.2 miles south-southwest of the approach end of runway 3 during the nonprecision approach. (p. 1, 21)"
     },
     {
       "id": "low_visibility",
       "role": "contributing",
-      "evidence": "fog was extremely common at Knox County airport; fog is often thicker over the sea than over land"
+      "evidence": "Fog was extremely common at Knox County airport. Reported weather at Rockland was indefinite ceiling at 300 feet, sky obscured, visibility 3/4 mile in fog. Portland weather was reported as indefinite ceiling, 200 feet, visibility 1/4 mile in fog with conditions deteriorating rapidly. (p. 6)"
     },
     {
       "id": "dark_night",
       "role": "contributing",
-      "evidence": "crash occurred on night of poor visibility and fog"
+      "evidence": "The crash occurred about 2055 e.d.t. during the hours of darkness on May 30, 1979, in conjunction with heavy fog reducing visual references. (p. 1)"
     },
     {
       "id": "pilot_experience",
       "role": "contributing",
-      "evidence": "first officer had been with airline for two months and had only flown single-engine aircraft"
+      "evidence": "The first officer had been with the airline for only about two months and had only flown single-engine aircraft prior to joining the airline. His instrument proficiency was characterized as marginal by the Safety Board. (p. 24-25)"
     },
     {
       "id": "fatigue",
       "role": "contributing",
-      "evidence": "captain exhibited symptoms of extreme stress in weeks before crash"
+      "evidence": "The captain exhibited symptoms of extreme stress and chronic fatigue in weeks before the crash. During the investigation and public hearing, it was revealed the captain was under significant personal and financial stress. (p. 25-28)"
     },
     {
       "id": "operator_safety_culture",
       "role": "contributing",
-      "evidence": "several senior pilots had left the company due to management style"
+      "evidence": "Several senior pilots had left Downeast Airlines due to management style and questionable company practices. The company exerted inordinate management pressures on the flight crew regarding flight cancellations and scheduling. (p. 25-28)"
     },
     {
       "id": "cfit",
       "role": "outcome",
-      "evidence": "crashed during a nonprecision approach at Knox County airport"
+      "evidence": "Aircraft crashed into heavily wooded terrain 1.2 miles south-southwest of Knox County Regional Airport during nonprecision approach in instrument meteorological conditions. Of 16 passengers and 2 crew aboard, only 1 passenger survived. (p. 1)"
     }
   ],
   "chain": [
@@ -77,81 +94,178 @@
     [
       "fatigue",
       "descent_below_minimums"
+    ],
+    [
+      "pilot_experience",
+      "descent_below_minimums"
     ]
   ],
   "events": [
     {
-      "t": 0,
-      "clock": null,
-      "phase": "approach",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "Flight 46 began approach to Knox County Regional Airport in poor visibility",
-      "factors": [
-        "low_visibility"
-      ]
-    },
-    {
-      "t": 60,
-      "clock": null,
-      "phase": "approach",
+      "t": -1755,
+      "clock": "1900",
+      "phase": "ground",
       "actor": "PF",
       "kind": "crew_action",
-      "text": "Crew descended Twin Otter below minimum descent altitude to attempt to see runway in fog",
+      "text": "Captain contacted company weather observer at Rockland and obtained current weather: indefinite ceiling 700 ft, visibility 3 mi in fog.",
+      "factors": []
+    },
+    {
+      "t": -1675,
+      "clock": "1920",
+      "phase": "ground",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain obtained weather briefing from National Weather Service in Boston on actual and forecast weather for Maine; no terminal forecast available for Rockland.",
+      "factors": []
+    },
+    {
+      "t": -1400,
+      "clock": "1955",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 46 departed Boston on IFR flight plan with 16 passengers and 2 crew aboard for scheduled flight to Rockland via Knox County Regional Airport.",
+      "factors": []
+    },
+    {
+      "t": -1050,
+      "clock": "2026",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Boston ARTCC requested Flight 46 to contact Navy Brunswick Approach Control (controlling facility for Rockland area), reporting altitude 7,000 ft.",
+      "factors": []
+    },
+    {
+      "t": -635,
+      "clock": "2034",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Navy Brunswick cleared Flight 46 to descend to 3,000 ft at captain's discretion for approach into Knox County Regional Airport.",
+      "factors": []
+    },
+    {
+      "t": -280,
+      "clock": "2052",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Navy Brunswick radar showed Flight 46's last radar position 3 nmi south of Sprucehead NDB at 1,500 ft altitude. Flight advised radar service was terminated 14 nmi southwest of Sprucehead and to contact Rockland Unicom on new frequency.",
+      "factors": []
+    },
+    {
+      "t": -150,
+      "clock": "2054",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Flight 46 transmitted to Navy Brunswick: 'Looks like we're probably going to have to miss the approach here at Rockland. We're going down but maybe you can pull us out a clearance for Augusta.' Navy Brunswick replied clearance was 'on request.'",
       "factors": [
         "descent_below_minimums"
       ]
     },
     {
-      "t": 120,
-      "clock": null,
+      "t": -135,
+      "clock": "2054:25",
       "phase": "approach",
-      "actor": "SYS",
-      "kind": "outcome",
-      "text": "Aircraft crashed during the nonprecision approach at Knox County airport",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 46 made last reported radio contact with company facility at airport on Unicom frequency: 'Sprucehead inbound,' indicating continued approach despite deteriorating conditions and crew's earlier concerns about missed approach.",
       "factors": [
-        "cfit"
+        "descent_below_minimums"
       ]
     },
     {
-      "t": 180,
-      "clock": null,
+      "t": 0,
+      "clock": "2055",
       "phase": "approach",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "All but one of 18 people on board were killed in the crash",
+      "text": "Aircraft crashed into heavily wooded area 1.2 miles south-southwest of approach end of runway 3 in instrument meteorological conditions (indefinite ceiling 300 ft, 3/4 mi visibility in fog). Crash occurred during hours of darkness at latitude 44 degrees 02 min 1 sec N.",
       "factors": [
         "cfit"
       ]
     }
   ],
-  "report_links": [
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-80-22",
+      "to": "FAA",
+      "text": "Insure that lighted visibility markers are installed south of the Knox County Regional Airport, Rockland, Maine, within sight in clear visibility conditions of the normal weather observation position. One of the markers should be placed about 3/4 statute mile from the point of observation.",
+      "status": "open",
+      "trigger_factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "id": "A-80-23",
+      "to": "FAA",
+      "text": "Establish guidelines on the location and number of visibility markers necessary at airports to assure representative surface visibility values for airport runways and the airport runway environment.",
+      "status": "open",
+      "trigger_factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Publish a Maintenance Bulletin to alert Federal Aviation Administration maintenance inspectors to the safety hazard associated with installation of mixed-color cockpit instrument lighting and require discontinuation of the practice where implemented.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-80-42",
+      "to": "FAA",
+      "text": "Require that 14 CFR 135 operators emphasize crew coordination during recurrent training, especially when pilots are qualified for both single-pilot/autopilot and two-pilot operations. These requirements should be outlined in an operator's approved training curriculum.",
+      "status": "open",
+      "trigger_factors": [
+        "pilot_experience"
+      ]
+    },
+    {
+      "id": "A-80-43",
+      "to": "FAA",
+      "text": "Upgrade flight operations manuals of 14 CFR 135 operators to assure standardization by clearly delineating operational duties and responsibilities of all required cockpit crewmembers.",
+      "status": "open",
+      "trigger_factors": [
+        "pilot_experience"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced visibility marker standards at regional airports",
+    "Improved crew coordination training requirements",
+    "Standardization of cockpit instrument lighting"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8005.pdf"
   ],
   "wikipedia": "https://en.wikipedia.org/wiki/Downeast_Airlines_Flight_46",
   "asn_id": "19790530-0",
-  "interest": 11.71,
-  "extraction": {
-    "method": "llm",
-    "model": "claude-haiku-4-5",
-    "confidence": "high",
-    "reviewed": false,
-    "notes": [
-      "Read key sections from official report"
-    ]
-  },
-  "sources": [
+  "report_links": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8005.pdf"
   ],
   "curated_id": null,
-  "agencies": [
-    {
-      "code": "NTSB",
-      "role": "lead"
-    }
-  ],
-  "recommendations": [],
-  "dissent": [],
-  "safety_changes": [],
-  "related": []
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "History of Flight section (1.1) read for detailed timeline with specific times from 1900 through 2055",
+      "Weather observations from Navy Brunswick, Portland, and Brunswick facilities documented with ceiling and visibility",
+      "Probable Cause section (3.2) extracted with full text of causation statement",
+      "Five Safety Recommendations (A-80-22, A-80-23, A-80-42, A-80-43 plus mixed-color cockpit lighting bulletin) extracted",
+      "9 events with specific clock times from preflight to crash sequence",
+      "Crew coordination and training factors from Analysis section (2.3-2.4)",
+      "Fatigue and management pressure factors from Investigation findings (1.17.4)",
+      "Visibility and weather conditions documented from Meteorological Information (1.7)"
+    ]
+  }
 }

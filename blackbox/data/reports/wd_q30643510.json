@@ -1,0 +1,349 @@
+{
+  "id": "wd_q30643510",
+  "qid": "Q30643510",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "East Coast Jets 81",
+  "flight_number": "ECJ81",
+  "date": "2008-07-31",
+  "time_reference": "local",
+  "t0": "2008-07-31T09:45:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-11-01"
+    }
+  ],
+  "aircraft": {
+    "type": "Hawker 800",
+    "family": "Hawker",
+    "manufacturer": "Raytheon",
+    "registration": "N818MV"
+  },
+  "operator": "East Coast Jets",
+  "route": {
+    "from": "KACY",
+    "from_name": "Atlantic City International",
+    "to": "KOWA",
+    "to_name": "Owatonna Degner Regional"
+  },
+  "location": {
+    "name": "Owatonna Degner Regional Airport, runway 30",
+    "country": "United States (Minnesota)"
+  },
+  "phase": "landing",
+  "occupants": 8,
+  "fatalities": 8,
+  "damage": "destroyed",
+  "category": "RE",
+  "summary": "East Coast Jets Flight 81, a Hawker 800, touched down on runway 30 at Owatonna Degner Regional Airport then the crew initiated a go-around after noticing insufficient runway length remained. The aircraft overran the runway end at high speed, struck the approach lighting system antenna at 5 feet altitude, and crashed into a cornfield 2,136 feet from the runway end, killing all eight occupants. The captain had decided to go around too late with insufficient runway remaining and pilots failed to properly configure the aircraft for deceleration.",
+  "probable_cause": "The probable cause of this accident was the captain's decision to attempt a go-around late in the landing roll with insufficient runway remaining. Contributing to the accident were the pilots' poor crew coordination and lack of cockpit discipline, fatigue which likely impaired both pilots' performance, and the failure of the Federal Aviation Administration to require crew resource management training and standard operating procedures for Part 135 operators.",
+  "factors": [
+    {
+      "id": "late_go_around",
+      "role": "initiating",
+      "evidence": "Captain decided to go around after aircraft had already touched down and crew noticed insufficient runway length remained (p. 19)."
+    },
+    {
+      "id": "delayed_deceleration",
+      "role": "contributing",
+      "evidence": "Pilots moved airbrake handle to OPEN position instead of DUMP position, causing only partial airbrake extension (p. 5). First officer stated at 0945:08 we're not dumped, indicating confusion about the system configuration (p. 19)."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Pilots did not first select flaps 45 degrees then proper airbrake DUMP position as procedure required (p. 5)."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "NTSB cited poor crew coordination and lack of cockpit discipline; captain and first officer had conflicting intentions and communication (p. 14)."
+    },
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "Fatigue likely impaired both pilots' performance; accident occurred on second leg of five-leg trip sequence (p. 14)."
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "Aircraft overran the end of runway 30, lifting off at 978 feet from runway end and striking approach lighting antenna (p. 20)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft crashed into cornfield 2,136 feet from runway end after impacting ILS antenna, rolling to 90-degree right bank (p. 20)."
+    }
+  ],
+  "chain": [
+    ["late_go_around", "runway_overrun"],
+    ["procedural_noncompliance", "delayed_deceleration"],
+    ["delayed_deceleration", "runway_overrun"],
+    ["crm_breakdown", "procedural_noncompliance"],
+    ["fatigue", "crm_breakdown"],
+    ["runway_overrun", "cfit"]
+  ],
+  "events": [
+    {
+      "t": -710,
+      "clock": "0935:44",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain stated let's do the approaches real quick, referring to the Approach checklist",
+      "factors": []
+    },
+    {
+      "t": -703,
+      "clock": "0935:51",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain approved approach briefing stating it's gonna be the ILS to three zero",
+      "factors": []
+    },
+    {
+      "t": -641,
+      "clock": "0937:01",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Rochester approach controller provided weather information for OWA approximately 20 minutes old: winds 320 at 8 knots, visibility 10+ miles, thunderstorms, scattered clouds 3700 feet overcast 5000 feet",
+      "factors": []
+    },
+    {
+      "t": -539,
+      "clock": "0938:50",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain stated approaches are done, indicating completion of approach checklist",
+      "factors": []
+    },
+    {
+      "t": -397,
+      "clock": "0940:21",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Rochester approach controller cleared flight for ILS approach to runway 30",
+      "factors": []
+    },
+    {
+      "t": -325,
+      "clock": "0941:35",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain reported runway in sight and cancelled IFR flight plan",
+      "factors": []
+    },
+    {
+      "t": -315,
+      "clock": "0941:45",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain stated flaps two, selecting landing flap configuration",
+      "factors": []
+    },
+    {
+      "t": -104,
+      "clock": "0944:16",
+      "phase": "landing",
+      "actor": "ATC",
+      "kind": "env",
+      "text": "Electronic voice altimeter annunciator called out altitude levels: 400 feet, 300 feet, 2 minimums minimums",
+      "factors": []
+    },
+    {
+      "t": -23,
+      "clock": "0944:37",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Landing gear contacted runway surface with three green indicators and airbrakes closed",
+      "factors": []
+    },
+    {
+      "t": -10,
+      "clock": "0944:50",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "First officer stated airbrakes were not deployed properly, captain moved airbrake handle to DUMP position after touchdown",
+      "factors": ["delayed_deceleration"]
+    },
+    {
+      "t": 0,
+      "clock": "0945:04",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft touched down on runway 30, crew initiated go-around with insufficient runway remaining",
+      "factors": ["late_go_around"]
+    },
+    {
+      "t": 25,
+      "clock": "0945:29",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft overran runway 30 end at high speed, began nose-down pitch toward terrain",
+      "factors": ["runway_overrun"]
+    },
+    {
+      "t": 30,
+      "clock": "0945:34",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft lifted off ground approximately 978 feet from runway end, approximately 5 feet altitude",
+      "factors": ["runway_overrun"]
+    },
+    {
+      "t": 35,
+      "clock": "0945:39",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck approach lighting system antenna support structure about 1000 feet from runway end, rolled to 90-degree right bank with bank angle warning activated",
+      "factors": ["cfit"]
+    },
+    {
+      "t": 45,
+      "clock": "0945:49",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed into cornfield approximately 2136 feet from runway end, all eight occupants killed on impact",
+      "factors": ["cfit"]
+    }
+  ],
+  "cvr": [
+    {
+      "t": -710,
+      "clock": "0935:44",
+      "speaker": "CAPT",
+      "text": "let's do the approaches real quick"
+    },
+    {
+      "t": -641,
+      "clock": "0937:01",
+      "speaker": "ATC",
+      "text": "winds 320 at 8 knots, visibility 10 miles or more, thunderstorms, scattered 3700 overcast 5000, light in the distance in all quadrants"
+    },
+    {
+      "t": -539,
+      "clock": "0938:50",
+      "speaker": "CAPT",
+      "text": "approaches are done"
+    },
+    {
+      "t": -104,
+      "clock": "0944:16",
+      "speaker": "SYS",
+      "text": "four hundred"
+    },
+    {
+      "t": -104,
+      "clock": "0944:16",
+      "speaker": "CAPT",
+      "text": "slowin' to ref"
+    },
+    {
+      "t": -23,
+      "clock": "0944:37",
+      "speaker": "CAPT",
+      "text": "I'm goin' right to the tiller and the brakes"
+    },
+    {
+      "t": -10,
+      "clock": "0944:50",
+      "speaker": "FO",
+      "text": "we're dumped"
+    },
+    {
+      "t": -8,
+      "clock": "0944:52",
+      "speaker": "FO",
+      "text": "we're not dumped"
+    },
+    {
+      "t": -6,
+      "clock": "0944:54",
+      "speaker": "CAPT",
+      "text": "no we're not"
+    },
+    {
+      "t": 4,
+      "clock": "0945:08",
+      "speaker": "CAPT",
+      "text": "flaps"
+    },
+    {
+      "t": 27,
+      "clock": "0945:31",
+      "speaker": "CAPT",
+      "text": "here we go...not flyin'...not flyin'"
+    },
+    {
+      "t": 36,
+      "clock": "0945:40",
+      "speaker": "SYS",
+      "text": "bank angle, bank angle"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require crew resource management training and standard operating procedures for Part 135 operators"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Issue go-around guidance for turbine-powered aircraft emphasizing early decision-making"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require standardized landing distance assessment guidance for Part 135 operators"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Establish pilot fatigue and sleep disorder awareness training requirements"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1101.pdf"
+  ],
+  "asn_id": "20080731-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/East_Coast_Jets_Flight_81",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1101.pdf"
+  ],
+  "interest": 10.25,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report read: Factual Information History of Flight, Probable Cause sections",
+      "Events extracted from detailed CVR transcript with precise clock times in local CDT",
+      "14 events with clock times showing complete landing and go-around sequence",
+      "All crew speech CVR lines quoted from official transcript sections 1.1"
+    ]
+  }
+}

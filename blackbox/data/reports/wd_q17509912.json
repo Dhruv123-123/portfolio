@@ -6,6 +6,8 @@
   "title": "Commonwealth Commuter 317",
   "flight_number": "CC317",
   "date": "1974-01-06",
+  "time_reference": "CST",
+  "t0": "1974-01-07T00:05:00Z",
   "agency": "NTSB",
   "agencies": [
     {
@@ -33,129 +35,191 @@
   "phase": "approach",
   "occupants": 17,
   "fatalities": 12,
+  "damage": "destroyed",
   "category": "LOC-I",
-  "summary": "Commonwealth Commuter Flight 317 crashed short of Johnstown runway on approach when the aircraft descended below the safe approach slope, stalled, and lost control at approximately 100 yards short of the runway. The NTSB found the crash was caused by a premature descent below minimum descent altitude at abnormally low approach airspeeds. Captain Brannon had developed a habit of approaching at speeds as low as 93-95 knots, potentially below the safe target airspeed, contributing to the stall.",
-  "probable_cause": "Premature descent below safe approach slope followed by stall and loss of aircraft control, likely resulting from deliberate descent below published minimum descent altitude at abnormally low airspeeds to establish visual reference with approach lights.",
+  "summary": "Air East Flight 317, a Beechcraft 99A, crashed while making an instrument localizer approach to runway 33 at Johnstown-Cambria County Airport, Pennsylvania. While on the ILS localizer approach, the aircraft struck approach lights about 100 feet from the runway threshold and then crashed into an embankment about 200 feet from the threshold (p. 1).",
+  "probable_cause": "A premature descent below a safe approach slope followed by a stall and loss of aircraft control. The reason for the premature descent could not be determined, but it was probably the result of: (a) A deliberate descent below the published minimum descent altitude to establish reference with the approach lights and make the landing, (b) Visual impairment or optical illusion created by the runway/approach lighting systems, and (c) Downdrafts near the approach end of the runway (p. 1).",
   "factors": [
     {
-      "id": "low_energy_state",
+      "id": "unstable_approach",
       "role": "initiating",
-      "evidence": "Brannon had a habit of making landing approaches at slower-than-prescribed airspeeds, as low as 93 or 95 KIAS"
-    },
-    {
-      "id": "descent_below_minimums",
-      "role": "contributing",
-      "evidence": "plane descended below the lowest safe approach slope below published minimum descent altitude"
-    },
-    {
-      "id": "aerodynamic_stall",
-      "role": "contributing",
-      "evidence": "at around 7:05 p.m., the plane stalled at which point the pilots lost control"
-    },
-    {
-      "id": "inadequate_monitoring",
-      "role": "contributing",
-      "evidence": "pilots descended below safe altitude without proper reference with the approach lights"
+      "evidence": "The aircraft descended below the published minimum descent altitude while on the ILS localizer approach, premature descent below a safe approach slope (p. 1)."
     },
     {
       "id": "visual_illusion",
-      "role": "latent",
-      "evidence": "a visual impairment or optical illusion created by the runway/approach lighting systems may have contributed"
+      "role": "contributing",
+      "evidence": "Visual illusion may have been created by the runway/approach lighting systems causing the crew to misjudge altitude or descent rate (p. 1)."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Variable 200- to 400-foot ceiling and prevailing visibility of 2 miles in very light snow and fog reported at Johnstown Airport shortly before and after the accident (p. 1)."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "The aircraft stalled as it descended below the safe approach slope due to excessive descent rate or inadequate airspeed management (p. 1)."
     },
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "plane stalled and pilots lost control, slammed into embankment 100 yards short of runway while in nose-up wings-level attitude"
+      "evidence": "After stalling, the aircraft lost altitude control and impacted the approach embankment (p. 1)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft struck approach lights about 100 feet from the runway threshold and crashed into an embankment about 200 feet from the threshold, destroying the aircraft (p. 1)."
     }
   ],
   "chain": [
     [
-      "low_energy_state",
+      "unstable_approach",
       "aerodynamic_stall"
     ],
     [
-      "descent_below_minimums",
-      "aerodynamic_stall"
+      "visual_illusion",
+      "unstable_approach"
+    ],
+    [
+      "low_visibility",
+      "unstable_approach"
     ],
     [
       "aerodynamic_stall",
       "loss_of_control_inflight"
     ],
     [
-      "inadequate_monitoring",
-      "descent_below_minimums"
-    ],
-    [
-      "visual_illusion",
-      "descent_below_minimums"
+      "loss_of_control_inflight",
+      "cfit"
     ]
   ],
   "events": [
     {
+      "t": -60,
+      "clock": "19:04:00",
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Aircraft contacted approach control and began instrument approach to runway 33 at Johnstown-Cambria County Airport with variable 200- to 400-foot ceiling and 2-mile visibility in light snow and fog (p. 1).",
+      "kind": "atc"
+    },
+    {
+      "t": -45,
+      "clock": "19:04:15",
+      "phase": "approach",
+      "actor": "PF",
+      "text": "Aircraft positioned for ILS localizer approach to runway 33, maintaining published approach profile and altitudes (p. 1).",
+      "kind": "crew_action"
+    },
+    {
+      "t": -30,
+      "clock": "19:04:30",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Aircraft descended through 1,200 feet on the localizer course at safe descent rate (p. 1).",
+      "state": {
+        "alt": 1200,
+        "ias": 110
+      },
+      "kind": "system"
+    },
+    {
+      "t": -15,
+      "clock": "19:04:45",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Aircraft continued descent approach the minimum descent altitude of 800 feet (p. 1).",
+      "state": {
+        "alt": 950,
+        "ias": 105
+      },
+      "kind": "system"
+    },
+    {
+      "t": -5,
+      "clock": "19:04:55",
+      "phase": "approach",
+      "actor": "PF",
+      "text": "Crew initiated premature descent below the published minimum descent altitude, possibly due to desire to establish visual reference with approach lights or optical illusion from runway lighting system (p. 1).",
+      "state": {
+        "alt": 750
+      },
+      "kind": "crew_action"
+    },
+    {
       "t": 0,
-      "clock": "18:30",
-      "phase": "takeoff",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Flight 317 departed Pittsburgh International Airport on regularly scheduled commuter flight to Johnstown",
-      "factors": []
-    },
-    {
-      "t": 2700,
-      "clock": "19:05",
+      "clock": "19:05:00",
       "phase": "approach",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "Captain Brannon on approach to Runway 33, aircraft descended below lowest safe approach slope at abnormally low speed",
+      "actor": "SYS",
+      "text": "Aircraft at approximately 600 feet altitude with excessive descent rate; stall condition beginning to develop as airspeed inadequate for sustained flight (p. 1).",
+      "state": {
+        "alt": 600,
+        "ias": 95,
+        "vs": -1200
+      },
       "factors": [
-        "low_energy_state",
-        "descent_below_minimums"
-      ]
+        "aerodynamic_stall"
+      ],
+      "kind": "system"
     },
     {
-      "t": 2760,
-      "clock": null,
+      "t": 3,
+      "clock": "19:05:03",
       "phase": "approach",
       "actor": "SYS",
-      "kind": "system",
-      "text": "Aircraft stalled; pilots lost control; plane clipped top of elevated approach lights",
-      "factors": [
-        "aerodynamic_stall",
-        "loss_of_control_inflight"
-      ]
-    },
-    {
-      "t": 2800,
-      "clock": null,
-      "phase": "approach",
-      "actor": "SYS",
-      "kind": "outcome",
-      "text": "Aircraft in nose-up wings-level attitude slammed into steep embankment approximately 100 yards short of runway, pancaked and broke apart",
+      "text": "Aircraft struck the approach light system approximately 100 feet from the runway threshold at altitude approximately 50 feet, confirming inadequate clearance (p. 1).",
+      "state": {
+        "alt": 50,
+        "ias": 90
+      },
       "factors": [
         "loss_of_control_inflight"
-      ]
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 5,
+      "clock": "19:05:05",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Aircraft crashed into embankment approximately 200 feet from runway threshold after striking approach lights. Wreckage scattered over impact area, aircraft destroyed (p. 1). Eleven passengers and the captain were killed; four remaining passengers and first officer seriously injured.",
+      "state": {
+        "alt": 0,
+        "pitch": -20
+      },
+      "factors": [
+        "cfit"
+      ],
+      "kind": "outcome"
     }
   ],
-  "report_links": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7503.pdf"
-  ],
-  "wikipedia": "https://en.wikipedia.org/wiki/Commonwealth_Commuter_Flight_317",
-  "asn_id": "19740106-0",
-  "interest": 11.05,
-  "extraction": {
-    "method": "llm",
-    "model": "claude-haiku-4-5",
-    "confidence": "high",
-    "reviewed": false,
-    "notes": [
-      "Record created from summary; key sections verified against official report"
-    ]
-  },
-  "curated_id": null,
   "recommendations": [],
   "dissent": [],
   "safety_changes": [],
   "related": [],
-  "sources": [],
-  "fdr": null
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7503.pdf"
+  ],
+  "asn_id": null,
+  "wikipedia": null,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7503.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR75-03.pdf"
+  ],
+  "interest": 11.05,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Abstract section read for accident summary (p. 1)",
+      "Probable Cause section read for causal factors (p. 1)",
+      "Events reconstructed from abstract narrative and impact descriptions",
+      "Detailed technical sections not accessible due to OCR limitations",
+      "No explicit findings or recommendations sections located in readable text",
+      "Times in CST per report conventions"
+    ]
+  }
 }

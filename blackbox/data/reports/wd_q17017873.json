@@ -6,7 +6,17 @@
   "title": "United Air Lines 553",
   "flight_number": "553",
   "date": "1972-12-08",
+  "time_reference": "CST",
+  "t0": "1972-12-08T20:27:25Z",
   "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
   "aircraft": {
     "type": "Boeing 737-222",
     "manufacturer": "Boeing",
@@ -25,140 +35,186 @@
   "phase": "approach",
   "occupants": 61,
   "fatalities": 45,
+  "damage": "destroyed",
   "category": "LOC-I",
   "summary": "A Boeing 737 approaching Chicago Midway was too high on descent at the outer marker beacon. The captain extended spoilers and steepened descent to 1,550 feet per minute, well above the normal 1,000 fpm. After leveling at minimum descent altitude with engines not advanced fully and spoilers still extended, the aircraft entered an aerodynamic stall. The stick shaker activated and continued sounding until impact into a residential neighborhood. The flight data recorder was inoperative due to maintenance failure.",
-  "probable_cause": "The captain's failure to properly manage the descent and approach profile, resulting in an unstable approach that led to an aerodynamic stall at low altitude.",
+  "probable_cause": "The captain's failure to exercise positive flight management during the execution of a nonprecision approach, which culminated in a critical deterioration of airspeed into the stall regime where level flight could no longer be maintained (p. 32).",
   "factors": [
-    {
-      "id": "aerodynamic_stall",
-      "role": "outcome",
-      "evidence": "The stick shaker, a stall warning device, activated and continued to sound as the aircraft entered an aerodynamic stall"
-    },
     {
       "id": "unstable_approach",
       "role": "initiating",
-      "evidence": "When Flight 553 reached the Kedzie OMB, the aircraft was still at an altitude of 2200 ft MSL"
+      "evidence": "The flight was slow in responding to ATC requests for speed reductions and to the descent clearance (p. 32). The aircraft crossed the outer marker about 700 feet above the published minimum crossing altitude (p. 32)."
     },
     {
-      "id": "excessive_speed",
+      "id": "crm_breakdown",
       "role": "contributing",
-      "evidence": "steepened the aircraft's descent rate to 1550 ft per minute"
+      "evidence": "There was a breakdown in crew coordination during the most critical phase of the approach (p. 32). The first officer did not make the prescribed altitude callouts during the approach (p. 32)."
     },
     {
-      "id": "low_energy_state",
+      "id": "procedural_noncompliance",
       "role": "contributing",
-      "evidence": "With the spoilers still extended, thrust was not enough to maintain level flight without losing speed"
+      "evidence": "The captain did not call for the final descent check until the aircraft had passed the outer marker; the distance from the outer marker to the runway was 3.3 nmi (p. 32). The flight spoilers were deployed to the flight detent position for the final descent from the Kedzie OM and remained in this position during the level-off at MDA (p. 32)."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "The sound of stickshaker activation could be heard on the CVR tape beginning at 14:27:03, about 22 seconds before impact (p. 6)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft descended below the overcast in a nose-high attitude with the sound of high engine power just before impact (p. 2). Several survivors reported the aircraft shuddered following a nose-up pitch change, with some estimating the nose rose at least 30 degrees (p. 7)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft crashed into residential area approximately 1.5 miles southeast of the approach end of Runway 31L at 14:27:25 CST, destroyed by impact and subsequent fire (p. 1)."
     }
   ],
   "chain": [
     [
       "unstable_approach",
-      "excessive_speed"
-    ],
-    [
-      "excessive_speed",
-      "low_energy_state"
-    ],
-    [
-      "low_energy_state",
       "aerodynamic_stall"
+    ],
+    [
+      "crm_breakdown",
+      "aerodynamic_stall"
+    ],
+    [
+      "procedural_noncompliance",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
     ]
   ],
   "events": [
     {
-      "t": 0,
-      "clock": "14:24",
+      "t": -85,
+      "clock": "14:25:50",
+      "phase": "approach",
+      "actor": "PF",
+      "text": "Captain called for final descent check at 14:26:24, about 4 seconds after the Kedzie OM identifier ended (p. 6).",
+      "kind": "crew_action"
+    },
+    {
+      "t": -78,
+      "clock": "14:26:07",
       "phase": "approach",
       "actor": "ATC",
-      "kind": "atc",
-      "text": "Flight 553 was cleared by air traffic control for a nonprecision approach",
-      "factors": []
+      "text": "Chicago Approach Control cleared UA-553 to descend to 2,000 feet at 14:23:42, after issuing multiple speed reduction requests starting at 14:21:56 to reduce airspeed to 180 knots then to 160 knots (p. 5-6).",
+      "kind": "atc"
     },
     {
-      "t": 60,
-      "clock": "14:25",
+      "t": -55,
+      "clock": "14:26:30",
       "phase": "approach",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "When Flight 553 reached the Kedzie OMB, the aircraft was still at 2200 ft MSL, 700 ft above minimum crossing altitude",
-      "factors": [
-        "unstable_approach"
-      ]
+      "actor": "PF",
+      "text": "UA-553 reported passing the Kedzie Outer Marker inbound; tower controller advised they were number two on approach and would keep them advised (p. 6).",
+      "kind": "crew_speech"
     },
     {
-      "t": 120,
-      "clock": "14:26",
-      "phase": "approach",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "Realizing the aircraft was too high, the captain extended the spoilers and steepened the descent rate to 1550 ft per minute",
-      "factors": [
-        "excessive_speed"
-      ]
-    },
-    {
-      "t": 180,
-      "clock": "14:27",
-      "phase": "approach",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "The captain leveled the plane off and increased engine power, but did not advance the throttles fully, with spoilers still extended thrust was not enough to maintain level flight",
-      "factors": [
-        "low_energy_state"
-      ]
-    },
-    {
-      "t": 240,
-      "clock": "14:28",
+      "t": -22,
+      "clock": "14:27:03",
       "phase": "approach",
       "actor": "SYS",
-      "kind": "warning",
-      "text": "The stick shaker activated and continued to sound as the aircraft entered an aerodynamic stall",
+      "text": "First officer called 'Ah, thousand feet'; less than 2 seconds later, stickshaker activation could be heard on CVR tape, indicating approach to stall (p. 6).",
+      "state": {
+        "alt": 1000,
+        "ias": 120
+      },
       "factors": [
         "aerodynamic_stall"
-      ]
+      ],
+      "kind": "system"
+    },
+    {
+      "t": -21,
+      "clock": "14:27:04",
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Tower controller issued missed approach clearance to UA-553: 'United five fifty-three execute a missed approach, make a left turn to a heading of one eight zero climb to two thousand' (p. 6).",
+      "kind": "atc"
+    },
+    {
+      "t": -1,
+      "clock": "14:27:24",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Approach controller noticed radar target had drifted approximately 1/8 to 1/4 mile to the right of localizer centerline, disappearing from radarscope shortly thereafter (p. 6).",
+      "kind": "system"
+    },
+    {
+      "t": 0,
+      "clock": "14:27:25",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Aircraft crashed into residential area approximately 1.5 miles southeast of runway approach end, destroyed by impact and subsequent fire (p. 1-2).",
+      "state": {
+        "alt": 0,
+        "pitch": 30
+      },
+      "factors": [
+        "cfit"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 1,
+      "clock": "14:27:26",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "CVR recording ended at 14:27:25; stickshaker sound had been audible for entire approximately 22-second period from initial stall warning (p. 6).",
+      "kind": "system"
     }
   ],
+  "recommendations": [
+    {
+      "id": "A-73-73",
+      "to": "FAA",
+      "text": "Reassess and improve the methods used, both in flight manuals and in simulator or flight training, to familiarize flightcrews with the effects of spoilers on aircraft characteristics and stall warning devices.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-73-74",
+      "to": "FAA",
+      "text": "Issue an advisory bulletin to alert pilots and operators to the hazards of the improper use of spoilers.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR73-16.pdf"
+  ],
+  "asn_id": null,
+  "wikipedia": null,
   "report_links": [
     "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR73-16.pdf",
-    "https://news.google.com/newspapers?id=J6lVAAAAIBAJ&pg=3905%2C2159088",
-    "https://news.google.com/newspapers?id=8KFYAAAAIBAJ&pg=5659%2C2585297",
-    "https://news.google.com/newspapers?id=oOpRAAAAIBAJ&pg=2905%2C2476956",
-    "https://web.archive.org/web/20151121101555/https://news.google.com/newspapers?id=oOpRAAAAIBAJ&sjid=_nIDAAAAIBAJ&pg=2905%2C2476956",
-    "https://aviation-safety.net/database/record.php?id=19721208-1",
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7231.pdf",
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7211.pdf"
   ],
-  "wikipedia": "https://en.wikipedia.org/wiki/United_Air_Lines_Flight_553",
-  "asn_id": "19721208-1",
   "interest": 13.99,
+  "curated_id": null,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Sections read from text report at /home/user/portfolio/blackbox/cache/text/wd_q17017873.txt: synopsis/summary, probable cause, factors, chain, events"
+      "History of Flight section read (p. 5-7)",
+      "Findings section read (p. 32-33)",
+      "Probable Cause section read (p. 32)",
+      "Recommendations section read (p. 33-34)",
+      "Events extracted from approach controller radar observations and CVR transcript",
+      "Times in CST per Note 1 (p. 6)"
     ]
-  },
-  "curated_id": null,
-  "sources": [
-    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR73-16.pdf",
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7231.pdf",
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7211.pdf"
-  ],
-  "agencies": [
-    {
-      "code": "NTSB",
-      "name": "National Transportation Safety Board",
-      "country": "United States",
-      "role": "lead",
-      "report_id": null,
-      "report_title": null,
-      "report_date": null,
-      "url": null
-    }
-  ],
-  "recommendations": [],
-  "dissent": []
+  }
 }

@@ -1,10 +1,13 @@
 {
   "id": "wd_q2254983",
+  "qid": "Q2254983",
+  "tier": "wikidata",
+  "depth": "full",
   "title": "Pan Am 759",
   "flight_number": "PA759",
   "date": "1982-07-09",
-  "time_reference": "CDT",
-  "t0": "1982-07-09T16:08:00-05:00",
+  "time_reference": "local (c.d.t)",
+  "t0": "1982-07-09T16:07:57Z",
   "agency": "NTSB",
   "agencies": [
     {
@@ -12,8 +15,7 @@
       "name": "National Transportation Safety Board",
       "country": "United States",
       "role": "lead",
-      "report_id": "AAR-83-02",
-      "report_title": "Aircraft Accident Report - Pan American World Airways, Inc., Flight 759",
+      "report_id": "AAR83-2",
       "report_date": "1983-03-21"
     }
   ],
@@ -21,46 +23,50 @@
     "type": "Boeing 727-235",
     "manufacturer": "Boeing",
     "family": "727",
-    "registration": "N4737"
+    "registration": "N4737",
+    "msn": "21409"
   },
   "operator": "Pan American World Airways",
   "route": {
-    "from": "MIA",
+    "from": "KMIA",
     "from_name": "Miami",
-    "to": "LAS",
+    "to": "KLV",
     "to_name": "Las Vegas"
   },
   "location": {
-    "name": "Kenner, Louisiana",
-    "country": "United States"
+    "name": "Kenner, Louisiana (residential area near New Orleans International Airport)",
+    "country": "United States",
+    "lat": 29.9875,
+    "lon": -90.2356
   },
   "phase": "takeoff",
   "occupants": 145,
   "fatalities": 153,
+  "injuries_serious": 1,
   "damage": "destroyed",
   "category": "WSTRW",
-  "summary": "Pan Am Flight 759 crashed in Kenner, Louisiana, minutes after takeoff when the Boeing 727 encountered a microburst that produced a downdraft and decreasing headwind. The aircraft lifted off and climbed briefly then began to descend, striking trees. Eight people on the ground were killed.",
-  "probable_cause": "The aircraft's encounter with microburst-induced wind shear during the liftoff and initial climb phase, which imposed a downdraft and a decreasing headwind. The effects of the wind shear were difficult for the pilot to recognize and react to in time for the aircraft's descent to be arrested before impact with trees.",
+  "summary": "Pan American World Airways Flight 759, a Boeing 727-235 carrying 145 persons (7 crew, 137 passengers, 1 nonrevenue jumpseat passenger), crashed in the residential area of Kenner, Louisiana, immediately after takeoff from runway 10 at New Orleans International Airport on July 9, 1982. The aircraft lifted off, climbed to 95-150 feet above ground level, then began to descend, striking trees and residential structures. Eight persons on the ground were also killed. The aircraft encountered microburst-induced wind shear producing a strong downdraft and decreasing headwind during the critical liftoff and initial climb phase.",
+  "probable_cause": "The aircraft's encounter with microburst-induced wind shear during liftoff, which imposed a downdraft and a decreasing headwind. Contributing factors included the limited capability of then-current wind shear detection technology, the limited capability of the aircraft to climb out of wind shear with heavy loading, and inadequate wind shear training and recognition by the flightcrew. (p. 72)",
   "factors": [
     {
       "id": "windshear",
       "role": "initiating",
-      "evidence": "The aircraft experienced a decreasing headwind shear of about 38 knots and a 7 fps downdraft at 100 feet AGL caused by diverging flow from a microburst (p. 76)"
+      "evidence": "The aircraft's encounter with microburst-induced wind shear during the liftoff imposed a downdraft and a decreasing headwind, which prevented the aircraft from continuing to climb. The microburst produced strong downdraft with wind direction changes from 040 at 8 knots to 070 at 17 knots with peak gusts to 23 knots in approximately 3 minutes. (p. 64-82)"
     },
     {
       "id": "convective_weather",
       "role": "contributing",
-      "evidence": "At the time of Flight 759's takeoff, there were thunderstorms over the east of the airport with rainfall rates of 0.5 to 1.8 in/hr, with maximum possible rainfall rate of 5.7 in/hr near the departure end of runway 10 (p. 76)"
+      "evidence": "At the time of Flight 759's takeoff, there were showers over the east end of the airport and to the east of the airport along the airplane's intended takeoff path. The winds were gusty, variable, and swirling. Low level wind shear alerts were in effect all quadrants with a frontal system passing overhead. (p. 8)"
     },
     {
-      "id": "warning_system_deficiency",
+      "id": "inadequate_training",
       "role": "contributing",
-      "evidence": "The aircraft was not equipped with flight instrument systems designed to sense wind shear and provide instantaneous information, and the Low Level Wind Shear Alert System did not detect the wind shear until after Clipper 759 began its takeoff (p. 76)"
+      "evidence": "The flightcrew would have had difficulty recognizing and reacting to the wind shear in time for the aircraft's descent to be stopped. At the time of the accident, wind shear recognition training was limited and Low Level Wind Shear Alert System (LLWSAS) technology was not widely available in commercial aviation. (p. 68-70)"
     },
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "The aircraft struck a line of trees at an altitude of about 50 feet and crashed into the residential area of Kenner"
+      "evidence": "The aircraft struck a line of trees at an altitude of about 50 feet and crashed into the residential area of Kenner at coordinates 29 degrees 59 min 15 sec N, 90 degrees 14 min 08 sec W, destroying six houses and substantially damaging five others. One hundred thirty-seven passengers, 7 crew members, and 8 persons on the ground were killed. (p. 9-10)"
     }
   ],
   "chain": [
@@ -75,137 +81,211 @@
   ],
   "events": [
     {
-      "t": -180,
-      "clock": "16:07",
-      "phase": "takeoff",
+      "t": -600,
+      "clock": "1558:48",
+      "phase": "taxi",
       "actor": "SYS",
       "kind": "system",
-      "text": "Flight 759 began its takeoff from Runway 10 at 16:07:57 in conditions where the winds were reported to be gusty and swirling."
+      "text": "Flight 759 (Clipper 759) taxied from its gate at New Orleans International Airport with 7 crewmembers, 1 nonrevenue passenger on cockpit jumpseat, and 137 passengers (145 total) aboard. Takeoff gross weight 170,000 lbs.",
+      "factors": []
+    },
+    {
+      "t": -356,
+      "clock": "1602:34",
+      "phase": "taxi",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Ground control advised another aircraft of low level wind shear alerts in northeast quadrants of the airport with relevant wind directions and speeds. Clipper 759's radio received this advisory while taxiing.",
+      "factors": [
+        "convective_weather",
+        "windshear"
+      ]
+    },
+    {
+      "t": -344,
+      "clock": "1603:33",
+      "phase": "taxi",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "First officer requested wind check. Ground control replied: Wind now 070 degrees at 17, peak gusts 23, and we have low level wind shear alerts all quadrants, appears to be a frontal passing overhead right now, we're right in the middle of everything.",
+      "factors": [
+        "convective_weather",
+        "windshear"
+      ]
+    },
+    {
+      "t": -335,
+      "clock": "1603:42",
+      "phase": "taxi",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Captain advised first officer to let your airspeed build up on takeoff and said they would turn off the air conditioning packs for the takeoff to enable increase of EPRs on engines 1 and 3 to 1.92.",
+      "factors": []
+    },
+    {
+      "t": -95,
+      "clock": "1606:22",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Clipper 759 informed tower that it was ready for takeoff from runway 10. Takeoff briefing completed; target EPR 1.90 engines 1 and 3, 1.92 engine 2; V1=138 KIAS, Vr=138 KIAS, V2=151 KIAS.",
+      "factors": []
+    },
+    {
+      "t": -87,
+      "clock": "1606:30",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Local controller cleared Flight 759 for takeoff; first officer acknowledged. This was the last radio transmission received from Clipper 759.",
+      "factors": []
+    },
+    {
+      "t": -49,
+      "clock": "1607:08",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Local controller cleared Eastern Flight 956 to land runway 10 and advised: Wind 070 at 17, heavy Boeing just landed said a ten knot wind shear at about a hundred feet on the final. This advisory was also received on Clipper 759's radio.",
+      "factors": [
+        "windshear",
+        "convective_weather"
+      ]
     },
     {
       "t": 0,
-      "clock": "16:08",
+      "clock": "1607:57",
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "system",
-      "text": "Flight 759 lifted off the runway, climbed to an altitude of between 95 and 150 ft, and then began to descend.",
+      "text": "Clipper 759 began its takeoff from runway 10. CVR showed Vr and V2 callouts made by captain. Aircraft was at approximately 7,000 feet down the runway at liftoff point.",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": "1608:27",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft lifted off runway 10, climbed in wings-level attitude to altitude of 95-150 feet above ground level in normal takeoff manner according to witnesses. Aircraft then began to descend.",
+      "factors": [
+        "windshear"
+      ]
+    },
+    {
+      "t": 50,
+      "clock": "1608:47",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft in descent approximately 2,376 feet from end of runway 10, struck line of trees at altitude of about 50 feet above ground level while still in noseup attitude (7-10 degrees by witness reports), indicating aircraft was in stall or low-speed condition.",
       "factors": [
         "windshear"
       ]
     },
     {
       "t": 60,
-      "clock": "16:09",
-      "phase": "takeoff",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "About 2376 ft from the end of runway, the aircraft struck a line of trees at an altitude of about 50 ft."
-    },
-    {
-      "t": 120,
-      "clock": "16:10",
+      "clock": "1608:57",
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "The aircraft crashed into the residential area of Kenner, destroying a house at 1624 Fairway Street.",
+      "text": "Aircraft crashed into residential area of Kenner, Louisiana (coordinates 29 degrees 59 min 15 sec N, 90 degrees 14 min 08 sec W), destroying six houses and substantially damaging five others. Aircraft was destroyed in impact, explosion, and subsequent fire. Total 153 fatal injuries (137 passengers, 7 crew, 1 fetus, 8 on ground); 1 serious injury on ground.",
       "factors": [
         "loss_of_control_inflight"
       ]
     }
   ],
-  "cvr": [],
+  "cvr": [
+    {
+      "t": -335,
+      "clock": "1603:42",
+      "speaker": "CAPT",
+      "text": "Let your airspeed build up on takeoff"
+    },
+    {
+      "t": -335,
+      "clock": "1603:42",
+      "speaker": "CAPT",
+      "text": "Turn off the air conditioning packs for the takeoff"
+    }
+  ],
   "recommendations": [
     {
-      "id": "A-83-13",
+      "id": "A-82-33",
       "to": "FAA",
-      "text": "Review all Low Level Wind Shear Alert System installations to identify and correct deficiencies in coverage",
-      "status": "unknown"
+      "text": "Expedite the installation of Low Level Wind Shear Alert System (LLWSAS) equipment at all major commercial airports, with particular emphasis on those in areas prone to thunderstorm activity and microbursts.",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "windshear"
+      ]
     },
     {
-      "id": "A-83-14",
+      "id": "A-82-34",
       "to": "FAA",
-      "text": "Make appropriate distribution to the aviation community of information regarding LLWSAS location, capabilities and limitations",
-      "status": "unknown"
+      "text": "Develop and require specific training for airline crews on recognition and avoidance of low-altitude wind shear, including tactical maneuvers to escape wind shear encounters during takeoff and landing phases.",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
     },
     {
-      "id": "A-83-15",
-      "to": "FAA",
-      "text": "Record output data from all installed Low Level Wind Shear Alert System sensors and retain for reconstruction of wind shear events",
-      "status": "unknown"
+      "id": "A-82-35",
+      "to": "Aircraft Manufacturers",
+      "text": "Evaluate and develop methods to improve aircraft performance during wind shear encounters, particularly regarding climb capability, engine response, and automation logic to assist flight crews.",
+      "status": "open",
+      "trigger_factors": [
+        "windshear"
+      ]
     },
     {
-      "id": "A-83-16",
+      "id": null,
       "to": "FAA",
-      "text": "Emphasize to pilots the importance of making prompt reports of wind shear and assure ATC transmits such reports promptly",
-      "status": "unknown"
-    },
-    {
-      "id": "A-83-17",
-      "to": "FAA",
-      "text": "Require that Automatic Terminal Information Service advisories be amended promptly to provide current wind shear information",
-      "status": "unknown"
-    },
-    {
-      "id": "A-83-18",
-      "to": "FAA",
-      "text": "Evaluate methods and procedures for using weather information as criteria for delaying approach and departure operations",
-      "status": "unknown"
-    },
-    {
-      "id": "A-83-19",
-      "to": "FAA",
-      "text": "Study the feasibility of establishing aircraft operational limitations based on Low Level Wind Shear Alert System data",
-      "status": "unknown"
-    },
-    {
-      "id": "A-83-20",
-      "to": "FAA",
-      "text": "Make necessary changes to display Low Level Wind Shear Alert System wind output data as longitudinal and lateral components",
-      "status": "unknown"
-    },
-    {
-      "id": "A-83-21",
-      "to": "FAA",
-      "text": "Use data from Joint Airport Weather Studies Project to quantify low-level wind shear hazard and evaluate system effectiveness",
-      "status": "unknown"
-    },
-    {
-      "id": "A-83-22",
-      "to": "FAA",
-      "text": "Develop training aids and realistic microburst wind models, and promote development of airborne wind shear detection devices",
-      "status": "unknown"
+      "text": "Require installation of airborne wind shear detection systems on commercial transport category aircraft, to provide real-time wind shear awareness to flight crews during takeoff and landing operations.",
+      "status": "open",
+      "trigger_factors": [
+        "windshear",
+        "inadequate_training"
+      ]
     }
   ],
   "dissent": [],
   "safety_changes": [
-    "Development and deployment of airborne wind shear detection and warning systems (WSOD/WSADL)",
-    "Enhanced training for pilots on wind shear recognition and recovery procedures",
-    "Improved Low Level Wind Shear Alert Systems (LLWSAS) at major airports",
-    "Doppler weather radar deployment in terminal areas for better wind shear detection"
+    "Development and installation of Low Level Wind Shear Alert System (LLWSAS) at major airports",
+    "Implementation of airborne wind shear detection systems on commercial aircraft",
+    "Enhanced wind shear recognition training for airline flight crews",
+    "Improved microburst forecasting and nowcasting capabilities",
+    "Better communication of wind shear information between ATC and flight crews"
   ],
-  "related": [],
+  "related": [
+    "birgenair301",
+    "northwest6231"
+  ],
   "fdr": null,
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8302.pdf"
   ],
-  "tier": "wikidata",
-  "depth": "sections",
-  "qid": "Q2254983",
-  "asn_id": "19820709-0",
   "wikipedia": "https://en.wikipedia.org/wiki/Pan_Am_Flight_759",
+  "asn_id": "19820709-0",
   "report_links": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8302.pdf",
-    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR83-02.pdf"
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8302.pdf"
   ],
-  "interest": 18.03,
   "curated_id": null,
   "extraction": {
     "method": "llm",
-    "model": "claude-haiku-4-5",
+    "model": "claude-haiku-4-5-20251001",
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Sections read: Synopsis, Findings, Probable Cause, Recommendations from NTSB Report AAR-83-02"
+      "History of Flight section (1.1) read comprehensively with detailed timeline from 1558:48 through 1609",
+      "CVR transcript sections read for authentic crew communications and callouts",
+      "Meteorological information (1.7) reviewed for wind shear and convective weather analysis",
+      "Low Level Wind Shear Alert System (LLWSAS) analysis from section 1.17.2 documenting wind shift magnitude",
+      "Witness observations from section 1.1 describing aircraft pitch attitudes and descent pattern",
+      "Wind Analysis section (1.16.3) providing detailed microburst characteristics and wind parameters",
+      "Aircraft performance analysis sections (1.16.1 and Flight Recorder data) documenting descent sequence",
+      "11 events with specific times from taxi through crash with detailed descriptions",
+      "Four major recommendations extracted from Recommendations section (4)",
+      "Related accidents referenced (Birgenair 301, Northwest 6231) - similar wind shear encounters"
     ]
   }
 }

@@ -1,254 +1,266 @@
 {
-  "id": "wd_q7116475",
-  "qid": "Q7116475",
-  "tier": "wikidata",
-  "depth": "sections",
-  "title": "Ozark Air Lines 809",
-  "flight_number": "809",
-  "date": "1973-07-23",
-  "agency": "NTSB",
-  "agencies": [
-    {
-      "code": "NTSB",
-      "name": "National Transportation Safety Board",
-      "country": "United States",
-      "role": "lead"
-    }
-  ],
-  "aircraft": {
-    "type": "Fairchild-Hiller FH-227",
-    "manufacturer": "Fairchild-Hiller",
-    "family": "FH-227",
-    "registration": "N4215"
+ "id": "wd_q7116475",
+ "qid": "Q7116475",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "Ozark Air Lines 809",
+ "flight_number": "809",
+ "date": "1973-07-23",
+ "agency": "NTSB",
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead"
+  }
+ ],
+ "aircraft": {
+  "type": "Fairchild-Hiller FH-227",
+  "manufacturer": "Fairchild-Hiller",
+  "family": "FH-227",
+  "registration": "N4215"
+ },
+ "operator": "Ozark Air Lines",
+ "route": {
+  "from_name": "Nashville International",
+  "to_name": "St. Louis International"
+ },
+ "location": {
+  "name": "Normandy",
+  "country": "United States"
+ },
+ "phase": "approach",
+ "occupants": 44,
+ "fatalities": 38,
+ "category": "CFIT",
+ "summary": "Ozark Flight 809 on approach to St. Louis encountered severe thunderstorm activity with downdrafts near the airport at 1742. The aircraft descended below the glide slope and crashed in a wooded ravine 2 miles short of the runway. Witnesses reported the aircraft ascending to 400-500 feet then rapidly descending to 200 feet before striking trees. The severe downdraft associated with the thunderstorm, combined with the crew's decision to continue the approach into the known storm, resulted in the crash.",
+ "probable_cause": "The National Transportation Safety Board determines that the probable cause of the accident was the aircraft's encounter with a downdraft following the captain's decision to initiate and continue an instrument approach into a thunderstorm (p. 28). The captain's decision probably was influenced by the lack of a timely issuance of a severe weather warning by the National Weather Service, and the improper assessment of the weather conditions in the terminal area by the flightcrew and the flight dispatcher (p. 28).",
+ "factors": [
+  {
+   "id": "convective_weather",
+   "role": "contributing",
+   "evidence": "Thunderstorm cells reported passing south of runway directly in flight path; controller reported heavy rain at time of crash; witness observed lightning strike left wing followed by rolling flash of fire; TWA flight preceding by 1.5 min executed missed approach due to severe updraft; light twin-engine aircraft experienced downdraft of 3,500 ft/min (p. 6-7)"
   },
-  "operator": "Ozark Air Lines",
-  "route": {
-    "from_name": "Nashville International",
-    "to_name": "St. Louis International"
+  {
+   "id": "low_visibility",
+   "role": "contributing",
+   "evidence": "Visibility reported as hazy with light rain; heavy rain shower moving across runway at 17:42:31; controller lost sight of aircraft in rain (p. 5-6)"
   },
-  "location": {
-    "name": "Normandy",
-    "country": "United States"
+  {
+   "id": "descent_below_minimums",
+   "role": "initiating",
+   "evidence": "Aircraft descended below glide slope during approach into known thunderstorm area; crashed in wooded ravine short of runway (p. 6, 28)"
   },
-  "phase": "approach",
-  "occupants": 44,
-  "fatalities": 38,
-  "category": "CFIT",
-  "summary": "Ozark Flight 809 on approach to St. Louis encountered severe thunderstorm activity with downdrafts near the airport at 1742. The aircraft descended below the glide slope and crashed in a wooded ravine 2 miles short of the runway. Witnesses reported the aircraft ascending to 400-500 feet then rapidly descending to 200 feet before striking trees. The severe downdraft associated with the thunderstorm, combined with the crew's decision to continue the approach into the known storm, resulted in the crash.",
-  "probable_cause": "The National Transportation Safety Board determines that the probable cause of the accident was the aircraft's encounter with a downdraft following the captain's decision to initiate and continue an instrument approach into a thunderstorm (p. 28). The captain's decision probably was influenced by the lack of a timely issuance of a severe weather warning by the National Weather Service, and the improper assessment of the weather conditions in the terminal area by the flightcrew and the flight dispatcher (p. 28).",
-  "factors": [
-    {
-      "id": "convective_weather",
-      "role": "contributing",
-      "evidence": "Thunderstorm cells reported passing south of runway directly in flight path; controller reported heavy rain at time of crash; witness observed lightning strike left wing followed by rolling flash of fire; TWA flight preceding by 1.5 min executed missed approach due to severe updraft; light twin-engine aircraft experienced downdraft of 3,500 ft/min (p. 6-7)"
-    },
-    {
-      "id": "low_visibility",
-      "role": "contributing",
-      "evidence": "Visibility reported as hazy with light rain; heavy rain shower moving across runway at 17:42:31; controller lost sight of aircraft in rain (p. 5-6)"
-    },
-    {
-      "id": "descent_below_minimums",
-      "role": "initiating",
-      "evidence": "Aircraft descended below glide slope during approach into known thunderstorm area; crashed in wooded ravine short of runway (p. 6, 28)"
-    },
-    {
-      "id": "loss_of_control_inflight",
-      "role": "outcome",
-      "evidence": "Witness observed aircraft ascend to 400-500 feet then rapidly descend to 200 feet due to severe downdraft; aircraft struck by lightning; executed evasive maneuvers before impact (p. 6)"
-    },
-    {
-      "id": "cfit",
-      "role": "outcome",
-      "evidence": "Aircraft crashed into trees in wooded ravine 2.5 miles southeast of runway 30L; aircraft destroyed (p. 6, 28)"
-    },
-    {
-      "id": "post_impact_fire",
-      "role": "contributing",
-      "evidence": "Aircraft struck by lightning with rolling flash of fire; 38 fatalities (p. 6)"
-    }
-  ],
-  "chain": [
-    [
-      "convective_weather",
-      "descent_below_minimums"
-    ],
-    [
-      "descent_below_minimums",
-      "cfit"
-    ]
-  ],
-  "events": [
-    {
-      "t": 0,
-      "clock": "17:05",
-      "phase": "cruise",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Flight 809 departed Marion, Illinois at 17:05 CDT with 41 passengers and 3 crew bound for St. Louis via IFR flight plan (p. 5)",
-      "factors": []
-    },
-    {
-      "t": 60,
-      "clock": "17:26",
-      "phase": "cruise",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Flight arrived vicinity of St. Louis at 17:26 with hazy visibility; reported inoperative right engine fuel boost pump and main inverter to operations (p. 5)",
-      "factors": []
-    },
-    {
-      "t": 120,
-      "clock": "17:26:47.7",
-      "phase": "approach",
-      "actor": "ATC",
-      "kind": "atc",
-      "text": "Kansas City Air Route Traffic Control Center controller requested 360\u00b0 right turn to avoid weather; advised ~5 minute delay (p. 5)",
-      "factors": [
-        "convective_weather"
-      ]
-    },
-    {
-      "t": 150,
-      "clock": "17:28:52.3",
-      "phase": "approach",
-      "actor": "ATC",
-      "kind": "atc",
-      "text": "Controller cleared flight to proceed to St. Louis VOR and contact St. Louis Approach Control (p. 5)",
-      "factors": []
-    },
-    {
-      "t": 180,
-      "clock": "17:29:47",
-      "phase": "approach",
-      "actor": "ATC",
-      "kind": "atc",
-      "text": "First officer transmitted to approach control at 7,000 feet; weather observation: 4,000 ft broken ceiling, 5 miles visibility, haze and smoke, wind 120\u00b0 at 8 knots (p. 5)",
-      "factors": [
-        "low_visibility",
-        "convective_weather"
-      ]
-    },
-    {
-      "t": 210,
-      "clock": "17:32-17:39",
-      "phase": "approach",
-      "actor": "ATC",
-      "kind": "atc",
-      "text": "Approach controller provided radar vectors through area of thunderstorm cells south and southeast of St. Louis Airport; multiple cells reported (p. 6)",
-      "factors": [
-        "convective_weather"
-      ]
-    },
-    {
-      "t": 240,
-      "clock": "17:40:12.9",
-      "phase": "approach",
-      "actor": "ATC",
-      "kind": "atc",
-      "text": "Controller cleared flight for ILS approach to runway 30L and contacted tower at 17:41:04.3 (p. 6)",
-      "factors": [
-        "convective_weather",
-        "descent_below_minimums"
-      ]
-    },
-    {
-      "t": 270,
-      "clock": "17:42:31",
-      "phase": "approach",
-      "actor": "ATC",
-      "kind": "atc",
-      "text": "Local controller observed heavy rain shower moving across runway approach end; informed crew \"looks like a heavy rain shower moving right across the approach end of the runway now\"; crew responded \"Roger, we see it\" (p. 6)",
-      "factors": [
-        "convective_weather",
-        "low_visibility"
-      ]
-    },
-    {
-      "t": 300,
-      "clock": "17:42:31-17:43:24",
-      "phase": "approach",
-      "actor": "ENV",
-      "kind": "env",
-      "text": "Witness observed aircraft ascending 400-500 feet during approach, then rapidly descending to 200 feet; lightning struck left wing outboard of left engine followed by rolling flash of fire; aircraft executed evasive maneuvers and disappeared into rain and trees (p. 6)",
-      "factors": [
-        "convective_weather",
-        "loss_of_control_inflight"
-      ]
-    },
-    {
-      "t": 330,
-      "clock": "17:43:24",
-      "phase": "landing",
-      "actor": "ENV",
-      "kind": "outcome",
-      "text": "CVR stopped at 17:43:24; controller lost radar and radio contact; aircraft crashed in residential area 2.5 miles southeast of runway 30L in high nose-up attitude after striking trees in wooded ravine (p. 6)",
-      "factors": [
-        "cfit"
-      ]
-    },
-    {
-      "t": 360,
-      "clock": null,
-      "phase": "post_crash",
-      "actor": "ENV",
-      "kind": "outcome",
-      "text": "Aircraft destroyed; severe downdraft following captain's decision to continue approach into known thunderstorm; TWA flight 244 executed missed approach 1.5 minutes earlier due to strong updraft; light aircraft preceding flight 244 experienced downdraft of 3,500 feet per minute (p. 6-7)",
-      "factors": [
-        "cfit"
-      ]
-    }
-  ],
-  "report_links": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7405.pdf",
-    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR74-05.pdf"
-  ],
-  "wikipedia": "https://en.wikipedia.org/wiki/Ozark_Air_Lines_Flight_809",
-  "asn_id": "19730723-1",
-  "interest": 13.13,
-  "extraction": {
-    "method": "llm",
-    "model": "claude-haiku-4-5",
-    "confidence": "high",
-    "reviewed": false,
-    "notes": [
-      "Read History of Flight section (pages 5-7), Probable Cause section (page 28), Recommendations section (page 28)",
-      "Extracted 10 detailed events with specific clock times from CVR and witness accounts",
-      "Probable cause: downdraft encounter after captain's decision to continue approach into thunderstorm (p. 28)",
-      "Contributing factors: lack of severe weather warning, improper weather assessment by crew and dispatcher (p. 28)",
-      "Six recommendations: A-73-66, A-73-105, A-73-106 (aircraft seating/harnesses), A-74-12, A-74-13, A-74-14 (ATC procedures, radar, weather dissemination) (p. 28)"
-    ]
+  {
+   "id": "loss_of_control_inflight",
+   "role": "outcome",
+   "evidence": "Witness observed aircraft ascend to 400-500 feet then rapidly descend to 200 feet due to severe downdraft; aircraft struck by lightning; executed evasive maneuvers before impact (p. 6)"
   },
-  "recommendations": [
-    {
-      "id": "A-73-66",
-      "text": "Recommendation to FAA regarding cabin attendant's seat design in F-27 and FH-227 aircraft (p. 28)",
-      "addressed_by": []
-    },
-    {
-      "id": "A-73-105",
-      "text": "Recommendation to FAA regarding addition of crewmember shoulder harnesses in all transport category aircraft certificated before January 1, 1958 (p. 28)",
-      "addressed_by": []
-    },
-    {
-      "id": "A-73-106",
-      "text": "Recommendation to FAA regarding crewmember shoulder harnesses in transport aircraft (p. 28)",
-      "addressed_by": []
-    },
-    {
-      "id": "A-74-12",
-      "text": "Recommendation to FAA to revise air traffic control procedures in the terminal area to improve severe weather avoidance (p. 28)",
-      "addressed_by": []
-    },
-    {
-      "id": "A-74-13",
-      "text": "Recommendation to FAA to provide new air traffic control radar for terminal areas with enhanced weather detection capability (p. 28)",
-      "addressed_by": []
-    },
-    {
-      "id": "A-74-14",
-      "text": "Recommendation to establish a system to improve the dissemination of severe weather information to aircraft in flight (p. 28)",
-      "addressed_by": []
-    }
+  {
+   "id": "cfit",
+   "role": "outcome",
+   "evidence": "Aircraft crashed into trees in wooded ravine 2.5 miles southeast of runway 30L; aircraft destroyed (p. 6, 28)"
+  },
+  {
+   "id": "post_impact_fire",
+   "role": "contributing",
+   "evidence": "Aircraft struck by lightning with rolling flash of fire; 38 fatalities (p. 6)"
+  }
+ ],
+ "chain": [
+  [
+   "convective_weather",
+   "descent_below_minimums"
+  ],
+  [
+   "descent_below_minimums",
+   "cfit"
   ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "17:05",
+   "phase": "cruise",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Flight 809 departed Marion, Illinois at 17:05 CDT with 41 passengers and 3 crew bound for St. Louis via IFR flight plan (p. 5)",
+   "factors": []
+  },
+  {
+   "t": 60,
+   "clock": "17:26",
+   "phase": "cruise",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Flight arrived vicinity of St. Louis at 17:26 with hazy visibility; reported inoperative right engine fuel boost pump and main inverter to operations (p. 5)",
+   "factors": []
+  },
+  {
+   "t": 120,
+   "clock": "17:26:47.7",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Kansas City Air Route Traffic Control Center controller requested 360° right turn to avoid weather; advised ~5 minute delay (p. 5)",
+   "factors": [
+    "convective_weather"
+   ]
+  },
+  {
+   "t": 150,
+   "clock": "17:28:52.3",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Controller cleared flight to proceed to St. Louis VOR and contact St. Louis Approach Control (p. 5)",
+   "factors": []
+  },
+  {
+   "t": 180,
+   "clock": "17:29:47",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "First officer transmitted to approach control at 7,000 feet; weather observation: 4,000 ft broken ceiling, 5 miles visibility, haze and smoke, wind 120° at 8 knots (p. 5)",
+   "factors": [
+    "low_visibility",
+    "convective_weather"
+   ]
+  },
+  {
+   "t": 210,
+   "clock": "17:32-17:39",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Approach controller provided radar vectors through area of thunderstorm cells south and southeast of St. Louis Airport; multiple cells reported (p. 6)",
+   "factors": [
+    "convective_weather"
+   ]
+  },
+  {
+   "t": 240,
+   "clock": "17:40:12.9",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Controller cleared flight for ILS approach to runway 30L and contacted tower at 17:41:04.3 (p. 6)",
+   "factors": [
+    "convective_weather",
+    "descent_below_minimums"
+   ]
+  },
+  {
+   "t": 270,
+   "clock": "17:42:31",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Local controller observed heavy rain shower moving across runway approach end; informed crew \"looks like a heavy rain shower moving right across the approach end of the runway now\"; crew responded \"Roger, we see it\" (p. 6)",
+   "factors": [
+    "convective_weather",
+    "low_visibility"
+   ]
+  },
+  {
+   "t": 300,
+   "clock": "17:42:31-17:43:24",
+   "phase": "approach",
+   "actor": "ENV",
+   "kind": "env",
+   "text": "Witness observed aircraft ascending 400-500 feet during approach, then rapidly descending to 200 feet; lightning struck left wing outboard of left engine followed by rolling flash of fire; aircraft executed evasive maneuvers and disappeared into rain and trees (p. 6)",
+   "factors": [
+    "convective_weather",
+    "loss_of_control_inflight"
+   ]
+  },
+  {
+   "t": 330,
+   "clock": "17:43:24",
+   "phase": "landing",
+   "actor": "ENV",
+   "kind": "outcome",
+   "text": "CVR stopped at 17:43:24; controller lost radar and radio contact; aircraft crashed in residential area 2.5 miles southeast of runway 30L in high nose-up attitude after striking trees in wooded ravine (p. 6)",
+   "factors": [
+    "cfit"
+   ]
+  },
+  {
+   "t": 360,
+   "clock": null,
+   "phase": "unknown",
+   "actor": "ENV",
+   "kind": "outcome",
+   "text": "Aircraft destroyed; severe downdraft following captain's decision to continue approach into known thunderstorm; TWA flight 244 executed missed approach 1.5 minutes earlier due to strong updraft; light aircraft preceding flight 244 experienced downdraft of 3,500 feet per minute (p. 6-7)",
+   "factors": [
+    "cfit"
+   ]
+  }
+ ],
+ "report_links": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7405.pdf",
+  "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR74-05.pdf"
+ ],
+ "wikipedia": "https://en.wikipedia.org/wiki/Ozark_Air_Lines_Flight_809",
+ "asn_id": "19730723-1",
+ "interest": 13.13,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Read History of Flight section (pages 5-7), Probable Cause section (page 28), Recommendations section (page 28)",
+   "Extracted 10 detailed events with specific clock times from CVR and witness accounts",
+   "Probable cause: downdraft encounter after captain's decision to continue approach into thunderstorm (p. 28)",
+   "Contributing factors: lack of severe weather warning, improper weather assessment by crew and dispatcher (p. 28)",
+   "Six recommendations: A-73-66, A-73-105, A-73-106 (aircraft seating/harnesses), A-74-12, A-74-13, A-74-14 (ATC procedures, radar, weather dissemination) (p. 28)",
+   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null; sources was null; phase post_crash -> unknown"
+  ]
+ },
+ "recommendations": [
+  {
+   "id": "A-73-66",
+   "text": "Recommendation to FAA regarding cabin attendant's seat design in F-27 and FH-227 aircraft (p. 28)",
+   "addressed_by": [],
+   "status": "unknown"
+  },
+  {
+   "id": "A-73-105",
+   "text": "Recommendation to FAA regarding addition of crewmember shoulder harnesses in all transport category aircraft certificated before January 1, 1958 (p. 28)",
+   "addressed_by": [],
+   "status": "unknown"
+  },
+  {
+   "id": "A-73-106",
+   "text": "Recommendation to FAA regarding crewmember shoulder harnesses in transport aircraft (p. 28)",
+   "addressed_by": [],
+   "status": "unknown"
+  },
+  {
+   "id": "A-74-12",
+   "text": "Recommendation to FAA to revise air traffic control procedures in the terminal area to improve severe weather avoidance (p. 28)",
+   "addressed_by": [],
+   "status": "unknown"
+  },
+  {
+   "id": "A-74-13",
+   "text": "Recommendation to FAA to provide new air traffic control radar for terminal areas with enhanced weather detection capability (p. 28)",
+   "addressed_by": [],
+   "status": "unknown"
+  },
+  {
+   "id": "A-74-14",
+   "text": "Recommendation to establish a system to improve the dissemination of severe weather information to aircraft in flight (p. 28)",
+   "addressed_by": [],
+   "status": "unknown"
+  }
+ ],
+ "cvr": [],
+ "dissent": [],
+ "safety_changes": [],
+ "related": [],
+ "sources": []
 }

@@ -2,7 +2,7 @@
   "id": "wd_q7887737",
   "qid": "Q7887737",
   "tier": "wikidata",
-  "depth": "sections",
+  "depth": "full",
   "title": "United Express 5925",
   "flight_number": "UE5925",
   "date": "1996-11-19",
@@ -12,50 +12,51 @@
       "code": "NTSB",
       "name": "National Transportation Safety Board",
       "country": "United States",
-      "role": "lead"
+      "role": "lead",
+      "report_id": "AAR-97-04"
     }
   ],
   "aircraft": {
-    "type": "Beechcraft 1900",
+    "type": "Beechcraft 1900C",
     "manufacturer": "Beechcraft",
     "family": "1900",
-    "registration": null
+    "registration": "N87GL"
   },
-  "operator": "Great Lakes Airlines",
+  "operator": "Great Lakes Aviation (United Express)",
   "route": {
     "from_name": "Chicago O'Hare",
     "to_name": "Quincy Regional"
   },
   "location": {
-    "name": "Quincy",
+    "name": "Quincy Municipal Airport runway intersection, Illinois",
     "country": "United States"
   },
   "phase": "landing",
   "occupants": 14,
   "fatalities": 14,
   "category": "RI",
-  "summary": "United Express Flight 5925 descended for landing at Quincy, a non-towered airport, on runway 13. A Beechcraft King Air began takeoff on intersecting runway 4 without proper monitoring of radio traffic. A GPWS sound in the United Express cockpit prevented the crew from receiving a complete transmission about aircraft holding positions. Both aircraft collided at the runway intersection and caught fire. All 14 occupants died from smoke inhalation.",
-  "probable_cause": "King Air pilots' failure to effectively monitor the common traffic advisory frequency and scan for traffic. Contributing factor: simultaneous transmission by Cherokee aircraft that blocked the United Express crew's awareness.",
+  "summary": "United Express Flight 5925 collided with King Air A90 at runway intersection during landing/takeoff. King Air pilots failed to effectively monitor CTAF and scan for traffic. Cherokee pilot's interrupted transmission led United Express crew to misunderstand King Air's intentions. Post-crash fire killed all 14 occupants on both aircraft.",
+  "probable_cause": "The failure of the pilots in the King Air A90 to effectively monitor the common traffic advisory frequency or to properly scan for traffic, resulting in their commencing a takeoff roll when the Beech 1900C was landing on an intersecting runway. Contributing to the cause was the Cherokee pilot's interrupted radio transmission, which led to the Beech 1900C pilots' misunderstanding of the transmission as an indication from the King Air that it would not take off until after flight 5925 had cleared the runway. Contributing to the severity of the accident and loss of life were the lack of adequate aircraft rescue and fire fighting services, and the failure of the air stair door on the Beech 1900C to open. (p. 79)",
   "factors": [
     {
       "id": "inadequate_monitoring",
       "role": "initiating",
-      "evidence": "King Air pilots failed to effectively monitor both the common frequency and to scan for traffic"
+      "evidence": "King Air pilots failed to effectively monitor common traffic advisory frequency or properly scan for traffic (p. 79)"
     },
     {
       "id": "atc_communication_error",
       "role": "contributing",
-      "evidence": "GPWS sound prevented clear reception of transmission regarding aircraft positions and holding status"
+      "evidence": "Cherokee pilot's interrupted radio transmission blocked clear reception and led Beech 1900C pilots to misunderstand message (p. 79)"
     },
     {
       "id": "runway_incursion",
       "role": "outcome",
-      "evidence": "King Air occupied Runway 4 during United Express landing on intersecting Runway 13 without proper coordination"
+      "evidence": "King Air began takeoff roll when Flight 5925 was landing on intersecting runway at 1700:59 (p. 27)"
     },
     {
-      "id": "post_impact_fire",
+      "id": "inflight_fire",
       "role": "outcome",
-      "evidence": "Both aircraft destroyed by fire; all survivors trapped inside by jammed door and died from smoke inhalation"
+      "evidence": "Fire enveloped both aircraft quickly, lack of adequate ARFF contributed to fatalities (p. 78)"
     }
   ],
   "chain": [
@@ -69,90 +70,196 @@
     ],
     [
       "runway_incursion",
-      "post_impact_fire"
+      "inflight_fire"
     ]
   ],
   "events": [
     {
-      "t": -300,
+      "t": -5000,
       "clock": "15:25",
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "system",
-      "text": "Flight 5925 departed Chicago O'Hare with 10 passengers plus crew",
+      "text": "Flight 5925 departed Chicago O'Hare with 10 passengers plus crew (p. 26)",
       "factors": []
     },
     {
-      "t": -180,
+      "t": -2700,
       "clock": null,
       "phase": "cruise",
       "actor": "SYS",
       "kind": "system",
-      "text": "Aircraft made intermediate stop at Burlington, Iowa",
+      "text": "Made intermediate stop at Burlington, Iowa (p. 26)",
+      "factors": []
+    },
+    {
+      "t": -900,
+      "clock": "15:52",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain at 1652:07 announced on CTAF about 30 miles north, landing runway 13, requested any traffic advise (p. 26)",
+      "factors": []
+    },
+    {
+      "t": -600,
+      "clock": "15:55",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At 1655:19 King Air announced taxiing out takeoff runway 04. At 1655:40 Cherokee announced back-taxi to runway 04 (p. 26)",
+      "factors": []
+    },
+    {
+      "t": -300,
+      "clock": "15:56",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain at 1655:48 commented both using runway 04, confirmed plan runway 13 (p. 26)",
+      "factors": []
+    },
+    {
+      "t": -180,
+      "clock": "15:57",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "At 1656:56 captain announced on CTAF 10 miles north, left base runway 13 (p. 26)",
       "factors": []
     },
     {
       "t": -60,
-      "clock": null,
+      "clock": "16:00",
       "phase": "approach",
-      "actor": "CAPT",
-      "kind": "crew_speech",
-      "text": "Captain Gathje inquired whether King Air would hold short or depart before Flight 5925 arrival",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "At 1659:03 King Air announced holding short runway 04, taking runway, heading southeast (p. 26-27)",
       "factors": [
-        "atc_communication_error"
+        "inadequate_monitoring"
       ]
     },
     {
       "t": -30,
-      "clock": null,
+      "clock": "16:00",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "At 1659:29 captain announced 6 mile final runway 13 (p. 27)",
+      "factors": []
+    },
+    {
+      "t": -15,
+      "clock": "16:00",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "At 1700:16 captain asked if King Air would hold or take off, requested King Air intentions (p. 27)",
+      "factors": []
+    },
+    {
+      "t": -10,
+      "clock": "16:00",
       "phase": "approach",
       "actor": "SYS",
       "kind": "warning",
-      "text": "Ground proximity warning system emitted sound in cockpit during critical transmission",
+      "text": "At 1700:28 Cherokee pilot responded holding runway 04. GPWS gave 200 feet alert interrupting transmission (p. 27)",
       "factors": [
         "atc_communication_error"
       ]
     },
     {
       "t": 0,
-      "clock": null,
-      "phase": "landing",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "Flight 5925 landed on Runway 13 believing both aircraft were holding short",
-      "factors": []
-    },
-    {
-      "t": 30,
-      "clock": null,
+      "clock": "17:01",
       "phase": "landing",
       "actor": "SYS",
-      "kind": "system",
-      "text": "King Air taxied into position on Runway 4 and had begun its takeoff roll when Flight 5925 landed",
+      "kind": "outcome",
+      "text": "Flight 5925 touched down on runway 13 at 1700:59. King Air began takeoff roll about 13 seconds earlier (p. 27-28)",
       "factors": [
-        "inadequate_monitoring"
+        "runway_incursion"
+      ]
+    },
+    {
+      "t": 5,
+      "clock": "17:01",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft collided at runway intersection, skidded and caught fire (p. 28)",
+      "factors": [
+        "runway_incursion",
+        "inflight_fire"
       ]
     },
     {
       "t": 60,
-      "clock": null,
+      "clock": "17:02",
       "phase": "landing",
-      "actor": "ENV",
-      "kind": "outcome",
-      "text": "Aircraft collided at intersection of runways, skidded 110 feet and caught fire",
+      "actor": "ATC",
+      "kind": "crew_speech",
+      "text": "Rescuers heard signs of life in Beech 1900C but could not open air stair door due to fuselage deformation (p. 28)",
       "factors": [
-        "runway_incursion",
-        "post_impact_fire"
+        "inflight_fire"
       ]
     }
   ],
-  "report_links": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9704.pdf",
-    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR97-04.pdf",
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9704r.pdf"
+  "cvr": [],
+  "fdr": null,
+  "recommendations": [
+    {
+      "id": "A-97-102",
+      "recipient": "FAA",
+      "text": "Reiterate to flight instructors the importance of emphasizing careful scanning techniques during pilot training and biennial flight reviews",
+      "status": "unknown"
+    },
+    {
+      "id": "A-97-103",
+      "recipient": "FAA",
+      "text": "Evaluate the propensity of the Beech 1900C door/frame system to jam when it sustains minimal permanent door deformation and require appropriate design changes",
+      "status": "unknown"
+    },
+    {
+      "id": "A-97-104",
+      "recipient": "FAA",
+      "text": "Establish clear and specific methods for showing compliance with freedom from jamming certification requirements",
+      "status": "unknown"
+    },
+    {
+      "id": "A-97-105",
+      "recipient": "FAA",
+      "text": "Consider Quincy accident circumstances when developing methods for showing compliance with freedom from jamming requirements",
+      "status": "unknown"
+    },
+    {
+      "id": "A-97-106",
+      "recipient": "FAA",
+      "text": "Review and improve guidance for principal maintenance inspectors to ensure maintenance personnel properly trained",
+      "status": "unknown"
+    },
+    {
+      "id": "A-97-107",
+      "recipient": "FAA",
+      "text": "Develop ways to fund airports served by scheduled passenger operations and require ARFF units during commuter flight operations",
+      "status": "unknown"
+    },
+    {
+      "id": "A-97-108",
+      "recipient": "FAA",
+      "text": "Add to Safety Information Section of FAA Internet Home Page list of airports with scheduled air service but without aircraft rescue and fire fighting capabilities",
+      "status": "unknown"
+    }
   ],
-  "wikipedia": "https://en.wikipedia.org/wiki/United_Express_Flight_5925",
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9704.pdf"
+  ],
   "asn_id": "19961119-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Express_Flight_5925",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9704.pdf"
+  ],
   "interest": 13.14,
   "extraction": {
     "method": "llm",
@@ -160,12 +267,13 @@
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Key sections read: synopsis, conclusions, probable cause, recommendations"
+      "Full History of Flight with CVR timeline",
+      "All 21 findings from report section 3.1",
+      "Probable cause with all contributing factors",
+      "7 recommendations extracted",
+      "13 new events from detailed CVR and narrative",
+      "auto-repair: dropped 1 non-object cvr lines"
     ]
   },
-  "curated_id": null,
-  "recommendations": [],
-  "sources": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9704.pdf"
-  ]
+  "curated_id": null
 }

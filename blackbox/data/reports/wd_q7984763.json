@@ -2,11 +2,17 @@
   "id": "wd_q7984763",
   "qid": "Q7984763",
   "tier": "wikidata",
-  "depth": "sections",
+  "depth": "full",
   "title": "West Coast Airlines 956",
   "flight_number": "956",
   "date": "1966-10-01",
   "agency": "NTSB",
+  "agencies": [{
+    "code": "NTSB",
+    "name": "National Transportation Safety Board",
+    "country": "United States",
+    "role": "lead"
+  }],
   "aircraft": {
     "type": "Douglas DC-9-14",
     "manufacturer": "Douglas",
@@ -15,139 +21,140 @@
   },
   "operator": "West Coast Airlines",
   "route": {
-    "from_name": "Portland",
-    "to_name": "Seattle"
+    "from_name": "Eugene",
+    "to_name": "Portland International Airport"
   },
   "location": {
-    "name": "Wemme",
+    "name": "Mt. Hood National Forest near Wemme, Oregon",
     "country": "United States"
   },
   "phase": "descent",
   "occupants": 18,
   "fatalities": 18,
   "category": "CFIT",
-  "summary": "During descent via radar vector from Seattle Center, Flight 956 received instruction to descend from 14,000 feet to 9,000 feet and turn right to heading 300 degrees. The aircraft descended to approximately 4,000 feet and leveled off in a normal descent pattern. An abrupt climb was initiated two seconds before impact. The crew had only 17 to 50 hours on the DC-9 type. The specific cause of descent below clearance limits was never determined by the NTSB.",
-  "probable_cause": "The descent of the aircraft below its clearance limit and below that of surrounding obstructing terrain, but the Board was unable to determine the cause of such descent.",
+  "summary": "DC-9 Flight 956 descended below cleared altitude and struck terrain on eastern slope of Salmon Mountain during approach to Portland. Controller lost radar contact during right turn. Cause of descent below clearance never determined. Crew had limited DC-9 experience. Aircraft destroyed by impact and fire.",
+  "probable_cause": "The Board determines the probable cause of this accident was the descent of the aircraft below its clearance limit and below that of surrounding obstructing terrain, but the Board has been unable to determine the cause of such descent. (p. 21)",
   "factors": [
-    {
-      "id": "pilot_experience",
-      "role": "contributing",
-      "evidence": "the captain, 42-year-old Charles C. Warren, had over 18,900 flying hours, but only seventeen in the DC-9"
-    },
-    {
-      "id": "descent_below_minimums",
-      "role": "initiating",
-      "evidence": "The aircraft was being flown on autopilot. The flight descended in a normal manner to approximately 4000 ft and leveled off."
-    },
-    {
-      "id": "loss_of_situational_awareness",
-      "role": "contributing",
-      "evidence": "The controller lost radar contact with the flight while it was in the right turn"
-    },
-    {
-      "id": "low_visibility",
-      "role": "latent",
-      "evidence": "more than an hour after sunset, the cloud ceiling was at 2900 ft, with the weather consisting of rain"
-    },
-    {
-      "id": "cfit",
-      "role": "outcome",
-      "evidence": "crashed on October 1, 1966, approximately 5.5 mi south of Wemme, Oregon"
-    }
+    {"id": "pilot_experience", "role": "contributing", "evidence": "Captain Warren had over 18,900 flying hours but only 17 hours in DC-9 type (p. 19)"},
+    {"id": "descent_below_minimums", "role": "initiating", "evidence": "Aircraft flown on autopilot, descended normally to approximately 4,000 feet then leveled off (p. 21)"},
+    {"id": "loss_of_situational_awareness", "role": "contributing", "evidence": "Controller lost radar contact with flight while in right turn (p. 21)"},
+    {"id": "low_visibility", "role": "latent", "evidence": "More than an hour after sunset, cloud ceiling at 2,900 feet with rain weather (p. 7)"},
+    {"id": "cfit", "role": "outcome", "evidence": "Crashed October 1, 1966, approximately 5.5 miles south of Wemme on Salmon Mountain (p. 6)"}
   ],
   "chain": [
-    [
-      "pilot_experience",
-      "descent_below_minimums"
-    ],
-    [
-      "descent_below_minimums",
-      "cfit"
-    ],
-    [
-      "loss_of_situational_awareness",
-      "descent_below_minimums"
-    ]
+    ["pilot_experience", "descent_below_minimums"],
+    ["descent_below_minimums", "cfit"],
+    ["loss_of_situational_awareness", "descent_below_minimums"]
   ],
   "events": [
     {
-      "t": 0,
-      "clock": "19:52",
-      "phase": "descent",
-      "actor": "ATC",
-      "kind": "atc",
-      "text": "Flight 956 departed Eugene for Portland, received IFR clearance via Victor Airway 23 at 12000 feet altitude",
+      "t": -1200,
+      "clock": "18:52",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 956 departed Eugene for Portland, received IFR clearance via Victor Airway 23 at 12,000 feet (p. 6)",
       "factors": []
     },
     {
-      "t": 660,
+      "t": -480,
+      "clock": "19:52",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight proceeded toward Portland cruising at 12,000 feet without reported difficulty (p. 6)",
+      "factors": []
+    },
+    {
+      "t": -360,
       "clock": "20:04",
       "phase": "descent",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Seattle Center under Air Traffic Control radar vector at 20:04:25 PDT issued descent instructions from 14000 feet to 9000 feet",
+      "text": "Seattle Center at 2004:25 issued descent clearance to 9,000 feet. Crew acknowledged (p. 6)",
       "factors": []
     },
     {
-      "t": 670,
+      "t": -240,
       "clock": "20:05",
       "phase": "descent",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Controller advised Runway 28R was in use at Portland International Airport and instructed turn right to heading 300 degrees",
+      "text": "Seattle Center about 1 minute later controller requested altitude, crew responded leaving 12,000 (p. 6)",
       "factors": []
     },
     {
-      "t": 690,
+      "t": -120,
+      "clock": "20:07",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Seattle Center issued vector turn right heading 300 degrees. Crew acknowledged but questioned direction of turn (p. 6-7)",
+      "factors": ["loss_of_situational_awareness"]
+    },
+    {
+      "t": -60,
       "clock": "20:09",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller lost radar contact with flight during right turn while passing estimated heading 140-160 degrees (p. 7)",
+      "factors": ["loss_of_situational_awareness"]
+    },
+    {
+      "t": -30,
+      "clock": "20:09",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 2009:09 crew requested to report when established on heading 300. At 2009:27 crew stated 'wilco' (p. 7)",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "20:10",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "system",
+      "text": "When radar target failed to reappear, controller transmitted series of radio calls with no response. At 2015 accident notification initiated (p. 7)",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": "20:15",
       "phase": "descent",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "The controller lost radar contact with the flight while it was in the right turn and aircraft crashed near Wemme at 20:15 radar notification",
-      "factors": [
-        "descent_below_minimums",
-        "loss_of_situational_awareness",
-        "cfit"
-      ]
+      "text": "Aircraft crashed on eastern slope at 45°51'21\" W latitude, 121°59'36\" W longitude in Mt. Hood National Forest (p. 7)",
+      "factors": ["descent_below_minimums", "cfit"]
+    },
+    {
+      "t": 360,
+      "clock": "20:16",
+      "phase": "descent",
+      "actor": "GND",
+      "kind": "system",
+      "text": "Ground witnesses in area reported seeing unusual orange glow near crash site. Aircraft sounded normal but appeared low (p. 7)",
+      "factors": []
     }
   ],
-  "report_links": [
-    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR67-AF.pdf",
-    "https://news.google.com/newspapers?id=sOVVAAAAIBAJ&sjid=IOEDAAAAIBAJ&pg=6277%2C18260",
-    "https://news.google.com/newspapers?id=SrJfAAAAIBAJ&sjid=AzMMAAAAIBAJ&pg=2296%2C112730",
-    "https://news.google.com/newspapers?id=seVVAAAAIBAJ&sjid=IOEDAAAAIBAJ&pg=6170%2C447032",
-    "https://news.google.com/newspapers?id=M_9XAAAAIBAJ&sjid=JPcDAAAAIBAJ&pg=6201%2C4638865",
-    "https://news.google.com/newspapers?id=S7JfAAAAIBAJ&sjid=AzMMAAAAIBAJ&pg=3240%2C320472"
-  ],
-  "wikipedia": "https://en.wikipedia.org/wiki/West_Coast_Airlines_Flight_956",
+  "cvr": [],
+  "fdr": null,
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "sources": ["http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR67-AF.pdf"],
   "asn_id": "19661001-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/West_Coast_Airlines_Flight_956",
+  "report_links": ["http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR67-AF.pdf"],
   "interest": 13.77,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
-    "notes": [
-      "Specific cause of descent never determined; aircraft was airworthy with proper crew certification; no mechanical failure detected; crew had limited experience on DC-9 type",
-      "Sections read from text report at /home/user/portfolio/blackbox/cache/text/wd_q7984763.txt: synopsis/summary, probable cause, factors, chain, events"
-    ]
+    "notes": ["Full History of Flight section with detailed timeline", "All 6 findings from Conclusions section", "Probable cause directly from report", "10 new events with clock times from narrative", "Page citations from OCR text markers"]
   },
-  "curated_id": null,
-  "sources": [
-    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR67-AF.pdf"
-  ],
-  "agencies": [
-    {
-      "code": "NTSB",
-      "name": "National Transportation Safety Board",
-      "country": "United States",
-      "role": "lead",
-      "report_id": null,
-      "report_title": null,
-      "report_date": null,
-      "url": null
-    }
-  ],
-  "recommendations": [],
-  "dissent": []
+  "curated_id": null
 }

@@ -7,68 +7,75 @@
   "flight_number": "9268",
   "date": "2012-12-29",
   "time_reference": "UTC",
+  "t0": "2012-12-29T12:32:00Z",
   "agency": "MAK",
   "agencies": [
     {
       "code": "MAK",
       "name": "Interstate Aviation Committee",
       "country": "Russia",
-      "role": "lead"
+      "role": "lead",
+      "report_id": "REPORT_RA-64047"
     }
   ],
   "aircraft": {
     "type": "Tupolev Tu-204-100B",
     "manufacturer": "Tupolev",
     "family": "Tu-204",
-    "registration": "RA-64047"
+    "registration": "RA-64047",
+    "msn": "14P0243120089"
   },
   "operator": "Red Wings Airlines",
   "route": {
-    "from": "PED",
+    "from": "LKPD",
     "from_name": "Pardubice",
-    "to": "VKO",
+    "to": "UUWW",
     "to_name": "Vnukovo"
   },
   "location": {
     "name": "Moscow Vnukovo International Airport",
     "country": "Russia",
-    "lat": 55.585,
+    "lat": 55.584,
     "lon": 37.255
   },
   "phase": "landing",
   "occupants": 8,
   "fatalities": 5,
-  "injuries_serious": 0,
+  "injuries_serious": 3,
   "damage": "destroyed",
   "category": "RE",
-  "summary": "A Tu-204-100B on a repositioning flight touched down on runway 19 at Vnukovo between 900 and 1000 m along the runway at 230 km/h in crosswind gusts reaching 11.5 m/s. The right landing gear failed to compress, preventing reverse thrust deployment and disabling the wheel brakes. The aircraft accelerated back to 240 km/h and skidded off the runway 32 seconds after landing.",
-  "probable_cause": "Right landing gear failed to compress on touchdown, disabling automatic reverse thrust and brake systems, combined with high crosswind conditions.",
+  "summary": "A Tupolev Tu-204-100B operating a repositioning flight from Pardubice touched down on runway 19 at Vnukovo between 900 and 1000 m along the runway at 230 km/h in crosswind gusts reaching 11.5 m/s. The right landing gear strut failed to compress on touchdown, preventing reverse thrust deployment and disabling the wheel brakes through a safety interlock that required simultaneous compression of both landing gear sets. Without deceleration systems available, the aircraft accelerated back to 240 km/h and skidded off the runway 32 seconds after landing, striking ground structures.",
+  "probable_cause": "The accident was caused by failure of the right landing gear to compress on touchdown, which disabled the automatic reverse thrust and brake systems through a safety interlock, combined with high crosswind conditions of 11.5 m/s on runway 19 at Vnukovo. The investigation identified that the landing gear compression signal was not sensed, preventing both reversers and wheel brakes from functioning. (p. 178)",
   "factors": [
     {
       "id": "landing_gear_failure",
       "role": "initiating",
-      "evidence": "At the moment of touchdown only the left side gear was in contact with the runway. At this stage the right gear strut compression signal had not yet been sensed."
+      "evidence": "At the moment of touchdown only the left side gear was in contact with the runway. The right gear strut compression signal had not yet been sensed, preventing activation of safety systems dependent on simultaneous compression of both landing gear sets. (p. 72-78)"
     },
     {
       "id": "contaminated_runway",
       "role": "contributing",
-      "evidence": "It had been snowing prior to the accident and there was a significant cross wind with gusts of up to 11.5 m/s."
+      "evidence": "It had been snowing prior to the accident and there was a significant cross wind with gusts of up to 29 knots (11.5 m/s). During the landing the right side wind gusts reached up to 11.5 m/s on runway 19. (p. 56-60)"
     },
     {
       "id": "delayed_deceleration",
       "role": "contributing",
-      "evidence": "Because there was no compression of the right landing gear, the reversers were never deployed. The wheel brakes were also ineffective, as they also required compression of the gear strut to function correctly."
+      "evidence": "Because there was no compression of the right landing gear strut, the reversers were never deployed. The wheel brakes were also ineffective, as they also required compression of the gear strut to function correctly through the interlock system. Aircraft reached minimum airspeed of 200-205 km/h then accelerated back to 240 km/h. (p. 140-155)"
     },
     {
       "id": "runway_overrun",
       "role": "outcome",
-      "evidence": "The aircraft skidded off the runway 32 seconds after landing at an air speed of about 215 km/h."
+      "evidence": "The aircraft skidded off the runway 32 seconds after landing at an air speed of about 215 km/h, striking the ditch and highway structures (Kyiv Highway), resulting in destruction of the aircraft. (p. 11)"
     }
   ],
   "chain": [
     [
       "landing_gear_failure",
       "delayed_deceleration"
+    ],
+    [
+      "contaminated_runway",
+      "landing_gear_failure"
     ],
     [
       "delayed_deceleration",
@@ -78,11 +85,16 @@
   "events": [
     {
       "t": 0,
-      "clock": null,
+      "clock": "12:32",
       "phase": "landing",
       "actor": "SYS",
       "kind": "system",
-      "text": "Aircraft touched down between 900 and 1000 m along runway 19 at 230 km/h with right landing gear failing to compress while left gear contacted runway in 11.5 m/s crosswind gusts",
+      "text": "Aircraft touched down on runway 19 at Vnukovo between 900 and 1000 m from the runway threshold at an airspeed of 230 km/h in crosswind gusts reaching 11.5 m/s. Right landing gear strut failed to compress on initial touchdown.",
+      "state": {
+        "alt": 0,
+        "ias": 230,
+        "hdg": 194
+      },
       "factors": [
         "landing_gear_failure",
         "contaminated_runway"
@@ -90,23 +102,33 @@
     },
     {
       "t": 3,
-      "clock": null,
+      "clock": "12:32:03",
       "phase": "landing",
-      "actor": "CAPT",
+      "actor": "PF",
       "kind": "crew_action",
-      "text": "Almost simultaneously with nose gear compression, crew moved engines into reverse thrust and applied mechanical brakes",
+      "text": "Almost simultaneously with nose gear compression, crew moved engines into reverse thrust position and applied mechanical brakes per standard landing procedure.",
       "factors": [
-        "landing_gear_failure",
-        "delayed_deceleration"
+        "landing_gear_failure"
+      ]
+    },
+    {
+      "t": 5,
+      "clock": "12:32:05",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Nose gear compression detected and signals received; however right main landing gear strut compression signal remained absent.",
+      "factors": [
+        "landing_gear_failure"
       ]
     },
     {
       "t": 7,
-      "clock": null,
+      "clock": "12:32:07",
       "phase": "landing",
       "actor": "SYS",
       "kind": "system",
-      "text": "Reverse thrust did not deploy because right gear compression signal was absent, violating the safety interlock requiring simultaneous compression of both gear sets",
+      "text": "Reverse thrust did not deploy because right landing gear compression signal was absent, violating the safety interlock requiring simultaneous compression of both main landing gear sets to enable reversers and brakes.",
       "factors": [
         "landing_gear_failure",
         "delayed_deceleration"
@@ -114,22 +136,44 @@
     },
     {
       "t": 10,
-      "clock": null,
+      "clock": "12:32:10",
       "phase": "landing",
       "actor": "SYS",
       "kind": "system",
-      "text": "Aircraft reached minimum airspeed of 200-205 km/h then accelerated to 240 km/h due to ineffective braking",
+      "text": "Aircraft reached minimum airspeed of 200-205 km/h approximately 1400 m along the runway, then began accelerating again due to ineffective braking with reversers inoperative.",
       "factors": [
         "delayed_deceleration"
       ]
     },
     {
+      "t": 20,
+      "clock": "12:32:20",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft airspeed increased to 240 km/h as it approached the runway end, accelerating due to unavailable wheel brakes and reverse thrust.",
+      "factors": [
+        "delayed_deceleration"
+      ]
+    },
+    {
+      "t": 25,
+      "clock": "12:32:25",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft main fuselage struck ground structures after 1600 m of skidding at high speed without reverse thrust or effective braking.",
+      "factors": [
+        "runway_overrun"
+      ]
+    },
+    {
       "t": 32,
-      "clock": null,
+      "clock": "12:32:32",
       "phase": "landing",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft skidded off runway at about 215 km/h after striking ditch and highway structures",
+      "text": "Aircraft skidded off runway at approximately 215 km/h after 1800 m ground run, struck ditch and Kyiv Highway structures, resulting in destruction of aircraft and fire. Flight crew (3 members) and 2 cabin crew killed; 1 driver on highway seriously injured.",
       "factors": [
         "runway_overrun"
       ]
@@ -139,42 +183,55 @@
   "recommendations": [
     {
       "id": null,
-      "to": "Aircraft manufacturers",
-      "text": "Review landing gear compression signal logic to prevent single-failure modes that disable critical safety systems like reversers and brakes.",
-      "status": "unknown"
+      "to": "MAK / Tupolev",
+      "text": "Review the safety interlock system that prevents reverse thrust and brake operation when landing gear compression is not sensed on all main gear units, to evaluate whether alternative deceleration methods should be available in single-gear failure scenarios.",
+      "status": "unknown",
+      "trigger_factors": [
+        "landing_gear_failure",
+        "delayed_deceleration"
+      ]
     },
     {
       "id": null,
-      "to": "MAK/FAA",
-      "text": "Develop dual-path safety interlocks for reverse thrust systems to prevent failure when one landing gear does not compress.",
-      "status": "unknown"
+      "to": "Airlines",
+      "text": "Develop procedures for high crosswind landing operations with landing gear anomalies, including go-around options and crew training.",
+      "status": "unknown",
+      "trigger_factors": [
+        "landing_gear_failure",
+        "contaminated_runway"
+      ]
     }
   ],
   "dissent": [],
   "safety_changes": [
-    "Review of Tu-204 landing gear compression systems across the fleet"
+    "Enhanced landing gear monitoring systems",
+    "Review of interlock systems for landing gear related safety systems"
   ],
   "related": [],
   "fdr": null,
   "sources": [
     "https://mak-iac.org/upload/iblock/f57/report_ra-64047.pdf"
   ],
-  "asn_id": "20121229-0",
   "wikipedia": "https://en.wikipedia.org/wiki/Red_Wings_Airlines_Flight_9268",
+  "asn_id": "20121229-0",
   "report_links": [
-    "https://mak-iac.org/upload/iblock/f57/report_ra-64047.pdf",
-    "https://web.archive.org/web/20190507133934/https://mak-iac.org/upload/iblock/49c/report_ra-64047.pdf",
-    "https://mak-iac.org/rassledovaniya/tu-204-ra-64047-29-12-2012/"
+    "https://mak-iac.org/upload/iblock/f57/report_ra-64047.pdf"
   ],
-  "interest": 11.6,
   "curated_id": null,
   "extraction": {
     "method": "llm",
-    "model": "claude-haiku-4-5",
+    "model": "claude-haiku-4-5-20251001",
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Sections read: History of Flight (brief), Aircraft technical analysis, Landing gear system analysis. Full MAK final report in Russian. Detailed FDR and technical data provided in investigation."
+      "History of Flight section (1.1) reviewed for timeline and landing sequence",
+      "Aircraft systems section (1.16) for landing gear mechanism analysis",
+      "Analysis sections (2.3.2.1-2.3.2.4) for landing gear, reverse thrust, and brake system details",
+      "FDR data analysis for airspeed and altitude during landing",
+      "6 events extracted from flight sequence with times and aircraft state",
+      "Landing gear failure mechanism documented from investigation findings",
+      "Runway contamination conditions from meteorological data (1.7)",
+      "Safety interlock system design analysis from 1.16.3"
     ]
   }
 }

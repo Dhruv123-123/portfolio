@@ -1,0 +1,209 @@
+{
+  "id": "wd_q7059927",
+  "qid": "Q7059927",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Northwest Airlines Flight 85",
+  "flight_number": "NW85",
+  "date": "2002-10-09",
+  "time_reference": "AKD",
+  "t0": "2002-10-09T22:40:00-08:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "ANC03IA001",
+      "report_title": "Aviation Incident Final Report",
+      "report_date": "2004-06-29"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 747-400",
+    "family": "747",
+    "manufacturer": "Boeing",
+    "registration": "N661US",
+    "msn": "23719",
+    "engines": "Pratt & Whitney PW4056"
+  },
+  "operator": "Northwest Airlines Inc.",
+  "route": {
+    "from": "DTW",
+    "from_name": "Detroit International Airport",
+    "to": "NRT",
+    "to_name": "Narita International Airport, Tokyo"
+  },
+  "location": {
+    "name": "Bering Sea, between Detroit and Tokyo",
+    "country": "United States (airspace)"
+  },
+  "phase": "cruise",
+  "occupants": 404,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "none",
+  "category": "ARC",
+  "summary": "Northwest Airlines Flight 85, a Boeing 747-400, experienced a lower rudder hardover at FL350 over the Bering Sea when the rudder suddenly deflected to its full left limit. The crew successfully managed the asymmetric control deflection using ailerons and asymmetric engine thrust, diverting to Anchorage. A fatigue crack in the rudder power control module housing caused the failure.",
+  "probable_cause": "The fatigue fracture of the lower rudder power control module manifold, which resulted in a lower rudder hardover. (p. 2)",
+  "factors": [
+    {
+      "id": "metal_fatigue",
+      "role": "initiating",
+      "evidence": "Metallurgical examination of the fractured power control module revealed a mode of crack initiation and growth consistent with fatigue; the cast aluminum manifold housing had broken with the end portion separating from the main portion. (p. 1, 4)"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The cast aluminum housing of the lower rudder power control module was susceptible to fatigue fracture, a failure mode not previously observed in the component's design history. (p. 1)"
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "latent",
+      "evidence": "Fatigue-type failures typically cannot be visually detected prior to actual failure; the NTSB developed a non-destructive ultrasonic inspection process after the accident. (p. 4)"
+    },
+    {
+      "id": "rudder_hardover",
+      "role": "outcome",
+      "evidence": "The fractured power control module allowed the yaw damper piston to travel beyond its normal position, resulting in a full left command input to the main control valve, driving the two actuators to full left rudder position. (p. 4)"
+    }
+  ],
+  "chain": [
+    [
+      "metal_fatigue",
+      "design_deficiency"
+    ],
+    [
+      "design_deficiency",
+      "rudder_hardover"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "1740",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft at cruise altitude FL350 with autopilot engaged; Junior Captain Geib and First Officer Fagan on flight deck; approximately 1,890 nautical miles from Tokyo.",
+      "state": {
+        "alt": 35000,
+        "ias": null
+      },
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": "2240",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Lower rudder power control module manifold fractures; aircraft abruptly enters 30-40 degree left bank; FDR recorded initial rudder deflection of 17.5 degrees left.",
+      "state": {
+        "alt": 35000,
+        "roll_deg": -35
+      },
+      "factors": [
+        "metal_fatigue",
+        "rudder_hardover"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "2245",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Senior Captain Hanson reenters cockpit; crew declares emergency; runs through emergency procedures but none correct the problem; begins using ailerons and asymmetric engine thrust to steer aircraft.",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": "2250",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC clears Flight 85 to divert to Ted Stevens International Airport, Anchorage, Alaska.",
+      "factors": []
+    },
+    {
+      "t": 240,
+      "clock": "2255",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "env",
+      "text": "As airspeed decreases during approach descent, lower rudder deflects further left to full 32-degree (full left) deflection; FDR confirmed maximum rudder deflection reached.",
+      "state": {
+        "alt": 15000,
+        "ias": 280
+      },
+      "factors": [
+        "rudder_hardover"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": "2300",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew continues approach using differential power and aileron deflection to maintain heading while descending toward Anchorage.",
+      "factors": []
+    },
+    {
+      "t": 360,
+      "clock": "2305",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft touches down on Anchorage runway; lower rudder remains fully deflected left.",
+      "state": {
+        "alt": 0,
+        "ias": 120
+      },
+      "factors": []
+    },
+    {
+      "t": 420,
+      "clock": "2310",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft comes to stop on taxiway at Ted Stevens International Airport, Anchorage; all 404 occupants evacuate safely; lower rudder remains in full left deflection until hydraulic pressure is relieved.",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Boeing Alert Service Bulletin 747-27A2397 (July 24, 2003) recommending ultrasonic inspection of high-time lower and upper rudder power control modules",
+    "FAA Notice of Proposed Rule Making for Airworthiness Directive to make ultrasonic inspection mandatory for affected Boeing 747 aircraft"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20021018X05344&AKey=1&RType=Final&IType=IA"
+  ],
+  "asn_id": null,
+  "interest": 7.47,
+  "report_links": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20021018X05344&AKey=1&RType=Final&IType=IA"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Northwest_Airlines_Flight_85",
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: History of Flight, Probable Cause and Findings, Analysis, Rudder System Information, Test and Research",
+      "FDR data provided precise rudder deflection angles and timing",
+      "8 events extracted with clock times from report; aircraft state reconstructed from context",
+      "No CVR transcript published in incident report",
+      "No numbered recommendations in incident report; only safety bulletins and proposed AD mentioned"
+    ]
+  }
+}

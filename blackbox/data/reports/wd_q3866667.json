@@ -1,17 +1,29 @@
 {
   "id": "wd_q3866667",
-  "title": "SCAT Airlines 760",
-  "date": "2013-01-29",
   "qid": "Q3866667",
-  "asn_id": "20130129-0",
   "tier": "wikidata",
-  "depth": "sections",
+  "depth": "full",
+  "title": "SCAT Airlines 760",
+  "flight_number": "VSV760",
+  "date": "2013-01-29",
+  "time_reference": "UTC",
   "agency": "MAK",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead",
+      "report_id": "UP-CJ006",
+      "report_date": "2014-03-27"
+    }
+  ],
   "aircraft": {
     "type": "Bombardier CRJ200",
     "manufacturer": "Bombardier",
     "family": "CRJ",
-    "registration": "UP-CJ006"
+    "registration": "UP-CJ006",
+    "msn": "7413"
   },
   "operator": "SCAT Airlines",
   "route": {
@@ -19,35 +31,35 @@
     "to_name": "Almaty"
   },
   "location": {
-    "name": "Kyzyltu",
+    "name": "Kyzyltu, 1.6 km short of Almaty runway 23R",
     "country": "Kazakhstan"
   },
   "phase": "go_around",
   "occupants": 21,
   "fatalities": 21,
   "category": "LOC-I",
-  "summary": "SCAT Airlines Flight 760, a Bombardier CRJ200, was on final approach to Almaty International Airport in thick fog and poor visibility when it initiated a go-around at 13:13 local time on 29 January 2013. Fourteen seconds after initiating the go-around, the aircraft experienced a nose-down elevator deflection and crashed 1.6 km short of the runway near Kyzyltu. The subsequent investigation was unable to determine the cause of the elevator deflection, though a possible scenario involved pilot incapacitation from a heart attack.",
-  "probable_cause": "Nose-down elevator deflection during go-around; cause undetermined but possibly pilot incapacitation from heart attack",
+  "summary": "SCAT Airlines Flight 760 crashed on 29 January 2013 during go-around to Almaty. At 07:03:24 UTC, the CRJ200 was at 1,600 m altitude on final approach in thick freezing fog with runway visibility of 175-200 m when the crew initiated a go-around due to inability to see the runway. Fourteen seconds after initiating the go-around, the aircraft entered an uncontrolled nose-down dive at approximately 20 degrees pitch-down. The aircraft impacted the ground 1.6 km short of the runway near Kyzyltu, killing all 21 occupants.",
+  "probable_cause": "The nose-down elevator deflection during go-around maneuvering was the result of pilot input, though the investigation could not determine why the pilot made these control inputs (p. 3278-3315). Possible scenarios included: spatial disorientation from instrument meteorological conditions and turbulence; pilot incapacitation from sudden medical event (autopsy revealed Captain had coronary artery disease with significant stenosis); or somatogravitational illusion causing inversion of pilot's pitch perception during dynamic flight in poor visibility (p. 2048-2050, 3300-3315).",
   "factors": [
     {
       "id": "low_visibility",
       "role": "initiating",
-      "evidence": "aircraft was on final approach in thick fog and poor visibility"
+      "evidence": "Approach in freezing fog with runway visibility 175-200 m, below operator's meteorological minimums for crew's CAT I certification (p. 2362-2368)"
     },
     {
       "id": "go_around_not_flown",
       "role": "contributing",
-      "evidence": "go-around initiated due to weather conditions being below minimums"
+      "evidence": "Go-around initiated at 07:03:24 UTC when visibility remained below operating minimums (p. 2367-2369)"
     },
     {
       "id": "pilot_incapacitation",
       "role": "latent",
-      "evidence": "possible scenario that Captain Evdokimov may have experienced a heart attack and collapsed onto the yoke; postaccident autopsy revealed he had coronary artery disease"
+      "evidence": "Autopsy revealed Captain Evdokimov had coronary artery disease with significant stenosis; sudden medical incapacitation scenario would cause uncontrolled input to control yoke (p. 3300-3310)"
     },
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "nose-down elevator deflection resulted in a steep dive and impact with the ground"
+      "evidence": "Aircraft descended from 1,600 m in uncontrolled dive with pitch 20-25 degrees nose-down, speed 360+ kt, impacting ground 1.6 km short of runway at 07:03:38 UTC, killing all occupants (p. 1675, 3278)"
     }
   ],
   "chain": [
@@ -63,98 +75,159 @@
   "events": [
     {
       "t": 0,
-      "clock": "13:13",
-      "phase": "approach",
+      "clock": "05:19:50",
+      "phase": "takeoff",
       "actor": "CAPT",
-      "kind": "system",
-      "text": "Aircraft on final approach to Almaty International Airport in thick fog and poor visibility",
-      "factors": [
-        "low_visibility"
-      ]
+      "kind": "crew_action",
+      "text": "Takeoff from Kokshetau airport; Captain monitoring, Second Officer flying; automatic climb mode (p. 2236)"
     },
     {
-      "t": 14,
-      "clock": "13:13",
+      "t": 1372,
+      "clock": "05:42:52",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Reached cruise altitude 10,650 m, cruise speed 460 km/h in automatic mode (p. 2236)"
+    },
+    {
+      "t": 2400,
+      "clock": "06:09:50",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain took control; Second Officer moved to radio duties without formal handover (p. 2236)"
+    },
+    {
+      "t": 2415,
+      "clock": "06:10:15",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain reported: ETA 06:55, weather min CAT II 30x300, alternates Chymkent/Karaganda, fuel 2.5 hrs (p. 2236)"
+    },
+    {
+      "t": 3018,
+      "clock": "06:20:18",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Descent initiated, aircraft 160 km from Almaty (p. 2236)"
+    },
+    {
+      "t": 3266,
+      "clock": "06:24:26",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "At 7,000 m, 540 km/h: Captain commanded 'Cowl on' - engine anti-ice system activated (p. 2236)"
+    },
+    {
+      "t": 3627,
+      "clock": "06:30:27",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Approach clearance obtained, descending toward Almaty with visibility 175 m reported (p. 2237)"
+    },
+    {
+      "t": 3884,
+      "clock": "06:36:24",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain confirmed decision to descend to runway visual range (VPR) despite below-minimums visibility (p. 2237)"
+    },
+    {
+      "t": 4540,
+      "clock": "06:52:20",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft level at 1,600 m altitude in automatic mode - altitude hold active, navigation mode in lateral channel (p. 2237)"
+    },
+    {
+      "t": 4614,
+      "clock": "06:54:34",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flaps extended to 8 degrees during right turn to heading 230; aircraft positioning for landing approach (p. 2237)"
+    },
+    {
+      "t": 5004,
+      "clock": "07:02:44",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "ATIS Sierra: visibility improved to 300 m midpoint. Captain satisfied: 'OK, 3 hundred, that's fine, we need the start' (p. 2238)"
+    },
+    {
+      "t": 5284,
+      "clock": "07:07:04",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flaps to 8 degrees during turn to heading 140; speed 345 km/h at 1,600 m altitude (p. 2238)"
+    },
+    {
+      "t": 5400,
+      "clock": "07:03:24",
       "phase": "go_around",
       "actor": "CAPT",
       "kind": "crew_action",
-      "text": "Go-around initiated due to weather conditions being below minimums",
-      "factors": [
-        "go_around_not_flown"
-      ]
+      "text": "Go-around initiated: runway not visible at descent minimum altitude, visual contact lost (p. 3278)"
     },
     {
-      "t": 30,
-      "clock": null,
+      "t": 5414,
+      "clock": "07:03:38",
       "phase": "go_around",
       "actor": "SYS",
       "kind": "system",
-      "text": "During the missed approach procedure, a nose-down elevator deflection was recorded",
-      "factors": [
-        "loss_of_control_inflight",
-        "pilot_incapacitation"
-      ]
+      "text": "Fourteen seconds into go-around: elevator deflection commanded uncontrolled nose-down dive, pitch changed to -20 degrees (p. 3278, 2048-2050)"
     },
     {
-      "t": 45,
-      "clock": null,
-      "phase": "go_around",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Resulting in a steep dive and impact with the ground",
-      "factors": [
-        "loss_of_control_inflight"
-      ]
-    },
-    {
-      "t": 60,
-      "clock": null,
+      "t": 5414,
+      "clock": "07:03:38",
       "phase": "go_around",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft crashed 1.6 km short of the runway near the village of Kyzyltu",
-      "factors": [
-        "loss_of_control_inflight"
-      ]
+      "text": "Aircraft crashed 1.6 km short of runway 23R near Kyzyltu at pitch 20 degrees nose-down, 360+ kt speed, landing gear down, flaps 10-15 degrees. All 21 killed (p. 1675, 3278)"
     }
   ],
   "cvr": [],
-  "recommendations": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "MAK",
+      "text": "Establish standardized procedures ensuring crew compliance with meteorological minimums and decision-making protocols during approaches below certification limits",
+      "status": "unknown",
+      "trigger_factors": [
+        "low_visibility"
+      ]
+    }
+  ],
   "dissent": [],
   "safety_changes": [],
   "related": [],
   "fdr": null,
   "sources": [
-    "https://mak-iac.org/upload/iblock/0ed/report_up-cj006.pdf",
-    "https://mak-iac.org/en/rassledovaniya/crj-200-up-cj006-29-01-2013/",
-    "https://mak-iac.org/rassledovaniya/crj-200-up-cj006-29-01-2013/"
+    "https://mak-iac.org/upload/iblock/0ed/report_up-cj006.pdf"
   ],
   "wikipedia": "https://en.wikipedia.org/wiki/SCAT_Airlines_Flight_760",
+  "asn_id": "20130129-0",
   "report_links": [
-    "https://aviation-safety.net/database/record.php?id=20130129-0",
-    "https://mak-iac.org/upload/iblock/0ed/report_up-cj006.pdf",
-    "https://mak-iac.org/en/rassledovaniya/crj-200-up-cj006-29-01-2013/",
-    "https://mak-iac.org/rassledovaniya/crj-200-up-cj006-29-01-2013/"
+    "https://mak-iac.org/upload/iblock/0ed/report_up-cj006.pdf"
   ],
   "interest": 13.91,
-  "curated_id": null,
   "extraction": {
     "method": "llm",
-    "model": "claude-haiku-4-5",
-    "confidence": "low",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
     "reviewed": false,
     "notes": [
-      "Extracted from sections: history_of_flight, findings, probable_cause, analysis",
-      "Text path: /home/user/portfolio/blackbox/cache/text/wd_q3866667.txt",
-      "Depth: sections - key report sections reviewed"
+      "15 detailed events with UTC clock times extracted from Russian MAK report",
+      "Root cause undetermined; elevator deflection confirmed as pilot input via mathematical modeling",
+      "Possible factors: spatial disorientation, medical incapacitation, somatogravitational illusion"
     ]
-  },
-  "agencies": [
-    {
-      "code": "MAK",
-      "name": "Interstate Aviation Committee",
-      "country": "Russia",
-      "role": "lead"
-    }
-  ]
+  }
 }

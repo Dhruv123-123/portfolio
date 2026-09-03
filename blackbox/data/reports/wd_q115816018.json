@@ -1,0 +1,238 @@
+{
+ "id": "wd_q115816018",
+ "tier": "wikidata",
+ "qid": "Q115816018",
+ "depth": "sections",
+ "title": "1984 San Luis Obispo mid-air collision",
+ "flight_number": "WWA628",
+ "date": "1984-08-24",
+ "time_reference": "PDT",
+ "t0": "1984-08-24T11:16:00-07:00",
+ "agency": "NTSB",
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead",
+   "report_id": "AAR-85/07",
+   "report_date": "1985-08-29"
+  }
+ ],
+ "aircraft": {
+  "type": "Beechcraft C-99 Commuter and Rockwell Commander 112",
+  "manufacturer": "Beechcraft; Rockwell",
+  "family": "C-99; Commander",
+  "registration": "N6399U; N112SM"
+ },
+ "operator": "Wings West Airlines; Aesthetec Inc. (private)",
+ "route": {
+  "from": "SLO",
+  "from_name": "San Luis Obispo",
+  "to": "SFO",
+  "to_name": "San Francisco"
+ },
+ "location": {
+  "name": "8 nm west-northwest of San Luis Obispo County Airport",
+  "country": "United States"
+ },
+ "phase": "initial_climb",
+ "occupants": 17,
+ "fatalities": 17,
+ "damage": "destroyed",
+ "category": "MAC",
+ "summary": "Wings West Airlines Flight 628 (Beechcraft C-99) collided head-on at 3,400 feet with a Rockwell Commander 112 during initial climb near San Luis Obispo, California. Both aircraft were destroyed and all 17 occupants perished. The NTSB determined that both flight crews' decisions to operate under VFR instead of IFR prevented air traffic control from detecting and preventing the collision threat.",
+ "probable_cause": "The probable cause of this accident was the failure of the pilots of both aircraft to follow the recommended communications and traffic advisory practices for uncontrolled airports contained in the Airman's Information Manual to alert each other to their presence and to enhance the controller's ability to provide timely traffic advisories. Underlying the accident were the physiological limitations of human vision and reaction time. Also underlying the accident was the short time available to the controller to detect and appraise radar data and to issue a safety advisory. Contributing to the accident was the Wings West Airlines policy which required its pilots to tune one radio to the company frequency at all times. (p. 4-5)",
+ "factors": [
+  {
+   "id": "inadequate_monitoring",
+   "role": "contributing",
+   "evidence": "Flight 628 pilots failed to monitor local aviation radio transmissions, monitoring the appropriate frequency for only the first 5 miles of flight. (p. 4-5)"
+  },
+  {
+   "id": "procedural_noncompliance",
+   "role": "contributing",
+   "evidence": "Both aircraft crews chose to fly VFR instead of IFR despite being in controlled airspace, depriving themselves of air traffic control radar separation. (p. 4)"
+  },
+  {
+   "id": "loss_of_situational_awareness",
+   "role": "contributing",
+   "evidence": "Both flight crews failed to detect the other aircraft visually in sufficient time to initiate evasive action. (p. 4)"
+  },
+  {
+   "id": "visual_illusion",
+   "role": "contributing",
+   "evidence": "Despite clear skies, the Beechcraft pilots would have noticed the Commander only about 10 seconds before collision, and Commander pilots saw the Beechcraft 6-8 seconds before impact. Given physiological limitations of human vision and the rapid closure rate of head-on approach, detection was marginal. (p. 6)"
+  },
+  {
+   "id": "midair_collision",
+   "role": "outcome",
+   "evidence": "Flight 628 collided head-on with Commander N112SM at altitude 3,400 feet near San Luis Obispo at 11:17:38 PDT. (p. 4)"
+  }
+ ],
+ "chain": [
+  [
+   "inadequate_monitoring",
+   "loss_of_situational_awareness"
+  ],
+  [
+   "procedural_noncompliance",
+   "loss_of_situational_awareness"
+  ],
+  [
+   "visual_illusion",
+   "midair_collision"
+  ],
+  [
+   "loss_of_situational_awareness",
+   "midair_collision"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "11:16",
+   "phase": "unknown",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Wings West Flight 628 (Beechcraft C-99 N6399U) pushed back from gate at San Luis Obispo County Airport with 13 passengers and 2 crew",
+   "factors": []
+  },
+  {
+   "t": 40,
+   "clock": "11:16:40",
+   "phase": "initial_climb",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Los Angeles ARTCC radar controller answered Flight 628 after delay due to congestion on frequency",
+   "factors": []
+  },
+  {
+   "t": 51,
+   "clock": "11:16:51",
+   "phase": "initial_climb",
+   "actor": "CAPT",
+   "kind": "crew_speech",
+   "text": "Flight 628 reported climbing through 2,700 feet, IFR to San Francisco",
+   "factors": []
+  },
+  {
+   "t": 56,
+   "clock": "11:16:56",
+   "phase": "initial_climb",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Controller assigned discrete transponder code 6721 to Flight 628",
+   "factors": []
+  },
+  {
+   "t": 60,
+   "clock": "11:16",
+   "phase": "takeoff",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Flight 628 took off from runway 29 at San Luis Obispo County Airport bound for San Francisco",
+   "factors": []
+  },
+  {
+   "t": 76,
+   "clock": "11:17:16",
+   "phase": "initial_climb",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Controller reported Flight 628 in radar contact 6 miles northwest of San Luis Obispo airport and requested altitude",
+   "factors": []
+  },
+  {
+   "t": 83,
+   "clock": "11:17:23",
+   "phase": "initial_climb",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Los Angeles ARTCC cleared Flight 628 to San Francisco as filed, climb and maintain 7,000 feet",
+   "factors": []
+  },
+  {
+   "t": 92,
+   "clock": "11:17:32",
+   "phase": "initial_climb",
+   "actor": "CAPT",
+   "kind": "crew_speech",
+   "text": "Flight 628 acknowledged clearance by reading back to controller; seconds later controller lost radar contact",
+   "factors": []
+  },
+  {
+   "t": 98,
+   "clock": "11:17:38",
+   "phase": "initial_climb",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "Wings West Flight 628 collided head-on with Rockwell Commander N112SM at 3,400 feet near San Luis Obispo; both aircraft destroyed",
+   "state": {
+    "alt": 3400
+   },
+   "factors": [
+    "midair_collision"
+   ]
+  }
+ ],
+ "cvr": [],
+ "recommendations": [
+  {
+   "id": "A-84-125",
+   "to": "FAA",
+   "text": "Issue an Air Carrier Operations Bulletin directing the Principal Operations Inspectors of Wings West and Imperial Airlines to require that the airlines amend their operating procedures so that their flights contact Los Angeles Center prior to departure from San Luis Obispo County Airport and obtain either an IFR clearance or a discrete transponder code if departing VFR.",
+   "status": "unknown",
+   "trigger_factors": [
+    "procedural_noncompliance"
+   ]
+  },
+  {
+   "id": "A-84-126",
+   "to": "FAA",
+   "text": "Require that the instrument approach chart for the localizer approach to runway 11 at San Luis Obispo County Airport and the Crepe One Departure Chart include a cautionary note with appropriate communication frequencies advising VFR flights on practice instrument approaches and departures to contact Los Angeles Center for traffic advisories.",
+   "status": "unknown",
+   "trigger_factors": [
+    "procedural_noncompliance",
+    "loss_of_situational_awareness"
+   ]
+  },
+  {
+   "id": "A-84-127",
+   "to": "FAA",
+   "text": "Disseminate the contents of this safety recommendation letter to fixed based operators in the general vicinity of the San Luis Obispo County Airport.",
+   "status": "closed_acceptable",
+   "trigger_factors": [
+    "inadequate_monitoring"
+   ]
+  }
+ ],
+ "dissent": [],
+ "safety_changes": [
+  "Cautionary note added to approach and departure charts at San Luis Obispo"
+ ],
+ "related": [],
+ "fdr": null,
+ "sources": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8507.pdf"
+ ],
+ "wikipedia": "https://en.wikipedia.org/wiki/1984_San_Luis_Obispo_mid-air_collision",
+ "asn_id": "19840824-0",
+ "interest": 11.57,
+ "report_links": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8507.pdf"
+ ],
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Read History of Flight, Communications, Analysis, Probable Cause, Recommendations sections",
+   "9 events with clock times extracted from detailed timeline",
+   "VFR vs IFR decision was central factor; physiological visual limitations discussed extensively",
+   "auto-repair: phase gate -> unknown; events re-sorted by t"
+  ]
+ },
+ "curated_id": null
+}

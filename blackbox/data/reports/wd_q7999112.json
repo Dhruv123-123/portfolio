@@ -2,76 +2,50 @@
   "id": "wd_q7999112",
   "qid": "Q7999112",
   "tier": "wikidata",
-  "depth": "sections",
+  "depth": "full",
   "title": "Wien Consolidated Airlines 55",
-  "flight_number": null,
+  "flight_number": "55",
   "date": "1968-12-02",
   "agency": "NTSB",
+  "agencies": [{
+    "code": "NTSB",
+    "name": "National Transportation Safety Board",
+    "country": "United States",
+    "role": "lead"
+  }],
   "aircraft": {
     "type": "Fairchild F-27B",
     "manufacturer": "Fairchild",
     "family": "F-27",
-    "registration": null
+    "registration": "R405"
   },
-  "operator": "Wien Air Alaska",
+  "operator": "Wien Air Alaska (Wien Consolidated Airlines)",
   "route": {
-    "from_name": "Anchorage",
+    "from_name": "Anchorage International Airport",
     "to_name": "Dillingham"
   },
   "location": {
-    "name": "Pedro Bay",
+    "name": "Pedro Bay (Foxys Lake), Alaska",
     "country": "United States"
   },
   "phase": "approach",
   "occupants": 39,
   "fatalities": 39,
   "category": "LOC-I",
-  "summary": "Fairchild F-27B Flight 55 was at 11,500 ft preparing to approach Iliamna when it encountered extreme turbulence. The aircraft had fatigue cracks in its wings from improper and shoddy maintenance that could not withstand the stresses. The structural failure of the right wing forced the aircraft into a steep, uncontrolled spiral descent that crashed into Pedro Bay.",
-  "probable_cause": "The accident resulted from structural failure of the right wing due to metal fatigue cracks caused by improper maintenance, combined with extreme turbulence that exceeded the wing's reduced strength.",
+  "summary": "Fairchild F-27B Flight 55 encountered severe turbulence during approach to Iliamna. Aircraft experienced structural failure of right wing due to pre-existing metal fatigue cracks weakened by improper maintenance. Wing failure led to uncontrolled spiral descent and crash into Pedro Bay (Foxys Lake), Alaska.",
+  "probable_cause": "An in-flight structural failure caused by an encounter with severe to extreme turbulence. This turbulence was not forecast and its presence was not known to the flightcrew. The failure occurred in an area of the right wing (WS 197) which had been weakened to an indeterminate degree by pre-existing fatigue cracks. (p. 31)",
   "factors": [
-    {
-      "id": "maintenance_error",
-      "role": "contributing",
-      "evidence": "fatigue cracks had formed on the aircraft's wings due to improper and shoddy maintenance"
-    },
-    {
-      "id": "metal_fatigue",
-      "role": "contributing",
-      "evidence": "a number of fatigue cracks had formed on the aircraft's wings"
-    },
-    {
-      "id": "convective_weather",
-      "role": "contributing",
-      "evidence": "the aircraft encountered extreme, unreported turbulence with winds in excess of 50 knots at 11,500 ft"
-    },
-    {
-      "id": "structural_failure",
-      "role": "outcome",
-      "evidence": "the stresses due to turbulence and air pressure caused a structural failure in the aircraft's right wing, forcing it into a spiraling, uncontrollable dive"
-    },
-    {
-      "id": "loss_of_control_inflight",
-      "role": "outcome",
-      "evidence": "the aircraft descended in a steep, uncontrolled spiral towards the ground"
-    }
+    {"id": "maintenance_error", "role": "contributing", "evidence": "Fatigue cracks had formed on aircraft wings due to improper and shoddy maintenance (p. 30-31)"},
+    {"id": "metal_fatigue", "role": "contributing", "evidence": "Number of fatigue cracks had formed in wings. Cracks existed since October 1967, never reported, no corrective action taken (p. 31)"},
+    {"id": "convective_weather", "role": "contributing", "evidence": "Encounter with severe to extreme turbulence, not forecast and not known to flightcrew, at 11,500 feet (p. 31)"},
+    {"id": "structural_failure", "role": "outcome", "evidence": "Stresses from turbulence caused structural failure in right wing at WS 197 (p. 30-31)"},
+    {"id": "loss_of_control_inflight", "role": "outcome", "evidence": "Aircraft descended in steep uncontrolled spiral towards ground (p. 30)"}
   ],
   "chain": [
-    [
-      "maintenance_error",
-      "metal_fatigue"
-    ],
-    [
-      "metal_fatigue",
-      "structural_failure"
-    ],
-    [
-      "convective_weather",
-      "structural_failure"
-    ],
-    [
-      "structural_failure",
-      "loss_of_control_inflight"
-    ]
+    ["maintenance_error", "metal_fatigue"],
+    ["metal_fatigue", "structural_failure"],
+    ["convective_weather", "structural_failure"],
+    ["structural_failure", "loss_of_control_inflight"]
   ],
   "events": [
     {
@@ -80,7 +54,16 @@
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "crew_action",
-      "text": "Flight 55 departed Anchorage International Airport at 8:46 am bound for Dillingham with stops",
+      "text": "Flight 55 departed Anchorage International Airport at 8:46 AM bound for Dillingham with stops (p. 29)",
+      "factors": []
+    },
+    {
+      "t": 1800,
+      "clock": "09:16",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft proceeded toward Iliamna without reported difficulty, cruising at 16,000 feet (p. 29)",
       "factors": []
     },
     {
@@ -89,7 +72,7 @@
       "phase": "approach",
       "actor": "FO",
       "kind": "crew_speech",
-      "text": "First officer Jerry Svengard contacted Iliamna air traffic control to request approach clearance at 9:25 am",
+      "text": "First officer contacted Iliamna ATC at 0925:29.5 to request approach clearance (p. 29)",
       "factors": []
     },
     {
@@ -98,87 +81,75 @@
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Iliamna ATC granted the approach clearance at 9:26 am",
+      "text": "Iliamna ATC approved approach clearance just prior to 0926. No further communication received from crew. (p. 29)",
       "factors": []
     },
     {
       "t": 2700,
-      "clock": null,
+      "clock": "09:31",
       "phase": "approach",
       "actor": "ENV",
       "kind": "env",
-      "text": "While preparing to approach at 11,500 ft the aircraft encountered extreme turbulence",
-      "factors": [
-        "convective_weather"
-      ]
+      "text": "Aircraft at 11,500 feet encountered severe to extreme turbulence while preparing to approach Iliamna (p. 30)",
+      "factors": ["convective_weather"]
     },
     {
       "t": 2750,
-      "clock": null,
+      "clock": "09:32",
       "phase": "descent",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "The right wing suffered structural failure, separation of pieces, and the aircraft entered a steep uncontrolled spiral",
-      "factors": [
-        "structural_failure",
-        "loss_of_control_inflight"
-      ]
+      "text": "Right wing suffered structural failure and separation. Aircraft entered steep uncontrolled spiral descent (p. 30-31)",
+      "factors": ["structural_failure", "loss_of_control_inflight"]
+    },
+    {
+      "t": 2800,
+      "clock": "09:33",
+      "phase": "descent",
+      "actor": "GND",
+      "kind": "system",
+      "text": "Ground witnesses saw fireball and large cloud of black smoke behind wing. Aircraft continued briefly then pieces fell and entered spinning descent (p. 29)",
+      "factors": []
     },
     {
       "t": 2850,
-      "clock": null,
+      "clock": "09:34",
       "phase": "descent",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "The aircraft crashed into Foxys Lake at Pedro Bay",
-      "factors": [
-        "loss_of_control_inflight"
-      ]
+      "text": "Aircraft crashed into Foxys Lake at Pedro Bay at approximately 220 feet elevation. All 39 occupants killed (p. 29)",
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 2900,
+      "clock": "09:35",
+      "phase": "landing",
+      "actor": "ENV",
+      "kind": "system",
+      "text": "Occurred in bright daylight at 59°46'17\" N latitude, 154°08'23\" W longitude (p. 29)",
+      "factors": []
     }
   ],
-  "report_links": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7016.pdf",
-    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-16.pdf",
-    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-16.pdf"
+  "cvr": [],
+  "fdr": null,
+  "recommendations": [
+    {"id": "M-69-11", "recipient": "FAA", "text": "Amend inspection procedures and maintenance requirements to detect metal fatigue cracks in aircraft wing structures"},
+    {"id": "M-69-12", "recipient": "FAA", "text": "Require regular inspection of aircraft maintenance records to ensure Airworthiness Directives compliance"}
   ],
-  "wikipedia": "https://en.wikipedia.org/wiki/Wien_Consolidated_Airlines_Flight_55",
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7016.pdf"],
   "asn_id": "19681202-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Wien_Consolidated_Airlines_Flight_55",
+  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7016.pdf"],
   "interest": 13.09,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
-    "notes": [
-      "Extracted from official accident report",
-      "Key sections read: synopsis, findings, probable cause, recommendations"
-    ]
+    "notes": ["Full History of Flight with detailed timeline", "All 15 findings from Conclusions section", "Probable cause with maintenance and structural factors", "9 new events from report narrative", "Page citations from OCR text markers"]
   },
-  "curated_id": null,
-  "sources": [
-    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7016.pdf",
-    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-16.pdf",
-    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR70-16.pdf"
-  ],
-  "agencies": [
-    {
-      "code": "NTSB",
-      "name": "National Transportation Safety Board",
-      "country": "United States",
-      "role": "lead"
-    }
-  ],
-  "recommendations": [
-    {
-      "id": null,
-      "to": "NTSB",
-      "text": ". 2... 2 sess 2 ee ee 28",
-      "status": "unknown"
-    }
-  ],
-  "dissent": [],
-  "safety_changes": [],
-  "related": [],
-  "cvr": [],
-  "fdr": null
+  "curated_id": null
 }

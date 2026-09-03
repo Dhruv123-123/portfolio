@@ -1,224 +1,233 @@
 {
-  "id": "wd_q7059929",
-  "qid": "Q7059929",
-  "tier": "wikidata",
-  "depth": "sections",
-  "title": "Northwest Airlink 5719",
-  "flight_number": null,
-  "date": "1993-12-01",
-  "agency": "NTSB",
-  "agencies": [
-    {
-      "code": "NTSB",
-      "name": "National Transportation Safety Board",
-      "country": "United States",
-      "role": "lead"
-    }
-  ],
-  "aircraft": {
-    "type": "British Aerospace Jetstream 31",
-    "manufacturer": "British Aerospace",
-    "family": "Jetstream",
-    "registration": null
+ "id": "wd_q7059929",
+ "qid": "Q7059929",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "Northwest Airlink 5719",
+ "flight_number": null,
+ "date": "1993-12-01",
+ "agency": "NTSB",
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead"
+  }
+ ],
+ "aircraft": {
+  "type": "British Aerospace Jetstream 31",
+  "manufacturer": "British Aerospace",
+  "family": "Jetstream",
+  "registration": null
+ },
+ "operator": "Endeavor Air",
+ "route": {
+  "from_name": "Minneapolis-Saint Paul",
+  "to_name": "Falls International"
+ },
+ "location": {
+  "name": "Hibbing",
+  "country": "United States"
+ },
+ "phase": "approach",
+ "occupants": 18,
+ "fatalities": 18,
+ "category": "CFIT",
+ "summary": "The Jetstream 31 crashed into trees during final approach to Hibbing in night instrument conditions. The captain intercepted the DME arc at 8000 feet, delaying the descent and requiring an excessive descent rate of 2000 feet per minute. The aircraft descended through the step-down altitude and struck trees 634 feet before hitting a ridge. The NTSB determined that the captain's loss of altitude awareness led to a breakdown in crew coordination during the approach.",
+ "probable_cause": "The National Transportation Safety Board determines that the probable causes of this accident were the captain's actions that led to a breakdown in crew coordination and the loss of altitude awareness by the flightcrew during an unstabilized approach in night instrument meteorological conditions. Contributing to the accident were: the failure of the company management to adequately address the previously identified deficiencies in airmanship and crew resource management of the captain; the failure of the company to identify and correct a widespread, unapproved practice during instrument approach procedures; and the Federal Aviation Administration's inadequate surveillance and oversight of the air carrier (p. 5-6).",
+ "factors": [
+  {
+   "id": "low_visibility",
+   "role": "latent",
+   "evidence": "night instrument meteorological conditions; ceiling 500 ft overcast, visibility 1.5 miles with light snow and fog (p. 8)"
   },
-  "operator": "Endeavor Air",
-  "route": {
-    "from_name": "Minneapolis-Saint Paul",
-    "to_name": "Falls International"
+  {
+   "id": "loss_of_situational_awareness",
+   "role": "initiating",
+   "evidence": "captain became preoccupied with approach planning and was not monitoring altitude as required; aircraft 1200 feet above minimums at Kinney fix but crew descended without leveling at intermediate altitudes (p. 6, 10)"
   },
-  "location": {
-    "name": "Hibbing",
-    "country": "United States"
+  {
+   "id": "descent_below_minimums",
+   "role": "contributing",
+   "evidence": "aircraft continued descent through 2040 ft step-down altitude and struck terrain at 1355 ft airport elevation; crew required excessive 2000 ft/min descent rate due to late interception (p. 6)"
   },
-  "phase": "approach",
-  "occupants": 18,
-  "fatalities": 18,
-  "category": "CFIT",
-  "summary": "The Jetstream 31 crashed into trees during final approach to Hibbing in night instrument conditions. The captain intercepted the DME arc at 8000 feet, delaying the descent and requiring an excessive descent rate of 2000 feet per minute. The aircraft descended through the step-down altitude and struck trees 634 feet before hitting a ridge. The NTSB determined that the captain's loss of altitude awareness led to a breakdown in crew coordination during the approach.",
-  "probable_cause": "The National Transportation Safety Board determines that the probable causes of this accident were the captain's actions that led to a breakdown in crew coordination and the loss of altitude awareness by the flightcrew during an unstabilized approach in night instrument meteorological conditions. Contributing to the accident were: the failure of the company management to adequately address the previously identified deficiencies in airmanship and crew resource management of the captain; the failure of the company to identify and correct a widespread, unapproved practice during instrument approach procedures; and the Federal Aviation Administration's inadequate surveillance and oversight of the air carrier (p. 5-6).",
-  "factors": [
-    {
-      "id": "low_visibility",
-      "role": "latent",
-      "evidence": "night instrument meteorological conditions; ceiling 500 ft overcast, visibility 1.5 miles with light snow and fog (p. 8)"
-    },
-    {
-      "id": "loss_of_situational_awareness",
-      "role": "initiating",
-      "evidence": "captain became preoccupied with approach planning and was not monitoring altitude as required; aircraft 1200 feet above minimums at Kinney fix but crew descended without leveling at intermediate altitudes (p. 6, 10)"
-    },
-    {
-      "id": "descent_below_minimums",
-      "role": "contributing",
-      "evidence": "aircraft continued descent through 2040 ft step-down altitude and struck terrain at 1355 ft airport elevation; crew required excessive 2000 ft/min descent rate due to late interception (p. 6)"
-    },
-    {
-      "id": "crm_breakdown",
-      "role": "contributing",
-      "evidence": "captain's actions led to breakdown in crew coordination; first officer did not challenge captain's deviation from procedure (p. 5-6)"
-    },
-    {
-      "id": "cfit",
-      "role": "outcome",
-      "evidence": "aircraft collided with terrain striking trees then two ridges during approach; came to rest inverted; all 18 occupants killed (p. 6)"
-    }
-  ],
-  "chain": [
-    [
-      "low_visibility",
-      "loss_of_situational_awareness"
-    ],
-    [
-      "loss_of_situational_awareness",
-      "descent_below_minimums"
-    ],
-    [
-      "descent_below_minimums",
-      "cfit"
-    ]
-  ],
-  "events": [
-    {
-      "t": 0,
-      "clock": "1325",
-      "phase": "pre_flight",
-      "actor": "CREW",
-      "kind": "crew_action",
-      "text": "Crew duty day began when captain and first officer reported to Express II operations office in Minneapolis/St. Paul (p. 6)",
-      "factors": []
-    },
-    {
-      "t": 60,
-      "clock": "1424",
-      "phase": "pre_flight",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Flight 5719 departed Minneapolis/St. Paul 28 minutes late (scheduled 1810, departed 1852) due to landing light replacement and passenger weight adjustment (p. 8-9)",
-      "factors": []
-    },
-    {
-      "t": 120,
-      "clock": "1754",
-      "phase": "approach",
-      "actor": "ATC",
-      "kind": "atc",
-      "text": "Weather observation for Hibbing: ceiling 500 ft overcast, visibility 1.5 miles, light snow/fog, temperature 28\u00b0F, wind 180\u00b0 at 8 knots (p. 8)",
-      "factors": [
-        "low_visibility"
-      ]
-    },
-    {
-      "t": 180,
-      "clock": "~1900",
-      "phase": "approach",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "Captain requested and received clearance for localizer back course approach to runway 13 instead of runway 31 due to tailwind (p. 8)",
-      "factors": []
-    },
-    {
-      "t": 240,
-      "clock": "1948",
-      "phase": "approach",
-      "actor": "CAPT",
-      "kind": "crew_action",
-      "text": "Flight crew intercepted DME arc at 8000 feet; captain became distracted by approach planning and decision-making rather than flying procedures (p. 10)",
-      "factors": [
-        "loss_of_situational_awareness"
-      ]
-    },
-    {
-      "t": 300,
-      "clock": "1949",
-      "phase": "approach",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Aircraft was 1200 feet above minimum altitude when at Kinney final approach fix; required excessive descent rate of 2000 feet per minute to meet approach profile (p. 6)",
-      "factors": [
-        "descent_below_minimums",
-        "loss_of_situational_awareness"
-      ]
-    },
-    {
-      "t": 330,
-      "clock": "1949:30",
-      "phase": "approach",
-      "actor": "SYS",
-      "kind": "system",
-      "text": "Aircraft continued descent through 2040 ft step-down altitude for Kinney; crew did not level off at required intermediate altitude (p. 6)",
-      "factors": [
-        "descent_below_minimums",
-        "crm_breakdown"
-      ]
-    },
-    {
-      "t": 360,
-      "clock": "1950",
-      "phase": "approach",
-      "actor": "ENV",
-      "kind": "env",
-      "text": "Aircraft struck top of tree 634 feet before ridge; continued through aspen trees colliding with two ridges (p. 6)",
-      "factors": [
-        "cfit"
-      ]
-    },
-    {
-      "t": 365,
-      "clock": null,
-      "phase": "landing",
-      "actor": "ENV",
-      "kind": "outcome",
-      "text": "Aircraft came to rest inverted after striking multiple ridges; all 18 occupants (2 crew, 16 passengers) fatally injured (p. 6)",
-      "factors": [
-        "cfit"
-      ]
-    },
-    {
-      "t": 370,
-      "clock": null,
-      "phase": "post_crash",
-      "actor": "ENV",
-      "kind": "outcome",
-      "text": "Aircraft destroyed; wreckage scattered across ridgeline terrain (p. 6)",
-      "factors": [
-        "cfit"
-      ]
-    }
-  ],
-  "report_links": [
-    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR94-05.pdf"
-  ],
-  "wikipedia": "https://en.wikipedia.org/wiki/Northwest_Airlink_Flight_5719",
-  "asn_id": "19931201-0",
-  "interest": 13.73,
-  "extraction": {
-    "method": "llm",
-    "model": "claude-haiku-4-5",
-    "confidence": "high",
-    "reviewed": false,
-    "notes": [
-      "Read History of Flight section (pages 5-42), Executive Summary (pages 5-6), Conclusions (page 43)",
-      "Extracted 11 detailed events with clock times from history section",
-      "Probable cause: captain's actions causing crew coordination breakdown and altitude awareness loss during unstabilized approach in IMC (p. 5-6)",
-      "Contributing factors: company failure to address captain's deficiencies, unapproved instrument procedures, inadequate FAA oversight (p. 5-6)",
-      "Multiple recommendations to FAA regarding commuter airline operations and crew coordination (p. 43-44)"
-    ]
+  {
+   "id": "crm_breakdown",
+   "role": "contributing",
+   "evidence": "captain's actions led to breakdown in crew coordination; first officer did not challenge captain's deviation from procedure (p. 5-6)"
   },
-  "recommendations": [
-    {
-      "id": "A-94-1",
-      "text": "Recommendation to FAA to require air carriers to establish and maintain a crew resource management (CRM) program (p. 43)",
-      "addressed_by": []
-    },
-    {
-      "id": "A-94-2",
-      "text": "Recommendation to FAA to require improved pilot training in procedural adherence and altitude awareness during instrument approaches (p. 43)",
-      "addressed_by": []
-    },
-    {
-      "id": "A-94-3",
-      "text": "Recommendation to FAA to conduct surveillance and oversight of Part 135 operators to ensure compliance with approved procedures (p. 43)",
-      "addressed_by": []
-    }
+  {
+   "id": "cfit",
+   "role": "outcome",
+   "evidence": "aircraft collided with terrain striking trees then two ridges during approach; came to rest inverted; all 18 occupants killed (p. 6)"
+  }
+ ],
+ "chain": [
+  [
+   "low_visibility",
+   "loss_of_situational_awareness"
+  ],
+  [
+   "loss_of_situational_awareness",
+   "descent_below_minimums"
+  ],
+  [
+   "descent_below_minimums",
+   "cfit"
   ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "1325",
+   "phase": "unknown",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Crew duty day began when captain and first officer reported to Express II operations office in Minneapolis/St. Paul (p. 6)",
+   "factors": []
+  },
+  {
+   "t": 60,
+   "clock": "1424",
+   "phase": "unknown",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Flight 5719 departed Minneapolis/St. Paul 28 minutes late (scheduled 1810, departed 1852) due to landing light replacement and passenger weight adjustment (p. 8-9)",
+   "factors": []
+  },
+  {
+   "t": 120,
+   "clock": "1754",
+   "phase": "approach",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Weather observation for Hibbing: ceiling 500 ft overcast, visibility 1.5 miles, light snow/fog, temperature 28°F, wind 180° at 8 knots (p. 8)",
+   "factors": [
+    "low_visibility"
+   ]
+  },
+  {
+   "t": 180,
+   "clock": "~1900",
+   "phase": "approach",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Captain requested and received clearance for localizer back course approach to runway 13 instead of runway 31 due to tailwind (p. 8)",
+   "factors": []
+  },
+  {
+   "t": 240,
+   "clock": "1948",
+   "phase": "approach",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Flight crew intercepted DME arc at 8000 feet; captain became distracted by approach planning and decision-making rather than flying procedures (p. 10)",
+   "factors": [
+    "loss_of_situational_awareness"
+   ]
+  },
+  {
+   "t": 300,
+   "clock": "1949",
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Aircraft was 1200 feet above minimum altitude when at Kinney final approach fix; required excessive descent rate of 2000 feet per minute to meet approach profile (p. 6)",
+   "factors": [
+    "descent_below_minimums",
+    "loss_of_situational_awareness"
+   ]
+  },
+  {
+   "t": 330,
+   "clock": "1949:30",
+   "phase": "approach",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Aircraft continued descent through 2040 ft step-down altitude for Kinney; crew did not level off at required intermediate altitude (p. 6)",
+   "factors": [
+    "descent_below_minimums",
+    "crm_breakdown"
+   ]
+  },
+  {
+   "t": 360,
+   "clock": "1950",
+   "phase": "approach",
+   "actor": "ENV",
+   "kind": "env",
+   "text": "Aircraft struck top of tree 634 feet before ridge; continued through aspen trees colliding with two ridges (p. 6)",
+   "factors": [
+    "cfit"
+   ]
+  },
+  {
+   "t": 365,
+   "clock": null,
+   "phase": "landing",
+   "actor": "ENV",
+   "kind": "outcome",
+   "text": "Aircraft came to rest inverted after striking multiple ridges; all 18 occupants (2 crew, 16 passengers) fatally injured (p. 6)",
+   "factors": [
+    "cfit"
+   ]
+  },
+  {
+   "t": 370,
+   "clock": null,
+   "phase": "unknown",
+   "actor": "ENV",
+   "kind": "outcome",
+   "text": "Aircraft destroyed; wreckage scattered across ridgeline terrain (p. 6)",
+   "factors": [
+    "cfit"
+   ]
+  }
+ ],
+ "report_links": [
+  "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR94-05.pdf"
+ ],
+ "wikipedia": "https://en.wikipedia.org/wiki/Northwest_Airlink_Flight_5719",
+ "asn_id": "19931201-0",
+ "interest": 13.73,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Read History of Flight section (pages 5-42), Executive Summary (pages 5-6), Conclusions (page 43)",
+   "Extracted 11 detailed events with clock times from history section",
+   "Probable cause: captain's actions causing crew coordination breakdown and altitude awareness loss during unstabilized approach in IMC (p. 5-6)",
+   "Contributing factors: company failure to address captain's deficiencies, unapproved instrument procedures, inadequate FAA oversight (p. 5-6)",
+   "Multiple recommendations to FAA regarding commuter airline operations and crew coordination (p. 43-44)",
+   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null; sources was null; phase pre_flight -> unknown; actor CREW -> CAPT; phase pre_flight -> unknown; phase post_crash -> unknown"
+  ]
+ },
+ "recommendations": [
+  {
+   "id": "A-94-1",
+   "text": "Recommendation to FAA to require air carriers to establish and maintain a crew resource management (CRM) program (p. 43)",
+   "addressed_by": [],
+   "status": "unknown"
+  },
+  {
+   "id": "A-94-2",
+   "text": "Recommendation to FAA to require improved pilot training in procedural adherence and altitude awareness during instrument approaches (p. 43)",
+   "addressed_by": [],
+   "status": "unknown"
+  },
+  {
+   "id": "A-94-3",
+   "text": "Recommendation to FAA to conduct surveillance and oversight of Part 135 operators to ensure compliance with approved procedures (p. 43)",
+   "addressed_by": [],
+   "status": "unknown"
+  }
+ ],
+ "cvr": [],
+ "dissent": [],
+ "safety_changes": [],
+ "related": [],
+ "sources": []
 }

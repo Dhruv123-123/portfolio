@@ -1,10 +1,13 @@
 {
   "id": "wd_q1781104",
+  "qid": "Q1781104",
+  "tier": "wikidata",
+  "depth": "sections",
   "title": "Southern Airways 242",
   "flight_number": "SA242",
   "date": "1977-04-04",
-  "time_reference": "Local",
-  "t0": "1977-04-04T04:10:00-06:00",
+  "time_reference": "local (e.s.t)",
+  "t0": "1977-04-04T16:08:05Z",
   "agency": "NTSB",
   "agencies": [
     {
@@ -12,59 +15,73 @@
       "name": "National Transportation Safety Board",
       "country": "United States",
       "role": "lead",
-      "report_id": "AAR-78-03",
-      "report_title": "Aircraft Accident Report - Southern Airways Flight 242"
+      "report_id": "AAR78-3",
+      "report_date": "1978-04-19"
     }
   ],
   "aircraft": {
     "type": "Douglas DC-9-31",
     "manufacturer": "Douglas",
     "family": "DC-9",
-    "registration": "N1335U"
+    "registration": "N1335U",
+    "engines": "Pratt & Whitney JT8D-7A"
   },
   "operator": "Southern Airways",
   "route": {
-    "from": "HSV",
+    "from": "HUA",
     "from_name": "Huntsville",
     "to": "ATL",
     "to_name": "Atlanta"
   },
   "location": {
-    "name": "New Hope, Georgia",
-    "country": "United States"
+    "name": "New Hope, Georgia (State Route 381)",
+    "country": "United States",
+    "lat": 33.9625,
+    "lon": -84.7869
   },
-  "phase": "landing",
+  "phase": "descent",
   "occupants": 85,
   "fatalities": 72,
+  "injuries_serious": 22,
   "damage": "destroyed",
   "category": "OTHR",
-  "summary": "Southern Airways Flight 242 suffered total loss of thrust from both engines while descending through a severe thunderstorm with embedded cells. The aircraft encountered massive rain and hail that broke the windshield and caused both engines to ingest water and hail, resulting in compressor stalling and flameout. The crew successfully glided the aircraft unpowered to a forced landing on Georgia State Route 381.",
-  "probable_cause": "Total loss of thrust from both engines caused by ingestion of massive amounts of water and hail during penetration of severe thunderstorm cell. The crew's misinterpretation of weather radar attenuation contributed to the decision to penetrate the storm. Contributing was thrust lever movement that induced severe stalling and major damage to the engine compressors.",
+  "summary": "Southern Airways Flight 242 suffered total loss of thrust from both engines while descending through a severe thunderstorm with embedded cells between 17,000 and 14,000 feet near Rome, Georgia. The crew penetrated the storm despite radar indications of severe activity, based on misinterpretation of weather radar attenuation. The aircraft encountered massive amounts of rain and hail that broke the windshield and caused both Pratt & Whitney JT8D-7A engines to ingest water and hail, resulting in compressor stalling and flameout. The crew successfully glided the aircraft unpowered to a forced emergency landing on Georgia State Route 381, where it struck vehicles and a building.",
+  "probable_cause": "The probable cause of this accident was the total and unique loss of thrust from both engines while the aircraft was penetrating an area of severe thunderstorms. The loss of thrust was caused by the ingestion of massive amounts of water and hail which in combination with thrust lever movement induced severe stalling in and major damage to the engine compressors. Major contributing factors included the failure of the company's dispatching system to provide the flightcrew with up-to-date severe weather information pertaining to the aircraft's intended route of flight, the captain's reliance on airborne weather radar for penetration of thunderstorm areas, and limitations in the Federal Aviation Administration's air traffic control system which precluded the timely dissemination of real-time hazardous weather information to the flightcrew. (p. 42)",
   "factors": [
     {
       "id": "convective_weather",
-      "role": "latent",
-      "evidence": "The aircraft descended from cruising altitude of 17,000 feet to near Rome VOR and apparently entered a thunderstorm cell, encountering a massive amount of rain and hail"
+      "role": "initiating",
+      "evidence": "Aircraft descended from cruising altitude of 17,000 ft through a severe thunderstorm cell with massive rain and hail near Rome, Georgia. At 1606:53 (14,000 ft), sound of heavy hail or rain was recorded on CVR, continuing through 1607:57 when CVR ceased for 36 sec. (p. 3-5)"
     },
     {
       "id": "low_visibility",
-      "role": "latent",
-      "evidence": "The hail was so intense that it broke the aircraft's windshield"
+      "role": "contributing",
+      "evidence": "The hail was so intense that it broke the aircraft's windshield during the encounter with the storm. Multiple CVR transmissions reference crew inability to see through weather. (p. 3)"
     },
     {
       "id": "mode_confusion",
       "role": "contributing",
-      "evidence": "The crew was apparently misled by the radar's attenuation effect and proceeded toward what they believed was a low-intensity area, when in fact it was the peak convective activity point"
+      "evidence": "The crew were apparently misled by the radar's attenuation effect, and they proceeded toward what they believed was a low-intensity area, when in fact it was the peak convective activity point. Captain initially decided storms were too severe to penetrate, then shortly after decided to penetrate based on radar interpretation. (p. 41-42, Findings 14-17)"
     },
     {
       "id": "dual_engine_failure",
       "role": "outcome",
-      "evidence": "The Pratt & Whitney JT8D-7A engines ingested a massive amount of water and hail causing major damage to the compressors and flameout"
+      "evidence": "Ingestion of massive amounts of water and hail into both Pratt & Whitney JT8D-7A engines caused compressor stalling. Severe compressor stalls produced overpressure surge deflecting sixth-stage low-pressure compressor blades forward, clashing against fifth-stage stator vanes and breaking pieces that ingested into high-pressure compressors. Continued high thrust settings caused severe overheating and engine ceased to function. Both engines went from normal operation to complete flameout within seconds. (p. 40-41, Findings 2-9)"
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "contributing",
+      "evidence": "Southern Airways' flight dispatch personnel did not monitor adequately the storm system which moved into the Rome area, and the information that the dispatch section provided to Flight 242 did not alert the flightcrew to the weather hazards along their route. NWS had identified by radar the precipitation in the Rome area as very strong and intense with indications of hail and cloud tops over 40,000 ft at least 20 min before Flight 242 departed Huntsville. (p. 41, Findings 18-19)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Captain's decision to penetrate the storm area was probably based on his interpretation of the weather radar display and his reliance on airborne weather radar for penetration of thunderstorm areas. Before departing Huntsville, the flightcrew had no information on thunderstorms immediately west of Rome VOR. (p. 41-42, Findings 12-17)"
     },
     {
       "id": "emergency_landing",
       "role": "outcome",
-      "evidence": "The crew glided the aircraft unpowered and executed a forced landing on Georgia State Route 381"
+      "evidence": "After losing both engines at 1610:05 at approximately 7,000 ft altitude, crew conducted successful forced landing glide (all engines inoperative) on Georgia State Route 381 near New Hope at 1618:36-1618:43 as recorded on CVR crash sounds. Aircraft struck trees and ground structures. (p. 5-6)"
     }
   ],
   "chain": [
@@ -74,7 +91,15 @@
     ],
     [
       "mode_confusion",
-      "dual_engine_failure"
+      "convective_weather"
+    ],
+    [
+      "operator_safety_culture",
+      "procedural_noncompliance"
+    ],
+    [
+      "procedural_noncompliance",
+      "convective_weather"
     ],
     [
       "dual_engine_failure",
@@ -83,80 +108,445 @@
   ],
   "events": [
     {
-      "t": -300,
-      "clock": null,
-      "phase": "descent",
+      "t": -1540,
+      "clock": "1521",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 242 departed Muscle Shoals on an instrument flight rules flight plan with 81 passengers and 4 crew aboard, heading for Atlanta via Huntsville intermediate stop.",
+      "factors": []
+    },
+    {
+      "t": -1460,
+      "clock": "1544",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 242 landed at Huntsville with no discrepancies.",
+      "factors": []
+    },
+    {
+      "t": -1340,
+      "clock": "1554",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 242 departed Huntsville on IFR flight plan for Atlanta direct to Rome VOR, requesting 17,000 ft with an estimated 25 minutes en route.",
+      "factors": []
+    },
+    {
+      "t": -1315,
+      "clock": "1554:35",
+      "phase": "climb",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Flight cleared to proceed to Rome VOR where peak convective activity was occurring",
+      "text": "Huntsville departure control cleared Flight 242 to climb to 17,000 ft and proceed directly to Rome VOR.",
+      "factors": []
+    },
+    {
+      "t": -1165,
+      "clock": "1556:00",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Huntsville controller advised heavy precipitation was 5 nmi ahead; crew reported they were already in rain and conditions did not look heavier than what they were in.",
       "factors": [
         "mode_confusion"
       ]
     },
     {
-      "t": 0,
-      "clock": null,
-      "phase": "descent",
-      "actor": "ENV",
-      "kind": "env",
-      "text": "Aircraft encountered severe thunderstorm with massive rain and hail",
+      "t": -845,
+      "clock": "1558:10",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 242 established communications with Memphis Air Route Traffic Control Center.",
+      "factors": []
+    },
+    {
+      "t": -785,
+      "clock": "1558:45",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Memphis Center controller advised SIGMET was current for Tennessee, Louisiana, Mississippi, Alabama vicinity and instructed Flight 242 to contact Atlanta Center.",
       "factors": [
-        "convective_weather"
+        "mode_confusion"
       ]
     },
     {
-      "t": 60,
-      "clock": null,
+      "t": -595,
+      "clock": "1606:30",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Atlanta Center cleared Flight 242 to descend to 14,000 ft and reported weather showing up northwest of Rome.",
+      "factors": []
+    },
+    {
+      "t": -545,
+      "clock": "1606:53",
       "phase": "descent",
       "actor": "SYS",
-      "kind": "outcome",
-      "text": "Windshield broken by hail; both engines ingested water and hail causing compressor damage and flameout",
+      "kind": "system",
+      "text": "Flight 242 reported reaching 14,000 ft; sound of heavy hail or rain was recorded on CVR at this time, indicating severe weather encounter.",
+      "factors": [
+        "convective_weather",
+        "low_visibility"
+      ]
+    },
+    {
+      "t": -490,
+      "clock": "1609:15",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 242 reported to Atlanta Center: 'We just got our windshield busted' indicating hail impact on cockpit windshield.",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": -485,
+      "clock": "1609:36",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "First officer said 'Left engine won't spool' and Flight 242 reported 'Our left engine just cut out.'",
       "factors": [
         "dual_engine_failure"
       ]
     },
     {
-      "t": 180,
-      "clock": null,
+      "t": -485,
+      "clock": "1609:36",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "First evidence of engine trouble: left engine compressor stall and power loss due to water/hail ingestion.",
+      "factors": [
+        "dual_engine_failure"
+      ]
+    },
+    {
+      "t": -480,
+      "clock": "1607:57",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "CVR ceased recording for 36 seconds during intense precipitation encounter; when it resumed at 1608:33, rain sounds continued for another 40 seconds.",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": -475,
+      "clock": "1610:04",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "First officer said 'My...the other engine's going too...' and at 1610:05 reported 'Standby, we lost both engines.'",
+      "factors": [
+        "dual_engine_failure"
+      ]
+    },
+    {
+      "t": -475,
+      "clock": "1610:05",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Total loss of thrust from both engines while at approximately 7,000 ft altitude. Both Pratt & Whitney JT8D-7A engines ceased functioning due to compressor damage from water and hail ingestion combined with thrust lever movement.",
+      "factors": [
+        "dual_engine_failure"
+      ]
+    },
+    {
+      "t": -415,
+      "clock": "1610:52",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "CVR ceased operation for 2 minutes 4 seconds (engine-driven electrical power interrupted when both engine rotational speed decreased below electrical generator operating thresholds).",
+      "factors": [
+        "dual_engine_failure"
+      ]
+    },
+    {
+      "t": -235,
+      "clock": "1613:04",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 242 transmitted to Atlanta Approach Control 'we've lost both engines, how about giving us a vector to the nearest place, we're at 7,000 ft.' Approach Control provided vector to Dobbins Air Force Base.",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": -185,
+      "clock": "1613:45",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Crew requested emergency descent; first officer declared emergency to crew.",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "1615:04",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain said 'Just don't stall this thing out' and directed 'Get your wing flaps.' First officer confirmed 'Got hydraulics' - APU was providing essential electrical power for flight control actuation.",
+      "factors": []
+    },
+    {
+      "t": 50,
+      "clock": "1617:08",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Captain: 'I'm picking out a clear field.' First officer: 'Bill, you've got to find me a highway.' Captain: 'Let's get the next clear open field.' First officer: 'No...' This exchange shows crew search for emergency landing site.",
+      "factors": []
+    },
+    {
+      "t": 90,
+      "clock": "1617:35",
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Captain said 'See a highway over--no cars' and first officer asked 'Right there, is that straight?' Captain replied 'No.' First officer said 'We'll have to take it.'",
+      "factors": []
+    },
+    {
+      "t": 155,
+      "clock": "1618:02",
       "phase": "landing",
       "actor": "PF",
       "kind": "crew_action",
-      "text": "Crew executed successful forced landing on Georgia State Route 381 in unpowered glide",
+      "text": "Flight 242's last transmission: 'we're putting it on the highway, we're down to nothing' indicating decision to land on Georgia State Route 381.",
+      "factors": []
+    },
+    {
+      "t": 200,
+      "clock": "1618:36-1618:43",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Crash impact sequence recorded on CVR. Aircraft touched down on Georgia State Route 381 in unpowered glide after 28+ minutes of engine-out flight, striking trees and ground structures at elevation 1,020 ft.",
       "factors": [
         "emergency_landing"
       ]
     }
   ],
-  "cvr": [],
-  "recommendations": [],
-  "dissent": [],
+  "cvr": [
+    {
+      "t": -1225,
+      "clock": "1555:58",
+      "speaker": "CAPT",
+      "text": "Well the radar is full of it, take your pick."
+    },
+    {
+      "t": -1155,
+      "clock": "1556:37",
+      "speaker": "FO",
+      "text": "I can't read that, it just looks like rain, Bill. What do you think? There's a hole."
+    },
+    {
+      "t": -1155,
+      "clock": "1556:37",
+      "speaker": "CAPT",
+      "text": "There's a hole right here. That's all I see."
+    },
+    {
+      "t": -1085,
+      "clock": "1558:32",
+      "speaker": "CAPT",
+      "text": "As long as it doesn't get any heavier we'll be all right."
+    },
+    {
+      "t": -1075,
+      "clock": "1558:45",
+      "speaker": "FO",
+      "text": "Yeah, this is good."
+    },
+    {
+      "t": -665,
+      "clock": "1605:53",
+      "speaker": "FO",
+      "text": "Which way do we go cross here or go out--I don't know how we get through there, Bill."
+    },
+    {
+      "t": -655,
+      "clock": "1606:01",
+      "speaker": "CAPT",
+      "text": "All clear left approximately right now; I think we can cut across there now."
+    },
+    {
+      "t": -490,
+      "clock": "1609:15",
+      "speaker": "CAPT",
+      "text": "We just got our windshield busted and...we'll try to get it back up to 15, we're 14."
+    },
+    {
+      "t": -485,
+      "clock": "1609:36",
+      "speaker": "FO",
+      "text": "Left engine won't spool"
+    },
+    {
+      "t": -475,
+      "clock": "1610:04",
+      "speaker": "FO",
+      "text": "My...the other engine's going too..."
+    },
+    {
+      "t": -475,
+      "clock": "1610:05",
+      "speaker": "PILOT",
+      "text": "Standby, we lost both engines."
+    },
+    {
+      "t": -455,
+      "clock": "1610:14",
+      "speaker": "FO",
+      "text": "All right Bill, get us a vector to a clear area."
+    },
+    {
+      "t": -75,
+      "clock": "1615:04",
+      "speaker": "CAPT",
+      "text": "Just don't stall this thing out."
+    },
+    {
+      "t": -70,
+      "clock": "1615:04",
+      "speaker": "FO",
+      "text": "No I won't."
+    },
+    {
+      "t": 50,
+      "clock": "1617:08",
+      "speaker": "CAPT",
+      "text": "I'm picking out a clear field."
+    },
+    {
+      "t": 50,
+      "clock": "1617:08",
+      "speaker": "FO",
+      "text": "Bill, you've got to find me a highway."
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-77-63",
+      "to": "FAA",
+      "text": "Expedite the development and implementation of an aviation weather subsystem for both en route and terminal area environments, which is capable of providing a real-time display of either precipitation or turbulence, or both, and which includes a multiple-intensity classification scheme. Transmit this information to pilots either via the controller as a safety advisory or via an electronic data link.",
+      "status": "open",
+      "trigger_factors": [
+        "mode_confusion",
+        "operator_safety_culture"
+      ]
+    },
+    {
+      "id": "A-77-64",
+      "to": "FAA",
+      "text": "Establish a standard scale of thunderstorm intensity based on the NWS six-level scale and promote its widespread use as a common language to describe thunderstorm precipitation intensity. Additionally, indoctrinate pilots and air traffic control personnel in the use of this system.",
+      "status": "open",
+      "trigger_factors": [
+        "mode_confusion"
+      ]
+    },
+    {
+      "id": "A-77-65",
+      "to": "FAA",
+      "text": "Transmit SIGMETs more frequently on navaids so that pilots can receive more timely information about hazardous weather.",
+      "status": "open",
+      "trigger_factors": [
+        "operator_safety_culture"
+      ]
+    },
+    {
+      "id": "A-77-66",
+      "to": "FAA",
+      "text": "Code, according to geographic applicability, Severe Thunderstorm Bulletins and Tornado Watch Bulletins issued by the National Severe Storms Forecast Center so that they may be transmitted to appropriate air traffic control facilities by the FAA Weather Message Switching Center.",
+      "status": "open",
+      "trigger_factors": [
+        "operator_safety_culture"
+      ]
+    },
+    {
+      "id": "A-77-67",
+      "to": "FAA",
+      "text": "Require that each air traffic control facility depict on the map portion of its radar displays those airports immediately outside of that facility's jurisdiction to the extent that adjacent facilities depict those airports on their displays.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-77-68",
+      "to": "FAA",
+      "text": "Formulate rules and procedures for the timely dissemination by air traffic controllers of all available severe weather information to inbound and outbound flightcrews in the terminal area.",
+      "status": "open",
+      "trigger_factors": [
+        "operator_safety_culture"
+      ]
+    },
+    {
+      "id": "A-78-1",
+      "to": "FAA",
+      "text": "Initiate research to determine the attenuating effects of various levels of precipitation and icing on airborne radomes of both x- and c-band radar, and disseminate to the aviation community any data derived concerning the limitations of airborne radar in precipitation.",
+      "status": "open",
+      "trigger_factors": [
+        "mode_confusion"
+      ]
+    },
+    {
+      "id": "A-78-2",
+      "to": "FAA",
+      "text": "Expedite its review of Recommendation A-73-40 with a view toward early requirement of properly designed shoulder harnesses at flight attendant stations in air carrier aircraft.",
+      "status": "open",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [
+    {
+      "agency": "NTSB Member Francis H. McAdams",
+      "position": "Disagreed with the probable cause, arguing it was merely a statement of what happened rather than why it occurred. Stated the probable cause should emphasize the captain's critical decision to penetrate rather than avoid a known area of severe weather.",
+      "topic": "probable cause"
+    }
+  ],
   "safety_changes": [
-    "Improved weather radar training for crews on radar attenuation effects",
-    "Enhanced severe weather avoidance procedures",
-    "Improved engine inlet protection from hail ingestion"
+    "Development of wind shear detection systems and microburst forecasting",
+    "Implementation of real-time weather information systems for pilots",
+    "Enhanced weather radar technology and interpretation training",
+    "Standard phraseology for thunderstorm intensity description"
   ],
   "related": [],
   "fdr": null,
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7803.pdf"
   ],
-  "tier": "wikidata",
-  "depth": "sections",
-  "qid": "Q1781104",
-  "asn_id": "19770404-1",
   "wikipedia": "https://en.wikipedia.org/wiki/Southern_Airways_Flight_242",
+  "asn_id": "19770404-1",
   "report_links": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7803.pdf"
   ],
-  "interest": 16.82,
   "curated_id": null,
   "extraction": {
     "method": "llm",
-    "model": "claude-haiku-4-5",
+    "model": "claude-haiku-4-5-20251001",
     "confidence": "high",
     "reviewed": false,
     "notes": [
-      "Sections read: Findings, Probable Cause, and event timeline from NTSB Report AAR-78-03"
+      "Narrative sections (1.1 History of Flight) read in detail with precise CVR times and dialog",
+      "Findings section (3.1) with 25 detailed findings covering engine failure sequence and crew decision factors",
+      "Probable Cause section (3.2) extensively documented with technical engine damage mechanisms",
+      "All 8 recommendations extracted with full text from NTSB response section",
+      "Dissenting opinion from Board Member McAdams included",
+      "Page citations from '<<< page N >>>' markers throughout extraction",
+      "22 events with specific clock times and CVR quotes from report narrative",
+      "CVR transcript sections read for authentic crew communications"
     ]
   }
 }

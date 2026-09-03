@@ -1,0 +1,325 @@
+{
+  "id": "wd_q665566",
+  "qid": "Q665566",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Aloha Airlines 243",
+  "flight_number": "AQ243",
+  "date": "1988-04-28",
+  "time_reference": "HST",
+  "t0": "1988-04-28T13:46:00-10:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-89-03",
+      "report_title": "Aircraft Accident Report--Aloha Airlines, Flight 243",
+      "report_date": "1989-06-14",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8903.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-200",
+    "family": "737",
+    "manufacturer": "Boeing",
+    "registration": "N73711",
+    "msn": "30556"
+  },
+  "operator": "Aloha Airlines",
+  "route": {
+    "from": "HLO",
+    "from_name": "Hilo",
+    "to": "HNL",
+    "to_name": "Honolulu"
+  },
+  "location": {
+    "name": "Kahului Airport, Maui",
+    "country": "United States"
+  },
+  "phase": "cruise",
+  "occupants": 95,
+  "fatalities": 1,
+  "damage": "substantial",
+  "category": "F-NI",
+  "summary": "The Boeing 737-200 suffered an explosive decompression in flight when a large section of the fuselage roof tore off at 24,000 feet. The damage resulted from metal fatigue and crevice corrosion in the lap joint along the upper fuselage. Flight attendant Clarabelle Lansing was ejected from the aircraft. The crew successfully diverted and landed at Kahului Airport with 94 survivors.",
+  "probable_cause": "The failure of the Aloha Airlines maintenance program to detect the presence of significant disbonding and fatigue damage which ultimately led to failure of the lap joint at S-10L and the separation of the fuselage upper lobe. Contributing to the accident were the failure of Aloha Airlines management to supervise properly its maintenance force; the failure of the FAA to evaluate properly the Aloha Airlines maintenance program and to assess the airline's inspection and quality control deficiencies; the failure of the FAA to require Airworthiness Directive 87-21-08 inspection of all the lap joints proposed by Boeing Alert Service Bulletin SB 737-53A1039; and, the lack of a complete terminating action after the discovery of early production difficulties in the B-737 cold bond lap joint which resulted in low bond durability, corrosion, and premature fatigue cracking.",
+  "factors": [
+    {
+      "id": "metal_fatigue",
+      "role": "initiating",
+      "evidence": "Multiple-site fatigue cracking of the skin adjacent to rivet holes along lap joint upper rivet row initiated from knife edges associated with countersunk lap joint rivet holes; the knife edge concentrated stresses transferred through rivets because of lap joint disbonding (p. 72)."
+    },
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "Failure of Aloha Airlines maintenance program to detect significant disbonding and fatigue damage in the lap joint at S-10L; the aircraft was 19 years old with 89,680 flight cycles in a coastal saltwater environment prone to corrosion (p. 72)."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "Fuselage examinations were scheduled during the night and not performed as required by company procedures, making carrying out an adequate inspection more difficult; Aloha Airlines management failed to recognize the human performance factors of inspection (p. 72-73)."
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Entire top half of the aircraft skin extending from just behind the cockpit to the fore-wing area separated; a major portion of the upper crown skin and structure of section 43 separated in flight causing an explosive decompression of the cabin (p. 12)."
+    },
+    {
+      "id": "explosive_decompression",
+      "role": "outcome",
+      "evidence": "Section on left side of roof ruptured with whooshing sound at 24,000 feet cruising altitude (p. 8)."
+    }
+  ],
+  "chain": [
+    ["metal_fatigue", "structural_failure"],
+    ["structural_failure", "explosive_decompression"],
+    ["maintenance_error", "metal_fatigue"],
+    ["inadequate_inspection", "maintenance_error"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "13:46",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 243 reached normal cruising altitude of 24,000 feet"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Section on the left side of roof ruptured with whooshing sound; cockpit door broke away exposing blue sky"
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain Schornstheimer took over controls and performed immediate emergency descent, extending speed brakes and descending at 280-290 knots with rate of descent of 4,100 feet per minute"
+    },
+    {
+      "t": 240,
+      "clock": "13:48:15",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Honolulu ARTCC controller attempting to communicate with flight 243, observing emergency code 7700 transponder return about 23 nautical miles south-southeast of Kahului Airport"
+    },
+    {
+      "t": 270,
+      "clock": "13:48:35",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "First officer switched radio to Maui Tower frequency and informed tower of rapid decompression, declaring an emergency and stating need for emergency equipment"
+    },
+    {
+      "t": 300,
+      "clock": "13:49:00",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "system",
+      "text": "Emergency coordination began between Honolulu Center and Maui Approach Control; Honolulu advised Maui that 7700 transponder return could be an Aloha 737"
+    },
+    {
+      "t": 432,
+      "clock": "13:50:58",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Local controller requested flight 243 to change to Maui Approach Control frequency 119.5 MHz; request acknowledged but flight continued transmitting on local controller frequency"
+    },
+    {
+      "t": 600,
+      "clock": "13:53:44",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "First officer informed local controller: We're going to need assistance. We cannot communicate with the flight attendants. We'll need assistance for the passengers when we land"
+    },
+    {
+      "t": 780,
+      "clock": "13:55:05",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "First officer advised tower: We won't have a nose gear; manual nose gear extension was selected but green indicator light did not illuminate"
+    },
+    {
+      "t": 840,
+      "clock": "13:56:14",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Crew advised tower: We'll need all the equipment you've got; discovered No. 1 (left) engine had failed during power maneuver for approach"
+    },
+    {
+      "t": 1020,
+      "clock": "13:58:45",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 243 landed on runway 02 at Maui's Kahului Airport with normal touchdown and landing rollout; used No. 2 engine thrust reverser and brakes to stop; emergency evacuation accomplished on runway"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-89-53",
+      "to": "FAA",
+      "text": "Provide specific guidance and proper engineering support to Principal Maintenance Inspectors to evaluate modifications of airline maintenance programs and operations specifications which propose segmenting major maintenance inspections.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-54",
+      "to": "FAA",
+      "text": "Identify operators whose airplane use differs significantly from the flight cycle versus flight time relationship upon which the Maintenance Planning Document was predicated, and verify that their maintenance programs provide timely detection of both cycle and time related deficiencies.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-55",
+      "to": "FAA",
+      "text": "Revise the regulations governing the certification of aviation maintenance technician schools and the licensing of airframe and powerplant mechanics to require that the curriculum and testing requirements include modern aviation industry technology.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-56",
+      "to": "FAA",
+      "text": "Require formal certification and recurrent training of aviation maintenance inspectors performing nondestructive inspection functions. Formal training should include apprenticeship and periodic skill demonstration.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-57",
+      "to": "FAA",
+      "text": "Require operators to provide specific training programs for maintenance and inspection personnel about the conditions under which visual inspections must be conducted and periodically test personnel on their ability to detect defined defects.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-58",
+      "to": "FAA",
+      "text": "Develop a continuing inspection program for those B-737 airplanes that have incorporated lap joint terminating action to detect any fatigue cracking that may develop in the middle or lower rows of fuselage lap joint fastener holes and define the types of inspections, inspection intervals, and corrective actions needed for continuing airworthiness.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-59",
+      "to": "FAA",
+      "text": "Develop a model program for a comprehensive corrosion control program to be included in each operator's approved maintenance program.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-60",
+      "to": "FAA",
+      "text": "Issue an Airworthiness Directive for B-737 airplanes equipped with carbon steel engine control cables to periodically inspect the cables for evidence of corrosion and if there is such evidence, to accomplish the actions set forth in Boeing Service Letter 737-SL-76-2-A.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-61",
+      "to": "FAA",
+      "text": "Require that air carrier maintenance departments use the engineering services available from the manufacturer or other sources to periodically evaluate their maintenance practices including structural repair, compliance with airworthiness directives and service bulletins, performance of inspection and quality assurance sections and overall effectiveness of continuing airworthiness programs.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-62",
+      "to": "FAA",
+      "text": "Revise the National Aviation Safety Inspection Program objectives to require that inspectors evaluate not only the paperwork trail, but also the actual condition of the fleet airplanes undergoing maintenance and on the operational ramp.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-63",
+      "to": "FAA",
+      "text": "Require National Aviation Safety Inspection Program teams to indicate related systemic deficiencies within an operators maintenance activity when less than satisfactory fleet condition is identified.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-64",
+      "to": "FAA",
+      "text": "Evaluate the quality of FAA surveillance provided by the principal inspectors as part of the National Aviation Safety Inspection Program.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-65",
+      "to": "FAA",
+      "text": "Integrate the National Aviation Safety Inspection Program team leader in the closeout of the team findings.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-66",
+      "to": "FAA",
+      "text": "Enhance the stature and performance of the principal inspectors through formal management training and guidance, greater encouragement and backing by headquarters, improved accountability for the quality of the surveillance, and additional headquarters assistance in standardizing surveillance activities.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-67",
+      "to": "FAA",
+      "text": "Require that all turbojet transport category airplanes certificated in the future receive full scale structural fatigue testing to a minimum of two times the projected economic service life. Also require that all currently certificated turbojet transport category airplanes that have not been fatigue tested to two lifetimes, be subjected to such testing. As a result of this testing and subsequent inspection and analysis, require manufacturers to identify structure susceptible to multiple site damage and adopt inspection programs appropriate for the detection of such damage.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-68",
+      "to": "FAA",
+      "text": "Discontinue classification of fuselage skin as \"malfunction evident\" or \"damage obvious\" on supplemental structural inspection documents. In addition, review all the remaining structurally significant items in the damage obvious category for possible inclusion in the Supplementary Inspection Program.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-69",
+      "to": "FAA",
+      "text": "Issue an Air Carrier Operations Bulletin for all air carrier flight training departments to review the accident scenario and reiterate the need to assess airplane airworthiness as stated in the operators manual before taking action that may cause further damage or breakup of a damaged airframe.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-70",
+      "to": "Aloha Airlines",
+      "text": "Revise the maintenance program to recognize the high-time high cycles nature of the fleet operations and initiate maintenance inspection and overhaul concepts based on realistic and acceptable calendar and flight cycle intervals.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-71",
+      "to": "Aloha Airlines",
+      "text": "Initiate a corrosion prevention and control program designed to afford maximum protection from the effects of harsh operating environments.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-72",
+      "to": "Aloha Airlines",
+      "text": "Revise and upgrade the technical division manpower and organization to provide the necessary Management, quality assurance, engineering, technical training and production personnel to maintain a high level of airworthiness of the fleet.",
+      "status": "open"
+    },
+    {
+      "id": "A-89-73",
+      "to": "Air Transport Association",
+      "text": "Assist member air carriers to establish maintenance department engineering services to evaluate maintenance practices including structural repair, compliance with airworthiness directives and service bulletins, performance of inspection and quality assurance sections, and overall effectiveness of continuing airworthiness programs.",
+      "status": "open"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8903.pdf"],
+  "wikipedia": "https://en.wikipedia.org/wiki/Aloha_Airlines_Flight_243",
+  "asn_id": "19880428-0",
+  "interest": 9.64,
+  "curated_id": null,
+  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8903.pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Timeline extracted from History of Flight section (p. 7-11)",
+      "Probable cause from section 3 (p. 74)",
+      "Recommendations from section 4 (p. 75-77)",
+      "Events with NEW clock times: 13:48:15, 13:48:35, 13:49:00, 13:50:58, 13:53:44, 13:55:05, 13:56:14, 13:58:45",
+      "Factors and evidence extracted from Findings section (p. 72-73)",
+      "Left engine failure due to cable separation from cabin floor deformation and corrosion"
+    ]
+  }
+}
