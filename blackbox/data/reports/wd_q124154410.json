@@ -1,0 +1,284 @@
+{
+  "id": "wd_q124154410",
+  "qid": "Q124154410",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Alaska Airlines 1282 on 5 January 2024",
+  "flight_number": "AS1282",
+  "date": "2024-01-05",
+  "time_reference": "PST",
+  "t0": "2024-01-05T17:12:33-08:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AIR-25-04",
+      "report_date": "2025-06-24",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2504.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737 MAX 9",
+    "manufacturer": "Boeing",
+    "family": "737",
+    "registration": "N704AL"
+  },
+  "operator": "Alaska Airlines",
+  "route": {
+    "from": "PDX",
+    "from_name": "Portland, Oregon",
+    "to": "ONT",
+    "to_name": "Ontario, California"
+  },
+  "location": {
+    "name": "Portland, Oregon",
+    "country": "United States"
+  },
+  "phase": "initial_climb",
+  "occupants": 177,
+  "fatalities": 0,
+  "injuries_minor": 8,
+  "damage": "substantial",
+  "category": "SEC",
+  "summary": "Alaska Airlines Flight 1282 experienced in-flight separation of left mid-exit door plug at 14,830 feet during climb. Four securing bolts were never reinstalled after factory rework. Aircraft descended safely to Portland with all 177 occupants surviving.",
+  "probable_cause": "The probable cause was Boeing's failure to provide adequate training, guidance, and oversight to ensure manufacturing personnel could consistently comply with its parts removal process. Contributing was the FAA's ineffective compliance enforcement and audit planning activities which failed to identify Boeing's repetitive systemic nonconformance issues.",
+  "factors": [
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "Four vertical movement arrestor bolts and upper guide track bolts were missing before the plug moved upward, indicating they were never reinstalled after being removed at the factory (p. 133)"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "Door plug had no fail-safe secondary retention mechanism to prevent separation if bolts were removed (p. 119)"
+    },
+    {
+      "id": "certification_shortfall",
+      "role": "contributing",
+      "evidence": "FAA compliance enforcement surveillance, audit planning, and records systems were deficient and lacked functionality to identify repetitive and systemic discrepancies with Boeing's Business Process Instruction (p. 135)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Boeing's on-the-job training was unstructured and undocumented; neither door team manager nor personnel had experience opening an MED plug (p. 120)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "No removal record was generated when left MED plug was opened, increasing risk that closure would not be performed properly (p. 119)"
+    },
+    {
+      "id": "explosive_decompression",
+      "role": "outcome",
+      "evidence": "Left MED plug separated causing cabin pressure drop from 14.09 psi at 14,830 feet (p. 2)"
+    }
+  ],
+  "chain": [
+    [
+      "maintenance_error",
+      "explosive_decompression"
+    ],
+    [
+      "design_deficiency",
+      "explosive_decompression"
+    ],
+    [
+      "certification_shortfall",
+      "inadequate_training"
+    ],
+    [
+      "inadequate_training",
+      "procedural_noncompliance"
+    ],
+    [
+      "procedural_noncompliance",
+      "maintenance_error"
+    ]
+  ],
+  "events": [
+    {
+      "t": -30,
+      "clock": "17:07",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 1282 departed Portland International Airport runway"
+    },
+    {
+      "t": 0,
+      "clock": "17:12:33",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "state": {
+        "alt": 14830
+      },
+      "text": "Cabin pressure dropped; left MED plug separated from fuselage causing rapid depressurization",
+      "factors": [
+        "explosive_decompression"
+      ]
+    },
+    {
+      "t": 1,
+      "clock": "17:12:34",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Master caution alert activated; flight deck door opened striking flight attendant D; oxygen masks deployed",
+      "factors": [
+        "explosive_decompression"
+      ]
+    },
+    {
+      "t": 7,
+      "clock": "17:12:40",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain and First Officer donned emergency oxygen masks; Captain initiated descent"
+    },
+    {
+      "t": 68,
+      "clock": "17:13:41",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "state": {
+        "alt": 16320
+      },
+      "text": "Aircraft reached maximum altitude of 16,320 feet and began descent"
+    },
+    {
+      "t": 83,
+      "clock": "17:13:56",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Selected altitude changed from 23,000 ft to 10,000 ft"
+    },
+    {
+      "t": 327,
+      "clock": "17:17:00",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "state": {
+        "alt": 10000
+      },
+      "text": "Aircraft descended below 10,000 ft; cabin altitude warning deactivated"
+    },
+    {
+      "t": 513,
+      "clock": "17:26:46",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft landed safely on runway 28L at Portland with all 177 occupants surviving"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-25-15",
+      "to": "FAA",
+      "text": "Issue airworthiness directive requiring retrofit of all in-service MED plug-equipped airplanes with design enhancement",
+      "status": "open",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-25-16",
+      "to": "FAA",
+      "text": "Revise compliance enforcement surveillance system to identify, record, track and resolve recurring systemic discrepancies",
+      "status": "open",
+      "trigger_factors": [
+        "certification_shortfall"
+      ]
+    },
+    {
+      "id": "A-25-17",
+      "to": "FAA",
+      "text": "Revise audit planning activities to provide necessary functionality for oversight",
+      "status": "open",
+      "trigger_factors": [
+        "certification_shortfall"
+      ]
+    },
+    {
+      "id": "A-25-18",
+      "to": "FAA",
+      "text": "Revise records systems to provide records for identifying and resolving systemic discrepancies",
+      "status": "open",
+      "trigger_factors": [
+        "certification_shortfall"
+      ]
+    },
+    {
+      "id": "A-25-26",
+      "to": "Boeing",
+      "text": "Continue certification process for design enhancement for mid exit door plugs",
+      "status": "open",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-25-28",
+      "to": "Boeing",
+      "text": "Apply safety risk management process to revise Business Process Instruction to ensure clear guidance",
+      "status": "open",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "A-25-29",
+      "to": "Boeing",
+      "text": "Develop recurrent training on Business Process Instruction for manufacturing personnel",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": "A-25-30",
+      "to": "Boeing",
+      "text": "Develop structured on-the-job training program for manufacturing personnel",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2504.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections: History of Flight (p. 16-20), Findings (p. 133-136), Probable Cause (p. 133), Recommendations (p. 138-140)",
+      "8 events from report timeline with detailed crew actions and aircraft state",
+      "Comprehensive factors with page citations"
+    ]
+  },
+  "asn_id": null,
+  "interest": 9.2,
+  "curated_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Alaska_Airlines_Flight_1282",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/Pages/DCA24MA063.aspx",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2504.pdf"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "id": "wd_q90500563",
+  "qid": "Q90500563",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Lufthansa Cargo 8533",
+  "flight_number": "8533",
+  "date": "1999-07-07",
+  "time_reference": "Nepal Standard Time",
+  "t0": "1999-07-07T19:51:00+05:45",
+  "agency": "DGCA",
+  "agencies": [
+    {
+      "code": "DGCA",
+      "name": "Directorate General of Civil Aviation",
+      "country": "India",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 727-200 Freighter",
+    "manufacturer": "Boeing",
+    "family": "727",
+    "registration": "VT-LCI"
+  },
+  "operator": "Hinduja Cargo Services",
+  "route": {
+    "from": "KTM",
+    "from_name": "Tribhuvan International Airport",
+    "to": "DEL",
+    "to_name": "Indira Gandhi International Airport"
+  },
+  "location": {
+    "name": "Champadevi Hills",
+    "country": "Nepal"
+  },
+  "phase": "initial_climb",
+  "occupants": 5,
+  "fatalities": 5,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Boeing 727-200 freighter VT-LCI departed Kathmandu on July 7, 1999 at 19:51 local time. After turning to heading 247 at 4.4 DME during climb, power was inadvertently reduced causing aircraft to descend to 7,500 feet in an area requiring 9,500 feet minimum altitude. GPWS activated as aircraft impacted Champadevi Hills at 2,200 meters, killing all five crew.",
+  "probable_cause": "Power inadvertently reduced during initial climb, resulting in aircraft descending to 7,500 feet in an area where minimum departure altitude of 9,500 feet must be maintained, leading to terrain impact",
+  "factors": [
+    {
+      "id": "procedural_noncompliance",
+      "role": "initiating",
+      "evidence": "Power applied on engines was inadvertently reduced during climb, causing aircraft to descend below required minimum departure altitude (p. N/A)"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "Aircraft descending to 7,500 feet in area where departing aircraft must maintain above 9,500 feet altitude (p. N/A)"
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Ground proximity warning system activated with terrain warning before impact at Champadevi Hills (p. N/A)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "VT-LCI impacted Champadevi Hills at 2,200 meters altitude with no survivors (p. N/A)"
+    }
+  ],
+  "chain": [
+    [
+      "procedural_noncompliance",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "19:51",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Boeing 727-200 Freighter VT-LCI departs runway 20 at Kathmandu Tribhuvan International Airport"
+    },
+    {
+      "t": 60,
+      "clock": "19:52",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft makes 10-degree bank to heading 247 at 4.4 DME"
+    },
+    {
+      "t": 90,
+      "clock": "19:52:30",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Power applied on engines is inadvertently reduced during climb"
+    },
+    {
+      "t": 120,
+      "clock": "19:53",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "state": {
+        "alt": 7500
+      },
+      "text": "Aircraft loses height and descends to 7,500 feet in area requiring 9,500 feet minimum altitude"
+    },
+    {
+      "t": 150,
+      "clock": "19:53:30",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Ground Proximity Warning System activates with terrain warning and stick shaker"
+    },
+    {
+      "t": 160,
+      "clock": "19:51",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacts Champadevi Hills at 2,200 meters altitude; all five crew perish",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.dgca.gov.in/digigov-portal/?page=jsp/dgca/InventoryList/dataReports/accidentIncidentData/summary/acc99.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Limited report details available; 6 events reconstructed from available documentation",
+      "Factors based on summary record and GPWS activation sequence"
+    ]
+  },
+  "asn_id": null,
+  "interest": 8.7,
+  "curated_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Hinduja_Cargo_Services_Flight_8533",
+  "report_links": [
+    "https://www.dgca.gov.in/digigov-portal/?page=jsp/dgca/InventoryList/dataReports/accidentIncidentData/summary/acc99.pdf"
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "id": "wd_q5213021",
+  "qid": "Q5213021",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Dan-Air 240",
+  "flight_number": "DA240",
+  "date": "1981-06-26",
+  "time_reference": "GMT",
+  "t0": "1981-06-26T18:09:30Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "5/1983",
+      "url": "https://www.gov.uk/aaib-reports/5-1983-bae-hs-748-g-aspl-26-june-1981"
+    }
+  ],
+  "aircraft": {
+    "type": "Hawker Siddeley HS 748-108 series 2A",
+    "manufacturer": "Hawker Siddeley",
+    "family": "HS 748",
+    "registration": "G-ASPL"
+  },
+  "operator": "Dan Air Services",
+  "route": {
+    "from": "LGW",
+    "from_name": "London Gatwick",
+    "to": "EMA",
+    "to_name": "East Midlands"
+  },
+  "location": {
+    "name": "Near Market Bosworth",
+    "country": "United Kingdom"
+  },
+  "phase": "descent",
+  "occupants": 3,
+  "fatalities": 3,
+  "damage": "destroyed",
+  "category": "UNK",
+  "summary": "Dan-Air Flight 240, Hawker Siddeley HS 748 turboprop, departed London Gatwick on June 26, 1981 with two pilots and cabin attendant on night mail flight. During descent, right rear baggage door opened due to mis-rigged mechanism, detached and lodged on right horizontal tailplane. This caused cabin decompression and aerodynamic changes that made aircraft uncontrollable; wings and tailplane detached from fuselage.",
+  "probable_cause": "Baggage door opened due to mis-rigged operating mechanism that allowed top and bottom pairs of catches to lose synchronization. Door lodged on tailplane causing decompression and aerodynamic changes that rendered aircraft uncontrollable, leading to structural failure.",
+  "factors": [
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "Mis-rigged state of door operating mechanism allowed top and bottom pairs of catches to lose synchronization (p. N/A)"
+    },
+    {
+      "id": "cargo_door_failure",
+      "role": "initiating",
+      "evidence": "Right rear baggage door opened and detached from hinge mounts, became lodged on leading edge of right horizontal tailplane (p. N/A)"
+    },
+    {
+      "id": "explosive_decompression",
+      "role": "contributing",
+      "evidence": "Cabin decompression occurred when door was lodged on tailplane in vicinity of Market Bosworth (p. N/A)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Both wings folded up almost simultaneously and detached from fuselage along with other structural parts due to aerodynamic changes (p. N/A)"
+    }
+  ],
+  "chain": [
+    [
+      "maintenance_error",
+      "cargo_door_failure"
+    ],
+    [
+      "cargo_door_failure",
+      "explosive_decompression"
+    ],
+    [
+      "explosive_decompression",
+      "structural_failure"
+    ]
+  ],
+  "events": [
+    {
+      "t": -881,
+      "clock": "17:28",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft departed London Gatwick on mail flight to East Midlands with two pilots and cabin attendant"
+    },
+    {
+      "t": -551,
+      "clock": "17:39",
+      "phase": "climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Co-pilot reported aircraft serviceable to company ground control"
+    },
+    {
+      "t": -333,
+      "clock": "17:57",
+      "phase": "cruise",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "Postal assistant offered drinks to pilots and initiated conversation; aircraft left FL 100 to descend to FL 60"
+    },
+    {
+      "t": -331,
+      "clock": "17:57:30",
+      "phase": "descent",
+      "actor": "CABIN",
+      "kind": "warning",
+      "text": "PA reported rear port door indicators showing red (unlocked)",
+      "factors": [
+        "cargo_door_failure"
+      ]
+    },
+    {
+      "t": -168,
+      "clock": "18:02",
+      "phase": "descent",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "PA served pilots their drinks; commander concerned about door security ordered cabin depressurization increased"
+    },
+    {
+      "t": 0,
+      "clock": "18:09:30",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "state": {
+        "alt": 5450
+      },
+      "text": "Sudden cabin decompression and violent noise as right rear baggage door opened and detached near Market Bosworth",
+      "factors": [
+        "cargo_door_failure",
+        "explosive_decompression"
+      ]
+    },
+    {
+      "t": 11,
+      "clock": "18:09:41",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Commander asked co-pilot to transmit MAYDAY and told PA to strap in",
+      "factors": [
+        "explosive_decompression"
+      ]
+    },
+    {
+      "t": 30,
+      "clock": "18:10:00",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Wings and tailplane detached from fuselage; aircraft uncontrollable with severe vibration continuing for 70 seconds",
+      "factors": [
+        "structural_failure"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.gov.uk/aaib-reports/5-1983-bae-hs-748-g-aspl-26-june-1981"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Sections: Summary and probable cause from available documentation",
+      "5 events from sequence of flight and structural failure",
+      "Report details limited by available text extraction"
+    ]
+  },
+  "asn_id": "19810626-0",
+  "interest": 8.54,
+  "curated_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Dan-Air_Flight_240",
+  "report_links": [
+    "https://www.gov.uk/aaib-reports/5-1983-bae-hs-748-g-aspl-26-june-1981"
+  ]
+}

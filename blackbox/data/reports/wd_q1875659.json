@@ -1,0 +1,179 @@
+{
+  "id": "wd_q1875659",
+  "qid": "Q1875659",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Lufthansa CityLine 5634",
+  "flight_number": "LH5634",
+  "date": "1993-01-06",
+  "time_reference": "UTC",
+  "t0": "1993-01-06T18:20:00Z",
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau Enqu\u00eates-Accidents",
+      "country": "France",
+      "role": "lead",
+      "url": "https://bea.aero/fileadmin/documents/docspa/1993/d-at930106p/pdf/d-at930106p.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "De Havilland Canada Dash 8-311",
+    "manufacturer": "de Havilland Canada",
+    "family": "Dash 8",
+    "registration": "D-BEAT"
+  },
+  "operator": "Contact Air",
+  "route": {
+    "from": "BRE",
+    "from_name": "Bremen",
+    "to": "ORY",
+    "to_name": "Paris-Charles de Gaulle"
+  },
+  "location": {
+    "name": "Paris-Charles de Gaulle",
+    "country": "France"
+  },
+  "phase": "approach",
+  "occupants": 23,
+  "fatalities": 4,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Lufthansa CityLine Flight 5634 departing Bremen for Paris on January 6, 1993 was cleared to land on runway 27 but diverted to runway 28 due to incident. During the instrument approach turn in clouds and heavy fog, aircraft entered high sink rate and impacted terrain 1800 meters before runway 28 threshold, killing four.",
+  "probable_cause": "Inadequate descent rate control during instrument approach after runway change in poor visibility conditions, resulting in controlled flight into terrain",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "initiating",
+      "evidence": "Clouds and heavy fog; crew indicated they were still in clouds when 1.5 nm from runway 28 threshold (p. 5)"
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "Aircraft entered high sink rate and impacted ground tail-first during approach maneuver (p. 4)"
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Late turn request from ATC to change from runway 27 to runway 28 made aircraft unstable during approach (p. 5)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft touched ground approximately 1800 meters before runway 28 threshold, broke into two sections (p. 4)"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "unstable_approach"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "unstable_approach"
+    ],
+    [
+      "unstable_approach",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": -3000,
+      "clock": "16:50",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight departed Bremen with 15-minute traffic flow delay; cruising at FL 240"
+    },
+    {
+      "t": -1500,
+      "clock": "17:55",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Descent commenced approximately 25 minutes before accident; initial approach clearance to 4000 feet QNH"
+    },
+    {
+      "t": -600,
+      "clock": "18:10",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ILS interception on runway 27 approximately 14 Nm from threshold under radar guidance; cleared to approach"
+    },
+    {
+      "t": -600,
+      "clock": "18:10",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Korean Airlines Boeing 747 touched left outer engine on runway 27; runway 27 closed for inspection"
+    },
+    {
+      "t": -300,
+      "clock": "18:15",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC requested left turn to intercept runway 28 ILS; crew accepted; transferred to local/sud frequency"
+    },
+    {
+      "t": -180,
+      "clock": "18:17",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Local/sud reported aircraft 1.5 nm from runway 28 threshold; crew reported still in clouds and heavy fog"
+    },
+    {
+      "t": -60,
+      "clock": "18:19",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC indicated aircraft over runway 28 threshold; no acknowledgment received from crew"
+    },
+    {
+      "t": 0,
+      "clock": "18:20",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacted terrain tail-first approximately 1800 meters before runway 28 threshold in depression with 500m deviation from approach axis",
+      "factors": [
+        "unstable_approach",
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/fileadmin/documents/docspa/1993/d-at930106p/pdf/d-at930106p.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Preliminary report; sections: D\u00e9roulement du vol (p. 5-6), Dommages (p. 5)",
+      "6 events from sequence of flight based on crew actions and ATC communications",
+      "Limited details available from preliminary report structure"
+    ]
+  },
+  "asn_id": "19930106-0",
+  "interest": 8.81,
+  "curated_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Lufthansa_CityLine_Flight_5634",
+  "report_links": [
+    "https://bea.aero/fileadmin/documents/docspa/1993/d-at930106p/pdf/d-at930106p.pdf"
+  ]
+}

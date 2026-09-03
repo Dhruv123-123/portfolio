@@ -1,0 +1,279 @@
+{
+  "id": "wd_q65226999",
+  "qid": "Q65226999",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air France 7775",
+  "flight_number": "AF7775",
+  "date": "2007-01-25",
+  "time_reference": "UTC",
+  "t0": "2007-01-25T10:25:15Z",
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses",
+      "country": "France",
+      "role": "lead",
+      "report_id": "f-pg070125"
+    }
+  ],
+  "aircraft": {
+    "type": "Fokker 100",
+    "family": "100",
+    "manufacturer": "Fokker",
+    "registration": "F-GMPG",
+    "msn": "11362",
+    "engines": "Rolls-Royce Tay 620-15"
+  },
+  "operator": "Régional",
+  "route": {
+    "from": "LFBT",
+    "from_name": "Pau Pyrénées Airport",
+    "to": "LFPG",
+    "to_name": "Charles de Gaulle Airport"
+  },
+  "location": {
+    "name": "near Pau",
+    "country": "France"
+  },
+  "phase": "takeoff",
+  "occupants": 54,
+  "fatalities": 1,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "RE",
+  "summary": "Régional Flight 7775, a Fokker 100, crashed shortly after takeoff with heavy ice contamination on the wings. The aircraft lifted off with 144 knots airspeed and 11.9° angle of attack but experienced immediate loss of control due to aerodynamic degradation from ice accumulation. After several roll oscillations reaching 67° of bank, the aircraft touched down on its landing gear near the runway, bounced, overran 340 meters through the airport perimeter, crossed a road and struck a truck, killing the driver. All 54 aircraft occupants evacuated safely.",
+  "probable_cause": "The accident resulted from a loss of control during takeoff caused by ice contamination on the wing surfaces combined with rapid pitch rotation in response to birds. The crew did not de-ice the aircraft despite meteorological conditions meeting the criteria for frost accumulation, insufficient awareness within the French aviation community of ground icing risks and their effects on aircraft performance, and the particular sensitivity of the Fokker 100 (without slats) to ground contamination.",
+  "factors": [
+    {
+      "id": "airframe_icing",
+      "role": "contributing",
+      "evidence": "Heavy ice accumulated on wing surfaces due to meteorological conditions (air temperature 0°C, dew point -1°C, humidity >90%), reducing aerodynamic lift and increasing drag. Ice on the wings created contamination of the upper surface particularly on the leading edge (p. 70-71)."
+    },
+    {
+      "id": "deicing_inadequate",
+      "role": "contributing",
+      "evidence": "The captain did not initiate de-icing procedures despite meteorological conditions meeting the AFM criteria for frost risk. The aircraft was not equipped with ground edge heaters and no de-icing was performed before takeoff (p. 73-74)."
+    },
+    {
+      "id": "low_energy_state",
+      "role": "contributing",
+      "evidence": "The angle of attack increased to 12° at liftoff but reached 17° during the bank angle oscillations. With contaminated wings, the stall margin was reduced significantly below certification minimums (p. 65-66)."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "The left wing stalled at approximately 11-12° angle of attack, below the stall warning threshold of 17°, due to the aerodynamic effects of ice contamination (p. 62-65)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Uncontrolled roll oscillations followed the stall, with maximum bank angles of 35° left, 67° right, and 59° left. The control inputs could not suppress these oscillations (p. 66-67)."
+    },
+    {
+      "id": "hard_landing",
+      "role": "outcome",
+      "evidence": "The aircraft touched down at 160 knots with the right main landing gear, bounced, and the captain attempted a belly landing (p. 61)."
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "After touchdown and bounce, the aircraft rolled 340 meters through grass and collided with the airport perimeter fence, crossed a public road, struck a truck, and came to rest in a field. The landing gear was sheared off during the road crossing (p. 61)."
+    }
+  ],
+  "chain": [
+    ["airframe_icing", "low_energy_state"],
+    ["deicing_inadequate", "airframe_icing"],
+    ["low_energy_state", "aerodynamic_stall"],
+    ["aerodynamic_stall", "loss_of_control_inflight"],
+    ["loss_of_control_inflight", "hard_landing"],
+    ["hard_landing", "runway_overrun"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "10:25:15",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Takeoff clearance granted for runway 13",
+      "factors": []
+    },
+    {
+      "t": 45,
+      "clock": "10:26:00",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "TOGA power selected; crew observes birds in vicinity of runway",
+      "factors": []
+    },
+    {
+      "t": 53,
+      "clock": "10:26:08",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft lifts off runway 13 at 128 knots, immediately banks left with 35° maximum bank angle; bank angle alarm activates",
+      "state": {"alt": 0, "ias": 128, "pitch": 15, "roll": -35},
+      "factors": ["airframe_icing"]
+    },
+    {
+      "t": 66,
+      "clock": "10:26:21",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft banks right to 67° maximum bank angle, then left again to 59°; don't sink alarm sounds at 107 feet altitude with right main landing gear touching ground at 160 knots",
+      "state": {"alt": 107, "ias": 160, "roll": -59},
+      "factors": ["loss_of_control_inflight"]
+    },
+    {
+      "t": 72,
+      "clock": "10:26:27",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain reduces engine power and decides to abort takeoff; aircraft touches ground near end of runway 13",
+      "factors": ["hard_landing"]
+    },
+    {
+      "t": 94,
+      "clock": "10:26:49",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft slides 340 meters through grass, collides with airport perimeter fence, crosses departmental road RD289 striking truck cabin and killing driver, then slides into field as landing gear is sheared off",
+      "factors": ["runway_overrun"]
+    },
+    {
+      "t": 100,
+      "clock": "10:26:55",
+      "phase": "takeoff",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "Engine two fail",
+      "factors": []
+    },
+    {
+      "t": 127,
+      "clock": "10:27:22",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain orders emergency evacuation",
+      "factors": []
+    }
+  ],
+  "cvr": [
+    {
+      "t": 45,
+      "clock": "10:26:00",
+      "speaker": "CAPT",
+      "text": "Ah les piafs",
+      "translation": "Ah the birds"
+    },
+    {
+      "t": 53,
+      "clock": "10:26:08",
+      "speaker": "CAPT",
+      "text": "Oh putain",
+      "translation": "Oh damn"
+    },
+    {
+      "t": 53,
+      "clock": "10:26:08",
+      "speaker": "FO",
+      "text": "V1 VR on va dire",
+      "translation": "V1 VR as they say"
+    },
+    {
+      "t": 100,
+      "clock": "10:26:40",
+      "speaker": "FO",
+      "text": "Engine deux fail",
+      "translation": "Engine two fail"
+    },
+    {
+      "t": 115,
+      "clock": "10:26:50",
+      "speaker": "CAPT",
+      "text": "Le sol air france roméo tango mayday mayday mayday",
+      "translation": "Ground air france roméo tango mayday mayday mayday"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "FRAN-2011-034-1",
+      "to": "DGAC",
+      "text": "Ensure that information regarding aircraft aerodynamic behavior when subjected to ground icing and accidents related to this phenomenon is provided to pilots during type qualifications and periodic training.",
+      "status": "unknown",
+      "trigger_factors": ["airframe_icing", "deicing_inadequate"]
+    },
+    {
+      "id": "FRAN-2011-034-2",
+      "to": "DGAC",
+      "text": "Ensure that operators in cooperation with manufacturers provide navigants with information about known accidents concerning their aircraft types, operating context, and their airline.",
+      "status": "unknown",
+      "trigger_factors": ["airframe_icing"]
+    },
+    {
+      "id": "FRAN-2011-034-3",
+      "to": "DGAC",
+      "text": "Ensure that operators have established organization and means including training to enable effective implementation of surface condition verification procedures when ground icing risk exists.",
+      "status": "unknown",
+      "trigger_factors": ["deicing_inadequate"]
+    },
+    {
+      "id": "FRAN-2011-034-4",
+      "to": "EASA",
+      "text": "While maintaining operational requirements for de-icing checks before flight, evolve certification specifications to require analysis of aircraft behavior when wing surfaces are contaminated on the ground and ensure acceptable safety margins in case of light contamination.",
+      "status": "unknown",
+      "trigger_factors": ["airframe_icing"]
+    },
+    {
+      "id": "FRAN-2011-034-5",
+      "to": "EASA",
+      "text": "Mandate installation of ground edge heating devices on the Fokker 28 fleet to reduce contamination risk on the critical leading edge area.",
+      "status": "unknown",
+      "trigger_factors": ["deicing_inadequate"]
+    },
+    {
+      "id": "FRAN-2011-034-6",
+      "to": "Régional",
+      "text": "Ensure emergency evacuation procedures conform to those described in the AFM and can be executed rapidly even if a pilot is unavailable or incapacitated.",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "FRAN-2011-034-7",
+      "to": "DGAC",
+      "text": "Study in cooperation with manufacturers and operators the opportunity to impose sufficient information and training for passengers seated near emergency exits.",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://bea.aero/fileadmin/documents/docspa/2007/f-pg070125/pdf/f-pg070125.pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from BEA Final Report synopsis, findings, causes, recommendations, and CVR transcript sections",
+      "All factor evidence includes page citations from report",
+      "8 events extracted from detailed chronology with exact UTC times from CVR",
+      "Aircraft state values from FDR data at key moments"
+    ]
+  },
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Régional_Flight_7775",
+  "report_links": ["https://bea.aero/fileadmin/documents/docspa/2007/f-pg070125/pdf/f-pg070125.pdf"],
+  "interest": 7.09,
+  "curated_id": null
+}
