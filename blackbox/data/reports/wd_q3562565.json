@@ -1,0 +1,174 @@
+{
+ "id": "wd_q3562565",
+ "qid": "Q3562565",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "Air Moorea 1121",
+ "flight_number": "QE1121",
+ "date": "2007-08-09",
+ "agency": "BEA",
+ "agencies": [
+  {
+   "code": "BEA",
+   "name": "Bureau of Enquiry and Analysis for Civil Aviation Safety",
+   "country": "France",
+   "role": "lead"
+  }
+ ],
+ "aircraft": {
+  "type": "DHC-6-300 Twin Otter",
+  "manufacturer": "de Havilland Canada",
+  "family": "DHC-6",
+  "registration": "F-OIQI"
+ },
+ "operator": "Air Moorea",
+ "route": {
+  "from_name": "Moorea",
+  "to_name": "Tahiti"
+ },
+ "location": {
+  "name": "Moorea Island",
+  "country": "French Polynesia"
+ },
+ "phase": "initial_climb",
+ "occupants": 20,
+ "fatalities": 20,
+ "category": "LOC-I",
+ "summary": "A 28-year-old DHC-6-300 Twin Otter crashed into the sea shortly after takeoff from Moorea when its elevator pitch-up cable failed at 350 feet altitude, causing an uncontrollable nose-down dive. The cable failure resulted from accelerated wear on stainless steel cables from abrasion and the high-frequency takeoff-landing cycle (40 times daily on the 7-minute Moorea-Tahiti route), which was not accounted for in the maintenance inspection intervals.",
+ "probable_cause": "The accident was caused by loss of airplane pitch control following failure of the elevator pitch-up control cable at low altitude. The cable failure resulted from wear and abrasion accelerated by the unusual number of operating cycles, combined with the maintenance schedule not being modified to account for stainless steel cable wear characteristics and high-frequency operations.",
+ "factors": [
+  {
+   "id": "loss_of_control_inflight",
+   "role": "outcome",
+   "evidence": "the elevator fell into a permanent, full nose-down deflection, sending the aircraft into a catastrophic dive"
+  },
+  {
+   "id": "flight_control_failure",
+   "role": "initiating",
+   "evidence": "the failing cable snapped completely, and the elevator fell into a permanent, full nose-down deflection"
+  },
+  {
+   "id": "metal_fatigue",
+   "role": "contributing",
+   "evidence": "stainless steel cables suffered greater wear from abrasion by the cable guides than original carbon steel"
+  },
+  {
+   "id": "inadequate_inspection",
+   "role": "contributing",
+   "evidence": "There were no modifications made to the maintenance schedule to account for this added wear, nor the higher than usual number of cycles"
+  }
+ ],
+ "chain": [
+  [
+   "flight_control_failure",
+   "loss_of_control_inflight"
+  ],
+  [
+   "metal_fatigue",
+   "flight_control_failure"
+  ],
+  [
+   "inadequate_inspection",
+   "metal_fatigue"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "12:00:06",
+   "phase": "takeoff",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Air traffic controller cleared F-OIQI (DHC-6-300 Twin Otter, 28 years old) for takeoff with 20 occupants on board from Moorea (p. 1-7)",
+   "factors": []
+  },
+  {
+   "t": 6,
+   "clock": "12:00:12",
+   "phase": "takeoff",
+   "actor": "PF",
+   "kind": "crew_action",
+   "text": "Aircraft began takeoff roll from Moorea runway (p. 1-8)",
+   "factors": []
+  },
+  {
+   "t": 36,
+   "clock": "12:00:42",
+   "phase": "initial_climb",
+   "actor": "PF",
+   "kind": "crew_action",
+   "text": "Pilot retracted flaps after climbing to safe altitude during normal initial climb (p. 1-8)",
+   "factors": []
+  },
+  {
+   "t": 50,
+   "clock": "12:01:02",
+   "phase": "initial_climb",
+   "actor": "PF",
+   "kind": "crew_action",
+   "text": "Pilot reduced engine power as aircraft approached cruising altitude (p. 1-8)",
+   "factors": []
+  },
+  {
+   "t": 57,
+   "clock": "12:01:09",
+   "phase": "initial_climb",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Elevator pitch-up cable failed at 350 feet altitude; cable snapped completely after accelerated wear from stainless steel abrasion over high-frequency operating cycle (40 takeoff-landing cycles daily on 7-minute route) (p. 2-18, 3-2)",
+   "factors": [
+    "flight_control_failure",
+    "metal_fatigue",
+    "inadequate_inspection"
+   ]
+  },
+  {
+   "t": 63,
+   "clock": "12:01:15",
+   "phase": "initial_climb",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "Elevator fell into permanent full nose-down deflection, sending aircraft into catastrophic dive at descent rate of approximately 6,500 feet per minute (p. 2-18, 3-2)",
+   "factors": [
+    "loss_of_control_inflight"
+   ]
+  },
+  {
+   "t": 68,
+   "clock": "12:01:20",
+   "phase": "initial_climb",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "Aircraft impacted ocean off Moorea Island; all 20 occupants killed; cable failure resulted from wear accelerated by stainless steel substitution and maintenance schedule not modified for high-frequency operations (p. 2-18, 3-2)",
+   "factors": [
+    "loss_of_control_inflight",
+    "metal_fatigue"
+   ]
+  }
+ ],
+ "report_links": [
+  "https://bea.aero/fileadmin/documents/docspa/2007/f-qi070809.en/pdf/f-qi070809.en.pdf"
+ ],
+ "wikipedia": "https://en.wikipedia.org/wiki/Air_Moorea_Flight_1121",
+ "asn_id": "20070809-0",
+ "interest": 7.98,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Depth: sections",
+   "Extracted from BEA report",
+   "Events and factors from report",
+   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null; sources was null"
+  ]
+ },
+ "curated_id": null,
+ "recommendations": [],
+ "cvr": [],
+ "dissent": [],
+ "safety_changes": [],
+ "related": [],
+ "sources": []
+}
