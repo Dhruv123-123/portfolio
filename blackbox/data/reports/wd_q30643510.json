@@ -44,7 +44,7 @@
   "probable_cause": "The probable cause of this accident was the captain's decision to attempt a go-around late in the landing roll with insufficient runway remaining. Contributing to the accident were the pilots' poor crew coordination and lack of cockpit discipline, fatigue which likely impaired both pilots' performance, and the failure of the Federal Aviation Administration to require crew resource management training and standard operating procedures for Part 135 operators.",
   "factors": [
     {
-      "id": "late_go_around",
+      "id": "go_around_not_flown",
       "role": "initiating",
       "evidence": "Captain decided to go around after aircraft had already touched down and crew noticed insufficient runway length remained (p. 19)."
     },
@@ -80,7 +80,7 @@
     }
   ],
   "chain": [
-    ["late_go_around", "runway_overrun"],
+    ["go_around_not_flown", "runway_overrun"],
     ["procedural_noncompliance", "delayed_deceleration"],
     ["delayed_deceleration", "runway_overrun"],
     ["crm_breakdown", "procedural_noncompliance"],
@@ -185,7 +185,7 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft touched down on runway 30, crew initiated go-around with insufficient runway remaining",
-      "factors": ["late_go_around"]
+      "factors": ["go_around_not_flown"]
     },
     {
       "t": 25,

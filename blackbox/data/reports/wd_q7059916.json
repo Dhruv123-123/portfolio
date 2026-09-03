@@ -1,0 +1,315 @@
+{
+  "id": "wd_q7059916",
+  "qid": "Q7059916",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Wayne County Airport runway collision",
+  "flight_number": "NW1482",
+  "date": "1990-12-03",
+  "time_reference": "local",
+  "t0": "1990-12-03T13:45:40-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-91-05"
+    }
+  ],
+  "aircraft": {
+    "type": "Douglas DC-9-14",
+    "family": "DC-9",
+    "manufacturer": "Douglas",
+    "registration": "N3313L"
+  },
+  "operator": "Northwest Airlines",
+  "route": {
+    "from": "KDCA",
+    "from_name": "Ronald Reagan Washington National",
+    "to": "KDTW",
+    "to_name": "Detroit Metropolitan Wayne County"
+  },
+  "location": {
+    "name": "Detroit Metropolitan Wayne County Airport, runway 03C/21",
+    "country": "United States (Michigan)"
+  },
+  "phase": "landing",
+  "occupants": 54,
+  "fatalities": 8,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "Northwest Airlines Flight 1482, a DC-9-14, was cleared to taxi toward runway 03C in dense fog but the crew missed turning onto taxiway Oscar 6 and instead entered the active runway 03C. About 40 seconds after the crew reported the error to ATC, Northwest Flight 299, a Boeing 727 on takeoff roll, collided with the DC-9's right fuselage, cutting through and severing the right engine. The DC-9 caught fire with eight people killed including a flight attendant and passenger who died from smoke inhalation after being unable to release the tailcone emergency exit.",
+  "probable_cause": "The probable cause of this accident was a lack of proper crew coordination including a virtual reversal of roles by the DC-9 pilots, which led to their failure to stop taxiing their airplane and alert the ground controller of their positional uncertainty in a timely manner before and after intruding onto the active runway. Contributing to the cause of the accident were deficiencies in the air traffic control services provided by the Detroit tower, including failure of the ground controller to take timely action to alert the local controller to the possible runway incursion, inadequate visibility observations, failure to use progressive taxi instructions in low-visibility conditions, and issuance of inappropriate and confusing taxi instructions compounded by inadequate backup supervision; deficiencies in the surface markings, signage, and lighting at the airport and the failure of Federal Aviation Administration surveillance to detect or correct these deficiencies; and failure of Northwest Airlines to provide adequate cockpit resource management training to their line aircrews.",
+  "factors": [
+    {
+      "id": "wrong_runway",
+      "role": "initiating",
+      "evidence": "DC-9 crew missed turning onto taxiway Oscar 6 and instead entered the active runway 03C (p. 14). Captain stated he intercepted the taxiway centerline at point where it forks left to become the centerline of the Outer taxiway heading east (p. 14-15)."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Collision occurred in dense fog at Detroit with visibility reported as 1/4 mile with RVR 16,22 (p. 14). First officer estimated visibility about 500-600 feet during taxiing (p. 15)."
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "DC-9 crew received confusing taxi instructions with inappropriate ground control clearances that led to crew uncertainty about position (p. 88-89). Ground controller failed to recognize runway incursion promptly; took 40 seconds from crew reporting error before ground control instructed DC-9 to exit runway immediately (p. 9)."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Virtual reversal of roles by DC-9 pilots where proper crew coordination failed; first officer providing incorrect navigation information while captain attempted to fly (p. 7, 88)."
+    },
+    {
+      "id": "ground_collision",
+      "role": "outcome",
+      "evidence": "Boeing 727 wing cut through right side of DC-9 fuselage at high speed during takeoff roll, severing right engine; collision occurred 1 minute 25 seconds after B-727 received takeoff clearance (p. 7)."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "DC-9 caught fire after collision and was destroyed. Rear jumpseat flight attendant and one passenger died from smoke inhalation after being unable to release the tailcone emergency exit; three crew members and four passengers died from drowning (p. 7, 87)."
+    }
+  ],
+  "chain": [
+    ["wrong_runway", "ground_collision"],
+    ["low_visibility", "atc_communication_error"],
+    ["atc_communication_error", "wrong_runway"],
+    ["crm_breakdown", "wrong_runway"],
+    ["ground_collision", "post_impact_fire"]
+  ],
+  "events": [
+    {
+      "t": -380,
+      "clock": "1335:31",
+      "phase": "landing",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "DC-9 Flight 1482 cleared to taxi from Gate C18 with instructions: right turn out of parking, taxi runway 3 Center, exit ramp at Oscar 6, contact ground 119.45",
+      "factors": []
+    },
+    {
+      "t": -258,
+      "clock": "1337:43",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "DC-9 crew reported position abeam the fire station; ground control issued additional taxi clearance: taxi Inner, Oscar 6, Fox, report making right turn on Xray",
+      "factors": []
+    },
+    {
+      "t": -196,
+      "clock": "1338:45",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "DC-9 crew missed turn onto taxiway Oscar 6 and instead entered outer taxiway; first officer reported approaching parallel runway on Oscar 6",
+      "factors": ["wrong_runway"]
+    },
+    {
+      "t": -154,
+      "clock": "1339:26",
+      "phase": "landing",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Ground control instructed DC-9 to continue to Oscar 4 then turn right on Xray; DC-9 taxiing eastbound on Outer taxiway at very slow rate in reduced visibility",
+      "factors": []
+    },
+    {
+      "t": -108,
+      "clock": "1340:12",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "DC-9 captain set parking brake while approaching Outer/Oscar 4 intersection, uncertain about position",
+      "factors": []
+    },
+    {
+      "t": -53,
+      "clock": "1341:07",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "DC-9 captain released parking brake and continued taxiing right turn; crew confusion about runway position with visibility zero",
+      "factors": ["crm_breakdown"]
+    },
+    {
+      "t": -13,
+      "clock": "1341:47",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "DC-9 captain attempted to contact ground control on unknown frequency, unable to make contact initially",
+      "factors": []
+    },
+    {
+      "t": -2,
+      "clock": "1341:58",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "DC-9 crew on radio reporting they were stuck and could not see anything, ground control asked if they were on taxiway or runway",
+      "factors": ["atc_communication_error"]
+    },
+    {
+      "t": 12,
+      "clock": "1342:12",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "DC-9 captain reported we're on a runway, we're right by zero four; first officer stated we're on runway 21 Center; captain confirmed we're on 21 Center here",
+      "factors": ["wrong_runway"]
+    },
+    {
+      "t": 22,
+      "clock": "1342:22",
+      "phase": "landing",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Ground control instructed DC-9 if you are on 21 Center exit the runway immediately sir",
+      "factors": []
+    },
+    {
+      "t": 38,
+      "clock": "1345:00",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "B-727 Flight 299 cleared for takeoff from runway 3 Center by tower controller",
+      "factors": []
+    },
+    {
+      "t": 40,
+      "clock": "1345:03",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "B-727 Flight 299 began takeoff roll from runway 3 Center",
+      "factors": []
+    },
+    {
+      "t": 45,
+      "clock": "1345:08",
+      "phase": "takeoff",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "B-727 first officer stated definitely not a quarter mile visibility, 5 seconds into takeoff roll",
+      "factors": []
+    },
+    {
+      "t": 77,
+      "clock": "1345:40",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "B-727 right wing collided with DC-9 right fuselage on runway 21 Center, B-727 wing cutting through fuselage and severing DC-9 right engine; DC-9 caught fire",
+      "factors": ["ground_collision", "post_impact_fire"]
+    }
+  ],
+  "cvr": [
+    {
+      "t": -196,
+      "clock": "1338:45",
+      "speaker": "FO",
+      "text": "approaching the parallel runway on Oscar 6"
+    },
+    {
+      "t": -51,
+      "clock": "1341:09",
+      "speaker": "CAPT",
+      "text": "Well tell him we're out here. We're stuck."
+    },
+    {
+      "t": -50,
+      "clock": "1341:10",
+      "speaker": "FO",
+      "text": "That's zero nine"
+    },
+    {
+      "t": -45,
+      "clock": "1341:15",
+      "speaker": "CAPT",
+      "text": "Hey, ground, 1482. We're out here we're stu....we can't see anything out here"
+    },
+    {
+      "t": -2,
+      "clock": "1341:58",
+      "speaker": "CAPT",
+      "text": "Ah, we're not sure, it's so foggy out here we're completely stuck here"
+    },
+    {
+      "t": 12,
+      "clock": "1342:12",
+      "speaker": "FO",
+      "text": "We're on runway 21 Center"
+    },
+    {
+      "t": 12,
+      "clock": "1342:12",
+      "speaker": "CAPT",
+      "text": "Yeah, it looks like we're on 21 Center here"
+    },
+    {
+      "t": 22,
+      "clock": "1342:22",
+      "speaker": "ATC",
+      "text": "Northwest 1482 roger if you are on 21 Center exit the runway immediately sir"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-91-54",
+      "to": "FAA",
+      "text": "Improve standards for airport marking and lighting during low-visibility conditions including conspicuous marking and lighting; evaluate unidirectional taxi lines for acute angle taxiways; require stopbars or position-hold lights at all taxiways that intersect active runways"
+    },
+    {
+      "id": "A-91-55",
+      "to": "FAA",
+      "text": "Identify at all Part 139 certificated airports complex intersections where potential for pilot confusion exists and require additional lighting and signs"
+    },
+    {
+      "id": "A-91-56",
+      "to": "FAA",
+      "text": "Require that Part 139 certificated airports use reflectorized paint for airport surface markings"
+    },
+    {
+      "id": "A-91-57",
+      "to": "FAA",
+      "text": "Require that Part 139 certificated airports install semiflush runway edge lights in accordance with Advisory Circular 150/5340-24"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Installation of improved lighting systems at runway intersections",
+    "Enhanced ground control procedures for low-visibility taxiing",
+    "Standardized crew resource management training requirements"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9105.pdf"
+  ],
+  "asn_id": "19901203-2",
+  "wikipedia": "https://en.wikipedia.org/wiki/1990_Detroit_Metropolitan_Airport_runway_collision",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9105.pdf"
+  ],
+  "interest": 10.23,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Report read: Factual Information sections including History of Flight for both aircraft, Probable Cause section",
+      "14 events extracted with local clock times from CVR and ATC transcripts",
+      "Detailed crew speech and ATC communications from official CVR transcript",
+      "Timeline spans from taxi clearance through collision at 1345:40",
+      "Contributing factors include both crew coordination issues and ATC failures"
+    ]
+  }
+}

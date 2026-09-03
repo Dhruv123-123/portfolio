@@ -1,0 +1,280 @@
+{
+ "id": "wd_q16974298",
+ "qid": "Q16974298",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "Continental Airlines 603",
+ "flight_number": "CO603",
+ "date": "1978-03-01",
+ "time_reference": "local",
+ "t0": "1978-03-01T09:25:00-08:00",
+ "agency": "NTSB",
+ "agencies": [
+  {
+   "code": "NTSB",
+   "name": "National Transportation Safety Board",
+   "country": "United States",
+   "role": "lead",
+   "report_id": "AAR-79-01"
+  }
+ ],
+ "aircraft": {
+  "type": "McDonnell Douglas DC-10-10",
+  "family": "DC-10",
+  "manufacturer": "McDonnell Douglas",
+  "registration": "N68045"
+ },
+ "operator": "Continental Airlines",
+ "route": {
+  "from": "KLAX",
+  "from_name": "Los Angeles International",
+  "to": "PHNL",
+  "to_name": "Honolulu International"
+ },
+ "location": {
+  "name": "Los Angeles International Airport, runway 6R",
+  "country": "United States (California)"
+ },
+ "phase": "takeoff",
+ "occupants": 231,
+ "fatalities": 4,
+ "damage": "substantial",
+ "category": "RE",
+ "summary": "Continental Airlines Flight 603, a McDonnell Douglas DC-10-10, experienced cascading tire failures during takeoff roll from runway 6R when the recapped tread of the number-two tire on the left main landing gear separated. This caused that tire to blow out, and the overload caused the adjacent number-one tire to blow out immediately. Metal pieces from both rims damaged the number-five tire. Unable to stop on the wet runway, the aircraft overran the departure end and the left main gear collapsed, puncturing fuel tanks and causing a post-impact fire that resulted in four fatalities and moderate injuries to many others.",
+ "probable_cause": "The probable cause of this accident was the sequential failure of two tires on the left main landing gear and the resultant failure of another tire on the same landing gear at a critical time during the takeoff roll. These failures resulted in the captain's decision to reject the takeoff. Contributing to the accident was the cumulative effect of the partial loss of aircraft braking because of the failed tires and the reduced braking friction achievable on the wet runway surface which increased the accelerate-stop distance to a value greater than the available runway length. This prevented the captain from stopping the aircraft within the runway confines. The failure of the left main landing gear and the consequent rupture of the left wing fuel tanks resulted in an intense fire which added to the severity of the accident.",
+ "factors": [
+  {
+   "id": "landing_gear_failure",
+   "role": "initiating",
+   "evidence": "Recapping tread of the number-two tire on the left main landing gear separated from the tire causing a blowout; this overload caused the adjacent number-one tire to blow out immediately (p. 5-6). The number-two tire may have been operated in an over-deflection condition due to suboptimal average inflation pressure for maximum gross weight (p. 5)."
+  },
+  {
+   "id": "contaminated_runway",
+   "role": "latent",
+   "evidence": "The aircraft could not stop within the confines of the runway partly because the runway was wet, reducing braking friction from that which would be available on a dry runway (p. 5)."
+  },
+  {
+   "id": "delayed_deceleration",
+   "role": "contributing",
+   "evidence": "Partial loss of braking power following the failure of the three tires on the left main gear compounded the stopping distance problem (p. 5). Metal pieces from rims of failed tires damaged the number-five tire causing a third blowout on left main gear (p. 5)."
+  },
+  {
+   "id": "runway_overrun",
+   "role": "outcome",
+   "evidence": "Aircraft could not stop within the confines of the runway and overran the departure end by approximately 664 feet; left main gear broke through nonload-bearing pavement, collapsed rearward, and punctured fuel tanks in left wing (p. 5)."
+  },
+  {
+   "id": "post_impact_fire",
+   "role": "outcome",
+   "evidence": "Portions of the failed gear punctured fuel tanks in the left wing, immediately starting a fuel fire; intense fire which added to severity of accident with four fatalities and moderate injuries to many occupants (p. 5)."
+  }
+ ],
+ "chain": [
+  [
+   "landing_gear_failure",
+   "delayed_deceleration"
+  ],
+  [
+   "contaminated_runway",
+   "delayed_deceleration"
+  ],
+  [
+   "delayed_deceleration",
+   "runway_overrun"
+  ],
+  [
+   "runway_overrun",
+   "post_impact_fire"
+  ]
+ ],
+ "events": [
+  {
+   "t": -300,
+   "clock": "0900:00",
+   "phase": "ground",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Flight 603 called Los Angeles clearance delivery and was cleared for the route of flight",
+   "factors": []
+  },
+  {
+   "t": -240,
+   "clock": "0901:00",
+   "phase": "ground",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Los Angeles ground control gave permission to push back from gate; approximately 2 minutes after clearance delivery",
+   "factors": []
+  },
+  {
+   "t": -117,
+   "clock": "0902:24",
+   "phase": "taxi",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Flight 603 cleared by ground control to taxi to runway 6R; runway was wet but had no standing water",
+   "factors": []
+  },
+  {
+   "t": 0,
+   "clock": "0923:00",
+   "phase": "takeoff",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Local control cleared Flight 603 to position on runway 6R and hold for takeoff",
+   "factors": []
+  },
+  {
+   "t": 57,
+   "clock": "0923:57",
+   "phase": "takeoff",
+   "actor": "ATC",
+   "kind": "atc",
+   "text": "Local control cleared Flight 603 for takeoff; flightcrew acknowledged the instructions",
+   "factors": []
+  },
+  {
+   "t": 62,
+   "clock": "0924:02",
+   "phase": "takeoff",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Aircraft began takeoff roll with normal acceleration; all engine instruments in normal range",
+   "factors": []
+  },
+  {
+   "t": 82,
+   "clock": "0924:22",
+   "phase": "takeoff",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "Airspeed approached V1 speed of 156 knots; captain heard loud metallic bang followed by aircraft quivering and left wing drop",
+   "factors": [
+    "landing_gear_failure"
+   ]
+  },
+  {
+   "t": 85,
+   "clock": "0924:25",
+   "phase": "takeoff",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Captain rejected takeoff immediately after hearing metallic bang and noting aircraft instability; Digital Flight Data Recorder showed airspeed had increased to approximately 159 knots",
+   "factors": [
+    "runway_overrun"
+   ]
+  },
+  {
+   "t": 88,
+   "clock": "0924:28",
+   "phase": "takeoff",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Captain applied full brake pressure while bringing thrust levers back to idle power and actuating full reverse thrust",
+   "factors": [
+    "delayed_deceleration"
+   ]
+  },
+  {
+   "t": 95,
+   "clock": "0924:35",
+   "phase": "takeoff",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "Number-one tire on left main landing gear blew out after number-two tire failure; metal pieces from rims damaged number-five tire causing third blowout",
+   "factors": [
+    "landing_gear_failure"
+   ]
+  },
+  {
+   "t": 130,
+   "clock": "0925:10",
+   "phase": "takeoff",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "Left main landing gear collapsed after aircraft overran runway end; gear break through nonload-bearing pavement and ruptured left wing fuel tanks",
+   "factors": [
+    "runway_overrun",
+    "post_impact_fire"
+   ]
+  },
+  {
+   "t": 135,
+   "clock": "0925:15",
+   "phase": "takeoff",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "Intense fuel fire erupted from ruptured left wing fuel tanks; aircraft came to rest approximately 664 feet beyond runway departure end",
+   "factors": [
+    "post_impact_fire"
+   ]
+  }
+ ],
+ "recommendations": [
+  {
+   "id": "A-79-16",
+   "to": "FAA",
+   "text": "Require airworthiness directive to inspect tire condition and change tires that show excessive wear or tread separation",
+   "status": "unknown"
+  },
+  {
+   "id": "A-79-17",
+   "to": "FAA",
+   "text": "Require inspection procedures and standards for recapped tires used on air carrier aircraft",
+   "status": "unknown"
+  },
+  {
+   "id": "A-79-18",
+   "to": "FAA",
+   "text": "Establish more stringent quality control standards for tire retreading facilities serving air carriers",
+   "status": "unknown"
+  },
+  {
+   "id": "A-79-19",
+   "to": "FAA",
+   "text": "Require tire pressure monitoring systems to alert flight crews to pressure loss during takeoff",
+   "status": "unknown"
+  },
+  {
+   "id": "A-79-20",
+   "to": "FAA",
+   "text": "Review and revise aircraft certification standards relating to landing gear and brake failure conditions",
+   "status": "unknown"
+  }
+ ],
+ "dissent": [],
+ "safety_changes": [
+  "Improved tire retreading standards for aircraft",
+  "Enhanced tire condition inspection procedures",
+  "Tighter quality control for aircraft tire manufacturers",
+  "Better tire pressure monitoring systems for takeoff"
+ ],
+ "related": [],
+ "fdr": null,
+ "sources": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7901.pdf"
+ ],
+ "asn_id": "19780301-0",
+ "wikipedia": "https://en.wikipedia.org/wiki/Continental_Airlines_Flight_603",
+ "report_links": [
+  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7901.pdf",
+  "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR79-01.pdf"
+ ],
+ "interest": 10.13,
+ "curated_id": null,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5-20251001",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Report read: Factual Information History of Flight section and Probable Cause section",
+   "12 events extracted with local clock times spanning from clearance through fire initiation",
+   "Cascade of tire failures documented with specific sequence: number-two separation, number-one blowout, number-five damage",
+   "Probable cause text extracted directly from report section 3.0",
+   "Recommendations extracted from report sections with IDs A-79-16 through A-79-20",
+   "auto-repair: cvr was null"
+  ]
+ },
+ "cvr": []
+}

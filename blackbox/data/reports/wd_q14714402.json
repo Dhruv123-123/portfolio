@@ -1,0 +1,249 @@
+{
+  "id": "wd_q14714402",
+  "tier": "wikidata",
+  "qid": "Q14714402",
+  "depth": "sections",
+  "title": "1972 Lake Winnebago mid-air collision",
+  "flight_number": "290/671",
+  "date": "1972-06-29",
+  "time_reference": "CDT",
+  "t0": "1972-06-29T10:30:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-73-09",
+      "report_date": "1973-04-25"
+    }
+  ],
+  "aircraft": {
+    "type": "Convair CV-580 and de Havilland DHC-6 Twin Otter",
+    "manufacturer": "Convair and de Havilland Canada",
+    "family": "CV-580 / DHC-6",
+    "registration": "N90858 / N4043B"
+  },
+  "operator": "North Central Airlines and Air Wisconsin",
+  "route": {
+    "from": "GRB",
+    "from_name": "Green Bay",
+    "to": "OSH/ATW",
+    "to_name": "Oshkosh/Appleton"
+  },
+  "location": {
+    "name": "Lake Winnebago near Fox Crossing",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 13,
+  "fatalities": 13,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "North Central Airlines Flight 290 (Convair CV-580) and Air Wisconsin Flight 671 (de Havilland DHC-6 Twin Otter) collided in mid-air over Lake Winnebago at 2,500 feet near Fox Crossing, Wisconsin during approach in bright sunshine with scattered clouds. The collision tore off portions of both aircraft's wings, rendering them uncontrollable. Both crashed into the lake. The NTSB determined that both crews failed to detect the other aircraft visually in sufficient time to take evasive action. (p. 18)",
+  "probable_cause": "The probable cause of this accident was the failure of both flight crews to detect visually the other aircraft in sufficient time to initiate evasive action. The Board is unable to determine why each crew failed to see and avoid the other aircraft; however, the Board believes that the ability of both crews to detect the other aircraft in time to avoid a collision was reduced because of atmospheric conditions and human visual limitations. The decision by both crews to fly VFR rather than IFR deprived both aircraft of air traffic control support that would have ensured adequate separation. (p. 18)",
+  "factors": [
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Both flight crews failed to detect visually the other aircraft in sufficient time to initiate evasive action. (p. 18)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The NTSB speculated that both flight crews could have been scanning instruments in preparation for descent to their respective destinations at the time of the collision. (p. 18)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Both aircraft crews chose to fly VFR instead of IFR despite being able to do so, depriving themselves of air traffic control radar separation and altitude separation procedures. (p. 18)"
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "The left wing of Flight 671 collided with the left wing of Flight 290 at 2,500 feet, resulting in an explosion that tore off most of the Twin Otter's wing and about a quarter of the CV-580's left wing. (p. 18)"
+    }
+  ],
+  "chain": [
+    [
+      "inadequate_monitoring",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "procedural_noncompliance",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "midair_collision"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "10:30",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "North Central Flight 290 (CV-580 N90858) and Air Wisconsin Flight 671 (DHC-6 N4043B) depart on collision course at approximately 10:30 CDT",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": "10:35",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Flight 290 made 'in range' call to company office at Oshkosh, reporting 8,400 pounds of fuel remaining",
+      "factors": []
+    },
+    {
+      "t": 346,
+      "clock": "10:35:46",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 290 made initial contact with Oshkosh tower, approximately 7 nm northeast at 2,500 feet VFR",
+      "factors": []
+    },
+    {
+      "t": 401,
+      "clock": "10:36:11",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Flight 290 crew requested clearance to land on Runway 27",
+      "factors": []
+    },
+    {
+      "t": 416,
+      "clock": "10:36:16",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 290 crew acknowledged landing clearance; last known radio transmission from Flight 290",
+      "factors": []
+    },
+    {
+      "t": 650,
+      "clock": "10:36:40",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Flight 671 crew contacted company office at Appleton, reported would be landing at 10:44 with 300 pounds fuel remaining",
+      "factors": []
+    },
+    {
+      "t": 707,
+      "clock": "10:36:47",
+      "phase": "approach",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "North Central Flight 290 and Air Wisconsin Flight 671 collided mid-air over Lake Winnebago at 2,500 feet, approximately 6 nm south of Appleton and 2.5 nm east of Neenah, Wisconsin; both aircraft destroyed in explosion",
+      "state": {
+        "alt": 2500
+      },
+      "factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "t": 715,
+      "clock": "10:36:55",
+      "phase": "descent",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Both aircraft became uncontrollable after collision and crashed into Lake Winnebago; all 13 occupants killed",
+      "factors": [
+        "midair_collision"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-73-27",
+      "to": "FAA",
+      "text": "Develop and publish standards for visual search techniques to be used by instructors and check pilots on all training, certification, and proficiency check flights when pilots are operating in VMC.",
+      "status": "unknown",
+      "trigger_factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "id": "A-73-28",
+      "to": "FAA",
+      "text": "Establish a requirement for pilots to be trained in the techniques of time sharing between visual scanning for airborne targets and cockpit duties.",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": "A-73-29",
+      "to": "FAA",
+      "text": "Require that all pilots and flightcrew members training, certification, and proficiency check forms contain a specific item on scanning and time sharing.",
+      "status": "unknown",
+      "trigger_factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "id": "A-73-30",
+      "to": "FAA",
+      "text": "Require that all pilots and flightcrew members be graded in scanning and time sharing techniques when training, certification, and proficiency check flights are conducted under VMC.",
+      "status": "unknown",
+      "trigger_factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "id": "A-73-31",
+      "to": "FAA",
+      "text": "Advise the Board of the status of the FAA's evaluation project of April 7, 1972, on aircraft conspicuity research and, if that project has not been completed, take action to complete the project on a priority basis.",
+      "status": "unknown",
+      "trigger_factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "id": "A-73-32",
+      "to": "FAA",
+      "text": "Expedite the development and issuance of national standards for systems to provide protection from midair collisions so that the industry can proceed without further delay to develop and market economically viable hardware.",
+      "status": "unknown",
+      "trigger_factors": [
+        "midair_collision"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced emphasis on visual scanning techniques in pilot training",
+    "Development of collision avoidance systems research initiatives"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR73-09.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/1972_Lake_Winnebago_mid-air_collision",
+  "asn_id": "19720629-1",
+  "interest": 11.17,
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR73-09.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read History of Flight, Probable Cause, Analysis, Recommendations sections",
+      "9 events with clock times from detailed timeline and radio communications",
+      "VFR operations and crew scanning failures identified as key causal factors",
+      "Six formal NTSB recommendations addressing visual search and collision avoidance"
+    ]
+  },
+  "curated_id": null
+}

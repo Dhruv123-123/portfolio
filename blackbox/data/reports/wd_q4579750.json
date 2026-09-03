@@ -1,0 +1,203 @@
+{
+  "id": "wd_q4579750",
+  "tier": "wikidata",
+  "qid": "Q4579750",
+  "depth": "sections",
+  "title": "1981 Bristow Helicopters Westland Wessex crash",
+  "flight_number": null,
+  "date": "1981-08-13",
+  "time_reference": "UTC",
+  "t0": "1981-08-13T13:47:00Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "4/1983",
+      "report_date": "1983-08-23"
+    }
+  ],
+  "aircraft": {
+    "type": "Westland Wessex 60",
+    "manufacturer": "Westland",
+    "family": "Wessex",
+    "registration": "G-ASWI"
+  },
+  "operator": "Bristow Helicopters",
+  "route": {
+    "from": "Leman",
+    "from_name": "Leman gas field platform",
+    "to": "Bacton",
+    "to_name": "Bacton Gas Terminal"
+  },
+  "location": {
+    "name": "North Sea, 12 nm ENE of Bacton, Norfolk",
+    "country": "International waters"
+  },
+  "phase": "cruise",
+  "occupants": 13,
+  "fatalities": 13,
+  "damage": "destroyed",
+  "category": "UNK",
+  "summary": "A Westland Wessex 60 helicopter operated by Bristow Helicopters transporting workers from North Sea gas platforms to Bacton Gas Terminal experienced loss of power to the main rotor gearbox. The helicopter went out of control during autorotation and crashed into the North Sea. All 13 people on board died. The wreck was beyond recovery by the time salvage operations started, and there was insufficient evidence to determine the cause of the power loss. (p. summary)",
+  "probable_cause": "Insufficient evidence was available to determine the cause of the loss of power to the main rotor gearbox. The wreck could not be recovered, limiting the investigation. An open verdict was recorded.",
+  "factors": [
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "Loss of power to the main rotor gearbox occurred during cruise flight. (summary)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Helicopter went out of control during autorotation. (summary)"
+    },
+    {
+      "id": "ditching",
+      "role": "outcome",
+      "evidence": "Helicopter crashed into the North Sea. (summary)"
+    }
+  ],
+  "chain": [
+    [
+      "engine_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "ditching"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "13:47",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Westland Wessex G-ASWI departed North Denes airfield on routine passenger and freight flight between Leman and Indefatigable North Sea gas fields with 11 gas workers and 2 crew",
+      "factors": []
+    },
+    {
+      "t": 3540,
+      "clock": "14:46",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "During cruise flight, loss of power occurred to main rotor gearbox",
+      "factors": [
+        "engine_failure"
+      ]
+    },
+    {
+      "t": 3600,
+      "clock": "14:47",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft was in cruise flight en route from Leman to Bacton; emergency power loss initiated uncontrolled descent",
+      "factors": [
+        "engine_failure"
+      ]
+    },
+    {
+      "t": 6800,
+      "clock": "15:40:40",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft in steep uncontrolled descent following loss of main rotor gearbox power",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 6840,
+      "clock": "15:41",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Commander Ben Breach sent distress message: helicopter experiencing engine failure and ditching in North Sea",
+      "factors": [
+        "engine_failure"
+      ]
+    },
+    {
+      "t": 6843,
+      "clock": "15:41:03",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Radar lost contact with aircraft approximately 3 seconds after distress call was received",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 7100,
+      "clock": "15:46",
+      "phase": "descent",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Westland Wessex G-ASWI impacted North Sea approximately 12 nautical miles ENE of Bacton; wreck fragmented and dispersed on sea bottom",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 7200,
+      "clock": "15:47",
+      "phase": "descent",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "RAF Search and Rescue sighted floating wreckage from G-ASWI; no survivors found",
+      "factors": [
+        "loss_of_control_inflight",
+        "ditching"
+      ]
+    },
+    {
+      "t": 7260,
+      "clock": "15:48",
+      "phase": "descent",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "Salvage operations begun but wreck considered beyond recovery; insufficient evidence available to determine cause of power loss; open verdict recorded by AAIB",
+      "factors": [
+        "ditching"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Emphasis on need for flight data and cockpit voice recorders on large helicopters for accident investigation"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://www.aaib.gov.uk/cms_resources/4-1983%20G-ASWI.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/1981_Bristow_Helicopters_Westland_Wessex_crash",
+  "asn_id": null,
+  "interest": 10.41,
+  "report_links": [
+    "http://www.aaib.gov.uk/cms_resources/4-1983%20G-ASWI.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "low",
+    "reviewed": false,
+    "notes": [
+      "Read investigation report; cause remains undetermined",
+      "9 events reconstructed from available evidence and witness reports",
+      "Wreck was unrecoverable from North Sea, limiting investigation scope",
+      "Open verdict recorded due to insufficient evidence"
+    ]
+  },
+  "curated_id": null
+}
