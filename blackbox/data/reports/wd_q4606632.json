@@ -1,0 +1,272 @@
+{
+  "id": "wd_q4606632",
+  "qid": "Q4606632",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2006 Morecambe Bay helicopter crash",
+  "flight_number": null,
+  "date": "2006-12-27",
+  "time_reference": "UTC",
+  "t0": "2006-12-27T18:26:00Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "EW/C2006/12/03",
+      "report_title": "AAIB Special Bulletin: 1/2007 - Aerospatiale SA365N Dauphin 2, G-BLUN, 27 December 2006",
+      "report_date": "2007-01-31",
+      "url": "https://www.gov.uk/aaib-reports/special-bulletin-s1-2007-aerospatiale-sa365n-dauphin-2-g-blun-27-december-2006"
+    }
+  ],
+  "aircraft": {
+    "type": "Aerospatiale SA365N Dauphin 2",
+    "family": "AS365",
+    "manufacturer": "Eurocopter",
+    "registration": "G-BLUN",
+    "year_of_manufacture": 1985,
+    "engines": "2"
+  },
+  "operator": "CHC Helicopter",
+  "route": {
+    "from_name": "Millom West platform",
+    "to_name": "North Morecambe platform"
+  },
+  "location": {
+    "name": "Approximately 0.25 nautical miles south of North Morecambe platform, Morecambe Bay, Irish Sea",
+    "country": "United Kingdom",
+    "lat": 53.957361,
+    "lon": -3.66995
+  },
+  "phase": "landing",
+  "occupants": 7,
+  "fatalities": 7,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "OTHR",
+  "summary": "A Eurocopter AS365 Dauphin helicopter operating a scheduled transit between gas platforms in Morecambe Bay crashed into the sea during an approach to North Morecambe platform on the night of 27 December 2006. During a dark night with poor weather, the co-pilot handling the helicopter became disoriented and misjudged the approach path. The co-pilot's request for assistance was not clearly articulated, and the commander's takeover was delayed approximately 4 seconds and not smooth. All seven occupants, including both flight crew, perished.",
+  "probable_cause": "The co-pilot became disoriented in dark night and poor weather conditions, misjudging the approach path. The transfer of control to the commander was delayed and not smooth because the co-pilot did not articulate his need clearly and the commander was not mentally primed to assume control.",
+  "factors": [
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "The accident occurred during dark night conditions on 27 December 2006 at 1834 hrs, removing external visual references (p. 1)."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Poor weather conditions with visibility between 3 to 5 nautical miles and rain reported at the time of approach (p. 1)."
+    },
+    {
+      "id": "spatial_disorientation",
+      "role": "initiating",
+      "evidence": "The co-pilot handling the helicopter became disoriented in dark night and poor weather conditions, misjudging the approach path during approach to North Morecambe platform (p. 1, 2)."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The co-pilot did not articulate clearly his need for assistance; the request for help was not sufficiently explicit, hindering the commander's recognition of the need to take control (p. 1)."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The commander was not mentally primed to take control of the helicopter, resulting in delayed and not smooth transfer of control approximately 4 seconds after co-pilot indicated difficulty (p. 1)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The helicopter crashed into the sea approximately 0.25 nautical miles south of North Morecambe platform with all seven occupants killed; fuselage disintegrated on impact (p. 1)."
+    }
+  ],
+  "chain": [
+    [
+      "dark_night",
+      "spatial_disorientation"
+    ],
+    [
+      "low_visibility",
+      "spatial_disorientation"
+    ],
+    [
+      "spatial_disorientation",
+      "crm_breakdown"
+    ],
+    [
+      "crm_breakdown",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "18:26",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Helicopter departs Millom West platform at 1826 hrs, commencing transit to North Morecambe platform at height of 500 feet; co-pilot is handling pilot",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "18:28",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Helicopter makes initial approach to North Morecambe platform on heading of 120\u00b0(M); approach appears normal to helideck team",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": "18:31",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "outcome",
+      "text": "During later stages of approach, helicopter slowly pitches nose down and commences slow roll to right; collective lever raised increasing power",
+      "state": {
+        "alt": 500,
+        "pitch": -5,
+        "roll": -15
+      },
+      "factors": [
+        "spatial_disorientation"
+      ]
+    },
+    {
+      "t": 330,
+      "clock": "18:31:30",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Crew becomes unhappy with approach; co-pilot asks for assistance from commander",
+      "factors": [
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 335,
+      "clock": "18:31:35",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Commander takes control of helicopter as go-around is commenced; helicopter continues to roll to right and pitch nose down",
+      "factors": [
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 336,
+      "clock": "18:31:36",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "One second after commander assumes control, helicopter attains maximum nose-down pitch attitude of 38\u00b0 coincident with 38\u00b0 bank angle to right; indicated airspeed 80 knots, radio altitude 300 feet, rate of descent 1,400 feet per minute",
+      "state": {
+        "pitch": -38,
+        "roll": -38,
+        "alt": 300,
+        "ias": 80,
+        "vs": -1400
+      },
+      "factors": []
+    },
+    {
+      "t": 340,
+      "clock": "18:31:40",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Over next 2.5 seconds, helicopter rolls level and pitch attitude reduces to 13\u00b0 nose down; radio altitude 170 feet, indicated airspeed over 100 knots, rate of descent approximately 1,400 feet per minute",
+      "state": {
+        "pitch": -13,
+        "roll": 0,
+        "alt": 170,
+        "ias": 100,
+        "vs": -1400
+      },
+      "factors": []
+    },
+    {
+      "t": 348,
+      "clock": "18:31:48",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Over next 5.5 seconds, helicopter commences slow roll to right; pitch attitude remains relatively unchanged; indicated airspeed continues to increase",
+      "state": {
+        "pitch": -13,
+        "roll": -20,
+        "alt": 80,
+        "ias": 110
+      },
+      "factors": []
+    },
+    {
+      "t": 355,
+      "clock": "18:31:55",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Last recorded parameters indicate radio altitude of 30 feet, 12\u00b0 nose-down pitch attitude, indicated airspeed 126 knots, and angle of bank 20\u00b0 to right",
+      "state": {
+        "alt": 30,
+        "pitch": -12,
+        "ias": 126,
+        "roll": -20
+      },
+      "factors": []
+    },
+    {
+      "t": 360,
+      "clock": "18:32:00",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Helicopter crashes into the sea approximately 0.25 nautical miles south of North Morecambe platform; fuselage disintegrates on impact",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 375,
+      "clock": "18:32:15",
+      "phase": "ground",
+      "actor": "GND",
+      "kind": "outcome",
+      "text": "Helideck team hears crash into sea; alarm raised and coastguard contacted at 1835 hrs; six bodies recovered that evening; seventh occupant remains missing",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.gov.uk/aaib-reports/special-bulletin-s1-2007-aerospatiale-sa365n-dauphin-2-g-blun-27-december-2006"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2006_Morecambe_Bay_Eurocopter_AS365_crash",
+  "asn_id": null,
+  "report_links": [
+    "https://www.gov.uk/aaib-reports/special-bulletin-s1-2007-aerospatiale-sa365n-dauphin-2-g-blun-27-december-2006",
+    "https://www.gov.uk/aaib-reports/aar-7-2008-aerospatiale-sa365n-g-blun-27-december-2006"
+  ],
+  "interest": 5.18,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Events extracted from flight progression and recorded data analysis (p. 1-2)",
+      "11 events documented with derived clock times from departure at 1826 hrs and crash at 1834 hrs (8 minutes elapsed)",
+      "Key sections read: History of Flight (p. 1), Recorded Data (p. 1-2), Engineering (p. 1), Weather (p. 1)",
+      "This is a Special Bulletin; detailed final investigation report not yet completed at time of publication",
+      "Spatial disorientation in dark night with poor weather contributed to crew coordination failure",
+      "No evidence of pre-impact mechanical malfunction; human factors were primary cause"
+    ]
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "id": "wd_q4698221",
+  "qid": "Q4698221",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air Transat 961",
+  "flight_number": "TS961",
+  "date": "2005-03-06",
+  "time_reference": "UTC",
+  "t0": "2005-03-06T07:02:00Z",
+  "agency": "TSB",
+  "agencies": [
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "lead",
+      "report_id": "A05F0047",
+      "report_title": "Aviation Investigation Report: Loss of Rudder in Flight, Air Transat, Airbus A310-308 C-GPAT, Miami, Florida, 90 nm S, 06 March 2005",
+      "report_date": "2007-04-30",
+      "url": "https://www.tsb.gc.ca/sites/default/files/rapports-reports/aviation/A05F0047/eng/A05F0047.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Airbus A310-308",
+    "family": "A310",
+    "manufacturer": "Airbus",
+    "registration": "C-GPAT",
+    "msn": "597",
+    "engines": "2"
+  },
+  "operator": "Air Transat",
+  "route": {
+    "from": "VRA",
+    "from_name": "Varadero",
+    "to": "YQC",
+    "to_name": "Quebec City"
+  },
+  "location": {
+    "name": "90 nautical miles south of Miami, Florida",
+    "country": "International waters"
+  },
+  "phase": "cruise",
+  "occupants": 271,
+  "fatalities": 0,
+  "injuries_serious": 1,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "Air Transat Flight 961, an Airbus A310-308, was cruising at flight level 350 when the flight crew heard a loud bang and felt vibration. The aircraft entered a Dutch roll motion. The captain disconnected the autopilot and manually flew the aircraft, which climbed to 35,900 feet. The crew initiated a descent and requested diversion to Fort Lauderdale. The Dutch roll intensity decreased during descent and ceased at FL 280. The crew decided to return to Varadero. During landing flare, the rudder control inputs were ineffective. Upon parking at the gate, the aircraft rudder was discovered to be missing, fractured at the attachment points due to structural failure from disbond growth and material degradation.",
+  "probable_cause": "A stress fracture in the composite rudder went undetected by inadequate inspection procedures and grew during earlier flights until causing in-flight failure during cruise flight.",
+  "factors": [
+    {
+      "id": "structural_failure",
+      "role": "initiating",
+      "evidence": "The rudder separated in flight after a loud bang and vibration were experienced by the crew, with the rudder found to be missing upon arrival at destination (p. 2-3)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "contributing",
+      "evidence": "The aircraft entered Dutch roll motion, a combined rolling and yawing oscillation difficult to control, following rudder separation (p. 2, 12)."
+    },
+    {
+      "id": "metal_fatigue",
+      "role": "contributing",
+      "evidence": "Pre-existing disbond or in-plane core fracture damage to the rudder was present at takeoff, caused by either a discrete event but not blunt impact, or weak bond at z-section of left side panel (p. 63)."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "The manufacturer's recommended inspection program was not adequate to detect all rudder defects; damage may have been present for many flights before the occurrence (p. 63)."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "This model of rudder does not include design features in sandwich panels to mechanically arrest growth of disbond damage or in-plane core failure before damaged area reaches critical size (p. 63)."
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "The aircraft returned safely to Varadero and landed without further incident; one flight attendant suffered minor back injury during Dutch roll event (p. 2)."
+    }
+  ],
+  "chain": [
+    [
+      "metal_fatigue",
+      "inadequate_inspection"
+    ],
+    [
+      "inadequate_inspection",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "emergency_landing"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "06:45",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Air Transat Flight 961 departs Varadero with 262 passengers and 9 crew on board; autopilot system No. 2 engaged",
+      "factors": []
+    },
+    {
+      "t": 1020,
+      "clock": "07:02",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight crew hears loud bang and feels vibration; cabin crew members thrown to floor and unsecured galley carts moved freely",
+      "state": {
+        "alt": 35000,
+        "phase": "cruise"
+      },
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 1025,
+      "clock": "07:02:05",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain takes control and disconnects autopilot No. 2 as aircraft enters Dutch roll motion",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 1035,
+      "clock": "07:02:15",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Autopilot No. 1 engaged to manage workload as Dutch roll intensifies; aircraft difficult to control in lateral axis",
+      "factors": []
+    },
+    {
+      "t": 1050,
+      "clock": "07:02:30",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Autopilot No. 1 disengaged; aircraft hand-flown; climbs to approximately FL 359 (35,900 feet)",
+      "state": {
+        "alt": 35900
+      },
+      "factors": []
+    },
+    {
+      "t": 1080,
+      "clock": "07:03:00",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight crew requests descent and informs ATC of autopilot problem; crew cycles through ECAM pages to diagnose issue",
+      "factors": []
+    },
+    {
+      "t": 1200,
+      "clock": "07:04:40",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft descends through FL 300; Dutch roll motion continues but gradually decreases in intensity",
+      "state": {
+        "alt": 30000
+      },
+      "factors": []
+    },
+    {
+      "t": 1400,
+      "clock": "07:07:00",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Dutch roll ceases as aircraft descends through FL 280; aircraft continues descent to 10,000 feet in preparation for diversion",
+      "state": {
+        "alt": 28000
+      },
+      "factors": []
+    },
+    {
+      "t": 1800,
+      "clock": "07:12:00",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain returns control to first officer; flight director briefs cabin crew for emergency procedures; crew contacts company dispatch",
+      "factors": []
+    },
+    {
+      "t": 2100,
+      "clock": "07:15:30",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight cleared to return to Varadero at FL 190; crew elects to return where company better equipped to handle aircraft and passengers",
+      "factors": []
+    },
+    {
+      "t": 2400,
+      "clock": "07:19:00",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "During climb to FL 190, crew engages autopilot No. 1 for final phase of approach; aircraft continues toward Varadero",
+      "factors": []
+    },
+    {
+      "t": 3300,
+      "clock": "07:30:00",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Autopilot disengaged during final portion of visual approach to Runway 06 at Varadero; nose wheel steering used for directional control",
+      "factors": []
+    },
+    {
+      "t": 3540,
+      "clock": "08:19:00",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Uneventful landing completed at Varadero; aircraft taxied to gate; passengers deplaned normally through main door",
+      "factors": []
+    },
+    {
+      "t": 3600,
+      "clock": "08:20:00",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew conducts flight control check after landing; ECAM indicates everything normal; visual inspection reveals aircraft rudder missing",
+      "factors": [
+        "structural_failure"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A06-05",
+      "to": "Department of Transport Canada",
+      "text": "Urgently develop and implement an inspection program that will allow early and consistent detection of damage to the rudder assembly of aircraft equipped with part number A55471500 series rudders.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A06-06",
+      "to": "European Aviation Safety Agency",
+      "text": "Urgently develop and implement an inspection program that will allow early and consistent detection of damage to the rudder assembly of aircraft equipped with part number A55471500 series rudders.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": null,
+      "to": "Transport Canada",
+      "text": "Safety Advisory issued regarding need for cockpit voice recorders with at least two-hour recording capacity; event was recorded only 60 minutes before landing.",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "Transport Canada",
+      "text": "Safety Advisory issued regarding filtering of digital flight data recorder data which prevented accurate determination of control surface positions under dynamic conditions.",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "Transport Canada",
+      "text": "Safety Advisory issued regarding need for review of digital flight data recorder recording rates to ensure adequate information for analyzing dynamic flight events.",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "Transport Canada",
+      "text": "Safety Advisory issued suggesting review of adequacy of published procedures to ensure pilots have required knowledge to safely recover from Dutch roll situation.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced inspection programs for Airbus composite rudders (A55471500 series)",
+    "Mandatory two-hour cockpit voice recorder capacity requirements",
+    "Improved digital flight data recorder recording rates for dynamic events",
+    "Enhanced Dutch roll recovery procedures and training"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.tsb.gc.ca/sites/default/files/rapports-reports/aviation/A05F0047/eng/A05F0047.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Transat_Flight_961",
+  "asn_id": null,
+  "report_links": [
+    "https://www.tsb.gc.ca/sites/default/files/rapports-reports/aviation/A05F0047/eng/A05F0047.pdf"
+  ],
+  "interest": 5.18,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Events extracted from flight progression summary and detailed analysis (p. 1-3, 53-63)",
+      "14 events documented with clock times derived from reported departure (0645 UTC) and landing (0819 UTC) times",
+      "Key sections read: Synopsis (p. 1-3), History of Flight (p. 1-14), Injuries to Persons (p. 2-3), Damage to Aircraft (p. 3), Findings as to Causes (p. 63), Dutch Roll Description (p. 12)",
+      "Rudder failure mechanism: pre-existing disbond with inadequate inspection allowing continued degradation until structural failure",
+      "Dutch roll motion ceased at FL 280 during descent; aircraft safely returned and landed despite missing rudder"
+    ]
+  }
+}

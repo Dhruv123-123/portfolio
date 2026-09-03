@@ -1,0 +1,346 @@
+{
+  "id": "wd_q134521400",
+  "qid": "Q134521400",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Piedmont Airlines 230",
+  "flight_number": "PA230",
+  "date": "1968-08-10",
+  "time_reference": "EDT",
+  "t0": "1968-08-10T08:52:00-04:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR69-06",
+      "report_title": "Aircraft Accident Report: Piedmont Airlines, Inc., Fairchild Hiller 227B, N712U, Charleston, West Virginia, August 10, 1968",
+      "report_date": "1969-08-21",
+      "url": "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR69-06.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Fairchild FH-227B",
+    "family": "FH-227",
+    "manufacturer": "Fairchild Hiller",
+    "registration": "N712U",
+    "engines": "2"
+  },
+  "operator": "Piedmont Airlines",
+  "route": {
+    "from": "CVG",
+    "from_name": "Cincinnati/Northern Kentucky International Airport",
+    "to": "ROA",
+    "to_name": "Roanoke-Blacksburg Regional Airport"
+  },
+  "location": {
+    "name": "Charleston-Kanawha County Airport",
+    "country": "United States"
+  },
+  "phase": "approach",
+  "occupants": 37,
+  "fatalities": 35,
+  "injuries_serious": 2,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "Piedmont Airlines Flight 230, a Fairchild FH-227B, was conducting an instrument landing system approach to runway 23 at Charleston-Kanawha County Airport in dense fog. The aircraft was cleared for approach without the glideslope, which was inoperative. As the aircraft descended into the fog, the crew lost altitude orientation. The aircraft struck a steep hill 360 feet short of the runway threshold. Of the 37 aboard, 35 were killed; two passengers were ejected from the aircraft during impact and survived.",
+  "probable_cause": "The accident was caused by unrecognized loss of altitude orientation during the final portion of an approach into shallow, dense fog. The disorientation resulted from a rapid reduction in the ground guidance segment available to the pilot, at a point beyond which a go-around could not be successfully effected.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Dense ground fog severely restricted visibility at the Charleston Airport, with runway visibility decreasing to near zero at the time of approach, and a fog bank concentrated over the approach light structure (p. 7-8)."
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "The aircraft descended below the authorized minimum descent altitude of 1,582 feet m.s.l. into the dense fog layer while attempting to maintain visual reference to approach lights (p. 25-26)."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "initiating",
+      "evidence": "Unrecognized loss of altitude orientation during the final portion of the approach as ground visibility deteriorated, with the pilot losing visual reference and initiating a rapid descent 6 seconds before impact (p. 26-27)."
+    },
+    {
+      "id": "visual_illusion",
+      "role": "contributing",
+      "evidence": "The shallow fog overlying the approach zone created an optical illusion; as the aircraft descended into the fog bank, the loss of visual ground guidance resulted in disorientation with rapid descent rate of over 2,000 feet per minute (p. 24-27)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft struck a steep hillside 250-360 feet short of the runway threshold at an elevation 33 feet below the threshold (p. 5)."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Aircraft became fully engulfed in fire following impact with terrain (p. 7)."
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "visual_illusion"
+    ],
+    [
+      "visual_illusion",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "08:52",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower clears Flight 230 to land on Runway 23 at Charleston",
+      "factors": []
+    },
+    {
+      "t": 100,
+      "clock": "08:54:40",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight passes outer marker inbound and requests wind check; wind reported as 230\u00b0 at 4 knots",
+      "factors": []
+    },
+    {
+      "t": 185,
+      "clock": "08:55:55",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Pilot asks tower: 'Have you got the lights turned all the way up?'",
+      "factors": []
+    },
+    {
+      "t": 195,
+      "clock": "08:56:05",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Tower responds: 'Sure do, uh, a little fog right off the end there and it's wide open after you get by that, it's more than a mile and a half on the runway.' Last known radio communication.",
+      "factors": []
+    },
+    {
+      "t": 235,
+      "clock": "08:56:27",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First Officer reports: 'I got the lights in sight down low. Got it?'",
+      "factors": []
+    },
+    {
+      "t": 240,
+      "clock": "08:56:32",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First Officer: 'I got to get to the chart right here we're liable to lose it'",
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 250,
+      "clock": "08:56:42",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "Co-pilot asks: 'Got the lights there?'",
+      "factors": []
+    },
+    {
+      "t": 258,
+      "clock": "08:56:49",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Sound of power reduction; aircraft maintains descent at approximately 625 feet per minute",
+      "state": {
+        "alt": 1100,
+        "vs": 625
+      },
+      "factors": []
+    },
+    {
+      "t": 261,
+      "clock": "08:56:51",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Sound of power increase as aircraft approaches dense fog at approximately 1,075 feet m.s.l., 175 feet above approach lights",
+      "state": {
+        "alt": 1075,
+        "vs": 625
+      },
+      "factors": []
+    },
+    {
+      "t": 262,
+      "clock": "08:56:51.9",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First Officer shouts 'Watch it!!' as aircraft enters dense fog and descent rate steepens to over 2,000 feet per minute",
+      "factors": [
+        "visual_illusion",
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 263,
+      "clock": "08:56:53",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft first contacts trees at approximately 885 feet m.s.l., approximately 360 feet from runway threshold",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 265,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Initial ground contact at sloping terrain 250 feet short of threshold, 33 feet below runway elevation; aircraft becomes airborne again, now on fire",
+      "factors": [
+        "post_impact_fire"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft comes to rest off the right side of Runway 23, approximately 300 feet from initial tree contact; aircraft destroyed by impact and fire. Two passengers ejected from aircraft: 27-year-old Tom Voignier and 19-year-old Barb Schiller; both survive.",
+      "factors": [
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "cvr": [
+    {
+      "t": 0,
+      "clock": "08:55:00",
+      "speaker": "CAPT",
+      "text": "Well, looks like our altimeters were within reason"
+    },
+    {
+      "t": 35,
+      "clock": "08:55:35",
+      "speaker": "FO",
+      "text": "Boy, you know it -- reads right about the middle marker there"
+    },
+    {
+      "t": 185,
+      "clock": "08:55:55",
+      "speaker": "CAPT",
+      "text": "Have you got the lights turned all the way up?"
+    },
+    {
+      "t": 240,
+      "clock": "08:56:32",
+      "speaker": "FO",
+      "text": "I got to get to the chart right here we're liable to lose it"
+    },
+    {
+      "t": 250,
+      "clock": "08:56:42",
+      "speaker": "FO",
+      "text": "Got the lights there?"
+    },
+    {
+      "t": 262,
+      "clock": "08:56:51.9",
+      "speaker": "FO",
+      "text": "Watch it!!"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Amend sections 91.117 and 121.649 of Federal Aviation Regulations to prohibit any approach below 200 feet above field level unless pilot has runway threshold in sight and continues to have it in sight during remainder of approach.",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Bring to attention of all instrument pilots the hazards associated with shallow fog penetration through Advisory Circular and publication in Airman's Information Manual, including reference to training films.",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Include information on shallow fog penetration, effect upon guidance segment, and potential illusions as mandatory items in air carrier training programs and FAA-approved Instrument Flight Schools.",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Pursue as expeditiously as possible research project to determine instrumentation necessary to provide slant visual range information.",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Establish standards and specifications for and encourage development of synthetic trainers capable of providing realistic low visibility approach simulation.",
+      "status": "unknown"
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Program installation of improved approach zone lighting in at least last 1,000 feet of approach preceding runway threshold at airports with climatological history of frequent heavy fog conditions.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Enhanced approach lighting systems at airports with frequent fog conditions",
+    "Increased emphasis on low-visibility approach training in pilot curriculum",
+    "Modifications to approach minimums and procedures for low-visibility operations"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR69-06.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Piedmont_Airlines_Flight_230",
+  "asn_id": null,
+  "report_links": [
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR69-06.pdf"
+  ],
+  "interest": 5.29,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Events extracted from CVR transcript and flight recorder data (p. 15-18)",
+      "Probable cause and factors from formal analysis section (p. 26-30)",
+      "Recommendations extracted from final report section (p. 40-42)",
+      "Key sections read: Synopsis (p. 3-4), History of Flight (p. 4-8), Meteorological Information (p. 8-10), Analysis (p. 24-30), Recommendations (p. 40-42), Crew Information (p. 44-47)",
+      "13 events documented with 9 containing clock times extracted from CVR",
+      "Multiple visual illusion and disorientation factors contributed to loss of situational awareness in dense fog"
+    ]
+  }
+}
