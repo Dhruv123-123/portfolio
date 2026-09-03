@@ -60,9 +60,10 @@ export class CockpitTrack {
    * of warnings only; speech stays at 1x up to 2x and is muted beyond.
    */
   update(time, playing, speed = 1) {
-    const ctx = this.getContext()
-    if (!this.sheet || !ctx) return
+    if (!this.sheet) return
     if (!playing) { this.stopAll(); this.lastTime = time; return }
+    const ctx = this.getContext()
+    if (!ctx) return
     const prev = this.lastTime
     const jumped = prev === null || Math.abs(time - prev) > 2.5 * Math.max(1, speed)
     this.sheet.cues.forEach((c, i) => {

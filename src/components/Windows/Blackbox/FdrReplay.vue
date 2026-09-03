@@ -51,7 +51,7 @@
           <!-- layers popover -->
           <div v-if="layersOpen" class="fr-layers" @click.stop>
             <div class="fr-layers-h">Sound</div>
-            <label class="fr-row"><span>Cockpit synthesis <small>engines, slipstream, live warnings</small></span><input type="checkbox" :checked="store.sound" @change="toggleSound" /></label>
+            <label class="fr-row"><span>Engine and slipstream <small>synthesized live from N1 and airspeed (M)</small></span><input type="checkbox" :checked="store.sound" @change="toggleSound" /></label>
             <label class="fr-row" :class="{ off: !trackSheet }"><span>Crew voices <small>{{ trackSheet ? spokenCount + ' lines, one voice per seat, timed to the transcript' : 'no transcript for this record' }}</small></span><input type="checkbox" v-model="trackVoices" :disabled="!trackSheet" /></label>
             <label class="fr-row" :class="{ off: !trackSheet }"><span>Cockpit warnings <small>{{ trackSheet ? warningCount + ' cues from the recorded flags' : 'live synthesis only' }}</small></span><input type="checkbox" v-model="trackWarnings" :disabled="!trackSheet" /></label>
             <label class="fr-row" :class="{ off: !recordings.length }"><span>Real tape <small>{{ recordings.length ? currentRec.kind === 'cvr' ? 'released cockpit voice recorder' : 'air traffic control side' : 'none openly licensed' }}</small></span><input type="checkbox" :checked="deckOn" :disabled="!recordings.length" @change="toggleDeck" /></label>
@@ -129,7 +129,7 @@
           <div class="fr-cvr-head">
             <span>CVR</span>
             <span class="bb-muted" v-if="!(record.cvr && record.cvr.length)">no public transcript · report events</span>
-            <span class="bb-muted" v-else-if="trackSheet">{{ spokenCount }} lines · voices {{ store.sound && trackVoices ? 'on' : 'off' }}</span>
+            <span class="bb-muted" v-else-if="trackSheet">{{ spokenCount }} lines · voices {{ trackVoices ? 'on, press play' : 'off' }}</span>
           </div>
           <div class="fr-cvr-list bb-scroll" ref="cvrList">
             <div v-for="(line, i) in transcript" :key="i" class="fr-cvr-line" :class="{ past: line.t < time, current: i === currentLine, speaking: i === speakingLine, event: line.kind === 'event' }" @click="seek(line.t)">
@@ -158,6 +158,7 @@ import { ReplayScene } from './lib/scene.js'
 import { ReplayAudio } from './lib/audio.js'
 import { CockpitTrack } from './lib/cockpitTrack.js'
 import { FlightGearBridge, geoTrack, geoAt, downloadPackage } from './lib/flightgear.js'
+import { audioContext } from './lib/synth.js'
 
 const props = defineProps({ graph: Object, index: Object })
 const store = useBlackboxStore()
@@ -272,7 +273,7 @@ watch(recIdx, () => { deckDur.value = 0; deckError.value = false })
 const trackSheet = ref(null)
 const trackVoices = ref(true)
 const trackWarnings = ref(true)
-const cockpit = new CockpitTrack(() => (audio && audio.ctx) || null)
+const cockpit = new CockpitTrack(() => audioContext())
 const spokenCount = computed(() => (trackSheet.value ? trackSheet.value.cues.filter((c) => c.kind === 'cvr' || c.kind === 'atc').length : 0))
 const warningCount = computed(() => (trackSheet.value ? trackSheet.value.cues.filter((c) => c.kind !== 'cvr' && c.kind !== 'atc').length : 0))
 const speakingLine = computed(() => {
@@ -316,7 +317,7 @@ const ticks = computed(() => {
   const n = 4
   return Array.from({ length: n + 1 }, (_, i) => formatClock(record.value.t0, fdr.value.t_start + ((fdr.value.t_end - fdr.value.t_start) * i) / n))
 })
-const layerCount = computed(() => [store.sound, trackSheet.value && trackVoices.value && store.sound, deckOn.value, annotationsOn.value, !!ghost.value, formationOn.value, fgBridge.value.state === 'connected'].filter(Boolean).length)
+const layerCount = computed(() => [store.sound, trackSheet.value && trackVoices.value, deckOn.value, annotationsOn.value, !!ghost.value, formationOn.value, fgBridge.value.state === 'connected'].filter(Boolean).length)
 const envLabel = computed(() => {
   const e = env.value
   const parts = [e.night > 0.6 ? 'night' : e.night > 0 ? 'dusk' : 'day']
@@ -382,7 +383,7 @@ async function loadFdr(id) {
   cockpit.stopAll()
   trackSheet.value = await cockpit.load(rec.id)
   if (audio) audio.warnings = !(trackSheet.value && trackWarnings.value)
-  if (trackSheet.value && store.sound) cockpit.preload()
+  if (trackSheet.value) cockpit.preload()
   await nextTick()
   initScene()
   if (formationOn.value) await loadFormation()
@@ -413,7 +414,7 @@ function initScene() {
     scene.setCameraMode(camera.value)
     scene.setQuality(quality.value)
     scene.resize()
-    if (import.meta.env.DEV || location.hostname === 'localhost') window.__bbScene = scene
+    if (import.meta.env.DEV || location.hostname === 'localhost') { window.__bbScene = scene; window.__bbCockpit = cockpit }
   } catch (e) {
     console.error('WebGL scene failed', e)
     scene = null
@@ -458,7 +459,8 @@ function togglePlay() {
   if (!playing.value && time.value >= fdr.value.t_end) time.value = fdr.value.t_start
   ended.value = false
   playing.value = !playing.value
-  if (playing.value && store.sound && audio) { audio.enable(family()); if (trackSheet.value) cockpit.preload() }
+  if (playing.value && store.sound && audio) audio.enable(family())
+  if (playing.value && trackSheet.value) { audioContext(); cockpit.preload() }
   if (!playing.value) cockpit.stopAll()
 }
 function seek(t) {
@@ -479,7 +481,7 @@ function toggleSound() {
   store.sound = !store.sound
   audio.voice = false // browser speech is replaced by the rendered cockpit track
   audio.warnings = !(trackSheet.value && trackWarnings.value)
-  if (store.sound) { audio.enable(family()); audio.setRain(env.value.rain); cockpit.destination = audio.master; if (trackSheet.value) cockpit.preload() } else { audio.disable(); cockpit.stopAll() }
+  if (store.sound) { audio.enable(family()); audio.setRain(env.value.rain) } else audio.disable()
 }
 function toggleTheatre() {
   const el = rootRef.value
@@ -519,7 +521,8 @@ function renderFrame(dt) {
   const s = sampleAll(fdr.value, time.value)
   const pos = trackAt(track.value, time.value)
   if (scene) scene.update(s, pos, dt)
-  if (audio && audio.enabled) { audio.update(s, dt, playing.value); cockpit.update(time.value, playing.value, speed.value) }
+  if (audio && audio.enabled) audio.update(s, dt, playing.value)
+  if (trackSheet.value && (trackVoices.value || trackWarnings.value)) cockpit.update(time.value, playing.value, speed.value)
   updateAnnotations(s)
   syncDeck()
   if (fgBridge.value.state === 'connected') {
@@ -675,7 +678,7 @@ onMounted(() => {
   window.addEventListener('keydown', onKey)
   document.addEventListener('mousedown', onDocClick)
   document.addEventListener('fullscreenchange', onFullscreenChange)
-  if (store.sound) { audio = new ReplayAudio(); audio.voice = false; audio.enable(family()); cockpit.destination = audio.master }
+  if (store.sound) { audio = new ReplayAudio(); audio.voice = false; audio.enable(family()) }
 })
 onBeforeUnmount(() => {
   cancelAnimationFrame(raf)
