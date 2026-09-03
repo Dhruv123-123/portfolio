@@ -1,0 +1,234 @@
+{
+  "id": "wd_q7865889",
+  "qid": "Q7865889",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "USAir 5050",
+  "flight_number": "US5050",
+  "date": "1989-09-20",
+  "time_reference": "EDT",
+  "t0": "1989-09-20T22:00:00-04:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-90-03",
+      "report_date": "1990-03-01",
+      "url": "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR90-03.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-400",
+    "family": "737",
+    "manufacturer": "Boeing",
+    "registration": "N416US"
+  },
+  "operator": "US Airways",
+  "route": {
+    "from": "LGA",
+    "from_name": "LaGuardia",
+    "to": "CLT",
+    "to_name": "Charlotte"
+  },
+  "location": {
+    "name": "Bowery Bay, LaGuardia Airport",
+    "country": "United States"
+  },
+  "phase": "takeoff",
+  "occupants": 63,
+  "fatalities": 2,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "During takeoff from LaGuardia runway 31 on a wet runway in darkness and low visibility, the aircraft drifted to the left. The captain's improper use of the nosewheel steering tiller damaged the left nose tire, and a loud bang followed. The captain aborted the takeoff but was unable to stop the aircraft before it ran off the runway end into Bowery Bay, breaking into three fuselage sections.",
+  "probable_cause": "The captain's failure to exercise command authority to reject the takeoff or take sufficient control to continue it, which was initiated with a mistrimmed rudder. Also causal was failure to detect the mistrimmed rudder before takeoff (p. 57).",
+  "factors": [
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Failure of crew to detect improper rudder trim setting despite checklists during pre-flight procedures; captain failed to detect mistrimmed rudder before takeoff was attempted (p. 55-57)."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Captain failed to provide extended briefing or emergency briefing and crew had coordination problems transferring control during takeoff roll; poor communication between captain and first officer (p. 38-42)."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Failure to detect improper rudder trim setting by means of rudder pedal displacement during taxiing; rudder trim control not checked as part of cross-check procedures (p. 40)."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "initiating",
+      "evidence": "As the first officer began the takeoff on runway 31, the airplane started to drift to the left; captain attempted to correct that drift with improper nosewheel steering tiller use, damaging left nose tire (p. 9)."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "Weather conditions included darkness, low visibility and wet runway during takeoff; flight was part of extra section decision made just before boarding causing time pressure (p. 8-10)."
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "Aircraft was unable to stop before running off end of runway into Bowery Bay; fuselage broke into three sections with forward section resting on elevated light stanchion and aft section partially submerged (p. 9)."
+    }
+  ],
+  "chain": [
+    ["procedural_noncompliance", "inappropriate_control_input"],
+    ["inappropriate_control_input", "runway_overrun"],
+    ["inadequate_monitoring", "procedural_noncompliance"],
+    ["crm_breakdown", "inappropriate_control_input"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "14:00",
+      "phase": "ground",
+      "actor": "OTHER",
+      "kind": "system",
+      "text": "Captain and first officer report to USAir operations at BWI to fly B-737 N416US to LaGuardia as Flight 1846; scheduled departure 1510 but delayed to 1935 due to LGA inbound air traffic"
+    },
+    {
+      "t": 7200,
+      "clock": "20:40",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 1846 arrives at LaGuardia Gate 15 after leaving BWI uneventfully; dispatcher cancels Norfolk leg and later reassigns aircraft to operate as Flight 5050 to Charlotte with passengers"
+    },
+    {
+      "t": 7200,
+      "clock": "22:00",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Passengers board Flight 5050; captain visits USAir ground movement control tower expressing concern about crew duty time limitations before end of trip"
+    },
+    {
+      "t": 7300,
+      "clock": "22:15",
+      "phase": "taxi",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "As first officer began takeoff on runway 31, airplane drifted to the left due to mistrimmed rudder; captain attempted to correct drift using nosewheel steering tiller"
+    },
+    {
+      "t": 7330,
+      "clock": "22:20",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Flightcrew heard loud bang followed by continuous rumbling noise; left nose tire damaged by improper tiller use"
+    },
+    {
+      "t": 7350,
+      "clock": "22:24",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain took over control from first officer and rejected takeoff by aborting"
+    },
+    {
+      "t": 7380,
+      "clock": "22:30",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "outcome",
+      "text": "Captain unable to stop airplane before it ran off end of runway into Bowery Bay"
+    },
+    {
+      "t": 7400,
+      "clock": "22:35",
+      "phase": "unknown",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Fuselage broke into three sections; forward section rested on part of elevated light stanchion; aft section partially submerged in Bowery Bay"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-90-40",
+      "to": "FAA",
+      "text": "Require an operational rule that, during takeoff roll, should an uncommanded deviation from the intended flight path occur, the pilot-not-flying shall explicitly advise the pilot-flying of the deviation and the pilot-flying shall acknowledge the deviation; if the deviation persists or another uncommanded deviation occurs, either pilot shall be authorized to execute a rejected takeoff without coordination.",
+      "status": "open"
+    },
+    {
+      "id": "A-90-41",
+      "to": "FAA",
+      "text": "Require a revision of the pre-takeoff instrument procedures and flight crew handbook requirements so that they address positional sensing of controls that are not normally visible to either pilot during the normal scan.",
+      "status": "open"
+    },
+    {
+      "id": "A-90-42",
+      "to": "FAA",
+      "text": "Require cockpit resource management (CRM) training for all U.S. air carriers, including those not currently required to provide formal CRM training.",
+      "status": "open"
+    },
+    {
+      "id": "A-90-43",
+      "to": "FAA",
+      "text": "Require pre-takeoff briefings for rejected takeoff procedures in all U.S. carrier flight training departments.",
+      "status": "open"
+    },
+    {
+      "id": "A-90-44",
+      "to": "FAA",
+      "text": "Require a comprehensive study by aircraft manufacturers of rudder trim control design and placement to determine how the systems can be designed to provide more positive feedback of control position to flightcrews.",
+      "status": "open"
+    },
+    {
+      "id": "A-90-45",
+      "to": "FAA",
+      "text": "Require that all runway safety areas meet the recommendations contained in the 1988 FAA Advisory Circular AC 150/5300-13.",
+      "status": "open"
+    },
+    {
+      "id": "A-90-46",
+      "to": "FAA",
+      "text": "Require aircraft manufacturers to make a comprehensive analysis of the problem of water ingestion during overwater emergency landings and to publish design guidance that will improve aircrew survivability in such events.",
+      "status": "open"
+    },
+    {
+      "id": "A-90-47",
+      "to": "FAA",
+      "text": "Require improved testing of aircraft emergency evacuation procedures with emphasis on the effectiveness of emergency exits and evacuation aids under adverse environmental conditions.",
+      "status": "open"
+    },
+    {
+      "id": "A-90-48",
+      "to": "FAA",
+      "text": "Require a comprehensive study of postaccident aircrew availability to determine the optimum method for obtaining postaccident statements from aircrew.",
+      "status": "open"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR90-03.pdf"],
+  "wikipedia": "https://en.wikipedia.org/wiki/USAir_Flight_5050",
+  "asn_id": "19890920-0",
+  "interest": 8.57,
+  "curated_id": null,
+  "report_links": ["http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR90-03.pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Executive Summary extracted from p. 5",
+      "History of Flight detailed from p. 8-10",
+      "Probable Cause from section 3.2 (p. 57)",
+      "Recommendations from section 4 (p. 58-59)",
+      "Events NEW to deep read: timestamps for crew pre-flight activities, passenger boarding, takeoff initialization, noise events",
+      "Mistrimmed rudder was initiating factor",
+      "Left nose tire damaged by captain's improper tiller use",
+      "Aircraft ran off runway into Bowery Bay breaking into 3 sections"
+    ]
+  }
+}

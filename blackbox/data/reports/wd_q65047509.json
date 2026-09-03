@@ -1,0 +1,208 @@
+{
+  "id": "wd_q65047509",
+  "qid": "Q65047509",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air Transport International 805",
+  "flight_number": "ATI 805",
+  "date": "1992-02-15",
+  "time_reference": "EST",
+  "t0": "1992-02-15T03:26:00-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-92-05",
+      "report_date": "1992-11-19",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9205.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Douglas DC-8-63F",
+    "family": "DC-8",
+    "manufacturer": "Douglas",
+    "registration": "N794AL",
+    "msn": "45923"
+  },
+  "operator": "Air Transport International",
+  "route": {
+    "from": "PDX",
+    "from_name": "Portland",
+    "to": "TOL",
+    "to_name": "Toledo"
+  },
+  "location": {
+    "name": "Toledo Express Airport",
+    "country": "United States"
+  },
+  "phase": "go_around",
+  "occupants": 4,
+  "fatalities": 4,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "A Douglas DC-8 cargo flight executing a second go-around at Toledo crashed after the captain became spatially disoriented while regaining control from the first officer. During the second approach attempt the aircraft experienced GPWS glideslope warnings and unstable conditions. When captain Baker took control at 03:24, he became disoriented and commanded an unrecoverable 80-degree bank and 25-degree pitch-up. The crew's mode awareness and control coordination failed during the emergency.",
+  "probable_cause": "The failure of the flightcrew to properly recognize or recover in a timely manner from the unusual aircraft attitude that resulted from the captain's apparent spatial disorientation, resulting from physiological factors and/or a failed attitude director indicator (p. 60).",
+  "factors": [
+    {
+      "id": "unstable_approach",
+      "role": "initiating",
+      "evidence": "First approach unstable with captain complaining to first officer that he was flying too slow with flaps not extended; aircraft failed to capture localizer and was below glide path; crew directed to climb and maintain 3,000 feet for second approach (p. 9-10)."
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "Aircraft managed to capture localizer during second approach but approach became destabilized again between 0324:01 and 0324:15 with GPWS sounding three glideslope warnings and three sink rate warnings (p. 10)."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Flight crew interactions were not representing proper crew resource management; captain took control at 0324:17 without clear transfer, and communication deteriorated during the go-around (p. 52-57)."
+    },
+    {
+      "id": "spatial_disorientation",
+      "role": "contributing",
+      "evidence": "When captain Baker took control at 0324:46, he became spatially disoriented; CVR recorded 'what's the matter?' and 'what the [expletive] the matter here?' before loss of control (p. 10-11)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft began to bank 80 degrees and pitch up 25 degrees during go-around; crashed about 3 miles northwest of Toledo Express Airport (p. 8, 10-11)."
+    }
+  ],
+  "chain": [
+    ["unstable_approach", "mode_confusion"],
+    ["mode_confusion", "crm_breakdown"],
+    ["crm_breakdown", "spatial_disorientation"],
+    ["spatial_disorientation", "loss_of_control_inflight"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "21:45",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 805 departs Seattle on-time with first officer Hupp as pilot flying, Captain Baker commanding with flight engineer Montalbo and non-revenue pilot passenger Patel on board"
+    },
+    {
+      "t": 52380,
+      "clock": "03:02",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 805 cleared to land on runway 07; TOL tower clears airplane at 0312 but approach becomes unstable; captain comments on first officer's flying technique citing slow speed and flap issues"
+    },
+    {
+      "t": 52680,
+      "clock": "03:13",
+      "phase": "go_around",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain Baker declares go-around after first officer unable to capture localizer; states we're not anywhere near the localizer"
+    },
+    {
+      "t": 53100,
+      "clock": "03:21:43",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 805 cleared to land on runway 07 for second approach; controller vectors flight onto base leg with heading 100 degrees; crew advised of right drift"
+    },
+    {
+      "t": 53380,
+      "clock": "03:24:01",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Three GPWS glideslope warnings and three sink rate warnings sounded between 0324:01 and 0324:15; captain directs first officer to push power and get back up to glidepath"
+    },
+    {
+      "t": 53457,
+      "clock": "03:24:17",
+      "phase": "go_around",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain took control of airplane and performed second missed approach maneuver; flaps retracted to go-around setting and landing gear retracted"
+    },
+    {
+      "t": 53526,
+      "clock": "03:24:46",
+      "phase": "go_around",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer advised controller airplane was performing missed approach; directed to climb and maintain 3,000 feet; captain called for climb power"
+    },
+    {
+      "t": 53793,
+      "clock": "03:25:38",
+      "phase": "go_around",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain expressed alarm on CVR: '[expletives]...what's the matter?'; 22 seconds before impact captain exchanges control with first officer saying 'You got it?'"
+    },
+    {
+      "t": 53860,
+      "clock": "03:26:00",
+      "phase": "unknown",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed approximately 3 miles northwest of Toledo Express Airport in steep nose-up attitude with bank exceeding 80 degrees"
+    }
+  ],
+  "cvr": [
+    {
+      "t": 53437,
+      "clock": "03:24:01",
+      "speaker": "CAPT",
+      "text": "If you're gonna fly that slow you gotta have more flaps"
+    },
+    {
+      "t": 53457,
+      "clock": "03:24:17",
+      "speaker": "CAPT",
+      "text": "We're gonna have to go around...cause we're not anywhere near the localizer"
+    },
+    {
+      "t": 53538,
+      "clock": "03:24:58",
+      "speaker": "CAPT",
+      "text": "You got it?"
+    },
+    {
+      "t": 53549,
+      "clock": "03:25:09",
+      "speaker": "FO",
+      "text": "I got it"
+    }
+  ],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9205.pdf"],
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Transport_International_Flight_805",
+  "asn_id": null,
+  "interest": 8.72,
+  "curated_id": null,
+  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9205.pdf"],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "History of Flight extracted from section 1.1 (p. 8-11)",
+      "Probable Cause from section 3.2 (p. 60)",
+      "No recommendations made as result of investigation (p. 60-61)",
+      "CVR transcript excerpts from Appendix D (p. 71-76)",
+      "First approach unstable with captain complaints about speed and flap configuration",
+      "Second approach also unstable with GPWS warnings triggering go-around",
+      "Spatial disorientation occurred during attempted recovery from unusual attitude",
+      "Aircraft crashed in steep nose-up attitude with extreme bank angle"
+    ]
+  }
+}
