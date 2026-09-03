@@ -1,0 +1,256 @@
+{
+  "id": "wd_q4055393",
+  "qid": "Q4055393",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Belavia 1834",
+  "flight_number": "B2/BT1834",
+  "date": "2008-02-14",
+  "time_reference": "UTC",
+  "t0": "2008-02-14T00:18:00Z",
+  "agency": "MAK",
+  "agencies": [
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Bombardier CRJ100ER",
+    "manufacturer": "Bombardier",
+    "family": "CRJ",
+    "registration": "EW-101PJ"
+  },
+  "operator": "Belavia",
+  "route": {
+    "from_name": "Yerevan",
+    "to_name": "Minsk"
+  },
+  "location": {
+    "name": "Zvartnots International Airport",
+    "country": "Armenia"
+  },
+  "phase": "takeoff",
+  "occupants": 21,
+  "fatalities": 0,
+  "damage": "destroyed",
+  "category": "OTHR",
+  "summary": "During takeoff from Zvartnots International Airport in icing conditions, the aircraft's wings became contaminated with frost and ice. As the CRJ100ER climbed through approximately 5 meters altitude at low airspeed, the left wing stalled due to ice-induced aerodynamic degradation. The aircraft rolled left uncontrollably and crashed, splitting into two pieces and catching fire, but all 21 occupants survived with seven seriously injured.",
+  "probable_cause": "Asymmetric loss of wing lift during takeoff resulting in left wing stall at insufficient altitude for recovery, caused by wing surface contamination with frost that formed from fuel icing during ground handling in cold ambient temperatures. Wing contamination was not detected during the pre-flight inspection despite proper tactile inspection technique being available in the Flight Crew Operating Manual requirements, and was not removed with de-icing fluid application prior to takeoff. (p. 67-68)",
+  "factors": [
+    {
+      "id": "airframe_icing",
+      "role": "initiating",
+      "evidence": "Frost and ice contamination of wing surfaces caused by fuel icing (fuel system icing) during aircraft ground time and taxi before takeoff, resulting from temperature differential between ambient air (-3°C) and cold fuel in tanks (-0°C or colder) following flight at altitude; frost layer 'contaminated' wing surface affecting aerodynamic lift (p. 67, 9)"
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "contributing",
+      "evidence": "CRJ-100 airframe aerodynamic characteristics highly sensitive to even minor leading edge contamination; left wing stalled during takeoff as aircraft climbed through ~5 meters altitude at low airspeed; asymmetric stall led to uncontrollable left bank roll (p. 67-68)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft rolled progressively left-wing-down; left wing tip struck runway surface during takeoff; aircraft departed runway onto ground, rotated inverted through right wing rotation, crossed runway again and came to rest; aircraft split into two pieces and caught fire (p. 10)"
+    }
+  ],
+  "chain": [
+    ["airframe_icing", "aerodynamic_stall"],
+    ["aerodynamic_stall", "loss_of_control_inflight"]
+  ],
+  "events": [
+    {
+      "t": -1920,
+      "clock": "22:05",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft lands at Zvartnots International Airport Yerevan after flight from Minsk (p. 8)"
+    },
+    {
+      "t": -1680,
+      "clock": "22:20",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew begins External Walkaround post-flight inspection in accordance with aircraft operating procedures; no anomalies found, wing surfaces reported clean and dry (p. 9)"
+    },
+    {
+      "t": -1440,
+      "clock": "22:30",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Centralized fuel refueling begins, controlled by second pilot; 2,200 liters (1,802 kg) Jet A-1 fuel loaded in automatic mode (p. 8)"
+    },
+    {
+      "t": -1200,
+      "clock": "22:50",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew begins pre-flight briefing at Zvartnots; captain receives full meteorological information; ambient temperature -3°C, dew point -4°C, visibility 3,500 meters in haze (p. 8, 11)"
+    },
+    {
+      "t": -840,
+      "clock": "23:00",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Top-off refueling with 400 liters (328 kg) completed around 23:00; total fuel on board becomes 4,830 kg; second pilot inspects right wing surface reported clean and dry; tactile (palm) and visual control of all critical wing surfaces and tail performed (p. 9)"
+    },
+    {
+      "t": -420,
+      "clock": "23:45",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain performs pre-flight inspection (Preflight Check) around 23:45; reports no anomalies; conducts tactile (palm) and visual control of critical wing surfaces and tail inspection; all surfaces reported clean and dry (p. 9)"
+    },
+    {
+      "t": -300,
+      "clock": "00:06:45",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew contacts taxi dispatcher at Zvartnots and requests engine start clearance; flight plan for return to Minsk prepared with calculated takeoff speeds V1=137 knots, VR=139 knots, V2=145 knots (p. 11)"
+    },
+    {
+      "t": -180,
+      "clock": "00:08:52",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Engines started in sequence right-left after obtaining clearance; engine anti-ice (Cowl anti-ice) activated 43 seconds after engine start; wing anti-ice system NOT activated (p. 12)"
+    },
+    {
+      "t": 0,
+      "clock": "00:18:19",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft enters takeoff roll (p. 12)"
+    },
+    {
+      "t": 10,
+      "clock": "00:18:29",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Progressive left-wing-down roll develops during takeoff climb; left wing tip contacts runway surface; aerodynamic stall occurs on left wing as contamination causes loss of lift (p. 67-68)"
+    },
+    {
+      "t": 15,
+      "clock": "00:18:34",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft departs runway onto ground; rolls through right wing rotation with 180-degree inversion; crosses runway again and rotates onto right side (p. 12)"
+    },
+    {
+      "t": 20,
+      "clock": "00:18:39",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft comes to rest on ground in damaged state; airframe breaks into two pieces; right wing ruptures fuel tanks; ground fire begins; rescue crews extinguish fire within approximately 50 seconds (p. 10, 12)"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "CRJ-100 Flight Crews",
+      "text": "Conduct special review sessions on circumstances and causes of accident with all CRJ-100 flight and engineering personnel operating this aircraft type",
+      "status": "open"
+    },
+    {
+      "id": null,
+      "to": "CRJ-100 Flight Crews",
+      "text": "Conduct training on aircraft aerodynamics with emphasis on risk of stall mode on takeoff when clean wing concept not achieved, especially during cold temperature periods; use training materials from aircraft manufacturer; distribute training during preparation for fall-winter season operations",
+      "status": "open"
+    },
+    {
+      "id": null,
+      "to": "CRJ-100 Flight Crews",
+      "text": "Emphasize adherence to Flight Crew Operating Manual provisions regarding wing anti-ice activation prior to takeoff",
+      "status": "open"
+    },
+    {
+      "id": null,
+      "to": "Transport Canada, Certifying Organizations, and Aircraft Manufacturer",
+      "text": "Review existing procedural approach to detecting and eliminating ice before takeoff; consider requiring automatic detection system for dangerous ground icing levels and provision of appropriate information to crew for aircraft types most vulnerable to ground icing aerodynamic effects",
+      "status": "open"
+    },
+    {
+      "id": null,
+      "to": "Transport Canada, Certifying Organizations, and Aircraft Manufacturer",
+      "text": "Review Flight Crew Operating Manual definition of 'fog' to align with ICAO definitions",
+      "status": "open"
+    },
+    {
+      "id": null,
+      "to": "Transport Canada, Certifying Organizations, and Aircraft Manufacturer",
+      "text": "Conduct additional wind tunnel aerodynamic testing to determine effects of 'fuel icing' (frost or ice formation only at contact points of fuel with wing upper and lower surfaces) on wing lift characteristics",
+      "status": "open"
+    },
+    {
+      "id": null,
+      "to": "Ministry of Transport and Communications of Belarus",
+      "text": "Coordinate with customs authorities to expedite customs procedures for import of spare parts for foreign-produced aircraft registered in Belarus civil aircraft registry",
+      "status": "open"
+    },
+    {
+      "id": null,
+      "to": "Belavia Airlines",
+      "text": "Review and modify pre-flight preparation technology schedule for CRJ-100LR aircraft to ensure flight crews conduct repeated inspection of aircraft surface condition before takeoff",
+      "status": "open"
+    },
+    {
+      "id": null,
+      "to": "Belavia Airlines",
+      "text": "Implement systematic flight data decryption, analysis and monitoring of flight technique control, especially for crews with limited experience or during type transition period",
+      "status": "open"
+    },
+    {
+      "id": null,
+      "to": "Belavia Airlines",
+      "text": "Provide additional training to flight and engineering personnel on methods and means of aircraft protection against ground icing conditions",
+      "status": "open"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Transport Canada issued Airworthiness Directive requiring wing anti-ice system activation during final taxi stage in actual icing conditions (issued after the accident)",
+    "Bombardier and other aircraft certifying organizations increased training requirements on ground icing protection"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/upload/iblock/d30/report_ew-101pj.pdf"
+  ],
+  "report_links": [
+    "https://mak-iac.org/upload/iblock/d30/report_ew-101pj.pdf",
+    "https://mak-iac.org/rassledovaniya/crj-100lr-cl-600-2b19-14-02-2008/"
+  ],
+  "asn_id": "20080214-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Belavia_Flight_1834",
+  "interest": 7.7,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Deep read from MAK (Interstate Aviation Committee) final report in Russian; Заключение (Conclusions) section on page 67-68 examined",
+      "12 events extracted with clock times from Historia Polyota (History of Flight) sections 1.1 (pages 8-12)",
+      "Recommendations extracted from Rekommendatsii (Recommendations) section 5 (pages 69-70); no formal numbering system used",
+      "Airframe icing factor evidence sourced from conclusion that frost/ice formed from fuel icing during ground handling",
+      "CRJ-100 aerodynamic sensitivity to wing contamination documented in section 1.18.4 on ground icing safety",
+      "All 21 occupants survived despite aircraft destruction; 7 sustained serious injuries"
+    ]
+  }
+}

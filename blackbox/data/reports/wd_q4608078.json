@@ -1,0 +1,213 @@
+{
+ "id": "wd_q4608078",
+ "qid": "Q4608078",
+ "tier": "wikidata",
+ "depth": "sections",
+ "title": "Blue Angels airshow crash",
+ "flight_number": null,
+ "date": "2007-04-21",
+ "time_reference": "EST",
+ "t0": "2007-04-21T20:00:00Z",
+ "agency": "USN",
+ "agencies": [
+  {
+   "code": "USN",
+   "name": "United States Navy",
+   "country": "United States",
+   "role": "lead"
+  }
+ ],
+ "aircraft": {
+  "type": "McDonnell Douglas F/A-18 Hornet",
+  "manufacturer": "McDonnell Douglas",
+  "family": "F/A-18"
+ },
+ "operator": "US Navy Blue Angels",
+ "location": {
+  "name": "Beaufort",
+  "country": "United States"
+ },
+ "phase": "landing",
+ "occupants": 1,
+ "fatalities": 1,
+ "damage": "destroyed",
+ "category": "OTHR",
+ "summary": "During the final minutes of an airshow at Marine Corps Air Station Beaufort, Blue Angels aircraft number 6 crashed in a residential neighborhood. LCDR Kevin Davis, attempting to catch up to the lead aircraft with a faster and tighter turn than usual while performing a rendezvous maneuver, experienced a high-G turn (6.8 G) that subjected him to forces exceeding six times normal gravity. The rapid onset G forces and high turn rate caused spatial disorientation and tunnel vision, resulting in loss of altitude awareness. The aircraft struck terrain while in a steep right-wing-down bank at only 54 degrees, killing the pilot and injuring eight people on the ground.",
+ "probable_cause": "LCDR Davis executed an excessively aggressive turn while attempting to catch up to the other aircraft during a rendezvous maneuver, subjecting himself to high-G forces (6.8 G) at rapid onset rate that caused spatial disorientation and loss of altitude awareness, resulting in loss of control and impact with terrain. (Command Investigation findings)",
+ "factors": [
+  {
+   "id": "inappropriate_control_input",
+   "role": "initiating",
+   "evidence": "LCDR Davis executed a sharper-than-usual right-hand 270-degree turn estimated at 6-7 G's out of the Loop Break Cross maneuver to cross above other aircraft; then performed a 'squatting' turn with rapid onset rate of at least 6.8 G in attempt to rendezvous with the lead aircraft (Delta); witnesses stated #6 was faster than usual and 'really squatted' the jet with a high G turn (Finding 75, 78, 81)"
+  },
+  {
+   "id": "spatial_disorientation",
+   "role": "contributing",
+   "evidence": "High-G maneuver with rapid onset (6.8 G) resulted in loss of blood flow to brain causing tunnel vision and disorientation; pilot failed to perform proper anti-G straining maneuver (AGSM) throughout the maneuver; pilot did not check in on radio at rendezvous point, indicating loss of situational awareness (Finding 78, 81-84)"
+  },
+  {
+   "id": "loss_of_situational_awareness",
+   "role": "contributing",
+   "evidence": "After 'squatting the jet,' pilot maintained right-wing-down, slightly nose-low attitude until disappearing below tree line; pilot failed to monitor altitude during high-G turn and did not recover from spatial disorientation before impact (Finding 79)"
+  },
+  {
+   "id": "cfit",
+   "role": "outcome",
+   "evidence": "Aircraft impacted in sparse residential area approximately 3 miles west of MCAS Beaufort; at impact, aircraft was in 6.8G, 54-degree right-wing-down roll, -1.4 degrees nose-down, at 320 knots with both engines at max afterburner; debris field approximately 2,000 feet long; pilot found without pulse strapped in ejection seat at far end of debris field (Finding 93, 94, 100, 107)"
+  }
+ ],
+ "chain": [
+  [
+   "inappropriate_control_input",
+   "spatial_disorientation"
+  ],
+  [
+   "spatial_disorientation",
+   "loss_of_situational_awareness"
+  ],
+  [
+   "loss_of_situational_awareness",
+   "cfit"
+  ]
+ ],
+ "events": [
+  {
+   "t": 0,
+   "clock": "1600",
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "system",
+   "text": "All six McDonnell Douglas F/A-18 Hornets of the Blue Angels are making final turns into landing pattern during airshow at Marine Corps Air Station Beaufort; weather clear with few clouds at 5,000 feet, visibility unlimited, temperature 74°F, winds variable 3 knots (Finding 70)"
+  },
+  {
+   "t": 30,
+   "clock": "1600:30",
+   "phase": "landing",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "Blue Angel #6 (LCDR Kevin Davis) executes sharper-than-usual right-hand 270-degree high-G turn estimated at 6-7 G's out of Loop Break Cross maneuver, crossing above #'s 4 and 5 to set up rendezvous (Finding 75)"
+  },
+  {
+   "t": 45,
+   "clock": "1600:45",
+   "phase": "landing",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "LCDR Davis goes somewhat wings-level after high-G turn, maintaining level flight path while accelerating toward Delta (lead formation) for rendezvous (Finding 76-77)"
+  },
+  {
+   "t": 60,
+   "clock": "1601:00",
+   "phase": "landing",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "state": {
+    "ias": 320,
+    "pitch": -1.4,
+    "roll": 54
+   },
+   "text": "LCDR Davis executes 'squatting of the jet' with rapid onset rate turn of at least 6.8 G in attempt to rendezvous with Delta formation; witnesses report #6 faster than normal and 'really squats' the jet with high G turn (Finding 78, 81)"
+  },
+  {
+   "t": 90,
+   "clock": "1601:30",
+   "phase": "landing",
+   "actor": "CAPT",
+   "kind": "crew_action",
+   "text": "LCDR Davis should check in on radio with callsign per SOP but only a mike click is heard; other pilots, unsure where #6 is, assume minor problem and continue performance (Finding 82-84)"
+  },
+  {
+   "t": 120,
+   "clock": "1602:00",
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "Aircraft maintains right-wing-down, slightly nose-low attitude until disappearing below tree line; aircraft in 6.8G, 54-degree right-wing-down roll, -1.4 degrees nose-down pitch, 320 knots, both engines at maximum afterburner (Finding 79, 94)"
+  },
+  {
+   "t": 125,
+   "clock": "1602:05",
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "Aircraft impacts terrain in sparse residential area approximately 3 miles west of MCAS Beaufort at coordinates N 32 26 89, W080 46 31; aircraft completely destroyed; debris field extends approximately 2,000 feet from first tree impact to final resting position (Finding 93, 100)"
+  },
+  {
+   "t": 130,
+   "clock": "1602:10",
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "LCDR Davis found without pulse, face down, still strapped into ejection seat at far end of debris field; rescue personnel from MCAS Beaufort arrive within 3-4 minutes but pilot does not survive; multiple blunt force injuries determined as cause of death (Finding 107, 110, 115, 117)"
+  },
+  {
+   "t": 135,
+   "clock": "1602:15",
+   "phase": "landing",
+   "actor": "SYS",
+   "kind": "outcome",
+   "text": "Blue Angels #1 and #3 wave off their landings and head to crash site; #1 assumes on-scene commander duties; eight civilians on ground sustain injuries from debris impact (Finding 88-89)"
+  }
+ ],
+ "cvr": [],
+ "recommendations": [
+  {
+   "id": null,
+   "to": "Naval Air Forces",
+   "text": "Implement focused research to develop appropriate G-suit for use by Naval Flight Demonstration Squadron pilots to enhance physiological tolerance to high-G maneuvers",
+   "status": "open"
+  },
+  {
+   "id": null,
+   "to": "Chief of Naval Air Training",
+   "text": "Implement multi-day G tolerance optimization training program with CFET physiologist to improve G technique of each NFDS pilot; all new NFDS pilots to complete program in September 2007; entire team to attend refresher training October or November 2007",
+   "status": "open"
+  },
+  {
+   "id": null,
+   "to": "Chief of Naval Air Training",
+   "text": "Flight Surgeon to develop weight training program targeting muscle groups needed to maximize G tolerance; program to be mandatory for all NFDS pilots",
+   "status": "open"
+  },
+  {
+   "id": null,
+   "to": "Chief of Naval Personnel",
+   "text": "Make medical record entries for all military personnel who responded to or walked crash scene documenting potential exposure to crash debris (carbon fibers and hazardous materials) from F/A-18 crash",
+   "status": "open"
+  }
+ ],
+ "dissent": [],
+ "safety_changes": [
+  "NFDS resumed flying practice flights on 30 April 2007 with G-suit waiver extension implemented",
+  "NFDS resumed airshow demonstrations in May 2007 following updated waiver by Chief of Naval Operations",
+  "Navy implemented new G-suit development program to provide enhanced physiological protection for demonstration pilots"
+ ],
+ "related": [],
+ "fdr": null,
+ "sources": [
+  "http://libraryonline.erau.edu/online-full-text/ntsb/miscellaneous-reports/BlueAngelsJAGReport.pdf"
+ ],
+ "report_links": [
+  "http://libraryonline.erau.edu/online-full-text/ntsb/miscellaneous-reports/BlueAngelsJAGReport.pdf"
+ ],
+ "wikipedia": "https://en.wikipedia.org/wiki/2007_Blue_Angels_South_Carolina_crash",
+ "asn_id": null,
+ "interest": 6.58,
+ "curated_id": null,
+ "extraction": {
+  "method": "llm",
+  "model": "claude-haiku-4-5",
+  "confidence": "high",
+  "reviewed": false,
+  "notes": [
+   "Deep read from JAG (Judge Advocate General) Manual Investigation Report for Naval Flight Demonstration Squadron mishap at MCAS Beaufort, South Carolina",
+   "9 events extracted from Findings of Fact sections detailing mishap sequence (Finding 75-94)",
+   "Military investigation report structure differs from civilian NTSB format; no formal probable cause statement but detailed findings establish causal factors",
+   "LCDR Kevin Davis (pilot) was sole occupant; 8 civilians on ground injured, none fatally",
+   "Investigation determined pilot did not perform proper anti-G straining maneuver (AGSM) during high-G turn, contributing to spatial disorientation",
+   "G-suit waiver had expired in 2004; not wearing G-suit did not contribute to mishap per investigation opinion",
+   "auto-repair: route was null"
+  ]
+ },
+ "route": {}
+}

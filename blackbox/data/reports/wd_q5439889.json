@@ -1,0 +1,319 @@
+{
+  "id": "wd_q5439889",
+  "qid": "Q5439889",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "FedEx Express 14",
+  "flight_number": "FX14",
+  "date": "1997-07-31",
+  "time_reference": "EDT",
+  "t0": "1997-07-31T01:32:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas MD-11F",
+    "manufacturer": "McDonnell Douglas",
+    "family": "MD-11",
+    "registration": "N611FE"
+  },
+  "operator": "FedEx Express",
+  "route": {
+    "from_name": "Singapore",
+    "to_name": "Newark"
+  },
+  "location": {
+    "name": "Newark International Airport",
+    "country": "United States"
+  },
+  "phase": "landing",
+  "occupants": 5,
+  "fatalities": 0,
+  "damage": "destroyed",
+  "category": "LOC-G",
+  "summary": "FedEx Flight 14, an MD-11 cargo aircraft, crashed during landing at Newark after a destabilized flare and excessive captain overcontrol. The aircraft touched down, bounced, and on the second touchdown 1,100 feet later, the right landing gear failed structurally. The right engine contacted the runway, and the aircraft rolled right and inverted on fire. All five crew members escaped through the cockpit window.",
+  "probable_cause": "The captain's overcontrol of the airplane during the landing and his failure to execute a go-around from a destabilized flare. Contributing to the accident was the captain's concern with touching down early to ensure adequate stopping distance. (p. 71)",
+  "factors": [
+    {
+      "id": "inappropriate_control_input",
+      "role": "initiating",
+      "evidence": "Captain made a nose-down elevator input of 12° at 17 feet radio altitude (2 seconds before first touchdown), inconsistent with FedEx guidance and designed to control touchdown point due to concerns about runway length (p. 55-56); then made a nearly full nose-up elevator input with large throttle increase to compensate for the resulting sink rate (p. 56); then applied full nose-down elevator input at first touchdown (p. 57)"
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "Destabilized flare beginning about 17 feet above runway as captain initiated nose-down input inconsistent with stabilized approach procedures (p. 55-56); increased sink rate and decreased vertical acceleration at 17 feet radio altitude (p. 56)"
+    },
+    {
+      "id": "go_around_not_flown",
+      "role": "contributing",
+      "evidence": "Captain failed to execute go-around from destabilized flare; instead attempted to salvage landing with last-second thrust and pitch adjustments (p. 56)"
+    },
+    {
+      "id": "hard_landing",
+      "role": "outcome",
+      "evidence": "Aircraft touched down with high sink rate and rightward roll at second touchdown 1,100 feet after initial touchdown; first touchdown at 0132:18.75 with 7° nose-up pitch and 7.6 fps vertical speed (p. 21); second touchdown at 0132:21.62 with 13.5 fps vertical speed and 9.5° right-wing-down roll angle (p. 21)"
+    },
+    {
+      "id": "landing_gear_failure",
+      "role": "outcome",
+      "evidence": "Right main landing gear strut and outboard tires bottomed at second touchdown, with energy of 1,574,000 ft-lbs transmitted to right MLG—3.2 times greater than MD-11's maximum certificated landing energy of 494,500 ft-lbs (p. 65)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Right wing rear spar failed due to shear overload condition from excessive gear forces and corresponding download from left wing and fuselage, rupturing right wing fuel tanks and resulting in fire (p. 65-66)"
+    }
+  ],
+  "chain": [
+    ["inappropriate_control_input", "unstable_approach"],
+    ["unstable_approach", "go_around_not_flown"],
+    ["go_around_not_flown", "hard_landing"],
+    ["hard_landing", "landing_gear_failure"],
+    ["landing_gear_failure", "structural_failure"]
+  ],
+  "events": [
+    {
+      "t": -1080,
+      "clock": "0102:11",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Boston Center air traffic controller instructs FedEx 14 to descend and maintain FL 180"
+    },
+    {
+      "t": -780,
+      "clock": "0103:33",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight crew uses APLC to calculate runway stopping distance of 6,080 feet for MED autobrakes and 5,030 feet for MAX autobrakes, comparing against approach plate distance of 6,860 feet; incorrectly calculates 780-foot margin for MED brakes (p. 2)"
+    },
+    {
+      "t": -600,
+      "clock": "0114:22",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain asks first officer to advise passengers of abrupt stop due to brakes and thrust reversers (p. 4)"
+    },
+    {
+      "t": -360,
+      "clock": "0129:45",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "EWR tower controller clears FedEx 14 to land on runway 22R, advises winds 250 at 5 knots (p. 5)"
+    },
+    {
+      "t": -300,
+      "clock": "0130:02",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Before-landing checklist; first officer states 'max brakes', captain confirms 'max brakes will be fine' (p. 5)"
+    },
+    {
+      "t": -240,
+      "clock": "0130:45",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain disengages autopilot at 1,200 feet altitude and hand-flies approach; autothrottles remain engaged (p. 5)"
+    },
+    {
+      "t": -85,
+      "clock": "0132:03",
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer calls out minimums (211 feet) (p. 5)"
+    },
+    {
+      "t": -60,
+      "clock": "0132:09",
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer states 'brakes on max'; CAWS altitude callouts follow for 100, 50, 40, 30, 20, and 10 feet (p. 5)"
+    },
+    {
+      "t": -20,
+      "clock": "0132:18",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "state": {
+        "alt": 0,
+        "ias": 149,
+        "pitch": 7.0,
+        "vs": -7.6
+      },
+      "text": "Initial touchdown at 0132:18.75 at 1,126 feet beyond runway threshold; aircraft at 7° nose-up pitch attitude with vertical speed 7.6 fps and vertical acceleration 1.67 g (p. 20-21)"
+    },
+    {
+      "t": -10,
+      "clock": "0132:19",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain makes nose-down elevator input to -18° about 0.5 seconds after first touchdown, consistent with response to perceived pitch-up tendency; aircraft becomes airborne (p. 21)"
+    },
+    {
+      "t": 0,
+      "clock": "0132:21.62",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "state": {
+        "alt": 0,
+        "ias": 0,
+        "pitch": -0.7,
+        "roll": 9.5,
+        "vs": -13.5
+      },
+      "text": "Second touchdown at 0132:21.62 about 1,889 feet from displaced threshold with 9.5° right-wing-down roll angle, -0.7° pitch, 13.5 fps vertical speed at right MLG, vertical acceleration 1.70 g; transmitting 1,574,000 ft-lbs energy into right MLG (p. 21, 65)"
+    },
+    {
+      "t": 10,
+      "clock": "0132:27",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft continues to roll right-wing-down through 90° as right landing gear bottoms and right wing rear spar fails; CVR records sounds of 'metallic breakup' at 0132:27 as aircraft inverts and fire begins; FDR stops recording at 0132:27.6 (p. 5, 21, 65-66)"
+    }
+  ],
+  "cvr": [
+    {
+      "t": -778,
+      "clock": "0103:33",
+      "speaker": "CAPT",
+      "text": "we got a lot of stuff going against us here so we'll…start with max."
+    },
+    {
+      "t": -300,
+      "clock": "0130:02",
+      "speaker": "CAPT",
+      "text": "max brakes will be fine"
+    },
+    {
+      "t": -60,
+      "clock": "0132:09",
+      "speaker": "F/O",
+      "text": "brakes on max"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-00-92",
+      "to": "FAA",
+      "text": "Convene joint government-industry task force to develop pilot training tool including information about structural failure factors (landing gear, wings, fuselage design sink rate limits, roll angle limits, control input roll rate and pitch rate, single-gear landings, decreased lift effects, and structural loading consequences of bottoming gear struts)",
+      "status": "open",
+      "trigger_factors": ["hard_landing", "landing_gear_failure", "structural_failure"]
+    },
+    {
+      "id": "A-00-93",
+      "to": "FAA",
+      "text": "Include in pilot training tool development syllabus for simulator training on stabilized approaches to landing flare, identification of unstabilized landing flares and recovery, proper high sink rate recovery techniques during flare to landing, techniques for avoiding overcontrol in pitch before touchdown, and techniques for avoiding overcontrol during bounced landing",
+      "status": "open",
+      "trigger_factors": ["unstable_approach", "inappropriate_control_input", "hard_landing"]
+    },
+    {
+      "id": "A-00-94",
+      "to": "FAA",
+      "text": "Pilot training tool development should promote orientation toward proactive go-around decision-making",
+      "status": "open",
+      "trigger_factors": ["go_around_not_flown"]
+    },
+    {
+      "id": "A-00-95",
+      "to": "FAA",
+      "text": "Require principal operations inspectors assigned to Part 121 carriers using auxiliary performance computers to review and ensure adequacy of training and procedures regarding use of equipment and interpretation of data generated, including landing distance data",
+      "status": "open"
+    },
+    {
+      "id": "A-00-96",
+      "to": "FAA",
+      "text": "Require installation within one year of MD-11 FCC-908 software upgrade on all MD-11 airplanes",
+      "status": "open"
+    },
+    {
+      "id": "A-00-97",
+      "to": "FAA",
+      "text": "Require retrofit of DFDR systems on all MD-11s equipped with FCC-908 software with additional parameters to precisely identify and differentiate between pilot and LSAS elevator control activity, including control column force, IRU pitch rate, LSAS command signals, elevator positions, and automatic ground spoiler command signals",
+      "status": "open"
+    },
+    {
+      "id": "A-00-98",
+      "to": "FAA",
+      "text": "Review and if appropriate revise DC-10 and MD-11 TRA-driven ground spoiler knockdown feature to ensure it does not prevent ground spoiler deployment at moderate TRAs during landing phase",
+      "status": "open"
+    },
+    {
+      "id": "A-00-99",
+      "to": "FAA",
+      "text": "Require DC-10 and MD-11 operators to provide pilots with information and training regarding ground spoiler knockdown feature and its effects on landing characteristics and performance",
+      "status": "open"
+    },
+    {
+      "id": "A-00-100",
+      "to": "FAA",
+      "text": "Sponsor NASA study of stability and control characteristics of widely used large transport-category airplanes to identify undesirable characteristics during landing phase and compare overall qualitative and quantitative stability and control characteristics objectively, including analyses of DC-10 and MD-11 landing accidents and other relevant incidents",
+      "status": "open"
+    },
+    {
+      "id": "A-00-101",
+      "to": "FAA",
+      "text": "Based on results of study recommended in A-00-100, implement improved certification criteria for transport-category airplane designs that will reduce incidence of landing accidents",
+      "status": "open"
+    },
+    {
+      "id": "A-00-102",
+      "to": "FAA",
+      "text": "Conduct study to determine if landing gear vertical overload fusing offers higher level of safety than overdesigned gear; if fusing offers higher level of safety, revise 14 CFR Part 25 to require vertical overload fusing of landing gear",
+      "status": "open"
+    },
+    {
+      "id": "A-00-103",
+      "to": "FAA",
+      "text": "Require manufacturers of 14 CFR Part 23 and Part 25 airplanes and Part 121 operators to revise hard landing inspection and reporting criteria to account for all factors contributing to structural damage; instruct POIs assigned to Part 121 operators to ensure changes made to operator maintenance manuals and Flight Operations Quality Assurance exceedence monitoring programs",
+      "status": "open"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "FedEx expanded APLC pilot training presentation in initial, upgrade, and recurrent flight crew training programs",
+    "FedEx added instructional material on landing gear and wing structural certification to tailstrike awareness training program"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0002.pdf"
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0002.pdf"
+  ],
+  "asn_id": "19970731-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/FedEx_Express_Flight_14",
+  "interest": 7.89,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Deep read from NTSB AAR 00-02 final report (34 pages; history of flight, analysis, findings, probable cause, and recommendations sections read)",
+      "12 events extracted with clock times and aircraft state from sections 1.1, 1.1.1, CVR transcript",
+      "All recommendations extracted with original NTSB recommendation IDs A-00-92 through A-00-103",
+      "Factors with page citations from probable cause section (p. 71) and analysis sections (p. 55-57, 65-66)",
+      "Aircraft state values for touchdown events from FDR data in section 1.1.1 (p. 20-21)"
+    ]
+  }
+}
