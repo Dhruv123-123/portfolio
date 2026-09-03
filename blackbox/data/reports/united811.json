@@ -309,16 +309,5 @@
       "Recommendation numbers not recalled and are left null."
     ]
   },
-  "wikipedia": "https://en.wikipedia.org/wiki/United_Airlines_Flight_811",
-  "audio": [
-    {
-      "title": "LL-Q36236 (mal)-BhagyaMohan-കഥീകരിക്കുക.wav",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/LL-Q36236_%28mal%29-BhagyaMohan-%E0%B4%95%E0%B4%A5%E0%B5%80%E0%B4%95%E0%B4%B0%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%95.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "page": "https://commons.wikimedia.org/wiki/File:LL-Q36236_(mal)-BhagyaMohan-%E0%B4%95%E0%B4%A5%E0%B5%80%E0%B4%95%E0%B4%B0%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%95.wav",
-      "license": "CC BY-SA 4.0",
-      "description": "Audio pronunciation file from the Lingua Libre  project.",
-      "duration": 1.19,
-      "kind": "audio"
-    }
-  ]
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Airlines_Flight_811"
 }

@@ -26,7 +26,7 @@ UA = "blackbox-pipeline/1.0 (https://dhruvramasubban.com; dhruvramasubban@gmail.
 AUDIO_EXT = (".ogg", ".oga", ".mp3", ".wav", ".flac", ".opus", ".mid", ".webm")
 OK_LICENSE = re.compile(r"public domain|\bpd\b|cc[- ]|creative commons|no restrictions", re.I)
 # news clips, interviews and narration are not recordings from the event
-NOT_RECORDING = re.compile(r"voice of america|\bvoa\b|\bnews\b|newscast|interview|podcast|documentary|narrat|pronunciation|\bEN-|\bspeech\b", re.I)
+NOT_RECORDING = re.compile(r"voice of america|\bvoa\b|\bnews\b|newscast|interview|podcast|documentary|narrat|pronunciation|\bEN-|\bspeech\b|-article-|LL-Q", re.I)
 
 
 def is_recording(f):
