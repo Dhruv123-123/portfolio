@@ -1,0 +1,230 @@
+{
+  "id": "wd_q135324764",
+  "qid": "Q135324764",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "1963 Air Nautic Vickers Viking crash",
+  "flight_number": null,
+  "date": "1963-09-12",
+  "time_reference": "UTC",
+  "t0": "1963-09-12T23:29:00Z",
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau of Enquiry and Analysis for Civil Aviation Safety",
+      "country": "France",
+      "role": "lead",
+      "report_id": "f-er630912",
+      "report_title": "Enquête sur l'accident survenu le 12 septembre 1963 à Py (Pyrénées-Orientales) à l'avion Viking F-BJER de la Compagnie Air Nautic",
+      "report_date": "1966-09-24",
+      "url": "https://bea.aero/fileadmin/documents/docspa/1963/f-er630912/pdf/f-er630912_06.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Vickers Viking 1-B",
+    "family": "Viking",
+    "manufacturer": "Vickers",
+    "registration": "F-BJER"
+  },
+  "operator": "Air Nautic",
+  "route": {
+    "from": "LGW",
+    "from_name": "London-Gatwick",
+    "to": "PGF",
+    "to_name": "Perpignan"
+  },
+  "location": {
+    "name": "Canigó mountain near Py",
+    "country": "France",
+    "lat": 42.5,
+    "lon": 2.39,
+    "altitude_ft": 5937
+  },
+  "phase": "descent",
+  "occupants": 40,
+  "fatalities": 40,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "A Vickers Viking charter aircraft operating Air Nautic flight from London-Gatwick to Perpignan crashed into the north face of Canigó mountain in France on September 12, 1963, killing all 40 occupants. The crew made significant navigation errors during descent in poor weather conditions with limited VOR and navigation equipment. The pilots selected a direct route and failed to use available navigation aids, resulting in controlled flight into terrain. Crew fatigue from extended duty hours and inadequate company procedures and training contributed to the accident.",
+  "probable_cause": "The probable cause of this accident was navigation errors made during descent in poor weather conditions, resulting in controlled flight into terrain. The navigation errors resulted from errors of judgment including: selection of a direct route Limoges-Perpignan without accurate position reporting despite known poor arrival conditions; non-use of the Toulouse and Istres VORs, the only precise navigation means available in the Perpignan region under the stormy conditions; and maintaining a southerly heading at 6,000 feet for three minutes past the estimated arrival time while the crew was manifestly uncertain of their position (p. 390-391). Additional contributing factors included crew fatigue from duty hours exceeding normal limitations, inadequate training and company procedures, limited navigation equipment (only one VOR, no ILS or radio altimeter), and poor meteorological conditions with radio disturbances.",
+  "factors": [
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "The crew made navigation errors during descent, selecting a direct route without accurate position reporting and failing to use available VORs for positioning (p. 390-391)."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Air Nautic was aware that the captain and copilot's certifications were issued under special authorization rather than through normal qualifications, and company training procedures were minimal or nonexistent (p. 388-389)."
+    },
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "The crew members had worked many flight hours in recent months exceeding normal limitations and approaching absolute maximum regulatory limits, placing them in a state of fatigue prejudicial to their efficiency (p. 389)."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Weather conditions in the region were particularly stormy with thunderstorms and rain, causing radio-electric disturbances and limiting visibility at approach to Perpignan (p. 389)."
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "contributing",
+      "evidence": "Air Nautic's operating manuals and company procedures were minimal or nonexistent, not providing adequate guidance for operations in adverse conditions (p. 389)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft crashed into the north face of Canigó mountain, with impact occurring in normal cruise configuration at a few meters below a ridge on the Canigó massif (p. 390)."
+    }
+  ],
+  "chain": [
+    ["navigation_error", "cfit"],
+    ["inadequate_training", "navigation_error"],
+    ["fatigue", "navigation_error"],
+    ["low_visibility", "navigation_error"],
+    ["operator_safety_culture", "navigation_error"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "20:13",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Vickers Viking F-BJER departed London-Gatwick Airport on September 11 at 20:13 UTC bound for Perpignan (p. 322).",
+      "factors": []
+    },
+    {
+      "t": 660,
+      "clock": "20:24",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft reached cruise altitude (flight level 90) at 20:24 and followed planned route via Seaford beacon, Amboise, Limoges and Toulouse (p. 322).",
+      "factors": []
+    },
+    {
+      "t": 5115,
+      "clock": "22:15",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft arrived over Limoges at approximately 22:15 and requested direct routing to Perpignan (p. 322).",
+      "factors": []
+    },
+    {
+      "t": 5880,
+      "clock": "22:58",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft announced crossing boundary between Bordeaux and Marseille flight information regions at 22:58 (p. 322).",
+      "factors": []
+    },
+    {
+      "t": 6480,
+      "clock": "23:08",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Marseille control authorized descent to flight level 65; crew received weather information indicating thunderstorm with rain on terrain (p. 322).",
+      "factors": []
+    },
+    {
+      "t": 6900,
+      "clock": "23:15",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Authorized descent to flight level 55; ceiling was deteriorating at limits of company minimums (p. 322).",
+      "factors": []
+    },
+    {
+      "t": 6960,
+      "clock": "23:16",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "F-BJER entered contact with Perpignan approach control; directed to maintain flight level 60 due to QNH value (p. 322).",
+      "factors": []
+    },
+    {
+      "t": 7020,
+      "clock": "23:17",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Perpignan reported thunderstorm with rain on terrain (p. 322).",
+      "factors": ["low_visibility"]
+    },
+    {
+      "t": 7140,
+      "clock": "23:19",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Weather deterioration reported, ceiling at limit of company minimums (p. 322).",
+      "factors": ["low_visibility"]
+    },
+    {
+      "t": 7680,
+      "clock": "23:28",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Crew requested QDM (magnetic heading) from tower to direct to station, unable to obtain due to Perpignan lacking DF equipment; crew reported radiocompass indications were unusable due to violent thunderstorms (p. 322).",
+      "factors": ["navigation_error"]
+    },
+    {
+      "t": 7740,
+      "clock": "23:29",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Aircraft made last radio communication at 23:29 UTC; crew manifestly uncertain of position, maintaining southerly heading at 6,000 feet three minutes past estimated arrival time (p. 390).",
+      "factors": ["navigation_error"]
+    },
+    {
+      "t": 7800,
+      "clock": "23:30",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft ceased responding to repeated radio calls; search operations commenced immediately and discovered wreckage in normal cruise configuration impacting north face of Canigó mountain at 1,810 meters altitude (p. 322, 390).",
+      "factors": ["cfit"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Improved navigation equipment requirements for international charter operations",
+    "Minimum VOR and radio-compass installation standards for high-altitude cruise aircraft",
+    "Enhanced crew rest and duty time regulations for charter operators",
+    "Standardized company operations manuals and procedures requirements"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/fileadmin/documents/docspa/1963/f-er630912/pdf/f-er630912_06.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read sections from BEA French official report (f-er630912) covering accident circumstances, investigation findings, and conclusions",
+      "Twelve events with clock times extracted from narrative",
+      "All factor ids verified against taxonomy",
+      "Report in French; translated key findings for extraction",
+      "No specific numbered recommendations in original 1963 report format",
+      "Crew fatigue identified as significant contributing factor",
+      "Navigation errors resulted from inadequate equipment and crew training"
+    ]
+  }
+}

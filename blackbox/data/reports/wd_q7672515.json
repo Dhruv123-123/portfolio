@@ -1,0 +1,271 @@
+{
+  "id": "wd_q7672515",
+  "qid": "Q7672515",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "1994 St. Louis Airport collision",
+  "flight_number": "TW427",
+  "date": "1994-11-22",
+  "time_reference": "CST",
+  "t0": "1994-11-22T22:01:23-06:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-95-05",
+      "report_title": "Runway Collision Involving Trans World Airlines Flight 427 and Superior Aviation Cessna 441",
+      "report_date": "1995-08-30",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9505.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas MD-82",
+    "family": "MD-80",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "N954U"
+  },
+  "operator": "Trans World Airlines",
+  "route": {
+    "from": "STL",
+    "from_name": "St. Louis Lambert International Airport",
+    "to": "DEN",
+    "to_name": "Denver International Airport"
+  },
+  "location": {
+    "name": "St. Louis Lambert International Airport",
+    "country": "United States",
+    "lat": 38.7404,
+    "lon": -90.3583
+  },
+  "phase": "takeoff",
+  "occupants": 140,
+  "fatalities": 2,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "ARC",
+  "summary": "TWA Flight 427, an MD-82 with 140 occupants, collided with a Cessna 441 charter aircraft on runway 30R at St. Louis Lambert Airport on November 22, 1994. The Cessna pilot, who had been cleared to back-taxi on runway 31, mistakenly taxied onto the active runway 30R where the MD-82 was commencing its takeoff roll at approximately 80 knots. The right wing of the MD-82 struck and destroyed the Cessna, killing both occupants. Eight MD-82 passengers sustained minor injuries during evacuation.",
+  "probable_cause": "The probable cause of this accident was the Cessna 441 pilot's mistaken belief that his assigned departure runway was runway 30R, which resulted in his undetected entrance onto runway 30R, which was being used by the MD-82 for its departure. Contributing to the accident was the lack of ATIS and other ATC information regarding the occasional use of runway 31 for departure. The utilization of an operational ASDE-3, and particularly ASDE-3 enhanced with AMASS, could have prevented this accident (p. 56).",
+  "factors": [
+    {
+      "id": "atc_communication_error",
+      "role": "initiating",
+      "evidence": "The ground controller used non-standard phraseology when instructing the Cessna pilot to 'back-taxi into position hold runway three one' without requiring pilot readback confirmation (p. 48)."
+    },
+    {
+      "id": "wrong_runway",
+      "role": "contributing",
+      "evidence": "The Cessna pilot's mistaken belief about his assigned runway resulted in him taxiing onto runway 30R instead of runway 31 (p. 48)."
+    },
+    {
+      "id": "airport_infrastructure",
+      "role": "contributing",
+      "evidence": "ATIS information did not reference runway 31 as an active runway for departure, contributing to the pilot's confusion (p. 48)."
+    },
+    {
+      "id": "ground_collision",
+      "role": "outcome",
+      "evidence": "The right wing of the MD-82 tore the horizontal and vertical stabilizers off the fuselage of the Cessna 441 during the collision (p. 11)."
+    }
+  ],
+  "chain": [
+    ["atc_communication_error", "wrong_runway"],
+    ["airport_infrastructure", "wrong_runway"],
+    ["wrong_runway", "ground_collision"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "22:01:23",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Local controller cleared MD-82 Flight 427 for takeoff on runway 30R with heading 335 (p. 10).",
+      "factors": []
+    },
+    {
+      "t": 66,
+      "clock": "22:02:29",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "MD-82 taxied onto runway 30R and began forward movement (p. 10).",
+      "factors": []
+    },
+    {
+      "t": 66,
+      "clock": "22:02:29",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "atc",
+      "text": "Cessna 441 pilot transmitted 'Kilo Mike ready to go on the right side' to local controller, indicating he was taxiing onto runway 30R instead of runway 31 (p. 10).",
+      "factors": ["wrong_runway"]
+    },
+    {
+      "t": 78,
+      "clock": "22:02:41",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "First officer called out reaching 80 knots airspeed during takeoff acceleration (p. 3).",
+      "factors": []
+    },
+    {
+      "t": 80,
+      "clock": "22:02:43",
+      "phase": "takeoff",
+      "actor": "PM",
+      "kind": "crew_speech",
+      "text": "Additional crew member in jumpseat yelled 'There's an airplane!' alerting the flight crew to the Cessna on the runway (p. 11).",
+      "factors": ["ground_collision"]
+    },
+    {
+      "t": 83,
+      "clock": "22:02:46",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Both pilots applied brakes; captain applied hard left rudder attempting to avoid collision with Cessna (p. 11).",
+      "factors": []
+    },
+    {
+      "t": 86,
+      "clock": "22:02:49",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Right wing of MD-82 struck tail cone and fuselage structure of Cessna 441, separating horizontal and vertical stabilizers from fuselage (p. 11).",
+      "factors": ["ground_collision"]
+    },
+    {
+      "t": 88,
+      "clock": "22:02:51",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "MD-82 flight crew continued abort and brought aircraft to stop on left side of runway 30R near taxiway November intersection (p. 11).",
+      "factors": []
+    },
+    {
+      "t": 90,
+      "clock": "22:02:53",
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "ARFF personnel secured Cessna 441 with right engine still running; aircraft destroyed (p. 11).",
+      "factors": ["ground_collision"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-95-86",
+      "to": "FAA",
+      "text": "Revise Federal Aviation Regulations to require pilots to illuminate all taxi, landing, and logo lights, or otherwise enhance the conspicuity of their aircraft when operating on an active runway (including runway crossing and position-and-hold operations).",
+      "status": "open",
+      "trigger_factors": ["ground_collision"]
+    },
+    {
+      "id": "A-95-87",
+      "to": "FAA",
+      "text": "Examine the feasibility of requiring pilots to use aircraft anticollision/strobe lights when holding in position on active runways.",
+      "status": "open",
+      "trigger_factors": ["ground_collision"]
+    },
+    {
+      "id": "A-95-88",
+      "to": "FAA",
+      "text": "Define the commonly used term 'back-taxi' in the Pilot-Controller Glossary, and provide an explanation of the use of the term and application of the procedure in the Airman's Information Manual and FAA Order 7110.65.",
+      "status": "open",
+      "trigger_factors": ["atc_communication_error"]
+    },
+    {
+      "id": "A-95-89",
+      "to": "FAA",
+      "text": "Require air traffic control personnel to make every possible effort to use as few frequencies as possible when positions are combined, and to provide notice of such on the Automatic Terminal Information Service where applicable.",
+      "status": "open",
+      "trigger_factors": ["airport_infrastructure"]
+    },
+    {
+      "id": "A-95-90",
+      "to": "FAA",
+      "text": "Continue to develop, publish, and encourage the implementation of procedures such as automated flight clearances and standard taxi routes to reduce radio frequency congestion during ground operations.",
+      "status": "open",
+      "trigger_factors": ["atc_communication_error"]
+    },
+    {
+      "id": "A-95-91",
+      "to": "FAA",
+      "text": "Mass-mail to all currently certificated pilots FAA publications on reducing runway incursions and airport improvement information, such as airport signage changes.",
+      "status": "open",
+      "trigger_factors": ["wrong_runway"]
+    },
+    {
+      "id": "A-95-92",
+      "to": "FAA",
+      "text": "Require flight instructors to stress airport surface operations, including airport markings, signs, and lighting; situational awareness; clearance readbacks; and proper phraseology during initial training and biennial flight reviews.",
+      "status": "open",
+      "trigger_factors": ["wrong_runway", "atc_communication_error"]
+    },
+    {
+      "id": "A-95-93",
+      "to": "FAA",
+      "text": "Require that initial and recurrent air carrier pilot training programs include training in airport surface movement operations, and familiarization with airport markings, signs, and lighting.",
+      "status": "open",
+      "trigger_factors": ["wrong_runway"]
+    },
+    {
+      "id": "A-95-94",
+      "to": "FAA",
+      "text": "Continue research and development efforts to provide airports that are not scheduled to receive Airport Surface Detection Equipment with an alternate, cost-effective system, such as the ground induction loop, to bring controller and pilot attention to pending runway incursions in time to prevent ground collisions.",
+      "status": "open",
+      "trigger_factors": ["ground_collision"]
+    },
+    {
+      "id": "A-95-95",
+      "to": "FAA",
+      "text": "Require that Automatic Terminal Information Service broadcasts at Lambert-St. Louis International Airport reference runways that are being used as secondary or occasionally active runways.",
+      "status": "open",
+      "trigger_factors": ["airport_infrastructure"]
+    },
+    {
+      "id": "A-95-96",
+      "to": "FAA",
+      "text": "Convene a joint FAA/industry task force on human performance initiatives to produce human performance-related airport surface operation improvements that could be readily implemented, are not cost prohibitive, and would provide additional safety measures during surface operations by mitigating human error.",
+      "status": "open",
+      "trigger_factors": ["atc_communication_error", "wrong_runway"]
+    },
+    {
+      "id": "A-95-97",
+      "to": "FAA",
+      "text": "Employ an independent source to conduct a survey of the terminal air traffic control staff, similar to the MITRE Corporation study, to determine the scope and magnitude of the runway incursion problem and recommendations for reduction.",
+      "status": "open",
+      "trigger_factors": ["atc_communication_error"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "ATIS now references all active runways including secondary/occasional runways at major airports",
+    "Standardization of 'back-taxi' terminology and procedures in ATC communications",
+    "Enhanced pilot training on ground operations and airport surface awareness"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9505.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read sections 1.1 (History of Flights), Probable Cause, and Recommendations from NTSB AAR95-05",
+      "Nine events with precise clock times extracted from narrative",
+      "All factor ids verified against taxonomy",
+      "Twelve numbered recommendations from NTSB report pages 56-58"
+    ]
+  }
+}

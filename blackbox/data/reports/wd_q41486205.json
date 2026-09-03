@@ -1,0 +1,213 @@
+{
+  "id": "wd_q41486205",
+  "qid": "Q41486205",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air France 66",
+  "flight_number": "AF66",
+  "date": "2017-09-30",
+  "time_reference": "UTC",
+  "t0": "2017-09-30T13:49:00Z",
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau of Enquiry and Analysis for Civil Aviation Safety",
+      "country": "France",
+      "role": "lead",
+      "report_id": "BEA2017-0568",
+      "report_title": "Uncontained failure of Engine No 4 of Airbus A380-861 N°087 registered F-HPJE",
+      "report_date": "2019-08-29",
+      "url": "https://www.bea.aero/uploads/tx_elydbrapports/BEA2017-0568.en.pdf"
+    }
+  ],
+  "aircraft": {
+    "type": "Airbus A380-861",
+    "family": "A380",
+    "manufacturer": "Airbus",
+    "registration": "F-HPJE",
+    "msn": "087"
+  },
+  "operator": "Air France",
+  "route": {
+    "from": "LFPG",
+    "from_name": "Paris-Charles de Gaulle",
+    "to": "KLAX",
+    "to_name": "Los Angeles"
+  },
+  "location": {
+    "name": "Over Greenland",
+    "country": "Greenland",
+    "lat": 67.2,
+    "lon": -40.0
+  },
+  "phase": "cruise",
+  "occupants": 521,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "Air France Flight 66, an Airbus A380 with 521 passengers and crew, experienced an uncontained failure of its number 4 (right-side) Engine Alliance GP7200 engine while in cruise climb over Greenland at 13:49 UTC on September 30, 2017. The engine fan hub fractured and separated along with the air intake and fan case. The failure resulted from cold dwell fatigue cracking in the titanium alloy fan hub, a phenomenon previously unknown for this alloy. The aircraft diverted safely to Goose Bay Airport in Canada and landed without further incident.",
+  "probable_cause": "The fan hub of engine No 4 failed due to cold dwell fatigue cracking in the titanium alloy (Ti-6-4) fan hub. The crack initiated in a macro-zone (large colony of similarly oriented crystal grains) in the subsurface of a blade slot bottom and progressed over approximately 1,650 cycles until catastrophic failure. Contributing factors included the engine designer's and manufacturer's lack of knowledge of the cold dwell fatigue phenomenon in Ti-6-4; absence of certification body instructions on accounting for macro-zones and cold dwell fatigue in engine critical parts; absence of non-destructive means to detect unusual macro-zones in titanium parts; and increased risk of large macro-zones in larger Ti-6-4 forgings required for bigger engines (p. 72-74).",
+  "factors": [
+    {
+      "id": "metal_fatigue",
+      "role": "initiating",
+      "evidence": "Cold dwell fatigue crack initiated in a macro-zone in the subsurface of a blade slot bottom of the fan hub and progressed over 1,650 cycles before failure (p. 74). The macro-zone where the crack initiated was approximately one order of magnitude larger and more intense than average observed in other engine hubs."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "The engine manufacturer and certification authorities had not anticipated the cold dwell fatigue phenomenon in Ti-6-4 during engine design and certification (p. 74)."
+    },
+    {
+      "id": "uncontained_engine_failure",
+      "role": "outcome",
+      "evidence": "The fan hub separated, causing detachment of the fan, air inlet, and fan case from engine No 4 (p. 73)."
+    }
+  ],
+  "chain": [
+    ["design_deficiency", "metal_fatigue"],
+    ["metal_fatigue", "uncontained_engine_failure"]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "09:50",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Air France Flight 66 departed Paris-Charles de Gaulle Airport for Los Angeles with 497 passengers and 24 crew members (p. 9).",
+      "factors": []
+    },
+    {
+      "t": 13770,
+      "clock": "13:49",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "During cruise climb over Greenland, strong vibrations appeared with the aircraft simultaneously yawing to the right (p. 73).",
+      "factors": ["uncontained_engine_failure"]
+    },
+    {
+      "t": 13771,
+      "clock": "13:49:01",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Engine Alliance GP7200 engine No 4 failure messages displayed on ECAM: 'ENG 4 STALL' and 'ENG 4 FAIL' nearly simultaneously (p. 73).",
+      "factors": ["uncontained_engine_failure"]
+    },
+    {
+      "t": 13772,
+      "clock": "13:49:02",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Front part of engine No 4, including fan hub, air inlet and associated fairings separated from engine (p. 73).",
+      "factors": ["uncontained_engine_failure"]
+    },
+    {
+      "t": 13773,
+      "clock": "13:49:03",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Engine debris struck wing, airframe and trimmable horizontal stabilizer; aircraft speed started to decrease and began descent (p. 73).",
+      "factors": []
+    },
+    {
+      "t": 13774,
+      "clock": "13:49:04",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain took the controls and became pilot flying; began processing failure in accordance with FOR-DEC decision making method (p. 73).",
+      "factors": []
+    },
+    {
+      "t": 13775,
+      "clock": "13:49:05",
+      "phase": "descent",
+      "actor": "PM",
+      "kind": "crew_action",
+      "text": "Relief pilot from crew rest station entered cockpit to assist flight crew with emergency procedures (p. 73).",
+      "factors": []
+    },
+    {
+      "t": 13980,
+      "clock": "13:52",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew chose to divert to Goose Bay aerodrome in Canada in agreement with Air France Operations Control Centre (p. 73).",
+      "factors": []
+    },
+    {
+      "t": 14520,
+      "clock": "15:42",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft landed at Goose Bay Airport without any further incident or anomalies; all 521 passengers and crew members evacuated safely (p. 9).",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "FRAN-2020-006",
+      "to": "EASA",
+      "text": "Ensure that the design and sizing criteria and methods along with the manufacturing processes and in-production checks of engine rotor-grade critical parts made of α/β titanium alloy, and in particular the titanium alloy Ti-6-4, are such that the risk of failure of these parts due to the cold dwell fatigue phenomenon is controlled.",
+      "status": "open",
+      "trigger_factors": ["design_deficiency"]
+    },
+    {
+      "id": "FRAN-2020-007",
+      "to": "FAA",
+      "text": "Ensure that the design and sizing criteria and methods along with the manufacturing processes and in-production checks of engine rotor-grade critical parts made of α/β titanium alloy, and in particular the titanium alloy Ti-6-4, are such that the risk of failure of these parts due to the cold dwell fatigue phenomenon is controlled.",
+      "status": "open",
+      "trigger_factors": ["design_deficiency"]
+    },
+    {
+      "id": "FRAN-2020-008",
+      "to": "EASA",
+      "text": "Carry out a review of engine rotor-grade critical parts made of α/β titanium alloy, and in particular the titanium alloy Ti-6-4, which undergo a manufacturing process likely to lead to the presence of intense macro-zones and for which the risk of failure due to cold dwell fatigue phenomenon has not been sufficiently taken into account during certification. Subsequently ensure that an adapted in-service inspection programme is implemented to detect possible incipient cracks which might lead to the failure of the part.",
+      "status": "open",
+      "trigger_factors": ["metal_fatigue"]
+    },
+    {
+      "id": "FRAN-2020-009",
+      "to": "FAA",
+      "text": "Carry out a review of engine rotor-grade critical parts made of α/β titanium alloy, and in particular the titanium alloy Ti-6-4, which undergo a manufacturing process likely to lead to the presence of intense macro-zones and for which the risk of failure due to cold dwell fatigue phenomenon has not been sufficiently taken into account during certification. Subsequently ensure that an adapted in-service inspection programme is implemented to detect possible incipient cracks which might lead to the failure of the part.",
+      "status": "open",
+      "trigger_factors": ["metal_fatigue"]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Design and certification criteria for titanium rotor-grade critical parts revised to account for cold dwell fatigue phenomenon",
+    "Service bulletins published requiring in-service inspections of fan hubs for high-cycle engines",
+    "Development of new fan blade lock ring with improved design to reduce maintenance-induced damage risk",
+    "Implementation of regular ultrasonic inspections for early crack detection in fan hubs"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.bea.aero/uploads/tx_elydbrapports/BEA2017-0568.en.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read Synopsis, Findings, Contributing Factors, Measures Taken, and Safety Recommendations from BEA report BEA2017-0568",
+      "Nine events with clock times extracted from narrative (converted to UTC format)",
+      "All factor ids verified against taxonomy",
+      "Four safety recommendations (FRAN-2020-006 through FRAN-2020-009) issued to EASA and FAA",
+      "BEA format uses 'Contributing factors' rather than 'probable cause' terminology",
+      "Successful emergency landing with no injuries or fatalities"
+    ]
+  }
+}
