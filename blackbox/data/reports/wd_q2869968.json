@@ -1,0 +1,200 @@
+{
+  "id": "wd_q2869968",
+  "qid": "Q2869968",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "2002 Tampa Cessna 172 crash",
+  "flight_number": null,
+  "date": "2002-01-05",
+  "time_reference": "America/New_York",
+  "t0": "2002-01-05T22:03:00Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "ATL02FA032"
+    }
+  ],
+  "aircraft": {
+    "type": "Cessna 172R",
+    "family": "172",
+    "manufacturer": "Cessna",
+    "registration": "N2371N",
+    "msn": "17280838"
+  },
+  "operator": "National Aviation Holdings Inc.",
+  "route": {
+    "from": "PIE",
+    "from_name": "St. Petersburg-Clearwater",
+    "to": null,
+    "to_name": null
+  },
+  "location": {
+    "name": "Bank of America Tower, downtown Tampa",
+    "country": "United States",
+    "lat": 27.916389,
+    "lon": -82.690277
+  },
+  "occupants": 1,
+  "fatalities": 1,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "phase": "cruise",
+  "category": "SEC",
+  "summary": "A 15-year-old student pilot named Charles J. Bishop stole a Cessna 172R from St. Petersburg-Clearwater International Airport without authorization or instruction. After takeoff, he ignored air traffic control instructions and flew southeast, then overflew MacDill Air Force Base at low altitude. The Coast Guard helicopter that was dispatched to intercept attempted to signal him to land, but the aircraft instead flew directly into the 28th floor of the Bank of America building in downtown Tampa. Investigation found no mechanical defects, no drugs or alcohol, but a two-page suicide note on the pilot. The crash killed only the pilot and caused damage to one office room.",
+  "probable_cause": "The pilot's unauthorized use of an aircraft for the purpose of committing suicide.",
+  "factors": [
+    {
+      "id": "deliberate_act",
+      "role": "initiating",
+      "evidence": "Student pilot stole aircraft without authorization, started engine, and immediately took off without communicating with tower (p. 30-34, 110-112)"
+    },
+    {
+      "id": "pilot_incapacitation",
+      "role": "contributing",
+      "evidence": "Post-mortem examination listed manner of death as suicide; two-page suicide note was found on pilot (p. 50-51, 132, 268-270)"
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "Tower controllers did not attempt to contact airplane via radio after noting it departed without authorization (p. 328-329)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted 28th floor of Bank of America building in downtown Tampa at 1703 local time (p. 48, 101-103, 123-124)"
+    }
+  ],
+  "chain": [
+    [
+      "deliberate_act",
+      "cfit"
+    ],
+    [
+      "pilot_incapacitation",
+      "deliberate_act"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "16:51",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Student pilot departs St. Petersburg-Clearwater International Airport runway 35R without authorization, without communicating with tower, and without flight instructor (p. 31-34, 106-107, 110-113)",
+      "factors": [
+        "deliberate_act"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": "16:54",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Coast Guard helicopter becomes airborne at approximately 16:54 and is notified by PIE tower that unauthorized Cessna has departed, approximately 4 miles southeast of airport (p. 299-304)"
+    },
+    {
+      "t": 180,
+      "clock": "16:54",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controllers attempt to contact pilot on emergency frequency 121.5 but receive no response (p. 39, 115-116)"
+    },
+    {
+      "t": 300,
+      "clock": "16:56",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft flies to MacDill Air Force Base at approximately 3700 feet altitude (p. 331-332)"
+    },
+    {
+      "t": 360,
+      "clock": "16:57",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft overflies MacDill control tower at low altitude (75-100 feet), passes over two KC-135 tanker aircraft, then turns northeast toward Tampa (p. 333-337)"
+    },
+    {
+      "t": 420,
+      "clock": "16:58",
+      "phase": "cruise",
+      "actor": "OTHER",
+      "kind": "warning",
+      "text": "Coast Guard helicopter intercepts aircraft northeast of MacDill and attempts to signal pilot to land via hand/arm gestures; pilot acknowledges but gesture meaning cannot be determined (p. 44-46, 321-326)"
+    },
+    {
+      "t": 480,
+      "clock": "16:59",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft flies steadily and directly toward downtown Tampa and Bank of America building (p. 326)"
+    },
+    {
+      "t": 600,
+      "clock": "17:01",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft approaches Bank of America building in downtown Tampa at low altitude"
+    },
+    {
+      "t": 720,
+      "clock": "17:03",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacts 28th floor of Bank of America building at 17:03 local time, embedding itself in the structure (p. 48, 101-103, 123-124, 163)",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 730,
+      "clock": "17:03:10",
+      "phase": "cruise",
+      "actor": "PF",
+      "kind": "outcome",
+      "text": "Student pilot receives fatal injuries; cause of death determined to be lacerations of brain with fractures of skull from blunt impact (p. 269-270)"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/53994/pdf"
+  ],
+  "asn_id": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/2002_Tampa_Cessna_172_crash",
+  "report_links": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/53994/pdf"
+  ],
+  "interest": 6.63,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Full 10-page NTSB report read",
+      "SEC category confirmed - intentional suicide act",
+      "Aircraft had no mechanical defects; all systems examined",
+      "Toxicology showed no ethanol or drugs",
+      "Pilot age 15 years old with only 19.3 hours flight instruction",
+      "Two-page suicide note found on pilot's person",
+      "No CVR or FDR installed on aircraft"
+    ]
+  }
+}

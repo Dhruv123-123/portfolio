@@ -1,0 +1,214 @@
+{
+  "id": "wd_q63456017",
+  "qid": "Q63456017",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Miami Air Flight 293",
+  "flight_number": "AUG293",
+  "date": "2019-05-03",
+  "time_reference": "America/New_York",
+  "t0": "2019-05-03T02:42:22Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "DCA19FA143"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-800",
+    "family": "737",
+    "manufacturer": "Boeing",
+    "registration": "N732MA"
+  },
+  "operator": "Miami Air International",
+  "route": {
+    "from": "MUGM",
+    "from_name": "Guantanamo Bay",
+    "to": "KNIP",
+    "to_name": "Naval Air Station Jacksonville"
+  },
+  "location": {
+    "name": "Naval Air Station Jacksonville, runway 10",
+    "country": "United States"
+  },
+  "occupants": 143,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "phase": "landing",
+  "category": "OTHR",
+  "summary": "Miami Air Flight 293, a Boeing 737-800 military charter, landed on runway 10 at Jacksonville Naval Air Station during heavy rain and thunderstorms. The aircraft touched down approximately 1,600 feet beyond the displaced threshold, reducing available landing distance to 7,800 feet. Hydroplaning on the wet ungrooved runway prevented effective braking. The left thrust reverser was inoperative. The aircraft overran the runway, struck a rock embankment, and came to rest in the St. Johns River in shallow water. All 143 occupants were rescued with 21 injured but no fatalities.",
+  "probable_cause": "Hydroplaning caused by heavy rainfall on the ungrooved runway prevented effective braking. Pilot errors during approach and landing, including a long touchdown, had little effect on the final outcome as the aircraft would have been unable to stop regardless due to hydroplaning conditions.",
+  "factors": [
+    {
+      "id": "contaminated_runway",
+      "role": "initiating",
+      "evidence": "Heavy rainfall on ungrooved runway 10 caused hydroplaning which precluded effective braking action (p. 4-6)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Weather observation at 2122 reported 5 miles visibility with heavy rain, thunderstorms, and mist; visibility reduced to 3 miles by 2145 (p. 20-31)"
+    },
+    {
+      "id": "convective_weather",
+      "role": "latent",
+      "evidence": "Heavy thunderstorms with frequent lightning overhead at time of landing; cumulus clouds at 800-1,500 feet AGL (p. 20-31)"
+    },
+    {
+      "id": "tailwind_landing",
+      "role": "contributing",
+      "evidence": "Aircraft landed on runway 10 with wind from 240 degrees at 10 knots, creating tailwind component; using runway 10 reduced available landing distance to 7,800 feet due to displaced threshold (p. 79-80, 111-112)"
+    },
+    {
+      "id": "landing_long",
+      "role": "contributing",
+      "evidence": "Aircraft touched down approximately 1,600 feet beyond the displaced threshold, reducing available runway distance for landing (p. 85-86, 111-116)"
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "Aircraft overran runway 10, crossed overrun area, struck rock embankment, and came to rest in St. Johns River approximately 1,200 feet from end of runway (p. 85-92)"
+    }
+  ],
+  "chain": [
+    [
+      "contaminated_runway",
+      "runway_overrun"
+    ],
+    [
+      "tailwind_landing",
+      "landing_long"
+    ],
+    [
+      "landing_long",
+      "runway_overrun"
+    ]
+  ],
+  "events": [
+    {
+      "t": -360,
+      "clock": "21:22",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Jacksonville approach control advises pilot to expect RNAV runway 28 approach with moderate-to-heavy precipitation on final approach (p. 42-48)"
+    },
+    {
+      "t": -240,
+      "clock": "21:24",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot requests runway 10 due to better weather appearance; controller advises moderate-to-heavy precipitation building over runway 10; pilot acknowledges and remains with runway 28 (p. 50-54)"
+    },
+    {
+      "t": -120,
+      "clock": "21:26",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller reports both runways 'pretty rough' and 'socked in'; pilot vectored for RNAV runway 28 approach (p. 56-62)"
+    },
+    {
+      "t": -60,
+      "clock": "21:30",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller advises pilot that runway 10 might be better as precipitation moving eastbound; pilot agrees 'yeah go ahead, let's do it' and is vectored for runway 10 approach (p. 70-74)"
+    },
+    {
+      "t": 30,
+      "clock": "21:37",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller clears flight for RNAV runway 10 approach; flight transferred to radar controller (p. 75-77)"
+    },
+    {
+      "t": 130,
+      "clock": "21:39",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Radar controller reports winds from 240 degrees at 10 knots and clears aircraft to land on runway 10 approximately 5 nautical miles from threshold (p. 78-81)"
+    },
+    {
+      "t": 230,
+      "clock": "21:41",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot reports field in sight to radar controller; no further communications before landing (p. 81-84)"
+    },
+    {
+      "t": 360,
+      "clock": "21:42",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft touches down approximately 1,600 feet beyond runway 10 displaced threshold; tire marks show touchdown point (p. 85-86, 111-116)"
+    },
+    {
+      "t": 480,
+      "clock": "21:43",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft hydroplanes on wet ungrooved runway, unable to maintain braking control; veers right of centerline and departs runway surface onto grass (p. 118-123)"
+    },
+    {
+      "t": 540,
+      "clock": "21:44",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft strikes rock embankment at end of runway 10 overrun area; both main landing gears separate and aircraft comes to rest in shallow water of St. Johns River approximately 1,200 feet from runway end (p. 85-92)"
+    },
+    {
+      "t": 600,
+      "clock": "21:45",
+      "phase": "landing",
+      "actor": "CABIN",
+      "kind": "outcome",
+      "text": "All 143 occupants evacuated using forward and overwing exits and deployed life rafts; 21 injured but no fatalities reported (p. 99-104)"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/Documents/DCA19FA143-investigative-update.pdf"
+  ],
+  "asn_id": "20190503-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Miami_Air_International_Flight_293",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/Documents/DCA19FA143-investigative-update.pdf",
+    "https://www.ntsb.gov/news/press-releases/Pages/NR20210804.aspx"
+  ],
+  "interest": 5.93,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "NTSB investigative update read (not final report)",
+      "Heavy rain with 0.63 inches precipitation since 2053 local time",
+      "Wind shifted from 350 degrees at landing to 240 degrees, creating tailwind",
+      "Left thrust reverser was inoperative",
+      "First officer had only 18 hours experience in Boeing 737",
+      "All occupants rescued with 21 injuries, zero fatalities",
+      "Probable cause from summary_record: hydroplaning on ungrooved runway"
+    ]
+  }
+}

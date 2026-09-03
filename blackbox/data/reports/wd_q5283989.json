@@ -1,0 +1,287 @@
+{
+  "id": "wd_q5283989",
+  "qid": "Q5283989",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "Divi Divi Air 014",
+  "flight_number": "DVR014",
+  "date": "2009-10-22",
+  "time_reference": "America/Curacao",
+  "t0": "2009-10-22T13:47:00Z",
+  "agency": "DSB",
+  "agencies": [
+    {
+      "code": "DSB",
+      "name": "Dutch Safety Board",
+      "country": "Netherlands",
+      "role": "lead",
+      "report_id": "2009090"
+    }
+  ],
+  "aircraft": {
+    "type": "Britten-Norman BN-2A-26 Islander",
+    "family": "Islander",
+    "manufacturer": "Britten-Norman",
+    "registration": "PJ-SUN"
+  },
+  "operator": "Divi Divi Air",
+  "route": {
+    "from": "CUR",
+    "from_name": "Curacao (Hato)",
+    "to": "BON",
+    "to_name": "Bonaire (Flamingo)"
+  },
+  "location": {
+    "name": "Caribbean Sea south of Klein Bonaire",
+    "country": "Netherlands Antilles"
+  },
+  "occupants": 10,
+  "fatalities": 1,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "phase": "descent",
+  "category": "ENGINE",
+  "summary": "A Britten-Norman BN-2A Islander departed Curacao with 1 pilot and 9 passengers bound for Bonaire. At approximately 3500 feet during climb, the starboard engine failed. The pilot elected to continue to Bonaire on one engine despite the aircraft's inability to maintain altitude. The aircraft was overloaded by approximately 9% of maximum structural weight. During descent to Bonaire, the pilot did not deploy flaps and made minimal effort to brief passengers on the emergency. The aircraft ditched in shallow water south of Klein Bonaire. All 9 passengers survived the impact but the pilot, who struck his head during landing and lost consciousness, drowned when the aircraft sank.",
+  "probable_cause": "The accident was caused by the failure of the starboard engine in cruise, combined with the pilot's decision to continue to the destination airport despite the aircraft being unable to maintain altitude due to structural overloading. Contributing factors included the pilot's inadequate preparation of passengers for the emergency landing, landing without flaps selected, insufficient company safety management and oversight of weight control procedures, and inadequate regulatory oversight of the airline's operations.",
+  "factors": [
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "Starboard engine ceased running at altitude approximately 3500 feet during initial climb phase (p. 16)"
+    },
+    {
+      "id": "weight_and_balance_error",
+      "role": "contributing",
+      "evidence": "Aircraft departed with overload of 9% above maximum structural take-off weight of 6600 lb (p. 25, 3467-3471)"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "With one engine inoperative, aircraft could not maintain altitude and descended at approximately 140 feet per minute average (p. 19)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Pilot undertook insufficient attempts to inform passengers about approaching emergency landing at sea after engine failure; safety briefing not properly understood by all passengers (p. 3484-3485)"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Pilot did not brief cabin crew or passengers effectively on emergency procedures, and landing was executed without proper configuration (flaps up)"
+    },
+    {
+      "id": "pilot_incapacitation",
+      "role": "outcome",
+      "evidence": "Pilot lost consciousness upon impact with water and drowned when aircraft sank (p. 26-27, 1322-1328)"
+    },
+    {
+      "id": "ditching",
+      "role": "outcome",
+      "evidence": "Aircraft touched down on water at position 0.7 nautical miles south of Klein Bonaire at 10:17 local time (p. 800-801)"
+    }
+  ],
+  "chain": [
+    [
+      "engine_failure",
+      "descent_below_minimums"
+    ],
+    [
+      "weight_and_balance_error",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "ditching"
+    ],
+    [
+      "inadequate_training",
+      "pilot_incapacitation"
+    ],
+    [
+      "ditching",
+      "pilot_incapacitation"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "09:47",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "system",
+      "text": "Aircraft takes off from Hato International Airport, Curacao with 1 pilot and 9 passengers"
+    },
+    {
+      "t": 180,
+      "clock": "09:50",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft climbs to flight level 035 (3500 feet) and pilot reduces power from climb to cruise power (p. 16)"
+    },
+    {
+      "t": 300,
+      "clock": "09:52",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Starboard engine fails during cruise at FL035. Pilot increases left engine power, feathers right propeller, and attempts restart (p. 16)",
+      "factors": [
+        "engine_failure"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": "09:52",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot reports to Hato Tower: 'Divi 014 requesting switch to Flamingo, priority landing with Flamingo, have lost one of the engines' (p. 16)"
+    },
+    {
+      "t": 600,
+      "clock": "09:57",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot contacts Flamingo Tower, reports one engine out, maintaining 3000 feet, 24 miles out from destination (p. 16)"
+    },
+    {
+      "t": 1260,
+      "clock": "10:08",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot reports 10 nautical miles from airport, flying at 1000 feet altitude, expecting to land in 10 minutes (p. 18)"
+    },
+    {
+      "t": 1500,
+      "clock": "10:12",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot reports 8 nautical miles away, 600 feet altitude, having trouble maintaining altitude (p. 18)"
+    },
+    {
+      "t": 1620,
+      "clock": "10:14",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot reports 6 nautical miles away, flying at 300 feet altitude (p. 18)"
+    },
+    {
+      "t": 1680,
+      "clock": "10:15",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Last radio contact: Pilot reports 5 nautical miles away, flying at 200 feet, still losing altitude, planning emergency landing (p. 18)"
+    },
+    {
+      "t": 1800,
+      "clock": "10:17",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacts water approximately 0.7 nautical miles south of Klein Bonaire with left wing slightly down; left front door breaks off on impact (p. 18-19)",
+      "factors": [
+        "ditching"
+      ]
+    },
+    {
+      "t": 1830,
+      "clock": "10:17:30",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "outcome",
+      "text": "Pilot strikes head on vertical door/window frame or instrument panel during impact and loses consciousness (p. 18-19)"
+    },
+    {
+      "t": 1900,
+      "clock": "10:18",
+      "phase": "landing",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "All 9 passengers exit aircraft through emergency exits; some sit on wings briefly; passengers form circle in water to support those without life jackets (p. 19)"
+    },
+    {
+      "t": 1920,
+      "clock": "10:18:20",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft sinks with pilot still on board as cabin fills rapidly with water following loss of left front door and shattered windscreen (p. 19)"
+    },
+    {
+      "t": 2100,
+      "clock": "10:22",
+      "phase": "landing",
+      "actor": "OTHER",
+      "kind": "crew_action",
+      "text": "Two boats with recreational divers arrive at scene approximately 5 minutes after ditching; passengers rescued and transferred to second boat (p. 19)"
+    },
+    {
+      "t": 2220,
+      "clock": "10:24",
+      "phase": "landing",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "Passengers arrive at Kralendijk at approximately 10:37 local time; 6 transported to hospital for examination, 3 others depart on own (p. 19)"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "1",
+      "to": "Divi Divi Air",
+      "text": "Demonstrate that the load and balance programme, the pilot training, the safety equipment and instructions of the Britten-Norman Islander aircraft in use are brought up to standard and comply with legal requirements and limitations specified by the aircraft manufacturer, and that risks of the load and balance programme are assessed and structurally controlled in the safety management system (p. 3604-3609)",
+      "status": "unknown"
+    },
+    {
+      "id": "2",
+      "to": "Minister of Traffic, Transport and Division of Urban Planning and Housing of Curacao",
+      "text": "Ensure that CARNA is correctly applied and user specifications by manufacturer of Britten-Norman Islander being used at airlines fall under supervision of Curacao Civil Aviation Authority in light of findings in conclusion 6 (p. 3613-3615)",
+      "status": "unknown"
+    },
+    {
+      "id": "3",
+      "to": "Minister of Traffic, Transport and Division of Urban Planning and Housing of Curacao",
+      "text": "Provide Dutch secretary of State of Infrastructure and Environment with follow-up status of ICAO audit 2008 findings in relation to findings in this report (p. 3616-3618)",
+      "status": "unknown"
+    },
+    {
+      "id": "4",
+      "to": "Governor of Bonaire",
+      "text": "Ensure that alerting process and emergency supporting services are improved by regularly practicing with deployment of multiple disciplines, assessment of practice and taking measures for arising shortcomings (p. 3620-3624)",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://onderzoeksraad.nl/rapport_divi_divi_engels_definitief-pdf/"
+  ],
+  "asn_id": "20091022-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Divi_Divi_Air_Flight_014",
+  "report_links": [
+    "https://onderzoeksraad.nl/rapport_divi_divi_engels_definitief-pdf/",
+    "https://onderzoeksraad.nl/en/onderzoek/crashed-en-route-britten-norman-bn-2a-26-south-of-klein-bonaire-22/"
+  ],
+  "interest": 7.03,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Sections read: Description of events (2.3), personal injury (2.4), aircraft info (2.8), survival aspects (2.17), conclusions (6), recommendations (7)",
+      "Engine model and specific failure cause not determined by investigation",
+      "Flaps position at impact could not be confirmed due to aircraft damage during recovery",
+      "Standard passenger weight discrepancy (160 lb on papers vs 187 lb actual) contributed to overloading calculation"
+    ]
+  }
+}

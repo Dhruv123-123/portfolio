@@ -1,0 +1,289 @@
+{
+  "id": "wd_q19801342",
+  "qid": "Q19801342",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "Asiana Airlines Flight 162",
+  "flight_number": "OZ162",
+  "date": "2015-04-14",
+  "time_reference": "Asia/Tokyo",
+  "t0": "2015-04-14T11:05:11Z",
+  "agency": "JTSB",
+  "agencies": [
+    {
+      "code": "JTSB",
+      "name": "Japan Transport Safety Board",
+      "country": "Japan",
+      "role": "lead",
+      "report_id": "AA2016-9"
+    }
+  ],
+  "aircraft": {
+    "type": "Airbus A320-200",
+    "family": "320",
+    "manufacturer": "Airbus",
+    "registration": "HL7762"
+  },
+  "operator": "Asiana Airlines",
+  "route": {
+    "from": "ICN",
+    "from_name": "Incheon",
+    "to": "HIJ",
+    "to_name": "Hiroshima"
+  },
+  "location": {
+    "name": "Hiroshima Airport, runway 28",
+    "country": "Japan"
+  },
+  "occupants": 86,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "phase": "landing",
+  "category": "LALT",
+  "summary": "Asiana Airlines Flight 162, an Airbus A320-200 en route from Incheon to Hiroshima, descended for approach in low visibility and darkness. The captain continued the descent below decision altitude without adequate visual references and did not execute a go-around as required when visual cues were lost. The first officer, acting as pilot monitoring, lost sight of the runway at decision altitude but failed to challenge the captain's decision to continue. The aircraft touched down short of the runway, struck the localizer antenna array, skidded across the runway surface, and came to rest on grass beyond the runway edge with 27 occupants injured. The probable causes were the captain's failure to execute a go-around when required, the first officer's failure to challenge the captain, and inadequate crew resource management, exacerbated by the airline's insufficient training on compliance with procedures.",
+  "probable_cause": "The aircraft undershot the runway when landing at Hiroshima airport in low visibility and darkness. The captain continued approaching without executing a go-around while visual references could not be identified continuously at or below the approach decision altitude, contrary to regulations and Standard Operating Procedures. The first officer, as pilot-monitoring, did not make a call-out of go-around immediately when he could not see the runway at decision altitude. The Crew Resource Management did not function appropriately. Contributing factors include insufficient education and training in the company for compliance with rules.",
+  "factors": [
+    {
+      "id": "descent_below_minimums",
+      "role": "initiating",
+      "evidence": "Aircraft continued descent below decision altitude of 1,500 ft without adequate visual references in darkness and low visibility (RVR 450-550 m) (p. 902-949)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Runway visual range was 1,700 m at 20:03:29 but decreased to 450 m by 20:04:45, below the approach minimum of 1,400 m (p. 918-925, 945)"
+    },
+    {
+      "id": "dark_night",
+      "role": "latent",
+      "evidence": "Approach was conducted in darkness; PIC noted that only airport lights were visible in pitch-dark night (p. 1020-1023)"
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "First officer lost sight of runway at decision altitude (20:04:42) but PIC continued approach; FO stated 'runway not in sight' (p. 942-944)"
+    },
+    {
+      "id": "go_around_not_flown",
+      "role": "contributing",
+      "evidence": "PIC continued descent below minimum descent altitude for 27 seconds after FO reported runway not in sight, finally calling for go-around at 20:05:11 (p. 942-1008)"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "FO lost sight of runway and stated 'runway not insight' at 20:04:44 but PIC did not respond appropriately; FO did not make assertive call-out of go-around (p. 123-139, 942-1031)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "Report notes insufficient education and training in company regarding compliance with Standard Operating Procedures and decision altitude procedures (p. 125-139)"
+    },
+    {
+      "id": "landing_long",
+      "role": "outcome",
+      "evidence": "Aircraft touched down short of runway, approximately 1,000 feet before runway threshold after striking localizer array (p. 123, 1041)"
+    },
+    {
+      "id": "hard_landing",
+      "role": "outcome",
+      "evidence": "Aircraft struck localizer antenna frame and skidded across runway surface bouncing about 3 times before veering off to left side in grass (p. 1041-1044)"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "descent_below_minimums"
+    ],
+    [
+      "dark_night",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "go_around_not_flown"
+    ],
+    [
+      "crm_breakdown",
+      "go_around_not_flown"
+    ],
+    [
+      "go_around_not_flown",
+      "landing_long"
+    ],
+    [
+      "landing_long",
+      "hard_landing"
+    ]
+  ],
+  "events": [
+    {
+      "t": -120,
+      "clock": "20:03:11",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain briefs first officer on approach to runway 28 with expected ILS runway 10 approach adjusted to RNAV runway 28 upon receipt of ATIS during descent (p. 1020-1023)"
+    },
+    {
+      "t": -90,
+      "clock": "20:03:41",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Hiroshima Tower reports wind 120 degrees at 4 knots and runway visual range of 1,700 m (p. 918)"
+    },
+    {
+      "t": -75,
+      "clock": "20:03:56",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain disengages autopilot at approximately 2,100 feet HAT (height above threshold), 132 knots, and switches to manual flying with flight director off (p. 920-921)"
+    },
+    {
+      "t": -15,
+      "clock": "20:04:36",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Auto call announces 'One hundred above' (100 feet to minimum descent altitude); first officer calls out and captain acknowledges (p. 930)"
+    },
+    {
+      "t": -10,
+      "clock": "20:04:41",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft descends below decision altitude of 1,500 feet; runway visual range has decreased to 550 meters (p. 931-932)"
+    },
+    {
+      "t": 0,
+      "clock": "20:05:11",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain calls 'No runway, go-around' and first officer responds 'Go-around'; captain pulls control stick to full nose-up and sets thrust levers to TOGA (p. 1006)"
+    },
+    {
+      "t": 3,
+      "clock": "20:05:14",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Vertical acceleration sharply increases and exceeds 1.7 G; pitch angle decreases (nose-down) from about 11 degrees; air-ground sensors indicate aircraft alternating between air and ground (p. 1008)"
+    },
+    {
+      "t": 6,
+      "clock": "20:05:17",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Vertical acceleration surpasses 2.0 G; aircraft is in contact with the localizer antenna frame structure (p. 1008)"
+    },
+    {
+      "t": 10,
+      "clock": "20:05:21",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft strikes localizer antenna array and touches down short of runway threshold, skidding and bouncing approximately 3 times along runway surface (p. 1041-1044)"
+    },
+    {
+      "t": 20,
+      "clock": "20:05:31",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain applies maximum braking and attempts to maintain runway direction; aircraft veers left (south) and comes to rest on grass area (p. 1044)"
+    },
+    {
+      "t": 30,
+      "clock": "20:05:41",
+      "phase": "landing",
+      "actor": "CABIN",
+      "kind": "outcome",
+      "text": "Flight attendants and passengers evacuate; no fire observed; 27 occupants injured during landing impact and evacuation (p. 1045)"
+    }
+  ],
+  "cvr": [
+    {
+      "t": -30,
+      "clock": "20:04:41",
+      "speaker": "SYS",
+      "text": "Minimum",
+      "translation": "Automatic call of minimum descent altitude reached"
+    },
+    {
+      "t": -26,
+      "clock": "20:04:45",
+      "speaker": "CAPT",
+      "text": "Wait a second (in Korean)",
+      "translation": "Continue for a moment"
+    },
+    {
+      "t": -25,
+      "clock": "20:04:46",
+      "speaker": "FO",
+      "text": "Ah (in Korean), runway not insight",
+      "translation": "Runway not in sight"
+    },
+    {
+      "t": 0,
+      "clock": "20:05:11",
+      "speaker": "CAPT",
+      "text": "No runway, go-around",
+      "translation": "No runway in sight, executing go-around"
+    },
+    {
+      "t": 1,
+      "clock": "20:05:11",
+      "speaker": "FO",
+      "text": "Yes. (in Korean) Go-around",
+      "translation": "Yes, go-around acknowledged"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "1",
+      "to": "Asiana Airlines",
+      "text": "The Company should reemphasize and reinforce the significance of compliance by flight crew members, while reviewing company procedures and ensuring comprehensive training (p. 169-171)"
+    },
+    {
+      "id": "2",
+      "to": "Asiana Airlines",
+      "text": "The Company should implement education and training that flight crew members should refer primarily to visual references, using flight instruments as supplementary tools appropriately, when approaching below decision altitude (p. 173-175)"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Asiana Airlines implemented enhanced training on approach procedures and decision altitude compliance"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.mlit.go.jp/jtsb/eng-air_report/HL7762.pdf"
+  ],
+  "asn_id": "20150414-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Asiana_Airlines_Flight_162",
+  "report_links": [
+    "https://www.mlit.go.jp/jtsb/eng-air_report/HL7762.pdf",
+    "https://www.mlit.go.jp/jtsb/aircraft/rep-acci/AA2016-9-4-HL7762.pdf"
+  ],
+  "interest": 6.05,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Full JTSB report read with detailed CVR transcript and FDR data",
+      "Detailed timeline extracted from pages 900-1050 covering approach and landing",
+      "RVR values documented decreasing from 1,700 m to 450 m during approach",
+      "Captain's post-accident statement indicates he was not conscious of flying lower than intended",
+      "First officer had never landed on runway 28 before this flight",
+      "All 86 occupants survived with 27 injured, no fatalities"
+    ]
+  }
+}
