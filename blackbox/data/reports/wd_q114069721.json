@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "Mutiny Bay, near Freeland, Whidbey Island",
-    "country": "United States"
+    "country": "United States",
+    "lat": 47.9903,
+    "lon": -122.585
   },
   "phase": "cruise",
   "occupants": 10,
@@ -65,9 +67,18 @@
     }
   ],
   "chain": [
-    ["maintenance_error", "stabilizer_trim_failure"],
-    ["stabilizer_trim_failure", "loss_of_pilot_control_authority"],
-    ["loss_of_pilot_control_authority", "loss_of_control_inflight"]
+    [
+      "maintenance_error",
+      "stabilizer_trim_failure"
+    ],
+    [
+      "stabilizer_trim_failure",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "loss_of_pilot_control_authority",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
@@ -86,7 +97,10 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft in cruise flight at altitudes between 600 and 700 feet mean sea level, groundspeed between 115 and 125 knots",
-      "state": {"alt": 650, "gs": 120},
+      "state": {
+        "alt": 650,
+        "gs": 120
+      },
       "factors": []
     },
     {
@@ -96,7 +110,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft began climb, reaching maximum altitude of about 1,000 feet mean sea level",
-      "state": {"alt": 1000},
+      "state": {
+        "alt": 1000
+      },
       "factors": []
     },
     {
@@ -106,7 +122,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft entered rapid nose-low, near-vertical descent and impacted water in Mutiny Bay; wreckage sank; all 10 occupants fatally injured",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     }
   ],
   "cvr": [],
@@ -116,7 +134,9 @@
       "to": "FAA",
       "text": "Require all operators of De Havilland Canada DHC-3 airplanes to conduct an immediate one-time inspection of the horizontal stabilizer actuator lock ring in accordance with the instructions in Viking Air Limited Service Letter DHC3-SL-27-001 and report their findings to the Federal Aviation Administration",
       "status": "unknown",
-      "trigger_factors": ["maintenance_error"],
+      "trigger_factors": [
+        "maintenance_error"
+      ],
       "priority": "urgent"
     },
     {
@@ -124,7 +144,9 @@
       "to": "Transport Canada",
       "text": "Require all operators of De Havilland Canada DHC-3 airplanes to conduct an immediate one-time inspection of the horizontal stabilizer actuator lock ring in accordance with the instructions in Viking Air Limited Service Letter DHC3-SL-27-001 and report their findings to Transport Canada",
       "status": "unknown",
-      "trigger_factors": ["maintenance_error"],
+      "trigger_factors": [
+        "maintenance_error"
+      ],
       "priority": "urgent"
     }
   ],
@@ -135,7 +157,9 @@
   ],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2208.pdf"],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2208.pdf"
+  ],
   "tier": "wikidata",
   "depth": "sections",
   "qid": "Q114069721",

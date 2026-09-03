@@ -45,8 +45,8 @@
   "location": {
     "name": "950 nautical miles south of Shemya, Aleutian Islands",
     "country": "International waters (North Pacific)",
-    "lat": null,
-    "lon": null
+    "lat": 30.0,
+    "lon": 172.0
   },
   "phase": "cruise",
   "occupants": 255,
@@ -568,5 +568,6 @@
       "Aircraft suffered substantial cabin interior damage; no external structural damage",
       "Vertical acceleration values from FDR data; attitude changes from FDR recordings"
     ]
-  }
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/China_Eastern_Airlines_Flight_583"
 }

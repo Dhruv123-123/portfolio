@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "North Sea, 11 nm northeast of Peterhead",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "lat": 57.554,
+    "lon": 0.0
   },
   "phase": "cruise",
   "occupants": 16,

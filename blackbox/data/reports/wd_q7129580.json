@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "San Francisco",
-    "country": "United States"
+    "country": "United States",
+    "lat": 16.311,
+    "lon": -61.768
   },
   "phase": "takeoff",
   "occupants": null,

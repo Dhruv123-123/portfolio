@@ -36,7 +36,9 @@
   },
   "location": {
     "name": "Whittier, California",
-    "country": "United States"
+    "country": "United States",
+    "lat": 33.9833,
+    "lon": -118.0667
   },
   "phase": "cruise",
   "occupants": 14,
@@ -74,10 +76,22 @@
     }
   ],
   "chain": [
-    ["visual_illusion", "loss_of_situational_awareness"],
-    ["loss_of_situational_awareness", "inadequate_monitoring"],
-    ["inadequate_monitoring", "midair_collision"],
-    ["ground_radar_unavailable", "midair_collision"]
+    [
+      "visual_illusion",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "midair_collision"
+    ],
+    [
+      "ground_radar_unavailable",
+      "midair_collision"
+    ]
   ],
   "events": [
     {
@@ -96,7 +110,10 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Twin Otter contacted LAX arrival radar, reported over Rose Hills, 23 nmi east of airport",
-      "state": {"alt": 2800, "hdg": 250},
+      "state": {
+        "alt": 2800,
+        "hdg": 250
+      },
       "factors": []
     },
     {
@@ -124,7 +141,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Controller transmitted advisory that helicopter was now at their 1130 position, 3 miles northbound. No response from Twin Otter.",
-      "factors": ["loss_of_situational_awareness"]
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
     },
     {
       "t": 720,
@@ -133,8 +152,15 @@
       "actor": "ENV",
       "kind": "env",
       "text": "Midair collision: Cessna 150 N11421 struck the left side of Twin Otter N6383 at approximately 90-degree angle at 2,200 ft, near Whittier. Both aircraft broke up in the air.",
-      "state": {"alt": 2200, "hdg": 250},
-      "factors": ["midair_collision", "visual_illusion", "inadequate_monitoring"]
+      "state": {
+        "alt": 2200,
+        "hdg": 250
+      },
+      "factors": [
+        "midair_collision",
+        "visual_illusion",
+        "inadequate_monitoring"
+      ]
     },
     {
       "t": 780,
@@ -143,7 +169,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Both aircraft destroyed by collision and subsequent ground impact, with wreckage scattered over 8 to 10 city block area in Whittier. Falling debris caused substantial damage to houses and lawns but no injuries to persons on the ground.",
-      "factors": ["midair_collision"]
+      "factors": [
+        "midair_collision"
+      ]
     }
   ],
   "cvr": [],

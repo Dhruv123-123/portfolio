@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Pinckneyville, Illinois",
-    "country": "United States"
+    "country": "United States",
+    "lat": 39.144,
+    "lon": -89.458
   },
   "phase": "descent",
   "occupants": 10,

@@ -36,7 +36,9 @@
   "location": {
     "name": "Eysines, Pinsan forest",
     "country": "France",
-    "region": "Gironde"
+    "region": "Gironde",
+    "lat": 44.87,
+    "lon": -0.66
   },
   "phase": "approach",
   "occupants": 16,
@@ -88,14 +90,38 @@
     }
   ],
   "chain": [
-    ["low_visibility", "inadequate_monitoring"],
-    ["crm_breakdown", "inadequate_monitoring"],
-    ["crm_breakdown", "descent_below_minimums"],
-    ["high_workload", "crm_breakdown"],
-    ["unstable_approach", "inadequate_monitoring"],
-    ["inadequate_monitoring", "go_around_not_flown"],
-    ["go_around_not_flown", "descent_below_minimums"],
-    ["descent_below_minimums", "cfit"]
+    [
+      "low_visibility",
+      "inadequate_monitoring"
+    ],
+    [
+      "crm_breakdown",
+      "inadequate_monitoring"
+    ],
+    [
+      "crm_breakdown",
+      "descent_below_minimums"
+    ],
+    [
+      "high_workload",
+      "crm_breakdown"
+    ],
+    [
+      "unstable_approach",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "go_around_not_flown"
+    ],
+    [
+      "go_around_not_flown",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
   ],
   "events": [
     {
@@ -105,7 +131,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Aircraft departs Brussels for Bordeaux with 16 occupants (2 pilots, 1 flight attendant, 13 passengers). Flight conditions forecast as marginal at Bordeaux with dense fog.",
-      "factors": ["low_visibility"]
+      "factors": [
+        "low_visibility"
+      ]
     },
     {
       "t": -375,
@@ -132,7 +160,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Approach reports cloud base height 160 feet, sufficient for ILS approach.",
-      "factors": ["low_visibility"]
+      "factors": [
+        "low_visibility"
+      ]
     },
     {
       "t": -40,
@@ -141,7 +171,10 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Controller reports updated cloud base height 130 feet, below the 150-foot minimum required for approach.",
-      "factors": ["low_visibility", "descent_below_minimums"]
+      "factors": [
+        "low_visibility",
+        "descent_below_minimums"
+      ]
     },
     {
       "t": -15,
@@ -150,7 +183,9 @@
       "actor": "PF",
       "kind": "crew_action",
       "text": "Captain takes control from first officer with brief instruction 'Remets-moi l'ILS chez moi' (Put the ILS on my display) and acknowledges 'O.K.', indicating duties exchange is complete.",
-      "factors": ["crm_breakdown"]
+      "factors": [
+        "crm_breakdown"
+      ]
     },
     {
       "t": -8,
@@ -168,7 +203,9 @@
       "actor": "PF",
       "kind": "crew_speech",
       "text": "Captain queries 'Bon, où est l'axe 2?' (Where is runway 2?), showing concern about runway alignment.",
-      "factors": ["inadequate_monitoring"]
+      "factors": [
+        "inadequate_monitoring"
+      ]
     },
     {
       "t": -1,
@@ -177,7 +214,9 @@
       "actor": "PF",
       "kind": "crew_speech",
       "text": "Captain asks 'On passe combien là?' (How much altitude are we at?), indicating insufficient altitude surveillance during the critical final moments.",
-      "factors": ["inadequate_monitoring"]
+      "factors": [
+        "inadequate_monitoring"
+      ]
     },
     {
       "t": 0,
@@ -186,7 +225,10 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft strikes trees on approach to Bordeaux, descending at high rate with insufficient altitude and with crew still attempting to gain control. Impact occurs 5,100 meters short of runway threshold. Immediate post-impact fire destroys the aircraft.",
-      "factors": ["cfit", "descent_below_minimums"],
+      "factors": [
+        "cfit",
+        "descent_below_minimums"
+      ],
       "state": {
         "alt": 300,
         "ias": 265,

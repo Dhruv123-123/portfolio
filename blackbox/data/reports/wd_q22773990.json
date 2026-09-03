@@ -36,7 +36,9 @@
   },
   "location": {
     "name": "Anchorage, Alaska (diversion from Cold Bay)",
-    "country": "United States"
+    "country": "United States",
+    "lat": 61.185,
+    "lon": -150.004
   },
   "phase": "climb",
   "occupants": 15,
@@ -240,7 +242,7 @@
     ]
   },
   "asn_id": null,
-  "wikipedia": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Reeve_Aleutian_Airways_Flight_8",
   "report_links": [
     "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001214X43286&AKey=1&RType=Final&IType=AA"
   ],

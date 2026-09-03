@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "LaGuardia Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 40.7747,
+    "lon": -73.8789
   },
   "phase": "landing",
   "occupants": 149,
@@ -65,9 +67,18 @@
     }
   ],
   "chain": [
-    ["unstable_approach", "inappropriate_control_input"],
-    ["inappropriate_control_input", "hard_landing"],
-    ["hard_landing", "landing_gear_failure"]
+    [
+      "unstable_approach",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "hard_landing"
+    ],
+    [
+      "hard_landing",
+      "landing_gear_failure"
+    ]
   ],
   "events": [
     {
@@ -77,7 +88,9 @@
       "actor": "PF",
       "kind": "crew_action",
       "text": "Captain observed flaps were set to 30° instead of 40° as briefed and manually set flaps to 40° at approximately 500 feet radio altitude, below the required 1,000 feet gate per stabilized approach criteria (p. 3-4).",
-      "factors": ["unstable_approach"]
+      "factors": [
+        "unstable_approach"
+      ]
     },
     {
       "t": -250,
@@ -95,7 +108,9 @@
       "actor": "PF",
       "kind": "crew_action",
       "text": "First officer made 100 feet callout; FDR data show aircraft was above glideslope with maximum recorded deviation reaching 1744:23 just before touchdown (p. 4).",
-      "factors": ["unstable_approach"]
+      "factors": [
+        "unstable_approach"
+      ]
     },
     {
       "t": -120,
@@ -104,7 +119,9 @@
       "actor": "PF",
       "kind": "crew_speech",
       "text": "Captain repeatedly said 'get down get down get down' to first officer approximately 3 seconds after 100 feet callout, expressing concern that the aircraft was too high and not getting proper sink rate (p. 4).",
-      "factors": ["unstable_approach"]
+      "factors": [
+        "unstable_approach"
+      ]
     },
     {
       "t": -3,
@@ -113,7 +130,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Captain announced 'I got it' at 27 feet radio altitude, approximately 3 seconds from touchdown, taking control of the aircraft from the first officer who acknowledged 'okay you got it' (p. 4).",
-      "factors": ["inappropriate_control_input"]
+      "factors": [
+        "inappropriate_control_input"
+      ]
     },
     {
       "t": 0,
@@ -122,7 +141,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Throttle resolver angles decreased to 35° and N1 values decreased; control column remained near zero position; aircraft pitch began to enter negative nose-down trend continuing to minimum airborne value of -3.87° (p. 4-5).",
-      "factors": ["inappropriate_control_input"]
+      "factors": [
+        "inappropriate_control_input"
+      ]
     },
     {
       "t": 8,
@@ -131,7 +152,10 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft touched down at 960 feet per minute descent rate with nose-down pitch attitude of -3.1 degrees, nose wheel striking runway first before main landing gear, resulting in nose gear collapse (p. 5).",
-      "factors": ["hard_landing", "landing_gear_failure"],
+      "factors": [
+        "hard_landing",
+        "landing_gear_failure"
+      ],
       "state": {
         "ias": 133,
         "vs": -960,
@@ -145,7 +169,10 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft slid on nose gear for approximately 2,500 feet on right side of runway centerline before stopping adjacent to taxiway F turnoff; fuselage was scraped and wrinkled, right engine nacelle damaged (p. 5).",
-      "factors": ["hard_landing", "landing_gear_failure"]
+      "factors": [
+        "hard_landing",
+        "landing_gear_failure"
+      ]
     }
   ],
   "cvr": [],

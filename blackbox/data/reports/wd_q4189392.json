@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "Cotonou Cadjèhoun Aerodrome",
-    "country": "Benin"
+    "country": "Benin",
+    "lat": 6.3667,
+    "lon": 2.4167
   },
   "phase": "takeoff",
   "occupants": 160,

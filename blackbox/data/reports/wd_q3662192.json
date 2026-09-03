@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "Eagle Lake",
-    "country": "United States"
+    "country": "United States",
+    "lat": 29.3098,
+    "lon": -96.2321
   },
   "phase": "descent",
   "occupants": 14,

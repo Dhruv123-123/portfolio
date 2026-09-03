@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "Wasatch Range near Kaysville, Utah",
-    "country": "United States"
+    "country": "United States",
+    "lat": 41.0281,
+    "lon": -111.875
   },
   "phase": "descent",
   "occupants": 3,
@@ -66,10 +68,22 @@
     }
   ],
   "chain": [
-    ["atc_communication_error", "procedural_noncompliance"],
-    ["atc_communication_error", "loss_of_situational_awareness"],
-    ["procedural_noncompliance", "loss_of_situational_awareness"],
-    ["loss_of_situational_awareness", "cfit"]
+    [
+      "atc_communication_error",
+      "procedural_noncompliance"
+    ],
+    [
+      "atc_communication_error",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "procedural_noncompliance",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "cfit"
+    ]
   ],
   "events": [
     {
@@ -97,7 +111,9 @@
       "actor": "CAPT",
       "kind": "crew_speech",
       "text": "Crew reported electrical trouble and requested holding clearance",
-      "factors": ["atc_communication_error"]
+      "factors": [
+        "atc_communication_error"
+      ]
     },
     {
       "t": 3480,
@@ -106,7 +122,9 @@
       "actor": "CAPT",
       "kind": "crew_speech",
       "text": "Crew requested to leave frequency for 'little minute' to contact United maintenance",
-      "factors": ["procedural_noncompliance"]
+      "factors": [
+        "procedural_noncompliance"
+      ]
     },
     {
       "t": 3480,
@@ -133,7 +151,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Controller warned flight of terrain on right and instructed left turn",
-      "factors": ["loss_of_situational_awareness"]
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
     },
     {
       "t": 4020,
@@ -160,7 +180,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft struck 7,665-foot mountain ridge at approximately 7,200 feet elevation",
-      "factors": ["cfit"]
+      "factors": [
+        "cfit"
+      ]
     }
   ],
   "cvr": [],
@@ -182,17 +204,23 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7808.pdf"],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7808.pdf"
+  ],
   "wikipedia": "https://en.wikipedia.org/wiki/United_Airlines_Flight_2860",
   "asn_id": "19771218-0",
   "interest": 10.54,
-  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7808.pdf"],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7808.pdf"
+  ],
   "curated_id": null,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
-    "notes": ["Read synopsis, analysis, findings, probable cause, and recommendations sections; 24 findings extracted; 2 recommendations from formal board issuance"]
+    "notes": [
+      "Read synopsis, analysis, findings, probable cause, and recommendations sections; 24 findings extracted; 2 recommendations from formal board issuance"
+    ]
   }
 }

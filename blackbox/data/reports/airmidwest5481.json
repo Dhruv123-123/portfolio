@@ -7,16 +7,38 @@
   "t0": "2003-01-08T13:46:39Z",
   "agency": "NTSB",
   "agencies": [
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
       "report_id": "NTSB/AAR-04/01",
       "report_title": "Loss of Pitch Control During Takeoff, Air Midwest Flight 5481, Raytheon (Beechcraft) 1900D, N233YV, Charlotte, North Carolina, January 8, 2003",
       "report_date": "2004-02-26",
-      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0401.pdf" }
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0401.pdf"
+    }
   ],
-  "aircraft": { "type": "Raytheon (Beechcraft) 1900D", "family": "Beech 1900", "manufacturer": "Raytheon Aircraft", "registration": "N233YV", "msn": null, "engines": "Pratt & Whitney Canada PT6A-67D" },
+  "aircraft": {
+    "type": "Raytheon (Beechcraft) 1900D",
+    "family": "Beech 1900",
+    "manufacturer": "Raytheon Aircraft",
+    "registration": "N233YV",
+    "msn": null,
+    "engines": "Pratt & Whitney Canada PT6A-67D"
+  },
   "operator": "Air Midwest (operating as US Airways Express)",
-  "route": { "from": "KCLT", "from_name": "Charlotte Douglas International", "to": "KGSO", "to_name": "Greensboro Piedmont Triad International" },
-  "location": { "name": "US Airways maintenance hangar area, Charlotte Douglas International Airport, North Carolina", "country": "USA", "lat": 35.214, "lon": -80.943 },
+  "route": {
+    "from": "KCLT",
+    "from_name": "Charlotte Douglas International",
+    "to": "KGSO",
+    "to_name": "Greensboro Piedmont Triad International"
+  },
+  "location": {
+    "name": "US Airways maintenance hangar area, Charlotte Douglas International Airport, North Carolina",
+    "country": "USA",
+    "lat": 35.214,
+    "lon": -80.943
+  },
   "phase": "initial_climb",
   "occupants": 21,
   "fatalities": 21,
@@ -26,50 +48,279 @@
   "summary": "Immediately after rotation from runway 18R at Charlotte the Beech 1900D pitched up steeply. The crew pushed the control column fully forward but the elevator's nose-down travel had been restricted to about half its range during a maintenance check two days earlier, and the airplane's center of gravity was well aft of the certified limit because of underestimated passenger and baggage weights. Pitch reached about 52 degrees, the airplane stalled at about 1,150 feet, rolled and struck a maintenance hangar 37 seconds after liftoff. All 21 on board died.",
   "probable_cause": "The airplane's loss of pitch control during takeoff. The loss of pitch control resulted from the incorrect rigging of the elevator control system compounded by the airplane's aft center of gravity, which was substantially aft of the certified aft limit. Contributing to the cause of the accident were (1) Air Midwest's lack of oversight of the work being performed at the Huntington, West Virginia, maintenance station; (2) Air Midwest's maintenance procedures and documentation; (3) Air Midwest's weight and balance program; (4) the Raytheon Aerospace quality assurance inspector's failure to detect the incorrect rigging of the elevator system; (5) the Federal Aviation Administration's (FAA) average weight assumptions in its weight and balance program guidance at the time of the accident; and (6) the FAA's lack of oversight of Air Midwest's maintenance program and its weight and balance program.",
   "factors": [
-    { "id": "maintenance_error", "role": "initiating", "evidence": "During a detail-6 check at Huntington two nights before the accident, elevator control cables were re-tensioned with steps of the rigging procedure skipped, leaving the elevator's nose-down travel restricted to about 7 degrees of the normal 14." },
-    { "id": "inadequate_inspection", "role": "contributing", "evidence": "The Raytheon Aerospace quality assurance inspector did not detect the incorrect rigging, and the required-inspection-item process was not followed." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "The mechanic performing the work was receiving on-the-job training and had not previously rigged a 1900D elevator system; supervision and training at the contract station were inadequate." },
-    { "id": "operator_safety_culture", "role": "contributing", "evidence": "Air Midwest lacked oversight of the contract maintenance work at Huntington and its maintenance procedures and documentation were deficient." },
-    { "id": "weight_and_balance_error", "role": "contributing", "evidence": "The load manifest used FAA average passenger and bag weights (175 and 20 pounds); actual weights placed the center of gravity about 5 percent MAC aft of the certified limit and the airplane about 600 pounds over its maximum takeoff weight." },
-    { "id": "regulatory_oversight", "role": "contributing", "evidence": "FAA average weight guidance was outdated and the FAA had not adequately overseen Air Midwest's maintenance and weight and balance programs." },
-    { "id": "flight_control_failure", "role": "contributing", "evidence": "The misrigged elevator could not produce enough nose-down moment; full forward column reached the restricted elevator stop." },
-    { "id": "loss_of_pilot_control_authority", "role": "contributing", "evidence": "With the aft CG and restricted elevator, the crew had no ability to lower the nose despite full forward control input." },
-    { "id": "aerodynamic_stall", "role": "outcome", "evidence": "Pitch reached about 52 degrees nose up and the airplane stalled at about 1,150 feet above the ground." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The airplane rolled left after the stall and descended out of control into a hangar." },
-    { "id": "post_impact_fire", "role": "outcome", "evidence": "The airplane was destroyed by impact and fire." }
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "During a detail-6 check at Huntington two nights before the accident, elevator control cables were re-tensioned with steps of the rigging procedure skipped, leaving the elevator's nose-down travel restricted to about 7 degrees of the normal 14."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "The Raytheon Aerospace quality assurance inspector did not detect the incorrect rigging, and the required-inspection-item process was not followed."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "The mechanic performing the work was receiving on-the-job training and had not previously rigged a 1900D elevator system; supervision and training at the contract station were inadequate."
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "contributing",
+      "evidence": "Air Midwest lacked oversight of the contract maintenance work at Huntington and its maintenance procedures and documentation were deficient."
+    },
+    {
+      "id": "weight_and_balance_error",
+      "role": "contributing",
+      "evidence": "The load manifest used FAA average passenger and bag weights (175 and 20 pounds); actual weights placed the center of gravity about 5 percent MAC aft of the certified limit and the airplane about 600 pounds over its maximum takeoff weight."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "contributing",
+      "evidence": "FAA average weight guidance was outdated and the FAA had not adequately overseen Air Midwest's maintenance and weight and balance programs."
+    },
+    {
+      "id": "flight_control_failure",
+      "role": "contributing",
+      "evidence": "The misrigged elevator could not produce enough nose-down moment; full forward column reached the restricted elevator stop."
+    },
+    {
+      "id": "loss_of_pilot_control_authority",
+      "role": "contributing",
+      "evidence": "With the aft CG and restricted elevator, the crew had no ability to lower the nose despite full forward control input."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "Pitch reached about 52 degrees nose up and the airplane stalled at about 1,150 feet above the ground."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The airplane rolled left after the stall and descended out of control into a hangar."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "The airplane was destroyed by impact and fire."
+    }
   ],
   "chain": [
-    ["regulatory_oversight", "operator_safety_culture"],
-    ["regulatory_oversight", "weight_and_balance_error"],
-    ["operator_safety_culture", "maintenance_error"],
-    ["inadequate_training", "maintenance_error"],
-    ["maintenance_error", "flight_control_failure"],
-    ["inadequate_inspection", "flight_control_failure"],
-    ["flight_control_failure", "loss_of_pilot_control_authority"],
-    ["weight_and_balance_error", "loss_of_pilot_control_authority"],
-    ["loss_of_pilot_control_authority", "aerodynamic_stall"],
-    ["aerodynamic_stall", "loss_of_control_inflight"],
-    ["loss_of_control_inflight", "post_impact_fire"]
+    [
+      "regulatory_oversight",
+      "operator_safety_culture"
+    ],
+    [
+      "regulatory_oversight",
+      "weight_and_balance_error"
+    ],
+    [
+      "operator_safety_culture",
+      "maintenance_error"
+    ],
+    [
+      "inadequate_training",
+      "maintenance_error"
+    ],
+    [
+      "maintenance_error",
+      "flight_control_failure"
+    ],
+    [
+      "inadequate_inspection",
+      "flight_control_failure"
+    ],
+    [
+      "flight_control_failure",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "weight_and_balance_error",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "loss_of_pilot_control_authority",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "post_impact_fire"
+    ]
   ],
   "events": [
-    { "t": -172800, "clock": null, "phase": "ground", "actor": "GND", "text": "About two days before the accident, during a detail-6 check at Huntington, West Virginia, the elevator control cables are re-tensioned; steps in the rigging procedure are skipped and the elevator's nose-down travel is left restricted.", "factors": ["maintenance_error", "inadequate_training"], "kind": "env" },
-    { "t": -170000, "clock": null, "phase": "ground", "actor": "GND", "text": "The quality assurance inspector signs off the elevator work without detecting the incorrect rigging; the airplane is returned to service and flies several uneventful legs.", "factors": ["inadequate_inspection"], "kind": "env" },
-    { "t": -1800, "clock": null, "phase": "ground", "actor": "CAPT", "text": "The crew complete the load manifest using FAA average passenger and baggage weights; the calculated center of gravity appears within limits although the actual CG is well aft of the limit.", "factors": ["weight_and_balance_error", "regulatory_oversight"], "kind": "crew_action" },
-    { "t": -60, "clock": null, "phase": "taxi", "actor": "ATC", "text": "Tower clears flight 5481 for takeoff on runway 18R.", "kind": "atc" },
-    { "t": -25, "clock": null, "phase": "takeoff", "actor": "CAPT", "text": "Takeoff roll begins with the captain as pilot flying.", "kind": "crew_action" },
-    { "t": 0, "clock": null, "phase": "takeoff", "actor": "CAPT", "text": "Rotation and liftoff; the nose continues to rise faster than commanded.", "factors": ["loss_of_pilot_control_authority"], "kind": "crew_action" },
-    { "t": 5, "clock": null, "phase": "initial_climb", "actor": "CAPT", "text": "Both pilots apply forward control column; the column reaches the stop but the elevator is limited to about half its nose-down travel and pitch keeps increasing.", "factors": ["flight_control_failure", "loss_of_pilot_control_authority"], "kind": "crew_action" },
-    { "t": 12, "clock": null, "phase": "initial_climb", "actor": "FO", "text": "First officer reports the pitch problem to the tower and declares an emergency.", "kind": "crew_speech" },
-    { "t": 20, "clock": null, "phase": "initial_climb", "actor": "SYS", "text": "Pitch reaches about 52 degrees nose up as airspeed decays; the crew reduce power and roll in an attempt to lower the nose.", "state": { "pitch": 52 }, "factors": ["aerodynamic_stall", "weight_and_balance_error"], "kind": "system" },
-    { "t": 26, "clock": null, "phase": "initial_climb", "actor": "SYS", "text": "The airplane stalls at about 1,150 feet above the ground and rolls to the left.", "state": { "alt": 1150 }, "factors": ["aerodynamic_stall", "loss_of_control_inflight"], "kind": "system" },
-    { "t": 37, "clock": "08:47:16", "phase": "initial_climb", "actor": "SYS", "text": "The airplane strikes a US Airways maintenance hangar in a steep nose-down attitude and bursts into flames; the recording ends.", "factors": ["loss_of_control_inflight", "post_impact_fire"], "kind": "outcome" }
+    {
+      "t": -172800,
+      "clock": null,
+      "phase": "ground",
+      "actor": "GND",
+      "text": "About two days before the accident, during a detail-6 check at Huntington, West Virginia, the elevator control cables are re-tensioned; steps in the rigging procedure are skipped and the elevator's nose-down travel is left restricted.",
+      "factors": [
+        "maintenance_error",
+        "inadequate_training"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": -170000,
+      "clock": null,
+      "phase": "ground",
+      "actor": "GND",
+      "text": "The quality assurance inspector signs off the elevator work without detecting the incorrect rigging; the airplane is returned to service and flies several uneventful legs.",
+      "factors": [
+        "inadequate_inspection"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": -1800,
+      "clock": null,
+      "phase": "ground",
+      "actor": "CAPT",
+      "text": "The crew complete the load manifest using FAA average passenger and baggage weights; the calculated center of gravity appears within limits although the actual CG is well aft of the limit.",
+      "factors": [
+        "weight_and_balance_error",
+        "regulatory_oversight"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -60,
+      "clock": null,
+      "phase": "taxi",
+      "actor": "ATC",
+      "text": "Tower clears flight 5481 for takeoff on runway 18R.",
+      "kind": "atc"
+    },
+    {
+      "t": -25,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "Takeoff roll begins with the captain as pilot flying.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "Rotation and liftoff; the nose continues to rise faster than commanded.",
+      "factors": [
+        "loss_of_pilot_control_authority"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 5,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "text": "Both pilots apply forward control column; the column reaches the stop but the elevator is limited to about half its nose-down travel and pitch keeps increasing.",
+      "factors": [
+        "flight_control_failure",
+        "loss_of_pilot_control_authority"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 12,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "FO",
+      "text": "First officer reports the pitch problem to the tower and declares an emergency.",
+      "kind": "crew_speech"
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "Pitch reaches about 52 degrees nose up as airspeed decays; the crew reduce power and roll in an attempt to lower the nose.",
+      "state": {
+        "pitch": 52
+      },
+      "factors": [
+        "aerodynamic_stall",
+        "weight_and_balance_error"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 26,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "The airplane stalls at about 1,150 feet above the ground and rolls to the left.",
+      "state": {
+        "alt": 1150
+      },
+      "factors": [
+        "aerodynamic_stall",
+        "loss_of_control_inflight"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 37,
+      "clock": "08:47:16",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "The airplane strikes a US Airways maintenance hangar in a steep nose-down attitude and bursts into flames; the recording ends.",
+      "factors": [
+        "loss_of_control_inflight",
+        "post_impact_fire"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "FAA", "text": "Revise average passenger and baggage weight guidance based on current survey data and require operators to periodically validate the weights they use.", "status": "closed_acceptable", "outcome": "FAA Advisory Circular 120-27E (2005) raised standard average passenger weights and required operator weight surveys.", "trigger_factors": ["weight_and_balance_error", "regulatory_oversight"] },
-    { "id": null, "to": "FAA", "text": "Require operators of small transport airplanes to use actual or validated weights when average weights could push the airplane outside its center of gravity envelope.", "status": "closed_acceptable", "outcome": "Operators of 19-seat aircraft adopted revised loading and seating procedures.", "trigger_factors": ["weight_and_balance_error"] },
-    { "id": null, "to": "FAA", "text": "Strengthen oversight of contract and outsourced maintenance, including verification that required-inspection-item procedures, on-the-job training and work card documentation are followed.", "status": "unknown", "outcome": "FAA revised guidance on surveillance of contract maintenance providers.", "trigger_factors": ["operator_safety_culture", "inadequate_inspection", "regulatory_oversight"] },
-    { "id": null, "to": "Raytheon Aircraft", "text": "Revise the 1900D maintenance manual so that the elevator control system rigging procedure explicitly requires a full travel check after any cable tension adjustment.", "status": "closed_acceptable", "outcome": "The maintenance manual and work cards were revised and the fleet was re-inspected.", "trigger_factors": ["maintenance_error"] }
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Revise average passenger and baggage weight guidance based on current survey data and require operators to periodically validate the weights they use.",
+      "status": "closed_acceptable",
+      "outcome": "FAA Advisory Circular 120-27E (2005) raised standard average passenger weights and required operator weight surveys.",
+      "trigger_factors": [
+        "weight_and_balance_error",
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require operators of small transport airplanes to use actual or validated weights when average weights could push the airplane outside its center of gravity envelope.",
+      "status": "closed_acceptable",
+      "outcome": "Operators of 19-seat aircraft adopted revised loading and seating procedures.",
+      "trigger_factors": [
+        "weight_and_balance_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Strengthen oversight of contract and outsourced maintenance, including verification that required-inspection-item procedures, on-the-job training and work card documentation are followed.",
+      "status": "unknown",
+      "outcome": "FAA revised guidance on surveillance of contract maintenance providers.",
+      "trigger_factors": [
+        "operator_safety_culture",
+        "inadequate_inspection",
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Raytheon Aircraft",
+      "text": "Revise the 1900D maintenance manual so that the elevator control system rigging procedure explicitly requires a full travel check after any cable tension adjustment.",
+      "status": "closed_acceptable",
+      "outcome": "The maintenance manual and work cards were revised and the fleet was re-inspected.",
+      "trigger_factors": [
+        "maintenance_error"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -78,19 +329,28 @@
     "Beech 1900D elevator control cable rigging procedures and work cards were revised; fleet inspections found other misrigged airplanes.",
     "FAA strengthened surveillance of outsourced and contract maintenance and of on-the-job training at repair stations."
   ],
-  "related": ["alaska261", "colgan3407", "airflorida90", "spanair5022"],
+  "related": [
+    "alaska261",
+    "colgan3407",
+    "airflorida90",
+    "spanair5022"
+  ],
   "fdr": null,
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0401.pdf",
     "https://www.ntsb.gov"
   ],
   "extraction": {
-    "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
     "notes": [
       "The rotation clock time is estimated at about 08:46:39 EST from the 08:47:16 end of recording and the report's 37-second flight duration; t values of the takeoff sequence are approximate.",
       "Maximum pitch of about 52 degrees and stall at about 1,150 feet are as stated in the report; the amount of overweight (about 600 pounds) and CG excess (about 5 percent MAC) are as recalled and may differ slightly.",
       "The maintenance and inspection events are given a nominal t of about two days before the accident; the exact night of the work is 6 to 7 January 2003.",
       "Aircraft MSN is not given because it is not recalled with confidence."
     ]
-  }
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Midwest_Flight_5481"
 }

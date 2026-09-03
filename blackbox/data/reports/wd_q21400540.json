@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "Fort Lauderdale-Hollywood International Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 26.0725,
+    "lon": -80.1528
   },
   "phase": "taxi",
   "occupants": 101,
@@ -60,8 +62,14 @@
     }
   ],
   "chain": [
-    ["maintenance_error", "fuel_leak"],
-    ["fuel_leak", "inflight_fire"]
+    [
+      "maintenance_error",
+      "fuel_leak"
+    ],
+    [
+      "fuel_leak",
+      "inflight_fire"
+    ]
   ],
   "events": [
     {
@@ -80,7 +88,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Another aircraft taxiing behind accident aircraft advised ATC they observed a large amount of fluid leaking from the left engine of the accident airplane (p. 3).",
-      "factors": ["fuel_leak"]
+      "factors": [
+        "fuel_leak"
+      ]
     },
     {
       "t": -30,
@@ -89,7 +99,9 @@
       "actor": "PF",
       "kind": "crew_action",
       "text": "Flight crew heard the transmissions about fluid leak, advised they would return to ramp, and were instructed by ATC to stop on taxiway B just east of taxiway T1 (p. 3).",
-      "factors": ["fuel_leak"]
+      "factors": [
+        "fuel_leak"
+      ]
     },
     {
       "t": 0,
@@ -98,7 +110,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "The trailing aircraft advised that the engine was on fire (p. 3).",
-      "factors": ["inflight_fire"]
+      "factors": [
+        "inflight_fire"
+      ]
     },
     {
       "t": 1,
@@ -107,7 +121,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Captain shut down the left engine using the fire handle; fire handle found actuated and rotated to bottle 1 discharge position in post-accident inspection (p. 3, 5).",
-      "factors": ["inflight_fire"]
+      "factors": [
+        "inflight_fire"
+      ]
     },
     {
       "t": 2,

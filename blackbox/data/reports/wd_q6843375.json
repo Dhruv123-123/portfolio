@@ -1,265 +1,267 @@
 {
- "id": "wd_q6843375",
- "qid": "Q6843375",
- "tier": "wikidata",
- "depth": "sections",
- "title": "Midwest Express Airlines 105",
- "flight_number": "ME105",
- "date": "1985-09-06",
- "time_reference": "EDT",
- "t0": "1985-09-06T15:21:41-05:00",
- "agency": "NTSB",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead",
-   "report_id": "AAR-87-01",
-   "report_date": "1987-02-03"
+  "id": "wd_q6843375",
+  "qid": "Q6843375",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Midwest Express Airlines 105",
+  "flight_number": "ME105",
+  "date": "1985-09-06",
+  "time_reference": "EDT",
+  "t0": "1985-09-06T15:21:41-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-87-01",
+      "report_date": "1987-02-03"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-9-14",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-9",
+    "registration": "N100ME"
+  },
+  "operator": "Midwest Express Airlines",
+  "route": {
+    "from_name": "Milwaukee Mitchell International Airport",
+    "to_name": "Hartsfield-Jackson Atlanta International Airport"
+  },
+  "location": {
+    "name": "Oak Creek",
+    "country": "United States",
+    "lat": 42.9273,
+    "lon": -87.9017
+  },
+  "phase": "initial_climb",
+  "occupants": 31,
+  "fatalities": 31,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Midwest Express Airlines Flight 105, a McDonnell Douglas DC-9-14, departed Milwaukee on September 6, 1985. At 450 feet during initial climb, the right engine experienced a catastrophic failure due to rupture of a removable sleeve spacer in the high-pressure compressor. The crew failed to properly control the aircraft during the emergency, resulting in an accelerated stall, loss of control, and crash into a field southwest of the airport. All 31 occupants were killed.",
+  "probable_cause": "The flightcrew's improper use of flight controls in response to the catastrophic failure of the right engine during a critical phase of flight, which led to an accelerated stall and loss of control of the airplane. Contributing to the loss of control was a lack of crew coordination in response to the emergency. The right engine failed from the rupture of the 9th to 10th stage removable sleeve spacer in the high pressure compressor because of the spacer's vulnerability to cracks. (p. 74)",
+  "factors": [
+    {
+      "id": "metal_fatigue",
+      "role": "initiating",
+      "evidence": "Removable sleeve spacer suffered metal fatigue with fatigue crack in knife edge of 9th to 10th stage spacer. Crack had propagated to a length which should have allowed detection at the occasion of the last high pressure compressor overhaul in 1981. (p. 73)"
+    },
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "Right engine failed abruptly and completely due to uncontained failure of the 8th to 10th stage high pressure compressor spacer during initial climb at 450 feet above ground level. (p. 73)"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The crew response to the right engine failure was not coordinated. Neither pilot verbally identified the emergency condition or made the emergency callouts required by FAA-approved Midwest Express procedures. (p. 73)"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "The rudder was incorrectly deflected to the right 4 to 5 seconds after the right engine failure. Captain initially responded correctly by deflecting rudder to the left but appeared unaware of exact nature of emergency. (p. 73)"
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "An accelerated stall occurred 10 seconds after the failure of the right engine. Airplane rolled to the right until wings were in near vertical approximately right 90 degree banked turn. (p. 1)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "During accelerated stall, control was lost and the airplane crashed into an open field. Aircraft was destroyed by impact forces and post-crash fire. (p. 1)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Flight 105 crashed into an open field at the edge of a wooded area about 1,686 feet southwest of the departure end of runway 19R. (p. 1)"
+    }
+  ],
+  "chain": [
+    [
+      "metal_fatigue",
+      "engine_failure"
+    ],
+    [
+      "engine_failure",
+      "crm_breakdown"
+    ],
+    [
+      "engine_failure",
+      "inappropriate_control_input"
+    ],
+    [
+      "crm_breakdown",
+      "aerodynamic_stall"
+    ],
+    [
+      "inappropriate_control_input",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": -73,
+      "clock": "15:20:28",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Clearance for takeoff on runway 19R at General Billy Mitchell Field, Milwaukee, Wisconsin acknowledged. (p. 1)"
+    },
+    {
+      "t": -58,
+      "clock": "15:20:43",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 105 became airborne, carrying 27 passengers and 4 crew members, climbing from runway 19R. (p. 1)"
+    },
+    {
+      "t": -15,
+      "clock": "15:21:26.4",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Right engine catastrophic failure occurred at approximately 450 feet above ground level. Loud 'clunk' noise recorded on CVR indicating uncontained failure of 8th to 10th stage high pressure compressor spacer. (p. 1)"
+    },
+    {
+      "t": -12,
+      "clock": "15:21:29",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain asked first officer: 'What do you got there?' indicating delayed recognition of emergency condition. (p. 1)"
+    },
+    {
+      "t": -5,
+      "clock": "15:21:36",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Stickshaker activated and continued until end of CVR recording, indicating aerodynamic stall condition developing. (p. 1)"
+    },
+    {
+      "t": 0,
+      "clock": "15:21:41",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Flight 105 crashed into an open field at edge of wooded area approximately 1,686 feet southwest of runway 19R departure end. Aircraft rolled to right until wings were in near vertical right 90-degree banked turn during accelerated stall. (p. 1)"
+    },
+    {
+      "t": 5,
+      "clock": "15:21:46",
+      "phase": "landing",
+      "actor": "CABIN",
+      "kind": "outcome",
+      "text": "Aircraft destroyed by impact forces and post-crash fire. All 31 occupants, including captain, first officer, two flight attendants, and 27 passengers, were fatally injured. (p. 1)"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-85-120",
+      "to": "FAA",
+      "text": "Issue an Airworthiness Directive to require the installation of the one-piece, integral sleeve spacer at all six locations in the high-pressure compressor rotor of Pratt & Whitney JT8D-series engines not so equipped. The installation should be made as soon as practical but no later than the next opportunity wherein the engine is available in a maintenance facility where a partial or complete disassembly of the compressor can be accomplished.",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "metal_fatigue",
+        "engine_failure"
+      ]
+    },
+    {
+      "id": "A-85-121",
+      "to": "FAA",
+      "text": "Notify appropriate foreign civil aviation authorities and foreign operators of airplanes equipped with Pratt & Whitney JT8D-series engines of the failures associated with the removable sleeve spacers installed in the high-pressure compressor rotor and of the actions which should be taken to minimize or eliminate the failures.",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "metal_fatigue"
+      ]
+    },
+    {
+      "id": "A-86-28",
+      "to": "FAA",
+      "text": "Issue a Telegraphic Airworthiness Directive and amend the airworthiness directive proposed in the Notice of Proposed Rulemaking published at 51 FR 37696, Docket No. 85-ANA-46, to require that the one-time, on-wing eddy current inspection specified in the proposed airworthiness directive be repeated at 1,000-cycle intervals until stage 7-8, 8-9, and 9-10 removable sleeve spacers between the high-pressure compressor are replaced with integral sleeve spacers.",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "metal_fatigue"
+      ]
+    },
+    {
+      "id": "A-87-8",
+      "to": "FAA",
+      "text": "Issue an air carrier operations bulletin directing Principal Operations Inspectors to review their respective air carrier's flightcrew training programs to ensure the existence of new coordination procedures that, notwithstanding a policy endorsing nonessential conversation during an emergency condition, require any crewmember who observes a potential or actual emergency situation to verbally call it to the captain's attention.",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "crm_breakdown"
+      ]
+    },
+    {
+      "id": "A-87-9",
+      "to": "FAA",
+      "text": "Issue an air carrier operations bulletin directing Principal Operations Inspectors to review their respective air carrier's simulator training programs to verify that engine failures in the posttakeoff climb are frequently given with particular emphasis on the use of engine and flight instruments as the primary source of information for airplane control and on the need for deliberate actions based upon flight and engine instrument analysis rather than hasty action based upon kinesthetic cues.",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "id": "A-87-10",
+      "to": "FAA",
+      "text": "Require Principal Operations Inspectors of 14 CFR 121 certificate holders to have training and experience commensurate with the air carrier involved, including a comparable type rating (e.g., turbojet powered transport category) in the category and class of aircraft to be used by the certificate holder.",
+      "status": "closed_acceptable",
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [
+    {
+      "agency": "NTSB",
+      "position": "The probable cause of the accident was the catastrophic failure of a high pressure compressor spacer in the right engine during a critical phase of flight, together with the flightcrew's improper use of the flight controls that resulted in an accelerated stall and loss of control of the airplane. Contributing to the cause of the accident was a training program which inadequately prepared the flightcrew to diagnose and respond to an engine-out situation in the climb-out phase of flight, a lack of crew coordination in response to the emergency, and the inadequate inspection of the compressor spacer at the engine repair facility.",
+      "topic": "probable cause"
+    }
+  ],
+  "safety_changes": [
+    "Installation of integral sleeve spacers in JT8D engines to eliminate fatigue crack vulnerability",
+    "Enhanced pilot training for engine failure recognition and response in the critical takeoff and initial climb phase"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8701.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Midwest_Express_Airlines_Flight_105",
+  "asn_id": "19850906-0",
+  "interest": 13.37,
+  "curated_id": null,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8701.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR87-01.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read Abstract and summary (pages 1-2)",
+      "Read Conclusions section 3 (pages 73-74) with all 26 findings",
+      "Read Probable Cause section (pages 74)",
+      "Read Recommendations section 4 (pages 74-76) with 6 numbered recommendations A-85-120, A-85-121, A-86-28, A-87-8, A-87-9, A-87-10",
+      "Read dissent statement by Chairman Burnett (pages 75-76)",
+      "7 NEW events with precise clock times from CVR and FDR data",
+      "Page citations from OCR <<< page N >>> markers",
+      "auto-repair: phase impact -> landing"
+    ]
   }
- ],
- "aircraft": {
-  "type": "McDonnell Douglas DC-9-14",
-  "manufacturer": "McDonnell Douglas",
-  "family": "DC-9",
-  "registration": "N100ME"
- },
- "operator": "Midwest Express Airlines",
- "route": {
-  "from_name": "Milwaukee Mitchell International Airport",
-  "to_name": "Hartsfield-Jackson Atlanta International Airport"
- },
- "location": {
-  "name": "Oak Creek",
-  "country": "United States"
- },
- "phase": "initial_climb",
- "occupants": 31,
- "fatalities": 31,
- "damage": "destroyed",
- "category": "LOC-I",
- "summary": "Midwest Express Airlines Flight 105, a McDonnell Douglas DC-9-14, departed Milwaukee on September 6, 1985. At 450 feet during initial climb, the right engine experienced a catastrophic failure due to rupture of a removable sleeve spacer in the high-pressure compressor. The crew failed to properly control the aircraft during the emergency, resulting in an accelerated stall, loss of control, and crash into a field southwest of the airport. All 31 occupants were killed.",
- "probable_cause": "The flightcrew's improper use of flight controls in response to the catastrophic failure of the right engine during a critical phase of flight, which led to an accelerated stall and loss of control of the airplane. Contributing to the loss of control was a lack of crew coordination in response to the emergency. The right engine failed from the rupture of the 9th to 10th stage removable sleeve spacer in the high pressure compressor because of the spacer's vulnerability to cracks. (p. 74)",
- "factors": [
-  {
-   "id": "metal_fatigue",
-   "role": "initiating",
-   "evidence": "Removable sleeve spacer suffered metal fatigue with fatigue crack in knife edge of 9th to 10th stage spacer. Crack had propagated to a length which should have allowed detection at the occasion of the last high pressure compressor overhaul in 1981. (p. 73)"
-  },
-  {
-   "id": "engine_failure",
-   "role": "initiating",
-   "evidence": "Right engine failed abruptly and completely due to uncontained failure of the 8th to 10th stage high pressure compressor spacer during initial climb at 450 feet above ground level. (p. 73)"
-  },
-  {
-   "id": "crm_breakdown",
-   "role": "contributing",
-   "evidence": "The crew response to the right engine failure was not coordinated. Neither pilot verbally identified the emergency condition or made the emergency callouts required by FAA-approved Midwest Express procedures. (p. 73)"
-  },
-  {
-   "id": "inappropriate_control_input",
-   "role": "contributing",
-   "evidence": "The rudder was incorrectly deflected to the right 4 to 5 seconds after the right engine failure. Captain initially responded correctly by deflecting rudder to the left but appeared unaware of exact nature of emergency. (p. 73)"
-  },
-  {
-   "id": "aerodynamic_stall",
-   "role": "outcome",
-   "evidence": "An accelerated stall occurred 10 seconds after the failure of the right engine. Airplane rolled to the right until wings were in near vertical approximately right 90 degree banked turn. (p. 1)"
-  },
-  {
-   "id": "loss_of_control_inflight",
-   "role": "outcome",
-   "evidence": "During accelerated stall, control was lost and the airplane crashed into an open field. Aircraft was destroyed by impact forces and post-crash fire. (p. 1)"
-  },
-  {
-   "id": "cfit",
-   "role": "outcome",
-   "evidence": "Flight 105 crashed into an open field at the edge of a wooded area about 1,686 feet southwest of the departure end of runway 19R. (p. 1)"
-  }
- ],
- "chain": [
-  [
-   "metal_fatigue",
-   "engine_failure"
-  ],
-  [
-   "engine_failure",
-   "crm_breakdown"
-  ],
-  [
-   "engine_failure",
-   "inappropriate_control_input"
-  ],
-  [
-   "crm_breakdown",
-   "aerodynamic_stall"
-  ],
-  [
-   "inappropriate_control_input",
-   "aerodynamic_stall"
-  ],
-  [
-   "aerodynamic_stall",
-   "loss_of_control_inflight"
-  ],
-  [
-   "loss_of_control_inflight",
-   "cfit"
-  ]
- ],
- "events": [
-  {
-   "t": -73,
-   "clock": "15:20:28",
-   "phase": "takeoff",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Clearance for takeoff on runway 19R at General Billy Mitchell Field, Milwaukee, Wisconsin acknowledged. (p. 1)"
-  },
-  {
-   "t": -58,
-   "clock": "15:20:43",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Flight 105 became airborne, carrying 27 passengers and 4 crew members, climbing from runway 19R. (p. 1)"
-  },
-  {
-   "t": -15,
-   "clock": "15:21:26.4",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Right engine catastrophic failure occurred at approximately 450 feet above ground level. Loud 'clunk' noise recorded on CVR indicating uncontained failure of 8th to 10th stage high pressure compressor spacer. (p. 1)"
-  },
-  {
-   "t": -12,
-   "clock": "15:21:29",
-   "phase": "initial_climb",
-   "actor": "CAPT",
-   "kind": "crew_speech",
-   "text": "Captain asked first officer: 'What do you got there?' indicating delayed recognition of emergency condition. (p. 1)"
-  },
-  {
-   "t": -5,
-   "clock": "15:21:36",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "warning",
-   "text": "Stickshaker activated and continued until end of CVR recording, indicating aerodynamic stall condition developing. (p. 1)"
-  },
-  {
-   "t": 0,
-   "clock": "15:21:41",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Flight 105 crashed into an open field at edge of wooded area approximately 1,686 feet southwest of runway 19R departure end. Aircraft rolled to right until wings were in near vertical right 90-degree banked turn during accelerated stall. (p. 1)"
-  },
-  {
-   "t": 5,
-   "clock": "15:21:46",
-   "phase": "landing",
-   "actor": "CABIN",
-   "kind": "outcome",
-   "text": "Aircraft destroyed by impact forces and post-crash fire. All 31 occupants, including captain, first officer, two flight attendants, and 27 passengers, were fatally injured. (p. 1)"
-  }
- ],
- "cvr": [],
- "recommendations": [
-  {
-   "id": "A-85-120",
-   "to": "FAA",
-   "text": "Issue an Airworthiness Directive to require the installation of the one-piece, integral sleeve spacer at all six locations in the high-pressure compressor rotor of Pratt & Whitney JT8D-series engines not so equipped. The installation should be made as soon as practical but no later than the next opportunity wherein the engine is available in a maintenance facility where a partial or complete disassembly of the compressor can be accomplished.",
-   "status": "closed_acceptable",
-   "trigger_factors": [
-    "metal_fatigue",
-    "engine_failure"
-   ]
-  },
-  {
-   "id": "A-85-121",
-   "to": "FAA",
-   "text": "Notify appropriate foreign civil aviation authorities and foreign operators of airplanes equipped with Pratt & Whitney JT8D-series engines of the failures associated with the removable sleeve spacers installed in the high-pressure compressor rotor and of the actions which should be taken to minimize or eliminate the failures.",
-   "status": "closed_acceptable",
-   "trigger_factors": [
-    "metal_fatigue"
-   ]
-  },
-  {
-   "id": "A-86-28",
-   "to": "FAA",
-   "text": "Issue a Telegraphic Airworthiness Directive and amend the airworthiness directive proposed in the Notice of Proposed Rulemaking published at 51 FR 37696, Docket No. 85-ANA-46, to require that the one-time, on-wing eddy current inspection specified in the proposed airworthiness directive be repeated at 1,000-cycle intervals until stage 7-8, 8-9, and 9-10 removable sleeve spacers between the high-pressure compressor are replaced with integral sleeve spacers.",
-   "status": "closed_acceptable",
-   "trigger_factors": [
-    "metal_fatigue"
-   ]
-  },
-  {
-   "id": "A-87-8",
-   "to": "FAA",
-   "text": "Issue an air carrier operations bulletin directing Principal Operations Inspectors to review their respective air carrier's flightcrew training programs to ensure the existence of new coordination procedures that, notwithstanding a policy endorsing nonessential conversation during an emergency condition, require any crewmember who observes a potential or actual emergency situation to verbally call it to the captain's attention.",
-   "status": "closed_acceptable",
-   "trigger_factors": [
-    "crm_breakdown"
-   ]
-  },
-  {
-   "id": "A-87-9",
-   "to": "FAA",
-   "text": "Issue an air carrier operations bulletin directing Principal Operations Inspectors to review their respective air carrier's simulator training programs to verify that engine failures in the posttakeoff climb are frequently given with particular emphasis on the use of engine and flight instruments as the primary source of information for airplane control and on the need for deliberate actions based upon flight and engine instrument analysis rather than hasty action based upon kinesthetic cues.",
-   "status": "closed_acceptable",
-   "trigger_factors": [
-    "inappropriate_control_input"
-   ]
-  },
-  {
-   "id": "A-87-10",
-   "to": "FAA",
-   "text": "Require Principal Operations Inspectors of 14 CFR 121 certificate holders to have training and experience commensurate with the air carrier involved, including a comparable type rating (e.g., turbojet powered transport category) in the category and class of aircraft to be used by the certificate holder.",
-   "status": "closed_acceptable",
-   "trigger_factors": []
-  }
- ],
- "dissent": [
-  {
-   "agency": "NTSB",
-   "position": "The probable cause of the accident was the catastrophic failure of a high pressure compressor spacer in the right engine during a critical phase of flight, together with the flightcrew's improper use of the flight controls that resulted in an accelerated stall and loss of control of the airplane. Contributing to the cause of the accident was a training program which inadequately prepared the flightcrew to diagnose and respond to an engine-out situation in the climb-out phase of flight, a lack of crew coordination in response to the emergency, and the inadequate inspection of the compressor spacer at the engine repair facility.",
-   "topic": "probable cause"
-  }
- ],
- "safety_changes": [
-  "Installation of integral sleeve spacers in JT8D engines to eliminate fatigue crack vulnerability",
-  "Enhanced pilot training for engine failure recognition and response in the critical takeoff and initial climb phase"
- ],
- "related": [],
- "fdr": null,
- "sources": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8701.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/Midwest_Express_Airlines_Flight_105",
- "asn_id": "19850906-0",
- "interest": 13.37,
- "curated_id": null,
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8701.pdf",
-  "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR87-01.pdf"
- ],
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5-20251001",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Read Abstract and summary (pages 1-2)",
-   "Read Conclusions section 3 (pages 73-74) with all 26 findings",
-   "Read Probable Cause section (pages 74)",
-   "Read Recommendations section 4 (pages 74-76) with 6 numbered recommendations A-85-120, A-85-121, A-86-28, A-87-8, A-87-9, A-87-10",
-   "Read dissent statement by Chairman Burnett (pages 75-76)",
-   "7 NEW events with precise clock times from CVR and FDR data",
-   "Page citations from OCR <<< page N >>> markers",
-   "auto-repair: phase impact -> landing"
-  ]
- }
 }

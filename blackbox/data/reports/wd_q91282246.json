@@ -1,294 +1,296 @@
 {
- "id": "wd_q91282246",
- "qid": "Q91282246",
- "tier": "wikidata",
- "depth": "sections",
- "title": "Alaska Airlines 60",
- "flight_number": "AA60",
- "date": "1976-04-05",
- "agency": "NTSB",
- "aircraft": {
-  "type": "Boeing 727-81",
-  "manufacturer": "Boeing",
-  "family": "727",
-  "registration": "N124AS"
- },
- "operator": "Alaska Airlines",
- "route": {
-  "from_name": "Juneau",
-  "to_name": "Ketchikan"
- },
- "location": {
-  "name": "Ketchikan International Airport",
-  "country": "United States"
- },
- "phase": "landing",
- "occupants": 50,
- "fatalities": 1,
- "category": "USOS",
- "summary": "Flight 60 departed Juneau and established an ILS approach to Ketchikan under low cloud ceilings and low visibility due to light snow and fog. The captain abandoned the precision approach for a visual approach at 1000 ft altitude. The aircraft touched down long at 145 knots alongside a tailwind of 3 knots on the wet runway with poor braking. The captain initiated a go-around but the thrust reverser mechanism failed to fully disengage, preventing full takeoff thrust. The aircraft overran the runway and struck an antenna array support in a ravine.",
- "probable_cause": "Captain Burke's faulty judgement to initiate a go-around after committing to a landing following an excessively long and fast approach, combined with the thrust reverser failure. The captain's unprofessional decision to abandon the precision approach contributed.",
- "factors": [
-  {
-   "id": "low_visibility",
-   "role": "latent",
-   "evidence": "low cloud ceilings and low visibility conditions due to light snow and fog (p. 5)"
+  "id": "wd_q91282246",
+  "qid": "Q91282246",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Alaska Airlines 60",
+  "flight_number": "AA60",
+  "date": "1976-04-05",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "Boeing 727-81",
+    "manufacturer": "Boeing",
+    "family": "727",
+    "registration": "N124AS"
   },
-  {
-   "id": "unstable_approach",
-   "role": "contributing",
-   "evidence": "high and fast approach with visual contact made at 1000 ft and distance of about 2 mi (p. 5-6)"
+  "operator": "Alaska Airlines",
+  "route": {
+    "from_name": "Juneau",
+    "to_name": "Ketchikan"
   },
-  {
-   "id": "landing_long",
-   "role": "contributing",
-   "evidence": "touched down about 1,500 feet beyond the runway threshold at a speed of 145 kn (p. 6-7)"
+  "location": {
+    "name": "Ketchikan International Airport",
+    "country": "United States",
+    "lat": 55.3542,
+    "lon": -131.7111
   },
-  {
-   "id": "tailwind_landing",
-   "role": "contributing",
-   "evidence": "alongside a tailwind of 3 kn at the time of landing (p. 6)"
-  },
-  {
-   "id": "contaminated_runway",
-   "role": "contributing",
-   "evidence": "braking actions were poor due to the runway being wet at the time of landing (p. 6-7)"
-  },
-  {
-   "id": "thrust_reverser_inflight",
-   "role": "contributing",
-   "evidence": "thrust reverser mechanism failed to fully disengage during go-around (p. 6-8)"
-  },
-  {
-   "id": "runway_overrun",
-   "role": "outcome",
-   "evidence": "aircraft overran the runway and struck antenna array support 700 ft beyond runway end (p. 6-7)"
-  },
-  {
-   "id": "loss_of_control_inflight",
-   "role": "outcome",
-   "evidence": "1 fatality from crash and post-crash fire (p. 7)"
-  }
- ],
- "chain": [
-  [
-   "unstable_approach",
-   "landing_long"
+  "phase": "landing",
+  "occupants": 50,
+  "fatalities": 1,
+  "category": "USOS",
+  "summary": "Flight 60 departed Juneau and established an ILS approach to Ketchikan under low cloud ceilings and low visibility due to light snow and fog. The captain abandoned the precision approach for a visual approach at 1000 ft altitude. The aircraft touched down long at 145 knots alongside a tailwind of 3 knots on the wet runway with poor braking. The captain initiated a go-around but the thrust reverser mechanism failed to fully disengage, preventing full takeoff thrust. The aircraft overran the runway and struck an antenna array support in a ravine.",
+  "probable_cause": "Captain Burke's faulty judgement to initiate a go-around after committing to a landing following an excessively long and fast approach, combined with the thrust reverser failure. The captain's unprofessional decision to abandon the precision approach contributed.",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "low cloud ceilings and low visibility conditions due to light snow and fog (p. 5)"
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "high and fast approach with visual contact made at 1000 ft and distance of about 2 mi (p. 5-6)"
+    },
+    {
+      "id": "landing_long",
+      "role": "contributing",
+      "evidence": "touched down about 1,500 feet beyond the runway threshold at a speed of 145 kn (p. 6-7)"
+    },
+    {
+      "id": "tailwind_landing",
+      "role": "contributing",
+      "evidence": "alongside a tailwind of 3 kn at the time of landing (p. 6)"
+    },
+    {
+      "id": "contaminated_runway",
+      "role": "contributing",
+      "evidence": "braking actions were poor due to the runway being wet at the time of landing (p. 6-7)"
+    },
+    {
+      "id": "thrust_reverser_inflight",
+      "role": "contributing",
+      "evidence": "thrust reverser mechanism failed to fully disengage during go-around (p. 6-8)"
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "aircraft overran the runway and struck antenna array support 700 ft beyond runway end (p. 6-7)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "1 fatality from crash and post-crash fire (p. 7)"
+    }
   ],
-  [
-   "landing_long",
-   "contaminated_runway"
+  "chain": [
+    [
+      "unstable_approach",
+      "landing_long"
+    ],
+    [
+      "landing_long",
+      "contaminated_runway"
+    ],
+    [
+      "contaminated_runway",
+      "thrust_reverser_inflight"
+    ],
+    [
+      "thrust_reverser_inflight",
+      "runway_overrun"
+    ]
   ],
-  [
-   "contaminated_runway",
-   "thrust_reverser_inflight"
+  "events": [
+    {
+      "t": 0,
+      "clock": "08:05",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Anchorage ARTCC cleared Flight 60 for an approach to runway 11 at Ketchikan International Airport (p. 5)",
+      "factors": []
+    },
+    {
+      "t": 360,
+      "clock": "08:11",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 60 reported out of 10,000 feet and contacted Ketchikan FSS; received weather report showing ceiling 800 feet obscured, visibility 2 miles with light snow and fog, and was advised that braking action on runway 11 was poor (p. 5)",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 540,
+      "clock": "08:17",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Near the 1.7-mile DME fix, as the flight descended through 4,000 feet and acquired visual contact with the ground and water near Guard Island, the captain decided to abandon the ILS approach and continue visually, establishing his own visual glide slope at approximately 1,000 feet altitude (p. 5-6)",
+      "factors": [
+        "unstable_approach"
+      ]
+    },
+    {
+      "t": 600,
+      "clock": "08:18",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Visual contact with approach lights was established approximately 2 miles from the runway threshold, and the airport became visible shortly thereafter (p. 5)",
+      "factors": []
+    },
+    {
+      "t": 840,
+      "clock": "08:19",
+      "phase": "landing",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft touched down approximately 1,500 feet past the runway 11 threshold at an excessive speed with a tailwind of 3 knots on a wet runway; the captain did not see the yellow 1,000-foot markers or the runway clearly (p. 6-7)",
+      "factors": [
+        "landing_long",
+        "tailwind_landing",
+        "contaminated_runway"
+      ]
+    },
+    {
+      "t": 900,
+      "clock": "08:20",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain deployed ground spoilers, reversed the engines, and applied wheel brakes; discovering that braking action was poor, he decided to execute a go-around (p. 6)",
+      "factors": [
+        "contaminated_runway"
+      ]
+    },
+    {
+      "t": 930,
+      "clock": "08:20",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The thrust reverser mechanism did not disengage fully, preventing the captain from obtaining full takeoff thrust; attempts to reach idle and re-apply reverse thrust were unsuccessful (p. 6)",
+      "factors": [
+        "thrust_reverser_inflight"
+      ]
+    },
+    {
+      "t": 960,
+      "clock": "08:20",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Realizing the aircraft could not be stopped on the runway, the captain turned right, raised the nose, and passed over a gully and service road beyond the runway departure end; the aircraft came to rest in a ravine 700 feet past the departure end of runway 11 and 125 feet right of centerline, destroyed by impact and ground fire (p. 6-7)",
+      "factors": [
+        "runway_overrun"
+      ]
+    }
   ],
-  [
-   "thrust_reverser_inflight",
-   "runway_overrun"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "08:05",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Anchorage ARTCC cleared Flight 60 for an approach to runway 11 at Ketchikan International Airport (p. 5)",
-   "factors": []
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7620.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR76-20.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Alaska_Airlines_Flight_60",
+  "asn_id": "19760405-0",
+  "interest": 5.88,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from NTSB AAR-76-20; 8 events from history of flight section with expanded descriptions from report text; all factor ids from taxonomy; recommendations extracted from Safety Recommendations section",
+      "auto-repair: cvr was null"
+    ]
   },
-  {
-   "t": 360,
-   "clock": "08:11",
-   "phase": "descent",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Flight 60 reported out of 10,000 feet and contacted Ketchikan FSS; received weather report showing ceiling 800 feet obscured, visibility 2 miles with light snow and fog, and was advised that braking action on runway 11 was poor (p. 5)",
-   "factors": [
-    "low_visibility"
-   ]
-  },
-  {
-   "t": 540,
-   "clock": "08:17",
-   "phase": "approach",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Near the 1.7-mile DME fix, as the flight descended through 4,000 feet and acquired visual contact with the ground and water near Guard Island, the captain decided to abandon the ILS approach and continue visually, establishing his own visual glide slope at approximately 1,000 feet altitude (p. 5-6)",
-   "factors": [
-    "unstable_approach"
-   ]
-  },
-  {
-   "t": 600,
-   "clock": "08:18",
-   "phase": "approach",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Visual contact with approach lights was established approximately 2 miles from the runway threshold, and the airport became visible shortly thereafter (p. 5)",
-   "factors": []
-  },
-  {
-   "t": 840,
-   "clock": "08:19",
-   "phase": "landing",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Aircraft touched down approximately 1,500 feet past the runway 11 threshold at an excessive speed with a tailwind of 3 knots on a wet runway; the captain did not see the yellow 1,000-foot markers or the runway clearly (p. 6-7)",
-   "factors": [
-    "landing_long",
-    "tailwind_landing",
-    "contaminated_runway"
-   ]
-  },
-  {
-   "t": 900,
-   "clock": "08:20",
-   "phase": "landing",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Captain deployed ground spoilers, reversed the engines, and applied wheel brakes; discovering that braking action was poor, he decided to execute a go-around (p. 6)",
-   "factors": [
-    "contaminated_runway"
-   ]
-  },
-  {
-   "t": 930,
-   "clock": "08:20",
-   "phase": "go_around",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "The thrust reverser mechanism did not disengage fully, preventing the captain from obtaining full takeoff thrust; attempts to reach idle and re-apply reverse thrust were unsuccessful (p. 6)",
-   "factors": [
-    "thrust_reverser_inflight"
-   ]
-  },
-  {
-   "t": 960,
-   "clock": "08:20",
-   "phase": "go_around",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Realizing the aircraft could not be stopped on the runway, the captain turned right, raised the nose, and passed over a gully and service road beyond the runway departure end; the aircraft came to rest in a ravine 700 feet past the departure end of runway 11 and 125 feet right of centerline, destroyed by impact and ground fire (p. 6-7)",
-   "factors": [
-    "runway_overrun"
-   ]
-  }
- ],
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7620.pdf",
-  "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR76-20.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/Alaska_Airlines_Flight_60",
- "asn_id": "19760405-0",
- "interest": 5.88,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5-20251001",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Extracted from NTSB AAR-76-20; 8 events from history of flight section with expanded descriptions from report text; all factor ids from taxonomy; recommendations extracted from Safety Recommendations section",
-   "auto-repair: cvr was null"
-  ]
- },
- "curated_id": null,
- "recommendations": [
-  {
-   "id": "A-72-137",
-   "to": "FAA",
-   "text": "Establish a procedure to require air carrier management to establish and implement a system that would provide a method for continual assessment of the pilot-in-command's performance in executing management's operational control responsibility",
-   "status": "open",
-   "outcome": null,
-   "trigger_factors": [
-    "unstable_approach"
-   ]
-  },
-  {
-   "id": "A-72-140",
-   "to": "ALPA",
-   "text": "Implement a program within existing professional standards committees to provide an expeditious means for peer groups monitoring and disciplining pilots who may display any unprofessional or hazardous traits",
-   "status": "open",
-   "outcome": null,
-   "trigger_factors": [
-    "unstable_approach"
-   ]
-  },
-  {
-   "id": "A-74-85",
-   "to": "FAA",
-   "text": "Initiate a movement among the pilots associations to form new professional standards committees and to regenerate old ones to monitor ranks for unprofessional performance and alert pilots",
-   "status": "open",
-   "outcome": null,
-   "trigger_factors": [
-    "unstable_approach"
-   ]
-  },
-  {
-   "id": "A-74-86",
-   "to": "FAA",
-   "text": "Develop an air carrier pilot program similar to the General Aviation Accident Prevention Program that will emphasize the dangers of unprofessional performance in all phases of flight",
-   "status": "open",
-   "outcome": null,
-   "trigger_factors": [
-    "unstable_approach"
-   ]
-  },
-  {
-   "id": "A-76-141",
-   "to": "FAA",
-   "text": "Inspect more frequently the crash/fire/rescue capabilities of certificated airports, especially those in Alaska, to assure adequate training of personnel, maintenance and operational readiness of CFR equipment",
-   "status": "open",
-   "outcome": null,
-   "trigger_factors": [
-    "runway_overrun"
-   ]
-  },
-  {
-   "id": "A-76-142",
-   "to": "FAA",
-   "text": "Initiate a program for those airports which have no full-time CFR crew, especially those in Alaska, to properly train and equip the personnel that must respond to an aircraft fire",
-   "status": "open",
-   "outcome": null,
-   "trigger_factors": [
-    "runway_overrun"
-   ]
-  },
-  {
-   "id": "A-76-143",
-   "to": "FAA",
-   "text": "Amend 14 CFR 139 to require that airport personnel who are not professional firefighters but who, because of their supervisory status, must direct CFR operations at airports, be qualified to perform this task",
-   "status": "open",
-   "outcome": null,
-   "trigger_factors": [
-    "runway_overrun"
-   ]
-  },
-  {
-   "id": "A-77-7",
-   "to": "FAA",
-   "text": "Amend 14 CFR 67 to require that all applicants for first- and second-class medical certificates be administered periodically an audiometric hearing test",
-   "status": "open",
-   "outcome": null,
-   "trigger_factors": []
-  }
- ],
- "dissent": [],
- "safety_changes": [],
- "related": [],
- "fdr": null,
- "sources": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7620.pdf",
-  "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR76-20.pdf"
- ],
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead"
-  }
- ],
- "cvr": []
+  "curated_id": null,
+  "recommendations": [
+    {
+      "id": "A-72-137",
+      "to": "FAA",
+      "text": "Establish a procedure to require air carrier management to establish and implement a system that would provide a method for continual assessment of the pilot-in-command's performance in executing management's operational control responsibility",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "unstable_approach"
+      ]
+    },
+    {
+      "id": "A-72-140",
+      "to": "ALPA",
+      "text": "Implement a program within existing professional standards committees to provide an expeditious means for peer groups monitoring and disciplining pilots who may display any unprofessional or hazardous traits",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "unstable_approach"
+      ]
+    },
+    {
+      "id": "A-74-85",
+      "to": "FAA",
+      "text": "Initiate a movement among the pilots associations to form new professional standards committees and to regenerate old ones to monitor ranks for unprofessional performance and alert pilots",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "unstable_approach"
+      ]
+    },
+    {
+      "id": "A-74-86",
+      "to": "FAA",
+      "text": "Develop an air carrier pilot program similar to the General Aviation Accident Prevention Program that will emphasize the dangers of unprofessional performance in all phases of flight",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "unstable_approach"
+      ]
+    },
+    {
+      "id": "A-76-141",
+      "to": "FAA",
+      "text": "Inspect more frequently the crash/fire/rescue capabilities of certificated airports, especially those in Alaska, to assure adequate training of personnel, maintenance and operational readiness of CFR equipment",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "id": "A-76-142",
+      "to": "FAA",
+      "text": "Initiate a program for those airports which have no full-time CFR crew, especially those in Alaska, to properly train and equip the personnel that must respond to an aircraft fire",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "id": "A-76-143",
+      "to": "FAA",
+      "text": "Amend 14 CFR 139 to require that airport personnel who are not professional firefighters but who, because of their supervisory status, must direct CFR operations at airports, be qualified to perform this task",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "id": "A-77-7",
+      "to": "FAA",
+      "text": "Amend 14 CFR 67 to require that all applicants for first- and second-class medical certificates be administered periodically an audiometric hearing test",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": []
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7620.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR76-20.pdf"
+  ],
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "cvr": []
 }

@@ -7,65 +7,318 @@
   "t0": "1992-01-20T18:19:30Z",
   "agency": "BEA",
   "agencies": [
-    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses pour la sécurité de l'aviation civile", "country": "France", "role": "lead",
-      "report_id": null, "report_title": "Rapport de la Commission d'Enquête sur l'accident survenu le 20 janvier 1992 près du Mont Sainte-Odile (Bas-Rhin) à l'Airbus A320 immatriculé F-GGED exploité par la compagnie Air Inter", "report_date": "1993-11-26",
-      "url": "https://bea.aero/" }
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses pour la sécurité de l'aviation civile",
+      "country": "France",
+      "role": "lead",
+      "report_id": null,
+      "report_title": "Rapport de la Commission d'Enquête sur l'accident survenu le 20 janvier 1992 près du Mont Sainte-Odile (Bas-Rhin) à l'Airbus A320 immatriculé F-GGED exploité par la compagnie Air Inter",
+      "report_date": "1993-11-26",
+      "url": "https://bea.aero/"
+    }
   ],
-  "aircraft": { "type": "Airbus A320-111", "family": "A320", "manufacturer": "Airbus", "registration": "F-GGED", "msn": "38", "engines": "CFM International CFM56-5A1" },
+  "aircraft": {
+    "type": "Airbus A320-111",
+    "family": "A320",
+    "manufacturer": "Airbus",
+    "registration": "F-GGED",
+    "msn": "38",
+    "engines": "CFM International CFM56-5A1"
+  },
   "operator": "Air Inter",
-  "route": { "from": "LFLL", "from_name": "Lyon Satolas", "to": "LFST", "to_name": "Strasbourg Entzheim" },
-  "location": { "name": "La Bloss ridge near Mont Sainte-Odile, Vosges, Bas-Rhin", "country": "France", "lat": 48.4325, "lon": 7.4106 },
+  "route": {
+    "from": "LFLL",
+    "from_name": "Lyon Satolas",
+    "to": "LFST",
+    "to_name": "Strasbourg Entzheim"
+  },
+  "location": {
+    "name": "La Bloss ridge near Mont Sainte-Odile, Vosges, Bas-Rhin",
+    "country": "France",
+    "lat": 48.4325,
+    "lon": 7.4106
+  },
   "phase": "approach",
-  "occupants": 96, "fatalities": 87, "injuries_serious": 5,
+  "occupants": 96,
+  "fatalities": 87,
+  "injuries_serious": 5,
   "damage": "destroyed",
   "category": "CFIT",
   "summary": "On a night VOR/DME approach to Strasbourg runway 05, after a late change of runway and approach by ATC, the crew descended from the final approach fix at about 3,300 ft/min instead of the intended 3.3 degree flight path angle. The aircraft struck the wooded ridge of La Bloss at 2,620 ft in cloud. 87 of the 96 occupants died; the wreckage was not located for several hours.",
   "probable_cause": "The Commission concluded that the accident was most probably due to a very high rate of descent during the final approach, the origin of which could not be determined with certainty; the most probable hypothesis was that the crew selected a vertical speed of -3,300 ft/min when they intended a flight path angle of -3.3 degrees on the FCU, whose display of the two modes was similar. Contributing factors included the crew's high workload following the late change of approach, the absence of cross-checking of the descent, the absence of a GPWS on the aircraft, the lack of an altitude check-call culture at Air Inter, and the limited radar and MSAW coverage at Strasbourg.",
   "factors": [
-    { "id": "atc_communication_error", "role": "initiating", "evidence": "ATC changed the expected ILS approach to runway 23 to a VOR/DME approach to runway 05 late in the descent, requiring the crew to re-plan under time pressure." },
-    { "id": "high_workload", "role": "contributing", "evidence": "The crew were re-briefing the approach, managing the autopilot and flying a tight circuit with little time between the approach fix and the descent." },
-    { "id": "mode_confusion", "role": "contributing", "evidence": "The most probable hypothesis is that the crew set -33 on the FCU in vertical speed mode (-3,300 ft/min) while intending -3.3 degrees flight path angle." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The FCU display presented flight path angle and vertical speed in a similar two-digit format with only a small mode indication, facilitating confusion." },
-    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "Neither pilot monitored the vertical speed or altitude against the approach profile during the roughly one-minute descent." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "There was no callout or cross-check of altitude and descent rate between the two pilots." },
-    { "id": "gpws_warning_response", "role": "latent", "evidence": "The aircraft was not fitted with a GPWS; Air Inter had obtained an exemption, so no terrain warning was available to the crew." },
-    { "id": "operator_safety_culture", "role": "latent", "evidence": "Air Inter had chosen not to equip its fleet with GPWS and did not require altitude callouts on non-precision approaches." },
-    { "id": "msaw_unavailable", "role": "latent", "evidence": "Strasbourg approach radar did not provide minimum safe altitude warning to the controller." },
-    { "id": "dark_night", "role": "contributing", "evidence": "The approach was flown at night in cloud with no visual reference to the terrain." },
-    { "id": "low_visibility", "role": "contributing", "evidence": "The aircraft was in cloud with snow showers over the Vosges during the descent." },
-    { "id": "cfit", "role": "outcome", "evidence": "The aircraft struck the ridge at 2,620 ft in a controlled descent with no indication that the crew saw the terrain." }
+    {
+      "id": "atc_communication_error",
+      "role": "initiating",
+      "evidence": "ATC changed the expected ILS approach to runway 23 to a VOR/DME approach to runway 05 late in the descent, requiring the crew to re-plan under time pressure."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The crew were re-briefing the approach, managing the autopilot and flying a tight circuit with little time between the approach fix and the descent."
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "The most probable hypothesis is that the crew set -33 on the FCU in vertical speed mode (-3,300 ft/min) while intending -3.3 degrees flight path angle."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The FCU display presented flight path angle and vertical speed in a similar two-digit format with only a small mode indication, facilitating confusion."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Neither pilot monitored the vertical speed or altitude against the approach profile during the roughly one-minute descent."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "There was no callout or cross-check of altitude and descent rate between the two pilots."
+    },
+    {
+      "id": "gpws_warning_response",
+      "role": "latent",
+      "evidence": "The aircraft was not fitted with a GPWS; Air Inter had obtained an exemption, so no terrain warning was available to the crew."
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "latent",
+      "evidence": "Air Inter had chosen not to equip its fleet with GPWS and did not require altitude callouts on non-precision approaches."
+    },
+    {
+      "id": "msaw_unavailable",
+      "role": "latent",
+      "evidence": "Strasbourg approach radar did not provide minimum safe altitude warning to the controller."
+    },
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "The approach was flown at night in cloud with no visual reference to the terrain."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "The aircraft was in cloud with snow showers over the Vosges during the descent."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft struck the ridge at 2,620 ft in a controlled descent with no indication that the crew saw the terrain."
+    }
   ],
   "chain": [
-    ["atc_communication_error", "high_workload"],
-    ["high_workload", "mode_confusion"],
-    ["design_deficiency", "mode_confusion"],
-    ["mode_confusion", "inadequate_monitoring"],
-    ["crm_breakdown", "inadequate_monitoring"],
-    ["operator_safety_culture", "gpws_warning_response"],
-    ["dark_night", "cfit"],
-    ["low_visibility", "cfit"],
-    ["inadequate_monitoring", "cfit"],
-    ["gpws_warning_response", "cfit"],
-    ["msaw_unavailable", "cfit"]
+    [
+      "atc_communication_error",
+      "high_workload"
+    ],
+    [
+      "high_workload",
+      "mode_confusion"
+    ],
+    [
+      "design_deficiency",
+      "mode_confusion"
+    ],
+    [
+      "mode_confusion",
+      "inadequate_monitoring"
+    ],
+    [
+      "crm_breakdown",
+      "inadequate_monitoring"
+    ],
+    [
+      "operator_safety_culture",
+      "gpws_warning_response"
+    ],
+    [
+      "dark_night",
+      "cfit"
+    ],
+    [
+      "low_visibility",
+      "cfit"
+    ],
+    [
+      "inadequate_monitoring",
+      "cfit"
+    ],
+    [
+      "gpws_warning_response",
+      "cfit"
+    ],
+    [
+      "msaw_unavailable",
+      "cfit"
+    ]
   ],
   "events": [
-    { "t": -1800, "clock": "17:49", "phase": "takeoff", "actor": "CAPT", "text": "Flight IT148 departs Lyon for Strasbourg with 90 passengers and 6 crew; the captain is pilot flying.", "kind": "crew_action" },
-    { "t": -600, "clock": "18:09", "phase": "descent", "actor": "ATC", "text": "Strasbourg approach informs the crew that the ILS to runway 23 is not available for them and offers a VOR/DME approach to runway 05; the crew re-brief the approach.", "factors": ["atc_communication_error", "high_workload"], "kind": "atc" },
-    { "t": -240, "clock": "18:15", "phase": "descent", "actor": "ATC", "text": "ATC vectors the aircraft to intercept the final approach track, which brings it to the ANDLO final fix closer in than planned.", "factors": ["high_workload"], "kind": "atc" },
-    { "t": -60, "clock": "18:18", "phase": "approach", "actor": "CAPT", "text": "The crew set up the descent on the FCU; the most probable hypothesis is a -33 selection in vertical speed mode rather than -3.3 degree flight path angle.", "factors": ["mode_confusion", "design_deficiency"], "kind": "crew_action" },
-    { "t": 0, "clock": "18:19:30", "phase": "approach", "actor": "SYS", "text": "Aircraft begins descent from about 5,000 ft after ANDLO at about 3,300 ft/min, well above the expected 800 ft/min.", "state": { "alt": 5000, "vs": -3300 }, "factors": ["mode_confusion", "inadequate_monitoring"], "kind": "system" },
-    { "t": 20, "clock": "18:19:50", "phase": "approach", "actor": "ATC", "text": "Controller, without MSAW, sees nothing abnormal on the radar and clears the crew to continue; no altitude alert is available.", "factors": ["msaw_unavailable"], "kind": "atc" },
-    { "t": 40, "clock": "18:20:10", "phase": "approach", "actor": "SYS", "text": "The aircraft passes through 3,500 ft in cloud at night still descending at high rate; no callouts are made and no GPWS is fitted.", "state": { "alt": 3500 }, "factors": ["dark_night", "low_visibility", "crm_breakdown", "gpws_warning_response"], "kind": "system" },
-    { "t": 63, "clock": "18:20:33", "phase": "approach", "actor": "SYS", "text": "Aircraft strikes trees on the ridge of La Bloss at 2,620 ft in level flight and breaks up; 87 of 96 occupants die.", "state": { "alt": 2620 }, "factors": ["cfit"], "kind": "outcome" },
-    { "t": 15000, "clock": "22:30", "phase": "ground", "actor": "OTHER", "text": "Rescuers reach the wreckage some four hours after the accident; nine survivors are recovered.", "kind": "outcome" }
+    {
+      "t": -1800,
+      "clock": "17:49",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "Flight IT148 departs Lyon for Strasbourg with 90 passengers and 6 crew; the captain is pilot flying.",
+      "kind": "crew_action"
+    },
+    {
+      "t": -600,
+      "clock": "18:09",
+      "phase": "descent",
+      "actor": "ATC",
+      "text": "Strasbourg approach informs the crew that the ILS to runway 23 is not available for them and offers a VOR/DME approach to runway 05; the crew re-brief the approach.",
+      "factors": [
+        "atc_communication_error",
+        "high_workload"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": -240,
+      "clock": "18:15",
+      "phase": "descent",
+      "actor": "ATC",
+      "text": "ATC vectors the aircraft to intercept the final approach track, which brings it to the ANDLO final fix closer in than planned.",
+      "factors": [
+        "high_workload"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": -60,
+      "clock": "18:18",
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "The crew set up the descent on the FCU; the most probable hypothesis is a -33 selection in vertical speed mode rather than -3.3 degree flight path angle.",
+      "factors": [
+        "mode_confusion",
+        "design_deficiency"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "18:19:30",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Aircraft begins descent from about 5,000 ft after ANDLO at about 3,300 ft/min, well above the expected 800 ft/min.",
+      "state": {
+        "alt": 5000,
+        "vs": -3300
+      },
+      "factors": [
+        "mode_confusion",
+        "inadequate_monitoring"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 20,
+      "clock": "18:19:50",
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Controller, without MSAW, sees nothing abnormal on the radar and clears the crew to continue; no altitude alert is available.",
+      "factors": [
+        "msaw_unavailable"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": 40,
+      "clock": "18:20:10",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "The aircraft passes through 3,500 ft in cloud at night still descending at high rate; no callouts are made and no GPWS is fitted.",
+      "state": {
+        "alt": 3500
+      },
+      "factors": [
+        "dark_night",
+        "low_visibility",
+        "crm_breakdown",
+        "gpws_warning_response"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 63,
+      "clock": "18:20:33",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Aircraft strikes trees on the ridge of La Bloss at 2,620 ft in level flight and breaks up; 87 of 96 occupants die.",
+      "state": {
+        "alt": 2620
+      },
+      "factors": [
+        "cfit"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 15000,
+      "clock": "22:30",
+      "phase": "ground",
+      "actor": "OTHER",
+      "text": "Rescuers reach the wreckage some four hours after the accident; nine survivors are recovered.",
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "DGAC", "text": "Make the carriage of a ground proximity warning system mandatory on French public transport aircraft.", "status": "closed_acceptable", "outcome": "GPWS became mandatory in France and Air Inter equipped its fleet.", "trigger_factors": ["gpws_warning_response", "operator_safety_culture"] },
-    { "id": null, "to": "DGAC / Airbus", "text": "Modify the FCU so that the vertical speed and flight path angle modes are clearly distinguishable in the display.", "status": "closed_acceptable", "outcome": "Airbus modified the FCU display to show vertical speed with four digits and flight path angle with two digits and a decimal point.", "trigger_factors": ["design_deficiency", "mode_confusion"] },
-    { "id": null, "to": "DGAC", "text": "Extend minimum safe altitude warning coverage at French approach radar facilities and review approach procedures at Strasbourg.", "status": "unknown", "outcome": null, "trigger_factors": ["msaw_unavailable"] },
-    { "id": null, "to": "Air Inter", "text": "Introduce systematic altitude and descent rate callouts and cross-checks during non-precision approaches.", "status": "unknown", "outcome": null, "trigger_factors": ["crm_breakdown", "inadequate_monitoring"] },
-    { "id": null, "to": "DGAC", "text": "Improve the location of accident sites through ELT performance and coordination of search and rescue.", "status": "unknown", "outcome": null, "trigger_factors": [] }
+    {
+      "id": null,
+      "to": "DGAC",
+      "text": "Make the carriage of a ground proximity warning system mandatory on French public transport aircraft.",
+      "status": "closed_acceptable",
+      "outcome": "GPWS became mandatory in France and Air Inter equipped its fleet.",
+      "trigger_factors": [
+        "gpws_warning_response",
+        "operator_safety_culture"
+      ]
+    },
+    {
+      "id": null,
+      "to": "DGAC / Airbus",
+      "text": "Modify the FCU so that the vertical speed and flight path angle modes are clearly distinguishable in the display.",
+      "status": "closed_acceptable",
+      "outcome": "Airbus modified the FCU display to show vertical speed with four digits and flight path angle with two digits and a decimal point.",
+      "trigger_factors": [
+        "design_deficiency",
+        "mode_confusion"
+      ]
+    },
+    {
+      "id": null,
+      "to": "DGAC",
+      "text": "Extend minimum safe altitude warning coverage at French approach radar facilities and review approach procedures at Strasbourg.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "msaw_unavailable"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Air Inter",
+      "text": "Introduce systematic altitude and descent rate callouts and cross-checks during non-precision approaches.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "crm_breakdown",
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": null,
+      "to": "DGAC",
+      "text": "Improve the location of accident sites through ELT performance and coordination of search and rescue.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": []
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -73,14 +326,26 @@
     "Airbus FCU display modification distinguishing V/S from FPA (four digits versus two with decimal point).",
     "Reinforced altitude callouts and approach monitoring procedures at Air Inter and improved SAR coordination."
   ],
-  "related": ["af296", "crossair3597", "korean801", "asiana214"],
+  "related": [
+    "af296",
+    "crossair3597",
+    "korean801",
+    "asiana214"
+  ],
   "fdr": null,
   "sources": [
     "https://bea.aero/"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
-    "Impact at 18:20:33 UTC (19:20 local) is from the report; intermediate times and the descent initiation clock are approximate.",
-    "The ATC runway change and radar vectoring are recorded contributors but the report attributes the descent rate primarily to the probable FCU mode confusion, which could not be proved definitively.",
-    "Report reference number omitted; recommendation ids null."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Impact at 18:20:33 UTC (19:20 local) is from the report; intermediate times and the descent initiation clock are approximate.",
+      "The ATC runway change and radar vectoring are recorded contributors but the report attributes the descent rate primarily to the probable FCU mode confusion, which could not be proved definitively.",
+      "Report reference number omitted; recommendation ids null."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Inter_Flight_148"
 }

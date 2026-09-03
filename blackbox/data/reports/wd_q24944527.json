@@ -31,7 +31,9 @@
   },
   "location": {
     "name": "Zion, Illinois",
-    "country": "United States"
+    "country": "United States",
+    "lat": 42.4483,
+    "lon": -87.8275
   },
   "phase": "approach",
   "occupants": 4,

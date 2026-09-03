@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Naval Air Station Jacksonville, runway 10",
-    "country": "United States"
+    "country": "United States",
+    "lat": 30.2318,
+    "lon": -81.6703
   },
   "occupants": 143,
   "fatalities": 0,

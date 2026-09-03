@@ -36,7 +36,9 @@
   },
   "location": {
     "name": "Toledo Express Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 41.6325,
+    "lon": -83.8012
   },
   "phase": "go_around",
   "occupants": 4,
@@ -73,10 +75,22 @@
     }
   ],
   "chain": [
-    ["unstable_approach", "mode_confusion"],
-    ["mode_confusion", "crm_breakdown"],
-    ["crm_breakdown", "spatial_disorientation"],
-    ["spatial_disorientation", "loss_of_control_inflight"]
+    [
+      "unstable_approach",
+      "mode_confusion"
+    ],
+    [
+      "mode_confusion",
+      "crm_breakdown"
+    ],
+    [
+      "crm_breakdown",
+      "spatial_disorientation"
+    ],
+    [
+      "spatial_disorientation",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
@@ -183,12 +197,16 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9205.pdf"],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9205.pdf"
+  ],
   "wikipedia": "https://en.wikipedia.org/wiki/Air_Transport_International_Flight_805",
   "asn_id": null,
   "interest": 8.72,
   "curated_id": null,
-  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9205.pdf"],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9205.pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5-20251001",

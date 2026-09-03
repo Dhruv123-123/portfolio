@@ -7,75 +7,374 @@
   "t0": "2007-07-17T21:54:00Z",
   "agency": "CENIPA",
   "agencies": [
-    { "code": "CENIPA", "name": "Centro de Investigação e Prevenção de Acidentes Aeronáuticos", "country": "Brazil", "role": "lead",
-      "report_id": "A-67/CENIPA/2009", "report_title": "Final Report A-67/CENIPA/2009, PR-MBK, 17 July 2007", "report_date": "2009-09-25",
-      "url": "https://www2.fab.mil.br/cenipa" },
-    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses", "country": "France", "role": "accredited_representative",
-      "report_id": null, "report_title": null, "report_date": null, "url": "https://bea.aero" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative",
-      "report_id": null, "report_title": null, "report_date": null, "url": "https://www.ntsb.gov" }
+    {
+      "code": "CENIPA",
+      "name": "Centro de Investigação e Prevenção de Acidentes Aeronáuticos",
+      "country": "Brazil",
+      "role": "lead",
+      "report_id": "A-67/CENIPA/2009",
+      "report_title": "Final Report A-67/CENIPA/2009, PR-MBK, 17 July 2007",
+      "report_date": "2009-09-25",
+      "url": "https://www2.fab.mil.br/cenipa"
+    },
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses",
+      "country": "France",
+      "role": "accredited_representative",
+      "report_id": null,
+      "report_title": null,
+      "report_date": null,
+      "url": "https://bea.aero"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative",
+      "report_id": null,
+      "report_title": null,
+      "report_date": null,
+      "url": "https://www.ntsb.gov"
+    }
   ],
-  "aircraft": { "type": "Airbus A320-233", "family": "A320", "manufacturer": "Airbus", "registration": "PR-MBK", "msn": "789", "engines": "IAE V2527E-A5" },
+  "aircraft": {
+    "type": "Airbus A320-233",
+    "family": "A320",
+    "manufacturer": "Airbus",
+    "registration": "PR-MBK",
+    "msn": "789",
+    "engines": "IAE V2527E-A5"
+  },
   "operator": "TAM Linhas Aéreas",
-  "route": { "from": "SBPA", "from_name": "Porto Alegre Salgado Filho", "to": "SBSP", "to_name": "São Paulo Congonhas" },
-  "location": { "name": "São Paulo Congonhas airport, runway 35L overrun into TAM Express building on Avenida Washington Luís", "country": "Brazil", "lat": -23.626, "lon": -46.656 },
+  "route": {
+    "from": "SBPA",
+    "from_name": "Porto Alegre Salgado Filho",
+    "to": "SBSP",
+    "to_name": "São Paulo Congonhas"
+  },
+  "location": {
+    "name": "São Paulo Congonhas airport, runway 35L overrun into TAM Express building on Avenida Washington Luís",
+    "country": "Brazil",
+    "lat": -23.626,
+    "lon": -46.656
+  },
   "phase": "landing",
-  "occupants": 187, "fatalities": 199, "injuries_serious": null,
+  "occupants": 187,
+  "fatalities": 199,
+  "injuries_serious": null,
   "damage": "destroyed",
   "category": "RE",
   "summary": "The A320 landed on the wet, recently resurfaced and ungrooved runway 35L at Congonhas with its right thrust reverser deactivated under the MEL. At touchdown the left thrust lever was moved to reverse but the right lever remained in the CLIMB detent. Because one lever was above idle, the ground spoilers did not deploy and the autobrake did not engage, and the right engine continued to deliver climb thrust. The aircraft veered left, ran off the end of the runway, crossed a major avenue and struck a TAM Express warehouse and a fuel station, killing all 187 on board and 12 people on the ground.",
   "probable_cause": "CENIPA concluded that the accident resulted from the right thrust lever remaining in the CLIMB position during the landing roll while the left was in reverse, which prevented ground spoiler extension and autobrake operation and produced forward thrust on the right engine, so that the aircraft could not be stopped on the runway. Contributing factors included the crew's failure to recognise the thrust lever position, the absence of a specific alert for a thrust lever asymmetry on landing, the deactivated reverser and the procedure in use for landing with a reverser inoperative, deficiencies in crew training and CRM, the wet, ungrooved runway with poor drainage at the time, the absence of a runway end safety area, and inadequacies in the oversight of operations at Congonhas.",
   "factors": [
-    { "id": "known_defect_unresolved", "role": "latent", "evidence": "The right engine thrust reverser had been deactivated four days earlier and the aircraft was operating under the MEL with the reverser inoperative." },
-    { "id": "control_misidentification", "role": "initiating", "evidence": "The FDR showed that at touchdown the left thrust lever was moved to idle and reverse while the right thrust lever remained in the CLIMB detent." },
-    { "id": "inappropriate_control_input", "role": "contributing", "evidence": "The crew did not move the right thrust lever to idle despite the RETARD callout and the aircraft's failure to decelerate." },
-    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The reverser-inoperative landing procedure required both thrust levers to be retarded to idle; the report found the crew's actions did not comply with the procedure in force." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The ground spoiler and autobrake logic inhibited deployment with one thrust lever above idle, and no dedicated warning drew attention to a thrust lever asymmetry on the ground." },
-    { "id": "warning_system_deficiency", "role": "latent", "evidence": "Apart from the RETARD callout, the aircraft provided no alert that the spoilers had not deployed or that one engine was producing forward thrust during the landing roll." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "CENIPA found deficiencies in the operator's training on landing with a reverser inoperative and on thrust lever handling." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "Neither pilot identified the cause of the failure to decelerate in the seconds available; the report cited inadequate crew coordination." },
-    { "id": "contaminated_runway", "role": "contributing", "evidence": "Runway 35L was wet, had recently been resurfaced without grooves, and had poor drainage at the time of the accident." },
-    { "id": "airport_infrastructure", "role": "latent", "evidence": "Congonhas runway 35L had no runway end safety area and ended at a busy avenue and buildings; the runway had been reopened without grooving." },
-    { "id": "regulatory_oversight", "role": "latent", "evidence": "The report cited deficiencies in the oversight of the runway condition and of operations at Congonhas by the regulator and the airport operator." },
-    { "id": "runway_overrun", "role": "outcome", "evidence": "The aircraft left the end of the runway at high speed, crossed Avenida Washington Luís and struck the TAM Express building." },
-    { "id": "post_impact_fire", "role": "outcome", "evidence": "The aircraft exploded and burned on striking the building and an adjacent fuel station; all on board and 12 on the ground died." }
+    {
+      "id": "known_defect_unresolved",
+      "role": "latent",
+      "evidence": "The right engine thrust reverser had been deactivated four days earlier and the aircraft was operating under the MEL with the reverser inoperative."
+    },
+    {
+      "id": "control_misidentification",
+      "role": "initiating",
+      "evidence": "The FDR showed that at touchdown the left thrust lever was moved to idle and reverse while the right thrust lever remained in the CLIMB detent."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "The crew did not move the right thrust lever to idle despite the RETARD callout and the aircraft's failure to decelerate."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The reverser-inoperative landing procedure required both thrust levers to be retarded to idle; the report found the crew's actions did not comply with the procedure in force."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The ground spoiler and autobrake logic inhibited deployment with one thrust lever above idle, and no dedicated warning drew attention to a thrust lever asymmetry on the ground."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "latent",
+      "evidence": "Apart from the RETARD callout, the aircraft provided no alert that the spoilers had not deployed or that one engine was producing forward thrust during the landing roll."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "CENIPA found deficiencies in the operator's training on landing with a reverser inoperative and on thrust lever handling."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Neither pilot identified the cause of the failure to decelerate in the seconds available; the report cited inadequate crew coordination."
+    },
+    {
+      "id": "contaminated_runway",
+      "role": "contributing",
+      "evidence": "Runway 35L was wet, had recently been resurfaced without grooves, and had poor drainage at the time of the accident."
+    },
+    {
+      "id": "airport_infrastructure",
+      "role": "latent",
+      "evidence": "Congonhas runway 35L had no runway end safety area and ended at a busy avenue and buildings; the runway had been reopened without grooving."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "The report cited deficiencies in the oversight of the runway condition and of operations at Congonhas by the regulator and the airport operator."
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "The aircraft left the end of the runway at high speed, crossed Avenida Washington Luís and struck the TAM Express building."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "The aircraft exploded and burned on striking the building and an adjacent fuel station; all on board and 12 on the ground died."
+    }
   ],
   "chain": [
-    ["known_defect_unresolved", "control_misidentification"],
-    ["inadequate_training", "control_misidentification"],
-    ["control_misidentification", "inappropriate_control_input"],
-    ["control_misidentification", "procedural_noncompliance"],
-    ["design_deficiency", "warning_system_deficiency"],
-    ["warning_system_deficiency", "crm_breakdown"],
-    ["inappropriate_control_input", "runway_overrun"],
-    ["contaminated_runway", "runway_overrun"],
-    ["regulatory_oversight", "airport_infrastructure"],
-    ["airport_infrastructure", "post_impact_fire"],
-    ["runway_overrun", "post_impact_fire"]
+    [
+      "known_defect_unresolved",
+      "control_misidentification"
+    ],
+    [
+      "inadequate_training",
+      "control_misidentification"
+    ],
+    [
+      "control_misidentification",
+      "inappropriate_control_input"
+    ],
+    [
+      "control_misidentification",
+      "procedural_noncompliance"
+    ],
+    [
+      "design_deficiency",
+      "warning_system_deficiency"
+    ],
+    [
+      "warning_system_deficiency",
+      "crm_breakdown"
+    ],
+    [
+      "inappropriate_control_input",
+      "runway_overrun"
+    ],
+    [
+      "contaminated_runway",
+      "runway_overrun"
+    ],
+    [
+      "regulatory_oversight",
+      "airport_infrastructure"
+    ],
+    [
+      "airport_infrastructure",
+      "post_impact_fire"
+    ],
+    [
+      "runway_overrun",
+      "post_impact_fire"
+    ]
   ],
   "events": [
-    { "t": -345600, "clock": null, "phase": "ground", "actor": "GND", "text": "Four days before the accident the right engine thrust reverser is deactivated and the aircraft continues in service under the MEL.", "factors": ["known_defect_unresolved"], "kind": "crew_action" },
-    { "t": -600, "clock": null, "phase": "approach", "actor": "ATC", "text": "Congonhas reports runway 35L wet and slippery; the runway has recently been resurfaced and has not yet been grooved.", "factors": ["contaminated_runway", "airport_infrastructure"], "kind": "atc" },
-    { "t": -120, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Crew brief the landing with the right reverser inoperative and continue the approach to runway 35L.", "factors": ["known_defect_unresolved"], "kind": "crew_speech" },
-    { "t": -10, "clock": null, "phase": "landing", "actor": "SYS", "text": "In the flare the RETARD callout sounds; the left thrust lever is retarded to idle but the right thrust lever stays in the CLIMB detent.", "factors": ["control_misidentification"], "kind": "warning" },
-    { "t": 0, "clock": "21:54", "phase": "landing", "actor": "ENV", "text": "Touchdown on runway 35L about 250 m past the threshold; the ground spoilers do not deploy and the autobrake does not engage because one thrust lever is above idle.", "factors": ["design_deficiency", "warning_system_deficiency"], "kind": "system" },
-    { "t": 2, "clock": null, "phase": "landing", "actor": "PF", "text": "Left thrust lever moved to reverse; the right engine, with its lever in CLIMB, spools toward climb thrust as the autothrust disengages.", "factors": ["control_misidentification", "inappropriate_control_input"], "kind": "crew_action" },
-    { "t": 5, "clock": null, "phase": "landing", "actor": "PM", "text": "First officer calls out that the spoilers have not deployed; the captain calls 'decelerate, decelerate'.", "factors": ["crm_breakdown"], "kind": "crew_speech" },
-    { "t": 8, "clock": null, "phase": "landing", "actor": "PF", "text": "Manual braking is applied but the aircraft, with forward thrust on the right engine and no spoilers, barely decelerates and begins to veer left.", "factors": ["inappropriate_control_input", "contaminated_runway"], "kind": "crew_action" },
-    { "t": 12, "clock": null, "phase": "landing", "actor": "CAPT", "text": "The captain calls that the aircraft cannot be stopped and tries to steer; the first officer urges him to turn.", "factors": ["crm_breakdown"], "kind": "crew_speech" },
-    { "t": 18, "clock": null, "phase": "landing", "actor": "ENV", "text": "The aircraft leaves the end of runway 35L at about 90 kt, crosses Avenida Washington Luís and strikes the TAM Express building and a fuel station.", "factors": ["runway_overrun", "airport_infrastructure"], "kind": "outcome" },
-    { "t": 19, "clock": null, "phase": "landing", "actor": "ENV", "text": "The aircraft explodes and burns; all 187 on board and 12 people on the ground die.", "factors": ["post_impact_fire"], "kind": "outcome" }
+    {
+      "t": -345600,
+      "clock": null,
+      "phase": "ground",
+      "actor": "GND",
+      "text": "Four days before the accident the right engine thrust reverser is deactivated and the aircraft continues in service under the MEL.",
+      "factors": [
+        "known_defect_unresolved"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -600,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Congonhas reports runway 35L wet and slippery; the runway has recently been resurfaced and has not yet been grooved.",
+      "factors": [
+        "contaminated_runway",
+        "airport_infrastructure"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": -120,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Crew brief the landing with the right reverser inoperative and continue the approach to runway 35L.",
+      "factors": [
+        "known_defect_unresolved"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": -10,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "text": "In the flare the RETARD callout sounds; the left thrust lever is retarded to idle but the right thrust lever stays in the CLIMB detent.",
+      "factors": [
+        "control_misidentification"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 0,
+      "clock": "21:54",
+      "phase": "landing",
+      "actor": "ENV",
+      "text": "Touchdown on runway 35L about 250 m past the threshold; the ground spoilers do not deploy and the autobrake does not engage because one thrust lever is above idle.",
+      "factors": [
+        "design_deficiency",
+        "warning_system_deficiency"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 2,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "text": "Left thrust lever moved to reverse; the right engine, with its lever in CLIMB, spools toward climb thrust as the autothrust disengages.",
+      "factors": [
+        "control_misidentification",
+        "inappropriate_control_input"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 5,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PM",
+      "text": "First officer calls out that the spoilers have not deployed; the captain calls 'decelerate, decelerate'.",
+      "factors": [
+        "crm_breakdown"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 8,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "text": "Manual braking is applied but the aircraft, with forward thrust on the right engine and no spoilers, barely decelerates and begins to veer left.",
+      "factors": [
+        "inappropriate_control_input",
+        "contaminated_runway"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 12,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "text": "The captain calls that the aircraft cannot be stopped and tries to steer; the first officer urges him to turn.",
+      "factors": [
+        "crm_breakdown"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 18,
+      "clock": null,
+      "phase": "landing",
+      "actor": "ENV",
+      "text": "The aircraft leaves the end of runway 35L at about 90 kt, crosses Avenida Washington Luís and strikes the TAM Express building and a fuel station.",
+      "factors": [
+        "runway_overrun",
+        "airport_infrastructure"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 19,
+      "clock": null,
+      "phase": "landing",
+      "actor": "ENV",
+      "text": "The aircraft explodes and burns; all 187 on board and 12 people on the ground die.",
+      "factors": [
+        "post_impact_fire"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [
-    { "t": 5, "clock": null, "speaker": "CAPT", "text": "Desacelera, desacelera.", "translation": "Decelerate, decelerate." },
-    { "t": 10, "clock": null, "speaker": "CAPT", "text": "Não dá, não dá, não dá.", "translation": "It can't, it can't, it can't." },
-    { "t": 13, "clock": null, "speaker": "FO", "text": "Vira, vira, vira.", "translation": "Turn, turn, turn." }
+    {
+      "t": 5,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "Desacelera, desacelera.",
+      "translation": "Decelerate, decelerate."
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "Não dá, não dá, não dá.",
+      "translation": "It can't, it can't, it can't."
+    },
+    {
+      "t": 13,
+      "clock": null,
+      "speaker": "FO",
+      "text": "Vira, vira, vira.",
+      "translation": "Turn, turn, turn."
+    }
   ],
   "recommendations": [
-    { "id": null, "to": "Airbus / EASA", "text": "Develop a flight-deck warning for a thrust lever not at idle during landing when the aircraft is on the ground with the other lever in reverse, and review the ground spoiler and autobrake activation logic.", "status": "closed_acceptable", "outcome": "Airbus introduced an ECAM 'ENG x THR LEVER ABV IDLE' style alert and revised procedures; the FAA and EASA issued airworthiness directives for the software update.", "trigger_factors": ["warning_system_deficiency", "design_deficiency"] },
-    { "id": null, "to": "ANAC / Infraero", "text": "Groove runway 35L at Congonhas, improve drainage, and establish runway end safety areas or equivalent protection.", "status": "closed_acceptable", "outcome": "Runway 35L was grooved and operational restrictions on wet-runway landings at Congonhas were introduced.", "trigger_factors": ["contaminated_runway", "airport_infrastructure"] },
-    { "id": null, "to": "TAM", "text": "Revise training on landing with a thrust reverser inoperative, thrust lever handling during landing and crew monitoring of the landing roll.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_training", "control_misidentification"] },
-    { "id": null, "to": "ANAC", "text": "Strengthen regulatory oversight of the operational conditions at Congonhas, including runway condition reporting and wet-runway operations.", "status": "unknown", "outcome": null, "trigger_factors": ["regulatory_oversight"] }
+    {
+      "id": null,
+      "to": "Airbus / EASA",
+      "text": "Develop a flight-deck warning for a thrust lever not at idle during landing when the aircraft is on the ground with the other lever in reverse, and review the ground spoiler and autobrake activation logic.",
+      "status": "closed_acceptable",
+      "outcome": "Airbus introduced an ECAM 'ENG x THR LEVER ABV IDLE' style alert and revised procedures; the FAA and EASA issued airworthiness directives for the software update.",
+      "trigger_factors": [
+        "warning_system_deficiency",
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "ANAC / Infraero",
+      "text": "Groove runway 35L at Congonhas, improve drainage, and establish runway end safety areas or equivalent protection.",
+      "status": "closed_acceptable",
+      "outcome": "Runway 35L was grooved and operational restrictions on wet-runway landings at Congonhas were introduced.",
+      "trigger_factors": [
+        "contaminated_runway",
+        "airport_infrastructure"
+      ]
+    },
+    {
+      "id": null,
+      "to": "TAM",
+      "text": "Revise training on landing with a thrust reverser inoperative, thrust lever handling during landing and crew monitoring of the landing roll.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_training",
+        "control_misidentification"
+      ]
+    },
+    {
+      "id": null,
+      "to": "ANAC",
+      "text": "Strengthen regulatory oversight of the operational conditions at Congonhas, including runway condition reporting and wet-runway operations.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -83,17 +382,27 @@
     "Congonhas runway 35L was grooved and wet-runway operating restrictions were imposed; larger aircraft operations at Congonhas were reduced.",
     "Brazil accelerated airport safety upgrades including runway end safety areas at major airports."
   ],
-  "related": ["southwest1248", "american1420", "af358"],
+  "related": [
+    "southwest1248",
+    "american1420",
+    "af358"
+  ],
   "fdr": null,
   "sources": [
     "https://www2.fab.mil.br/cenipa"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
     "notes": [
       "t0 is the touchdown time to the minute (about 21:54 UTC, 18:54 local); event t values in the landing roll are approximate offsets reconstructed from the published FDR narrative (about 19 s from touchdown to impact).",
       "The exit speed of about 90 kt and touchdown distance are from published summaries and were not verified against the report.",
       "The report number A-67/CENIPA/2009 and date are given from memory.",
       "CVR lines are the widely published Portuguese phrases from the released transcript; their exact times were not verified.",
       "The fatalities figure (199) includes 187 occupants and 12 people on the ground."
-    ] }
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/TAM_Airlines_Flight_3054"
 }

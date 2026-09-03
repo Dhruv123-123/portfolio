@@ -10,7 +10,7 @@
   "agencies": [
     {
       "code": "BEA",
-      "name": "Bureau d'Enqu\u00eates et d'Analyses",
+      "name": "Bureau d'Enquêtes et d'Analyses",
       "country": "France",
       "role": "lead"
     }
@@ -21,14 +21,16 @@
     "family": "DC-7",
     "registration": "F-BIAP"
   },
-  "operator": "Transports A\u00e9riens Intercontinentaux",
+  "operator": "Transports Aériens Intercontinentaux",
   "route": {
     "from_name": "Paris",
     "to_name": "Abidjan"
   },
   "location": {
-    "name": "Bordeaux\u2013M\u00e9rignac Airport",
-    "country": "France"
+    "name": "Bordeaux–Mérignac Airport",
+    "country": "France",
+    "lat": 44.8283,
+    "lon": -0.7156
   },
   "phase": "takeoff",
   "occupants": 56,
@@ -139,7 +141,7 @@
   "tier": "wikidata",
   "depth": "sections",
   "asn_id": null,
-  "wikipedia": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/TAI_Flight_307",
   "report_links": [
     "https://www.bea.aero/fileadmin/documents/docspa/1959/f-ap590924/pdf/f-ap590924.pdf",
     "https://www.bea.aero/en/investigation-reports/notified-events/detail/event/le-f-biap-sest-ecrase-dans-un-bois-de-pins-assez-dense-ce-bois-est-traverse-par-une-ancienne-tr-1/"

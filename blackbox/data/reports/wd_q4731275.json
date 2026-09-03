@@ -29,7 +29,9 @@
   },
   "location": {
     "name": "Fairland, Indiana",
-    "country": "United States"
+    "country": "United States",
+    "lat": 39.6172,
+    "lon": -85.9206
   },
   "phase": "approach",
   "occupants": 83,

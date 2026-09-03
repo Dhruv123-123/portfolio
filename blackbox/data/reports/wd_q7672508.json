@@ -28,7 +28,9 @@
   },
   "location": {
     "name": "Cincinnati/Northern Kentucky International Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 39.0844,
+    "lon": -84.67
   },
   "phase": "approach",
   "occupants": 82,
@@ -179,7 +181,7 @@
   "tier": "wikidata",
   "depth": "sections",
   "asn_id": null,
-  "wikipedia": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/TWA_Flight_128",
   "report_links": [
     "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR69-05.pdf",
     "https://www.ntsb.gov/aviationquery/brief.aspx?ev_id=15735&key=0"

@@ -33,7 +33,9 @@
   "location": {
     "name": "Kolomna",
     "country": "Russia",
-    "state": "Moscow region"
+    "state": "Moscow region",
+    "lat": 54.98,
+    "lon": 38.55
   },
   "phase": "cruise",
   "occupants": 3,

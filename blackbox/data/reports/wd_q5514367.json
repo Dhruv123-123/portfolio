@@ -1,459 +1,461 @@
 {
- "id": "wd_q5514367",
- "qid": "Q5514367",
- "tier": "wikidata",
- "depth": "sections",
- "title": "GP Express 861",
- "flight_number": "861",
- "date": "1992-06-08",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead",
-   "report_id": "AAR93-03"
-  }
- ],
- "aircraft": {
-  "type": "Beechcraft 99 Airliner",
-  "manufacturer": "Beechcraft",
-  "family": "99",
-  "registration": "N118GP"
- },
- "operator": "GP Express Airlines",
- "route": {
-  "from_name": "Atlanta",
-  "to_name": "Anniston"
- },
- "location": {
-  "name": "near Anniston, Alabama",
-  "country": "United States",
-  "latitude": 33.6667,
-  "longitude": -85.7333
- },
- "phase": "approach",
- "occupants": 6,
- "fatalities": 3,
- "category": "CFIT",
- "summary": "GP Express Flight 861 crashed while maneuvering to land at Anniston. The crew lost situational awareness after confusion about aircraft position during descent. Despite receiving navigational guidance, they failed to use proper instrument procedures, misinterpreted navigation signals by intercepting the back course localizer while north of the airport, and descended into terrain in fog. Contributing factors included inadequate training and preparation of newly hired captain, limited first officer experience, failure to provide approach charts to both pilots, crew coordination breakdown, and intercom system problems.",
- "probable_cause": "The probable cause was the failure of senior management of GP Express to provide adequate training and operational support for the startup of the southern operation, which resulted in the assignment of an inadequately prepared captain with a relatively inexperienced first officer in revenue passenger service and the failure of the flightcrew to use approved instrument flight procedures, which resulted in a loss of situational awareness and terrain clearance. Contributing to the causes of the accident was GP Express' failure to provide approach charts to each pilot and to establish stabilized approach criteria. Also contributing were the inadequate crew coordination and a role reversal on the part of the captain and first officer. (p. 48)",
- "factors": [
-  {
-   "id": "inadequate_training",
-   "role": "initiating",
-   "evidence": "Captain hired May 31, 1992, received only 11.1 hours C99 flight training with 22 instrument approaches before assigned as captain on his first revenue revenue flight on June 8, 1992 (p. 8-9). First officer completed initial training but failed first proficiency check on April 28, 1992, requiring retesting (p. 10)."
-  },
-  {
-   "id": "pilot_experience",
-   "role": "initiating",
-   "evidence": "Although captain had 857 total hours, he had only 17.6 hours turbine experience and no turboprop aircraft experience prior to GP Express assignment (p. 8-9). First officer had 1,234 total hours with only 37.7 hours actual instrument conditions (p. 10-11)."
-  },
-  {
-   "id": "loss_of_situational_awareness",
-   "role": "contributing",
-   "evidence": "At 0842:39 captain states 'way off course' during descent confusion (p. 2). At 0848:49 first officer comments 'you're going to get this much on your first day' indicating crew stress (p. 6). Crew misidentified position, believed they received radar vectors when they had not, and could not determine actual position relative to navigational aids (p. 27-29)."
-  },
-  {
-   "id": "crm_breakdown",
-   "role": "contributing",
-   "evidence": "First officer assumed captain-directing role, providing instructions beginning at 0848:49 (p. 6, 31). Captain failed to assert concerns or demand clarification about ATC instructions or crew's actual position (p. 29-30). At 0850:53 captain suggested missed approach but first officer encouraged continuation (p. 6)."
-  },
-  {
-   "id": "procedural_noncompliance",
-   "role": "contributing",
-   "evidence": "Crew failed to complete in-range checklist properly; were unaware of BOGGA initial approach fix location (p. 3, 29-30). No ILS approach briefing conducted; captain had not reviewed approach chart (p. 30). At 0849:26 first officer assumed position over BOGGA without confirmation (p. 6, 30)."
-  },
-  {
-   "id": "navigation_error",
-   "role": "contributing",
-   "evidence": "Crew intercepted back course localizer while actually north of airport, turning right believing they were south (p. 31). Radar data and aircraft performance analysis show crew completed 180-degree right turn north of airport, then left turn intercepting back course localizer (p. 16)."
-  },
-  {
-   "id": "design_deficiency",
-   "role": "contributing",
-   "evidence": "Only one set of approach charts available in aircraft; flying pilot would review then give to non-flying pilot (p. 6). Director of operations noted some captains had to purchase own charts (p. 8-9). Charts were not available to both pilots during critical approach phase."
-  },
-  {
-   "id": "low_visibility",
-   "role": "latent",
-   "evidence": "Area enveloped in fog and low-lying clouds at accident time with 1,500 feet ceiling and 3 miles visibility in fog and haze (p. 3, 6). Weather conditions limited ability to visually acquire airport (p. 1)."
-  },
-  {
-   "id": "cfit",
-   "role": "outcome",
-   "evidence": "Aircraft impacted heavily wooded ridge at 0852:25 about 7.5 miles north of Anniston airport at elevation 1,800 feet MSL (p. 6). Aircraft was destroyed by impact and postcrash fire causing 3 fatalities (p. 1)."
-  }
- ],
- "chain": [
-  [
-   "inadequate_training",
-   "pilot_experience"
+  "id": "wd_q5514367",
+  "qid": "Q5514367",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "GP Express 861",
+  "flight_number": "861",
+  "date": "1992-06-08",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR93-03"
+    }
   ],
-  [
-   "pilot_experience",
-   "crm_breakdown"
+  "aircraft": {
+    "type": "Beechcraft 99 Airliner",
+    "manufacturer": "Beechcraft",
+    "family": "99",
+    "registration": "N118GP"
+  },
+  "operator": "GP Express Airlines",
+  "route": {
+    "from_name": "Atlanta",
+    "to_name": "Anniston"
+  },
+  "location": {
+    "name": "near Anniston, Alabama",
+    "country": "United States",
+    "latitude": 33.6667,
+    "longitude": -85.7333,
+    "lat": 33.6667,
+    "lon": -85.7333
+  },
+  "phase": "approach",
+  "occupants": 6,
+  "fatalities": 3,
+  "category": "CFIT",
+  "summary": "GP Express Flight 861 crashed while maneuvering to land at Anniston. The crew lost situational awareness after confusion about aircraft position during descent. Despite receiving navigational guidance, they failed to use proper instrument procedures, misinterpreted navigation signals by intercepting the back course localizer while north of the airport, and descended into terrain in fog. Contributing factors included inadequate training and preparation of newly hired captain, limited first officer experience, failure to provide approach charts to both pilots, crew coordination breakdown, and intercom system problems.",
+  "probable_cause": "The probable cause was the failure of senior management of GP Express to provide adequate training and operational support for the startup of the southern operation, which resulted in the assignment of an inadequately prepared captain with a relatively inexperienced first officer in revenue passenger service and the failure of the flightcrew to use approved instrument flight procedures, which resulted in a loss of situational awareness and terrain clearance. Contributing to the causes of the accident was GP Express' failure to provide approach charts to each pilot and to establish stabilized approach criteria. Also contributing were the inadequate crew coordination and a role reversal on the part of the captain and first officer. (p. 48)",
+  "factors": [
+    {
+      "id": "inadequate_training",
+      "role": "initiating",
+      "evidence": "Captain hired May 31, 1992, received only 11.1 hours C99 flight training with 22 instrument approaches before assigned as captain on his first revenue revenue flight on June 8, 1992 (p. 8-9). First officer completed initial training but failed first proficiency check on April 28, 1992, requiring retesting (p. 10)."
+    },
+    {
+      "id": "pilot_experience",
+      "role": "initiating",
+      "evidence": "Although captain had 857 total hours, he had only 17.6 hours turbine experience and no turboprop aircraft experience prior to GP Express assignment (p. 8-9). First officer had 1,234 total hours with only 37.7 hours actual instrument conditions (p. 10-11)."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "At 0842:39 captain states 'way off course' during descent confusion (p. 2). At 0848:49 first officer comments 'you're going to get this much on your first day' indicating crew stress (p. 6). Crew misidentified position, believed they received radar vectors when they had not, and could not determine actual position relative to navigational aids (p. 27-29)."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "First officer assumed captain-directing role, providing instructions beginning at 0848:49 (p. 6, 31). Captain failed to assert concerns or demand clarification about ATC instructions or crew's actual position (p. 29-30). At 0850:53 captain suggested missed approach but first officer encouraged continuation (p. 6)."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Crew failed to complete in-range checklist properly; were unaware of BOGGA initial approach fix location (p. 3, 29-30). No ILS approach briefing conducted; captain had not reviewed approach chart (p. 30). At 0849:26 first officer assumed position over BOGGA without confirmation (p. 6, 30)."
+    },
+    {
+      "id": "navigation_error",
+      "role": "contributing",
+      "evidence": "Crew intercepted back course localizer while actually north of airport, turning right believing they were south (p. 31). Radar data and aircraft performance analysis show crew completed 180-degree right turn north of airport, then left turn intercepting back course localizer (p. 16)."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "Only one set of approach charts available in aircraft; flying pilot would review then give to non-flying pilot (p. 6). Director of operations noted some captains had to purchase own charts (p. 8-9). Charts were not available to both pilots during critical approach phase."
+    },
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Area enveloped in fog and low-lying clouds at accident time with 1,500 feet ceiling and 3 miles visibility in fog and haze (p. 3, 6). Weather conditions limited ability to visually acquire airport (p. 1)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted heavily wooded ridge at 0852:25 about 7.5 miles north of Anniston airport at elevation 1,800 feet MSL (p. 6). Aircraft was destroyed by impact and postcrash fire causing 3 fatalities (p. 1)."
+    }
   ],
-  [
-   "crm_breakdown",
-   "loss_of_situational_awareness"
+  "chain": [
+    [
+      "inadequate_training",
+      "pilot_experience"
+    ],
+    [
+      "pilot_experience",
+      "crm_breakdown"
+    ],
+    [
+      "crm_breakdown",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "procedural_noncompliance",
+      "navigation_error"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "navigation_error"
+    ],
+    [
+      "navigation_error",
+      "cfit"
+    ],
+    [
+      "low_visibility",
+      "cfit"
+    ]
   ],
-  [
-   "procedural_noncompliance",
-   "navigation_error"
+  "events": [
+    {
+      "t": 0,
+      "clock": "0400",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain and first officer report for duty at GP Express operation facility at Tuscaloosa Municipal Airport (p. 1)",
+      "factors": []
+    },
+    {
+      "t": 75,
+      "clock": "0515",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 860 departs Tuscaloosa; station agents report captain and first officer in good spirits, passenger loading and departure routine (p. 1)",
+      "factors": []
+    },
+    {
+      "t": 165,
+      "clock": "0555",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 860 arrives at Anniston on schedule after visual approach; first officer mentions possible aircraft problems to station manager (p. 1)",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": "0600",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 860 departs Anniston for Atlanta with 469 pounds of fuel added for 1,500 pound total fuel load (p. 1)",
+      "factors": []
+    },
+    {
+      "t": 270,
+      "clock": "0645",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 860 arrives in Atlanta; four passengers board Flight 861 with six bags loaded (p. 1)",
+      "factors": []
+    },
+    {
+      "t": 450,
+      "clock": "0755",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 861 departs Atlanta passenger gate on schedule; ATC ground hold procedures delay actual takeoff until approximately 0822 (p. 1)",
+      "factors": []
+    },
+    {
+      "t": 672,
+      "clock": "0822",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight 861 departs runway; ATC and ground personnel report crew in good spirits and congenial; crew reports no aircraft difficulties (p. 1)",
+      "factors": []
+    },
+    {
+      "t": 930,
+      "clock": "0841",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Atlanta Center controller clears Flight 861 to 'descend pilot's discretion maintain five thousand'; crew acknowledges and begins descent to 5,000 feet (p. 2)",
+      "factors": []
+    },
+    {
+      "t": 960,
+      "clock": "0841:30",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain questions 'does he want us to resume own navigation?' but first officer assures captain they are 'on course anyway so let's just hold it' (p. 2)",
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 995,
+      "clock": "0842:39",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "After crew discussion about aircraft heading and course, captain concludes 'then we're way off course' (p. 2). Conversation shows first officer provided inbound course as 085° which was actually outbound VOR radial, creating crew confusion (p. 2)",
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 1004,
+      "clock": "0842:44",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Atlanta Center controller terminates radar service and instructs contact with Birmingham Approach Control; first officer acknowledges and contacts Birmingham at 0843:19 (p. 2-3)",
+      "factors": []
+    },
+    {
+      "t": 1022,
+      "clock": "0843:42",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Birmingham Approach controller instructs Flight 861 to descend maintain 4,000 feet, continue direct to Talladega VOR, expect possible visual or ILS approach to runway 5 from BOGGA initial approach fix (p. 3)",
+      "factors": []
+    },
+    {
+      "t": 1056,
+      "clock": "0844:13",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer acknowledges with 'possible visual and ah if we don't see it we'll let you know for the ILS' indicating intention to attempt visual first (p. 3)",
+      "factors": []
+    },
+    {
+      "t": 1252,
+      "clock": "0847:46",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach controller reports latest weather for Anniston: ceiling 1,500 feet, visibility 3 miles in fog and haze, 700 foot cloud layer scattered variable to broken (p. 3)",
+      "factors": []
+    },
+    {
+      "t": 1326,
+      "clock": "0848:49",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer states 'didn't realize that you're going to get this much on your first day did ya'; captain responds 'it's all kind of ganged up here on me a little fast' indicating workload and stress (p. 3, 6, 32)",
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 1362,
+      "clock": "0849:02",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain asks 'got the localizer in?'; first officer replies 'workin' on it' indicating difficulty tuning navigational radios to correct frequencies for approach (p. 3, 32)",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 1380,
+      "clock": "0849:20",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer states 'there you go'; captain replies 'yup went right through it', later first officer asks 'can you go around for it?' implying aircraft passed through localizer course while significantly north of BOGGA (p. 3, 6, 31)",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 1402,
+      "clock": "0849:26",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer states 'we're right over BOGGA' and instructs to 'go ahead and drop your gear, speed checks' despite no confirmation of actual position (p. 6)",
+      "factors": [
+        "procedural_noncompliance",
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 1443,
+      "clock": "0849:43",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain asks 'glideslope isn't even alive. What's the minimum altitude I can descend to 'til I'm established?'; first officer responds 'til established. Twenty two hundred' (p. 6)",
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 1506,
+      "clock": "0850:18",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer reports to controller 'we're out of four thousand for the localizer at this time and we're inside of BOGGA' showing continued position confusion (p. 6)",
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 1528,
+      "clock": "0850:28",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer states 'ah procedure turn inbound complete' but radar data shows aircraft was north of airport, intercepting back course localizer while flying away from runway (p. 6, 31)",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": 1653,
+      "clock": "0850:53",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain states 'ah we gotta go missed on this'; first officer encourages continuation: 'just a minute--there you go--there your gonna' shoot right through it again--there you go see' (p. 6)",
+      "factors": [
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 1812,
+      "clock": "0851:12",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer states 'okay we gettin' in close keep 'er goin,' followed by 'you're okay' providing continued directive coaching to captain (p. 6)",
+      "factors": [
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 1813,
+      "clock": "0852:13",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain asks 'what's our missed approach point now?'; first officer responds 'middle marker at 1,200 feet' (p. 6)",
+      "factors": []
+    },
+    {
+      "t": 1824,
+      "clock": "0852:24",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer states 'coming up' (p. 6)",
+      "factors": []
+    },
+    {
+      "t": 1825,
+      "clock": "0852:25",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Sound of impact recorded on CVR at 0852:25; aircraft impacted heavily wooded ridge approximately 7.5 miles north of Anniston airport at elevation 1,800 feet MSL; aircraft destroyed by impact and postcrash fire in fog and low-lying clouds (p. 6)",
+      "factors": [
+        "cfit",
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 1830,
+      "clock": "0851:30",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain responds 'okay we're on our way' then 'there's the glideslope'; first officer replies 'we can continue our descent on down. We're way high' and confirms no glideslope, requiring descent minimum of 1,100 feet (p. 6)",
+      "factors": [
+        "navigation_error"
+      ]
+    }
   ],
-  [
-   "loss_of_situational_awareness",
-   "navigation_error"
+  "recommendations": [
+    {
+      "id": "A-93-35",
+      "category": "Class 0",
+      "priority": "Priority Action",
+      "text": "Require that all pilots operating aircraft under 14 CFR Part 135 have access to their own set of instrument approach charts. (p. 50)",
+      "status": "unknown"
+    },
+    {
+      "id": "A-93-36",
+      "category": "Class II",
+      "priority": "Priority Action",
+      "text": "Require that scheduled air carriers operating under 14 CFR Part 135 develop and include in their flight operation manuals and training programs stabilized approach criteria. The criteria should include specific limits of localizer, glideslope, and VOR needle deflections and rates of descent, etc., near the airport, beyond which initiation of an immediate missed approach would be required. (p. 50)",
+      "status": "unknown"
+    },
+    {
+      "id": "A-93-37",
+      "category": "Class I",
+      "priority": "Priority Action",
+      "text": "Develop guidance and evaluation criteria for Principal Operations Inspectors to use to ensure that airline cockpit resource management training programs adequately address crew interaction, decision-making processes, information gathering, flightcrew communication, and leadership skills. (p. 50)",
+      "status": "unknown"
+    },
+    {
+      "id": "A-93-38",
+      "category": "Class II",
+      "priority": "Priority Action",
+      "text": "For airlines that utilize contracted flight and ground training programs, require that pilots hired directly to be captains receive additional flight instruction pertaining to the operating environment and procedures unique to the airline from an FAA-approved company check airman or instructor, rather than only from the contractor instructor. (p. 50)",
+      "status": "unknown"
+    },
+    {
+      "id": "A-93-39",
+      "category": "Class I",
+      "priority": "Priority Action",
+      "text": "Amend 14 CFR 135.243(c)(2) to require that the pilot-in-command of a commuter air carrier flight that requires two crewmembers have at least 100 hours of flight time or an equivalent level of training in commuter air carrier operations requiring two pilots. (p. 50-51)",
+      "status": "unknown"
+    }
   ],
-  [
-   "navigation_error",
-   "cfit"
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9303.pdf"
   ],
-  [
-   "low_visibility",
-   "cfit"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "0400",
-   "phase": "ground",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Captain and first officer report for duty at GP Express operation facility at Tuscaloosa Municipal Airport (p. 1)",
-   "factors": []
+  "wikipedia": "https://en.wikipedia.org/wiki/GP_Express_Airlines_Flight_861",
+  "asn_id": "19920608-0",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9303.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR93-03.pdf"
+  ],
+  "interest": 8.54,
+  "curated_id": null,
+  "fdr": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read sections 1.1-1.16, 2. ANALYSIS, 3.2 Probable Cause, 4. RECOMMENDATIONS",
+      "Extracted 27 events with specific clock times from History of Flight and CVR references",
+      "10 detailed factors with page citations from analysis and findings",
+      "5 recommendations with category and priority classifications",
+      "Page citations (p. N) included throughout factors and event descriptions",
+      "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
+    ]
   },
-  {
-   "t": 75,
-   "clock": "0515",
-   "phase": "takeoff",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Flight 860 departs Tuscaloosa; station agents report captain and first officer in good spirits, passenger loading and departure routine (p. 1)",
-   "factors": []
-  },
-  {
-   "t": 165,
-   "clock": "0555",
-   "phase": "landing",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Flight 860 arrives at Anniston on schedule after visual approach; first officer mentions possible aircraft problems to station manager (p. 1)",
-   "factors": []
-  },
-  {
-   "t": 180,
-   "clock": "0600",
-   "phase": "takeoff",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Flight 860 departs Anniston for Atlanta with 469 pounds of fuel added for 1,500 pound total fuel load (p. 1)",
-   "factors": []
-  },
-  {
-   "t": 270,
-   "clock": "0645",
-   "phase": "landing",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Flight 860 arrives in Atlanta; four passengers board Flight 861 with six bags loaded (p. 1)",
-   "factors": []
-  },
-  {
-   "t": 450,
-   "clock": "0755",
-   "phase": "takeoff",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Flight 861 departs Atlanta passenger gate on schedule; ATC ground hold procedures delay actual takeoff until approximately 0822 (p. 1)",
-   "factors": []
-  },
-  {
-   "t": 672,
-   "clock": "0822",
-   "phase": "takeoff",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Flight 861 departs runway; ATC and ground personnel report crew in good spirits and congenial; crew reports no aircraft difficulties (p. 1)",
-   "factors": []
-  },
-  {
-   "t": 930,
-   "clock": "0841",
-   "phase": "descent",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Atlanta Center controller clears Flight 861 to 'descend pilot's discretion maintain five thousand'; crew acknowledges and begins descent to 5,000 feet (p. 2)",
-   "factors": []
-  },
-  {
-   "t": 960,
-   "clock": "0841:30",
-   "phase": "descent",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Captain questions 'does he want us to resume own navigation?' but first officer assures captain they are 'on course anyway so let's just hold it' (p. 2)",
-   "factors": [
-    "loss_of_situational_awareness"
-   ]
-  },
-  {
-   "t": 995,
-   "clock": "0842:39",
-   "phase": "approach",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "After crew discussion about aircraft heading and course, captain concludes 'then we're way off course' (p. 2). Conversation shows first officer provided inbound course as 085° which was actually outbound VOR radial, creating crew confusion (p. 2)",
-   "factors": [
-    "loss_of_situational_awareness"
-   ]
-  },
-  {
-   "t": 1004,
-   "clock": "0842:44",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Atlanta Center controller terminates radar service and instructs contact with Birmingham Approach Control; first officer acknowledges and contacts Birmingham at 0843:19 (p. 2-3)",
-   "factors": []
-  },
-  {
-   "t": 1022,
-   "clock": "0843:42",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Birmingham Approach controller instructs Flight 861 to descend maintain 4,000 feet, continue direct to Talladega VOR, expect possible visual or ILS approach to runway 5 from BOGGA initial approach fix (p. 3)",
-   "factors": []
-  },
-  {
-   "t": 1056,
-   "clock": "0844:13",
-   "phase": "approach",
-   "actor": "FO",
-   "kind": "crew_action",
-   "text": "First officer acknowledges with 'possible visual and ah if we don't see it we'll let you know for the ILS' indicating intention to attempt visual first (p. 3)",
-   "factors": []
-  },
-  {
-   "t": 1252,
-   "clock": "0847:46",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Approach controller reports latest weather for Anniston: ceiling 1,500 feet, visibility 3 miles in fog and haze, 700 foot cloud layer scattered variable to broken (p. 3)",
-   "factors": []
-  },
-  {
-   "t": 1326,
-   "clock": "0848:49",
-   "phase": "approach",
-   "actor": "FO",
-   "kind": "crew_action",
-   "text": "First officer states 'didn't realize that you're going to get this much on your first day did ya'; captain responds 'it's all kind of ganged up here on me a little fast' indicating workload and stress (p. 3, 6, 32)",
-   "factors": [
-    "loss_of_situational_awareness"
-   ]
-  },
-  {
-   "t": 1362,
-   "clock": "0849:02",
-   "phase": "approach",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Captain asks 'got the localizer in?'; first officer replies 'workin' on it' indicating difficulty tuning navigational radios to correct frequencies for approach (p. 3, 32)",
-   "factors": [
-    "procedural_noncompliance"
-   ]
-  },
-  {
-   "t": 1380,
-   "clock": "0849:20",
-   "phase": "approach",
-   "actor": "FO",
-   "kind": "crew_action",
-   "text": "First officer states 'there you go'; captain replies 'yup went right through it', later first officer asks 'can you go around for it?' implying aircraft passed through localizer course while significantly north of BOGGA (p. 3, 6, 31)",
-   "factors": [
-    "navigation_error"
-   ]
-  },
-  {
-   "t": 1402,
-   "clock": "0849:26",
-   "phase": "approach",
-   "actor": "FO",
-   "kind": "crew_action",
-   "text": "First officer states 'we're right over BOGGA' and instructs to 'go ahead and drop your gear, speed checks' despite no confirmation of actual position (p. 6)",
-   "factors": [
-    "procedural_noncompliance",
-    "crm_breakdown"
-   ]
-  },
-  {
-   "t": 1443,
-   "clock": "0849:43",
-   "phase": "approach",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Captain asks 'glideslope isn't even alive. What's the minimum altitude I can descend to 'til I'm established?'; first officer responds 'til established. Twenty two hundred' (p. 6)",
-   "factors": [
-    "loss_of_situational_awareness"
-   ]
-  },
-  {
-   "t": 1506,
-   "clock": "0850:18",
-   "phase": "approach",
-   "actor": "FO",
-   "kind": "crew_action",
-   "text": "First officer reports to controller 'we're out of four thousand for the localizer at this time and we're inside of BOGGA' showing continued position confusion (p. 6)",
-   "factors": [
-    "loss_of_situational_awareness"
-   ]
-  },
-  {
-   "t": 1528,
-   "clock": "0850:28",
-   "phase": "approach",
-   "actor": "FO",
-   "kind": "crew_action",
-   "text": "First officer states 'ah procedure turn inbound complete' but radar data shows aircraft was north of airport, intercepting back course localizer while flying away from runway (p. 6, 31)",
-   "factors": [
-    "procedural_noncompliance"
-   ]
-  },
-  {
-   "t": 1653,
-   "clock": "0850:53",
-   "phase": "approach",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Captain states 'ah we gotta go missed on this'; first officer encourages continuation: 'just a minute--there you go--there your gonna' shoot right through it again--there you go see' (p. 6)",
-   "factors": [
-    "crm_breakdown"
-   ]
-  },
-  {
-   "t": 1812,
-   "clock": "0851:12",
-   "phase": "approach",
-   "actor": "FO",
-   "kind": "crew_action",
-   "text": "First officer states 'okay we gettin' in close keep 'er goin,' followed by 'you're okay' providing continued directive coaching to captain (p. 6)",
-   "factors": [
-    "crm_breakdown"
-   ]
-  },
-  {
-   "t": 1813,
-   "clock": "0852:13",
-   "phase": "approach",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Captain asks 'what's our missed approach point now?'; first officer responds 'middle marker at 1,200 feet' (p. 6)",
-   "factors": []
-  },
-  {
-   "t": 1824,
-   "clock": "0852:24",
-   "phase": "approach",
-   "actor": "FO",
-   "kind": "crew_action",
-   "text": "First officer states 'coming up' (p. 6)",
-   "factors": []
-  },
-  {
-   "t": 1825,
-   "clock": "0852:25",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Sound of impact recorded on CVR at 0852:25; aircraft impacted heavily wooded ridge approximately 7.5 miles north of Anniston airport at elevation 1,800 feet MSL; aircraft destroyed by impact and postcrash fire in fog and low-lying clouds (p. 6)",
-   "factors": [
-    "cfit",
-    "low_visibility"
-   ]
-  },
-  {
-   "t": 1830,
-   "clock": "0851:30",
-   "phase": "approach",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Captain responds 'okay we're on our way' then 'there's the glideslope'; first officer replies 'we can continue our descent on down. We're way high' and confirms no glideslope, requiring descent minimum of 1,100 feet (p. 6)",
-   "factors": [
-    "navigation_error"
-   ]
-  }
- ],
- "recommendations": [
-  {
-   "id": "A-93-35",
-   "category": "Class 0",
-   "priority": "Priority Action",
-   "text": "Require that all pilots operating aircraft under 14 CFR Part 135 have access to their own set of instrument approach charts. (p. 50)",
-   "status": "unknown"
-  },
-  {
-   "id": "A-93-36",
-   "category": "Class II",
-   "priority": "Priority Action",
-   "text": "Require that scheduled air carriers operating under 14 CFR Part 135 develop and include in their flight operation manuals and training programs stabilized approach criteria. The criteria should include specific limits of localizer, glideslope, and VOR needle deflections and rates of descent, etc., near the airport, beyond which initiation of an immediate missed approach would be required. (p. 50)",
-   "status": "unknown"
-  },
-  {
-   "id": "A-93-37",
-   "category": "Class I",
-   "priority": "Priority Action",
-   "text": "Develop guidance and evaluation criteria for Principal Operations Inspectors to use to ensure that airline cockpit resource management training programs adequately address crew interaction, decision-making processes, information gathering, flightcrew communication, and leadership skills. (p. 50)",
-   "status": "unknown"
-  },
-  {
-   "id": "A-93-38",
-   "category": "Class II",
-   "priority": "Priority Action",
-   "text": "For airlines that utilize contracted flight and ground training programs, require that pilots hired directly to be captains receive additional flight instruction pertaining to the operating environment and procedures unique to the airline from an FAA-approved company check airman or instructor, rather than only from the contractor instructor. (p. 50)",
-   "status": "unknown"
-  },
-  {
-   "id": "A-93-39",
-   "category": "Class I",
-   "priority": "Priority Action",
-   "text": "Amend 14 CFR 135.243(c)(2) to require that the pilot-in-command of a commuter air carrier flight that requires two crewmembers have at least 100 hours of flight time or an equivalent level of training in commuter air carrier operations requiring two pilots. (p. 50-51)",
-   "status": "unknown"
-  }
- ],
- "sources": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9303.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/GP_Express_Airlines_Flight_861",
- "asn_id": "19920608-0",
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9303.pdf",
-  "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR93-03.pdf"
- ],
- "interest": 8.54,
- "curated_id": null,
- "fdr": null,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5-20251001",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Read sections 1.1-1.16, 2. ANALYSIS, 3.2 Probable Cause, 4. RECOMMENDATIONS",
-   "Extracted 27 events with specific clock times from History of Flight and CVR references",
-   "10 detailed factors with page citations from analysis and findings",
-   "5 recommendations with category and priority classifications",
-   "Page citations (p. N) included throughout factors and event descriptions",
-   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
-  ]
- },
- "agency": "NTSB",
- "cvr": [],
- "dissent": [],
- "safety_changes": [],
- "related": []
+  "agency": "NTSB",
+  "cvr": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": []
 }

@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "Atlantic Ocean, 35 nm east of St. John's",
-    "country": "Canada"
+    "country": "Canada",
+    "lat": 47.4347,
+    "lon": -51.9494
   },
   "phase": "cruise",
   "occupants": 18,
@@ -69,9 +71,18 @@
     }
   ],
   "chain": [
-    ["maintenance_error", "engine_failure"],
-    ["engine_failure", "emergency_landing"],
-    ["emergency_landing", "evacuation_deficiency"]
+    [
+      "maintenance_error",
+      "engine_failure"
+    ],
+    [
+      "engine_failure",
+      "emergency_landing"
+    ],
+    [
+      "emergency_landing",
+      "evacuation_deficiency"
+    ]
   ],
   "events": [
     {
@@ -177,7 +188,9 @@
   ],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.tsb.gc.ca/eng/rapports-reports/aviation/2009/a09a0016/a09a0016.html"],
+  "sources": [
+    "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2009/a09a0016/a09a0016.html"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",

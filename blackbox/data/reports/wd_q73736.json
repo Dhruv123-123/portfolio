@@ -34,7 +34,9 @@
   },
   "location": {
     "name": "Palana, Kamchatka Krai",
-    "country": "Russia"
+    "country": "Russia",
+    "lat": 58.95,
+    "lon": 160.319
   },
   "phase": "approach",
   "occupants": 14,
@@ -137,7 +139,7 @@
       "phase": "approach",
       "actor": "SYS",
       "kind": "crew_action",
-      "text": "In attempt to avoid terrain collision, crew abruptly pulled control column with elevator deflected to maximum 30\u00b0; both engine throttles moved to takeoff mode (p. 45)",
+      "text": "In attempt to avoid terrain collision, crew abruptly pulled control column with elevator deflected to maximum 30°; both engine throttles moved to takeoff mode (p. 45)",
       "factors": []
     },
     {
@@ -146,7 +148,7 @@
       "phase": "approach",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Pitch angle increased sharply by 24\u00b0 in 0.9 seconds; both engines shut down during pitch increase; power loss prevented thrust recovery (p. 45)",
+      "text": "Pitch angle increased sharply by 24° in 0.9 seconds; both engines shut down during pitch increase; power loss prevented thrust recovery (p. 45)",
       "factors": []
     },
     {

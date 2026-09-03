@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "Chicago Midway International Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 41.7642,
+    "lon": -87.715
   },
   "phase": "approach",
   "occupants": 61,
@@ -195,7 +197,7 @@
     "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR73-16.pdf"
   ],
   "asn_id": null,
-  "wikipedia": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Air_Lines_Flight_553",
   "report_links": [
     "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR73-16.pdf",
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7231.pdf",

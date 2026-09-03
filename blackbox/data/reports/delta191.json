@@ -7,68 +7,343 @@
   "t0": "1985-08-02T23:05:05Z",
   "agency": "NTSB",
   "agencies": [
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
-      "report_id": "NTSB/AAR-86/05", "report_title": "Delta Air Lines, Inc., Lockheed L-1011-385-1, N726DA, Dallas/Fort Worth International Airport, Texas, August 2, 1985", "report_date": "1986-08-15",
-      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8605.pdf" }
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "NTSB/AAR-86/05",
+      "report_title": "Delta Air Lines, Inc., Lockheed L-1011-385-1, N726DA, Dallas/Fort Worth International Airport, Texas, August 2, 1985",
+      "report_date": "1986-08-15",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8605.pdf"
+    }
   ],
-  "aircraft": { "type": "Lockheed L-1011-385-1 TriStar", "family": "L-1011", "manufacturer": "Lockheed", "registration": "N726DA", "msn": null, "engines": "Rolls-Royce RB211-22B" },
+  "aircraft": {
+    "type": "Lockheed L-1011-385-1 TriStar",
+    "family": "L-1011",
+    "manufacturer": "Lockheed",
+    "registration": "N726DA",
+    "msn": null,
+    "engines": "Rolls-Royce RB211-22B"
+  },
   "operator": "Delta Air Lines",
-  "route": { "from": "KFLL", "from_name": "Fort Lauderdale-Hollywood", "to": "KDFW", "to_name": "Dallas/Fort Worth" },
-  "location": { "name": "Short of runway 17L, Dallas/Fort Worth International Airport, Texas", "country": "USA", "lat": 32.92, "lon": -97.03 },
+  "route": {
+    "from": "KFLL",
+    "from_name": "Fort Lauderdale-Hollywood",
+    "to": "KDFW",
+    "to_name": "Dallas/Fort Worth"
+  },
+  "location": {
+    "name": "Short of runway 17L, Dallas/Fort Worth International Airport, Texas",
+    "country": "USA",
+    "lat": 32.92,
+    "lon": -97.03
+  },
   "phase": "approach",
-  "occupants": 163, "fatalities": 137, "injuries_serious": null,
+  "occupants": 163,
+  "fatalities": 137,
+  "injuries_serious": null,
   "damage": "destroyed",
   "category": "WSTRW",
   "summary": "On approach to runway 17L at DFW the L-1011 flew into a rapidly developing thunderstorm cell on the final approach course and encountered a microburst. The aircraft struck the ground in a field north of the runway, hit a car on Highway 114 killing its driver, and struck water tanks on the airport, breaking up and catching fire. Of the 163 on board, 136 died, plus one person on the ground.",
   "probable_cause": "The flightcrew's decision to initiate and continue the approach into a cumulonimbus cloud which they observed to contain visible lightning; the lack of specific guidelines, procedures, and training for avoiding and escaping from low-altitude wind shear; and the lack of definitive, real-time wind shear hazard information. This resulted in the aircraft's encounter at low altitude with a microburst-induced, severe wind shear from a rapidly developing thunderstorm located on the final approach course.",
   "factors": [
-    { "id": "convective_weather", "role": "initiating", "evidence": "A thunderstorm cell developed rapidly on the final approach course to runway 17L and the crew observed lightning in it before continuing the approach." },
-    { "id": "windshear", "role": "contributing", "evidence": "The aircraft encountered a microburst with a strong headwind-to-tailwind shear and downdraft at low altitude." },
-    { "id": "go_around_not_flown", "role": "contributing", "evidence": "The crew continued the approach into the cumulonimbus rather than abandoning it; a go-around was commanded only after the aircraft was already sinking rapidly." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "The NTSB cited the lack of specific guidelines, procedures and training for avoiding and escaping low-altitude wind shear." },
-    { "id": "warning_system_deficiency", "role": "latent", "evidence": "No definitive, real-time wind shear hazard information was available; the airport low-level wind shear alert system did not alert before the encounter." },
-    { "id": "regulatory_oversight", "role": "latent", "evidence": "The lack of industry-wide wind shear guidance and detection requirements was a cited factor." },
-    { "id": "inappropriate_control_input", "role": "contributing", "evidence": "Thrust was reduced during the initial airspeed increase in the headwind and the nose was lowered as airspeed decayed, consistent with training of the time, which increased the sink rate." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The downdraft and tailwind produced a sink rate that could not be arrested before ground contact." },
-    { "id": "post_impact_fire", "role": "outcome", "evidence": "The aircraft broke up on striking water tanks and the wreckage was consumed by fire." }
+    {
+      "id": "convective_weather",
+      "role": "initiating",
+      "evidence": "A thunderstorm cell developed rapidly on the final approach course to runway 17L and the crew observed lightning in it before continuing the approach."
+    },
+    {
+      "id": "windshear",
+      "role": "contributing",
+      "evidence": "The aircraft encountered a microburst with a strong headwind-to-tailwind shear and downdraft at low altitude."
+    },
+    {
+      "id": "go_around_not_flown",
+      "role": "contributing",
+      "evidence": "The crew continued the approach into the cumulonimbus rather than abandoning it; a go-around was commanded only after the aircraft was already sinking rapidly."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "The NTSB cited the lack of specific guidelines, procedures and training for avoiding and escaping low-altitude wind shear."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "latent",
+      "evidence": "No definitive, real-time wind shear hazard information was available; the airport low-level wind shear alert system did not alert before the encounter."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "The lack of industry-wide wind shear guidance and detection requirements was a cited factor."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "Thrust was reduced during the initial airspeed increase in the headwind and the nose was lowered as airspeed decayed, consistent with training of the time, which increased the sink rate."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The downdraft and tailwind produced a sink rate that could not be arrested before ground contact."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "The aircraft broke up on striking water tanks and the wreckage was consumed by fire."
+    }
   ],
   "chain": [
-    ["convective_weather", "windshear"],
-    ["convective_weather", "go_around_not_flown"],
-    ["inadequate_training", "go_around_not_flown"],
-    ["warning_system_deficiency", "go_around_not_flown"],
-    ["regulatory_oversight", "inadequate_training"],
-    ["go_around_not_flown", "windshear"],
-    ["windshear", "inappropriate_control_input"],
-    ["inappropriate_control_input", "loss_of_control_inflight"],
-    ["windshear", "loss_of_control_inflight"],
-    ["loss_of_control_inflight", "post_impact_fire"]
+    [
+      "convective_weather",
+      "windshear"
+    ],
+    [
+      "convective_weather",
+      "go_around_not_flown"
+    ],
+    [
+      "inadequate_training",
+      "go_around_not_flown"
+    ],
+    [
+      "warning_system_deficiency",
+      "go_around_not_flown"
+    ],
+    [
+      "regulatory_oversight",
+      "inadequate_training"
+    ],
+    [
+      "go_around_not_flown",
+      "windshear"
+    ],
+    [
+      "windshear",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "loss_of_control_inflight"
+    ],
+    [
+      "windshear",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "post_impact_fire"
+    ]
   ],
   "events": [
-    { "t": -600, "clock": null, "phase": "descent", "actor": "ATC", "text": "Aircraft is vectored for the ILS approach to runway 17L; a rain shower and rapidly building cell lie north of the airport on the final approach course.", "factors": ["convective_weather"], "kind": "atc" },
-    { "t": -47, "clock": "18:04:18", "phase": "approach", "actor": "FO", "text": "First officer points out lightning coming out of the cloud ahead; the captain asks where and is told it is right ahead of them.", "factors": ["convective_weather", "go_around_not_flown"], "kind": "crew_speech" },
-    { "t": -20, "clock": null, "phase": "approach", "actor": "ENV", "text": "Aircraft enters heavy rain beneath the cell on final approach.", "factors": ["convective_weather"], "kind": "env" },
-    { "t": 0, "clock": "18:05:05", "phase": "approach", "actor": "CAPT", "text": "Airspeed increases in the microburst outflow headwind; captain tells the first officer to watch his speed and thrust is reduced.", "factors": ["windshear", "inappropriate_control_input"], "kind": "crew_speech" },
-    { "t": 14, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Captain warns that the airspeed will be lost all of a sudden as the aircraft passes through the downdraft into the tailwind.", "factors": ["windshear"], "kind": "crew_speech" },
-    { "t": 21, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Captain calls for thrust to be pushed way up as airspeed decays and the sink rate increases.", "factors": ["windshear", "loss_of_control_inflight"], "kind": "crew_speech" },
-    { "t": 30, "clock": null, "phase": "approach", "actor": "SYS", "text": "Aircraft descends below the glideslope with a high sink rate in the downdraft and tailwind.", "factors": ["windshear"], "kind": "system" },
-    { "t": 39, "clock": "18:05:44", "phase": "approach", "actor": "SYS", "text": "GPWS 'whoop whoop pull up' warning sounds.", "factors": ["loss_of_control_inflight"], "kind": "warning" },
-    { "t": 41, "clock": null, "phase": "go_around", "actor": "CAPT", "text": "Captain calls TOGA; full go-around thrust is applied but the aircraft is still descending.", "factors": ["go_around_not_flown"], "kind": "crew_action" },
-    { "t": 47, "clock": "18:05:52", "phase": "approach", "actor": "ENV", "text": "Main landing gear strikes a plowed field about 6,300 ft north of the runway 17L threshold; the aircraft bounces.", "factors": ["loss_of_control_inflight"], "kind": "outcome" },
-    { "t": 51, "clock": null, "phase": "approach", "actor": "ENV", "text": "Aircraft crosses Highway 114 and strikes a car, killing the driver, and hits a light pole.", "factors": ["loss_of_control_inflight"], "kind": "outcome" },
-    { "t": 53, "clock": null, "phase": "approach", "actor": "ENV", "text": "Aircraft strikes two water tanks on the airport, breaks up and is engulfed in fire; the tail section separates and most survivors are in the rear.", "factors": ["post_impact_fire"], "kind": "outcome" }
+    {
+      "t": -600,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ATC",
+      "text": "Aircraft is vectored for the ILS approach to runway 17L; a rain shower and rapidly building cell lie north of the airport on the final approach course.",
+      "factors": [
+        "convective_weather"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": -47,
+      "clock": "18:04:18",
+      "phase": "approach",
+      "actor": "FO",
+      "text": "First officer points out lightning coming out of the cloud ahead; the captain asks where and is told it is right ahead of them.",
+      "factors": [
+        "convective_weather",
+        "go_around_not_flown"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": -20,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "text": "Aircraft enters heavy rain beneath the cell on final approach.",
+      "factors": [
+        "convective_weather"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": 0,
+      "clock": "18:05:05",
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Airspeed increases in the microburst outflow headwind; captain tells the first officer to watch his speed and thrust is reduced.",
+      "factors": [
+        "windshear",
+        "inappropriate_control_input"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 14,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Captain warns that the airspeed will be lost all of a sudden as the aircraft passes through the downdraft into the tailwind.",
+      "factors": [
+        "windshear"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 21,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Captain calls for thrust to be pushed way up as airspeed decays and the sink rate increases.",
+      "factors": [
+        "windshear",
+        "loss_of_control_inflight"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Aircraft descends below the glideslope with a high sink rate in the downdraft and tailwind.",
+      "factors": [
+        "windshear"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 39,
+      "clock": "18:05:44",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "GPWS 'whoop whoop pull up' warning sounds.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 41,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "CAPT",
+      "text": "Captain calls TOGA; full go-around thrust is applied but the aircraft is still descending.",
+      "factors": [
+        "go_around_not_flown"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 47,
+      "clock": "18:05:52",
+      "phase": "approach",
+      "actor": "ENV",
+      "text": "Main landing gear strikes a plowed field about 6,300 ft north of the runway 17L threshold; the aircraft bounces.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 51,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "text": "Aircraft crosses Highway 114 and strikes a car, killing the driver, and hits a light pole.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 53,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "text": "Aircraft strikes two water tanks on the airport, breaks up and is engulfed in fire; the tail section separates and most survivors are in the rear.",
+      "factors": [
+        "post_impact_fire"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [
-    { "t": 0, "clock": "18:05:05", "speaker": "CAPT", "text": "Watch your speed.", "translation": null },
-    { "t": 14, "clock": null, "speaker": "CAPT", "text": "You're gonna lose it all of a sudden, there it goes.", "translation": null },
-    { "t": 21, "clock": null, "speaker": "CAPT", "text": "Push it up, push it way up.", "translation": null },
-    { "t": 39, "clock": "18:05:44", "speaker": "SYS", "text": "Whoop whoop pull up.", "translation": null },
-    { "t": 41, "clock": null, "speaker": "CAPT", "text": "TOGA.", "translation": null }
+    {
+      "t": 0,
+      "clock": "18:05:05",
+      "speaker": "CAPT",
+      "text": "Watch your speed.",
+      "translation": null
+    },
+    {
+      "t": 14,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "You're gonna lose it all of a sudden, there it goes.",
+      "translation": null
+    },
+    {
+      "t": 21,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "Push it up, push it way up.",
+      "translation": null
+    },
+    {
+      "t": 39,
+      "clock": "18:05:44",
+      "speaker": "SYS",
+      "text": "Whoop whoop pull up.",
+      "translation": null
+    },
+    {
+      "t": 41,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "TOGA.",
+      "translation": null
+    }
   ],
   "recommendations": [
-    { "id": null, "to": "FAA", "text": "Expedite development and installation of terminal Doppler weather radar and improved low-level wind shear alert systems at airports prone to microbursts.", "status": "unknown", "outcome": "Terminal Doppler Weather Radar was developed and installed at major US airports.", "trigger_factors": ["warning_system_deficiency", "windshear"] },
-    { "id": null, "to": "FAA", "text": "Develop and require wind shear avoidance and escape training and procedures for air carrier flightcrews, including simulator training in microburst encounters.", "status": "unknown", "outcome": "FAA Windshear Training Aid published in 1987; wind shear training became mandatory.", "trigger_factors": ["inadequate_training", "regulatory_oversight"] },
-    { "id": null, "to": "FAA", "text": "Require airborne wind shear detection and warning systems on transport category aircraft.", "status": "unknown", "outcome": "Airborne reactive and later predictive wind shear systems were mandated for air carrier aircraft.", "trigger_factors": ["windshear", "warning_system_deficiency"] }
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Expedite development and installation of terminal Doppler weather radar and improved low-level wind shear alert systems at airports prone to microbursts.",
+      "status": "unknown",
+      "outcome": "Terminal Doppler Weather Radar was developed and installed at major US airports.",
+      "trigger_factors": [
+        "warning_system_deficiency",
+        "windshear"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Develop and require wind shear avoidance and escape training and procedures for air carrier flightcrews, including simulator training in microburst encounters.",
+      "status": "unknown",
+      "outcome": "FAA Windshear Training Aid published in 1987; wind shear training became mandatory.",
+      "trigger_factors": [
+        "inadequate_training",
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require airborne wind shear detection and warning systems on transport category aircraft.",
+      "status": "unknown",
+      "outcome": "Airborne reactive and later predictive wind shear systems were mandated for air carrier aircraft.",
+      "trigger_factors": [
+        "windshear",
+        "warning_system_deficiency"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -76,12 +351,27 @@
     "FAA Windshear Training Aid and mandatory wind shear escape training for airline pilots.",
     "Requirement for airborne wind shear warning and, later, predictive wind shear radar on transport aircraft."
   ],
-  "related": ["american1420", "af358", "flydubai981"],
+  "related": [
+    "american1420",
+    "af358",
+    "flydubai981"
+  ],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8605.pdf", "https://www.ntsb.gov"],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
-    "notes": ["CVR wording is from the widely published transcript, but the clock times for the lines without a clock value are approximate offsets from 18:05:05; the 18:04:18 lightning remark, 18:05:44 GPWS and 18:05:52 first ground contact are recalled from the report.",
-              "Fatalities: 134 on board died initially plus 1 on the ground; later deaths brought the total to 137, which is used here. Occupants 163 (152 passengers, 11 crew).",
-              "The inappropriate_control_input factor reflects the NTSB's discussion of thrust reduction and pitch handling during the encounter, which was consistent with the training of the time; it is not part of the probable cause statement.",
-              "Recommendation numbers not recalled and are left null."] }
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8605.pdf",
+    "https://www.ntsb.gov"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "CVR wording is from the widely published transcript, but the clock times for the lines without a clock value are approximate offsets from 18:05:05; the 18:04:18 lightning remark, 18:05:44 GPWS and 18:05:52 first ground contact are recalled from the report.",
+      "Fatalities: 134 on board died initially plus 1 on the ground; later deaths brought the total to 137, which is used here. Occupants 163 (152 passengers, 11 crew).",
+      "The inappropriate_control_input factor reflects the NTSB's discussion of thrust reduction and pitch handling during the encounter, which was consistent with the training of the time; it is not part of the probable cause statement.",
+      "Recommendation numbers not recalled and are left null."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Delta_Air_Lines_Flight_191"
 }

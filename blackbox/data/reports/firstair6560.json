@@ -7,62 +7,287 @@
   "t0": null,
   "agency": "TSB",
   "agencies": [
-    { "code": "TSB", "name": "Transportation Safety Board of Canada", "country": "Canada", "role": "lead",
-      "report_id": "A11H0002", "report_title": "Controlled Flight into Terrain, Bradley Air Services Limited (First Air), Boeing 737-210C C-GNWN, Resolute Bay, Nunavut, 20 August 2011", "report_date": "2014-01-29",
-      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2011/a11h0002/a11h0002.html" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" }
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "lead",
+      "report_id": "A11H0002",
+      "report_title": "Controlled Flight into Terrain, Bradley Air Services Limited (First Air), Boeing 737-210C C-GNWN, Resolute Bay, Nunavut, 20 August 2011",
+      "report_date": "2014-01-29",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2011/a11h0002/a11h0002.html"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Boeing 737-210C", "family": "737", "manufacturer": "Boeing", "registration": "C-GNWN", "msn": "21067", "engines": "Pratt & Whitney JT8D-17A" },
+  "aircraft": {
+    "type": "Boeing 737-210C",
+    "family": "737",
+    "manufacturer": "Boeing",
+    "registration": "C-GNWN",
+    "msn": "21067",
+    "engines": "Pratt & Whitney JT8D-17A"
+  },
   "operator": "First Air (Bradley Air Services)",
-  "route": { "from": "CYZF", "from_name": "Yellowknife", "to": "CYRB", "to_name": "Resolute Bay" },
-  "location": { "name": "Hill about 1 nm east of runway 35T, Resolute Bay, Nunavut", "country": "Canada", "lat": 74.72, "lon": -94.97 },
+  "route": {
+    "from": "CYZF",
+    "from_name": "Yellowknife",
+    "to": "CYRB",
+    "to_name": "Resolute Bay"
+  },
+  "location": {
+    "name": "Hill about 1 nm east of runway 35T, Resolute Bay, Nunavut",
+    "country": "Canada",
+    "lat": 74.72,
+    "lon": -94.97
+  },
   "phase": "approach",
-  "occupants": 15, "fatalities": 12, "injuries_serious": 3,
+  "occupants": 15,
+  "fatalities": 12,
+  "injuries_serious": 3,
   "damage": "destroyed",
   "category": "CFIT",
   "summary": "The chartered 737 combi was flying an ILS approach to runway 35T at Resolute Bay in low cloud when it struck a hill about 1 nm east of the runway. The autopilot had not captured the localizer and the aircraft flew a track diverging to the right of the approach course; the first officer repeatedly voiced concern and called for a go-around, but the captain continued the approach until seconds before impact. Twelve of the 15 people on board were killed.",
   "probable_cause": "The TSB found that the autopilot did not transition to localizer-capture mode and the aircraft diverged to the right of the localizer while the crew tried to reconcile conflicting heading, localizer and GPS indications; the captain believed the localizer indication might be erroneous. The approach was unstable and below the required standard, and the crew's coordination broke down: the first officer's concerns and go-around calls were not acted on until it was too late. Contributing factors included the crew's high workload, the compass and mode indications that were not understood, low cloud at the approach minima, and First Air's standard operating procedures and crew resource management training, which did not provide effective defences.",
   "factors": [
-    { "id": "mode_confusion", "role": "initiating", "evidence": "The autopilot remained in a heading/roll mode instead of capturing the localizer, which the crew did not recognise in time." },
-    { "id": "navigation_error", "role": "contributing", "evidence": "The aircraft flew a track diverging to the right of the localizer course; heading and compass indications available to the crew were not reconciled with the localizer and GPS information." },
-    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The captain believed the localizer indication might be erroneous and did not appreciate that the aircraft was off course and heading toward rising terrain east of the runway." },
-    { "id": "high_workload", "role": "contributing", "evidence": "The crew were dealing with an unresolved navigation discrepancy, approach configuration and communications during the final approach." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "The first officer expressed concern several times and called for a go-around; the captain did not respond effectively and the two pilots did not share a common understanding of the situation." },
-    { "id": "unstable_approach", "role": "contributing", "evidence": "The aircraft was not established on the localizer and did not meet the operator's stabilized-approach criteria." },
-    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The approach was continued although the criteria for a go-around had been met." },
-    { "id": "go_around_not_flown", "role": "contributing", "evidence": "A go-around was not initiated until about two seconds before impact, too late to avoid the terrain." },
-    { "id": "low_visibility", "role": "contributing", "evidence": "Low cloud and reduced visibility at Resolute Bay prevented the crew from seeing the terrain or the runway in time." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "First Air's crew resource management training was of the older, less effective type; the TSB recommended contemporary CRM training for all commercial operators." },
-    { "id": "cfit", "role": "outcome", "evidence": "The aircraft struck a hill about 1 nm east of the runway threshold in controlled flight." }
+    {
+      "id": "mode_confusion",
+      "role": "initiating",
+      "evidence": "The autopilot remained in a heading/roll mode instead of capturing the localizer, which the crew did not recognise in time."
+    },
+    {
+      "id": "navigation_error",
+      "role": "contributing",
+      "evidence": "The aircraft flew a track diverging to the right of the localizer course; heading and compass indications available to the crew were not reconciled with the localizer and GPS information."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The captain believed the localizer indication might be erroneous and did not appreciate that the aircraft was off course and heading toward rising terrain east of the runway."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The crew were dealing with an unresolved navigation discrepancy, approach configuration and communications during the final approach."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The first officer expressed concern several times and called for a go-around; the captain did not respond effectively and the two pilots did not share a common understanding of the situation."
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "The aircraft was not established on the localizer and did not meet the operator's stabilized-approach criteria."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The approach was continued although the criteria for a go-around had been met."
+    },
+    {
+      "id": "go_around_not_flown",
+      "role": "contributing",
+      "evidence": "A go-around was not initiated until about two seconds before impact, too late to avoid the terrain."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Low cloud and reduced visibility at Resolute Bay prevented the crew from seeing the terrain or the runway in time."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "First Air's crew resource management training was of the older, less effective type; the TSB recommended contemporary CRM training for all commercial operators."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft struck a hill about 1 nm east of the runway threshold in controlled flight."
+    }
   ],
   "chain": [
-    ["mode_confusion", "navigation_error"],
-    ["navigation_error", "loss_of_situational_awareness"],
-    ["navigation_error", "unstable_approach"],
-    ["high_workload", "loss_of_situational_awareness"],
-    ["inadequate_training", "crm_breakdown"],
-    ["loss_of_situational_awareness", "crm_breakdown"],
-    ["crm_breakdown", "go_around_not_flown"],
-    ["unstable_approach", "procedural_noncompliance"],
-    ["procedural_noncompliance", "go_around_not_flown"],
-    ["low_visibility", "cfit"],
-    ["go_around_not_flown", "cfit"]
+    [
+      "mode_confusion",
+      "navigation_error"
+    ],
+    [
+      "navigation_error",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "navigation_error",
+      "unstable_approach"
+    ],
+    [
+      "high_workload",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "inadequate_training",
+      "crm_breakdown"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "crm_breakdown"
+    ],
+    [
+      "crm_breakdown",
+      "go_around_not_flown"
+    ],
+    [
+      "unstable_approach",
+      "procedural_noncompliance"
+    ],
+    [
+      "procedural_noncompliance",
+      "go_around_not_flown"
+    ],
+    [
+      "low_visibility",
+      "cfit"
+    ],
+    [
+      "go_around_not_flown",
+      "cfit"
+    ]
   ],
   "events": [
-    { "t": -1200, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Crew brief the ILS approach to runway 35T at Resolute Bay; weather is low cloud with reduced visibility near the approach minima. A military exercise is under way at the airport and a temporary military control unit is in operation.", "factors": ["low_visibility"], "kind": "crew_action" },
-    { "t": -600, "clock": null, "phase": "approach", "actor": "SYS", "text": "The aircraft turns toward the final approach course with the autopilot engaged, but the autopilot does not transition to localizer-capture mode and the aircraft continues on a heading-based track that diverges to the right of the localizer.", "factors": ["mode_confusion", "navigation_error"], "kind": "system" },
-    { "t": -420, "clock": null, "phase": "approach", "actor": "FO", "text": "The first officer notes that the localizer indication is not centred and points out the discrepancy between the heading and the GPS track.", "factors": ["navigation_error", "crm_breakdown"], "kind": "crew_speech" },
-    { "t": -300, "clock": null, "phase": "approach", "actor": "CAPT", "text": "The captain, recalling earlier experiences of erroneous ILS indications, doubts the localizer and continues descending on the glideslope while offset right of the course.", "factors": ["loss_of_situational_awareness", "unstable_approach"], "kind": "crew_action" },
-    { "t": -180, "clock": null, "phase": "approach", "actor": "CAPT", "text": "The captain disconnects the autopilot and attempts to correct toward the localizer while continuing the approach; workload is high and the crew's understanding of the situation diverges.", "factors": ["high_workload", "procedural_noncompliance"], "kind": "crew_action" },
-    { "t": -90, "clock": null, "phase": "approach", "actor": "FO", "text": "The first officer suggests a go-around; the captain does not act on the suggestion.", "factors": ["crm_breakdown", "go_around_not_flown"], "kind": "crew_speech" },
-    { "t": -30, "clock": null, "phase": "approach", "actor": "FO", "text": "The first officer again calls for a go-around as the aircraft continues below cloud toward terrain east of the runway.", "factors": ["crm_breakdown", "go_around_not_flown"], "kind": "crew_speech" },
-    { "t": -2, "clock": null, "phase": "go_around", "actor": "CAPT", "text": "The captain calls for a go-around and advances the thrust levers about two seconds before impact.", "factors": ["go_around_not_flown"], "kind": "crew_action" },
-    { "t": 0, "clock": "16:41", "phase": "go_around", "actor": "SYS", "text": "The aircraft strikes a hill about 1 nm east of the runway 35T threshold and breaks up; 12 of the 15 occupants are killed, 3 are seriously injured.", "factors": ["cfit"], "kind": "outcome" }
+    {
+      "t": -1200,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Crew brief the ILS approach to runway 35T at Resolute Bay; weather is low cloud with reduced visibility near the approach minima. A military exercise is under way at the airport and a temporary military control unit is in operation.",
+      "factors": [
+        "low_visibility"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -600,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "The aircraft turns toward the final approach course with the autopilot engaged, but the autopilot does not transition to localizer-capture mode and the aircraft continues on a heading-based track that diverges to the right of the localizer.",
+      "factors": [
+        "mode_confusion",
+        "navigation_error"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": -420,
+      "clock": null,
+      "phase": "approach",
+      "actor": "FO",
+      "text": "The first officer notes that the localizer indication is not centred and points out the discrepancy between the heading and the GPS track.",
+      "factors": [
+        "navigation_error",
+        "crm_breakdown"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": -300,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "The captain, recalling earlier experiences of erroneous ILS indications, doubts the localizer and continues descending on the glideslope while offset right of the course.",
+      "factors": [
+        "loss_of_situational_awareness",
+        "unstable_approach"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -180,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "The captain disconnects the autopilot and attempts to correct toward the localizer while continuing the approach; workload is high and the crew's understanding of the situation diverges.",
+      "factors": [
+        "high_workload",
+        "procedural_noncompliance"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -90,
+      "clock": null,
+      "phase": "approach",
+      "actor": "FO",
+      "text": "The first officer suggests a go-around; the captain does not act on the suggestion.",
+      "factors": [
+        "crm_breakdown",
+        "go_around_not_flown"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": -30,
+      "clock": null,
+      "phase": "approach",
+      "actor": "FO",
+      "text": "The first officer again calls for a go-around as the aircraft continues below cloud toward terrain east of the runway.",
+      "factors": [
+        "crm_breakdown",
+        "go_around_not_flown"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": -2,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "CAPT",
+      "text": "The captain calls for a go-around and advances the thrust levers about two seconds before impact.",
+      "factors": [
+        "go_around_not_flown"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "16:41",
+      "phase": "go_around",
+      "actor": "SYS",
+      "text": "The aircraft strikes a hill about 1 nm east of the runway 35T threshold and breaks up; 12 of the 15 occupants are killed, 3 are seriously injured.",
+      "factors": [
+        "cfit"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": "A14-01", "to": "Transport Canada", "text": "Require commercial air operators to provide contemporary crew resource management training for pilots of air taxi and commuter operations (CAR 703 and 704).", "status": "closed_acceptable", "outcome": "Transport Canada introduced a contemporary CRM training standard applying to all Canadian commercial air operators in 2019.", "trigger_factors": ["crm_breakdown", "inadequate_training"] },
-    { "id": null, "to": "Transport Canada", "text": "Require operators to implement measures that ensure unstable approaches are recognised and result in a go-around.", "status": "unknown", "outcome": null, "trigger_factors": ["unstable_approach", "go_around_not_flown", "procedural_noncompliance"] }
+    {
+      "id": "A14-01",
+      "to": "Transport Canada",
+      "text": "Require commercial air operators to provide contemporary crew resource management training for pilots of air taxi and commuter operations (CAR 703 and 704).",
+      "status": "closed_acceptable",
+      "outcome": "Transport Canada introduced a contemporary CRM training standard applying to all Canadian commercial air operators in 2019.",
+      "trigger_factors": [
+        "crm_breakdown",
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Transport Canada",
+      "text": "Require operators to implement measures that ensure unstable approaches are recognised and result in a go-around.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "unstable_approach",
+        "go_around_not_flown",
+        "procedural_noncompliance"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -70,16 +295,27 @@
     "First Air revised its standard operating procedures, stabilized-approach criteria and go-around policy, and updated its CRM training.",
     "The TSB placed unstable approaches that are continued to a landing on its Watchlist of key safety issues."
   ],
-  "related": ["korean801", "crossair3597", "ups1354"],
+  "related": [
+    "korean801",
+    "crossair3597",
+    "ups1354"
+  ],
   "fdr": null,
   "sources": [
     "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2011/a11h0002/a11h0002.html",
     "https://www.tsb.gc.ca/"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
-    "Only the impact time (about 1641 CDT) is given; all other event times are approximate offsets reconstructed from the report narrative.",
-    "The precise nature of the compass/heading discrepancy described in the TSB report (its magnitude and origin) is not reproduced; the record describes it generically.",
-    "GPWS alerts in the final seconds are not itemised because their exact timing was not verified.",
-    "Recommendation A14-01 text is paraphrased; a second TSB recommendation from this investigation exists but its number and exact wording were not verified."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Only the impact time (about 1641 CDT) is given; all other event times are approximate offsets reconstructed from the report narrative.",
+      "The precise nature of the compass/heading discrepancy described in the TSB report (its magnitude and origin) is not reproduced; the record describes it generically.",
+      "GPWS alerts in the final seconds are not itemised because their exact timing was not verified.",
+      "Recommendation A14-01 text is paraphrased; a second TSB recommendation from this investigation exists but its number and exact wording were not verified."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/First_Air_Flight_6560"
 }

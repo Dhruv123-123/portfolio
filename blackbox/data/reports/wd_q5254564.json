@@ -31,7 +31,9 @@
   },
   "location": {
     "name": "Dallas/Fort Worth International Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 32.8703,
+    "lon": -97.0511
   },
   "phase": "takeoff",
   "occupants": 108,

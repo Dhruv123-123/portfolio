@@ -1,262 +1,264 @@
 {
- "id": "wd_q7118386",
- "qid": "Q7118386",
- "tier": "wikidata",
- "depth": "full",
- "title": "PBA 1039",
- "flight_number": "PB1039",
- "date": "1984-12-06",
- "agency": "NTSB",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead"
-  }
- ],
- "aircraft": {
-  "type": "Embraer Bandeirante EMB-110P1",
-  "manufacturer": "Embraer",
-  "family": "EMB-110",
-  "registration": null
- },
- "operator": "Provincetown-Boston Airlines",
- "route": {
-  "from_name": "Jacksonville",
-  "to_name": "Tampa"
- },
- "location": {
-  "name": "Jacksonville",
-  "country": "United States"
- },
- "phase": "takeoff",
- "occupants": 13,
- "fatalities": 13,
- "category": "UNK",
- "summary": "PBA Flight 1039 received takeoff clearance and began the takeoff roll from Runway 31. Thirty seconds after takeoff, witnesses saw the aircraft in a steep descent. The horizontal stabilizer, elevators, tail cone, and ventral fin separated from the aircraft in flight. Investigation found fractures in hinge brackets from overstress and multiple potential causes including elevator control system or trim system malfunction.",
- "probable_cause": "Malfunction of either the elevator control system or the elevator trim system, which resulted in an airplane pitch control problem. The reaction of the flight crew to correct the pitch control problem overstressed the left elevator control rod, which resulted in asymmetrical elevator deflection and overstress failure of the horizontal stabilizer attachment structure. The Safety Board was not able to determine the precise problem with the pitch control system (p. 6-7)",
- "factors": [
-  {
-   "id": "flight_control_failure",
-   "role": "initiating",
-   "evidence": "Malfunction of either elevator control system or elevator trim system resulted in pitch control problem; left elevator control rod overstressed (p. 6-7)"
-  },
-  {
-   "id": "design_deficiency",
-   "role": "contributing",
-   "evidence": "Aircraft design lacked fail-safe elevator control systems susceptible to overstress separation; EMB-110 had history of elevator control problems with one disconnected rod and broken trim tabs (p. 15)"
-  },
-  {
-   "id": "inadequate_inspection",
-   "role": "contributing",
-   "evidence": "Lack of cockpit voice recorder and flight data recorder hampered investigation; maintenance records showed last inspection September 20, 1984 complying with AD 82-27-69 found no defects (p. 15)"
-  },
-  {
-   "id": "structural_failure",
-   "role": "outcome",
-   "evidence": "Horizontal stabilizer and elevators separated from aircraft in flight; male lugs of forward attachment fitting fractured in shear and tension overstress at bulkhead No. 33 (p. 10-11)"
-  },
-  {
-   "id": "loss_of_control_inflight",
-   "role": "outcome",
-   "evidence": "Structural failure resulted in asymmetrical elevator deflection and loss of control, causing steep descent (p. 6-7)"
-  },
-  {
-   "id": "cfit",
-   "role": "outcome",
-   "evidence": "EMB-110 crashed approximately 7800 feet beyond end of runway 31 and 85 feet to northeast of centerline (p. 6)"
-  },
-  {
-   "id": "post_impact_fire",
-   "role": "outcome",
-   "evidence": "Aircraft caught fire after ground impact (p. 6)"
-  }
- ],
- "chain": [
-  [
-   "flight_control_failure",
-   "structural_failure"
+  "id": "wd_q7118386",
+  "qid": "Q7118386",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "PBA 1039",
+  "flight_number": "PB1039",
+  "date": "1984-12-06",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
   ],
-  [
-   "design_deficiency",
-   "flight_control_failure"
+  "aircraft": {
+    "type": "Embraer Bandeirante EMB-110P1",
+    "manufacturer": "Embraer",
+    "family": "EMB-110",
+    "registration": null
+  },
+  "operator": "Provincetown-Boston Airlines",
+  "route": {
+    "from_name": "Jacksonville",
+    "to_name": "Tampa"
+  },
+  "location": {
+    "name": "Jacksonville",
+    "country": "United States",
+    "lat": 30.4833,
+    "lon": -81.6833
+  },
+  "phase": "takeoff",
+  "occupants": 13,
+  "fatalities": 13,
+  "category": "UNK",
+  "summary": "PBA Flight 1039 received takeoff clearance and began the takeoff roll from Runway 31. Thirty seconds after takeoff, witnesses saw the aircraft in a steep descent. The horizontal stabilizer, elevators, tail cone, and ventral fin separated from the aircraft in flight. Investigation found fractures in hinge brackets from overstress and multiple potential causes including elevator control system or trim system malfunction.",
+  "probable_cause": "Malfunction of either the elevator control system or the elevator trim system, which resulted in an airplane pitch control problem. The reaction of the flight crew to correct the pitch control problem overstressed the left elevator control rod, which resulted in asymmetrical elevator deflection and overstress failure of the horizontal stabilizer attachment structure. The Safety Board was not able to determine the precise problem with the pitch control system (p. 6-7)",
+  "factors": [
+    {
+      "id": "flight_control_failure",
+      "role": "initiating",
+      "evidence": "Malfunction of either elevator control system or elevator trim system resulted in pitch control problem; left elevator control rod overstressed (p. 6-7)"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "Aircraft design lacked fail-safe elevator control systems susceptible to overstress separation; EMB-110 had history of elevator control problems with one disconnected rod and broken trim tabs (p. 15)"
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "Lack of cockpit voice recorder and flight data recorder hampered investigation; maintenance records showed last inspection September 20, 1984 complying with AD 82-27-69 found no defects (p. 15)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Horizontal stabilizer and elevators separated from aircraft in flight; male lugs of forward attachment fitting fractured in shear and tension overstress at bulkhead No. 33 (p. 10-11)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Structural failure resulted in asymmetrical elevator deflection and loss of control, causing steep descent (p. 6-7)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "EMB-110 crashed approximately 7800 feet beyond end of runway 31 and 85 feet to northeast of centerline (p. 6)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Aircraft caught fire after ground impact (p. 6)"
+    }
   ],
-  [
-   "structural_failure",
-   "loss_of_control_inflight"
+  "chain": [
+    [
+      "flight_control_failure",
+      "structural_failure"
+    ],
+    [
+      "design_deficiency",
+      "flight_control_failure"
+    ],
+    [
+      "structural_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ]
   ],
-  [
-   "loss_of_control_inflight",
-   "cfit"
-  ]
- ],
- "events": [
-  {
-   "t": -300,
-   "clock": "18:07",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Morning crew inspected aircraft tail area and reported no mechanical problems before handing over to afternoon crew (p. 6)",
-   "factors": []
+  "events": [
+    {
+      "t": -300,
+      "clock": "18:07",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Morning crew inspected aircraft tail area and reported no mechanical problems before handing over to afternoon crew (p. 6)",
+      "factors": []
+    },
+    {
+      "t": -240,
+      "clock": "18:08",
+      "phase": "taxi",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft N96PB taxied from gate at Jacksonville International Airport with 11 passengers and 2 crewmembers (p. 6)",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "18:12",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 1039 received takeoff clearance and began takeoff roll from runway 31 (p. 6)",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": "18:12:30",
+      "phase": "takeoff",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Thirty seconds after takeoff, witnesses saw aircraft in steep descent near extended runway centerline (p. 6)",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": "18:13",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft climbed above runway 31 departure end; flight crew switched to departure control frequency (p. 6)",
+      "factors": []
+    },
+    {
+      "t": 90,
+      "clock": "18:13:30",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Horizontal stabilizer, elevators, tail cone assembly, and ventral fin separated from aircraft in flight (p. 6)",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "18:14:00",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed 7800 feet beyond runway 31 departure end in inverted nose-down attitude (p. 6)",
+      "factors": [
+        "structural_failure",
+        "loss_of_control_inflight",
+        "cfit",
+        "post_impact_fire"
+      ]
+    },
+    {
+      "t": 130,
+      "clock": "18:14:10",
+      "phase": "takeoff",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft caught fire and burned after ground impact; all 13 persons aboard were killed (p. 6)",
+      "factors": [
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8604.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Provincetown-Boston_Airlines_Flight_1039",
+  "asn_id": "19841206-0",
+  "interest": 11.08,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Comprehensive NTSB Aircraft Accident Report read (103 pages)",
+      "Detailed structural analysis and testing data reviewed",
+      "Service history of EMB-110P1 analyzed including elevator control issues",
+      "Flight control system architecture and redundancy examined",
+      "Extensive testing results documenting structural failure mechanisms",
+      "8 events spanning pre-flight to crash with specific timing",
+      "6 factor causal chain documented with page citations",
+      "Five numbered recommendations extracted with disposition status",
+      "auto-repair: cvr was null; dissent was null; related was null"
+    ]
   },
-  {
-   "t": -240,
-   "clock": "18:08",
-   "phase": "taxi",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft N96PB taxied from gate at Jacksonville International Airport with 11 passengers and 2 crewmembers (p. 6)",
-   "factors": []
-  },
-  {
-   "t": 0,
-   "clock": "18:12",
-   "phase": "takeoff",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Flight 1039 received takeoff clearance and began takeoff roll from runway 31 (p. 6)",
-   "factors": []
-  },
-  {
-   "t": 30,
-   "clock": "18:12:30",
-   "phase": "takeoff",
-   "actor": "ENV",
-   "kind": "env",
-   "text": "Thirty seconds after takeoff, witnesses saw aircraft in steep descent near extended runway centerline (p. 6)",
-   "factors": [
-    "structural_failure"
-   ]
-  },
-  {
-   "t": 60,
-   "clock": "18:13",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft climbed above runway 31 departure end; flight crew switched to departure control frequency (p. 6)",
-   "factors": []
-  },
-  {
-   "t": 90,
-   "clock": "18:13:30",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Horizontal stabilizer, elevators, tail cone assembly, and ventral fin separated from aircraft in flight (p. 6)",
-   "factors": [
-    "structural_failure"
-   ]
-  },
-  {
-   "t": 120,
-   "clock": "18:14:00",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Aircraft crashed 7800 feet beyond runway 31 departure end in inverted nose-down attitude (p. 6)",
-   "factors": [
-    "structural_failure",
-    "loss_of_control_inflight",
-    "cfit",
-    "post_impact_fire"
-   ]
-  },
-  {
-   "t": 130,
-   "clock": "18:14:10",
-   "phase": "takeoff",
-   "actor": "ENV",
-   "kind": "outcome",
-   "text": "Aircraft caught fire and burned after ground impact; all 13 persons aboard were killed (p. 6)",
-   "factors": [
-    "post_impact_fire"
-   ]
-  }
- ],
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8604.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/Provincetown-Boston_Airlines_Flight_1039",
- "asn_id": "19841206-0",
- "interest": 11.08,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Comprehensive NTSB Aircraft Accident Report read (103 pages)",
-   "Detailed structural analysis and testing data reviewed",
-   "Service history of EMB-110P1 analyzed including elevator control issues",
-   "Flight control system architecture and redundancy examined",
-   "Extensive testing results documenting structural failure mechanisms",
-   "8 events spanning pre-flight to crash with specific timing",
-   "6 factor causal chain documented with page citations",
-   "Five numbered recommendations extracted with disposition status",
-   "auto-repair: cvr was null; dissent was null; related was null"
-  ]
- },
- "sources": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8604.pdf"
- ],
- "time_reference": "EST",
- "t0": "1984-12-06T18:12:00",
- "recommendations": [
-  {
-   "id": "A-85-01",
-   "to": "FAA",
-   "text": "Issue an airworthiness directive to require inspection of horizontal stabilizer attachment structure of EMB-110P1 and -110P2 using improved procedures to enhance detection of loose or sheared rivets",
-   "status": "closed_acceptable",
-   "trigger_factors": [
-    "flight_control_failure",
-    "design_deficiency"
-   ]
-  },
-  {
-   "id": "A-85-02",
-   "to": "FAA",
-   "text": "Revise airworthiness directive 83-14-09 to require modification of horizontal stabilizer attachment structure with redesigned channels and modified rivet patterns",
-   "status": "closed_unacceptable",
-   "trigger_factors": [
-    "design_deficiency"
-   ]
-  },
-  {
-   "id": "A-85-03",
-   "to": "FAA",
-   "text": "Conduct directed safety investigation of EMB-110P1 and -110P2 model airplanes modified per AD 83-14-09 to determine structural damage",
-   "status": "closed_acceptable",
-   "trigger_factors": [
-    "design_deficiency"
-   ]
-  },
-  {
-   "id": "A-85-04",
-   "to": "FAA",
-   "text": "Notify foreign civil aviation authorities of PBA 1039 accident circumstances and recommended actions",
-   "status": "closed_acceptable",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-107",
-   "to": "FAA",
-   "text": "Require multiengine turbine aircraft carrying 6+ passengers to be prewired for cockpit voice recorder and flight data recorder",
-   "status": "unknown",
-   "trigger_factors": [
-    "inadequate_inspection"
-   ]
-  }
- ],
- "safety_changes": [
-  "Emergency Airworthiness Directive 85-01-51 issued January 10, 1985 requiring comprehensive inspection of EMB-110P1 and 110P2 horizontal stabilizer attachments",
-  "AD 85-17-04 issued August 30, 1985 regarding inspection and replacement of elevator control rod tubes",
-  "AD 88-18-51 issued September 12, 1985 regarding deactivation of Bendix electric trim switches and autopilots",
-  "Service bulletins issued requiring modifications to bulkhead No. 33 structure to assure horizontal stabilizer attachment integrity"
- ],
- "cvr": [],
- "dissent": [],
- "related": []
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8604.pdf"
+  ],
+  "time_reference": "EST",
+  "t0": "1984-12-06T18:12:00",
+  "recommendations": [
+    {
+      "id": "A-85-01",
+      "to": "FAA",
+      "text": "Issue an airworthiness directive to require inspection of horizontal stabilizer attachment structure of EMB-110P1 and -110P2 using improved procedures to enhance detection of loose or sheared rivets",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "flight_control_failure",
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-85-02",
+      "to": "FAA",
+      "text": "Revise airworthiness directive 83-14-09 to require modification of horizontal stabilizer attachment structure with redesigned channels and modified rivet patterns",
+      "status": "closed_unacceptable",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-85-03",
+      "to": "FAA",
+      "text": "Conduct directed safety investigation of EMB-110P1 and -110P2 model airplanes modified per AD 83-14-09 to determine structural damage",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": "A-85-04",
+      "to": "FAA",
+      "text": "Notify foreign civil aviation authorities of PBA 1039 accident circumstances and recommended actions",
+      "status": "closed_acceptable",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-107",
+      "to": "FAA",
+      "text": "Require multiengine turbine aircraft carrying 6+ passengers to be prewired for cockpit voice recorder and flight data recorder",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
+    }
+  ],
+  "safety_changes": [
+    "Emergency Airworthiness Directive 85-01-51 issued January 10, 1985 requiring comprehensive inspection of EMB-110P1 and 110P2 horizontal stabilizer attachments",
+    "AD 85-17-04 issued August 30, 1985 regarding inspection and replacement of elevator control rod tubes",
+    "AD 88-18-51 issued September 12, 1985 regarding deactivation of Bendix electric trim switches and autopilots",
+    "Service bulletins issued requiring modifications to bulkhead No. 33 structure to assure horizontal stabilizer attachment integrity"
+  ],
+  "cvr": [],
+  "dissent": [],
+  "related": []
 }

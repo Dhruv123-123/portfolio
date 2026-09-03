@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Detroit Metropolitan Wayne County Airport, runway 03C/21",
-    "country": "United States (Michigan)"
+    "country": "United States (Michigan)",
+    "lat": 42.2125,
+    "lon": -83.3533
   },
   "phase": "landing",
   "occupants": 54,
@@ -75,11 +77,26 @@
     }
   ],
   "chain": [
-    ["wrong_runway", "ground_collision"],
-    ["low_visibility", "atc_communication_error"],
-    ["atc_communication_error", "wrong_runway"],
-    ["crm_breakdown", "wrong_runway"],
-    ["ground_collision", "post_impact_fire"]
+    [
+      "wrong_runway",
+      "ground_collision"
+    ],
+    [
+      "low_visibility",
+      "atc_communication_error"
+    ],
+    [
+      "atc_communication_error",
+      "wrong_runway"
+    ],
+    [
+      "crm_breakdown",
+      "wrong_runway"
+    ],
+    [
+      "ground_collision",
+      "post_impact_fire"
+    ]
   ],
   "events": [
     {
@@ -107,7 +124,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "DC-9 crew missed turn onto taxiway Oscar 6 and instead entered outer taxiway; first officer reported approaching parallel runway on Oscar 6",
-      "factors": ["wrong_runway"]
+      "factors": [
+        "wrong_runway"
+      ]
     },
     {
       "t": -154,
@@ -134,7 +153,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "DC-9 captain released parking brake and continued taxiing right turn; crew confusion about runway position with visibility zero",
-      "factors": ["crm_breakdown"]
+      "factors": [
+        "crm_breakdown"
+      ]
     },
     {
       "t": -13,
@@ -152,7 +173,9 @@
       "actor": "CAPT",
       "kind": "crew_speech",
       "text": "DC-9 crew on radio reporting they were stuck and could not see anything, ground control asked if they were on taxiway or runway",
-      "factors": ["atc_communication_error"]
+      "factors": [
+        "atc_communication_error"
+      ]
     },
     {
       "t": 12,
@@ -161,7 +184,9 @@
       "actor": "CAPT",
       "kind": "crew_speech",
       "text": "DC-9 captain reported we're on a runway, we're right by zero four; first officer stated we're on runway 21 Center; captain confirmed we're on 21 Center here",
-      "factors": ["wrong_runway"]
+      "factors": [
+        "wrong_runway"
+      ]
     },
     {
       "t": 22,
@@ -206,7 +231,10 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "B-727 right wing collided with DC-9 right fuselage on runway 21 Center, B-727 wing cutting through fuselage and severing DC-9 right engine; DC-9 caught fire",
-      "factors": ["ground_collision", "post_impact_fire"]
+      "factors": [
+        "ground_collision",
+        "post_impact_fire"
+      ]
     }
   ],
   "cvr": [

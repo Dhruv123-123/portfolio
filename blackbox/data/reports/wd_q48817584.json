@@ -29,7 +29,9 @@
   },
   "location": {
     "name": "Logan International Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 42.3633,
+    "lon": -71.005
   },
   "phase": "approach",
   "occupants": 168,
@@ -67,9 +69,18 @@
     }
   ],
   "chain": [
-    ["windshear", "inadequate_monitoring"],
-    ["inadequate_monitoring", "hard_landing"],
-    ["hard_landing", "landing_gear_failure"]
+    [
+      "windshear",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "hard_landing"
+    ],
+    [
+      "hard_landing",
+      "landing_gear_failure"
+    ]
   ],
   "events": [
     {

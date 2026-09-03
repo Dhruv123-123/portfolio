@@ -28,7 +28,9 @@
   },
   "location": {
     "name": "Sheremetyevo International Airport",
-    "country": "Russia"
+    "country": "Russia",
+    "lat": 55.9692,
+    "lon": 37.4031
   },
   "phase": "landing",
   "occupants": 78,

@@ -34,7 +34,9 @@
   },
   "location": {
     "name": "Halifax Stanfield International Airport, Nova Scotia",
-    "country": "Canada"
+    "country": "Canada",
+    "lat": 44.8622,
+    "lon": -63.532
   },
   "phase": "takeoff",
   "occupants": 7,

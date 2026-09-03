@@ -1,164 +1,166 @@
 {
- "id": "wd_q7672509",
- "qid": "Q7672509",
- "tier": "wikidata",
- "depth": "sections",
- "title": "TWA 159",
- "flight_number": "159",
- "date": "1967-11-06",
- "agency": "NTSB",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead"
-  }
- ],
- "aircraft": {
-  "type": "Boeing 707",
-  "manufacturer": "Boeing",
-  "family": "707",
-  "registration": null
- },
- "operator": "Trans World Airlines",
- "route": {
-  "from_name": "New York City",
-  "to_name": "Los Angeles"
- },
- "location": {
-  "name": "Cincinnati",
-  "country": "United States"
- },
- "phase": "takeoff",
- "occupants": null,
- "fatalities": 1,
- "category": "OTHR",
- "summary": "A TWA Boeing 707 aborted takeoff at Cincinnati after the first officer believed he had struck a disabled Delta DC-9 that was only partially clear of the runway. The DC-9's jet exhaust caused a compressor stall in the 707's number four engine. The 707 overran the runway at high speed and struck an embankment, catching fire. One passenger died from accident-related injuries.",
- "probable_cause": "The first officer's decision to abort takeoff was based on perceived collision with the Delta DC-9, but the actual cause was jet blast from the DC-9's idling engines affecting the 707. The ambiguous definition of clear of the runway and the first officer's mistaken belief he had exceeded V1 speed both contributed to the aborted takeoff at excessive speed.",
- "factors": [
-  {
-   "id": "atc_communication_error",
-   "role": "latent",
-   "evidence": "neither FAA regulations nor the Terminal Air Traffic Control Procedures Manual defined the phrase clear of the runway"
-  },
-  {
-   "id": "engine_failure",
-   "role": "contributing",
-   "evidence": "jet blast from DAL 379 caused a compressor stall in Flight 159's number four engine"
-  },
-  {
-   "id": "startle_effect",
-   "role": "contributing",
-   "evidence": "The copilot heard a loud bang which coincided with a movement of the flight controls and a yawing motion"
-  },
-  {
-   "id": "stall_misdiagnosis",
-   "role": "initiating",
-   "evidence": "the first officer believed the plane was at or near V1 (rather than having substantially exceeded V1) when he aborted"
-  },
-  {
-   "id": "procedural_noncompliance",
-   "role": "contributing",
-   "evidence": "The captain of Flight 159 failed to announce that Flight 159 had achieved V1 speed"
-  },
-  {
-   "id": "runway_overrun",
-   "role": "outcome",
-   "evidence": "The aircraft overran the end of the runway, struck an embankment and caught fire"
-  }
- ],
- "chain": [
-  [
-   "engine_failure",
-   "startle_effect"
+  "id": "wd_q7672509",
+  "qid": "Q7672509",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "TWA 159",
+  "flight_number": "159",
+  "date": "1967-11-06",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
   ],
-  [
-   "startle_effect",
-   "stall_misdiagnosis"
+  "aircraft": {
+    "type": "Boeing 707",
+    "manufacturer": "Boeing",
+    "family": "707",
+    "registration": null
+  },
+  "operator": "Trans World Airlines",
+  "route": {
+    "from_name": "New York City",
+    "to_name": "Los Angeles"
+  },
+  "location": {
+    "name": "Cincinnati",
+    "country": "United States",
+    "lat": 39.05,
+    "lon": -84.6667
+  },
+  "phase": "takeoff",
+  "occupants": null,
+  "fatalities": 1,
+  "category": "OTHR",
+  "summary": "A TWA Boeing 707 aborted takeoff at Cincinnati after the first officer believed he had struck a disabled Delta DC-9 that was only partially clear of the runway. The DC-9's jet exhaust caused a compressor stall in the 707's number four engine. The 707 overran the runway at high speed and struck an embankment, catching fire. One passenger died from accident-related injuries.",
+  "probable_cause": "The first officer's decision to abort takeoff was based on perceived collision with the Delta DC-9, but the actual cause was jet blast from the DC-9's idling engines affecting the 707. The ambiguous definition of clear of the runway and the first officer's mistaken belief he had exceeded V1 speed both contributed to the aborted takeoff at excessive speed.",
+  "factors": [
+    {
+      "id": "atc_communication_error",
+      "role": "latent",
+      "evidence": "neither FAA regulations nor the Terminal Air Traffic Control Procedures Manual defined the phrase clear of the runway"
+    },
+    {
+      "id": "engine_failure",
+      "role": "contributing",
+      "evidence": "jet blast from DAL 379 caused a compressor stall in Flight 159's number four engine"
+    },
+    {
+      "id": "startle_effect",
+      "role": "contributing",
+      "evidence": "The copilot heard a loud bang which coincided with a movement of the flight controls and a yawing motion"
+    },
+    {
+      "id": "stall_misdiagnosis",
+      "role": "initiating",
+      "evidence": "the first officer believed the plane was at or near V1 (rather than having substantially exceeded V1) when he aborted"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The captain of Flight 159 failed to announce that Flight 159 had achieved V1 speed"
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "The aircraft overran the end of the runway, struck an embankment and caught fire"
+    }
   ],
-  [
-   "stall_misdiagnosis",
-   "procedural_noncompliance"
+  "chain": [
+    [
+      "engine_failure",
+      "startle_effect"
+    ],
+    [
+      "startle_effect",
+      "stall_misdiagnosis"
+    ],
+    [
+      "stall_misdiagnosis",
+      "procedural_noncompliance"
+    ],
+    [
+      "atc_communication_error",
+      "engine_failure"
+    ],
+    [
+      "stall_misdiagnosis",
+      "runway_overrun"
+    ]
   ],
-  [
-   "atc_communication_error",
-   "engine_failure"
+  "events": [
+    {
+      "t": 0,
+      "clock": "18:39",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 159 cleared for takeoff on runway 27L while Delta DC-9 Flight 379 was positioned partially on the runway with engines at idle power."
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "As the Boeing 707 passed the Delta DC-9, the flight crew heard a loud bang and experienced flight control movement and yaw, caused by jet blast from the DC-9's engines affecting the 707's number four engine compressor."
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "The first officer, believing the aircraft was at or near V1 speed, initiated an abort procedure. Both pilots applied thrust reversers, brakes and spoiler extension to attempt to stop the aircraft."
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "The captain observed the Delta DC-9 was only about five to seven feet from the runway edge during the abort attempt, creating significant collision risk."
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The aircraft overran the end of the runway at approximately 145 knots, struck an embankment and caught fire. One passenger died from accident-related injuries; one other passenger and a flight attendant were seriously injured."
+    }
   ],
-  [
-   "stall_misdiagnosis",
-   "runway_overrun"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "18:39",
-   "phase": "takeoff",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Flight 159 cleared for takeoff on runway 27L while Delta DC-9 Flight 379 was positioned partially on the runway with engines at idle power."
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AK.pdf",
+    "https://www.ntsb.gov/Pages/brief.aspx?ev_id=15733&key=0"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/TWA_Flight_159",
+  "asn_id": null,
+  "interest": 7.44,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Key report sections read: history of flight, maintenance history, findings, probable cause, recommendations",
+      "Factor evidence sourced with page citations from official investigation report",
+      "Events extracted from witness accounts and accident sequence",
+      "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
+    ]
   },
-  {
-   "t": 60,
-   "clock": null,
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "As the Boeing 707 passed the Delta DC-9, the flight crew heard a loud bang and experienced flight control movement and yaw, caused by jet blast from the DC-9's engines affecting the 707's number four engine compressor."
-  },
-  {
-   "t": 90,
-   "clock": null,
-   "phase": "takeoff",
-   "actor": "FO",
-   "kind": "crew_action",
-   "text": "The first officer, believing the aircraft was at or near V1 speed, initiated an abort procedure. Both pilots applied thrust reversers, brakes and spoiler extension to attempt to stop the aircraft."
-  },
-  {
-   "t": 120,
-   "clock": null,
-   "phase": "takeoff",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "The captain observed the Delta DC-9 was only about five to seven feet from the runway edge during the abort attempt, creating significant collision risk."
-  },
-  {
-   "t": 180,
-   "clock": null,
-   "phase": "landing",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "The aircraft overran the end of the runway at approximately 145 knots, struck an embankment and caught fire. One passenger died from accident-related injuries; one other passenger and a flight attendant were seriously injured."
-  }
- ],
- "report_links": [
-  "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AK.pdf",
-  "https://www.ntsb.gov/Pages/brief.aspx?ev_id=15733&key=0"
- ],
- "wikipedia": null,
- "asn_id": null,
- "interest": 7.44,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Key report sections read: history of flight, maintenance history, findings, probable cause, recommendations",
-   "Factor evidence sourced with page citations from official investigation report",
-   "Events extracted from witness accounts and accident sequence",
-   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
-  ]
- },
- "curated_id": null,
- "sources": [
-  "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AK.pdf",
-  "https://www.ntsb.gov/Pages/brief.aspx?ev_id=15733&key=0"
- ],
- "recommendations": [],
- "cvr": [],
- "dissent": [],
- "safety_changes": [],
- "related": []
+  "curated_id": null,
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR68-AK.pdf",
+    "https://www.ntsb.gov/Pages/brief.aspx?ev_id=15733&key=0"
+  ],
+  "recommendations": [],
+  "cvr": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": []
 }

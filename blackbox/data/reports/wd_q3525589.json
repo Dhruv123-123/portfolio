@@ -1,220 +1,222 @@
 {
- "id": "wd_q3525589",
- "qid": "Q3525589",
- "tier": "wikidata",
- "depth": "full",
- "title": "2005 Royal Air Force Hercules shootdown",
- "flight_number": null,
- "date": "2005-01-30",
- "agency": "AIB",
- "agencies": [
-  {
-   "code": "AIB",
-   "name": "Air Accidents Investigation Branch",
-   "country": "UK",
-   "role": "lead"
-  }
- ],
- "aircraft": {
-  "type": "Lockheed C-130K Hercules C1",
-  "manufacturer": "Lockheed",
-  "family": "C-130",
-  "registration": "XV179"
- },
- "operator": "Royal Air Force",
- "route": {
-  "from_name": "Baghdad",
-  "to_name": "Balad"
- },
- "location": {
-  "name": "25 miles northwest of Baghdad",
-  "country": "Iraq"
- },
- "phase": "initial_climb",
- "occupants": 10,
- "fatalities": 10,
- "category": "SEC",
- "summary": "RAF Hercules XV179 was shot down by Sunni insurgents in Iraq six minutes after departure from Baghdad. All 10 personnel perished. The Board of Inquiry identified the lack of a fire-suppressant system as a contributory factor, and the right wing was found separated from the fuselage.",
- "probable_cause": "Aircraft became uncontrollable after hostile ground-to-air fire caused explosive separation of the outboard right-hand wing. The lack of a fuel tank inerting system in the wing fuel tanks left the aircraft vulnerable to explosive fuel/air mixture development (p. 2-3)",
- "factors": [
-  {
-   "id": "terrorism_or_hostile_act",
-   "role": "initiating",
-   "evidence": "Aircraft shot down by hostile ground-to-air fire causing explosive wing separation (p. 2-3)"
-  },
-  {
-   "id": "inflight_fire",
-   "role": "contributing",
-   "evidence": "Distress message from crew at 1330Z indicated \"We are on fire, we are on fire\" after hostile fire impact (p. 2-3)"
-  },
-  {
-   "id": "structural_failure",
-   "role": "contributing",
-   "evidence": "Right wing outboard section separated explosively from fuselage due to hostile ground-to-air fire impact (p. 2)"
-  },
-  {
-   "id": "evacuation_deficiency",
-   "role": "outcome",
-   "evidence": "All 10 personnel on board were killed - crash was not survivable (p. 2-3)"
-  }
- ],
- "chain": [
-  [
-   "terrorism_or_hostile_act",
-   "inflight_fire"
+  "id": "wd_q3525589",
+  "qid": "Q3525589",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "2005 Royal Air Force Hercules shootdown",
+  "flight_number": null,
+  "date": "2005-01-30",
+  "agency": "AIB",
+  "agencies": [
+    {
+      "code": "AIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "UK",
+      "role": "lead"
+    }
   ],
-  [
-   "inflight_fire",
-   "structural_failure"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "1324",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "RAF Hercules XV179 took off from Baghdad at 1324Z en route to Balad at low level",
-   "factors": []
+  "aircraft": {
+    "type": "Lockheed C-130K Hercules C1",
+    "manufacturer": "Lockheed",
+    "family": "C-130",
+    "registration": "XV179"
   },
-  {
-   "t": 120,
-   "clock": "1326",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft heading north at low level, utilizing low-level flying tactic to mitigate risk from hostile ground-to-air threats (p. 3)",
-   "factors": []
+  "operator": "Royal Air Force",
+  "route": {
+    "from_name": "Baghdad",
+    "to_name": "Balad"
   },
-  {
-   "t": 360,
-   "clock": "1330",
-   "phase": "initial_climb",
-   "actor": "CABIN",
-   "kind": "crew_speech",
-   "text": "Royal Signals signaller reported fire on board: \"No duff, no duff, We are on fire, we are on fire\" (p. 2)",
-   "factors": [
-    "inflight_fire"
-   ]
+  "location": {
+    "name": "25 miles northwest of Baghdad",
+    "country": "Iraq",
+    "lat": 33.5316,
+    "lon": 44.0487
   },
-  {
-   "t": 660,
-   "clock": "1333",
-   "phase": "initial_climb",
-   "actor": "GND",
-   "kind": "atc",
-   "text": "Distress message received at 1330Z from crew indicating aircraft on fire (p. 3)",
-   "factors": [
-    "inflight_fire"
-   ]
+  "phase": "initial_climb",
+  "occupants": 10,
+  "fatalities": 10,
+  "category": "SEC",
+  "summary": "RAF Hercules XV179 was shot down by Sunni insurgents in Iraq six minutes after departure from Baghdad. All 10 personnel perished. The Board of Inquiry identified the lack of a fire-suppressant system as a contributory factor, and the right wing was found separated from the fuselage.",
+  "probable_cause": "Aircraft became uncontrollable after hostile ground-to-air fire caused explosive separation of the outboard right-hand wing. The lack of a fuel tank inerting system in the wing fuel tanks left the aircraft vulnerable to explosive fuel/air mixture development (p. 2-3)",
+  "factors": [
+    {
+      "id": "terrorism_or_hostile_act",
+      "role": "initiating",
+      "evidence": "Aircraft shot down by hostile ground-to-air fire causing explosive wing separation (p. 2-3)"
+    },
+    {
+      "id": "inflight_fire",
+      "role": "contributing",
+      "evidence": "Distress message from crew at 1330Z indicated \"We are on fire, we are on fire\" after hostile fire impact (p. 2-3)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "contributing",
+      "evidence": "Right wing outboard section separated explosively from fuselage due to hostile ground-to-air fire impact (p. 2)"
+    },
+    {
+      "id": "evacuation_deficiency",
+      "role": "outcome",
+      "evidence": "All 10 personnel on board were killed - crash was not survivable (p. 2-3)"
+    }
+  ],
+  "chain": [
+    [
+      "terrorism_or_hostile_act",
+      "inflight_fire"
+    ],
+    [
+      "inflight_fire",
+      "structural_failure"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "1324",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "RAF Hercules XV179 took off from Baghdad at 1324Z en route to Balad at low level",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "1326",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft heading north at low level, utilizing low-level flying tactic to mitigate risk from hostile ground-to-air threats (p. 3)",
+      "factors": []
+    },
+    {
+      "t": 360,
+      "clock": "1330",
+      "phase": "initial_climb",
+      "actor": "CABIN",
+      "kind": "crew_speech",
+      "text": "Royal Signals signaller reported fire on board: \"No duff, no duff, We are on fire, we are on fire\" (p. 2)",
+      "factors": [
+        "inflight_fire"
+      ]
+    },
+    {
+      "t": 660,
+      "clock": "1333",
+      "phase": "initial_climb",
+      "actor": "GND",
+      "kind": "atc",
+      "text": "Distress message received at 1330Z from crew indicating aircraft on fire (p. 3)",
+      "factors": [
+        "inflight_fire"
+      ]
+    },
+    {
+      "t": 1860,
+      "clock": "1355",
+      "phase": "initial_climb",
+      "actor": "GND",
+      "kind": "env",
+      "text": "Aircraft confirmed missing at 1355Z (p. 3)",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 2460,
+      "clock": "1406",
+      "phase": "initial_climb",
+      "actor": "GND",
+      "kind": "outcome",
+      "text": "Crash site located by US Apache helicopter crew at 1415Z in hostile area (p. 3)",
+      "factors": [
+        "terrorism_or_hostile_act",
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 2520,
+      "clock": "1414",
+      "phase": "initial_climb",
+      "actor": "GND",
+      "kind": "env",
+      "text": "Wreckage found in two separate locations indicating separation during flight (p. 2)",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 2580,
+      "clock": "1423",
+      "phase": "initial_climb",
+      "actor": "GND",
+      "kind": "outcome",
+      "text": "Right wing found separated from fuselage - outboard right-hand wing explosive separation due to hostile ground-to-air fire (p. 2)",
+      "factors": [
+        "terrorism_or_hostile_act",
+        "structural_failure"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/82773/hercules_crash_maas.pdf",
+    "http://www.mod.uk/NR/rdonlyres/20F22B57-C1BA-4715-AC38-F2E1604A78CF/0/boi_raf_hercules.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2005_Royal_Air_Force_Hercules_shootdown",
+  "asn_id": "20050130-0",
+  "interest": 10.78,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Entire short formal report read",
+      "Hostile act clearly established - ground-to-air missile",
+      "Fire on board reported by crew",
+      "Tactical considerations and system recommendations extracted",
+      "auto-repair: cvr was null; dissent was null; related was null"
+    ]
   },
-  {
-   "t": 1860,
-   "clock": "1355",
-   "phase": "initial_climb",
-   "actor": "GND",
-   "kind": "env",
-   "text": "Aircraft confirmed missing at 1355Z (p. 3)",
-   "factors": [
-    "structural_failure"
-   ]
-  },
-  {
-   "t": 2460,
-   "clock": "1406",
-   "phase": "initial_climb",
-   "actor": "GND",
-   "kind": "outcome",
-   "text": "Crash site located by US Apache helicopter crew at 1415Z in hostile area (p. 3)",
-   "factors": [
-    "terrorism_or_hostile_act",
-    "structural_failure"
-   ]
-  },
-  {
-   "t": 2520,
-   "clock": "1414",
-   "phase": "initial_climb",
-   "actor": "GND",
-   "kind": "env",
-   "text": "Wreckage found in two separate locations indicating separation during flight (p. 2)",
-   "factors": [
-    "structural_failure"
-   ]
-  },
-  {
-   "t": 2580,
-   "clock": "1423",
-   "phase": "initial_climb",
-   "actor": "GND",
-   "kind": "outcome",
-   "text": "Right wing found separated from fuselage - outboard right-hand wing explosive separation due to hostile ground-to-air fire (p. 2)",
-   "factors": [
-    "terrorism_or_hostile_act",
-    "structural_failure"
-   ]
-  }
- ],
- "report_links": [
-  "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/82773/hercules_crash_maas.pdf",
-  "http://www.mod.uk/NR/rdonlyres/20F22B57-C1BA-4715-AC38-F2E1604A78CF/0/boi_raf_hercules.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/2005_Royal_Air_Force_Hercules_shootdown",
- "asn_id": "20050130-0",
- "interest": 10.78,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Entire short formal report read",
-   "Hostile act clearly established - ground-to-air missile",
-   "Fire on board reported by crew",
-   "Tactical considerations and system recommendations extracted",
-   "auto-repair: cvr was null; dissent was null; related was null"
-  ]
- },
- "sources": [
-  "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/82773/hercules_crash_maas.pdf"
- ],
- "safety_changes": [
-  "C130 tactics reviewed - low level flying in daylight no longer authorized unless operationally essential (p. 4)",
-  "Fuel tank inerting system being investigated for C130 aircraft (p. 4)",
-  "Ground-to-air fire reporting and dissemination system improved and procedures reviewed (p. 4)",
-  "Air Component Headquarters adapted intelligence procedures and processes for ground-to-air threat reporting (p. 4)"
- ],
- "recommendations": [
-  {
-   "id": null,
-   "to": "RAF/UK MOD",
-   "text": "Review C130 low-level flying tactics to mitigate risk from hostile ground-to-air fire in daylight operations",
-   "status": "closed_acceptable",
-   "trigger_factors": [
-    "terrorism_or_hostile_act"
-   ]
-  },
-  {
-   "id": null,
-   "to": "RAF/UK MOD",
-   "text": "Consider fitting fuel tank inerting system in C130 aircraft wing fuel tanks to prevent explosive fuel/air mixtures",
-   "status": "closed_acceptable",
-   "trigger_factors": [
-    "inflight_fire"
-   ]
-  },
-  {
-   "id": null,
-   "to": "RAF/UK MOD",
-   "text": "Improve in-theatre ground-to-air intelligence process and reporting procedures",
-   "status": "closed_acceptable",
-   "trigger_factors": [
-    "terrorism_or_hostile_act"
-   ]
-  }
- ],
- "cvr": [],
- "dissent": [],
- "related": []
+  "sources": [
+    "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/82773/hercules_crash_maas.pdf"
+  ],
+  "safety_changes": [
+    "C130 tactics reviewed - low level flying in daylight no longer authorized unless operationally essential (p. 4)",
+    "Fuel tank inerting system being investigated for C130 aircraft (p. 4)",
+    "Ground-to-air fire reporting and dissemination system improved and procedures reviewed (p. 4)",
+    "Air Component Headquarters adapted intelligence procedures and processes for ground-to-air threat reporting (p. 4)"
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "RAF/UK MOD",
+      "text": "Review C130 low-level flying tactics to mitigate risk from hostile ground-to-air fire in daylight operations",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "terrorism_or_hostile_act"
+      ]
+    },
+    {
+      "id": null,
+      "to": "RAF/UK MOD",
+      "text": "Consider fitting fuel tank inerting system in C130 aircraft wing fuel tanks to prevent explosive fuel/air mixtures",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "inflight_fire"
+      ]
+    },
+    {
+      "id": null,
+      "to": "RAF/UK MOD",
+      "text": "Improve in-theatre ground-to-air intelligence process and reporting procedures",
+      "status": "closed_acceptable",
+      "trigger_factors": [
+        "terrorism_or_hostile_act"
+      ]
+    }
+  ],
+  "cvr": [],
+  "dissent": [],
+  "related": []
 }

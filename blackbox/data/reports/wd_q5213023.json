@@ -29,7 +29,9 @@
   },
   "location": {
     "name": "Mount La Esperanza",
-    "country": "Spain"
+    "country": "Spain",
+    "lat": 28.3981,
+    "lon": -16.4181
   },
   "phase": "approach",
   "occupants": 146,

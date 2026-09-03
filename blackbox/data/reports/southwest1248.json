@@ -7,65 +7,326 @@
   "t0": "2005-12-09T01:14:00Z",
   "agency": "NTSB",
   "agencies": [
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
-      "report_id": "NTSB/AAR-07/06", "report_title": "Runway Overrun and Collision, Southwest Airlines Flight 1248, Boeing 737-7H4, N471WN, Chicago Midway International Airport, Chicago, Illinois, December 8, 2005", "report_date": "2007-10-02",
-      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0706.pdf" }
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "NTSB/AAR-07/06",
+      "report_title": "Runway Overrun and Collision, Southwest Airlines Flight 1248, Boeing 737-7H4, N471WN, Chicago Midway International Airport, Chicago, Illinois, December 8, 2005",
+      "report_date": "2007-10-02",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0706.pdf"
+    }
   ],
-  "aircraft": { "type": "Boeing 737-7H4", "family": "737NG", "manufacturer": "Boeing", "registration": "N471WN", "msn": null, "engines": "CFM56-7B" },
+  "aircraft": {
+    "type": "Boeing 737-7H4",
+    "family": "737NG",
+    "manufacturer": "Boeing",
+    "registration": "N471WN",
+    "msn": null,
+    "engines": "CFM56-7B"
+  },
   "operator": "Southwest Airlines",
-  "route": { "from": "KBWI", "from_name": "Baltimore/Washington International", "to": "KMDW", "to_name": "Chicago Midway" },
-  "location": { "name": "Chicago Midway International Airport, runway 31C overrun onto Central Avenue", "country": "USA", "lat": 41.79, "lon": -87.76 },
+  "route": {
+    "from": "KBWI",
+    "from_name": "Baltimore/Washington International",
+    "to": "KMDW",
+    "to_name": "Chicago Midway"
+  },
+  "location": {
+    "name": "Chicago Midway International Airport, runway 31C overrun onto Central Avenue",
+    "country": "USA",
+    "lat": 41.79,
+    "lon": -87.76
+  },
   "phase": "landing",
-  "occupants": 103, "fatalities": 0, "injuries_serious": null,
+  "occupants": 103,
+  "fatalities": 0,
+  "injuries_serious": null,
   "damage": "substantial",
   "category": "RE",
   "summary": "Landing on Midway's 6,522 ft runway 31C at night in a snowstorm with an approximately 8 kt tailwind and braking action reported fair to poor, the crew used autobrakes for the first time and did not deploy reverse thrust until about 18 seconds after touchdown. The 737 overran the runway, went through the blast fence and airport perimeter fence onto Central Avenue and struck vehicles, killing a 6-year-old boy in a car. All 103 people on board survived.",
   "probable_cause": "The pilots' failure to use available reverse thrust in a timely manner to safely slow or stop the airplane after landing, which resulted in a runway overrun. This failure occurred because the pilots' first experience and lack of familiarity with the airplane's autobrake system distracted them from thrust reverser usage during the challenging landing. Contributing were Southwest Airlines' failure to provide clear and consistent guidance and training regarding arrival landing distance calculations; the programming and design of its on-board performance computer, which did not present inherent assumptions critical to pilot decision-making; its plan to implement new autobrake procedures without a familiarization period; and its failure to include a margin of safety in the arrival assessment. Also contributing was the pilots' failure to divert given reports of poor braking action and a tailwind component of about 8 knots. Contributing to the severity was the absence of an engineering materials arresting system (EMAS) beyond the end of runway 31C.",
   "factors": [
-    { "id": "contaminated_runway", "role": "initiating", "evidence": "Snow was falling and the runway was contaminated; braking action had been reported fair for the first half and poor for the second half." },
-    { "id": "tailwind_landing", "role": "contributing", "evidence": "The crew landed on runway 31C with a tailwind component of about 8 knots." },
-    { "id": "low_visibility", "role": "contributing", "evidence": "The approach was flown at night in falling snow with reduced visibility." },
-    { "id": "delayed_deceleration", "role": "contributing", "evidence": "Reverse thrust was not deployed until about 18 seconds after touchdown; the NTSB cited this as the primary cause." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "This was the pilots' first landing using autobrakes; Southwest introduced the procedure without a familiarisation period, and guidance on landing distance assessment was inconsistent." },
-    { "id": "checklist_design", "role": "latent", "evidence": "The on-board performance computer assumed immediate reverse thrust and did not present this assumption; with 'poor' braking entered the predicted margin would have been only about 30 ft rather than the 560 ft shown for 'fair'." },
-    { "id": "operator_safety_culture", "role": "latent", "evidence": "Southwest's arrival landing distance assessment did not include a safety margin to account for operational uncertainties." },
-    { "id": "high_workload", "role": "contributing", "evidence": "The challenging night, snow and tailwind landing combined with unfamiliar autobrake operation distracted the captain from deploying the reversers." },
-    { "id": "go_around_not_flown", "role": "contributing", "evidence": "The NTSB found the pilots should have diverted given the poor braking action reports and tailwind." },
-    { "id": "airport_infrastructure", "role": "latent", "evidence": "Runway 31C had a limited runway safety area and no EMAS, which contributed to the severity of the overrun." },
-    { "id": "runway_overrun", "role": "outcome", "evidence": "The aircraft left the end of runway 31C, penetrated the blast fence and perimeter fence and came to rest on Central Avenue after striking vehicles." }
+    {
+      "id": "contaminated_runway",
+      "role": "initiating",
+      "evidence": "Snow was falling and the runway was contaminated; braking action had been reported fair for the first half and poor for the second half."
+    },
+    {
+      "id": "tailwind_landing",
+      "role": "contributing",
+      "evidence": "The crew landed on runway 31C with a tailwind component of about 8 knots."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "The approach was flown at night in falling snow with reduced visibility."
+    },
+    {
+      "id": "delayed_deceleration",
+      "role": "contributing",
+      "evidence": "Reverse thrust was not deployed until about 18 seconds after touchdown; the NTSB cited this as the primary cause."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "This was the pilots' first landing using autobrakes; Southwest introduced the procedure without a familiarisation period, and guidance on landing distance assessment was inconsistent."
+    },
+    {
+      "id": "checklist_design",
+      "role": "latent",
+      "evidence": "The on-board performance computer assumed immediate reverse thrust and did not present this assumption; with 'poor' braking entered the predicted margin would have been only about 30 ft rather than the 560 ft shown for 'fair'."
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "latent",
+      "evidence": "Southwest's arrival landing distance assessment did not include a safety margin to account for operational uncertainties."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The challenging night, snow and tailwind landing combined with unfamiliar autobrake operation distracted the captain from deploying the reversers."
+    },
+    {
+      "id": "go_around_not_flown",
+      "role": "contributing",
+      "evidence": "The NTSB found the pilots should have diverted given the poor braking action reports and tailwind."
+    },
+    {
+      "id": "airport_infrastructure",
+      "role": "latent",
+      "evidence": "Runway 31C had a limited runway safety area and no EMAS, which contributed to the severity of the overrun."
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "The aircraft left the end of runway 31C, penetrated the blast fence and perimeter fence and came to rest on Central Avenue after striking vehicles."
+    }
   ],
   "chain": [
-    ["contaminated_runway", "delayed_deceleration"],
-    ["low_visibility", "high_workload"],
-    ["tailwind_landing", "runway_overrun"],
-    ["inadequate_training", "high_workload"],
-    ["high_workload", "delayed_deceleration"],
-    ["checklist_design", "go_around_not_flown"],
-    ["operator_safety_culture", "checklist_design"],
-    ["go_around_not_flown", "runway_overrun"],
-    ["delayed_deceleration", "runway_overrun"],
-    ["airport_infrastructure", "runway_overrun"]
+    [
+      "contaminated_runway",
+      "delayed_deceleration"
+    ],
+    [
+      "low_visibility",
+      "high_workload"
+    ],
+    [
+      "tailwind_landing",
+      "runway_overrun"
+    ],
+    [
+      "inadequate_training",
+      "high_workload"
+    ],
+    [
+      "high_workload",
+      "delayed_deceleration"
+    ],
+    [
+      "checklist_design",
+      "go_around_not_flown"
+    ],
+    [
+      "operator_safety_culture",
+      "checklist_design"
+    ],
+    [
+      "go_around_not_flown",
+      "runway_overrun"
+    ],
+    [
+      "delayed_deceleration",
+      "runway_overrun"
+    ],
+    [
+      "airport_infrastructure",
+      "runway_overrun"
+    ]
   ],
   "events": [
-    { "t": -2400, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "Crew obtains weather and braking action reports for Midway: snow, low visibility, braking action fair for the first half of runway 31C and poor for the second half.", "factors": ["contaminated_runway", "low_visibility"], "kind": "env" },
-    { "t": -2100, "clock": null, "phase": "cruise", "actor": "FO", "text": "Landing distance computed on the on-board performance computer using 'fair' braking action, giving a stopping margin of about 560 ft; the computer assumed immediate reverse thrust and, with 'poor' entered, would have shown about 30 ft.", "factors": ["checklist_design", "operator_safety_culture"], "kind": "crew_action" },
-    { "t": -1500, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Crew elects to continue to Midway rather than divert despite the reports of poor braking action and a tailwind.", "factors": ["go_around_not_flown", "tailwind_landing"], "kind": "crew_action" },
-    { "t": -900, "clock": null, "phase": "descent", "actor": "ATC", "text": "Aircraft is held briefly and then sequenced for the ILS approach to runway 31C; wind reported from the east giving a tailwind component of about 8 knots.", "factors": ["tailwind_landing"], "kind": "atc" },
-    { "t": -300, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Autobrake MAX selected for landing; this is the first time either pilot has landed with the autobrake system under Southwest's new procedure.", "factors": ["inadequate_training"], "kind": "crew_action" },
-    { "t": -30, "clock": null, "phase": "approach", "actor": "PF", "text": "Aircraft on final in snow and low visibility; runway environment acquired late.", "factors": ["low_visibility"], "kind": "crew_action" },
-    { "t": 0, "clock": "19:14", "phase": "landing", "actor": "SYS", "text": "Touchdown on runway 31C; the autobrakes engage.", "factors": ["contaminated_runway"], "kind": "system" },
-    { "t": 3, "clock": null, "phase": "landing", "actor": "CAPT", "text": "Captain attempts to select reverse thrust but is unable to move the reverse levers past the interlock while attending to the unfamiliar autobrake behaviour.", "factors": ["delayed_deceleration", "high_workload", "inadequate_training"], "kind": "crew_action" },
-    { "t": 18, "clock": null, "phase": "landing", "actor": "FO", "text": "First officer deploys reverse thrust about 18 seconds after touchdown; captain applies maximum manual braking.", "factors": ["delayed_deceleration"], "kind": "crew_action" },
-    { "t": 30, "clock": null, "phase": "landing", "actor": "SYS", "text": "Aircraft continues past the end of runway 31C at low speed, crosses the limited runway safety area and strikes the blast fence and perimeter fence.", "factors": ["runway_overrun", "airport_infrastructure"], "kind": "outcome" },
-    { "t": 35, "clock": null, "phase": "landing", "actor": "ENV", "text": "Aircraft comes to rest on Central Avenue after striking vehicles; a child in one of the cars is killed and several occupants of the vehicles are injured.", "factors": ["runway_overrun"], "kind": "outcome" },
-    { "t": 300, "clock": null, "phase": "ground", "actor": "CABIN", "text": "Passengers and crew evacuate; there are no fatalities on board.", "kind": "crew_action" }
+    {
+      "t": -2400,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Crew obtains weather and braking action reports for Midway: snow, low visibility, braking action fair for the first half of runway 31C and poor for the second half.",
+      "factors": [
+        "contaminated_runway",
+        "low_visibility"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": -2100,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "FO",
+      "text": "Landing distance computed on the on-board performance computer using 'fair' braking action, giving a stopping margin of about 560 ft; the computer assumed immediate reverse thrust and, with 'poor' entered, would have shown about 30 ft.",
+      "factors": [
+        "checklist_design",
+        "operator_safety_culture"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -1500,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Crew elects to continue to Midway rather than divert despite the reports of poor braking action and a tailwind.",
+      "factors": [
+        "go_around_not_flown",
+        "tailwind_landing"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -900,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ATC",
+      "text": "Aircraft is held briefly and then sequenced for the ILS approach to runway 31C; wind reported from the east giving a tailwind component of about 8 knots.",
+      "factors": [
+        "tailwind_landing"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": -300,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Autobrake MAX selected for landing; this is the first time either pilot has landed with the autobrake system under Southwest's new procedure.",
+      "factors": [
+        "inadequate_training"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -30,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "text": "Aircraft on final in snow and low visibility; runway environment acquired late.",
+      "factors": [
+        "low_visibility"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "19:14",
+      "phase": "landing",
+      "actor": "SYS",
+      "text": "Touchdown on runway 31C; the autobrakes engage.",
+      "factors": [
+        "contaminated_runway"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 3,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "text": "Captain attempts to select reverse thrust but is unable to move the reverse levers past the interlock while attending to the unfamiliar autobrake behaviour.",
+      "factors": [
+        "delayed_deceleration",
+        "high_workload",
+        "inadequate_training"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 18,
+      "clock": null,
+      "phase": "landing",
+      "actor": "FO",
+      "text": "First officer deploys reverse thrust about 18 seconds after touchdown; captain applies maximum manual braking.",
+      "factors": [
+        "delayed_deceleration"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "text": "Aircraft continues past the end of runway 31C at low speed, crosses the limited runway safety area and strikes the blast fence and perimeter fence.",
+      "factors": [
+        "runway_overrun",
+        "airport_infrastructure"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 35,
+      "clock": null,
+      "phase": "landing",
+      "actor": "ENV",
+      "text": "Aircraft comes to rest on Central Avenue after striking vehicles; a child in one of the cars is killed and several occupants of the vehicles are injured.",
+      "factors": [
+        "runway_overrun"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "ground",
+      "actor": "CABIN",
+      "text": "Passengers and crew evacuate; there are no fatalities on board.",
+      "kind": "crew_action"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "FAA", "text": "Require operators to perform arrival landing distance assessments before every landing based on existing performance data, actual conditions and a safety margin of at least 15 percent.", "status": "unknown", "outcome": "FAA issued SAFO 06012 on landing performance assessments at time of arrival and later rulemaking on runway condition reporting.", "trigger_factors": ["contaminated_runway", "checklist_design", "operator_safety_culture"] },
-    { "id": null, "to": "FAA", "text": "Require that on-board performance computers and landing distance tools clearly present the assumptions on which their calculations are based.", "status": "unknown", "outcome": null, "trigger_factors": ["checklist_design"] },
-    { "id": null, "to": "FAA", "text": "Ensure that operators provide adequate familiarisation and training before introducing new landing procedures such as autobrake use.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_training"] },
-    { "id": null, "to": "FAA", "text": "Expedite installation of EMAS or equivalent runway safety area improvements at airports with limited safety areas.", "status": "unknown", "outcome": "EMAS beds were installed at Chicago Midway.", "trigger_factors": ["airport_infrastructure"] }
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require operators to perform arrival landing distance assessments before every landing based on existing performance data, actual conditions and a safety margin of at least 15 percent.",
+      "status": "unknown",
+      "outcome": "FAA issued SAFO 06012 on landing performance assessments at time of arrival and later rulemaking on runway condition reporting.",
+      "trigger_factors": [
+        "contaminated_runway",
+        "checklist_design",
+        "operator_safety_culture"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require that on-board performance computers and landing distance tools clearly present the assumptions on which their calculations are based.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "checklist_design"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Ensure that operators provide adequate familiarisation and training before introducing new landing procedures such as autobrake use.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Expedite installation of EMAS or equivalent runway safety area improvements at airports with limited safety areas.",
+      "status": "unknown",
+      "outcome": "EMAS beds were installed at Chicago Midway.",
+      "trigger_factors": [
+        "airport_infrastructure"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -73,11 +334,26 @@
     "EMAS arrestor beds were installed at the runway ends at Chicago Midway.",
     "Development of the Takeoff and Landing Performance Assessment (TALPA) runway condition reporting framework."
   ],
-  "related": ["american1420", "tam3054", "af358"],
+  "related": [
+    "american1420",
+    "tam3054",
+    "af358"
+  ],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0706.pdf", "https://www.ntsb.gov"],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
-    "notes": ["t0 is set to touchdown at about 19:14 CST; seconds not recalled. Pre-landing event times are approximate.",
-              "Occupant count of 103 (98 passengers and 5 crew) and the 560 ft / 30 ft OPC margins are from memory of the report; the 18 second reverse thrust delay is as stated by the NTSB.",
-              "Recommendation numbers not recalled and are left null; SAFO 06012 was issued before the final report."] }
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0706.pdf",
+    "https://www.ntsb.gov"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "t0 is set to touchdown at about 19:14 CST; seconds not recalled. Pre-landing event times are approximate.",
+      "Occupant count of 103 (98 passengers and 5 crew) and the 560 ft / 30 ft OPC margins are from memory of the report; the 18 second reverse thrust delay is as stated by the NTSB.",
+      "Recommendation numbers not recalled and are left null; SAFO 06012 was issued before the final report."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Southwest_Airlines_Flight_1248"
 }

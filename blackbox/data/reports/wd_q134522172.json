@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "Near Tanana River",
-    "country": "United States"
+    "country": "United States",
+    "lat": 64.7453,
+    "lon": -148.0794
   },
   "phase": "initial_climb",
   "occupants": 2,
@@ -75,11 +77,26 @@
     }
   ],
   "chain": [
-    ["fuel_leak", "inflight_fire"],
-    ["engine_failure", "inflight_fire"],
-    ["maintenance_error", "inflight_fire"],
-    ["inflight_fire", "loss_of_control_inflight"],
-    ["loss_of_control_inflight", "structural_failure"]
+    [
+      "fuel_leak",
+      "inflight_fire"
+    ],
+    [
+      "engine_failure",
+      "inflight_fire"
+    ],
+    [
+      "maintenance_error",
+      "inflight_fire"
+    ],
+    [
+      "inflight_fire",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "structural_failure"
+    ]
   ],
   "events": [
     {
@@ -98,7 +115,10 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Smoke observed from engine one which was no longer operating; engine failure indicated on tracking data approximately 8 minutes after takeoff (p. 1, narrative).",
-      "factors": ["engine_failure", "fuel_leak"]
+      "factors": [
+        "engine_failure",
+        "fuel_leak"
+      ]
     },
     {
       "t": 120,
@@ -107,7 +127,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "White smoke and fire developed behind the engine with bright explosion captured on video; fire originated from pressurized oil from the feathering system nut (improperly installed) spraying onto hot exhaust surfaces (p. 1-2, narrative and summary).",
-      "factors": ["inflight_fire"]
+      "factors": [
+        "inflight_fire"
+      ]
     },
     {
       "t": 150,
@@ -116,7 +138,10 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Fire penetrated the #1 rear firewall and reached the #2 (inboard) main wing fuel tank causing that wing tank to explode in flight (p. 1, narrative).",
-      "factors": ["inflight_fire", "loss_of_control_inflight"]
+      "factors": [
+        "inflight_fire",
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 180,
@@ -125,7 +150,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft entered a sharp left turn following the explosion and began an uncontrolled descent (p. 1, summary record).",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 210,
@@ -134,7 +161,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "The failing engine separated from the aircraft approximately 100 feet above the ground (p. 1, summary record).",
-      "factors": ["structural_failure"]
+      "factors": [
+        "structural_failure"
+      ]
     },
     {
       "t": 215,
@@ -143,7 +172,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Infrasound data recorded the aircraft impacting terrain near Tanana River approximately 8 minutes and 8 seconds after departure with two occupants aboard; aircraft destroyed on impact (p. 1, summary record).",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     }
   ],
   "cvr": [],

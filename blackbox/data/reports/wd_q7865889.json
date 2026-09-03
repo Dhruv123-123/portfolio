@@ -35,7 +35,9 @@
   },
   "location": {
     "name": "Bowery Bay, LaGuardia Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 40.776,
+    "lon": -73.885
   },
   "phase": "takeoff",
   "occupants": 63,
@@ -77,10 +79,22 @@
     }
   ],
   "chain": [
-    ["procedural_noncompliance", "inappropriate_control_input"],
-    ["inappropriate_control_input", "runway_overrun"],
-    ["inadequate_monitoring", "procedural_noncompliance"],
-    ["crm_breakdown", "inappropriate_control_input"]
+    [
+      "procedural_noncompliance",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "runway_overrun"
+    ],
+    [
+      "inadequate_monitoring",
+      "procedural_noncompliance"
+    ],
+    [
+      "crm_breakdown",
+      "inappropriate_control_input"
+    ]
   ],
   "events": [
     {
@@ -209,12 +223,16 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR90-03.pdf"],
+  "sources": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR90-03.pdf"
+  ],
   "wikipedia": "https://en.wikipedia.org/wiki/USAir_Flight_5050",
   "asn_id": "19890920-0",
   "interest": 8.57,
   "curated_id": null,
-  "report_links": ["http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR90-03.pdf"],
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR90-03.pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5-20251001",

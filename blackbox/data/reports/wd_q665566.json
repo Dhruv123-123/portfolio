@@ -37,7 +37,9 @@
   },
   "location": {
     "name": "Kahului Airport, Maui",
-    "country": "United States"
+    "country": "United States",
+    "lat": 20.54,
+    "lon": -156.28
   },
   "phase": "cruise",
   "occupants": 95,
@@ -74,10 +76,22 @@
     }
   ],
   "chain": [
-    ["metal_fatigue", "structural_failure"],
-    ["structural_failure", "explosive_decompression"],
-    ["maintenance_error", "metal_fatigue"],
-    ["inadequate_inspection", "maintenance_error"]
+    [
+      "metal_fatigue",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "explosive_decompression"
+    ],
+    [
+      "maintenance_error",
+      "metal_fatigue"
+    ],
+    [
+      "inadequate_inspection",
+      "maintenance_error"
+    ]
   ],
   "events": [
     {
@@ -302,12 +316,16 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8903.pdf"],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8903.pdf"
+  ],
   "wikipedia": "https://en.wikipedia.org/wiki/Aloha_Airlines_Flight_243",
   "asn_id": "19880428-0",
   "interest": 9.64,
   "curated_id": null,
-  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8903.pdf"],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8903.pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5-20251001",

@@ -1,240 +1,242 @@
 {
- "id": "wd_q26201735",
- "qid": "Q26201735",
- "tier": "wikidata",
- "depth": "full",
- "title": "2016 Lockhart hot air balloon crash",
- "flight_number": null,
- "date": "2016-07-30",
- "agency": "NTSB",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead"
-  }
- ],
- "aircraft": {
-  "type": "Balóny Kubíček BB85Z hot air balloon",
-  "manufacturer": "Balóny Kubíček",
-  "family": "BB85Z",
-  "registration": "N2469L"
- },
- "operator": "Heart of Texas Balloon Ride",
- "route": {
-  "from_name": "Fentress Airpark",
-  "to_name": "Off-airport landing near Lockhart"
- },
- "location": {
-  "name": "Maxwell near Lockhart",
-  "country": "United States"
- },
- "phase": "initial_climb",
- "occupants": 16,
- "fatalities": 16,
- "category": "OTHR",
- "summary": "A Balóny Kubíček BB85Z hot air balloon operated by Heart of Texas Balloon Ride struck power lines, caught fire and crashed near Lockhart Texas on July 30 2016 killing all 16 aboard. The NTSB determined the accident was caused by the pilot's pattern of poor decision-making including launching despite weather forecasts indicating cloud layers as low as 1100 feet when other balloon operators cancelled flights. The pilot continued into fog and clouds while impaired by diazepam, oxycodone, and diphenhydramine equivalent to drunken driving.",
- "probable_cause": "Pilot's pattern of poor decision-making in launching and continuing flight into unsuitable weather, complicated by medical conditions and medications that impaired judgment. Pilot made decisions to launch despite deteriorating weather forecasts, continued flight into fog and clouds, and descended in conditions that decreased ability to see and avoid obstacles (p. 10)",
- "factors": [
-  {
-   "id": "low_visibility",
-   "role": "latent",
-   "evidence": "Weather observations 1 hour 50 minutes before launch indicated clouds as low as 1100 ft AGL; fog reported near launch site; deteriorating conditions available but not rechecked (p. 10)"
-  },
-  {
-   "id": "pilot_incapacitation",
-   "role": "contributing",
-   "evidence": "Toxicology detected diazepam, oxycodone, methylphenidate, and diphenhydramine at levels equivalent to blood alcohol content of a drunken driver; pilot had untreated depression, ADHD, and bipolar disorder (p. 15-16, 17)"
-  },
-  {
-   "id": "inadequate_training",
-   "role": "latent",
-   "evidence": "Balloon pilots do not require medical certification unlike other commercial pilots; no requirement for flight review documentation found in records (p. 14-15)"
-  },
-  {
-   "id": "loss_of_control_inflight",
-   "role": "outcome",
-   "evidence": "Aircraft struck power lines and crashed into field during descent through clouds that obstructed ground view (p. 12)"
-  },
-  {
-   "id": "post_impact_fire",
-   "role": "outcome",
-   "evidence": "Balloon caught fire after power line impact (p. 12)"
-  }
- ],
- "chain": [
-  [
-   "low_visibility",
-   "loss_of_control_inflight"
+  "id": "wd_q26201735",
+  "qid": "Q26201735",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "2016 Lockhart hot air balloon crash",
+  "flight_number": null,
+  "date": "2016-07-30",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
   ],
-  [
-   "pilot_incapacitation",
-   "loss_of_control_inflight"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "06:58",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Balloon launched from Fentress Airpark on northerly course after pibal checks (p. 11)",
-   "factors": []
+  "aircraft": {
+    "type": "Balóny Kubíček BB85Z hot air balloon",
+    "manufacturer": "Balóny Kubíček",
+    "family": "BB85Z",
+    "registration": "N2469L"
   },
-  {
-   "t": 120,
-   "clock": "07:00",
-   "phase": "initial_climb",
-   "actor": "ENV",
-   "kind": "env",
-   "text": "Passenger photograph 2 minutes after launch showed low clouds and fog visible along route of flight (p. 11)",
-   "factors": [
-    "low_visibility"
-   ]
+  "operator": "Heart of Texas Balloon Ride",
+  "route": {
+    "from_name": "Fentress Airpark",
+    "to_name": "Off-airport landing near Lockhart"
   },
-  {
-   "t": 300,
-   "clock": "07:03",
-   "phase": "initial_climb",
-   "actor": "ENV",
-   "kind": "env",
-   "text": "Balloon much closer to fog and clouds; ground crew saw balloon enter fog that became thicker (p. 11)",
-   "factors": [
-    "low_visibility"
-   ]
+  "location": {
+    "name": "Maxwell near Lockhart",
+    "country": "United States",
+    "lat": 29.885,
+    "lon": -97.7622
   },
-  {
-   "t": 1140,
-   "clock": "07:17",
-   "phase": "initial_climb",
-   "actor": "ENV",
-   "kind": "env",
-   "text": "Passenger photograph at 19 minutes after launch showed reduced visibility in mist/fog/clouds (p. 11)",
-   "factors": [
-    "low_visibility"
-   ]
+  "phase": "initial_climb",
+  "occupants": 16,
+  "fatalities": 16,
+  "category": "OTHR",
+  "summary": "A Balóny Kubíček BB85Z hot air balloon operated by Heart of Texas Balloon Ride struck power lines, caught fire and crashed near Lockhart Texas on July 30 2016 killing all 16 aboard. The NTSB determined the accident was caused by the pilot's pattern of poor decision-making including launching despite weather forecasts indicating cloud layers as low as 1100 feet when other balloon operators cancelled flights. The pilot continued into fog and clouds while impaired by diazepam, oxycodone, and diphenhydramine equivalent to drunken driving.",
+  "probable_cause": "Pilot's pattern of poor decision-making in launching and continuing flight into unsuitable weather, complicated by medical conditions and medications that impaired judgment. Pilot made decisions to launch despite deteriorating weather forecasts, continued flight into fog and clouds, and descended in conditions that decreased ability to see and avoid obstacles (p. 10)",
+  "factors": [
+    {
+      "id": "low_visibility",
+      "role": "latent",
+      "evidence": "Weather observations 1 hour 50 minutes before launch indicated clouds as low as 1100 ft AGL; fog reported near launch site; deteriorating conditions available but not rechecked (p. 10)"
+    },
+    {
+      "id": "pilot_incapacitation",
+      "role": "contributing",
+      "evidence": "Toxicology detected diazepam, oxycodone, methylphenidate, and diphenhydramine at levels equivalent to blood alcohol content of a drunken driver; pilot had untreated depression, ADHD, and bipolar disorder (p. 15-16, 17)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "Balloon pilots do not require medical certification unlike other commercial pilots; no requirement for flight review documentation found in records (p. 14-15)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft struck power lines and crashed into field during descent through clouds that obstructed ground view (p. 12)"
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Balloon caught fire after power line impact (p. 12)"
+    }
+  ],
+  "chain": [
+    [
+      "low_visibility",
+      "loss_of_control_inflight"
+    ],
+    [
+      "pilot_incapacitation",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "06:58",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Balloon launched from Fentress Airpark on northerly course after pibal checks (p. 11)",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "07:00",
+      "phase": "initial_climb",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Passenger photograph 2 minutes after launch showed low clouds and fog visible along route of flight (p. 11)",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": "07:03",
+      "phase": "initial_climb",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Balloon much closer to fog and clouds; ground crew saw balloon enter fog that became thicker (p. 11)",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 1140,
+      "clock": "07:17",
+      "phase": "initial_climb",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Passenger photograph at 19 minutes after launch showed reduced visibility in mist/fog/clouds (p. 11)",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 1440,
+      "clock": "07:22",
+      "phase": "initial_climb",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "First photograph showing balloon above thin clouds at 24 minutes after launch; ground visible through clouds (p. 11)",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 1680,
+      "clock": "07:26",
+      "phase": "initial_climb",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Pilot sent position signal to ground crew via navigation app at 28 minutes after launch, then no further communication (p. 11)",
+      "factors": [
+        "pilot_incapacitation"
+      ]
+    },
+    {
+      "t": 2400,
+      "clock": "07:38",
+      "phase": "initial_climb",
+      "actor": "ENV",
+      "kind": "env",
+      "text": "Passenger photograph at 40 minutes after launch showed balloon flying above overcast cloud layer extending to horizon, obstructing ground view (p. 11)",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 2520,
+      "clock": "07:40",
+      "phase": "initial_climb",
+      "actor": "ENV",
+      "kind": "warning",
+      "text": "Passenger photograph at 42 minutes after launch showed balloon shadow near hole in clouds with visible power line tower (p. 11-12)",
+      "factors": [
+        "low_visibility"
+      ]
+    },
+    {
+      "t": 2640,
+      "clock": "07:42",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Balloon struck power lines during descent through cloud layers; power operator reported power trip at 0742 CDT (p. 12)",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 2700,
+      "clock": "07:43",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Balloon caught fire; basket located beneath power lines, burner and envelope found 0.5 mile downwind; crash destroyed aircraft (p. 12)",
+      "factors": [
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/Pages/DCA16MA204.aspx"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2016_Lockhart_hot_air_balloon_crash",
+  "asn_id": null,
+  "interest": 11.0,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Comprehensive NTSB report read (65 pages)",
+      "Pilot medical records and toxicology findings detailed",
+      "Passenger photographs with timestamps provided detailed cloud progression",
+      "Flight path data from navigation app provided precise timing",
+      "All major decision points and environmental factors extracted",
+      "10 detailed events spanning 44-minute flight",
+      "auto-repair: cvr was null; dissent was null; related was null"
+    ]
   },
-  {
-   "t": 1440,
-   "clock": "07:22",
-   "phase": "initial_climb",
-   "actor": "ENV",
-   "kind": "env",
-   "text": "First photograph showing balloon above thin clouds at 24 minutes after launch; ground visible through clouds (p. 11)",
-   "factors": [
-    "low_visibility"
-   ]
-  },
-  {
-   "t": 1680,
-   "clock": "07:26",
-   "phase": "initial_climb",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Pilot sent position signal to ground crew via navigation app at 28 minutes after launch, then no further communication (p. 11)",
-   "factors": [
-    "pilot_incapacitation"
-   ]
-  },
-  {
-   "t": 2400,
-   "clock": "07:38",
-   "phase": "initial_climb",
-   "actor": "ENV",
-   "kind": "env",
-   "text": "Passenger photograph at 40 minutes after launch showed balloon flying above overcast cloud layer extending to horizon, obstructing ground view (p. 11)",
-   "factors": [
-    "low_visibility"
-   ]
-  },
-  {
-   "t": 2520,
-   "clock": "07:40",
-   "phase": "initial_climb",
-   "actor": "ENV",
-   "kind": "warning",
-   "text": "Passenger photograph at 42 minutes after launch showed balloon shadow near hole in clouds with visible power line tower (p. 11-12)",
-   "factors": [
-    "low_visibility"
-   ]
-  },
-  {
-   "t": 2640,
-   "clock": "07:42",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Balloon struck power lines during descent through cloud layers; power operator reported power trip at 0742 CDT (p. 12)",
-   "factors": [
-    "loss_of_control_inflight"
-   ]
-  },
-  {
-   "t": 2700,
-   "clock": "07:43",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Balloon caught fire; basket located beneath power lines, burner and envelope found 0.5 mile downwind; crash destroyed aircraft (p. 12)",
-   "factors": [
-    "post_impact_fire"
-   ]
-  }
- ],
- "report_links": [
-  "https://www.ntsb.gov/investigations/Pages/DCA16MA204.aspx"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/2016_Lockhart_hot_air_balloon_crash",
- "asn_id": null,
- "interest": 11.0,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Comprehensive NTSB report read (65 pages)",
-   "Pilot medical records and toxicology findings detailed",
-   "Passenger photographs with timestamps provided detailed cloud progression",
-   "Flight path data from navigation app provided precise timing",
-   "All major decision points and environmental factors extracted",
-   "10 detailed events spanning 44-minute flight",
-   "auto-repair: cvr was null; dissent was null; related was null"
-  ]
- },
- "sources": [
-  "https://www.ntsb.gov/investigations/Pages/DCA16MA204.aspx"
- ],
- "time_reference": "CDT",
- "t0": "2016-07-30T06:58:00",
- "recommendations": [
-  {
-   "id": null,
-   "to": "FAA",
-   "text": "Require commercial hot air balloon pilots to obtain and maintain a medical certificate to ensure medical fitness to fly",
-   "status": "unknown",
-   "trigger_factors": [
-    "pilot_incapacitation",
-    "inadequate_training"
-   ]
-  },
-  {
-   "id": null,
-   "to": "FAA",
-   "text": "Conduct targeted FAA oversight of commercial balloon operations to mitigate risk before accidents occur rather than focusing oversight primarily on balloon gatherings",
-   "status": "unknown",
-   "trigger_factors": [
-    "inadequate_training"
-   ]
-  }
- ],
- "safety_changes": [
-  "Identified critical safety gaps in medical oversight for commercial balloon pilots",
-  "Highlighted need for improved FAA risk-based oversight of balloon operations outside gatherings"
- ],
- "cvr": [],
- "dissent": [],
- "related": []
+  "sources": [
+    "https://www.ntsb.gov/investigations/Pages/DCA16MA204.aspx"
+  ],
+  "time_reference": "CDT",
+  "t0": "2016-07-30T06:58:00",
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require commercial hot air balloon pilots to obtain and maintain a medical certificate to ensure medical fitness to fly",
+      "status": "unknown",
+      "trigger_factors": [
+        "pilot_incapacitation",
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Conduct targeted FAA oversight of commercial balloon operations to mitigate risk before accidents occur rather than focusing oversight primarily on balloon gatherings",
+      "status": "unknown",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    }
+  ],
+  "safety_changes": [
+    "Identified critical safety gaps in medical oversight for commercial balloon pilots",
+    "Highlighted need for improved FAA risk-based oversight of balloon operations outside gatherings"
+  ],
+  "cvr": [],
+  "dissent": [],
+  "related": []
 }

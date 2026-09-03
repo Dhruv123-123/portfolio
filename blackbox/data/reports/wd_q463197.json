@@ -31,7 +31,9 @@
   },
   "location": {
     "name": "Des Plaines",
-    "country": "United States"
+    "country": "United States",
+    "lat": 42.0097,
+    "lon": -87.93
   },
   "phase": "takeoff",
   "occupants": 271,
@@ -68,11 +70,26 @@
     }
   ],
   "chain": [
-    ["maintenance_error", "structural_failure"],
-    ["structural_failure", "design_deficiency"],
-    ["structural_failure", "warning_system_deficiency"],
-    ["design_deficiency", "loss_of_control_inflight"],
-    ["warning_system_deficiency", "loss_of_control_inflight"]
+    [
+      "maintenance_error",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "design_deficiency"
+    ],
+    [
+      "structural_failure",
+      "warning_system_deficiency"
+    ],
+    [
+      "design_deficiency",
+      "loss_of_control_inflight"
+    ],
+    [
+      "warning_system_deficiency",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
@@ -91,7 +108,10 @@
       "actor": "SYS",
       "kind": "system",
       "text": "During takeoff rotation, sections of the left engine pylon structure come off the aircraft; witnesses see white smoke or vapor from the No. 1 engine pylon area.",
-      "factors": ["maintenance_error", "structural_failure"]
+      "factors": [
+        "maintenance_error",
+        "structural_failure"
+      ]
     },
     {
       "t": 10,
@@ -100,7 +120,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "The entire No. 1 engine and pylon assembly separate from the aircraft, go over the top of the wing, and fall to the runway.",
-      "factors": ["structural_failure"],
+      "factors": [
+        "structural_failure"
+      ],
       "state": {
         "alt": 0,
         "ias": 150
@@ -113,7 +135,9 @@
       "actor": "FO",
       "kind": "crew_speech",
       "text": "The cockpit voice recorder captures only a thump and the first officer exclaiming 'Damn!' as the engine detaches; recording then ends due to power loss.",
-      "factors": ["structural_failure"]
+      "factors": [
+        "structural_failure"
+      ]
     },
     {
       "t": 15,
@@ -122,7 +146,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "The separating engine severs hydraulic lines that locked the left wing's leading-edge slats, and aerodynamic forces cause an uncommanded retraction of the outboard slats.",
-      "factors": ["design_deficiency"],
+      "factors": [
+        "design_deficiency"
+      ],
       "state": {
         "alt": 100,
         "ias": 160
@@ -135,7 +161,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "The number-one electrical bus fails with the engine, knocking out the captain's instruments, his stick shaker, and the slat-disagreement warning system.",
-      "factors": ["warning_system_deficiency"]
+      "factors": [
+        "warning_system_deficiency"
+      ]
     },
     {
       "t": 30,
@@ -157,7 +185,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "The aircraft begins to turn and roll to the left, nose pitches down, and aircraft begins to descend.",
-      "factors": ["loss_of_control_inflight"],
+      "factors": [
+        "loss_of_control_inflight"
+      ],
       "state": {
         "alt": 250,
         "roll": -30
@@ -170,7 +200,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft continues rolling left until wings are past the vertical position (inverted), with the nose well below the horizon.",
-      "factors": ["loss_of_control_inflight"],
+      "factors": [
+        "loss_of_control_inflight"
+      ],
       "state": {
         "alt": 100,
         "roll": -120
@@ -183,7 +215,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Flight 191 crashes in an open field and trailer park about 4,600 feet northwest of the departure end of runway 32R; the aircraft is destroyed in the impact and ground fire.",
-      "factors": ["loss_of_control_inflight"],
+      "factors": [
+        "loss_of_control_inflight"
+      ],
       "state": {
         "alt": 0,
         "roll": -180
@@ -210,28 +244,38 @@
       "to": "FAA",
       "text": "Require a fleetwide inspection of all DC-10 pylon assemblies, including checks for proper clearances, missing or loose fasteners, and structural damage.",
       "status": "closed_acceptable",
-      "trigger_factors": ["maintenance_error", "structural_failure", "design_deficiency"]
+      "trigger_factors": [
+        "maintenance_error",
+        "structural_failure",
+        "design_deficiency"
+      ]
     },
     {
       "id": null,
       "to": "McDonnell-Douglas",
       "text": "Establish standard minimum clearance specifications for spherical bearing assemblies and aft wing clevis to prevent interference.",
       "status": "closed_acceptable",
-      "trigger_factors": ["design_deficiency"]
+      "trigger_factors": [
+        "design_deficiency"
+      ]
     },
     {
       "id": null,
       "to": "FAA",
       "text": "Enhance surveillance and reporting systems to detect and prevent improper maintenance procedures across the airline industry.",
       "status": "closed_acceptable",
-      "trigger_factors": ["maintenance_error"]
+      "trigger_factors": [
+        "maintenance_error"
+      ]
     },
     {
       "id": null,
       "to": "FAA",
       "text": "Improve communications and information sharing among operators, manufacturers, and FAA regarding maintenance damage incidents.",
       "status": "closed_acceptable",
-      "trigger_factors": ["maintenance_error"]
+      "trigger_factors": [
+        "maintenance_error"
+      ]
     }
   ],
   "dissent": [],

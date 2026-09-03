@@ -1,153 +1,155 @@
 {
- "id": "wd_q12487849",
- "qid": "Q12487849",
- "tier": "wikidata",
- "depth": "sections",
- "title": "JetBlue Airways 191",
- "flight_number": "JB191",
- "date": "2012-03-27",
- "agency": "BEA",
- "aircraft": {
-  "type": "Airbus A320",
-  "manufacturer": "Airbus",
-  "family": "A320",
-  "registration": null
- },
- "operator": "JetBlue Airways",
- "route": {
-  "from_name": "New York (JFK)",
-  "to_name": "Las Vegas (diverted to Amarillo)"
- },
- "location": {
-  "name": "Amarillo",
-  "country": "United States"
- },
- "phase": "cruise",
- "occupants": 150,
- "fatalities": 0,
- "category": "MED",
- "summary": "Captain Clayton Osbon suffered an acute mental breakdown en route from New York to Las Vegas, making incoherent statements about terrorists and behaving erratically on the flight deck. First Officer Jason Dowd locked the cockpit door and with assistance from an off-duty captain and flight attendants restrained Osbon. The aircraft diverted safely to Amarillo, Texas with no injuries to anyone on board.",
- "probable_cause": "Cause of captain's mental breakdown remains undetermined; Osbon later claimed complex partial brain seizure, though possibilities included psychotic disorder or intoxication from medication.",
- "factors": [
-  {
-   "id": "pilot_incapacitation",
-   "role": "initiating",
-   "evidence": "Captain Osbon started acting erratically and ranting about terrorists, apparently suffering from an unspecified mental breakdown (p. 2-3)"
+  "id": "wd_q12487849",
+  "qid": "Q12487849",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "JetBlue Airways 191",
+  "flight_number": "JB191",
+  "date": "2012-03-27",
+  "agency": "BEA",
+  "aircraft": {
+    "type": "Airbus A320",
+    "manufacturer": "Airbus",
+    "family": "A320",
+    "registration": null
   },
-  {
-   "id": "crm_breakdown",
-   "role": "contributing",
-   "evidence": "First Officer Dowd grew concerned when Osbon made comments such as We need to take a leap of faith and yelling at air traffic controllers on frequency ordering them to be quiet (p. 3-4)"
+  "operator": "JetBlue Airways",
+  "route": {
+    "from_name": "New York (JFK)",
+    "to_name": "Las Vegas (diverted to Amarillo)"
   },
-  {
-   "id": "mode_confusion",
-   "role": "contributing",
-   "evidence": "dimming his primary flight display, engine instruments and navigation display to the point they were almost totally switched off and unusable (p. 3)"
+  "location": {
+    "name": "Amarillo",
+    "country": "United States",
+    "lat": 35.1992,
+    "lon": -101.8453
   },
-  {
-   "id": "emergency_landing",
-   "role": "outcome",
-   "evidence": "First Officer Dowd locked the cockpit and diverted safely to Amarillo with the assistance of crew and off-duty captain (p. 4)"
-  }
- ],
- "chain": [
-  [
-   "pilot_incapacitation",
-   "crm_breakdown"
+  "phase": "cruise",
+  "occupants": 150,
+  "fatalities": 0,
+  "category": "MED",
+  "summary": "Captain Clayton Osbon suffered an acute mental breakdown en route from New York to Las Vegas, making incoherent statements about terrorists and behaving erratically on the flight deck. First Officer Jason Dowd locked the cockpit door and with assistance from an off-duty captain and flight attendants restrained Osbon. The aircraft diverted safely to Amarillo, Texas with no injuries to anyone on board.",
+  "probable_cause": "Cause of captain's mental breakdown remains undetermined; Osbon later claimed complex partial brain seizure, though possibilities included psychotic disorder or intoxication from medication.",
+  "factors": [
+    {
+      "id": "pilot_incapacitation",
+      "role": "initiating",
+      "evidence": "Captain Osbon started acting erratically and ranting about terrorists, apparently suffering from an unspecified mental breakdown (p. 2-3)"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "First Officer Dowd grew concerned when Osbon made comments such as We need to take a leap of faith and yelling at air traffic controllers on frequency ordering them to be quiet (p. 3-4)"
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "dimming his primary flight display, engine instruments and navigation display to the point they were almost totally switched off and unusable (p. 3)"
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "First Officer Dowd locked the cockpit and diverted safely to Amarillo with the assistance of crew and off-duty captain (p. 4)"
+    }
   ],
-  [
-   "crm_breakdown",
-   "emergency_landing"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": null,
-   "phase": "cruise",
-   "actor": "CAPT",
-   "kind": "crew_speech",
-   "text": "Captain Osbon began making incoherent statements such as \"We need to take a leap of faith,\" \"We're not going to Vegas,\" and \"I can't be held responsible when this plane crashes\" (p. 2-3)",
-   "factors": [
-    "pilot_incapacitation"
-   ]
+  "chain": [
+    [
+      "pilot_incapacitation",
+      "crm_breakdown"
+    ],
+    [
+      "crm_breakdown",
+      "emergency_landing"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain Osbon began making incoherent statements such as \"We need to take a leap of faith,\" \"We're not going to Vegas,\" and \"I can't be held responsible when this plane crashes\" (p. 2-3)",
+      "factors": [
+        "pilot_incapacitation"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Osbon dimmed his primary flight display, engine instruments, and navigation display to the point they were almost totally switched off and began yelling at air traffic controllers on frequency, ordering them to be quiet (p. 3)",
+      "factors": [
+        "mode_confusion",
+        "crm_breakdown"
+      ]
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Osbon leapt from his seat, opened the cockpit door, and ran into the forward lavatory (p. 3)",
+      "factors": [
+        "pilot_incapacitation"
+      ]
+    },
+    {
+      "t": 240,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First Officer Jason Dowd locked the cockpit door completely, preventing Osbon from regaining access even with the emergency door code, with assistance from an off-duty captain and flight attendants (p. 3)",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "descent",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "Aircraft diverted safely to Amarillo International Airport where Osbon was met by law enforcement; all 150 occupants survived with no injuries (p. 4)",
+      "factors": [
+        "emergency_landing"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://bea.aero/uploads/tx_elydbrapports/BEA2015-0125.en-LR.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/JetBlue_Flight_191",
+  "asn_id": null,
+  "interest": 5.39,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Extracted from BEA report on JetBlue 191; medical event with no mechanical cause identified; 5 events from crisis narrative covering captain incapacitation through safe diversion",
+      "auto-repair: cvr was null"
+    ]
   },
-  {
-   "t": 120,
-   "clock": null,
-   "phase": "cruise",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Osbon dimmed his primary flight display, engine instruments, and navigation display to the point they were almost totally switched off and began yelling at air traffic controllers on frequency, ordering them to be quiet (p. 3)",
-   "factors": [
-    "mode_confusion",
-    "crm_breakdown"
-   ]
-  },
-  {
-   "t": 180,
-   "clock": null,
-   "phase": "cruise",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Osbon leapt from his seat, opened the cockpit door, and ran into the forward lavatory (p. 3)",
-   "factors": [
-    "pilot_incapacitation"
-   ]
-  },
-  {
-   "t": 240,
-   "clock": null,
-   "phase": "cruise",
-   "actor": "FO",
-   "kind": "crew_action",
-   "text": "First Officer Jason Dowd locked the cockpit door completely, preventing Osbon from regaining access even with the emergency door code, with assistance from an off-duty captain and flight attendants (p. 3)",
-   "factors": []
-  },
-  {
-   "t": 300,
-   "clock": null,
-   "phase": "descent",
-   "actor": "FO",
-   "kind": "crew_action",
-   "text": "Aircraft diverted safely to Amarillo International Airport where Osbon was met by law enforcement; all 150 occupants survived with no injuries (p. 4)",
-   "factors": [
-    "emergency_landing"
-   ]
-  }
- ],
- "report_links": [
-  "https://bea.aero/uploads/tx_elydbrapports/BEA2015-0125.en-LR.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/JetBlue_Flight_191",
- "asn_id": null,
- "interest": 5.39,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5-20251001",
-  "confidence": "medium",
-  "reviewed": false,
-  "notes": [
-   "Extracted from BEA report on JetBlue 191; medical event with no mechanical cause identified; 5 events from crisis narrative covering captain incapacitation through safe diversion",
-   "auto-repair: cvr was null"
-  ]
- },
- "curated_id": null,
- "recommendations": [],
- "dissent": [],
- "safety_changes": [],
- "related": [],
- "fdr": null,
- "sources": [
-  "https://bea.aero/uploads/tx_elydbrapports/BEA2015-0125.en-LR.pdf"
- ],
- "agencies": [
-  {
-   "code": "BEA",
-   "name": "Bureau d'Enquêtes et d'Analyses",
-   "country": "France",
-   "role": "lead"
-  }
- ],
- "cvr": []
+  "curated_id": null,
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/uploads/tx_elydbrapports/BEA2015-0125.en-LR.pdf"
+  ],
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses",
+      "country": "France",
+      "role": "lead"
+    }
+  ],
+  "cvr": []
 }

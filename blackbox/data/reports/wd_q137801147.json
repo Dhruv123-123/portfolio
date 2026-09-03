@@ -43,7 +43,9 @@
     "country": "Indonesia",
     "latitude": -4.928,
     "longitude": 119.747,
-    "elevation_ft": 4300
+    "elevation_ft": 4300,
+    "lat": -4.9522,
+    "lon": 119.715
   },
   "phase": "approach",
   "occupants": 10,

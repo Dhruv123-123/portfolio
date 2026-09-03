@@ -37,7 +37,9 @@
   },
   "location": {
     "name": "Yuma",
-    "country": "United States"
+    "country": "United States",
+    "lat": 32.6567,
+    "lon": -114.6061
   },
   "phase": "cruise",
   "occupants": 122,

@@ -1,295 +1,297 @@
 {
- "id": "wd_q104776742",
- "qid": "Q104776742",
- "tier": "wikidata",
- "depth": "sections",
- "title": "Ryan International Airlines 590",
- "flight_number": "590",
- "date": "1991-02-17",
- "agency": "NTSB",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead"
-  }
- ],
- "aircraft": {
-  "type": "McDonnell Douglas DC-9-15RC",
-  "manufacturer": "McDonnell Douglas",
-  "family": "DC-9",
-  "registration": "N565PC"
- },
- "operator": "Ryan International Airlines",
- "route": {
-  "from_name": "Buffalo",
-  "to_name": "Indianapolis"
- },
- "location": {
-  "name": "Cleveland Hopkins International Airport",
-  "country": "United States"
- },
- "phase": "takeoff",
- "occupants": 2,
- "fatalities": 2,
- "category": "LOC-I",
- "summary": "A McDonnell Douglas DC-9-15RC cargo flight crashed on takeoff from Cleveland Hopkins International Airport during icing conditions. The flight crew failing to deice their aircraft contributed to the accident. The captain had 10,505 flight hours including 505 hours on the DC-9, while the first officer had 3,820 flight hours including 510 hours on the DC-9. Both pilots were killed when the aircraft rolled 90 degrees to the left and entered a stall shortly after liftoff.",
- "probable_cause": "The causes of the crash were the flight crew failing to deice their aircraft, and the inexperience of the Federal Aviation Administration, McDonnell Douglas, and Ryan International Airlines with icing condition on DC-9-10 aircraft.",
- "factors": [
-  {
-   "id": "deicing_inadequate",
-   "role": "initiating",
-   "evidence": "The flight crew failing to deice their aircraft contributed to the crash. (p. 2)"
-  },
-  {
-   "id": "airframe_icing",
-   "role": "contributing",
-   "evidence": "The aircraft crashed on takeoff from Cleveland during icing conditions. (p. 2)"
-  },
-  {
-   "id": "pilot_experience",
-   "role": "contributing",
-   "evidence": "The first officer was 28-year-old Richard Duney Jr., who was far less experienced than captain Reay, having only been with the airline since January 28, 1991, less than a month before the accident. (p. 2)"
-  },
-  {
-   "id": "inadequate_training",
-   "role": "contributing",
-   "evidence": "The inexperience of the Federal Aviation Administration, McDonnell Douglas, and Ryan International Airlines with icing condition on DC-9-10 aircraft contributed to the accident. (p. 2)"
-  },
-  {
-   "id": "aerodynamic_stall",
-   "role": "outcome",
-   "evidence": "Both engines began to experience compressor stalls and the stick shaker activated. The aircraft rolled 90 degrees to the left and entered a stall. (p. 6)"
-  },
-  {
-   "id": "loss_of_control_inflight",
-   "role": "outcome",
-   "evidence": "The aircraft rolled 90 degrees to the left and entered a stall, then crashed back onto runway 23L. (p. 2)"
-  }
- ],
- "chain": [
-  [
-   "deicing_inadequate",
-   "airframe_icing"
+  "id": "wd_q104776742",
+  "qid": "Q104776742",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Ryan International Airlines 590",
+  "flight_number": "590",
+  "date": "1991-02-17",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
   ],
-  [
-   "airframe_icing",
-   "aerodynamic_stall"
+  "aircraft": {
+    "type": "McDonnell Douglas DC-9-15RC",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-9",
+    "registration": "N565PC"
+  },
+  "operator": "Ryan International Airlines",
+  "route": {
+    "from_name": "Buffalo",
+    "to_name": "Indianapolis"
+  },
+  "location": {
+    "name": "Cleveland Hopkins International Airport",
+    "country": "United States",
+    "lat": 41.405,
+    "lon": -81.8583
+  },
+  "phase": "takeoff",
+  "occupants": 2,
+  "fatalities": 2,
+  "category": "LOC-I",
+  "summary": "A McDonnell Douglas DC-9-15RC cargo flight crashed on takeoff from Cleveland Hopkins International Airport during icing conditions. The flight crew failing to deice their aircraft contributed to the accident. The captain had 10,505 flight hours including 505 hours on the DC-9, while the first officer had 3,820 flight hours including 510 hours on the DC-9. Both pilots were killed when the aircraft rolled 90 degrees to the left and entered a stall shortly after liftoff.",
+  "probable_cause": "The causes of the crash were the flight crew failing to deice their aircraft, and the inexperience of the Federal Aviation Administration, McDonnell Douglas, and Ryan International Airlines with icing condition on DC-9-10 aircraft.",
+  "factors": [
+    {
+      "id": "deicing_inadequate",
+      "role": "initiating",
+      "evidence": "The flight crew failing to deice their aircraft contributed to the crash. (p. 2)"
+    },
+    {
+      "id": "airframe_icing",
+      "role": "contributing",
+      "evidence": "The aircraft crashed on takeoff from Cleveland during icing conditions. (p. 2)"
+    },
+    {
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "The first officer was 28-year-old Richard Duney Jr., who was far less experienced than captain Reay, having only been with the airline since January 28, 1991, less than a month before the accident. (p. 2)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "The inexperience of the Federal Aviation Administration, McDonnell Douglas, and Ryan International Airlines with icing condition on DC-9-10 aircraft contributed to the accident. (p. 2)"
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "Both engines began to experience compressor stalls and the stick shaker activated. The aircraft rolled 90 degrees to the left and entered a stall. (p. 6)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft rolled 90 degrees to the left and entered a stall, then crashed back onto runway 23L. (p. 2)"
+    }
   ],
-  [
-   "aerodynamic_stall",
-   "loss_of_control_inflight"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "00:06",
-   "phase": "ground",
-   "actor": "FO",
-   "kind": "crew_action",
-   "text": "First officer Duney requested departure clearance from air traffic control at 00:06 on February 17.",
-   "factors": []
+  "chain": [
+    [
+      "deicing_inadequate",
+      "airframe_icing"
+    ],
+    [
+      "airframe_icing",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "00:06",
+      "phase": "ground",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer Duney requested departure clearance from air traffic control at 00:06 on February 17.",
+      "factors": []
+    },
+    {
+      "t": 6,
+      "clock": "00:06",
+      "phase": "ground",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer Duney requested departure clearance from air traffic control.",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "00:08",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Due to freezing temperatures and snow, pilots activated the engine anti-ice system, which uses engine heat to prevent sensors from freezing, ensuring accurate instrument readings.",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "00:08",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Due to freezing temperatures and snow, pilots activated engine anti-ice system.",
+      "factors": []
+    },
+    {
+      "t": 480,
+      "clock": "00:14",
+      "phase": "taxi",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Continental Airlines Flight 1238 informed tower that they were on approach to the same runway, and controller cleared Flight 1238 to land.",
+      "factors": []
+    },
+    {
+      "t": 480,
+      "clock": "00:14",
+      "phase": "taxi",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Continental Airlines Flight 1238 informed tower of approach to same runway; tower cleared them to land.",
+      "factors": []
+    },
+    {
+      "t": 504,
+      "clock": "00:18:24",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 590 commenced its takeoff roll from runway 23L with engine anti-ice system on.",
+      "factors": [
+        "deicing_inadequate"
+      ]
+    },
+    {
+      "t": 600,
+      "clock": "00:17",
+      "phase": "taxi",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 590 lined up on runway 23L and one minute later was cleared for takeoff.",
+      "factors": []
+    },
+    {
+      "t": 600,
+      "clock": "00:18",
+      "phase": "taxi",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 590 lined up on runway 23L; one minute later cleared for takeoff.",
+      "factors": []
+    },
+    {
+      "t": 625,
+      "clock": "00:18:30",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Takeoff roll commenced with engine anti-ice system activated.",
+      "factors": [
+        "deicing_inadequate"
+      ]
+    },
+    {
+      "t": 645,
+      "clock": "00:18:45",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain Reay called out rotate; aircraft lifted off and immediately began to bank left, roll 90 degrees to the left.",
+      "factors": [
+        "airframe_icing"
+      ]
+    },
+    {
+      "t": 648,
+      "clock": "00:18:48",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain called out rotate; aircraft lifted off and began banking left.",
+      "factors": [
+        "airframe_icing"
+      ]
+    },
+    {
+      "t": 657,
+      "clock": "00:18:57",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft rolled 90 degrees to the left, entered a stall, and crashed back onto runway 23L with the left wing contacting ground first.",
+      "factors": [
+        "aerodynamic_stall",
+        "loss_of_control_inflight"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9109.pdf",
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR91-09.pdf",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7020.pdf",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8208.pdf",
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8809.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Ryan_International_Airlines_Flight_590",
+  "asn_id": "19910217-2",
+  "interest": 6.27,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from NTSB report: history of flight with detailed timeline",
+      "Added 6 new events with specific action times",
+      "Factors and probable cause from investigation findings",
+      "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
+    ]
   },
-  {
-   "t": 6,
-   "clock": "00:06",
-   "phase": "ground",
-   "actor": "FO",
-   "kind": "crew_action",
-   "text": "First officer Duney requested departure clearance from air traffic control.",
-   "factors": []
-  },
-  {
-   "t": 120,
-   "clock": "00:08",
-   "phase": "ground",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Due to freezing temperatures and snow, pilots activated the engine anti-ice system, which uses engine heat to prevent sensors from freezing, ensuring accurate instrument readings.",
-   "factors": []
-  },
-  {
-   "t": 120,
-   "clock": "00:08",
-   "phase": "ground",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Due to freezing temperatures and snow, pilots activated engine anti-ice system.",
-   "factors": []
-  },
-  {
-   "t": 480,
-   "clock": "00:14",
-   "phase": "taxi",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Continental Airlines Flight 1238 informed tower that they were on approach to the same runway, and controller cleared Flight 1238 to land.",
-   "factors": []
-  },
-  {
-   "t": 480,
-   "clock": "00:14",
-   "phase": "taxi",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Continental Airlines Flight 1238 informed tower of approach to same runway; tower cleared them to land.",
-   "factors": []
-  },
-  {
-   "t": 504,
-   "clock": "00:18:24",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Flight 590 commenced its takeoff roll from runway 23L with engine anti-ice system on.",
-   "factors": [
-    "deicing_inadequate"
-   ]
-  },
-  {
-   "t": 600,
-   "clock": "00:17",
-   "phase": "taxi",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Flight 590 lined up on runway 23L and one minute later was cleared for takeoff.",
-   "factors": []
-  },
-  {
-   "t": 600,
-   "clock": "00:18",
-   "phase": "taxi",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Flight 590 lined up on runway 23L; one minute later cleared for takeoff.",
-   "factors": []
-  },
-  {
-   "t": 625,
-   "clock": "00:18:30",
-   "phase": "takeoff",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Takeoff roll commenced with engine anti-ice system activated.",
-   "factors": [
-    "deicing_inadequate"
-   ]
-  },
-  {
-   "t": 645,
-   "clock": "00:18:45",
-   "phase": "takeoff",
-   "actor": "CAPT",
-   "kind": "crew_speech",
-   "text": "Captain Reay called out rotate; aircraft lifted off and immediately began to bank left, roll 90 degrees to the left.",
-   "factors": [
-    "airframe_icing"
-   ]
-  },
-  {
-   "t": 648,
-   "clock": "00:18:48",
-   "phase": "takeoff",
-   "actor": "CAPT",
-   "kind": "crew_speech",
-   "text": "Captain called out rotate; aircraft lifted off and began banking left.",
-   "factors": [
-    "airframe_icing"
-   ]
-  },
-  {
-   "t": 657,
-   "clock": "00:18:57",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Aircraft rolled 90 degrees to the left, entered a stall, and crashed back onto runway 23L with the left wing contacting ground first.",
-   "factors": [
-    "aerodynamic_stall",
-    "loss_of_control_inflight"
-   ]
-  }
- ],
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9109.pdf",
-  "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR91-09.pdf",
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7020.pdf",
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8208.pdf",
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8809.pdf"
- ],
- "wikipedia": null,
- "asn_id": "19910217-2",
- "interest": 6.27,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Extracted from NTSB report: history of flight with detailed timeline",
-   "Added 6 new events with specific action times",
-   "Factors and probable cause from investigation findings",
-   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
-  ]
- },
- "curated_id": null,
- "sources": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9109.pdf"
- ],
- "recommendations": [
-  {
-   "id": "A-91-123",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-91-124",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-91-125",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-91-126",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-91-127",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-91-128",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-88-134",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-88-136",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  }
- ],
- "cvr": [],
- "dissent": [],
- "safety_changes": [],
- "related": []
+  "curated_id": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9109.pdf"
+  ],
+  "recommendations": [
+    {
+      "id": "A-91-123",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-91-124",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-91-125",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-91-126",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-91-127",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-91-128",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-88-134",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-88-136",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    }
+  ],
+  "cvr": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": []
 }

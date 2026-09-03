@@ -1,287 +1,289 @@
 {
- "id": "wd_q98768977",
- "qid": "Q98768977",
- "tier": "wikidata",
- "depth": "sections",
- "title": "2020 South West Aviation Antonov An-26 crash",
- "flight_number": null,
- "date": "2020-08-22",
- "agencies": [
-  {
-   "code": "AAIID",
-   "name": "Aircraft Accident Incident Investigations Department",
-   "country": "South Sudan",
-   "role": "lead"
-  }
- ],
- "aircraft": {
-  "type": "Antonov An-26B",
-  "manufacturer": "Antonov",
-  "family": "An-26",
-  "registration": "EX-126"
- },
- "operator": "South West Aviation",
- "route": {
-  "from_name": "Juba",
-  "to_name": "Wau"
- },
- "location": {
-  "name": "Juba (Kemiru residential area)",
-  "country": "South Sudan"
- },
- "phase": "takeoff",
- "occupants": 9,
- "fatalities": 8,
- "injuries_serious": 1,
- "damage": "destroyed",
- "category": "LOC-I",
- "time_reference": "UTC/Local",
- "t0": "08:41",
- "summary": "South West Aviation Antonov An-26B freighter EX-126 crashed during takeoff from Juba International Airport shortly after becoming airborne. Witnesses reported the aircraft suddenly lost power and nosedived into a residential area in Kemiru, approximately 8 kilometers from the runway. Eight occupants were killed. The investigation found the aircraft was operated without valid Certificate of Airworthiness and the operator lacked valid Air Operator Certificate. Maintenance records were lost and the FDR did not record data due to lack of maintenance. Evidence of fatigue damage was found in the combustion chamber.",
- "probable_cause": "The accident cause could not be determined. The aircraft lacked valid airworthiness and operator certificates; maintenance records were unavailable and the FDR had not recorded due to poor maintenance. Evidence of combustion chamber fatigue damage was noted. The reported sudden power loss suggested possible engine failure, but technical investigation could not establish definitive cause due to destruction of evidence and lack of maintenance documentation (p. 1362-1369)",
- "factors": [
-  {
-   "id": "certification_shortfall",
-   "role": "contributing",
-   "evidence": "Aircraft operating with no valid Certificate of Airworthiness (expired 30/04/2016); ground engineer maintenance license expired 02/02/2020 (p. 1297-1358)"
-  },
-  {
-   "id": "atc_communication_error",
-   "role": "contributing",
-   "evidence": "Crew did not obtain weather briefing from meteorological department before departure despite requirement; unofficial handwritten crew manifest provided (p. 1319-1340)"
-  },
-  {
-   "id": "engine_failure",
-   "role": "initiating",
-   "evidence": "Eyewitnesses reported aircraft suddenly lost power shortly after takeoff and nosedived; fatigue damage in combustion chamber identified (p. 336-339)"
-  },
-  {
-   "id": "loss_of_control_inflight",
-   "role": "outcome",
-   "evidence": "Aircraft took low angle of climb then nosedived; crashed approximately 8 kilometers from runway (p. 336-339)"
-  },
-  {
-   "id": "cfit",
-   "role": "outcome",
-   "evidence": "Aircraft crashed in Kemiru residential area; fuselage destroyed by fire; all crew and 6 passengers killed (p. 422-441)"
-  }
- ],
- "chain": [
-  [
-   "certification_shortfall",
-   "engine_failure"
+  "id": "wd_q98768977",
+  "qid": "Q98768977",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2020 South West Aviation Antonov An-26 crash",
+  "flight_number": null,
+  "date": "2020-08-22",
+  "agencies": [
+    {
+      "code": "AAIID",
+      "name": "Aircraft Accident Incident Investigations Department",
+      "country": "South Sudan",
+      "role": "lead"
+    }
   ],
-  [
-   "atc_communication_error",
-   "engine_failure"
+  "aircraft": {
+    "type": "Antonov An-26B",
+    "manufacturer": "Antonov",
+    "family": "An-26",
+    "registration": "EX-126"
+  },
+  "operator": "South West Aviation",
+  "route": {
+    "from_name": "Juba",
+    "to_name": "Wau"
+  },
+  "location": {
+    "name": "Juba (Kemiru residential area)",
+    "country": "South Sudan",
+    "lat": 4.8486,
+    "lon": 31.55
+  },
+  "phase": "takeoff",
+  "occupants": 9,
+  "fatalities": 8,
+  "injuries_serious": 1,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "time_reference": "UTC/Local",
+  "t0": "08:41",
+  "summary": "South West Aviation Antonov An-26B freighter EX-126 crashed during takeoff from Juba International Airport shortly after becoming airborne. Witnesses reported the aircraft suddenly lost power and nosedived into a residential area in Kemiru, approximately 8 kilometers from the runway. Eight occupants were killed. The investigation found the aircraft was operated without valid Certificate of Airworthiness and the operator lacked valid Air Operator Certificate. Maintenance records were lost and the FDR did not record data due to lack of maintenance. Evidence of fatigue damage was found in the combustion chamber.",
+  "probable_cause": "The accident cause could not be determined. The aircraft lacked valid airworthiness and operator certificates; maintenance records were unavailable and the FDR had not recorded due to poor maintenance. Evidence of combustion chamber fatigue damage was noted. The reported sudden power loss suggested possible engine failure, but technical investigation could not establish definitive cause due to destruction of evidence and lack of maintenance documentation (p. 1362-1369)",
+  "factors": [
+    {
+      "id": "certification_shortfall",
+      "role": "contributing",
+      "evidence": "Aircraft operating with no valid Certificate of Airworthiness (expired 30/04/2016); ground engineer maintenance license expired 02/02/2020 (p. 1297-1358)"
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "Crew did not obtain weather briefing from meteorological department before departure despite requirement; unofficial handwritten crew manifest provided (p. 1319-1340)"
+    },
+    {
+      "id": "engine_failure",
+      "role": "initiating",
+      "evidence": "Eyewitnesses reported aircraft suddenly lost power shortly after takeoff and nosedived; fatigue damage in combustion chamber identified (p. 336-339)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft took low angle of climb then nosedived; crashed approximately 8 kilometers from runway (p. 336-339)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft crashed in Kemiru residential area; fuselage destroyed by fire; all crew and 6 passengers killed (p. 422-441)"
+    }
   ],
-  [
-   "engine_failure",
-   "loss_of_control_inflight"
+  "chain": [
+    [
+      "certification_shortfall",
+      "engine_failure"
+    ],
+    [
+      "atc_communication_error",
+      "engine_failure"
+    ],
+    [
+      "engine_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ]
   ],
-  [
-   "loss_of_control_inflight",
-   "cfit"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "08:37",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Antonov An-26B EX-126 took off from Juba International Airport runway 31 at 05:37Z/08:37 local time carrying cargo including bank currency shipments, 4 motorbikes, and 6 passengers",
-   "factors": []
+  "events": [
+    {
+      "t": 0,
+      "clock": "08:37",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Antonov An-26B EX-126 took off from Juba International Airport runway 31 at 05:37Z/08:37 local time carrying cargo including bank currency shipments, 4 motorbikes, and 6 passengers",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": "08:38",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft climbed away from runway 31 with low angle of climb as observed by ground witnesses; aircraft taking northwesterly heading toward Aweil destination",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "08:39",
+      "phase": "initial_climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Three minutes after takeoff at 05:40Z/08:40 local time, Juba ATC attempted radio contact with crew to verify departure distance was clear for next departure; first call had no response",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": "08:40",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Aircraft suddenly lost power and entered steep nosedive from approximately 500-1,000 feet altitude; visible dark smoke billowing from aircraft as it descended toward ground",
+      "factors": [
+        "engine_failure",
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 240,
+      "clock": "08:41",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft crashed in Kemiru residential area, northwest of Juba International Airport approximately 8 kilometers from takeoff; crash occurred less than 2 minutes after takeoff",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": "08:42",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "ATC continued attempts to contact crew without response at 05:42Z/08:42 local time, now alerted to potential emergency",
+      "factors": []
+    },
+    {
+      "t": 1080,
+      "clock": "08:59",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "At 05:59Z/08:59 local time, ATC directed departing Caravan aircraft C208 (5H-MIK) to investigate smoke column 6 miles from airport tower; Caravan captain confirmed it was wreckage of An-26B EX-126",
+      "factors": []
+    },
+    {
+      "t": 1200,
+      "clock": "08:41+",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft fuselage completely destroyed with all crew and passengers killed in intense fire; total of 8 fatalities (3 crew, 6 passengers); 1 passenger seriously injured but survived",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "SWA-1",
+      "text": "All airlines operating in South Sudan must implement Safety audit programs, with all Antonov aircraft grounded until audits completed (p. 1379-1383)",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "SWA-2",
+      "text": "Engage audit by international experts from Ukraine and Ukrainian Aeronautical Scientific Technical Complex (ASTC) including ICAO experts (p. 1385-1388)",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "SWA-3",
+      "text": "All Antonov aircraft operating in South Sudan must introduce comprehensive maintenance programs including Corrosion Prevention Control Programs (CPCP) (p. 1391-1393)",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "SWA-4",
+      "text": "SS-CAA must audit and scrutinize qualifications and eligibility criteria of pilots employed by aviation companies based in South Sudan (p. 1395-1397)",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "SWA-5",
+      "text": "SS-CAA must control weight and balance of aircraft during loading to prevent overweight and secure cargo with safety net, with designated Loadmaster and Safety inspectors (p. 1399-1401)",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "SWA-6",
+      "text": "South Sudan Civil Aviation Authority (SS-CAA) should notify State of Registry and State of Operator on air accidents (p. 1403-1404)",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "SWA-7",
+      "text": "Ensure aircraft originally designed as cargo planes are not remodeled as passenger carriers for use in South Sudan regardless of age or make (p. 1406-1408)",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "SWA-8",
+      "text": "Stopping all security organs at airports from interfering with pilots, such as forcing them to carry passengers regardless of weight restrictions (p. 1410-1413)",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "SWA-9",
+      "text": "Establish Ground Monitoring Center (GMC) facility to carry out flight data monitoring on every aircraft regularly and transmit data to base per ICAO Doc 10000 (p. 1415-1424)",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "SWA-10",
+      "text": "Establish modern reading facility for Flight Data Recorder (FDR), Cockpit Voice Recorder (CVR) and train personnel to reduce foreign travel costs and conflicts of interest (p. 1426-1429)",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "SWA-11",
+      "text": "All aircraft aged above 20 years from date of production must not be allowed to operate in South Sudan (p. 1431-1432)",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "SWA-12",
+      "text": "All requests for aircraft operation must pass through office of current sitting Minister before approval to operate in country (p. 1434-1435)",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "SWA-13",
+      "text": "All aircraft accident investigations in South Sudan territory must be funded by Government to avoid conflicts of interest and preserve integrity per ICAO 5.1.2 (p. 1437-1446)",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "SWA-14",
+      "text": "All companies operating Antonov aircraft in South Sudan must introduce certificate of prolongation from Antonov Manufacture (p. 1448-1450)",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "SWA-15",
+      "text": "Update South Sudan Civil Aviation Act (currently adopted in 2012); utilize new unified East African Community Civil Aviation Act being used by six EAC partner states (p. 1452-1456)",
+      "role": "safety",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://mak-iac.org/upload/iblock/c4d/yqs0mr8o87nq7gh97q6j02yic54a5r9x/report_ex-126_en.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2020_South_West_Aviation_Antonov_An-26_crash",
+  "asn_id": null,
+  "interest": 10.95,
+  "report_links": [
+    "https://mak-iac.org/upload/iblock/c4d/yqs0mr8o87nq7gh97q6j02yic54a5r9x/report_ex-126_en.pdf"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Read sections 1.1 (History of Flight, p. 365-402), 2.0 (Analysis, p. 1267-1290), 3.0 (Findings, p. 1292-1358), 4.0 (Conclusion, p. 1362-1369), 5.0 (Safety Recommendations, p. 1378-1456)",
+      "Extracted 8 events from narrative and timeline; accident cause undetermined per conclusion",
+      "All factor evidence includes page citations from report",
+      "Added all 15 numbered safety recommendations from section 5.0",
+      "auto-repair: cvr was null"
+    ]
   },
-  {
-   "t": 60,
-   "clock": "08:38",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft climbed away from runway 31 with low angle of climb as observed by ground witnesses; aircraft taking northwesterly heading toward Aweil destination",
-   "factors": []
-  },
-  {
-   "t": 120,
-   "clock": "08:39",
-   "phase": "initial_climb",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Three minutes after takeoff at 05:40Z/08:40 local time, Juba ATC attempted radio contact with crew to verify departure distance was clear for next departure; first call had no response",
-   "factors": []
-  },
-  {
-   "t": 180,
-   "clock": "08:40",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "warning",
-   "text": "Aircraft suddenly lost power and entered steep nosedive from approximately 500-1,000 feet altitude; visible dark smoke billowing from aircraft as it descended toward ground",
-   "factors": [
-    "engine_failure",
-    "loss_of_control_inflight"
-   ]
-  },
-  {
-   "t": 240,
-   "clock": "08:41",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Aircraft crashed in Kemiru residential area, northwest of Juba International Airport approximately 8 kilometers from takeoff; crash occurred less than 2 minutes after takeoff",
-   "factors": [
-    "cfit"
-   ]
-  },
-  {
-   "t": 300,
-   "clock": "08:42",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "ATC continued attempts to contact crew without response at 05:42Z/08:42 local time, now alerted to potential emergency",
-   "factors": []
-  },
-  {
-   "t": 1080,
-   "clock": "08:59",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "At 05:59Z/08:59 local time, ATC directed departing Caravan aircraft C208 (5H-MIK) to investigate smoke column 6 miles from airport tower; Caravan captain confirmed it was wreckage of An-26B EX-126",
-   "factors": []
-  },
-  {
-   "t": 1200,
-   "clock": "08:41+",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Aircraft fuselage completely destroyed with all crew and passengers killed in intense fire; total of 8 fatalities (3 crew, 6 passengers); 1 passenger seriously injured but survived",
-   "factors": []
-  }
- ],
- "cvr": [],
- "recommendations": [
-  {
-   "id": "SWA-1",
-   "text": "All airlines operating in South Sudan must implement Safety audit programs, with all Antonov aircraft grounded until audits completed (p. 1379-1383)",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "SWA-2",
-   "text": "Engage audit by international experts from Ukraine and Ukrainian Aeronautical Scientific Technical Complex (ASTC) including ICAO experts (p. 1385-1388)",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "SWA-3",
-   "text": "All Antonov aircraft operating in South Sudan must introduce comprehensive maintenance programs including Corrosion Prevention Control Programs (CPCP) (p. 1391-1393)",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "SWA-4",
-   "text": "SS-CAA must audit and scrutinize qualifications and eligibility criteria of pilots employed by aviation companies based in South Sudan (p. 1395-1397)",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "SWA-5",
-   "text": "SS-CAA must control weight and balance of aircraft during loading to prevent overweight and secure cargo with safety net, with designated Loadmaster and Safety inspectors (p. 1399-1401)",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "SWA-6",
-   "text": "South Sudan Civil Aviation Authority (SS-CAA) should notify State of Registry and State of Operator on air accidents (p. 1403-1404)",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "SWA-7",
-   "text": "Ensure aircraft originally designed as cargo planes are not remodeled as passenger carriers for use in South Sudan regardless of age or make (p. 1406-1408)",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "SWA-8",
-   "text": "Stopping all security organs at airports from interfering with pilots, such as forcing them to carry passengers regardless of weight restrictions (p. 1410-1413)",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "SWA-9",
-   "text": "Establish Ground Monitoring Center (GMC) facility to carry out flight data monitoring on every aircraft regularly and transmit data to base per ICAO Doc 10000 (p. 1415-1424)",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "SWA-10",
-   "text": "Establish modern reading facility for Flight Data Recorder (FDR), Cockpit Voice Recorder (CVR) and train personnel to reduce foreign travel costs and conflicts of interest (p. 1426-1429)",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "SWA-11",
-   "text": "All aircraft aged above 20 years from date of production must not be allowed to operate in South Sudan (p. 1431-1432)",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "SWA-12",
-   "text": "All requests for aircraft operation must pass through office of current sitting Minister before approval to operate in country (p. 1434-1435)",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "SWA-13",
-   "text": "All aircraft accident investigations in South Sudan territory must be funded by Government to avoid conflicts of interest and preserve integrity per ICAO 5.1.2 (p. 1437-1446)",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "SWA-14",
-   "text": "All companies operating Antonov aircraft in South Sudan must introduce certificate of prolongation from Antonov Manufacture (p. 1448-1450)",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "SWA-15",
-   "text": "Update South Sudan Civil Aviation Act (currently adopted in 2012); utilize new unified East African Community Civil Aviation Act being used by six EAC partner states (p. 1452-1456)",
-   "role": "safety",
-   "status": "unknown"
-  }
- ],
- "dissent": [],
- "safety_changes": [],
- "related": [],
- "fdr": null,
- "sources": [
-  "https://mak-iac.org/upload/iblock/c4d/yqs0mr8o87nq7gh97q6j02yic54a5r9x/report_ex-126_en.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/2020_South_West_Aviation_Antonov_An-26_crash",
- "asn_id": null,
- "interest": 10.95,
- "report_links": [
-  "https://mak-iac.org/upload/iblock/c4d/yqs0mr8o87nq7gh97q6j02yic54a5r9x/report_ex-126_en.pdf"
- ],
- "curated_id": null,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5",
-  "confidence": "medium",
-  "reviewed": false,
-  "notes": [
-   "Read sections 1.1 (History of Flight, p. 365-402), 2.0 (Analysis, p. 1267-1290), 3.0 (Findings, p. 1292-1358), 4.0 (Conclusion, p. 1362-1369), 5.0 (Safety Recommendations, p. 1378-1456)",
-   "Extracted 8 events from narrative and timeline; accident cause undetermined per conclusion",
-   "All factor evidence includes page citations from report",
-   "Added all 15 numbered safety recommendations from section 5.0",
-   "auto-repair: cvr was null"
-  ]
- },
- "agency": "AAIID"
+  "agency": "AAIID"
 }

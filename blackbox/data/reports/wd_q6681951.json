@@ -1,202 +1,204 @@
 {
- "id": "wd_q6681951",
- "tier": "wikidata",
- "qid": "Q6681951",
- "depth": "sections",
- "title": "Los Angeles Airways 841",
- "flight_number": "841",
- "date": "1968-05-22",
- "time_reference": "PDT",
- "t0": "1968-05-22T17:40:00-07:00",
- "agency": "NTSB",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead",
-   "report_id": "NTSB-AAR-70-1",
-   "report_date": "1969-12-18"
-  }
- ],
- "aircraft": {
-  "type": "Sikorsky S-61L",
-  "manufacturer": "Sikorsky",
-  "family": "S-61",
-  "registration": "N303Y"
- },
- "operator": "Los Angeles Airways",
- "route": {
-  "from": "ANA",
-  "from_name": "Anaheim Heliport (Disneyland)",
-  "to": "LAX",
-  "to_name": "Los Angeles International Airport"
- },
- "location": {
-  "name": "Paramount, California",
-  "country": "United States"
- },
- "phase": "cruise",
- "occupants": 23,
- "fatalities": 23,
- "damage": "destroyed",
- "category": "LOC-I",
- "summary": "Los Angeles Airways Flight 841, a Sikorsky S-61 helicopter, crashed at Paramount, California while en route from Disneyland to Los Angeles International Airport. All 23 occupants perished. The aircraft underwent extreme rotor blade excursions in the lead/lag axis, leading to separation of the yellow rotor blade's pitch control rod and blade strikes that destroyed the aircraft structure and tail rotor, rendering it uncontrollable. (p. 4)",
- "probable_cause": "The probable cause of this accident was the loss of main rotor blade damper integrity due to either a failure of the black blade damper or a loss of effective damping action by the white blade damper. This resulted in uncontrolled excursions of the main rotor blades in their lead/lag axis, an overload detachment of the yellow main rotor blade pitch change control rod and destruction of the structural integrity of the aircraft by blade strikes. The precise reason for either of these possibilities for the loss of damper integrity is undetermined. (p. 4-5)",
- "factors": [
-  {
-   "id": "flight_control_failure",
-   "role": "initiating",
-   "evidence": "Loss of main rotor blade damper integrity due to failure of the black blade damper or loss of effective damping action by the white blade damper caused uncontrolled lead/lag excursions. (p. 4)"
-  },
-  {
-   "id": "structural_failure",
-   "role": "outcome",
-   "evidence": "All five rotor blades then broke and the rear fuselage and tail rotor separated from the rest of the airframe due to blade strikes. (p. 4)"
-  },
-  {
-   "id": "loss_of_control_inflight",
-   "role": "outcome",
-   "evidence": "Aircraft became completely uncontrollable and crashed in a near-vertical descent. (p. 4)"
-  }
- ],
- "chain": [
-  [
-   "flight_control_failure",
-   "structural_failure"
+  "id": "wd_q6681951",
+  "tier": "wikidata",
+  "qid": "Q6681951",
+  "depth": "sections",
+  "title": "Los Angeles Airways 841",
+  "flight_number": "841",
+  "date": "1968-05-22",
+  "time_reference": "PDT",
+  "t0": "1968-05-22T17:40:00-07:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "NTSB-AAR-70-1",
+      "report_date": "1969-12-18"
+    }
   ],
-  [
-   "structural_failure",
-   "loss_of_control_inflight"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "17:40",
-   "phase": "cruise",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Los Angeles Airways Flight 841 departed Anaheim Heliport (Disneyland) at 17:40 with 3 crew and 20 passengers bound for Los Angeles International Airport",
-   "factors": []
+  "aircraft": {
+    "type": "Sikorsky S-61L",
+    "manufacturer": "Sikorsky",
+    "family": "S-61",
+    "registration": "N303Y"
   },
-  {
-   "t": 120,
-   "clock": "17:42",
-   "phase": "cruise",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Flight 841 gave Fullerton Tower its route of flight and position report",
-   "factors": []
+  "operator": "Los Angeles Airways",
+  "route": {
+    "from": "ANA",
+    "from_name": "Anaheim Heliport (Disneyland)",
+    "to": "LAX",
+    "to_name": "Los Angeles International Airport"
   },
-  {
-   "t": 420,
-   "clock": "17:47",
-   "phase": "cruise",
-   "actor": "CAPT",
-   "kind": "crew_speech",
-   "text": "Flight 841 gave position report, all transmissions routine",
-   "factors": []
+  "location": {
+    "name": "Paramount, California",
+    "country": "United States",
+    "lat": 33.8888,
+    "lon": -118.1671
   },
-  {
-   "t": 600,
-   "clock": "17:50",
-   "phase": "cruise",
-   "actor": "OTHER",
-   "kind": "system",
-   "text": "Flight 742 pilots passed Flight 841 approximately one-half mile apart, observed Flight 841 at 2,000 feet on westerly heading, appearing completely normal",
-   "state": {
-    "alt": 2000
-   },
-   "factors": []
+  "phase": "cruise",
+  "occupants": 23,
+  "fatalities": 23,
+  "damage": "destroyed",
+  "category": "LOC-I",
+  "summary": "Los Angeles Airways Flight 841, a Sikorsky S-61 helicopter, crashed at Paramount, California while en route from Disneyland to Los Angeles International Airport. All 23 occupants perished. The aircraft underwent extreme rotor blade excursions in the lead/lag axis, leading to separation of the yellow rotor blade's pitch control rod and blade strikes that destroyed the aircraft structure and tail rotor, rendering it uncontrollable. (p. 4)",
+  "probable_cause": "The probable cause of this accident was the loss of main rotor blade damper integrity due to either a failure of the black blade damper or a loss of effective damping action by the white blade damper. This resulted in uncontrolled excursions of the main rotor blades in their lead/lag axis, an overload detachment of the yellow main rotor blade pitch change control rod and destruction of the structural integrity of the aircraft by blade strikes. The precise reason for either of these possibilities for the loss of damper integrity is undetermined. (p. 4-5)",
+  "factors": [
+    {
+      "id": "flight_control_failure",
+      "role": "initiating",
+      "evidence": "Loss of main rotor blade damper integrity due to failure of the black blade damper or loss of effective damping action by the white blade damper caused uncontrolled lead/lag excursions. (p. 4)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "All five rotor blades then broke and the rear fuselage and tail rotor separated from the rest of the airframe due to blade strikes. (p. 4)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft became completely uncontrollable and crashed in a near-vertical descent. (p. 4)"
+    }
+  ],
+  "chain": [
+    [
+      "flight_control_failure",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "loss_of_control_inflight"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "17:40",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Los Angeles Airways Flight 841 departed Anaheim Heliport (Disneyland) at 17:40 with 3 crew and 20 passengers bound for Los Angeles International Airport",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": "17:42",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 841 gave Fullerton Tower its route of flight and position report",
+      "factors": []
+    },
+    {
+      "t": 420,
+      "clock": "17:47",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Flight 841 gave position report, all transmissions routine",
+      "factors": []
+    },
+    {
+      "t": 600,
+      "clock": "17:50",
+      "phase": "cruise",
+      "actor": "OTHER",
+      "kind": "system",
+      "text": "Flight 742 pilots passed Flight 841 approximately one-half mile apart, observed Flight 841 at 2,000 feet on westerly heading, appearing completely normal",
+      "state": {
+        "alt": 2000
+      },
+      "factors": []
+    },
+    {
+      "t": 630,
+      "clock": "17:50:30",
+      "phase": "descent",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Flight 841 transmitted distress message: 'LA, we're crashing, help us'",
+      "factors": [
+        "flight_control_failure"
+      ]
+    },
+    {
+      "t": 660,
+      "clock": "17:51",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft descended from cruising altitude of 2,000 feet to between 600-800 feet above ground, slowing with erratic main rotor blade action observed",
+      "state": {
+        "alt": 800
+      },
+      "factors": [
+        "flight_control_failure"
+      ]
+    },
+    {
+      "t": 690,
+      "clock": "17:51:30",
+      "phase": "descent",
+      "actor": "OTHER",
+      "kind": "outcome",
+      "text": "Witnesses observed violent yaw to left of nearly 90 degrees; one witness with helicopter maintenance background saw main rotor blade extremely out of track on high side",
+      "factors": [
+        "flight_control_failure"
+      ]
+    },
+    {
+      "t": 715,
+      "clock": "17:51:55",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Sharp sounds heard from aircraft; witnesses saw main rotor blades striking front and back areas of fuselage; parts including rotor blades, fuselage and tail rotor separated",
+      "factors": [
+        "structural_failure",
+        "flight_control_failure"
+      ]
+    },
+    {
+      "t": 750,
+      "clock": "17:52:30",
+      "phase": "landing",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Los Angeles Airways Flight 841 crashed at Paramount, California in near-vertical trajectory; fire followed ground impact; all 23 occupants killed",
+      "factors": [
+        "loss_of_control_inflight",
+        "structural_failure"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7001.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Los_Angeles_Airways_Flight_841",
+  "asn_id": null,
+  "interest": 11.49,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7001.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Read History of Flight, Synopsis, Analysis, Probable Cause sections",
+      "9 events with clock times extracted from narrative timeline",
+      "Root cause of damper failure undetermined; extensive blade strike evidence documented",
+      "auto-repair: phase impact -> landing"
+    ]
   },
-  {
-   "t": 630,
-   "clock": "17:50:30",
-   "phase": "descent",
-   "actor": "CAPT",
-   "kind": "crew_speech",
-   "text": "Flight 841 transmitted distress message: 'LA, we're crashing, help us'",
-   "factors": [
-    "flight_control_failure"
-   ]
-  },
-  {
-   "t": 660,
-   "clock": "17:51",
-   "phase": "descent",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft descended from cruising altitude of 2,000 feet to between 600-800 feet above ground, slowing with erratic main rotor blade action observed",
-   "state": {
-    "alt": 800
-   },
-   "factors": [
-    "flight_control_failure"
-   ]
-  },
-  {
-   "t": 690,
-   "clock": "17:51:30",
-   "phase": "descent",
-   "actor": "OTHER",
-   "kind": "outcome",
-   "text": "Witnesses observed violent yaw to left of nearly 90 degrees; one witness with helicopter maintenance background saw main rotor blade extremely out of track on high side",
-   "factors": [
-    "flight_control_failure"
-   ]
-  },
-  {
-   "t": 715,
-   "clock": "17:51:55",
-   "phase": "descent",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Sharp sounds heard from aircraft; witnesses saw main rotor blades striking front and back areas of fuselage; parts including rotor blades, fuselage and tail rotor separated",
-   "factors": [
-    "structural_failure",
-    "flight_control_failure"
-   ]
-  },
-  {
-   "t": 750,
-   "clock": "17:52:30",
-   "phase": "landing",
-   "actor": "ENV",
-   "kind": "outcome",
-   "text": "Los Angeles Airways Flight 841 crashed at Paramount, California in near-vertical trajectory; fire followed ground impact; all 23 occupants killed",
-   "factors": [
-    "loss_of_control_inflight",
-    "structural_failure"
-   ]
-  }
- ],
- "cvr": [],
- "recommendations": [],
- "dissent": [],
- "safety_changes": [],
- "related": [],
- "fdr": null,
- "sources": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7001.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/Los_Angeles_Airways_Flight_841",
- "asn_id": null,
- "interest": 11.49,
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7001.pdf"
- ],
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5",
-  "confidence": "medium",
-  "reviewed": false,
-  "notes": [
-   "Read History of Flight, Synopsis, Analysis, Probable Cause sections",
-   "9 events with clock times extracted from narrative timeline",
-   "Root cause of damper failure undetermined; extensive blade strike evidence documented",
-   "auto-repair: phase impact -> landing"
-  ]
- },
- "curated_id": null
+  "curated_id": null
 }

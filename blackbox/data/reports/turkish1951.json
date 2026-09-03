@@ -7,74 +7,392 @@
   "t0": "2009-02-25T09:24:00Z",
   "agency": "DSB",
   "agencies": [
-    { "code": "DSB", "name": "Dutch Safety Board", "country": "Netherlands", "role": "lead",
-      "report_id": null, "report_title": "Crashed during approach, Boeing 737-800, near Amsterdam Schiphol Airport, 25 February 2009", "report_date": "2010-05-06",
-      "url": "https://www.onderzoeksraad.nl/en/" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" },
-    { "code": "AAIB-TR", "name": "Turkish Accident Investigation Board (Kaza Araştırma ve İnceleme Kurulu)", "country": "Turkey", "role": "accredited_representative" }
+    {
+      "code": "DSB",
+      "name": "Dutch Safety Board",
+      "country": "Netherlands",
+      "role": "lead",
+      "report_id": null,
+      "report_title": "Crashed during approach, Boeing 737-800, near Amsterdam Schiphol Airport, 25 February 2009",
+      "report_date": "2010-05-06",
+      "url": "https://www.onderzoeksraad.nl/en/"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "AAIB-TR",
+      "name": "Turkish Accident Investigation Board (Kaza Araştırma ve İnceleme Kurulu)",
+      "country": "Turkey",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Boeing 737-8F2", "family": "737", "manufacturer": "Boeing", "registration": "TC-JGE", "msn": "29789", "engines": "CFM International CFM56-7B26" },
+  "aircraft": {
+    "type": "Boeing 737-8F2",
+    "family": "737",
+    "manufacturer": "Boeing",
+    "registration": "TC-JGE",
+    "msn": "29789",
+    "engines": "CFM International CFM56-7B26"
+  },
   "operator": "Turkish Airlines",
-  "route": { "from": "LTBA", "from_name": "Istanbul Atatürk", "to": "EHAM", "to_name": "Amsterdam Schiphol" },
-  "location": { "name": "Field 1.5 km short of runway 18R, Amsterdam Schiphol", "country": "Netherlands", "lat": 52.3789, "lon": 4.7133 },
+  "route": {
+    "from": "LTBA",
+    "from_name": "Istanbul Atatürk",
+    "to": "EHAM",
+    "to_name": "Amsterdam Schiphol"
+  },
+  "location": {
+    "name": "Field 1.5 km short of runway 18R, Amsterdam Schiphol",
+    "country": "Netherlands",
+    "lat": 52.3789,
+    "lon": 4.7133
+  },
   "phase": "approach",
-  "occupants": 135, "fatalities": 9, "injuries_serious": 28,
+  "occupants": 135,
+  "fatalities": 9,
+  "injuries_serious": 28,
   "damage": "destroyed",
   "category": "LOC-I",
   "summary": "During an ILS approach to Schiphol runway 18R the left radio altimeter erroneously indicated -8 ft, causing the autothrottle to enter RETARD mode and close the thrust levers as if for landing flare. The crew, who had been vectored to intercept the glideslope from above and were busy with a line-training approach, did not notice the decaying airspeed until the stick shaker at about 460 ft. Recovery was too late and the aircraft stalled into a field 1.5 km short of the runway; 9 people died including the three pilots.",
   "probable_cause": "The accident was caused by the erroneous left radio altimeter reading, which made the autothrottle reduce the thrust to idle in the retard flare mode during the approach, combined with the crew's failure to notice the decreasing airspeed and the abnormal autothrottle mode until the stick shaker; the subsequent recovery from the stall was not successful. Contributing factors: the aircraft intercepted the glideslope from above due to ATC vectoring, which increased workload and masked the thrust reduction; the approach was not stabilised and should have been abandoned; the crew's monitoring during the line training situation was inadequate; and Boeing had not informed operators adequately about the known radio altimeter problems and their effect on the autothrottle.",
   "factors": [
-    { "id": "radio_altimeter_failure", "role": "initiating", "evidence": "The left radio altimeter system produced an erroneous -8 ft value during the approach, as it had on previous flights of the aircraft." },
-    { "id": "known_defect_unresolved", "role": "latent", "evidence": "The same radio altimeter fault had occurred on TC-JGE in the preceding days and on other 737NGs but had not been rectified." },
-    { "id": "autothrottle_mode_confusion", "role": "contributing", "evidence": "The autothrottle entered RETARD flare mode at about 1,950 ft and closed the thrust levers; the crew did not recognise the mode annunciation." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The autothrottle used only the left radio altimeter data with no comparison against the right unit, so a single erroneous input could drive the retard logic." },
-    { "id": "manufacturer_communication", "role": "latent", "evidence": "Boeing was aware of radio altimeter problems affecting autothrottle behaviour but the information had not reached Turkish Airlines' crews." },
-    { "id": "atc_communication_error", "role": "contributing", "evidence": "Amsterdam approach vectored the aircraft onto the localiser at 5.5 nm and 2,000 ft, above the glideslope, contrary to the standard procedure, so the crew intercepted from above with the thrust already at idle." },
-    { "id": "unstable_approach", "role": "contributing", "evidence": "The approach was not stabilised at 1,000 ft; the crew continued rather than executing a go-around." },
-    { "id": "high_workload", "role": "contributing", "evidence": "The captain was instructing the first officer under line training with a safety pilot present, adding to workload during the glideslope capture and landing checklist." },
-    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "None of the three pilots noticed the airspeed falling from 144 kt toward 83 kt or the thrust levers at idle for about 100 seconds." },
-    { "id": "low_energy_state", "role": "contributing", "evidence": "Airspeed decayed well below the approach speed of 144 kt with the pitch attitude increasing to maintain the glideslope." },
-    { "id": "stick_shaker_pusher", "role": "contributing", "evidence": "The stick shaker activated at about 460 ft radio altitude." },
-    { "id": "inappropriate_stall_recovery", "role": "contributing", "evidence": "The first officer pushed the thrust levers forward but the captain took control and the autothrottle, still engaged, retarded them again; full thrust was applied only after a delay." },
-    { "id": "aerodynamic_stall", "role": "outcome", "evidence": "The aircraft stalled at about 83 kt and descended into the field short of the runway." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft struck the ground tail first in a nose-high attitude and broke into three sections." }
+    {
+      "id": "radio_altimeter_failure",
+      "role": "initiating",
+      "evidence": "The left radio altimeter system produced an erroneous -8 ft value during the approach, as it had on previous flights of the aircraft."
+    },
+    {
+      "id": "known_defect_unresolved",
+      "role": "latent",
+      "evidence": "The same radio altimeter fault had occurred on TC-JGE in the preceding days and on other 737NGs but had not been rectified."
+    },
+    {
+      "id": "autothrottle_mode_confusion",
+      "role": "contributing",
+      "evidence": "The autothrottle entered RETARD flare mode at about 1,950 ft and closed the thrust levers; the crew did not recognise the mode annunciation."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The autothrottle used only the left radio altimeter data with no comparison against the right unit, so a single erroneous input could drive the retard logic."
+    },
+    {
+      "id": "manufacturer_communication",
+      "role": "latent",
+      "evidence": "Boeing was aware of radio altimeter problems affecting autothrottle behaviour but the information had not reached Turkish Airlines' crews."
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "Amsterdam approach vectored the aircraft onto the localiser at 5.5 nm and 2,000 ft, above the glideslope, contrary to the standard procedure, so the crew intercepted from above with the thrust already at idle."
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "The approach was not stabilised at 1,000 ft; the crew continued rather than executing a go-around."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The captain was instructing the first officer under line training with a safety pilot present, adding to workload during the glideslope capture and landing checklist."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "None of the three pilots noticed the airspeed falling from 144 kt toward 83 kt or the thrust levers at idle for about 100 seconds."
+    },
+    {
+      "id": "low_energy_state",
+      "role": "contributing",
+      "evidence": "Airspeed decayed well below the approach speed of 144 kt with the pitch attitude increasing to maintain the glideslope."
+    },
+    {
+      "id": "stick_shaker_pusher",
+      "role": "contributing",
+      "evidence": "The stick shaker activated at about 460 ft radio altitude."
+    },
+    {
+      "id": "inappropriate_stall_recovery",
+      "role": "contributing",
+      "evidence": "The first officer pushed the thrust levers forward but the captain took control and the autothrottle, still engaged, retarded them again; full thrust was applied only after a delay."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "The aircraft stalled at about 83 kt and descended into the field short of the runway."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft struck the ground tail first in a nose-high attitude and broke into three sections."
+    }
   ],
   "chain": [
-    ["known_defect_unresolved", "radio_altimeter_failure"],
-    ["radio_altimeter_failure", "autothrottle_mode_confusion"],
-    ["design_deficiency", "autothrottle_mode_confusion"],
-    ["manufacturer_communication", "autothrottle_mode_confusion"],
-    ["atc_communication_error", "unstable_approach"],
-    ["atc_communication_error", "high_workload"],
-    ["high_workload", "inadequate_monitoring"],
-    ["autothrottle_mode_confusion", "low_energy_state"],
-    ["inadequate_monitoring", "low_energy_state"],
-    ["unstable_approach", "low_energy_state"],
-    ["low_energy_state", "stick_shaker_pusher"],
-    ["stick_shaker_pusher", "inappropriate_stall_recovery"],
-    ["inappropriate_stall_recovery", "aerodynamic_stall"],
-    ["aerodynamic_stall", "loss_of_control_inflight"]
+    [
+      "known_defect_unresolved",
+      "radio_altimeter_failure"
+    ],
+    [
+      "radio_altimeter_failure",
+      "autothrottle_mode_confusion"
+    ],
+    [
+      "design_deficiency",
+      "autothrottle_mode_confusion"
+    ],
+    [
+      "manufacturer_communication",
+      "autothrottle_mode_confusion"
+    ],
+    [
+      "atc_communication_error",
+      "unstable_approach"
+    ],
+    [
+      "atc_communication_error",
+      "high_workload"
+    ],
+    [
+      "high_workload",
+      "inadequate_monitoring"
+    ],
+    [
+      "autothrottle_mode_confusion",
+      "low_energy_state"
+    ],
+    [
+      "inadequate_monitoring",
+      "low_energy_state"
+    ],
+    [
+      "unstable_approach",
+      "low_energy_state"
+    ],
+    [
+      "low_energy_state",
+      "stick_shaker_pusher"
+    ],
+    [
+      "stick_shaker_pusher",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "inappropriate_stall_recovery",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
-    { "t": -420, "clock": "10:17", "phase": "descent", "actor": "SYS", "text": "Left radio altimeter begins to indicate -8 ft; the landing gear warning horn sounds once and a master caution is triggered but the crew treat it as spurious.", "factors": ["radio_altimeter_failure", "known_defect_unresolved"], "kind": "system" },
-    { "t": -180, "clock": "10:21", "phase": "approach", "actor": "ATC", "text": "Approach control vectors the aircraft to intercept the runway 18R localiser at about 5.5 nm, at 2,000 ft, above the glideslope.", "state": { "alt": 2000 }, "factors": ["atc_communication_error"], "kind": "atc" },
-    { "t": -60, "clock": "10:23", "phase": "approach", "actor": "CAPT", "text": "Crew select landing gear down and flaps 15, then 40, and descend to capture the glideslope from above with the thrust levers at idle; the landing checklist is being run.", "factors": ["unstable_approach", "high_workload"], "kind": "crew_action" },
-    { "t": 0, "clock": "10:24", "phase": "approach", "actor": "SYS", "text": "At about 1,950 ft the autothrottle annunciates RETARD and holds the thrust levers at idle, based on the erroneous radio height.", "state": { "alt": 1950 }, "factors": ["autothrottle_mode_confusion", "design_deficiency"], "kind": "system" },
-    { "t": 30, "clock": "10:24", "phase": "approach", "actor": "SYS", "text": "Glideslope captured; the autopilot pitches the aircraft up to hold the glidepath as the speed falls below the 144 kt selected approach speed.", "state": { "ias": 144 }, "factors": ["low_energy_state", "inadequate_monitoring"], "kind": "system" },
-    { "t": 60, "clock": "10:25", "phase": "approach", "actor": "PM", "text": "Landing checklist completed; the crew note the aircraft is at 1,000 ft but do not remark on the speed or the thrust levers at idle.", "state": { "alt": 1000 }, "factors": ["inadequate_monitoring", "unstable_approach"], "kind": "crew_speech" },
-    { "t": 95, "clock": "10:25", "phase": "approach", "actor": "SYS", "text": "Airspeed reaches about 105 kt with the pitch attitude rising; the autopilot remains engaged.", "state": { "ias": 105 }, "factors": ["low_energy_state"], "kind": "system" },
-    { "t": 100, "clock": "10:25", "phase": "approach", "actor": "SYS", "text": "Stick shaker activates at about 460 ft radio altitude; the first officer advances the thrust levers.", "state": { "alt": 460 }, "factors": ["stick_shaker_pusher"], "kind": "warning" },
-    { "t": 103, "clock": "10:25", "phase": "approach", "actor": "CAPT", "text": "Captain takes control; the autothrottle, still engaged in RETARD mode, pulls the thrust levers back to idle again.", "factors": ["inappropriate_stall_recovery", "autothrottle_mode_confusion"], "kind": "crew_action" },
-    { "t": 109, "clock": "10:26", "phase": "approach", "actor": "CAPT", "text": "Autothrottle disconnected and full thrust applied, about nine seconds after the stick shaker; the aircraft is stalled with insufficient height to recover.", "factors": ["aerodynamic_stall", "inappropriate_stall_recovery"], "kind": "crew_action" },
-    { "t": 120, "clock": "10:26", "phase": "landing", "actor": "SYS", "text": "The aircraft strikes a field 1.5 km short of runway 18R, tail first, at about 95 kt, breaking into three parts; 9 killed including the three pilots, 28 seriously injured.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+    {
+      "t": -420,
+      "clock": "10:17",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Left radio altimeter begins to indicate -8 ft; the landing gear warning horn sounds once and a master caution is triggered but the crew treat it as spurious.",
+      "factors": [
+        "radio_altimeter_failure",
+        "known_defect_unresolved"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": -180,
+      "clock": "10:21",
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Approach control vectors the aircraft to intercept the runway 18R localiser at about 5.5 nm, at 2,000 ft, above the glideslope.",
+      "state": {
+        "alt": 2000
+      },
+      "factors": [
+        "atc_communication_error"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": -60,
+      "clock": "10:23",
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Crew select landing gear down and flaps 15, then 40, and descend to capture the glideslope from above with the thrust levers at idle; the landing checklist is being run.",
+      "factors": [
+        "unstable_approach",
+        "high_workload"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "10:24",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "At about 1,950 ft the autothrottle annunciates RETARD and holds the thrust levers at idle, based on the erroneous radio height.",
+      "state": {
+        "alt": 1950
+      },
+      "factors": [
+        "autothrottle_mode_confusion",
+        "design_deficiency"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 30,
+      "clock": "10:24",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Glideslope captured; the autopilot pitches the aircraft up to hold the glidepath as the speed falls below the 144 kt selected approach speed.",
+      "state": {
+        "ias": 144
+      },
+      "factors": [
+        "low_energy_state",
+        "inadequate_monitoring"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 60,
+      "clock": "10:25",
+      "phase": "approach",
+      "actor": "PM",
+      "text": "Landing checklist completed; the crew note the aircraft is at 1,000 ft but do not remark on the speed or the thrust levers at idle.",
+      "state": {
+        "alt": 1000
+      },
+      "factors": [
+        "inadequate_monitoring",
+        "unstable_approach"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 95,
+      "clock": "10:25",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Airspeed reaches about 105 kt with the pitch attitude rising; the autopilot remains engaged.",
+      "state": {
+        "ias": 105
+      },
+      "factors": [
+        "low_energy_state"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 100,
+      "clock": "10:25",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Stick shaker activates at about 460 ft radio altitude; the first officer advances the thrust levers.",
+      "state": {
+        "alt": 460
+      },
+      "factors": [
+        "stick_shaker_pusher"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 103,
+      "clock": "10:25",
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Captain takes control; the autothrottle, still engaged in RETARD mode, pulls the thrust levers back to idle again.",
+      "factors": [
+        "inappropriate_stall_recovery",
+        "autothrottle_mode_confusion"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 109,
+      "clock": "10:26",
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Autothrottle disconnected and full thrust applied, about nine seconds after the stick shaker; the aircraft is stalled with insufficient height to recover.",
+      "factors": [
+        "aerodynamic_stall",
+        "inappropriate_stall_recovery"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 120,
+      "clock": "10:26",
+      "phase": "landing",
+      "actor": "SYS",
+      "text": "The aircraft strikes a field 1.5 km short of runway 18R, tail first, at about 95 kt, breaking into three parts; 9 killed including the three pilots, 28 seriously injured.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "Boeing / FAA / EASA", "text": "Improve the reliability of the radio altimeter system and modify the autothrottle logic so that a single erroneous radio altimeter cannot drive the retard flare mode during the approach.", "status": "closed_acceptable", "outcome": "Boeing modified the autothrottle software to compare both radio altimeters and issued a flight crew operations bulletin.", "trigger_factors": ["radio_altimeter_failure", "design_deficiency"] },
-    { "id": null, "to": "Boeing", "text": "Inform all 737NG operators of the radio altimeter problems and their effect on the autothrottle, and include an appropriate warning in the manuals.", "status": "closed_acceptable", "outcome": "Boeing issued a Multi Operator Message and revised the manuals.", "trigger_factors": ["manufacturer_communication", "known_defect_unresolved"] },
-    { "id": null, "to": "Turkish Airlines", "text": "Ensure crews are trained on recognition of autothrottle modes, the stabilised approach criteria and go-around decision-making, and that line training approaches are adequately monitored.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_monitoring", "unstable_approach", "high_workload"] },
-    { "id": null, "to": "LVNL / Ministry", "text": "Ensure that Amsterdam approach procedures provide for interception of the glideslope from below in accordance with ICAO requirements.", "status": "unknown", "outcome": null, "trigger_factors": ["atc_communication_error"] },
-    { "id": null, "to": "FAA / EASA", "text": "Review stall recovery training so that flight crews immediately disconnect the autothrottle and apply maximum thrust in response to a stick shaker.", "status": "unknown", "outcome": null, "trigger_factors": ["inappropriate_stall_recovery"] }
+    {
+      "id": null,
+      "to": "Boeing / FAA / EASA",
+      "text": "Improve the reliability of the radio altimeter system and modify the autothrottle logic so that a single erroneous radio altimeter cannot drive the retard flare mode during the approach.",
+      "status": "closed_acceptable",
+      "outcome": "Boeing modified the autothrottle software to compare both radio altimeters and issued a flight crew operations bulletin.",
+      "trigger_factors": [
+        "radio_altimeter_failure",
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Boeing",
+      "text": "Inform all 737NG operators of the radio altimeter problems and their effect on the autothrottle, and include an appropriate warning in the manuals.",
+      "status": "closed_acceptable",
+      "outcome": "Boeing issued a Multi Operator Message and revised the manuals.",
+      "trigger_factors": [
+        "manufacturer_communication",
+        "known_defect_unresolved"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Turkish Airlines",
+      "text": "Ensure crews are trained on recognition of autothrottle modes, the stabilised approach criteria and go-around decision-making, and that line training approaches are adequately monitored.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_monitoring",
+        "unstable_approach",
+        "high_workload"
+      ]
+    },
+    {
+      "id": null,
+      "to": "LVNL / Ministry",
+      "text": "Ensure that Amsterdam approach procedures provide for interception of the glideslope from below in accordance with ICAO requirements.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA / EASA",
+      "text": "Review stall recovery training so that flight crews immediately disconnect the autothrottle and apply maximum thrust in response to a stick shaker.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inappropriate_stall_recovery"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -82,14 +400,26 @@
     "Turkish Airlines revised approach monitoring and stabilised approach procedures.",
     "Renewed emphasis on go-around policy and mode awareness in the industry; Dutch review of glideslope interception practices at Schiphol."
   ],
-  "related": ["asiana214", "colgan3407", "af447", "airasia8501"],
+  "related": [
+    "asiana214",
+    "colgan3407",
+    "af447",
+    "airasia8501"
+  ],
   "fdr": null,
   "sources": [
     "https://www.onderzoeksraad.nl/en/"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
-    "Clock strings are local time (CET) to the minute; seconds are estimated. Impact occurred at about 10:26 local.",
-    "The 1,950 ft RETARD activation, 460 ft stick shaker, 144 kt approach speed and 83 kt minimum speed are from the DSB report; other state values approximate.",
-    "Turkish accredited agency code is an informal label; no formal dissent was published."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Clock strings are local time (CET) to the minute; seconds are estimated. Impact occurred at about 10:26 local.",
+      "The 1,950 ft RETARD activation, 460 ft stick shaker, 144 kt approach speed and 83 kt minimum speed are from the DSB report; other state values approximate.",
+      "Turkish accredited agency code is an informal label; no formal dissent was published."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Turkish_Airlines_Flight_1951"
 }

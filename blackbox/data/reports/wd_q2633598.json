@@ -45,7 +45,9 @@
   },
   "location": {
     "name": "Government Cut channel, Port of Miami, Florida",
-    "country": "United States"
+    "country": "United States",
+    "lat": 25.7606,
+    "lon": -80.1239
   },
   "phase": "takeoff",
   "occupants": 20,

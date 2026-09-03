@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "Mount Trelease near Loveland Pass",
-    "country": "United States"
+    "country": "United States",
+    "lat": 39.6933,
+    "lon": -105.882
   },
   "phase": "cruise",
   "occupants": 40,
@@ -170,7 +172,7 @@
       "phase": "cruise",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft continues 425 feet through trees at 215\u00b0 heading, destroyed by fire and impact (p. 2)",
+      "text": "Aircraft continues 425 feet through trees at 215° heading, destroyed by fire and impact (p. 2)",
       "factors": [
         "cfit",
         "post_impact_fire"

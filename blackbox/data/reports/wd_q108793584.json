@@ -1,192 +1,194 @@
 {
- "id": "wd_q108793584",
- "qid": "Q108793584",
- "tier": "wikidata",
- "depth": "sections",
- "title": "Omega Aerial Refueling Services 70",
- "date": "2011-05-18",
- "time_reference": "PDT",
- "t0": "2011-05-18T17:23:30Z",
- "agency": "NTSB",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead",
-   "report_id": "DCA11PA075"
-  }
- ],
- "aircraft": {
-  "type": "Boeing 707-321B",
-  "manufacturer": "Boeing",
-  "family": "707",
-  "registration": "N707AR"
- },
- "operator": "Omega Aerial Refueling Services",
- "location": {
-  "name": "Naval Base Ventura County, Naval Air Station Point Mugu",
-  "country": "United States"
- },
- "phase": "takeoff",
- "occupants": 3,
- "fatalities": 0,
- "injuries_serious": 3,
- "damage": "substantial",
- "category": "OTHR",
- "summary": "On 18 May 2011, Omega Aerial Refueling Services Flight 70, a Boeing 707 tanker, experienced engine pylon separation shortly after takeoff from Naval Air Station Point Mugu, California. The No. 2 engine separated from the wing and struck the No. 1 engine inlet, reducing thrust. Despite full control inputs, the aircraft descended and made multiple runway contacts before departing the runway into a saltwater marsh. All three crew members survived with injuries.",
- "probable_cause": "The NTSB determines that the probable cause of this accident was the failure of a midspar fitting, which was susceptible to fatigue cracking and should have been replaced with a newer, more fatigue-resistant version of the fitting as required by an airworthiness directive. Also causal was an erroneous maintenance entry made by a previous aircraft owner, which incorrectly reflected that the newer fitting had been installed. (p. 17)",
- "factors": [
-  {
-   "id": "uncontained_engine_failure",
-   "role": "initiating",
-   "evidence": "The No. 2 engine pylon midspar fitting had a preexisting fatigue crack that had propagated to critical length. The No. 2 engine nacelle and pylon assembly struck the No. 1 engine nacelle, causing the No. 1 engine inlet cowl to separate and resulting in significant loss of thrust on the left side. (p. 17, 659-661)"
-  },
-  {
-   "id": "metal_fatigue",
-   "role": "contributing",
-   "evidence": "The fatigue crack initiated at the upper inboard corner of the reduced section between the lug where the drag support fitting is normally attached and the chromium-coated radius. The reduced section radius was measured at nominal 0.38 inch, an older fitting design subject to fatigue cracking. (p. 17, 667-676)"
-  },
-  {
-   "id": "inadequate_inspection",
-   "role": "contributing",
-   "evidence": "Erroneous maintenance entry made by previous aircraft owner in 1983 incorrectly reflected that the newer fitting had been installed. Omega records review in 2003 based on the erroneous entries led to deletion of the repetitive inspection requirement from its maintenance plan. (p. 17, 677-688)"
-  },
-  {
-   "id": "known_defect_unresolved",
-   "role": "contributing",
-   "evidence": "AD 93-11-02 and Boeing SBs required either repetitive visual inspections or replacement with more fatigue-resistant design incorporating 1.0-inch radius. The replacement was a terminating action, but erroneous records showed falsely that it was completed. (p. 17, 673-676)"
-  },
-  {
-   "id": "loss_of_control_inflight",
-   "role": "contributing",
-   "evidence": "Even with full right aileron and rudder inputs, the plane started to descend and drift to the left after engine separation, reducing pilot's ability to maintain control. (p. 7, 401-403)"
-  },
-  {
-   "id": "runway_overrun",
-   "role": "outcome",
-   "evidence": "The plane made multiple contacts with the runway and departed the runway, crossing a taxiway before coming to rest in a saltwater marsh. (p. 7, 405-407, 458)"
-  }
- ],
- "chain": [
-  [
-   "metal_fatigue",
-   "uncontained_engine_failure"
+  "id": "wd_q108793584",
+  "qid": "Q108793584",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Omega Aerial Refueling Services 70",
+  "date": "2011-05-18",
+  "time_reference": "PDT",
+  "t0": "2011-05-18T17:23:30Z",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "DCA11PA075"
+    }
   ],
-  [
-   "inadequate_inspection",
-   "known_defect_unresolved"
+  "aircraft": {
+    "type": "Boeing 707-321B",
+    "manufacturer": "Boeing",
+    "family": "707",
+    "registration": "N707AR"
+  },
+  "operator": "Omega Aerial Refueling Services",
+  "location": {
+    "name": "Naval Base Ventura County, Naval Air Station Point Mugu",
+    "country": "United States",
+    "lat": 34.1203,
+    "lon": -119.1211
+  },
+  "phase": "takeoff",
+  "occupants": 3,
+  "fatalities": 0,
+  "injuries_serious": 3,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "On 18 May 2011, Omega Aerial Refueling Services Flight 70, a Boeing 707 tanker, experienced engine pylon separation shortly after takeoff from Naval Air Station Point Mugu, California. The No. 2 engine separated from the wing and struck the No. 1 engine inlet, reducing thrust. Despite full control inputs, the aircraft descended and made multiple runway contacts before departing the runway into a saltwater marsh. All three crew members survived with injuries.",
+  "probable_cause": "The NTSB determines that the probable cause of this accident was the failure of a midspar fitting, which was susceptible to fatigue cracking and should have been replaced with a newer, more fatigue-resistant version of the fitting as required by an airworthiness directive. Also causal was an erroneous maintenance entry made by a previous aircraft owner, which incorrectly reflected that the newer fitting had been installed. (p. 17)",
+  "factors": [
+    {
+      "id": "uncontained_engine_failure",
+      "role": "initiating",
+      "evidence": "The No. 2 engine pylon midspar fitting had a preexisting fatigue crack that had propagated to critical length. The No. 2 engine nacelle and pylon assembly struck the No. 1 engine nacelle, causing the No. 1 engine inlet cowl to separate and resulting in significant loss of thrust on the left side. (p. 17, 659-661)"
+    },
+    {
+      "id": "metal_fatigue",
+      "role": "contributing",
+      "evidence": "The fatigue crack initiated at the upper inboard corner of the reduced section between the lug where the drag support fitting is normally attached and the chromium-coated radius. The reduced section radius was measured at nominal 0.38 inch, an older fitting design subject to fatigue cracking. (p. 17, 667-676)"
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "Erroneous maintenance entry made by previous aircraft owner in 1983 incorrectly reflected that the newer fitting had been installed. Omega records review in 2003 based on the erroneous entries led to deletion of the repetitive inspection requirement from its maintenance plan. (p. 17, 677-688)"
+    },
+    {
+      "id": "known_defect_unresolved",
+      "role": "contributing",
+      "evidence": "AD 93-11-02 and Boeing SBs required either repetitive visual inspections or replacement with more fatigue-resistant design incorporating 1.0-inch radius. The replacement was a terminating action, but erroneous records showed falsely that it was completed. (p. 17, 673-676)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "contributing",
+      "evidence": "Even with full right aileron and rudder inputs, the plane started to descend and drift to the left after engine separation, reducing pilot's ability to maintain control. (p. 7, 401-403)"
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "The plane made multiple contacts with the runway and departed the runway, crossing a taxiway before coming to rest in a saltwater marsh. (p. 7, 405-407, 458)"
+    }
   ],
-  [
-   "known_defect_unresolved",
-   "uncontained_engine_failure"
+  "chain": [
+    [
+      "metal_fatigue",
+      "uncontained_engine_failure"
+    ],
+    [
+      "inadequate_inspection",
+      "known_defect_unresolved"
+    ],
+    [
+      "known_defect_unresolved",
+      "uncontained_engine_failure"
+    ],
+    [
+      "uncontained_engine_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "runway_overrun"
+    ]
   ],
-  [
-   "uncontained_engine_failure",
-   "loss_of_control_inflight"
+  "events": [
+    {
+      "t": 0,
+      "clock": "17:23",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight cleared for takeoff from runway 21 at Naval Air Station Point Mugu. Takeoff roll was normal. (p. 7, 427)"
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Shortly after liftoff, approximately 20 feet above ground and 7,000 feet down the runway, the No. 2 engine pylon midspar fitting failed due to fatigue crack propagation. The No. 2 engine separated from the wing. (p. 17, 659-661)"
+    },
+    {
+      "t": 35,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "The No. 2 engine nacelle and pylon assembly struck the No. 1 engine's inlet cowling, causing the No. 1 engine inlet cowl to separate and degrading No. 1 engine's ability to produce thrust. Significant loss of thrust occurred on left side of airplane. (p. 17, 660-661)"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain made appropriate decision to reject takeoff and attempt to land on remaining runway. He lowered the nose and leveled the wings, applying full right aileron and rudder. (p. 17, 662-665)"
+    },
+    {
+      "t": 65,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Despite full control inputs, the plane started to descend and drift to the left due to loss of thrust from both left engines. The loss of thrust made continued takeoff highly unlikely. (p. 7, 401-403, 447)"
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft made first contact with runway, followed by multiple contacts as it descended with unequal thrust condition. (p. 458)"
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft drifted left off the runway, crossed a taxiway, and departed the runway area. (p. 458)"
+    },
+    {
+      "t": 150,
+      "clock": null,
+      "phase": "ground",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft came to rest in saltwater marsh. All three crew members survived but sustained serious injuries. Aircraft substantially damaged. (p. 7, 389, 458)"
+    }
   ],
-  [
-   "loss_of_control_inflight",
-   "runway_overrun"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "17:23",
-   "phase": "takeoff",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Flight cleared for takeoff from runway 21 at Naval Air Station Point Mugu. Takeoff roll was normal. (p. 7, 427)"
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB1301.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Omega_Aerial_Refueling_Services_Flight_70",
+  "asn_id": "20110518-1",
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB1301.pdf",
+    "https://www.ntsb.gov/investigations/Pages/DCA11PA075.aspx"
+  ],
+  "interest": 7.86,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from NTSB report AAB 13-01 (Corrected Copy)",
+      "Sections read: Analysis (p. 17), Probable Cause (p. 17)",
+      "8 events with detailed timeline from takeoff through runway excursion",
+      "No CVR transcript in public report",
+      "Maintenance history revealed erroneous compliance entry that caused inspection termination",
+      "Part of series of fatigue crack failures in 707 midspar fittings (1992, 1998, 2011)",
+      "auto-repair: route was null"
+    ]
   },
-  {
-   "t": 30,
-   "clock": null,
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Shortly after liftoff, approximately 20 feet above ground and 7,000 feet down the runway, the No. 2 engine pylon midspar fitting failed due to fatigue crack propagation. The No. 2 engine separated from the wing. (p. 17, 659-661)"
-  },
-  {
-   "t": 35,
-   "clock": null,
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "The No. 2 engine nacelle and pylon assembly struck the No. 1 engine's inlet cowling, causing the No. 1 engine inlet cowl to separate and degrading No. 1 engine's ability to produce thrust. Significant loss of thrust occurred on left side of airplane. (p. 17, 660-661)"
-  },
-  {
-   "t": 60,
-   "clock": null,
-   "phase": "takeoff",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Captain made appropriate decision to reject takeoff and attempt to land on remaining runway. He lowered the nose and leveled the wings, applying full right aileron and rudder. (p. 17, 662-665)"
-  },
-  {
-   "t": 65,
-   "clock": null,
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Despite full control inputs, the plane started to descend and drift to the left due to loss of thrust from both left engines. The loss of thrust made continued takeoff highly unlikely. (p. 7, 401-403, 447)"
-  },
-  {
-   "t": 90,
-   "clock": null,
-   "phase": "landing",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Aircraft made first contact with runway, followed by multiple contacts as it descended with unequal thrust condition. (p. 458)"
-  },
-  {
-   "t": 120,
-   "clock": null,
-   "phase": "landing",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Aircraft drifted left off the runway, crossed a taxiway, and departed the runway area. (p. 458)"
-  },
-  {
-   "t": 150,
-   "clock": null,
-   "phase": "ground",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Aircraft came to rest in saltwater marsh. All three crew members survived but sustained serious injuries. Aircraft substantially damaged. (p. 7, 389, 458)"
-  }
- ],
- "cvr": [],
- "recommendations": [],
- "dissent": [],
- "safety_changes": [],
- "related": [],
- "fdr": null,
- "sources": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB1301.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/Omega_Aerial_Refueling_Services_Flight_70",
- "asn_id": "20110518-1",
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB1301.pdf",
-  "https://www.ntsb.gov/investigations/Pages/DCA11PA075.aspx"
- ],
- "interest": 7.86,
- "curated_id": null,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5-20251001",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Extracted from NTSB report AAB 13-01 (Corrected Copy)",
-   "Sections read: Analysis (p. 17), Probable Cause (p. 17)",
-   "8 events with detailed timeline from takeoff through runway excursion",
-   "No CVR transcript in public report",
-   "Maintenance history revealed erroneous compliance entry that caused inspection termination",
-   "Part of series of fatigue crack failures in 707 midspar fittings (1992, 1998, 2011)",
-   "auto-repair: route was null"
-  ]
- },
- "route": {}
+  "route": {}
 }

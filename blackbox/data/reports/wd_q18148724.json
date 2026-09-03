@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Hall Mountain, Grottoes, Virginia",
-    "country": "United States"
+    "country": "United States",
+    "lat": 38.2266,
+    "lon": -78.7771
   },
   "phase": "approach",
   "occupants": 14,

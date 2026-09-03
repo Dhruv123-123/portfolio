@@ -27,7 +27,9 @@
   },
   "location": {
     "name": "Kirksville",
-    "country": "United States"
+    "country": "United States",
+    "lat": 40.0646,
+    "lon": -92.5432
   },
   "phase": "approach",
   "occupants": 15,

@@ -31,7 +31,9 @@
   },
   "location": {
     "name": "Valley, Nebraska",
-    "country": "United States"
+    "country": "United States",
+    "lat": 41.3819,
+    "lon": -96.345
   },
   "phase": "descent",
   "occupants": 15,
@@ -69,10 +71,22 @@
     }
   ],
   "chain": [
-    ["convective_weather", "engine_failure"],
-    ["engine_failure", "loss_of_control_inflight"],
-    ["inadequate_monitoring", "loss_of_control_inflight"],
-    ["atc_workload_staffing", "loss_of_control_inflight"]
+    [
+      "convective_weather",
+      "engine_failure"
+    ],
+    [
+      "engine_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "inadequate_monitoring",
+      "loss_of_control_inflight"
+    ],
+    [
+      "atc_workload_staffing",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
@@ -114,7 +128,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "O'Neill low sector controller warned of large area of weather at twelve o'clock, about 35 miles, extending from east of Neola around Sioux City to Fremont. Controller advised another aircraft at FL 200 went around; another at 9,000 feet found way through.",
-      "factors": ["convective_weather"]
+      "factors": [
+        "convective_weather"
+      ]
     },
     {
       "t": -30,
@@ -131,7 +147,10 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft entered severe precipitation. Engines flamed out from massive water ingestion.",
-      "factors": ["convective_weather", "engine_failure"]
+      "factors": [
+        "convective_weather",
+        "engine_failure"
+      ]
     },
     {
       "t": 0,
@@ -140,7 +159,9 @@
       "actor": "PF",
       "kind": "crew_speech",
       "text": "Nine sixty-five, we have lost both engines.",
-      "factors": ["engine_failure"]
+      "factors": [
+        "engine_failure"
+      ]
     },
     {
       "t": 4,
@@ -157,7 +178,9 @@
       "actor": "PF",
       "kind": "crew_speech",
       "text": "Nine sixty-five, we gottem both, both of them going.",
-      "factors": ["engine_failure"]
+      "factors": [
+        "engine_failure"
+      ]
     },
     {
       "t": 19,
@@ -174,7 +197,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft crashed into a field near Valley, Nebraska in nose-down, right-wing-low attitude and bounced.",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     }
   ],
   "cvr": [],
@@ -226,12 +251,16 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR8015.pdf"],
+  "sources": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR8015.pdf"
+  ],
   "tier": "wikidata",
   "depth": "sections",
   "asn_id": "19800612-1",
   "wikipedia": "https://en.wikipedia.org/wiki/Air_Wisconsin_Flight_965",
-  "report_links": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR8015.pdf"],
+  "report_links": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR8015.pdf"
+  ],
   "interest": 10.97,
   "curated_id": null,
   "extraction": {

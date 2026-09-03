@@ -71,9 +71,18 @@
     }
   ],
   "chain": [
-    ["atc_communication_error", "wrong_runway"],
-    ["airport_infrastructure", "wrong_runway"],
-    ["wrong_runway", "ground_collision"]
+    [
+      "atc_communication_error",
+      "wrong_runway"
+    ],
+    [
+      "airport_infrastructure",
+      "wrong_runway"
+    ],
+    [
+      "wrong_runway",
+      "ground_collision"
+    ]
   ],
   "events": [
     {
@@ -101,7 +110,9 @@
       "actor": "CAPT",
       "kind": "atc",
       "text": "Cessna 441 pilot transmitted 'Kilo Mike ready to go on the right side' to local controller, indicating he was taxiing onto runway 30R instead of runway 31 (p. 10).",
-      "factors": ["wrong_runway"]
+      "factors": [
+        "wrong_runway"
+      ]
     },
     {
       "t": 78,
@@ -119,7 +130,9 @@
       "actor": "PM",
       "kind": "crew_speech",
       "text": "Additional crew member in jumpseat yelled 'There's an airplane!' alerting the flight crew to the Cessna on the runway (p. 11).",
-      "factors": ["ground_collision"]
+      "factors": [
+        "ground_collision"
+      ]
     },
     {
       "t": 83,
@@ -137,7 +150,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Right wing of MD-82 struck tail cone and fuselage structure of Cessna 441, separating horizontal and vertical stabilizers from fuselage (p. 11).",
-      "factors": ["ground_collision"]
+      "factors": [
+        "ground_collision"
+      ]
     },
     {
       "t": 88,
@@ -155,7 +170,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "ARFF personnel secured Cessna 441 with right engine still running; aircraft destroyed (p. 11).",
-      "factors": ["ground_collision"]
+      "factors": [
+        "ground_collision"
+      ]
     }
   ],
   "cvr": [],
@@ -165,84 +182,110 @@
       "to": "FAA",
       "text": "Revise Federal Aviation Regulations to require pilots to illuminate all taxi, landing, and logo lights, or otherwise enhance the conspicuity of their aircraft when operating on an active runway (including runway crossing and position-and-hold operations).",
       "status": "open",
-      "trigger_factors": ["ground_collision"]
+      "trigger_factors": [
+        "ground_collision"
+      ]
     },
     {
       "id": "A-95-87",
       "to": "FAA",
       "text": "Examine the feasibility of requiring pilots to use aircraft anticollision/strobe lights when holding in position on active runways.",
       "status": "open",
-      "trigger_factors": ["ground_collision"]
+      "trigger_factors": [
+        "ground_collision"
+      ]
     },
     {
       "id": "A-95-88",
       "to": "FAA",
       "text": "Define the commonly used term 'back-taxi' in the Pilot-Controller Glossary, and provide an explanation of the use of the term and application of the procedure in the Airman's Information Manual and FAA Order 7110.65.",
       "status": "open",
-      "trigger_factors": ["atc_communication_error"]
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
     },
     {
       "id": "A-95-89",
       "to": "FAA",
       "text": "Require air traffic control personnel to make every possible effort to use as few frequencies as possible when positions are combined, and to provide notice of such on the Automatic Terminal Information Service where applicable.",
       "status": "open",
-      "trigger_factors": ["airport_infrastructure"]
+      "trigger_factors": [
+        "airport_infrastructure"
+      ]
     },
     {
       "id": "A-95-90",
       "to": "FAA",
       "text": "Continue to develop, publish, and encourage the implementation of procedures such as automated flight clearances and standard taxi routes to reduce radio frequency congestion during ground operations.",
       "status": "open",
-      "trigger_factors": ["atc_communication_error"]
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
     },
     {
       "id": "A-95-91",
       "to": "FAA",
       "text": "Mass-mail to all currently certificated pilots FAA publications on reducing runway incursions and airport improvement information, such as airport signage changes.",
       "status": "open",
-      "trigger_factors": ["wrong_runway"]
+      "trigger_factors": [
+        "wrong_runway"
+      ]
     },
     {
       "id": "A-95-92",
       "to": "FAA",
       "text": "Require flight instructors to stress airport surface operations, including airport markings, signs, and lighting; situational awareness; clearance readbacks; and proper phraseology during initial training and biennial flight reviews.",
       "status": "open",
-      "trigger_factors": ["wrong_runway", "atc_communication_error"]
+      "trigger_factors": [
+        "wrong_runway",
+        "atc_communication_error"
+      ]
     },
     {
       "id": "A-95-93",
       "to": "FAA",
       "text": "Require that initial and recurrent air carrier pilot training programs include training in airport surface movement operations, and familiarization with airport markings, signs, and lighting.",
       "status": "open",
-      "trigger_factors": ["wrong_runway"]
+      "trigger_factors": [
+        "wrong_runway"
+      ]
     },
     {
       "id": "A-95-94",
       "to": "FAA",
       "text": "Continue research and development efforts to provide airports that are not scheduled to receive Airport Surface Detection Equipment with an alternate, cost-effective system, such as the ground induction loop, to bring controller and pilot attention to pending runway incursions in time to prevent ground collisions.",
       "status": "open",
-      "trigger_factors": ["ground_collision"]
+      "trigger_factors": [
+        "ground_collision"
+      ]
     },
     {
       "id": "A-95-95",
       "to": "FAA",
       "text": "Require that Automatic Terminal Information Service broadcasts at Lambert-St. Louis International Airport reference runways that are being used as secondary or occasionally active runways.",
       "status": "open",
-      "trigger_factors": ["airport_infrastructure"]
+      "trigger_factors": [
+        "airport_infrastructure"
+      ]
     },
     {
       "id": "A-95-96",
       "to": "FAA",
       "text": "Convene a joint FAA/industry task force on human performance initiatives to produce human performance-related airport surface operation improvements that could be readily implemented, are not cost prohibitive, and would provide additional safety measures during surface operations by mitigating human error.",
       "status": "open",
-      "trigger_factors": ["atc_communication_error", "wrong_runway"]
+      "trigger_factors": [
+        "atc_communication_error",
+        "wrong_runway"
+      ]
     },
     {
       "id": "A-95-97",
       "to": "FAA",
       "text": "Employ an independent source to conduct a survey of the terminal air traffic control staff, similar to the MITRE Corporation study, to determine the scope and magnitude of the runway incursion problem and recommendations for reduction.",
       "status": "open",
-      "trigger_factors": ["atc_communication_error"]
+      "trigger_factors": [
+        "atc_communication_error"
+      ]
     }
   ],
   "dissent": [],
@@ -267,5 +310,6 @@
       "All factor ids verified against taxonomy",
       "Twelve numbered recommendations from NTSB report pages 56-58"
     ]
-  }
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/TWA_Flight_427"
 }

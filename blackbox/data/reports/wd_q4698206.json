@@ -35,7 +35,9 @@
   },
   "location": {
     "name": "Florence, Kentucky (near Cincinnati)",
-    "country": "United States"
+    "country": "United States",
+    "lat": 39.0089,
+    "lon": -84.6467
   },
   "phase": "descent",
   "occupants": 2,

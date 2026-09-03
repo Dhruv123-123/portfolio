@@ -7,73 +7,377 @@
   "t0": "2005-08-14T06:12:00Z",
   "agency": "AAIASB",
   "agencies": [
-    { "code": "AAIASB", "name": "Air Accident Investigation and Aviation Safety Board", "country": "Greece", "role": "lead",
-      "report_id": "11/2006", "report_title": "Aircraft Accident Report: Helios Airways Flight HCY522, Boeing 737-31S at Grammatiko, Hellas on 14 August 2005", "report_date": "2006-11-01",
-      "url": "https://aaiasb.gr/" },
-    { "code": "AAIB", "name": "Air Accidents Investigation Branch", "country": "United Kingdom", "role": "accredited_representative" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" },
-    { "code": "AAIU-CY", "name": "Cyprus Air Accident and Incident Investigation Board", "country": "Cyprus", "role": "accredited_representative" }
+    {
+      "code": "AAIASB",
+      "name": "Air Accident Investigation and Aviation Safety Board",
+      "country": "Greece",
+      "role": "lead",
+      "report_id": "11/2006",
+      "report_title": "Aircraft Accident Report: Helios Airways Flight HCY522, Boeing 737-31S at Grammatiko, Hellas on 14 August 2005",
+      "report_date": "2006-11-01",
+      "url": "https://aaiasb.gr/"
+    },
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "AAIU-CY",
+      "name": "Cyprus Air Accident and Incident Investigation Board",
+      "country": "Cyprus",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Boeing 737-31S", "family": "737", "manufacturer": "Boeing", "registration": "5B-DBY", "msn": "29099", "engines": "CFM International CFM56-3B1" },
+  "aircraft": {
+    "type": "Boeing 737-31S",
+    "family": "737",
+    "manufacturer": "Boeing",
+    "registration": "5B-DBY",
+    "msn": "29099",
+    "engines": "CFM International CFM56-3B1"
+  },
   "operator": "Helios Airways",
-  "route": { "from": "LCLK", "from_name": "Larnaca", "to": "LGAV", "to_name": "Athens Eleftherios Venizelos (onward to Prague)" },
-  "location": { "name": "Hills near Grammatiko, about 33 km north of Athens", "country": "Greece", "lat": 38.2264, "lon": 23.9708 },
+  "route": {
+    "from": "LCLK",
+    "from_name": "Larnaca",
+    "to": "LGAV",
+    "to_name": "Athens Eleftherios Venizelos (onward to Prague)"
+  },
+  "location": {
+    "name": "Hills near Grammatiko, about 33 km north of Athens",
+    "country": "Greece",
+    "lat": 38.2264,
+    "lon": 23.9708
+  },
   "phase": "climb",
-  "occupants": 121, "fatalities": 121, "injuries_serious": 0,
+  "occupants": 121,
+  "fatalities": 121,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "OTHR",
   "summary": "After overnight maintenance the pressurisation mode selector was left in MANUAL and not detected by the crew during pre-flight checks. As the aircraft climbed through about 12,000 ft the cabin altitude warning horn sounded, but the crew misidentified it as a takeoff configuration warning and became confused by subsequent master caution alerts. Both pilots became incapacitated by hypoxia and the aircraft continued to Athens on autopilot, holding for over two hours until fuel exhaustion caused both engines to flame out and it crashed into hills near Grammatiko. All 121 on board died.",
   "probable_cause": "Direct causes: non-recognition that the cabin pressurisation mode selector was in the MANUAL position during the performance of the Preflight, Before Start and After Takeoff checklists; non-identification of the warnings and the reasons for the activation of the warnings (cabin altitude warning horn, passenger oxygen masks deployment indication, master caution); and incapacitation of the flight crew due to hypoxia, resulting in continuation of the flight via the flight management computer and autopilot, depletion of the fuel and engine flameout, and the impact of the aircraft with the ground. Latent causes: the operator's deficiencies in organisation, quality management and safety culture; the regulatory authority's inadequate execution of its oversight responsibilities; inadequate application of CRM principles; and the ineffectiveness of measures taken by the manufacturer in response to previous pressurisation incidents, particularly the similarity of the cabin altitude and takeoff configuration warning horns.",
   "factors": [
-    { "id": "maintenance_error", "role": "initiating", "evidence": "During a pressurisation leak check the night before, the ground engineer left the pressurisation mode selector in MANUAL instead of returning it to AUTO." },
-    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The crew failed to detect the MANUAL selection during the Preflight, Before Start and After Takeoff checklists." },
-    { "id": "cabin_pressurization_failure", "role": "contributing", "evidence": "With the outflow valve partly open in manual, the cabin did not pressurise and cabin altitude climbed with the aircraft." },
-    { "id": "warning_system_deficiency", "role": "latent", "evidence": "The cabin altitude warning horn was identical to the takeoff configuration warning horn, and the crew's confusion had been foreseen in earlier incidents." },
-    { "id": "mode_confusion", "role": "contributing", "evidence": "The crew interpreted the cabin altitude horn as a takeoff configuration warning and the equipment cooling master caution as unrelated faults." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "The captain and first officer, of different nationalities and with language difficulties, did not coordinate the diagnosis, and the captain left his seat to consult with the engineer on the radio." },
-    { "id": "hypoxia", "role": "contributing", "evidence": "The crew did not don oxygen masks; as cabin altitude passed 14,000 ft and higher, both pilots lost useful consciousness." },
-    { "id": "pilot_incapacitation", "role": "contributing", "evidence": "Both pilots were incapacitated by hypoxia; a flight attendant with a portable oxygen bottle entered the cockpit late in the flight but could not recover the aircraft." },
-    { "id": "fuel_exhaustion", "role": "contributing", "evidence": "The aircraft flew on autopilot to the KEA holding pattern near Athens and circled until the left, then the right engine flamed out from fuel exhaustion." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The manufacturer's measures after previous MANUAL-mode pressurisation incidents did not address the shared horn and the lack of a distinct cabin altitude alert." },
-    { "id": "operator_safety_culture", "role": "latent", "evidence": "Helios Airways had deficiencies in organisation, quality management, crew training and safety culture." },
-    { "id": "regulatory_oversight", "role": "latent", "evidence": "The Cyprus regulator's oversight of the operator was found inadequate." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "After the second engine flamed out the autopilot could no longer maintain the aircraft and it descended into the hills near Grammatiko." }
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "During a pressurisation leak check the night before, the ground engineer left the pressurisation mode selector in MANUAL instead of returning it to AUTO."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The crew failed to detect the MANUAL selection during the Preflight, Before Start and After Takeoff checklists."
+    },
+    {
+      "id": "cabin_pressurization_failure",
+      "role": "contributing",
+      "evidence": "With the outflow valve partly open in manual, the cabin did not pressurise and cabin altitude climbed with the aircraft."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "latent",
+      "evidence": "The cabin altitude warning horn was identical to the takeoff configuration warning horn, and the crew's confusion had been foreseen in earlier incidents."
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "The crew interpreted the cabin altitude horn as a takeoff configuration warning and the equipment cooling master caution as unrelated faults."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The captain and first officer, of different nationalities and with language difficulties, did not coordinate the diagnosis, and the captain left his seat to consult with the engineer on the radio."
+    },
+    {
+      "id": "hypoxia",
+      "role": "contributing",
+      "evidence": "The crew did not don oxygen masks; as cabin altitude passed 14,000 ft and higher, both pilots lost useful consciousness."
+    },
+    {
+      "id": "pilot_incapacitation",
+      "role": "contributing",
+      "evidence": "Both pilots were incapacitated by hypoxia; a flight attendant with a portable oxygen bottle entered the cockpit late in the flight but could not recover the aircraft."
+    },
+    {
+      "id": "fuel_exhaustion",
+      "role": "contributing",
+      "evidence": "The aircraft flew on autopilot to the KEA holding pattern near Athens and circled until the left, then the right engine flamed out from fuel exhaustion."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The manufacturer's measures after previous MANUAL-mode pressurisation incidents did not address the shared horn and the lack of a distinct cabin altitude alert."
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "latent",
+      "evidence": "Helios Airways had deficiencies in organisation, quality management, crew training and safety culture."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "The Cyprus regulator's oversight of the operator was found inadequate."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "After the second engine flamed out the autopilot could no longer maintain the aircraft and it descended into the hills near Grammatiko."
+    }
   ],
   "chain": [
-    ["operator_safety_culture", "maintenance_error"],
-    ["regulatory_oversight", "operator_safety_culture"],
-    ["maintenance_error", "cabin_pressurization_failure"],
-    ["procedural_noncompliance", "cabin_pressurization_failure"],
-    ["design_deficiency", "warning_system_deficiency"],
-    ["warning_system_deficiency", "mode_confusion"],
-    ["crm_breakdown", "mode_confusion"],
-    ["cabin_pressurization_failure", "hypoxia"],
-    ["mode_confusion", "hypoxia"],
-    ["hypoxia", "pilot_incapacitation"],
-    ["pilot_incapacitation", "fuel_exhaustion"],
-    ["fuel_exhaustion", "loss_of_control_inflight"]
+    [
+      "operator_safety_culture",
+      "maintenance_error"
+    ],
+    [
+      "regulatory_oversight",
+      "operator_safety_culture"
+    ],
+    [
+      "maintenance_error",
+      "cabin_pressurization_failure"
+    ],
+    [
+      "procedural_noncompliance",
+      "cabin_pressurization_failure"
+    ],
+    [
+      "design_deficiency",
+      "warning_system_deficiency"
+    ],
+    [
+      "warning_system_deficiency",
+      "mode_confusion"
+    ],
+    [
+      "crm_breakdown",
+      "mode_confusion"
+    ],
+    [
+      "cabin_pressurization_failure",
+      "hypoxia"
+    ],
+    [
+      "mode_confusion",
+      "hypoxia"
+    ],
+    [
+      "hypoxia",
+      "pilot_incapacitation"
+    ],
+    [
+      "pilot_incapacitation",
+      "fuel_exhaustion"
+    ],
+    [
+      "fuel_exhaustion",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
-    { "t": -21600, "clock": "03:15", "phase": "ground", "actor": "GND", "text": "Overnight at Larnaca a ground engineer performs a pressurisation leak check in response to a reported rear door seal problem and leaves the mode selector in MANUAL.", "factors": ["maintenance_error"], "kind": "crew_action" },
-    { "t": -1500, "clock": "08:47", "phase": "ground", "actor": "FO", "text": "Preflight and Before Start checklists performed; the pressurisation mode selector position is not detected as MANUAL.", "factors": ["procedural_noncompliance"], "kind": "crew_action" },
-    { "t": -300, "clock": "09:07", "phase": "takeoff", "actor": "CAPT", "text": "Flight 522 departs Larnaca for Athens with 115 passengers and 6 crew; the After Takeoff checklist again fails to catch the MANUAL selection.", "factors": ["procedural_noncompliance", "cabin_pressurization_failure"], "kind": "crew_action" },
-    { "t": 0, "clock": "09:12", "phase": "climb", "actor": "SYS", "text": "Passing about 12,040 ft the cabin altitude warning horn sounds; the crew believe it is a takeoff configuration warning.", "state": { "alt": 12040 }, "factors": ["warning_system_deficiency", "mode_confusion"], "kind": "warning" },
-    { "t": 120, "clock": "09:14", "phase": "climb", "actor": "SYS", "text": "Master caution: equipment cooling off lights and, passing about 14,000 ft, the passenger oxygen masks deploy; the crew contact the company operations centre to discuss the warnings.", "state": { "alt": 14000 }, "factors": ["mode_confusion", "crm_breakdown"], "kind": "warning" },
-    { "t": 300, "clock": "09:17", "phase": "climb", "actor": "CAPT", "text": "Captain, speaking with the ground engineer by radio, asks where the equipment cooling circuit breakers are, then leaves his seat; the conversation is confused and the pressurisation is never discussed.", "factors": ["crm_breakdown", "hypoxia"], "kind": "crew_speech" },
-    { "t": 480, "clock": "09:20", "phase": "climb", "actor": "SYS", "text": "Last radio contact with the flight; the aircraft continues climbing on autopilot to the cruising level of FL340 with both pilots incapacitated.", "state": { "alt": 34000 }, "factors": ["hypoxia", "pilot_incapacitation"], "kind": "system" },
-    { "t": 2400, "clock": "09:52", "phase": "cruise", "actor": "ATC", "text": "Athens control fails to establish contact; the aircraft enters Greek airspace and proceeds to the KEA VOR under FMC guidance.", "kind": "atc" },
-    { "t": 3600, "clock": "10:12", "phase": "cruise", "actor": "SYS", "text": "The aircraft enters the holding pattern at KEA at FL340 and continues to circle on autopilot.", "factors": ["pilot_incapacitation"], "kind": "system" },
-    { "t": 7800, "clock": "11:22", "phase": "cruise", "actor": "OTHER", "text": "Two Hellenic Air Force F-16s intercept the aircraft; they observe the first officer slumped over the controls, the captain's seat empty and oxygen masks hanging in the cabin.", "kind": "env" },
-    { "t": 9420, "clock": "11:49", "phase": "cruise", "actor": "CABIN", "text": "A flight attendant, holding a portable oxygen bottle, is seen entering the cockpit and sitting in the captain's seat; the left engine flames out from fuel exhaustion at 11:49:50.", "factors": ["fuel_exhaustion"], "kind": "crew_action" },
-    { "t": 10100, "clock": "12:00", "phase": "descent", "actor": "SYS", "text": "The aircraft descends; a Mayday call is transmitted from the cockpit but is not on the correct frequency. The right engine flames out.", "factors": ["fuel_exhaustion"], "kind": "system" },
-    { "t": 10290, "clock": "12:03:32", "phase": "descent", "actor": "SYS", "text": "The aircraft strikes hilly terrain near Grammatiko; all 121 on board killed.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+    {
+      "t": -21600,
+      "clock": "03:15",
+      "phase": "ground",
+      "actor": "GND",
+      "text": "Overnight at Larnaca a ground engineer performs a pressurisation leak check in response to a reported rear door seal problem and leaves the mode selector in MANUAL.",
+      "factors": [
+        "maintenance_error"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -1500,
+      "clock": "08:47",
+      "phase": "ground",
+      "actor": "FO",
+      "text": "Preflight and Before Start checklists performed; the pressurisation mode selector position is not detected as MANUAL.",
+      "factors": [
+        "procedural_noncompliance"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -300,
+      "clock": "09:07",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "Flight 522 departs Larnaca for Athens with 115 passengers and 6 crew; the After Takeoff checklist again fails to catch the MANUAL selection.",
+      "factors": [
+        "procedural_noncompliance",
+        "cabin_pressurization_failure"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "09:12",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Passing about 12,040 ft the cabin altitude warning horn sounds; the crew believe it is a takeoff configuration warning.",
+      "state": {
+        "alt": 12040
+      },
+      "factors": [
+        "warning_system_deficiency",
+        "mode_confusion"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 120,
+      "clock": "09:14",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Master caution: equipment cooling off lights and, passing about 14,000 ft, the passenger oxygen masks deploy; the crew contact the company operations centre to discuss the warnings.",
+      "state": {
+        "alt": 14000
+      },
+      "factors": [
+        "mode_confusion",
+        "crm_breakdown"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 300,
+      "clock": "09:17",
+      "phase": "climb",
+      "actor": "CAPT",
+      "text": "Captain, speaking with the ground engineer by radio, asks where the equipment cooling circuit breakers are, then leaves his seat; the conversation is confused and the pressurisation is never discussed.",
+      "factors": [
+        "crm_breakdown",
+        "hypoxia"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 480,
+      "clock": "09:20",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Last radio contact with the flight; the aircraft continues climbing on autopilot to the cruising level of FL340 with both pilots incapacitated.",
+      "state": {
+        "alt": 34000
+      },
+      "factors": [
+        "hypoxia",
+        "pilot_incapacitation"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 2400,
+      "clock": "09:52",
+      "phase": "cruise",
+      "actor": "ATC",
+      "text": "Athens control fails to establish contact; the aircraft enters Greek airspace and proceeds to the KEA VOR under FMC guidance.",
+      "kind": "atc"
+    },
+    {
+      "t": 3600,
+      "clock": "10:12",
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "The aircraft enters the holding pattern at KEA at FL340 and continues to circle on autopilot.",
+      "factors": [
+        "pilot_incapacitation"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 7800,
+      "clock": "11:22",
+      "phase": "cruise",
+      "actor": "OTHER",
+      "text": "Two Hellenic Air Force F-16s intercept the aircraft; they observe the first officer slumped over the controls, the captain's seat empty and oxygen masks hanging in the cabin.",
+      "kind": "env"
+    },
+    {
+      "t": 9420,
+      "clock": "11:49",
+      "phase": "cruise",
+      "actor": "CABIN",
+      "text": "A flight attendant, holding a portable oxygen bottle, is seen entering the cockpit and sitting in the captain's seat; the left engine flames out from fuel exhaustion at 11:49:50.",
+      "factors": [
+        "fuel_exhaustion"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 10100,
+      "clock": "12:00",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "The aircraft descends; a Mayday call is transmitted from the cockpit but is not on the correct frequency. The right engine flames out.",
+      "factors": [
+        "fuel_exhaustion"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 10290,
+      "clock": "12:03:32",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "The aircraft strikes hilly terrain near Grammatiko; all 121 on board killed.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "FAA / EASA / Boeing", "text": "Require a distinct cabin altitude warning, with an aural and visual indication that cannot be confused with the takeoff configuration warning, on the Boeing 737 and similar types.", "status": "closed_acceptable", "outcome": "Boeing introduced a cabin altitude warning light and the FAA mandated it on 737s.", "trigger_factors": ["warning_system_deficiency", "design_deficiency"] },
-    { "id": null, "to": "Boeing / operators", "text": "Revise checklists and training so that the pressurisation mode selector position is positively verified before flight and after maintenance, and that the cabin altitude warning is trained in the simulator.", "status": "unknown", "outcome": null, "trigger_factors": ["procedural_noncompliance", "maintenance_error"] },
-    { "id": null, "to": "Cyprus DCA / Helios", "text": "Correct deficiencies in the operator's organisation, quality system, crew training and safety culture, and strengthen regulatory oversight of the operator.", "status": "unknown", "outcome": "Helios Airways ceased operations in 2006.", "trigger_factors": ["operator_safety_culture", "regulatory_oversight"] },
-    { "id": null, "to": "ICAO / states", "text": "Improve procedures for handling loss of communication with a flight and coordination with air defence interception.", "status": "unknown", "outcome": null, "trigger_factors": [] }
+    {
+      "id": null,
+      "to": "FAA / EASA / Boeing",
+      "text": "Require a distinct cabin altitude warning, with an aural and visual indication that cannot be confused with the takeoff configuration warning, on the Boeing 737 and similar types.",
+      "status": "closed_acceptable",
+      "outcome": "Boeing introduced a cabin altitude warning light and the FAA mandated it on 737s.",
+      "trigger_factors": [
+        "warning_system_deficiency",
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Boeing / operators",
+      "text": "Revise checklists and training so that the pressurisation mode selector position is positively verified before flight and after maintenance, and that the cabin altitude warning is trained in the simulator.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "procedural_noncompliance",
+        "maintenance_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Cyprus DCA / Helios",
+      "text": "Correct deficiencies in the operator's organisation, quality system, crew training and safety culture, and strengthen regulatory oversight of the operator.",
+      "status": "unknown",
+      "outcome": "Helios Airways ceased operations in 2006.",
+      "trigger_factors": [
+        "operator_safety_culture",
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "ICAO / states",
+      "text": "Improve procedures for handling loss of communication with a flight and coordination with air defence interception.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": []
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -81,15 +385,26 @@
     "Boeing checklist revisions and operator training emphasising pressurisation panel checks and hypoxia recognition.",
     "Strengthened Cypriot civil aviation oversight following EU and ICAO audits."
   ],
-  "related": ["ba5390", "jal123", "united811"],
+  "related": [
+    "ba5390",
+    "jal123",
+    "united811"
+  ],
   "fdr": null,
   "sources": [
     "https://aaiasb.gr/"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
-    "Clock strings are Cyprus/Greece local time (both UTC+3 that day); t0 is the cabin altitude warning at about 09:12 local. Seconds are estimated except the left engine flameout (11:49:50) and impact (12:03:32) given in the report.",
-    "The time of the right engine flameout is approximate.",
-    "The Cyprus accredited agency code is an informal label. Report reference number 11/2006 may not match the AAIASB's official numbering.",
-    "loss_of_control_inflight is used as the outcome factor for the uncontrolled descent after fuel exhaustion with no pilot at the controls."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Clock strings are Cyprus/Greece local time (both UTC+3 that day); t0 is the cabin altitude warning at about 09:12 local. Seconds are estimated except the left engine flameout (11:49:50) and impact (12:03:32) given in the report.",
+      "The time of the right engine flameout is approximate.",
+      "The Cyprus accredited agency code is an informal label. Report reference number 11/2006 may not match the AAIASB's official numbering.",
+      "loss_of_control_inflight is used as the outcome factor for the uncontrolled descent after fuel exhaustion with no pilot at the controls."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Helios_Airways_Flight_522"
 }

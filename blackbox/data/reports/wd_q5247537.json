@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Elkhorn, Wisconsin",
-    "country": "United States"
+    "country": "United States",
+    "lat": 42.7319,
+    "lon": -88.425
   },
   "phase": "initial_climb",
   "occupants": 5,
@@ -70,10 +72,22 @@
     }
   ],
   "chain": [
-    ["dark_night", "loss_of_pilot_control_authority"],
-    ["low_visibility", "loss_of_pilot_control_authority"],
-    ["navigation_error", "loss_of_pilot_control_authority"],
-    ["loss_of_pilot_control_authority", "cfit"]
+    [
+      "dark_night",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "low_visibility",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "navigation_error",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "loss_of_pilot_control_authority",
+      "cfit"
+    ]
   ],
   "events": [
     {
@@ -92,7 +106,10 @@
       "actor": "PF",
       "kind": "crew_action",
       "text": "Helicopter departed golf course area in dense fog at higher speed and slightly lower altitude than other helicopters operating the same mission.",
-      "factors": ["low_visibility", "navigation_error"]
+      "factors": [
+        "low_visibility",
+        "navigation_error"
+      ]
     },
     {
       "t": 60,
@@ -101,7 +118,10 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft climbed to only about 300 feet altitude above ground before banking sharply to the left, turning southeasterly toward rising terrain.",
-      "factors": ["navigation_error", "loss_of_pilot_control_authority"]
+      "factors": [
+        "navigation_error",
+        "loss_of_pilot_control_authority"
+      ]
     },
     {
       "t": 120,
@@ -110,7 +130,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Helicopter crashed on hilly terrain approximately 0.6 miles from takeoff point. Elevation of crash site was about 100 feet above golf course and 50 feet below the summit of the hill.",
-      "factors": ["cfit"]
+      "factors": [
+        "cfit"
+      ]
     },
     {
       "t": 150,
@@ -128,7 +150,9 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001212X23968&AKey=1&RType=HTML&IType=MA"],
+  "sources": [
+    "https://app.ntsb.gov/pdfgenerator/ReportGeneratorFile.ashx?EventID=20001212X23968&AKey=1&RType=HTML&IType=MA"
+  ],
   "asn_id": null,
   "wikipedia": "https://en.wikipedia.org/wiki/Death_of_Stevie_Ray_Vaughan",
   "report_links": [

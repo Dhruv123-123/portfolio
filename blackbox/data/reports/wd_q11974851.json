@@ -27,7 +27,9 @@
   "route": {},
   "location": {
     "name": "Dalamot in Ullensvang, Hordaland county",
-    "country": "Norway"
+    "country": "Norway",
+    "lat": 60.4074,
+    "lon": 6.9716
   },
   "phase": "approach",
   "occupants": 5,
@@ -56,8 +58,14 @@
     }
   ],
   "chain": [
-    ["loss_of_control_inflight", "low_energy_state"],
-    ["low_energy_state", "cfit"]
+    [
+      "loss_of_control_inflight",
+      "low_energy_state"
+    ],
+    [
+      "low_energy_state",
+      "cfit"
+    ]
   ],
   "events": [
     {
@@ -76,7 +84,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Helicopter observed turning tightly to the right, with loss of control and high bank and steep descent",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 20,
@@ -85,7 +95,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Helicopter impacted ground about 500 metres short of planned landing site and immediately caught fire",
-      "factors": ["cfit"]
+      "factors": [
+        "cfit"
+      ]
     }
   ],
   "cvr": [],
@@ -113,17 +125,23 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.aibn.no/Aviation/Reports/2012-13-eng"],
+  "sources": [
+    "https://www.aibn.no/Aviation/Reports/2012-13-eng"
+  ],
   "wikipedia": "https://en.wikipedia.org/wiki/2011_Dalamot_helicopter_crash",
   "asn_id": null,
   "interest": 9.6,
-  "report_links": ["https://www.aibn.no/Aviation/Reports/2012-13-eng"],
+  "report_links": [
+    "https://www.aibn.no/Aviation/Reports/2012-13-eng"
+  ],
   "curated_id": null,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "medium",
     "reviewed": false,
-    "notes": ["Report text was web-scraped summary rather than full investigation document; extracted investigation findings, causal factors, and 3 formal safety recommendations; minimal event details available from source document"]
+    "notes": [
+      "Report text was web-scraped summary rather than full investigation document; extracted investigation findings, causal factors, and 3 formal safety recommendations; minimal event details available from source document"
+    ]
   }
 }

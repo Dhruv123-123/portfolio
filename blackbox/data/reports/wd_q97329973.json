@@ -1,309 +1,311 @@
 {
- "id": "wd_q97329973",
- "qid": "Q97329973",
- "tier": "wikidata",
- "depth": "sections",
- "title": "Air Inter 696",
- "flight_number": "AI696Y",
- "date": "1972-10-27",
- "agencies": [
-  {
-   "code": "BEA",
-   "name": "Bureau d'Enquêtes et d'Analyses (French accident investigation authority)",
-   "country": "France",
-   "role": "lead"
-  }
- ],
- "aircraft": {
-  "type": "Vickers Viscount 724",
-  "manufacturer": "Vickers",
-  "family": "Viscount",
-  "registration": "F-BMCH"
- },
- "operator": "Air Inter",
- "route": {
-  "from_name": "Lyon-Bron",
-  "to_name": "Clermont-Ferrand"
- },
- "location": {
-  "name": "Noirétable / Viscontat (Mont Picot, Forez Mountains)",
-  "country": "France"
- },
- "phase": "approach",
- "occupants": 68,
- "fatalities": 60,
- "injuries_serious": 8,
- "damage": "destroyed",
- "category": "CFIT",
- "time_reference": "UTC (add 1 hour for local time)",
- "t0": "17:20",
- "summary": "Air Inter Flight 696, a Vickers Viscount operating from Lyon-Bron to Clermont-Ferrand, crashed during approach in violent thunderstorm conditions. The aircraft encountered severe weather, with strong winds, turbulence, and lightning activity. Radio contact with ATC was lost while approaching Clermont-Ferrand Airport. The aircraft descended below safe altitude and struck Mont Picot in the Forez mountains at approximately 1,000 meters altitude, about 30 kilometers east of the airport and 10 kilometers from the intended landing point. The wreckage was found in the woods with the aircraft broken into three pieces. Sixty of 68 occupants were killed.",
- "probable_cause": "The accident resulted from a collision with mountainous terrain that occurred during night instrument approach in conditions of poor visibility and severe weather (violent thunderstorm). The crew announced being at the CF (Clermont-Ferrand) beacon vertical position when in fact they were displaced approximately 30 kilometers to the east. The radiocompas (radio compass/NDB) displayed an erroneous indication, and the crew did not detect the anomaly or verify their actual position using other navigation aids, notably the Moulins VOR radial. The crew's reliance on incorrect radionavigation information led to the aircraft following an approach path shifted 30 kilometers to the east. Contributing factors included severe turbulence, intense atmospheric precipitation creating electromagnetic interference with the radiocompas, and the crew's failure to properly validate navigation cross-checks despite unusual timing (more than 3 minutes early at CF beacon) (p. 4305-4410, 4309-4372, 6207-6230)",
- "factors": [
-  {
-   "id": "convective_weather",
-   "role": "contributing",
-   "evidence": "Strong cold front moving west to east over Forez mountains; violent thunderstorm with severe turbulences marked on flight data recorder; low visibility conditions; atmospheric electrical activity creating localized electromagnetic discharge (p. 681-728, 3720-3732)"
-  },
-  {
-   "id": "atc_communication_error",
-   "role": "contributing",
-   "evidence": "ATC did not provide sufficient cross-check of crew's reported position; crew reported being vertical at CF beacon when actually approximately 30 kilometers to the east (p. 4327-4342)"
-  },
-  {
-   "id": "navigation_error",
-   "role": "contributing",
-   "evidence": "Crew announced CF passage with hesitation at 18:14 after being told to estimate arrival time; crew arrived more than 3 minutes early, yet crew did not detect this anomaly (p. 276-282, 3824-3850, 4337-4372)"
-  },
-  {
-   "id": "crm_breakdown",
-   "role": "contributing",
-   "evidence": "Despite being in final descent phase with turbulent weather, crew did not verify position using other navigation aids such as Moulins VOR radial; presence of flight instructor may have created distraction (p. 4343-4353, 4373-4406)"
-  },
-  {
-   "id": "descent_below_minimums",
-   "role": "contributing",
-   "evidence": "Aircraft descended to approximately 1,000 meters altitude; this altitude was below safe minimums for instrument approach given mountainous terrain (p. 305-306, 388-389, 3916-3945)"
-  },
-  {
-   "id": "cfit",
-   "role": "outcome",
-   "evidence": "Aircraft struck Mont Picot at 1,000 meters altitude; aircraft broke into three pieces (p. 1000-1100, 3371-3400)"
-  }
- ],
- "chain": [
-  [
-   "convective_weather",
-   "navigation_error"
+  "id": "wd_q97329973",
+  "qid": "Q97329973",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Air Inter 696",
+  "flight_number": "AI696Y",
+  "date": "1972-10-27",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses (French accident investigation authority)",
+      "country": "France",
+      "role": "lead"
+    }
   ],
-  [
-   "atc_communication_error",
-   "navigation_error"
+  "aircraft": {
+    "type": "Vickers Viscount 724",
+    "manufacturer": "Vickers",
+    "family": "Viscount",
+    "registration": "F-BMCH"
+  },
+  "operator": "Air Inter",
+  "route": {
+    "from_name": "Lyon-Bron",
+    "to_name": "Clermont-Ferrand"
+  },
+  "location": {
+    "name": "Noirétable / Viscontat (Mont Picot, Forez Mountains)",
+    "country": "France",
+    "lat": 45.8364,
+    "lon": 3.7258
+  },
+  "phase": "approach",
+  "occupants": 68,
+  "fatalities": 60,
+  "injuries_serious": 8,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "time_reference": "UTC (add 1 hour for local time)",
+  "t0": "17:20",
+  "summary": "Air Inter Flight 696, a Vickers Viscount operating from Lyon-Bron to Clermont-Ferrand, crashed during approach in violent thunderstorm conditions. The aircraft encountered severe weather, with strong winds, turbulence, and lightning activity. Radio contact with ATC was lost while approaching Clermont-Ferrand Airport. The aircraft descended below safe altitude and struck Mont Picot in the Forez mountains at approximately 1,000 meters altitude, about 30 kilometers east of the airport and 10 kilometers from the intended landing point. The wreckage was found in the woods with the aircraft broken into three pieces. Sixty of 68 occupants were killed.",
+  "probable_cause": "The accident resulted from a collision with mountainous terrain that occurred during night instrument approach in conditions of poor visibility and severe weather (violent thunderstorm). The crew announced being at the CF (Clermont-Ferrand) beacon vertical position when in fact they were displaced approximately 30 kilometers to the east. The radiocompas (radio compass/NDB) displayed an erroneous indication, and the crew did not detect the anomaly or verify their actual position using other navigation aids, notably the Moulins VOR radial. The crew's reliance on incorrect radionavigation information led to the aircraft following an approach path shifted 30 kilometers to the east. Contributing factors included severe turbulence, intense atmospheric precipitation creating electromagnetic interference with the radiocompas, and the crew's failure to properly validate navigation cross-checks despite unusual timing (more than 3 minutes early at CF beacon) (p. 4305-4410, 4309-4372, 6207-6230)",
+  "factors": [
+    {
+      "id": "convective_weather",
+      "role": "contributing",
+      "evidence": "Strong cold front moving west to east over Forez mountains; violent thunderstorm with severe turbulences marked on flight data recorder; low visibility conditions; atmospheric electrical activity creating localized electromagnetic discharge (p. 681-728, 3720-3732)"
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "ATC did not provide sufficient cross-check of crew's reported position; crew reported being vertical at CF beacon when actually approximately 30 kilometers to the east (p. 4327-4342)"
+    },
+    {
+      "id": "navigation_error",
+      "role": "contributing",
+      "evidence": "Crew announced CF passage with hesitation at 18:14 after being told to estimate arrival time; crew arrived more than 3 minutes early, yet crew did not detect this anomaly (p. 276-282, 3824-3850, 4337-4372)"
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Despite being in final descent phase with turbulent weather, crew did not verify position using other navigation aids such as Moulins VOR radial; presence of flight instructor may have created distraction (p. 4343-4353, 4373-4406)"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "Aircraft descended to approximately 1,000 meters altitude; this altitude was below safe minimums for instrument approach given mountainous terrain (p. 305-306, 388-389, 3916-3945)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck Mont Picot at 1,000 meters altitude; aircraft broke into three pieces (p. 1000-1100, 3371-3400)"
+    }
   ],
-  [
-   "navigation_error",
-   "crm_breakdown"
+  "chain": [
+    [
+      "convective_weather",
+      "navigation_error"
+    ],
+    [
+      "atc_communication_error",
+      "navigation_error"
+    ],
+    [
+      "navigation_error",
+      "crm_breakdown"
+    ],
+    [
+      "crm_breakdown",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
   ],
-  [
-   "crm_breakdown",
-   "descent_below_minimums"
+  "events": [
+    {
+      "t": 0,
+      "clock": "17:48",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Air Inter Flight 696Y departed Lyon-Bron airport on Friday October 27, 1972 at 17:48 UTC with 63 passengers (including 4 children) and 5 crew members on flight to Clermont-Ferrand in violent thunderstorm conditions",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 360,
+      "clock": "17:54",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Initial contact with Marseille Control at 17:54 UTC; aircraft requested and received authorization to proceed southwest of AD beacon due to cumulus cloud formations; crew reported responding on transponder frequency, normal contact established",
+      "factors": []
+    },
+    {
+      "t": 420,
+      "clock": "17:55",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft reported passing AD beacon and turned left toward ASE report point; aircraft stabilized at flight level 100 just before 17:58 UTC as conditions remained turbulent",
+      "factors": []
+    },
+    {
+      "t": 720,
+      "clock": "18:06",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft reported passing ASE beacon at flight level 100 after approximately 10 minutes from takeoff; crew estimated CF (Clermont-Ferrand) arrival in 8 minutes based on position 36 nautical miles away",
+      "factors": []
+    },
+    {
+      "t": 900,
+      "clock": "18:09",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC proposed descent to lower flight level; crew responded 20 seconds before 18:09 that descent would begin in 3 minutes, with ATC confirming flight level 80 was available",
+      "factors": []
+    },
+    {
+      "t": 1050,
+      "clock": "18:10:50",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "crew_action",
+      "text": "Crew announced they were at CF vertical position (18:10:50 UTC) and beginning descent to flight level 80 in CF holding pattern, having announced position with hesitation and timing anomaly of more than 3 minutes advance on estimated traverse time",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 1080,
+      "clock": "18:11",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC confirmed descent request; crew responded affirming they were at CF vertical, had released flight level 100, and were descending through flight level 95; ATC confirmed flight level 80 was available",
+      "factors": []
+    },
+    {
+      "t": 1140,
+      "clock": "18:12",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft closed with Marseille Control and announced flight level 60 in CF holding pattern; transfer made to Clermont-Ferrand approach frequency 125 MHz; continued descent in holding pattern",
+      "factors": []
+    },
+    {
+      "t": 1200,
+      "clock": "18:13",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Clermont-Ferrand approach control authorized descent to flight level 50; reception reported very noisy due to atmospheric interference; low stratus clouds at 700 meters reported at airport with visibility 8 kilometers with continuous rain",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 1260,
+      "clock": "18:14",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "crew_action",
+      "text": "Crew reported flight level 55 in descent, correcting moments later to flight level 65 in descent; aircraft position still reported as CF based on continuing radiocompas indication",
+      "factors": []
+    },
+    {
+      "t": 1380,
+      "clock": "18:16:30",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft reported flight level 50 for further descent; received authorization to continue toward final approach altitude of 3,600 feet for ILS interception with instruction to call back in procedure turn",
+      "factors": []
+    },
+    {
+      "t": 1440,
+      "clock": "18:18",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "crew_action",
+      "text": "Aircraft reported in procedure turn for alignment on ILS; approach control authorized continuation and requested call back when established on ILS; crew responded OK",
+      "factors": []
+    },
+    {
+      "t": 1500,
+      "clock": "18:19",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft continuing descent in procedure turn; atmospheric parasiting (electromagnetic interference) at high level in Noirétable region; strong cold front passage over Forez mountains causing severe turbulence with peaks of 1.8G recorded on flight data",
+      "factors": [
+        "convective_weather"
+      ]
+    },
+    {
+      "t": 1560,
+      "clock": "18:20",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Tower made final call to 696Y at 18:20:30 UTC with no response; aircraft impacted terrain at Mont Picot/La Faye forest at approximately 1,000 meters altitude in the Forez mountains at the boundary between Viscontat and Noirétable communes, approximately 30 kilometers east of intended landing position",
+      "factors": [
+        "cfit",
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 1620,
+      "clock": "18:30",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "system",
+      "text": "After 18:20 and continued failures to contact aircraft, distress phase initiated at 18:30 UTC; Marseille Control was notified by Clermont-Ferrand control that aircraft had not established on ILS as expected",
+      "factors": []
+    },
+    {
+      "t": 2295,
+      "clock": "02:15",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Wreckage discovered in the night of Friday to Saturday around 02:15 local time (01:15 UTC Saturday) after seven hours of search efforts in the La Faye forest; aircraft broken into three pieces at 1,000 meters altitude; 60 of 68 occupants killed (8 serious injuries reported as survivors)",
+      "factors": []
+    }
   ],
-  [
-   "descent_below_minimums",
-   "cfit"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "17:48",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Air Inter Flight 696Y departed Lyon-Bron airport on Friday October 27, 1972 at 17:48 UTC with 63 passengers (including 4 children) and 5 crew members on flight to Clermont-Ferrand in violent thunderstorm conditions",
-   "factors": [
-    "convective_weather"
-   ]
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "AIR1",
+      "text": "Examination of radiocompas reliability under conditions of severe meteorological phenomena such as thunderstorms with electromagnetic discharge in mountainous regions",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "AIR2",
+      "text": "Strengthened procedures for radionavigation cross-checks using VOR/DME and other independent navigation aids during approach in poor visibility conditions",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "AIR3",
+      "text": "Enhanced cockpit resource management and challenge procedures when navigation fixes show significant time anomalies or inconsistencies with calculated flight times",
+      "role": "safety",
+      "status": "unknown"
+    },
+    {
+      "id": "AIR4",
+      "text": "Improved aircraft approach procedures and minimum safe altitudes defined for mountainous regions with consideration of electromagnetic interference effects on radio equipment",
+      "role": "safety",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/fileadmin/documents/docspa/1972/f-ch721027/pdf/f-ch721027_06.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Inter_Flight_696Y",
+  "asn_id": null,
+  "interest": 13.31,
+  "report_links": [
+    "https://bea.aero/fileadmin/documents/docspa/1972/f-ch721027/pdf/f-ch721027_06.pdf"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Read sections 2.1 Déroulement du vol (History of Flight, p. 147-340), 3.1-3.2 Analysis (p. 3483-4000), 3.4 Causes probables (Probable Causes, p. 4305-4410), 3.3 Conclusion (p. 6207-6230)",
+      "Extracted 16 events from detailed French narrative with specific times and aircraft states from flight data",
+      "Report is in French; key dates and times converted to UTC per report footnote",
+      "Identified radionavigation error and atmospheric interference as primary causal factors",
+      "All factor evidence includes page citations from report",
+      "auto-repair: event factors ['navigation_error', 'radionavigation_error'] -> ['navigation_error']; event factors ['radionavigation_error'] -> []; event factors ['convective_weather', 'radionavigation_error'] -> ['convective_weather']"
+    ]
   },
-  {
-   "t": 360,
-   "clock": "17:54",
-   "phase": "climb",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Initial contact with Marseille Control at 17:54 UTC; aircraft requested and received authorization to proceed southwest of AD beacon due to cumulus cloud formations; crew reported responding on transponder frequency, normal contact established",
-   "factors": []
-  },
-  {
-   "t": 420,
-   "clock": "17:55",
-   "phase": "climb",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft reported passing AD beacon and turned left toward ASE report point; aircraft stabilized at flight level 100 just before 17:58 UTC as conditions remained turbulent",
-   "factors": []
-  },
-  {
-   "t": 720,
-   "clock": "18:06",
-   "phase": "cruise",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft reported passing ASE beacon at flight level 100 after approximately 10 minutes from takeoff; crew estimated CF (Clermont-Ferrand) arrival in 8 minutes based on position 36 nautical miles away",
-   "factors": []
-  },
-  {
-   "t": 900,
-   "clock": "18:09",
-   "phase": "descent",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "ATC proposed descent to lower flight level; crew responded 20 seconds before 18:09 that descent would begin in 3 minutes, with ATC confirming flight level 80 was available",
-   "factors": []
-  },
-  {
-   "t": 1050,
-   "clock": "18:10:50",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "crew_action",
-   "text": "Crew announced they were at CF vertical position (18:10:50 UTC) and beginning descent to flight level 80 in CF holding pattern, having announced position with hesitation and timing anomaly of more than 3 minutes advance on estimated traverse time",
-   "factors": [
-    "navigation_error"
-   ]
-  },
-  {
-   "t": 1080,
-   "clock": "18:11",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "ATC confirmed descent request; crew responded affirming they were at CF vertical, had released flight level 100, and were descending through flight level 95; ATC confirmed flight level 80 was available",
-   "factors": []
-  },
-  {
-   "t": 1140,
-   "clock": "18:12",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft closed with Marseille Control and announced flight level 60 in CF holding pattern; transfer made to Clermont-Ferrand approach frequency 125 MHz; continued descent in holding pattern",
-   "factors": []
-  },
-  {
-   "t": 1200,
-   "clock": "18:13",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Clermont-Ferrand approach control authorized descent to flight level 50; reception reported very noisy due to atmospheric interference; low stratus clouds at 700 meters reported at airport with visibility 8 kilometers with continuous rain",
-   "factors": [
-    "convective_weather"
-   ]
-  },
-  {
-   "t": 1260,
-   "clock": "18:14",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "crew_action",
-   "text": "Crew reported flight level 55 in descent, correcting moments later to flight level 65 in descent; aircraft position still reported as CF based on continuing radiocompas indication",
-   "factors": []
-  },
-  {
-   "t": 1380,
-   "clock": "18:16:30",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft reported flight level 50 for further descent; received authorization to continue toward final approach altitude of 3,600 feet for ILS interception with instruction to call back in procedure turn",
-   "factors": []
-  },
-  {
-   "t": 1440,
-   "clock": "18:18",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "crew_action",
-   "text": "Aircraft reported in procedure turn for alignment on ILS; approach control authorized continuation and requested call back when established on ILS; crew responded OK",
-   "factors": []
-  },
-  {
-   "t": 1500,
-   "clock": "18:19",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft continuing descent in procedure turn; atmospheric parasiting (electromagnetic interference) at high level in Noirétable region; strong cold front passage over Forez mountains causing severe turbulence with peaks of 1.8G recorded on flight data",
-   "factors": [
-    "convective_weather"
-   ]
-  },
-  {
-   "t": 1560,
-   "clock": "18:20",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Tower made final call to 696Y at 18:20:30 UTC with no response; aircraft impacted terrain at Mont Picot/La Faye forest at approximately 1,000 meters altitude in the Forez mountains at the boundary between Viscontat and Noirétable communes, approximately 30 kilometers east of intended landing position",
-   "factors": [
-    "cfit",
-    "descent_below_minimums"
-   ]
-  },
-  {
-   "t": 1620,
-   "clock": "18:30",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "system",
-   "text": "After 18:20 and continued failures to contact aircraft, distress phase initiated at 18:30 UTC; Marseille Control was notified by Clermont-Ferrand control that aircraft had not established on ILS as expected",
-   "factors": []
-  },
-  {
-   "t": 2295,
-   "clock": "02:15",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Wreckage discovered in the night of Friday to Saturday around 02:15 local time (01:15 UTC Saturday) after seven hours of search efforts in the La Faye forest; aircraft broken into three pieces at 1,000 meters altitude; 60 of 68 occupants killed (8 serious injuries reported as survivors)",
-   "factors": []
-  }
- ],
- "cvr": [],
- "recommendations": [
-  {
-   "id": "AIR1",
-   "text": "Examination of radiocompas reliability under conditions of severe meteorological phenomena such as thunderstorms with electromagnetic discharge in mountainous regions",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "AIR2",
-   "text": "Strengthened procedures for radionavigation cross-checks using VOR/DME and other independent navigation aids during approach in poor visibility conditions",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "AIR3",
-   "text": "Enhanced cockpit resource management and challenge procedures when navigation fixes show significant time anomalies or inconsistencies with calculated flight times",
-   "role": "safety",
-   "status": "unknown"
-  },
-  {
-   "id": "AIR4",
-   "text": "Improved aircraft approach procedures and minimum safe altitudes defined for mountainous regions with consideration of electromagnetic interference effects on radio equipment",
-   "role": "safety",
-   "status": "unknown"
-  }
- ],
- "dissent": [],
- "safety_changes": [],
- "related": [],
- "fdr": null,
- "sources": [
-  "https://bea.aero/fileadmin/documents/docspa/1972/f-ch721027/pdf/f-ch721027_06.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/Air_Inter_Flight_696Y",
- "asn_id": null,
- "interest": 13.31,
- "report_links": [
-  "https://bea.aero/fileadmin/documents/docspa/1972/f-ch721027/pdf/f-ch721027_06.pdf"
- ],
- "curated_id": null,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5",
-  "confidence": "medium",
-  "reviewed": false,
-  "notes": [
-   "Read sections 2.1 Déroulement du vol (History of Flight, p. 147-340), 3.1-3.2 Analysis (p. 3483-4000), 3.4 Causes probables (Probable Causes, p. 4305-4410), 3.3 Conclusion (p. 6207-6230)",
-   "Extracted 16 events from detailed French narrative with specific times and aircraft states from flight data",
-   "Report is in French; key dates and times converted to UTC per report footnote",
-   "Identified radionavigation error and atmospheric interference as primary causal factors",
-   "All factor evidence includes page citations from report",
-   "auto-repair: event factors ['navigation_error', 'radionavigation_error'] -> ['navigation_error']; event factors ['radionavigation_error'] -> []; event factors ['convective_weather', 'radionavigation_error'] -> ['convective_weather']"
-  ]
- },
- "agency": "BEA"
+  "agency": "BEA"
 }

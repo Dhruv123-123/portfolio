@@ -37,7 +37,9 @@
   },
   "location": {
     "name": "Chicago O'Hare International Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 41.966,
+    "lon": -87.901
   },
   "phase": "takeoff",
   "occupants": 170,

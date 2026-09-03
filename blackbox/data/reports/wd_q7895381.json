@@ -20,7 +20,9 @@
   },
   "location": {
     "name": "Evansville Regional Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 38.0366,
+    "lon": -87.5188
   },
   "phase": "takeoff",
   "occupants": 30,

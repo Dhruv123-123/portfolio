@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Akron, Ohio - four-unit apartment building",
-    "country": "United States"
+    "country": "United States",
+    "lat": 41.0547,
+    "lon": -81.4233
   },
   "phase": "approach",
   "occupants": 9,

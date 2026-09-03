@@ -10,7 +10,7 @@
   "agencies": [
     {
       "code": "DGAC",
-      "name": "Direcci\u00f3n General de Aeron\u00e1utica Civil",
+      "name": "Dirección General de Aeronáutica Civil",
       "country": "Chile",
       "role": "lead"
     }
@@ -28,7 +28,9 @@
   },
   "location": {
     "name": "Puerto Williams Airport",
-    "country": "Chile"
+    "country": "Chile",
+    "lat": -54.9311,
+    "lon": -67.6264
   },
   "phase": "landing",
   "occupants": 66,
@@ -47,7 +49,7 @@
     {
       "id": "tailwind_landing",
       "role": "latent",
-      "evidence": "Wind was given as 180\u00b0 at 4 kn. Shortly, the air traffic controller announced the updated wind information"
+      "evidence": "Wind was given as 180° at 4 kn. Shortly, the air traffic controller announced the updated wind information"
     },
     {
       "id": "contaminated_runway",
@@ -168,7 +170,7 @@
   "tier": "wikidata",
   "depth": "sections",
   "asn_id": null,
-  "wikipedia": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/LAN_Chile_Flight_1069",
   "report_links": [
     "https://www.dgac.gob.cl/wp-content/uploads/2019/10/770.pdf"
   ],

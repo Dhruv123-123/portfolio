@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "Near Ted Stevens Anchorage International Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 61.1667,
+    "lon": -149.9333
   },
   "phase": "initial_climb",
   "occupants": 5,
@@ -65,9 +67,18 @@
     }
   ],
   "chain": [
-    ["metal_fatigue", "uncontained_engine_failure"],
-    ["convective_weather", "uncontained_engine_failure"],
-    ["uncontained_engine_failure", "emergency_landing"]
+    [
+      "metal_fatigue",
+      "uncontained_engine_failure"
+    ],
+    [
+      "convective_weather",
+      "uncontained_engine_failure"
+    ],
+    [
+      "uncontained_engine_failure",
+      "emergency_landing"
+    ]
   ],
   "events": [
     {
@@ -77,7 +88,9 @@
       "actor": "ENV",
       "kind": "env",
       "text": "Flight 46E departed Anchorage on runway 6 right; local controller informed crew that another Evergreen B-747 reported severe turbulence at 2,500 feet while climbing out.",
-      "factors": ["convective_weather"]
+      "factors": [
+        "convective_weather"
+      ]
     },
     {
       "t": 60,
@@ -92,7 +105,9 @@
         "ias_low": 170,
         "roll": -50
       },
-      "factors": ["uncontained_engine_failure"]
+      "factors": [
+        "uncontained_engine_failure"
+      ]
     },
     {
       "t": 65,
@@ -101,7 +116,10 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "No. 2 engine pylon structural failure begins at fatigue crack near forward firewall web; entire No. 2 engine separates from wing.",
-      "factors": ["uncontained_engine_failure", "metal_fatigue"]
+      "factors": [
+        "uncontained_engine_failure",
+        "metal_fatigue"
+      ]
     },
     {
       "t": 90,
@@ -119,7 +137,9 @@
       "actor": "PF",
       "kind": "crew_action",
       "text": "Flight crew declared emergency and captain initiated large radius left turn to return; used emergency/maximum power on No. 1 engine, full rudder authority, and almost full right aileron; aircraft landed safely on runway 06R.",
-      "factors": ["emergency_landing"]
+      "factors": [
+        "emergency_landing"
+      ]
     }
   ],
   "cvr": [
@@ -184,13 +204,17 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9306.pdf"],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9306.pdf"
+  ],
   "tier": "wikidata",
   "depth": "sections",
   "qid": "Q6164968",
   "asn_id": "19930331-0",
   "wikipedia": "https://en.wikipedia.org/wiki/Japan_Air_Lines_Cargo_Flight_46E",
-  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9306.pdf"],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9306.pdf"
+  ],
   "interest": 8.87,
   "curated_id": null,
   "extraction": {
@@ -198,6 +222,11 @@
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
-    "notes": ["Key sections read: executive summary, history of flight, aircraft accident data, engine/pylon examination, findings, probable cause, and recommendations", "CVR transcript available in report but only brief context provided as full transcript is extensive", "Report contains FDR data but detailed parameter reconstruction would require full reading of appendices", "Multiple recommendations indicate systemic issues with engine pylon design and mountainous terrain wind hazards"]
+    "notes": [
+      "Key sections read: executive summary, history of flight, aircraft accident data, engine/pylon examination, findings, probable cause, and recommendations",
+      "CVR transcript available in report but only brief context provided as full transcript is extensive",
+      "Report contains FDR data but detailed parameter reconstruction would require full reading of appendices",
+      "Multiple recommendations indicate systemic issues with engine pylon design and mountainous terrain wind hazards"
+    ]
   }
 }

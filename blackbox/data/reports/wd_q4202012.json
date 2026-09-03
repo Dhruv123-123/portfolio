@@ -1,211 +1,213 @@
 {
- "id": "wd_q4202012",
- "qid": "Q4202012",
- "tier": "wikidata",
- "depth": "sections",
- "title": "FlyMontserrat 107",
- "flight_number": "107",
- "date": "2012-10-07",
- "agencies": [
-  {
-   "code": "AAIB",
-   "name": "British Air Accidents Investigation Branch",
-   "country": "United Kingdom",
-   "role": "lead",
-   "report_id": "S4/2013"
-  }
- ],
- "aircraft": {
-  "type": "Britten-Norman BN-2 Islander",
-  "manufacturer": "Britten-Norman",
-  "family": "Islander",
-  "registration": "VP-MON"
- },
- "operator": "FlyMontserrat",
- "route": {
-  "from_name": "V.C. Bird International Airport",
-  "to_name": "John A. Osborne Airport"
- },
- "location": {
-  "name": "V.C. Bird International Airport, Antigua",
-  "country": "Antigua and Barbuda",
-  "latitude": 17.1267,
-  "longitude": -61.793
- },
- "phase": "takeoff",
- "occupants": 4,
- "fatalities": 3,
- "category": "LOC-I",
- "summary": "FlyMontserrat 107 crashed during takeoff from Antigua on 7 October 2012 at 1610 local time (2010 UTC). The Britten-Norman Islander's right engine lost power due to water contamination of the fuel system. The improper fuel filler cap allowed water ingress during heavy rain. With asymmetric thrust and unfeathered propeller, the aircraft yawed right, rolled right, descended rapidly and out of control, impacting the ground within the airport perimeter with its right wingtip first. The aircraft cartwheeled destroying the forward fuselage and killing the pilot and two forward-cabin passengers.",
- "probable_cause": "Water contamination of the right-hand engine fuel system resulting from incompatible fuel filler caps (p. 3). The right-hand engine lost power during takeoff due to fuel system contamination, and without propeller feathering, the aircraft became uncontrollable with asymmetric thrust and crashed (p. 1-2, 3).",
- "factors": [
-  {
-   "id": "maintenance_error",
-   "role": "initiating",
-   "evidence": "Right-hand fuel filler cap was of design incompatible with filler neck. Tests showed cap, installed in neck, could allow water to pass into fuel tank if aircraft parked during rain (p. 3). Aircraft Construction Number 082 had not been modified with improved fuel suction filter assembly despite availability since 1968 (p. 3)."
-  },
-  {
-   "id": "engine_failure",
-   "role": "contributing",
-   "evidence": "Right-hand engine was not producing power at impact; fuel system feeding engine contained significant quantities of water (p. 1, 3). Water in fuel tank sumps probably entered engine fuel supply lines when aircraft rotated into takeoff attitude (p. 3)."
-  },
-  {
-   "id": "design_deficiency",
-   "role": "contributing",
-   "evidence": "Following loss of power on one engine, propeller should be feathered to reduce drag. Right-hand propeller was not in feathered position; bench test of propeller control unit functioned satisfactorily, suggesting no attempt was made to feather propeller (p. 3)."
-  },
-  {
-   "id": "loss_of_control_inflight",
-   "role": "outcome",
-   "evidence": "Shortly after takeoff, aircraft yawed and rolled to right, descending rapidly and apparently out of control (p. 1-2). Ground marks and damage indicated aircraft cartwheeled after right wingtip impact (p. 2)."
-  },
-  {
-   "id": "post_impact_fire",
-   "role": "outcome",
-   "evidence": "Fuselage forward of wings destroyed; fuselage forward of wings destroyed by impact forces and subsequent fire (p. 2)."
-  }
- ],
- "chain": [
-  [
-   "maintenance_error",
-   "engine_failure"
+  "id": "wd_q4202012",
+  "qid": "Q4202012",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "FlyMontserrat 107",
+  "flight_number": "107",
+  "date": "2012-10-07",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "British Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "S4/2013"
+    }
   ],
-  [
-   "engine_failure",
-   "design_deficiency"
+  "aircraft": {
+    "type": "Britten-Norman BN-2 Islander",
+    "manufacturer": "Britten-Norman",
+    "family": "Islander",
+    "registration": "VP-MON"
+  },
+  "operator": "FlyMontserrat",
+  "route": {
+    "from_name": "V.C. Bird International Airport",
+    "to_name": "John A. Osborne Airport"
+  },
+  "location": {
+    "name": "V.C. Bird International Airport, Antigua",
+    "country": "Antigua and Barbuda",
+    "latitude": 17.1267,
+    "longitude": -61.793,
+    "lat": 17.1333,
+    "lon": -61.7964
+  },
+  "phase": "takeoff",
+  "occupants": 4,
+  "fatalities": 3,
+  "category": "LOC-I",
+  "summary": "FlyMontserrat 107 crashed during takeoff from Antigua on 7 October 2012 at 1610 local time (2010 UTC). The Britten-Norman Islander's right engine lost power due to water contamination of the fuel system. The improper fuel filler cap allowed water ingress during heavy rain. With asymmetric thrust and unfeathered propeller, the aircraft yawed right, rolled right, descended rapidly and out of control, impacting the ground within the airport perimeter with its right wingtip first. The aircraft cartwheeled destroying the forward fuselage and killing the pilot and two forward-cabin passengers.",
+  "probable_cause": "Water contamination of the right-hand engine fuel system resulting from incompatible fuel filler caps (p. 3). The right-hand engine lost power during takeoff due to fuel system contamination, and without propeller feathering, the aircraft became uncontrollable with asymmetric thrust and crashed (p. 1-2, 3).",
+  "factors": [
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "Right-hand fuel filler cap was of design incompatible with filler neck. Tests showed cap, installed in neck, could allow water to pass into fuel tank if aircraft parked during rain (p. 3). Aircraft Construction Number 082 had not been modified with improved fuel suction filter assembly despite availability since 1968 (p. 3)."
+    },
+    {
+      "id": "engine_failure",
+      "role": "contributing",
+      "evidence": "Right-hand engine was not producing power at impact; fuel system feeding engine contained significant quantities of water (p. 1, 3). Water in fuel tank sumps probably entered engine fuel supply lines when aircraft rotated into takeoff attitude (p. 3)."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "Following loss of power on one engine, propeller should be feathered to reduce drag. Right-hand propeller was not in feathered position; bench test of propeller control unit functioned satisfactorily, suggesting no attempt was made to feather propeller (p. 3)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Shortly after takeoff, aircraft yawed and rolled to right, descending rapidly and apparently out of control (p. 1-2). Ground marks and damage indicated aircraft cartwheeled after right wingtip impact (p. 2)."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Fuselage forward of wings destroyed; fuselage forward of wings destroyed by impact forces and subsequent fire (p. 2)."
+    }
   ],
-  [
-   "design_deficiency",
-   "loss_of_control_inflight"
+  "chain": [
+    [
+      "maintenance_error",
+      "engine_failure"
+    ],
+    [
+      "engine_failure",
+      "design_deficiency"
+    ],
+    [
+      "design_deficiency",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "post_impact_fire"
+    ]
   ],
-  [
-   "loss_of_control_inflight",
-   "post_impact_fire"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "1610",
-   "phase": "takeoff",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "FlyMontserrat 107 cleared for takeoff from runway 07 at V.C. Bird International Airport, Antigua (p. 1)",
-   "factors": []
+  "events": [
+    {
+      "t": 0,
+      "clock": "1610",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "FlyMontserrat 107 cleared for takeoff from runway 07 at V.C. Bird International Airport, Antigua (p. 1)",
+      "factors": []
+    },
+    {
+      "t": 5,
+      "clock": "1610:05",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft begins takeoff roll after rain showers had passed and approximately 40 mm of rain had fallen; no evidence water drain check was conducted following rainfall (p. 1-2)",
+      "factors": []
+    },
+    {
+      "t": 20,
+      "clock": "1610:20",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Right-hand engine fails due to water contamination in fuel system caused by incompatible fuel filler cap (p. 1, 3)",
+      "factors": [
+        "engine_failure",
+        "maintenance_error"
+      ]
+    },
+    {
+      "t": 30,
+      "clock": "1610:30",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft starts to yaw to right and stops climbing as asymmetric thrust develops from failed right engine (p. 1-2)",
+      "factors": [
+        "loss_of_control_inflight",
+        "design_deficiency"
+      ]
+    },
+    {
+      "t": 40,
+      "clock": "1610:40",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft rolls to right and descends rapidly, apparently out of control (p. 1-2)",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 60,
+      "clock": "1610:60",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft impacts ground within airport perimeter right wingtip first, steeply banked to right, at low forward speed; aircraft cartwheels before coming to rest erect (p. 1-2)",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 65,
+      "clock": "1611:05",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Fuselage forward of wings destroyed; pilot and two passengers seated in forward cabin fatally injured; rear passenger severely injured (p. 2)",
+      "factors": [
+        "post_impact_fire"
+      ]
+    },
+    {
+      "t": 120,
+      "clock": "1612:00",
+      "phase": "landing",
+      "actor": "GND",
+      "kind": "outcome",
+      "text": "Survivor evacuated to hospital for treatment; aircraft remains destroyed (p. 2)",
+      "factors": []
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "2013-014",
+      "category": "Safety Recommendation",
+      "priority": "EASA",
+      "text": "It is recommended that the European Aviation Safety Agency takes action to require that Britten-Norman Islander aircraft are equipped with fuel suction filter assemblies which minimise the likelihood of any water present in the fuel tank sumps being fed to the engines. (p. 6)",
+      "status": "unknown"
+    }
+  ],
+  "sources": [
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/S4-2013%20VP-MON.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/FlyMontserrat_Flight_107",
+  "asn_id": "20121007-1",
+  "report_links": [
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/S4-2013%20VP-MON.pdf"
+  ],
+  "interest": 8.44,
+  "curated_id": null,
+  "fdr": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read AAIB Special Bulletin S4/2013 (still under investigation)",
+      "Extracted 8 events from History of Flight and Additional Information sections",
+      "6 factors with page citations addressing maintenance, engine failure, and propeller feathering",
+      "1 Safety Recommendation 2013-014",
+      "Report established water contamination root cause and identified inadequate fuel caps as initiating factor",
+      "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
+    ]
   },
-  {
-   "t": 5,
-   "clock": "1610:05",
-   "phase": "takeoff",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Aircraft begins takeoff roll after rain showers had passed and approximately 40 mm of rain had fallen; no evidence water drain check was conducted following rainfall (p. 1-2)",
-   "factors": []
-  },
-  {
-   "t": 20,
-   "clock": "1610:20",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Right-hand engine fails due to water contamination in fuel system caused by incompatible fuel filler cap (p. 1, 3)",
-   "factors": [
-    "engine_failure",
-    "maintenance_error"
-   ]
-  },
-  {
-   "t": 30,
-   "clock": "1610:30",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft starts to yaw to right and stops climbing as asymmetric thrust develops from failed right engine (p. 1-2)",
-   "factors": [
-    "loss_of_control_inflight",
-    "design_deficiency"
-   ]
-  },
-  {
-   "t": 40,
-   "clock": "1610:40",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft rolls to right and descends rapidly, apparently out of control (p. 1-2)",
-   "factors": [
-    "loss_of_control_inflight"
-   ]
-  },
-  {
-   "t": 60,
-   "clock": "1610:60",
-   "phase": "descent",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Aircraft impacts ground within airport perimeter right wingtip first, steeply banked to right, at low forward speed; aircraft cartwheels before coming to rest erect (p. 1-2)",
-   "factors": [
-    "loss_of_control_inflight"
-   ]
-  },
-  {
-   "t": 65,
-   "clock": "1611:05",
-   "phase": "landing",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Fuselage forward of wings destroyed; pilot and two passengers seated in forward cabin fatally injured; rear passenger severely injured (p. 2)",
-   "factors": [
-    "post_impact_fire"
-   ]
-  },
-  {
-   "t": 120,
-   "clock": "1612:00",
-   "phase": "landing",
-   "actor": "GND",
-   "kind": "outcome",
-   "text": "Survivor evacuated to hospital for treatment; aircraft remains destroyed (p. 2)",
-   "factors": []
-  }
- ],
- "recommendations": [
-  {
-   "id": "2013-014",
-   "category": "Safety Recommendation",
-   "priority": "EASA",
-   "text": "It is recommended that the European Aviation Safety Agency takes action to require that Britten-Norman Islander aircraft are equipped with fuel suction filter assemblies which minimise the likelihood of any water present in the fuel tank sumps being fed to the engines. (p. 6)",
-   "status": "unknown"
-  }
- ],
- "sources": [
-  "http://www.aaib.gov.uk/cms_resources.cfm?file=/S4-2013%20VP-MON.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/FlyMontserrat_Flight_107",
- "asn_id": "20121007-1",
- "report_links": [
-  "http://www.aaib.gov.uk/cms_resources.cfm?file=/S4-2013%20VP-MON.pdf"
- ],
- "interest": 8.44,
- "curated_id": null,
- "fdr": null,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5-20251001",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Read AAIB Special Bulletin S4/2013 (still under investigation)",
-   "Extracted 8 events from History of Flight and Additional Information sections",
-   "6 factors with page citations addressing maintenance, engine failure, and propeller feathering",
-   "1 Safety Recommendation 2013-014",
-   "Report established water contamination root cause and identified inadequate fuel caps as initiating factor",
-   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
-  ]
- },
- "agency": "AAIB",
- "cvr": [],
- "dissent": [],
- "safety_changes": [],
- "related": []
+  "agency": "AAIB",
+  "cvr": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": []
 }

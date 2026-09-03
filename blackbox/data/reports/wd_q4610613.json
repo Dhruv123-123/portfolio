@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "Romsey Close, Farnborough",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "lat": 51.3646,
+    "lon": 0.0672
   },
   "phase": "initial_climb",
   "occupants": 5,

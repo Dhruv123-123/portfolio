@@ -39,8 +39,8 @@
     "name": "Approximately 2.5 miles south of Gadsden Regional Airport",
     "country": "USA",
     "state": "Alabama",
-    "lat": null,
-    "lon": null
+    "lat": 33.9771,
+    "lon": -86.0949
   },
   "phase": "climb",
   "occupants": 9,

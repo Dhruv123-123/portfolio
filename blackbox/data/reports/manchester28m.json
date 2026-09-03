@@ -7,63 +7,309 @@
   "t0": "1985-08-22T06:12:00Z",
   "agency": "AAIB",
   "agencies": [
-    { "code": "AAIB", "name": "Air Accidents Investigation Branch", "country": "United Kingdom", "role": "lead",
-      "report_id": "8/88", "report_title": "Report on the accident to Boeing 737-236 series 1, G-BGJL at Manchester International Airport on 22 August 1985", "report_date": "1988-12-15",
-      "url": "https://www.gov.uk/aaib-reports/8-1988-boeing-737-236-g-bgjl-22-august-1985" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" }
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "8/88",
+      "report_title": "Report on the accident to Boeing 737-236 series 1, G-BGJL at Manchester International Airport on 22 August 1985",
+      "report_date": "1988-12-15",
+      "url": "https://www.gov.uk/aaib-reports/8-1988-boeing-737-236-g-bgjl-22-august-1985"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Boeing 737-236", "family": "737", "manufacturer": "Boeing", "registration": "G-BGJL", "msn": "22033", "engines": "Pratt & Whitney JT8D-15" },
+  "aircraft": {
+    "type": "Boeing 737-236",
+    "family": "737",
+    "manufacturer": "Boeing",
+    "registration": "G-BGJL",
+    "msn": "22033",
+    "engines": "Pratt & Whitney JT8D-15"
+  },
   "operator": "British Airtours",
-  "route": { "from": "EGCC", "from_name": "Manchester", "to": "LGKR", "to_name": "Corfu" },
-  "location": { "name": "Runway 24 / taxiway link D, Manchester International Airport", "country": "United Kingdom", "lat": 53.3537, "lon": -2.275 },
+  "route": {
+    "from": "EGCC",
+    "from_name": "Manchester",
+    "to": "LGKR",
+    "to_name": "Corfu"
+  },
+  "location": {
+    "name": "Runway 24 / taxiway link D, Manchester International Airport",
+    "country": "United Kingdom",
+    "lat": 53.3537,
+    "lon": -2.275
+  },
   "phase": "takeoff",
-  "occupants": 137, "fatalities": 55, "injuries_serious": 15,
+  "occupants": 137,
+  "fatalities": 55,
+  "injuries_serious": 15,
   "damage": "destroyed",
   "category": "F-POST",
   "summary": "During the takeoff roll on runway 24 at Manchester the left engine's No.9 combustor can failed; a section of the can was ejected forward and struck an underwing fuel tank access panel, releasing fuel that ignited. The crew rejected the takeoff and turned off the runway, positioning the aircraft so that a light wind carried the fire onto the fuselage. Fire penetrated the cabin during evacuation and 55 occupants died, mainly from smoke and toxic gases.",
   "probable_cause": "The cause of the accident was an uncontained failure of the left engine, initiated by a failure of the No.9 combustor can which had been the subject of a repair. A section of the combustor can was ejected forward and struck the underwing fuel tank access panel, rupturing it and releasing fuel which ignited. The major cause of the fatalities was the rapid incapacitation of occupants by toxic gases and smoke from the burning cabin, aggravated by evacuation difficulties, the aircraft having been stopped with the wind carrying the fire onto the fuselage, and the loss of time before exits were opened.",
   "factors": [
-    { "id": "maintenance_error", "role": "initiating", "evidence": "The No.9 combustor can had been weld-repaired in a manner that did not restore its fatigue resistance, and the subsequent inspection regime did not catch the propagating crack." },
-    { "id": "known_defect_unresolved", "role": "latent", "evidence": "The JT8D combustor can cracking problem was known to the manufacturer and operators, but the airworthiness response did not prevent recurrence." },
-    { "id": "engine_failure", "role": "contributing", "evidence": "The combustor can failed at about 125 kt during the takeoff roll, producing a thud heard by the crew who believed it to be a tyre burst." },
-    { "id": "uncontained_engine_failure", "role": "contributing", "evidence": "The forward section of the can was ejected through the combustion casing and struck the wing fuel tank access panel." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The underwing fuel tank access panels were not designed to resist impact from ejected engine debris and the cabin materials produced dense toxic smoke." },
-    { "id": "fuel_leak", "role": "contributing", "evidence": "Fuel escaped from the ruptured access panel and pooled on the runway, igniting against the hot engine." },
-    { "id": "post_impact_fire", "role": "outcome", "evidence": "A ground fire developed during the rejected takeoff (no impact), was carried onto the fuselage by the wind after the aircraft turned off the runway, and burned through the rear cabin." },
-    { "id": "flammable_material", "role": "contributing", "evidence": "The cabin furnishings burned rapidly and produced toxic smoke and gases that incapacitated occupants within minutes." },
-    { "id": "evacuation_deficiency", "role": "contributing", "evidence": "The right forward door was delayed by a jammed slide, the overwing exit was obstructed by seat pitch, and passengers were slow to leave due to the narrow bulkhead gap and smoke." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "The crew stopped the aircraft with the wind blowing the fire onto the fuselage and there was a delay before the evacuation was ordered while the cause of the emergency was being assessed." }
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "The No.9 combustor can had been weld-repaired in a manner that did not restore its fatigue resistance, and the subsequent inspection regime did not catch the propagating crack."
+    },
+    {
+      "id": "known_defect_unresolved",
+      "role": "latent",
+      "evidence": "The JT8D combustor can cracking problem was known to the manufacturer and operators, but the airworthiness response did not prevent recurrence."
+    },
+    {
+      "id": "engine_failure",
+      "role": "contributing",
+      "evidence": "The combustor can failed at about 125 kt during the takeoff roll, producing a thud heard by the crew who believed it to be a tyre burst."
+    },
+    {
+      "id": "uncontained_engine_failure",
+      "role": "contributing",
+      "evidence": "The forward section of the can was ejected through the combustion casing and struck the wing fuel tank access panel."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The underwing fuel tank access panels were not designed to resist impact from ejected engine debris and the cabin materials produced dense toxic smoke."
+    },
+    {
+      "id": "fuel_leak",
+      "role": "contributing",
+      "evidence": "Fuel escaped from the ruptured access panel and pooled on the runway, igniting against the hot engine."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "A ground fire developed during the rejected takeoff (no impact), was carried onto the fuselage by the wind after the aircraft turned off the runway, and burned through the rear cabin."
+    },
+    {
+      "id": "flammable_material",
+      "role": "contributing",
+      "evidence": "The cabin furnishings burned rapidly and produced toxic smoke and gases that incapacitated occupants within minutes."
+    },
+    {
+      "id": "evacuation_deficiency",
+      "role": "contributing",
+      "evidence": "The right forward door was delayed by a jammed slide, the overwing exit was obstructed by seat pitch, and passengers were slow to leave due to the narrow bulkhead gap and smoke."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The crew stopped the aircraft with the wind blowing the fire onto the fuselage and there was a delay before the evacuation was ordered while the cause of the emergency was being assessed."
+    }
   ],
   "chain": [
-    ["known_defect_unresolved", "maintenance_error"],
-    ["maintenance_error", "engine_failure"],
-    ["engine_failure", "uncontained_engine_failure"],
-    ["design_deficiency", "fuel_leak"],
-    ["uncontained_engine_failure", "fuel_leak"],
-    ["fuel_leak", "post_impact_fire"],
-    ["crm_breakdown", "post_impact_fire"],
-    ["flammable_material", "evacuation_deficiency"],
-    ["post_impact_fire", "evacuation_deficiency"]
+    [
+      "known_defect_unresolved",
+      "maintenance_error"
+    ],
+    [
+      "maintenance_error",
+      "engine_failure"
+    ],
+    [
+      "engine_failure",
+      "uncontained_engine_failure"
+    ],
+    [
+      "design_deficiency",
+      "fuel_leak"
+    ],
+    [
+      "uncontained_engine_failure",
+      "fuel_leak"
+    ],
+    [
+      "fuel_leak",
+      "post_impact_fire"
+    ],
+    [
+      "crm_breakdown",
+      "post_impact_fire"
+    ],
+    [
+      "flammable_material",
+      "evacuation_deficiency"
+    ],
+    [
+      "post_impact_fire",
+      "evacuation_deficiency"
+    ]
   ],
   "events": [
-    { "t": -60, "clock": "06:11", "phase": "takeoff", "actor": "ATC", "text": "Flight KT28M cleared for takeoff on runway 24 with 131 passengers and 6 crew for a charter flight to Corfu.", "kind": "atc" },
-    { "t": 0, "clock": "06:12", "phase": "takeoff", "actor": "SYS", "text": "About 36 seconds into the takeoff roll at about 125 kt a thud is heard as the No.9 combustor can of the left engine fails; a section is ejected forward and strikes the wing fuel tank access panel.", "state": { "ias": 125 }, "factors": ["maintenance_error", "engine_failure", "uncontained_engine_failure"], "kind": "system" },
-    { "t": 1, "clock": "06:12", "phase": "takeoff", "actor": "CAPT", "text": "Commander, believing a tyre has burst, calls stop and rejects the takeoff using reverse thrust and light braking.", "kind": "crew_action" },
-    { "t": 9, "clock": "06:12", "phase": "takeoff", "actor": "ATC", "text": "Tower informs the crew that there is a lot of fire on the left side; the crew request the fire services.", "factors": ["fuel_leak", "post_impact_fire"], "kind": "atc" },
-    { "t": 20, "clock": "06:13", "phase": "taxi", "actor": "SYS", "text": "Fire warning for the left engine; the crew carry out the engine fire drill.", "factors": ["post_impact_fire"], "kind": "warning" },
-    { "t": 30, "clock": "06:13", "phase": "taxi", "actor": "CAPT", "text": "Commander turns right off the runway onto taxiway link D, placing the fire on the upwind side; a 7 kt wind carries flames onto the rear fuselage.", "factors": ["crm_breakdown", "post_impact_fire"], "kind": "crew_action" },
-    { "t": 45, "clock": "06:13", "phase": "ground", "actor": "SYS", "text": "Aircraft stops; fire penetrates the rear fuselage and the cabin fills with thick black smoke within seconds.", "factors": ["flammable_material"], "kind": "system" },
-    { "t": 50, "clock": "06:13", "phase": "ground", "actor": "CAPT", "text": "Commander orders evacuation via the starboard side; the right forward door slide initially jams and the door is delayed about 25 seconds.", "factors": ["evacuation_deficiency"], "kind": "crew_action" },
-    { "t": 70, "clock": "06:13", "phase": "ground", "actor": "CABIN", "text": "Passengers crowd the narrow gap beside the forward galley bulkhead; the right overwing exit is opened by a passenger after a struggle with the hatch.", "factors": ["evacuation_deficiency"], "kind": "crew_action" },
-    { "t": 90, "clock": "06:14", "phase": "ground", "actor": "OTHER", "text": "Airport fire service arrives and applies foam; the fire has already breached the cabin and the rear of the aircraft is burning fiercely.", "kind": "env" },
-    { "t": 300, "clock": "06:17", "phase": "ground", "actor": "OTHER", "text": "Last survivors leave the aircraft; 55 occupants die, 48 of them from the effects of toxic gases and smoke, and the aircraft is destroyed by fire.", "factors": ["post_impact_fire", "flammable_material"], "kind": "outcome" }
+    {
+      "t": -60,
+      "clock": "06:11",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "text": "Flight KT28M cleared for takeoff on runway 24 with 131 passengers and 6 crew for a charter flight to Corfu.",
+      "kind": "atc"
+    },
+    {
+      "t": 0,
+      "clock": "06:12",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "text": "About 36 seconds into the takeoff roll at about 125 kt a thud is heard as the No.9 combustor can of the left engine fails; a section is ejected forward and strikes the wing fuel tank access panel.",
+      "state": {
+        "ias": 125
+      },
+      "factors": [
+        "maintenance_error",
+        "engine_failure",
+        "uncontained_engine_failure"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 1,
+      "clock": "06:12",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "Commander, believing a tyre has burst, calls stop and rejects the takeoff using reverse thrust and light braking.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 9,
+      "clock": "06:12",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "text": "Tower informs the crew that there is a lot of fire on the left side; the crew request the fire services.",
+      "factors": [
+        "fuel_leak",
+        "post_impact_fire"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": 20,
+      "clock": "06:13",
+      "phase": "taxi",
+      "actor": "SYS",
+      "text": "Fire warning for the left engine; the crew carry out the engine fire drill.",
+      "factors": [
+        "post_impact_fire"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 30,
+      "clock": "06:13",
+      "phase": "taxi",
+      "actor": "CAPT",
+      "text": "Commander turns right off the runway onto taxiway link D, placing the fire on the upwind side; a 7 kt wind carries flames onto the rear fuselage.",
+      "factors": [
+        "crm_breakdown",
+        "post_impact_fire"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 45,
+      "clock": "06:13",
+      "phase": "ground",
+      "actor": "SYS",
+      "text": "Aircraft stops; fire penetrates the rear fuselage and the cabin fills with thick black smoke within seconds.",
+      "factors": [
+        "flammable_material"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 50,
+      "clock": "06:13",
+      "phase": "ground",
+      "actor": "CAPT",
+      "text": "Commander orders evacuation via the starboard side; the right forward door slide initially jams and the door is delayed about 25 seconds.",
+      "factors": [
+        "evacuation_deficiency"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 70,
+      "clock": "06:13",
+      "phase": "ground",
+      "actor": "CABIN",
+      "text": "Passengers crowd the narrow gap beside the forward galley bulkhead; the right overwing exit is opened by a passenger after a struggle with the hatch.",
+      "factors": [
+        "evacuation_deficiency"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 90,
+      "clock": "06:14",
+      "phase": "ground",
+      "actor": "OTHER",
+      "text": "Airport fire service arrives and applies foam; the fire has already breached the cabin and the rear of the aircraft is burning fiercely.",
+      "kind": "env"
+    },
+    {
+      "t": 300,
+      "clock": "06:17",
+      "phase": "ground",
+      "actor": "OTHER",
+      "text": "Last survivors leave the aircraft; 55 occupants die, 48 of them from the effects of toxic gases and smoke, and the aircraft is destroyed by fire.",
+      "factors": [
+        "post_impact_fire",
+        "flammable_material"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "CAA", "text": "Require the fitting of floor-level emergency lighting and smoke hoods or other respiratory protection for passengers, and review cabin material flammability and toxicity standards.", "status": "unknown", "outcome": "Floor proximity lighting and fire-blocking seat covers were mandated; smoke hoods were not.", "trigger_factors": ["flammable_material", "evacuation_deficiency"] },
-    { "id": null, "to": "CAA / Boeing", "text": "Review the minimum access gap beside galley bulkheads and the spacing of seats adjacent to overwing exits to improve evacuation flow.", "status": "closed_acceptable", "outcome": "Regulations on exit access and minimum bulkhead gaps were introduced.", "trigger_factors": ["evacuation_deficiency"] },
-    { "id": null, "to": "CAA / FAA", "text": "Review the JT8D combustor can repair schemes and inspection intervals and make fuel tank access panels resistant to impact from ejected engine debris.", "status": "unknown", "outcome": null, "trigger_factors": ["maintenance_error", "known_defect_unresolved", "design_deficiency"] },
-    { "id": null, "to": "CAA", "text": "Provide guidance to flight crews on positioning the aircraft relative to wind after a ground fire and on ordering an immediate evacuation when a fire is reported.", "status": "unknown", "outcome": null, "trigger_factors": ["crm_breakdown"] }
+    {
+      "id": null,
+      "to": "CAA",
+      "text": "Require the fitting of floor-level emergency lighting and smoke hoods or other respiratory protection for passengers, and review cabin material flammability and toxicity standards.",
+      "status": "unknown",
+      "outcome": "Floor proximity lighting and fire-blocking seat covers were mandated; smoke hoods were not.",
+      "trigger_factors": [
+        "flammable_material",
+        "evacuation_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "CAA / Boeing",
+      "text": "Review the minimum access gap beside galley bulkheads and the spacing of seats adjacent to overwing exits to improve evacuation flow.",
+      "status": "closed_acceptable",
+      "outcome": "Regulations on exit access and minimum bulkhead gaps were introduced.",
+      "trigger_factors": [
+        "evacuation_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "CAA / FAA",
+      "text": "Review the JT8D combustor can repair schemes and inspection intervals and make fuel tank access panels resistant to impact from ejected engine debris.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "maintenance_error",
+        "known_defect_unresolved",
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "CAA",
+      "text": "Provide guidance to flight crews on positioning the aircraft relative to wind after a ground fire and on ordering an immediate evacuation when a fire is reported.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "crm_breakdown"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -72,14 +318,25 @@
     "Revised guidance on rejected takeoff and evacuation decision making, including stopping on the runway and evacuation drills for cabin crew.",
     "Research programme into passenger smoke hoods and cabin water spray systems."
   ],
-  "related": ["kegworth", "united232", "af358"],
+  "related": [
+    "kegworth",
+    "united232",
+    "af358"
+  ],
   "fdr": null,
   "sources": [
     "https://www.gov.uk/aaib-reports/8-1988-boeing-737-236-g-bgjl-22-august-1985"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
-    "post_impact_fire is used for a ground fire that started during the rejected takeoff; there was no impact.",
-    "Event seconds are approximate; the report gives the failure at about 125 kt roughly 36 s into the roll.",
-    "Recommendation numbers omitted; the report contained 31 recommendations."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "post_impact_fire is used for a ground fire that started during the rejected takeoff; there was no impact.",
+      "Event seconds are approximate; the report gives the failure at about 125 kt roughly 36 s into the roll.",
+      "Recommendation numbers omitted; the report contained 31 recommendations."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/1985_Manchester_Airport_disaster"
 }

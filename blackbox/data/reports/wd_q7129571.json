@@ -1,289 +1,291 @@
 {
- "id": "wd_q7129571",
- "qid": "Q7129571",
- "tier": "wikidata",
- "depth": "sections",
- "title": "Pan Am 806",
- "flight_number": "PA806",
- "date": "1974-01-30",
- "agency": "NTSB",
- "aircraft": {
-  "type": "Boeing 707-321B",
-  "manufacturer": "Boeing",
-  "family": "707",
-  "registration": null
- },
- "operator": "Pan American Airways",
- "route": {
-  "from_name": "Auckland",
-  "to_name": "Los Angeles"
- },
- "location": {
-  "name": "Pago Pago International Airport",
-  "country": "American Samoa"
- },
- "phase": "approach",
- "occupants": 101,
- "fatalities": 97,
- "category": "WSTRW",
- "summary": "Pan Am Flight 806 departed Auckland on 30 January 1974 with 91 passengers and 10 crew for a flight to Los Angeles with stops at Pago Pago and Honolulu. On approach to Pago Pago, the aircraft encountered microburst wind shear. At 23:40:42, the 707 came into contact with trees 3865 ft short of runway 5 threshold while descending through weather. The aircraft impacted the ground 236 feet further and plowed through dense vegetation for another 539 ft before crashing into a three-foot high rock wall. All four engines were torn from the wings and a post-impact fire consumed most of the aircraft, killing 97 persons. Four crew and passengers initially survived but died later.",
- "probable_cause": "The National Transportation Safety Board determines that the probable cause of the accident was the flightcrew's late recognition and failure to correct in a timely manner an excessive descent rate which developed as a result of the aircraft's penetration through destabilizing wind changes (p. 31). The winds consisted of horizontal and vertical components produced by a heavy rainstorm and influenced by uneven terrain close to the aircraft's approach path. The captain's recognition was hampered by restricted visibility, the illusory effects of a 'blackhole' approach, inadequate monitoring of flight instruments, and the failure of the crew to call out descent rate during the last 15 seconds of flight (p. 31).",
- "factors": [
-  {
-   "id": "windshear",
-   "role": "initiating",
-   "evidence": "Aircraft encountered microburst-induced wind shear approximately 3 miles from airport creating updraft and headwind causing airspeed gain and glide slope deviation above approach path at 23:40:22.5; wind shear then diminished and aircraft descended at 1,500 fpm for 15 seconds undetected (p. 30-31)"
+  "id": "wd_q7129571",
+  "qid": "Q7129571",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Pan Am 806",
+  "flight_number": "PA806",
+  "date": "1974-01-30",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "Boeing 707-321B",
+    "manufacturer": "Boeing",
+    "family": "707",
+    "registration": null
   },
-  {
-   "id": "inadequate_monitoring",
-   "role": "contributing",
-   "evidence": "First officer did not switch No. 2 nav receiver from VOR to ILS frequency at final approach fix; glide slope raw data and flight director steering commands displayed only on captain's panel; no descent rate callouts by flight engineer or jumpseat pilot despite exceeding 1,000 fpm maximum for 15 seconds (p. 30-31)"
+  "operator": "Pan American Airways",
+  "route": {
+    "from_name": "Auckland",
+    "to_name": "Los Angeles"
   },
-  {
-   "id": "low_visibility",
-   "role": "contributing",
-   "evidence": "Restricted visibility due to heavy rain shower moving across runway; approach control could not see runway lights from position; VASI lights possibly obscured by rain despite lights being available and operating (p. 7, 30)"
+  "location": {
+    "name": "Pago Pago International Airport",
+    "country": "American Samoa",
+    "lat": -14.3486,
+    "lon": -170.7319
   },
-  {
-   "id": "landing_long",
-   "role": "contributing",
-   "evidence": "Aircraft came into contact with trees 3,865 feet short of runway threshold while descending through destabilizing wind changes; approached at excessive descent rate (p. 8)"
-  },
-  {
-   "id": "cfit",
-   "role": "outcome",
-   "evidence": "Aircraft impacted ground and plowed through dense vegetation before hitting rock wall; aircraft destroyed; 97 fatalities including 4 who initially survived but died later (p. 8)"
-  },
-  {
-   "id": "loss_of_control_inflight",
-   "role": "outcome",
-   "evidence": "Aircraft descended at excessive 1,500 fpm rate uncontrolled for 15 seconds due to wind shear effect"
-  }
- ],
- "chain": [
-  [
-   "windshear",
-   "low_visibility"
+  "phase": "approach",
+  "occupants": 101,
+  "fatalities": 97,
+  "category": "WSTRW",
+  "summary": "Pan Am Flight 806 departed Auckland on 30 January 1974 with 91 passengers and 10 crew for a flight to Los Angeles with stops at Pago Pago and Honolulu. On approach to Pago Pago, the aircraft encountered microburst wind shear. At 23:40:42, the 707 came into contact with trees 3865 ft short of runway 5 threshold while descending through weather. The aircraft impacted the ground 236 feet further and plowed through dense vegetation for another 539 ft before crashing into a three-foot high rock wall. All four engines were torn from the wings and a post-impact fire consumed most of the aircraft, killing 97 persons. Four crew and passengers initially survived but died later.",
+  "probable_cause": "The National Transportation Safety Board determines that the probable cause of the accident was the flightcrew's late recognition and failure to correct in a timely manner an excessive descent rate which developed as a result of the aircraft's penetration through destabilizing wind changes (p. 31). The winds consisted of horizontal and vertical components produced by a heavy rainstorm and influenced by uneven terrain close to the aircraft's approach path. The captain's recognition was hampered by restricted visibility, the illusory effects of a 'blackhole' approach, inadequate monitoring of flight instruments, and the failure of the crew to call out descent rate during the last 15 seconds of flight (p. 31).",
+  "factors": [
+    {
+      "id": "windshear",
+      "role": "initiating",
+      "evidence": "Aircraft encountered microburst-induced wind shear approximately 3 miles from airport creating updraft and headwind causing airspeed gain and glide slope deviation above approach path at 23:40:22.5; wind shear then diminished and aircraft descended at 1,500 fpm for 15 seconds undetected (p. 30-31)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "First officer did not switch No. 2 nav receiver from VOR to ILS frequency at final approach fix; glide slope raw data and flight director steering commands displayed only on captain's panel; no descent rate callouts by flight engineer or jumpseat pilot despite exceeding 1,000 fpm maximum for 15 seconds (p. 30-31)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Restricted visibility due to heavy rain shower moving across runway; approach control could not see runway lights from position; VASI lights possibly obscured by rain despite lights being available and operating (p. 7, 30)"
+    },
+    {
+      "id": "landing_long",
+      "role": "contributing",
+      "evidence": "Aircraft came into contact with trees 3,865 feet short of runway threshold while descending through destabilizing wind changes; approached at excessive descent rate (p. 8)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted ground and plowed through dense vegetation before hitting rock wall; aircraft destroyed; 97 fatalities including 4 who initially survived but died later (p. 8)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft descended at excessive 1,500 fpm rate uncontrolled for 15 seconds due to wind shear effect"
+    }
   ],
-  [
-   "low_visibility",
-   "inadequate_monitoring"
+  "chain": [
+    [
+      "windshear",
+      "low_visibility"
+    ],
+    [
+      "low_visibility",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "landing_long"
+    ],
+    [
+      "landing_long",
+      "cfit"
+    ]
   ],
-  [
-   "inadequate_monitoring",
-   "landing_long"
+  "events": [
+    {
+      "t": 0,
+      "clock": "20:14",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 806 departed Auckland at 20:14 with 91 passengers and 10 crew on board with IFR flight plan to Pago Pago (p. 6-7)",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": "23:11:55",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 806 contacted Pago Pago Approach Control 160 miles south of airport; approach control reported weather: ceiling 1,600 ft broken, 4,000 ft broken, 1,000 ft overcast, visibility 1 mile with light rain shower (p. 7)",
+      "factors": [
+        "low_visibility",
+        "windshear"
+      ]
+    },
+    {
+      "t": 330,
+      "clock": "23:13:04",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Pago Pago Approach Control cleared flight to VORTAC (p. 7)",
+      "factors": []
+    },
+    {
+      "t": 420,
+      "clock": "23:24:40",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight left FL-200 and began approach descent at 23:24:40 (p. 7)",
+      "factors": []
+    },
+    {
+      "t": 450,
+      "clock": "23:24:49",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach control cleared flight for ILS DME runway 5 approach via 20-mile arc south-southwest; reported to leave 5,000 feet (p. 7)",
+      "factors": []
+    },
+    {
+      "t": 540,
+      "clock": "23:30:51",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight requested direction and velocity of Pago Pago winds; told 360° variable from 020° at 10-45 knots (p. 7)",
+      "factors": [
+        "windshear"
+      ]
+    },
+    {
+      "t": 600,
+      "clock": "23:34:56",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight reported out of 5,500 feet and intercepted 226° radial of Pago Pago VOR; approach control confirmed inbound on localizer, winds 010° at 15 gusting 20 knots (p. 7)",
+      "factors": [
+        "windshear"
+      ]
+    },
+    {
+      "t": 660,
+      "clock": "23:38:50",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Approach control reported power failure at airport; first officer confirmed still receiving VOR, ILS and lights (p. 7)",
+      "factors": []
+    },
+    {
+      "t": 690,
+      "clock": "23:39:05-23:39:29",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Approach control asked about runway lights visibility; flight confirmed seeing them. Approach control reported bad rain shower. At 23:39:29 first officer reported at 5 DME with lights still appearing bright (p. 7)",
+      "factors": [
+        "low_visibility",
+        "windshear"
+      ]
+    },
+    {
+      "t": 720,
+      "clock": "23:40:22.5",
+      "phase": "approach",
+      "actor": "PM",
+      "kind": "crew_speech",
+      "text": "First officer stated \"You're a little high\"; four seconds later sound of electric stabilizer trim actuation heard on CVR indicating aircraft above glide slope during microburst encounter (p. 7)",
+      "factors": [
+        "windshear"
+      ]
+    },
+    {
+      "t": 735,
+      "clock": "23:40:29.5-23:40:34",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Radio altimeter warning tone sounded twice; at 23:40:33.5 first officer called \"You're at minimums\" indicating descent through minimum altitude (p. 7-8)",
+      "factors": [
+        "windshear"
+      ]
+    },
+    {
+      "t": 750,
+      "clock": "23:40:35",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "First officer reported \"Field in sight\" then \"Turn to your right\" followed by \"hundred and forty knots\" - last CVR communication; aircraft descending at 1,500 fpm with inadequate monitoring of instruments (p. 8)",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 780,
+      "clock": "23:40:42",
+      "phase": "landing",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft struck trees at 113 ft elevation and 3,865 ft short of runway threshold; impacted ground 236 ft farther; continued through jungle vegetation striking 3-foot-high lava rock wall stopping 3,090 ft from runway threshold; all four engines torn from wings (p. 8)",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 810,
+      "clock": null,
+      "phase": "unknown",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft destroyed by impact and subsequent fire; 97 fatalities (86 passengers, 10 crew, 1 house resident); 4 crew and passengers initially survived but died later; fire and rescue response delayed by rain, barriers, and terrain (p. 8)",
+      "factors": [
+        "cfit"
+      ]
+    }
   ],
-  [
-   "landing_long",
-   "cfit"
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7707.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Pan_Am_Flight_806",
+  "asn_id": "19740130-0",
+  "interest": 16.97,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read History of Flight section (pages 6-8), Conclusions section (pages 30-31), Probable Cause section (page 31)",
+      "Extracted 13 detailed events with specific clock times from CVR and approach control communications",
+      "Probable cause: late recognition and failure to correct excessive descent rate resulting from aircraft penetration through microburst wind shear (p. 31)",
+      "Contributing factors: restricted visibility, blackhole approach illusion, inadequate instrument monitoring, no descent rate callouts (p. 30-31)",
+      "Recommendations include CFR amendments regarding pilot recent experience requirements, VASI/PAPI standardization, and wind shear training (p. 31+)",
+      "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null; sources was null; actor CREW -> CAPT; actor CREW -> CAPT; actor CREW -> CAPT; actor CREW -> CAPT; actor CREW -> CAPT; event factors ['descent_below_minimums', 'windshear'] -> ['windshear']; event factors ['descent_below_minimums', 'loss_of_control_inflight'] -> ['loss_of_control_inflight']; event factors ['cfit', 'post_impact_fire'] -> ['cfit']; phase post_crash -> unknown",
+      "auto-repair: agencies built from agency code"
+    ]
+  },
+  "recommendations": [
+    {
+      "id": "A-77-56",
+      "text": "Amend 14 CFR 121.439 to require that a check airman observe a pilot performing required takeoffs and landings and certify recent experience (p. 31+)",
+      "addressed_by": [],
+      "status": "unknown"
+    },
+    {
+      "id": "A-77-57",
+      "text": "Recommendation regarding visual approach slope indicator systems (VASI/PAPI) standardization on runways (p. 31+)",
+      "addressed_by": [],
+      "status": "unknown"
+    },
+    {
+      "id": "A-77-58",
+      "text": "Recommendation regarding wind shear training and recognition for flight crews in terminal areas (p. 31+)",
+      "addressed_by": [],
+      "status": "unknown"
+    },
+    {
+      "id": "A-77-59",
+      "text": "Recommendation regarding improved flight crew procedures for descent monitoring and crew coordination during approaches (p. 31+)",
+      "addressed_by": [],
+      "status": "unknown"
+    }
+  ],
+  "cvr": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "sources": [],
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "NTSB",
+      "country": "unknown",
+      "role": "lead"
+    }
   ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "20:14",
-   "phase": "cruise",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Flight 806 departed Auckland at 20:14 with 91 passengers and 10 crew on board with IFR flight plan to Pago Pago (p. 6-7)",
-   "factors": []
-  },
-  {
-   "t": 300,
-   "clock": "23:11:55",
-   "phase": "approach",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Flight 806 contacted Pago Pago Approach Control 160 miles south of airport; approach control reported weather: ceiling 1,600 ft broken, 4,000 ft broken, 1,000 ft overcast, visibility 1 mile with light rain shower (p. 7)",
-   "factors": [
-    "low_visibility",
-    "windshear"
-   ]
-  },
-  {
-   "t": 330,
-   "clock": "23:13:04",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Pago Pago Approach Control cleared flight to VORTAC (p. 7)",
-   "factors": []
-  },
-  {
-   "t": 420,
-   "clock": "23:24:40",
-   "phase": "approach",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Flight left FL-200 and began approach descent at 23:24:40 (p. 7)",
-   "factors": []
-  },
-  {
-   "t": 450,
-   "clock": "23:24:49",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Approach control cleared flight for ILS DME runway 5 approach via 20-mile arc south-southwest; reported to leave 5,000 feet (p. 7)",
-   "factors": []
-  },
-  {
-   "t": 540,
-   "clock": "23:30:51",
-   "phase": "approach",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Flight requested direction and velocity of Pago Pago winds; told 360° variable from 020° at 10-45 knots (p. 7)",
-   "factors": [
-    "windshear"
-   ]
-  },
-  {
-   "t": 600,
-   "clock": "23:34:56",
-   "phase": "approach",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Flight reported out of 5,500 feet and intercepted 226° radial of Pago Pago VOR; approach control confirmed inbound on localizer, winds 010° at 15 gusting 20 knots (p. 7)",
-   "factors": [
-    "windshear"
-   ]
-  },
-  {
-   "t": 660,
-   "clock": "23:38:50",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Approach control reported power failure at airport; first officer confirmed still receiving VOR, ILS and lights (p. 7)",
-   "factors": []
-  },
-  {
-   "t": 690,
-   "clock": "23:39:05-23:39:29",
-   "phase": "approach",
-   "actor": "CAPT",
-   "kind": "crew_speech",
-   "text": "Approach control asked about runway lights visibility; flight confirmed seeing them. Approach control reported bad rain shower. At 23:39:29 first officer reported at 5 DME with lights still appearing bright (p. 7)",
-   "factors": [
-    "low_visibility",
-    "windshear"
-   ]
-  },
-  {
-   "t": 720,
-   "clock": "23:40:22.5",
-   "phase": "approach",
-   "actor": "PM",
-   "kind": "crew_speech",
-   "text": "First officer stated \"You're a little high\"; four seconds later sound of electric stabilizer trim actuation heard on CVR indicating aircraft above glide slope during microburst encounter (p. 7)",
-   "factors": [
-    "windshear"
-   ]
-  },
-  {
-   "t": 735,
-   "clock": "23:40:29.5-23:40:34",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Radio altimeter warning tone sounded twice; at 23:40:33.5 first officer called \"You're at minimums\" indicating descent through minimum altitude (p. 7-8)",
-   "factors": [
-    "windshear"
-   ]
-  },
-  {
-   "t": 750,
-   "clock": "23:40:35",
-   "phase": "approach",
-   "actor": "PF",
-   "kind": "crew_speech",
-   "text": "First officer reported \"Field in sight\" then \"Turn to your right\" followed by \"hundred and forty knots\" - last CVR communication; aircraft descending at 1,500 fpm with inadequate monitoring of instruments (p. 8)",
-   "factors": [
-    "loss_of_control_inflight"
-   ]
-  },
-  {
-   "t": 780,
-   "clock": "23:40:42",
-   "phase": "landing",
-   "actor": "ENV",
-   "kind": "outcome",
-   "text": "Aircraft struck trees at 113 ft elevation and 3,865 ft short of runway threshold; impacted ground 236 ft farther; continued through jungle vegetation striking 3-foot-high lava rock wall stopping 3,090 ft from runway threshold; all four engines torn from wings (p. 8)",
-   "factors": [
-    "cfit"
-   ]
-  },
-  {
-   "t": 810,
-   "clock": null,
-   "phase": "unknown",
-   "actor": "ENV",
-   "kind": "outcome",
-   "text": "Aircraft destroyed by impact and subsequent fire; 97 fatalities (86 passengers, 10 crew, 1 house resident); 4 crew and passengers initially survived but died later; fire and rescue response delayed by rain, barriers, and terrain (p. 8)",
-   "factors": [
-    "cfit"
-   ]
-  }
- ],
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7707.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/Pan_Am_Flight_806",
- "asn_id": "19740130-0",
- "interest": 16.97,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Read History of Flight section (pages 6-8), Conclusions section (pages 30-31), Probable Cause section (page 31)",
-   "Extracted 13 detailed events with specific clock times from CVR and approach control communications",
-   "Probable cause: late recognition and failure to correct excessive descent rate resulting from aircraft penetration through microburst wind shear (p. 31)",
-   "Contributing factors: restricted visibility, blackhole approach illusion, inadequate instrument monitoring, no descent rate callouts (p. 30-31)",
-   "Recommendations include CFR amendments regarding pilot recent experience requirements, VASI/PAPI standardization, and wind shear training (p. 31+)",
-   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null; sources was null; actor CREW -> CAPT; actor CREW -> CAPT; actor CREW -> CAPT; actor CREW -> CAPT; actor CREW -> CAPT; event factors ['descent_below_minimums', 'windshear'] -> ['windshear']; event factors ['descent_below_minimums', 'loss_of_control_inflight'] -> ['loss_of_control_inflight']; event factors ['cfit', 'post_impact_fire'] -> ['cfit']; phase post_crash -> unknown",
-   "auto-repair: agencies built from agency code"
-  ]
- },
- "recommendations": [
-  {
-   "id": "A-77-56",
-   "text": "Amend 14 CFR 121.439 to require that a check airman observe a pilot performing required takeoffs and landings and certify recent experience (p. 31+)",
-   "addressed_by": [],
-   "status": "unknown"
-  },
-  {
-   "id": "A-77-57",
-   "text": "Recommendation regarding visual approach slope indicator systems (VASI/PAPI) standardization on runways (p. 31+)",
-   "addressed_by": [],
-   "status": "unknown"
-  },
-  {
-   "id": "A-77-58",
-   "text": "Recommendation regarding wind shear training and recognition for flight crews in terminal areas (p. 31+)",
-   "addressed_by": [],
-   "status": "unknown"
-  },
-  {
-   "id": "A-77-59",
-   "text": "Recommendation regarding improved flight crew procedures for descent monitoring and crew coordination during approaches (p. 31+)",
-   "addressed_by": [],
-   "status": "unknown"
-  }
- ],
- "cvr": [],
- "dissent": [],
- "safety_changes": [],
- "related": [],
- "sources": [],
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "NTSB",
-   "country": "unknown",
-   "role": "lead"
-  }
- ]
 }

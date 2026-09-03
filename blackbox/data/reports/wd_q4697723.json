@@ -31,7 +31,9 @@
   },
   "location": {
     "name": "Besurica, Piacenza",
-    "country": "Italy"
+    "country": "Italy",
+    "lat": 45.0378,
+    "lon": 9.6558
   },
   "phase": "descent",
   "occupants": 3,
@@ -63,9 +65,18 @@
     }
   ],
   "chain": [
-    ["autopilot_disconnect", "flight_control_law_degradation"],
-    ["flight_control_law_degradation", "loss_of_control_inflight"],
-    ["loss_of_control_inflight", "descent_below_minimums"]
+    [
+      "autopilot_disconnect",
+      "flight_control_law_degradation"
+    ],
+    [
+      "flight_control_law_degradation",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "descent_below_minimums"
+    ]
   ],
   "events": [
     {
@@ -139,7 +150,9 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.ansv.it/cgi-bin/ita/Relazione%207T-VHG.pdf"],
+  "sources": [
+    "https://www.ansv.it/cgi-bin/ita/Relazione%207T-VHG.pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5-20251001",
@@ -155,6 +168,8 @@
   "asn_id": "20060813-0",
   "interest": 8.53,
   "wikipedia": "https://en.wikipedia.org/wiki/Air_Alg%C3%A9rie_Flight_2208",
-  "report_links": ["https://www.ansv.it/cgi-bin/ita/Relazione%207T-VHG.pdf"],
+  "report_links": [
+    "https://www.ansv.it/cgi-bin/ita/Relazione%207T-VHG.pdf"
+  ],
   "curated_id": null
 }

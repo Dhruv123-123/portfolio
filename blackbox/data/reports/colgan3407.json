@@ -7,17 +7,44 @@
   "t0": "2009-02-13T03:16:27Z",
   "agency": "NTSB",
   "agencies": [
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
       "report_id": "NTSB/AAR-10/01",
       "report_title": "Loss of Control on Approach, Colgan Air, Inc., Operating as Continental Connection Flight 3407, Bombardier DHC-8-400, N200WQ, Clarence Center, New York, February 12, 2009",
       "report_date": "2010-02-02",
-      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1001.pdf" },
-    { "code": "TSB", "name": "Transportation Safety Board of Canada", "country": "Canada", "role": "accredited_representative" }
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1001.pdf"
+    },
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Bombardier DHC-8-402 Q400", "family": "Dash 8", "manufacturer": "Bombardier", "registration": "N200WQ", "msn": "4200", "engines": "Pratt & Whitney Canada PW150A" },
+  "aircraft": {
+    "type": "Bombardier DHC-8-402 Q400",
+    "family": "Dash 8",
+    "manufacturer": "Bombardier",
+    "registration": "N200WQ",
+    "msn": "4200",
+    "engines": "Pratt & Whitney Canada PW150A"
+  },
   "operator": "Colgan Air (operating as Continental Connection)",
-  "route": { "from": "KEWR", "from_name": "Newark Liberty International", "to": "KBUF", "to_name": "Buffalo Niagara International" },
-  "location": { "name": "Clarence Center, New York, about 5 nm from Buffalo Niagara International Airport", "country": "USA", "lat": 43.0, "lon": -78.64 },
+  "route": {
+    "from": "KEWR",
+    "from_name": "Newark Liberty International",
+    "to": "KBUF",
+    "to_name": "Buffalo Niagara International"
+  },
+  "location": {
+    "name": "Clarence Center, New York, about 5 nm from Buffalo Niagara International Airport",
+    "country": "USA",
+    "lat": 43.0,
+    "lon": -78.64
+  },
   "phase": "approach",
   "occupants": 49,
   "fatalities": 50,
@@ -27,74 +54,449 @@
   "summary": "During a night ILS approach to runway 23 at Buffalo in light snow and icing conditions, the crew allowed airspeed to decay while configuring the Q400 for landing. When the stick shaker activated at 131 knots the captain pulled the control column aft and added only partial power, overriding the stick pusher; the first officer retracted the flaps without being asked. The airplane stalled, rolled and pitched violently, and struck a house about 26 seconds later, killing all 49 on board and one person on the ground.",
   "probable_cause": "The captain's inappropriate response to the activation of the stick shaker, which led to an aerodynamic stall from which the airplane did not recover. Contributing to the accident were (1) the flight crew's failure to monitor airspeed in relation to the rising position of the low-speed cue, (2) the flight crew's failure to adhere to sterile cockpit procedures, (3) the captain's failure to effectively manage the flight, and (4) Colgan Air's inadequate procedures for airspeed selection and management during approaches in icing conditions.",
   "factors": [
-    { "id": "stick_shaker_pusher", "role": "initiating", "evidence": "The stick shaker activated at 131 knots (a threshold raised by the REF SPEEDS switch) and the stick pusher subsequently fired three times; the captain overrode each pusher activation." },
-    { "id": "inappropriate_stall_recovery", "role": "contributing", "evidence": "The captain responded to the stick shaker with a 37-pound aft column pull and only partial power instead of the trained nose-down, full-power recovery." },
-    { "id": "inappropriate_control_input", "role": "contributing", "evidence": "Aft column input drove pitch to about 31 degrees nose up and the airplane rolled 45 degrees left then 105 degrees right; the first officer retracted the flaps without coordination." },
-    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "Neither pilot monitored airspeed as it decayed from about 180 to 131 knots against the rising low-speed cue on the airspeed tape." },
-    { "id": "low_energy_state", "role": "contributing", "evidence": "With power near flight idle, gear extended and flaps moving to 15, airspeed fell about 20 knots below the target the crew should have been flying with the REF SPEEDS switch in the INCREASE position." },
-    { "id": "sterile_cockpit_violation", "role": "contributing", "evidence": "The crew held an extended nonpertinent conversation about icing experience and careers below 10,000 feet, contrary to 14 CFR 121.542." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "The captain failed to effectively manage the flight; the first officer retracted the flaps and asked about raising the gear during the stall without direction." },
-    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The REF SPEEDS switch was set to INCREASE without the crew adjusting their approach speed bugs accordingly, and the captain reduced power below what the approach required." },
-    { "id": "fatigue", "role": "latent", "evidence": "The NTSB found both pilots were likely experiencing fatigue (the first officer had commuted overnight from Seattle; the captain slept in the crew room), though its contribution to their performance could not be conclusively determined." },
-    { "id": "startle_effect", "role": "contributing", "evidence": "The report concluded the captain was startled by the unexpected stick shaker and did not recognize the situation as an impending stall." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "Colgan's stall training did not expose pilots to the stick pusher or to the rising low-speed cue behavior with the REF SPEEDS switch on, and the captain had a history of training and checkride deficiencies." },
-    { "id": "operator_safety_culture", "role": "latent", "evidence": "Colgan Air's procedures for airspeed selection and management in icing conditions were inadequate and the airline's oversight of the captain's training record was deficient." },
-    { "id": "regulatory_oversight", "role": "latent", "evidence": "FAA oversight of Colgan's training program and pilot records was found wanting; the report generated recommendations on remedial training and pilot record sharing." },
-    { "id": "pilot_experience", "role": "latent", "evidence": "The captain had about 110 hours as pilot-in-command on the Q400; the first officer had about 770 hours on type and had never flown in icing before joining Colgan." },
-    { "id": "airframe_icing", "role": "latent", "evidence": "The airplane had accreted light ice; the NTSB found its effect on stall speed was minimal, but the icing conditions led the crew to select REF SPEEDS INCREASE, which raised the stick shaker speed by about 20 knots." },
-    { "id": "aerodynamic_stall", "role": "outcome", "evidence": "The airplane entered an aerodynamic stall from which the crew did not recover." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The airplane rolled and pitched uncontrollably and struck a house in a steep nose-down attitude." }
+    {
+      "id": "stick_shaker_pusher",
+      "role": "initiating",
+      "evidence": "The stick shaker activated at 131 knots (a threshold raised by the REF SPEEDS switch) and the stick pusher subsequently fired three times; the captain overrode each pusher activation."
+    },
+    {
+      "id": "inappropriate_stall_recovery",
+      "role": "contributing",
+      "evidence": "The captain responded to the stick shaker with a 37-pound aft column pull and only partial power instead of the trained nose-down, full-power recovery."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "Aft column input drove pitch to about 31 degrees nose up and the airplane rolled 45 degrees left then 105 degrees right; the first officer retracted the flaps without coordination."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Neither pilot monitored airspeed as it decayed from about 180 to 131 knots against the rising low-speed cue on the airspeed tape."
+    },
+    {
+      "id": "low_energy_state",
+      "role": "contributing",
+      "evidence": "With power near flight idle, gear extended and flaps moving to 15, airspeed fell about 20 knots below the target the crew should have been flying with the REF SPEEDS switch in the INCREASE position."
+    },
+    {
+      "id": "sterile_cockpit_violation",
+      "role": "contributing",
+      "evidence": "The crew held an extended nonpertinent conversation about icing experience and careers below 10,000 feet, contrary to 14 CFR 121.542."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The captain failed to effectively manage the flight; the first officer retracted the flaps and asked about raising the gear during the stall without direction."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The REF SPEEDS switch was set to INCREASE without the crew adjusting their approach speed bugs accordingly, and the captain reduced power below what the approach required."
+    },
+    {
+      "id": "fatigue",
+      "role": "latent",
+      "evidence": "The NTSB found both pilots were likely experiencing fatigue (the first officer had commuted overnight from Seattle; the captain slept in the crew room), though its contribution to their performance could not be conclusively determined."
+    },
+    {
+      "id": "startle_effect",
+      "role": "contributing",
+      "evidence": "The report concluded the captain was startled by the unexpected stick shaker and did not recognize the situation as an impending stall."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "Colgan's stall training did not expose pilots to the stick pusher or to the rising low-speed cue behavior with the REF SPEEDS switch on, and the captain had a history of training and checkride deficiencies."
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "latent",
+      "evidence": "Colgan Air's procedures for airspeed selection and management in icing conditions were inadequate and the airline's oversight of the captain's training record was deficient."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "FAA oversight of Colgan's training program and pilot records was found wanting; the report generated recommendations on remedial training and pilot record sharing."
+    },
+    {
+      "id": "pilot_experience",
+      "role": "latent",
+      "evidence": "The captain had about 110 hours as pilot-in-command on the Q400; the first officer had about 770 hours on type and had never flown in icing before joining Colgan."
+    },
+    {
+      "id": "airframe_icing",
+      "role": "latent",
+      "evidence": "The airplane had accreted light ice; the NTSB found its effect on stall speed was minimal, but the icing conditions led the crew to select REF SPEEDS INCREASE, which raised the stick shaker speed by about 20 knots."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "The airplane entered an aerodynamic stall from which the crew did not recover."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The airplane rolled and pitched uncontrollably and struck a house in a steep nose-down attitude."
+    }
   ],
   "chain": [
-    ["regulatory_oversight", "operator_safety_culture"],
-    ["operator_safety_culture", "procedural_noncompliance"],
-    ["operator_safety_culture", "inadequate_training"],
-    ["sterile_cockpit_violation", "inadequate_monitoring"],
-    ["fatigue", "inadequate_monitoring"],
-    ["inadequate_monitoring", "low_energy_state"],
-    ["procedural_noncompliance", "low_energy_state"],
-    ["airframe_icing", "stick_shaker_pusher"],
-    ["low_energy_state", "stick_shaker_pusher"],
-    ["stick_shaker_pusher", "startle_effect"],
-    ["startle_effect", "inappropriate_stall_recovery"],
-    ["inadequate_training", "inappropriate_stall_recovery"],
-    ["pilot_experience", "inappropriate_stall_recovery"],
-    ["inappropriate_stall_recovery", "inappropriate_control_input"],
-    ["crm_breakdown", "inappropriate_control_input"],
-    ["inappropriate_control_input", "aerodynamic_stall"],
-    ["aerodynamic_stall", "loss_of_control_inflight"]
+    [
+      "regulatory_oversight",
+      "operator_safety_culture"
+    ],
+    [
+      "operator_safety_culture",
+      "procedural_noncompliance"
+    ],
+    [
+      "operator_safety_culture",
+      "inadequate_training"
+    ],
+    [
+      "sterile_cockpit_violation",
+      "inadequate_monitoring"
+    ],
+    [
+      "fatigue",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "low_energy_state"
+    ],
+    [
+      "procedural_noncompliance",
+      "low_energy_state"
+    ],
+    [
+      "airframe_icing",
+      "stick_shaker_pusher"
+    ],
+    [
+      "low_energy_state",
+      "stick_shaker_pusher"
+    ],
+    [
+      "stick_shaker_pusher",
+      "startle_effect"
+    ],
+    [
+      "startle_effect",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "inadequate_training",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "pilot_experience",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "inappropriate_stall_recovery",
+      "inappropriate_control_input"
+    ],
+    [
+      "crm_breakdown",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
-    { "t": -420, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Below 10,000 feet the crew continue an extended nonpertinent conversation about their icing experience and careers, contrary to sterile cockpit rules.", "factors": ["sterile_cockpit_violation"], "kind": "crew_speech" },
-    { "t": -330, "clock": null, "phase": "descent", "actor": "CAPT", "text": "REF SPEEDS switch is set to INCREASE for icing conditions; the crew do not correspondingly increase their planned approach speeds.", "factors": ["procedural_noncompliance", "airframe_icing"], "kind": "crew_action" },
-    { "t": -180, "clock": null, "phase": "approach", "actor": "ATC", "text": "Buffalo approach vectors the flight onto the localizer for the ILS runway 23; the airplane levels at the 2,300 ft intercept altitude with autopilot engaged.", "state": { "alt": 2300 }, "kind": "atc" },
-    { "t": -25, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Captain calls for flaps 5 and reduces power toward flight idle; airspeed begins to decay steadily.", "factors": ["low_energy_state", "procedural_noncompliance"], "kind": "crew_action" },
-    { "t": -6, "clock": "22:16:21", "phase": "approach", "actor": "FO", "text": "First officer lowers the landing gear on the captain's call.", "factors": ["low_energy_state"], "kind": "crew_action" },
-    { "t": -3, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Captain calls for flaps 15; the low-speed cue on the airspeed tape has risen to meet the decaying airspeed, unnoticed by either pilot.", "factors": ["inadequate_monitoring"], "kind": "crew_action" },
-    { "t": 0, "clock": "22:16:27", "phase": "approach", "actor": "SYS", "text": "Stick shaker activates at 131 knots; autopilot disconnects.", "state": { "ias": 131, "alt": 2300 }, "factors": ["stick_shaker_pusher", "low_energy_state"], "kind": "warning" },
-    { "t": 1, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Captain pulls the control column aft with about 37 pounds of force and advances the power levers to about 75 percent torque rather than full power.", "factors": ["inappropriate_stall_recovery", "inappropriate_control_input", "startle_effect"], "kind": "crew_action" },
-    { "t": 3, "clock": null, "phase": "approach", "actor": "SYS", "text": "Pitch reaches about 31 degrees nose up; the airplane rolls to about 45 degrees left bank.", "state": { "pitch": 31 }, "factors": ["aerodynamic_stall"], "kind": "system" },
-    { "t": 7, "clock": "22:16:34", "phase": "approach", "actor": "SYS", "text": "Stick pusher activates for the first time; the captain overrides it with continued aft column force.", "factors": ["stick_shaker_pusher", "inappropriate_stall_recovery"], "kind": "warning" },
-    { "t": 10, "clock": null, "phase": "approach", "actor": "FO", "text": "First officer retracts the flaps from 15 toward 0 without being asked, announcing 'I put the flaps up'.", "factors": ["crm_breakdown", "inappropriate_control_input"], "kind": "crew_action" },
-    { "t": 12, "clock": null, "phase": "approach", "actor": "SYS", "text": "Airplane rolls through wings level to about 105 degrees right bank and pitches nose down; stick pusher activates again and is overridden.", "state": { "roll": 105 }, "factors": ["loss_of_control_inflight", "stick_shaker_pusher"], "kind": "system" },
-    { "t": 18, "clock": null, "phase": "approach", "actor": "FO", "text": "First officer asks whether to raise the landing gear; captain replies 'gear up'.", "factors": ["crm_breakdown"], "kind": "crew_speech" },
-    { "t": 22, "clock": null, "phase": "approach", "actor": "SYS", "text": "Third stick pusher activation; the airplane is in a steep nose-down attitude with insufficient altitude to recover.", "factors": ["stick_shaker_pusher", "aerodynamic_stall"], "kind": "warning" },
-    { "t": 25, "clock": "22:16:52", "phase": "approach", "actor": "SYS", "text": "Cockpit voice recorder stops; the airplane strikes a house on Long Street, Clarence Center, and is destroyed by impact and fire.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+    {
+      "t": -420,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Below 10,000 feet the crew continue an extended nonpertinent conversation about their icing experience and careers, contrary to sterile cockpit rules.",
+      "factors": [
+        "sterile_cockpit_violation"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": -330,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "REF SPEEDS switch is set to INCREASE for icing conditions; the crew do not correspondingly increase their planned approach speeds.",
+      "factors": [
+        "procedural_noncompliance",
+        "airframe_icing"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -180,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Buffalo approach vectors the flight onto the localizer for the ILS runway 23; the airplane levels at the 2,300 ft intercept altitude with autopilot engaged.",
+      "state": {
+        "alt": 2300
+      },
+      "kind": "atc"
+    },
+    {
+      "t": -25,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Captain calls for flaps 5 and reduces power toward flight idle; airspeed begins to decay steadily.",
+      "factors": [
+        "low_energy_state",
+        "procedural_noncompliance"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -6,
+      "clock": "22:16:21",
+      "phase": "approach",
+      "actor": "FO",
+      "text": "First officer lowers the landing gear on the captain's call.",
+      "factors": [
+        "low_energy_state"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -3,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Captain calls for flaps 15; the low-speed cue on the airspeed tape has risen to meet the decaying airspeed, unnoticed by either pilot.",
+      "factors": [
+        "inadequate_monitoring"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "22:16:27",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Stick shaker activates at 131 knots; autopilot disconnects.",
+      "state": {
+        "ias": 131,
+        "alt": 2300
+      },
+      "factors": [
+        "stick_shaker_pusher",
+        "low_energy_state"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 1,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Captain pulls the control column aft with about 37 pounds of force and advances the power levers to about 75 percent torque rather than full power.",
+      "factors": [
+        "inappropriate_stall_recovery",
+        "inappropriate_control_input",
+        "startle_effect"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 3,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Pitch reaches about 31 degrees nose up; the airplane rolls to about 45 degrees left bank.",
+      "state": {
+        "pitch": 31
+      },
+      "factors": [
+        "aerodynamic_stall"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 7,
+      "clock": "22:16:34",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Stick pusher activates for the first time; the captain overrides it with continued aft column force.",
+      "factors": [
+        "stick_shaker_pusher",
+        "inappropriate_stall_recovery"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "approach",
+      "actor": "FO",
+      "text": "First officer retracts the flaps from 15 toward 0 without being asked, announcing 'I put the flaps up'.",
+      "factors": [
+        "crm_breakdown",
+        "inappropriate_control_input"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 12,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Airplane rolls through wings level to about 105 degrees right bank and pitches nose down; stick pusher activates again and is overridden.",
+      "state": {
+        "roll": 105
+      },
+      "factors": [
+        "loss_of_control_inflight",
+        "stick_shaker_pusher"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 18,
+      "clock": null,
+      "phase": "approach",
+      "actor": "FO",
+      "text": "First officer asks whether to raise the landing gear; captain replies 'gear up'.",
+      "factors": [
+        "crm_breakdown"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 22,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Third stick pusher activation; the airplane is in a steep nose-down attitude with insufficient altitude to recover.",
+      "factors": [
+        "stick_shaker_pusher",
+        "aerodynamic_stall"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 25,
+      "clock": "22:16:52",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Cockpit voice recorder stops; the airplane strikes a house on Long Street, Clarence Center, and is destroyed by impact and fire.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [
-    { "t": -6, "clock": "22:16:21", "speaker": "FO", "text": "gear down.", "translation": null },
-    { "t": 0, "clock": "22:16:27", "speaker": "CAPT", "text": "Jesus Christ.", "translation": null },
-    { "t": 10, "clock": null, "speaker": "FO", "text": "I put the flaps up.", "translation": null },
-    { "t": 18, "clock": null, "speaker": "FO", "text": "should I put the gear up?", "translation": null },
-    { "t": 19, "clock": null, "speaker": "CAPT", "text": "gear up.", "translation": null },
-    { "t": 23, "clock": null, "speaker": "FO", "text": "we're down.", "translation": null }
+    {
+      "t": -6,
+      "clock": "22:16:21",
+      "speaker": "FO",
+      "text": "gear down.",
+      "translation": null
+    },
+    {
+      "t": 0,
+      "clock": "22:16:27",
+      "speaker": "CAPT",
+      "text": "Jesus Christ.",
+      "translation": null
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "speaker": "FO",
+      "text": "I put the flaps up.",
+      "translation": null
+    },
+    {
+      "t": 18,
+      "clock": null,
+      "speaker": "FO",
+      "text": "should I put the gear up?",
+      "translation": null
+    },
+    {
+      "t": 19,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "gear up.",
+      "translation": null
+    },
+    {
+      "t": 23,
+      "clock": null,
+      "speaker": "FO",
+      "text": "we're down.",
+      "translation": null
+    }
   ],
   "recommendations": [
-    { "id": null, "to": "FAA", "text": "Require operators to provide stall recovery training that emphasizes reducing angle of attack, includes stick pusher demonstration where fitted, and covers the effects of the REF SPEEDS switch on the low-speed cue.", "status": "closed_acceptable", "outcome": "FAA revised stall training guidance (AC 120-109) to prioritize AOA reduction over minimum altitude loss; full-stall and pusher training added to Part 121 training requirements.", "trigger_factors": ["inappropriate_stall_recovery", "inadequate_training", "stick_shaker_pusher"] },
-    { "id": null, "to": "FAA", "text": "Require operators to develop and implement procedures to monitor and cross-check airspeed, including low-airspeed alerting systems in transport-category airplanes.", "status": "open", "outcome": null, "trigger_factors": ["inadequate_monitoring", "low_energy_state"] },
-    { "id": null, "to": "FAA", "text": "Address pilot fatigue arising from commuting and inadequate rest, and require operators to address commuting in fatigue risk management.", "status": "closed_acceptable", "outcome": "New flight and duty time rules (14 CFR Part 117) took effect in 2014.", "trigger_factors": ["fatigue"] },
-    { "id": null, "to": "FAA", "text": "Require air carriers to obtain and review a pilot's complete training and checkride history, including failures, before hiring, and to provide remedial training programs for pilots with repeated deficiencies.", "status": "closed_acceptable", "outcome": "Pilot Records Database mandated by the Airline Safety and FAA Extension Act of 2010.", "trigger_factors": ["regulatory_oversight", "operator_safety_culture", "pilot_experience"] },
-    { "id": null, "to": "FAA", "text": "Reinforce sterile cockpit compliance and leadership and professionalism training for Part 121 flight crews.", "status": "unknown", "outcome": null, "trigger_factors": ["sterile_cockpit_violation", "crm_breakdown"] }
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require operators to provide stall recovery training that emphasizes reducing angle of attack, includes stick pusher demonstration where fitted, and covers the effects of the REF SPEEDS switch on the low-speed cue.",
+      "status": "closed_acceptable",
+      "outcome": "FAA revised stall training guidance (AC 120-109) to prioritize AOA reduction over minimum altitude loss; full-stall and pusher training added to Part 121 training requirements.",
+      "trigger_factors": [
+        "inappropriate_stall_recovery",
+        "inadequate_training",
+        "stick_shaker_pusher"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require operators to develop and implement procedures to monitor and cross-check airspeed, including low-airspeed alerting systems in transport-category airplanes.",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_monitoring",
+        "low_energy_state"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Address pilot fatigue arising from commuting and inadequate rest, and require operators to address commuting in fatigue risk management.",
+      "status": "closed_acceptable",
+      "outcome": "New flight and duty time rules (14 CFR Part 117) took effect in 2014.",
+      "trigger_factors": [
+        "fatigue"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require air carriers to obtain and review a pilot's complete training and checkride history, including failures, before hiring, and to provide remedial training programs for pilots with repeated deficiencies.",
+      "status": "closed_acceptable",
+      "outcome": "Pilot Records Database mandated by the Airline Safety and FAA Extension Act of 2010.",
+      "trigger_factors": [
+        "regulatory_oversight",
+        "operator_safety_culture",
+        "pilot_experience"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Reinforce sterile cockpit compliance and leadership and professionalism training for Part 121 flight crews.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "sterile_cockpit_violation",
+        "crm_breakdown"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -103,19 +505,31 @@
     "FAA stall training guidance was rewritten (AC 120-109) to emphasize immediate angle-of-attack reduction rather than minimum altitude loss, with full-stall and stick pusher training later required for Part 121 carriers.",
     "Regional airlines and their mainline partners increased oversight of training records, remedial training and commuting policies."
   ],
-  "related": ["af447", "pinnacle3701", "airflorida90", "americaneagle4184", "birgenair301", "westcaribbean708", "turkish1951"],
+  "related": [
+    "af447",
+    "pinnacle3701",
+    "airflorida90",
+    "americaneagle4184",
+    "birgenair301",
+    "westcaribbean708",
+    "turkish1951"
+  ],
   "fdr": "colgan3407",
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1001.pdf",
     "https://www.ntsb.gov"
   ],
   "extraction": {
-    "method": "llm", "model": "claude", "confidence": "high", "reviewed": false,
+    "method": "llm",
+    "model": "claude",
+    "confidence": "high",
+    "reviewed": false,
     "notes": [
       "Accident occurred 22:17 EST on 2009-02-12; in UTC it is 2009-02-13. Local date is used in the date field.",
       "Fatalities (50) include one person in the house struck; occupants aboard were 49 (45 passengers, 4 crew).",
       "Clock times for the REF SPEEDS switch, flaps 5 and flaps 15 calls, the second and third stick pusher activations and several CVR lines are approximate and given as relative t only; the stick shaker (22:16:27), gear call (22:16:21), first pusher (about 22:16:34) and end of CVR (22:16:52) follow the report.",
       "CVR lines are short excerpts from the public transcript; timing of the flap and gear exchanges is estimated to within a few seconds."
     ]
-  }
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Colgan_Air_Flight_3407"
 }

@@ -9,7 +9,7 @@
   "agencies": [
     {
       "code": "BEA",
-      "name": "Bureau d'Enqu\u00eates et d'Analyses",
+      "name": "Bureau d'Enquêtes et d'Analyses",
       "country": "France",
       "role": "lead",
       "report_id": "f-fv991112a",
@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "Near Pristina, Kosovo",
-    "country": "Kosovo"
+    "country": "Kosovo",
+    "lat": 42.9667,
+    "lon": 21.05
   },
   "phase": "approach",
   "occupants": 24,

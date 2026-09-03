@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Caribbean Sea south of Klein Bonaire",
-    "country": "Netherlands Antilles"
+    "country": "Netherlands Antilles",
+    "lat": 12.2419,
+    "lon": -68.5471
   },
   "occupants": 10,
   "fatalities": 1,

@@ -34,7 +34,9 @@
   },
   "location": {
     "name": "North Sea, 12 nm ENE of Bacton, Norfolk",
-    "country": "International waters"
+    "country": "International waters",
+    "lat": 52.9333,
+    "lon": 1.7667
   },
   "phase": "cruise",
   "occupants": 13,

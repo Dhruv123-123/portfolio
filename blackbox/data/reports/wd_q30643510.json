@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Owatonna Degner Regional Airport, runway 30",
-    "country": "United States (Minnesota)"
+    "country": "United States (Minnesota)",
+    "lat": 44.1305,
+    "lon": -93.2748
   },
   "phase": "landing",
   "occupants": 8,
@@ -80,12 +82,30 @@
     }
   ],
   "chain": [
-    ["go_around_not_flown", "runway_overrun"],
-    ["procedural_noncompliance", "delayed_deceleration"],
-    ["delayed_deceleration", "runway_overrun"],
-    ["crm_breakdown", "procedural_noncompliance"],
-    ["fatigue", "crm_breakdown"],
-    ["runway_overrun", "cfit"]
+    [
+      "go_around_not_flown",
+      "runway_overrun"
+    ],
+    [
+      "procedural_noncompliance",
+      "delayed_deceleration"
+    ],
+    [
+      "delayed_deceleration",
+      "runway_overrun"
+    ],
+    [
+      "crm_breakdown",
+      "procedural_noncompliance"
+    ],
+    [
+      "fatigue",
+      "crm_breakdown"
+    ],
+    [
+      "runway_overrun",
+      "cfit"
+    ]
   ],
   "events": [
     {
@@ -176,7 +196,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "First officer stated airbrakes were not deployed properly, captain moved airbrake handle to DUMP position after touchdown",
-      "factors": ["delayed_deceleration"]
+      "factors": [
+        "delayed_deceleration"
+      ]
     },
     {
       "t": 0,
@@ -185,7 +207,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft touched down on runway 30, crew initiated go-around with insufficient runway remaining",
-      "factors": ["go_around_not_flown"]
+      "factors": [
+        "go_around_not_flown"
+      ]
     },
     {
       "t": 25,
@@ -194,7 +218,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft overran runway 30 end at high speed, began nose-down pitch toward terrain",
-      "factors": ["runway_overrun"]
+      "factors": [
+        "runway_overrun"
+      ]
     },
     {
       "t": 30,
@@ -203,7 +229,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft lifted off ground approximately 978 feet from runway end, approximately 5 feet altitude",
-      "factors": ["runway_overrun"]
+      "factors": [
+        "runway_overrun"
+      ]
     },
     {
       "t": 35,
@@ -212,7 +240,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft struck approach lighting system antenna support structure about 1000 feet from runway end, rolled to 90-degree right bank with bank angle warning activated",
-      "factors": ["cfit"]
+      "factors": [
+        "cfit"
+      ]
     },
     {
       "t": 45,
@@ -221,7 +251,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft crashed into cornfield approximately 2136 feet from runway end, all eight occupants killed on impact",
-      "factors": ["cfit"]
+      "factors": [
+        "cfit"
+      ]
     }
   ],
   "cvr": [

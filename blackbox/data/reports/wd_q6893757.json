@@ -31,7 +31,9 @@
   },
   "location": {
     "name": "Mansfield area",
-    "country": "United States"
+    "country": "United States",
+    "lat": 41.6825,
+    "lon": -77.0514
   },
   "phase": "climb",
   "occupants": 34,

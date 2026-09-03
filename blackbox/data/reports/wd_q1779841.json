@@ -28,7 +28,9 @@
   },
   "location": {
     "name": "King Khalid International Airport",
-    "country": "Saudi Arabia"
+    "country": "Saudi Arabia",
+    "lat": 24.9578,
+    "lon": 46.8656
   },
   "phase": "landing",
   "occupants": 2,

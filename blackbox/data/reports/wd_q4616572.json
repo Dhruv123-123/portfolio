@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "Muklung Hills near Aleknagik, Alaska",
-    "country": "United States"
+    "country": "United States",
+    "lat": 59.3294,
+    "lon": -158.381
   },
   "phase": "cruise",
   "occupants": 9,
@@ -70,10 +72,22 @@
     }
   ],
   "chain": [
-    ["pilot_incapacitation", "loss_of_situational_awareness"],
-    ["loss_of_situational_awareness", "cfit"],
-    ["low_visibility", "loss_of_situational_awareness"],
-    ["fatigue", "pilot_incapacitation"]
+    [
+      "pilot_incapacitation",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "cfit"
+    ],
+    [
+      "low_visibility",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "fatigue",
+      "pilot_incapacitation"
+    ]
   ],
   "events": [
     {
@@ -120,7 +134,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft radar altimeter provided visual and aural altitude alerts approximately 4-6 seconds before impact, likely prompting control input",
-      "factors": ["loss_of_situational_awareness"]
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
     },
     {
       "t": 735,
@@ -134,7 +150,9 @@
         "pitch": 17,
         "roll": -30
       },
-      "factors": ["cfit"]
+      "factors": [
+        "cfit"
+      ]
     }
   ],
   "cvr": [],
@@ -198,17 +216,25 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1103.pdf"],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1103.pdf"
+  ],
   "wikipedia": "https://en.wikipedia.org/wiki/2010_Alaska_DHC-3_crash",
   "asn_id": "20100809-0",
   "interest": 9.49,
-  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1103.pdf", "https://www.ntsb.gov/investigations/Pages/ANC10MA068.aspx", "https://data.ntsb.gov/Docket/?NTSBNumber=ANC10MA068"],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1103.pdf",
+    "https://www.ntsb.gov/investigations/Pages/ANC10MA068.aspx",
+    "https://data.ntsb.gov/Docket/?NTSBNumber=ANC10MA068"
+  ],
   "curated_id": null,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
-    "notes": ["Read accident history, accident sequence, human performance analysis, findings, probable cause, and all recommendations sections (both new and reiterated); 20 findings extracted; 9 recommendations from formal NTSB issuance; depth=full due to extensive detail from analysis sections"]
+    "notes": [
+      "Read accident history, accident sequence, human performance analysis, findings, probable cause, and all recommendations sections (both new and reiterated); 20 findings extracted; 9 recommendations from formal NTSB issuance; depth=full due to extensive detail from analysis sections"
+    ]
   }
 }

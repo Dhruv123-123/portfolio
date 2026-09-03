@@ -35,7 +35,9 @@
   },
   "location": {
     "name": "Peak Mountain, East Granby",
-    "country": "United States"
+    "country": "United States",
+    "lat": 41.9728,
+    "lon": -72.7439
   },
   "phase": "approach",
   "occupants": 78,
@@ -88,12 +90,30 @@
     }
   ],
   "chain": [
-    ["altimeter_setting_error", "descent_below_minimums"],
-    ["inadequate_monitoring", "descent_below_minimums"],
-    ["low_visibility", "descent_below_minimums"],
-    ["convective_weather", "descent_below_minimums"],
-    ["windshear", "descent_below_minimums"],
-    ["descent_below_minimums", "cfit"]
+    [
+      "altimeter_setting_error",
+      "descent_below_minimums"
+    ],
+    [
+      "inadequate_monitoring",
+      "descent_below_minimums"
+    ],
+    [
+      "low_visibility",
+      "descent_below_minimums"
+    ],
+    [
+      "convective_weather",
+      "descent_below_minimums"
+    ],
+    [
+      "windshear",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
   ],
   "events": [
     {

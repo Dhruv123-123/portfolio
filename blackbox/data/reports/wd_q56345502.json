@@ -38,7 +38,9 @@
   "location": {
     "name": "John F. Kennedy International Airport",
     "country": "United States",
-    "city": "New York"
+    "city": "New York",
+    "lat": 40.6333,
+    "lon": -73.7667
   },
   "phase": "takeoff",
   "occupants": 139,
@@ -91,13 +93,34 @@
     }
   ],
   "chain": [
-    ["bird_strike", "uncontained_engine_failure"],
-    ["uncontained_engine_failure", "flight_control_failure"],
-    ["uncontained_engine_failure", "landing_gear_failure"],
-    ["flight_control_failure", "contaminated_runway"],
-    ["landing_gear_failure", "contaminated_runway"],
-    ["contaminated_runway", "runway_overrun"],
-    ["runway_overrun", "post_impact_fire"]
+    [
+      "bird_strike",
+      "uncontained_engine_failure"
+    ],
+    [
+      "uncontained_engine_failure",
+      "flight_control_failure"
+    ],
+    [
+      "uncontained_engine_failure",
+      "landing_gear_failure"
+    ],
+    [
+      "flight_control_failure",
+      "contaminated_runway"
+    ],
+    [
+      "landing_gear_failure",
+      "contaminated_runway"
+    ],
+    [
+      "contaminated_runway",
+      "runway_overrun"
+    ],
+    [
+      "runway_overrun",
+      "post_impact_fire"
+    ]
   ],
   "events": [
     {
@@ -131,7 +154,9 @@
       "state": {
         "ias": 100
       },
-      "factors": ["bird_strike"]
+      "factors": [
+        "bird_strike"
+      ]
     },
     {
       "t": 90,
@@ -140,7 +165,10 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Crew heard birds strike the aircraft and recalled one to three explosions or bangs; captain immediately began procedures to reject takeoff with thrust levers to idle, thrust reversal of engines, and application of heavy braking (p. 712-716, 718-719)",
-      "factors": ["bird_strike", "uncontained_engine_failure"]
+      "factors": [
+        "bird_strike",
+        "uncontained_engine_failure"
+      ]
     },
     {
       "t": 95,
@@ -149,7 +177,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Master warning and master caution lights appeared; as engines went into reverse thrust, flight engineer stated they had lost No. 3 engine; Nos. 1 and 2 engines attained normal reverse thrust (p. 720-726)",
-      "factors": ["uncontained_engine_failure"]
+      "factors": [
+        "uncontained_engine_failure"
+      ]
     },
     {
       "t": 100,
@@ -158,7 +188,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Flight engineer noticed No. 2 brake system pressure had dropped to zero (No. 3 hydraulic system failure); No. 1 brake system pressure remained normal with 3,000 lbs (p. 727-732)",
-      "factors": ["flight_control_failure"]
+      "factors": [
+        "flight_control_failure"
+      ]
     },
     {
       "t": 105,
@@ -167,7 +199,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Fire-warning light illuminated on captain's glare shield; fire lights on fire handle and fuel control lever illuminated for No. 3 engine; first officer and flight engineer attempted to shut down No. 3 engine (p. 742-749)",
-      "factors": ["uncontained_engine_failure"]
+      "factors": [
+        "uncontained_engine_failure"
+      ]
     },
     {
       "t": 120,
@@ -176,7 +210,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Aircraft seemed to decelerate effectively initially but rate of deceleration decreased; crew believed aircraft could be guided onto taxiway Z without striking blast fence; however during turn aircraft left paved surface before entering taxiway (p. 800-804)",
-      "factors": ["runway_overrun"]
+      "factors": [
+        "runway_overrun"
+      ]
     },
     {
       "t": 140,
@@ -188,7 +224,9 @@
       "state": {
         "ias": 40
       },
-      "factors": ["runway_overrun"]
+      "factors": [
+        "runway_overrun"
+      ]
     },
     {
       "t": 145,
@@ -197,7 +235,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Right wing was ablaze; first officer opened right front cockpit window and saw fire on right wing; cockpit door was opened and black smoke could be seen in cabin (p. 823-826)",
-      "factors": ["post_impact_fire"]
+      "factors": [
+        "post_impact_fire"
+      ]
     },
     {
       "t": 150,
@@ -249,10 +289,16 @@
     }
   ],
   "dissent": [],
-  "safety_changes": ["Improved bird control programs at major airports", "Enhanced engine certification requirements for bird ingestion", "Revised aircraft design standards for hydraulic redundancy"],
+  "safety_changes": [
+    "Improved bird control programs at major airports",
+    "Enhanced engine certification requirements for bird ingestion",
+    "Revised aircraft design standards for hydraulic redundancy"
+  ],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7619.pdf"],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7619.pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
@@ -271,6 +317,10 @@
   "wikipedia": "https://en.wikipedia.org/wiki/Overseas_National_Airways_Flight_032",
   "asn_id": null,
   "interest": 5.8,
-  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7619.pdf", "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR76-19.pdf", "https://www.faa.gov/sites/faa.gov/files/AAR76-19.pdf"],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7619.pdf",
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR76-19.pdf",
+    "https://www.faa.gov/sites/faa.gov/files/AAR76-19.pdf"
+  ],
   "curated_id": null
 }

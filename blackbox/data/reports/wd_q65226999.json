@@ -35,7 +35,9 @@
   },
   "location": {
     "name": "near Pau",
-    "country": "France"
+    "country": "France",
+    "lat": 43.3797,
+    "lon": -0.4183
   },
   "phase": "takeoff",
   "occupants": 54,
@@ -83,12 +85,30 @@
     }
   ],
   "chain": [
-    ["airframe_icing", "low_energy_state"],
-    ["deicing_inadequate", "airframe_icing"],
-    ["low_energy_state", "aerodynamic_stall"],
-    ["aerodynamic_stall", "loss_of_control_inflight"],
-    ["loss_of_control_inflight", "hard_landing"],
-    ["hard_landing", "runway_overrun"]
+    [
+      "airframe_icing",
+      "low_energy_state"
+    ],
+    [
+      "deicing_inadequate",
+      "airframe_icing"
+    ],
+    [
+      "low_energy_state",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "hard_landing"
+    ],
+    [
+      "hard_landing",
+      "runway_overrun"
+    ]
   ],
   "events": [
     {
@@ -116,8 +136,15 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft lifts off runway 13 at 128 knots, immediately banks left with 35° maximum bank angle; bank angle alarm activates",
-      "state": {"alt": 0, "ias": 128, "pitch": 15, "roll": -35},
-      "factors": ["airframe_icing"]
+      "state": {
+        "alt": 0,
+        "ias": 128,
+        "pitch": 15,
+        "roll": -35
+      },
+      "factors": [
+        "airframe_icing"
+      ]
     },
     {
       "t": 66,
@@ -126,8 +153,14 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft banks right to 67° maximum bank angle, then left again to 59°; don't sink alarm sounds at 107 feet altitude with right main landing gear touching ground at 160 knots",
-      "state": {"alt": 107, "ias": 160, "roll": -59},
-      "factors": ["loss_of_control_inflight"]
+      "state": {
+        "alt": 107,
+        "ias": 160,
+        "roll": -59
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 72,
@@ -136,7 +169,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Captain reduces engine power and decides to abort takeoff; aircraft touches ground near end of runway 13",
-      "factors": ["hard_landing"]
+      "factors": [
+        "hard_landing"
+      ]
     },
     {
       "t": 94,
@@ -145,7 +180,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft slides 340 meters through grass, collides with airport perimeter fence, crosses departmental road RD289 striking truck cabin and killing driver, then slides into field as landing gear is sheared off",
-      "factors": ["runway_overrun"]
+      "factors": [
+        "runway_overrun"
+      ]
     },
     {
       "t": 100,
@@ -209,35 +246,46 @@
       "to": "DGAC",
       "text": "Ensure that information regarding aircraft aerodynamic behavior when subjected to ground icing and accidents related to this phenomenon is provided to pilots during type qualifications and periodic training.",
       "status": "unknown",
-      "trigger_factors": ["airframe_icing", "deicing_inadequate"]
+      "trigger_factors": [
+        "airframe_icing",
+        "deicing_inadequate"
+      ]
     },
     {
       "id": "FRAN-2011-034-2",
       "to": "DGAC",
       "text": "Ensure that operators in cooperation with manufacturers provide navigants with information about known accidents concerning their aircraft types, operating context, and their airline.",
       "status": "unknown",
-      "trigger_factors": ["airframe_icing"]
+      "trigger_factors": [
+        "airframe_icing"
+      ]
     },
     {
       "id": "FRAN-2011-034-3",
       "to": "DGAC",
       "text": "Ensure that operators have established organization and means including training to enable effective implementation of surface condition verification procedures when ground icing risk exists.",
       "status": "unknown",
-      "trigger_factors": ["deicing_inadequate"]
+      "trigger_factors": [
+        "deicing_inadequate"
+      ]
     },
     {
       "id": "FRAN-2011-034-4",
       "to": "EASA",
       "text": "While maintaining operational requirements for de-icing checks before flight, evolve certification specifications to require analysis of aircraft behavior when wing surfaces are contaminated on the ground and ensure acceptable safety margins in case of light contamination.",
       "status": "unknown",
-      "trigger_factors": ["airframe_icing"]
+      "trigger_factors": [
+        "airframe_icing"
+      ]
     },
     {
       "id": "FRAN-2011-034-5",
       "to": "EASA",
       "text": "Mandate installation of ground edge heating devices on the Fokker 28 fleet to reduce contamination risk on the critical leading edge area.",
       "status": "unknown",
-      "trigger_factors": ["deicing_inadequate"]
+      "trigger_factors": [
+        "deicing_inadequate"
+      ]
     },
     {
       "id": "FRAN-2011-034-6",
@@ -258,7 +306,9 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://bea.aero/fileadmin/documents/docspa/2007/f-pg070125/pdf/f-pg070125.pdf"],
+  "sources": [
+    "https://bea.aero/fileadmin/documents/docspa/2007/f-pg070125/pdf/f-pg070125.pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
@@ -273,7 +323,9 @@
   },
   "asn_id": null,
   "wikipedia": "https://en.wikipedia.org/wiki/Régional_Flight_7775",
-  "report_links": ["https://bea.aero/fileadmin/documents/docspa/2007/f-pg070125/pdf/f-pg070125.pdf"],
+  "report_links": [
+    "https://bea.aero/fileadmin/documents/docspa/2007/f-pg070125/pdf/f-pg070125.pdf"
+  ],
   "interest": 7.09,
   "curated_id": null
 }

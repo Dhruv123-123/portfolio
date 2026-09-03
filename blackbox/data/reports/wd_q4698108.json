@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Camp Greenough, Yarmouth, Massachusetts",
-    "country": "United States"
+    "country": "United States",
+    "lat": 41.6904,
+    "lon": -70.2419
   },
   "phase": "approach",
   "occupants": 10,

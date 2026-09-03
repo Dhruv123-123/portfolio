@@ -31,7 +31,9 @@
   },
   "location": {
     "name": "Bradford, Pennsylvania",
-    "country": "United States"
+    "country": "United States",
+    "lat": 41.7678,
+    "lon": -78.6017
   },
   "phase": "approach",
   "occupants": 47,

@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "Black Fork Mountain, Arkansas",
-    "country": "United States"
+    "country": "United States",
+    "lat": 34.7014,
+    "lon": -94.3333
   },
   "phase": "descent",
   "occupants": 11,

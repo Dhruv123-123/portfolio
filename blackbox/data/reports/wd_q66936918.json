@@ -25,7 +25,9 @@
   "operator": "Helitrans",
   "location": {
     "name": "Skoddevarre Alta",
-    "country": "Norway"
+    "country": "Norway",
+    "lat": 69.9183,
+    "lon": 23.155
   },
   "phase": "cruise",
   "occupants": 6,

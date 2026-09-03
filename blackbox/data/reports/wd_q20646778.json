@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "Moncks Corner",
-    "country": "United States"
+    "country": "United States",
+    "lat": 33.196,
+    "lon": -80.01
   },
   "phase": "approach",
   "occupants": 3,

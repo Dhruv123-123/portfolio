@@ -33,7 +33,9 @@
   "location": {
     "name": "Detroit Metropolitan Wayne County Airport",
     "country": "United States",
-    "state": "Michigan"
+    "state": "Michigan",
+    "lat": 42.2125,
+    "lon": -83.3533
   },
   "phase": "landing",
   "occupants": 19,

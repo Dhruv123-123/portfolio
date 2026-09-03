@@ -35,7 +35,9 @@
   "location": {
     "name": "Hendersonville",
     "country": "United States",
-    "region": "North Carolina"
+    "region": "North Carolina",
+    "lat": 35.3372,
+    "lon": -82.4378
   },
   "phase": "climb",
   "occupants": 82,
@@ -163,7 +165,7 @@
       "phase": "climb",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Boeing 727 and Cessna collide at 6,132 feet altitude, 9 miles southwest of Asheville VOR on 243\u00b0 radial; Cessna impacts 727 fuselage just aft of cockpit; both aircraft destroyed (p. 5, 9)",
+      "text": "Boeing 727 and Cessna collide at 6,132 feet altitude, 9 miles southwest of Asheville VOR on 243° radial; Cessna impacts 727 fuselage just aft of cockpit; both aircraft destroyed (p. 5, 9)",
       "factors": [
         "midair_collision"
       ]

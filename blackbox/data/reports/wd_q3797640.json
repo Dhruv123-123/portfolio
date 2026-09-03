@@ -29,7 +29,9 @@
   },
   "location": {
     "name": "Pirelli Tower, Milan",
-    "country": "Italy"
+    "country": "Italy",
+    "lat": 45.4847,
+    "lon": 9.2014
   },
   "phase": "approach",
   "occupants": 1,

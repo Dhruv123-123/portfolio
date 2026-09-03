@@ -7,16 +7,38 @@
   "t0": "1974-12-02T00:24:42Z",
   "agency": "NTSB",
   "agencies": [
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
       "report_id": "NTSB-AAR-75-13",
       "report_title": "Northwest Airlines, Inc., Boeing 727-251, N274US, Near Thiells, New York, December 1, 1974",
       "report_date": "1975-08-13",
-      "url": "https://www.ntsb.gov" }
+      "url": "https://www.ntsb.gov"
+    }
   ],
-  "aircraft": { "type": "Boeing 727-251", "family": "727", "manufacturer": "Boeing", "registration": "N274US", "msn": null, "engines": "Pratt & Whitney JT8D" },
+  "aircraft": {
+    "type": "Boeing 727-251",
+    "family": "727",
+    "manufacturer": "Boeing",
+    "registration": "N274US",
+    "msn": null,
+    "engines": "Pratt & Whitney JT8D"
+  },
   "operator": "Northwest Airlines (Northwest Orient)",
-  "route": { "from": "KJFK", "from_name": "New York John F. Kennedy International", "to": "KBUF", "to_name": "Buffalo Greater Buffalo International" },
-  "location": { "name": "Harriman State Park near Thiells and Stony Point, Rockland County, New York", "country": "USA", "lat": 41.23, "lon": -74.05 },
+  "route": {
+    "from": "KJFK",
+    "from_name": "New York John F. Kennedy International",
+    "to": "KBUF",
+    "to_name": "Buffalo Greater Buffalo International"
+  },
+  "location": {
+    "name": "Harriman State Park near Thiells and Stony Point, Rockland County, New York",
+    "country": "USA",
+    "lat": 41.23,
+    "lon": -74.05
+  },
   "phase": "climb",
   "occupants": 3,
   "fatalities": 3,
@@ -26,53 +48,312 @@
   "summary": "On an evening ferry flight from JFK to Buffalo with only three crew aboard, the 727 climbed in cloud and icing with the pitot heat switched off. The pitot probes iced over, so the airspeed and Mach indications rose with altitude; the crew, believing the airplane was accelerating, reduced power and raised the nose until an overspeed warning sounded at 24,800 feet. They pulled up further, the airplane stalled, and the stick shaker and buffet were misread as Mach buffet. The airplane entered a spiral dive and struck the ground about 83 seconds later.",
   "probable_cause": "The loss of control of the aircraft because the flightcrew failed to recognize and correct the aircraft's high-angle-of-attack, low-speed stall and its descending spiral. The stall was precipitated by the flightcrew's improper reaction to erroneous airspeed and Mach indications which had resulted from a blockage of the pitot heads by atmospheric icing. Contrary to standard operational procedures, the flightcrew had not activated the pitot head heaters.",
   "factors": [
-    { "id": "pitot_blockage", "role": "initiating", "evidence": "The pitot heads iced over during the climb in cloud because the pitot heat switches had not been turned on." },
-    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "Contrary to standard operating procedures the crew did not activate the pitot head heaters before takeoff; the checklist item was missed." },
-    { "id": "airframe_icing", "role": "contributing", "evidence": "The airplane climbed through cloud in icing conditions, which produced the ice that blocked the unheated pitot heads." },
-    { "id": "unreliable_airspeed", "role": "contributing", "evidence": "With the pitot heads blocked and static ports open the indicated airspeed and Mach increased with altitude, reaching more than 400 knots indicated while the airplane was actually slowing." },
-    { "id": "spurious_overspeed_warning", "role": "contributing", "evidence": "The overspeed warning sounded at 24,800 feet as the erroneous indications passed the limit speed, confirming the crew's belief that the airplane was too fast." },
-    { "id": "stall_misdiagnosis", "role": "contributing", "evidence": "The crew interpreted the stick shaker and pre-stall buffet as Mach buffet and continued to pitch up and reduce power." },
-    { "id": "stick_shaker_pusher", "role": "contributing", "evidence": "The stick shaker activated as the airplane approached the stall but was misread by the crew." },
-    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "The crew did not cross-check the implausible combination of high indicated airspeed, high pitch attitude, reduced power and a climb rate the airplane could not have sustained." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "The report found crews were not adequately trained to recognize erroneous airspeed indications or the stall characteristics of the 727 at high altitude." },
-    { "id": "warning_system_deficiency", "role": "latent", "evidence": "There was no warning to alert the crew that pitot heat was off; the NTSB recommended a pitot heat off indication." },
-    { "id": "dark_night", "role": "contributing", "evidence": "The flight was at night in cloud, so the crew had no external visual references to contradict the instruments." },
-    { "id": "aerodynamic_stall", "role": "outcome", "evidence": "The airplane stalled at 24,800 feet in a nose-high, low-speed condition." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The airplane entered a descending spiral from which the crew did not recover, striking the ground in Harriman State Park." }
+    {
+      "id": "pitot_blockage",
+      "role": "initiating",
+      "evidence": "The pitot heads iced over during the climb in cloud because the pitot heat switches had not been turned on."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Contrary to standard operating procedures the crew did not activate the pitot head heaters before takeoff; the checklist item was missed."
+    },
+    {
+      "id": "airframe_icing",
+      "role": "contributing",
+      "evidence": "The airplane climbed through cloud in icing conditions, which produced the ice that blocked the unheated pitot heads."
+    },
+    {
+      "id": "unreliable_airspeed",
+      "role": "contributing",
+      "evidence": "With the pitot heads blocked and static ports open the indicated airspeed and Mach increased with altitude, reaching more than 400 knots indicated while the airplane was actually slowing."
+    },
+    {
+      "id": "spurious_overspeed_warning",
+      "role": "contributing",
+      "evidence": "The overspeed warning sounded at 24,800 feet as the erroneous indications passed the limit speed, confirming the crew's belief that the airplane was too fast."
+    },
+    {
+      "id": "stall_misdiagnosis",
+      "role": "contributing",
+      "evidence": "The crew interpreted the stick shaker and pre-stall buffet as Mach buffet and continued to pitch up and reduce power."
+    },
+    {
+      "id": "stick_shaker_pusher",
+      "role": "contributing",
+      "evidence": "The stick shaker activated as the airplane approached the stall but was misread by the crew."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The crew did not cross-check the implausible combination of high indicated airspeed, high pitch attitude, reduced power and a climb rate the airplane could not have sustained."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "The report found crews were not adequately trained to recognize erroneous airspeed indications or the stall characteristics of the 727 at high altitude."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "latent",
+      "evidence": "There was no warning to alert the crew that pitot heat was off; the NTSB recommended a pitot heat off indication."
+    },
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "The flight was at night in cloud, so the crew had no external visual references to contradict the instruments."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "The airplane stalled at 24,800 feet in a nose-high, low-speed condition."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The airplane entered a descending spiral from which the crew did not recover, striking the ground in Harriman State Park."
+    }
   ],
   "chain": [
-    ["procedural_noncompliance", "pitot_blockage"],
-    ["airframe_icing", "pitot_blockage"],
-    ["warning_system_deficiency", "pitot_blockage"],
-    ["pitot_blockage", "unreliable_airspeed"],
-    ["unreliable_airspeed", "spurious_overspeed_warning"],
-    ["dark_night", "inadequate_monitoring"],
-    ["inadequate_training", "stall_misdiagnosis"],
-    ["inadequate_monitoring", "stall_misdiagnosis"],
-    ["spurious_overspeed_warning", "stall_misdiagnosis"],
-    ["stick_shaker_pusher", "stall_misdiagnosis"],
-    ["stall_misdiagnosis", "aerodynamic_stall"],
-    ["aerodynamic_stall", "loss_of_control_inflight"]
+    [
+      "procedural_noncompliance",
+      "pitot_blockage"
+    ],
+    [
+      "airframe_icing",
+      "pitot_blockage"
+    ],
+    [
+      "warning_system_deficiency",
+      "pitot_blockage"
+    ],
+    [
+      "pitot_blockage",
+      "unreliable_airspeed"
+    ],
+    [
+      "unreliable_airspeed",
+      "spurious_overspeed_warning"
+    ],
+    [
+      "dark_night",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_training",
+      "stall_misdiagnosis"
+    ],
+    [
+      "inadequate_monitoring",
+      "stall_misdiagnosis"
+    ],
+    [
+      "spurious_overspeed_warning",
+      "stall_misdiagnosis"
+    ],
+    [
+      "stick_shaker_pusher",
+      "stall_misdiagnosis"
+    ],
+    [
+      "stall_misdiagnosis",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
-    { "t": -640, "clock": "19:14", "phase": "takeoff", "actor": "CAPT", "text": "The empty 727 departs JFK on a ferry flight to Buffalo with the captain, first officer and flight engineer aboard; the pitot heat switches are off.", "factors": ["procedural_noncompliance"], "kind": "crew_action" },
-    { "t": -400, "clock": null, "phase": "climb", "actor": "ENV", "text": "The airplane climbs through cloud in icing conditions at night; ice begins to accumulate in the unheated pitot heads.", "factors": ["airframe_icing", "pitot_blockage", "dark_night"], "kind": "env" },
-    { "t": -240, "clock": null, "phase": "climb", "actor": "SYS", "text": "Passing about 16,000 feet the pitot heads are blocked; from here the indicated airspeed and Mach rise as the airplane climbs, although true airspeed is falling.", "state": { "alt": 16000 }, "factors": ["pitot_blockage", "unreliable_airspeed"], "kind": "system" },
-    { "t": -150, "clock": null, "phase": "climb", "actor": "CAPT", "text": "Believing the airplane is accelerating, the crew raise the nose and reduce power; the rate of climb increases to well above normal and the crew remark on the apparently excellent performance.", "factors": ["unreliable_airspeed", "inadequate_monitoring"], "kind": "crew_action" },
-    { "t": -60, "clock": null, "phase": "climb", "actor": "SYS", "text": "Indicated airspeed passes 340 knots and continues rising as the airplane climbs through 23,000 feet at a high pitch attitude and decreasing true airspeed.", "state": { "alt": 23000 }, "factors": ["unreliable_airspeed"], "kind": "system" },
-    { "t": 0, "clock": "19:24:42", "phase": "climb", "actor": "SYS", "text": "The overspeed warning (clacker) sounds at about 24,800 feet with the airspeed indicators reading about 405 knots; the crew pull the nose up further to slow down.", "state": { "alt": 24800, "ias": 405 }, "factors": ["spurious_overspeed_warning", "stall_misdiagnosis"], "kind": "warning" },
-    { "t": 8, "clock": null, "phase": "climb", "actor": "SYS", "text": "The stick shaker activates and the airplane buffets; the crew interpret the buffet as Mach buffet consistent with the overspeed warning.", "factors": ["stick_shaker_pusher", "stall_misdiagnosis"], "kind": "warning" },
-    { "t": 12, "clock": null, "phase": "climb", "actor": "SYS", "text": "The airplane stalls at 24,800 feet in a nose-high attitude and rolls off into a descending spiral to the right.", "state": { "alt": 24800 }, "factors": ["aerodynamic_stall", "loss_of_control_inflight"], "kind": "system" },
-    { "t": 30, "clock": null, "phase": "descent", "actor": "CAPT", "text": "The crew attempt to recover, still treating the situation as an overspeed; the captain calls to pull up as the descent rate exceeds 15,000 feet per minute.", "factors": ["stall_misdiagnosis", "loss_of_control_inflight"], "kind": "crew_speech" },
-    { "t": 60, "clock": null, "phase": "descent", "actor": "SYS", "text": "In the spiral dive the airplane experiences high load factors and the horizontal stabilizer and elevator structure are overstressed.", "factors": ["loss_of_control_inflight"], "kind": "system" },
-    { "t": 83, "clock": null, "phase": "descent", "actor": "SYS", "text": "The airplane strikes wooded terrain in Harriman State Park near Thiells, about 83 seconds after the stall began, and is destroyed; all three crew die.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+    {
+      "t": -640,
+      "clock": "19:14",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "The empty 727 departs JFK on a ferry flight to Buffalo with the captain, first officer and flight engineer aboard; the pitot heat switches are off.",
+      "factors": [
+        "procedural_noncompliance"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -400,
+      "clock": null,
+      "phase": "climb",
+      "actor": "ENV",
+      "text": "The airplane climbs through cloud in icing conditions at night; ice begins to accumulate in the unheated pitot heads.",
+      "factors": [
+        "airframe_icing",
+        "pitot_blockage",
+        "dark_night"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": -240,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Passing about 16,000 feet the pitot heads are blocked; from here the indicated airspeed and Mach rise as the airplane climbs, although true airspeed is falling.",
+      "state": {
+        "alt": 16000
+      },
+      "factors": [
+        "pitot_blockage",
+        "unreliable_airspeed"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": -150,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CAPT",
+      "text": "Believing the airplane is accelerating, the crew raise the nose and reduce power; the rate of climb increases to well above normal and the crew remark on the apparently excellent performance.",
+      "factors": [
+        "unreliable_airspeed",
+        "inadequate_monitoring"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -60,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Indicated airspeed passes 340 knots and continues rising as the airplane climbs through 23,000 feet at a high pitch attitude and decreasing true airspeed.",
+      "state": {
+        "alt": 23000
+      },
+      "factors": [
+        "unreliable_airspeed"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 0,
+      "clock": "19:24:42",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "The overspeed warning (clacker) sounds at about 24,800 feet with the airspeed indicators reading about 405 knots; the crew pull the nose up further to slow down.",
+      "state": {
+        "alt": 24800,
+        "ias": 405
+      },
+      "factors": [
+        "spurious_overspeed_warning",
+        "stall_misdiagnosis"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 8,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "The stick shaker activates and the airplane buffets; the crew interpret the buffet as Mach buffet consistent with the overspeed warning.",
+      "factors": [
+        "stick_shaker_pusher",
+        "stall_misdiagnosis"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 12,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "The airplane stalls at 24,800 feet in a nose-high attitude and rolls off into a descending spiral to the right.",
+      "state": {
+        "alt": 24800
+      },
+      "factors": [
+        "aerodynamic_stall",
+        "loss_of_control_inflight"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "The crew attempt to recover, still treating the situation as an overspeed; the captain calls to pull up as the descent rate exceeds 15,000 feet per minute.",
+      "factors": [
+        "stall_misdiagnosis",
+        "loss_of_control_inflight"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "In the spiral dive the airplane experiences high load factors and the horizontal stabilizer and elevator structure are overstressed.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 83,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "The airplane strikes wooded terrain in Harriman State Park near Thiells, about 83 seconds after the stall began, and is destroyed; all three crew die.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "FAA", "text": "Require a warning or indication in the cockpit of transport airplanes when pitot heat is not on, or require pitot heat to be on automatically whenever the airplane is in flight.", "status": "closed_acceptable", "outcome": "Later transport-category designs include pitot heat off caution lights or automatic probe heating.", "trigger_factors": ["warning_system_deficiency", "pitot_blockage"] },
-    { "id": null, "to": "FAA", "text": "Require that air carrier training programs include recognition of and response to erroneous airspeed and Mach indications, using attitude, power and altitude cross-checks.", "status": "unknown", "outcome": "Unreliable airspeed procedures were added to airline manuals and training.", "trigger_factors": ["unreliable_airspeed", "inadequate_training", "stall_misdiagnosis"] },
-    { "id": null, "to": "FAA", "text": "Ensure crews are trained to distinguish stall buffet and stick shaker warning from Mach buffet, and emphasize stall recognition and recovery at high altitude.", "status": "unknown", "outcome": null, "trigger_factors": ["stall_misdiagnosis", "stick_shaker_pusher"] },
-    { "id": null, "to": "FAA", "text": "Review checklist design so that pitot heat and other critical anti-ice items are checked before takeoff in a way that is not easily omitted.", "status": "unknown", "outcome": null, "trigger_factors": ["procedural_noncompliance"] }
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require a warning or indication in the cockpit of transport airplanes when pitot heat is not on, or require pitot heat to be on automatically whenever the airplane is in flight.",
+      "status": "closed_acceptable",
+      "outcome": "Later transport-category designs include pitot heat off caution lights or automatic probe heating.",
+      "trigger_factors": [
+        "warning_system_deficiency",
+        "pitot_blockage"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require that air carrier training programs include recognition of and response to erroneous airspeed and Mach indications, using attitude, power and altitude cross-checks.",
+      "status": "unknown",
+      "outcome": "Unreliable airspeed procedures were added to airline manuals and training.",
+      "trigger_factors": [
+        "unreliable_airspeed",
+        "inadequate_training",
+        "stall_misdiagnosis"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Ensure crews are trained to distinguish stall buffet and stick shaker warning from Mach buffet, and emphasize stall recognition and recovery at high altitude.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "stall_misdiagnosis",
+        "stick_shaker_pusher"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Review checklist design so that pitot heat and other critical anti-ice items are checked before takeoff in a way that is not easily omitted.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -80,13 +361,23 @@
     "Pitot heat off warning annunciations became standard on subsequent transport airplane designs.",
     "Unreliable airspeed and pitch-and-power procedures became a standard element of airline training, later reinforced by the Birgenair 301, Aeroperú 603 and Air France 447 accidents."
   ],
-  "related": ["af447", "birgenair301", "aeroperu603", "colgan3407", "airflorida90", "westcaribbean708"],
+  "related": [
+    "af447",
+    "birgenair301",
+    "aeroperu603",
+    "colgan3407",
+    "airflorida90",
+    "westcaribbean708"
+  ],
   "fdr": null,
   "sources": [
     "https://www.ntsb.gov"
   ],
   "extraction": {
-    "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
     "notes": [
       "Local date 1974-12-01 is used; in UTC the accident occurred on 1974-12-02.",
       "t0 is set to the overspeed warning at about 19:24:42 EST because the onset of the erroneous climb cannot be pinned to an instant; that clock time and the 83-second duration of the descent are as recalled from the report and should be verified.",
@@ -94,5 +385,6 @@
       "No CVR excerpts are quoted; the crew's remarks are paraphrased as crew speech events.",
       "Aircraft MSN and exact JT8D variant are omitted because they are not recalled with confidence; the report is not available online as a deep link so the NTSB home page is cited."
     ]
-  }
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Northwest_Orient_Airlines_Flight_6231"
 }

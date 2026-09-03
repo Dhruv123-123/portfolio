@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Pacific Ocean",
-    "country": "International waters"
+    "country": "International waters",
+    "lat": 32.544,
+    "lon": -116.9656
   },
   "phase": "cruise",
   "occupants": 274,

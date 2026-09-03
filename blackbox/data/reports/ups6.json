@@ -7,72 +7,363 @@
   "t0": "2010-09-03T15:12:00Z",
   "agency": "GCAA",
   "agencies": [
-    { "code": "GCAA", "name": "General Civil Aviation Authority", "country": "United Arab Emirates", "role": "lead",
-      "report_id": null, "report_title": "Air Accident Investigation Sector final report, Uncontained cargo fire leading to loss of control inflight and uncontrolled descent into terrain, Boeing 747-44AF N571UP, Dubai, 3 September 2010", "report_date": "2013-07-24",
-      "url": "https://www.gcaa.gov.ae" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative",
-      "report_id": null, "report_title": null, "report_date": null, "url": "https://www.ntsb.gov" }
+    {
+      "code": "GCAA",
+      "name": "General Civil Aviation Authority",
+      "country": "United Arab Emirates",
+      "role": "lead",
+      "report_id": null,
+      "report_title": "Air Accident Investigation Sector final report, Uncontained cargo fire leading to loss of control inflight and uncontrolled descent into terrain, Boeing 747-44AF N571UP, Dubai, 3 September 2010",
+      "report_date": "2013-07-24",
+      "url": "https://www.gcaa.gov.ae"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative",
+      "report_id": null,
+      "report_title": null,
+      "report_date": null,
+      "url": "https://www.ntsb.gov"
+    }
   ],
-  "aircraft": { "type": "Boeing 747-44AF", "family": "747", "manufacturer": "Boeing", "registration": "N571UP", "msn": "35668", "engines": "General Electric CF6-80C2B5F" },
+  "aircraft": {
+    "type": "Boeing 747-44AF",
+    "family": "747",
+    "manufacturer": "Boeing",
+    "registration": "N571UP",
+    "msn": "35668",
+    "engines": "General Electric CF6-80C2B5F"
+  },
   "operator": "UPS Airlines",
-  "route": { "from": "OMDB", "from_name": "Dubai International", "to": "EDDK", "to_name": "Cologne Bonn" },
-  "location": { "name": "Nad Al Sheba military area, about 10 km south of Dubai International", "country": "United Arab Emirates", "lat": 25.11, "lon": 55.34 },
+  "route": {
+    "from": "OMDB",
+    "from_name": "Dubai International",
+    "to": "EDDK",
+    "to_name": "Cologne Bonn"
+  },
+  "location": {
+    "name": "Nad Al Sheba military area, about 10 km south of Dubai International",
+    "country": "United Arab Emirates",
+    "lat": 25.11,
+    "lon": 55.34
+  },
   "phase": "cruise",
-  "occupants": 2, "fatalities": 2, "injuries_serious": 0,
+  "occupants": 2,
+  "fatalities": 2,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "F-NI",
   "summary": "About 22 minutes after departure from Dubai, climbing through the Bahrain FIR, a fire warning sounded for the main deck cargo compartment, where a shipment including lithium batteries had ignited. The crew turned back toward Dubai. Smoke filled the cockpit and the captain's oxygen supply failed; he left his seat and was incapacitated. The first officer flew alone, unable to see the instruments or tune the radios, communicating through relay aircraft, and with degraded pitch control from fire-damaged cables. The aircraft overflew Dubai, could not be positioned for a landing, and struck the ground south of the airport. Both pilots died.",
   "probable_cause": "The GCAA concluded that a large fire developed in the palletised cargo on the main deck, most probably originating in a shipment containing lithium batteries, and that the resulting smoke entered the flight deck. The fire damaged the control cables, limiting pitch control, and the captain's oxygen supply was interrupted, leading to his incapacitation. The first officer, with severely reduced visibility of the instruments, no direct communication with Dubai and limited control authority, was unable to land the aircraft. Contributing factors included the lack of a requirement to declare lithium batteries as hazardous in cargo, the class E cargo compartment's lack of fire suppression, the inadequate smoke barrier between the main deck and the flight deck, and the absence of a supplementary oxygen supply that could be used without leaving the seat.",
   "factors": [
-    { "id": "cargo_fire", "role": "initiating", "evidence": "A fire developed in palletised cargo on the main deck containing lithium batteries and other flammable material; the fire warning sounded about 22 minutes after takeoff." },
-    { "id": "flammable_material", "role": "latent", "evidence": "The shipment contained lithium batteries in quantities that did not require declaration as hazardous goods, in proximity to combustible packaging." },
-    { "id": "inflight_fire", "role": "contributing", "evidence": "The fire spread rapidly through the main deck; the class E compartment had no active fire suppression." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The smoke barrier between the main deck and the flight deck did not prevent smoke ingress, and the crew oxygen system did not provide a portable supply usable without leaving the seat." },
-    { "id": "regulatory_oversight", "role": "latent", "evidence": "The regulations in force did not require lithium batteries in the quantities carried to be declared, packaged or segregated as dangerous goods." },
-    { "id": "pilot_incapacitation", "role": "contributing", "evidence": "The captain's oxygen supply ceased; he left his seat to find a portable bottle and was incapacitated by smoke and fumes." },
-    { "id": "flight_control_failure", "role": "contributing", "evidence": "The fire damaged the control cables on the main deck, degrading pitch control; the first officer relied on the autopilot for control." },
-    { "id": "loss_of_pilot_control_authority", "role": "contributing", "evidence": "With fire-damaged cables and unreliable elevator response the first officer had limited ability to control pitch during the final descent." },
-    { "id": "high_workload", "role": "contributing", "evidence": "The first officer alone flew the aircraft, managed the emergency, and relayed communications through other aircraft because he could not tune the radios." },
-    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "Unable to see the instruments through the smoke, the first officer overflew the airport and could not establish the aircraft's position for an approach." },
-    { "id": "cfit", "role": "outcome", "evidence": "The aircraft descended into the ground south of Dubai while the first officer attempted to return to the airport." },
-    { "id": "post_impact_fire", "role": "outcome", "evidence": "The aircraft was destroyed by impact forces and fire." }
+    {
+      "id": "cargo_fire",
+      "role": "initiating",
+      "evidence": "A fire developed in palletised cargo on the main deck containing lithium batteries and other flammable material; the fire warning sounded about 22 minutes after takeoff."
+    },
+    {
+      "id": "flammable_material",
+      "role": "latent",
+      "evidence": "The shipment contained lithium batteries in quantities that did not require declaration as hazardous goods, in proximity to combustible packaging."
+    },
+    {
+      "id": "inflight_fire",
+      "role": "contributing",
+      "evidence": "The fire spread rapidly through the main deck; the class E compartment had no active fire suppression."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The smoke barrier between the main deck and the flight deck did not prevent smoke ingress, and the crew oxygen system did not provide a portable supply usable without leaving the seat."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "The regulations in force did not require lithium batteries in the quantities carried to be declared, packaged or segregated as dangerous goods."
+    },
+    {
+      "id": "pilot_incapacitation",
+      "role": "contributing",
+      "evidence": "The captain's oxygen supply ceased; he left his seat to find a portable bottle and was incapacitated by smoke and fumes."
+    },
+    {
+      "id": "flight_control_failure",
+      "role": "contributing",
+      "evidence": "The fire damaged the control cables on the main deck, degrading pitch control; the first officer relied on the autopilot for control."
+    },
+    {
+      "id": "loss_of_pilot_control_authority",
+      "role": "contributing",
+      "evidence": "With fire-damaged cables and unreliable elevator response the first officer had limited ability to control pitch during the final descent."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The first officer alone flew the aircraft, managed the emergency, and relayed communications through other aircraft because he could not tune the radios."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "Unable to see the instruments through the smoke, the first officer overflew the airport and could not establish the aircraft's position for an approach."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft descended into the ground south of Dubai while the first officer attempted to return to the airport."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "The aircraft was destroyed by impact forces and fire."
+    }
   ],
   "chain": [
-    ["regulatory_oversight", "flammable_material"],
-    ["flammable_material", "cargo_fire"],
-    ["cargo_fire", "inflight_fire"],
-    ["design_deficiency", "inflight_fire"],
-    ["inflight_fire", "pilot_incapacitation"],
-    ["design_deficiency", "pilot_incapacitation"],
-    ["inflight_fire", "flight_control_failure"],
-    ["flight_control_failure", "loss_of_pilot_control_authority"],
-    ["pilot_incapacitation", "high_workload"],
-    ["inflight_fire", "loss_of_situational_awareness"],
-    ["high_workload", "loss_of_situational_awareness"],
-    ["loss_of_situational_awareness", "cfit"],
-    ["loss_of_pilot_control_authority", "cfit"],
-    ["cfit", "post_impact_fire"]
+    [
+      "regulatory_oversight",
+      "flammable_material"
+    ],
+    [
+      "flammable_material",
+      "cargo_fire"
+    ],
+    [
+      "cargo_fire",
+      "inflight_fire"
+    ],
+    [
+      "design_deficiency",
+      "inflight_fire"
+    ],
+    [
+      "inflight_fire",
+      "pilot_incapacitation"
+    ],
+    [
+      "design_deficiency",
+      "pilot_incapacitation"
+    ],
+    [
+      "inflight_fire",
+      "flight_control_failure"
+    ],
+    [
+      "flight_control_failure",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "pilot_incapacitation",
+      "high_workload"
+    ],
+    [
+      "inflight_fire",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "high_workload",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "cfit"
+    ],
+    [
+      "loss_of_pilot_control_authority",
+      "cfit"
+    ],
+    [
+      "cfit",
+      "post_impact_fire"
+    ]
   ],
   "events": [
-    { "t": -1260, "clock": "14:51", "phase": "takeoff", "actor": "PF", "text": "Takeoff from Dubai runway 30R for Cologne with a main-deck cargo load that includes lithium batteries.", "factors": ["flammable_material"], "kind": "crew_action" },
-    { "t": 0, "clock": "15:12", "phase": "climb", "actor": "SYS", "text": "Fire warning for the main deck cargo compartment while climbing through about FL320 in the Bahrain FIR.", "state": { "alt": 32000 }, "factors": ["cargo_fire", "inflight_fire"], "kind": "warning" },
-    { "t": 60, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "The crew declare an emergency to Bahrain ACC and elect to return to Dubai rather than divert to Doha, which is closer.", "factors": [], "kind": "atc" },
-    { "t": 120, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "Crew run the fire checklist; the main deck is depressurised and the aircraft turns back toward Dubai.", "factors": ["inflight_fire"], "kind": "crew_action" },
-    { "t": 180, "clock": null, "phase": "descent", "actor": "SYS", "text": "Smoke enters the flight deck and rapidly reduces visibility of the instruments and the outside.", "factors": ["design_deficiency", "inflight_fire"], "kind": "system" },
-    { "t": 300, "clock": null, "phase": "descent", "actor": "SYS", "text": "The autopilot is used for control; pitch control through the column becomes limited as the fire damages the control cables.", "factors": ["flight_control_failure", "loss_of_pilot_control_authority"], "kind": "system" },
-    { "t": 420, "clock": null, "phase": "descent", "actor": "CAPT", "text": "The captain's oxygen supply fails; he leaves his seat to find a portable oxygen bottle and is overcome by smoke and fumes.", "factors": ["pilot_incapacitation", "design_deficiency"], "kind": "crew_action" },
-    { "t": 480, "clock": null, "phase": "descent", "actor": "FO", "text": "The first officer, flying alone, cannot see the radio panel to tune Dubai frequencies and communicates with Bahrain ACC through relay aircraft.", "factors": ["high_workload"], "kind": "atc" },
-    { "t": 1200, "clock": null, "phase": "approach", "actor": "FO", "text": "The aircraft descends toward Dubai; the first officer, unable to read the instruments, passes over the airport at about 4,000 ft without seeing the runway.", "state": { "alt": 4000 }, "factors": ["loss_of_situational_awareness"], "kind": "crew_action" },
-    { "t": 1500, "clock": null, "phase": "approach", "actor": "FO", "text": "Relayed instructions to turn toward Sharjah are received; the aircraft turns but continues to descend with limited pitch authority.", "factors": ["loss_of_pilot_control_authority", "loss_of_situational_awareness"], "kind": "atc" },
-    { "t": 1680, "clock": null, "phase": "approach", "actor": "SYS", "text": "GPWS warnings sound as the aircraft descends toward the ground.", "factors": [], "kind": "warning" },
-    { "t": 1740, "clock": "15:41", "phase": "approach", "actor": "ENV", "text": "The aircraft strikes the ground at the Nad Al Sheba military area about 10 km south of Dubai International and is destroyed by impact and fire.", "factors": ["cfit", "post_impact_fire"], "kind": "outcome" }
+    {
+      "t": -1260,
+      "clock": "14:51",
+      "phase": "takeoff",
+      "actor": "PF",
+      "text": "Takeoff from Dubai runway 30R for Cologne with a main-deck cargo load that includes lithium batteries.",
+      "factors": [
+        "flammable_material"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "15:12",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Fire warning for the main deck cargo compartment while climbing through about FL320 in the Bahrain FIR.",
+      "state": {
+        "alt": 32000
+      },
+      "factors": [
+        "cargo_fire",
+        "inflight_fire"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "The crew declare an emergency to Bahrain ACC and elect to return to Dubai rather than divert to Doha, which is closer.",
+      "factors": [],
+      "kind": "atc"
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Crew run the fire checklist; the main deck is depressurised and the aircraft turns back toward Dubai.",
+      "factors": [
+        "inflight_fire"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Smoke enters the flight deck and rapidly reduces visibility of the instruments and the outside.",
+      "factors": [
+        "design_deficiency",
+        "inflight_fire"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "The autopilot is used for control; pitch control through the column becomes limited as the fire damages the control cables.",
+      "factors": [
+        "flight_control_failure",
+        "loss_of_pilot_control_authority"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 420,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "The captain's oxygen supply fails; he leaves his seat to find a portable oxygen bottle and is overcome by smoke and fumes.",
+      "factors": [
+        "pilot_incapacitation",
+        "design_deficiency"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 480,
+      "clock": null,
+      "phase": "descent",
+      "actor": "FO",
+      "text": "The first officer, flying alone, cannot see the radio panel to tune Dubai frequencies and communicates with Bahrain ACC through relay aircraft.",
+      "factors": [
+        "high_workload"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": 1200,
+      "clock": null,
+      "phase": "approach",
+      "actor": "FO",
+      "text": "The aircraft descends toward Dubai; the first officer, unable to read the instruments, passes over the airport at about 4,000 ft without seeing the runway.",
+      "state": {
+        "alt": 4000
+      },
+      "factors": [
+        "loss_of_situational_awareness"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 1500,
+      "clock": null,
+      "phase": "approach",
+      "actor": "FO",
+      "text": "Relayed instructions to turn toward Sharjah are received; the aircraft turns but continues to descend with limited pitch authority.",
+      "factors": [
+        "loss_of_pilot_control_authority",
+        "loss_of_situational_awareness"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": 1680,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "GPWS warnings sound as the aircraft descends toward the ground.",
+      "factors": [],
+      "kind": "warning"
+    },
+    {
+      "t": 1740,
+      "clock": "15:41",
+      "phase": "approach",
+      "actor": "ENV",
+      "text": "The aircraft strikes the ground at the Nad Al Sheba military area about 10 km south of Dubai International and is destroyed by impact and fire.",
+      "factors": [
+        "cfit",
+        "post_impact_fire"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "ICAO / FAA", "text": "Review the classification, packaging, quantity limits and declaration requirements for lithium batteries carried as cargo, and prohibit or restrict their carriage in bulk on aircraft without suppression.", "status": "closed_acceptable", "outcome": "ICAO prohibited lithium metal batteries as cargo on passenger aircraft in 2015 and lithium-ion batteries in 2016, with state-of-charge limits on cargo aircraft.", "trigger_factors": ["flammable_material", "regulatory_oversight"] },
-    { "id": null, "to": "FAA / Boeing", "text": "Improve fire detection and suppression for class E main-deck cargo compartments, and the smoke barrier between cargo compartment and flight deck.", "status": "unknown", "outcome": "Industry development of fire-resistant containers and fire containment covers; FAA fire-safety research on class E compartments.", "trigger_factors": ["inflight_fire", "design_deficiency"] },
-    { "id": null, "to": "FAA / Boeing", "text": "Provide flight crews with full-face oxygen masks and smoke-vision systems or equivalent means to see the instruments in dense smoke, and a portable oxygen supply usable without leaving the seat.", "status": "unknown", "outcome": "UPS installed full-face oxygen masks and Emergency Vision Assurance Systems on its fleet.", "trigger_factors": ["pilot_incapacitation", "design_deficiency"] },
-    { "id": null, "to": "Operators", "text": "Train crews to divert to the nearest suitable airport in the event of an uncontrolled cargo fire.", "status": "unknown", "outcome": null, "trigger_factors": ["inflight_fire"] }
+    {
+      "id": null,
+      "to": "ICAO / FAA",
+      "text": "Review the classification, packaging, quantity limits and declaration requirements for lithium batteries carried as cargo, and prohibit or restrict their carriage in bulk on aircraft without suppression.",
+      "status": "closed_acceptable",
+      "outcome": "ICAO prohibited lithium metal batteries as cargo on passenger aircraft in 2015 and lithium-ion batteries in 2016, with state-of-charge limits on cargo aircraft.",
+      "trigger_factors": [
+        "flammable_material",
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA / Boeing",
+      "text": "Improve fire detection and suppression for class E main-deck cargo compartments, and the smoke barrier between cargo compartment and flight deck.",
+      "status": "unknown",
+      "outcome": "Industry development of fire-resistant containers and fire containment covers; FAA fire-safety research on class E compartments.",
+      "trigger_factors": [
+        "inflight_fire",
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA / Boeing",
+      "text": "Provide flight crews with full-face oxygen masks and smoke-vision systems or equivalent means to see the instruments in dense smoke, and a portable oxygen supply usable without leaving the seat.",
+      "status": "unknown",
+      "outcome": "UPS installed full-face oxygen masks and Emergency Vision Assurance Systems on its fleet.",
+      "trigger_factors": [
+        "pilot_incapacitation",
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Operators",
+      "text": "Train crews to divert to the nearest suitable airport in the event of an uncontrolled cargo fire.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inflight_fire"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -80,17 +371,26 @@
     "UPS fitted its fleet with full-face oxygen masks, Emergency Vision Assurance Systems and fire-resistant cargo containers and fire containment covers.",
     "The FAA issued guidance on lithium battery transport and accelerated research on class E cargo compartment fire protection."
   ],
-  "related": ["valujet592", "swissair111"],
+  "related": [
+    "valujet592",
+    "swissair111"
+  ],
   "fdr": null,
   "sources": [
     "https://www.gcaa.gov.ae",
     "https://www.ntsb.gov"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
     "notes": [
       "Times are given to the minute from the GCAA report narrative (takeoff 14:51, fire warning about 15:12, impact about 15:41 UTC); intermediate event t values are approximate offsets.",
       "The report number is not given because the GCAA case reference was not verified.",
       "The cfit outcome factor is used as instructed; the GCAA described the impact as an uncontrolled descent into terrain after loss of control, so loss_of_pilot_control_authority is also listed.",
       "Crash-site lat/lon are approximate for Nad Al Sheba."
-    ] }
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/UPS_Airlines_Flight_6"
 }

@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "Crossmaglen",
-    "country": "Northern Ireland"
+    "country": "Northern Ireland",
+    "lat": 54.0784,
+    "lon": -6.6076
   },
   "phase": "descent",
   "occupants": 4,

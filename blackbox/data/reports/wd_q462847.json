@@ -29,7 +29,9 @@
   },
   "location": {
     "name": "Colorado Springs Municipal Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 38.7359,
+    "lon": -104.7118
   },
   "phase": "approach",
   "occupants": 25,

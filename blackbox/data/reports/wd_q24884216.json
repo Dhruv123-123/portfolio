@@ -1,214 +1,216 @@
 {
- "id": "wd_q24884216",
- "qid": "Q24884216",
- "tier": "wikidata",
- "depth": "sections",
- "title": "Trans-Colorado Airlines 2286",
- "flight_number": "TC2286",
- "date": "1988-01-19",
- "agency": "NTSB",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead"
-  }
- ],
- "aircraft": {
-  "type": "Fairchild Swearingen Metro III",
-  "manufacturer": "Fairchild",
-  "family": "Metro",
-  "registration": "N68TC"
- },
- "operator": "Trans-Colorado Airlines",
- "route": {
-  "from_name": "Denver",
-  "to_name": "Durango"
- },
- "location": {
-  "name": "Bayfield, Colorado",
-  "country": "United States"
- },
- "phase": "approach",
- "occupants": 17,
- "fatalities": 9,
- "category": "CFIT",
- "summary": "The crew chose a direct non-precision approach to runway 20 instead of an ILS approach that would have added ten minutes, motivated by time savings. The first officer flew a rapid descent of 3,000 feet per minute, more than three times the intended rate. The aircraft struck terrain approximately five miles from the airport while descending. Tests revealed the captain had used cocaine 12 to 18 hours before the flight, which likely degraded his piloting skills.",
- "probable_cause": "The crew's failure to follow the proper descent profile and recent cocaine use by the captain degraded his ability to provide adequate oversight and supervision of the approach.",
- "factors": [
-  {
-   "id": "navigation_error",
-   "role": "initiating",
-   "evidence": "crew's failure to follow the proper descent profile"
-  },
-  {
-   "id": "excessive_speed",
-   "role": "contributing",
-   "evidence": "Harvey flew in at a rapid descent of 3,000 feet per minute, which was more than three times the rate intended for the approach"
-  },
-  {
-   "id": "pilot_experience",
-   "role": "latent",
-   "evidence": "Harvey had 1,494 flying hours total with 3,458 on the Fairchild Metro"
-  },
-  {
-   "id": "high_workload",
-   "role": "contributing",
-   "evidence": "Silver had a reputation as a pilot who could make up for lost time, chose approach to Runway 20 because it would save time"
-  },
-  {
-   "id": "cfit",
-   "role": "outcome",
-   "evidence": "aircraft struck the ground and rolled several times before striking the ground again"
-  }
- ],
- "chain": [
-  [
-   "high_workload",
-   "navigation_error"
+  "id": "wd_q24884216",
+  "qid": "Q24884216",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Trans-Colorado Airlines 2286",
+  "flight_number": "TC2286",
+  "date": "1988-01-19",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
   ],
-  [
-   "navigation_error",
-   "excessive_speed"
+  "aircraft": {
+    "type": "Fairchild Swearingen Metro III",
+    "manufacturer": "Fairchild",
+    "family": "Metro",
+    "registration": "N68TC"
+  },
+  "operator": "Trans-Colorado Airlines",
+  "route": {
+    "from_name": "Denver",
+    "to_name": "Durango"
+  },
+  "location": {
+    "name": "Bayfield, Colorado",
+    "country": "United States",
+    "lat": 37.2167,
+    "lon": -107.6833
+  },
+  "phase": "approach",
+  "occupants": 17,
+  "fatalities": 9,
+  "category": "CFIT",
+  "summary": "The crew chose a direct non-precision approach to runway 20 instead of an ILS approach that would have added ten minutes, motivated by time savings. The first officer flew a rapid descent of 3,000 feet per minute, more than three times the intended rate. The aircraft struck terrain approximately five miles from the airport while descending. Tests revealed the captain had used cocaine 12 to 18 hours before the flight, which likely degraded his piloting skills.",
+  "probable_cause": "The crew's failure to follow the proper descent profile and recent cocaine use by the captain degraded his ability to provide adequate oversight and supervision of the approach.",
+  "factors": [
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "crew's failure to follow the proper descent profile"
+    },
+    {
+      "id": "excessive_speed",
+      "role": "contributing",
+      "evidence": "Harvey flew in at a rapid descent of 3,000 feet per minute, which was more than three times the rate intended for the approach"
+    },
+    {
+      "id": "pilot_experience",
+      "role": "latent",
+      "evidence": "Harvey had 1,494 flying hours total with 3,458 on the Fairchild Metro"
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "Silver had a reputation as a pilot who could make up for lost time, chose approach to Runway 20 because it would save time"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "aircraft struck the ground and rolled several times before striking the ground again"
+    }
   ],
-  [
-   "excessive_speed",
-   "cfit"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "18:20",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft departed Denver Stapleton International Airport with 17 occupants (2 crew, 15 passengers) on a regularly scheduled flight to Durango via Cortez with minimal weather ceiling and visibility in Durango area (p. 1-7)",
-   "factors": []
+  "chain": [
+    [
+      "high_workload",
+      "navigation_error"
+    ],
+    [
+      "navigation_error",
+      "excessive_speed"
+    ],
+    [
+      "excessive_speed",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "18:20",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft departed Denver Stapleton International Airport with 17 occupants (2 crew, 15 passengers) on a regularly scheduled flight to Durango via Cortez with minimal weather ceiling and visibility in Durango area (p. 1-7)",
+      "factors": []
+    },
+    {
+      "t": 180,
+      "clock": "18:53",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain reported aircraft level at Flight Level 230 (23,000 feet) to Denver ARTCC (p. 1-7)",
+      "factors": []
+    },
+    {
+      "t": 420,
+      "clock": "19:00",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Denver ARTCC offered captain choice between ILS approach to runway 2 or VOR-DME approach to runway 20; captain chose direct VOR-DME approach to runway 20 to save 10 minutes (p. 1-7)",
+      "factors": [
+        "high_workload",
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 480,
+      "clock": "19:03",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Cleared to descend at pilot's discretion to 16,000 feet MSL (p. 1-7)",
+      "factors": []
+    },
+    {
+      "t": 600,
+      "clock": "19:10",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Cleared to descend to 15,000 feet MSL and shortly after to cross the DRO 023 degree radial 11-mile fix at or above 14,000 feet for VOR-DME runway 20 approach (p. 1-7)",
+      "factors": []
+    },
+    {
+      "t": 630,
+      "clock": "19:14",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain reported down to 14,000 feet and cleared for approach; radar coverage terminated 2 seconds later with final transmission from aircraft (p. 1-7)",
+      "factors": []
+    },
+    {
+      "t": 720,
+      "clock": "19:16",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer flying at excessive descent rate of approximately 3,000 feet per minute, beginning from 14,000 feet MSL altitude at high ground speed (p. 2-25, 2-26)",
+      "factors": [
+        "excessive_speed",
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 900,
+      "clock": "19:20",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft struck terrain approximately 5 miles from Durango airport in Bayfield, Colorado at 37 degrees 13 minutes N, 107 degrees 41 minutes W; rolled several times before coming to rest (p. 1-7)",
+      "factors": [
+        "cfit",
+        "excessive_speed"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8901.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Trans-Colorado_Airlines_Flight_2286",
+  "asn_id": "19880119-3",
+  "interest": 10.48,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Depth: sections",
+      "Extracted from NTSB AAR-89-01",
+      "Events and factors from report",
+      "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null; sources was null"
+    ]
   },
-  {
-   "t": 180,
-   "clock": "18:53",
-   "phase": "cruise",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Captain reported aircraft level at Flight Level 230 (23,000 feet) to Denver ARTCC (p. 1-7)",
-   "factors": []
-  },
-  {
-   "t": 420,
-   "clock": "19:00",
-   "phase": "descent",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Denver ARTCC offered captain choice between ILS approach to runway 2 or VOR-DME approach to runway 20; captain chose direct VOR-DME approach to runway 20 to save 10 minutes (p. 1-7)",
-   "factors": [
-    "high_workload",
-    "navigation_error"
-   ]
-  },
-  {
-   "t": 480,
-   "clock": "19:03",
-   "phase": "descent",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Cleared to descend at pilot's discretion to 16,000 feet MSL (p. 1-7)",
-   "factors": []
-  },
-  {
-   "t": 600,
-   "clock": "19:10",
-   "phase": "descent",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Cleared to descend to 15,000 feet MSL and shortly after to cross the DRO 023 degree radial 11-mile fix at or above 14,000 feet for VOR-DME runway 20 approach (p. 1-7)",
-   "factors": []
-  },
-  {
-   "t": 630,
-   "clock": "19:14",
-   "phase": "approach",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Captain reported down to 14,000 feet and cleared for approach; radar coverage terminated 2 seconds later with final transmission from aircraft (p. 1-7)",
-   "factors": []
-  },
-  {
-   "t": 720,
-   "clock": "19:16",
-   "phase": "approach",
-   "actor": "FO",
-   "kind": "crew_action",
-   "text": "First officer flying at excessive descent rate of approximately 3,000 feet per minute, beginning from 14,000 feet MSL altitude at high ground speed (p. 2-25, 2-26)",
-   "factors": [
-    "excessive_speed",
-    "navigation_error"
-   ]
-  },
-  {
-   "t": 900,
-   "clock": "19:20",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Aircraft struck terrain approximately 5 miles from Durango airport in Bayfield, Colorado at 37 degrees 13 minutes N, 107 degrees 41 minutes W; rolled several times before coming to rest (p. 1-7)",
-   "factors": [
-    "cfit",
-    "excessive_speed"
-   ]
-  }
- ],
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8901.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/Trans-Colorado_Airlines_Flight_2286",
- "asn_id": "19880119-3",
- "interest": 10.48,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Depth: sections",
-   "Extracted from NTSB AAR-89-01",
-   "Events and factors from report",
-   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null; sources was null"
-  ]
- },
- "curated_id": null,
- "recommendations": [
-  {
-   "id": "A-89-3",
-   "to": "FAA",
-   "text": "Inform principal operations inspectors of the United States Standard for Terminal Instrument Procedures (TERPs criteria), and require them to personally observe an operator's conduct of a special approach before they give the authorization to fly the approach.",
-   "status": "unknown",
-   "trigger_factors": [
-    "navigation_error"
-   ]
-  },
-  {
-   "id": "A-89-4",
-   "to": "FAA",
-   "text": "Provide guidance to operators of scheduled revenue passenger service to assist them in obtaining relevant information from previous employers about the piloting skills and abilities of prospective pilots.",
-   "status": "unknown",
-   "trigger_factors": [
-    "pilot_experience"
-   ]
-  },
-  {
-   "id": "A-89-5",
-   "to": "FAA",
-   "text": "Distribute and periodically update, as needed, the Department of Transportation study, Data Available on the impact of Drug Use on Transportation Safety, to all aviation medical examiners. In addition, information on the detection of drug use should be disseminated to aviation medical examiners.",
-   "status": "unknown",
-   "trigger_factors": []
-  }
- ],
- "cvr": [],
- "dissent": [],
- "safety_changes": [],
- "related": [],
- "sources": []
+  "curated_id": null,
+  "recommendations": [
+    {
+      "id": "A-89-3",
+      "to": "FAA",
+      "text": "Inform principal operations inspectors of the United States Standard for Terminal Instrument Procedures (TERPs criteria), and require them to personally observe an operator's conduct of a special approach before they give the authorization to fly the approach.",
+      "status": "unknown",
+      "trigger_factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "id": "A-89-4",
+      "to": "FAA",
+      "text": "Provide guidance to operators of scheduled revenue passenger service to assist them in obtaining relevant information from previous employers about the piloting skills and abilities of prospective pilots.",
+      "status": "unknown",
+      "trigger_factors": [
+        "pilot_experience"
+      ]
+    },
+    {
+      "id": "A-89-5",
+      "to": "FAA",
+      "text": "Distribute and periodically update, as needed, the Department of Transportation study, Data Available on the impact of Drug Use on Transportation Safety, to all aviation medical examiners. In addition, information on the detection of drug use should be disseminated to aviation medical examiners.",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "cvr": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "sources": []
 }

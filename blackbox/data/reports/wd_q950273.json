@@ -1,405 +1,405 @@
 {
- "id": "wd_q950273",
- "title": "1986 Mozambican Tupolev Tu-134 crash",
- "flight_number": null,
- "date": "1986-10-19",
- "time_reference": "Local time (SAST/UTC+2)",
- "t0": "1986-10-19T17:21:39Z",
- "agency": "SACT",
- "agencies": [
-  {
-   "code": "SACT",
-   "name": "South African Civil Aviation Authority",
-   "country": "South Africa",
-   "role": "lead",
-   "report_id": "C9-CAA",
-   "report_title": "Board of Inquiry Report - Tupolev TU-134A Aircraft C9-CAA",
-   "report_date": null,
-   "url": "https://caasanwebsitestorage.blob.core.windows.net/accident-report-archive/C9-CAA.pdf"
-  }
- ],
- "aircraft": {
-  "type": "Tupolev Tu-134A-3",
-  "family": "Tu-134",
-  "manufacturer": "Tupolev",
-  "registration": "C9-CAA",
-  "msn": null,
-  "engines": "2 x Kuznetsov NK-8-2U"
- },
- "operator": "People's Republic of Mozambique",
- "route": {
-  "from": "MBW",
-  "from_name": "Mbala Airport, Zambia",
-  "to": "FQMM",
-  "to_name": "Maputo International Airport"
- },
- "location": {
-  "name": "Mbuzini, near Komatipoort",
-  "country": "South Africa",
-  "lat": null,
-  "lon": null
- },
- "phase": "descent",
- "occupants": 44,
- "fatalities": 34,
- "injuries_serious": 10,
- "damage": "destroyed",
- "category": "CFIT",
- "summary": "A Tupolev Tu-134A carrying President Samora Machel and 43 others departed Mbala, Zambia on October 19, 1986 for Maputo. The navigator inadvertently tuned the primary VOR receiver to Matsapa Airport frequency in Swaziland instead of Maputo, diverting the aircraft 37° off course. The crew failed to monitor the second VOR receiver or cross-check their position. Despite ground proximity warnings, the captain continued descending below minimum safe altitude in darkness and clouds without visual reference to the ground, resulting in controlled flight into terrain near Mbuzini in South Africa.",
- "probable_cause": "The cause of the accident was that the flight crew failed to follow procedural requirements for an instrument let-down approach, but continued to descend under visual flight rules in darkness and some cloud, i.e. without having visual contact with the ground, below minimum safe altitude and minimum assigned altitude, and in addition ignored the GPWS alarm. (p. 109)",
- "factors": [
-  {
-   "id": "navigation_error",
-   "role": "initiating",
-   "evidence": "Crew set first VOR receiver to Matsapa frequency instead of Maputo frequency, causing 37° deviation off course; navigator unaware of the error and continued to follow Matsapa beacon (p. 108)"
-  },
-  {
-   "id": "design_deficiency",
-   "role": "latent",
-   "evidence": "Poor design of VOR frequency display with no back-lighting, unusually close frequencies between Matsapa and Maputo, and similar appearance of displayed numerals made frequency selection error more likely (p. 108)"
-  },
-  {
-   "id": "inadequate_monitoring",
-   "role": "contributing",
-   "evidence": "Second VOR receiver correctly set to Maputo but apparently not being used or monitored by crew; no cross-checking by challenge and answer system took place (p. 107)"
-  },
-  {
-   "id": "procedural_noncompliance",
-   "role": "contributing",
-   "evidence": "Required procedures and callouts during final let-down and approach were not followed; breakdown in crew discipline and coordination; crew did not file required flight plan (p. 108)"
-  },
-  {
-   "id": "gpws_warning_response",
-   "role": "contributing",
-   "evidence": "GPWS alarm sounded at 19:21:02 at height of 796m and remained active for 32 seconds; captain cursed but continued descent, ignoring the warning (p. 25)"
-  },
-  {
-   "id": "cfit",
-   "role": "outcome",
-   "evidence": "Aircraft impacted terrain at Mbuzini at 19:21:39 in darkness at high descent rate of 480 feet per minute; 34 of 44 occupants killed including President Samora Machel (p. 26)"
-  }
- ],
- "chain": [
-  [
-   "design_deficiency",
-   "navigation_error"
+  "id": "wd_q950273",
+  "title": "1986 Mozambican Tupolev Tu-134 crash",
+  "flight_number": null,
+  "date": "1986-10-19",
+  "time_reference": "Local time (SAST/UTC+2)",
+  "t0": "1986-10-19T17:21:39Z",
+  "agency": "SACT",
+  "agencies": [
+    {
+      "code": "SACT",
+      "name": "South African Civil Aviation Authority",
+      "country": "South Africa",
+      "role": "lead",
+      "report_id": "C9-CAA",
+      "report_title": "Board of Inquiry Report - Tupolev TU-134A Aircraft C9-CAA",
+      "report_date": null,
+      "url": "https://caasanwebsitestorage.blob.core.windows.net/accident-report-archive/C9-CAA.pdf"
+    }
   ],
-  [
-   "navigation_error",
-   "inadequate_monitoring"
+  "aircraft": {
+    "type": "Tupolev Tu-134A-3",
+    "family": "Tu-134",
+    "manufacturer": "Tupolev",
+    "registration": "C9-CAA",
+    "msn": null,
+    "engines": "2 x Kuznetsov NK-8-2U"
+  },
+  "operator": "People's Republic of Mozambique",
+  "route": {
+    "from": "MBW",
+    "from_name": "Mbala Airport, Zambia",
+    "to": "FQMM",
+    "to_name": "Maputo International Airport"
+  },
+  "location": {
+    "name": "Mbuzini, near Komatipoort",
+    "country": "South Africa",
+    "lat": -25.9114,
+    "lon": 31.9572
+  },
+  "phase": "descent",
+  "occupants": 44,
+  "fatalities": 34,
+  "injuries_serious": 10,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "A Tupolev Tu-134A carrying President Samora Machel and 43 others departed Mbala, Zambia on October 19, 1986 for Maputo. The navigator inadvertently tuned the primary VOR receiver to Matsapa Airport frequency in Swaziland instead of Maputo, diverting the aircraft 37° off course. The crew failed to monitor the second VOR receiver or cross-check their position. Despite ground proximity warnings, the captain continued descending below minimum safe altitude in darkness and clouds without visual reference to the ground, resulting in controlled flight into terrain near Mbuzini in South Africa.",
+  "probable_cause": "The cause of the accident was that the flight crew failed to follow procedural requirements for an instrument let-down approach, but continued to descend under visual flight rules in darkness and some cloud, i.e. without having visual contact with the ground, below minimum safe altitude and minimum assigned altitude, and in addition ignored the GPWS alarm. (p. 109)",
+  "factors": [
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "Crew set first VOR receiver to Matsapa frequency instead of Maputo frequency, causing 37° deviation off course; navigator unaware of the error and continued to follow Matsapa beacon (p. 108)"
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "Poor design of VOR frequency display with no back-lighting, unusually close frequencies between Matsapa and Maputo, and similar appearance of displayed numerals made frequency selection error more likely (p. 108)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Second VOR receiver correctly set to Maputo but apparently not being used or monitored by crew; no cross-checking by challenge and answer system took place (p. 107)"
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Required procedures and callouts during final let-down and approach were not followed; breakdown in crew discipline and coordination; crew did not file required flight plan (p. 108)"
+    },
+    {
+      "id": "gpws_warning_response",
+      "role": "contributing",
+      "evidence": "GPWS alarm sounded at 19:21:02 at height of 796m and remained active for 32 seconds; captain cursed but continued descent, ignoring the warning (p. 25)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft impacted terrain at Mbuzini at 19:21:39 in darkness at high descent rate of 480 feet per minute; 34 of 44 occupants killed including President Samora Machel (p. 26)"
+    }
   ],
-  [
-   "inadequate_monitoring",
-   "cfit"
+  "chain": [
+    [
+      "design_deficiency",
+      "navigation_error"
+    ],
+    [
+      "navigation_error",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "cfit"
+    ],
+    [
+      "procedural_noncompliance",
+      "gpws_warning_response"
+    ],
+    [
+      "gpws_warning_response",
+      "cfit"
+    ]
   ],
-  [
-   "procedural_noncompliance",
-   "gpws_warning_response"
+  "events": [
+    {
+      "t": -1500,
+      "clock": "16:38",
+      "phase": "unknown",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Tupolev Tu-134A C9-CAA departed Mbala Airport with crew of 9 and 35 passengers; computed fuel mass of 10,384 kg for non-stop flight to Maputo (p. 21-22)",
+      "factors": []
+    },
+    {
+      "t": -1200,
+      "clock": "16:58",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft reported overhead Lusaka at 17:44; cleared to FL 370; handed over to Harare FIR at 17:53 at FIR boundary (p. 22)",
+      "factors": []
+    },
+    {
+      "t": -480,
+      "clock": "18:46",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft made contact with Maputo Information and reported position as Kurla at FL 350; stated endurance as 4 hours and persons on board as 48 (actual: 3h 45m endurance, 44 persons) (p. 22)",
+      "factors": [
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "t": -240,
+      "clock": "19:02",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft initiated descent from FL 350; instructed by AFIS to report at 3,000 feet or runway lights in sight (p. 22)",
+      "factors": []
+    },
+    {
+      "t": -150,
+      "clock": "19:09",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Captain observed reserve fuel warning light did not light up during initial descent; navigator reported distance remaining as 120 km (p. 22)",
+      "factors": []
+    },
+    {
+      "t": -58,
+      "clock": "19:10:41",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Turn to right commenced from 184°M to 221°M initiated by navigator via autopilot Doppler navigation mode; turn based on VOR signal but was actually Matsapa VOR, diverting aircraft 37° off course (p. 23)",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": -48,
+      "clock": "19:11:51",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Navigator replied to captain's question about turn: VOR indicates that way; turn completed at 19:11:39 from altitude 19,167 feet to 17,217 feet with 10-15° bank angle (p. 23)",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": -30,
+      "clock": "19:14:57",
+      "phase": "descent",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Navigator reported distance as 60 km; reserve fuel warning light illuminated for 25 seconds at 19:12:26 indicating 2,400 kg fuel remaining (p. 23)",
+      "factors": []
+    },
+    {
+      "t": -12,
+      "clock": "19:18:24",
+      "phase": "descent",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft reached 3,000 feet and informed controller that it was maintaining that altitude; in fact, DFDR showed aircraft continued to descend (p. 24)",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": -10,
+      "clock": "19:18:46",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Aircraft was cleared for ILS approach to runway 23 with QNH of 1017; radio operator acknowledged but stated ILS was out of service; controller cleared for visual approach to runway 05 instead (p. 24)",
+      "factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "t": -5,
+      "clock": "19:19:50",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Radio operator requested controller check runway lights; aircraft continued to descend below minimums (p. 24)",
+      "factors": [
+        "gpws_warning_response"
+      ]
+    },
+    {
+      "t": -2,
+      "clock": "19:21:02",
+      "phase": "approach",
+      "actor": "ENV",
+      "kind": "warning",
+      "text": "Ground proximity warning system alarm sounded at height of 796 m (2,611 feet) above ground and remained on for 32 seconds; captain cursed but descent was continued at 480 feet per minute (p. 25)",
+      "factors": [
+        "gpws_warning_response"
+      ]
+    },
+    {
+      "t": 0,
+      "clock": "19:21:39",
+      "phase": "descent",
+      "actor": "ENV",
+      "kind": "outcome",
+      "text": "Aircraft impacted terrain at Mbuzini near Komatipoort in darkness; all aircraft systems functioning normally immediately before impact; destroyed by ground impact; 34 fatalities including President Samora Machel (p. 26)",
+      "factors": [
+        "cfit"
+      ]
+    }
   ],
-  [
-   "gpws_warning_response",
-   "cfit"
-  ]
- ],
- "events": [
-  {
-   "t": -1500,
-   "clock": "16:38",
-   "phase": "unknown",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Tupolev Tu-134A C9-CAA departed Mbala Airport with crew of 9 and 35 passengers; computed fuel mass of 10,384 kg for non-stop flight to Maputo (p. 21-22)",
-   "factors": []
-  },
-  {
-   "t": -1200,
-   "clock": "16:58",
-   "phase": "cruise",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Aircraft reported overhead Lusaka at 17:44; cleared to FL 370; handed over to Harare FIR at 17:53 at FIR boundary (p. 22)",
-   "factors": []
-  },
-  {
-   "t": -480,
-   "clock": "18:46",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Aircraft made contact with Maputo Information and reported position as Kurla at FL 350; stated endurance as 4 hours and persons on board as 48 (actual: 3h 45m endurance, 44 persons) (p. 22)",
-   "factors": [
-    "inadequate_monitoring"
-   ]
-  },
-  {
-   "t": -240,
-   "clock": "19:02",
-   "phase": "descent",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Aircraft initiated descent from FL 350; instructed by AFIS to report at 3,000 feet or runway lights in sight (p. 22)",
-   "factors": []
-  },
-  {
-   "t": -150,
-   "clock": "19:09",
-   "phase": "descent",
-   "actor": "PF",
-   "kind": "crew_speech",
-   "text": "Captain observed reserve fuel warning light did not light up during initial descent; navigator reported distance remaining as 120 km (p. 22)",
-   "factors": []
-  },
-  {
-   "t": -58,
-   "clock": "19:10:41",
-   "phase": "descent",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Turn to right commenced from 184°M to 221°M initiated by navigator via autopilot Doppler navigation mode; turn based on VOR signal but was actually Matsapa VOR, diverting aircraft 37° off course (p. 23)",
-   "factors": [
-    "navigation_error"
-   ]
-  },
-  {
-   "t": -48,
-   "clock": "19:11:51",
-   "phase": "descent",
-   "actor": "PF",
-   "kind": "crew_speech",
-   "text": "Navigator replied to captain's question about turn: VOR indicates that way; turn completed at 19:11:39 from altitude 19,167 feet to 17,217 feet with 10-15° bank angle (p. 23)",
-   "factors": [
-    "navigation_error"
-   ]
-  },
-  {
-   "t": -30,
-   "clock": "19:14:57",
-   "phase": "descent",
-   "actor": "PF",
-   "kind": "crew_speech",
-   "text": "Navigator reported distance as 60 km; reserve fuel warning light illuminated for 25 seconds at 19:12:26 indicating 2,400 kg fuel remaining (p. 23)",
-   "factors": []
-  },
-  {
-   "t": -12,
-   "clock": "19:18:24",
-   "phase": "descent",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Aircraft reached 3,000 feet and informed controller that it was maintaining that altitude; in fact, DFDR showed aircraft continued to descend (p. 24)",
-   "factors": [
-    "procedural_noncompliance"
-   ]
-  },
-  {
-   "t": -10,
-   "clock": "19:18:46",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Aircraft was cleared for ILS approach to runway 23 with QNH of 1017; radio operator acknowledged but stated ILS was out of service; controller cleared for visual approach to runway 05 instead (p. 24)",
-   "factors": [
-    "procedural_noncompliance"
-   ]
-  },
-  {
-   "t": -5,
-   "clock": "19:19:50",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Radio operator requested controller check runway lights; aircraft continued to descend below minimums (p. 24)",
-   "factors": [
-    "gpws_warning_response"
-   ]
-  },
-  {
-   "t": -2,
-   "clock": "19:21:02",
-   "phase": "approach",
-   "actor": "ENV",
-   "kind": "warning",
-   "text": "Ground proximity warning system alarm sounded at height of 796 m (2,611 feet) above ground and remained on for 32 seconds; captain cursed but descent was continued at 480 feet per minute (p. 25)",
-   "factors": [
-    "gpws_warning_response"
-   ]
-  },
-  {
-   "t": 0,
-   "clock": "19:21:39",
-   "phase": "descent",
-   "actor": "ENV",
-   "kind": "outcome",
-   "text": "Aircraft impacted terrain at Mbuzini near Komatipoort in darkness; all aircraft systems functioning normally immediately before impact; destroyed by ground impact; 34 fatalities including President Samora Machel (p. 26)",
-   "factors": [
-    "cfit"
-   ]
+  "cvr": [
+    {
+      "t": -58,
+      "clock": "19:10:41",
+      "speaker": "NAV",
+      "text": "VOR indicates that way",
+      "translation": null
+    },
+    {
+      "t": -18,
+      "clock": "19:16:58",
+      "speaker": "PF",
+      "text": "It is necessary to find out and tell them about RV",
+      "translation": null
+    },
+    {
+      "t": -11,
+      "clock": "19:17:21",
+      "speaker": "PF",
+      "text": "There is no Maputo",
+      "translation": null
+    },
+    {
+      "t": -11,
+      "clock": "19:17:27",
+      "speaker": "PF",
+      "text": "Electrical power is off, chaps",
+      "translation": null
+    },
+    {
+      "t": -11,
+      "clock": "19:17:27",
+      "speaker": "NAV",
+      "text": "ILS switched off and DME",
+      "translation": null
+    },
+    {
+      "t": -11,
+      "clock": "19:17:27",
+      "speaker": "PF",
+      "text": "Everything switched off",
+      "translation": null
+    },
+    {
+      "t": -11,
+      "clock": "19:17:27",
+      "speaker": "NAV",
+      "text": "And NDBs do not work",
+      "translation": null
+    },
+    {
+      "t": -2,
+      "clock": "19:21:02",
+      "speaker": "PF",
+      "text": "[cursing]",
+      "translation": "Captain's reaction to GPWS alarm"
+    },
+    {
+      "t": 0,
+      "clock": "19:21:36",
+      "speaker": "NAV",
+      "text": "No, no, there's nowhere to go, no NDBs, there's nothing",
+      "translation": null
+    },
+    {
+      "t": 0,
+      "clock": "19:21:36",
+      "speaker": "PF",
+      "text": "Neither NDBs, nor ILS",
+      "translation": "Last words recorded by CVR before impact"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "4.1",
+      "to": "Aviation Authorities",
+      "text": "Aviation Authorities should draw the attention of operating crews and air traffic control personnel to the need for compliance with and the correct use of the RTF terminology interpretation, as provided in Annex 10, Chapter 5.",
+      "status": "open",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "4.2",
+      "to": "Aviation Authorities",
+      "text": "Attention should further be given to recurrent training in the use of correct air traffic control terminology, particularly in cases where a language foreign to that of the flight personnel or air traffic controller is used.",
+      "status": "open",
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "4.3",
+      "to": "Aviation Authorities",
+      "text": "The monitoring of crew compliance with prescribed operating procedures should be reviewed.",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_monitoring",
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": "4.4",
+      "to": "Aviation Authorities",
+      "text": "The period over which CVR installations should keep a running record should be increased from 30 minutes to at least 1 hour.",
+      "status": "open",
+      "trigger_factors": []
+    },
+    {
+      "id": "4.5",
+      "to": "Aviation Authorities",
+      "text": "Attention is drawn to the importance of maintaining navigational aids in accordance with the standards of integrity laid down by ICAO.",
+      "status": "open",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Improved VOR frequency display design with back-lighting and different format to prevent confusion",
+    "Enhanced crew training on instrument approach procedures and cross-checking protocols",
+    "Emphasis on importance of monitoring all navigation systems and cross-validation",
+    "Increased CVR recording duration from 30 to 60+ minutes"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://caasanwebsitestorage.blob.core.windows.net/accident-report-archive/C9-CAA.pdf",
+    "http://www.caa.co.za/resource%20center/accidents%20%26%20incid/reports/OldReports/C9-CAA.pdf",
+    "https://www.caa.co.za/industry-information/accidents-and-incidents/accidents-and-incidents-archive/",
+    "http://www.caa.co.za/resource%20center/accidents%20&%20incid/reports/OldReports/C9-CAA.pdf"
+  ],
+  "tier": "wikidata",
+  "depth": "full",
+  "qid": "Q950273",
+  "asn_id": "19861019-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/1986_Mozambican_Tupolev_Tu-134_crash",
+  "report_links": [
+    "http://www.caa.co.za/resource%20center/accidents%20%26%20incid/reports/OldReports/C9-CAA.pdf",
+    "http://www.justice.gov.za/trc/report/index.htm",
+    "https://caasanwebsitestorage.blob.core.windows.net/accident-report-archive/C9-CAA.pdf",
+    "https://www.caa.co.za/industry-information/accidents-and-incidents/accidents-and-incidents-archive/",
+    "http://www.caa.co.za/resource%20center/accidents%20&%20incid/reports/OldReports/C9-CAA.pdf",
+    "http://www.rnf.is/media/eydublod/Annex_13.pdf",
+    "http://www.africanstudies.uct.ac.za/postamble/vol2-2/assassination.pdf",
+    "https://news.google.com/newspapers?id=lQYQAAAAIBAJ&pg=4364,61472"
+  ],
+  "interest": 14.61,
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "South African CAA Board of Inquiry report C9-CAA read from sections History of Flight (p. 20-26), Analysis (p. 29-109), Findings (p. 105-109), Cause (p. 109), and Recommendations (p. 111-112)",
+      "12 events extracted from detailed DFDR and CVR timeline with local times",
+      "Navigation error chain thoroughly documented from Findings section xvi-xviii",
+      "GPWS warning response from CVR and DFDR analysis in Finding xxiii",
+      "All 5 recommendations included from section 4",
+      "CVR excerpts quoted directly from investigation transcript showing crew awareness of navigation systems failure",
+      "False beacon rumor addressed in Appendix of report",
+      "auto-repair: factor procedure_deviation -> procedural_noncompliance; phase departure -> unknown; event factors ['procedure_deviation'] -> ['procedural_noncompliance']; event factors ['procedure_deviation'] -> ['procedural_noncompliance']; recommendation trigger factors pruned; recommendation trigger factors pruned; recommendation trigger factors pruned"
+    ]
   }
- ],
- "cvr": [
-  {
-   "t": -58,
-   "clock": "19:10:41",
-   "speaker": "NAV",
-   "text": "VOR indicates that way",
-   "translation": null
-  },
-  {
-   "t": -18,
-   "clock": "19:16:58",
-   "speaker": "PF",
-   "text": "It is necessary to find out and tell them about RV",
-   "translation": null
-  },
-  {
-   "t": -11,
-   "clock": "19:17:21",
-   "speaker": "PF",
-   "text": "There is no Maputo",
-   "translation": null
-  },
-  {
-   "t": -11,
-   "clock": "19:17:27",
-   "speaker": "PF",
-   "text": "Electrical power is off, chaps",
-   "translation": null
-  },
-  {
-   "t": -11,
-   "clock": "19:17:27",
-   "speaker": "NAV",
-   "text": "ILS switched off and DME",
-   "translation": null
-  },
-  {
-   "t": -11,
-   "clock": "19:17:27",
-   "speaker": "PF",
-   "text": "Everything switched off",
-   "translation": null
-  },
-  {
-   "t": -11,
-   "clock": "19:17:27",
-   "speaker": "NAV",
-   "text": "And NDBs do not work",
-   "translation": null
-  },
-  {
-   "t": -2,
-   "clock": "19:21:02",
-   "speaker": "PF",
-   "text": "[cursing]",
-   "translation": "Captain's reaction to GPWS alarm"
-  },
-  {
-   "t": 0,
-   "clock": "19:21:36",
-   "speaker": "NAV",
-   "text": "No, no, there's nowhere to go, no NDBs, there's nothing",
-   "translation": null
-  },
-  {
-   "t": 0,
-   "clock": "19:21:36",
-   "speaker": "PF",
-   "text": "Neither NDBs, nor ILS",
-   "translation": "Last words recorded by CVR before impact"
-  }
- ],
- "recommendations": [
-  {
-   "id": "4.1",
-   "to": "Aviation Authorities",
-   "text": "Aviation Authorities should draw the attention of operating crews and air traffic control personnel to the need for compliance with and the correct use of the RTF terminology interpretation, as provided in Annex 10, Chapter 5.",
-   "status": "open",
-   "trigger_factors": [
-    "procedural_noncompliance"
-   ]
-  },
-  {
-   "id": "4.2",
-   "to": "Aviation Authorities",
-   "text": "Attention should further be given to recurrent training in the use of correct air traffic control terminology, particularly in cases where a language foreign to that of the flight personnel or air traffic controller is used.",
-   "status": "open",
-   "trigger_factors": [
-    "procedural_noncompliance"
-   ]
-  },
-  {
-   "id": "4.3",
-   "to": "Aviation Authorities",
-   "text": "The monitoring of crew compliance with prescribed operating procedures should be reviewed.",
-   "status": "open",
-   "trigger_factors": [
-    "inadequate_monitoring",
-    "procedural_noncompliance"
-   ]
-  },
-  {
-   "id": "4.4",
-   "to": "Aviation Authorities",
-   "text": "The period over which CVR installations should keep a running record should be increased from 30 minutes to at least 1 hour.",
-   "status": "open",
-   "trigger_factors": []
-  },
-  {
-   "id": "4.5",
-   "to": "Aviation Authorities",
-   "text": "Attention is drawn to the importance of maintaining navigational aids in accordance with the standards of integrity laid down by ICAO.",
-   "status": "open",
-   "trigger_factors": [
-    "design_deficiency"
-   ]
-  }
- ],
- "dissent": [],
- "safety_changes": [
-  "Improved VOR frequency display design with back-lighting and different format to prevent confusion",
-  "Enhanced crew training on instrument approach procedures and cross-checking protocols",
-  "Emphasis on importance of monitoring all navigation systems and cross-validation",
-  "Increased CVR recording duration from 30 to 60+ minutes"
- ],
- "related": [],
- "fdr": null,
- "sources": [
-  "https://caasanwebsitestorage.blob.core.windows.net/accident-report-archive/C9-CAA.pdf",
-  "http://www.caa.co.za/resource%20center/accidents%20%26%20incid/reports/OldReports/C9-CAA.pdf",
-  "https://www.caa.co.za/industry-information/accidents-and-incidents/accidents-and-incidents-archive/",
-  "http://www.caa.co.za/resource%20center/accidents%20&%20incid/reports/OldReports/C9-CAA.pdf"
- ],
- "tier": "wikidata",
- "depth": "full",
- "qid": "Q950273",
- "asn_id": "19861019-0",
- "wikipedia": "https://en.wikipedia.org/wiki/1986_Mozambican_Tupolev_Tu-134_crash",
- "report_links": [
-  "http://www.caa.co.za/resource%20center/accidents%20%26%20incid/reports/OldReports/C9-CAA.pdf",
-  "http://www.justice.gov.za/trc/report/index.htm",
-  "https://caasanwebsitestorage.blob.core.windows.net/accident-report-archive/C9-CAA.pdf",
-  "https://www.caa.co.za/industry-information/accidents-and-incidents/accidents-and-incidents-archive/",
-  "http://www.caa.co.za/resource%20center/accidents%20&%20incid/reports/OldReports/C9-CAA.pdf",
-  "http://www.rnf.is/media/eydublod/Annex_13.pdf",
-  "http://www.africanstudies.uct.ac.za/postamble/vol2-2/assassination.pdf",
-  "https://news.google.com/newspapers?id=lQYQAAAAIBAJ&pg=4364,61472"
- ],
- "interest": 14.61,
- "curated_id": null,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5-20251001",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "South African CAA Board of Inquiry report C9-CAA read from sections History of Flight (p. 20-26), Analysis (p. 29-109), Findings (p. 105-109), Cause (p. 109), and Recommendations (p. 111-112)",
-   "12 events extracted from detailed DFDR and CVR timeline with local times",
-   "Navigation error chain thoroughly documented from Findings section xvi-xviii",
-   "GPWS warning response from CVR and DFDR analysis in Finding xxiii",
-   "All 5 recommendations included from section 4",
-   "CVR excerpts quoted directly from investigation transcript showing crew awareness of navigation systems failure",
-   "False beacon rumor addressed in Appendix of report",
-   "auto-repair: factor procedure_deviation -> procedural_noncompliance; phase departure -> unknown; event factors ['procedure_deviation'] -> ['procedural_noncompliance']; event factors ['procedure_deviation'] -> ['procedural_noncompliance']; recommendation trigger factors pruned; recommendation trigger factors pruned; recommendation trigger factors pruned"
-  ]
- }
 }

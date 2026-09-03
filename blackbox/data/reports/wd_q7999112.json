@@ -7,12 +7,14 @@
   "flight_number": "55",
   "date": "1968-12-02",
   "agency": "NTSB",
-  "agencies": [{
-    "code": "NTSB",
-    "name": "National Transportation Safety Board",
-    "country": "United States",
-    "role": "lead"
-  }],
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
   "aircraft": {
     "type": "Fairchild F-27B",
     "manufacturer": "Fairchild",
@@ -26,7 +28,9 @@
   },
   "location": {
     "name": "Pedro Bay (Foxys Lake), Alaska",
-    "country": "United States"
+    "country": "United States",
+    "lat": 59.7714,
+    "lon": -154.141
   },
   "phase": "approach",
   "occupants": 39,
@@ -35,17 +39,49 @@
   "summary": "Fairchild F-27B Flight 55 encountered severe turbulence during approach to Iliamna. Aircraft experienced structural failure of right wing due to pre-existing metal fatigue cracks weakened by improper maintenance. Wing failure led to uncontrolled spiral descent and crash into Pedro Bay (Foxys Lake), Alaska.",
   "probable_cause": "An in-flight structural failure caused by an encounter with severe to extreme turbulence. This turbulence was not forecast and its presence was not known to the flightcrew. The failure occurred in an area of the right wing (WS 197) which had been weakened to an indeterminate degree by pre-existing fatigue cracks. (p. 31)",
   "factors": [
-    {"id": "maintenance_error", "role": "contributing", "evidence": "Fatigue cracks had formed on aircraft wings due to improper and shoddy maintenance (p. 30-31)"},
-    {"id": "metal_fatigue", "role": "contributing", "evidence": "Number of fatigue cracks had formed in wings. Cracks existed since October 1967, never reported, no corrective action taken (p. 31)"},
-    {"id": "convective_weather", "role": "contributing", "evidence": "Encounter with severe to extreme turbulence, not forecast and not known to flightcrew, at 11,500 feet (p. 31)"},
-    {"id": "structural_failure", "role": "outcome", "evidence": "Stresses from turbulence caused structural failure in right wing at WS 197 (p. 30-31)"},
-    {"id": "loss_of_control_inflight", "role": "outcome", "evidence": "Aircraft descended in steep uncontrolled spiral towards ground (p. 30)"}
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "Fatigue cracks had formed on aircraft wings due to improper and shoddy maintenance (p. 30-31)"
+    },
+    {
+      "id": "metal_fatigue",
+      "role": "contributing",
+      "evidence": "Number of fatigue cracks had formed in wings. Cracks existed since October 1967, never reported, no corrective action taken (p. 31)"
+    },
+    {
+      "id": "convective_weather",
+      "role": "contributing",
+      "evidence": "Encounter with severe to extreme turbulence, not forecast and not known to flightcrew, at 11,500 feet (p. 31)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Stresses from turbulence caused structural failure in right wing at WS 197 (p. 30-31)"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft descended in steep uncontrolled spiral towards ground (p. 30)"
+    }
   ],
   "chain": [
-    ["maintenance_error", "metal_fatigue"],
-    ["metal_fatigue", "structural_failure"],
-    ["convective_weather", "structural_failure"],
-    ["structural_failure", "loss_of_control_inflight"]
+    [
+      "maintenance_error",
+      "metal_fatigue"
+    ],
+    [
+      "metal_fatigue",
+      "structural_failure"
+    ],
+    [
+      "convective_weather",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
@@ -91,7 +127,9 @@
       "actor": "ENV",
       "kind": "env",
       "text": "Aircraft at 11,500 feet encountered severe to extreme turbulence while preparing to approach Iliamna (p. 30)",
-      "factors": ["convective_weather"]
+      "factors": [
+        "convective_weather"
+      ]
     },
     {
       "t": 2750,
@@ -100,7 +138,10 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Right wing suffered structural failure and separation. Aircraft entered steep uncontrolled spiral descent (p. 30-31)",
-      "factors": ["structural_failure", "loss_of_control_inflight"]
+      "factors": [
+        "structural_failure",
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 2800,
@@ -118,7 +159,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft crashed into Foxys Lake at Pedro Bay at approximately 220 feet elevation. All 39 occupants killed (p. 29)",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 2900,
@@ -133,23 +176,41 @@
   "cvr": [],
   "fdr": null,
   "recommendations": [
-    {"id": "M-69-11", "recipient": "FAA", "text": "Amend inspection procedures and maintenance requirements to detect metal fatigue cracks in aircraft wing structures"},
-    {"id": "M-69-12", "recipient": "FAA", "text": "Require regular inspection of aircraft maintenance records to ensure Airworthiness Directives compliance"}
+    {
+      "id": "M-69-11",
+      "recipient": "FAA",
+      "text": "Amend inspection procedures and maintenance requirements to detect metal fatigue cracks in aircraft wing structures"
+    },
+    {
+      "id": "M-69-12",
+      "recipient": "FAA",
+      "text": "Require regular inspection of aircraft maintenance records to ensure Airworthiness Directives compliance"
+    }
   ],
   "dissent": [],
   "safety_changes": [],
   "related": [],
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7016.pdf"],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7016.pdf"
+  ],
   "asn_id": "19681202-0",
   "wikipedia": "https://en.wikipedia.org/wiki/Wien_Consolidated_Airlines_Flight_55",
-  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7016.pdf"],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7016.pdf"
+  ],
   "interest": 13.09,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
-    "notes": ["Full History of Flight with detailed timeline", "All 15 findings from Conclusions section", "Probable cause with maintenance and structural factors", "9 new events from report narrative", "Page citations from OCR text markers"]
+    "notes": [
+      "Full History of Flight with detailed timeline",
+      "All 15 findings from Conclusions section",
+      "Probable cause with maintenance and structural factors",
+      "9 new events from report narrative",
+      "Page citations from OCR text markers"
+    ]
   },
   "curated_id": null
 }

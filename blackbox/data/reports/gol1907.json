@@ -7,81 +7,333 @@
   "t0": "2006-09-29T19:02:00Z",
   "agency": "CENIPA",
   "agencies": [
-    { "code": "CENIPA", "name": "Centro de Investigação e Prevenção de Acidentes Aeronáuticos", "country": "Brazil", "role": "lead",
-      "report_id": "A-022/CENIPA/2008", "report_title": "Final Report A-022/CENIPA/2008, PR-GTD and N600XL, 29 September 2006", "report_date": "2008-12-10",
-      "url": "https://www2.fab.mil.br/cenipa" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative",
-      "report_id": null, "report_title": "NTSB comments appended to the CENIPA final report", "report_date": "2008-12-10", "url": "https://www.ntsb.gov" }
+    {
+      "code": "CENIPA",
+      "name": "Centro de Investigação e Prevenção de Acidentes Aeronáuticos",
+      "country": "Brazil",
+      "role": "lead",
+      "report_id": "A-022/CENIPA/2008",
+      "report_title": "Final Report A-022/CENIPA/2008, PR-GTD and N600XL, 29 September 2006",
+      "report_date": "2008-12-10",
+      "url": "https://www2.fab.mil.br/cenipa"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative",
+      "report_id": null,
+      "report_title": "NTSB comments appended to the CENIPA final report",
+      "report_date": "2008-12-10",
+      "url": "https://www.ntsb.gov"
+    }
   ],
-  "aircraft": { "type": "Boeing 737-8EH", "family": "737 NG", "manufacturer": "Boeing", "registration": "PR-GTD", "msn": "34653", "engines": "CFM56-7B" },
+  "aircraft": {
+    "type": "Boeing 737-8EH",
+    "family": "737 NG",
+    "manufacturer": "Boeing",
+    "registration": "PR-GTD",
+    "msn": "34653",
+    "engines": "CFM56-7B"
+  },
   "operator": "Gol Transportes Aéreos",
-  "route": { "from": "SBEG", "from_name": "Manaus Eduardo Gomes", "to": "SBBR", "to_name": "Brasília" },
-  "location": { "name": "Amazon rainforest near Peixoto de Azevedo, Mato Grosso", "country": "Brazil", "lat": null, "lon": null },
+  "route": {
+    "from": "SBEG",
+    "from_name": "Manaus Eduardo Gomes",
+    "to": "SBBR",
+    "to_name": "Brasília"
+  },
+  "location": {
+    "name": "Amazon rainforest near Peixoto de Azevedo, Mato Grosso",
+    "country": "Brazil",
+    "lat": null,
+    "lon": null
+  },
   "phase": "cruise",
-  "occupants": 154, "fatalities": 154, "injuries_serious": 0,
+  "occupants": 154,
+  "fatalities": 154,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "MAC",
   "summary": "An Embraer Legacy 600 business jet on its delivery flight from São José dos Campos to Manaus was cleared by ATC to FL370 and was not descended to FL360 at Brasília as its flight plan required. Its transponder inadvertently went to standby, disabling both its TCAS and the 737's ability to detect it, and Brasília ACC lost radio contact without acting on the loss of Mode C. The Legacy's winglet struck the left wing of Gol 1907, a 737-800 cruising at FL370 in the opposite direction on the same airway. The 737 broke up and crashed into the jungle with 154 dead; the Legacy landed at Cachimbo air base.",
   "probable_cause": "CENIPA concluded that the collision resulted from a combination of errors in the air traffic control system and by the Legacy crew: ATC issued a clearance to FL370 to Manaus that conflicted with the flight plan, failed to recognise the loss of the Legacy's transponder and its non-compliance with the planned level, did not re-establish communication or advise the Legacy to change level, and was affected by workload, staffing and training deficiencies; the Legacy crew inadvertently switched the transponder to standby, did not notice its loss for almost an hour, and did not manage the loss of communication adequately. The NTSB's appended comments placed greater weight on the ATC system.",
   "factors": [
-    { "id": "atc_communication_error", "role": "initiating", "evidence": "São José tower cleared the Legacy to FL370 to Manaus, contrary to the flight plan's FL360 segment after Brasília, and Brasília ACC never instructed a level change or re-established contact after the transponder and radio contact were lost." },
-    { "id": "atc_workload_staffing", "role": "contributing", "evidence": "CENIPA found deficiencies in controller training, staffing, supervision and sector handover procedures at Brasília ACC, including failure to act on the loss of the Legacy's Mode C for about 50 minutes." },
-    { "id": "mode_confusion", "role": "contributing", "evidence": "The Legacy's transponder went to standby, most likely through inadvertent crew input on the radio management unit, and the crew did not notice the TCAS OFF indication for nearly an hour." },
-    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The Legacy crew remained at FL370 past Brasília instead of the planned FL360 and did not apply the loss-of-communication procedure after failing to reach Brasília ACC." },
-    { "id": "warning_system_deficiency", "role": "latent", "evidence": "The Legacy's avionics presented the transponder standby status and TCAS OFF as small annunciations that did not attract the crew's attention." },
-    { "id": "regulatory_oversight", "role": "latent", "evidence": "CENIPA identified systemic deficiencies in the Brazilian ATC system's procedures, training and supervision at the time of the accident." },
-    { "id": "pilot_experience", "role": "contributing", "evidence": "The Legacy crew were on their first flight in the aircraft type in Brazil with limited familiarity with the avionics and with Brazilian procedures." },
-    { "id": "midair_collision", "role": "outcome", "evidence": "The Legacy's left winglet struck the 737's left wing at FL370 at 19:56:54 UTC; the 737 lost part of its wing, broke up and crashed." }
+    {
+      "id": "atc_communication_error",
+      "role": "initiating",
+      "evidence": "São José tower cleared the Legacy to FL370 to Manaus, contrary to the flight plan's FL360 segment after Brasília, and Brasília ACC never instructed a level change or re-established contact after the transponder and radio contact were lost."
+    },
+    {
+      "id": "atc_workload_staffing",
+      "role": "contributing",
+      "evidence": "CENIPA found deficiencies in controller training, staffing, supervision and sector handover procedures at Brasília ACC, including failure to act on the loss of the Legacy's Mode C for about 50 minutes."
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "The Legacy's transponder went to standby, most likely through inadvertent crew input on the radio management unit, and the crew did not notice the TCAS OFF indication for nearly an hour."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The Legacy crew remained at FL370 past Brasília instead of the planned FL360 and did not apply the loss-of-communication procedure after failing to reach Brasília ACC."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "latent",
+      "evidence": "The Legacy's avionics presented the transponder standby status and TCAS OFF as small annunciations that did not attract the crew's attention."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "CENIPA identified systemic deficiencies in the Brazilian ATC system's procedures, training and supervision at the time of the accident."
+    },
+    {
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "The Legacy crew were on their first flight in the aircraft type in Brazil with limited familiarity with the avionics and with Brazilian procedures."
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "The Legacy's left winglet struck the 737's left wing at FL370 at 19:56:54 UTC; the 737 lost part of its wing, broke up and crashed."
+    }
   ],
   "chain": [
-    ["regulatory_oversight", "atc_workload_staffing"],
-    ["atc_communication_error", "procedural_noncompliance"],
-    ["pilot_experience", "mode_confusion"],
-    ["warning_system_deficiency", "mode_confusion"],
-    ["mode_confusion", "atc_workload_staffing"],
-    ["atc_workload_staffing", "atc_communication_error"],
-    ["procedural_noncompliance", "midair_collision"],
-    ["mode_confusion", "midair_collision"],
-    ["atc_communication_error", "midair_collision"]
+    [
+      "regulatory_oversight",
+      "atc_workload_staffing"
+    ],
+    [
+      "atc_communication_error",
+      "procedural_noncompliance"
+    ],
+    [
+      "pilot_experience",
+      "mode_confusion"
+    ],
+    [
+      "warning_system_deficiency",
+      "mode_confusion"
+    ],
+    [
+      "mode_confusion",
+      "atc_workload_staffing"
+    ],
+    [
+      "atc_workload_staffing",
+      "atc_communication_error"
+    ],
+    [
+      "procedural_noncompliance",
+      "midair_collision"
+    ],
+    [
+      "mode_confusion",
+      "midair_collision"
+    ],
+    [
+      "atc_communication_error",
+      "midair_collision"
+    ]
   ],
   "events": [
-    { "t": -4260, "clock": "17:51", "phase": "takeoff", "actor": "OTHER", "text": "Legacy N600XL departs São José dos Campos for Manaus, cleared to FL370 by the tower; its flight plan calls for FL370 to Brasília, FL360 to TERES and FL380 thereafter.", "factors": ["atc_communication_error"], "kind": "atc" },
-    { "t": -1620, "clock": "18:35", "phase": "takeoff", "actor": "OTHER", "text": "Gol 1907 departs Manaus for Brasília and climbs to FL370 on airway UZ6, the reciprocal of the Legacy's route.", "state": { "alt": 37000 }, "factors": [], "kind": "crew_action" },
-    { "t": -660, "clock": "18:51", "phase": "cruise", "actor": "ATC", "text": "Last two-way radio contact between Brasília ACC and the Legacy; the controller gives no instruction to descend to FL360 at Brasília.", "factors": ["atc_communication_error"], "kind": "atc" },
-    { "t": -300, "clock": null, "phase": "cruise", "actor": "OTHER", "text": "The Legacy passes over Brasília VOR and continues at FL370 rather than the planned FL360.", "state": { "alt": 37000 }, "factors": ["procedural_noncompliance", "atc_communication_error"], "kind": "crew_action" },
-    { "t": 0, "clock": "19:02", "phase": "cruise", "actor": "OTHER", "text": "The Legacy's transponder goes to standby; Mode C and TCAS are lost. Brasília ACC's radar label changes to show the planned level rather than a measured altitude.", "factors": ["mode_confusion", "warning_system_deficiency"], "kind": "system" },
-    { "t": 600, "clock": null, "phase": "cruise", "actor": "ATC", "text": "Brasília ACC controllers do not recognise or act on the loss of the Legacy's Mode C return; the sector is handed over without the discrepancy being resolved.", "factors": ["atc_workload_staffing"], "kind": "atc" },
-    { "t": 1500, "clock": "19:27", "phase": "cruise", "actor": "ATC", "text": "Brasília ACC begins attempts to contact the Legacy, without success; over the following half hour the controller makes several calls and the Legacy crew make many calls on the wrong or unresponsive frequencies.", "factors": ["atc_communication_error", "procedural_noncompliance"], "kind": "atc" },
-    { "t": 2700, "clock": null, "phase": "cruise", "actor": "OTHER", "text": "The Legacy crew, unaware of the transponder status, continue at FL370 in radio blind; Gol 1907 at FL370 has no TCAS target to detect.", "factors": ["mode_confusion"], "kind": "crew_action" },
-    { "t": 3294, "clock": "19:56:54", "phase": "cruise", "actor": "ENV", "text": "Head-on collision at FL370: the Legacy's left winglet cuts through the left wing of the 737. The 737 rolls, breaks up and falls into the jungle; all 154 aboard die.", "state": { "alt": 37000 }, "factors": ["midair_collision"], "kind": "outcome" },
-    { "t": 4860, "clock": null, "phase": "landing", "actor": "OTHER", "text": "The damaged Legacy lands at Cachimbo air base (Serra do Cachimbo); its seven occupants are uninjured.", "factors": [], "kind": "crew_action" }
+    {
+      "t": -4260,
+      "clock": "17:51",
+      "phase": "takeoff",
+      "actor": "OTHER",
+      "text": "Legacy N600XL departs São José dos Campos for Manaus, cleared to FL370 by the tower; its flight plan calls for FL370 to Brasília, FL360 to TERES and FL380 thereafter.",
+      "factors": [
+        "atc_communication_error"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": -1620,
+      "clock": "18:35",
+      "phase": "takeoff",
+      "actor": "OTHER",
+      "text": "Gol 1907 departs Manaus for Brasília and climbs to FL370 on airway UZ6, the reciprocal of the Legacy's route.",
+      "state": {
+        "alt": 37000
+      },
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": -660,
+      "clock": "18:51",
+      "phase": "cruise",
+      "actor": "ATC",
+      "text": "Last two-way radio contact between Brasília ACC and the Legacy; the controller gives no instruction to descend to FL360 at Brasília.",
+      "factors": [
+        "atc_communication_error"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": -300,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "OTHER",
+      "text": "The Legacy passes over Brasília VOR and continues at FL370 rather than the planned FL360.",
+      "state": {
+        "alt": 37000
+      },
+      "factors": [
+        "procedural_noncompliance",
+        "atc_communication_error"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "19:02",
+      "phase": "cruise",
+      "actor": "OTHER",
+      "text": "The Legacy's transponder goes to standby; Mode C and TCAS are lost. Brasília ACC's radar label changes to show the planned level rather than a measured altitude.",
+      "factors": [
+        "mode_confusion",
+        "warning_system_deficiency"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 600,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "ATC",
+      "text": "Brasília ACC controllers do not recognise or act on the loss of the Legacy's Mode C return; the sector is handed over without the discrepancy being resolved.",
+      "factors": [
+        "atc_workload_staffing"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": 1500,
+      "clock": "19:27",
+      "phase": "cruise",
+      "actor": "ATC",
+      "text": "Brasília ACC begins attempts to contact the Legacy, without success; over the following half hour the controller makes several calls and the Legacy crew make many calls on the wrong or unresponsive frequencies.",
+      "factors": [
+        "atc_communication_error",
+        "procedural_noncompliance"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": 2700,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "OTHER",
+      "text": "The Legacy crew, unaware of the transponder status, continue at FL370 in radio blind; Gol 1907 at FL370 has no TCAS target to detect.",
+      "factors": [
+        "mode_confusion"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 3294,
+      "clock": "19:56:54",
+      "phase": "cruise",
+      "actor": "ENV",
+      "text": "Head-on collision at FL370: the Legacy's left winglet cuts through the left wing of the 737. The 737 rolls, breaks up and falls into the jungle; all 154 aboard die.",
+      "state": {
+        "alt": 37000
+      },
+      "factors": [
+        "midair_collision"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 4860,
+      "clock": null,
+      "phase": "landing",
+      "actor": "OTHER",
+      "text": "The damaged Legacy lands at Cachimbo air base (Serra do Cachimbo); its seven occupants are uninjured.",
+      "factors": [],
+      "kind": "crew_action"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "DECEA (Brazilian airspace control department)", "text": "Revise ATC procedures so that clearances are consistent with filed flight plans, and that loss of transponder or radio contact with an aircraft under control triggers immediate coordinated action.", "status": "unknown", "outcome": null, "trigger_factors": ["atc_communication_error", "atc_workload_staffing"] },
-    { "id": null, "to": "DECEA", "text": "Improve controller training, staffing, supervision and the display of aircraft with lost Mode C so that predicted levels are not confused with measured altitude.", "status": "unknown", "outcome": null, "trigger_factors": ["atc_workload_staffing", "regulatory_oversight"] },
-    { "id": null, "to": "FAA / Honeywell / Embraer", "text": "Improve the annunciation of transponder standby and TCAS OFF status on the Legacy 600 avionics so the condition is unmistakable to the crew.", "status": "unknown", "outcome": null, "trigger_factors": ["warning_system_deficiency", "mode_confusion"] },
-    { "id": null, "to": "ANAC / operators", "text": "Reinforce crew training on loss-of-communication procedures and on transponder and TCAS monitoring in cruise.", "status": "unknown", "outcome": null, "trigger_factors": ["procedural_noncompliance"] }
+    {
+      "id": null,
+      "to": "DECEA (Brazilian airspace control department)",
+      "text": "Revise ATC procedures so that clearances are consistent with filed flight plans, and that loss of transponder or radio contact with an aircraft under control triggers immediate coordinated action.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "atc_communication_error",
+        "atc_workload_staffing"
+      ]
+    },
+    {
+      "id": null,
+      "to": "DECEA",
+      "text": "Improve controller training, staffing, supervision and the display of aircraft with lost Mode C so that predicted levels are not confused with measured altitude.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "atc_workload_staffing",
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA / Honeywell / Embraer",
+      "text": "Improve the annunciation of transponder standby and TCAS OFF status on the Legacy 600 avionics so the condition is unmistakable to the crew.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "warning_system_deficiency",
+        "mode_confusion"
+      ]
+    },
+    {
+      "id": null,
+      "to": "ANAC / operators",
+      "text": "Reinforce crew training on loss-of-communication procedures and on transponder and TCAS monitoring in cruise.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
+    }
   ],
   "dissent": [
-    { "agency": "NTSB", "position": "In its comments appended to the final report, the NTSB agreed that the loss of the transponder and the crew's failure to notice it were factors, but stated that the air traffic control system's errors, in particular the clearance to FL370 to Manaus, the failure to recognise the loss of Mode C and the lack of level instructions or communication, were the primary cause of the collision, and that the report placed undue weight on the Legacy crew's actions.", "topic": "relative weight of ATC versus Legacy crew errors" }
+    {
+      "agency": "NTSB",
+      "position": "In its comments appended to the final report, the NTSB agreed that the loss of the transponder and the crew's failure to notice it were factors, but stated that the air traffic control system's errors, in particular the clearance to FL370 to Manaus, the failure to recognise the loss of Mode C and the lack of level instructions or communication, were the primary cause of the collision, and that the report placed undue weight on the Legacy crew's actions.",
+      "topic": "relative weight of ATC versus Legacy crew errors"
+    }
   ],
   "safety_changes": [
     "Brazil restructured airspace control procedures, controller training and staffing at Brasília ACC and reviewed the display of planned versus measured levels on ATC radar.",
     "The FAA and Honeywell reviewed transponder-standby and TCAS-off annunciations on the Legacy 600 avionics.",
     "The accident led to increased emphasis on strategic lateral offset procedures and TCAS monitoring on Brazilian airways."
   ],
-  "related": ["uberlingen"],
+  "related": [
+    "uberlingen"
+  ],
   "fdr": null,
   "sources": [
     "https://www2.fab.mil.br/cenipa",
     "https://www.ntsb.gov"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
     "notes": [
       "The collision time 19:56:54 UTC and the Legacy departure (17:51 UTC) are from the report; the transponder loss time (about 19:02 UTC) and the 18:51 last-contact time are given to the minute from the published narrative and t0 is set to the transponder loss.",
       "Crash-site lat/lon left null: the wreckage lay in remote forest near Peixoto de Azevedo and exact coordinates were not verified.",
       "The report number A-022/CENIPA/2008 and date 10 December 2008 are given from memory.",
       "Recommendation ids and exact addressees were not verified."
-    ] }
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Gol_Transportes_A%C3%A9reos_Flight_1907"
 }

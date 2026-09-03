@@ -29,7 +29,9 @@
   },
   "location": {
     "name": "San Gabriel Mountains",
-    "country": "United States"
+    "country": "United States",
+    "lat": 34.175,
+    "lon": -118.0
   },
   "phase": "climb",
   "occupants": 51,

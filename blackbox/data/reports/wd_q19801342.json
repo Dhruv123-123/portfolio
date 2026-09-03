@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Hiroshima Airport, runway 28",
-    "country": "Japan"
+    "country": "Japan",
+    "lat": 34.4361,
+    "lon": 132.9194
   },
   "occupants": 86,
   "fatalities": 0,

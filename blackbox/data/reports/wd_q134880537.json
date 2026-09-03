@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "Ahmedabad",
-    "country": "India"
+    "country": "India",
+    "lat": 23.0549,
+    "lon": 72.6121
   },
   "phase": "initial_climb",
   "occupants": 242,
@@ -62,9 +64,18 @@
     }
   ],
   "chain": [
-    ["dual_engine_failure", "loss_of_pilot_control_authority"],
-    ["loss_of_pilot_control_authority", "loss_of_control_inflight"],
-    ["loss_of_control_inflight", "post_impact_fire"]
+    [
+      "dual_engine_failure",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "loss_of_pilot_control_authority",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "post_impact_fire"
+    ]
   ],
   "events": [
     {
@@ -82,7 +93,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Three seconds after liftoff, Engine 1 and Engine 2 fuel control switches transitioned from RUN to CUTOFF, causing loss of thrust in both engines according to the front flight recorder.",
-      "factors": ["dual_engine_failure"],
+      "factors": [
+        "dual_engine_failure"
+      ],
       "state": {
         "alt": 180,
         "ias": 180
@@ -95,7 +108,9 @@
       "actor": "CAPT",
       "kind": "crew_speech",
       "text": "One pilot asked the other why he cut off; the other pilot responded that he did not do so.",
-      "factors": ["dual_engine_failure"]
+      "factors": [
+        "dual_engine_failure"
+      ]
     },
     {
       "t": 8,
@@ -113,7 +128,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Engine 1 fuel control switch transitioned from CUTOFF to RUN at 08:08:52 UTC, and FADEC automatically initiated a relight and thrust recovery sequence.",
-      "factors": ["dual_engine_failure"]
+      "factors": [
+        "dual_engine_failure"
+      ]
     },
     {
       "t": 15,
@@ -131,7 +148,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Engine 2 fuel control switch transitioned from CUTOFF to RUN; both engines attempted relight with Engine 1 recovering and Engine 2 struggling to maintain core speed.",
-      "factors": ["dual_engine_failure"]
+      "factors": [
+        "dual_engine_failure"
+      ]
     },
     {
       "t": 26,
@@ -140,7 +159,9 @@
       "actor": "ATC",
       "kind": "crew_speech",
       "text": "One of the pilots transmitted MAYDAY MAYDAY MAYDAY; the ATCO did not get a response but observed the aircraft crashing outside the airport boundary.",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 32,
@@ -149,7 +170,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "After 32 seconds of flight the aircraft crashed into the hostel block of B. J. Medical College 0.9 nmi from the runway, initially striking trees and a chimney before impacting the building at a nose-up attitude of about 8 degrees.",
-      "factors": ["loss_of_control_inflight"],
+      "factors": [
+        "loss_of_control_inflight"
+      ],
       "state": {
         "alt": 0,
         "pitch": 8
@@ -162,7 +185,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "The aircraft fragmented across five buildings with extensive thermal damage; the vertical stabilizer separated and came to rest 200 feet away; both engines were found in different buildings.",
-      "factors": ["post_impact_fire"]
+      "factors": [
+        "post_impact_fire"
+      ]
     }
   ],
   "cvr": [

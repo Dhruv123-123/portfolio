@@ -38,7 +38,9 @@
   },
   "location": {
     "name": "Meadow near Blountville, Tennessee, 5.5 miles northeast of Tri-Cities Regional Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 36.5664,
+    "lon": -83.3178
   },
   "phase": "approach",
   "occupants": 4,
@@ -76,9 +78,18 @@
     }
   ],
   "chain": [
-    ["airframe_icing", "deicing_inadequate"],
-    ["deicing_inadequate", "engine_failure"],
-    ["engine_failure", "loss_of_control_inflight"]
+    [
+      "airframe_icing",
+      "deicing_inadequate"
+    ],
+    [
+      "deicing_inadequate",
+      "engine_failure"
+    ],
+    [
+      "engine_failure",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
@@ -97,7 +108,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Atlanta Center cleared the flight to descend from 16,000 feet to 11,000 feet; pilot was advised to expect light to moderate icing during descent.",
-      "factors": ["airframe_icing"]
+      "factors": [
+        "airframe_icing"
+      ]
     },
     {
       "t": -1800,
@@ -115,7 +128,9 @@
       "actor": "ATC",
       "kind": "atc",
       "text": "Tri-City Approach accepted the flight as a radar handoff from Knoxville Approach Control; pilot advised to expect ILS approach to Runway 23. Approach control informed another aircraft of light icing reported by another aircraft at 10,000 feet.",
-      "factors": ["airframe_icing"]
+      "factors": [
+        "airframe_icing"
+      ]
     },
     {
       "t": -300,
@@ -124,7 +139,11 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft encountered icing conditions on final approach; radar data showed substantial speed reduction consistent with partial loss of power.",
-      "factors": ["airframe_icing", "deicing_inadequate", "engine_failure"]
+      "factors": [
+        "airframe_icing",
+        "deicing_inadequate",
+        "engine_failure"
+      ]
     },
     {
       "t": 0,
@@ -151,7 +170,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft descended out of clouds in steep spiraling descent; air traffic controller observed airplane lights descending in steep spiral.",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 60,
@@ -160,7 +181,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Radio contact lost; aircraft impacted meadow 5.5 miles northeast of Tri-City Regional Airport; both propellers feathered at impact.",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 120,

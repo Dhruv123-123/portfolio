@@ -7,74 +7,376 @@
   "t0": "2005-08-02T20:02:00Z",
   "agency": "TSB",
   "agencies": [
-    { "code": "TSB", "name": "Transportation Safety Board of Canada", "country": "Canada", "role": "lead",
-      "report_id": "A05H0002", "report_title": "Runway Overrun and Fire, Air France, Airbus A340-313 F-GLZQ, Toronto/Lester B. Pearson International Airport, Ontario, 02 August 2005", "report_date": "2007-12-12",
-      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2005/a05h0002/a05h0002.html" },
-    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses", "country": "France", "role": "accredited_representative" }
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "lead",
+      "report_id": "A05H0002",
+      "report_title": "Runway Overrun and Fire, Air France, Airbus A340-313 F-GLZQ, Toronto/Lester B. Pearson International Airport, Ontario, 02 August 2005",
+      "report_date": "2007-12-12",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2005/a05h0002/a05h0002.html"
+    },
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses",
+      "country": "France",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Airbus A340-313", "family": "A340", "manufacturer": "Airbus", "registration": "F-GLZQ", "msn": "289", "engines": "CFM International CFM56-5C4" },
+  "aircraft": {
+    "type": "Airbus A340-313",
+    "family": "A340",
+    "manufacturer": "Airbus",
+    "registration": "F-GLZQ",
+    "msn": "289",
+    "engines": "CFM International CFM56-5C4"
+  },
   "operator": "Air France",
-  "route": { "from": "LFPG", "from_name": "Paris Charles de Gaulle", "to": "CYYZ", "to_name": "Toronto Pearson" },
-  "location": { "name": "Toronto Pearson International Airport, runway 24L overrun into Etobicoke Creek ravine", "country": "Canada", "lat": 43.68, "lon": -79.62 },
+  "route": {
+    "from": "LFPG",
+    "from_name": "Paris Charles de Gaulle",
+    "to": "CYYZ",
+    "to_name": "Toronto Pearson"
+  },
+  "location": {
+    "name": "Toronto Pearson International Airport, runway 24L overrun into Etobicoke Creek ravine",
+    "country": "Canada",
+    "lat": 43.68,
+    "lon": -79.62
+  },
   "phase": "landing",
-  "occupants": 309, "fatalities": 0, "injuries_serious": 12,
+  "occupants": 309,
+  "fatalities": 0,
+  "injuries_serious": 12,
   "damage": "destroyed",
   "category": "RE",
   "summary": "Arriving from Paris during a severe thunderstorm, the A340 landed on Toronto's runway 24L in heavy rain with a tailwind, touching down about 3,800 ft along the 9,000 ft runway. Thrust reversers were selected late, and the aircraft left the runway end at about 80 kt, crossed the grass and came to rest in the Etobicoke Creek ravine, where it was destroyed by fire. All 297 passengers and 12 crew evacuated; 12 people were seriously injured.",
   "probable_cause": "The TSB found that the crew continued the approach into a thunderstorm in which the wind shifted to a tailwind and heavy rain reduced visibility. The aircraft crossed the threshold high, floated in a prolonged flare and touched down far down the wet runway; the thrust reversers were selected 12.8 seconds after touchdown and full braking was delayed, so the aircraft could not be stopped on the runway remaining. The crew had not calculated the landing distance required for the conditions, and Air France had no clear guidance requiring a go-around when a long landing developed. The absence of a runway end safety area meant the overrun ended in a ravine, and the ensuing fire destroyed the aircraft.",
   "factors": [
-    { "id": "convective_weather", "role": "initiating", "evidence": "A line of severe thunderstorms with lightning and intense rain was over the airport during the approach and landing; a ground-operations red alert was in effect at Pearson." },
-    { "id": "tailwind_landing", "role": "contributing", "evidence": "The wind shifted during the final approach so that the aircraft landed with a tailwind component of about 10 kt." },
-    { "id": "low_visibility", "role": "contributing", "evidence": "Intense rain on short final and in the flare reduced forward visibility; the pilot flying lost sight of the runway end environment during the flare." },
-    { "id": "contaminated_runway", "role": "contributing", "evidence": "Runway 24L was water-covered by heavy rain, reducing braking effectiveness." },
-    { "id": "landing_long", "role": "contributing", "evidence": "The aircraft crossed the threshold about 40 ft high and touched down about 3,800 ft beyond the threshold of the 9,000 ft runway." },
-    { "id": "delayed_deceleration", "role": "contributing", "evidence": "Thrust reversers were selected 12.8 seconds after touchdown and maximum braking was not applied immediately." },
-    { "id": "go_around_not_flown", "role": "contributing", "evidence": "The crew did not consider a go-around when the landing became long; Air France procedures did not clearly require one in that situation." },
-    { "id": "high_workload", "role": "contributing", "evidence": "The crew were managing a deteriorating weather situation, wind shifts and reduced visibility in the final seconds of the approach." },
-    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The crew did not compute the landing distance required for a wet runway with a tailwind before landing." },
-    { "id": "airport_infrastructure", "role": "latent", "evidence": "The end of runway 24L was not provided with a 300 m runway end safety area; the overrun terminated in the Etobicoke Creek ravine, which increased the damage and the fire." },
-    { "id": "runway_overrun", "role": "outcome", "evidence": "The aircraft departed the runway end at about 80 kt and travelled across the grass into the ravine." },
-    { "id": "post_impact_fire", "role": "outcome", "evidence": "A fire developed after the aircraft came to rest and destroyed the aircraft." },
-    { "id": "evacuation_deficiency", "role": "contributing", "evidence": "Some exits and slides were unusable because of fire and damage, and many passengers took carry-on baggage with them, slowing the evacuation." }
+    {
+      "id": "convective_weather",
+      "role": "initiating",
+      "evidence": "A line of severe thunderstorms with lightning and intense rain was over the airport during the approach and landing; a ground-operations red alert was in effect at Pearson."
+    },
+    {
+      "id": "tailwind_landing",
+      "role": "contributing",
+      "evidence": "The wind shifted during the final approach so that the aircraft landed with a tailwind component of about 10 kt."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Intense rain on short final and in the flare reduced forward visibility; the pilot flying lost sight of the runway end environment during the flare."
+    },
+    {
+      "id": "contaminated_runway",
+      "role": "contributing",
+      "evidence": "Runway 24L was water-covered by heavy rain, reducing braking effectiveness."
+    },
+    {
+      "id": "landing_long",
+      "role": "contributing",
+      "evidence": "The aircraft crossed the threshold about 40 ft high and touched down about 3,800 ft beyond the threshold of the 9,000 ft runway."
+    },
+    {
+      "id": "delayed_deceleration",
+      "role": "contributing",
+      "evidence": "Thrust reversers were selected 12.8 seconds after touchdown and maximum braking was not applied immediately."
+    },
+    {
+      "id": "go_around_not_flown",
+      "role": "contributing",
+      "evidence": "The crew did not consider a go-around when the landing became long; Air France procedures did not clearly require one in that situation."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The crew were managing a deteriorating weather situation, wind shifts and reduced visibility in the final seconds of the approach."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The crew did not compute the landing distance required for a wet runway with a tailwind before landing."
+    },
+    {
+      "id": "airport_infrastructure",
+      "role": "latent",
+      "evidence": "The end of runway 24L was not provided with a 300 m runway end safety area; the overrun terminated in the Etobicoke Creek ravine, which increased the damage and the fire."
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "The aircraft departed the runway end at about 80 kt and travelled across the grass into the ravine."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "A fire developed after the aircraft came to rest and destroyed the aircraft."
+    },
+    {
+      "id": "evacuation_deficiency",
+      "role": "contributing",
+      "evidence": "Some exits and slides were unusable because of fire and damage, and many passengers took carry-on baggage with them, slowing the evacuation."
+    }
   ],
   "chain": [
-    ["convective_weather", "tailwind_landing"],
-    ["convective_weather", "low_visibility"],
-    ["convective_weather", "contaminated_runway"],
-    ["tailwind_landing", "landing_long"],
-    ["low_visibility", "landing_long"],
-    ["high_workload", "go_around_not_flown"],
-    ["landing_long", "go_around_not_flown"],
-    ["procedural_noncompliance", "landing_long"],
-    ["go_around_not_flown", "runway_overrun"],
-    ["landing_long", "runway_overrun"],
-    ["delayed_deceleration", "runway_overrun"],
-    ["contaminated_runway", "runway_overrun"],
-    ["runway_overrun", "post_impact_fire"],
-    ["airport_infrastructure", "post_impact_fire"],
-    ["post_impact_fire", "evacuation_deficiency"]
+    [
+      "convective_weather",
+      "tailwind_landing"
+    ],
+    [
+      "convective_weather",
+      "low_visibility"
+    ],
+    [
+      "convective_weather",
+      "contaminated_runway"
+    ],
+    [
+      "tailwind_landing",
+      "landing_long"
+    ],
+    [
+      "low_visibility",
+      "landing_long"
+    ],
+    [
+      "high_workload",
+      "go_around_not_flown"
+    ],
+    [
+      "landing_long",
+      "go_around_not_flown"
+    ],
+    [
+      "procedural_noncompliance",
+      "landing_long"
+    ],
+    [
+      "go_around_not_flown",
+      "runway_overrun"
+    ],
+    [
+      "landing_long",
+      "runway_overrun"
+    ],
+    [
+      "delayed_deceleration",
+      "runway_overrun"
+    ],
+    [
+      "contaminated_runway",
+      "runway_overrun"
+    ],
+    [
+      "runway_overrun",
+      "post_impact_fire"
+    ],
+    [
+      "airport_infrastructure",
+      "post_impact_fire"
+    ],
+    [
+      "post_impact_fire",
+      "evacuation_deficiency"
+    ]
   ],
   "events": [
-    { "t": -1500, "clock": null, "phase": "descent", "actor": "ENV", "text": "Severe thunderstorms approach Toronto Pearson; a red alert suspends ground operations for lightning. The crew brief the ILS approach to runway 24L, which is wet.", "factors": ["convective_weather"], "kind": "env" },
-    { "t": -600, "clock": null, "phase": "approach", "actor": "ATC", "text": "Preceding aircraft land; the crew are advised of the weather but are not given a reason to expect the runway to be unusable.", "kind": "atc" },
-    { "t": -300, "clock": null, "phase": "approach", "actor": "PF", "text": "Established on the ILS for runway 24L with the autopilot engaged; intense rain and lightning are visible ahead. The crew continue the approach.", "factors": ["convective_weather", "high_workload"], "kind": "crew_action" },
-    { "t": -60, "clock": null, "phase": "approach", "actor": "ENV", "text": "The wind shifts to a tailwind component of about 10 kt as the storm passes over the airport; rain intensity increases sharply.", "factors": ["tailwind_landing", "convective_weather"], "kind": "env" },
-    { "t": -30, "clock": null, "phase": "approach", "actor": "PF", "text": "Autopilot disconnected; the first officer flies the final approach manually in heavy rain and reduced visibility.", "factors": ["low_visibility"], "kind": "crew_action" },
-    { "t": -16, "clock": null, "phase": "landing", "actor": "PF", "text": "Aircraft crosses the runway threshold about 40 ft higher than normal.", "factors": ["landing_long"], "kind": "crew_action" },
-    { "t": -8, "clock": null, "phase": "landing", "actor": "PF", "text": "Prolonged flare; the pilot flying loses visual reference to the runway end in the intense rain. No go-around is considered.", "factors": ["low_visibility", "landing_long", "go_around_not_flown"], "kind": "crew_action" },
-    { "t": 0, "clock": "16:02", "phase": "landing", "actor": "PF", "text": "Touchdown about 3,800 ft beyond the threshold of the 9,000 ft runway, leaving about 5,100 ft of wet runway.", "factors": ["landing_long", "contaminated_runway"], "kind": "crew_action" },
-    { "t": 1, "clock": null, "phase": "landing", "actor": "SYS", "text": "Ground spoilers deploy on touchdown.", "kind": "system" },
-    { "t": 12.8, "clock": null, "phase": "landing", "actor": "PF", "text": "Thrust reversers selected 12.8 seconds after touchdown; heavy braking applied late.", "factors": ["delayed_deceleration"], "kind": "crew_action" },
-    { "t": 30, "clock": null, "phase": "landing", "actor": "SYS", "text": "Aircraft leaves the end of runway 24L at about 80 kt, crosses the grass overrun area and drops into the Etobicoke Creek ravine, coming to rest about 300 m beyond the runway end.", "state": { "gs": 80 }, "factors": ["runway_overrun", "airport_infrastructure"], "kind": "outcome" },
-    { "t": 60, "clock": null, "phase": "ground", "actor": "CABIN", "text": "Fire develops on the left side; evacuation begins. Some exits and slides are unusable and many passengers take carry-on baggage.", "factors": ["post_impact_fire", "evacuation_deficiency"], "kind": "outcome" },
-    { "t": 180, "clock": null, "phase": "ground", "actor": "CABIN", "text": "All 309 occupants are out of the aircraft within about two minutes; 12 are seriously injured. The aircraft is destroyed by fire.", "factors": ["post_impact_fire"], "kind": "outcome" }
+    {
+      "t": -1500,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ENV",
+      "text": "Severe thunderstorms approach Toronto Pearson; a red alert suspends ground operations for lightning. The crew brief the ILS approach to runway 24L, which is wet.",
+      "factors": [
+        "convective_weather"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": -600,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Preceding aircraft land; the crew are advised of the weather but are not given a reason to expect the runway to be unusable.",
+      "kind": "atc"
+    },
+    {
+      "t": -300,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "text": "Established on the ILS for runway 24L with the autopilot engaged; intense rain and lightning are visible ahead. The crew continue the approach.",
+      "factors": [
+        "convective_weather",
+        "high_workload"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -60,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "text": "The wind shifts to a tailwind component of about 10 kt as the storm passes over the airport; rain intensity increases sharply.",
+      "factors": [
+        "tailwind_landing",
+        "convective_weather"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": -30,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "text": "Autopilot disconnected; the first officer flies the final approach manually in heavy rain and reduced visibility.",
+      "factors": [
+        "low_visibility"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -16,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "text": "Aircraft crosses the runway threshold about 40 ft higher than normal.",
+      "factors": [
+        "landing_long"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -8,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "text": "Prolonged flare; the pilot flying loses visual reference to the runway end in the intense rain. No go-around is considered.",
+      "factors": [
+        "low_visibility",
+        "landing_long",
+        "go_around_not_flown"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "16:02",
+      "phase": "landing",
+      "actor": "PF",
+      "text": "Touchdown about 3,800 ft beyond the threshold of the 9,000 ft runway, leaving about 5,100 ft of wet runway.",
+      "factors": [
+        "landing_long",
+        "contaminated_runway"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 1,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "text": "Ground spoilers deploy on touchdown.",
+      "kind": "system"
+    },
+    {
+      "t": 12.8,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "text": "Thrust reversers selected 12.8 seconds after touchdown; heavy braking applied late.",
+      "factors": [
+        "delayed_deceleration"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "text": "Aircraft leaves the end of runway 24L at about 80 kt, crosses the grass overrun area and drops into the Etobicoke Creek ravine, coming to rest about 300 m beyond the runway end.",
+      "state": {
+        "gs": 80
+      },
+      "factors": [
+        "runway_overrun",
+        "airport_infrastructure"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "ground",
+      "actor": "CABIN",
+      "text": "Fire develops on the left side; evacuation begins. Some exits and slides are unusable and many passengers take carry-on baggage.",
+      "factors": [
+        "post_impact_fire",
+        "evacuation_deficiency"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "ground",
+      "actor": "CABIN",
+      "text": "All 309 occupants are out of the aircraft within about two minutes; 12 are seriously injured. The aircraft is destroyed by fire.",
+      "factors": [
+        "post_impact_fire"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "Transport Canada", "text": "Require crews to establish, before landing, that a safety margin exists between the landing distance available and the landing distance required for the actual runway and weather conditions.", "status": "unknown", "outcome": null, "trigger_factors": ["procedural_noncompliance", "landing_long", "contaminated_runway"] },
-    { "id": null, "to": "Transport Canada / ICAO", "text": "Require that all Code 4 runways have a 300 m runway end safety area or an equivalent means of stopping aircraft.", "status": "unknown", "outcome": "Toronto Pearson subsequently extended its runway end safety areas; Transport Canada later moved to require RESAs at major airports.", "trigger_factors": ["airport_infrastructure", "runway_overrun"] },
-    { "id": null, "to": "Transport Canada", "text": "Require operators to provide clear guidance on go-around decisions when a landing is not proceeding as expected, including after the flare.", "status": "unknown", "outcome": null, "trigger_factors": ["go_around_not_flown", "landing_long"] },
-    { "id": null, "to": "Transport Canada", "text": "Address the risks posed by passengers retrieving carry-on baggage during an emergency evacuation.", "status": "unknown", "outcome": null, "trigger_factors": ["evacuation_deficiency"] }
+    {
+      "id": null,
+      "to": "Transport Canada",
+      "text": "Require crews to establish, before landing, that a safety margin exists between the landing distance available and the landing distance required for the actual runway and weather conditions.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "procedural_noncompliance",
+        "landing_long",
+        "contaminated_runway"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Transport Canada / ICAO",
+      "text": "Require that all Code 4 runways have a 300 m runway end safety area or an equivalent means of stopping aircraft.",
+      "status": "unknown",
+      "outcome": "Toronto Pearson subsequently extended its runway end safety areas; Transport Canada later moved to require RESAs at major airports.",
+      "trigger_factors": [
+        "airport_infrastructure",
+        "runway_overrun"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Transport Canada",
+      "text": "Require operators to provide clear guidance on go-around decisions when a landing is not proceeding as expected, including after the flare.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "go_around_not_flown",
+        "landing_long"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Transport Canada",
+      "text": "Address the risks posed by passengers retrieving carry-on baggage during an emergency evacuation.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "evacuation_deficiency"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -82,16 +384,27 @@
     "Toronto Pearson and other Canadian airports improved runway end safety areas; Transport Canada worked toward mandatory RESA standards.",
     "Industry and regulators reinforced pre-landing landing-distance assessment for wet or contaminated runways and tailwinds."
   ],
-  "related": ["american1420", "southwest1248", "tam3054"],
+  "related": [
+    "american1420",
+    "southwest1248",
+    "tam3054"
+  ],
   "fdr": null,
   "sources": [
     "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2005/a05h0002/a05h0002.html",
     "https://www.tsb.gc.ca/"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
-    "Event t values are approximate reconstructions from the report narrative (touchdown 3,800 ft down the runway, reversers 12.8 s after touchdown, exit from runway at about 80 kt); the report's exact clock times are not reproduced.",
-    "Threshold crossing height of about 40 ft high is from memory of the report and should be verified.",
-    "The number of usable exits and slides is not stated precisely; the record only says some were unusable.",
-    "TSB recommendation numbers from the December 2007 report (A07 series) are not given because the exact mapping to text was not verified."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Event t values are approximate reconstructions from the report narrative (touchdown 3,800 ft down the runway, reversers 12.8 s after touchdown, exit from runway at about 80 kt); the report's exact clock times are not reproduced.",
+      "Threshold crossing height of about 40 ft high is from memory of the report and should be verified.",
+      "The number of usable exits and slides is not stated precisely; the record only says some were unusable.",
+      "TSB recommendation numbers from the December 2007 report (A07 series) are not given because the exact mapping to text was not verified."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_France_Flight_358"
 }

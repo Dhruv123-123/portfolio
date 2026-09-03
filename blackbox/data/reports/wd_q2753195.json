@@ -31,7 +31,9 @@
   },
   "location": {
     "name": "Tonto Plateau, Grand Canyon National Park",
-    "country": "United States"
+    "country": "United States",
+    "lat": 36.1367,
+    "lon": -112.2464
   },
   "phase": "cruise",
   "occupants": 20,

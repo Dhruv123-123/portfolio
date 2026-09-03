@@ -7,104 +7,624 @@
   "t0": "2009-06-01T02:10:05Z",
   "agency": "BEA",
   "agencies": [
-    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses pour la sécurité de l'aviation civile", "country": "France", "role": "lead",
-      "report_id": "f-cp090601", "report_title": "Final Report on the accident on 1st June 2009 to the Airbus A330-203 registered F-GZCP operated by Air France flight AF 447 Rio de Janeiro - Paris", "report_date": "2012-07-05",
-      "url": "https://bea.aero/en/investigation-reports/notified-events/detail/accident-to-the-airbus-a330-203-registered-f-gzcp-and-operated-by-air-france-on-01-06-2009-in-the-atlantic-ocean-en/" },
-    { "code": "CENIPA", "name": "Centro de Investigação e Prevenção de Acidentes Aeronáuticos", "country": "Brazil", "role": "accredited_representative" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" },
-    { "code": "BFU", "name": "Bundesstelle für Flugunfalluntersuchung", "country": "Germany", "role": "accredited_representative" },
-    { "code": "AAIB", "name": "Air Accidents Investigation Branch", "country": "United Kingdom", "role": "accredited_representative" }
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses pour la sécurité de l'aviation civile",
+      "country": "France",
+      "role": "lead",
+      "report_id": "f-cp090601",
+      "report_title": "Final Report on the accident on 1st June 2009 to the Airbus A330-203 registered F-GZCP operated by Air France flight AF 447 Rio de Janeiro - Paris",
+      "report_date": "2012-07-05",
+      "url": "https://bea.aero/en/investigation-reports/notified-events/detail/accident-to-the-airbus-a330-203-registered-f-gzcp-and-operated-by-air-france-on-01-06-2009-in-the-atlantic-ocean-en/"
+    },
+    {
+      "code": "CENIPA",
+      "name": "Centro de Investigação e Prevenção de Acidentes Aeronáuticos",
+      "country": "Brazil",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "BFU",
+      "name": "Bundesstelle für Flugunfalluntersuchung",
+      "country": "Germany",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Airbus A330-203", "family": "A330", "manufacturer": "Airbus", "registration": "F-GZCP", "msn": "660", "engines": "General Electric CF6-80E1A3" },
+  "aircraft": {
+    "type": "Airbus A330-203",
+    "family": "A330",
+    "manufacturer": "Airbus",
+    "registration": "F-GZCP",
+    "msn": "660",
+    "engines": "General Electric CF6-80E1A3"
+  },
   "operator": "Air France",
-  "route": { "from": "SBGL", "from_name": "Rio de Janeiro Galeão", "to": "LFPG", "to_name": "Paris Charles de Gaulle" },
-  "location": { "name": "Atlantic Ocean, about 570 nm north-east of Natal, Brazil", "country": "International waters", "lat": 3.06, "lon": -30.56 },
+  "route": {
+    "from": "SBGL",
+    "from_name": "Rio de Janeiro Galeão",
+    "to": "LFPG",
+    "to_name": "Paris Charles de Gaulle"
+  },
+  "location": {
+    "name": "Atlantic Ocean, about 570 nm north-east of Natal, Brazil",
+    "country": "International waters",
+    "lat": 3.06,
+    "lon": -30.56
+  },
   "phase": "cruise",
-  "occupants": 228, "fatalities": 228, "injuries_serious": 0,
+  "occupants": 228,
+  "fatalities": 228,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "LOC-I",
   "summary": "In cruise at FL350 near the intertropical convergence zone the Pitot probes were obstructed by ice crystals, the airspeed indications became inconsistent and the autopilot and autothrust disconnected, with the flight control law reverting to alternate. The pilot flying applied nose-up inputs and the aircraft climbed to about 38,000 ft, where the stall warning sounded and the aircraft stalled. The stall was never recognised and the aircraft descended for 3 minutes 30 seconds, striking the ocean at 02:14:28 with all 228 occupants killed.",
   "probable_cause": "The accident resulted from the temporary inconsistency between the measured airspeeds, likely as a result of the obstruction of the Pitot probes by ice crystals, which led to autopilot disconnection and reconfiguration to alternate law; inappropriate control inputs that destabilised the flight path; the crew not making the connection between the loss of airspeed indications and the appropriate procedure; the late identification by the PNF of the deviation from the flight path and insufficient correction by the PF; the crew not identifying the approach to stall, the lack of an immediate response and exit from the flight envelope; and the crew's failure to diagnose the stall situation and consequently the lack of inputs that would have made recovery possible. Contributing factors included the absence of training in manual aircraft handling at high altitude and in the approach to stall procedure, the ergonomics of the stall warning and the absence of an angle of attack display, the lack of a clear display of airspeed inconsistency, the crew task-sharing and CRM weaknesses after the captain left the cockpit, and the known Pitot icing issue that had not yet led to replacement of the probes.",
   "factors": [
-    { "id": "high_altitude_ice_crystals", "role": "initiating", "evidence": "The aircraft entered a region of ice crystals at the top of convective cloud in the ITCZ; the crew had made only a small deviation around the weather." },
-    { "id": "pitot_blockage", "role": "initiating", "evidence": "The Thales C16195AA Pitot probes were obstructed by ice crystals, producing a sudden fall in indicated airspeed on the left and standby instruments." },
-    { "id": "unreliable_airspeed", "role": "contributing", "evidence": "Inconsistency between the three airspeed sources caused rejection of the ADR data; airspeed indications were lost for up to about a minute." },
-    { "id": "autopilot_disconnect", "role": "contributing", "evidence": "The autopilot and autothrust disconnected at 02:10:05 as a consequence of the airspeed inconsistency." },
-    { "id": "flight_control_law_degradation", "role": "contributing", "evidence": "Flight controls reverted to alternate 2 law, removing angle-of-attack protection and leaving the aircraft in a mode with which the crew were unfamiliar." },
-    { "id": "known_defect_unresolved", "role": "latent", "evidence": "Pitot icing events on the A330/A340 with Thales AA probes were known to Airbus, Air France and the authorities; the replacement programme was in progress but F-GZCP had not yet received new probes." },
-    { "id": "startle_effect", "role": "contributing", "evidence": "The sudden autopilot disconnection, warnings and unusual conditions surprised the crew and degraded their response." },
-    { "id": "inappropriate_control_input", "role": "contributing", "evidence": "The PF made abrupt, predominantly nose-up sidestick inputs that took the aircraft into a steep climb to about 38,000 ft at over 6,000 ft/min." },
-    { "id": "high_workload", "role": "contributing", "evidence": "Numerous ECAM messages, warnings and the need to hand-fly at altitude saturated both pilots; neither called the unreliable airspeed procedure." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "The captain had left for rest without a clear designation of relief responsibilities; task sharing and communication between the two co-pilots broke down." },
-    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "The PNF noticed the climb late and did not effectively challenge the PF's inputs or take control." },
-    { "id": "aerodynamic_stall", "role": "outcome", "evidence": "Stall warning sounded continuously from 02:10:51; angle of attack exceeded 40 degrees and the aircraft descended at about 10,000 ft/min in a stalled condition." },
-    { "id": "stall_misdiagnosis", "role": "contributing", "evidence": "Neither pilot referred to the stall warning or identified the stall; the aircraft's behaviour was not understood." },
-    { "id": "inappropriate_stall_recovery", "role": "contributing", "evidence": "The PF held the sidestick back and applied TOGA thrust; nose-down inputs were never sustained and the trimmable stabiliser reached 13 degrees nose-up." },
-    { "id": "dual_sidestick_input", "role": "contributing", "evidence": "The PNF and captain intervened with sidestick inputs without a clear takeover, producing dual inputs in the final minute." },
-    { "id": "warning_system_deficiency", "role": "latent", "evidence": "The stall warning stopped when indicated airspeed fell below 60 kt and resumed when the nose was lowered, giving misleading feedback; no angle of attack was displayed." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "Air France crews received no training in manual handling at high altitude or in approach-to-stall in alternate law." },
-    { "id": "automation_dependency", "role": "latent", "evidence": "The report noted the erosion of manual handling skills in highly automated operations as a contributor to the crew's inability to control the aircraft." },
-    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The crew lost awareness of the aircraft's energy state and attitude, and the captain on his return could not diagnose the situation from the available indications." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft remained stalled until impact with the ocean at 02:14:28." }
+    {
+      "id": "high_altitude_ice_crystals",
+      "role": "initiating",
+      "evidence": "The aircraft entered a region of ice crystals at the top of convective cloud in the ITCZ; the crew had made only a small deviation around the weather."
+    },
+    {
+      "id": "pitot_blockage",
+      "role": "initiating",
+      "evidence": "The Thales C16195AA Pitot probes were obstructed by ice crystals, producing a sudden fall in indicated airspeed on the left and standby instruments."
+    },
+    {
+      "id": "unreliable_airspeed",
+      "role": "contributing",
+      "evidence": "Inconsistency between the three airspeed sources caused rejection of the ADR data; airspeed indications were lost for up to about a minute."
+    },
+    {
+      "id": "autopilot_disconnect",
+      "role": "contributing",
+      "evidence": "The autopilot and autothrust disconnected at 02:10:05 as a consequence of the airspeed inconsistency."
+    },
+    {
+      "id": "flight_control_law_degradation",
+      "role": "contributing",
+      "evidence": "Flight controls reverted to alternate 2 law, removing angle-of-attack protection and leaving the aircraft in a mode with which the crew were unfamiliar."
+    },
+    {
+      "id": "known_defect_unresolved",
+      "role": "latent",
+      "evidence": "Pitot icing events on the A330/A340 with Thales AA probes were known to Airbus, Air France and the authorities; the replacement programme was in progress but F-GZCP had not yet received new probes."
+    },
+    {
+      "id": "startle_effect",
+      "role": "contributing",
+      "evidence": "The sudden autopilot disconnection, warnings and unusual conditions surprised the crew and degraded their response."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "The PF made abrupt, predominantly nose-up sidestick inputs that took the aircraft into a steep climb to about 38,000 ft at over 6,000 ft/min."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "Numerous ECAM messages, warnings and the need to hand-fly at altitude saturated both pilots; neither called the unreliable airspeed procedure."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The captain had left for rest without a clear designation of relief responsibilities; task sharing and communication between the two co-pilots broke down."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The PNF noticed the climb late and did not effectively challenge the PF's inputs or take control."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "Stall warning sounded continuously from 02:10:51; angle of attack exceeded 40 degrees and the aircraft descended at about 10,000 ft/min in a stalled condition."
+    },
+    {
+      "id": "stall_misdiagnosis",
+      "role": "contributing",
+      "evidence": "Neither pilot referred to the stall warning or identified the stall; the aircraft's behaviour was not understood."
+    },
+    {
+      "id": "inappropriate_stall_recovery",
+      "role": "contributing",
+      "evidence": "The PF held the sidestick back and applied TOGA thrust; nose-down inputs were never sustained and the trimmable stabiliser reached 13 degrees nose-up."
+    },
+    {
+      "id": "dual_sidestick_input",
+      "role": "contributing",
+      "evidence": "The PNF and captain intervened with sidestick inputs without a clear takeover, producing dual inputs in the final minute."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "latent",
+      "evidence": "The stall warning stopped when indicated airspeed fell below 60 kt and resumed when the nose was lowered, giving misleading feedback; no angle of attack was displayed."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "Air France crews received no training in manual handling at high altitude or in approach-to-stall in alternate law."
+    },
+    {
+      "id": "automation_dependency",
+      "role": "latent",
+      "evidence": "The report noted the erosion of manual handling skills in highly automated operations as a contributor to the crew's inability to control the aircraft."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The crew lost awareness of the aircraft's energy state and attitude, and the captain on his return could not diagnose the situation from the available indications."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft remained stalled until impact with the ocean at 02:14:28."
+    }
   ],
   "chain": [
-    ["high_altitude_ice_crystals", "pitot_blockage"],
-    ["known_defect_unresolved", "pitot_blockage"],
-    ["pitot_blockage", "unreliable_airspeed"],
-    ["unreliable_airspeed", "autopilot_disconnect"],
-    ["unreliable_airspeed", "flight_control_law_degradation"],
-    ["autopilot_disconnect", "startle_effect"],
-    ["startle_effect", "inappropriate_control_input"],
-    ["inadequate_training", "inappropriate_control_input"],
-    ["automation_dependency", "inappropriate_control_input"],
-    ["flight_control_law_degradation", "aerodynamic_stall"],
-    ["inappropriate_control_input", "aerodynamic_stall"],
-    ["high_workload", "inadequate_monitoring"],
-    ["crm_breakdown", "inadequate_monitoring"],
-    ["inadequate_monitoring", "inappropriate_control_input"],
-    ["warning_system_deficiency", "stall_misdiagnosis"],
-    ["aerodynamic_stall", "stall_misdiagnosis"],
-    ["stall_misdiagnosis", "inappropriate_stall_recovery"],
-    ["dual_sidestick_input", "inappropriate_stall_recovery"],
-    ["loss_of_situational_awareness", "inappropriate_stall_recovery"],
-    ["inappropriate_stall_recovery", "loss_of_control_inflight"]
+    [
+      "high_altitude_ice_crystals",
+      "pitot_blockage"
+    ],
+    [
+      "known_defect_unresolved",
+      "pitot_blockage"
+    ],
+    [
+      "pitot_blockage",
+      "unreliable_airspeed"
+    ],
+    [
+      "unreliable_airspeed",
+      "autopilot_disconnect"
+    ],
+    [
+      "unreliable_airspeed",
+      "flight_control_law_degradation"
+    ],
+    [
+      "autopilot_disconnect",
+      "startle_effect"
+    ],
+    [
+      "startle_effect",
+      "inappropriate_control_input"
+    ],
+    [
+      "inadequate_training",
+      "inappropriate_control_input"
+    ],
+    [
+      "automation_dependency",
+      "inappropriate_control_input"
+    ],
+    [
+      "flight_control_law_degradation",
+      "aerodynamic_stall"
+    ],
+    [
+      "inappropriate_control_input",
+      "aerodynamic_stall"
+    ],
+    [
+      "high_workload",
+      "inadequate_monitoring"
+    ],
+    [
+      "crm_breakdown",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "inappropriate_control_input"
+    ],
+    [
+      "warning_system_deficiency",
+      "stall_misdiagnosis"
+    ],
+    [
+      "aerodynamic_stall",
+      "stall_misdiagnosis"
+    ],
+    [
+      "stall_misdiagnosis",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "dual_sidestick_input",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "inappropriate_stall_recovery",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
-    { "t": -1200, "clock": "01:50", "phase": "cruise", "actor": "CAPT", "text": "Captain leaves the cockpit for rest; the junior co-pilot in the right seat is PF, the more experienced co-pilot takes the left seat as PNF.", "state": { "alt": 35000 }, "factors": ["crm_breakdown"], "kind": "crew_action" },
-    { "t": -170, "clock": "02:08:07", "phase": "cruise", "actor": "PNF", "text": "PNF suggests turning a little to the left; the crew alter heading about 12 degrees left to avoid returns on the weather radar and reduce speed to Mach 0.80 with engine anti-ice on.", "factors": ["high_altitude_ice_crystals"], "kind": "crew_action" },
-    { "t": -30, "clock": "02:09:35", "phase": "cruise", "actor": "ENV", "text": "Turbulence increases slightly and a noise of ice crystals is heard on the windshield; the aircraft is in ice crystals at the top of convective cloud.", "state": { "alt": 35000 }, "factors": ["high_altitude_ice_crystals"], "kind": "env" },
-    { "t": 0, "clock": "02:10:05", "phase": "cruise", "actor": "SYS", "text": "Autopilot and autothrust disconnect; the left PFD speed falls from 274 kt to 52 kt in a few seconds. Flight control law reverts to alternate.", "state": { "alt": 35000, "ias": 274, "pitch": 2.5 }, "factors": ["pitot_blockage", "unreliable_airspeed", "autopilot_disconnect", "flight_control_law_degradation", "startle_effect"], "kind": "system" },
-    { "t": 1, "clock": "02:10:06", "phase": "cruise", "actor": "PF", "text": "PF takes control and applies a nose-up, left-roll sidestick input; the aircraft rolls right then left and pitches up.", "factors": ["inappropriate_control_input"], "kind": "crew_action" },
-    { "t": 5, "clock": "02:10:10", "phase": "cruise", "actor": "SYS", "text": "Stall warning sounds twice briefly as angle of attack momentarily exceeds the alternate-law threshold; the vertical speed reaches about 7,000 ft/min.", "state": { "vs": 7000 }, "factors": ["warning_system_deficiency"], "kind": "warning" },
-    { "t": 11, "clock": "02:10:16", "phase": "cruise", "actor": "PNF", "text": "PNF announces that the speeds have been lost and that they are in alternate law; ECAM actions begin but the unreliable airspeed procedure is not called.", "factors": ["unreliable_airspeed", "high_workload"], "kind": "crew_speech" },
-    { "t": 21, "clock": "02:10:26", "phase": "climb", "actor": "PNF", "text": "PNF says several times to go back down, noting the climb; pitch reaches about 11 degrees nose-up as the aircraft passes FL360.", "state": { "alt": 36000, "pitch": 11 }, "factors": ["inadequate_monitoring"], "kind": "crew_speech" },
-    { "t": 31, "clock": "02:10:36", "phase": "climb", "actor": "SYS", "text": "Left PFD airspeed indication becomes valid again, showing 223 kt; the standby (ISIS) speed follows later; no comment is made by the crew.", "state": { "ias": 223 }, "factors": ["unreliable_airspeed"], "kind": "system" },
-    { "t": 46, "clock": "02:10:51", "phase": "climb", "actor": "SYS", "text": "Stall warning sounds continuously; the aircraft is at about 37,500 ft with angle of attack increasing beyond 6 degrees.", "state": { "alt": 37500 }, "factors": ["aerodynamic_stall"], "kind": "warning" },
-    { "t": 47, "clock": "02:10:52", "phase": "climb", "actor": "PF", "text": "PF advances the thrust levers to TOGA and maintains nose-up sidestick; the trimmable horizontal stabiliser begins to move nose-up from 3 to 13 degrees over the following minute.", "factors": ["inappropriate_stall_recovery", "stall_misdiagnosis"], "kind": "crew_action" },
-    { "t": 65, "clock": "02:11:10", "phase": "climb", "actor": "SYS", "text": "Aircraft reaches its maximum altitude of about 37,924 ft with pitch about 16 degrees nose-up; it then begins to descend while still pitched up as the stall develops.", "state": { "alt": 37924, "pitch": 16 }, "factors": ["aerodynamic_stall"], "kind": "system" },
-    { "t": 97, "clock": "02:11:42", "phase": "descent", "actor": "CAPT", "text": "Captain returns to the cockpit; the aircraft is descending through about 35,000 ft with angle of attack above 40 degrees and vertical speed near -10,000 ft/min, and rolls of up to 40 degrees.", "state": { "alt": 35000, "vs": -10000 }, "factors": ["loss_of_situational_awareness", "crm_breakdown"], "kind": "crew_action" },
-    { "t": 100, "clock": "02:11:45", "phase": "descent", "actor": "SYS", "text": "As indicated airspeed falls below 60 kt the angle of attack values are considered invalid and the stall warning stops; it sounds again whenever the nose is lowered and speed increases.", "factors": ["warning_system_deficiency", "stall_misdiagnosis"], "kind": "warning" },
-    { "t": 117, "clock": "02:12:02", "phase": "descent", "actor": "PF", "text": "PF says he no longer has any indication; PNF says they have no valid indications. Thrust levers are briefly reduced to idle and speedbrakes momentarily extended.", "factors": ["loss_of_situational_awareness"], "kind": "crew_speech" },
-    { "t": 215, "clock": "02:13:40", "phase": "descent", "actor": "PF", "text": "PF reveals he has been holding the sidestick fully back for some time; the captain and PNF respond that he must not climb. PNF takes over briefly, with dual inputs.", "factors": ["inappropriate_stall_recovery", "dual_sidestick_input"], "kind": "crew_speech" },
-    { "t": 245, "clock": "02:14:10", "phase": "descent", "actor": "PF", "text": "PF resumes nose-up inputs; the aircraft descends through about 4,000 ft; GPWS 'pull up' and sink rate warnings sound.", "state": { "alt": 4000 }, "factors": ["inappropriate_stall_recovery"], "kind": "warning" },
-    { "t": 258, "clock": "02:14:23", "phase": "descent", "actor": "PF", "text": "PF calls that they are going to hit; last recorded values show pitch about 16 degrees nose-up, roll 5 degrees left, ground speed 107 kt, vertical speed about -10,900 ft/min.", "state": { "pitch": 16.2, "vs": -10912 }, "factors": ["loss_of_control_inflight"], "kind": "crew_speech" },
-    { "t": 263, "clock": "02:14:28", "phase": "descent", "actor": "SYS", "text": "Aircraft strikes the ocean surface in a stalled condition; recordings stop. All 228 occupants killed.", "factors": ["loss_of_control_inflight", "aerodynamic_stall"], "kind": "outcome" }
+    {
+      "t": -1200,
+      "clock": "01:50",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Captain leaves the cockpit for rest; the junior co-pilot in the right seat is PF, the more experienced co-pilot takes the left seat as PNF.",
+      "state": {
+        "alt": 35000
+      },
+      "factors": [
+        "crm_breakdown"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -170,
+      "clock": "02:08:07",
+      "phase": "cruise",
+      "actor": "PNF",
+      "text": "PNF suggests turning a little to the left; the crew alter heading about 12 degrees left to avoid returns on the weather radar and reduce speed to Mach 0.80 with engine anti-ice on.",
+      "factors": [
+        "high_altitude_ice_crystals"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -30,
+      "clock": "02:09:35",
+      "phase": "cruise",
+      "actor": "ENV",
+      "text": "Turbulence increases slightly and a noise of ice crystals is heard on the windshield; the aircraft is in ice crystals at the top of convective cloud.",
+      "state": {
+        "alt": 35000
+      },
+      "factors": [
+        "high_altitude_ice_crystals"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": 0,
+      "clock": "02:10:05",
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Autopilot and autothrust disconnect; the left PFD speed falls from 274 kt to 52 kt in a few seconds. Flight control law reverts to alternate.",
+      "state": {
+        "alt": 35000,
+        "ias": 274,
+        "pitch": 2.5
+      },
+      "factors": [
+        "pitot_blockage",
+        "unreliable_airspeed",
+        "autopilot_disconnect",
+        "flight_control_law_degradation",
+        "startle_effect"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 1,
+      "clock": "02:10:06",
+      "phase": "cruise",
+      "actor": "PF",
+      "text": "PF takes control and applies a nose-up, left-roll sidestick input; the aircraft rolls right then left and pitches up.",
+      "factors": [
+        "inappropriate_control_input"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 5,
+      "clock": "02:10:10",
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Stall warning sounds twice briefly as angle of attack momentarily exceeds the alternate-law threshold; the vertical speed reaches about 7,000 ft/min.",
+      "state": {
+        "vs": 7000
+      },
+      "factors": [
+        "warning_system_deficiency"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 11,
+      "clock": "02:10:16",
+      "phase": "cruise",
+      "actor": "PNF",
+      "text": "PNF announces that the speeds have been lost and that they are in alternate law; ECAM actions begin but the unreliable airspeed procedure is not called.",
+      "factors": [
+        "unreliable_airspeed",
+        "high_workload"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 21,
+      "clock": "02:10:26",
+      "phase": "climb",
+      "actor": "PNF",
+      "text": "PNF says several times to go back down, noting the climb; pitch reaches about 11 degrees nose-up as the aircraft passes FL360.",
+      "state": {
+        "alt": 36000,
+        "pitch": 11
+      },
+      "factors": [
+        "inadequate_monitoring"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 31,
+      "clock": "02:10:36",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Left PFD airspeed indication becomes valid again, showing 223 kt; the standby (ISIS) speed follows later; no comment is made by the crew.",
+      "state": {
+        "ias": 223
+      },
+      "factors": [
+        "unreliable_airspeed"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 46,
+      "clock": "02:10:51",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Stall warning sounds continuously; the aircraft is at about 37,500 ft with angle of attack increasing beyond 6 degrees.",
+      "state": {
+        "alt": 37500
+      },
+      "factors": [
+        "aerodynamic_stall"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 47,
+      "clock": "02:10:52",
+      "phase": "climb",
+      "actor": "PF",
+      "text": "PF advances the thrust levers to TOGA and maintains nose-up sidestick; the trimmable horizontal stabiliser begins to move nose-up from 3 to 13 degrees over the following minute.",
+      "factors": [
+        "inappropriate_stall_recovery",
+        "stall_misdiagnosis"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 65,
+      "clock": "02:11:10",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Aircraft reaches its maximum altitude of about 37,924 ft with pitch about 16 degrees nose-up; it then begins to descend while still pitched up as the stall develops.",
+      "state": {
+        "alt": 37924,
+        "pitch": 16
+      },
+      "factors": [
+        "aerodynamic_stall"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 97,
+      "clock": "02:11:42",
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Captain returns to the cockpit; the aircraft is descending through about 35,000 ft with angle of attack above 40 degrees and vertical speed near -10,000 ft/min, and rolls of up to 40 degrees.",
+      "state": {
+        "alt": 35000,
+        "vs": -10000
+      },
+      "factors": [
+        "loss_of_situational_awareness",
+        "crm_breakdown"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 100,
+      "clock": "02:11:45",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "As indicated airspeed falls below 60 kt the angle of attack values are considered invalid and the stall warning stops; it sounds again whenever the nose is lowered and speed increases.",
+      "factors": [
+        "warning_system_deficiency",
+        "stall_misdiagnosis"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 117,
+      "clock": "02:12:02",
+      "phase": "descent",
+      "actor": "PF",
+      "text": "PF says he no longer has any indication; PNF says they have no valid indications. Thrust levers are briefly reduced to idle and speedbrakes momentarily extended.",
+      "factors": [
+        "loss_of_situational_awareness"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 215,
+      "clock": "02:13:40",
+      "phase": "descent",
+      "actor": "PF",
+      "text": "PF reveals he has been holding the sidestick fully back for some time; the captain and PNF respond that he must not climb. PNF takes over briefly, with dual inputs.",
+      "factors": [
+        "inappropriate_stall_recovery",
+        "dual_sidestick_input"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 245,
+      "clock": "02:14:10",
+      "phase": "descent",
+      "actor": "PF",
+      "text": "PF resumes nose-up inputs; the aircraft descends through about 4,000 ft; GPWS 'pull up' and sink rate warnings sound.",
+      "state": {
+        "alt": 4000
+      },
+      "factors": [
+        "inappropriate_stall_recovery"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 258,
+      "clock": "02:14:23",
+      "phase": "descent",
+      "actor": "PF",
+      "text": "PF calls that they are going to hit; last recorded values show pitch about 16 degrees nose-up, roll 5 degrees left, ground speed 107 kt, vertical speed about -10,900 ft/min.",
+      "state": {
+        "pitch": 16.2,
+        "vs": -10912
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 263,
+      "clock": "02:14:28",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Aircraft strikes the ocean surface in a stalled condition; recordings stop. All 228 occupants killed.",
+      "factors": [
+        "loss_of_control_inflight",
+        "aerodynamic_stall"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [
-    { "t": 1, "clock": "02:10:06", "speaker": "PF", "text": "J'ai les commandes.", "translation": "I have the controls." },
-    { "t": 11, "clock": "02:10:16", "speaker": "PNF", "text": "On a perdu les vitesses.", "translation": "We've lost the speeds." },
-    { "t": 117, "clock": "02:12:02", "speaker": "PF", "text": "Je n'ai plus aucune indication.", "translation": "I don't have any more indications." },
-    { "t": 215, "clock": "02:13:40", "speaker": "PF", "text": "Mais je suis à fond à cabrer depuis tout à l'heure.", "translation": "But I've been at full nose-up for a while." },
-    { "t": 218, "clock": "02:13:43", "speaker": "CAPT", "text": "Non non non ne remonte pas.", "translation": "No no no, don't climb." },
-    { "t": 258, "clock": "02:14:23", "speaker": "PF", "text": "On va taper.", "translation": "We're going to hit." }
+    {
+      "t": 1,
+      "clock": "02:10:06",
+      "speaker": "PF",
+      "text": "J'ai les commandes.",
+      "translation": "I have the controls."
+    },
+    {
+      "t": 11,
+      "clock": "02:10:16",
+      "speaker": "PNF",
+      "text": "On a perdu les vitesses.",
+      "translation": "We've lost the speeds."
+    },
+    {
+      "t": 117,
+      "clock": "02:12:02",
+      "speaker": "PF",
+      "text": "Je n'ai plus aucune indication.",
+      "translation": "I don't have any more indications."
+    },
+    {
+      "t": 215,
+      "clock": "02:13:40",
+      "speaker": "PF",
+      "text": "Mais je suis à fond à cabrer depuis tout à l'heure.",
+      "translation": "But I've been at full nose-up for a while."
+    },
+    {
+      "t": 218,
+      "clock": "02:13:43",
+      "speaker": "CAPT",
+      "text": "Non non non ne remonte pas.",
+      "translation": "No no no, don't climb."
+    },
+    {
+      "t": 258,
+      "clock": "02:14:23",
+      "speaker": "PF",
+      "text": "On va taper.",
+      "translation": "We're going to hit."
+    }
   ],
   "recommendations": [
-    { "id": null, "to": "EASA / FAA", "text": "Review the certification criteria for Pitot probes in icing conditions, including high-altitude ice crystals, and require probe replacement where standards are not met.", "status": "closed_acceptable", "outcome": "Thales AA probes were replaced fleet-wide by airworthiness directive; ice crystal icing certification requirements were revised.", "trigger_factors": ["pitot_blockage", "high_altitude_ice_crystals", "known_defect_unresolved"] },
-    { "id": null, "to": "EASA", "text": "Make mandatory the triggering of the flight data recorder ULB with extended transmission time and study deployable recorders and regular position transmission for aircraft over remote areas.", "status": "closed_acceptable", "outcome": "ICAO standards on flight recorder locating, 90-day ULBs and autonomous distress tracking followed.", "trigger_factors": [] },
-    { "id": null, "to": "EASA / DGAC", "text": "Require training in manual aircraft handling at high altitude, approach-to-stall recognition and recovery in degraded flight control laws, and startle effect, for airline pilots.", "status": "closed_acceptable", "outcome": "Upset prevention and recovery training (UPRT) became mandatory; stall recovery procedures were revised to prioritise reducing angle of attack.", "trigger_factors": ["inadequate_training", "inappropriate_stall_recovery", "automation_dependency", "startle_effect"] },
-    { "id": null, "to": "EASA", "text": "Study the inclusion of an angle of attack indicator on transport aircraft and improve the stall warning logic so that it remains consistent with the aircraft state at very low airspeed.", "status": "unknown", "outcome": null, "trigger_factors": ["warning_system_deficiency", "stall_misdiagnosis"] },
-    { "id": null, "to": "EASA", "text": "Review the ergonomics and the logic of the flight director bars during unreliable airspeed and stall warning, and the display of dual sidestick inputs.", "status": "unknown", "outcome": null, "trigger_factors": ["dual_sidestick_input", "inappropriate_control_input"] },
-    { "id": null, "to": "DGAC / EASA", "text": "Define criteria for relief crew composition and the handover of command when the captain leaves the cockpit, and reinforce CRM in a two-co-pilot configuration.", "status": "unknown", "outcome": null, "trigger_factors": ["crm_breakdown"] }
+    {
+      "id": null,
+      "to": "EASA / FAA",
+      "text": "Review the certification criteria for Pitot probes in icing conditions, including high-altitude ice crystals, and require probe replacement where standards are not met.",
+      "status": "closed_acceptable",
+      "outcome": "Thales AA probes were replaced fleet-wide by airworthiness directive; ice crystal icing certification requirements were revised.",
+      "trigger_factors": [
+        "pitot_blockage",
+        "high_altitude_ice_crystals",
+        "known_defect_unresolved"
+      ]
+    },
+    {
+      "id": null,
+      "to": "EASA",
+      "text": "Make mandatory the triggering of the flight data recorder ULB with extended transmission time and study deployable recorders and regular position transmission for aircraft over remote areas.",
+      "status": "closed_acceptable",
+      "outcome": "ICAO standards on flight recorder locating, 90-day ULBs and autonomous distress tracking followed.",
+      "trigger_factors": []
+    },
+    {
+      "id": null,
+      "to": "EASA / DGAC",
+      "text": "Require training in manual aircraft handling at high altitude, approach-to-stall recognition and recovery in degraded flight control laws, and startle effect, for airline pilots.",
+      "status": "closed_acceptable",
+      "outcome": "Upset prevention and recovery training (UPRT) became mandatory; stall recovery procedures were revised to prioritise reducing angle of attack.",
+      "trigger_factors": [
+        "inadequate_training",
+        "inappropriate_stall_recovery",
+        "automation_dependency",
+        "startle_effect"
+      ]
+    },
+    {
+      "id": null,
+      "to": "EASA",
+      "text": "Study the inclusion of an angle of attack indicator on transport aircraft and improve the stall warning logic so that it remains consistent with the aircraft state at very low airspeed.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "warning_system_deficiency",
+        "stall_misdiagnosis"
+      ]
+    },
+    {
+      "id": null,
+      "to": "EASA",
+      "text": "Review the ergonomics and the logic of the flight director bars during unreliable airspeed and stall warning, and the display of dual sidestick inputs.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "dual_sidestick_input",
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "id": null,
+      "to": "DGAC / EASA",
+      "text": "Define criteria for relief crew composition and the handover of command when the captain leaves the cockpit, and reinforce CRM in a two-co-pilot configuration.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "crm_breakdown"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -114,16 +634,32 @@
     "Extended 90-day underwater locator beacons, low-frequency airframe beacons and ICAO autonomous distress tracking requirements.",
     "Air France changes to relief crew designation and captain handover procedures."
   ],
-  "related": ["birgenair301", "northwest6231", "aeroperu603", "saratov703", "austral2553", "colgan3407", "westcaribbean708", "airasia8501"],
+  "related": [
+    "birgenair301",
+    "northwest6231",
+    "aeroperu603",
+    "saratov703",
+    "austral2553",
+    "colgan3407",
+    "westcaribbean708",
+    "airasia8501"
+  ],
   "fdr": "af447",
   "sources": [
     "https://bea.aero/en/investigation-reports/notified-events/detail/accident-to-the-airbus-a330-203-registered-f-gzcp-and-operated-by-air-france-on-01-06-2009-in-the-atlantic-ocean-en/",
     "https://bea.aero/docspa/2009/f-cp090601.en/pdf/f-cp090601.en.pdf"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "high", "reviewed": false, "notes": [
-    "CVR clock times are those given in the BEA final report to within a second or two; wording of the French lines follows the report transcript and translations are the BEA's or close paraphrases.",
-    "Recommendation ids left null: BEA issued FRAN-2009, FRAN-2011 and FRAN-2012 series recommendations, but individual numbers are not reproduced to avoid mis-attribution.",
-    "Some intermediate altitudes (e.g. 35,000 ft at the captain's return) are approximate readings from the FDR plots.",
-    "The fdr field refers to a separate FDR keyframe file to be supplied."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "CVR clock times are those given in the BEA final report to within a second or two; wording of the French lines follows the report transcript and translations are the BEA's or close paraphrases.",
+      "Recommendation ids left null: BEA issued FRAN-2009, FRAN-2011 and FRAN-2012 series recommendations, but individual numbers are not reproduced to avoid mis-attribution.",
+      "Some intermediate altitudes (e.g. 35,000 ft at the captain's return) are approximate readings from the FDR plots.",
+      "The fdr field refers to a separate FDR keyframe file to be supplied."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_France_Flight_447"
 }

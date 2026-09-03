@@ -7,16 +7,38 @@
   "t0": "1982-01-13T20:59:32Z",
   "agency": "NTSB",
   "agencies": [
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
       "report_id": "NTSB/AAR-82/08",
       "report_title": "Air Florida, Inc., Boeing 737-222, N62AF, Collision with 14th Street Bridge, Near Washington National Airport, Washington, D.C., January 13, 1982",
       "report_date": "1982-08-10",
-      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8208.pdf" }
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8208.pdf"
+    }
   ],
-  "aircraft": { "type": "Boeing 737-222", "family": "737", "manufacturer": "Boeing", "registration": "N62AF", "msn": null, "engines": "Pratt & Whitney JT8D-9A" },
+  "aircraft": {
+    "type": "Boeing 737-222",
+    "family": "737",
+    "manufacturer": "Boeing",
+    "registration": "N62AF",
+    "msn": null,
+    "engines": "Pratt & Whitney JT8D-9A"
+  },
   "operator": "Air Florida",
-  "route": { "from": "KDCA", "from_name": "Washington National", "to": "KFLL", "to_name": "Fort Lauderdale-Hollywood International (via Tampa)" },
-  "location": { "name": "14th Street Bridge over the Potomac River, Washington, D.C.", "country": "USA", "lat": 38.874, "lon": -77.043 },
+  "route": {
+    "from": "KDCA",
+    "from_name": "Washington National",
+    "to": "KFLL",
+    "to_name": "Fort Lauderdale-Hollywood International (via Tampa)"
+  },
+  "location": {
+    "name": "14th Street Bridge over the Potomac River, Washington, D.C.",
+    "country": "USA",
+    "lat": 38.874,
+    "lon": -77.043
+  },
   "phase": "initial_climb",
   "occupants": 79,
   "fatalities": 78,
@@ -26,68 +48,406 @@
   "summary": "During a heavy snowstorm at Washington National the 737 was de-iced, then waited about 49 minutes in a departure queue with continuing snowfall and with engine anti-ice switched off. Ice in the engine inlet pressure probes caused the EPR gauges to read high, so the crew set what looked like takeoff thrust but was actually far less, and snow and ice on the wings degraded lift. The first officer voiced doubts about the instrument readings during the takeoff roll but the captain continued. The airplane struggled into the air, stalled, and struck the 14th Street Bridge and the frozen Potomac River. Seventy-four of the 79 on board and four people on the bridge died.",
   "probable_cause": "The flightcrew's failure to use engine anti-ice during ground operation and takeoff, their decision to take off with snow/ice on the airfoil surfaces of the aircraft, and the captain's failure to reject the takeoff during the early stage when his attention was called to anomalous engine instrument readings. Contributing to the accident were the prolonged ground delay between deicing and the receipt of ATC takeoff clearance during which the airplane was exposed to continual precipitation, the known inherent pitchup characteristics of the B-737 aircraft when the leading edge is contaminated with even small amounts of snow or ice, and the limited experience of the flightcrew in jet transport winter operations.",
   "factors": [
-    { "id": "deicing_inadequate", "role": "initiating", "evidence": "Engine anti-ice was left off throughout ground operations and takeoff, and the crew departed with snow and ice on the wings after a de-icing that had been followed by 49 minutes of continued snowfall." },
-    { "id": "engine_instrument_error", "role": "contributing", "evidence": "Ice blocked the engine Pt2 inlet pressure probes so the EPR gauges indicated the 2.04 takeoff target while the engines were producing thrust equivalent to about 1.70 EPR." },
-    { "id": "airframe_icing", "role": "contributing", "evidence": "Snow and ice on the wings and leading edges increased stall speed and induced the 737's pitch-up tendency after liftoff." },
-    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The crew did not use engine anti-ice as required in icing conditions, used reverse thrust during pushback contrary to guidance, and taxied close behind another jet in an attempt to melt snow with its exhaust." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "The first officer repeatedly questioned the engine indications during the takeoff roll but did not insist on rejecting the takeoff and the captain did not respond to his concerns." },
-    { "id": "pilot_experience", "role": "contributing", "evidence": "Both pilots had limited experience in jet transport winter operations; neither had significant experience of taking off in snow." },
-    { "id": "design_deficiency", "role": "contributing", "evidence": "The 737 had known pitch-up and roll-off characteristics when its leading edge was contaminated with even small amounts of snow or ice." },
-    { "id": "stick_shaker_pusher", "role": "contributing", "evidence": "The stick shaker activated almost immediately after liftoff and continued until impact." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "Air Florida's training and guidance on winter operations, de-icing and contaminated wing takeoffs was limited." },
-    { "id": "aerodynamic_stall", "role": "outcome", "evidence": "With reduced thrust and contaminated wings the airplane could not accelerate or climb and entered a stall at low altitude." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The airplane descended in a nose-high attitude and struck the bridge and the frozen river." },
-    { "id": "evacuation_deficiency", "role": "latent", "evidence": "Survivors were in the icy river for more than 20 minutes before a helicopter rescue; the report identified deficiencies in water rescue capability at the airport." }
+    {
+      "id": "deicing_inadequate",
+      "role": "initiating",
+      "evidence": "Engine anti-ice was left off throughout ground operations and takeoff, and the crew departed with snow and ice on the wings after a de-icing that had been followed by 49 minutes of continued snowfall."
+    },
+    {
+      "id": "engine_instrument_error",
+      "role": "contributing",
+      "evidence": "Ice blocked the engine Pt2 inlet pressure probes so the EPR gauges indicated the 2.04 takeoff target while the engines were producing thrust equivalent to about 1.70 EPR."
+    },
+    {
+      "id": "airframe_icing",
+      "role": "contributing",
+      "evidence": "Snow and ice on the wings and leading edges increased stall speed and induced the 737's pitch-up tendency after liftoff."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The crew did not use engine anti-ice as required in icing conditions, used reverse thrust during pushback contrary to guidance, and taxied close behind another jet in an attempt to melt snow with its exhaust."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The first officer repeatedly questioned the engine indications during the takeoff roll but did not insist on rejecting the takeoff and the captain did not respond to his concerns."
+    },
+    {
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "Both pilots had limited experience in jet transport winter operations; neither had significant experience of taking off in snow."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "The 737 had known pitch-up and roll-off characteristics when its leading edge was contaminated with even small amounts of snow or ice."
+    },
+    {
+      "id": "stick_shaker_pusher",
+      "role": "contributing",
+      "evidence": "The stick shaker activated almost immediately after liftoff and continued until impact."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "Air Florida's training and guidance on winter operations, de-icing and contaminated wing takeoffs was limited."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "With reduced thrust and contaminated wings the airplane could not accelerate or climb and entered a stall at low altitude."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The airplane descended in a nose-high attitude and struck the bridge and the frozen river."
+    },
+    {
+      "id": "evacuation_deficiency",
+      "role": "latent",
+      "evidence": "Survivors were in the icy river for more than 20 minutes before a helicopter rescue; the report identified deficiencies in water rescue capability at the airport."
+    }
   ],
   "chain": [
-    ["pilot_experience", "procedural_noncompliance"],
-    ["inadequate_training", "procedural_noncompliance"],
-    ["procedural_noncompliance", "deicing_inadequate"],
-    ["deicing_inadequate", "engine_instrument_error"],
-    ["deicing_inadequate", "airframe_icing"],
-    ["engine_instrument_error", "crm_breakdown"],
-    ["crm_breakdown", "aerodynamic_stall"],
-    ["engine_instrument_error", "aerodynamic_stall"],
-    ["airframe_icing", "design_deficiency"],
-    ["design_deficiency", "aerodynamic_stall"],
-    ["airframe_icing", "stick_shaker_pusher"],
-    ["stick_shaker_pusher", "aerodynamic_stall"],
-    ["aerodynamic_stall", "loss_of_control_inflight"],
-    ["loss_of_control_inflight", "evacuation_deficiency"]
+    [
+      "pilot_experience",
+      "procedural_noncompliance"
+    ],
+    [
+      "inadequate_training",
+      "procedural_noncompliance"
+    ],
+    [
+      "procedural_noncompliance",
+      "deicing_inadequate"
+    ],
+    [
+      "deicing_inadequate",
+      "engine_instrument_error"
+    ],
+    [
+      "deicing_inadequate",
+      "airframe_icing"
+    ],
+    [
+      "engine_instrument_error",
+      "crm_breakdown"
+    ],
+    [
+      "crm_breakdown",
+      "aerodynamic_stall"
+    ],
+    [
+      "engine_instrument_error",
+      "aerodynamic_stall"
+    ],
+    [
+      "airframe_icing",
+      "design_deficiency"
+    ],
+    [
+      "design_deficiency",
+      "aerodynamic_stall"
+    ],
+    [
+      "airframe_icing",
+      "stick_shaker_pusher"
+    ],
+    [
+      "stick_shaker_pusher",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "evacuation_deficiency"
+    ]
   ],
   "events": [
-    { "t": -5400, "clock": null, "phase": "ground", "actor": "GND", "text": "The airplane is de-iced at the gate with a glycol mixture in heavy snow; the airport is closed for snow clearance and the flight is delayed.", "factors": ["deicing_inadequate"], "kind": "env" },
-    { "t": -2100, "clock": null, "phase": "ground", "actor": "CAPT", "text": "During pushback the tug slips on the ice; the crew use reverse thrust to try to push back, contrary to the operator's guidance, blowing snow and slush around the airplane.", "factors": ["procedural_noncompliance"], "kind": "crew_action" },
-    { "t": -1500, "clock": null, "phase": "taxi", "actor": "CAPT", "text": "In the departure queue the crew taxi close behind a DC-9, hoping its exhaust will melt snow from the wings; engine anti-ice remains off.", "factors": ["procedural_noncompliance", "deicing_inadequate", "airframe_icing"], "kind": "crew_action" },
-    { "t": -60, "clock": null, "phase": "taxi", "actor": "ATC", "text": "Tower clears Palm 90 for takeoff on runway 36 with 'no delay on departure' because of landing traffic two and a half miles out.", "kind": "atc" },
-    { "t": 0, "clock": "15:59:32", "phase": "takeoff", "actor": "CAPT", "text": "Takeoff roll begins; the EPR gauges show the 2.04 target but the iced Pt2 probes mean the engines are producing far less thrust.", "factors": ["engine_instrument_error", "deicing_inadequate"], "kind": "crew_action" },
-    { "t": 19, "clock": "15:59:51", "phase": "takeoff", "actor": "FO", "text": "First officer: 'God, look at that thing. That don't seem right, does it?' and, seconds later, 'Ah, that's not right.'", "factors": ["crm_breakdown", "engine_instrument_error"], "kind": "crew_speech" },
-    { "t": 27, "clock": "15:59:59", "phase": "takeoff", "actor": "CAPT", "text": "Captain replies 'Yes it is, there's eighty' and continues the takeoff; the first officer says 'Naw, I don't think that's right' then 'Ah, maybe it is.'", "state": { "ias": 80 }, "factors": ["crm_breakdown"], "kind": "crew_speech" },
-    { "t": 37, "clock": "16:00:09", "phase": "takeoff", "actor": "CAPT", "text": "Captain calls 'Hundred and twenty'; the first officer answers 'I don't know.' The acceleration is markedly slower than normal.", "state": { "ias": 120 }, "factors": ["engine_instrument_error"], "kind": "crew_speech" },
-    { "t": 49, "clock": "16:00:21", "phase": "takeoff", "actor": "CAPT", "text": "'V one' and 'V two' calls; the airplane becomes airborne about 2,000 feet from the end of the runway after a takeoff roll of some 45 seconds.", "factors": ["airframe_icing"], "kind": "crew_speech" },
-    { "t": 65, "clock": "16:00:37", "phase": "initial_climb", "actor": "SYS", "text": "The stick shaker activates immediately after liftoff and the airplane pitches up with contaminated wings; the captain calls 'forward, forward, easy. We only want five hundred.'", "factors": ["stick_shaker_pusher", "design_deficiency", "airframe_icing"], "kind": "warning" },
-    { "t": 73, "clock": "16:00:45", "phase": "initial_climb", "actor": "CAPT", "text": "'Stalling, we're falling'; the airplane reaches a maximum height of a few hundred feet and begins to descend.", "factors": ["aerodynamic_stall"], "kind": "crew_speech" },
-    { "t": 76, "clock": "16:00:48", "phase": "initial_climb", "actor": "FO", "text": "First officer: 'Larry, we're going down, Larry.' Captain: 'I know it.'", "factors": ["loss_of_control_inflight"], "kind": "crew_speech" },
-    { "t": 89, "clock": "16:01:01", "phase": "initial_climb", "actor": "SYS", "text": "The airplane strikes vehicles and the northbound span of the 14th Street Bridge and plunges through the ice of the Potomac River.", "factors": ["loss_of_control_inflight"], "kind": "outcome" },
-    { "t": 1400, "clock": null, "phase": "ground", "actor": "OTHER", "text": "A U.S. Park Police helicopter and bystanders pull the five survivors from the river more than 20 minutes after the crash.", "factors": ["evacuation_deficiency"], "kind": "env" }
+    {
+      "t": -5400,
+      "clock": null,
+      "phase": "ground",
+      "actor": "GND",
+      "text": "The airplane is de-iced at the gate with a glycol mixture in heavy snow; the airport is closed for snow clearance and the flight is delayed.",
+      "factors": [
+        "deicing_inadequate"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": -2100,
+      "clock": null,
+      "phase": "ground",
+      "actor": "CAPT",
+      "text": "During pushback the tug slips on the ice; the crew use reverse thrust to try to push back, contrary to the operator's guidance, blowing snow and slush around the airplane.",
+      "factors": [
+        "procedural_noncompliance"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -1500,
+      "clock": null,
+      "phase": "taxi",
+      "actor": "CAPT",
+      "text": "In the departure queue the crew taxi close behind a DC-9, hoping its exhaust will melt snow from the wings; engine anti-ice remains off.",
+      "factors": [
+        "procedural_noncompliance",
+        "deicing_inadequate",
+        "airframe_icing"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -60,
+      "clock": null,
+      "phase": "taxi",
+      "actor": "ATC",
+      "text": "Tower clears Palm 90 for takeoff on runway 36 with 'no delay on departure' because of landing traffic two and a half miles out.",
+      "kind": "atc"
+    },
+    {
+      "t": 0,
+      "clock": "15:59:32",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "Takeoff roll begins; the EPR gauges show the 2.04 target but the iced Pt2 probes mean the engines are producing far less thrust.",
+      "factors": [
+        "engine_instrument_error",
+        "deicing_inadequate"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 19,
+      "clock": "15:59:51",
+      "phase": "takeoff",
+      "actor": "FO",
+      "text": "First officer: 'God, look at that thing. That don't seem right, does it?' and, seconds later, 'Ah, that's not right.'",
+      "factors": [
+        "crm_breakdown",
+        "engine_instrument_error"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 27,
+      "clock": "15:59:59",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "Captain replies 'Yes it is, there's eighty' and continues the takeoff; the first officer says 'Naw, I don't think that's right' then 'Ah, maybe it is.'",
+      "state": {
+        "ias": 80
+      },
+      "factors": [
+        "crm_breakdown"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 37,
+      "clock": "16:00:09",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "Captain calls 'Hundred and twenty'; the first officer answers 'I don't know.' The acceleration is markedly slower than normal.",
+      "state": {
+        "ias": 120
+      },
+      "factors": [
+        "engine_instrument_error"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 49,
+      "clock": "16:00:21",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "'V one' and 'V two' calls; the airplane becomes airborne about 2,000 feet from the end of the runway after a takeoff roll of some 45 seconds.",
+      "factors": [
+        "airframe_icing"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 65,
+      "clock": "16:00:37",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "The stick shaker activates immediately after liftoff and the airplane pitches up with contaminated wings; the captain calls 'forward, forward, easy. We only want five hundred.'",
+      "factors": [
+        "stick_shaker_pusher",
+        "design_deficiency",
+        "airframe_icing"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 73,
+      "clock": "16:00:45",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "text": "'Stalling, we're falling'; the airplane reaches a maximum height of a few hundred feet and begins to descend.",
+      "factors": [
+        "aerodynamic_stall"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 76,
+      "clock": "16:00:48",
+      "phase": "initial_climb",
+      "actor": "FO",
+      "text": "First officer: 'Larry, we're going down, Larry.' Captain: 'I know it.'",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 89,
+      "clock": "16:01:01",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "The airplane strikes vehicles and the northbound span of the 14th Street Bridge and plunges through the ice of the Potomac River.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 1400,
+      "clock": null,
+      "phase": "ground",
+      "actor": "OTHER",
+      "text": "A U.S. Park Police helicopter and bystanders pull the five survivors from the river more than 20 minutes after the crash.",
+      "factors": [
+        "evacuation_deficiency"
+      ],
+      "kind": "env"
+    }
   ],
   "cvr": [
-    { "t": 19, "clock": "15:59:51", "speaker": "FO", "text": "God, look at that thing. That don't seem right, does it?", "translation": null },
-    { "t": 26, "clock": "15:59:58", "speaker": "FO", "text": "Ah, that's not right.", "translation": null },
-    { "t": 27, "clock": "15:59:59", "speaker": "CAPT", "text": "Yes it is, there's eighty.", "translation": null },
-    { "t": 28, "clock": "16:00:00", "speaker": "FO", "text": "Naw, I don't think that's right.", "translation": null },
-    { "t": 37, "clock": "16:00:09", "speaker": "CAPT", "text": "Hundred and twenty.", "translation": null },
-    { "t": 38, "clock": "16:00:10", "speaker": "FO", "text": "I don't know.", "translation": null },
-    { "t": 67, "clock": "16:00:39", "speaker": "CAPT", "text": "Forward, forward, easy. We only want five hundred.", "translation": null },
-    { "t": 73, "clock": "16:00:45", "speaker": "CAPT", "text": "Stalling, we're falling.", "translation": null },
-    { "t": 76, "clock": "16:00:48", "speaker": "FO", "text": "Larry, we're going down, Larry.", "translation": null },
-    { "t": 77, "clock": "16:00:49", "speaker": "CAPT", "text": "I know it.", "translation": null }
+    {
+      "t": 19,
+      "clock": "15:59:51",
+      "speaker": "FO",
+      "text": "God, look at that thing. That don't seem right, does it?",
+      "translation": null
+    },
+    {
+      "t": 26,
+      "clock": "15:59:58",
+      "speaker": "FO",
+      "text": "Ah, that's not right.",
+      "translation": null
+    },
+    {
+      "t": 27,
+      "clock": "15:59:59",
+      "speaker": "CAPT",
+      "text": "Yes it is, there's eighty.",
+      "translation": null
+    },
+    {
+      "t": 28,
+      "clock": "16:00:00",
+      "speaker": "FO",
+      "text": "Naw, I don't think that's right.",
+      "translation": null
+    },
+    {
+      "t": 37,
+      "clock": "16:00:09",
+      "speaker": "CAPT",
+      "text": "Hundred and twenty.",
+      "translation": null
+    },
+    {
+      "t": 38,
+      "clock": "16:00:10",
+      "speaker": "FO",
+      "text": "I don't know.",
+      "translation": null
+    },
+    {
+      "t": 67,
+      "clock": "16:00:39",
+      "speaker": "CAPT",
+      "text": "Forward, forward, easy. We only want five hundred.",
+      "translation": null
+    },
+    {
+      "t": 73,
+      "clock": "16:00:45",
+      "speaker": "CAPT",
+      "text": "Stalling, we're falling.",
+      "translation": null
+    },
+    {
+      "t": 76,
+      "clock": "16:00:48",
+      "speaker": "FO",
+      "text": "Larry, we're going down, Larry.",
+      "translation": null
+    },
+    {
+      "t": 77,
+      "clock": "16:00:49",
+      "speaker": "CAPT",
+      "text": "I know it.",
+      "translation": null
+    }
   ],
   "recommendations": [
-    { "id": null, "to": "FAA", "text": "Issue guidance and require training on the effects of wing contamination, the need to re-de-ice after holdover times are exceeded, and the use of engine anti-ice in icing conditions.", "status": "closed_acceptable", "outcome": "The 'clean aircraft concept' was formalized and, after later accidents, 14 CFR 121.629 was revised in 1992 to require approved ground de-icing programs with holdover times.", "trigger_factors": ["deicing_inadequate", "airframe_icing", "inadequate_training"] },
-    { "id": null, "to": "FAA", "text": "Require that flight crews be trained to recognize erroneous engine pressure ratio indications caused by iced inlet probes and to cross-check with N1 and fuel flow.", "status": "unknown", "outcome": "Boeing and operators added cross-checks of N1 against EPR in icing conditions.", "trigger_factors": ["engine_instrument_error"] },
-    { "id": null, "to": "FAA", "text": "Require operators to give flight crews training in assertive communication and decision-making so that a takeoff is rejected when either pilot detects abnormal indications.", "status": "closed_acceptable", "outcome": "The accident became a founding case in crew resource management training adopted across U.S. airlines during the 1980s.", "trigger_factors": ["crm_breakdown", "pilot_experience"] },
-    { "id": null, "to": "FAA and airport operators", "text": "Improve water rescue capability and response planning at airports adjacent to water.", "status": "unknown", "outcome": "Washington National Airport acquired water rescue equipment and revised its emergency plan.", "trigger_factors": ["evacuation_deficiency"] }
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Issue guidance and require training on the effects of wing contamination, the need to re-de-ice after holdover times are exceeded, and the use of engine anti-ice in icing conditions.",
+      "status": "closed_acceptable",
+      "outcome": "The 'clean aircraft concept' was formalized and, after later accidents, 14 CFR 121.629 was revised in 1992 to require approved ground de-icing programs with holdover times.",
+      "trigger_factors": [
+        "deicing_inadequate",
+        "airframe_icing",
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require that flight crews be trained to recognize erroneous engine pressure ratio indications caused by iced inlet probes and to cross-check with N1 and fuel flow.",
+      "status": "unknown",
+      "outcome": "Boeing and operators added cross-checks of N1 against EPR in icing conditions.",
+      "trigger_factors": [
+        "engine_instrument_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require operators to give flight crews training in assertive communication and decision-making so that a takeoff is rejected when either pilot detects abnormal indications.",
+      "status": "closed_acceptable",
+      "outcome": "The accident became a founding case in crew resource management training adopted across U.S. airlines during the 1980s.",
+      "trigger_factors": [
+        "crm_breakdown",
+        "pilot_experience"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA and airport operators",
+      "text": "Improve water rescue capability and response planning at airports adjacent to water.",
+      "status": "unknown",
+      "outcome": "Washington National Airport acquired water rescue equipment and revised its emergency plan.",
+      "trigger_factors": [
+        "evacuation_deficiency"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -96,14 +456,24 @@
     "Crew resource management training spread across U.S. carriers, using Flight 90's cockpit exchange as a case study in monitoring and assertiveness.",
     "Water rescue capability at Washington National and other waterside airports was upgraded."
   ],
-  "related": ["colgan3407", "americaneagle4184", "airmidwest5481", "spanair5022", "comair5191", "northwest6231"],
+  "related": [
+    "colgan3407",
+    "americaneagle4184",
+    "airmidwest5481",
+    "spanair5022",
+    "comair5191",
+    "northwest6231"
+  ],
   "fdr": null,
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8208.pdf",
     "https://www.ntsb.gov"
   ],
   "extraction": {
-    "method": "llm", "model": "claude", "confidence": "high", "reviewed": false,
+    "method": "llm",
+    "model": "claude",
+    "confidence": "high",
+    "reviewed": false,
     "notes": [
       "Fatalities (78) comprise 74 of the 79 aboard plus 4 people in vehicles on the bridge; 5 aboard survived with serious injuries.",
       "CVR quotes and clock times follow the widely reproduced public transcript; individual times may be off by one to two seconds.",
@@ -111,5 +481,6 @@
       "Actual engine thrust is given in the report as about 10,750 pounds per engine versus about 14,500 expected, corresponding to an actual EPR of about 1.70 against an indicated 2.04.",
       "Aircraft MSN is omitted because it is not recalled with confidence."
     ]
-  }
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_Florida_Flight_90"
 }

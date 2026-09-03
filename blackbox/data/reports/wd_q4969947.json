@@ -34,7 +34,9 @@
   },
   "location": {
     "name": "Staines-upon-Thames, Surrey",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "lat": 51.4392,
+    "lon": -0.5089
   },
   "phase": "initial_climb",
   "occupants": 118,

@@ -7,75 +7,308 @@
   "t0": "1990-06-10T07:33:00Z",
   "agency": "AAIB",
   "agencies": [
-    { "code": "AAIB", "name": "Air Accidents Investigation Branch", "country": "United Kingdom", "role": "lead",
-      "report_id": "1/92", "report_title": "Report on the accident to BAC One-Eleven, G-BJRT over Didcot, Oxfordshire on 10 June 1990", "report_date": "1992-02-01",
-      "url": "https://www.gov.uk/aaib-reports/1-1992-bac-one-eleven-g-bjrt-10-june-1990" }
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "1/92",
+      "report_title": "Report on the accident to BAC One-Eleven, G-BJRT over Didcot, Oxfordshire on 10 June 1990",
+      "report_date": "1992-02-01",
+      "url": "https://www.gov.uk/aaib-reports/1-1992-bac-one-eleven-g-bjrt-10-june-1990"
+    }
   ],
-  "aircraft": { "type": "BAC One-Eleven 528FL", "family": "BAC 1-11", "manufacturer": "British Aircraft Corporation", "registration": "G-BJRT", "msn": "234", "engines": "Rolls-Royce Spey 512-14DW" },
+  "aircraft": {
+    "type": "BAC One-Eleven 528FL",
+    "family": "BAC 1-11",
+    "manufacturer": "British Aircraft Corporation",
+    "registration": "G-BJRT",
+    "msn": "234",
+    "engines": "Rolls-Royce Spey 512-14DW"
+  },
   "operator": "British Airways",
-  "route": { "from": "EGBB", "from_name": "Birmingham", "to": "LEMG", "to_name": "Málaga" },
-  "location": { "name": "Over Didcot, Oxfordshire; diversion to Southampton", "country": "United Kingdom", "lat": 51.6, "lon": -1.25 },
+  "route": {
+    "from": "EGBB",
+    "from_name": "Birmingham",
+    "to": "LEMG",
+    "to_name": "Málaga"
+  },
+  "location": {
+    "name": "Over Didcot, Oxfordshire; diversion to Southampton",
+    "country": "United Kingdom",
+    "lat": 51.6,
+    "lon": -1.25
+  },
   "phase": "climb",
-  "occupants": 87, "fatalities": 0, "injuries_serious": 2,
+  "occupants": 87,
+  "fatalities": 0,
+  "injuries_serious": 2,
   "damage": "substantial",
   "category": "SCF-NP",
   "summary": "Climbing through 17,300 ft after departure from Birmingham, the left windscreen, which had been replaced the previous night, blew out. The commander was partially sucked through the aperture and held by cabin crew while the first officer flew the aircraft to an emergency landing at Southampton. The commander survived with fractures and frostbite.",
   "probable_cause": "The windscreen had been fitted with 84 of 90 bolts that were of a smaller diameter than specified and the remaining six were too short; the bolts were installed by the shift maintenance manager, who worked alone, relied on visual matching of the old bolts and did not consult the parts catalogue. The installation was not subject to independent inspection, and the shift manager's inadequate practices were not detected by the airline's quality monitoring or the CAA.",
   "factors": [
-    { "id": "maintenance_error", "role": "initiating", "evidence": "The shift maintenance manager fitted the windscreen with 84 bolts of the wrong (undersize) diameter and 6 bolts of the correct diameter but wrong length, having selected them by visual comparison in poor light." },
-    { "id": "inadequate_inspection", "role": "latent", "evidence": "The windscreen installation was not classified as a vital task requiring independent inspection, so the incorrect bolts went undetected." },
-    { "id": "operator_safety_culture", "role": "latent", "evidence": "Local management and quality monitoring did not detect the shift manager's inadequate working practices and the deviation from published procedures." },
-    { "id": "regulatory_oversight", "role": "latent", "evidence": "The CAA's product sampling did not identify the maintenance standards shortfall at the Birmingham base." },
-    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The shift manager did not use the Illustrated Parts Catalogue or the maintenance manual to identify the correct bolts, and operated the uncontrolled bolt carousel without verification." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The windscreen was fitted from the outside of the aircraft, so it relied wholly on the bolts to resist cabin pressure differential." },
-    { "id": "windshield_failure", "role": "contributing", "evidence": "At about 17,300 ft the windscreen separated from the airframe under cabin pressure load." },
-    { "id": "explosive_decompression", "role": "contributing", "evidence": "The windscreen departure caused an explosive decompression and the commander was pulled partly through the aperture." },
-    { "id": "pilot_incapacitation", "role": "contributing", "evidence": "The commander was incapacitated, held by cabin crew, leaving the first officer to fly the aircraft alone." },
-    { "id": "emergency_landing", "role": "outcome", "evidence": "The first officer landed the aircraft safely at Southampton about 22 minutes after the decompression." }
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "The shift maintenance manager fitted the windscreen with 84 bolts of the wrong (undersize) diameter and 6 bolts of the correct diameter but wrong length, having selected them by visual comparison in poor light."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "latent",
+      "evidence": "The windscreen installation was not classified as a vital task requiring independent inspection, so the incorrect bolts went undetected."
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "latent",
+      "evidence": "Local management and quality monitoring did not detect the shift manager's inadequate working practices and the deviation from published procedures."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "The CAA's product sampling did not identify the maintenance standards shortfall at the Birmingham base."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The shift manager did not use the Illustrated Parts Catalogue or the maintenance manual to identify the correct bolts, and operated the uncontrolled bolt carousel without verification."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The windscreen was fitted from the outside of the aircraft, so it relied wholly on the bolts to resist cabin pressure differential."
+    },
+    {
+      "id": "windshield_failure",
+      "role": "contributing",
+      "evidence": "At about 17,300 ft the windscreen separated from the airframe under cabin pressure load."
+    },
+    {
+      "id": "explosive_decompression",
+      "role": "contributing",
+      "evidence": "The windscreen departure caused an explosive decompression and the commander was pulled partly through the aperture."
+    },
+    {
+      "id": "pilot_incapacitation",
+      "role": "contributing",
+      "evidence": "The commander was incapacitated, held by cabin crew, leaving the first officer to fly the aircraft alone."
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "The first officer landed the aircraft safely at Southampton about 22 minutes after the decompression."
+    }
   ],
   "chain": [
-    ["operator_safety_culture", "procedural_noncompliance"],
-    ["regulatory_oversight", "operator_safety_culture"],
-    ["procedural_noncompliance", "maintenance_error"],
-    ["inadequate_inspection", "maintenance_error"],
-    ["design_deficiency", "windshield_failure"],
-    ["maintenance_error", "windshield_failure"],
-    ["windshield_failure", "explosive_decompression"],
-    ["explosive_decompression", "pilot_incapacitation"],
-    ["pilot_incapacitation", "emergency_landing"]
+    [
+      "operator_safety_culture",
+      "procedural_noncompliance"
+    ],
+    [
+      "regulatory_oversight",
+      "operator_safety_culture"
+    ],
+    [
+      "procedural_noncompliance",
+      "maintenance_error"
+    ],
+    [
+      "inadequate_inspection",
+      "maintenance_error"
+    ],
+    [
+      "design_deficiency",
+      "windshield_failure"
+    ],
+    [
+      "maintenance_error",
+      "windshield_failure"
+    ],
+    [
+      "windshield_failure",
+      "explosive_decompression"
+    ],
+    [
+      "explosive_decompression",
+      "pilot_incapacitation"
+    ],
+    [
+      "pilot_incapacitation",
+      "emergency_landing"
+    ]
   ],
   "events": [
-    { "t": -43200, "clock": null, "phase": "ground", "actor": "GND", "text": "During the previous night shift at Birmingham the left windscreen is replaced; the shift maintenance manager selects replacement bolts by visual comparison and fits 84 undersize A211-8C bolts and 6 too-short A211-9D bolts.", "factors": ["maintenance_error", "procedural_noncompliance", "inadequate_inspection"], "kind": "crew_action" },
-    { "t": -780, "clock": "07:20", "phase": "takeoff", "actor": "CAPT", "text": "G-BJRT departs Birmingham for Málaga with 81 passengers and 6 crew; the commander is pilot flying.", "kind": "crew_action" },
-    { "t": -60, "clock": "07:32", "phase": "climb", "actor": "CAPT", "text": "Climbing through about 17,000 ft both pilots have released their shoulder harnesses; the commander has loosened his lap strap.", "state": { "alt": 17000 }, "kind": "crew_action" },
-    { "t": 0, "clock": "07:33", "phase": "climb", "actor": "SYS", "text": "At 17,300 ft the left windscreen blows out with a loud bang; explosive decompression and condensation mist fill the flight deck.", "state": { "alt": 17300 }, "factors": ["windshield_failure", "explosive_decompression"], "kind": "system" },
-    { "t": 2, "clock": "07:33", "phase": "climb", "actor": "CAPT", "text": "The commander is pulled head-first out of the aperture, his knees caught on the control column; the flight deck door is blown onto the centre pedestal.", "factors": ["pilot_incapacitation"], "kind": "outcome" },
-    { "t": 5, "clock": "07:33", "phase": "climb", "actor": "CABIN", "text": "A cabin crew member on the flight deck grabs the commander's legs and holds him; the autopilot has disengaged.", "kind": "crew_action" },
-    { "t": 15, "clock": "07:33", "phase": "descent", "actor": "FO", "text": "The first officer takes control, regains control of the aircraft and initiates a rapid descent while transmitting a Mayday.", "kind": "crew_action" },
-    { "t": 60, "clock": "07:34", "phase": "descent", "actor": "ATC", "text": "ATC initially have difficulty hearing the transmissions over the wind noise; the first officer requests a diversion and is offered Southampton.", "kind": "atc" },
-    { "t": 300, "clock": "07:38", "phase": "descent", "actor": "FO", "text": "Aircraft levels at 11,000 ft and is radar vectored towards Southampton; other cabin crew relieve the first steward holding the commander.", "state": { "alt": 11000 }, "kind": "crew_action" },
-    { "t": 1320, "clock": "07:55", "phase": "landing", "actor": "FO", "text": "First officer lands the aircraft safely on Southampton runway 02 with the commander still held half out of the windscreen aperture.", "factors": ["emergency_landing"], "kind": "outcome" },
-    { "t": 1400, "clock": "07:56", "phase": "ground", "actor": "OTHER", "text": "Commander recovered alive with fractures to his right arm, wrist and left thumb, bruising and frostbite; a steward suffers a dislocated shoulder.", "kind": "outcome" }
+    {
+      "t": -43200,
+      "clock": null,
+      "phase": "ground",
+      "actor": "GND",
+      "text": "During the previous night shift at Birmingham the left windscreen is replaced; the shift maintenance manager selects replacement bolts by visual comparison and fits 84 undersize A211-8C bolts and 6 too-short A211-9D bolts.",
+      "factors": [
+        "maintenance_error",
+        "procedural_noncompliance",
+        "inadequate_inspection"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -780,
+      "clock": "07:20",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "G-BJRT departs Birmingham for Málaga with 81 passengers and 6 crew; the commander is pilot flying.",
+      "kind": "crew_action"
+    },
+    {
+      "t": -60,
+      "clock": "07:32",
+      "phase": "climb",
+      "actor": "CAPT",
+      "text": "Climbing through about 17,000 ft both pilots have released their shoulder harnesses; the commander has loosened his lap strap.",
+      "state": {
+        "alt": 17000
+      },
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "07:33",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "At 17,300 ft the left windscreen blows out with a loud bang; explosive decompression and condensation mist fill the flight deck.",
+      "state": {
+        "alt": 17300
+      },
+      "factors": [
+        "windshield_failure",
+        "explosive_decompression"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 2,
+      "clock": "07:33",
+      "phase": "climb",
+      "actor": "CAPT",
+      "text": "The commander is pulled head-first out of the aperture, his knees caught on the control column; the flight deck door is blown onto the centre pedestal.",
+      "factors": [
+        "pilot_incapacitation"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 5,
+      "clock": "07:33",
+      "phase": "climb",
+      "actor": "CABIN",
+      "text": "A cabin crew member on the flight deck grabs the commander's legs and holds him; the autopilot has disengaged.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 15,
+      "clock": "07:33",
+      "phase": "descent",
+      "actor": "FO",
+      "text": "The first officer takes control, regains control of the aircraft and initiates a rapid descent while transmitting a Mayday.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 60,
+      "clock": "07:34",
+      "phase": "descent",
+      "actor": "ATC",
+      "text": "ATC initially have difficulty hearing the transmissions over the wind noise; the first officer requests a diversion and is offered Southampton.",
+      "kind": "atc"
+    },
+    {
+      "t": 300,
+      "clock": "07:38",
+      "phase": "descent",
+      "actor": "FO",
+      "text": "Aircraft levels at 11,000 ft and is radar vectored towards Southampton; other cabin crew relieve the first steward holding the commander.",
+      "state": {
+        "alt": 11000
+      },
+      "kind": "crew_action"
+    },
+    {
+      "t": 1320,
+      "clock": "07:55",
+      "phase": "landing",
+      "actor": "FO",
+      "text": "First officer lands the aircraft safely on Southampton runway 02 with the commander still held half out of the windscreen aperture.",
+      "factors": [
+        "emergency_landing"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 1400,
+      "clock": "07:56",
+      "phase": "ground",
+      "actor": "OTHER",
+      "text": "Commander recovered alive with fractures to his right arm, wrist and left thumb, bruising and frostbite; a steward suffers a dislocated shoulder.",
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "CAA", "text": "Review the current classification of tasks requiring independent inspection and consider including windscreen and other pressure-critical installations.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_inspection"] },
-    { "id": null, "to": "British Airways", "text": "Review quality assurance and the monitoring of engineering working practices at outstations, including the control of uncontrolled bolt stores and the use of parts catalogues.", "status": "unknown", "outcome": null, "trigger_factors": ["operator_safety_culture", "procedural_noncompliance"] },
-    { "id": null, "to": "CAA", "text": "Recognise the need for corrective glasses to be worn by engineers where required and improve product sampling of maintenance work.", "status": "unknown", "outcome": null, "trigger_factors": ["regulatory_oversight"] }
+    {
+      "id": null,
+      "to": "CAA",
+      "text": "Review the current classification of tasks requiring independent inspection and consider including windscreen and other pressure-critical installations.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_inspection"
+      ]
+    },
+    {
+      "id": null,
+      "to": "British Airways",
+      "text": "Review quality assurance and the monitoring of engineering working practices at outstations, including the control of uncontrolled bolt stores and the use of parts catalogues.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "operator_safety_culture",
+        "procedural_noncompliance"
+      ]
+    },
+    {
+      "id": null,
+      "to": "CAA",
+      "text": "Recognise the need for corrective glasses to be worn by engineers where required and improve product sampling of maintenance work.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
     "Windscreen installation designated as a task requiring independent inspection at British Airways and reviewed by the CAA.",
     "Widely cited as a case study for human factors in maintenance and the need for duplicate inspection of flight-critical tasks."
   ],
-  "related": ["helios522", "jal123", "united811"],
+  "related": [
+    "helios522",
+    "jal123",
+    "united811"
+  ],
   "fdr": null,
   "sources": [
     "https://www.gov.uk/aaib-reports/1-1992-bac-one-eleven-g-bjrt-10-june-1990"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
-    "Clock times are approximate; the report gives the decompression at 07:33 and landing at Southampton at about 07:55.",
-    "Bolt part numbers (A211-8C, A211-9D) are as reported by the AAIB; counts 84 and 6 as reported.",
-    "Recommendation numbers omitted."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Clock times are approximate; the report gives the decompression at 07:33 and landing at Southampton at about 07:55.",
+      "Bolt part numbers (A211-8C, A211-9D) are as reported by the AAIB; counts 84 and 6 as reported.",
+      "Recommendation numbers omitted."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/British_Airways_Flight_5390"
 }

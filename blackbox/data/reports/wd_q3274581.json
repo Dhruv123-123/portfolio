@@ -34,7 +34,9 @@
   },
   "location": {
     "name": "Fukuoka Airport",
-    "country": "Japan"
+    "country": "Japan",
+    "lat": 33.5697,
+    "lon": 130.4617
   },
   "phase": "takeoff",
   "occupants": 275,
@@ -123,7 +125,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Captain commanded First Officer to set autothrottles on",
-      "state": {"ias": 0},
+      "state": {
+        "ias": 0
+      },
       "factors": []
     },
     {
@@ -133,7 +137,9 @@
       "actor": "FO",
       "kind": "crew_action",
       "text": "First Officer called V1 at 151.5 knots",
-      "state": {"ias": 151},
+      "state": {
+        "ias": 151
+      },
       "factors": []
     },
     {
@@ -143,7 +149,10 @@
       "actor": "FO",
       "kind": "crew_action",
       "text": "First Officer called Rotate at 158.0 knots; nose began rotation",
-      "state": {"ias": 158, "pitch": 2.6},
+      "state": {
+        "ias": 158,
+        "pitch": 2.6
+      },
       "factors": []
     },
     {
@@ -153,7 +162,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Number 3 engine failure; N1 decreased from 112.8% to 53.3%",
-      "state": {"pitch": 11.4},
+      "state": {
+        "pitch": 11.4
+      },
       "factors": [
         "engine_failure"
       ]
@@ -230,21 +241,28 @@
       "to": "Garuda Indonesia",
       "text": "Reinforcement of flight training and proficiency checks for flight crew to allow pilots to make an adequate go/no-go decision in the event of aircraft anomalies such as engine failure during takeoff roll",
       "status": "unknown",
-      "trigger_factors": ["engine_failure", "inappropriate_control_input"]
+      "trigger_factors": [
+        "engine_failure",
+        "inappropriate_control_input"
+      ]
     },
     {
       "id": null,
       "to": "Garuda Indonesia",
       "text": "Thorough implementation of emergency evacuation training for flight crew periodically and joint training with cabin attendants",
       "status": "unknown",
-      "trigger_factors": ["post_impact_fire"]
+      "trigger_factors": [
+        "post_impact_fire"
+      ]
     },
     {
       "id": null,
       "to": "Garuda Indonesia",
       "text": "Improvement of methods of guiding passengers including study of effective measures against fire and smoke",
       "status": "unknown",
-      "trigger_factors": ["post_impact_fire"]
+      "trigger_factors": [
+        "post_impact_fire"
+      ]
     }
   ],
   "dissent": [],

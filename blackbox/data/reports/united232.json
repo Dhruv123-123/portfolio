@@ -7,16 +7,38 @@
   "t0": "1989-07-19T20:16:10Z",
   "agency": "NTSB",
   "agencies": [
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
       "report_id": "NTSB/AAR-90/06",
       "report_title": "United Airlines Flight 232, McDonnell Douglas DC-10-10, Sioux Gateway Airport, Sioux City, Iowa, July 19, 1989",
       "report_date": "1990-11-01",
-      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9006.pdf" }
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9006.pdf"
+    }
   ],
-  "aircraft": { "type": "McDonnell Douglas DC-10-10", "family": "DC-10", "manufacturer": "McDonnell Douglas", "registration": "N1819U", "msn": "46618", "engines": "General Electric CF6-6D" },
+  "aircraft": {
+    "type": "McDonnell Douglas DC-10-10",
+    "family": "DC-10",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "N1819U",
+    "msn": "46618",
+    "engines": "General Electric CF6-6D"
+  },
   "operator": "United Airlines",
-  "route": { "from": "KDEN", "from_name": "Denver Stapleton International", "to": "KORD", "to_name": "Chicago O'Hare International (continuing to Philadelphia)" },
-  "location": { "name": "Sioux Gateway Airport, Sioux City, Iowa", "country": "USA", "lat": 42.403, "lon": -96.384 },
+  "route": {
+    "from": "KDEN",
+    "from_name": "Denver Stapleton International",
+    "to": "KORD",
+    "to_name": "Chicago O'Hare International (continuing to Philadelphia)"
+  },
+  "location": {
+    "name": "Sioux Gateway Airport, Sioux City, Iowa",
+    "country": "USA",
+    "lat": 42.403,
+    "lon": -96.384
+  },
   "phase": "cruise",
   "occupants": 296,
   "fatalities": 111,
@@ -26,57 +48,332 @@
   "summary": "In cruise at 37,000 feet the stage 1 fan disk of the DC-10's tail-mounted number 2 engine fractured from a fatigue crack that had grown from a manufacturing defect in the titanium. Disk fragments severed the lines of all three hydraulic systems, leaving the crew with no conventional flight controls. Using only differential thrust on the two wing engines, and helped by an off-duty DC-10 instructor, the crew steered the airplane for 44 minutes to an emergency landing at Sioux City. The airplane cartwheeled and broke up on the runway; 111 of the 296 on board died and 185 survived.",
   "probable_cause": "The inadequate consideration given to human factors limitations in the inspection and quality control procedures used by United Airlines' engine overhaul facility which resulted in the failure to detect a fatigue crack originating from a previously undetected metallurgical defect located in a critical area of the stage 1 fan disk that was manufactured by General Electric Aircraft Engines. The subsequent catastrophic disintegration of the disk resulted in the liberation of debris in a pattern of distribution and with energy levels that exceeded the level of protection provided by design features of the hydraulic systems that operate the DC-10's flight controls.",
   "factors": [
-    { "id": "metal_fatigue", "role": "initiating", "evidence": "A fatigue crack grew from a hard alpha inclusion in the titanium of the stage 1 fan disk, formed during the manufacturing melt process, until the disk fractured after about 17 years in service." },
-    { "id": "inadequate_inspection", "role": "initiating", "evidence": "The crack was large enough to be detected at the last fluorescent penetrant inspection at United's overhaul facility about 760 cycles before the accident but was missed; the report faulted the human factors of the inspection process." },
-    { "id": "uncontained_engine_failure", "role": "contributing", "evidence": "The fan disk separated from the number 2 engine at high energy, shedding fragments through the horizontal stabilizer and tail structure." },
-    { "id": "hydraulic_failure", "role": "contributing", "evidence": "Fragments severed lines of all three independent hydraulic systems where they ran close together in the tail, and all hydraulic fluid was lost." },
-    { "id": "flight_control_failure", "role": "contributing", "evidence": "With no hydraulic pressure the ailerons, elevators, rudder, spoilers, flaps and slats were inoperative; the airplane had no conventional flight controls." },
-    { "id": "loss_of_pilot_control_authority", "role": "contributing", "evidence": "The crew could only influence pitch and roll by varying thrust on the two wing engines, which could not arrest the phugoid oscillation or line up precisely for landing." },
-    { "id": "design_deficiency", "role": "contributing", "evidence": "The DC-10's three hydraulic systems were routed through the same area of the tail without fuses or shutoff valves, so one uncontained failure could disable all of them." },
-    { "id": "certification_shortfall", "role": "latent", "evidence": "Certification had assumed that hydraulic system redundancy was sufficient without fully considering the distribution and energy of uncontained rotor debris." },
-    { "id": "hard_landing", "role": "outcome", "evidence": "The airplane touched down at about 215 knots with a sink rate of about 1,620 feet per minute, right wing low; the right wing struck first and the airplane cartwheeled and broke apart." },
-    { "id": "post_impact_fire", "role": "outcome", "evidence": "Fire consumed the center fuselage after the breakup; most fatalities were in that section." },
-    { "id": "emergency_landing", "role": "outcome", "evidence": "Despite the breakup, the crew's management of the emergency and the preparation of the airport and rescue services allowed 185 of 296 occupants to survive." },
-    { "id": "evacuation_deficiency", "role": "latent", "evidence": "An unrestrained lap-held infant died; the NTSB reiterated its recommendation for child restraint systems." }
+    {
+      "id": "metal_fatigue",
+      "role": "initiating",
+      "evidence": "A fatigue crack grew from a hard alpha inclusion in the titanium of the stage 1 fan disk, formed during the manufacturing melt process, until the disk fractured after about 17 years in service."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "initiating",
+      "evidence": "The crack was large enough to be detected at the last fluorescent penetrant inspection at United's overhaul facility about 760 cycles before the accident but was missed; the report faulted the human factors of the inspection process."
+    },
+    {
+      "id": "uncontained_engine_failure",
+      "role": "contributing",
+      "evidence": "The fan disk separated from the number 2 engine at high energy, shedding fragments through the horizontal stabilizer and tail structure."
+    },
+    {
+      "id": "hydraulic_failure",
+      "role": "contributing",
+      "evidence": "Fragments severed lines of all three independent hydraulic systems where they ran close together in the tail, and all hydraulic fluid was lost."
+    },
+    {
+      "id": "flight_control_failure",
+      "role": "contributing",
+      "evidence": "With no hydraulic pressure the ailerons, elevators, rudder, spoilers, flaps and slats were inoperative; the airplane had no conventional flight controls."
+    },
+    {
+      "id": "loss_of_pilot_control_authority",
+      "role": "contributing",
+      "evidence": "The crew could only influence pitch and roll by varying thrust on the two wing engines, which could not arrest the phugoid oscillation or line up precisely for landing."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "The DC-10's three hydraulic systems were routed through the same area of the tail without fuses or shutoff valves, so one uncontained failure could disable all of them."
+    },
+    {
+      "id": "certification_shortfall",
+      "role": "latent",
+      "evidence": "Certification had assumed that hydraulic system redundancy was sufficient without fully considering the distribution and energy of uncontained rotor debris."
+    },
+    {
+      "id": "hard_landing",
+      "role": "outcome",
+      "evidence": "The airplane touched down at about 215 knots with a sink rate of about 1,620 feet per minute, right wing low; the right wing struck first and the airplane cartwheeled and broke apart."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Fire consumed the center fuselage after the breakup; most fatalities were in that section."
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "Despite the breakup, the crew's management of the emergency and the preparation of the airport and rescue services allowed 185 of 296 occupants to survive."
+    },
+    {
+      "id": "evacuation_deficiency",
+      "role": "latent",
+      "evidence": "An unrestrained lap-held infant died; the NTSB reiterated its recommendation for child restraint systems."
+    }
   ],
   "chain": [
-    ["metal_fatigue", "uncontained_engine_failure"],
-    ["inadequate_inspection", "uncontained_engine_failure"],
-    ["uncontained_engine_failure", "hydraulic_failure"],
-    ["certification_shortfall", "design_deficiency"],
-    ["design_deficiency", "hydraulic_failure"],
-    ["hydraulic_failure", "flight_control_failure"],
-    ["flight_control_failure", "loss_of_pilot_control_authority"],
-    ["loss_of_pilot_control_authority", "hard_landing"],
-    ["loss_of_pilot_control_authority", "emergency_landing"],
-    ["hard_landing", "post_impact_fire"],
-    ["post_impact_fire", "evacuation_deficiency"]
+    [
+      "metal_fatigue",
+      "uncontained_engine_failure"
+    ],
+    [
+      "inadequate_inspection",
+      "uncontained_engine_failure"
+    ],
+    [
+      "uncontained_engine_failure",
+      "hydraulic_failure"
+    ],
+    [
+      "certification_shortfall",
+      "design_deficiency"
+    ],
+    [
+      "design_deficiency",
+      "hydraulic_failure"
+    ],
+    [
+      "hydraulic_failure",
+      "flight_control_failure"
+    ],
+    [
+      "flight_control_failure",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "loss_of_pilot_control_authority",
+      "hard_landing"
+    ],
+    [
+      "loss_of_pilot_control_authority",
+      "emergency_landing"
+    ],
+    [
+      "hard_landing",
+      "post_impact_fire"
+    ],
+    [
+      "post_impact_fire",
+      "evacuation_deficiency"
+    ]
   ],
   "events": [
-    { "t": -4000, "clock": "14:09", "phase": "takeoff", "actor": "CAPT", "text": "Flight 232 departs Denver for Chicago and climbs to flight level 370.", "kind": "crew_action" },
-    { "t": 0, "clock": "15:16:10", "phase": "cruise", "actor": "SYS", "text": "The stage 1 fan disk of the number 2 (tail) engine fractures and separates; a loud bang and airframe shudder are felt. The engine's fragments strike the horizontal stabilizer and tail.", "state": { "alt": 37000 }, "factors": ["metal_fatigue", "uncontained_engine_failure", "inadequate_inspection"], "kind": "system" },
-    { "t": 20, "clock": null, "phase": "cruise", "actor": "FE", "text": "Flight engineer reports the number 2 engine failed; the crew begin the engine shutdown checklist and then notice all three hydraulic system pressures and quantities falling to zero.", "factors": ["hydraulic_failure"], "kind": "crew_speech" },
-    { "t": 60, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "The airplane enters a descending right turn that does not respond to control inputs; the captain and first officer find the controls have no effect.", "factors": ["flight_control_failure", "loss_of_pilot_control_authority"], "kind": "crew_action" },
-    { "t": 120, "clock": null, "phase": "descent", "actor": "CAPT", "text": "The captain reduces thrust on the number 1 engine and increases it on number 3 to stop the right roll; the crew discover differential thrust is their only means of control.", "factors": ["loss_of_pilot_control_authority"], "kind": "crew_action" },
-    { "t": 230, "clock": "15:20", "phase": "descent", "actor": "FO", "text": "The crew declare an emergency to Minneapolis Center and request vectors to the nearest suitable airport; Sioux City is offered.", "factors": ["hydraulic_failure"], "kind": "atc" },
-    { "t": 780, "clock": "15:29", "phase": "descent", "actor": "OTHER", "text": "A deadheading United DC-10 training check airman comes to the cockpit and takes over the throttles, allowing the pilots to concentrate on the phugoid and on planning the landing.", "factors": ["loss_of_pilot_control_authority"], "kind": "crew_action" },
-    { "t": 1200, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Captain tells Sioux City approach 'we have no hydraulic fluid, which means we have no elevator control, almost none, and very little aileron control'; a series of right-hand turns is flown because the airplane will not turn left.", "factors": ["flight_control_failure"], "kind": "crew_speech" },
-    { "t": 1800, "clock": null, "phase": "descent", "actor": "FE", "text": "The landing gear is extended by the alternate free-fall method; the airport, hospitals and Air National Guard units are alerted for a crash landing.", "kind": "crew_action" },
-    { "t": 2580, "clock": "15:59", "phase": "approach", "actor": "ATC", "text": "Sioux City tower clears the flight to 'land on any runway'; the captain replies 'you want to be particular and make it a runway, huh?' The airplane lines up with closed runway 22.", "kind": "atc" },
-    { "t": 2630, "clock": null, "phase": "approach", "actor": "SYS", "text": "On short final a phugoid downswing and a right roll develop that thrust changes cannot correct; sink rate increases to about 1,620 feet per minute at about 215 knots.", "state": { "ias": 215, "vs": -1620 }, "factors": ["loss_of_pilot_control_authority", "hard_landing"], "kind": "system" },
-    { "t": 2646, "clock": "16:00:16", "phase": "landing", "actor": "SYS", "text": "The right wing and right main gear strike the runway first; the airplane cartwheels, breaks into sections and the center fuselage burns in a cornfield.", "factors": ["hard_landing", "post_impact_fire"], "kind": "outcome" },
-    { "t": 2700, "clock": null, "phase": "ground", "actor": "CABIN", "text": "Survivors evacuate through fuselage breaks and doors; 185 of the 296 occupants survive, aided by the pre-positioned rescue services.", "factors": ["emergency_landing", "evacuation_deficiency"], "kind": "outcome" }
+    {
+      "t": -4000,
+      "clock": "14:09",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "Flight 232 departs Denver for Chicago and climbs to flight level 370.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "15:16:10",
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "The stage 1 fan disk of the number 2 (tail) engine fractures and separates; a loud bang and airframe shudder are felt. The engine's fragments strike the horizontal stabilizer and tail.",
+      "state": {
+        "alt": 37000
+      },
+      "factors": [
+        "metal_fatigue",
+        "uncontained_engine_failure",
+        "inadequate_inspection"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "FE",
+      "text": "Flight engineer reports the number 2 engine failed; the crew begin the engine shutdown checklist and then notice all three hydraulic system pressures and quantities falling to zero.",
+      "factors": [
+        "hydraulic_failure"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "The airplane enters a descending right turn that does not respond to control inputs; the captain and first officer find the controls have no effect.",
+      "factors": [
+        "flight_control_failure",
+        "loss_of_pilot_control_authority"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "The captain reduces thrust on the number 1 engine and increases it on number 3 to stop the right roll; the crew discover differential thrust is their only means of control.",
+      "factors": [
+        "loss_of_pilot_control_authority"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 230,
+      "clock": "15:20",
+      "phase": "descent",
+      "actor": "FO",
+      "text": "The crew declare an emergency to Minneapolis Center and request vectors to the nearest suitable airport; Sioux City is offered.",
+      "factors": [
+        "hydraulic_failure"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": 780,
+      "clock": "15:29",
+      "phase": "descent",
+      "actor": "OTHER",
+      "text": "A deadheading United DC-10 training check airman comes to the cockpit and takes over the throttles, allowing the pilots to concentrate on the phugoid and on planning the landing.",
+      "factors": [
+        "loss_of_pilot_control_authority"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 1200,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Captain tells Sioux City approach 'we have no hydraulic fluid, which means we have no elevator control, almost none, and very little aileron control'; a series of right-hand turns is flown because the airplane will not turn left.",
+      "factors": [
+        "flight_control_failure"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 1800,
+      "clock": null,
+      "phase": "descent",
+      "actor": "FE",
+      "text": "The landing gear is extended by the alternate free-fall method; the airport, hospitals and Air National Guard units are alerted for a crash landing.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 2580,
+      "clock": "15:59",
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Sioux City tower clears the flight to 'land on any runway'; the captain replies 'you want to be particular and make it a runway, huh?' The airplane lines up with closed runway 22.",
+      "kind": "atc"
+    },
+    {
+      "t": 2630,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "On short final a phugoid downswing and a right roll develop that thrust changes cannot correct; sink rate increases to about 1,620 feet per minute at about 215 knots.",
+      "state": {
+        "ias": 215,
+        "vs": -1620
+      },
+      "factors": [
+        "loss_of_pilot_control_authority",
+        "hard_landing"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 2646,
+      "clock": "16:00:16",
+      "phase": "landing",
+      "actor": "SYS",
+      "text": "The right wing and right main gear strike the runway first; the airplane cartwheels, breaks into sections and the center fuselage burns in a cornfield.",
+      "factors": [
+        "hard_landing",
+        "post_impact_fire"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 2700,
+      "clock": null,
+      "phase": "ground",
+      "actor": "CABIN",
+      "text": "Survivors evacuate through fuselage breaks and doors; 185 of the 296 occupants survive, aided by the pre-positioned rescue services.",
+      "factors": [
+        "emergency_landing",
+        "evacuation_deficiency"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [
-    { "t": 2580, "clock": null, "speaker": "ATC", "text": "United two thirty two heavy, ... you're cleared to land on any runway.", "translation": null },
-    { "t": 2585, "clock": null, "speaker": "CAPT", "text": "You want to be particular and make it a runway, huh?", "translation": null }
+    {
+      "t": 2580,
+      "clock": null,
+      "speaker": "ATC",
+      "text": "United two thirty two heavy, ... you're cleared to land on any runway.",
+      "translation": null
+    },
+    {
+      "t": 2585,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "You want to be particular and make it a runway, huh?",
+      "translation": null
+    }
   ],
   "recommendations": [
-    { "id": null, "to": "FAA", "text": "Require modification of the DC-10 hydraulic systems, such as hydraulic fuses or shutoff valves, so that a single uncontained engine failure cannot cause total loss of hydraulic power for the flight controls.", "status": "closed_acceptable", "outcome": "An airworthiness directive required installation of hydraulic fuses in the number 3 hydraulic system of DC-10s.", "trigger_factors": ["hydraulic_failure", "design_deficiency"] },
-    { "id": null, "to": "FAA", "text": "Review the certification of transport airplanes to ensure that the effects of uncontained engine rotor failures on redundant flight control systems are adequately considered, including debris energy and distribution.", "status": "closed_acceptable", "outcome": "FAA issued updated guidance (AC 20-128A) on designing for minimum hazard from uncontained rotor failures.", "trigger_factors": ["certification_shortfall", "uncontained_engine_failure"] },
-    { "id": null, "to": "FAA", "text": "Improve fluorescent penetrant and other inspection methods for titanium rotating parts, including human factors of the inspection process, and require re-inspection of CF6-6 fan disks from the same melt.", "status": "closed_acceptable", "outcome": "Fan disks from the affected titanium lots were removed and inspection procedures at overhaul facilities were revised.", "trigger_factors": ["inadequate_inspection", "metal_fatigue"] },
-    { "id": null, "to": "FAA", "text": "Work with titanium producers to reduce the occurrence of hard alpha inclusions in rotor-grade titanium through improved melting and inspection processes.", "status": "closed_acceptable", "outcome": "Triple vacuum-arc remelt and improved ultrasonic billet inspection became standard for rotor-grade titanium.", "trigger_factors": ["metal_fatigue"] },
-    { "id": null, "to": "FAA", "text": "Require approved child restraint systems for infants and small children on air carrier flights.", "status": "closed_unacceptable", "outcome": "The FAA declined to mandate child restraints, citing the cost of separate seats.", "trigger_factors": ["evacuation_deficiency"] }
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require modification of the DC-10 hydraulic systems, such as hydraulic fuses or shutoff valves, so that a single uncontained engine failure cannot cause total loss of hydraulic power for the flight controls.",
+      "status": "closed_acceptable",
+      "outcome": "An airworthiness directive required installation of hydraulic fuses in the number 3 hydraulic system of DC-10s.",
+      "trigger_factors": [
+        "hydraulic_failure",
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Review the certification of transport airplanes to ensure that the effects of uncontained engine rotor failures on redundant flight control systems are adequately considered, including debris energy and distribution.",
+      "status": "closed_acceptable",
+      "outcome": "FAA issued updated guidance (AC 20-128A) on designing for minimum hazard from uncontained rotor failures.",
+      "trigger_factors": [
+        "certification_shortfall",
+        "uncontained_engine_failure"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Improve fluorescent penetrant and other inspection methods for titanium rotating parts, including human factors of the inspection process, and require re-inspection of CF6-6 fan disks from the same melt.",
+      "status": "closed_acceptable",
+      "outcome": "Fan disks from the affected titanium lots were removed and inspection procedures at overhaul facilities were revised.",
+      "trigger_factors": [
+        "inadequate_inspection",
+        "metal_fatigue"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Work with titanium producers to reduce the occurrence of hard alpha inclusions in rotor-grade titanium through improved melting and inspection processes.",
+      "status": "closed_acceptable",
+      "outcome": "Triple vacuum-arc remelt and improved ultrasonic billet inspection became standard for rotor-grade titanium.",
+      "trigger_factors": [
+        "metal_fatigue"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require approved child restraint systems for infants and small children on air carrier flights.",
+      "status": "closed_unacceptable",
+      "outcome": "The FAA declined to mandate child restraints, citing the cost of separate seats.",
+      "trigger_factors": [
+        "evacuation_deficiency"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -86,14 +383,23 @@
     "The crew's cooperative use of an additional pilot became a model for crew resource management training, and research into propulsion-controlled aircraft followed.",
     "Airport emergency planning was widely reviewed after the Sioux City response, which had been drilled for a similar scenario two years earlier."
   ],
-  "related": ["usair1549", "jal123", "alaska261", "qantas32", "aa587"],
+  "related": [
+    "usair1549",
+    "jal123",
+    "alaska261",
+    "qantas32",
+    "aa587"
+  ],
   "fdr": null,
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9006.pdf",
     "https://www.ntsb.gov"
   ],
   "extraction": {
-    "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
     "notes": [
       "Engine failure at about 15:16 CDT and touchdown at about 16:00 CDT are as stated in the report; the seconds in the t0 and touchdown clocks are approximate and intermediate event times (emergency declaration, check airman arriving, gear extension) are approximate to within a few minutes.",
       "Touchdown at about 215 knots with a sink rate of about 1,620 feet per minute is from the report.",
@@ -101,5 +407,6 @@
       "The interval between the last inspection and the accident (about 760 cycles) and the disk's service history are as recalled from the report and should be verified.",
       "ATC and captain exchange about landing 'on any runway' is quoted from the public transcript with the ATC wording abbreviated."
     ]
-  }
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Airlines_Flight_232"
 }

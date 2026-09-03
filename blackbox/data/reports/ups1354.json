@@ -7,81 +7,377 @@
   "t0": "2013-08-14T09:47:00Z",
   "agency": "NTSB",
   "agencies": [
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
-      "report_id": "NTSB/AAR-14/02", "report_title": "Crash During a Nighttime Nonprecision Instrument Approach to Landing, UPS Flight 1354, Airbus A300-600, N155UP, Birmingham, Alabama, August 14, 2013", "report_date": "2014-09-09",
-      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1402.pdf" },
-    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses", "country": "France", "role": "accredited_representative" }
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "NTSB/AAR-14/02",
+      "report_title": "Crash During a Nighttime Nonprecision Instrument Approach to Landing, UPS Flight 1354, Airbus A300-600, N155UP, Birmingham, Alabama, August 14, 2013",
+      "report_date": "2014-09-09",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1402.pdf"
+    },
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses",
+      "country": "France",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Airbus A300F4-622R", "family": "A300", "manufacturer": "Airbus", "registration": "N155UP", "msn": null, "engines": "Pratt & Whitney PW4158" },
+  "aircraft": {
+    "type": "Airbus A300F4-622R",
+    "family": "A300",
+    "manufacturer": "Airbus",
+    "registration": "N155UP",
+    "msn": null,
+    "engines": "Pratt & Whitney PW4158"
+  },
   "operator": "UPS Airlines",
-  "route": { "from": "KSDF", "from_name": "Louisville International", "to": "KBHM", "to_name": "Birmingham-Shuttlesworth International" },
-  "location": { "name": "About 1 mile north of the runway 18 threshold, Birmingham-Shuttlesworth International Airport, Alabama", "country": "USA", "lat": 33.58, "lon": -86.75 },
+  "route": {
+    "from": "KSDF",
+    "from_name": "Louisville International",
+    "to": "KBHM",
+    "to_name": "Birmingham-Shuttlesworth International"
+  },
+  "location": {
+    "name": "About 1 mile north of the runway 18 threshold, Birmingham-Shuttlesworth International Airport, Alabama",
+    "country": "USA",
+    "lat": 33.58,
+    "lon": -86.75
+  },
   "phase": "approach",
-  "occupants": 2, "fatalities": 2, "injuries_serious": 0,
+  "occupants": 2,
+  "fatalities": 2,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "CFIT",
   "summary": "Before dawn, with Birmingham's main runway closed, the UPS A300 crew flew the localizer non-precision approach to the shorter runway 18. The flight management computer was not properly set up so the vertical profile did not capture; the captain selected a 1,500 ft/min vertical speed descent and, expecting to break out at 1,000 ft, continued an unstabilized approach below the minimum descent altitude without either pilot noticing. The aircraft struck trees and terrain about a mile short of the runway, killing both pilots.",
   "probable_cause": "The flight crew's continuation of an unstabilized approach and their failure to monitor the aircraft's altitude during the approach, which led to an inadvertent descent below the minimum approach altitude and subsequently into terrain. Contributing were the flight crew's failure to properly configure and verify the flight management computer for the profile approach; the captain's failure to communicate his intentions to the first officer once it became apparent the vertical profile was not captured; the flight crew's expectation that they would break out of the clouds at 1,000 ft above ground level due to incomplete weather information; the first officer's failure to make the required minimums callouts; the captain's performance deficiencies likely due to factors including fatigue, distraction, or confusion, consistent with performance deficiencies exhibited during training; and the first officer's fatigue due to acute sleep loss resulting from her ineffective off-duty time management and circadian factors.",
   "factors": [
-    { "id": "mode_confusion", "role": "initiating", "evidence": "The FMC was not properly configured and verified for the profile approach, so the vertical profile did not capture and the captain switched to vertical speed mode without announcing it." },
-    { "id": "unstable_approach", "role": "contributing", "evidence": "The approach was continued with a 1,500 ft/min descent rate below the profile, contrary to stabilized approach criteria." },
-    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "Neither pilot monitored the altitude against the MDA; the first officer did not make the required minimums callouts." },
-    { "id": "descent_below_minimums", "role": "contributing", "evidence": "The aircraft descended through the MDA and continued toward terrain without the runway in sight." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "The captain did not communicate his intentions after the profile failed to capture, and the first officer did not challenge the continued descent." },
-    { "id": "fatigue", "role": "contributing", "evidence": "The first officer had acute sleep loss and the captain's performance deficiencies were likely related to fatigue, distraction or confusion." },
-    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The crew expected to break out at 1,000 ft agl based on incomplete weather information and did not recognise their proximity to terrain." },
-    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "Required callouts were omitted and the approach was not flown according to the profile procedure." },
-    { "id": "low_visibility", "role": "contributing", "evidence": "Variable low clouds around 1,000 ft agl obscured the approach path; the crew had not received the latest observation indicating lower cloud." },
-    { "id": "dark_night", "role": "contributing", "evidence": "The approach was flown before dawn at about 04:47 local time." },
-    { "id": "warning_system_deficiency", "role": "latent", "evidence": "The EGPWS 'sink rate' caution occurred only seconds before impact; the NTSB recommended updated terrain awareness software with earlier alerting." },
-    { "id": "cfit", "role": "outcome", "evidence": "The aircraft struck trees and then terrain about 1 mile north of the runway 18 threshold in controlled flight." },
-    { "id": "post_impact_fire", "role": "outcome", "evidence": "The wreckage was consumed by fire after impact." }
+    {
+      "id": "mode_confusion",
+      "role": "initiating",
+      "evidence": "The FMC was not properly configured and verified for the profile approach, so the vertical profile did not capture and the captain switched to vertical speed mode without announcing it."
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "The approach was continued with a 1,500 ft/min descent rate below the profile, contrary to stabilized approach criteria."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Neither pilot monitored the altitude against the MDA; the first officer did not make the required minimums callouts."
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "The aircraft descended through the MDA and continued toward terrain without the runway in sight."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The captain did not communicate his intentions after the profile failed to capture, and the first officer did not challenge the continued descent."
+    },
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "The first officer had acute sleep loss and the captain's performance deficiencies were likely related to fatigue, distraction or confusion."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The crew expected to break out at 1,000 ft agl based on incomplete weather information and did not recognise their proximity to terrain."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Required callouts were omitted and the approach was not flown according to the profile procedure."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Variable low clouds around 1,000 ft agl obscured the approach path; the crew had not received the latest observation indicating lower cloud."
+    },
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "The approach was flown before dawn at about 04:47 local time."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "latent",
+      "evidence": "The EGPWS 'sink rate' caution occurred only seconds before impact; the NTSB recommended updated terrain awareness software with earlier alerting."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft struck trees and then terrain about 1 mile north of the runway 18 threshold in controlled flight."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "The wreckage was consumed by fire after impact."
+    }
   ],
   "chain": [
-    ["mode_confusion", "unstable_approach"],
-    ["crm_breakdown", "unstable_approach"],
-    ["fatigue", "inadequate_monitoring"],
-    ["fatigue", "crm_breakdown"],
-    ["procedural_noncompliance", "inadequate_monitoring"],
-    ["low_visibility", "loss_of_situational_awareness"],
-    ["dark_night", "loss_of_situational_awareness"],
-    ["loss_of_situational_awareness", "descent_below_minimums"],
-    ["unstable_approach", "descent_below_minimums"],
-    ["inadequate_monitoring", "descent_below_minimums"],
-    ["warning_system_deficiency", "cfit"],
-    ["descent_below_minimums", "cfit"],
-    ["cfit", "post_impact_fire"]
+    [
+      "mode_confusion",
+      "unstable_approach"
+    ],
+    [
+      "crm_breakdown",
+      "unstable_approach"
+    ],
+    [
+      "fatigue",
+      "inadequate_monitoring"
+    ],
+    [
+      "fatigue",
+      "crm_breakdown"
+    ],
+    [
+      "procedural_noncompliance",
+      "inadequate_monitoring"
+    ],
+    [
+      "low_visibility",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "dark_night",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "descent_below_minimums"
+    ],
+    [
+      "unstable_approach",
+      "descent_below_minimums"
+    ],
+    [
+      "inadequate_monitoring",
+      "descent_below_minimums"
+    ],
+    [
+      "warning_system_deficiency",
+      "cfit"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ],
+    [
+      "cfit",
+      "post_impact_fire"
+    ]
   ],
   "events": [
-    { "t": -3900, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "Crew learn that runway 6/24 at Birmingham is closed and plan the localizer runway 18 non-precision approach, briefing it as a profile (constant-angle) approach.", "kind": "crew_action" },
-    { "t": -1200, "clock": null, "phase": "descent", "actor": "FO", "text": "First officer sets up the FMC for the approach but the flight plan is not properly sequenced and verified, leaving the vertical profile unable to capture.", "factors": ["mode_confusion", "procedural_noncompliance"], "kind": "crew_action" },
-    { "t": -600, "clock": null, "phase": "descent", "actor": "ATC", "text": "Approach control clears the flight for the localizer 18 approach; the crew have weather indicating a cloud base near 1,000 ft agl but not the latest observation of lower, variable cloud.", "factors": ["low_visibility", "loss_of_situational_awareness"], "kind": "atc" },
-    { "t": -170, "clock": null, "phase": "approach", "actor": "SYS", "text": "Passing the final approach fix the autopilot does not capture the vertical profile because the FMC was not configured correctly.", "factors": ["mode_confusion"], "kind": "system" },
-    { "t": -150, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Captain selects vertical speed mode with a descent rate of about 1,500 ft/min without telling the first officer why the profile was not captured.", "state": { "vs": -1500 }, "factors": ["mode_confusion", "crm_breakdown", "unstable_approach"], "kind": "crew_action" },
-    { "t": -100, "clock": null, "phase": "approach", "actor": "FO", "text": "First officer calls one thousand feet, instruments cross-checked, but does not make the approaching-minimums or minimums callouts as the descent continues.", "factors": ["inadequate_monitoring", "procedural_noncompliance"], "kind": "crew_speech" },
-    { "t": -60, "clock": null, "phase": "approach", "actor": "SYS", "text": "Aircraft descends through the minimum descent altitude with the descent rate unchanged and the runway not in sight.", "factors": ["descent_below_minimums", "dark_night"], "kind": "system" },
-    { "t": -25, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Captain reports the runway in sight as the aircraft emerges from cloud well below the MDA and close to terrain.", "factors": ["loss_of_situational_awareness", "low_visibility"], "kind": "crew_speech" },
-    { "t": -8, "clock": null, "phase": "approach", "actor": "SYS", "text": "EGPWS 'sink rate' caution sounds.", "factors": ["warning_system_deficiency"], "kind": "warning" },
-    { "t": -4, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Captain begins to reduce the descent rate, remarking on the sink rate, but the aircraft is already among the trees.", "factors": ["cfit"], "kind": "crew_action" },
-    { "t": 0, "clock": "04:47", "phase": "approach", "actor": "ENV", "text": "Aircraft strikes trees and then terrain about 1 mile north of the runway 18 threshold, breaks up and catches fire; both pilots are killed.", "factors": ["cfit", "post_impact_fire"], "kind": "outcome" }
+    {
+      "t": -3900,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Crew learn that runway 6/24 at Birmingham is closed and plan the localizer runway 18 non-precision approach, briefing it as a profile (constant-angle) approach.",
+      "kind": "crew_action"
+    },
+    {
+      "t": -1200,
+      "clock": null,
+      "phase": "descent",
+      "actor": "FO",
+      "text": "First officer sets up the FMC for the approach but the flight plan is not properly sequenced and verified, leaving the vertical profile unable to capture.",
+      "factors": [
+        "mode_confusion",
+        "procedural_noncompliance"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -600,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ATC",
+      "text": "Approach control clears the flight for the localizer 18 approach; the crew have weather indicating a cloud base near 1,000 ft agl but not the latest observation of lower, variable cloud.",
+      "factors": [
+        "low_visibility",
+        "loss_of_situational_awareness"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": -170,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Passing the final approach fix the autopilot does not capture the vertical profile because the FMC was not configured correctly.",
+      "factors": [
+        "mode_confusion"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": -150,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Captain selects vertical speed mode with a descent rate of about 1,500 ft/min without telling the first officer why the profile was not captured.",
+      "state": {
+        "vs": -1500
+      },
+      "factors": [
+        "mode_confusion",
+        "crm_breakdown",
+        "unstable_approach"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -100,
+      "clock": null,
+      "phase": "approach",
+      "actor": "FO",
+      "text": "First officer calls one thousand feet, instruments cross-checked, but does not make the approaching-minimums or minimums callouts as the descent continues.",
+      "factors": [
+        "inadequate_monitoring",
+        "procedural_noncompliance"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": -60,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Aircraft descends through the minimum descent altitude with the descent rate unchanged and the runway not in sight.",
+      "factors": [
+        "descent_below_minimums",
+        "dark_night"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": -25,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Captain reports the runway in sight as the aircraft emerges from cloud well below the MDA and close to terrain.",
+      "factors": [
+        "loss_of_situational_awareness",
+        "low_visibility"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": -8,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "EGPWS 'sink rate' caution sounds.",
+      "factors": [
+        "warning_system_deficiency"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": -4,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Captain begins to reduce the descent rate, remarking on the sink rate, but the aircraft is already among the trees.",
+      "factors": [
+        "cfit"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "04:47",
+      "phase": "approach",
+      "actor": "ENV",
+      "text": "Aircraft strikes trees and then terrain about 1 mile north of the runway 18 threshold, breaks up and catches fire; both pilots are killed.",
+      "factors": [
+        "cfit",
+        "post_impact_fire"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "FAA", "text": "Require operators to install and use the latest EGPWS terrain awareness software that provides earlier alerting on non-precision approaches.", "status": "unknown", "outcome": "Honeywell released updated EGPWS terrain clearance floor software; the FAA issued guidance encouraging updates.", "trigger_factors": ["warning_system_deficiency", "cfit"] },
-    { "id": null, "to": "FAA / UPS", "text": "Emphasise in training the requirement to verify FMC configuration for profile approaches, to announce automation mode changes and to go around from an unstabilized approach.", "status": "unknown", "outcome": null, "trigger_factors": ["mode_confusion", "unstable_approach", "crm_breakdown"] },
-    { "id": null, "to": "FAA", "text": "Ensure that flight crews receive the most current weather observations and that dispatch procedures deliver updated terminal weather before approach.", "status": "unknown", "outcome": null, "trigger_factors": ["low_visibility", "loss_of_situational_awareness"] },
-    { "id": null, "to": "UPS / Independent Pilots Association", "text": "Address pilot fatigue through fatigue risk management and education on effective use of rest periods.", "status": "unknown", "outcome": null, "trigger_factors": ["fatigue"] }
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require operators to install and use the latest EGPWS terrain awareness software that provides earlier alerting on non-precision approaches.",
+      "status": "unknown",
+      "outcome": "Honeywell released updated EGPWS terrain clearance floor software; the FAA issued guidance encouraging updates.",
+      "trigger_factors": [
+        "warning_system_deficiency",
+        "cfit"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA / UPS",
+      "text": "Emphasise in training the requirement to verify FMC configuration for profile approaches, to announce automation mode changes and to go around from an unstabilized approach.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "mode_confusion",
+        "unstable_approach",
+        "crm_breakdown"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Ensure that flight crews receive the most current weather observations and that dispatch procedures deliver updated terminal weather before approach.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "low_visibility",
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "id": null,
+      "to": "UPS / Independent Pilots Association",
+      "text": "Address pilot fatigue through fatigue risk management and education on effective use of rest periods.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "fatigue"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
     "Updated EGPWS terrain clearance floor software with earlier alerting was released and adopted by operators.",
     "UPS revised its non-precision approach procedures and fatigue risk management; the accident featured in debate on the cargo carve-out from FAA flight duty time rules."
   ],
-  "related": ["korean801", "crossair3597", "flash604", "tatarstan363"],
+  "related": [
+    "korean801",
+    "crossair3597",
+    "flash604",
+    "tatarstan363"
+  ],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1402.pdf", "https://www.ntsb.gov"],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
-    "notes": ["t0 is the approximate impact time of 04:47 CDT; all other event times are estimated offsets and no clock values are given for them.",
-              "The MDA value, the exact EGPWS alert sequence and the first officer's callouts are paraphrased from memory of the report.",
-              "Recommendation numbers not recalled and are left null."] }
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1402.pdf",
+    "https://www.ntsb.gov"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "t0 is the approximate impact time of 04:47 CDT; all other event times are estimated offsets and no clock values are given for them.",
+      "The MDA value, the exact EGPWS alert sequence and the first officer's callouts are paraphrased from memory of the report.",
+      "Recommendation numbers not recalled and are left null."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/UPS_Airlines_Flight_1354"
 }

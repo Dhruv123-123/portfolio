@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "Hanamaki Airport",
-    "country": "Japan"
+    "country": "Japan",
+    "lat": 39.4394,
+    "lon": 141.1383
   },
   "phase": "landing",
   "occupants": 77,
@@ -85,12 +87,30 @@
     }
   ],
   "chain": [
-    ["windshear", "pilot_experience"],
-    ["pilot_experience", "inadequate_monitoring"],
-    ["inadequate_monitoring", "go_around_not_flown"],
-    ["go_around_not_flown", "hard_landing"],
-    ["hard_landing", "fuel_leak"],
-    ["fuel_leak", "inflight_fire"]
+    [
+      "windshear",
+      "pilot_experience"
+    ],
+    [
+      "pilot_experience",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "go_around_not_flown"
+    ],
+    [
+      "go_around_not_flown",
+      "hard_landing"
+    ],
+    [
+      "hard_landing",
+      "fuel_leak"
+    ],
+    [
+      "fuel_leak",
+      "inflight_fire"
+    ]
   ],
   "events": [
     {

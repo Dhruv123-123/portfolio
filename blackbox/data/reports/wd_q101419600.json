@@ -33,7 +33,9 @@
   "location": {
     "name": "Homer Airport",
     "country": "United States",
-    "state": "Alaska"
+    "state": "Alaska",
+    "lat": 59.6393,
+    "lon": -151.497
   },
   "phase": "landing",
   "occupants": 21,

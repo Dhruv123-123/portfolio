@@ -7,87 +7,381 @@
   "t0": null,
   "agency": "JIAAC-VE",
   "agencies": [
-    { "code": "JIAAC-VE", "name": "Junta Investigadora de Accidentes de Aviación Civil", "country": "Venezuela", "role": "lead",
-      "report_id": null, "report_title": "Final report on the accident to McDonnell Douglas MD-82 HK-4374X, Machiques, 16 August 2005", "report_date": null,
-      "url": "https://www.bea.aero" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative",
-      "report_id": null, "report_title": null, "report_date": null, "url": "https://www.ntsb.gov" },
-    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses", "country": "France", "role": "accredited_representative",
-      "report_id": null, "report_title": "English translation of the Venezuelan final report", "report_date": null, "url": "https://www.bea.aero" }
+    {
+      "code": "JIAAC-VE",
+      "name": "Junta Investigadora de Accidentes de Aviación Civil",
+      "country": "Venezuela",
+      "role": "lead",
+      "report_id": null,
+      "report_title": "Final report on the accident to McDonnell Douglas MD-82 HK-4374X, Machiques, 16 August 2005",
+      "report_date": null,
+      "url": "https://www.bea.aero"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative",
+      "report_id": null,
+      "report_title": null,
+      "report_date": null,
+      "url": "https://www.ntsb.gov"
+    },
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses",
+      "country": "France",
+      "role": "accredited_representative",
+      "report_id": null,
+      "report_title": "English translation of the Venezuelan final report",
+      "report_date": null,
+      "url": "https://www.bea.aero"
+    }
   ],
-  "aircraft": { "type": "McDonnell Douglas MD-82", "family": "MD-80", "manufacturer": "McDonnell Douglas", "registration": "HK-4374X", "msn": null, "engines": "Pratt & Whitney JT8D-217" },
+  "aircraft": {
+    "type": "McDonnell Douglas MD-82",
+    "family": "MD-80",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "HK-4374X",
+    "msn": null,
+    "engines": "Pratt & Whitney JT8D-217"
+  },
   "operator": "West Caribbean Airways",
-  "route": { "from": "MPTO", "from_name": "Panama City Tocumen", "to": "TFFF", "to_name": "Fort-de-France Martinique" },
-  "location": { "name": "Near Machiques, Sierra de Perijá, Zulia", "country": "Venezuela", "lat": 10.06, "lon": -72.58 },
+  "route": {
+    "from": "MPTO",
+    "from_name": "Panama City Tocumen",
+    "to": "TFFF",
+    "to_name": "Fort-de-France Martinique"
+  },
+  "location": {
+    "name": "Near Machiques, Sierra de Perijá, Zulia",
+    "country": "Venezuela",
+    "lat": 10.06,
+    "lon": -72.58
+  },
   "phase": "cruise",
-  "occupants": 160, "fatalities": 160, "injuries_serious": 0,
+  "occupants": 160,
+  "fatalities": 160,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "LOC-I",
   "summary": "The MD-82, on a charter flight from Panama to Martinique, climbed to FL330 with engine anti-ice selected on, an altitude at which the aircraft could not maintain speed at its weight and thrust setting. With the autothrottle in Mach hold and the autopilot holding altitude, the airspeed decayed unnoticed until the aircraft stalled. The captain, believing both engines had flamed out, held the nose up while the aircraft descended in a deep stall for more than three minutes and struck the ground near Machiques. All 160 on board died.",
   "probable_cause": "The Venezuelan JIAAC concluded that the crew allowed the aircraft to enter a stall at FL330 through inadequate monitoring of airspeed after climbing to an altitude above the aircraft's performance capability with engine anti-ice on, and then failed to recognise the stall and apply the correct recovery. The captain interpreted the situation as a loss of thrust on both engines and kept the aircraft nose up, sustaining a deep stall until impact. Contributing factors included the crew's inadequate crew resource management, the pilots' lack of knowledge of high-altitude performance and stall characteristics of the MD-80, and organisational deficiencies at the operator.",
   "factors": [
-    { "id": "low_energy_state", "role": "initiating", "evidence": "The aircraft was flown to FL330 at a weight and with engine anti-ice on that left it unable to maintain cruise speed; airspeed decayed steadily while the autopilot held altitude." },
-    { "id": "autothrottle_mode_confusion", "role": "contributing", "evidence": "The autothrottle was in Mach hold and the crew did not recognise that the thrust available was not sustaining the target speed." },
-    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "The report found the crew did not monitor the decreasing airspeed and rising angle of attack before the stall warning." },
-    { "id": "convective_weather", "role": "contributing", "evidence": "The flight was operating in an area of convective weather and icing conditions, for which engine anti-ice had been selected on, reducing thrust available." },
-    { "id": "aerodynamic_stall", "role": "contributing", "evidence": "At FL330 the stick shaker activated and the aircraft entered a stall from which the crew did not recover." },
-    { "id": "stall_misdiagnosis", "role": "contributing", "evidence": "The CVR showed the captain believed both engines had flamed out and did not identify the stall." },
-    { "id": "inappropriate_stall_recovery", "role": "contributing", "evidence": "The captain held nose-up control input throughout the descent instead of reducing the angle of attack; the aircraft remained in a deep stall." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "The first officer called out the stall but did not challenge the captain's actions effectively; the report cited deficient crew coordination." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "The report found the crew's knowledge of high-altitude performance, stall recognition and recovery on the MD-80 was inadequate." },
-    { "id": "operator_safety_culture", "role": "latent", "evidence": "The report described the operator's financial difficulties and deficient operational control and training oversight at the time of the accident." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft descended in a stalled condition at rates exceeding 10,000 ft/min until it struck the ground." }
+    {
+      "id": "low_energy_state",
+      "role": "initiating",
+      "evidence": "The aircraft was flown to FL330 at a weight and with engine anti-ice on that left it unable to maintain cruise speed; airspeed decayed steadily while the autopilot held altitude."
+    },
+    {
+      "id": "autothrottle_mode_confusion",
+      "role": "contributing",
+      "evidence": "The autothrottle was in Mach hold and the crew did not recognise that the thrust available was not sustaining the target speed."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The report found the crew did not monitor the decreasing airspeed and rising angle of attack before the stall warning."
+    },
+    {
+      "id": "convective_weather",
+      "role": "contributing",
+      "evidence": "The flight was operating in an area of convective weather and icing conditions, for which engine anti-ice had been selected on, reducing thrust available."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "contributing",
+      "evidence": "At FL330 the stick shaker activated and the aircraft entered a stall from which the crew did not recover."
+    },
+    {
+      "id": "stall_misdiagnosis",
+      "role": "contributing",
+      "evidence": "The CVR showed the captain believed both engines had flamed out and did not identify the stall."
+    },
+    {
+      "id": "inappropriate_stall_recovery",
+      "role": "contributing",
+      "evidence": "The captain held nose-up control input throughout the descent instead of reducing the angle of attack; the aircraft remained in a deep stall."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The first officer called out the stall but did not challenge the captain's actions effectively; the report cited deficient crew coordination."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "The report found the crew's knowledge of high-altitude performance, stall recognition and recovery on the MD-80 was inadequate."
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "latent",
+      "evidence": "The report described the operator's financial difficulties and deficient operational control and training oversight at the time of the accident."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft descended in a stalled condition at rates exceeding 10,000 ft/min until it struck the ground."
+    }
   ],
   "chain": [
-    ["convective_weather", "low_energy_state"],
-    ["inadequate_training", "low_energy_state"],
-    ["low_energy_state", "autothrottle_mode_confusion"],
-    ["autothrottle_mode_confusion", "inadequate_monitoring"],
-    ["inadequate_monitoring", "aerodynamic_stall"],
-    ["aerodynamic_stall", "stall_misdiagnosis"],
-    ["inadequate_training", "stall_misdiagnosis"],
-    ["stall_misdiagnosis", "inappropriate_stall_recovery"],
-    ["crm_breakdown", "inappropriate_stall_recovery"],
-    ["operator_safety_culture", "inadequate_training"],
-    ["inappropriate_stall_recovery", "loss_of_control_inflight"]
+    [
+      "convective_weather",
+      "low_energy_state"
+    ],
+    [
+      "inadequate_training",
+      "low_energy_state"
+    ],
+    [
+      "low_energy_state",
+      "autothrottle_mode_confusion"
+    ],
+    [
+      "autothrottle_mode_confusion",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "stall_misdiagnosis"
+    ],
+    [
+      "inadequate_training",
+      "stall_misdiagnosis"
+    ],
+    [
+      "stall_misdiagnosis",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "crm_breakdown",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "operator_safety_culture",
+      "inadequate_training"
+    ],
+    [
+      "inappropriate_stall_recovery",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
-    { "t": -1500, "clock": null, "phase": "climb", "actor": "CAPT", "text": "Crew request and are cleared to climb from FL310 to FL330 with engine anti-ice on; the aircraft is near its performance ceiling for its weight.", "state": { "alt": 33000 }, "factors": ["low_energy_state", "convective_weather"], "kind": "crew_action" },
-    { "t": -900, "clock": null, "phase": "cruise", "actor": "SYS", "text": "In level flight at FL330 with the autothrottle in Mach hold, the airspeed begins a slow decay while the autopilot holds altitude.", "state": { "alt": 33000 }, "factors": ["low_energy_state", "autothrottle_mode_confusion"], "kind": "system" },
-    { "t": -300, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "Crew discuss weather and request descent to FL310 from ATC as the aircraft struggles to hold speed; airspeed continues to decay unremarked.", "factors": ["inadequate_monitoring"], "kind": "crew_speech" },
-    { "t": -60, "clock": null, "phase": "cruise", "actor": "SYS", "text": "Pitch attitude rises as the autopilot trims to hold altitude with insufficient thrust; angle of attack approaches the stall.", "factors": ["low_energy_state", "inadequate_monitoring"], "kind": "system" },
-    { "t": 0, "clock": null, "phase": "cruise", "actor": "SYS", "text": "Stick shaker activates at FL330; the aircraft stalls and begins to descend.", "state": { "alt": 33000 }, "factors": ["aerodynamic_stall"], "kind": "warning" },
-    { "t": 10, "clock": null, "phase": "descent", "actor": "SYS", "text": "Autopilot disconnects; the aircraft pitches up and rolls as it enters a deep stall.", "factors": ["aerodynamic_stall"], "kind": "system" },
-    { "t": 30, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Captain states that both engines have flamed out and calls for the engine restart procedure; thrust is advanced.", "factors": ["stall_misdiagnosis"], "kind": "crew_speech" },
-    { "t": 45, "clock": null, "phase": "descent", "actor": "FO", "text": "First officer calls out that the aircraft is stalling; the captain continues to hold the nose up.", "factors": ["crm_breakdown", "inappropriate_stall_recovery"], "kind": "crew_speech" },
-    { "t": 60, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Captain declares an emergency to ATC, reporting a loss of both engines.", "factors": ["stall_misdiagnosis"], "kind": "atc" },
-    { "t": 120, "clock": null, "phase": "descent", "actor": "SYS", "text": "The aircraft descends at more than 10,000 ft/min with high angle of attack and nose-up column input; stall warning continues.", "state": { "vs": -12000 }, "factors": ["inappropriate_stall_recovery", "aerodynamic_stall"], "kind": "system" },
-    { "t": 180, "clock": null, "phase": "descent", "actor": "SYS", "text": "GPWS terrain warnings sound in the final part of the descent.", "factors": [], "kind": "warning" },
-    { "t": 210, "clock": null, "phase": "descent", "actor": "ENV", "text": "Impact with the ground near Machiques in a stalled, near-level attitude; all on board are killed.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+    {
+      "t": -1500,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CAPT",
+      "text": "Crew request and are cleared to climb from FL310 to FL330 with engine anti-ice on; the aircraft is near its performance ceiling for its weight.",
+      "state": {
+        "alt": 33000
+      },
+      "factors": [
+        "low_energy_state",
+        "convective_weather"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -900,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "In level flight at FL330 with the autothrottle in Mach hold, the airspeed begins a slow decay while the autopilot holds altitude.",
+      "state": {
+        "alt": 33000
+      },
+      "factors": [
+        "low_energy_state",
+        "autothrottle_mode_confusion"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": -300,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Crew discuss weather and request descent to FL310 from ATC as the aircraft struggles to hold speed; airspeed continues to decay unremarked.",
+      "factors": [
+        "inadequate_monitoring"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": -60,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Pitch attitude rises as the autopilot trims to hold altitude with insufficient thrust; angle of attack approaches the stall.",
+      "factors": [
+        "low_energy_state",
+        "inadequate_monitoring"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Stick shaker activates at FL330; the aircraft stalls and begins to descend.",
+      "state": {
+        "alt": 33000
+      },
+      "factors": [
+        "aerodynamic_stall"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Autopilot disconnects; the aircraft pitches up and rolls as it enters a deep stall.",
+      "factors": [
+        "aerodynamic_stall"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Captain states that both engines have flamed out and calls for the engine restart procedure; thrust is advanced.",
+      "factors": [
+        "stall_misdiagnosis"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 45,
+      "clock": null,
+      "phase": "descent",
+      "actor": "FO",
+      "text": "First officer calls out that the aircraft is stalling; the captain continues to hold the nose up.",
+      "factors": [
+        "crm_breakdown",
+        "inappropriate_stall_recovery"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Captain declares an emergency to ATC, reporting a loss of both engines.",
+      "factors": [
+        "stall_misdiagnosis"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "The aircraft descends at more than 10,000 ft/min with high angle of attack and nose-up column input; stall warning continues.",
+      "state": {
+        "vs": -12000
+      },
+      "factors": [
+        "inappropriate_stall_recovery",
+        "aerodynamic_stall"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "GPWS terrain warnings sound in the final part of the descent.",
+      "factors": [],
+      "kind": "warning"
+    },
+    {
+      "t": 210,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ENV",
+      "text": "Impact with the ground near Machiques in a stalled, near-level attitude; all on board are killed.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "Colombian civil aviation authority (Aerocivil) / operators", "text": "Ensure MD-80 crews are trained in high-altitude performance, the effect of engine anti-ice on climb capability, and stall recognition and recovery at high altitude.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_training", "low_energy_state"] },
-    { "id": null, "to": "Aerocivil", "text": "Strengthen oversight of the operator's operational control, crew training and financial capacity to operate safely.", "status": "unknown", "outcome": null, "trigger_factors": ["operator_safety_culture"] },
-    { "id": null, "to": "Boeing / FAA", "text": "Review autothrottle and flight-mode annunciation and stall-warning enhancements on MD-80 series aircraft so that a decaying airspeed in cruise is more clearly presented to the crew.", "status": "unknown", "outcome": null, "trigger_factors": ["autothrottle_mode_confusion", "inadequate_monitoring"] }
+    {
+      "id": null,
+      "to": "Colombian civil aviation authority (Aerocivil) / operators",
+      "text": "Ensure MD-80 crews are trained in high-altitude performance, the effect of engine anti-ice on climb capability, and stall recognition and recovery at high altitude.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_training",
+        "low_energy_state"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Aerocivil",
+      "text": "Strengthen oversight of the operator's operational control, crew training and financial capacity to operate safely.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "operator_safety_culture"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Boeing / FAA",
+      "text": "Review autothrottle and flight-mode annunciation and stall-warning enhancements on MD-80 series aircraft so that a decaying airspeed in cruise is more clearly presented to the crew.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "autothrottle_mode_confusion",
+        "inadequate_monitoring"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
     "West Caribbean Airways ceased operations after the accident and its operating certificate was suspended by Aerocivil.",
     "The accident became a reference case in the industry's revision of stall-recovery training toward angle-of-attack reduction rather than minimising altitude loss."
   ],
-  "related": ["pinnacle3701", "colgan3407", "af447", "birgenair301"],
+  "related": [
+    "pinnacle3701",
+    "colgan3407",
+    "af447",
+    "birgenair301"
+  ],
   "fdr": null,
   "sources": [
     "https://www.bea.aero",
     "https://www.ntsb.gov"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
     "notes": [
       "t0 is null: exact UTC clock times from the JIAAC report were not verified, so t values are approximate offsets from the onset of the stall warning at FL330 reconstructed from the report narrative (descent of roughly three and a half minutes).",
       "The JIAAC-VE final report date and number were not verified; the BEA published an English translation.",
       "Lat/lon are approximate for the Machiques area.",
       "The vertical speed of about 12,000 ft/min and the crew statements are paraphrased from the published narrative, not quoted from the transcript.",
       "Recommendation texts summarise themes of the report; the exact wording and addressees were not verified."
-    ] }
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/West_Caribbean_Airways_Flight_708"
 }

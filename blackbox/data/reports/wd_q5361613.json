@@ -34,7 +34,9 @@
   },
   "location": {
     "name": "Memphis International Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 35.0333,
+    "lon": -89.9719
   },
   "phase": "landing",
   "occupants": 7,

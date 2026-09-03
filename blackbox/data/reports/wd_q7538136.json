@@ -35,7 +35,9 @@
   "location": {
     "name": "Kearns",
     "country": "United States",
-    "region": "Utah"
+    "region": "Utah",
+    "lat": 40.6556,
+    "lon": -112.0
   },
   "phase": "approach",
   "occupants": 10,
@@ -104,7 +106,7 @@
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Bear Sector controller issues heading 100\u00b0 to SkyWest 1834; advises to expect vectors for visual approach to runway 34L (p. 5)"
+      "text": "Bear Sector controller issues heading 100° to SkyWest 1834; advises to expect vectors for visual approach to runway 34L (p. 5)"
     },
     {
       "t": -240,

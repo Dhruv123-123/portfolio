@@ -7,85 +7,356 @@
   "t0": null,
   "agency": "MAK",
   "agencies": [
-    { "code": "MAK", "name": "Interstate Aviation Committee", "country": "Russia", "role": "lead",
-      "report_id": null, "report_title": "Final report on the investigation of the accident to Boeing 737-53A VQ-BBN at Kazan, 17 November 2013", "report_date": null,
-      "url": "https://mak-iac.org" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative",
-      "report_id": null, "report_title": null, "report_date": null, "url": "https://www.ntsb.gov" }
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead",
+      "report_id": null,
+      "report_title": "Final report on the investigation of the accident to Boeing 737-53A VQ-BBN at Kazan, 17 November 2013",
+      "report_date": null,
+      "url": "https://mak-iac.org"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative",
+      "report_id": null,
+      "report_title": null,
+      "report_date": null,
+      "url": "https://www.ntsb.gov"
+    }
   ],
-  "aircraft": { "type": "Boeing 737-53A", "family": "737 Classic", "manufacturer": "Boeing", "registration": "VQ-BBN", "msn": "24785", "engines": "CFM56-3" },
+  "aircraft": {
+    "type": "Boeing 737-53A",
+    "family": "737 Classic",
+    "manufacturer": "Boeing",
+    "registration": "VQ-BBN",
+    "msn": "24785",
+    "engines": "CFM56-3"
+  },
   "operator": "Tatarstan Airlines",
-  "route": { "from": "UUDD", "from_name": "Moscow Domodedovo", "to": "UWKD", "to_name": "Kazan" },
-  "location": { "name": "Kazan International Airport, near runway 29", "country": "Russia", "lat": 55.606, "lon": 49.278 },
+  "route": {
+    "from": "UUDD",
+    "from_name": "Moscow Domodedovo",
+    "to": "UWKD",
+    "to_name": "Kazan"
+  },
+  "location": {
+    "name": "Kazan International Airport, near runway 29",
+    "country": "Russia",
+    "lat": 55.606,
+    "lon": 49.278
+  },
   "phase": "go_around",
-  "occupants": 50, "fatalities": 50, "injuries_serious": 0,
+  "occupants": 50,
+  "fatalities": 50,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "LOC-I",
   "summary": "On a night approach to Kazan the crew found the aircraft displaced from the localiser course and, at about 270 m (900 ft), initiated a go-around with TOGA thrust. On the 737-500 a single-channel go-around disconnects the autopilot, and the captain, who had never flown a go-around in the aircraft outside the simulator, did not manage the pitch: it rose to about 25 degrees and the speed decayed, after which he pushed the column forward and the aircraft pitched to about 75 degrees nose down. It struck the ground near the runway about 45 seconds after the go-around began. All 50 on board died.",
   "probable_cause": "The MAK concluded that the accident resulted from the crew's loss of spatial orientation and inability to fly a go-around manually at night, which led to a steep dive and impact with the ground. The captain's inadequate skills, the deficiencies in the airline's pilot training and qualification, and the first officer's failure to monitor and intervene were identified as causes. Systemic contributing factors included deficiencies in the training and licensing of the crew (the captain's licence had been issued on the basis of training records found to be doubtful), the operator's lack of a functioning safety management and flight data monitoring system, and inadequate oversight by the aviation authority.",
   "factors": [
-    { "id": "unstable_approach", "role": "initiating", "evidence": "The approach was flown with a significant lateral displacement from the localiser and the crew elected to go around at about 270 m." },
-    { "id": "mode_confusion", "role": "contributing", "evidence": "Pressing TOGA on the 737-500 disconnected the autopilot; the crew did not appear to expect to be flying manually and did not control the pitch." },
-    { "id": "inappropriate_control_input", "role": "contributing", "evidence": "After the pitch rose to about 25 degrees and the speed decayed, the captain pushed the control column fully forward and the pitch decreased to about 75 degrees nose down." },
-    { "id": "spatial_disorientation", "role": "contributing", "evidence": "The MAK concluded that the captain lost spatial orientation at night in cloud during the go-around." },
-    { "id": "somatogravic_illusion", "role": "contributing", "evidence": "The report considered the acceleration under TOGA thrust as a source of the false sensation of pitch-up that led to the nose-down input." },
-    { "id": "dark_night", "role": "contributing", "evidence": "The go-around was flown at night in instrument conditions without external references." },
-    { "id": "pilot_experience", "role": "contributing", "evidence": "The captain had never performed a go-around in the 737 in actual flight and had limited manual flying experience on the type." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "The MAK found that the crew's training and checking at the operator did not develop manual go-around skills and that the captain's initial licence training was deficient." },
-    { "id": "operator_safety_culture", "role": "latent", "evidence": "The airline lacked an effective safety management system and flight data monitoring that could have detected the crew's deficiencies." },
-    { "id": "regulatory_oversight", "role": "latent", "evidence": "The report cited deficiencies in the authority's oversight of pilot licensing and training organisations, including the doubtful basis of the captain's licence." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "The first officer did not monitor the pitch or intervene when the captain's input drove the aircraft into a dive." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft struck the ground near the runway in a near-vertical nose-down attitude at high speed." }
+    {
+      "id": "unstable_approach",
+      "role": "initiating",
+      "evidence": "The approach was flown with a significant lateral displacement from the localiser and the crew elected to go around at about 270 m."
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "Pressing TOGA on the 737-500 disconnected the autopilot; the crew did not appear to expect to be flying manually and did not control the pitch."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "After the pitch rose to about 25 degrees and the speed decayed, the captain pushed the control column fully forward and the pitch decreased to about 75 degrees nose down."
+    },
+    {
+      "id": "spatial_disorientation",
+      "role": "contributing",
+      "evidence": "The MAK concluded that the captain lost spatial orientation at night in cloud during the go-around."
+    },
+    {
+      "id": "somatogravic_illusion",
+      "role": "contributing",
+      "evidence": "The report considered the acceleration under TOGA thrust as a source of the false sensation of pitch-up that led to the nose-down input."
+    },
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "The go-around was flown at night in instrument conditions without external references."
+    },
+    {
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "The captain had never performed a go-around in the 737 in actual flight and had limited manual flying experience on the type."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "The MAK found that the crew's training and checking at the operator did not develop manual go-around skills and that the captain's initial licence training was deficient."
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "latent",
+      "evidence": "The airline lacked an effective safety management system and flight data monitoring that could have detected the crew's deficiencies."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "The report cited deficiencies in the authority's oversight of pilot licensing and training organisations, including the doubtful basis of the captain's licence."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The first officer did not monitor the pitch or intervene when the captain's input drove the aircraft into a dive."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft struck the ground near the runway in a near-vertical nose-down attitude at high speed."
+    }
   ],
   "chain": [
-    ["regulatory_oversight", "inadequate_training"],
-    ["operator_safety_culture", "inadequate_training"],
-    ["inadequate_training", "pilot_experience"],
-    ["unstable_approach", "mode_confusion"],
-    ["mode_confusion", "spatial_disorientation"],
-    ["dark_night", "spatial_disorientation"],
-    ["somatogravic_illusion", "spatial_disorientation"],
-    ["pilot_experience", "inappropriate_control_input"],
-    ["spatial_disorientation", "inappropriate_control_input"],
-    ["crm_breakdown", "inappropriate_control_input"],
-    ["inappropriate_control_input", "loss_of_control_inflight"]
+    [
+      "regulatory_oversight",
+      "inadequate_training"
+    ],
+    [
+      "operator_safety_culture",
+      "inadequate_training"
+    ],
+    [
+      "inadequate_training",
+      "pilot_experience"
+    ],
+    [
+      "unstable_approach",
+      "mode_confusion"
+    ],
+    [
+      "mode_confusion",
+      "spatial_disorientation"
+    ],
+    [
+      "dark_night",
+      "spatial_disorientation"
+    ],
+    [
+      "somatogravic_illusion",
+      "spatial_disorientation"
+    ],
+    [
+      "pilot_experience",
+      "inappropriate_control_input"
+    ],
+    [
+      "spatial_disorientation",
+      "inappropriate_control_input"
+    ],
+    [
+      "crm_breakdown",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
-    { "t": -180, "clock": null, "phase": "approach", "actor": "PF", "text": "Night approach to runway 29 at Kazan; the aircraft is displaced from the localiser course and the crew try to correct.", "factors": ["unstable_approach", "dark_night"], "kind": "crew_action" },
-    { "t": -30, "clock": null, "phase": "approach", "actor": "CAPT", "text": "The crew discuss the map shift and the displacement from the approach course.", "factors": ["unstable_approach"], "kind": "crew_speech" },
-    { "t": 0, "clock": null, "phase": "go_around", "actor": "CAPT", "text": "At about 270 m (900 ft) the captain calls a go-around and presses TOGA; the autopilot disconnects and thrust increases.", "state": { "alt": 900 }, "factors": ["unstable_approach", "mode_confusion"], "kind": "crew_action" },
-    { "t": 5, "clock": null, "phase": "go_around", "actor": "SYS", "text": "The pitch attitude rises to about 25 degrees as the aircraft climbs; the airspeed begins to decay.", "state": { "pitch": 25 }, "factors": ["mode_confusion", "pilot_experience"], "kind": "system" },
-    { "t": 15, "clock": null, "phase": "go_around", "actor": "PF", "text": "Flaps retracted to 15 and gear raised; the aircraft climbs to about 700 m (2,300 ft) with the speed decreasing.", "state": { "alt": 2300 }, "factors": [], "kind": "crew_action" },
-    { "t": 25, "clock": null, "phase": "go_around", "actor": "CAPT", "text": "The captain pushes the control column forward; the pitch attitude decreases rapidly through level flight into a dive.", "factors": ["inappropriate_control_input", "spatial_disorientation", "somatogravic_illusion"], "kind": "crew_action" },
-    { "t": 35, "clock": null, "phase": "descent", "actor": "SYS", "text": "The pitch attitude reaches about 75 degrees nose down; the airspeed increases rapidly and the aircraft descends at a very high rate.", "state": { "pitch": -75 }, "factors": ["loss_of_control_inflight"], "kind": "system" },
-    { "t": 40, "clock": null, "phase": "descent", "actor": "FO", "text": "The first officer does not intervene effectively; the captain begins to pull but the height is insufficient.", "factors": ["crm_breakdown"], "kind": "crew_action" },
-    { "t": 45, "clock": null, "phase": "descent", "actor": "ENV", "text": "The aircraft strikes the ground near the runway at about 450 km/h in a near-vertical attitude and disintegrates; all 50 on board die.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+    {
+      "t": -180,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "text": "Night approach to runway 29 at Kazan; the aircraft is displaced from the localiser course and the crew try to correct.",
+      "factors": [
+        "unstable_approach",
+        "dark_night"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -30,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "The crew discuss the map shift and the displacement from the approach course.",
+      "factors": [
+        "unstable_approach"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "CAPT",
+      "text": "At about 270 m (900 ft) the captain calls a go-around and presses TOGA; the autopilot disconnects and thrust increases.",
+      "state": {
+        "alt": 900
+      },
+      "factors": [
+        "unstable_approach",
+        "mode_confusion"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 5,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "SYS",
+      "text": "The pitch attitude rises to about 25 degrees as the aircraft climbs; the airspeed begins to decay.",
+      "state": {
+        "pitch": 25
+      },
+      "factors": [
+        "mode_confusion",
+        "pilot_experience"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 15,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "PF",
+      "text": "Flaps retracted to 15 and gear raised; the aircraft climbs to about 700 m (2,300 ft) with the speed decreasing.",
+      "state": {
+        "alt": 2300
+      },
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": 25,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "CAPT",
+      "text": "The captain pushes the control column forward; the pitch attitude decreases rapidly through level flight into a dive.",
+      "factors": [
+        "inappropriate_control_input",
+        "spatial_disorientation",
+        "somatogravic_illusion"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 35,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "The pitch attitude reaches about 75 degrees nose down; the airspeed increases rapidly and the aircraft descends at a very high rate.",
+      "state": {
+        "pitch": -75
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 40,
+      "clock": null,
+      "phase": "descent",
+      "actor": "FO",
+      "text": "The first officer does not intervene effectively; the captain begins to pull but the height is insufficient.",
+      "factors": [
+        "crm_breakdown"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 45,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ENV",
+      "text": "The aircraft strikes the ground near the runway at about 450 km/h in a near-vertical attitude and disintegrates; all 50 on board die.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "Rosaviatsia", "text": "Verify the training records and licences of pilots trained at the flight training organisations concerned and strengthen oversight of pilot licensing.", "status": "unknown", "outcome": null, "trigger_factors": ["regulatory_oversight", "inadequate_training"] },
-    { "id": null, "to": "Operators", "text": "Include manual go-arounds from intermediate heights, at night and with autopilot disconnection, in recurrent training, and address somatogravic illusion.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_training", "somatogravic_illusion"] },
-    { "id": null, "to": "Operators / Rosaviatsia", "text": "Implement effective safety management and flight data monitoring programmes so that crew performance deficiencies are detected.", "status": "unknown", "outcome": null, "trigger_factors": ["operator_safety_culture"] },
-    { "id": null, "to": "Boeing / FAA", "text": "Review the 737 Classic single-channel go-around logic and the associated crew guidance on autopilot disconnection at TOGA.", "status": "unknown", "outcome": null, "trigger_factors": ["mode_confusion"] }
+    {
+      "id": null,
+      "to": "Rosaviatsia",
+      "text": "Verify the training records and licences of pilots trained at the flight training organisations concerned and strengthen oversight of pilot licensing.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "regulatory_oversight",
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Operators",
+      "text": "Include manual go-arounds from intermediate heights, at night and with autopilot disconnection, in recurrent training, and address somatogravic illusion.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_training",
+        "somatogravic_illusion"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Operators / Rosaviatsia",
+      "text": "Implement effective safety management and flight data monitoring programmes so that crew performance deficiencies are detected.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "operator_safety_culture"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Boeing / FAA",
+      "text": "Review the 737 Classic single-channel go-around logic and the associated crew guidance on autopilot disconnection at TOGA.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "mode_confusion"
+      ]
+    }
   ],
   "dissent": [
-    { "agency": "Rosaviatsia", "position": "The Russian Federal Air Transport Agency (Rosaviatsia) disagreed with the MAK's conclusions, arguing that a possible malfunction of the elevator control system had not been excluded, and recommended a suspension of 737 operations pending checks; the MAK rejected this and Rosaviatsia's representatives recorded a dissenting opinion on the investigation's findings.", "topic": "aircraft elevator control versus crew performance" }
+    {
+      "agency": "Rosaviatsia",
+      "position": "The Russian Federal Air Transport Agency (Rosaviatsia) disagreed with the MAK's conclusions, arguing that a possible malfunction of the elevator control system had not been excluded, and recommended a suspension of 737 operations pending checks; the MAK rejected this and Rosaviatsia's representatives recorded a dissenting opinion on the investigation's findings.",
+      "topic": "aircraft elevator control versus crew performance"
+    }
   ],
   "safety_changes": [
     "Rosaviatsia audited pilot training organisations and revoked a number of pilot licences issued on the basis of deficient training records.",
     "Tatarstan Airlines' operating certificate was revoked in December 2013.",
     "Russian operators were required to include manual go-around training at night and from intermediate heights in recurrent training."
   ],
-  "related": ["flydubai981", "crossair3597"],
+  "related": [
+    "flydubai981",
+    "crossair3597"
+  ],
   "fdr": null,
   "sources": [
     "https://mak-iac.org"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
     "notes": [
       "t0 is null: the exact UTC time of the go-around was not verified (the accident occurred at about 19:24 local time, 15:24 UTC). Event t values are approximate offsets from the go-around initiation reconstructed from the MAK narrative (about 45 seconds to impact).",
       "The pitch values (about +25 and -75 degrees), altitude (about 700 m), and impact speed (about 450 km/h) are from the MAK interim findings as recalled.",
       "The MAK final report number and publication date (believed to be December 2015) were not verified.",
       "The dissent entry records Rosaviatsia's public disagreement with the MAK conclusions; whether it is formally appended to the report as a dissenting opinion was not verified."
-    ] }
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Tatarstan_Airlines_Flight_363"
 }

@@ -29,7 +29,9 @@
   },
   "location": {
     "name": "Near Roshchino International Airport",
-    "country": "Russia"
+    "country": "Russia",
+    "lat": 57.1544,
+    "lon": 65.2481
   },
   "phase": "takeoff",
   "occupants": 43,

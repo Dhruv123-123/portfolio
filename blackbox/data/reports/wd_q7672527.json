@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "John F. Kennedy International Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 40.6288,
+    "lon": -73.7718
   },
   "phase": "takeoff",
   "occupants": 280,
@@ -65,9 +67,18 @@
     }
   ],
   "chain": [
-    ["aoa_sensor_failure", "stall_misdiagnosis"],
-    ["stall_misdiagnosis", "dual_sidestick_input"],
-    ["dual_sidestick_input", "crm_breakdown"]
+    [
+      "aoa_sensor_failure",
+      "stall_misdiagnosis"
+    ],
+    [
+      "stall_misdiagnosis",
+      "dual_sidestick_input"
+    ],
+    [
+      "dual_sidestick_input",
+      "crm_breakdown"
+    ]
   ],
   "events": [
     {
@@ -167,7 +178,9 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9304.pdf"],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9304.pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5-20251001",
@@ -184,6 +197,8 @@
   "asn_id": "19920730-0",
   "interest": 8.02,
   "wikipedia": "https://en.wikipedia.org/wiki/TWA_Flight_843",
-  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9304.pdf"],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9304.pdf"
+  ],
   "curated_id": null
 }

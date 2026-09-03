@@ -7,72 +7,380 @@
   "t0": "2016-08-03T08:37:19Z",
   "agency": "GCAA",
   "agencies": [
-    { "code": "GCAA", "name": "General Civil Aviation Authority", "country": "United Arab Emirates", "role": "lead",
-      "report_id": "AIFN/0008/2016", "report_title": "Air Accident Investigation Sector final report, Runway impact during attempted go-around, Boeing 777-31H A6-EMW, Dubai International Airport, 3 August 2016", "report_date": "2020-02-06",
-      "url": "https://www.gcaa.gov.ae" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative",
-      "report_id": null, "report_title": null, "report_date": null, "url": "https://www.ntsb.gov" }
+    {
+      "code": "GCAA",
+      "name": "General Civil Aviation Authority",
+      "country": "United Arab Emirates",
+      "role": "lead",
+      "report_id": "AIFN/0008/2016",
+      "report_title": "Air Accident Investigation Sector final report, Runway impact during attempted go-around, Boeing 777-31H A6-EMW, Dubai International Airport, 3 August 2016",
+      "report_date": "2020-02-06",
+      "url": "https://www.gcaa.gov.ae"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative",
+      "report_id": null,
+      "report_title": null,
+      "report_date": null,
+      "url": "https://www.ntsb.gov"
+    }
   ],
-  "aircraft": { "type": "Boeing 777-31H", "family": "777", "manufacturer": "Boeing", "registration": "A6-EMW", "msn": "32700", "engines": "Rolls-Royce Trent 892" },
+  "aircraft": {
+    "type": "Boeing 777-31H",
+    "family": "777",
+    "manufacturer": "Boeing",
+    "registration": "A6-EMW",
+    "msn": "32700",
+    "engines": "Rolls-Royce Trent 892"
+  },
   "operator": "Emirates",
-  "route": { "from": "VOTV", "from_name": "Thiruvananthapuram", "to": "OMDB", "to_name": "Dubai International" },
-  "location": { "name": "Dubai International Airport, runway 12L", "country": "United Arab Emirates", "lat": 25.253, "lon": 55.364 },
+  "route": {
+    "from": "VOTV",
+    "from_name": "Thiruvananthapuram",
+    "to": "OMDB",
+    "to_name": "Dubai International"
+  },
+  "location": {
+    "name": "Dubai International Airport, runway 12L",
+    "country": "United Arab Emirates",
+    "lat": 25.253,
+    "lon": 55.364
+  },
   "phase": "landing",
-  "occupants": 300, "fatalities": 1, "injuries_serious": 4,
+  "occupants": 300,
+  "fatalities": 1,
+  "injuries_serious": 4,
   "damage": "destroyed",
   "category": "ARC",
   "summary": "Landing on runway 12L at Dubai in hot conditions with a reported windshear, the 777 experienced a shift to a tailwind in the flare and floated well beyond the touchdown zone. After the main gear touched down the crew initiated a go-around, but because the aircraft was on the ground the TOGA switches were inhibited and the autothrottle left the thrust levers at idle, which the crew did not notice. The aircraft became airborne on pitch alone, the gear was retracted, and it sank back onto the runway with the engines still at idle. The fuselage slid to a stop and caught fire; all 300 occupants evacuated, but a firefighter was killed when the centre fuel tank exploded.",
   "probable_cause": "The GCAA concluded that the aircraft impacted the runway during an attempted go-around because the flight crew did not realise that the autothrottle had not responded to the TOGA switch presses, which were inhibited by the on-ground logic, so that the thrust levers remained at idle and the aircraft could not sustain flight after it became airborne. Contributing factors included the crew's reliance on automation and lack of awareness of the TOGA inhibit logic, the absence of a flight-deck alert or procedural guidance for a go-around after touchdown, the crew's ineffective monitoring of the flight mode annunciations and engine thrust during the go-around, the long landing resulting from a headwind-to-tailwind shift, and the decision to retract the landing gear before a positive rate of climb was established with thrust.",
   "factors": [
-    { "id": "windshear", "role": "initiating", "evidence": "A windshear warning had been broadcast; in the flare the wind shifted from a headwind to a tailwind of about 16 kt, extending the float." },
-    { "id": "tailwind_landing", "role": "contributing", "evidence": "The tailwind component in the flare increased the groundspeed and the landing distance." },
-    { "id": "landing_long", "role": "contributing", "evidence": "The aircraft floated and the main gear touched down about 1,100 m beyond the threshold, well past the touchdown zone; the RAAS 'LONG LANDING' aural alert sounded." },
-    { "id": "mode_confusion", "role": "contributing", "evidence": "The crew pressed the TOGA switches after touchdown, when they were inhibited by the weight-on-wheels logic, and did not recognise that the go-around mode had not engaged." },
-    { "id": "autothrottle_mode_confusion", "role": "contributing", "evidence": "The autothrottle remained in its landing idle mode and the thrust levers stayed at idle for about 12 seconds after the go-around was called; the crew expected the autothrottle to advance them." },
-    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "Neither pilot monitored the flight mode annunciations or engine indications; the thrust levers were advanced manually only about 3 seconds before impact." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The TOGA switch inhibit after touchdown and the absence of an alert when a go-around is attempted with the switches inhibited were identified as contributing to the crew's lack of awareness." },
-    { "id": "warning_system_deficiency", "role": "latent", "evidence": "No flight-deck alert indicated that TOGA had not engaged or that thrust remained at idle during the attempted go-around." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "The crew had not been trained for a go-around after touchdown and the operator's procedures did not address the TOGA inhibit logic." },
-    { "id": "post_impact_fire", "role": "outcome", "evidence": "After the aircraft came to rest, fire from the separated right engine spread to the fuselage; the centre tank exploded about nine minutes later, killing a firefighter." },
-    { "id": "evacuation_deficiency", "role": "contributing", "evidence": "Several slides were unusable in the wind, and passengers retrieving cabin baggage slowed the evacuation." },
-    { "id": "emergency_landing", "role": "outcome", "evidence": "The aircraft sank back onto the runway with the gear retracting, struck the runway on its underside, and slid about 800 m before stopping." }
+    {
+      "id": "windshear",
+      "role": "initiating",
+      "evidence": "A windshear warning had been broadcast; in the flare the wind shifted from a headwind to a tailwind of about 16 kt, extending the float."
+    },
+    {
+      "id": "tailwind_landing",
+      "role": "contributing",
+      "evidence": "The tailwind component in the flare increased the groundspeed and the landing distance."
+    },
+    {
+      "id": "landing_long",
+      "role": "contributing",
+      "evidence": "The aircraft floated and the main gear touched down about 1,100 m beyond the threshold, well past the touchdown zone; the RAAS 'LONG LANDING' aural alert sounded."
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "The crew pressed the TOGA switches after touchdown, when they were inhibited by the weight-on-wheels logic, and did not recognise that the go-around mode had not engaged."
+    },
+    {
+      "id": "autothrottle_mode_confusion",
+      "role": "contributing",
+      "evidence": "The autothrottle remained in its landing idle mode and the thrust levers stayed at idle for about 12 seconds after the go-around was called; the crew expected the autothrottle to advance them."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Neither pilot monitored the flight mode annunciations or engine indications; the thrust levers were advanced manually only about 3 seconds before impact."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The TOGA switch inhibit after touchdown and the absence of an alert when a go-around is attempted with the switches inhibited were identified as contributing to the crew's lack of awareness."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "latent",
+      "evidence": "No flight-deck alert indicated that TOGA had not engaged or that thrust remained at idle during the attempted go-around."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "The crew had not been trained for a go-around after touchdown and the operator's procedures did not address the TOGA inhibit logic."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "After the aircraft came to rest, fire from the separated right engine spread to the fuselage; the centre tank exploded about nine minutes later, killing a firefighter."
+    },
+    {
+      "id": "evacuation_deficiency",
+      "role": "contributing",
+      "evidence": "Several slides were unusable in the wind, and passengers retrieving cabin baggage slowed the evacuation."
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "The aircraft sank back onto the runway with the gear retracting, struck the runway on its underside, and slid about 800 m before stopping."
+    }
   ],
   "chain": [
-    ["windshear", "tailwind_landing"],
-    ["tailwind_landing", "landing_long"],
-    ["landing_long", "mode_confusion"],
-    ["design_deficiency", "mode_confusion"],
-    ["inadequate_training", "mode_confusion"],
-    ["mode_confusion", "autothrottle_mode_confusion"],
-    ["warning_system_deficiency", "inadequate_monitoring"],
-    ["autothrottle_mode_confusion", "inadequate_monitoring"],
-    ["inadequate_monitoring", "emergency_landing"],
-    ["emergency_landing", "post_impact_fire"],
-    ["post_impact_fire", "evacuation_deficiency"]
+    [
+      "windshear",
+      "tailwind_landing"
+    ],
+    [
+      "tailwind_landing",
+      "landing_long"
+    ],
+    [
+      "landing_long",
+      "mode_confusion"
+    ],
+    [
+      "design_deficiency",
+      "mode_confusion"
+    ],
+    [
+      "inadequate_training",
+      "mode_confusion"
+    ],
+    [
+      "mode_confusion",
+      "autothrottle_mode_confusion"
+    ],
+    [
+      "warning_system_deficiency",
+      "inadequate_monitoring"
+    ],
+    [
+      "autothrottle_mode_confusion",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "emergency_landing"
+    ],
+    [
+      "emergency_landing",
+      "post_impact_fire"
+    ],
+    [
+      "post_impact_fire",
+      "evacuation_deficiency"
+    ]
   ],
   "events": [
-    { "t": -600, "clock": null, "phase": "approach", "actor": "ATC", "text": "Dubai ATIS and tower report windshear on approach to runway 12L; the aircraft is on a stabilised approach in hot conditions.", "factors": ["windshear"], "kind": "atc" },
-    { "t": -40, "clock": null, "phase": "approach", "actor": "ENV", "text": "Below about 100 ft the wind shifts from a headwind to a tailwind of about 16 kt.", "factors": ["windshear", "tailwind_landing"], "kind": "env" },
-    { "t": -15, "clock": null, "phase": "landing", "actor": "SYS", "text": "The aircraft floats in the flare along the runway with the thrust levers at idle under autothrottle control.", "factors": ["landing_long"], "kind": "system" },
-    { "t": 0, "clock": "08:37:19", "phase": "landing", "actor": "ENV", "text": "Right main gear touches down about 1,100 m beyond the threshold, followed by the left main gear; the aircraft is on the ground with idle thrust.", "factors": ["landing_long"], "kind": "outcome" },
-    { "t": 2, "clock": null, "phase": "landing", "actor": "SYS", "text": "RAAS 'LONG LANDING, LONG LANDING' aural alert sounds.", "factors": ["landing_long"], "kind": "warning" },
-    { "t": 4, "clock": null, "phase": "go_around", "actor": "PF", "text": "The commander decides to go around and presses the TOGA switches; they are inhibited by the on-ground logic and the autothrottle does not advance the thrust levers.", "factors": ["mode_confusion", "design_deficiency", "autothrottle_mode_confusion"], "kind": "crew_action" },
-    { "t": 5, "clock": null, "phase": "go_around", "actor": "PF", "text": "The commander pitches the aircraft up and it becomes airborne on residual speed alone; the pilot monitoring calls a positive rate of climb.", "factors": ["mode_confusion"], "kind": "crew_action" },
-    { "t": 8, "clock": null, "phase": "go_around", "actor": "PM", "text": "Landing gear selected up on the commander's command; the flaps are set to 20.", "factors": ["inadequate_monitoring"], "kind": "crew_action" },
-    { "t": 10, "clock": null, "phase": "go_around", "actor": "ATC", "text": "The tower clears the aircraft to climb straight ahead to 4,000 ft, adding to the crew's workload during the go-around.", "factors": [], "kind": "atc" },
-    { "t": 12, "clock": null, "phase": "go_around", "actor": "SYS", "text": "The aircraft reaches a maximum height of about 85 ft with the thrust levers still at idle and the airspeed decaying; it begins to sink.", "state": { "ra": 85 }, "factors": ["autothrottle_mode_confusion", "inadequate_monitoring"], "kind": "system" },
-    { "t": 16, "clock": null, "phase": "go_around", "actor": "PF", "text": "The thrust levers are advanced manually about 3 seconds before impact; the engines have not yet accelerated.", "factors": ["inadequate_monitoring"], "kind": "crew_action" },
-    { "t": 19, "clock": "08:37:38", "phase": "go_around", "actor": "ENV", "text": "The aircraft strikes the runway on its underside with the gear in transit; the right engine separates and the aircraft slides about 800 m before stopping.", "factors": ["emergency_landing"], "kind": "outcome" },
-    { "t": 60, "clock": null, "phase": "ground", "actor": "CABIN", "text": "Fire spreads from the separated engine along the right side; evacuation is ordered; some slides are unusable in the wind and some passengers take cabin baggage.", "factors": ["post_impact_fire", "evacuation_deficiency"], "kind": "outcome" },
-    { "t": 560, "clock": null, "phase": "ground", "actor": "ENV", "text": "About nine minutes after the aircraft stopped, the centre wing fuel tank explodes; a firefighter is killed.", "factors": ["post_impact_fire"], "kind": "outcome" }
+    {
+      "t": -600,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Dubai ATIS and tower report windshear on approach to runway 12L; the aircraft is on a stabilised approach in hot conditions.",
+      "factors": [
+        "windshear"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": -40,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "text": "Below about 100 ft the wind shifts from a headwind to a tailwind of about 16 kt.",
+      "factors": [
+        "windshear",
+        "tailwind_landing"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": -15,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "text": "The aircraft floats in the flare along the runway with the thrust levers at idle under autothrottle control.",
+      "factors": [
+        "landing_long"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 0,
+      "clock": "08:37:19",
+      "phase": "landing",
+      "actor": "ENV",
+      "text": "Right main gear touches down about 1,100 m beyond the threshold, followed by the left main gear; the aircraft is on the ground with idle thrust.",
+      "factors": [
+        "landing_long"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 2,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "text": "RAAS 'LONG LANDING, LONG LANDING' aural alert sounds.",
+      "factors": [
+        "landing_long"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 4,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "PF",
+      "text": "The commander decides to go around and presses the TOGA switches; they are inhibited by the on-ground logic and the autothrottle does not advance the thrust levers.",
+      "factors": [
+        "mode_confusion",
+        "design_deficiency",
+        "autothrottle_mode_confusion"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 5,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "PF",
+      "text": "The commander pitches the aircraft up and it becomes airborne on residual speed alone; the pilot monitoring calls a positive rate of climb.",
+      "factors": [
+        "mode_confusion"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 8,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "PM",
+      "text": "Landing gear selected up on the commander's command; the flaps are set to 20.",
+      "factors": [
+        "inadequate_monitoring"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "ATC",
+      "text": "The tower clears the aircraft to climb straight ahead to 4,000 ft, adding to the crew's workload during the go-around.",
+      "factors": [],
+      "kind": "atc"
+    },
+    {
+      "t": 12,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "SYS",
+      "text": "The aircraft reaches a maximum height of about 85 ft with the thrust levers still at idle and the airspeed decaying; it begins to sink.",
+      "state": {
+        "ra": 85
+      },
+      "factors": [
+        "autothrottle_mode_confusion",
+        "inadequate_monitoring"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 16,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "PF",
+      "text": "The thrust levers are advanced manually about 3 seconds before impact; the engines have not yet accelerated.",
+      "factors": [
+        "inadequate_monitoring"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 19,
+      "clock": "08:37:38",
+      "phase": "go_around",
+      "actor": "ENV",
+      "text": "The aircraft strikes the runway on its underside with the gear in transit; the right engine separates and the aircraft slides about 800 m before stopping.",
+      "factors": [
+        "emergency_landing"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "ground",
+      "actor": "CABIN",
+      "text": "Fire spreads from the separated engine along the right side; evacuation is ordered; some slides are unusable in the wind and some passengers take cabin baggage.",
+      "factors": [
+        "post_impact_fire",
+        "evacuation_deficiency"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 560,
+      "clock": null,
+      "phase": "ground",
+      "actor": "ENV",
+      "text": "About nine minutes after the aircraft stopped, the centre wing fuel tank explodes; a firefighter is killed.",
+      "factors": [
+        "post_impact_fire"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "Boeing / FAA", "text": "Review the go-around logic so that a TOGA request after touchdown is either honoured or clearly annunciated to the crew, and provide guidance and alerting for a go-around initiated after touchdown.", "status": "unknown", "outcome": "Boeing issued operator communications and flight crew training material on go-arounds after touchdown and TOGA inhibit logic.", "trigger_factors": ["design_deficiency", "warning_system_deficiency"] },
-    { "id": null, "to": "Emirates", "text": "Include go-around after touchdown scenarios in training and emphasise the flight crew's responsibility to verify thrust lever position and flight mode annunciations during every go-around.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_training", "inadequate_monitoring"] },
-    { "id": null, "to": "Emirates / GCAA", "text": "Reinforce guidance on the retraction of the landing gear only after a positive rate of climb has been established with thrust.", "status": "unknown", "outcome": null, "trigger_factors": ["mode_confusion"] },
-    { "id": null, "to": "Dubai Airports / GCAA", "text": "Review airport rescue and firefighting procedures for aircraft with fuel tank fire exposure and the guidance to firefighters on the risk of tank explosion.", "status": "unknown", "outcome": null, "trigger_factors": ["post_impact_fire"] },
-    { "id": null, "to": "ICAO / GCAA", "text": "Address the retrieval of cabin baggage during evacuations through passenger briefing and cabin crew procedures.", "status": "unknown", "outcome": null, "trigger_factors": ["evacuation_deficiency"] }
+    {
+      "id": null,
+      "to": "Boeing / FAA",
+      "text": "Review the go-around logic so that a TOGA request after touchdown is either honoured or clearly annunciated to the crew, and provide guidance and alerting for a go-around initiated after touchdown.",
+      "status": "unknown",
+      "outcome": "Boeing issued operator communications and flight crew training material on go-arounds after touchdown and TOGA inhibit logic.",
+      "trigger_factors": [
+        "design_deficiency",
+        "warning_system_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Emirates",
+      "text": "Include go-around after touchdown scenarios in training and emphasise the flight crew's responsibility to verify thrust lever position and flight mode annunciations during every go-around.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_training",
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Emirates / GCAA",
+      "text": "Reinforce guidance on the retraction of the landing gear only after a positive rate of climb has been established with thrust.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "mode_confusion"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Dubai Airports / GCAA",
+      "text": "Review airport rescue and firefighting procedures for aircraft with fuel tank fire exposure and the guidance to firefighters on the risk of tank explosion.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "post_impact_fire"
+      ]
+    },
+    {
+      "id": null,
+      "to": "ICAO / GCAA",
+      "text": "Address the retrieval of cabin baggage during evacuations through passenger briefing and cabin crew procedures.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "evacuation_deficiency"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -80,16 +388,25 @@
     "Emirates revised its go-around training and procedures, including scenarios with a bounced or long landing and a go-around after touchdown.",
     "The accident became a reference case for the industry's guidance on cabin baggage retrieval during evacuations."
   ],
-  "related": ["asiana214", "turkish1951"],
+  "related": [
+    "asiana214",
+    "turkish1951"
+  ],
   "fdr": null,
   "sources": [
     "https://www.gcaa.gov.ae"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
     "notes": [
       "t0 (first main gear touchdown at 08:37:19 UTC) and the impact time (08:37:38) are given from memory of the GCAA report timeline and may be off by a few seconds; intermediate offsets follow the report narrative (about 85 ft maximum height, thrust levers advanced about 3 s before impact).",
       "The emergency_landing outcome factor is used as instructed to represent the aircraft settling back onto the runway; the ICAO category ARC (abnormal runway contact) is used.",
       "The tailwind value (16 kt) and touchdown distance (about 1,100 m) are from the report narrative as recalled; the exact figures were not verified.",
       "Recommendation ids were not verified; the GCAA report contains numbered safety recommendations to Boeing, the FAA, Emirates and the airport."
-    ] }
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Emirates_Flight_521"
 }

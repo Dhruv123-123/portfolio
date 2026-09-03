@@ -28,7 +28,9 @@
   },
   "location": {
     "name": "Greater Southwest International Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 32.8302,
+    "lon": -97.049
   },
   "phase": "approach",
   "occupants": 4,

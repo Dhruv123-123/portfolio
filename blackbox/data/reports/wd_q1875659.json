@@ -12,7 +12,7 @@
   "agencies": [
     {
       "code": "BEA",
-      "name": "Bureau Enqu\u00eates-Accidents",
+      "name": "Bureau Enquêtes-Accidents",
       "country": "France",
       "role": "lead",
       "url": "https://bea.aero/fileadmin/documents/docspa/1993/d-at930106p/pdf/d-at930106p.pdf"
@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Paris-Charles de Gaulle",
-    "country": "France"
+    "country": "France",
+    "lat": 49.0018,
+    "lon": 2.6176
   },
   "phase": "approach",
   "occupants": 23,
@@ -164,7 +166,7 @@
     "confidence": "medium",
     "reviewed": false,
     "notes": [
-      "Preliminary report; sections: D\u00e9roulement du vol (p. 5-6), Dommages (p. 5)",
+      "Preliminary report; sections: Déroulement du vol (p. 5-6), Dommages (p. 5)",
       "6 events from sequence of flight based on crew actions and ATC communications",
       "Limited details available from preliminary report structure"
     ]

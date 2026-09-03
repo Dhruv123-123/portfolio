@@ -67,8 +67,14 @@
     }
   ],
   "chain": [
-    ["design_deficiency", "metal_fatigue"],
-    ["metal_fatigue", "uncontained_engine_failure"]
+    [
+      "design_deficiency",
+      "metal_fatigue"
+    ],
+    [
+      "metal_fatigue",
+      "uncontained_engine_failure"
+    ]
   ],
   "events": [
     {
@@ -87,7 +93,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "During cruise climb over Greenland, strong vibrations appeared with the aircraft simultaneously yawing to the right (p. 73).",
-      "factors": ["uncontained_engine_failure"]
+      "factors": [
+        "uncontained_engine_failure"
+      ]
     },
     {
       "t": 13771,
@@ -96,7 +104,9 @@
       "actor": "SYS",
       "kind": "warning",
       "text": "Engine Alliance GP7200 engine No 4 failure messages displayed on ECAM: 'ENG 4 STALL' and 'ENG 4 FAIL' nearly simultaneously (p. 73).",
-      "factors": ["uncontained_engine_failure"]
+      "factors": [
+        "uncontained_engine_failure"
+      ]
     },
     {
       "t": 13772,
@@ -105,7 +115,9 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Front part of engine No 4, including fan hub, air inlet and associated fairings separated from engine (p. 73).",
-      "factors": ["uncontained_engine_failure"]
+      "factors": [
+        "uncontained_engine_failure"
+      ]
     },
     {
       "t": 13773,
@@ -160,28 +172,36 @@
       "to": "EASA",
       "text": "Ensure that the design and sizing criteria and methods along with the manufacturing processes and in-production checks of engine rotor-grade critical parts made of α/β titanium alloy, and in particular the titanium alloy Ti-6-4, are such that the risk of failure of these parts due to the cold dwell fatigue phenomenon is controlled.",
       "status": "open",
-      "trigger_factors": ["design_deficiency"]
+      "trigger_factors": [
+        "design_deficiency"
+      ]
     },
     {
       "id": "FRAN-2020-007",
       "to": "FAA",
       "text": "Ensure that the design and sizing criteria and methods along with the manufacturing processes and in-production checks of engine rotor-grade critical parts made of α/β titanium alloy, and in particular the titanium alloy Ti-6-4, are such that the risk of failure of these parts due to the cold dwell fatigue phenomenon is controlled.",
       "status": "open",
-      "trigger_factors": ["design_deficiency"]
+      "trigger_factors": [
+        "design_deficiency"
+      ]
     },
     {
       "id": "FRAN-2020-008",
       "to": "EASA",
       "text": "Carry out a review of engine rotor-grade critical parts made of α/β titanium alloy, and in particular the titanium alloy Ti-6-4, which undergo a manufacturing process likely to lead to the presence of intense macro-zones and for which the risk of failure due to cold dwell fatigue phenomenon has not been sufficiently taken into account during certification. Subsequently ensure that an adapted in-service inspection programme is implemented to detect possible incipient cracks which might lead to the failure of the part.",
       "status": "open",
-      "trigger_factors": ["metal_fatigue"]
+      "trigger_factors": [
+        "metal_fatigue"
+      ]
     },
     {
       "id": "FRAN-2020-009",
       "to": "FAA",
       "text": "Carry out a review of engine rotor-grade critical parts made of α/β titanium alloy, and in particular the titanium alloy Ti-6-4, which undergo a manufacturing process likely to lead to the presence of intense macro-zones and for which the risk of failure due to cold dwell fatigue phenomenon has not been sufficiently taken into account during certification. Subsequently ensure that an adapted in-service inspection programme is implemented to detect possible incipient cracks which might lead to the failure of the part.",
       "status": "open",
-      "trigger_factors": ["metal_fatigue"]
+      "trigger_factors": [
+        "metal_fatigue"
+      ]
     }
   ],
   "dissent": [],
@@ -209,5 +229,6 @@
       "BEA format uses 'Contributing factors' rather than 'probable cause' terminology",
       "Successful emergency landing with no injuries or fatalities"
     ]
-  }
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Air_France_Flight_066"
 }

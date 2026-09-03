@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "Zvartnots International Airport",
-    "country": "Armenia"
+    "country": "Armenia",
+    "lat": 40.1814,
+    "lon": 44.5144
   },
   "phase": "takeoff",
   "occupants": 21,
@@ -57,8 +59,14 @@
     }
   ],
   "chain": [
-    ["airframe_icing", "aerodynamic_stall"],
-    ["aerodynamic_stall", "loss_of_control_inflight"]
+    [
+      "airframe_icing",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {

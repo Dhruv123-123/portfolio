@@ -1,222 +1,224 @@
 {
- "id": "wd_q106238034",
- "qid": "Q106238034",
- "tier": "wikidata",
- "depth": "full",
- "title": "2021 Touques Airbus AS350B helicopter crash",
- "flight_number": null,
- "date": "2021-03-07",
- "time_reference": "local",
- "t0": "2021-03-07T17:43:00+01:00",
- "agency": "BEA",
- "agencies": [
-  {
-   "code": "BEA",
-   "name": "Bureau d'Enquêtes et d'Analyses",
-   "country": "France",
-   "role": "lead",
-   "report_id": "BEA2021-0089",
-   "report_title": "Accident to the AIRBUS - AS350 - B registered F-GIBM on 07 March 2021 at Touques (Calvados)",
-   "report_date": "2022-02-01",
-   "url": "https://bea.aero/fileadmin/user_upload/BEA2021-0089.en.1.pdf"
-  }
- ],
- "aircraft": {
-  "type": "Eurocopter AS350 Écureuil",
-  "family": "AS350",
-  "manufacturer": "Airbus",
-  "registration": "F-GIBM",
-  "msn": "1424",
-  "engines": "Turbomeca Arriel 1B"
- },
- "operator": "Dolijet",
- "location": {
-  "name": "Touques, Calvados, Normandy",
-  "country": "France"
- },
- "phase": "takeoff",
- "occupants": 2,
- "fatalities": 2,
- "injuries_serious": 0,
- "damage": "destroyed",
- "category": "CFIT",
- "summary": "An Airbus AS350 helicopter crashed at Touques, France on 7 March 2021 while taking off from a restricted helipad surrounded by tall trees. The pilot (aged 74) and passenger (aged 70) were killed. During a vertical climb, the main rotor struck a 23-meter tree at approximately 19 meters altitude, causing the tail boom to separate. The helicopter fell and struck the ground 50 meters from the takeoff point. The helipad chosen the previous day offered minimal safety margins with respect to tree obstacles, and adverse light and contrast conditions made detecting the tree branches difficult.",
- "probable_cause": "The manoeuvring area on the HLS, chosen the day before the accident when landing, restricted the possibilities of safely manoeuvring. This choice probably pushed the pilot to carry out a vertical take-off with a small safety margin with respect to the tree branches which were in the shade. The assessment of the distance to the obstacles may have been difficult in a shaded environment with low light contrast.",
- "factors": [
-  {
-   "id": "cfit",
-   "role": "outcome",
-   "evidence": "The main rotor blades struck branches of a tree at a height of approximately 19 meters. The collision led to the airframe rotating violently around its yaw axis (p. 7)."
-  },
-  {
-   "id": "visual_illusion",
-   "role": "contributing",
-   "evidence": "The assessment of the distance to the obstacles may have been difficult in a shaded environment with low light contrast. The trees ahead of the helicopter were leafless and in the shade, and the sun was low on the horizon abeam the helicopter (p. 7)."
-  },
-  {
-   "id": "inadequate_training",
-   "role": "latent",
-   "evidence": "The manoeuvring area on the HLS was chosen the day before without reference to established safety distances, and pilot training does not impose compliance with safety distances for confined areas (p. 37-38)."
-  }
- ],
- "chain": [
-  [
-   "visual_illusion",
-   "cfit"
+  "id": "wd_q106238034",
+  "qid": "Q106238034",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "2021 Touques Airbus AS350B helicopter crash",
+  "flight_number": null,
+  "date": "2021-03-07",
+  "time_reference": "local",
+  "t0": "2021-03-07T17:43:00+01:00",
+  "agency": "BEA",
+  "agencies": [
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses",
+      "country": "France",
+      "role": "lead",
+      "report_id": "BEA2021-0089",
+      "report_title": "Accident to the AIRBUS - AS350 - B registered F-GIBM on 07 March 2021 at Touques (Calvados)",
+      "report_date": "2022-02-01",
+      "url": "https://bea.aero/fileadmin/user_upload/BEA2021-0089.en.1.pdf"
+    }
   ],
-  [
-   "inadequate_training",
-   "visual_illusion"
-  ]
- ],
- "events": [
-  {
-   "t": -86400,
-   "clock": "09:30",
-   "phase": "ground",
-   "actor": "GND",
-   "kind": "system",
-   "text": "On Saturday 6 March, pilot and passenger departed from Issy-les-Moulineaux heliport bound for Framicourt HLS.",
-   "factors": [],
-   "date": "2021-03-06"
+  "aircraft": {
+    "type": "Eurocopter AS350 Écureuil",
+    "family": "AS350",
+    "manufacturer": "Airbus",
+    "registration": "F-GIBM",
+    "msn": "1424",
+    "engines": "Turbomeca Arriel 1B"
   },
-  {
-   "t": -25020,
-   "clock": "17:45",
-   "phase": "ground",
-   "actor": "GND",
-   "kind": "system",
-   "text": "Aircraft departed Framicourt HLS bound for Touques HLS, approaching on heading 150° with tailwind.",
-   "factors": [],
-   "date": "2021-03-06"
+  "operator": "Dolijet",
+  "location": {
+    "name": "Touques, Calvados, Normandy",
+    "country": "France",
+    "lat": 49.3433,
+    "lon": 0.1028
   },
-  {
-   "t": -12420,
-   "clock": "18:27",
-   "phase": "landing",
-   "actor": "CAPT",
-   "kind": "system",
-   "text": "Aircraft landed at Touques HLS after transitioning to hover at 1.5 meters height, then proceeding forward to touchdown point in sunlit area. Main rotor blade tips were less than 1 meter from a 4.5-meter tree.",
-   "factors": [],
-   "date": "2021-03-06"
+  "phase": "takeoff",
+  "occupants": 2,
+  "fatalities": 2,
+  "injuries_serious": 0,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "An Airbus AS350 helicopter crashed at Touques, France on 7 March 2021 while taking off from a restricted helipad surrounded by tall trees. The pilot (aged 74) and passenger (aged 70) were killed. During a vertical climb, the main rotor struck a 23-meter tree at approximately 19 meters altitude, causing the tail boom to separate. The helicopter fell and struck the ground 50 meters from the takeoff point. The helipad chosen the previous day offered minimal safety margins with respect to tree obstacles, and adverse light and contrast conditions made detecting the tree branches difficult.",
+  "probable_cause": "The manoeuvring area on the HLS, chosen the day before the accident when landing, restricted the possibilities of safely manoeuvring. This choice probably pushed the pilot to carry out a vertical take-off with a small safety margin with respect to the tree branches which were in the shade. The assessment of the distance to the obstacles may have been difficult in a shaded environment with low light contrast.",
+  "factors": [
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The main rotor blades struck branches of a tree at a height of approximately 19 meters. The collision led to the airframe rotating violently around its yaw axis (p. 7)."
+    },
+    {
+      "id": "visual_illusion",
+      "role": "contributing",
+      "evidence": "The assessment of the distance to the obstacles may have been difficult in a shaded environment with low light contrast. The trees ahead of the helicopter were leafless and in the shade, and the sun was low on the horizon abeam the helicopter (p. 7)."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "The manoeuvring area on the HLS was chosen the day before without reference to established safety distances, and pilot training does not impose compliance with safety distances for confined areas (p. 37-38)."
+    }
+  ],
+  "chain": [
+    [
+      "visual_illusion",
+      "cfit"
+    ],
+    [
+      "inadequate_training",
+      "visual_illusion"
+    ]
+  ],
+  "events": [
+    {
+      "t": -86400,
+      "clock": "09:30",
+      "phase": "ground",
+      "actor": "GND",
+      "kind": "system",
+      "text": "On Saturday 6 March, pilot and passenger departed from Issy-les-Moulineaux heliport bound for Framicourt HLS.",
+      "factors": [],
+      "date": "2021-03-06"
+    },
+    {
+      "t": -25020,
+      "clock": "17:45",
+      "phase": "ground",
+      "actor": "GND",
+      "kind": "system",
+      "text": "Aircraft departed Framicourt HLS bound for Touques HLS, approaching on heading 150° with tailwind.",
+      "factors": [],
+      "date": "2021-03-06"
+    },
+    {
+      "t": -12420,
+      "clock": "18:27",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "system",
+      "text": "Aircraft landed at Touques HLS after transitioning to hover at 1.5 meters height, then proceeding forward to touchdown point in sunlit area. Main rotor blade tips were less than 1 meter from a 4.5-meter tree.",
+      "factors": [],
+      "date": "2021-03-06"
+    },
+    {
+      "t": 0,
+      "clock": "17:43",
+      "phase": "ground",
+      "actor": "GND",
+      "kind": "system",
+      "text": "Engine start-up completed with rotor spinning. Pilot indicated takeoff direction to ground personnel, raising left arm to show helicopter would climb straight ahead.",
+      "state": {
+        "fuel_pct": 63
+      },
+      "factors": [],
+      "date": "2021-03-07"
+    },
+    {
+      "t": 1,
+      "clock": "17:43:01",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "system",
+      "text": "Aircraft transitioned from ground to hover flight, then initiated vertical climb directly upward without backing away from takeoff point.",
+      "state": {
+        "alt": 0
+      },
+      "factors": []
+    },
+    {
+      "t": 6,
+      "clock": "17:43:06",
+      "phase": "initial_climb",
+      "actor": "CAPT",
+      "kind": "system",
+      "text": "Helicopter climbed vertically to approximately 19 meters altitude. Pitch attitude decreased as helicopter began to drift forward horizontally.",
+      "state": {
+        "alt": 19
+      },
+      "factors": []
+    },
+    {
+      "t": 11,
+      "clock": "17:43:11",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Main rotor blades struck branches of a 23-meter tree at approximately 19 meters altitude. Impact generated excessive torque, causing immediate structural failure of tail boom attachment.",
+      "state": {
+        "alt": 19
+      },
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 12,
+      "clock": "17:43:12",
+      "phase": "unknown",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Helicopter yawed violently about vertical axis while falling forward. Aircraft struck ground approximately 50 meters from takeoff point, destroying structure and causing immediate fatal injuries to both occupants.",
+      "state": {
+        "alt": 0
+      },
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "FRAN-2022-001",
+      "to": "EASA",
+      "text": "EASA should publish a guide aimed at training organisations which indicates distance-to-obstacle reference values adapted to initial training in use of confined areas and how these can evolve according to the pilot's experience and ratings.",
+      "status": "open",
+      "trigger_factors": [
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": "FRAN-2022-002",
+      "to": "EASA",
+      "text": "EASA should include in Part MED of EU regulation No 1178/2011 a guide or Acceptable Means of Compliance proposing an awareness module that will encourage Aero-Medical Examiners to freely address, during renewal medical examinations, the physiological consequences of ageing, using in particular a contrast sensitivity assessment test.",
+      "status": "open",
+      "trigger_factors": [
+        "visual_illusion"
+      ]
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Increased focus on contrast vision assessment during aero-medical examinations for aging pilots"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://bea.aero/fileadmin/user_upload/BEA2021-0089.en.1.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2021_Touques_Airbus_AS350B_helicopter_crash",
+  "asn_id": null,
+  "interest": 7.34,
+  "report_links": [
+    "https://bea.aero/fileadmin/user_upload/BEA2021-0089.en.1.pdf",
+    "https://bea.aero/en/investigation-reports/notified-events/detail/accident-to-the-airbus-as350-registered-f-gibm-on-07-03-2021-at-touques/",
+    "https://bea.aero/fileadmin/user_upload/BEA2021-0089_22_02_final.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read sections: synopsis (p. 6), history of flight (p. 7-9), findings (p. 42-43), contributing factors (p. 43), analysis - landing/takeoff in confined areas (p. 37-38), low contrast vision (p. 39-40), and recommendations (p. 44-45)",
+      "Events include timeline from March 6-7 with specific clock times from report",
+      "Visual illusion factor supported by extensive discussion of mesopic vision, aging effects on vision, and low light contrast on accident day",
+      "Recommendations extracted from formal safety recommendations section with official BEA identifiers",
+      "auto-repair: route was null"
+    ]
   },
-  {
-   "t": 0,
-   "clock": "17:43",
-   "phase": "ground",
-   "actor": "GND",
-   "kind": "system",
-   "text": "Engine start-up completed with rotor spinning. Pilot indicated takeoff direction to ground personnel, raising left arm to show helicopter would climb straight ahead.",
-   "state": {
-    "fuel_pct": 63
-   },
-   "factors": [],
-   "date": "2021-03-07"
-  },
-  {
-   "t": 1,
-   "clock": "17:43:01",
-   "phase": "takeoff",
-   "actor": "CAPT",
-   "kind": "system",
-   "text": "Aircraft transitioned from ground to hover flight, then initiated vertical climb directly upward without backing away from takeoff point.",
-   "state": {
-    "alt": 0
-   },
-   "factors": []
-  },
-  {
-   "t": 6,
-   "clock": "17:43:06",
-   "phase": "initial_climb",
-   "actor": "CAPT",
-   "kind": "system",
-   "text": "Helicopter climbed vertically to approximately 19 meters altitude. Pitch attitude decreased as helicopter began to drift forward horizontally.",
-   "state": {
-    "alt": 19
-   },
-   "factors": []
-  },
-  {
-   "t": 11,
-   "clock": "17:43:11",
-   "phase": "initial_climb",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Main rotor blades struck branches of a 23-meter tree at approximately 19 meters altitude. Impact generated excessive torque, causing immediate structural failure of tail boom attachment.",
-   "state": {
-    "alt": 19
-   },
-   "factors": [
-    "cfit"
-   ]
-  },
-  {
-   "t": 12,
-   "clock": "17:43:12",
-   "phase": "unknown",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Helicopter yawed violently about vertical axis while falling forward. Aircraft struck ground approximately 50 meters from takeoff point, destroying structure and causing immediate fatal injuries to both occupants.",
-   "state": {
-    "alt": 0
-   },
-   "factors": [
-    "cfit"
-   ]
-  }
- ],
- "cvr": [],
- "recommendations": [
-  {
-   "id": "FRAN-2022-001",
-   "to": "EASA",
-   "text": "EASA should publish a guide aimed at training organisations which indicates distance-to-obstacle reference values adapted to initial training in use of confined areas and how these can evolve according to the pilot's experience and ratings.",
-   "status": "open",
-   "trigger_factors": [
-    "inadequate_training"
-   ]
-  },
-  {
-   "id": "FRAN-2022-002",
-   "to": "EASA",
-   "text": "EASA should include in Part MED of EU regulation No 1178/2011 a guide or Acceptable Means of Compliance proposing an awareness module that will encourage Aero-Medical Examiners to freely address, during renewal medical examinations, the physiological consequences of ageing, using in particular a contrast sensitivity assessment test.",
-   "status": "open",
-   "trigger_factors": [
-    "visual_illusion"
-   ]
-  }
- ],
- "dissent": [],
- "safety_changes": [
-  "Increased focus on contrast vision assessment during aero-medical examinations for aging pilots"
- ],
- "related": [],
- "fdr": null,
- "sources": [
-  "https://bea.aero/fileadmin/user_upload/BEA2021-0089.en.1.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/2021_Touques_Airbus_AS350B_helicopter_crash",
- "asn_id": null,
- "interest": 7.34,
- "report_links": [
-  "https://bea.aero/fileadmin/user_upload/BEA2021-0089.en.1.pdf",
-  "https://bea.aero/en/investigation-reports/notified-events/detail/accident-to-the-airbus-as350-registered-f-gibm-on-07-03-2021-at-touques/",
-  "https://bea.aero/fileadmin/user_upload/BEA2021-0089_22_02_final.pdf"
- ],
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5-20251001",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Read sections: synopsis (p. 6), history of flight (p. 7-9), findings (p. 42-43), contributing factors (p. 43), analysis - landing/takeoff in confined areas (p. 37-38), low contrast vision (p. 39-40), and recommendations (p. 44-45)",
-   "Events include timeline from March 6-7 with specific clock times from report",
-   "Visual illusion factor supported by extensive discussion of mesopic vision, aging effects on vision, and low light contrast on accident day",
-   "Recommendations extracted from formal safety recommendations section with official BEA identifiers",
-   "auto-repair: route was null"
-  ]
- },
- "curated_id": null,
- "route": {}
+  "curated_id": null,
+  "route": {}
 }

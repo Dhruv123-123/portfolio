@@ -34,7 +34,9 @@
   },
   "location": {
     "name": "Lake Winnebago near Fox Crossing",
-    "country": "United States"
+    "country": "United States",
+    "lat": 44.1833,
+    "lon": -88.4
   },
   "phase": "approach",
   "occupants": 13,

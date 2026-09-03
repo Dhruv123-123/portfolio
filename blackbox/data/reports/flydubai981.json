@@ -7,86 +7,375 @@
   "t0": "2016-03-19T00:40:50Z",
   "agency": "MAK",
   "agencies": [
-    { "code": "MAK", "name": "Interstate Aviation Committee", "country": "Russia", "role": "lead",
-      "report_id": null, "report_title": "Final report on the investigation of the accident to Boeing 737-8KN A6-FDN at Rostov-on-Don, 19 March 2016", "report_date": "2019-11-26",
-      "url": "https://mak-iac.org" },
-    { "code": "GCAA", "name": "General Civil Aviation Authority", "country": "United Arab Emirates", "role": "accredited_representative",
-      "report_id": null, "report_title": null, "report_date": null, "url": "https://www.gcaa.gov.ae" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative",
-      "report_id": null, "report_title": null, "report_date": null, "url": "https://www.ntsb.gov" }
+    {
+      "code": "MAK",
+      "name": "Interstate Aviation Committee",
+      "country": "Russia",
+      "role": "lead",
+      "report_id": null,
+      "report_title": "Final report on the investigation of the accident to Boeing 737-8KN A6-FDN at Rostov-on-Don, 19 March 2016",
+      "report_date": "2019-11-26",
+      "url": "https://mak-iac.org"
+    },
+    {
+      "code": "GCAA",
+      "name": "General Civil Aviation Authority",
+      "country": "United Arab Emirates",
+      "role": "accredited_representative",
+      "report_id": null,
+      "report_title": null,
+      "report_date": null,
+      "url": "https://www.gcaa.gov.ae"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative",
+      "report_id": null,
+      "report_title": null,
+      "report_date": null,
+      "url": "https://www.ntsb.gov"
+    }
   ],
-  "aircraft": { "type": "Boeing 737-8KN", "family": "737 NG", "manufacturer": "Boeing", "registration": "A6-FDN", "msn": "40241", "engines": "CFM56-7B" },
+  "aircraft": {
+    "type": "Boeing 737-8KN",
+    "family": "737 NG",
+    "manufacturer": "Boeing",
+    "registration": "A6-FDN",
+    "msn": "40241",
+    "engines": "CFM56-7B"
+  },
   "operator": "Flydubai",
-  "route": { "from": "OMDB", "from_name": "Dubai International", "to": "URRR", "to_name": "Rostov-on-Don" },
-  "location": { "name": "Rostov-on-Don airport, runway 22", "country": "Russia", "lat": 47.258, "lon": 39.818 },
+  "route": {
+    "from": "OMDB",
+    "from_name": "Dubai International",
+    "to": "URRR",
+    "to_name": "Rostov-on-Don"
+  },
+  "location": {
+    "name": "Rostov-on-Don airport, runway 22",
+    "country": "Russia",
+    "lat": 47.258,
+    "lon": 39.818
+  },
   "phase": "go_around",
-  "occupants": 62, "fatalities": 62, "injuries_serious": 0,
+  "occupants": 62,
+  "fatalities": 62,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "LOC-I",
   "summary": "After a first go-around from an approach to Rostov-on-Don in strong gusting wind and windshear, the crew held for about two hours and made a second approach at night. At about 220 m (720 ft) the captain initiated a second go-around; with TOGA thrust at light weight the aircraft pitched up steeply. The captain, subject to a somatogravic illusion and without outside references, pushed the control column forward and applied nose-down stabilizer trim for about 12 seconds. The aircraft pitched to a steep dive and struck the runway at high speed about 40 seconds after the go-around began. All 62 on board died.",
   "probable_cause": "The MAK concluded that the accident was caused by an incorrect aircraft configuration and crew piloting during the go-around, leading to the captain's loss of situational awareness under the effect of a somatogravic illusion at night in instrument conditions, an inappropriate nose-down control input and prolonged nose-down stabilizer trim, and a dive from which recovery was not possible. Contributing factors included the presence of turbulence and windshear, the crew's fatigue after a long night duty, the lack of specific training for go-arounds from intermediate heights with high thrust and light weight, inconsistencies in the flight director cues during the go-around, and deficiencies in the crew's resource management and in the captain's psychological state during the second approach.",
   "factors": [
-    { "id": "windshear", "role": "initiating", "evidence": "Strong gusting wind and windshear warnings led to the first go-around and were present during the second approach." },
-    { "id": "dark_night", "role": "contributing", "evidence": "The second approach and go-around were flown at night in cloud with no external visual references." },
-    { "id": "fatigue", "role": "contributing", "evidence": "The crew had been on duty since the evening and the accident occurred at about 03:40 local time after two hours of holding; the MAK cited fatigue as contributing." },
-    { "id": "unstable_approach", "role": "contributing", "evidence": "The second approach was flown in turbulent conditions with speed and path deviations before the go-around decision at about 220 m." },
-    { "id": "mode_confusion", "role": "contributing", "evidence": "The report found that the flight director pitch command during the go-around did not correspond to the crew's expectation and contributed to the captain's confusion." },
-    { "id": "somatogravic_illusion", "role": "contributing", "evidence": "The MAK concluded that the acceleration under TOGA thrust produced a false sensation of excessive pitch-up which led the captain to push the nose down." },
-    { "id": "spatial_disorientation", "role": "contributing", "evidence": "The captain lost awareness of the aircraft's attitude and did not use the attitude indicator to recover from the dive." },
-    { "id": "inappropriate_control_input", "role": "contributing", "evidence": "The captain pushed the control column forward and applied nose-down stabilizer trim for about 12 seconds, pitching the aircraft into a steep dive." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "The first officer did not intervene effectively when the captain applied the nose-down input and the aircraft entered the dive." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "The MAK found that go-arounds from intermediate heights with full thrust at light weight, and somatogravic illusion, were not adequately addressed in the operator's training." },
-    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The report identified loss of situational awareness by the captain as the central element of the sequence." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft struck the runway in a steep nose-down attitude at high speed about 40 seconds after the go-around was initiated." }
+    {
+      "id": "windshear",
+      "role": "initiating",
+      "evidence": "Strong gusting wind and windshear warnings led to the first go-around and were present during the second approach."
+    },
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "The second approach and go-around were flown at night in cloud with no external visual references."
+    },
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "The crew had been on duty since the evening and the accident occurred at about 03:40 local time after two hours of holding; the MAK cited fatigue as contributing."
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "The second approach was flown in turbulent conditions with speed and path deviations before the go-around decision at about 220 m."
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "The report found that the flight director pitch command during the go-around did not correspond to the crew's expectation and contributed to the captain's confusion."
+    },
+    {
+      "id": "somatogravic_illusion",
+      "role": "contributing",
+      "evidence": "The MAK concluded that the acceleration under TOGA thrust produced a false sensation of excessive pitch-up which led the captain to push the nose down."
+    },
+    {
+      "id": "spatial_disorientation",
+      "role": "contributing",
+      "evidence": "The captain lost awareness of the aircraft's attitude and did not use the attitude indicator to recover from the dive."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "The captain pushed the control column forward and applied nose-down stabilizer trim for about 12 seconds, pitching the aircraft into a steep dive."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The first officer did not intervene effectively when the captain applied the nose-down input and the aircraft entered the dive."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "The MAK found that go-arounds from intermediate heights with full thrust at light weight, and somatogravic illusion, were not adequately addressed in the operator's training."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The report identified loss of situational awareness by the captain as the central element of the sequence."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft struck the runway in a steep nose-down attitude at high speed about 40 seconds after the go-around was initiated."
+    }
   ],
   "chain": [
-    ["windshear", "unstable_approach"],
-    ["unstable_approach", "mode_confusion"],
-    ["fatigue", "somatogravic_illusion"],
-    ["dark_night", "somatogravic_illusion"],
-    ["mode_confusion", "somatogravic_illusion"],
-    ["inadequate_training", "somatogravic_illusion"],
-    ["somatogravic_illusion", "spatial_disorientation"],
-    ["spatial_disorientation", "loss_of_situational_awareness"],
-    ["loss_of_situational_awareness", "inappropriate_control_input"],
-    ["crm_breakdown", "inappropriate_control_input"],
-    ["inappropriate_control_input", "loss_of_control_inflight"]
+    [
+      "windshear",
+      "unstable_approach"
+    ],
+    [
+      "unstable_approach",
+      "mode_confusion"
+    ],
+    [
+      "fatigue",
+      "somatogravic_illusion"
+    ],
+    [
+      "dark_night",
+      "somatogravic_illusion"
+    ],
+    [
+      "mode_confusion",
+      "somatogravic_illusion"
+    ],
+    [
+      "inadequate_training",
+      "somatogravic_illusion"
+    ],
+    [
+      "somatogravic_illusion",
+      "spatial_disorientation"
+    ],
+    [
+      "spatial_disorientation",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "inappropriate_control_input"
+    ],
+    [
+      "crm_breakdown",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
-    { "t": -7100, "clock": "22:42", "phase": "go_around", "actor": "PF", "text": "First approach to runway 22 abandoned at about 1,100 ft after a windshear warning; the aircraft climbs away and enters a holding pattern.", "factors": ["windshear"], "kind": "crew_action" },
-    { "t": -3600, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "The crew hold for about two hours awaiting improvement in the wind, discussing whether to divert; the captain decides on a second approach.", "factors": ["fatigue"], "kind": "crew_speech" },
-    { "t": -300, "clock": null, "phase": "approach", "actor": "PF", "text": "Second ILS approach to runway 22 at night in gusting wind and turbulence with the autopilot disengaged.", "factors": ["dark_night", "windshear", "unstable_approach"], "kind": "crew_action" },
-    { "t": 0, "clock": "00:40:50", "phase": "go_around", "actor": "CAPT", "text": "At about 220 m (720 ft) the captain calls a go-around and presses TOGA; the thrust increases toward full and the aircraft pitches up.", "state": { "alt": 720 }, "factors": ["windshear", "unstable_approach"], "kind": "crew_action" },
-    { "t": 5, "clock": null, "phase": "go_around", "actor": "SYS", "text": "With full thrust at light weight the pitch attitude rises to about 18 degrees and the aircraft accelerates and climbs rapidly; the flight director pitch cue differs from the crew's expectation.", "state": { "pitch": 18 }, "factors": ["mode_confusion"], "kind": "system" },
-    { "t": 12, "clock": null, "phase": "go_around", "actor": "PF", "text": "Flaps retracted to 15 and landing gear raised; the pitch and climb rate remain high.", "factors": [], "kind": "crew_action" },
-    { "t": 20, "clock": null, "phase": "go_around", "actor": "CAPT", "text": "Under a somatogravic illusion the captain pushes the control column forward; the pitch attitude decreases and passes through level flight.", "factors": ["somatogravic_illusion", "inappropriate_control_input"], "kind": "crew_action" },
-    { "t": 25, "clock": null, "phase": "go_around", "actor": "CAPT", "text": "The captain applies nose-down stabilizer trim for about 12 seconds; the pitch attitude continues to decrease into a dive.", "factors": ["inappropriate_control_input", "spatial_disorientation"], "kind": "crew_action" },
-    { "t": 32, "clock": null, "phase": "go_around", "actor": "FO", "text": "The first officer calls out and pulls back on the column; the captain's input and the nose-down trim dominate.", "factors": ["crm_breakdown"], "kind": "crew_speech" },
-    { "t": 36, "clock": null, "phase": "descent", "actor": "SYS", "text": "The aircraft is in a steep nose-down dive with airspeed increasing; GPWS warnings sound.", "factors": ["loss_of_situational_awareness"], "kind": "warning" },
-    { "t": 40, "clock": null, "phase": "descent", "actor": "ENV", "text": "The aircraft strikes runway 22 at high speed in a steep nose-down attitude about 40 seconds after the go-around began; all 62 on board die.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+    {
+      "t": -7100,
+      "clock": "22:42",
+      "phase": "go_around",
+      "actor": "PF",
+      "text": "First approach to runway 22 abandoned at about 1,100 ft after a windshear warning; the aircraft climbs away and enters a holding pattern.",
+      "factors": [
+        "windshear"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -3600,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "The crew hold for about two hours awaiting improvement in the wind, discussing whether to divert; the captain decides on a second approach.",
+      "factors": [
+        "fatigue"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": -300,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "text": "Second ILS approach to runway 22 at night in gusting wind and turbulence with the autopilot disengaged.",
+      "factors": [
+        "dark_night",
+        "windshear",
+        "unstable_approach"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "00:40:50",
+      "phase": "go_around",
+      "actor": "CAPT",
+      "text": "At about 220 m (720 ft) the captain calls a go-around and presses TOGA; the thrust increases toward full and the aircraft pitches up.",
+      "state": {
+        "alt": 720
+      },
+      "factors": [
+        "windshear",
+        "unstable_approach"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 5,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "SYS",
+      "text": "With full thrust at light weight the pitch attitude rises to about 18 degrees and the aircraft accelerates and climbs rapidly; the flight director pitch cue differs from the crew's expectation.",
+      "state": {
+        "pitch": 18
+      },
+      "factors": [
+        "mode_confusion"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 12,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "PF",
+      "text": "Flaps retracted to 15 and landing gear raised; the pitch and climb rate remain high.",
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "CAPT",
+      "text": "Under a somatogravic illusion the captain pushes the control column forward; the pitch attitude decreases and passes through level flight.",
+      "factors": [
+        "somatogravic_illusion",
+        "inappropriate_control_input"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 25,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "CAPT",
+      "text": "The captain applies nose-down stabilizer trim for about 12 seconds; the pitch attitude continues to decrease into a dive.",
+      "factors": [
+        "inappropriate_control_input",
+        "spatial_disorientation"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 32,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "FO",
+      "text": "The first officer calls out and pulls back on the column; the captain's input and the nose-down trim dominate.",
+      "factors": [
+        "crm_breakdown"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 36,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "The aircraft is in a steep nose-down dive with airspeed increasing; GPWS warnings sound.",
+      "factors": [
+        "loss_of_situational_awareness"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 40,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ENV",
+      "text": "The aircraft strikes runway 22 at high speed in a steep nose-down attitude about 40 seconds after the go-around began; all 62 on board die.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "Operators / ICAO", "text": "Include in training the recognition of and recovery from somatogravic illusion during go-arounds with high thrust and light weight, and go-arounds from intermediate heights.", "status": "unknown", "outcome": null, "trigger_factors": ["somatogravic_illusion", "inadequate_training"] },
-    { "id": null, "to": "Boeing / FAA", "text": "Review the flight director go-around pitch guidance and its transitions on the 737 so that the cues are consistent during a go-around initiated above the normal decision height.", "status": "unknown", "outcome": null, "trigger_factors": ["mode_confusion"] },
-    { "id": null, "to": "Flydubai / GCAA", "text": "Review crew rostering and fatigue risk management for long night duties with extended holding, and the decision-making guidance for diversion in adverse weather.", "status": "unknown", "outcome": null, "trigger_factors": ["fatigue", "unstable_approach"] },
-    { "id": null, "to": "Operators", "text": "Reinforce crew resource management training on monitoring and intervention by the pilot monitoring during go-arounds.", "status": "unknown", "outcome": null, "trigger_factors": ["crm_breakdown"] }
+    {
+      "id": null,
+      "to": "Operators / ICAO",
+      "text": "Include in training the recognition of and recovery from somatogravic illusion during go-arounds with high thrust and light weight, and go-arounds from intermediate heights.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "somatogravic_illusion",
+        "inadequate_training"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Boeing / FAA",
+      "text": "Review the flight director go-around pitch guidance and its transitions on the 737 so that the cues are consistent during a go-around initiated above the normal decision height.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "mode_confusion"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Flydubai / GCAA",
+      "text": "Review crew rostering and fatigue risk management for long night duties with extended holding, and the decision-making guidance for diversion in adverse weather.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "fatigue",
+        "unstable_approach"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Operators",
+      "text": "Reinforce crew resource management training on monitoring and intervention by the pilot monitoring during go-arounds.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "crm_breakdown"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
     "Flydubai revised its go-around training, fatigue management and diversion decision-making guidance after the accident.",
     "The accident reinforced industry attention (including the Flight Safety Foundation and EASA) on go-around safety and somatogravic illusion at night."
   ],
-  "related": ["tatarstan363", "crossair3597"],
+  "related": [
+    "tatarstan363",
+    "crossair3597"
+  ],
   "fdr": null,
   "sources": [
     "https://mak-iac.org"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
     "notes": [
       "t0 (about 00:40:50 UTC, the start of the second go-around) and the first go-around time (about 22:42 UTC) are given from the MAK narrative as recalled; the exact seconds were not verified. Event offsets within the final 40 seconds are approximate.",
       "The final pitch attitude and impact speed are deliberately not given as numbers because the exact figures were not verified.",
       "The MAK final report was published in November 2019; the exact report number was not verified.",
       "The accredited representative list (GCAA, NTSB) is based on the states of registry and manufacture."
-    ] }
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Flydubai_Flight_981"
 }

@@ -36,8 +36,8 @@
   "location": {
     "name": "Aarsele",
     "country": "Belgium",
-    "lat": null,
-    "lon": null
+    "lat": 50.9908,
+    "lon": 3.4388
   },
   "phase": "cruise",
   "occupants": 63,
@@ -184,7 +184,7 @@
       "phase": "descent",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft in steep dive with longitudinal attitude between 20\u00b0 and 30\u00b0 over vertical, rotating slowly in clockwise direction about longitudinal axis at high forward speed; transmissions ceased abruptly at ground impact (p. 3)",
+      "text": "Aircraft in steep dive with longitudinal attitude between 20° and 30° over vertical, rotating slowly in clockwise direction about longitudinal axis at high forward speed; transmissions ceased abruptly at ground impact (p. 3)",
       "factors": [
         "loss_of_control_inflight"
       ]

@@ -35,7 +35,9 @@
   "location": {
     "name": "Santa Monica Bay",
     "country": "United States",
-    "region": "California"
+    "region": "California",
+    "lat": 33.9489,
+    "lon": -118.658
   },
   "phase": "initial_climb",
   "occupants": 38,

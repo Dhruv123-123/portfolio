@@ -1,167 +1,169 @@
 {
- "id": "wd_q14814571",
- "qid": "Q14814571",
- "tier": "wikidata",
- "depth": "sections",
- "title": "Twilight Zone accident",
- "flight_number": null,
- "date": "1982-07-23",
- "time_reference": "PDT",
- "t0": "1982-07-23T02:20:00-07:00",
- "agency": "NTSB",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead",
-   "report_id": "AAR-84-14",
-   "report_date": "1984-10-30",
-   "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8414.pdf"
-  }
- ],
- "aircraft": {
-  "type": "Bell UH-1B Iroquois",
-  "family": "UH-1",
-  "manufacturer": "Bell",
-  "registration": "N877901",
-  "msn": null
- },
- "operator": "Western Helicopters Inc.",
- "location": {
-  "name": "Indian Dunes, Valencia",
-  "country": "United States"
- },
- "phase": "ground",
- "occupants": 9,
- "fatalities": 3,
- "damage": "substantial",
- "category": "UNK",
- "summary": "On 23 July 1982, a Bell UH-1B Iroquois helicopter was positioned 25 feet above ground hovering near a large mortar effect during filming of Twilight Zone: The Movie at Indian Dunes in Valencia, California. The helicopter turned 180 degrees and a mortar effect was detonated while the helicopter's tail rotor was still above it. The metal lid on top of the mortar struck the tail rotor, causing it to fail and detach. The helicopter fell and killed actor Vic Morrow and child actors Myca Dinh Le and Renee Shin-Yi Chen on the ground. Six helicopter passengers were injured.",
- "probable_cause": "The detonation of debris-laden high temperature special effects explosions too near to a low-flying helicopter, leading to foreign object damage to the tail rotor. Failure to establish direct communications and coordination between the helicopter pilot and the film director (p. 1-2).",
- "factors": [
-  {
-   "id": "flight_control_failure",
-   "role": "initiating",
-   "evidence": "Metal lid on top of the mortar struck the tail-rotor, causing the rotor to fail and detach from the tail; tail rotor assembly separated and helicopter descended out of control (p. 1)."
-  },
-  {
-   "id": "crm_breakdown",
-   "role": "contributing",
-   "evidence": "Failure to establish direct communications and coordination between Wingo, who was in command of the helicopter operation, and Landis, who was in charge of the filming operation; pilot did not maintain contact with director during maneuvering (p. 2)."
-  },
-  {
-   "id": "procedural_noncompliance",
-   "role": "contributing",
-   "evidence": "Explosions were detonated with helicopter positioned too close at 25 ft altitude while tail rotor still above the mortar; helicopter turned 180 degrees to the left for next camera shot while tail rotor still above mortar effect (p. 1)."
-  },
-  {
-   "id": "loss_of_control_inflight",
-   "role": "outcome",
-   "evidence": "The low-flying helicopter spun out of control and fell on top of all three people; helicopter's main rotor blade struck and fatally injured three actors on the ground (p. 1)."
-  }
- ],
- "chain": [
-  [
-   "flight_control_failure",
-   "loss_of_control_inflight"
+  "id": "wd_q14814571",
+  "qid": "Q14814571",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Twilight Zone accident",
+  "flight_number": null,
+  "date": "1982-07-23",
+  "time_reference": "PDT",
+  "t0": "1982-07-23T02:20:00-07:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-84-14",
+      "report_date": "1984-10-30",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8414.pdf"
+    }
   ],
-  [
-   "crm_breakdown",
-   "flight_control_failure"
+  "aircraft": {
+    "type": "Bell UH-1B Iroquois",
+    "family": "UH-1",
+    "manufacturer": "Bell",
+    "registration": "N877901",
+    "msn": null
+  },
+  "operator": "Western Helicopters Inc.",
+  "location": {
+    "name": "Indian Dunes, Valencia",
+    "country": "United States",
+    "lat": 34.4186,
+    "lon": -118.6322
+  },
+  "phase": "ground",
+  "occupants": 9,
+  "fatalities": 3,
+  "damage": "substantial",
+  "category": "UNK",
+  "summary": "On 23 July 1982, a Bell UH-1B Iroquois helicopter was positioned 25 feet above ground hovering near a large mortar effect during filming of Twilight Zone: The Movie at Indian Dunes in Valencia, California. The helicopter turned 180 degrees and a mortar effect was detonated while the helicopter's tail rotor was still above it. The metal lid on top of the mortar struck the tail rotor, causing it to fail and detach. The helicopter fell and killed actor Vic Morrow and child actors Myca Dinh Le and Renee Shin-Yi Chen on the ground. Six helicopter passengers were injured.",
+  "probable_cause": "The detonation of debris-laden high temperature special effects explosions too near to a low-flying helicopter, leading to foreign object damage to the tail rotor. Failure to establish direct communications and coordination between the helicopter pilot and the film director (p. 1-2).",
+  "factors": [
+    {
+      "id": "flight_control_failure",
+      "role": "initiating",
+      "evidence": "Metal lid on top of the mortar struck the tail-rotor, causing the rotor to fail and detach from the tail; tail rotor assembly separated and helicopter descended out of control (p. 1)."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Failure to establish direct communications and coordination between Wingo, who was in command of the helicopter operation, and Landis, who was in charge of the filming operation; pilot did not maintain contact with director during maneuvering (p. 2)."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "Explosions were detonated with helicopter positioned too close at 25 ft altitude while tail rotor still above the mortar; helicopter turned 180 degrees to the left for next camera shot while tail rotor still above mortar effect (p. 1)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The low-flying helicopter spun out of control and fell on top of all three people; helicopter's main rotor blade struck and fatally injured three actors on the ground (p. 1)."
+    }
   ],
-  [
-   "procedural_noncompliance",
-   "flight_control_failure"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "02:20",
-   "phase": "ground",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Helicopter pilot Dorcey Wingo stationed Bell UH-1B helicopter 25 feet above ground hovering near large mortar effect during Twilight Zone: The Movie filming at Indian Dunes"
+  "chain": [
+    [
+      "flight_control_failure",
+      "loss_of_control_inflight"
+    ],
+    [
+      "crm_breakdown",
+      "flight_control_failure"
+    ],
+    [
+      "procedural_noncompliance",
+      "flight_control_failure"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "02:20",
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Helicopter pilot Dorcey Wingo stationed Bell UH-1B helicopter 25 feet above ground hovering near large mortar effect during Twilight Zone: The Movie filming at Indian Dunes"
+    },
+    {
+      "t": 30,
+      "clock": null,
+      "phase": "ground",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot maneuvered aircraft for camera positioning; turned helicopter 180 degrees to the left for next camera shot while tail rotor remained positioned above mortar explosive"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "ground",
+      "actor": "OTHER",
+      "kind": "system",
+      "text": "Film director Landis initiated detonation of mortar effect while helicopter's tail rotor was still above it; metal lid on top of mortar struck tail rotor"
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Tail rotor assembly separated from helicopter; foreign object damage and delamination from heat caused tail rotor failure"
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "unknown",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Helicopter spun out of control and fell; helicopter's main rotor blades struck three people on the ground (actors Vic Morrow, Myca Dinh Le, and Renee Shin-Yi Chen); six helicopter occupants sustained injuries"
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-84-016",
+      "to": "Unknown",
+      "text": "Restrict use of helicopters and explosive effects on motion picture sets with specific safety protocols",
+      "status": "open"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [
+    "Establishment of federal safety standards for helicopter use in film and television production",
+    "Requirement for clear communications and coordination between helicopter pilots and film directors",
+    "Restrictions on explosive effects proximity to aircraft during filming operations"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8414.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Twilight_Zone_accident",
+  "asn_id": null,
+  "interest": 8.55,
+  "curated_id": null,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8414.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Report extracted from NTSB Aircraft Accident Report AAR-84-14 (superseding AAR-84-02)",
+      "Abstract and probable cause from pages 1-2",
+      "Incident occurred during filming of Twilight Zone: The Movie at Indian Dunes, Valencia",
+      "Helicopter hovered at 25 feet altitude near mortar special effects",
+      "Pilot Dorcey Wingo commanded helicopter; film director John Landis controlled explosives",
+      "No direct communications between pilot and director regarding mortar detonation",
+      "Mortar detonated while helicopter tail rotor positioned above it",
+      "Metal lid from mortar struck tail rotor causing separation and uncontrolled descent",
+      "Main rotor blades struck three people on ground during crash: Vic Morrow (actor), Myca Dinh Le (child actor), Renee Shin-Yi Chen (child actor)",
+      "Six helicopter occupants sustained minor injuries",
+      "auto-repair: route was null"
+    ]
   },
-  {
-   "t": 30,
-   "clock": null,
-   "phase": "ground",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Pilot maneuvered aircraft for camera positioning; turned helicopter 180 degrees to the left for next camera shot while tail rotor remained positioned above mortar explosive"
-  },
-  {
-   "t": 60,
-   "clock": null,
-   "phase": "ground",
-   "actor": "OTHER",
-   "kind": "system",
-   "text": "Film director Landis initiated detonation of mortar effect while helicopter's tail rotor was still above it; metal lid on top of mortar struck tail rotor"
-  },
-  {
-   "t": 90,
-   "clock": null,
-   "phase": "descent",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Tail rotor assembly separated from helicopter; foreign object damage and delamination from heat caused tail rotor failure"
-  },
-  {
-   "t": 120,
-   "clock": null,
-   "phase": "unknown",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Helicopter spun out of control and fell; helicopter's main rotor blades struck three people on the ground (actors Vic Morrow, Myca Dinh Le, and Renee Shin-Yi Chen); six helicopter occupants sustained injuries"
-  }
- ],
- "cvr": [],
- "recommendations": [
-  {
-   "id": "A-84-016",
-   "to": "Unknown",
-   "text": "Restrict use of helicopters and explosive effects on motion picture sets with specific safety protocols",
-   "status": "open"
-  }
- ],
- "dissent": [],
- "safety_changes": [
-  "Establishment of federal safety standards for helicopter use in film and television production",
-  "Requirement for clear communications and coordination between helicopter pilots and film directors",
-  "Restrictions on explosive effects proximity to aircraft during filming operations"
- ],
- "related": [],
- "fdr": null,
- "sources": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8414.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/Twilight_Zone_accident",
- "asn_id": null,
- "interest": 8.55,
- "curated_id": null,
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8414.pdf"
- ],
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5-20251001",
-  "confidence": "medium",
-  "reviewed": false,
-  "notes": [
-   "Report extracted from NTSB Aircraft Accident Report AAR-84-14 (superseding AAR-84-02)",
-   "Abstract and probable cause from pages 1-2",
-   "Incident occurred during filming of Twilight Zone: The Movie at Indian Dunes, Valencia",
-   "Helicopter hovered at 25 feet altitude near mortar special effects",
-   "Pilot Dorcey Wingo commanded helicopter; film director John Landis controlled explosives",
-   "No direct communications between pilot and director regarding mortar detonation",
-   "Mortar detonated while helicopter tail rotor positioned above it",
-   "Metal lid from mortar struck tail rotor causing separation and uncontrolled descent",
-   "Main rotor blades struck three people on ground during crash: Vic Morrow (actor), Myca Dinh Le (child actor), Renee Shin-Yi Chen (child actor)",
-   "Six helicopter occupants sustained minor injuries",
-   "auto-repair: route was null"
-  ]
- },
- "route": {}
+  "route": {}
 }

@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "Newark International Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 40.6872,
+    "lon": -74.1742
   },
   "phase": "landing",
   "occupants": 5,
@@ -72,11 +74,26 @@
     }
   ],
   "chain": [
-    ["inappropriate_control_input", "unstable_approach"],
-    ["unstable_approach", "go_around_not_flown"],
-    ["go_around_not_flown", "hard_landing"],
-    ["hard_landing", "landing_gear_failure"],
-    ["landing_gear_failure", "structural_failure"]
+    [
+      "inappropriate_control_input",
+      "unstable_approach"
+    ],
+    [
+      "unstable_approach",
+      "go_around_not_flown"
+    ],
+    [
+      "go_around_not_flown",
+      "hard_landing"
+    ],
+    [
+      "hard_landing",
+      "landing_gear_failure"
+    ],
+    [
+      "landing_gear_failure",
+      "structural_failure"
+    ]
   ],
   "events": [
     {
@@ -215,21 +232,31 @@
       "to": "FAA",
       "text": "Convene joint government-industry task force to develop pilot training tool including information about structural failure factors (landing gear, wings, fuselage design sink rate limits, roll angle limits, control input roll rate and pitch rate, single-gear landings, decreased lift effects, and structural loading consequences of bottoming gear struts)",
       "status": "open",
-      "trigger_factors": ["hard_landing", "landing_gear_failure", "structural_failure"]
+      "trigger_factors": [
+        "hard_landing",
+        "landing_gear_failure",
+        "structural_failure"
+      ]
     },
     {
       "id": "A-00-93",
       "to": "FAA",
       "text": "Include in pilot training tool development syllabus for simulator training on stabilized approaches to landing flare, identification of unstabilized landing flares and recovery, proper high sink rate recovery techniques during flare to landing, techniques for avoiding overcontrol in pitch before touchdown, and techniques for avoiding overcontrol during bounced landing",
       "status": "open",
-      "trigger_factors": ["unstable_approach", "inappropriate_control_input", "hard_landing"]
+      "trigger_factors": [
+        "unstable_approach",
+        "inappropriate_control_input",
+        "hard_landing"
+      ]
     },
     {
       "id": "A-00-94",
       "to": "FAA",
       "text": "Pilot training tool development should promote orientation toward proactive go-around decision-making",
       "status": "open",
-      "trigger_factors": ["go_around_not_flown"]
+      "trigger_factors": [
+        "go_around_not_flown"
+      ]
     },
     {
       "id": "A-00-95",

@@ -34,7 +34,9 @@
   },
   "location": {
     "name": "Narita International Airport",
-    "country": "Japan"
+    "country": "Japan",
+    "lat": 35.7597,
+    "lon": 140.3778
   },
   "phase": "landing",
   "occupants": 2,
@@ -47,7 +49,7 @@
     {
       "id": "windshear",
       "role": "contributing",
-      "evidence": "surface winds 320\u00b0 at 26 knots gusting to 40 knots reported at time of accident (p. 3)"
+      "evidence": "surface winds 320° at 26 knots gusting to 40 knots reported at time of accident (p. 3)"
     },
     {
       "id": "unstable_approach",
@@ -62,7 +64,7 @@
     {
       "id": "inappropriate_control_input",
       "role": "contributing",
-      "evidence": "large nose-down input (-4.9\u00b0) applied just before first touchdown and continuing after first bounce (-6.7\u00b0), causing touchdown on nose gear and deviating from approved procedures requiring 7.5\u00b0 pitch and thrust control (p. 92-93)"
+      "evidence": "large nose-down input (-4.9°) applied just before first touchdown and continuing after first bounce (-6.7°), causing touchdown on nose gear and deviating from approved procedures requiring 7.5° pitch and thrust control (p. 92-93)"
     },
     {
       "id": "landing_gear_failure",
@@ -113,7 +115,7 @@
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Narita Tower informed wind 320\u00b0 at 28 knots gusting to 40 knots",
+      "text": "Narita Tower informed wind 320° at 28 knots gusting to 40 knots",
       "factors": [
         "windshear"
       ]
@@ -133,7 +135,7 @@
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Narita Tower informed surface wind 320\u00b0 at 26 knots with maximum 38 knots",
+      "text": "Narita Tower informed surface wind 320° at 26 knots with maximum 38 knots",
       "factors": []
     },
     {
@@ -142,7 +144,7 @@
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "Narita Tower issued landing clearance for Runway 34L, wind 320\u00b0 at 29 knots with maximum 36 knots",
+      "text": "Narita Tower issued landing clearance for Runway 34L, wind 320° at 29 knots with maximum 36 knots",
       "factors": []
     },
     {
@@ -151,7 +153,7 @@
       "phase": "landing",
       "actor": "FO",
       "kind": "crew_action",
-      "text": "100 feet callout; aircraft with CAS 154 knots and pitch angle 3.5\u00b0",
+      "text": "100 feet callout; aircraft with CAS 154 knots and pitch angle 3.5°",
       "state": {
         "alt": 100,
         "ias": 154,
@@ -181,7 +183,7 @@
       "phase": "landing",
       "actor": "FO",
       "kind": "crew_action",
-      "text": "Large nose-down control column input (-3.0\u00b0) initiated at 20 feet radio altitude",
+      "text": "Large nose-down control column input (-3.0°) initiated at 20 feet radio altitude",
       "factors": []
     },
     {
@@ -206,7 +208,7 @@
       "phase": "landing",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Aircraft bounced off runway; auto ground spoilers deployed at 25\u00b0",
+      "text": "Aircraft bounced off runway; auto ground spoilers deployed at 25°",
       "factors": []
     },
     {
@@ -215,7 +217,7 @@
       "phase": "landing",
       "actor": "FO",
       "kind": "crew_action",
-      "text": "Second touchdown on nose landing gear in nose-low attitude (-1.8\u00b0) with pitch angle decreased 6.4\u00b0 in 1.75 seconds; vertical acceleration 2.21 G",
+      "text": "Second touchdown on nose landing gear in nose-low attitude (-1.8°) with pitch angle decreased 6.4° in 1.75 seconds; vertical acceleration 2.21 G",
       "state": {
         "ias": 161,
         "pitch": -1.8
@@ -230,7 +232,7 @@
       "phase": "landing",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Second bounce initiated; large nose-down control inputs continued (-7.7\u00b0 to -7.4\u00b0)",
+      "text": "Second bounce initiated; large nose-down control inputs continued (-7.7° to -7.4°)",
       "factors": []
     },
     {
@@ -254,7 +256,7 @@
       "phase": "landing",
       "actor": "SYS",
       "kind": "outcome",
-      "text": "Fire broke out near rear of left engine at pitch 10\u00b0 and roll -15\u00b0; aircraft engulfed in flames",
+      "text": "Fire broke out near rear of left engine at pitch 10° and roll -15°; aircraft engulfed in flames",
       "factors": [
         "structural_failure",
         "post_impact_fire"
@@ -290,7 +292,7 @@
     {
       "id": null,
       "to": "Federal Express Corporation",
-      "text": "Enhance bounce recovery training for MD-11 pilots with emphasis on proper pitch attitude control (7.5\u00b0) and thrust application procedures",
+      "text": "Enhance bounce recovery training for MD-11 pilots with emphasis on proper pitch attitude control (7.5°) and thrust application procedures",
       "status": "unknown",
       "trigger_factors": [
         "inappropriate_control_input",

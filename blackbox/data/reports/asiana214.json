@@ -7,17 +7,44 @@
   "t0": "2013-07-06T18:26:35Z",
   "agency": "NTSB",
   "agencies": [
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
       "report_id": "NTSB/AAR-14/01",
       "report_title": "Descent Below Visual Glidepath and Impact With Seawall, Asiana Airlines Flight 214, Boeing 777-200ER, HL7742, San Francisco, California, July 6, 2013",
       "report_date": "2014-06-24",
-      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1401.pdf" },
-    { "code": "ARAIB", "name": "Aviation and Railway Accident Investigation Board", "country": "South Korea", "role": "accredited_representative" }
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1401.pdf"
+    },
+    {
+      "code": "ARAIB",
+      "name": "Aviation and Railway Accident Investigation Board",
+      "country": "South Korea",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Boeing 777-28EER", "family": "777", "manufacturer": "Boeing", "registration": "HL7742", "msn": null, "engines": "Pratt & Whitney PW4090" },
+  "aircraft": {
+    "type": "Boeing 777-28EER",
+    "family": "777",
+    "manufacturer": "Boeing",
+    "registration": "HL7742",
+    "msn": null,
+    "engines": "Pratt & Whitney PW4090"
+  },
   "operator": "Asiana Airlines",
-  "route": { "from": "RKSI", "from_name": "Seoul Incheon International", "to": "KSFO", "to_name": "San Francisco International" },
-  "location": { "name": "Runway 28L seawall, San Francisco International Airport, California", "country": "USA", "lat": 37.613, "lon": -122.358 },
+  "route": {
+    "from": "RKSI",
+    "from_name": "Seoul Incheon International",
+    "to": "KSFO",
+    "to_name": "San Francisco International"
+  },
+  "location": {
+    "name": "Runway 28L seawall, San Francisco International Airport, California",
+    "country": "USA",
+    "lat": 37.613,
+    "lon": -122.358
+  },
   "phase": "approach",
   "occupants": 307,
   "fatalities": 3,
@@ -27,68 +54,403 @@
   "summary": "On a daytime visual approach to runway 28L at San Francisco (glideslope out of service), the 777 was high and fast. The pilot flying selected flight level change, then disconnected the autopilot and pulled the thrust levers to idle, which placed the autothrottle in HOLD so that it no longer protected speed. The crew did not notice the decaying airspeed until the airplane was below 200 feet and initiated a go-around only seconds before the main gear and tail struck the seawall. Three passengers died and 49 people were seriously injured.",
   "probable_cause": "The flight crew's mismanagement of the airplane's descent during the visual approach, the pilot flying's unintended deactivation of automatic airspeed control, the flight crew's inadequate monitoring of airspeed, and the flight crew's delayed execution of a go-around after they became aware that the airplane was below acceptable glidepath and airspeed tolerances. Contributing were (1) the complexities of the autothrottle and autopilot flight director systems that were inadequately described in Boeing's documentation and Asiana's pilot training, which increased the likelihood of mode error; (2) the flight crew's nonstandard communication and coordination regarding the use of the autothrottle and autopilot flight director systems; (3) the pilot flying's inadequate training on the planning and executing of visual approaches; (4) the pilot monitoring/instructor pilot's inadequate supervision of the pilot flying; and (5) flight crew fatigue, which likely degraded their performance.",
   "factors": [
-    { "id": "autothrottle_mode_confusion", "role": "initiating", "evidence": "Moving the thrust levers to idle after selecting FLCH SPD transitioned the autothrottle to HOLD; the pilot flying believed the autothrottle would still maintain the selected speed." },
-    { "id": "mode_confusion", "role": "contributing", "evidence": "The crew did not recognize that the autoflight system's mode combination left neither autopilot nor autothrottle managing airspeed." },
-    { "id": "automation_dependency", "role": "contributing", "evidence": "The pilot flying relied on the autothrottle to protect airspeed and was uncomfortable hand-flying a visual approach without the ILS glideslope." },
-    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "None of the three pilots monitored airspeed, which fell about 30 knots below the 137-knot approach speed before anyone called it out." },
-    { "id": "low_energy_state", "role": "contributing", "evidence": "The airplane reached a minimum airspeed of 103 knots with idle thrust and a high sink rate, well below the glidepath." },
-    { "id": "unstable_approach", "role": "contributing", "evidence": "The airplane was above the glidepath and fast at 1,600 feet, then below it and slow below 500 feet; the approach never met stabilized criteria." },
-    { "id": "go_around_not_flown", "role": "contributing", "evidence": "The go-around was delayed until about three seconds before impact, when the airplane was below 100 feet with thrust only just advancing." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "Communication and coordination about autoflight mode use were nonstandard, and the instructor pilot did not adequately supervise the pilot flying." },
-    { "id": "inadequate_training", "role": "contributing", "evidence": "The pilot flying's training on planning and executing visual approaches was inadequate, and Asiana's training did not adequately explain the autothrottle HOLD behaviour." },
-    { "id": "fatigue", "role": "contributing", "evidence": "The NTSB concluded that fatigue from the overnight trans-Pacific flight and circadian disruption likely degraded the crew's performance." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The complexity of the 777 autothrottle and autopilot flight director system interactions increased the likelihood of mode error." },
-    { "id": "manufacturer_communication", "role": "latent", "evidence": "Boeing's documentation inadequately described the autothrottle HOLD mode and the conditions under which speed protection is not available." },
-    { "id": "pilot_experience", "role": "latent", "evidence": "The pilot flying was transitioning to the 777 with about 35 hours on type and the instructor pilot was on his first flight as an instructor." },
-    { "id": "warning_system_deficiency", "role": "latent", "evidence": "The low-airspeed alerting available did not provide timely enough warning; the NTSB recommended improved low-energy alerting for transport airplanes." },
-    { "id": "evacuation_deficiency", "role": "contributing", "evidence": "Evacuation was delayed about 90 seconds while the cabin manager consulted the cockpit, two slides inflated inside the cabin, and one ejected passenger was struck by a rescue vehicle." },
-    { "id": "tail_strike", "role": "outcome", "evidence": "The main landing gear and then the aft fuselage struck the seawall; the tail section separated." },
-    { "id": "post_impact_fire", "role": "outcome", "evidence": "A fire developed in the fuselage after the airplane came to rest, destroying the cabin." }
+    {
+      "id": "autothrottle_mode_confusion",
+      "role": "initiating",
+      "evidence": "Moving the thrust levers to idle after selecting FLCH SPD transitioned the autothrottle to HOLD; the pilot flying believed the autothrottle would still maintain the selected speed."
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "The crew did not recognize that the autoflight system's mode combination left neither autopilot nor autothrottle managing airspeed."
+    },
+    {
+      "id": "automation_dependency",
+      "role": "contributing",
+      "evidence": "The pilot flying relied on the autothrottle to protect airspeed and was uncomfortable hand-flying a visual approach without the ILS glideslope."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "None of the three pilots monitored airspeed, which fell about 30 knots below the 137-knot approach speed before anyone called it out."
+    },
+    {
+      "id": "low_energy_state",
+      "role": "contributing",
+      "evidence": "The airplane reached a minimum airspeed of 103 knots with idle thrust and a high sink rate, well below the glidepath."
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "The airplane was above the glidepath and fast at 1,600 feet, then below it and slow below 500 feet; the approach never met stabilized criteria."
+    },
+    {
+      "id": "go_around_not_flown",
+      "role": "contributing",
+      "evidence": "The go-around was delayed until about three seconds before impact, when the airplane was below 100 feet with thrust only just advancing."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "Communication and coordination about autoflight mode use were nonstandard, and the instructor pilot did not adequately supervise the pilot flying."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "The pilot flying's training on planning and executing visual approaches was inadequate, and Asiana's training did not adequately explain the autothrottle HOLD behaviour."
+    },
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "The NTSB concluded that fatigue from the overnight trans-Pacific flight and circadian disruption likely degraded the crew's performance."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The complexity of the 777 autothrottle and autopilot flight director system interactions increased the likelihood of mode error."
+    },
+    {
+      "id": "manufacturer_communication",
+      "role": "latent",
+      "evidence": "Boeing's documentation inadequately described the autothrottle HOLD mode and the conditions under which speed protection is not available."
+    },
+    {
+      "id": "pilot_experience",
+      "role": "latent",
+      "evidence": "The pilot flying was transitioning to the 777 with about 35 hours on type and the instructor pilot was on his first flight as an instructor."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "latent",
+      "evidence": "The low-airspeed alerting available did not provide timely enough warning; the NTSB recommended improved low-energy alerting for transport airplanes."
+    },
+    {
+      "id": "evacuation_deficiency",
+      "role": "contributing",
+      "evidence": "Evacuation was delayed about 90 seconds while the cabin manager consulted the cockpit, two slides inflated inside the cabin, and one ejected passenger was struck by a rescue vehicle."
+    },
+    {
+      "id": "tail_strike",
+      "role": "outcome",
+      "evidence": "The main landing gear and then the aft fuselage struck the seawall; the tail section separated."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "A fire developed in the fuselage after the airplane came to rest, destroying the cabin."
+    }
   ],
   "chain": [
-    ["design_deficiency", "autothrottle_mode_confusion"],
-    ["manufacturer_communication", "inadequate_training"],
-    ["inadequate_training", "autothrottle_mode_confusion"],
-    ["unstable_approach", "autothrottle_mode_confusion"],
-    ["autothrottle_mode_confusion", "mode_confusion"],
-    ["automation_dependency", "inadequate_monitoring"],
-    ["fatigue", "inadequate_monitoring"],
-    ["crm_breakdown", "inadequate_monitoring"],
-    ["pilot_experience", "crm_breakdown"],
-    ["mode_confusion", "low_energy_state"],
-    ["inadequate_monitoring", "low_energy_state"],
-    ["warning_system_deficiency", "go_around_not_flown"],
-    ["low_energy_state", "go_around_not_flown"],
-    ["go_around_not_flown", "tail_strike"],
-    ["tail_strike", "post_impact_fire"],
-    ["post_impact_fire", "evacuation_deficiency"]
+    [
+      "design_deficiency",
+      "autothrottle_mode_confusion"
+    ],
+    [
+      "manufacturer_communication",
+      "inadequate_training"
+    ],
+    [
+      "inadequate_training",
+      "autothrottle_mode_confusion"
+    ],
+    [
+      "unstable_approach",
+      "autothrottle_mode_confusion"
+    ],
+    [
+      "autothrottle_mode_confusion",
+      "mode_confusion"
+    ],
+    [
+      "automation_dependency",
+      "inadequate_monitoring"
+    ],
+    [
+      "fatigue",
+      "inadequate_monitoring"
+    ],
+    [
+      "crm_breakdown",
+      "inadequate_monitoring"
+    ],
+    [
+      "pilot_experience",
+      "crm_breakdown"
+    ],
+    [
+      "mode_confusion",
+      "low_energy_state"
+    ],
+    [
+      "inadequate_monitoring",
+      "low_energy_state"
+    ],
+    [
+      "warning_system_deficiency",
+      "go_around_not_flown"
+    ],
+    [
+      "low_energy_state",
+      "go_around_not_flown"
+    ],
+    [
+      "go_around_not_flown",
+      "tail_strike"
+    ],
+    [
+      "tail_strike",
+      "post_impact_fire"
+    ],
+    [
+      "post_impact_fire",
+      "evacuation_deficiency"
+    ]
   ],
   "events": [
-    { "t": -120, "clock": null, "phase": "approach", "actor": "ATC", "text": "Approach control vectors the flight for a visual approach to runway 28L; the ILS glideslope is out of service and the crew are asked to maintain 180 knots to 5 nm.", "factors": ["unstable_approach"], "kind": "atc" },
-    { "t": -40, "clock": null, "phase": "approach", "actor": "PF", "text": "The airplane is above the desired glidepath and fast; the pilot flying uses vertical speed mode and then increases the descent rate to regain the path.", "factors": ["unstable_approach"], "kind": "crew_action" },
-    { "t": -5, "clock": null, "phase": "approach", "actor": "PF", "text": "At about 1,600 feet the pilot flying selects FLCH SPD with the MCP altitude set at 3,000 feet; the autopilot begins to command a climb.", "state": { "alt": 1600 }, "factors": ["mode_confusion"], "kind": "crew_action" },
-    { "t": 0, "clock": null, "phase": "approach", "actor": "PF", "text": "Pilot flying disconnects the autopilot and moves the thrust levers to idle; the autothrottle transitions to HOLD and no longer controls airspeed.", "factors": ["autothrottle_mode_confusion", "automation_dependency"], "kind": "crew_action" },
-    { "t": 1, "clock": null, "phase": "approach", "actor": "SYS", "text": "Autothrottle mode annunciation changes to HOLD on the flight mode annunciator; the change is not called out by either pilot.", "factors": ["autothrottle_mode_confusion", "inadequate_monitoring"], "kind": "system" },
-    { "t": 20, "clock": null, "phase": "approach", "actor": "PF", "text": "The pilot flying hand-flies the descent using the PAPI as reference; thrust remains at idle and airspeed decays through the 137-knot approach speed.", "factors": ["inadequate_monitoring", "low_energy_state"], "kind": "crew_action" },
-    { "t": 41, "clock": null, "phase": "approach", "actor": "SYS", "text": "The airplane passes 500 feet slightly below glidepath at about 134 knots with sink rate increasing; the PAPI shows three red lights shortly afterwards.", "state": { "alt": 500, "ias": 134 }, "factors": ["low_energy_state", "unstable_approach"], "kind": "system" },
-    { "t": 52, "clock": null, "phase": "approach", "actor": "PM", "text": "Passing about 200 feet the instructor pilot notices the four-red PAPI indication and low airspeed and calls for more speed; airspeed is about 118 knots.", "state": { "alt": 200, "ias": 118 }, "factors": ["inadequate_monitoring", "low_energy_state"], "kind": "crew_speech" },
-    { "t": 64, "clock": null, "phase": "approach", "actor": "PM", "text": "Instructor pilot calls 'sink rate' as the airplane passes about 100 feet; the pilot flying pulls the nose up without adding thrust.", "state": { "alt": 100 }, "factors": ["low_energy_state", "go_around_not_flown"], "kind": "crew_speech" },
-    { "t": 68, "clock": null, "phase": "approach", "actor": "PF", "text": "Thrust levers are advanced toward full thrust about seven seconds before impact; engines begin to spool up from idle.", "factors": ["go_around_not_flown"], "kind": "crew_action" },
-    { "t": 71, "clock": null, "phase": "approach", "actor": "SYS", "text": "Stick shaker activates about four seconds before impact.", "factors": ["low_energy_state"], "kind": "warning" },
-    { "t": 72, "clock": null, "phase": "approach", "actor": "SYS", "text": "Airspeed reaches its minimum of 103 knots about three seconds before impact; the instructor pilot calls for a go-around.", "state": { "ias": 103 }, "factors": ["low_energy_state", "go_around_not_flown"], "kind": "crew_speech" },
-    { "t": 75, "clock": "11:27:50", "phase": "landing", "actor": "SYS", "text": "Main landing gear and aft fuselage strike the seawall short of the runway 28L threshold; the tail separates and the airplane slides and spins before coming to rest.", "factors": ["tail_strike"], "kind": "outcome" },
-    { "t": 165, "clock": null, "phase": "ground", "actor": "CABIN", "text": "After a delay of about 90 seconds while the cabin manager checks with the cockpit, an evacuation is ordered when fire is seen outside; two slides have inflated inside the cabin.", "factors": ["evacuation_deficiency", "post_impact_fire"], "kind": "outcome" }
+    {
+      "t": -120,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Approach control vectors the flight for a visual approach to runway 28L; the ILS glideslope is out of service and the crew are asked to maintain 180 knots to 5 nm.",
+      "factors": [
+        "unstable_approach"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": -40,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "text": "The airplane is above the desired glidepath and fast; the pilot flying uses vertical speed mode and then increases the descent rate to regain the path.",
+      "factors": [
+        "unstable_approach"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -5,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "text": "At about 1,600 feet the pilot flying selects FLCH SPD with the MCP altitude set at 3,000 feet; the autopilot begins to command a climb.",
+      "state": {
+        "alt": 1600
+      },
+      "factors": [
+        "mode_confusion"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "text": "Pilot flying disconnects the autopilot and moves the thrust levers to idle; the autothrottle transitions to HOLD and no longer controls airspeed.",
+      "factors": [
+        "autothrottle_mode_confusion",
+        "automation_dependency"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 1,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Autothrottle mode annunciation changes to HOLD on the flight mode annunciator; the change is not called out by either pilot.",
+      "factors": [
+        "autothrottle_mode_confusion",
+        "inadequate_monitoring"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "text": "The pilot flying hand-flies the descent using the PAPI as reference; thrust remains at idle and airspeed decays through the 137-knot approach speed.",
+      "factors": [
+        "inadequate_monitoring",
+        "low_energy_state"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 41,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "The airplane passes 500 feet slightly below glidepath at about 134 knots with sink rate increasing; the PAPI shows three red lights shortly afterwards.",
+      "state": {
+        "alt": 500,
+        "ias": 134
+      },
+      "factors": [
+        "low_energy_state",
+        "unstable_approach"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 52,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PM",
+      "text": "Passing about 200 feet the instructor pilot notices the four-red PAPI indication and low airspeed and calls for more speed; airspeed is about 118 knots.",
+      "state": {
+        "alt": 200,
+        "ias": 118
+      },
+      "factors": [
+        "inadequate_monitoring",
+        "low_energy_state"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 64,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PM",
+      "text": "Instructor pilot calls 'sink rate' as the airplane passes about 100 feet; the pilot flying pulls the nose up without adding thrust.",
+      "state": {
+        "alt": 100
+      },
+      "factors": [
+        "low_energy_state",
+        "go_around_not_flown"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 68,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "text": "Thrust levers are advanced toward full thrust about seven seconds before impact; engines begin to spool up from idle.",
+      "factors": [
+        "go_around_not_flown"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 71,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Stick shaker activates about four seconds before impact.",
+      "factors": [
+        "low_energy_state"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 72,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Airspeed reaches its minimum of 103 knots about three seconds before impact; the instructor pilot calls for a go-around.",
+      "state": {
+        "ias": 103
+      },
+      "factors": [
+        "low_energy_state",
+        "go_around_not_flown"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 75,
+      "clock": "11:27:50",
+      "phase": "landing",
+      "actor": "SYS",
+      "text": "Main landing gear and aft fuselage strike the seawall short of the runway 28L threshold; the tail separates and the airplane slides and spins before coming to rest.",
+      "factors": [
+        "tail_strike"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 165,
+      "clock": null,
+      "phase": "ground",
+      "actor": "CABIN",
+      "text": "After a delay of about 90 seconds while the cabin manager checks with the cockpit, an evacuation is ordered when fire is seen outside; two slides have inflated inside the cabin.",
+      "factors": [
+        "evacuation_deficiency",
+        "post_impact_fire"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "FAA", "text": "Require Boeing to revise 777 flight crew documentation and training to clearly describe the autothrottle HOLD mode and the conditions under which the autothrottle will not maintain the selected airspeed.", "status": "closed_acceptable", "outcome": "Boeing revised 777 Flight Crew Training Manual and Operations Manual material on autothrottle modes.", "trigger_factors": ["autothrottle_mode_confusion", "manufacturer_communication"] },
-    { "id": null, "to": "FAA", "text": "Convene a panel of human factors, aviation operations and design experts to evaluate the current Boeing autoflight design philosophy and recommend changes that would minimize mode confusion.", "status": "unknown", "outcome": null, "trigger_factors": ["design_deficiency", "mode_confusion"] },
-    { "id": null, "to": "FAA", "text": "Develop a standard for low-energy alerting on transport-category airplanes so that crews receive timely warning of a low airspeed, high sink rate condition.", "status": "open", "outcome": null, "trigger_factors": ["warning_system_deficiency", "low_energy_state"] },
-    { "id": null, "to": "Asiana Airlines", "text": "Revise training to require pilots to hand-fly visual approaches and to reinforce standard callouts, monitoring and go-around decision-making, including for instructor pilots.", "status": "closed_acceptable", "outcome": "Asiana revised its training program and increased manual flying practice.", "trigger_factors": ["inadequate_training", "automation_dependency", "crm_breakdown"] },
-    { "id": null, "to": "FAA", "text": "Improve aircraft rescue and firefighting training and procedures for vehicle operation near an accident site and for interior firefighting of large aircraft.", "status": "unknown", "outcome": null, "trigger_factors": ["evacuation_deficiency"] }
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require Boeing to revise 777 flight crew documentation and training to clearly describe the autothrottle HOLD mode and the conditions under which the autothrottle will not maintain the selected airspeed.",
+      "status": "closed_acceptable",
+      "outcome": "Boeing revised 777 Flight Crew Training Manual and Operations Manual material on autothrottle modes.",
+      "trigger_factors": [
+        "autothrottle_mode_confusion",
+        "manufacturer_communication"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Convene a panel of human factors, aviation operations and design experts to evaluate the current Boeing autoflight design philosophy and recommend changes that would minimize mode confusion.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "design_deficiency",
+        "mode_confusion"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Develop a standard for low-energy alerting on transport-category airplanes so that crews receive timely warning of a low airspeed, high sink rate condition.",
+      "status": "open",
+      "outcome": null,
+      "trigger_factors": [
+        "warning_system_deficiency",
+        "low_energy_state"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Asiana Airlines",
+      "text": "Revise training to require pilots to hand-fly visual approaches and to reinforce standard callouts, monitoring and go-around decision-making, including for instructor pilots.",
+      "status": "closed_acceptable",
+      "outcome": "Asiana revised its training program and increased manual flying practice.",
+      "trigger_factors": [
+        "inadequate_training",
+        "automation_dependency",
+        "crm_breakdown"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Improve aircraft rescue and firefighting training and procedures for vehicle operation near an accident site and for interior firefighting of large aircraft.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "evacuation_deficiency"
+      ]
+    }
   ],
   "dissent": [
-    { "agency": "ARAIB", "position": "In its formal comments on the draft report the Korean ARAIB argued that the autothrottle and autopilot flight director system design and Boeing's documentation should carry greater weight in the probable cause rather than being listed only as contributing factors.", "topic": "probable cause weighting of autoflight design" }
+    {
+      "agency": "ARAIB",
+      "position": "In its formal comments on the draft report the Korean ARAIB argued that the autothrottle and autopilot flight director system design and Boeing's documentation should carry greater weight in the probable cause rather than being listed only as contributing factors.",
+      "topic": "probable cause weighting of autoflight design"
+    }
   ],
   "safety_changes": [
     "Boeing clarified 777 documentation and training material on autothrottle HOLD mode and speed protection.",
@@ -96,19 +458,30 @@
     "FAA renewed emphasis on manual flight skills and monitoring (SAFO 13002 and Operational Use of Flight Path Management Systems working group follow-up).",
     "San Francisco International Airport and other ARFF services revised procedures for vehicle movement and passenger accounting at accident sites."
   ],
-  "related": ["turkish1951", "af447", "colgan3407", "emirates521", "flydubai981", "ba38"],
+  "related": [
+    "turkish1951",
+    "af447",
+    "colgan3407",
+    "emirates521",
+    "flydubai981",
+    "ba38"
+  ],
   "fdr": "asiana214",
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1401.pdf",
     "https://www.ntsb.gov"
   ],
   "extraction": {
-    "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
     "notes": [
       "The precise clock time of the autothrottle HOLD transition is not recalled exactly; t0 is set to about 11:26:35 PDT (impact about 11:27:50) and may be off by roughly 15 seconds. Most event clocks are therefore left null and t values are relative estimates from the report's narrative (500 ft at 134 kt, 200 ft at about 118 kt, thrust advanced about 7 s before impact, stick shaker about 4 s before, minimum 103 kt about 3 s before).",
       "Serious injuries (49) per the NTSB report; 187 minor.",
       "Dissent entry reflects the Korean ARAIB's comments appended to the report as best recalled; verify wording against the report appendix.",
       "Aircraft MSN not stated; engine model PW4090 as fitted to Asiana's 777-28E ER fleet."
     ]
-  }
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Asiana_Airlines_Flight_214"
 }

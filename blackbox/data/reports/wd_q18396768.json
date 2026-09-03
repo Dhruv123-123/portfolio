@@ -1,309 +1,311 @@
 {
- "id": "wd_q18396768",
- "qid": "Q18396768",
- "tier": "wikidata",
- "depth": "sections",
- "title": "2014 Virgin Galactic crash",
- "flight_number": null,
- "date": "2014-10-31",
- "agency": "NTSB",
- "aircraft": {
-  "type": "SpaceShipTwo",
-  "manufacturer": "Scaled Composites",
-  "family": "SpaceShipTwo",
-  "registration": "N339SS"
- },
- "operator": "Virgin Galactic",
- "route": {
-  "from_name": "Mojave",
-  "to_name": "Mojave"
- },
- "location": {
-  "name": "Mojave Desert",
-  "country": "United States"
- },
- "phase": "climb",
- "occupants": 2,
- "fatalities": 1,
- "category": "LOC-I",
- "summary": "VSS Enterprise broke apart in flight during powered test flight four when co-pilot Michael Alsbury prematurely unlocked the feathering system at Mach 0.92. The NTSB determined that inadequate design safeguards, poor pilot training, and lack of FAA oversight allowed a single human error to destroy the aircraft.",
- "probable_cause": "The co-pilot's premature unlocking of the air brake feathering system during rocket-powered ascent at transonic speed caused the vehicle to break apart. Contributing factors were inadequate design safeguards that failed to prevent the hazard, insufficient pilot training, and inadequate FAA oversight of the experimental program.",
- "factors": [
-  {
-   "id": "design_deficiency",
-   "role": "latent",
-   "evidence": "the feathering system was not protected against single-point human failure; the system could be unlocked at transonic speeds with no fail-safe mechanism (p. 3)"
+  "id": "wd_q18396768",
+  "qid": "Q18396768",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2014 Virgin Galactic crash",
+  "flight_number": null,
+  "date": "2014-10-31",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "SpaceShipTwo",
+    "manufacturer": "Scaled Composites",
+    "family": "SpaceShipTwo",
+    "registration": "N339SS"
   },
-  {
-   "id": "inadequate_training",
-   "role": "contributing",
-   "evidence": "the NTSB cited poor pilot training and co-pilot's lack of rigorous training for the program (p. 3)"
+  "operator": "Virgin Galactic",
+  "route": {
+    "from_name": "Mojave",
+    "to_name": "Mojave"
   },
-  {
-   "id": "pilot_experience",
-   "role": "contributing",
-   "evidence": "the co-pilot was described as potentially anxious without recent flight experience (p. 3)"
+  "location": {
+    "name": "Mojave Desert",
+    "country": "United States",
+    "lat": 35.3088,
+    "lon": -117.9683
   },
-  {
-   "id": "regulatory_oversight",
-   "role": "latent",
-   "evidence": "lack of rigorous federal oversight by the FAA (p. 3)"
-  },
-  {
-   "id": "inappropriate_control_input",
-   "role": "initiating",
-   "evidence": "the co-pilot prematurely unlocked the feathering system's lever at slightly above Mach 1 (p. 3)"
-  },
-  {
-   "id": "structural_failure",
-   "role": "outcome",
-   "evidence": "the feathering system deployed and the space plane violently broke apart (p. 3)"
-  }
- ],
- "chain": [
-  [
-   "design_deficiency",
-   "inappropriate_control_input"
+  "phase": "climb",
+  "occupants": 2,
+  "fatalities": 1,
+  "category": "LOC-I",
+  "summary": "VSS Enterprise broke apart in flight during powered test flight four when co-pilot Michael Alsbury prematurely unlocked the feathering system at Mach 0.92. The NTSB determined that inadequate design safeguards, poor pilot training, and lack of FAA oversight allowed a single human error to destroy the aircraft.",
+  "probable_cause": "The co-pilot's premature unlocking of the air brake feathering system during rocket-powered ascent at transonic speed caused the vehicle to break apart. Contributing factors were inadequate design safeguards that failed to prevent the hazard, insufficient pilot training, and inadequate FAA oversight of the experimental program.",
+  "factors": [
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "the feathering system was not protected against single-point human failure; the system could be unlocked at transonic speeds with no fail-safe mechanism (p. 3)"
+    },
+    {
+      "id": "inadequate_training",
+      "role": "contributing",
+      "evidence": "the NTSB cited poor pilot training and co-pilot's lack of rigorous training for the program (p. 3)"
+    },
+    {
+      "id": "pilot_experience",
+      "role": "contributing",
+      "evidence": "the co-pilot was described as potentially anxious without recent flight experience (p. 3)"
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "lack of rigorous federal oversight by the FAA (p. 3)"
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "initiating",
+      "evidence": "the co-pilot prematurely unlocked the feathering system's lever at slightly above Mach 1 (p. 3)"
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "the feathering system deployed and the space plane violently broke apart (p. 3)"
+    }
   ],
-  [
-   "inadequate_training",
-   "inappropriate_control_input"
+  "chain": [
+    [
+      "design_deficiency",
+      "inappropriate_control_input"
+    ],
+    [
+      "inadequate_training",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "structural_failure"
+    ]
   ],
-  [
-   "inappropriate_control_input",
-   "structural_failure"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": null,
-   "phase": "climb",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "VSS Enterprise released from WhiteKnightTwo carrier aircraft and rocket engine fires",
-   "factors": []
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "VSS Enterprise released from WhiteKnightTwo carrier aircraft and rocket engine fires",
+      "factors": []
+    },
+    {
+      "t": 9,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Feathering system lock-unlock lever moved to unlocked position as aircraft reaches Mach 0.92 during rocket acceleration",
+      "factors": [
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "t": 11,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "SpaceShipTwo violently breaks apart at transonic speed creating 35-mile debris field",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 11,
+      "clock": null,
+      "phase": "climb",
+      "actor": "PNF",
+      "kind": "outcome",
+      "text": "Co-pilot Michael Alsbury killed; pilot Peter Siebold seriously injured and transported to hospital",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "clock": "16:28:32.68",
+      "text": ".70 [Center MFD fades to black.] HOT-1 16:28:29.92 [sigh] oohhhggg. HOT-2 16:28:31.09 ughhh. HOT-2 16:28:32.68 there ya go. SS2 Cockpit 16:28:32.93 [Center MFD begins rebooting at splash screen] HOT-2",
+      "kind": "system",
+      "actor": "SYS",
+      "phase": "unknown",
+      "factors": [],
+      "t": 59312
+    },
+    {
+      "clock": "16:28:32.93",
+      "text": "16:28:29.92 [sigh] oohhhggg. HOT-2 16:28:31.09 ughhh. HOT-2 16:28:32.68 there ya go. SS2 Cockpit 16:28:32.93 [Center MFD begins rebooting at splash screen] HOT-2 16:28:34.25 base we just had a uh cent",
+      "kind": "system",
+      "actor": "SYS",
+      "phase": "unknown",
+      "factors": [],
+      "t": 59312
+    },
+    {
+      "clock": "16:28:34.25",
+      "text": "HOT-2 16:28:32.68 there ya go. SS2 Cockpit 16:28:32.93 [Center MFD begins rebooting at splash screen] HOT-2 16:28:34.25 base we just had a uh center M-F-D failure, with uhh @, moving the uhh, right lo",
+      "kind": "system",
+      "actor": "SYS",
+      "phase": "unknown",
+      "factors": [],
+      "t": 59314
+    },
+    {
+      "clock": "16:28:45.16",
+      "text": "OT-2 16:28:34.25 base we just had a uh center M-F-D failure, with uhh @, moving the uhh, right lower small knob. BASE 16:28:45.16 base copies and were, uh, seeing it rebooting on the, uh, big screen. ",
+      "kind": "system",
+      "actor": "SYS",
+      "phase": "unknown",
+      "factors": [],
+      "t": 59325
+    },
+    {
+      "clock": "16:28:52.78",
+      "text": "right lower small knob. BASE 16:28:45.16 base copies and were, uh, seeing it rebooting on the, uh, big screen. HOT-1 16:28:52.78 I think that’s a first. at least in the airplane. HOT-2 16:29:08.83 I’m",
+      "kind": "system",
+      "actor": "SYS",
+      "phase": "unknown",
+      "factors": [],
+      "t": 59332
+    },
+    {
+      "clock": "16:29:08.83",
+      "text": "were, uh, seeing it rebooting on the, uh, big screen. HOT-1 16:28:52.78 I think that’s a first. at least in the airplane. HOT-2 16:29:08.83 I’m gunna go ahead and pull it up on my side. NTSB",
+      "kind": "system",
+      "actor": "SYS",
+      "phase": "unknown",
+      "factors": [],
+      "t": 59348
+    },
+    {
+      "clock": "16:29:29.20",
+      "text": "ge.] HOT-2 16:29:25.93 alright, uhh, I'm selecting P-F-D on my side again...and I'm punching out the lights. Pilot-2 16:29:29.20 [Reaches toward softkey and selects PFD screen.] Pilot-2 16:29:35.37 [P",
+      "kind": "system",
+      "actor": "SYS",
+      "phase": "unknown",
+      "factors": [],
+      "t": 59369
+    },
+    {
+      "clock": "16:29:53.03",
+      "text": "HOT-2 16:29:49.75 alright thirty thousand foot checks. ready for that? HOT-1 16:29:51.90 ready. HOT-2 16:29:53.03 alright, cabin altitude is fifty-three hundred. NTSB",
+      "kind": "system",
+      "actor": "SYS",
+      "phase": "unknown",
+      "factors": [],
+      "t": 59393
+    },
+    {
+      "clock": "16:29:58.60",
+      "text": "moves oxygen mask from helmet.] [Sound similar to the ambient noise of free air flowing around the pilot’s facemask mounted microphone.] HOT-2 16:29:58.60 and delta P is seven point niner. Pilot-1 16:",
+      "kind": "system",
+      "actor": "SYS",
+      "phase": "unknown",
+      "factors": [],
+      "t": 59398
+    },
+    {
+      "clock": "16:30:00.03",
+      "text": "of free air flowing around the pilot’s facemask mounted microphone.] HOT-2 16:29:58.60 and delta P is seven point niner. Pilot-1 16:30:00.03 [Switches O2 regulator OFF.] HOT-2 16:30:04.22 oxygen mask(",
+      "kind": "system",
+      "actor": "SYS",
+      "phase": "unknown",
+      "factors": [],
+      "t": 59400
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1502.pdf",
+    "https://www.ntsb.gov/news/press-releases/Pages/PR20150728.aspx",
+    "https://www.ntsb.gov/news/2014/141031b.html"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/VSS_Enterprise_crash",
+  "asn_id": null,
+  "interest": 7.48,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from NTSB official accident report",
+      "Added 12 new events from detailed timeline and CVR",
+      "All factors include page citations from report",
+      "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
+    ]
   },
-  {
-   "t": 9,
-   "clock": null,
-   "phase": "climb",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Feathering system lock-unlock lever moved to unlocked position as aircraft reaches Mach 0.92 during rocket acceleration",
-   "factors": [
-    "inappropriate_control_input"
-   ]
-  },
-  {
-   "t": 11,
-   "clock": null,
-   "phase": "climb",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "SpaceShipTwo violently breaks apart at transonic speed creating 35-mile debris field",
-   "factors": [
-    "structural_failure"
-   ]
-  },
-  {
-   "t": 11,
-   "clock": null,
-   "phase": "climb",
-   "actor": "PNF",
-   "kind": "outcome",
-   "text": "Co-pilot Michael Alsbury killed; pilot Peter Siebold seriously injured and transported to hospital",
-   "factors": [
-    "structural_failure"
-   ]
-  },
-  {
-   "clock": "16:28:32.68",
-   "text": ".70 [Center MFD fades to black.] HOT-1 16:28:29.92 [sigh] oohhhggg. HOT-2 16:28:31.09 ughhh. HOT-2 16:28:32.68 there ya go. SS2 Cockpit 16:28:32.93 [Center MFD begins rebooting at splash screen] HOT-2",
-   "kind": "system",
-   "actor": "SYS",
-   "phase": "unknown",
-   "factors": [],
-   "t": 59312
-  },
-  {
-   "clock": "16:28:32.93",
-   "text": "16:28:29.92 [sigh] oohhhggg. HOT-2 16:28:31.09 ughhh. HOT-2 16:28:32.68 there ya go. SS2 Cockpit 16:28:32.93 [Center MFD begins rebooting at splash screen] HOT-2 16:28:34.25 base we just had a uh cent",
-   "kind": "system",
-   "actor": "SYS",
-   "phase": "unknown",
-   "factors": [],
-   "t": 59312
-  },
-  {
-   "clock": "16:28:34.25",
-   "text": "HOT-2 16:28:32.68 there ya go. SS2 Cockpit 16:28:32.93 [Center MFD begins rebooting at splash screen] HOT-2 16:28:34.25 base we just had a uh center M-F-D failure, with uhh @, moving the uhh, right lo",
-   "kind": "system",
-   "actor": "SYS",
-   "phase": "unknown",
-   "factors": [],
-   "t": 59314
-  },
-  {
-   "clock": "16:28:45.16",
-   "text": "OT-2 16:28:34.25 base we just had a uh center M-F-D failure, with uhh @, moving the uhh, right lower small knob. BASE 16:28:45.16 base copies and were, uh, seeing it rebooting on the, uh, big screen. ",
-   "kind": "system",
-   "actor": "SYS",
-   "phase": "unknown",
-   "factors": [],
-   "t": 59325
-  },
-  {
-   "clock": "16:28:52.78",
-   "text": "right lower small knob. BASE 16:28:45.16 base copies and were, uh, seeing it rebooting on the, uh, big screen. HOT-1 16:28:52.78 I think that’s a first. at least in the airplane. HOT-2 16:29:08.83 I’m",
-   "kind": "system",
-   "actor": "SYS",
-   "phase": "unknown",
-   "factors": [],
-   "t": 59332
-  },
-  {
-   "clock": "16:29:08.83",
-   "text": "were, uh, seeing it rebooting on the, uh, big screen. HOT-1 16:28:52.78 I think that’s a first. at least in the airplane. HOT-2 16:29:08.83 I’m gunna go ahead and pull it up on my side. NTSB",
-   "kind": "system",
-   "actor": "SYS",
-   "phase": "unknown",
-   "factors": [],
-   "t": 59348
-  },
-  {
-   "clock": "16:29:29.20",
-   "text": "ge.] HOT-2 16:29:25.93 alright, uhh, I'm selecting P-F-D on my side again...and I'm punching out the lights. Pilot-2 16:29:29.20 [Reaches toward softkey and selects PFD screen.] Pilot-2 16:29:35.37 [P",
-   "kind": "system",
-   "actor": "SYS",
-   "phase": "unknown",
-   "factors": [],
-   "t": 59369
-  },
-  {
-   "clock": "16:29:53.03",
-   "text": "HOT-2 16:29:49.75 alright thirty thousand foot checks. ready for that? HOT-1 16:29:51.90 ready. HOT-2 16:29:53.03 alright, cabin altitude is fifty-three hundred. NTSB",
-   "kind": "system",
-   "actor": "SYS",
-   "phase": "unknown",
-   "factors": [],
-   "t": 59393
-  },
-  {
-   "clock": "16:29:58.60",
-   "text": "moves oxygen mask from helmet.] [Sound similar to the ambient noise of free air flowing around the pilot’s facemask mounted microphone.] HOT-2 16:29:58.60 and delta P is seven point niner. Pilot-1 16:",
-   "kind": "system",
-   "actor": "SYS",
-   "phase": "unknown",
-   "factors": [],
-   "t": 59398
-  },
-  {
-   "clock": "16:30:00.03",
-   "text": "of free air flowing around the pilot’s facemask mounted microphone.] HOT-2 16:29:58.60 and delta P is seven point niner. Pilot-1 16:30:00.03 [Switches O2 regulator OFF.] HOT-2 16:30:04.22 oxygen mask(",
-   "kind": "system",
-   "actor": "SYS",
-   "phase": "unknown",
-   "factors": [],
-   "t": 59400
-  }
- ],
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1502.pdf",
-  "https://www.ntsb.gov/news/press-releases/Pages/PR20150728.aspx",
-  "https://www.ntsb.gov/news/2014/141031b.html"
- ],
- "wikipedia": null,
- "asn_id": null,
- "interest": 7.48,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Extracted from NTSB official accident report",
-   "Added 12 new events from detailed timeline and CVR",
-   "All factors include page citations from report",
-   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
-  ]
- },
- "curated_id": null,
- "sources": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1502.pdf"
- ],
- "recommendations": [
-  {
-   "id": "A-15-19",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-15-20",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-15-21",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-15-22",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-15-23",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-15-24",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-15-25",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-15-26",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-15-27",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  },
-  {
-   "id": "A-15-28",
-   "to": "FAA",
-   "text": "NTSB safety recommendation",
-   "status": "unknown"
-  }
- ],
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead"
-  }
- ],
- "cvr": [],
- "dissent": [],
- "safety_changes": [],
- "related": []
+  "curated_id": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1502.pdf"
+  ],
+  "recommendations": [
+    {
+      "id": "A-15-19",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-15-20",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-15-21",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-15-22",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-15-23",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-15-24",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-15-25",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-15-26",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-15-27",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    },
+    {
+      "id": "A-15-28",
+      "to": "FAA",
+      "text": "NTSB safety recommendation",
+      "status": "unknown"
+    }
+  ],
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "cvr": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": []
 }

@@ -7,63 +7,308 @@
   "t0": null,
   "agency": "AAIC-JP",
   "agencies": [
-    { "code": "AAIC-JP", "name": "Aircraft Accident Investigation Commission", "country": "Japan", "role": "lead",
-      "report_id": "96-5", "report_title": "Aircraft Accident Investigation Report, China Airlines, Airbus Industrie A300B4-622R, B1816, Nagoya Airport, April 26, 1994", "report_date": "1996-07-19",
-      "url": "https://www.mlit.go.jp/jtsb/" },
-    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses", "country": "France", "role": "accredited_representative" },
-    { "code": "CAA-TW", "name": "Civil Aeronautics Administration", "country": "Taiwan", "role": "accredited_representative" }
+    {
+      "code": "AAIC-JP",
+      "name": "Aircraft Accident Investigation Commission",
+      "country": "Japan",
+      "role": "lead",
+      "report_id": "96-5",
+      "report_title": "Aircraft Accident Investigation Report, China Airlines, Airbus Industrie A300B4-622R, B1816, Nagoya Airport, April 26, 1994",
+      "report_date": "1996-07-19",
+      "url": "https://www.mlit.go.jp/jtsb/"
+    },
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses",
+      "country": "France",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "CAA-TW",
+      "name": "Civil Aeronautics Administration",
+      "country": "Taiwan",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Airbus A300B4-622R", "family": "A300", "manufacturer": "Airbus", "registration": "B-1816", "msn": "580", "engines": "Pratt & Whitney PW4158" },
+  "aircraft": {
+    "type": "Airbus A300B4-622R",
+    "family": "A300",
+    "manufacturer": "Airbus",
+    "registration": "B-1816",
+    "msn": "580",
+    "engines": "Pratt & Whitney PW4158"
+  },
   "operator": "China Airlines",
-  "route": { "from": "RCTP", "from_name": "Taipei Chiang Kai-shek", "to": "RJNN", "to_name": "Nagoya Komaki" },
-  "location": { "name": "Nagoya Airport, east of runway 34", "country": "Japan", "lat": 35.255, "lon": 136.924 },
+  "route": {
+    "from": "RCTP",
+    "from_name": "Taipei Chiang Kai-shek",
+    "to": "RJNN",
+    "to_name": "Nagoya Komaki"
+  },
+  "location": {
+    "name": "Nagoya Airport, east of runway 34",
+    "country": "Japan",
+    "lat": 35.255,
+    "lon": 136.924
+  },
   "phase": "approach",
-  "occupants": 271, "fatalities": 264, "injuries_serious": 7,
+  "occupants": 271,
+  "fatalities": 264,
+  "injuries_serious": 7,
   "damage": "destroyed",
   "category": "LOC-I",
   "summary": "On final approach to Nagoya the first officer inadvertently triggered the go-around (GO) lever, putting the autothrottle and flight director into go-around mode. The crew tried to continue the approach by pushing the nose down while the autopilot, engaged in go-around mode, trimmed the horizontal stabiliser fully nose-up against them. When the captain took over and added power the out-of-trim aircraft pitched up steeply, stalled at about 1,800 ft and fell onto the airport. Of 271 on board, 264 died.",
   "probable_cause": "The AAIC concluded that the accident resulted from the first officer's inadvertent activation of the GO lever, the crew's continued attempt to land while the autopilot was in go-around mode, and the resulting out-of-trim condition in which the trimmable horizontal stabiliser moved to its nose-up limit while the elevators were held nose-down. The captain's late takeover and the application of go-around thrust then produced a pitch-up beyond the crew's ability to control, leading to a stall. Contributing factors included the flight control computer design, under which the autopilot could not be overridden by control-column force in go-around mode, the fact that an Airbus service bulletin correcting this had not been incorporated, inadequate crew training on the autopilot's go-around behaviour, and deficient crew coordination.",
   "factors": [
-    { "id": "inappropriate_control_input", "role": "initiating", "evidence": "The first officer, as pilot flying, inadvertently activated the GO lever on final approach at about 1,070 ft, and later held the control column forward against the autopilot." },
-    { "id": "mode_confusion", "role": "contributing", "evidence": "The crew did not fully understand that the autothrottle, flight director and then the autopilot were in go-around mode and continued trying to land." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "The AAIC found the crew had not been adequately trained in the autopilot's behaviour in go-around mode and in the recovery from an out-of-trim condition." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "In go-around mode the A300-600 autopilot could not be disengaged by force on the control column, and the automatic trim moved the stabiliser opposite to the pilots' elevator input." },
-    { "id": "manufacturer_communication", "role": "latent", "evidence": "Airbus had issued a service bulletin to modify the flight control computers so that the autopilot would disconnect with control-column force in go-around mode, but it was not mandatory and its urgency was not conveyed." },
-    { "id": "known_defect_unresolved", "role": "latent", "evidence": "The service bulletin had not been incorporated on B-1816, and a similar earlier incident had not led to corrective action." },
-    { "id": "loss_of_pilot_control_authority", "role": "contributing", "evidence": "With the stabiliser trimmed to the nose-up limit, the elevators lacked the authority to counter the pitch-up when thrust was increased." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "The captain's instructions to the first officer were not effective, the takeover of control was late, and neither pilot monitored the trim state." },
-    { "id": "high_workload", "role": "contributing", "evidence": "The crew were dealing with unexpected autoflight behaviour at low altitude in the final phase of the approach." },
-    { "id": "aerodynamic_stall", "role": "outcome", "evidence": "The aircraft pitched up to over 50 degrees, lost airspeed and stalled at about 1,800 ft." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft fell tail-first onto the airport grass east of the runway." }
+    {
+      "id": "inappropriate_control_input",
+      "role": "initiating",
+      "evidence": "The first officer, as pilot flying, inadvertently activated the GO lever on final approach at about 1,070 ft, and later held the control column forward against the autopilot."
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "The crew did not fully understand that the autothrottle, flight director and then the autopilot were in go-around mode and continued trying to land."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "The AAIC found the crew had not been adequately trained in the autopilot's behaviour in go-around mode and in the recovery from an out-of-trim condition."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "In go-around mode the A300-600 autopilot could not be disengaged by force on the control column, and the automatic trim moved the stabiliser opposite to the pilots' elevator input."
+    },
+    {
+      "id": "manufacturer_communication",
+      "role": "latent",
+      "evidence": "Airbus had issued a service bulletin to modify the flight control computers so that the autopilot would disconnect with control-column force in go-around mode, but it was not mandatory and its urgency was not conveyed."
+    },
+    {
+      "id": "known_defect_unresolved",
+      "role": "latent",
+      "evidence": "The service bulletin had not been incorporated on B-1816, and a similar earlier incident had not led to corrective action."
+    },
+    {
+      "id": "loss_of_pilot_control_authority",
+      "role": "contributing",
+      "evidence": "With the stabiliser trimmed to the nose-up limit, the elevators lacked the authority to counter the pitch-up when thrust was increased."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The captain's instructions to the first officer were not effective, the takeover of control was late, and neither pilot monitored the trim state."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The crew were dealing with unexpected autoflight behaviour at low altitude in the final phase of the approach."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "The aircraft pitched up to over 50 degrees, lost airspeed and stalled at about 1,800 ft."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft fell tail-first onto the airport grass east of the runway."
+    }
   ],
   "chain": [
-    ["inadequate_training", "mode_confusion"],
-    ["inappropriate_control_input", "mode_confusion"],
-    ["mode_confusion", "loss_of_pilot_control_authority"],
-    ["manufacturer_communication", "known_defect_unresolved"],
-    ["known_defect_unresolved", "design_deficiency"],
-    ["design_deficiency", "loss_of_pilot_control_authority"],
-    ["high_workload", "crm_breakdown"],
-    ["crm_breakdown", "loss_of_pilot_control_authority"],
-    ["loss_of_pilot_control_authority", "aerodynamic_stall"],
-    ["aerodynamic_stall", "loss_of_control_inflight"]
+    [
+      "inadequate_training",
+      "mode_confusion"
+    ],
+    [
+      "inappropriate_control_input",
+      "mode_confusion"
+    ],
+    [
+      "mode_confusion",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "manufacturer_communication",
+      "known_defect_unresolved"
+    ],
+    [
+      "known_defect_unresolved",
+      "design_deficiency"
+    ],
+    [
+      "design_deficiency",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "high_workload",
+      "crm_breakdown"
+    ],
+    [
+      "crm_breakdown",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "loss_of_pilot_control_authority",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
-    { "t": -2592000, "clock": null, "phase": "ground", "actor": "GND", "text": "Before the accident: Airbus service bulletin A300-22-6021, modifying the flight control computers so that control-column force disengages the autopilot in go-around mode, is available but not mandatory; it has not been incorporated on B-1816.", "factors": ["manufacturer_communication", "known_defect_unresolved", "design_deficiency"], "kind": "system" },
-    { "t": -600, "clock": null, "phase": "approach", "actor": "PF", "text": "Night ILS approach to Nagoya runway 34; the first officer is pilot flying, the captain is pilot monitoring.", "kind": "crew_action" },
-    { "t": 0, "clock": null, "phase": "approach", "actor": "FO", "text": "At about 1,070 ft the first officer inadvertently triggers the GO lever; the autothrottle enters go-around mode and thrust increases, and the flight director commands go-around.", "state": { "alt": 1070 }, "factors": ["inappropriate_control_input", "mode_confusion"], "kind": "crew_action" },
-    { "t": 10, "clock": null, "phase": "approach", "actor": "CAPT", "text": "The captain tells the first officer to disengage the go-around mode and continue the approach; the first officer reduces thrust manually and pushes the control column forward, but the flight director remains in go-around mode.", "factors": ["mode_confusion", "crm_breakdown"], "kind": "crew_speech" },
-    { "t": 20, "clock": null, "phase": "approach", "actor": "SYS", "text": "The autopilots are engaged while go-around mode is active. The autopilot commands nose-up while the first officer holds the column forward; the automatic trim runs the horizontal stabiliser toward the nose-up limit while the elevators are nose-down.", "factors": ["design_deficiency", "loss_of_pilot_control_authority", "known_defect_unresolved"], "kind": "system" },
-    { "t": 45, "clock": null, "phase": "approach", "actor": "SYS", "text": "The stabiliser reaches its full nose-up position; the aircraft is severely out of trim, and the pilots are unaware of the trim state.", "factors": ["loss_of_pilot_control_authority", "inadequate_training"], "kind": "system" },
-    { "t": 60, "clock": null, "phase": "approach", "actor": "SYS", "text": "The angle of attack increases and alpha-floor protection commands go-around thrust, adding to the pitch-up tendency.", "factors": ["design_deficiency"], "kind": "system" },
-    { "t": 70, "clock": null, "phase": "go_around", "actor": "CAPT", "text": "The captain takes control and decides to go around, increasing thrust; with full nose-up trim and high thrust the aircraft pitches up steeply despite forward elevator.", "factors": ["crm_breakdown", "loss_of_pilot_control_authority", "high_workload"], "kind": "crew_action" },
-    { "t": 85, "clock": null, "phase": "go_around", "actor": "SYS", "text": "Pitch attitude exceeds 50 degrees and airspeed decays rapidly; the aircraft stalls at about 1,800 ft.", "state": { "alt": 1800, "pitch": 52 }, "factors": ["aerodynamic_stall"], "kind": "system" },
-    { "t": 100, "clock": "20:15:45", "phase": "go_around", "actor": "SYS", "text": "The aircraft falls tail-first onto the grass east of runway 34 and breaks up in flames; 264 of the 271 on board are killed, 7 survive.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+    {
+      "t": -2592000,
+      "clock": null,
+      "phase": "ground",
+      "actor": "GND",
+      "text": "Before the accident: Airbus service bulletin A300-22-6021, modifying the flight control computers so that control-column force disengages the autopilot in go-around mode, is available but not mandatory; it has not been incorporated on B-1816.",
+      "factors": [
+        "manufacturer_communication",
+        "known_defect_unresolved",
+        "design_deficiency"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": -600,
+      "clock": null,
+      "phase": "approach",
+      "actor": "PF",
+      "text": "Night ILS approach to Nagoya runway 34; the first officer is pilot flying, the captain is pilot monitoring.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "approach",
+      "actor": "FO",
+      "text": "At about 1,070 ft the first officer inadvertently triggers the GO lever; the autothrottle enters go-around mode and thrust increases, and the flight director commands go-around.",
+      "state": {
+        "alt": 1070
+      },
+      "factors": [
+        "inappropriate_control_input",
+        "mode_confusion"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "The captain tells the first officer to disengage the go-around mode and continue the approach; the first officer reduces thrust manually and pushes the control column forward, but the flight director remains in go-around mode.",
+      "factors": [
+        "mode_confusion",
+        "crm_breakdown"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "The autopilots are engaged while go-around mode is active. The autopilot commands nose-up while the first officer holds the column forward; the automatic trim runs the horizontal stabiliser toward the nose-up limit while the elevators are nose-down.",
+      "factors": [
+        "design_deficiency",
+        "loss_of_pilot_control_authority",
+        "known_defect_unresolved"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 45,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "The stabiliser reaches its full nose-up position; the aircraft is severely out of trim, and the pilots are unaware of the trim state.",
+      "factors": [
+        "loss_of_pilot_control_authority",
+        "inadequate_training"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "The angle of attack increases and alpha-floor protection commands go-around thrust, adding to the pitch-up tendency.",
+      "factors": [
+        "design_deficiency"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 70,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "CAPT",
+      "text": "The captain takes control and decides to go around, increasing thrust; with full nose-up trim and high thrust the aircraft pitches up steeply despite forward elevator.",
+      "factors": [
+        "crm_breakdown",
+        "loss_of_pilot_control_authority",
+        "high_workload"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 85,
+      "clock": null,
+      "phase": "go_around",
+      "actor": "SYS",
+      "text": "Pitch attitude exceeds 50 degrees and airspeed decays rapidly; the aircraft stalls at about 1,800 ft.",
+      "state": {
+        "alt": 1800,
+        "pitch": 52
+      },
+      "factors": [
+        "aerodynamic_stall"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 100,
+      "clock": "20:15:45",
+      "phase": "go_around",
+      "actor": "SYS",
+      "text": "The aircraft falls tail-first onto the grass east of runway 34 and breaks up in flames; 264 of the 271 on board are killed, 7 survive.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "Ministry of Transport (Japan) / DGAC France / Airbus", "text": "Make mandatory the flight control computer modification allowing the autopilot to be disengaged by control-column force in go-around mode, and review the design so that the autopilot cannot trim against sustained pilot input.", "status": "closed_acceptable", "outcome": "The DGAC issued an airworthiness directive mandating the service bulletin on A300-600 and A310 aircraft.", "trigger_factors": ["design_deficiency", "known_defect_unresolved", "manufacturer_communication"] },
-    { "id": null, "to": "China Airlines / civil aviation authorities", "text": "Improve crew training on autoflight mode awareness, the go-around mode behaviour of the autopilot, out-of-trim recovery and crew coordination.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_training", "mode_confusion", "crm_breakdown"] }
+    {
+      "id": null,
+      "to": "Ministry of Transport (Japan) / DGAC France / Airbus",
+      "text": "Make mandatory the flight control computer modification allowing the autopilot to be disengaged by control-column force in go-around mode, and review the design so that the autopilot cannot trim against sustained pilot input.",
+      "status": "closed_acceptable",
+      "outcome": "The DGAC issued an airworthiness directive mandating the service bulletin on A300-600 and A310 aircraft.",
+      "trigger_factors": [
+        "design_deficiency",
+        "known_defect_unresolved",
+        "manufacturer_communication"
+      ]
+    },
+    {
+      "id": null,
+      "to": "China Airlines / civil aviation authorities",
+      "text": "Improve crew training on autoflight mode awareness, the go-around mode behaviour of the autopilot, out-of-trim recovery and crew coordination.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_training",
+        "mode_confusion",
+        "crm_breakdown"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -71,16 +316,27 @@
     "Operators reinforced training on autoflight mode awareness and recovery from out-of-trim conditions.",
     "China Airlines undertook a review of its training and operating procedures under pressure from regulators."
   ],
-  "related": ["asiana214", "turkish1951", "airinter148"],
+  "related": [
+    "asiana214",
+    "turkish1951",
+    "airinter148"
+  ],
   "fdr": null,
   "sources": [
     "https://www.mlit.go.jp/jtsb/",
     "https://www.bea.aero/"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
-    "Only the impact time (20:15:45 JST) is given as a clock string; event offsets are approximate and t0 is the GO lever activation at about 20:14.",
-    "The stabiliser trim reached the nose-up limit (about -12.3 degrees); the exact value is omitted from the state fields.",
-    "The service bulletin number is given as A300-22-6021 from memory and should be verified.",
-    "The report date (July 1996) and report number (96-5) are from memory."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Only the impact time (20:15:45 JST) is given as a clock string; event offsets are approximate and t0 is the GO lever activation at about 20:14.",
+      "The stabiliser trim reached the nose-up limit (about -12.3 degrees); the exact value is omitted from the state fields.",
+      "The service bulletin number is given as A300-22-6021 from memory and should be verified.",
+      "The report date (July 1996) and report number (96-5) are from memory."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/China_Airlines_Flight_140"
 }

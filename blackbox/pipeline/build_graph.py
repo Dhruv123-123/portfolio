@@ -49,6 +49,12 @@ def build_catalog(records_by_curated_id):
             row["s"] = (rec.get("summary") or "")[:280]
             row["d"] = bool(rec.get("dissent"))
             row["r"] = bool(rec.get("report_links"))
+            loc = rec.get("location") or {}
+            if loc.get("lat") is not None and loc.get("lon") is not None:
+                row["la"] = round(loc["lat"], 2)
+                row["lo"] = round(loc["lon"], 2)
+            if rec.get("wikipedia"):
+                row["w"] = rec["wikipedia"].replace("https://en.wikipedia.org/wiki/", "")
             index.append(row)
             shards[rec["date"][:4]].append(rec)
             for f in rec.get("factors", []):

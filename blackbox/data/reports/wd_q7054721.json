@@ -20,7 +20,9 @@
   },
   "location": {
     "name": "O'Hare International Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 41.9911,
+    "lon": -87.9222
   },
   "phase": "approach",
   "occupants": 45,

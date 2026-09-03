@@ -38,7 +38,9 @@
   },
   "location": {
     "name": "Sacramento Executive Airport, Sacramento, California",
-    "country": "United States"
+    "country": "United States",
+    "lat": 38.5211,
+    "lon": -121.4992
   },
   "phase": "takeoff",
   "occupants": 1,
@@ -76,9 +78,18 @@
     }
   ],
   "chain": [
-    ["pilot_experience", "inappropriate_control_input"],
-    ["inappropriate_control_input", "runway_overrun"],
-    ["runway_overrun", "post_impact_fire"]
+    [
+      "pilot_experience",
+      "inappropriate_control_input"
+    ],
+    [
+      "inappropriate_control_input",
+      "runway_overrun"
+    ],
+    [
+      "runway_overrun",
+      "post_impact_fire"
+    ]
   ],
   "events": [
     {
@@ -88,7 +99,10 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Sabre takeoff commenced on runway 30 from Sacramento Executive Airport",
-      "state": {"ias": 0, "pitch": 0},
+      "state": {
+        "ias": 0,
+        "pitch": 0
+      },
       "factors": []
     },
     {
@@ -98,7 +112,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "At approximately 105 knots, pilot applied back pressure to raise nosewheel off runway",
-      "state": {"ias": 105},
+      "state": {
+        "ias": 105
+      },
       "factors": []
     },
     {
@@ -108,8 +124,14 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Initial lift-off occurred at 2,800-2,900 feet from end of runway at 124 knots, 11° nose-up attitude",
-      "state": {"ias": 124, "alt": 7, "pitch": 11},
-      "factors": ["inappropriate_control_input"]
+      "state": {
+        "ias": 124,
+        "alt": 7,
+        "pitch": 11
+      },
+      "factors": [
+        "inappropriate_control_input"
+      ]
     },
     {
       "t": 30,
@@ -118,8 +140,14 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft reached 130.5 knots and 15.5° nose-up attitude but acceleration stopped and speed began decreasing; aircraft 7 feet above ground",
-      "state": {"ias": 130.5, "alt": 7, "pitch": 15.5},
-      "factors": ["inappropriate_control_input"]
+      "state": {
+        "ias": 130.5,
+        "alt": 7,
+        "pitch": 15.5
+      },
+      "factors": [
+        "inappropriate_control_input"
+      ]
     },
     {
       "t": 32,
@@ -128,7 +156,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Pilot felt and heard unusual vibration; instinctively lowered nose",
-      "state": {"ias": 128},
+      "state": {
+        "ias": 128
+      },
       "factors": []
     },
     {
@@ -138,7 +168,10 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft settled back to runway at approximately 3,700 feet at 128 knots, 10° nose-up attitude",
-      "state": {"ias": 128, "pitch": 10},
+      "state": {
+        "ias": 128,
+        "pitch": 10
+      },
       "factors": []
     },
     {
@@ -148,8 +181,13 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Pilot resumed takeoff attitude for second attempt; speed increased to approximately 137 knots with 16.5° nose-up attitude",
-      "state": {"ias": 137, "pitch": 16.5},
-      "factors": ["inappropriate_control_input"]
+      "state": {
+        "ias": 137,
+        "pitch": 16.5
+      },
+      "factors": [
+        "inappropriate_control_input"
+      ]
     },
     {
       "t": 55,
@@ -158,8 +196,14 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Second lift-off occurred at approximately 5,005 feet from end of runway; pilot realized aircraft would not fly",
-      "state": {"ias": 137, "alt": 8, "pitch": 16.5},
-      "factors": ["inappropriate_control_input"]
+      "state": {
+        "ias": 137,
+        "alt": 8,
+        "pitch": 16.5
+      },
+      "factors": [
+        "inappropriate_control_input"
+      ]
     },
     {
       "t": 57,
@@ -168,7 +212,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Pilot began rejected takeoff procedure; closed throttle and touched down",
-      "state": {"ias": 120},
+      "state": {
+        "ias": 120
+      },
       "factors": []
     },
     {
@@ -178,8 +224,12 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft hit perimeter fence and became airborne again at approximately 800 feet from end of runway; crossed Freeport Boulevard",
-      "state": {"ias": 100},
-      "factors": ["runway_overrun"]
+      "state": {
+        "ias": 100
+      },
+      "factors": [
+        "runway_overrun"
+      ]
     },
     {
       "t": 61,
@@ -199,7 +249,9 @@
       "kind": "outcome",
       "text": "Aircraft crashed through ice cream parlor; external fuel tanks ruptured and ignited; aircraft destroyed by impact and fire",
       "state": {},
-      "factors": ["post_impact_fire"]
+      "factors": [
+        "post_impact_fire"
+      ]
     }
   ],
   "cvr": [],
@@ -209,14 +261,18 @@
       "to": "FAA",
       "text": "Limit the issuance of experimental certificates to those aircraft and operations that are truly experimental in nature and reclassify the other activities listed in FAR 21.191 in a manner that will permit more selective regulatory control without unduly inhibiting the promotion of aviation.",
       "status": "closed_acceptable",
-      "trigger_factors": ["pilot_experience"]
+      "trigger_factors": [
+        "pilot_experience"
+      ]
     },
     {
       "id": "A-72-220",
       "to": "FAA",
       "text": "Establish pilot experience, transition, and proficiency standards applicable to the operation of all high-performance surplus military aircraft, reciprocating as well as turbine engine powered.",
       "status": "closed_acceptable",
-      "trigger_factors": ["pilot_experience"]
+      "trigger_factors": [
+        "pilot_experience"
+      ]
     },
     {
       "id": "A-72-221",

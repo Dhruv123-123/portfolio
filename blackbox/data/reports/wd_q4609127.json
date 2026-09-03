@@ -1,200 +1,202 @@
 {
- "id": "wd_q4609127",
- "qid": "Q4609127",
- "tier": "wikidata",
- "depth": "sections",
- "title": "2007 Phoenix news helicopter collision",
- "flight_number": null,
- "date": "2007-07-27",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead",
-   "report_id": "AAR09-02"
-  }
- ],
- "aircraft": {
-  "type": "AS-350 AStar",
-  "manufacturer": "Aérospatiale",
-  "family": "AS-350",
-  "registration": null
- },
- "operator": "KNXV-TV and KTVK",
- "route": {},
- "location": {
-  "name": "Steele Indian School Park, Phoenix",
-  "country": "United States",
-  "latitude": 33.4484,
-  "longitude": -112.0712
- },
- "phase": "cruise",
- "occupants": 4,
- "fatalities": 4,
- "category": "MAC",
- "summary": "Two AS-350 AStar helicopters operating news coverage of a Phoenix police pursuit collided at 12:46 p.m. MST on 27 July 2007 over Steele Indian School Park. Both pilots were performing concurrent reporting and visual tracking duties while flying and failed to see and avoid the other helicopter. Contributing factors included high workload from dual reporting duties, lack of formal procedures for coordinating air operations among Phoenix news helicopters, and the failure of both pilots to maintain situational awareness. All four occupants were killed in the collision and subsequent crashes.",
- "probable_cause": "Both pilots' failure to see and avoid the other helicopter. Contributing factors were the pilots' responsibility to perform concurrent reporting and visual tracking duties that distracted from collision avoidance, and the absence of formal procedures for news helicopter operations in Phoenix airspace. (p. 1, 20)",
- "factors": [
-  {
-   "id": "loss_of_situational_awareness",
-   "role": "initiating",
-   "evidence": "Despite operating in same airspace covering same event, both pilots failed to see other helicopter until too late; both were assigned to perform reporting and visual tracking duties in addition to flying (p. 1, 20)."
-  },
-  {
-   "id": "high_workload",
-   "role": "contributing",
-   "evidence": "Both pilots were assigned to perform reporting and visual tracking duties in addition to flying, creating task saturation and divided attention during critical phase (p. 1, 20)."
-  },
-  {
-   "id": "design_deficiency",
-   "role": "contributing",
-   "evidence": "Absence of formal procedures for coordinating air operations among Phoenix news helicopters despite multiple news helicopters operating in same airspace covering same police pursuit (p. 1, 20)."
-  },
-  {
-   "id": "midair_collision",
-   "role": "outcome",
-   "evidence": "Two helicopters collided in mid-air over central Phoenix at approximately 12:46:18 p.m. MST at Steele Indian School Park (p. 1)."
-  },
-  {
-   "id": "ground_collision",
-   "role": "outcome",
-   "evidence": "Both aircraft descended toward ground after collision and crashed in Steele Indian School Park, killing all four occupants (p. 1)."
-  }
- ],
- "chain": [
-  [
-   "high_workload",
-   "loss_of_situational_awareness"
+  "id": "wd_q4609127",
+  "qid": "Q4609127",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2007 Phoenix news helicopter collision",
+  "flight_number": null,
+  "date": "2007-07-27",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR09-02"
+    }
   ],
-  [
-   "design_deficiency",
-   "loss_of_situational_awareness"
+  "aircraft": {
+    "type": "AS-350 AStar",
+    "manufacturer": "Aérospatiale",
+    "family": "AS-350",
+    "registration": null
+  },
+  "operator": "KNXV-TV and KTVK",
+  "route": {},
+  "location": {
+    "name": "Steele Indian School Park, Phoenix",
+    "country": "United States",
+    "latitude": 33.4484,
+    "longitude": -112.0712,
+    "lat": 33.4967,
+    "lon": -112.0706
+  },
+  "phase": "cruise",
+  "occupants": 4,
+  "fatalities": 4,
+  "category": "MAC",
+  "summary": "Two AS-350 AStar helicopters operating news coverage of a Phoenix police pursuit collided at 12:46 p.m. MST on 27 July 2007 over Steele Indian School Park. Both pilots were performing concurrent reporting and visual tracking duties while flying and failed to see and avoid the other helicopter. Contributing factors included high workload from dual reporting duties, lack of formal procedures for coordinating air operations among Phoenix news helicopters, and the failure of both pilots to maintain situational awareness. All four occupants were killed in the collision and subsequent crashes.",
+  "probable_cause": "Both pilots' failure to see and avoid the other helicopter. Contributing factors were the pilots' responsibility to perform concurrent reporting and visual tracking duties that distracted from collision avoidance, and the absence of formal procedures for news helicopter operations in Phoenix airspace. (p. 1, 20)",
+  "factors": [
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "initiating",
+      "evidence": "Despite operating in same airspace covering same event, both pilots failed to see other helicopter until too late; both were assigned to perform reporting and visual tracking duties in addition to flying (p. 1, 20)."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "Both pilots were assigned to perform reporting and visual tracking duties in addition to flying, creating task saturation and divided attention during critical phase (p. 1, 20)."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "Absence of formal procedures for coordinating air operations among Phoenix news helicopters despite multiple news helicopters operating in same airspace covering same police pursuit (p. 1, 20)."
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "Two helicopters collided in mid-air over central Phoenix at approximately 12:46:18 p.m. MST at Steele Indian School Park (p. 1)."
+    },
+    {
+      "id": "ground_collision",
+      "role": "outcome",
+      "evidence": "Both aircraft descended toward ground after collision and crashed in Steele Indian School Park, killing all four occupants (p. 1)."
+    }
   ],
-  [
-   "loss_of_situational_awareness",
-   "midair_collision"
+  "chain": [
+    [
+      "high_workload",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "design_deficiency",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "midair_collision"
+    ],
+    [
+      "midair_collision",
+      "ground_collision"
+    ]
   ],
-  [
-   "midair_collision",
-   "ground_collision"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "12:40",
-   "phase": "cruise",
-   "actor": "ATC",
-   "kind": "crew_action",
-   "text": "Both KNXV-TV and KTVK helicopters deployed to cover live police pursuit in Phoenix metropolitan area (p. 1)",
-   "factors": []
+  "events": [
+    {
+      "t": 0,
+      "clock": "12:40",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "crew_action",
+      "text": "Both KNXV-TV and KTVK helicopters deployed to cover live police pursuit in Phoenix metropolitan area (p. 1)",
+      "factors": []
+    },
+    {
+      "t": 360,
+      "clock": "12:45",
+      "phase": "cruise",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Both helicopters broadcasting police pursuit on live television; pilots performing concurrent reporting duties while flying and tracking suspect vehicle below (p. 1, 20)",
+      "factors": [
+        "high_workload"
+      ]
+    },
+    {
+      "t": 378,
+      "clock": "12:46:18",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Two helicopters collide in mid-air over central Phoenix at Steele Indian School Park (p. 1)",
+      "factors": [
+        "midair_collision",
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 420,
+      "clock": "12:47",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Both aircraft descend toward ground after collision, apparently out of control (p. 1)",
+      "factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "t": 480,
+      "clock": "12:48",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Both helicopters crash in Steele Indian School Park within minutes of collision (p. 1)",
+      "factors": [
+        "ground_collision"
+      ]
+    },
+    {
+      "t": 600,
+      "clock": "12:50",
+      "phase": "landing",
+      "actor": "GND",
+      "kind": "outcome",
+      "text": "Emergency responders arrive at scene; all four occupants (2 pilots, 2 reporters/photographers) confirmed fatal (p. 1)",
+      "factors": []
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-09-58",
+      "category": "Class A",
+      "priority": "Safety",
+      "text": "Recommend that all news helicopter operators in the Phoenix, Arizona metropolitan area develop and implement procedures for coordinating air operations in the area. (p. 20)",
+      "status": "unknown"
+    },
+    {
+      "id": "A-09-59",
+      "category": "Class A",
+      "priority": "Safety",
+      "text": "Recommend that the Federal Aviation Administration, in coordination with the Department of Homeland Security, develop and implement guidance material and policy for news helicopter operators on how they should coordinate and manage multiple news helicopters assigned to cover the same news event. (p. 20)",
+      "status": "unknown"
+    },
+    {
+      "id": "A-09-60",
+      "category": "Class A",
+      "priority": "Safety",
+      "text": "Recommend that the Federal Aviation Administration incorporate existing and new recommendations related to operational procedures and pilot training requirements for news helicopter operations into an advisory circular or in an amendment to an existing advisory circular. (p. 20)",
+      "status": "unknown"
+    }
+  ],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0902.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Phoenix_news_helicopter_collision",
+  "asn_id": null,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0902.pdf"
+  ],
+  "interest": 8.43,
+  "curated_id": null,
+  "fdr": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read NTSB Accident Report AAR 09-02 sections on History of the Flight, Analysis, and Recommendations",
+      "Extracted 6 events with clock times from pre-collision through post-impact phases",
+      "6 factors addressing pilot performance, workload, and coordination deficiency",
+      "3 recommendations addressing news helicopter operational coordination procedures",
+      "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
+    ]
   },
-  {
-   "t": 360,
-   "clock": "12:45",
-   "phase": "cruise",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Both helicopters broadcasting police pursuit on live television; pilots performing concurrent reporting duties while flying and tracking suspect vehicle below (p. 1, 20)",
-   "factors": [
-    "high_workload"
-   ]
-  },
-  {
-   "t": 378,
-   "clock": "12:46:18",
-   "phase": "cruise",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Two helicopters collide in mid-air over central Phoenix at Steele Indian School Park (p. 1)",
-   "factors": [
-    "midair_collision",
-    "loss_of_situational_awareness"
-   ]
-  },
-  {
-   "t": 420,
-   "clock": "12:47",
-   "phase": "descent",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Both aircraft descend toward ground after collision, apparently out of control (p. 1)",
-   "factors": [
-    "midair_collision"
-   ]
-  },
-  {
-   "t": 480,
-   "clock": "12:48",
-   "phase": "cruise",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Both helicopters crash in Steele Indian School Park within minutes of collision (p. 1)",
-   "factors": [
-    "ground_collision"
-   ]
-  },
-  {
-   "t": 600,
-   "clock": "12:50",
-   "phase": "landing",
-   "actor": "GND",
-   "kind": "outcome",
-   "text": "Emergency responders arrive at scene; all four occupants (2 pilots, 2 reporters/photographers) confirmed fatal (p. 1)",
-   "factors": []
-  }
- ],
- "recommendations": [
-  {
-   "id": "A-09-58",
-   "category": "Class A",
-   "priority": "Safety",
-   "text": "Recommend that all news helicopter operators in the Phoenix, Arizona metropolitan area develop and implement procedures for coordinating air operations in the area. (p. 20)",
-   "status": "unknown"
-  },
-  {
-   "id": "A-09-59",
-   "category": "Class A",
-   "priority": "Safety",
-   "text": "Recommend that the Federal Aviation Administration, in coordination with the Department of Homeland Security, develop and implement guidance material and policy for news helicopter operators on how they should coordinate and manage multiple news helicopters assigned to cover the same news event. (p. 20)",
-   "status": "unknown"
-  },
-  {
-   "id": "A-09-60",
-   "category": "Class A",
-   "priority": "Safety",
-   "text": "Recommend that the Federal Aviation Administration incorporate existing and new recommendations related to operational procedures and pilot training requirements for news helicopter operations into an advisory circular or in an amendment to an existing advisory circular. (p. 20)",
-   "status": "unknown"
-  }
- ],
- "sources": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0902.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/Phoenix_news_helicopter_collision",
- "asn_id": null,
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0902.pdf"
- ],
- "interest": 8.43,
- "curated_id": null,
- "fdr": null,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5-20251001",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Read NTSB Accident Report AAR 09-02 sections on History of the Flight, Analysis, and Recommendations",
-   "Extracted 6 events with clock times from pre-collision through post-impact phases",
-   "6 factors addressing pilot performance, workload, and coordination deficiency",
-   "3 recommendations addressing news helicopter operational coordination procedures",
-   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
-  ]
- },
- "agency": "NTSB",
- "cvr": [],
- "dissent": [],
- "safety_changes": [],
- "related": []
+  "agency": "NTSB",
+  "cvr": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": []
 }

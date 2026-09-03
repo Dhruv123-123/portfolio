@@ -7,16 +7,38 @@
   "t0": "2000-02-01T00:09:16Z",
   "agency": "NTSB",
   "agencies": [
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
       "report_id": "NTSB/AAR-02/01",
       "report_title": "Loss of Control and Impact with Pacific Ocean, Alaska Airlines Flight 261, McDonnell Douglas MD-83, N963AS, About 2.7 Miles North of Anacapa Island, California, January 31, 2000",
       "report_date": "2002-12-30",
-      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0201.pdf" }
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0201.pdf"
+    }
   ],
-  "aircraft": { "type": "McDonnell Douglas MD-83", "family": "MD-80", "manufacturer": "McDonnell Douglas", "registration": "N963AS", "msn": "53077", "engines": "Pratt & Whitney JT8D-219" },
+  "aircraft": {
+    "type": "McDonnell Douglas MD-83",
+    "family": "MD-80",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "N963AS",
+    "msn": "53077",
+    "engines": "Pratt & Whitney JT8D-219"
+  },
   "operator": "Alaska Airlines",
-  "route": { "from": "MMPR", "from_name": "Puerto Vallarta Licenciado Gustavo Díaz Ordaz", "to": "KSFO", "to_name": "San Francisco International (continuing to Seattle)" },
-  "location": { "name": "Pacific Ocean about 2.7 miles north of Anacapa Island, California", "country": "USA", "lat": 34.06, "lon": -119.35 },
+  "route": {
+    "from": "MMPR",
+    "from_name": "Puerto Vallarta Licenciado Gustavo Díaz Ordaz",
+    "to": "KSFO",
+    "to_name": "San Francisco International (continuing to Seattle)"
+  },
+  "location": {
+    "name": "Pacific Ocean about 2.7 miles north of Anacapa Island, California",
+    "country": "USA",
+    "lat": 34.06,
+    "lon": -119.35
+  },
   "phase": "cruise",
   "occupants": 88,
   "fatalities": 88,
@@ -26,58 +48,344 @@
   "summary": "The MD-83's horizontal stabilizer jammed during climb out of Puerto Vallarta and the crew spent much of the cruise troubleshooting with Alaska Airlines maintenance and dispatch. When the crew ran the trim motors the worn threads of the jackscrew acme nut stripped and the stabilizer moved to an extreme nose-down position; the airplane dived from 31,000 feet before the crew regained control at about 24,000 feet. About ten minutes later, while diverting to Los Angeles, the jackscrew's lower stop failed, the stabilizer went beyond its limit and the airplane pitched over, inverted, and struck the Pacific Ocean. All 88 on board died.",
   "probable_cause": "A loss of airplane pitch control resulting from the in-flight failure of the horizontal stabilizer trim system jackscrew assembly's acme nut threads. The thread failure was caused by excessive wear resulting from Alaska Airlines' insufficient lubrication of the jackscrew assembly. Contributing to the accident were Alaska Airlines' extended lubrication interval and the FAA's approval of that extension, which increased the likelihood that a missed or inadequate lubrication would result in excessive wear of the acme nut threads, and Alaska Airlines' extended end play check interval and the FAA's approval of that extension, which allowed the excessive wear of the acme nut threads to progress to failure without the opportunity for detection. Also contributing to the accident was the absence on the McDonnell Douglas MD-80 of a fail-safe mechanism to prevent the catastrophic effects of total acme nut thread loss.",
   "factors": [
-    { "id": "inadequate_lubrication", "role": "initiating", "evidence": "The acme nut threads wore away because of insufficient lubrication of the jackscrew assembly; very little grease was found on the recovered jackscrew." },
-    { "id": "maintenance_error", "role": "contributing", "evidence": "Lubrication tasks were either missed or performed inadequately, and the last end play check recorded a value near the replacement limit without the nut being replaced." },
-    { "id": "inadequate_inspection", "role": "contributing", "evidence": "Alaska Airlines' end play check interval had been extended to about 9,550 flight hours, allowing the excessive thread wear to progress to failure undetected." },
-    { "id": "regulatory_oversight", "role": "contributing", "evidence": "The FAA approved Alaska Airlines' extensions of both the lubrication interval and the end play check interval without adequate technical justification, and its oversight of the airline's maintenance program was deficient." },
-    { "id": "operator_safety_culture", "role": "latent", "evidence": "Alaska Airlines' maintenance program repeatedly extended maintenance intervals; the report cited weaknesses in the airline's maintenance and quality control." },
-    { "id": "stabilizer_trim_failure", "role": "contributing", "evidence": "The stabilizer jammed during the climb and, when the crew later operated the trim motors, moved rapidly nose down as the remaining acme nut threads stripped." },
-    { "id": "structural_failure", "role": "contributing", "evidence": "About ten minutes after the first dive the jackscrew's lower mechanical stop and torque tube failed, allowing the stabilizer to move beyond its normal nose-down limit." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The MD-80 jackscrew assembly had no fail-safe mechanism to prevent the catastrophic effects of total acme nut thread loss." },
-    { "id": "certification_shortfall", "role": "latent", "evidence": "The original certification of the DC-9/MD-80 stabilizer trim system treated the acme nut as structurally reliable without requiring a fail-safe load path." },
-    { "id": "loss_of_pilot_control_authority", "role": "contributing", "evidence": "With the stabilizer at an extreme nose-down position the elevators could not counter the pitching moment; the crew's control column and trim inputs had no effect." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The airplane pitched over, rolled inverted and descended into the ocean." }
+    {
+      "id": "inadequate_lubrication",
+      "role": "initiating",
+      "evidence": "The acme nut threads wore away because of insufficient lubrication of the jackscrew assembly; very little grease was found on the recovered jackscrew."
+    },
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "Lubrication tasks were either missed or performed inadequately, and the last end play check recorded a value near the replacement limit without the nut being replaced."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "Alaska Airlines' end play check interval had been extended to about 9,550 flight hours, allowing the excessive thread wear to progress to failure undetected."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "contributing",
+      "evidence": "The FAA approved Alaska Airlines' extensions of both the lubrication interval and the end play check interval without adequate technical justification, and its oversight of the airline's maintenance program was deficient."
+    },
+    {
+      "id": "operator_safety_culture",
+      "role": "latent",
+      "evidence": "Alaska Airlines' maintenance program repeatedly extended maintenance intervals; the report cited weaknesses in the airline's maintenance and quality control."
+    },
+    {
+      "id": "stabilizer_trim_failure",
+      "role": "contributing",
+      "evidence": "The stabilizer jammed during the climb and, when the crew later operated the trim motors, moved rapidly nose down as the remaining acme nut threads stripped."
+    },
+    {
+      "id": "structural_failure",
+      "role": "contributing",
+      "evidence": "About ten minutes after the first dive the jackscrew's lower mechanical stop and torque tube failed, allowing the stabilizer to move beyond its normal nose-down limit."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The MD-80 jackscrew assembly had no fail-safe mechanism to prevent the catastrophic effects of total acme nut thread loss."
+    },
+    {
+      "id": "certification_shortfall",
+      "role": "latent",
+      "evidence": "The original certification of the DC-9/MD-80 stabilizer trim system treated the acme nut as structurally reliable without requiring a fail-safe load path."
+    },
+    {
+      "id": "loss_of_pilot_control_authority",
+      "role": "contributing",
+      "evidence": "With the stabilizer at an extreme nose-down position the elevators could not counter the pitching moment; the crew's control column and trim inputs had no effect."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The airplane pitched over, rolled inverted and descended into the ocean."
+    }
   ],
   "chain": [
-    ["regulatory_oversight", "inadequate_inspection"],
-    ["regulatory_oversight", "inadequate_lubrication"],
-    ["operator_safety_culture", "maintenance_error"],
-    ["maintenance_error", "inadequate_lubrication"],
-    ["inadequate_lubrication", "stabilizer_trim_failure"],
-    ["inadequate_inspection", "stabilizer_trim_failure"],
-    ["stabilizer_trim_failure", "structural_failure"],
-    ["certification_shortfall", "design_deficiency"],
-    ["design_deficiency", "structural_failure"],
-    ["structural_failure", "loss_of_pilot_control_authority"],
-    ["loss_of_pilot_control_authority", "loss_of_control_inflight"]
+    [
+      "regulatory_oversight",
+      "inadequate_inspection"
+    ],
+    [
+      "regulatory_oversight",
+      "inadequate_lubrication"
+    ],
+    [
+      "operator_safety_culture",
+      "maintenance_error"
+    ],
+    [
+      "maintenance_error",
+      "inadequate_lubrication"
+    ],
+    [
+      "inadequate_lubrication",
+      "stabilizer_trim_failure"
+    ],
+    [
+      "inadequate_inspection",
+      "stabilizer_trim_failure"
+    ],
+    [
+      "stabilizer_trim_failure",
+      "structural_failure"
+    ],
+    [
+      "certification_shortfall",
+      "design_deficiency"
+    ],
+    [
+      "design_deficiency",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "loss_of_pilot_control_authority"
+    ],
+    [
+      "loss_of_pilot_control_authority",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
-    { "t": -9000, "clock": null, "phase": "climb", "actor": "SYS", "text": "During the climb out of Puerto Vallarta the horizontal stabilizer trim stops responding; the autopilot holds pitch with elevator and the crew begin troubleshooting a jammed stabilizer.", "factors": ["stabilizer_trim_failure"], "kind": "system" },
-    { "t": -3600, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "The crew discuss the jammed stabilizer with Alaska Airlines dispatch and maintenance control by radio and consider whether to divert to Los Angeles or continue to San Francisco.", "factors": ["operator_safety_culture"], "kind": "crew_speech" },
-    { "t": -60, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "Cruising at 31,050 feet the captain, with the autopilot disengaged, operates the primary and alternate trim switches together to try to free the stabilizer.", "state": { "alt": 31050 }, "factors": ["stabilizer_trim_failure"], "kind": "crew_action" },
-    { "t": 0, "clock": "16:09:16", "phase": "cruise", "actor": "SYS", "text": "The remaining acme nut threads strip; the stabilizer moves rapidly to a nose-down position and the airplane pitches over and begins a steep descent.", "state": { "alt": 31050 }, "factors": ["stabilizer_trim_failure", "inadequate_lubrication", "loss_of_pilot_control_authority"], "kind": "system" },
-    { "t": 20, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Both pilots pull on the control columns with well over 100 pounds of force to arrest the dive.", "factors": ["loss_of_pilot_control_authority"], "kind": "crew_action" },
-    { "t": 80, "clock": null, "phase": "descent", "actor": "SYS", "text": "The airplane is recovered to level flight at about 24,000 feet after losing roughly 7,000 feet; the crew declare an emergency to Los Angeles Center and request a divert to Los Angeles.", "state": { "alt": 24000 }, "factors": ["loss_of_pilot_control_authority"], "kind": "system" },
-    { "t": 180, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Captain tells ATC they are stabilized, slowing, and will 'do a little test flight' with slats and flaps to check controllability before landing.", "kind": "crew_speech" },
-    { "t": 420, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Descending through about 18,000 feet the crew extend slats and flaps 11 to evaluate handling, then retract them when the pitch forces become worse.", "state": { "alt": 18000 }, "factors": ["loss_of_pilot_control_authority"], "kind": "crew_action" },
-    { "t": 619, "clock": "16:19:36", "phase": "descent", "actor": "SYS", "text": "The cockpit voice recorder records an extremely loud noise as the jackscrew's lower stop fails; the stabilizer travels past its nose-down limit and the airplane pitches over sharply.", "factors": ["structural_failure", "design_deficiency", "loss_of_control_inflight"], "kind": "system" },
-    { "t": 630, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Captain transmits 'mayday' and the crew attempt to regain control, including trying to fly the airplane inverted.", "factors": ["loss_of_control_inflight"], "kind": "crew_speech" },
-    { "t": 660, "clock": null, "phase": "descent", "actor": "SYS", "text": "The airplane descends inverted and nearly vertically, pitching and rolling, with no pitch authority available to the crew.", "factors": ["loss_of_control_inflight"], "kind": "system" },
-    { "t": 700, "clock": "16:20:57", "phase": "descent", "actor": "SYS", "text": "End of recording; the airplane strikes the Pacific Ocean north of Anacapa Island and is destroyed.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+    {
+      "t": -9000,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "During the climb out of Puerto Vallarta the horizontal stabilizer trim stops responding; the autopilot holds pitch with elevator and the crew begin troubleshooting a jammed stabilizer.",
+      "factors": [
+        "stabilizer_trim_failure"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": -3600,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "The crew discuss the jammed stabilizer with Alaska Airlines dispatch and maintenance control by radio and consider whether to divert to Los Angeles or continue to San Francisco.",
+      "factors": [
+        "operator_safety_culture"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": -60,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Cruising at 31,050 feet the captain, with the autopilot disengaged, operates the primary and alternate trim switches together to try to free the stabilizer.",
+      "state": {
+        "alt": 31050
+      },
+      "factors": [
+        "stabilizer_trim_failure"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "16:09:16",
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "The remaining acme nut threads strip; the stabilizer moves rapidly to a nose-down position and the airplane pitches over and begins a steep descent.",
+      "state": {
+        "alt": 31050
+      },
+      "factors": [
+        "stabilizer_trim_failure",
+        "inadequate_lubrication",
+        "loss_of_pilot_control_authority"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Both pilots pull on the control columns with well over 100 pounds of force to arrest the dive.",
+      "factors": [
+        "loss_of_pilot_control_authority"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 80,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "The airplane is recovered to level flight at about 24,000 feet after losing roughly 7,000 feet; the crew declare an emergency to Los Angeles Center and request a divert to Los Angeles.",
+      "state": {
+        "alt": 24000
+      },
+      "factors": [
+        "loss_of_pilot_control_authority"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Captain tells ATC they are stabilized, slowing, and will 'do a little test flight' with slats and flaps to check controllability before landing.",
+      "kind": "crew_speech"
+    },
+    {
+      "t": 420,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Descending through about 18,000 feet the crew extend slats and flaps 11 to evaluate handling, then retract them when the pitch forces become worse.",
+      "state": {
+        "alt": 18000
+      },
+      "factors": [
+        "loss_of_pilot_control_authority"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 619,
+      "clock": "16:19:36",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "The cockpit voice recorder records an extremely loud noise as the jackscrew's lower stop fails; the stabilizer travels past its nose-down limit and the airplane pitches over sharply.",
+      "factors": [
+        "structural_failure",
+        "design_deficiency",
+        "loss_of_control_inflight"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 630,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Captain transmits 'mayday' and the crew attempt to regain control, including trying to fly the airplane inverted.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 660,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "The airplane descends inverted and nearly vertically, pitching and rolling, with no pitch authority available to the crew.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 700,
+      "clock": "16:20:57",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "End of recording; the airplane strikes the Pacific Ocean north of Anacapa Island and is destroyed.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [
-    { "t": 619, "clock": "16:19:36", "speaker": "CAM", "text": "[sound of extremely loud noise]", "translation": null },
-    { "t": 630, "clock": null, "speaker": "CAPT", "text": "mayday.", "translation": null },
-    { "t": 640, "clock": null, "speaker": "CAPT", "text": "push and roll, push and roll.", "translation": null },
-    { "t": 650, "clock": null, "speaker": "CAPT", "text": "ok, we are inverted... and now we gotta get it.", "translation": null },
-    { "t": 670, "clock": null, "speaker": "CAPT", "text": "push push push... push the blue side up.", "translation": null },
-    { "t": 690, "clock": null, "speaker": "CAPT", "text": "at least upside down we're flyin'.", "translation": null }
+    {
+      "t": 619,
+      "clock": "16:19:36",
+      "speaker": "CAM",
+      "text": "[sound of extremely loud noise]",
+      "translation": null
+    },
+    {
+      "t": 630,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "mayday.",
+      "translation": null
+    },
+    {
+      "t": 640,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "push and roll, push and roll.",
+      "translation": null
+    },
+    {
+      "t": 650,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "ok, we are inverted... and now we gotta get it.",
+      "translation": null
+    },
+    {
+      "t": 670,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "push push push... push the blue side up.",
+      "translation": null
+    },
+    {
+      "t": 690,
+      "clock": null,
+      "speaker": "CAPT",
+      "text": "at least upside down we're flyin'.",
+      "translation": null
+    }
   ],
   "recommendations": [
-    { "id": null, "to": "FAA", "text": "Establish shorter, technically justified lubrication and end play check intervals for the DC-9/MD-80/MD-90 and 717 horizontal stabilizer jackscrew assembly and require a review of maintenance interval extensions that are not supported by data.", "status": "closed_acceptable", "outcome": "FAA airworthiness directives reduced jackscrew lubrication and end play inspection intervals.", "trigger_factors": ["inadequate_lubrication", "inadequate_inspection", "regulatory_oversight"] },
-    { "id": null, "to": "FAA", "text": "Require that the jackscrew assembly design on MD-80 series airplanes, and on any transport airplane using a similar single-load-path design, be modified to be fail-safe against total acme nut thread loss.", "status": "unknown", "outcome": "FAA required design reviews of jackscrew trim systems; a fail-safe retrofit was not mandated but nut wear limits and inspections were tightened.", "trigger_factors": ["design_deficiency", "certification_shortfall"] },
-    { "id": null, "to": "FAA", "text": "Improve FAA surveillance of air carrier maintenance programs, including scrutiny of proposed maintenance interval extensions and of the data used to justify them.", "status": "unknown", "outcome": null, "trigger_factors": ["regulatory_oversight", "operator_safety_culture"] },
-    { "id": null, "to": "FAA", "text": "Issue guidance that flight crews facing a jammed or unresponsive stabilizer should not continue to operate the trim motors in an attempt to free it and should land at the nearest suitable airport.", "status": "unknown", "outcome": "Boeing revised MD-80 series jammed stabilizer procedures.", "trigger_factors": ["stabilizer_trim_failure"] }
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Establish shorter, technically justified lubrication and end play check intervals for the DC-9/MD-80/MD-90 and 717 horizontal stabilizer jackscrew assembly and require a review of maintenance interval extensions that are not supported by data.",
+      "status": "closed_acceptable",
+      "outcome": "FAA airworthiness directives reduced jackscrew lubrication and end play inspection intervals.",
+      "trigger_factors": [
+        "inadequate_lubrication",
+        "inadequate_inspection",
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require that the jackscrew assembly design on MD-80 series airplanes, and on any transport airplane using a similar single-load-path design, be modified to be fail-safe against total acme nut thread loss.",
+      "status": "unknown",
+      "outcome": "FAA required design reviews of jackscrew trim systems; a fail-safe retrofit was not mandated but nut wear limits and inspections were tightened.",
+      "trigger_factors": [
+        "design_deficiency",
+        "certification_shortfall"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Improve FAA surveillance of air carrier maintenance programs, including scrutiny of proposed maintenance interval extensions and of the data used to justify them.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "regulatory_oversight",
+        "operator_safety_culture"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Issue guidance that flight crews facing a jammed or unresponsive stabilizer should not continue to operate the trim motors in an attempt to free it and should land at the nearest suitable airport.",
+      "status": "unknown",
+      "outcome": "Boeing revised MD-80 series jammed stabilizer procedures.",
+      "trigger_factors": [
+        "stabilizer_trim_failure"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -86,14 +394,23 @@
     "The FAA required manufacturers and operators to review transport-category flight control systems for single points of failure lacking fail-safe features.",
     "Boeing revised MD-80 family procedures for a jammed horizontal stabilizer to discourage repeated trim motor operation."
   ],
-  "related": ["airmidwest5481", "united232", "aa587", "jal123", "chinaairlines140"],
+  "related": [
+    "airmidwest5481",
+    "united232",
+    "aa587",
+    "jal123",
+    "chinaairlines140"
+  ],
   "fdr": null,
   "sources": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0201.pdf",
     "https://www.ntsb.gov"
   ],
   "extraction": {
-    "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
     "notes": [
       "Local date 2000-01-31 is used; in UTC the accident occurred on 2000-02-01.",
       "Clock of the first dive (16:09:16) and of the loud noise on the CVR (16:19:36) are as recalled from the report and may differ by a few seconds; the end of recording is given as about 16:20:57 and may be off by up to a minute.",
@@ -101,5 +418,6 @@
       "CVR lines are well-known excerpts from the public transcript; their t values between 16:19:36 and the end of recording are estimated, not taken from the transcript.",
       "Altitude at which the first dive was arrested is stated in the report as about 23,000 to 24,000 feet; 24,000 is used."
     ]
-  }
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Alaska_Airlines_Flight_261"
 }

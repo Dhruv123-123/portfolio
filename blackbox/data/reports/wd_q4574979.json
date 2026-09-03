@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "O'Hare International Airport, Chicago",
-    "country": "United States"
+    "country": "United States",
+    "lat": 41.9692,
+    "lon": -87.9011
   },
   "phase": "takeoff",
   "occupants": 93,
@@ -65,9 +67,18 @@
     }
   ],
   "chain": [
-    ["atc_communication_error", "runway_incursion"],
-    ["low_visibility", "atc_communication_error"],
-    ["runway_incursion", "post_impact_fire"]
+    [
+      "atc_communication_error",
+      "runway_incursion"
+    ],
+    [
+      "low_visibility",
+      "atc_communication_error"
+    ],
+    [
+      "runway_incursion",
+      "post_impact_fire"
+    ]
   ],
   "events": [
     {
@@ -153,21 +164,68 @@
   ],
   "cvr": [],
   "recommendations": [
-    {"id": "A-73-21", "to": "FAA", "text": "Standardize ASDE 'BRITE' equipment configurations and alignment techniques at three existing facilities (p. 34).", "status": "unknown"},
-    {"id": "A-73-22", "to": "FAA", "text": "Do not proceed with 'BRITE' installation at other ASDE facilities until satisfactory operation achieved at existing three (p. 34).", "status": "unknown"},
-    {"id": "A-73-23", "to": "FAA", "text": "Install improved ASDE 'BRITE' equipment first at three existing locations (p. 34).", "status": "unknown"},
-    {"id": "A-73-24", "to": "FAA", "text": "Establish standard procedures for ASDE radar use and publish in Air Traffic Handbooks (p. 34).", "status": "unknown"},
-    {"id": "A-73-25", "to": "FAA", "text": "Establish and publish taxi routes for arrival/departure aircraft during restricted visibility of 1/4 mile or less (p. 34).", "status": "unknown"},
-    {"id": "A-73-26", "to": "FAA", "text": "Require pilots to obtain controller approval before crossing lighted runways in visibility of 1/4 mile or less (p. 35).", "status": "unknown"},
-    {"id": "A-73-53", "to": "FAA", "text": "Amend certification rules to require tactile guidance, improved visual guidance to emergency exits, and better location indication in dark/smoke (p. 24-25).", "status": "unknown"},
-    {"id": "A-73-54", "to": "FAA", "text": "Require flightcrews to report aircraft position on airport and controllers to read back when not verified by visual/radar (p. 25).", "status": "unknown"},
-    {"id": "A-73-55", "to": "FAA", "text": "Require flightcrews to read back taxi clearances when visibility is less than 1/2 mile (p. 25).", "status": "unknown"}
+    {
+      "id": "A-73-21",
+      "to": "FAA",
+      "text": "Standardize ASDE 'BRITE' equipment configurations and alignment techniques at three existing facilities (p. 34).",
+      "status": "unknown"
+    },
+    {
+      "id": "A-73-22",
+      "to": "FAA",
+      "text": "Do not proceed with 'BRITE' installation at other ASDE facilities until satisfactory operation achieved at existing three (p. 34).",
+      "status": "unknown"
+    },
+    {
+      "id": "A-73-23",
+      "to": "FAA",
+      "text": "Install improved ASDE 'BRITE' equipment first at three existing locations (p. 34).",
+      "status": "unknown"
+    },
+    {
+      "id": "A-73-24",
+      "to": "FAA",
+      "text": "Establish standard procedures for ASDE radar use and publish in Air Traffic Handbooks (p. 34).",
+      "status": "unknown"
+    },
+    {
+      "id": "A-73-25",
+      "to": "FAA",
+      "text": "Establish and publish taxi routes for arrival/departure aircraft during restricted visibility of 1/4 mile or less (p. 34).",
+      "status": "unknown"
+    },
+    {
+      "id": "A-73-26",
+      "to": "FAA",
+      "text": "Require pilots to obtain controller approval before crossing lighted runways in visibility of 1/4 mile or less (p. 35).",
+      "status": "unknown"
+    },
+    {
+      "id": "A-73-53",
+      "to": "FAA",
+      "text": "Amend certification rules to require tactile guidance, improved visual guidance to emergency exits, and better location indication in dark/smoke (p. 24-25).",
+      "status": "unknown"
+    },
+    {
+      "id": "A-73-54",
+      "to": "FAA",
+      "text": "Require flightcrews to report aircraft position on airport and controllers to read back when not verified by visual/radar (p. 25).",
+      "status": "unknown"
+    },
+    {
+      "id": "A-73-55",
+      "to": "FAA",
+      "text": "Require flightcrews to read back taxi clearances when visibility is less than 1/2 mile (p. 25).",
+      "status": "unknown"
+    }
   ],
   "dissent": [],
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR7315.pdf"],
+  "sources": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR7315.pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5-20251001",
@@ -182,6 +240,8 @@
   "asn_id": null,
   "interest": 10.55,
   "wikipedia": "https://en.wikipedia.org/wiki/1972_Chicago%E2%80%93O%27Hare_runway_collision",
-  "report_links": ["https://ntsb.gov/investigations/AccidentReports/Reports/AAR7315.pdf"],
+  "report_links": [
+    "https://ntsb.gov/investigations/AccidentReports/Reports/AAR7315.pdf"
+  ],
   "curated_id": null
 }

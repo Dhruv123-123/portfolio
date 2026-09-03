@@ -29,7 +29,9 @@
   },
   "location": {
     "name": "Near Lake Baikal, northeast of Irkutsk, Siberia",
-    "country": "Russia"
+    "country": "Russia",
+    "lat": 54.3467,
+    "lon": 101.9772
   },
   "phase": "cruise",
   "occupants": 10,

@@ -28,7 +28,9 @@
   },
   "location": {
     "name": "Halim Perdanakusuma International Airport",
-    "country": "Indonesia"
+    "country": "Indonesia",
+    "lat": -6.2661,
+    "lon": 106.8922
   },
   "phase": "takeoff",
   "occupants": 135,

@@ -7,70 +7,312 @@
   "t0": "1978-12-29T01:12:00Z",
   "agency": "NTSB",
   "agencies": [
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
-      "report_id": "NTSB/AAR-79/07", "report_title": "United Airlines, Inc., McDonnell-Douglas DC-8-61, N8082U, Portland, Oregon, December 28, 1978", "report_date": "1979-06-07",
-      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7907.pdf" }
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "NTSB/AAR-79/07",
+      "report_title": "United Airlines, Inc., McDonnell-Douglas DC-8-61, N8082U, Portland, Oregon, December 28, 1978",
+      "report_date": "1979-06-07",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7907.pdf"
+    }
   ],
-  "aircraft": { "type": "McDonnell Douglas DC-8-61", "family": "DC-8", "manufacturer": "McDonnell Douglas", "registration": "N8082U", "msn": null, "engines": "Pratt & Whitney JT3D-3B" },
+  "aircraft": {
+    "type": "McDonnell Douglas DC-8-61",
+    "family": "DC-8",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "N8082U",
+    "msn": null,
+    "engines": "Pratt & Whitney JT3D-3B"
+  },
   "operator": "United Airlines",
-  "route": { "from": "KDEN", "from_name": "Denver Stapleton", "to": "KPDX", "to_name": "Portland International" },
-  "location": { "name": "Wooded residential area about 6 nm southeast of Portland International Airport, Oregon", "country": "USA", "lat": 45.52, "lon": -122.50 },
+  "route": {
+    "from": "KDEN",
+    "from_name": "Denver Stapleton",
+    "to": "KPDX",
+    "to_name": "Portland International"
+  },
+  "location": {
+    "name": "Wooded residential area about 6 nm southeast of Portland International Airport, Oregon",
+    "country": "USA",
+    "lat": 45.52,
+    "lon": -122.5
+  },
   "phase": "approach",
-  "occupants": 189, "fatalities": 10, "injuries_serious": 23,
+  "occupants": 189,
+  "fatalities": 10,
+  "injuries_serious": 23,
   "damage": "destroyed",
   "category": "FUEL",
   "summary": "When the landing gear was extended on approach to Portland, an abnormal thump and yaw and a missing gear-down indication led the crew to break off the approach and hold while they troubleshot the problem and prepared the cabin for an emergency landing. The captain remained preoccupied with the gear for about an hour while the fuel state became critical; the flight engineer's and first officer's fuel advisories were not acted on decisively. All four engines flamed out from fuel exhaustion and the DC-8 crash-landed in a wooded suburb, killing 10 of the 189 on board. The accident led directly to the development of crew resource management training.",
   "probable_cause": "The failure of the captain to monitor properly the aircraft's fuel state and to properly respond to the low fuel state and the crewmember's advisories regarding fuel state. This resulted in fuel exhaustion to all engines. His inattention resulted from preoccupation with a landing gear malfunction and preparations for a possible landing emergency. Contributing to the accident was the failure of the other two flight crewmembers either to fully comprehend the criticality of the fuel state or to successfully communicate their concern to the captain.",
   "factors": [
-    { "id": "landing_gear_failure", "role": "initiating", "evidence": "A corroded retract cylinder piston rod on the right main gear failed on extension; the gear fell free with a thump and the gear-down indication was lost, although the gear was actually down and locked." },
-    { "id": "high_workload", "role": "contributing", "evidence": "The captain devoted the holding period to troubleshooting the gear indication and coordinating cabin preparation for an emergency landing." },
-    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The captain lost track of the fuel remaining and of the time needed to reach the runway." },
-    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "The crew did not properly monitor and respond to the decreasing fuel quantity during about an hour of holding." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "The flight engineer and first officer expressed concern about fuel but did not communicate its criticality assertively, and the captain did not respond to their advisories." },
-    { "id": "fuel_exhaustion", "role": "contributing", "evidence": "The fuel tanks ran dry after the extended hold; engine No. 4 flamed out first, followed by the others." },
-    { "id": "dual_engine_failure", "role": "outcome", "evidence": "All four engines lost power from fuel exhaustion and the aircraft descended into trees and houses short of the airport." },
-    { "id": "dark_night", "role": "contributing", "evidence": "The forced landing occurred after dark in a residential area." }
+    {
+      "id": "landing_gear_failure",
+      "role": "initiating",
+      "evidence": "A corroded retract cylinder piston rod on the right main gear failed on extension; the gear fell free with a thump and the gear-down indication was lost, although the gear was actually down and locked."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The captain devoted the holding period to troubleshooting the gear indication and coordinating cabin preparation for an emergency landing."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The captain lost track of the fuel remaining and of the time needed to reach the runway."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The crew did not properly monitor and respond to the decreasing fuel quantity during about an hour of holding."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The flight engineer and first officer expressed concern about fuel but did not communicate its criticality assertively, and the captain did not respond to their advisories."
+    },
+    {
+      "id": "fuel_exhaustion",
+      "role": "contributing",
+      "evidence": "The fuel tanks ran dry after the extended hold; engine No. 4 flamed out first, followed by the others."
+    },
+    {
+      "id": "dual_engine_failure",
+      "role": "outcome",
+      "evidence": "All four engines lost power from fuel exhaustion and the aircraft descended into trees and houses short of the airport."
+    },
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "The forced landing occurred after dark in a residential area."
+    }
   ],
   "chain": [
-    ["landing_gear_failure", "high_workload"],
-    ["high_workload", "loss_of_situational_awareness"],
-    ["loss_of_situational_awareness", "inadequate_monitoring"],
-    ["crm_breakdown", "inadequate_monitoring"],
-    ["inadequate_monitoring", "fuel_exhaustion"],
-    ["fuel_exhaustion", "dual_engine_failure"],
-    ["dark_night", "dual_engine_failure"]
+    [
+      "landing_gear_failure",
+      "high_workload"
+    ],
+    [
+      "high_workload",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "inadequate_monitoring"
+    ],
+    [
+      "crm_breakdown",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "fuel_exhaustion"
+    ],
+    [
+      "fuel_exhaustion",
+      "dual_engine_failure"
+    ],
+    [
+      "dark_night",
+      "dual_engine_failure"
+    ]
   ],
   "events": [
-    { "t": -360, "clock": null, "phase": "descent", "actor": "ATC", "text": "Flight is cleared for a visual approach to runway 28 at Portland.", "kind": "atc" },
-    { "t": 0, "clock": "17:12", "phase": "approach", "actor": "SYS", "text": "Landing gear extended; the crew hear a loud thump and feel a yaw, and the right main gear green light does not illuminate.", "factors": ["landing_gear_failure"], "kind": "system" },
-    { "t": 120, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Captain breaks off the approach and requests holding to troubleshoot the gear indication; ATC clears the flight to hold southeast of the airport at 5,000 ft.", "factors": ["high_workload"], "kind": "crew_action" },
-    { "t": 600, "clock": null, "phase": "cruise", "actor": "FE", "text": "Flight engineer checks the gear visually through the viewers and consults with United maintenance by radio; the gear appears down but the indication problem is unresolved.", "factors": ["high_workload"], "kind": "crew_action" },
-    { "t": 1500, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "Captain discusses emergency landing preparations with the senior flight attendant and continues circling while the cabin is prepared.", "factors": ["high_workload", "loss_of_situational_awareness"], "kind": "crew_action" },
-    { "t": 2040, "clock": "17:46", "phase": "cruise", "actor": "FE", "text": "Flight engineer reports the fuel remaining is about 5,000 lb; the crew discuss fuel but continue holding.", "factors": ["inadequate_monitoring", "crm_breakdown"], "kind": "crew_speech" },
-    { "t": 2280, "clock": "17:50", "phase": "cruise", "actor": "FE", "text": "Flight engineer advises that a further fifteen minutes will leave the aircraft very low on fuel; the captain still does not commit to landing.", "factors": ["crm_breakdown", "inadequate_monitoring"], "kind": "crew_speech" },
-    { "t": 3000, "clock": "18:02", "phase": "cruise", "actor": "CAPT", "text": "Captain says he plans to land in about five more minutes and continues briefing the emergency landing.", "factors": ["loss_of_situational_awareness"], "kind": "crew_speech" },
-    { "t": 3286, "clock": "18:06:46", "phase": "cruise", "actor": "FO", "text": "First officer reports that they are going to lose an engine; engine No. 4 flames out from fuel starvation.", "factors": ["fuel_exhaustion"], "kind": "system" },
-    { "t": 3480, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Crew turns toward the airport and requests an immediate clearance; ATC clears the flight for a visual approach to runway 28L.", "kind": "crew_action" },
-    { "t": 3680, "clock": "18:13:21", "phase": "approach", "actor": "FE", "text": "Flight engineer reports the remaining engines are flaming out.", "factors": ["fuel_exhaustion", "dual_engine_failure"], "kind": "crew_speech" },
-    { "t": 3740, "clock": null, "phase": "approach", "actor": "FO", "text": "First officer transmits a Mayday to Portland tower, reporting the engines are flaming out, the aircraft is going down and will not reach the airport.", "factors": ["dual_engine_failure"], "kind": "crew_speech" },
-    { "t": 3780, "clock": "18:15", "phase": "approach", "actor": "ENV", "text": "Aircraft strikes trees and two houses in a wooded residential area about 6 nm southeast of the airport; the fuselage is torn open but there is no fire because the tanks are empty. The flight engineer, a flight attendant and eight passengers die.", "factors": ["dual_engine_failure", "dark_night"], "kind": "outcome" }
+    {
+      "t": -360,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ATC",
+      "text": "Flight is cleared for a visual approach to runway 28 at Portland.",
+      "kind": "atc"
+    },
+    {
+      "t": 0,
+      "clock": "17:12",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Landing gear extended; the crew hear a loud thump and feel a yaw, and the right main gear green light does not illuminate.",
+      "factors": [
+        "landing_gear_failure"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Captain breaks off the approach and requests holding to troubleshoot the gear indication; ATC clears the flight to hold southeast of the airport at 5,000 ft.",
+      "factors": [
+        "high_workload"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 600,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "FE",
+      "text": "Flight engineer checks the gear visually through the viewers and consults with United maintenance by radio; the gear appears down but the indication problem is unresolved.",
+      "factors": [
+        "high_workload"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 1500,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Captain discusses emergency landing preparations with the senior flight attendant and continues circling while the cabin is prepared.",
+      "factors": [
+        "high_workload",
+        "loss_of_situational_awareness"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 2040,
+      "clock": "17:46",
+      "phase": "cruise",
+      "actor": "FE",
+      "text": "Flight engineer reports the fuel remaining is about 5,000 lb; the crew discuss fuel but continue holding.",
+      "factors": [
+        "inadequate_monitoring",
+        "crm_breakdown"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 2280,
+      "clock": "17:50",
+      "phase": "cruise",
+      "actor": "FE",
+      "text": "Flight engineer advises that a further fifteen minutes will leave the aircraft very low on fuel; the captain still does not commit to landing.",
+      "factors": [
+        "crm_breakdown",
+        "inadequate_monitoring"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 3000,
+      "clock": "18:02",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Captain says he plans to land in about five more minutes and continues briefing the emergency landing.",
+      "factors": [
+        "loss_of_situational_awareness"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 3286,
+      "clock": "18:06:46",
+      "phase": "cruise",
+      "actor": "FO",
+      "text": "First officer reports that they are going to lose an engine; engine No. 4 flames out from fuel starvation.",
+      "factors": [
+        "fuel_exhaustion"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 3480,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Crew turns toward the airport and requests an immediate clearance; ATC clears the flight for a visual approach to runway 28L.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 3680,
+      "clock": "18:13:21",
+      "phase": "approach",
+      "actor": "FE",
+      "text": "Flight engineer reports the remaining engines are flaming out.",
+      "factors": [
+        "fuel_exhaustion",
+        "dual_engine_failure"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 3740,
+      "clock": null,
+      "phase": "approach",
+      "actor": "FO",
+      "text": "First officer transmits a Mayday to Portland tower, reporting the engines are flaming out, the aircraft is going down and will not reach the airport.",
+      "factors": [
+        "dual_engine_failure"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 3780,
+      "clock": "18:15",
+      "phase": "approach",
+      "actor": "ENV",
+      "text": "Aircraft strikes trees and two houses in a wooded residential area about 6 nm southeast of the airport; the fuselage is torn open but there is no fire because the tanks are empty. The flight engineer, a flight attendant and eight passengers die.",
+      "factors": [
+        "dual_engine_failure",
+        "dark_night"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": "A-79-47", "to": "FAA", "text": "Issue an operations bulletin to all air carrier operations inspectors directing them to urge their assigned operators to ensure that their flightcrews are indoctrinated in principles of flightdeck resource management, with particular emphasis on the merits of participative management for captains and assertiveness training for other cockpit crewmembers.", "status": "closed_acceptable", "outcome": "United Airlines introduced the first airline CRM program in 1981 and CRM training became an industry standard.", "trigger_factors": ["crm_breakdown", "inadequate_monitoring"] },
-    { "id": null, "to": "FAA", "text": "Require inspection of DC-8 main landing gear retract cylinder assemblies for corrosion and require corrective action.", "status": "unknown", "outcome": null, "trigger_factors": ["landing_gear_failure"] }
+    {
+      "id": "A-79-47",
+      "to": "FAA",
+      "text": "Issue an operations bulletin to all air carrier operations inspectors directing them to urge their assigned operators to ensure that their flightcrews are indoctrinated in principles of flightdeck resource management, with particular emphasis on the merits of participative management for captains and assertiveness training for other cockpit crewmembers.",
+      "status": "closed_acceptable",
+      "outcome": "United Airlines introduced the first airline CRM program in 1981 and CRM training became an industry standard.",
+      "trigger_factors": [
+        "crm_breakdown",
+        "inadequate_monitoring"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require inspection of DC-8 main landing gear retract cylinder assemblies for corrosion and require corrective action.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "landing_gear_failure"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
     "Development and adoption of Crew Resource Management (CRM) training; United's Cockpit Resource Management program began in 1981.",
     "Greater emphasis in airline training on fuel-state awareness and time management during abnormal situations."
   ],
-  "related": ["eastern401", "aircanada143", "airtransat236"],
+  "related": [
+    "eastern401",
+    "aircanada143",
+    "airtransat236"
+  ],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7907.pdf", "https://www.ntsb.gov"],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
-    "notes": ["Clock times other than 18:06:46 (first flameout) and 18:13:21 are approximate to the minute; t0 is the approximate gear extension time of 17:12 PST.",
-              "Occupants 189 (181 passengers, 8 crew) and 10 fatalities as stated by the NTSB; serious injury count of 23 is from memory and may differ.",
-              "The 5,000 lb fuel remark at about 17:46 is paraphrased from the transcript; crew speech is paraphrased rather than quoted.",
-              "Recommendation A-79-47 wording is recalled from the report; the second recommendation has no id."] }
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7907.pdf",
+    "https://www.ntsb.gov"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Clock times other than 18:06:46 (first flameout) and 18:13:21 are approximate to the minute; t0 is the approximate gear extension time of 17:12 PST.",
+      "Occupants 189 (181 passengers, 8 crew) and 10 fatalities as stated by the NTSB; serious injury count of 23 is from memory and may differ.",
+      "The 5,000 lb fuel remark at about 17:46 is paraphrased from the transcript; crew speech is paraphrased rather than quoted.",
+      "Recommendation A-79-47 wording is recalled from the report; the second recommendation has no id."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/United_Airlines_Flight_173"
 }

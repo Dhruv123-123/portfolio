@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "Johnstown, Pennsylvania",
-    "country": "United States"
+    "country": "United States",
+    "lat": 40.3156,
+    "lon": -78.8347
   },
   "phase": "approach",
   "occupants": 17,
@@ -201,7 +203,7 @@
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7503.pdf"
   ],
   "asn_id": null,
-  "wikipedia": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Commonwealth_Commuter_Flight_317",
   "report_links": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7503.pdf",
     "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR75-03.pdf"

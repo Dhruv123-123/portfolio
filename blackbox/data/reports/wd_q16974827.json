@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "Morrisville",
-    "country": "United States"
+    "country": "United States",
+    "lat": 35.8347,
+    "lon": -78.8669
   },
   "phase": "approach",
   "occupants": 20,
@@ -262,7 +264,7 @@
     "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR95-07.pdf"
   ],
   "asn_id": null,
-  "wikipedia": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Flagship_Airlines_Flight_3379",
   "report_links": [
     "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR95-07.pdf",
     "https://www.ntsb.gov/_layouts/ntsb.aviation/Results.aspx?queryId=e199e50f-87c6-4ec6-adcd-6a6b75dbd5af"

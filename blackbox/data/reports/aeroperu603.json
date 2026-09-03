@@ -7,61 +7,309 @@
   "t0": "1996-10-02T05:42:00Z",
   "agency": "CIAA",
   "agencies": [
-    { "code": "CIAA", "name": "Comisión de Investigación de Accidentes de Aviación", "country": "Peru", "role": "lead",
-      "report_id": null, "report_title": "Informe final del accidente del Boeing 757-23A N52AW, Aeroperú vuelo 603", "report_date": null, "url": null },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" }
+    {
+      "code": "CIAA",
+      "name": "Comisión de Investigación de Accidentes de Aviación",
+      "country": "Peru",
+      "role": "lead",
+      "report_id": null,
+      "report_title": "Informe final del accidente del Boeing 757-23A N52AW, Aeroperú vuelo 603",
+      "report_date": null,
+      "url": null
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Boeing 757-23A", "family": "757", "manufacturer": "Boeing", "registration": "N52AW", "msn": null, "engines": "Pratt & Whitney PW2037" },
+  "aircraft": {
+    "type": "Boeing 757-23A",
+    "family": "757",
+    "manufacturer": "Boeing",
+    "registration": "N52AW",
+    "msn": null,
+    "engines": "Pratt & Whitney PW2037"
+  },
   "operator": "Aeroperú",
-  "route": { "from": "SPIM", "from_name": "Lima Jorge Chávez International", "to": "SCEL", "to_name": "Santiago Arturo Merino Benítez" },
-  "location": { "name": "Pacific Ocean off Pasamayo, about 30 miles northwest of Lima", "country": "Peru", "lat": -11.85, "lon": -77.55 },
+  "route": {
+    "from": "SPIM",
+    "from_name": "Lima Jorge Chávez International",
+    "to": "SCEL",
+    "to_name": "Santiago Arturo Merino Benítez"
+  },
+  "location": {
+    "name": "Pacific Ocean off Pasamayo, about 30 miles northwest of Lima",
+    "country": "Peru",
+    "lat": -11.85,
+    "lon": -77.55
+  },
   "phase": "climb",
-  "occupants": 70, "fatalities": 70, "injuries_serious": 0,
+  "occupants": 70,
+  "fatalities": 70,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "CFIT",
   "summary": "Before a night departure from Lima, the 757's static ports had been covered with adhesive tape during washing and polishing and the tape was not removed. After takeoff the altimeters and airspeed indicators gave erroneous readings and the crew received a stream of contradictory warnings including wind shear, rudder ratio, mach trim, overspeed and stick shaker. Unable to trust their instruments and relying on ATC altitude readouts that came from the aircraft's own faulty transponder data, the crew flew a slow descending return over the sea until the aircraft struck the water in the dark. All 70 on board died.",
   "probable_cause": "The Peruvian commission concluded that the accident was caused by the blockage of the static ports by adhesive tape that maintenance personnel had applied during cleaning and polishing of the fuselage and failed to remove, and the failure of maintenance supervision and the flight crew's preflight inspection to detect it. The blocked ports produced erroneous altitude, airspeed and vertical speed indications and a series of contradictory warnings that, together with the dark night over the sea and the absence of reliable altitude information from ATC, prevented the crew from recognising the aircraft's true altitude before it struck the water.",
   "factors": [
-    { "id": "maintenance_error", "role": "initiating", "evidence": "A worker covered the left-side static ports with protective tape during washing and polishing and did not remove it; supervision and the walk-around did not detect the tape." },
-    { "id": "static_port_blockage", "role": "contributing", "evidence": "The taped static ports fed erroneous static pressure to the captain's instruments and the air data computer." },
-    { "id": "unreliable_airspeed", "role": "contributing", "evidence": "Airspeed and altitude indications were erroneous from shortly after rotation and became increasingly divergent from the true values." },
-    { "id": "spurious_overspeed_warning", "role": "contributing", "evidence": "Overspeed warnings sounded while the stick shaker also activated, presenting the crew with contradictory indications." },
-    { "id": "warning_system_deficiency", "role": "contributing", "evidence": "Wind shear, rudder ratio, mach trim, overspeed and stick shaker warnings occurred together and were treated as unreliable, including the terrain warnings near the end." },
-    { "id": "high_workload", "role": "contributing", "evidence": "The crew were saturated by continuous warnings while trying to determine which instruments to trust and coordinate a return." },
-    { "id": "dark_night", "role": "contributing", "evidence": "The flight was over the sea at night with no external references to judge altitude." },
-    { "id": "loss_of_situational_awareness", "role": "contributing", "evidence": "The crew believed they were at about 9,700 ft, as confirmed by ATC from the aircraft's own erroneous Mode C data, when they were near the sea." },
-    { "id": "cfit", "role": "outcome", "evidence": "The aircraft struck the water in a controlled descent while the crew believed they had ample altitude." }
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "A worker covered the left-side static ports with protective tape during washing and polishing and did not remove it; supervision and the walk-around did not detect the tape."
+    },
+    {
+      "id": "static_port_blockage",
+      "role": "contributing",
+      "evidence": "The taped static ports fed erroneous static pressure to the captain's instruments and the air data computer."
+    },
+    {
+      "id": "unreliable_airspeed",
+      "role": "contributing",
+      "evidence": "Airspeed and altitude indications were erroneous from shortly after rotation and became increasingly divergent from the true values."
+    },
+    {
+      "id": "spurious_overspeed_warning",
+      "role": "contributing",
+      "evidence": "Overspeed warnings sounded while the stick shaker also activated, presenting the crew with contradictory indications."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "contributing",
+      "evidence": "Wind shear, rudder ratio, mach trim, overspeed and stick shaker warnings occurred together and were treated as unreliable, including the terrain warnings near the end."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The crew were saturated by continuous warnings while trying to determine which instruments to trust and coordinate a return."
+    },
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "The flight was over the sea at night with no external references to judge altitude."
+    },
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "contributing",
+      "evidence": "The crew believed they were at about 9,700 ft, as confirmed by ATC from the aircraft's own erroneous Mode C data, when they were near the sea."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft struck the water in a controlled descent while the crew believed they had ample altitude."
+    }
   ],
   "chain": [
-    ["maintenance_error", "static_port_blockage"],
-    ["static_port_blockage", "unreliable_airspeed"],
-    ["unreliable_airspeed", "spurious_overspeed_warning"],
-    ["unreliable_airspeed", "warning_system_deficiency"],
-    ["spurious_overspeed_warning", "high_workload"],
-    ["warning_system_deficiency", "high_workload"],
-    ["high_workload", "loss_of_situational_awareness"],
-    ["dark_night", "loss_of_situational_awareness"],
-    ["loss_of_situational_awareness", "cfit"]
+    [
+      "maintenance_error",
+      "static_port_blockage"
+    ],
+    [
+      "static_port_blockage",
+      "unreliable_airspeed"
+    ],
+    [
+      "unreliable_airspeed",
+      "spurious_overspeed_warning"
+    ],
+    [
+      "unreliable_airspeed",
+      "warning_system_deficiency"
+    ],
+    [
+      "spurious_overspeed_warning",
+      "high_workload"
+    ],
+    [
+      "warning_system_deficiency",
+      "high_workload"
+    ],
+    [
+      "high_workload",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "dark_night",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "cfit"
+    ]
   ],
   "events": [
-    { "t": -7200, "clock": null, "phase": "ground", "actor": "GND", "text": "During washing and polishing of the fuselage the static ports on the left side are covered with adhesive tape; the tape is not removed when the work is finished.", "factors": ["maintenance_error"], "kind": "env" },
-    { "t": -1800, "clock": null, "phase": "ground", "actor": "CAPT", "text": "Preflight walk-around at night does not detect the tape on the static ports.", "factors": ["maintenance_error", "dark_night"], "kind": "crew_action" },
-    { "t": 0, "clock": "00:42", "phase": "takeoff", "actor": "CAPT", "text": "Flight 603 takes off from Lima for Santiago.", "kind": "crew_action" },
-    { "t": 60, "clock": null, "phase": "initial_climb", "actor": "SYS", "text": "Altimeters and vertical speed indications behave abnormally and the airspeed indications disagree; the crew realise the instruments are unreliable.", "factors": ["static_port_blockage", "unreliable_airspeed"], "kind": "system" },
-    { "t": 120, "clock": null, "phase": "climb", "actor": "SYS", "text": "Wind shear, rudder ratio and mach/speed trim warnings appear in succession.", "factors": ["warning_system_deficiency", "high_workload"], "kind": "warning" },
-    { "t": 180, "clock": null, "phase": "climb", "actor": "CAPT", "text": "Captain declares an emergency to Lima and requests vectors back to the airport, reporting that the instruments are unreliable.", "factors": ["unreliable_airspeed"], "kind": "crew_speech" },
-    { "t": 400, "clock": null, "phase": "cruise", "actor": "ATC", "text": "Controller relays altitude and speed readouts from radar; these come from the aircraft's own transponder and air data and are equally erroneous.", "factors": ["loss_of_situational_awareness"], "kind": "atc" },
-    { "t": 700, "clock": null, "phase": "cruise", "actor": "SYS", "text": "Overspeed warning sounds while the stick shaker also activates; the crew cannot reconcile the two.", "factors": ["spurious_overspeed_warning", "unreliable_airspeed", "high_workload"], "kind": "warning" },
-    { "t": 900, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "Crew request that another aircraft be sent to guide them and discuss the impossibility of trusting any instrument; they turn back over the sea toward Lima.", "factors": ["high_workload", "dark_night"], "kind": "crew_speech" },
-    { "t": 1500, "clock": null, "phase": "descent", "actor": "SYS", "text": "Ground proximity 'too low terrain' warnings sound; the crew consider them false because ATC still reports them at about 9,700 ft.", "factors": ["warning_system_deficiency", "loss_of_situational_awareness"], "kind": "warning" },
-    { "t": 1680, "clock": null, "phase": "descent", "actor": "ENV", "text": "The left wingtip and engine strike the sea; the aircraft climbs briefly.", "factors": ["cfit"], "kind": "outcome" },
-    { "t": 1740, "clock": "01:11", "phase": "descent", "actor": "ENV", "text": "Aircraft strikes the Pacific inverted about 30 miles from Lima and breaks up; all 70 on board are killed.", "factors": ["cfit"], "kind": "outcome" }
+    {
+      "t": -7200,
+      "clock": null,
+      "phase": "ground",
+      "actor": "GND",
+      "text": "During washing and polishing of the fuselage the static ports on the left side are covered with adhesive tape; the tape is not removed when the work is finished.",
+      "factors": [
+        "maintenance_error"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": -1800,
+      "clock": null,
+      "phase": "ground",
+      "actor": "CAPT",
+      "text": "Preflight walk-around at night does not detect the tape on the static ports.",
+      "factors": [
+        "maintenance_error",
+        "dark_night"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "00:42",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "Flight 603 takes off from Lima for Santiago.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "Altimeters and vertical speed indications behave abnormally and the airspeed indications disagree; the crew realise the instruments are unreliable.",
+      "factors": [
+        "static_port_blockage",
+        "unreliable_airspeed"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Wind shear, rudder ratio and mach/speed trim warnings appear in succession.",
+      "factors": [
+        "warning_system_deficiency",
+        "high_workload"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 180,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CAPT",
+      "text": "Captain declares an emergency to Lima and requests vectors back to the airport, reporting that the instruments are unreliable.",
+      "factors": [
+        "unreliable_airspeed"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 400,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "ATC",
+      "text": "Controller relays altitude and speed readouts from radar; these come from the aircraft's own transponder and air data and are equally erroneous.",
+      "factors": [
+        "loss_of_situational_awareness"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": 700,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Overspeed warning sounds while the stick shaker also activates; the crew cannot reconcile the two.",
+      "factors": [
+        "spurious_overspeed_warning",
+        "unreliable_airspeed",
+        "high_workload"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 900,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Crew request that another aircraft be sent to guide them and discuss the impossibility of trusting any instrument; they turn back over the sea toward Lima.",
+      "factors": [
+        "high_workload",
+        "dark_night"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 1500,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Ground proximity 'too low terrain' warnings sound; the crew consider them false because ATC still reports them at about 9,700 ft.",
+      "factors": [
+        "warning_system_deficiency",
+        "loss_of_situational_awareness"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 1680,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ENV",
+      "text": "The left wingtip and engine strike the sea; the aircraft climbs briefly.",
+      "factors": [
+        "cfit"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 1740,
+      "clock": "01:11",
+      "phase": "descent",
+      "actor": "ENV",
+      "text": "Aircraft strikes the Pacific inverted about 30 miles from Lima and breaks up; all 70 on board are killed.",
+      "factors": [
+        "cfit"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "Aeroperú / DGAC Peru", "text": "Require that protective coverings on pitot-static ports be conspicuous, logged and removed under supervision, and that preflight inspections specifically verify the static ports are clear.", "status": "unknown", "outcome": "Boeing and operators reinforced procedures for covering and inspecting static ports; maintenance logging of port covers became standard.", "trigger_factors": ["maintenance_error", "static_port_blockage"] },
-    { "id": null, "to": "Boeing / FAA", "text": "Provide flight crews with training and procedures for flight with unreliable airspeed and altitude, including use of pitch and power tables and radio altitude.", "status": "unknown", "outcome": null, "trigger_factors": ["unreliable_airspeed", "high_workload"] },
-    { "id": null, "to": "ATC authorities", "text": "Ensure controllers understand that Mode C altitude readouts derive from the aircraft's own air data and cannot confirm altitude when the aircraft's instruments are unreliable.", "status": "unknown", "outcome": null, "trigger_factors": ["loss_of_situational_awareness"] }
+    {
+      "id": null,
+      "to": "Aeroperú / DGAC Peru",
+      "text": "Require that protective coverings on pitot-static ports be conspicuous, logged and removed under supervision, and that preflight inspections specifically verify the static ports are clear.",
+      "status": "unknown",
+      "outcome": "Boeing and operators reinforced procedures for covering and inspecting static ports; maintenance logging of port covers became standard.",
+      "trigger_factors": [
+        "maintenance_error",
+        "static_port_blockage"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Boeing / FAA",
+      "text": "Provide flight crews with training and procedures for flight with unreliable airspeed and altitude, including use of pitch and power tables and radio altitude.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "unreliable_airspeed",
+        "high_workload"
+      ]
+    },
+    {
+      "id": null,
+      "to": "ATC authorities",
+      "text": "Ensure controllers understand that Mode C altitude readouts derive from the aircraft's own air data and cannot confirm altitude when the aircraft's instruments are unreliable.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "loss_of_situational_awareness"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -69,12 +317,26 @@
     "Unreliable airspeed and altitude training was expanded, emphasising pitch and power flying and use of the radio altimeter.",
     "Awareness that ATC Mode C altitude is aircraft-derived and cannot verify altitude for an aircraft with air data faults."
   ],
-  "related": ["birgenair301", "af447", "austral2553"],
+  "related": [
+    "birgenair301",
+    "af447",
+    "austral2553"
+  ],
   "fdr": null,
-  "sources": ["https://www.gob.pe/mtc"],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
-    "notes": ["The Peruvian final report is not widely available in English; the probable cause is condensed from published summaries and may not match the report wording.",
-              "Report id, report date and URL for the CIAA report are unknown and left null; the sources entry is the Peruvian Ministry of Transport site.",
-              "t0 is the approximate takeoff time of 00:42 local and impact about 01:11; intermediate offsets are estimates and clocks are omitted.",
-              "Crash coordinates are approximate for the sea area off Pasamayo."] }
+  "sources": [
+    "https://www.gob.pe/mtc"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "The Peruvian final report is not widely available in English; the probable cause is condensed from published summaries and may not match the report wording.",
+      "Report id, report date and URL for the CIAA report are unknown and left null; the sources entry is the Peruvian Ministry of Transport site.",
+      "t0 is the approximate takeoff time of 00:42 local and impact about 01:11; intermediate offsets are estimates and clocks are omitted.",
+      "Crash coordinates are approximate for the sea area off Pasamayo."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Aeroper%C3%BA_Flight_603"
 }

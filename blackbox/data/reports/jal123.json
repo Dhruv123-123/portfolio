@@ -7,66 +7,325 @@
   "t0": "1985-08-12T09:24:35Z",
   "agency": "AAIC-JP",
   "agencies": [
-    { "code": "AAIC-JP", "name": "Aircraft Accident Investigation Commission", "country": "Japan", "role": "lead",
-      "report_id": "62-2", "report_title": "Aircraft Accident Investigation Report, Japan Air Lines Co., Ltd., Boeing 747 SR-100, JA8119, Gunma Prefecture, Japan, August 12, 1985", "report_date": "1987-06-19",
-      "url": "https://www.mlit.go.jp/jtsb/" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" }
+    {
+      "code": "AAIC-JP",
+      "name": "Aircraft Accident Investigation Commission",
+      "country": "Japan",
+      "role": "lead",
+      "report_id": "62-2",
+      "report_title": "Aircraft Accident Investigation Report, Japan Air Lines Co., Ltd., Boeing 747 SR-100, JA8119, Gunma Prefecture, Japan, August 12, 1985",
+      "report_date": "1987-06-19",
+      "url": "https://www.mlit.go.jp/jtsb/"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Boeing 747SR-46", "family": "747", "manufacturer": "Boeing", "registration": "JA8119", "msn": "20783", "engines": "Pratt & Whitney JT9D-7A" },
+  "aircraft": {
+    "type": "Boeing 747SR-46",
+    "family": "747",
+    "manufacturer": "Boeing",
+    "registration": "JA8119",
+    "msn": "20783",
+    "engines": "Pratt & Whitney JT9D-7A"
+  },
   "operator": "Japan Airlines",
-  "route": { "from": "RJTT", "from_name": "Tokyo Haneda", "to": "RJOO", "to_name": "Osaka Itami" },
-  "location": { "name": "Ridge near Mount Osutaka, Ueno village, Gunma Prefecture", "country": "Japan", "lat": 36.0, "lon": 138.68 },
+  "route": {
+    "from": "RJTT",
+    "from_name": "Tokyo Haneda",
+    "to": "RJOO",
+    "to_name": "Osaka Itami"
+  },
+  "location": {
+    "name": "Ridge near Mount Osutaka, Ueno village, Gunma Prefecture",
+    "country": "Japan",
+    "lat": 36.0,
+    "lon": 138.68
+  },
   "phase": "climb",
-  "occupants": 524, "fatalities": 520, "injuries_serious": 4,
+  "occupants": 524,
+  "fatalities": 520,
+  "injuries_serious": 4,
   "damage": "destroyed",
   "category": "SCF-NP",
   "summary": "Twelve minutes after leaving Haneda for Osaka, the 747SR's aft pressure bulkhead ruptured as it climbed through about 24,000 ft. The escaping cabin air blew off most of the vertical fin and severed all four hydraulic systems, leaving the crew without flight controls. They kept the aircraft airborne for 32 minutes using engine thrust before it struck a mountain ridge in Gunma Prefecture. Of the 524 people on board, 520 died; four survived.",
   "probable_cause": "The AAIC concluded that the bulkhead failed because a repair carried out by Boeing after a 1978 tailstrike had been performed improperly: a splice plate was fitted in a way that left only a single row of rivets carrying the load across the joint, greatly reducing the fatigue strength. Fatigue cracks propagated from the rivet holes over the following 12,318 flights and were not detected by Japan Airlines' inspections. The rupture of the bulkhead caused the loss of the vertical fin and of all hydraulic systems, making the aircraft uncontrollable.",
   "factors": [
-    { "id": "maintenance_error", "role": "initiating", "evidence": "The 1978 repair of the aft pressure bulkhead by a Boeing team used a splice plate cut in two, so that only one row of rivets carried the load across the joint, contrary to the repair instructions." },
-    { "id": "inadequate_inspection", "role": "latent", "evidence": "The improper repair was not detected when the work was accepted, and subsequent inspections by Japan Airlines did not find the fatigue cracks growing in the bulkhead." },
-    { "id": "metal_fatigue", "role": "contributing", "evidence": "Multi-site fatigue cracks propagated from the rivet holes along the repaired joint over about 12,300 pressurisation cycles until the remaining structure could not hold cabin pressure." },
-    { "id": "pressure_bulkhead_failure", "role": "contributing", "evidence": "The aft pressure bulkhead ruptured at 18:24:35 as the aircraft climbed through about 24,000 ft." },
-    { "id": "explosive_decompression", "role": "contributing", "evidence": "The cabin decompressed rapidly, with mist in the cabin and oxygen masks deployed." },
-    { "id": "structural_failure", "role": "contributing", "evidence": "The pressure released into the unpressurised tail blew off most of the vertical fin and damaged the tail cone and APU." },
-    { "id": "hydraulic_failure", "role": "contributing", "evidence": "All four hydraulic systems, whose lines ran through the fin area, were severed and lost pressure." },
-    { "id": "flight_control_failure", "role": "contributing", "evidence": "With no hydraulic pressure the crew had no control over the ailerons, elevators, rudder or stabiliser and could influence the flight path only with engine thrust, flaps and landing gear." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The routing of all hydraulic systems through the same area of the tail allowed a single structural event to disable every system; Boeing subsequently modified the 747 with hydraulic fuses and a fin-base bulkhead." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft flew in phugoid and Dutch-roll oscillations for 32 minutes before descending into mountainous terrain." }
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "The 1978 repair of the aft pressure bulkhead by a Boeing team used a splice plate cut in two, so that only one row of rivets carried the load across the joint, contrary to the repair instructions."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "latent",
+      "evidence": "The improper repair was not detected when the work was accepted, and subsequent inspections by Japan Airlines did not find the fatigue cracks growing in the bulkhead."
+    },
+    {
+      "id": "metal_fatigue",
+      "role": "contributing",
+      "evidence": "Multi-site fatigue cracks propagated from the rivet holes along the repaired joint over about 12,300 pressurisation cycles until the remaining structure could not hold cabin pressure."
+    },
+    {
+      "id": "pressure_bulkhead_failure",
+      "role": "contributing",
+      "evidence": "The aft pressure bulkhead ruptured at 18:24:35 as the aircraft climbed through about 24,000 ft."
+    },
+    {
+      "id": "explosive_decompression",
+      "role": "contributing",
+      "evidence": "The cabin decompressed rapidly, with mist in the cabin and oxygen masks deployed."
+    },
+    {
+      "id": "structural_failure",
+      "role": "contributing",
+      "evidence": "The pressure released into the unpressurised tail blew off most of the vertical fin and damaged the tail cone and APU."
+    },
+    {
+      "id": "hydraulic_failure",
+      "role": "contributing",
+      "evidence": "All four hydraulic systems, whose lines ran through the fin area, were severed and lost pressure."
+    },
+    {
+      "id": "flight_control_failure",
+      "role": "contributing",
+      "evidence": "With no hydraulic pressure the crew had no control over the ailerons, elevators, rudder or stabiliser and could influence the flight path only with engine thrust, flaps and landing gear."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The routing of all hydraulic systems through the same area of the tail allowed a single structural event to disable every system; Boeing subsequently modified the 747 with hydraulic fuses and a fin-base bulkhead."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft flew in phugoid and Dutch-roll oscillations for 32 minutes before descending into mountainous terrain."
+    }
   ],
   "chain": [
-    ["maintenance_error", "metal_fatigue"],
-    ["inadequate_inspection", "metal_fatigue"],
-    ["metal_fatigue", "pressure_bulkhead_failure"],
-    ["pressure_bulkhead_failure", "explosive_decompression"],
-    ["pressure_bulkhead_failure", "structural_failure"],
-    ["structural_failure", "hydraulic_failure"],
-    ["design_deficiency", "hydraulic_failure"],
-    ["hydraulic_failure", "flight_control_failure"],
-    ["flight_control_failure", "loss_of_control_inflight"]
+    [
+      "maintenance_error",
+      "metal_fatigue"
+    ],
+    [
+      "inadequate_inspection",
+      "metal_fatigue"
+    ],
+    [
+      "metal_fatigue",
+      "pressure_bulkhead_failure"
+    ],
+    [
+      "pressure_bulkhead_failure",
+      "explosive_decompression"
+    ],
+    [
+      "pressure_bulkhead_failure",
+      "structural_failure"
+    ],
+    [
+      "structural_failure",
+      "hydraulic_failure"
+    ],
+    [
+      "design_deficiency",
+      "hydraulic_failure"
+    ],
+    [
+      "hydraulic_failure",
+      "flight_control_failure"
+    ],
+    [
+      "flight_control_failure",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
-    { "t": -227000000, "clock": null, "phase": "landing", "actor": "OTHER", "text": "2 June 1978: JA8119 suffers a tailstrike on landing at Osaka that damages the aft pressure bulkhead.", "kind": "outcome" },
-    { "t": -224000000, "clock": null, "phase": "ground", "actor": "GND", "text": "Boeing repairs the bulkhead. The splice plate specified in the repair is fitted as two pieces, so only a single row of rivets carries the load across the joint. The discrepancy is not detected on inspection.", "factors": ["maintenance_error", "inadequate_inspection"], "kind": "system" },
-    { "t": -755, "clock": "18:12", "phase": "takeoff", "actor": "PF", "text": "Departs Haneda for Osaka with 509 passengers and 15 crew; the aircraft has flown 12,318 flights since the repair.", "factors": ["metal_fatigue"], "kind": "crew_action" },
-    { "t": 0, "clock": "18:24:35", "phase": "climb", "actor": "SYS", "text": "Climbing through about 24,000 ft over Sagami Bay, the aft pressure bulkhead ruptures with a loud bang; the cabin decompresses.", "state": { "alt": 24000 }, "factors": ["pressure_bulkhead_failure", "metal_fatigue", "explosive_decompression"], "kind": "system" },
-    { "t": 2, "clock": null, "phase": "climb", "actor": "SYS", "text": "Escaping cabin air blows off most of the vertical fin and severs all four hydraulic systems; the aircraft begins to oscillate in pitch and yaw.", "factors": ["structural_failure", "hydraulic_failure", "flight_control_failure"], "kind": "system" },
-    { "t": 7, "clock": "18:24:42", "phase": "climb", "actor": "CAPT", "text": "Captain orders squawk 7700; the crew declare an emergency to Tokyo Control.", "kind": "crew_speech" },
-    { "t": 46, "clock": "18:25:21", "phase": "cruise", "actor": "FO", "text": "Crew request an immediate return to Haneda; Tokyo Control approves.", "kind": "crew_speech" },
-    { "t": 120, "clock": null, "phase": "cruise", "actor": "FE", "text": "The flight engineer reports that hydraulic pressure is lost on all systems.", "factors": ["hydraulic_failure"], "kind": "crew_speech" },
-    { "t": 240, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "Crew inform Tokyo Control that the aircraft is uncontrollable; they attempt to steer using differential thrust as the aircraft wanders over the Izu peninsula and turns north.", "factors": ["flight_control_failure", "loss_of_control_inflight"], "kind": "crew_speech" },
-    { "t": 925, "clock": "18:40", "phase": "cruise", "actor": "FE", "text": "The landing gear is lowered by the alternate (gravity) system in an attempt to damp the oscillations and slow the aircraft.", "kind": "crew_action" },
-    { "t": 1318, "clock": "18:46:33", "phase": "descent", "actor": "CAPT", "text": "The captain remarks that the situation may be hopeless as the aircraft continues in phugoid oscillations over the mountains west of Tokyo.", "factors": ["loss_of_control_inflight"], "kind": "crew_speech" },
-    { "t": 1800, "clock": null, "phase": "descent", "actor": "SYS", "text": "The aircraft descends rapidly toward the mountains of Gunma Prefecture; the crew apply maximum power and call for the nose to be raised; GPWS sounds.", "factors": ["loss_of_control_inflight"], "kind": "warning" },
-    { "t": 1915, "clock": "18:56:30", "phase": "descent", "actor": "SYS", "text": "The aircraft strikes trees and a ridge near Mount Osutaka at about 5,100 ft, breaks up and burns; 520 of the 524 on board are killed, 4 survive.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+    {
+      "t": -227000000,
+      "clock": null,
+      "phase": "landing",
+      "actor": "OTHER",
+      "text": "2 June 1978: JA8119 suffers a tailstrike on landing at Osaka that damages the aft pressure bulkhead.",
+      "kind": "outcome"
+    },
+    {
+      "t": -224000000,
+      "clock": null,
+      "phase": "ground",
+      "actor": "GND",
+      "text": "Boeing repairs the bulkhead. The splice plate specified in the repair is fitted as two pieces, so only a single row of rivets carries the load across the joint. The discrepancy is not detected on inspection.",
+      "factors": [
+        "maintenance_error",
+        "inadequate_inspection"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": -755,
+      "clock": "18:12",
+      "phase": "takeoff",
+      "actor": "PF",
+      "text": "Departs Haneda for Osaka with 509 passengers and 15 crew; the aircraft has flown 12,318 flights since the repair.",
+      "factors": [
+        "metal_fatigue"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "18:24:35",
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Climbing through about 24,000 ft over Sagami Bay, the aft pressure bulkhead ruptures with a loud bang; the cabin decompresses.",
+      "state": {
+        "alt": 24000
+      },
+      "factors": [
+        "pressure_bulkhead_failure",
+        "metal_fatigue",
+        "explosive_decompression"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 2,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Escaping cabin air blows off most of the vertical fin and severs all four hydraulic systems; the aircraft begins to oscillate in pitch and yaw.",
+      "factors": [
+        "structural_failure",
+        "hydraulic_failure",
+        "flight_control_failure"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 7,
+      "clock": "18:24:42",
+      "phase": "climb",
+      "actor": "CAPT",
+      "text": "Captain orders squawk 7700; the crew declare an emergency to Tokyo Control.",
+      "kind": "crew_speech"
+    },
+    {
+      "t": 46,
+      "clock": "18:25:21",
+      "phase": "cruise",
+      "actor": "FO",
+      "text": "Crew request an immediate return to Haneda; Tokyo Control approves.",
+      "kind": "crew_speech"
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "FE",
+      "text": "The flight engineer reports that hydraulic pressure is lost on all systems.",
+      "factors": [
+        "hydraulic_failure"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 240,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Crew inform Tokyo Control that the aircraft is uncontrollable; they attempt to steer using differential thrust as the aircraft wanders over the Izu peninsula and turns north.",
+      "factors": [
+        "flight_control_failure",
+        "loss_of_control_inflight"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 925,
+      "clock": "18:40",
+      "phase": "cruise",
+      "actor": "FE",
+      "text": "The landing gear is lowered by the alternate (gravity) system in an attempt to damp the oscillations and slow the aircraft.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 1318,
+      "clock": "18:46:33",
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "The captain remarks that the situation may be hopeless as the aircraft continues in phugoid oscillations over the mountains west of Tokyo.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 1800,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "The aircraft descends rapidly toward the mountains of Gunma Prefecture; the crew apply maximum power and call for the nose to be raised; GPWS sounds.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 1915,
+      "clock": "18:56:30",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "The aircraft strikes trees and a ridge near Mount Osutaka at about 5,100 ft, breaks up and burns; 520 of the 524 on board are killed, 4 survive.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [
-    { "t": 7, "clock": "18:24:42", "speaker": "CAPT", "text": "スコーク77", "translation": "Squawk 77." },
-    { "t": 1318, "clock": "18:46:33", "speaker": "CAPT", "text": "これはだめかもわからんね", "translation": "This may be hopeless." }
+    {
+      "t": 7,
+      "clock": "18:24:42",
+      "speaker": "CAPT",
+      "text": "スコーク77",
+      "translation": "Squawk 77."
+    },
+    {
+      "t": 1318,
+      "clock": "18:46:33",
+      "speaker": "CAPT",
+      "text": "これはだめかもわからんね",
+      "translation": "This may be hopeless."
+    }
   ],
   "recommendations": [
-    { "id": null, "to": "Ministry of Transport (Japan) / Boeing", "text": "Improve the quality control and inspection of major structural repairs, and the inspection procedures for pressure bulkheads, so that improper repairs and fatigue cracking are detected.", "status": "unknown", "outcome": "Airworthiness directives required detailed inspections of 747 aft pressure bulkheads; JAL revised its inspection program.", "trigger_factors": ["maintenance_error", "inadequate_inspection", "metal_fatigue"] },
-    { "id": null, "to": "Boeing / FAA", "text": "Modify the 747 so that a failure of the aft pressure bulkhead cannot cause the loss of the vertical fin and of all hydraulic systems.", "status": "closed_acceptable", "outcome": "Boeing installed hydraulic fuses and a bulkhead at the base of the fin and improved the tail-cone venting on the 747 fleet.", "trigger_factors": ["design_deficiency", "hydraulic_failure", "structural_failure"] }
+    {
+      "id": null,
+      "to": "Ministry of Transport (Japan) / Boeing",
+      "text": "Improve the quality control and inspection of major structural repairs, and the inspection procedures for pressure bulkheads, so that improper repairs and fatigue cracking are detected.",
+      "status": "unknown",
+      "outcome": "Airworthiness directives required detailed inspections of 747 aft pressure bulkheads; JAL revised its inspection program.",
+      "trigger_factors": [
+        "maintenance_error",
+        "inadequate_inspection",
+        "metal_fatigue"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Boeing / FAA",
+      "text": "Modify the 747 so that a failure of the aft pressure bulkhead cannot cause the loss of the vertical fin and of all hydraulic systems.",
+      "status": "closed_acceptable",
+      "outcome": "Boeing installed hydraulic fuses and a bulkhead at the base of the fin and improved the tail-cone venting on the 747 fleet.",
+      "trigger_factors": [
+        "design_deficiency",
+        "hydraulic_failure",
+        "structural_failure"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -74,17 +333,28 @@
     "Airworthiness directives required detailed inspections of 747 aft pressure bulkheads and of major structural repairs.",
     "Japan Airlines overhauled its maintenance quality control and inspection procedures; the accident remains the deadliest single-aircraft accident in history."
   ],
-  "related": ["united232", "united811", "aa587"],
+  "related": [
+    "united232",
+    "united811",
+    "aa587"
+  ],
   "fdr": null,
   "sources": [
     "https://www.mlit.go.jp/jtsb/",
     "https://www.ntsb.gov/"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
-    "The 1978 tailstrike and repair are placed at approximate t offsets of about seven years before the accident.",
-    "CVR times for the two quoted lines (18:24:42 and 18:46:33) are as widely published from the transcript; the times of the flight engineer's hydraulic report and the gear extension (about 18:40) are approximate.",
-    "Impact time is given as 18:56:30; the report gives a time within a few seconds of this.",
-    "The impact altitude of about 5,100 ft is approximate.",
-    "The AAIC is now part of the Japan Transport Safety Board; the JTSB home page is given as the source."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "The 1978 tailstrike and repair are placed at approximate t offsets of about seven years before the accident.",
+      "CVR times for the two quoted lines (18:24:42 and 18:46:33) are as widely published from the transcript; the times of the flight engineer's hydraulic report and the gear extension (about 18:40) are approximate.",
+      "Impact time is given as 18:56:30; the report gives a time within a few seconds of this.",
+      "The impact altitude of about 5,100 ft is approximate.",
+      "The AAIC is now part of the Japan Transport Safety Board; the JTSB home page is given as the source."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Japan_Air_Lines_Flight_123"
 }

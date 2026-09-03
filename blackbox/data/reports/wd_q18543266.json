@@ -1,224 +1,226 @@
 {
- "id": "wd_q18543266",
- "qid": "Q18543266",
- "tier": "wikidata",
- "depth": "sections",
- "title": "Pan Am 799",
- "flight_number": "PA799",
- "date": "1968-12-26",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead",
-   "report_id": "AAR-69-8"
-  }
- ],
- "aircraft": {
-  "type": "Boeing 707-321C",
-  "manufacturer": "Boeing",
-  "family": "707",
-  "registration": "N799PA"
- },
- "operator": "Pan American World Airways",
- "route": {
-  "from_name": "Los Angeles",
-  "intermediate": [
-   "Tokyo",
-   "Da Nang"
+  "id": "wd_q18543266",
+  "qid": "Q18543266",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Pan Am 799",
+  "flight_number": "PA799",
+  "date": "1968-12-26",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "AAR-69-8"
+    }
   ],
-  "to_name": "Cam Ranh Bay"
- },
- "location": {
-  "name": "Elmendorf Air Force Base, Anchorage",
-  "country": "United States",
-  "latitude": 61.2667,
-  "longitude": -149.7833
- },
- "phase": "takeoff",
- "occupants": 3,
- "fatalities": 3,
- "category": "LOC-I",
- "summary": "Pan Am Flight 799 crashed at Elmendorf Air Force Base near Anchorage during takeoff on 26 December 1968. The Boeing 707-321C cargo aircraft took off with flaps retracted due to cold weather icing prevention procedures. The takeoff warning system failed to alert the crew because Pan Am had not implemented Boeing Service Bulletin 2384, which would have reduced the warning system threshold for cold weather conditions. The aircraft stalled immediately after becoming airborne; the stick shaker vibrated, but the crew could not recover. The right wing struck the ground 59.2 seconds after takeoff, and the aircraft crashed beyond the runway, exploding in flames.",
- "probable_cause": "The probable cause of this accident was an attempted takeoff with the flaps in a retracted position. This resulted from a combination of factors: (a) inadequate cockpit checklist and procedures; (b) a warning system inadequacy associated with cold weather operations; (c) ineffective control practices regarding manufacturer's Service Bulletins; and (d) stresses imposed upon the crew by their attempts to meet an air traffic control deadline. (p. 20-21)",
- "factors": [
-  {
-   "id": "takeoff_configuration_error",
-   "role": "initiating",
-   "evidence": "First Officer Markestein lowered flaps during initial taxi checklist reading but Captain Moen retracted them to prevent icing, and flaps item did not appear in pre-takeoff checklist to remind pilots (p. 6-7). Crew computed takeoff speeds based on 14° flap configuration but aircraft had 0° flaps (p. 7)."
+  "aircraft": {
+    "type": "Boeing 707-321C",
+    "manufacturer": "Boeing",
+    "family": "707",
+    "registration": "N799PA"
   },
-  {
-   "id": "checklist_design",
-   "role": "contributing",
-   "evidence": "Flaps item appeared only on taxi checklist and was not included in pre-takeoff checklist which comes after taxi checklist (p. 6). Board determined inadequate cockpit checklist and procedures contributed to accident (p. 20-21)."
+  "operator": "Pan American World Airways",
+  "route": {
+    "from_name": "Los Angeles",
+    "intermediate": [
+      "Tokyo",
+      "Da Nang"
+    ],
+    "to_name": "Cam Ranh Bay"
   },
-  {
-   "id": "warning_system_deficiency",
-   "role": "contributing",
-   "evidence": "Takeoff warning system should sound audible warning but did not happen because Pan American failed to implement Boeing January 31, 1967 Service Bulletin 2384 recommending warning system throttle actuation point be reduced from 42 degrees (or 33 degrees) to 25 degrees for cold weather conditions (p. 20-21)."
+  "location": {
+    "name": "Elmendorf Air Force Base, Anchorage",
+    "country": "United States",
+    "latitude": 61.2667,
+    "longitude": -149.7833,
+    "lat": 61.2667,
+    "lon": -149.8333
   },
-  {
-   "id": "maintenance_error",
-   "role": "contributing",
-   "evidence": "Pan Am operations engineering group had decided that Boeing Service Bulletin 2384 was inapplicable to Pan Am aircraft for reasons they never documented (p. 20-21). No evidence that effectiveness of non-implementation was ever questioned or reviewed."
-  },
-  {
-   "id": "atc_workload_staffing",
-   "role": "contributing",
-   "evidence": "Crew experienced pressure to meet air traffic control void time deadline of 0615; void time had been extended six times and final void time was established at 0615 (p. 20-21). Controller stated if Flight 799 failed to make void time of 0615, they would have had to delay approximately 45 minutes (p. 5-6)."
-  },
-  {
-   "id": "deicing_inadequate",
-   "role": "contributing",
-   "evidence": "Captain retracted flaps to prevent icing on aircraft; cold weather was present at Elmendorf AFB (p. 6-7). FAA issued December 31, 1968 Telegraphic Notice alerting operators to possibility of takeoff warning system not operating during cold weather conditions (p. 21)."
-  },
-  {
-   "id": "aerodynamic_stall",
-   "role": "contributing",
-   "evidence": "Cockpit stick shaker began to vibrate indicating imminent aerodynamic stall immediately after plane left the ground; stick shaker noise was heard on CVR record and continued throughout rest of recording (p. 7, 16-17)."
-  },
-  {
-   "id": "loss_of_control_inflight",
-   "role": "outcome",
-   "evidence": "Aircraft banked to right and right wing touched ground and plane crashed 59.2 seconds after takeoff beyond Runway 23 at elevation approximately 207 feet MSL (p. 6, 16-17). Right wingtip contacted ground first in steep right bank with nose low (p. 16-17)."
-  },
-  {
-   "id": "design_deficiency",
-   "role": "contributing",
-   "evidence": "Boeing Service Bulletin 2384 was available since January 31, 1967, but Pan Am had not implemented it, showing design-related control practice deficiency (p. 20-21)."
-  }
- ],
- "chain": [
-  [
-   "takeoff_configuration_error",
-   "aerodynamic_stall"
+  "phase": "takeoff",
+  "occupants": 3,
+  "fatalities": 3,
+  "category": "LOC-I",
+  "summary": "Pan Am Flight 799 crashed at Elmendorf Air Force Base near Anchorage during takeoff on 26 December 1968. The Boeing 707-321C cargo aircraft took off with flaps retracted due to cold weather icing prevention procedures. The takeoff warning system failed to alert the crew because Pan Am had not implemented Boeing Service Bulletin 2384, which would have reduced the warning system threshold for cold weather conditions. The aircraft stalled immediately after becoming airborne; the stick shaker vibrated, but the crew could not recover. The right wing struck the ground 59.2 seconds after takeoff, and the aircraft crashed beyond the runway, exploding in flames.",
+  "probable_cause": "The probable cause of this accident was an attempted takeoff with the flaps in a retracted position. This resulted from a combination of factors: (a) inadequate cockpit checklist and procedures; (b) a warning system inadequacy associated with cold weather operations; (c) ineffective control practices regarding manufacturer's Service Bulletins; and (d) stresses imposed upon the crew by their attempts to meet an air traffic control deadline. (p. 20-21)",
+  "factors": [
+    {
+      "id": "takeoff_configuration_error",
+      "role": "initiating",
+      "evidence": "First Officer Markestein lowered flaps during initial taxi checklist reading but Captain Moen retracted them to prevent icing, and flaps item did not appear in pre-takeoff checklist to remind pilots (p. 6-7). Crew computed takeoff speeds based on 14° flap configuration but aircraft had 0° flaps (p. 7)."
+    },
+    {
+      "id": "checklist_design",
+      "role": "contributing",
+      "evidence": "Flaps item appeared only on taxi checklist and was not included in pre-takeoff checklist which comes after taxi checklist (p. 6). Board determined inadequate cockpit checklist and procedures contributed to accident (p. 20-21)."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "contributing",
+      "evidence": "Takeoff warning system should sound audible warning but did not happen because Pan American failed to implement Boeing January 31, 1967 Service Bulletin 2384 recommending warning system throttle actuation point be reduced from 42 degrees (or 33 degrees) to 25 degrees for cold weather conditions (p. 20-21)."
+    },
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "Pan Am operations engineering group had decided that Boeing Service Bulletin 2384 was inapplicable to Pan Am aircraft for reasons they never documented (p. 20-21). No evidence that effectiveness of non-implementation was ever questioned or reviewed."
+    },
+    {
+      "id": "atc_workload_staffing",
+      "role": "contributing",
+      "evidence": "Crew experienced pressure to meet air traffic control void time deadline of 0615; void time had been extended six times and final void time was established at 0615 (p. 20-21). Controller stated if Flight 799 failed to make void time of 0615, they would have had to delay approximately 45 minutes (p. 5-6)."
+    },
+    {
+      "id": "deicing_inadequate",
+      "role": "contributing",
+      "evidence": "Captain retracted flaps to prevent icing on aircraft; cold weather was present at Elmendorf AFB (p. 6-7). FAA issued December 31, 1968 Telegraphic Notice alerting operators to possibility of takeoff warning system not operating during cold weather conditions (p. 21)."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "contributing",
+      "evidence": "Cockpit stick shaker began to vibrate indicating imminent aerodynamic stall immediately after plane left the ground; stick shaker noise was heard on CVR record and continued throughout rest of recording (p. 7, 16-17)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "Aircraft banked to right and right wing touched ground and plane crashed 59.2 seconds after takeoff beyond Runway 23 at elevation approximately 207 feet MSL (p. 6, 16-17). Right wingtip contacted ground first in steep right bank with nose low (p. 16-17)."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "Boeing Service Bulletin 2384 was available since January 31, 1967, but Pan Am had not implemented it, showing design-related control practice deficiency (p. 20-21)."
+    }
   ],
-  [
-   "checklist_design",
-   "takeoff_configuration_error"
+  "chain": [
+    [
+      "takeoff_configuration_error",
+      "aerodynamic_stall"
+    ],
+    [
+      "checklist_design",
+      "takeoff_configuration_error"
+    ],
+    [
+      "warning_system_deficiency",
+      "takeoff_configuration_error"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ],
+    [
+      "deicing_inadequate",
+      "takeoff_configuration_error"
+    ],
+    [
+      "atc_workload_staffing",
+      "takeoff_configuration_error"
+    ]
   ],
-  [
-   "warning_system_deficiency",
-   "takeoff_configuration_error"
+  "events": [
+    {
+      "t": 0,
+      "clock": "06:14:30",
+      "phase": "takeoff",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight 799 cleared for takeoff from Runway 23 at Elmendorf AFB (p. 5-6)",
+      "factors": []
+    },
+    {
+      "t": 1,
+      "clock": "06:15:00",
+      "phase": "takeoff",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "First officer called for takeoff power; engine pressure ratio readings were 1.78 static and 1.82 rolling takeoff (p. 7)",
+      "factors": []
+    },
+    {
+      "t": 2,
+      "clock": "06:15:02",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Cockpit stick shaker began to vibrate indicating imminent aerodynamic stall; noise continued throughout rest of CVR recording (p. 7, 16-17)",
+      "factors": [
+        "aerodynamic_stall"
+      ]
+    },
+    {
+      "t": 5,
+      "clock": "06:15:05",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Captain called out airspeed of 129 knots, Vy, and Vp as attempted takeoff progressed; aircraft banked to right (p. 7)",
+      "factors": []
+    },
+    {
+      "t": 30,
+      "clock": "06:15:30",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft continued to maneuver with nose-up and wing-down attitudes; witnesses observed flames from right engines (p. 7, 16-17)",
+      "factors": []
+    },
+    {
+      "t": 59,
+      "clock": "06:16:14",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Right wing touched ground and aircraft crashed 59.2 seconds after takeoff in steep right bank with nose low beyond Runway 23; large ground fire broke out immediately (p. 6-7, 16-17)",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
   ],
-  [
-   "aerodynamic_stall",
-   "loss_of_control_inflight"
+  "recommendations": [
+    {
+      "id": "1",
+      "category": "Service Bulletin Implementation",
+      "priority": "Airworthiness Directive",
+      "text": "The provisions of Boeing Service Bulletin No. 2384, which calls for modification of the thrust lever advancement from 42° (or 33°) to 25° travel, be required by issuance of an airworthiness directive to all operators of B-707/720 aircraft. (p. 20)",
+      "status": "unknown"
+    },
+    {
+      "id": "2",
+      "category": "Cockpit Procedures",
+      "priority": "Safety",
+      "text": "Air carrier cockpit checklists be reviewed in an effort to insure that each list provides a means of reminding the crew, immediately prior to takeoff, that all items critical for safe flight have been accomplished. (p. 20)",
+      "status": "unknown"
+    }
   ],
-  [
-   "deicing_inadequate",
-   "takeoff_configuration_error"
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR6908.pdf"
   ],
-  [
-   "atc_workload_staffing",
-   "takeoff_configuration_error"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "06:14:30",
-   "phase": "takeoff",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Flight 799 cleared for takeoff from Runway 23 at Elmendorf AFB (p. 5-6)",
-   "factors": []
+  "wikipedia": "https://en.wikipedia.org/wiki/Pan_Am_Flight_799",
+  "asn_id": null,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR6908.pdf"
+  ],
+  "interest": 8.25,
+  "curated_id": null,
+  "fdr": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read NTSB Accident Report AAR-69-8 sections on History of Flight, Probable Cause, and Recommendations",
+      "Extracted 6 events with specific clock times from pre-takeoff through impact",
+      "8 detailed factors with page citations addressing configuration error, checklist deficiency, warning system inadequacy, and crew pressures",
+      "2 major recommendations regarding Service Bulletin implementation and checklist procedures",
+      "Clear causal chain from checklist design through cold weather procedures to aerodynamic stall and loss of control",
+      "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
+    ]
   },
-  {
-   "t": 1,
-   "clock": "06:15:00",
-   "phase": "takeoff",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "First officer called for takeoff power; engine pressure ratio readings were 1.78 static and 1.82 rolling takeoff (p. 7)",
-   "factors": []
-  },
-  {
-   "t": 2,
-   "clock": "06:15:02",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "warning",
-   "text": "Cockpit stick shaker began to vibrate indicating imminent aerodynamic stall; noise continued throughout rest of CVR recording (p. 7, 16-17)",
-   "factors": [
-    "aerodynamic_stall"
-   ]
-  },
-  {
-   "t": 5,
-   "clock": "06:15:05",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Captain called out airspeed of 129 knots, Vy, and Vp as attempted takeoff progressed; aircraft banked to right (p. 7)",
-   "factors": []
-  },
-  {
-   "t": 30,
-   "clock": "06:15:30",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Aircraft continued to maneuver with nose-up and wing-down attitudes; witnesses observed flames from right engines (p. 7, 16-17)",
-   "factors": []
-  },
-  {
-   "t": 59,
-   "clock": "06:16:14",
-   "phase": "takeoff",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Right wing touched ground and aircraft crashed 59.2 seconds after takeoff in steep right bank with nose low beyond Runway 23; large ground fire broke out immediately (p. 6-7, 16-17)",
-   "factors": [
-    "loss_of_control_inflight"
-   ]
-  }
- ],
- "recommendations": [
-  {
-   "id": "1",
-   "category": "Service Bulletin Implementation",
-   "priority": "Airworthiness Directive",
-   "text": "The provisions of Boeing Service Bulletin No. 2384, which calls for modification of the thrust lever advancement from 42° (or 33°) to 25° travel, be required by issuance of an airworthiness directive to all operators of B-707/720 aircraft. (p. 20)",
-   "status": "unknown"
-  },
-  {
-   "id": "2",
-   "category": "Cockpit Procedures",
-   "priority": "Safety",
-   "text": "Air carrier cockpit checklists be reviewed in an effort to insure that each list provides a means of reminding the crew, immediately prior to takeoff, that all items critical for safe flight have been accomplished. (p. 20)",
-   "status": "unknown"
-  }
- ],
- "sources": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR6908.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/Pan_Am_Flight_799",
- "asn_id": null,
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR6908.pdf"
- ],
- "interest": 8.25,
- "curated_id": null,
- "fdr": null,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5-20251001",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Read NTSB Accident Report AAR-69-8 sections on History of Flight, Probable Cause, and Recommendations",
-   "Extracted 6 events with specific clock times from pre-takeoff through impact",
-   "8 detailed factors with page citations addressing configuration error, checklist deficiency, warning system inadequacy, and crew pressures",
-   "2 major recommendations regarding Service Bulletin implementation and checklist procedures",
-   "Clear causal chain from checklist design through cold weather procedures to aerodynamic stall and loss of control",
-   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null"
-  ]
- },
- "agency": "NTSB",
- "cvr": [],
- "dissent": [],
- "safety_changes": [],
- "related": []
+  "agency": "NTSB",
+  "cvr": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": []
 }

@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Teterboro Airport, New Jersey",
-    "country": "United States"
+    "country": "United States",
+    "lat": 40.8294,
+    "lon": -74.0603
   },
   "phase": "approach",
   "occupants": 2,
@@ -86,13 +88,34 @@
     }
   ],
   "chain": [
-    ["pilot_experience", "crm_breakdown"],
-    ["procedural_noncompliance", "crm_breakdown"],
-    ["crm_breakdown", "low_energy_state"],
-    ["low_energy_state", "unstable_approach"],
-    ["unstable_approach", "aerodynamic_stall"],
-    ["aerodynamic_stall", "loss_of_control_inflight"],
-    ["inadequate_monitoring", "low_energy_state"]
+    [
+      "pilot_experience",
+      "crm_breakdown"
+    ],
+    [
+      "procedural_noncompliance",
+      "crm_breakdown"
+    ],
+    [
+      "crm_breakdown",
+      "low_energy_state"
+    ],
+    [
+      "low_energy_state",
+      "unstable_approach"
+    ],
+    [
+      "unstable_approach",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ],
+    [
+      "inadequate_monitoring",
+      "low_energy_state"
+    ]
   ],
   "events": [
     {
@@ -102,7 +125,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Captain filed instrument flight rules flight plan from Philadelphia to Teterboro; no weather briefing conducted and no approach briefing prepared",
-      "factors": ["crm_breakdown"]
+      "factors": [
+        "crm_breakdown"
+      ]
     },
     {
       "t": 1200,
@@ -111,8 +136,14 @@
       "actor": "SYS",
       "kind": "system",
       "text": "Aircraft crosses TORBY (final approach fix) at 1,550 feet altitude; captain did not initiate circle-to-land maneuver at this point as instructed by ATC",
-      "state": {"alt": 1550, "ias": 120},
-      "factors": ["crm_breakdown", "unstable_approach"]
+      "state": {
+        "alt": 1550,
+        "ias": 120
+      },
+      "factors": [
+        "crm_breakdown",
+        "unstable_approach"
+      ]
     },
     {
       "t": 2745,
@@ -121,8 +152,15 @@
       "actor": "FO",
       "kind": "crew_action",
       "text": "First officer acting as pilot flying begins right turn toward runway 1; aircraft at 650 feet altitude and begins descending",
-      "state": {"alt": 650, "ias": 127, "roll": 28},
-      "factors": ["pilot_experience", "inadequate_monitoring"]
+      "state": {
+        "alt": 650,
+        "ias": 127,
+        "roll": 28
+      },
+      "factors": [
+        "pilot_experience",
+        "inadequate_monitoring"
+      ]
     },
     {
       "t": 2760,
@@ -131,8 +169,13 @@
       "actor": "SYS",
       "kind": "system",
       "text": "EGPWS '500-foot' aural alert sounds; captain disregards alert and tells SIC to disregard it. Aircraft continues descent and right turn",
-      "state": {"alt": 500, "ias": 123},
-      "factors": ["inadequate_monitoring"]
+      "state": {
+        "alt": 500,
+        "ias": 123
+      },
+      "factors": [
+        "inadequate_monitoring"
+      ]
     },
     {
       "t": 2763,
@@ -141,8 +184,13 @@
       "actor": "SYS",
       "kind": "system",
       "text": "EGPWS 'sink rate, pull up' alert sounds. Aircraft at 350 feet altitude in 28-degree right bank. No go-around initiated",
-      "state": {"alt": 350, "roll": 28},
-      "factors": ["inadequate_monitoring"]
+      "state": {
+        "alt": 350,
+        "roll": 28
+      },
+      "factors": [
+        "inadequate_monitoring"
+      ]
     },
     {
       "t": 2835,
@@ -151,8 +199,14 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Captain takes control from SIC, stating 'my controls'; instructs SIC to monitor airspeed. Aircraft makes rapid left turn toward runway 1",
-      "state": {"alt": 450, "ias": 120, "roll": -35},
-      "factors": ["inadequate_monitoring"]
+      "state": {
+        "alt": 450,
+        "ias": 120,
+        "roll": -35
+      },
+      "factors": [
+        "inadequate_monitoring"
+      ]
     },
     {
       "t": 2852,
@@ -161,7 +215,9 @@
       "actor": "CAPT",
       "kind": "crew_speech",
       "text": "Captain announces 'stall' in strained voice at 35-degree left bank; SIC responds 'yup'",
-      "factors": ["aerodynamic_stall"]
+      "factors": [
+        "aerodynamic_stall"
+      ]
     },
     {
       "t": 2858,
@@ -170,7 +226,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft right wing tip impacts roof of office building at Carlstadt, New Jersey; aircraft fragments and catches fire; both pilots killed in impact",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     }
   ],
   "cvr": [
@@ -223,35 +281,45 @@
       "to": "FAA",
       "text": "Require all Title 14 CFR Part 135 operators to establish programs for flight crewmembers who have demonstrated performance deficiencies or experienced failures during training and administer additional oversight and training to address and correct performance deficiencies",
       "status": "unknown",
-      "trigger_factors": ["pilot_experience"]
+      "trigger_factors": [
+        "pilot_experience"
+      ]
     },
     {
       "id": "A-19-8",
       "to": "FAA",
       "text": "Develop guidance for Title 14 CFR Part 135 operators to help them create and implement effective crew resource management training programs",
       "status": "unknown",
-      "trigger_factors": ["crm_breakdown"]
+      "trigger_factors": [
+        "crm_breakdown"
+      ]
     },
     {
       "id": "A-19-9",
       "to": "FAA",
       "text": "Review operators' Learjet 35A operations manuals to determine whether they contain manufacturer-recommended approach speed wind additives and encourage those operators without that information to add it to their operations documents",
       "status": "unknown",
-      "trigger_factors": ["low_energy_state"]
+      "trigger_factors": [
+        "low_energy_state"
+      ]
     },
     {
       "id": "A-10-13",
       "to": "FAA",
       "text": "Issue an advisory circular with guidance on leadership training for upgrading captains at 14 CFR Part 121, 135, and 91K operators, including methods and techniques for effective leadership and professional standards",
       "status": "unknown",
-      "trigger_factors": ["procedural_noncompliance"]
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
     },
     {
       "id": "A-10-14",
       "to": "FAA",
       "text": "Require all 14 CFR Part 121, 135, and 91K operators to provide a specific course on leadership training to their upgrading captains",
       "status": "unknown",
-      "trigger_factors": ["procedural_noncompliance"]
+      "trigger_factors": [
+        "procedural_noncompliance"
+      ]
     },
     {
       "id": "A-16-34",
@@ -286,7 +354,9 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1902.pdf"],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1902.pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
@@ -304,7 +374,9 @@
   },
   "asn_id": null,
   "wikipedia": "https://en.wikipedia.org/wiki/2017_Teterboro_Learjet_35_crash",
-  "report_links": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1902.pdf"],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1902.pdf"
+  ],
   "interest": 6.32,
   "curated_id": null
 }

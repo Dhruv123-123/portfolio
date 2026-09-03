@@ -7,70 +7,357 @@
   "t0": "2008-08-20T12:24:00Z",
   "agency": "CIAIAC",
   "agencies": [
-    { "code": "CIAIAC", "name": "Comisión de Investigación de Accidentes e Incidentes de Aviación Civil", "country": "Spain", "role": "lead",
-      "report_id": "A-032/2008", "report_title": "Report A-032/2008: Accident involving a McDonnell Douglas DC-9-82 (MD-82) aircraft, registration EC-HFP, operated by Spanair, at Madrid-Barajas Airport, on 20 August 2008", "report_date": "2011-07-29",
-      "url": "https://www.mitma.gob.es/organos-colegiados/ciaiac" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" }
+    {
+      "code": "CIAIAC",
+      "name": "Comisión de Investigación de Accidentes e Incidentes de Aviación Civil",
+      "country": "Spain",
+      "role": "lead",
+      "report_id": "A-032/2008",
+      "report_title": "Report A-032/2008: Accident involving a McDonnell Douglas DC-9-82 (MD-82) aircraft, registration EC-HFP, operated by Spanair, at Madrid-Barajas Airport, on 20 August 2008",
+      "report_date": "2011-07-29",
+      "url": "https://www.mitma.gob.es/organos-colegiados/ciaiac"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "McDonnell Douglas MD-82", "family": "MD-80", "manufacturer": "McDonnell Douglas", "registration": "EC-HFP", "msn": "53148", "engines": "Pratt & Whitney JT8D-219" },
+  "aircraft": {
+    "type": "McDonnell Douglas MD-82",
+    "family": "MD-80",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "EC-HFP",
+    "msn": "53148",
+    "engines": "Pratt & Whitney JT8D-219"
+  },
   "operator": "Spanair",
-  "route": { "from": "LEMD", "from_name": "Madrid Barajas", "to": "GCLP", "to_name": "Gran Canaria" },
-  "location": { "name": "Beyond the end of runway 36L, Madrid Barajas Airport", "country": "Spain", "lat": 40.5167, "lon": -3.5667 },
+  "route": {
+    "from": "LEMD",
+    "from_name": "Madrid Barajas",
+    "to": "GCLP",
+    "to_name": "Gran Canaria"
+  },
+  "location": {
+    "name": "Beyond the end of runway 36L, Madrid Barajas Airport",
+    "country": "Spain",
+    "lat": 40.5167,
+    "lon": -3.5667
+  },
   "phase": "takeoff",
-  "occupants": 172, "fatalities": 154, "injuries_serious": 18,
+  "occupants": 172,
+  "fatalities": 154,
+  "injuries_serious": 18,
   "damage": "destroyed",
   "category": "LOC-I",
   "summary": "After returning to the stand because of an overheating ram air temperature probe, which maintenance addressed by pulling its heater circuit breaker, the MD-82 taxied out again for a second departure. The crew did not extend the flaps and slats for takeoff and the takeoff warning system did not sound. The aircraft rotated, stalled immediately after lift-off, rolled and struck the ground beside the runway, breaking up and burning. 154 of the 172 occupants died.",
   "probable_cause": "The crew lost control of the aircraft as a consequence of entering a stall immediately after takeoff due to an improper aircraft configuration, with the flaps and slats retracted, following a series of mistakes and omissions, together with the absence of the takeoff configuration warning. The crew did not identify the configuration error because they did not properly use the checklists that contain the items to select and verify the position of the flaps and slats, omitting the flaps/slats item in the After Start checklist, cross-checking of it in the Takeoff Briefing, and the visual check of the flaps/slats when performing the Takeoff Imminent checklist. The TOWS did not function because of a failure whose origin could not be determined, but which was associated with the R2-5 relay and the RAT probe heating problem.",
   "factors": [
-    { "id": "takeoff_configuration_error", "role": "initiating", "evidence": "The flaps and slats were not extended for takeoff; the flap handle was found in the retracted position and the FDR shows flaps at zero." },
-    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The crew omitted the flaps/slats item of the After Start checklist, did not cross-check it in the takeoff briefing and did not carry out the visual check in the Takeoff Imminent checklist." },
-    { "id": "warning_system_deficiency", "role": "contributing", "evidence": "The takeoff warning system (TOWS) did not sound when the throttles were advanced with the flaps retracted." },
-    { "id": "maintenance_error", "role": "contributing", "evidence": "Maintenance action on the RAT probe overheating consisted of pulling the Z-29 circuit breaker for the probe heater without investigating the cause, which was associated with the R2-5 ground-sensing relay that also feeds the TOWS." },
-    { "id": "known_defect_unresolved", "role": "latent", "evidence": "The RAT probe heating on the ground had been reported on earlier flights and was deferred rather than diagnosed." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The TOWS was not designed to be fail-safe and was not monitored for its own failure; the same relay affected both the RAT heater and the TOWS ground logic." },
-    { "id": "high_workload", "role": "contributing", "evidence": "The return to the stand, delay and rushed second departure disrupted the normal flow of the crew's preparation and checklists." },
-    { "id": "sterile_cockpit_violation", "role": "contributing", "evidence": "The CVR recorded non-essential conversation and interruptions during the second taxi-out that disrupted checklist execution." },
-    { "id": "checklist_design", "role": "latent", "evidence": "The operator's checklists and the way they were executed did not ensure independent verification of the takeoff configuration." },
-    { "id": "aerodynamic_stall", "role": "outcome", "evidence": "The stall warning sounded immediately after rotation; the aircraft pitched up, rolled and stalled at low height with flaps retracted." },
-    { "id": "inappropriate_stall_recovery", "role": "contributing", "evidence": "The crew did not identify the configuration cause and their responses did not recover the aircraft in the few seconds available." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft rolled alternately right and left with a very high angle of attack and struck the ground beside the runway." },
-    { "id": "post_impact_fire", "role": "outcome", "evidence": "The aircraft broke up and a fuel-fed fire destroyed the fuselage; most fatalities were due to impact and fire." },
-    { "id": "regulatory_oversight", "role": "latent", "evidence": "The report found deficiencies in the oversight of the operator's maintenance and MEL handling and in the harmonisation of TOWS airworthiness requirements." }
+    {
+      "id": "takeoff_configuration_error",
+      "role": "initiating",
+      "evidence": "The flaps and slats were not extended for takeoff; the flap handle was found in the retracted position and the FDR shows flaps at zero."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The crew omitted the flaps/slats item of the After Start checklist, did not cross-check it in the takeoff briefing and did not carry out the visual check in the Takeoff Imminent checklist."
+    },
+    {
+      "id": "warning_system_deficiency",
+      "role": "contributing",
+      "evidence": "The takeoff warning system (TOWS) did not sound when the throttles were advanced with the flaps retracted."
+    },
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "Maintenance action on the RAT probe overheating consisted of pulling the Z-29 circuit breaker for the probe heater without investigating the cause, which was associated with the R2-5 ground-sensing relay that also feeds the TOWS."
+    },
+    {
+      "id": "known_defect_unresolved",
+      "role": "latent",
+      "evidence": "The RAT probe heating on the ground had been reported on earlier flights and was deferred rather than diagnosed."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The TOWS was not designed to be fail-safe and was not monitored for its own failure; the same relay affected both the RAT heater and the TOWS ground logic."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The return to the stand, delay and rushed second departure disrupted the normal flow of the crew's preparation and checklists."
+    },
+    {
+      "id": "sterile_cockpit_violation",
+      "role": "contributing",
+      "evidence": "The CVR recorded non-essential conversation and interruptions during the second taxi-out that disrupted checklist execution."
+    },
+    {
+      "id": "checklist_design",
+      "role": "latent",
+      "evidence": "The operator's checklists and the way they were executed did not ensure independent verification of the takeoff configuration."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "outcome",
+      "evidence": "The stall warning sounded immediately after rotation; the aircraft pitched up, rolled and stalled at low height with flaps retracted."
+    },
+    {
+      "id": "inappropriate_stall_recovery",
+      "role": "contributing",
+      "evidence": "The crew did not identify the configuration cause and their responses did not recover the aircraft in the few seconds available."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft rolled alternately right and left with a very high angle of attack and struck the ground beside the runway."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "The aircraft broke up and a fuel-fed fire destroyed the fuselage; most fatalities were due to impact and fire."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "The report found deficiencies in the oversight of the operator's maintenance and MEL handling and in the harmonisation of TOWS airworthiness requirements."
+    }
   ],
   "chain": [
-    ["known_defect_unresolved", "maintenance_error"],
-    ["maintenance_error", "warning_system_deficiency"],
-    ["design_deficiency", "warning_system_deficiency"],
-    ["high_workload", "procedural_noncompliance"],
-    ["sterile_cockpit_violation", "procedural_noncompliance"],
-    ["checklist_design", "procedural_noncompliance"],
-    ["procedural_noncompliance", "takeoff_configuration_error"],
-    ["warning_system_deficiency", "takeoff_configuration_error"],
-    ["takeoff_configuration_error", "aerodynamic_stall"],
-    ["aerodynamic_stall", "inappropriate_stall_recovery"],
-    ["inappropriate_stall_recovery", "loss_of_control_inflight"],
-    ["loss_of_control_inflight", "post_impact_fire"]
+    [
+      "known_defect_unresolved",
+      "maintenance_error"
+    ],
+    [
+      "maintenance_error",
+      "warning_system_deficiency"
+    ],
+    [
+      "design_deficiency",
+      "warning_system_deficiency"
+    ],
+    [
+      "high_workload",
+      "procedural_noncompliance"
+    ],
+    [
+      "sterile_cockpit_violation",
+      "procedural_noncompliance"
+    ],
+    [
+      "checklist_design",
+      "procedural_noncompliance"
+    ],
+    [
+      "procedural_noncompliance",
+      "takeoff_configuration_error"
+    ],
+    [
+      "warning_system_deficiency",
+      "takeoff_configuration_error"
+    ],
+    [
+      "takeoff_configuration_error",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "inappropriate_stall_recovery",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "post_impact_fire"
+    ]
   ],
   "events": [
-    { "t": -4200, "clock": "13:14", "phase": "taxi", "actor": "CAPT", "text": "During the first taxi to runway 36L the crew note the RAT probe temperature indicating an excessive value on the ground and return to the stand.", "factors": ["known_defect_unresolved"], "kind": "crew_action" },
-    { "t": -2400, "clock": "13:44", "phase": "ground", "actor": "GND", "text": "Maintenance technicians pull the Z-29 circuit breaker for the RAT probe heater in accordance with the MEL and release the aircraft, without investigating the R2-5 relay.", "factors": ["maintenance_error", "design_deficiency"], "kind": "crew_action" },
-    { "t": -1500, "clock": "13:59", "phase": "ground", "actor": "FO", "text": "Engines restarted; the After Start checklist is read but the flaps/slats item is skipped and the flaps remain retracted.", "factors": ["procedural_noncompliance", "takeoff_configuration_error"], "kind": "crew_action" },
-    { "t": -900, "clock": "14:09", "phase": "taxi", "actor": "CAPT", "text": "Second taxi to runway 36L; the takeoff briefing does not cross-check the flap setting and there is non-essential conversation in the cockpit.", "factors": ["sterile_cockpit_violation", "high_workload"], "kind": "crew_speech" },
-    { "t": -120, "clock": "14:22", "phase": "taxi", "actor": "FO", "text": "Takeoff Imminent checklist read; the flaps/slats response is given without a visual check of the handle or indicators.", "factors": ["procedural_noncompliance", "checklist_design"], "kind": "crew_speech" },
-    { "t": -60, "clock": "14:23", "phase": "takeoff", "actor": "SYS", "text": "Throttles advanced for takeoff; the takeoff warning system does not sound although flaps and slats are retracted.", "factors": ["warning_system_deficiency"], "kind": "system" },
-    { "t": 0, "clock": "14:24", "phase": "takeoff", "actor": "CAPT", "text": "Rotation at about 154 kt; the aircraft lifts off with flaps and slats retracted.", "state": { "ias": 154 }, "factors": ["takeoff_configuration_error"], "kind": "crew_action" },
-    { "t": 3, "clock": "14:24", "phase": "initial_climb", "actor": "SYS", "text": "Stall warning and stick shaker activate immediately after lift-off; a synthetic voice calls stall.", "factors": ["aerodynamic_stall"], "kind": "warning" },
-    { "t": 8, "clock": "14:24", "phase": "initial_climb", "actor": "SYS", "text": "The aircraft reaches about 40 ft with a high pitch attitude, then rolls right and left with bank angles of over 30 degrees; the crew apply inputs but do not identify the configuration.", "state": { "alt": 40 }, "factors": ["loss_of_control_inflight", "inappropriate_stall_recovery"], "kind": "system" },
-    { "t": 15, "clock": "14:24", "phase": "initial_climb", "actor": "SYS", "text": "The right wing and tail strike the ground beside the runway; the aircraft skids across the terrain, breaks up and catches fire near a stream.", "factors": ["loss_of_control_inflight", "post_impact_fire"], "kind": "outcome" },
-    { "t": 60, "clock": "14:25", "phase": "ground", "actor": "OTHER", "text": "Fuel-fed fire destroys the fuselage; 154 of the 172 occupants die and 18 survive with injuries.", "factors": ["post_impact_fire"], "kind": "outcome" }
+    {
+      "t": -4200,
+      "clock": "13:14",
+      "phase": "taxi",
+      "actor": "CAPT",
+      "text": "During the first taxi to runway 36L the crew note the RAT probe temperature indicating an excessive value on the ground and return to the stand.",
+      "factors": [
+        "known_defect_unresolved"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -2400,
+      "clock": "13:44",
+      "phase": "ground",
+      "actor": "GND",
+      "text": "Maintenance technicians pull the Z-29 circuit breaker for the RAT probe heater in accordance with the MEL and release the aircraft, without investigating the R2-5 relay.",
+      "factors": [
+        "maintenance_error",
+        "design_deficiency"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -1500,
+      "clock": "13:59",
+      "phase": "ground",
+      "actor": "FO",
+      "text": "Engines restarted; the After Start checklist is read but the flaps/slats item is skipped and the flaps remain retracted.",
+      "factors": [
+        "procedural_noncompliance",
+        "takeoff_configuration_error"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -900,
+      "clock": "14:09",
+      "phase": "taxi",
+      "actor": "CAPT",
+      "text": "Second taxi to runway 36L; the takeoff briefing does not cross-check the flap setting and there is non-essential conversation in the cockpit.",
+      "factors": [
+        "sterile_cockpit_violation",
+        "high_workload"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": -120,
+      "clock": "14:22",
+      "phase": "taxi",
+      "actor": "FO",
+      "text": "Takeoff Imminent checklist read; the flaps/slats response is given without a visual check of the handle or indicators.",
+      "factors": [
+        "procedural_noncompliance",
+        "checklist_design"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": -60,
+      "clock": "14:23",
+      "phase": "takeoff",
+      "actor": "SYS",
+      "text": "Throttles advanced for takeoff; the takeoff warning system does not sound although flaps and slats are retracted.",
+      "factors": [
+        "warning_system_deficiency"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 0,
+      "clock": "14:24",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "Rotation at about 154 kt; the aircraft lifts off with flaps and slats retracted.",
+      "state": {
+        "ias": 154
+      },
+      "factors": [
+        "takeoff_configuration_error"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 3,
+      "clock": "14:24",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "Stall warning and stick shaker activate immediately after lift-off; a synthetic voice calls stall.",
+      "factors": [
+        "aerodynamic_stall"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 8,
+      "clock": "14:24",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "The aircraft reaches about 40 ft with a high pitch attitude, then rolls right and left with bank angles of over 30 degrees; the crew apply inputs but do not identify the configuration.",
+      "state": {
+        "alt": 40
+      },
+      "factors": [
+        "loss_of_control_inflight",
+        "inappropriate_stall_recovery"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 15,
+      "clock": "14:24",
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "The right wing and tail strike the ground beside the runway; the aircraft skids across the terrain, breaks up and catches fire near a stream.",
+      "factors": [
+        "loss_of_control_inflight",
+        "post_impact_fire"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 60,
+      "clock": "14:25",
+      "phase": "ground",
+      "actor": "OTHER",
+      "text": "Fuel-fed fire destroys the fuselage; 154 of the 172 occupants die and 18 survive with injuries.",
+      "factors": [
+        "post_impact_fire"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "EASA / FAA", "text": "Require that takeoff warning systems on transport aircraft be designed so that a failure of the system is detected and indicated to the crew, and that the TOWS is checked before every flight.", "status": "unknown", "outcome": "Boeing revised MD-80 procedures to include a TOWS check before each takeoff.", "trigger_factors": ["warning_system_deficiency", "design_deficiency"] },
-    { "id": null, "to": "EASA / operators", "text": "Reinforce checklist discipline, in particular the independent verification of flaps and slats before takeoff, and the application of sterile cockpit rules during taxi.", "status": "unknown", "outcome": null, "trigger_factors": ["procedural_noncompliance", "sterile_cockpit_violation", "checklist_design"] },
-    { "id": null, "to": "AESA / Spanair", "text": "Improve maintenance troubleshooting and MEL application so that defects with potential links to safety systems are diagnosed rather than deferred.", "status": "unknown", "outcome": null, "trigger_factors": ["maintenance_error", "known_defect_unresolved", "regulatory_oversight"] },
-    { "id": null, "to": "FAA / EASA / Boeing", "text": "Investigate the R2-5 relay and RAT probe heating faults on MD-80 series aircraft and their relationship with TOWS operation.", "status": "unknown", "outcome": null, "trigger_factors": ["maintenance_error", "warning_system_deficiency"] }
+    {
+      "id": null,
+      "to": "EASA / FAA",
+      "text": "Require that takeoff warning systems on transport aircraft be designed so that a failure of the system is detected and indicated to the crew, and that the TOWS is checked before every flight.",
+      "status": "unknown",
+      "outcome": "Boeing revised MD-80 procedures to include a TOWS check before each takeoff.",
+      "trigger_factors": [
+        "warning_system_deficiency",
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "EASA / operators",
+      "text": "Reinforce checklist discipline, in particular the independent verification of flaps and slats before takeoff, and the application of sterile cockpit rules during taxi.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "procedural_noncompliance",
+        "sterile_cockpit_violation",
+        "checklist_design"
+      ]
+    },
+    {
+      "id": null,
+      "to": "AESA / Spanair",
+      "text": "Improve maintenance troubleshooting and MEL application so that defects with potential links to safety systems are diagnosed rather than deferred.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "maintenance_error",
+        "known_defect_unresolved",
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA / EASA / Boeing",
+      "text": "Investigate the R2-5 relay and RAT probe heating faults on MD-80 series aircraft and their relationship with TOWS operation.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "maintenance_error",
+        "warning_system_deficiency"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -78,15 +365,26 @@
     "Spanish and European emphasis on sterile cockpit discipline and takeoff configuration verification.",
     "Review of MEL procedures and maintenance troubleshooting for the RAT probe heater circuit on MD-80s."
   ],
-  "related": ["northwest6231", "delta191", "emirates407"],
+  "related": [
+    "northwest6231",
+    "delta191",
+    "emirates407"
+  ],
   "fdr": null,
   "sources": [
     "https://www.mitma.gob.es/organos-colegiados/ciaiac"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
-    "Clock strings are local time (CEST); the accident occurred at about 14:24 local. Seconds and the earlier taxi/maintenance times are approximate.",
-    "Rotation speed (about 154 kt) and the roughly 40 ft maximum height are from the report's FDR analysis; other values approximate.",
-    "Sterile cockpit violation is included on the basis of the report's discussion of interruptions and non-essential conversation during taxi; the report did not name it as a cause.",
-    "Recommendation ids not reproduced."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Clock strings are local time (CEST); the accident occurred at about 14:24 local. Seconds and the earlier taxi/maintenance times are approximate.",
+      "Rotation speed (about 154 kt) and the roughly 40 ft maximum height are from the report's FDR analysis; other values approximate.",
+      "Sterile cockpit violation is included on the basis of the report's discussion of interruptions and non-essential conversation during taxi; the report did not name it as a cause.",
+      "Recommendation ids not reproduced."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Spanair_Flight_5022"
 }

@@ -7,57 +7,271 @@
   "t0": "2008-01-17T12:41:00Z",
   "agency": "AAIB",
   "agencies": [
-    { "code": "AAIB", "name": "Air Accidents Investigation Branch", "country": "United Kingdom", "role": "lead",
-      "report_id": "1/2010", "report_title": "Report on the accident to Boeing 777-236ER, G-YMMM, at London Heathrow Airport on 17 January 2008", "report_date": "2010-02-09",
-      "url": "https://www.gov.uk/aaib-reports/1-2010-boeing-777-236er-g-ymmm-17-january-2008" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" }
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead",
+      "report_id": "1/2010",
+      "report_title": "Report on the accident to Boeing 777-236ER, G-YMMM, at London Heathrow Airport on 17 January 2008",
+      "report_date": "2010-02-09",
+      "url": "https://www.gov.uk/aaib-reports/1-2010-boeing-777-236er-g-ymmm-17-january-2008"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Boeing 777-236ER", "family": "777", "manufacturer": "Boeing", "registration": "G-YMMM", "msn": "30314", "engines": "Rolls-Royce Trent 895-17" },
+  "aircraft": {
+    "type": "Boeing 777-236ER",
+    "family": "777",
+    "manufacturer": "Boeing",
+    "registration": "G-YMMM",
+    "msn": "30314",
+    "engines": "Rolls-Royce Trent 895-17"
+  },
   "operator": "British Airways",
-  "route": { "from": "ZBAA", "from_name": "Beijing Capital", "to": "EGLL", "to_name": "London Heathrow" },
-  "location": { "name": "Undershoot area of runway 27L, London Heathrow Airport", "country": "United Kingdom", "lat": 51.4647, "lon": -0.4342 },
+  "route": {
+    "from": "ZBAA",
+    "from_name": "Beijing Capital",
+    "to": "EGLL",
+    "to_name": "London Heathrow"
+  },
+  "location": {
+    "name": "Undershoot area of runway 27L, London Heathrow Airport",
+    "country": "United Kingdom",
+    "lat": 51.4647,
+    "lon": -0.4342
+  },
   "phase": "approach",
-  "occupants": 152, "fatalities": 0, "injuries_serious": 1,
+  "occupants": 152,
+  "fatalities": 0,
+  "injuries_serious": 1,
   "damage": "destroyed",
   "category": "SCF-PP",
   "summary": "On final approach to Heathrow runway 27L, at about 720 ft, the right engine and then the left engine failed to respond to autothrottle commands for increased thrust, their fuel flows falling to little more than idle. The aircraft landed on the grass some 330 m short of the runway threshold; the landing gear collapsed and the aircraft was written off. There were no fatalities.",
   "probable_cause": "The reduction in thrust on both engines was the result of restricted fuel flow to the engine fuel-oil heat exchangers (FOHE). Ice had accreted in the fuel system during a flight through unusually cold ambient conditions, released as the aircraft approached, and accumulated on the face of the FOHE, restricting fuel flow. The FOHE was found susceptible to restriction when presented with soft ice in a fuel flow of high water concentration; certification requirements did not take account of this phenomenon.",
   "factors": [
-    { "id": "fuel_system_icing", "role": "initiating", "evidence": "Ice formed from water in the fuel during the long cold-soaked cruise and was released as fuel flow increased on approach, restricting flow at the FOHE face on both engines." },
-    { "id": "engine_failure", "role": "contributing", "evidence": "Both engines rolled back to a fuel flow just above idle and failed to respond to commanded thrust increases at about 720 ft and 620 ft respectively." },
-    { "id": "dual_engine_failure", "role": "contributing", "evidence": "Both engines suffered a simultaneous loss of thrust response on short final, leaving insufficient energy to reach the runway." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The fuel-oil heat exchanger design was susceptible to blockage by soft ice in fuel with high water concentration." },
-    { "id": "certification_shortfall", "role": "latent", "evidence": "Certification requirements did not address the risk of ice accretion and release in fuel systems restricting flow at the FOHE." },
-    { "id": "low_energy_state", "role": "contributing", "evidence": "With thrust stuck near idle the aircraft could not maintain the approach path and speed decayed toward stick shaker before touchdown." },
-    { "id": "emergency_landing", "role": "outcome", "evidence": "The aircraft touched down on grass 330 m short of runway 27L; all occupants survived and evacuated." }
+    {
+      "id": "fuel_system_icing",
+      "role": "initiating",
+      "evidence": "Ice formed from water in the fuel during the long cold-soaked cruise and was released as fuel flow increased on approach, restricting flow at the FOHE face on both engines."
+    },
+    {
+      "id": "engine_failure",
+      "role": "contributing",
+      "evidence": "Both engines rolled back to a fuel flow just above idle and failed to respond to commanded thrust increases at about 720 ft and 620 ft respectively."
+    },
+    {
+      "id": "dual_engine_failure",
+      "role": "contributing",
+      "evidence": "Both engines suffered a simultaneous loss of thrust response on short final, leaving insufficient energy to reach the runway."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The fuel-oil heat exchanger design was susceptible to blockage by soft ice in fuel with high water concentration."
+    },
+    {
+      "id": "certification_shortfall",
+      "role": "latent",
+      "evidence": "Certification requirements did not address the risk of ice accretion and release in fuel systems restricting flow at the FOHE."
+    },
+    {
+      "id": "low_energy_state",
+      "role": "contributing",
+      "evidence": "With thrust stuck near idle the aircraft could not maintain the approach path and speed decayed toward stick shaker before touchdown."
+    },
+    {
+      "id": "emergency_landing",
+      "role": "outcome",
+      "evidence": "The aircraft touched down on grass 330 m short of runway 27L; all occupants survived and evacuated."
+    }
   ],
   "chain": [
-    ["certification_shortfall", "design_deficiency"],
-    ["design_deficiency", "fuel_system_icing"],
-    ["fuel_system_icing", "engine_failure"],
-    ["engine_failure", "dual_engine_failure"],
-    ["dual_engine_failure", "low_energy_state"],
-    ["low_energy_state", "emergency_landing"]
+    [
+      "certification_shortfall",
+      "design_deficiency"
+    ],
+    [
+      "design_deficiency",
+      "fuel_system_icing"
+    ],
+    [
+      "fuel_system_icing",
+      "engine_failure"
+    ],
+    [
+      "engine_failure",
+      "dual_engine_failure"
+    ],
+    [
+      "dual_engine_failure",
+      "low_energy_state"
+    ],
+    [
+      "low_energy_state",
+      "emergency_landing"
+    ]
   ],
   "events": [
-    { "t": -36000, "clock": "02:09", "phase": "takeoff", "actor": "PF", "text": "Departure from Beijing with 79,000 kg of fuel at a fuel temperature of about -2 C.", "kind": "crew_action" },
-    { "t": -25000, "clock": null, "phase": "cruise", "actor": "ENV", "text": "Cruise over Siberia and Mongolia in unusually cold air; fuel temperature falls to a minimum of -34 C, remaining above the freezing point of the fuel.", "factors": ["fuel_system_icing"], "kind": "env" },
-    { "t": -1200, "clock": "12:21", "phase": "descent", "actor": "ATC", "text": "Aircraft is held at Lambourne before being radar vectored for an ILS approach to runway 27L.", "kind": "atc" },
-    { "t": -300, "clock": "12:36", "phase": "approach", "actor": "SYS", "text": "Aircraft established on the ILS with autopilot and autothrottle engaged; landing gear down and flap 30 selected.", "kind": "system" },
-    { "t": -60, "clock": "12:40", "phase": "approach", "actor": "SYS", "text": "Autothrottle commands a thrust increase during the approach; both engines initially respond.", "kind": "system" },
-    { "t": 0, "clock": "12:41", "phase": "approach", "actor": "SYS", "text": "At about 720 ft the right engine fails to respond to the autothrottle command; its fuel flow falls to about 6,000 pph.", "state": { "alt": 720 }, "factors": ["fuel_system_icing", "engine_failure"], "kind": "system" },
-    { "t": 7, "clock": "12:41", "phase": "approach", "actor": "SYS", "text": "About seven seconds later, at about 620 ft, the left engine also fails to respond; its fuel flow falls to about 5,000 pph.", "state": { "alt": 620 }, "factors": ["dual_engine_failure"], "kind": "system" },
-    { "t": 20, "clock": "12:41", "phase": "approach", "actor": "FO", "text": "First officer, as pilot flying, notices the reduced thrust; airspeed begins to decay below the approach speed.", "factors": ["low_energy_state"], "kind": "crew_action" },
-    { "t": 40, "clock": "12:42", "phase": "approach", "actor": "CAPT", "text": "Captain retracts the flaps from 30 to 25 to reduce drag and extend the glide toward the runway.", "kind": "crew_action" },
-    { "t": 55, "clock": "12:42", "phase": "approach", "actor": "SYS", "text": "Stick shaker activates as the aircraft descends toward the ground short of the runway.", "factors": ["low_energy_state"], "kind": "warning" },
-    { "t": 60, "clock": "12:42", "phase": "landing", "actor": "SYS", "text": "Aircraft touches down on the grass about 330 m short of the runway 27L threshold; landing gear collapses and the aircraft slides to a stop.", "factors": ["emergency_landing"], "kind": "outcome" },
-    { "t": 120, "clock": "12:44", "phase": "ground", "actor": "CABIN", "text": "Emergency evacuation via the slides; one passenger seriously injured, all 152 occupants survive.", "kind": "outcome" }
+    {
+      "t": -36000,
+      "clock": "02:09",
+      "phase": "takeoff",
+      "actor": "PF",
+      "text": "Departure from Beijing with 79,000 kg of fuel at a fuel temperature of about -2 C.",
+      "kind": "crew_action"
+    },
+    {
+      "t": -25000,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "ENV",
+      "text": "Cruise over Siberia and Mongolia in unusually cold air; fuel temperature falls to a minimum of -34 C, remaining above the freezing point of the fuel.",
+      "factors": [
+        "fuel_system_icing"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": -1200,
+      "clock": "12:21",
+      "phase": "descent",
+      "actor": "ATC",
+      "text": "Aircraft is held at Lambourne before being radar vectored for an ILS approach to runway 27L.",
+      "kind": "atc"
+    },
+    {
+      "t": -300,
+      "clock": "12:36",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Aircraft established on the ILS with autopilot and autothrottle engaged; landing gear down and flap 30 selected.",
+      "kind": "system"
+    },
+    {
+      "t": -60,
+      "clock": "12:40",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Autothrottle commands a thrust increase during the approach; both engines initially respond.",
+      "kind": "system"
+    },
+    {
+      "t": 0,
+      "clock": "12:41",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "At about 720 ft the right engine fails to respond to the autothrottle command; its fuel flow falls to about 6,000 pph.",
+      "state": {
+        "alt": 720
+      },
+      "factors": [
+        "fuel_system_icing",
+        "engine_failure"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 7,
+      "clock": "12:41",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "About seven seconds later, at about 620 ft, the left engine also fails to respond; its fuel flow falls to about 5,000 pph.",
+      "state": {
+        "alt": 620
+      },
+      "factors": [
+        "dual_engine_failure"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 20,
+      "clock": "12:41",
+      "phase": "approach",
+      "actor": "FO",
+      "text": "First officer, as pilot flying, notices the reduced thrust; airspeed begins to decay below the approach speed.",
+      "factors": [
+        "low_energy_state"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 40,
+      "clock": "12:42",
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Captain retracts the flaps from 30 to 25 to reduce drag and extend the glide toward the runway.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 55,
+      "clock": "12:42",
+      "phase": "approach",
+      "actor": "SYS",
+      "text": "Stick shaker activates as the aircraft descends toward the ground short of the runway.",
+      "factors": [
+        "low_energy_state"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 60,
+      "clock": "12:42",
+      "phase": "landing",
+      "actor": "SYS",
+      "text": "Aircraft touches down on the grass about 330 m short of the runway 27L threshold; landing gear collapses and the aircraft slides to a stop.",
+      "factors": [
+        "emergency_landing"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 120,
+      "clock": "12:44",
+      "phase": "ground",
+      "actor": "CABIN",
+      "text": "Emergency evacuation via the slides; one passenger seriously injured, all 152 occupants survive.",
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": "2009-028", "to": "FAA / EASA", "text": "Introduce interim measures for the Boeing 777 with Rolls-Royce Trent 800 engines to reduce the risk of ice formed from water in the fuel restricting fuel flow at the fuel-oil heat exchanger.", "status": "closed_acceptable", "outcome": "Boeing issued revised operational procedures and Rolls-Royce redesigned the FOHE; a mandatory retrofit followed.", "trigger_factors": ["fuel_system_icing", "design_deficiency"] },
-    { "id": null, "to": "FAA / EASA", "text": "Review the certification requirements for fuel systems to ensure that aircraft and engine fuel systems are tolerant to the potential build-up and sudden release of ice in the fuel feed system.", "status": "unknown", "outcome": null, "trigger_factors": ["certification_shortfall"] },
-    { "id": null, "to": "Boeing / Rolls-Royce", "text": "Review the design of the Rolls-Royce Trent 800 fuel-oil heat exchanger so that it is not susceptible to blockage by ice released from the fuel system.", "status": "closed_acceptable", "outcome": "Modified FOHE with redesigned inlet introduced and mandated by airworthiness directive.", "trigger_factors": ["design_deficiency"] }
+    {
+      "id": "2009-028",
+      "to": "FAA / EASA",
+      "text": "Introduce interim measures for the Boeing 777 with Rolls-Royce Trent 800 engines to reduce the risk of ice formed from water in the fuel restricting fuel flow at the fuel-oil heat exchanger.",
+      "status": "closed_acceptable",
+      "outcome": "Boeing issued revised operational procedures and Rolls-Royce redesigned the FOHE; a mandatory retrofit followed.",
+      "trigger_factors": [
+        "fuel_system_icing",
+        "design_deficiency"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA / EASA",
+      "text": "Review the certification requirements for fuel systems to ensure that aircraft and engine fuel systems are tolerant to the potential build-up and sudden release of ice in the fuel feed system.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "certification_shortfall"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Boeing / Rolls-Royce",
+      "text": "Review the design of the Rolls-Royce Trent 800 fuel-oil heat exchanger so that it is not susceptible to blockage by ice released from the fuel system.",
+      "status": "closed_acceptable",
+      "outcome": "Modified FOHE with redesigned inlet introduced and mandated by airworthiness directive.",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -65,14 +279,25 @@
     "Interim operational procedures for cold-soaked fuel on 777/Trent aircraft (periodic thrust increases, fuel temperature management).",
     "Research into ice accretion in aircraft fuel systems and review of fuel system certification requirements."
   ],
-  "related": ["kegworth", "airtransat236", "usair1549"],
+  "related": [
+    "kegworth",
+    "airtransat236",
+    "usair1549"
+  ],
   "fdr": null,
   "sources": [
     "https://www.gov.uk/aaib-reports/1-2010-boeing-777-236er-g-ymmm-17-january-2008"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
-    "Event clock times other than the 12:41 thrust rollback and fuel flow values are approximate; t values are estimates relative to the first engine rollback.",
-    "Only the first AAIB recommendation number is given; others left null.",
-    "Location lat/lon is approximate."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Event clock times other than the 12:41 thrust rollback and fuel flow values are approximate; t values are estimates relative to the first engine rollback.",
+      "Only the first AAIB recommendation number is given; others left null.",
+      "Location lat/lon is approximate."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/British_Airways_Flight_38"
 }

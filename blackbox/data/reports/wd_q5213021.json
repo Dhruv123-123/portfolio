@@ -34,7 +34,9 @@
   },
   "location": {
     "name": "Near Market Bosworth",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "lat": 52.6694,
+    "lon": -1.3702
   },
   "phase": "descent",
   "occupants": 3,

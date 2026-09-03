@@ -1,300 +1,302 @@
 {
- "id": "wd_q8035350",
- "qid": "Q8035350",
- "tier": "wikidata",
- "depth": "sections",
- "title": "World Airways 30",
- "flight_number": null,
- "date": "1982-01-23",
- "agency": "NTSB",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead"
-  }
- ],
- "aircraft": {
-  "type": "McDonnell Douglas DC-10-30CF",
-  "manufacturer": "McDonnell Douglas",
-  "family": "DC-10",
-  "registration": "N113WA"
- },
- "operator": "World Airways",
- "route": {
-  "from_name": "Newark",
-  "to_name": "Logan International"
- },
- "location": {
-  "name": "Boston Harbor, Boston",
-  "country": "United States"
- },
- "phase": "landing",
- "occupants": 213,
- "fatalities": 2,
- "category": "LOC-G",
- "summary": "World Airways Flight 30 touched down 2800 feet beyond the displaced threshold at Boston Logan on a runway covered with ice. Despite poor braking conditions reported as fair to poor, the aircraft could not be stopped on the runway. The pilots steered the aircraft off the runway to avoid obstacles and it skidded across a field and taxiway before coming to rest in Boston Harbor. The cockpit section submerged but 210 occupants survived. Two passengers, father and son, were missing and presumed drowned. A Delta flight had warned of nil braking conditions 35 minutes prior but this was not relayed to Flight 30.",
- "probable_cause": "The aircraft touched down long on a runway covered with ice with poor braking action, preventing adequate deceleration to stop on runway length, leading to controlled diversion into Boston Harbor.",
- "factors": [
-  {
-   "id": "contaminated_runway",
-   "role": "initiating",
-   "evidence": "runway was covered in ice, and braking action was poor to nil"
-  },
-  {
-   "id": "landing_long",
-   "role": "contributing",
-   "evidence": "DC-10 touched down 2800 ft beyond the displaced threshold"
-  },
-  {
-   "id": "delayed_deceleration",
-   "role": "contributing",
-   "evidence": "insufficient space remaining on runway to take off again, pilots steered plane off runway"
-  },
-  {
-   "id": "atc_communication_error",
-   "role": "latent",
-   "evidence": "just 35 minutes before, Delta flight reported poor to nil braking but this information was not passed along to oncoming flights"
-  },
-  {
-   "id": "runway_overrun",
-   "role": "outcome",
-   "evidence": "aircraft skidded across field and taxiway before coming to rest in Boston Harbor"
-  }
- ],
- "chain": [
-  [
-   "contaminated_runway",
-   "landing_long"
+  "id": "wd_q8035350",
+  "qid": "Q8035350",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "World Airways 30",
+  "flight_number": null,
+  "date": "1982-01-23",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
   ],
-  [
-   "contaminated_runway",
-   "delayed_deceleration"
+  "aircraft": {
+    "type": "McDonnell Douglas DC-10-30CF",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-10",
+    "registration": "N113WA"
+  },
+  "operator": "World Airways",
+  "route": {
+    "from_name": "Newark",
+    "to_name": "Logan International"
+  },
+  "location": {
+    "name": "Boston Harbor, Boston",
+    "country": "United States",
+    "lat": 42.3508,
+    "lon": -70.9897
+  },
+  "phase": "landing",
+  "occupants": 213,
+  "fatalities": 2,
+  "category": "LOC-G",
+  "summary": "World Airways Flight 30 touched down 2800 feet beyond the displaced threshold at Boston Logan on a runway covered with ice. Despite poor braking conditions reported as fair to poor, the aircraft could not be stopped on the runway. The pilots steered the aircraft off the runway to avoid obstacles and it skidded across a field and taxiway before coming to rest in Boston Harbor. The cockpit section submerged but 210 occupants survived. Two passengers, father and son, were missing and presumed drowned. A Delta flight had warned of nil braking conditions 35 minutes prior but this was not relayed to Flight 30.",
+  "probable_cause": "The aircraft touched down long on a runway covered with ice with poor braking action, preventing adequate deceleration to stop on runway length, leading to controlled diversion into Boston Harbor.",
+  "factors": [
+    {
+      "id": "contaminated_runway",
+      "role": "initiating",
+      "evidence": "runway was covered in ice, and braking action was poor to nil"
+    },
+    {
+      "id": "landing_long",
+      "role": "contributing",
+      "evidence": "DC-10 touched down 2800 ft beyond the displaced threshold"
+    },
+    {
+      "id": "delayed_deceleration",
+      "role": "contributing",
+      "evidence": "insufficient space remaining on runway to take off again, pilots steered plane off runway"
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "latent",
+      "evidence": "just 35 minutes before, Delta flight reported poor to nil braking but this information was not passed along to oncoming flights"
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "aircraft skidded across field and taxiway before coming to rest in Boston Harbor"
+    }
   ],
-  [
-   "delayed_deceleration",
-   "runway_overrun"
-  ]
- ],
- "events": [
-  {
-   "t": -300,
-   "clock": "19:25",
-   "phase": "cruise",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Delta flight reported nil braking conditions 35 minutes before Flight 30H's approach, but this information was not transmitted to incoming flights (p. 3-38)",
-   "factors": [
-    "atc_communication_error"
-   ]
+  "chain": [
+    [
+      "contaminated_runway",
+      "landing_long"
+    ],
+    [
+      "contaminated_runway",
+      "delayed_deceleration"
+    ],
+    [
+      "delayed_deceleration",
+      "runway_overrun"
+    ]
+  ],
+  "events": [
+    {
+      "t": -300,
+      "clock": "19:25",
+      "phase": "cruise",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Delta flight reported nil braking conditions 35 minutes before Flight 30H's approach, but this information was not transmitted to incoming flights (p. 3-38)",
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": 0,
+      "clock": "19:30",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Flight 30H descended toward Boston-Logan on nonprecision approach to runway 15R (alternate runways 22L available) with runway contaminated with hard-packed snow and glazed ice; weather reported as 800-foot overcast, light rain/fog, temperature 35F (p. 3-37, 3-38)",
+      "factors": []
+    },
+    {
+      "t": 300,
+      "clock": "19:36",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain configured aircraft with 35-degree trailing edge flaps rather than recommended 50-degree flaps for contaminated runway; AT/SC autothrottle system indicated speeds 10 KIAS higher than calculated, suggesting possible weight discrepancy or system malfunction not investigated (p. 3-38, 3-39)",
+      "factors": [
+        "delayed_deceleration"
+      ]
+    },
+    {
+      "t": 390,
+      "clock": "19:38",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft touched down 2,800 feet beyond displaced threshold on contaminated runway 15R, leaving only 6,691 feet remaining to stop; aircraft descended below ceiling on nonprecision approach with extended landing flare as airspeed dissipated (p. 3-37, 3-38)",
+      "factors": [
+        "landing_long",
+        "contaminated_runway"
+      ]
+    },
+    {
+      "t": 430,
+      "clock": "19:40",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Pilot used all decelerative devices (maximum reverse thrust, ground spoilers, wheel brakes) but could not decelerate aircraft sufficiently; after 43 seconds on ground moving at approximately 49 knots, aircraft veered left to avoid approach light pier at runway end (p. 3-38, 3-39)",
+      "factors": [
+        "runway_overrun"
+      ]
+    },
+    {
+      "t": 480,
+      "clock": "19:42",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft slid into Boston Harbor after going over seawall; nose section separated from forward fuselage; 2 occupants (father and son) missing and presumed drowned; 210 others evacuated with various injuries (p. 3-37, 3-39)",
+      "factors": [
+        "runway_overrun"
+      ]
+    }
+  ],
+  "report_links": [
+    "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR85-06.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/World_Airways_Flight_30",
+  "asn_id": "19820123-0",
+  "interest": 7.9,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Depth: sections",
+      "Extracted from NTSB AAR-85-06",
+      "Events and factors from report",
+      "18 recommendations A-82-152 through A-82-169",
+      "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null; sources was null"
+    ]
   },
-  {
-   "t": 0,
-   "clock": "19:30",
-   "phase": "descent",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Flight 30H descended toward Boston-Logan on nonprecision approach to runway 15R (alternate runways 22L available) with runway contaminated with hard-packed snow and glazed ice; weather reported as 800-foot overcast, light rain/fog, temperature 35F (p. 3-37, 3-38)",
-   "factors": []
-  },
-  {
-   "t": 300,
-   "clock": "19:36",
-   "phase": "landing",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Captain configured aircraft with 35-degree trailing edge flaps rather than recommended 50-degree flaps for contaminated runway; AT/SC autothrottle system indicated speeds 10 KIAS higher than calculated, suggesting possible weight discrepancy or system malfunction not investigated (p. 3-38, 3-39)",
-   "factors": [
-    "delayed_deceleration"
-   ]
-  },
-  {
-   "t": 390,
-   "clock": "19:38",
-   "phase": "landing",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft touched down 2,800 feet beyond displaced threshold on contaminated runway 15R, leaving only 6,691 feet remaining to stop; aircraft descended below ceiling on nonprecision approach with extended landing flare as airspeed dissipated (p. 3-37, 3-38)",
-   "factors": [
-    "landing_long",
-    "contaminated_runway"
-   ]
-  },
-  {
-   "t": 430,
-   "clock": "19:40",
-   "phase": "landing",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Pilot used all decelerative devices (maximum reverse thrust, ground spoilers, wheel brakes) but could not decelerate aircraft sufficiently; after 43 seconds on ground moving at approximately 49 knots, aircraft veered left to avoid approach light pier at runway end (p. 3-38, 3-39)",
-   "factors": [
-    "runway_overrun"
-   ]
-  },
-  {
-   "t": 480,
-   "clock": "19:42",
-   "phase": "landing",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Aircraft slid into Boston Harbor after going over seawall; nose section separated from forward fuselage; 2 occupants (father and son) missing and presumed drowned; 210 others evacuated with various injuries (p. 3-37, 3-39)",
-   "factors": [
-    "runway_overrun"
-   ]
-  }
- ],
- "report_links": [
-  "http://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR85-06.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/World_Airways_Flight_30",
- "asn_id": "19820123-0",
- "interest": 7.9,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Depth: sections",
-   "Extracted from NTSB AAR-85-06",
-   "Events and factors from report",
-   "18 recommendations A-82-152 through A-82-169",
-   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null; sources was null"
-  ]
- },
- "curated_id": null,
- "recommendations": [
-  {
-   "id": "A-82-152",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-152",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-153",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-153",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-154",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-154",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-155",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-155",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-156",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-156",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-157",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-157",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-158",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-158",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-159",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-159",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-160",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-160",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-161",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-161",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-162",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-162",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-163",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-163",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-164",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-164",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-165",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-165",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-166",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-166",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-167",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-167",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-168",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-168",
-   "status": "unknown",
-   "trigger_factors": []
-  },
-  {
-   "id": "A-82-169",
-   "to": "FAA",
-   "text": "Safety recommendation A-82-169",
-   "status": "unknown",
-   "trigger_factors": []
-  }
- ],
- "cvr": [],
- "dissent": [],
- "safety_changes": [],
- "related": [],
- "sources": []
+  "curated_id": null,
+  "recommendations": [
+    {
+      "id": "A-82-152",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-152",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-153",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-153",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-154",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-154",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-155",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-155",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-156",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-156",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-157",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-157",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-158",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-158",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-159",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-159",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-160",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-160",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-161",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-161",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-162",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-162",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-163",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-163",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-164",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-164",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-165",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-165",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-166",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-166",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-167",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-167",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-168",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-168",
+      "status": "unknown",
+      "trigger_factors": []
+    },
+    {
+      "id": "A-82-169",
+      "to": "FAA",
+      "text": "Safety recommendation A-82-169",
+      "status": "unknown",
+      "trigger_factors": []
+    }
+  ],
+  "cvr": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "sources": []
 }

@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Dunkeswick, North Yorkshire",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "lat": 53.9167,
+    "lon": -1.5167
   },
   "phase": "climb",
   "occupants": 12,
@@ -57,7 +59,7 @@
     {
       "id": "loss_of_control_inflight",
       "role": "outcome",
-      "evidence": "Aircraft began continuous left turns and abrupt right turns during climb (p. 2). After reaching 3,600 feet, aircraft resumed left turn and entered steeply descending spiral dive (p. 3). Bank angle increased to 45\u00b0 while descending. Aircraft disappeared from radar after descending to heading 230\u00b0 (p. 3)."
+      "evidence": "Aircraft began continuous left turns and abrupt right turns during climb (p. 2). After reaching 3,600 feet, aircraft resumed left turn and entered steeply descending spiral dive (p. 3). Bank angle increased to 45° while descending. Aircraft disappeared from radar after descending to heading 230° (p. 3)."
     },
     {
       "id": "structural_failure",
@@ -99,7 +101,7 @@
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "system",
-      "text": "Aircraft took off from Runway 14, initially maintained runway heading (143\u00b0 M) per ATC instruction",
+      "text": "Aircraft took off from Runway 14, initially maintained runway heading (143° M) per ATC instruction",
       "factors": []
     },
     {
@@ -120,7 +122,7 @@
       "phase": "climb",
       "actor": "ATC",
       "kind": "atc",
-      "text": "ATC passed instructions for radar heading 360\u00b0 and cleared aircraft to 3,000 feet QNH",
+      "text": "ATC passed instructions for radar heading 360° and cleared aircraft to 3,000 feet QNH",
       "factors": []
     },
     {
@@ -129,7 +131,7 @@
       "phase": "climb",
       "actor": "SYS",
       "kind": "system",
-      "text": "Aircraft climbing through 2,800 feet in steep right-hand turn with 30\u00b0 bank",
+      "text": "Aircraft climbing through 2,800 feet in steep right-hand turn with 30° bank",
       "state": {
         "alt": 2800,
         "bank": 30
@@ -155,7 +157,7 @@
       "phase": "climb",
       "actor": "ATC",
       "kind": "atc",
-      "text": "ATC ordered right turn onto heading 340\u00b0, but aircraft began left-hand turn with 30-40\u00b0 bank",
+      "text": "ATC ordered right turn onto heading 340°, but aircraft began left-hand turn with 30-40° bank",
       "state": {
         "alt": 3200
       },
@@ -169,7 +171,7 @@
       "phase": "climb",
       "actor": "FO",
       "kind": "crew_speech",
-      "text": "First Officer again asked: ARE WE GOING STRAIGHT AT THE MOMENT SIR while aircraft on heading 360\u00b0",
+      "text": "First Officer again asked: ARE WE GOING STRAIGHT AT THE MOMENT SIR while aircraft on heading 360°",
       "state": {
         "alt": 3600
       },
@@ -198,7 +200,7 @@
       "phase": "descent",
       "actor": "SYS",
       "kind": "system",
-      "text": "Aircraft in steeply descending left spiral with 45\u00b0 bank angle after 25 seconds of descent",
+      "text": "Aircraft in steeply descending left spiral with 45° bank angle after 25 seconds of descent",
       "state": {
         "alt": 2900,
         "bank": 45
@@ -214,7 +216,7 @@
       "phase": "descent",
       "actor": "SYS",
       "kind": "system",
-      "text": "Aircraft passed through heading 230\u00b0 and disappeared from secondary radar. Four primary radar returns followed before final radar contact lost.",
+      "text": "Aircraft passed through heading 230° and disappeared from secondary radar. Four primary radar returns followed before final radar contact lost.",
       "state": {
         "alt": 1000
       },

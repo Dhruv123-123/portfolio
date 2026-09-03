@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "Champadevi Hills",
-    "country": "Nepal"
+    "country": "Nepal",
+    "lat": 27.6833,
+    "lon": 85.35
   },
   "phase": "initial_climb",
   "occupants": 5,

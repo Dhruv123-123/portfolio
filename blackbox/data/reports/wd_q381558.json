@@ -1,6 +1,6 @@
 {
   "id": "wd_q381558",
-  "title": "Aerom\u00e9xico 498",
+  "title": "Aeroméxico 498",
   "flight_number": "AM498",
   "date": "1986-08-31",
   "time_reference": "PDT",
@@ -20,7 +20,7 @@
     "manufacturer": "McDonnell Douglas",
     "registration": "XA-JED"
   },
-  "operator": "Aerom\u00e9xico",
+  "operator": "Aeroméxico",
   "route": {
     "from": "MMMX",
     "from_name": "Mexico City",
@@ -29,14 +29,16 @@
   },
   "location": {
     "name": "Cerritos",
-    "country": "United States"
+    "country": "United States",
+    "lat": 33.8681,
+    "lon": -118.0456
   },
   "phase": "approach",
   "occupants": 67,
   "fatalities": 82,
   "damage": "destroyed",
   "category": "MAC",
-  "summary": "Aerom\u00e9xico Flight 498 collided with a Piper PA-28 Cherokee that entered the Los Angeles Terminal Control Area without clearance. The Piper was not equipped with a Mode C transponder and was not visible to either crew or ATC radar. The DC-9 crashed in a residential neighborhood in Cerritos, killing 64 on the aircraft, 3 in the Piper, and 15 on the ground.",
+  "summary": "Aeroméxico Flight 498 collided with a Piper PA-28 Cherokee that entered the Los Angeles Terminal Control Area without clearance. The Piper was not equipped with a Mode C transponder and was not visible to either crew or ATC radar. The DC-9 crashed in a residential neighborhood in Cerritos, killing 64 on the aircraft, 3 in the Piper, and 15 on the ground.",
   "probable_cause": "The limitations of the air traffic control system to provide collision protection, through both ATC procedures and automated redundancy. Contributing factors were the inadvertent and unauthorized entry of the PA-28 into the Los Angeles Terminal Control Area and the limitations of the 'see and avoid' concept to ensure traffic separation.",
   "factors": [
     {
@@ -168,7 +170,7 @@
   "depth": "sections",
   "qid": "Q381558",
   "asn_id": "19860831-0",
-  "wikipedia": "https://en.wikipedia.org/wiki/Aerom\u00e9xico_Flight_498",
+  "wikipedia": "https://en.wikipedia.org/wiki/Aeroméxico_Flight_498",
   "report_links": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8707.pdf",
     "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR87-07.pdf"

@@ -1,212 +1,214 @@
 {
- "id": "wd_q4602849",
- "qid": "Q4602849",
- "tier": "wikidata",
- "depth": "full",
- "title": "2004 Hendrick Motorsports aircraft crash",
- "flight_number": null,
- "date": "2004-10-24",
- "agency": "NTSB",
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead"
-  }
- ],
- "aircraft": {
-  "type": "Beechcraft Super King Air 200",
-  "manufacturer": "Beechcraft",
-  "family": "King Air",
-  "registration": null
- },
- "operator": "Hendrick Motorsports",
- "route": {
-  "from_name": "Concord Regional Airport",
-  "to_name": "Blue Ridge Airport"
- },
- "location": {
-  "name": "Stuart, Virginia; Bull Mountain",
-  "country": "United States"
- },
- "phase": "approach",
- "occupants": 10,
- "fatalities": 10,
- "category": "CFIT",
- "summary": "A Beechcraft King Air conducting an instrument approach in low-level overcast at Blue Ridge Airport failed to properly descend through the approach procedure. The aircraft overflew the airport by 4 nautical miles before reaching the minimum descent altitude of 1400 feet, then initiated a missed approach. The aircraft crashed into Bull Mountain during the attempted climb-out, killing all ten occupants.",
- "probable_cause": "The pilots failed to execute the instrument approach procedure and failed to use all navigational aids to confirm the airplane's position during approach. The aircraft overflew the airport by 4 nautical miles before reaching the minimum descent altitude, then initiated a missed approach that resulted in controlled flight into terrain (p. 6)",
- "factors": [
-  {
-   "id": "navigation_error",
-   "role": "initiating",
-   "evidence": "Aircraft failed to descend to assigned 2600-foot altitude immediately upon ATC clearance for approach; did not begin descending until 4nm past BALES LOM (p. 2)"
-  },
-  {
-   "id": "inadequate_monitoring",
-   "role": "contributing",
-   "evidence": "Pilots failed to use all navigational aids including GPS with current database to confirm position; GPS database not current for IFR use (p. 3)"
-  },
-  {
-   "id": "low_visibility",
-   "role": "contributing",
-   "evidence": "Instrument meteorological conditions prevailed with 400-600 foot ceiling and 1.25-5 mile visibility; state trooper stated visibility 0-0.25 mile at mountain (p. 4)"
-  },
-  {
-   "id": "descent_below_minimums",
-   "role": "contributing",
-   "evidence": "Aircraft reached MDA of 1400 feet only after overflying airport by 4 nautical miles; flew level at 1400-1500 feet for 1:13 before initiating climb (p. 2-3)"
-  },
-  {
-   "id": "cfit",
-   "role": "outcome",
-   "evidence": "Aircraft crashed into Bull Mountain peak during missed approach climb - initial impact in trees with wreckage found at elevation 2450 feet (p. 3, 5)"
-  }
- ],
- "chain": [
-  [
-   "navigation_error",
-   "descent_below_minimums"
+  "id": "wd_q4602849",
+  "qid": "Q4602849",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "2004 Hendrick Motorsports aircraft crash",
+  "flight_number": null,
+  "date": "2004-10-24",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
   ],
-  [
-   "descent_below_minimums",
-   "cfit"
-  ]
- ],
- "events": [
-  {
-   "t": -780,
-   "clock": "11:56",
-   "phase": "climb",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Beechcraft King Air 200 N501RH departed Concord Regional Airport (p. 1)",
-   "factors": []
+  "aircraft": {
+    "type": "Beechcraft Super King Air 200",
+    "manufacturer": "Beechcraft",
+    "family": "King Air",
+    "registration": null
   },
-  {
-   "t": 0,
-   "clock": "12:24",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Flight established in holding pattern over BALES LOM at 4000 feet, second in line for runway 30 approach (p. 1)",
-   "factors": []
+  "operator": "Hendrick Motorsports",
+  "route": {
+    "from_name": "Concord Regional Airport",
+    "to_name": "Blue Ridge Airport"
   },
-  {
-   "t": 7,
-   "clock": "12:24:26",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "ATC cleared airplane for localizer runway 30 approach (p. 2)",
-   "factors": []
+  "location": {
+    "name": "Stuart, Virginia; Bull Mountain",
+    "country": "United States",
+    "lat": 36.7061,
+    "lon": -80.1922
   },
-  {
-   "t": 173,
-   "clock": "12:26:53",
-   "phase": "approach",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Flight crew advised controller airplane was established inbound on approach (p. 2)",
-   "factors": []
+  "phase": "approach",
+  "occupants": 10,
+  "fatalities": 10,
+  "category": "CFIT",
+  "summary": "A Beechcraft King Air conducting an instrument approach in low-level overcast at Blue Ridge Airport failed to properly descend through the approach procedure. The aircraft overflew the airport by 4 nautical miles before reaching the minimum descent altitude of 1400 feet, then initiated a missed approach. The aircraft crashed into Bull Mountain during the attempted climb-out, killing all ten occupants.",
+  "probable_cause": "The pilots failed to execute the instrument approach procedure and failed to use all navigational aids to confirm the airplane's position during approach. The aircraft overflew the airport by 4 nautical miles before reaching the minimum descent altitude, then initiated a missed approach that resulted in controlled flight into terrain (p. 6)",
+  "factors": [
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "Aircraft failed to descend to assigned 2600-foot altitude immediately upon ATC clearance for approach; did not begin descending until 4nm past BALES LOM (p. 2)"
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "Pilots failed to use all navigational aids including GPS with current database to confirm position; GPS database not current for IFR use (p. 3)"
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Instrument meteorological conditions prevailed with 400-600 foot ceiling and 1.25-5 mile visibility; state trooper stated visibility 0-0.25 mile at mountain (p. 4)"
+    },
+    {
+      "id": "descent_below_minimums",
+      "role": "contributing",
+      "evidence": "Aircraft reached MDA of 1400 feet only after overflying airport by 4 nautical miles; flew level at 1400-1500 feet for 1:13 before initiating climb (p. 2-3)"
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft crashed into Bull Mountain peak during missed approach climb - initial impact in trees with wreckage found at elevation 2450 feet (p. 3, 5)"
+    }
+  ],
+  "chain": [
+    [
+      "navigation_error",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": -780,
+      "clock": "11:56",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Beechcraft King Air 200 N501RH departed Concord Regional Airport (p. 1)",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "12:24",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight established in holding pattern over BALES LOM at 4000 feet, second in line for runway 30 approach (p. 1)",
+      "factors": []
+    },
+    {
+      "t": 7,
+      "clock": "12:24:26",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC cleared airplane for localizer runway 30 approach (p. 2)",
+      "factors": []
+    },
+    {
+      "t": 173,
+      "clock": "12:26:53",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight crew advised controller airplane was established inbound on approach (p. 2)",
+      "factors": []
+    },
+    {
+      "t": 184,
+      "clock": "12:27:04",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Controller cleared airplane for approach and approved frequency change to CTAF (p. 2)",
+      "factors": []
+    },
+    {
+      "t": 334,
+      "clock": "12:29:34",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Airplane began descent from 4000 feet at 4 DME (2nm after BALES LOM) (p. 2)",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 609,
+      "clock": "12:33:09",
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Airplane leveled off at 1400-1500 feet about 4nm beyond MTV and 5nm beyond the MAP - significantly overflew airport (p. 2)",
+      "factors": [
+        "navigation_error",
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 668,
+      "clock": "12:33:08",
+      "phase": "go_around",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight crew declared missed approach to controller (p. 2)",
+      "factors": []
+    },
+    {
+      "t": 720,
+      "clock": "12:34:00",
+      "phase": "go_around",
+      "actor": "ATC",
+      "kind": "warning",
+      "text": "MSAW alert sounded on controller radar at 1230:07 when airplane at 1800 feet, 2.5nm NW of airport - controller did not observe alert (p. 5)",
+      "factors": [
+        "descent_below_minimums"
+      ]
+    },
+    {
+      "t": 750,
+      "clock": "12:34:30",
+      "phase": "go_around",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Radar target lost at 1233:24 as airplane crashed into Bull Mountain in Stuart, Virginia at elevation 2400 feet (p. 3)",
+      "factors": [
+        "cfit"
+      ]
+    }
+  ],
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0601.pdf",
+    "https://www.ntsb.gov/investigations/fulltext/AAB0601.html"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2004_Hendrick_Motorsports_aircraft_crash",
+  "asn_id": "20041024-1",
+  "interest": 10.62,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "NTSB Aircraft Accident Brief read (24 pages)",
+      "Detailed radar data and flight path analysis provided",
+      "Meteorological conditions, pilot qualifications reviewed",
+      "Performance study and demonstration flight analysis included",
+      "10 events with precise timing in seconds",
+      "Clearcut navigation error and descent profile violations",
+      "auto-repair: cvr was null; dissent was null; related was null"
+    ]
   },
-  {
-   "t": 184,
-   "clock": "12:27:04",
-   "phase": "approach",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "Controller cleared airplane for approach and approved frequency change to CTAF (p. 2)",
-   "factors": []
-  },
-  {
-   "t": 334,
-   "clock": "12:29:34",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Airplane began descent from 4000 feet at 4 DME (2nm after BALES LOM) (p. 2)",
-   "factors": [
-    "navigation_error"
-   ]
-  },
-  {
-   "t": 609,
-   "clock": "12:33:09",
-   "phase": "approach",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Airplane leveled off at 1400-1500 feet about 4nm beyond MTV and 5nm beyond the MAP - significantly overflew airport (p. 2)",
-   "factors": [
-    "navigation_error",
-    "descent_below_minimums"
-   ]
-  },
-  {
-   "t": 668,
-   "clock": "12:33:08",
-   "phase": "go_around",
-   "actor": "PF",
-   "kind": "crew_action",
-   "text": "Flight crew declared missed approach to controller (p. 2)",
-   "factors": []
-  },
-  {
-   "t": 720,
-   "clock": "12:34:00",
-   "phase": "go_around",
-   "actor": "ATC",
-   "kind": "warning",
-   "text": "MSAW alert sounded on controller radar at 1230:07 when airplane at 1800 feet, 2.5nm NW of airport - controller did not observe alert (p. 5)",
-   "factors": [
-    "descent_below_minimums"
-   ]
-  },
-  {
-   "t": 750,
-   "clock": "12:34:30",
-   "phase": "go_around",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Radar target lost at 1233:24 as airplane crashed into Bull Mountain in Stuart, Virginia at elevation 2400 feet (p. 3)",
-   "factors": [
-    "cfit"
-   ]
-  }
- ],
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0601.pdf",
-  "https://www.ntsb.gov/investigations/fulltext/AAB0601.html"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/2004_Hendrick_Motorsports_aircraft_crash",
- "asn_id": "20041024-1",
- "interest": 10.62,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "NTSB Aircraft Accident Brief read (24 pages)",
-   "Detailed radar data and flight path analysis provided",
-   "Meteorological conditions, pilot qualifications reviewed",
-   "Performance study and demonstration flight analysis included",
-   "10 events with precise timing in seconds",
-   "Clearcut navigation error and descent profile violations",
-   "auto-repair: cvr was null; dissent was null; related was null"
-  ]
- },
- "sources": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0601.pdf"
- ],
- "time_reference": "EDT",
- "t0": "2004-10-24T12:24:00",
- "recommendations": [],
- "safety_changes": [
-  "Identified need for EGPWS installation and GPS database currency requirements",
-  "Highlighted controller awareness of MSAW alerts"
- ],
- "cvr": [],
- "dissent": [],
- "related": []
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0601.pdf"
+  ],
+  "time_reference": "EDT",
+  "t0": "2004-10-24T12:24:00",
+  "recommendations": [],
+  "safety_changes": [
+    "Identified need for EGPWS installation and GPS database currency requirements",
+    "Highlighted controller awareness of MSAW alerts"
+  ],
+  "cvr": [],
+  "dissent": [],
+  "related": []
 }

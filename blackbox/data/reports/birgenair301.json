@@ -7,67 +7,354 @@
   "t0": "1996-02-07T03:42:30Z",
   "agency": "DGAC-DR",
   "agencies": [
-    { "code": "DGAC-DR", "name": "Dirección General de Aeronáutica Civil", "country": "Dominican Republic", "role": "lead",
-      "report_id": null, "report_title": "Final report on the accident of Boeing 757-225 TC-GEN, Birgenair flight 301, Puerto Plata, 6 February 1996", "report_date": null, "url": null },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" },
-    { "code": "BFU", "name": "Bundesstelle für Flugunfalluntersuchung", "country": "Germany", "role": "accredited_representative" }
+    {
+      "code": "DGAC-DR",
+      "name": "Dirección General de Aeronáutica Civil",
+      "country": "Dominican Republic",
+      "role": "lead",
+      "report_id": null,
+      "report_title": "Final report on the accident of Boeing 757-225 TC-GEN, Birgenair flight 301, Puerto Plata, 6 February 1996",
+      "report_date": null,
+      "url": null
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "BFU",
+      "name": "Bundesstelle für Flugunfalluntersuchung",
+      "country": "Germany",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Boeing 757-225", "family": "757", "manufacturer": "Boeing", "registration": "TC-GEN", "msn": null, "engines": "Rolls-Royce RB211-535E4" },
+  "aircraft": {
+    "type": "Boeing 757-225",
+    "family": "757",
+    "manufacturer": "Boeing",
+    "registration": "TC-GEN",
+    "msn": null,
+    "engines": "Rolls-Royce RB211-535E4"
+  },
   "operator": "Birgenair (operating for Alas Nacionales)",
-  "route": { "from": "MDPP", "from_name": "Puerto Plata Gregorio Luperón", "to": "EDDF", "to_name": "Frankfurt (via Gander and Berlin)" },
-  "location": { "name": "Atlantic Ocean about 26 km northeast of Puerto Plata", "country": "Dominican Republic", "lat": 19.9, "lon": -70.3 },
+  "route": {
+    "from": "MDPP",
+    "from_name": "Puerto Plata Gregorio Luperón",
+    "to": "EDDF",
+    "to_name": "Frankfurt (via Gander and Berlin)"
+  },
+  "location": {
+    "name": "Atlantic Ocean about 26 km northeast of Puerto Plata",
+    "country": "Dominican Republic",
+    "lat": 19.9,
+    "lon": -70.3
+  },
   "phase": "climb",
-  "occupants": 189, "fatalities": 189, "injuries_serious": 0,
+  "occupants": 189,
+  "fatalities": 189,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "LOC-I",
   "summary": "Departing Puerto Plata at night after the 757 had stood unused for about three weeks, the captain noticed during the takeoff roll that his airspeed indicator was not working but continued the takeoff. His pitot probe was blocked, probably by a wasp nest, and as the aircraft climbed his airspeed indication rose falsely. The autopilot, using the same erroneous data, pitched the nose up to hold speed; an overspeed warning and the stick shaker sounded together, the crew reduced thrust, and the aircraft stalled and fell into the sea. All 189 on board died.",
   "probable_cause": "The Dominican commission determined the probable cause was the crew's failure to recognise the activation of the stick shaker as an imminent warning of entry into an aerodynamic stall and their failure to execute the procedures for recovery from the onset of loss of control. Before the stall the crew were confused by contradictory airspeed indications and warnings resulting from a blocked pitot tube (attributed to an obstruction, probably a mud dauber wasp nest, while the aircraft was parked without pitot covers) and by the autopilot's response to the erroneous airspeed.",
   "factors": [
-    { "id": "pitot_blockage", "role": "initiating", "evidence": "The captain's pitot probe was obstructed, most probably by an insect nest built while the aircraft stood parked for about 20 days without pitot covers." },
-    { "id": "unreliable_airspeed", "role": "contributing", "evidence": "The captain's airspeed indicator read low on the takeoff roll and then increasingly high in the climb while the first officer's indicator read correctly." },
-    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The captain continued the takeoff after noting his airspeed indicator was not working instead of rejecting it." },
-    { "id": "mode_confusion", "role": "contributing", "evidence": "The autopilot and autothrottle were engaged using the captain's erroneous air data and pitched the nose up and reduced thrust to counter the apparent overspeed." },
-    { "id": "spurious_overspeed_warning", "role": "contributing", "evidence": "An overspeed warning sounded at about 7,300 ft as the erroneous indication passed 350 knots." },
-    { "id": "stall_misdiagnosis", "role": "contributing", "evidence": "The crew reduced thrust in response to the overspeed indication while the stick shaker was warning of a stall, and did not identify the stall." },
-    { "id": "crm_breakdown", "role": "contributing", "evidence": "The first officer's correct airspeed indication and the relief pilot's prompts were not used to resolve the situation." },
-    { "id": "stick_shaker_pusher", "role": "contributing", "evidence": "The stick shaker activated while the overspeed warning was still sounding." },
-    { "id": "aerodynamic_stall", "role": "contributing", "evidence": "The aircraft stalled at about 7,000 ft with the nose high and thrust reduced; an engine flamed out during the descent." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft rolled and descended out of control into the sea about five minutes after takeoff." },
-    { "id": "dark_night", "role": "contributing", "evidence": "The takeoff and climb were made at night over the sea with no visual horizon." }
+    {
+      "id": "pitot_blockage",
+      "role": "initiating",
+      "evidence": "The captain's pitot probe was obstructed, most probably by an insect nest built while the aircraft stood parked for about 20 days without pitot covers."
+    },
+    {
+      "id": "unreliable_airspeed",
+      "role": "contributing",
+      "evidence": "The captain's airspeed indicator read low on the takeoff roll and then increasingly high in the climb while the first officer's indicator read correctly."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The captain continued the takeoff after noting his airspeed indicator was not working instead of rejecting it."
+    },
+    {
+      "id": "mode_confusion",
+      "role": "contributing",
+      "evidence": "The autopilot and autothrottle were engaged using the captain's erroneous air data and pitched the nose up and reduced thrust to counter the apparent overspeed."
+    },
+    {
+      "id": "spurious_overspeed_warning",
+      "role": "contributing",
+      "evidence": "An overspeed warning sounded at about 7,300 ft as the erroneous indication passed 350 knots."
+    },
+    {
+      "id": "stall_misdiagnosis",
+      "role": "contributing",
+      "evidence": "The crew reduced thrust in response to the overspeed indication while the stick shaker was warning of a stall, and did not identify the stall."
+    },
+    {
+      "id": "crm_breakdown",
+      "role": "contributing",
+      "evidence": "The first officer's correct airspeed indication and the relief pilot's prompts were not used to resolve the situation."
+    },
+    {
+      "id": "stick_shaker_pusher",
+      "role": "contributing",
+      "evidence": "The stick shaker activated while the overspeed warning was still sounding."
+    },
+    {
+      "id": "aerodynamic_stall",
+      "role": "contributing",
+      "evidence": "The aircraft stalled at about 7,000 ft with the nose high and thrust reduced; an engine flamed out during the descent."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft rolled and descended out of control into the sea about five minutes after takeoff."
+    },
+    {
+      "id": "dark_night",
+      "role": "contributing",
+      "evidence": "The takeoff and climb were made at night over the sea with no visual horizon."
+    }
   ],
   "chain": [
-    ["pitot_blockage", "unreliable_airspeed"],
-    ["unreliable_airspeed", "procedural_noncompliance"],
-    ["unreliable_airspeed", "mode_confusion"],
-    ["unreliable_airspeed", "spurious_overspeed_warning"],
-    ["mode_confusion", "stick_shaker_pusher"],
-    ["spurious_overspeed_warning", "stall_misdiagnosis"],
-    ["crm_breakdown", "stall_misdiagnosis"],
-    ["stick_shaker_pusher", "stall_misdiagnosis"],
-    ["stall_misdiagnosis", "aerodynamic_stall"],
-    ["dark_night", "loss_of_control_inflight"],
-    ["aerodynamic_stall", "loss_of_control_inflight"]
+    [
+      "pitot_blockage",
+      "unreliable_airspeed"
+    ],
+    [
+      "unreliable_airspeed",
+      "procedural_noncompliance"
+    ],
+    [
+      "unreliable_airspeed",
+      "mode_confusion"
+    ],
+    [
+      "unreliable_airspeed",
+      "spurious_overspeed_warning"
+    ],
+    [
+      "mode_confusion",
+      "stick_shaker_pusher"
+    ],
+    [
+      "spurious_overspeed_warning",
+      "stall_misdiagnosis"
+    ],
+    [
+      "crm_breakdown",
+      "stall_misdiagnosis"
+    ],
+    [
+      "stick_shaker_pusher",
+      "stall_misdiagnosis"
+    ],
+    [
+      "stall_misdiagnosis",
+      "aerodynamic_stall"
+    ],
+    [
+      "dark_night",
+      "loss_of_control_inflight"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
-    { "t": -1800000, "clock": null, "phase": "ground", "actor": "GND", "text": "Aircraft stands parked at Puerto Plata for about three weeks without pitot covers installed.", "factors": ["pitot_blockage"], "kind": "env" },
-    { "t": -30, "clock": null, "phase": "takeoff", "actor": "CAPT", "text": "Takeoff roll begins on runway 08 at Puerto Plata.", "kind": "crew_action" },
-    { "t": 0, "clock": "23:42", "phase": "takeoff", "actor": "CAPT", "text": "At about 80 knots the captain remarks that his airspeed indicator is not working; the first officer reports that his is, and the captain elects to continue the takeoff using the first officer's calls.", "state": { "ias": 80 }, "factors": ["unreliable_airspeed", "procedural_noncompliance"], "kind": "crew_speech" },
-    { "t": 20, "clock": null, "phase": "takeoff", "actor": "PF", "text": "Aircraft rotates and lifts off; the captain's airspeed indicator begins to show increasing values as the aircraft climbs.", "factors": ["pitot_blockage"], "kind": "crew_action" },
-    { "t": 60, "clock": null, "phase": "initial_climb", "actor": "SYS", "text": "Autopilot engaged in the climb using the captain's air data.", "factors": ["mode_confusion"], "kind": "system" },
-    { "t": 90, "clock": null, "phase": "climb", "actor": "SYS", "text": "Rudder ratio and mach speed trim advisories appear; the captain remarks that something is wrong and the airspeed indications differ.", "factors": ["unreliable_airspeed"], "kind": "warning" },
-    { "t": 150, "clock": null, "phase": "climb", "actor": "SYS", "text": "Passing about 7,300 ft the captain's airspeed reads about 350 knots and the overspeed warning sounds; the autopilot has raised the pitch attitude and the autothrottle has reduced thrust to hold the target speed.", "state": { "alt": 7300, "ias": 350 }, "factors": ["spurious_overspeed_warning", "mode_confusion"], "kind": "warning" },
-    { "t": 160, "clock": null, "phase": "climb", "actor": "CAPT", "text": "Captain reduces thrust further in response to the overspeed indication.", "factors": ["stall_misdiagnosis"], "kind": "crew_action" },
-    { "t": 175, "clock": null, "phase": "climb", "actor": "SYS", "text": "Stick shaker activates while the overspeed warning continues; the autopilot disconnects.", "factors": ["stick_shaker_pusher", "unreliable_airspeed"], "kind": "warning" },
-    { "t": 185, "clock": null, "phase": "climb", "actor": "FO", "text": "First officer and relief pilot call for thrust and attitude corrections as the crew struggle to understand the contradictory warnings.", "factors": ["crm_breakdown", "stall_misdiagnosis"], "kind": "crew_speech" },
-    { "t": 200, "clock": null, "phase": "climb", "actor": "SYS", "text": "Aircraft stalls at about 7,000 ft and begins to roll and descend; full thrust is applied late and the left engine flames out.", "state": { "alt": 7000 }, "factors": ["aerodynamic_stall", "loss_of_control_inflight"], "kind": "system" },
-    { "t": 240, "clock": null, "phase": "descent", "actor": "SYS", "text": "Ground proximity warnings sound as the aircraft descends steeply toward the sea in darkness.", "factors": ["dark_night", "loss_of_control_inflight"], "kind": "warning" },
-    { "t": 290, "clock": "23:47", "phase": "descent", "actor": "ENV", "text": "Aircraft strikes the Atlantic about 26 km northeast of Puerto Plata; all 189 on board are killed.", "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+    {
+      "t": -1800000,
+      "clock": null,
+      "phase": "ground",
+      "actor": "GND",
+      "text": "Aircraft stands parked at Puerto Plata for about three weeks without pitot covers installed.",
+      "factors": [
+        "pitot_blockage"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": -30,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "Takeoff roll begins on runway 08 at Puerto Plata.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "23:42",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "At about 80 knots the captain remarks that his airspeed indicator is not working; the first officer reports that his is, and the captain elects to continue the takeoff using the first officer's calls.",
+      "state": {
+        "ias": 80
+      },
+      "factors": [
+        "unreliable_airspeed",
+        "procedural_noncompliance"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 20,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "PF",
+      "text": "Aircraft rotates and lifts off; the captain's airspeed indicator begins to show increasing values as the aircraft climbs.",
+      "factors": [
+        "pitot_blockage"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "initial_climb",
+      "actor": "SYS",
+      "text": "Autopilot engaged in the climb using the captain's air data.",
+      "factors": [
+        "mode_confusion"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Rudder ratio and mach speed trim advisories appear; the captain remarks that something is wrong and the airspeed indications differ.",
+      "factors": [
+        "unreliable_airspeed"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 150,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Passing about 7,300 ft the captain's airspeed reads about 350 knots and the overspeed warning sounds; the autopilot has raised the pitch attitude and the autothrottle has reduced thrust to hold the target speed.",
+      "state": {
+        "alt": 7300,
+        "ias": 350
+      },
+      "factors": [
+        "spurious_overspeed_warning",
+        "mode_confusion"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 160,
+      "clock": null,
+      "phase": "climb",
+      "actor": "CAPT",
+      "text": "Captain reduces thrust further in response to the overspeed indication.",
+      "factors": [
+        "stall_misdiagnosis"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 175,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Stick shaker activates while the overspeed warning continues; the autopilot disconnects.",
+      "factors": [
+        "stick_shaker_pusher",
+        "unreliable_airspeed"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 185,
+      "clock": null,
+      "phase": "climb",
+      "actor": "FO",
+      "text": "First officer and relief pilot call for thrust and attitude corrections as the crew struggle to understand the contradictory warnings.",
+      "factors": [
+        "crm_breakdown",
+        "stall_misdiagnosis"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 200,
+      "clock": null,
+      "phase": "climb",
+      "actor": "SYS",
+      "text": "Aircraft stalls at about 7,000 ft and begins to roll and descend; full thrust is applied late and the left engine flames out.",
+      "state": {
+        "alt": 7000
+      },
+      "factors": [
+        "aerodynamic_stall",
+        "loss_of_control_inflight"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 240,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Ground proximity warnings sound as the aircraft descends steeply toward the sea in darkness.",
+      "factors": [
+        "dark_night",
+        "loss_of_control_inflight"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 290,
+      "clock": "23:47",
+      "phase": "descent",
+      "actor": "ENV",
+      "text": "Aircraft strikes the Atlantic about 26 km northeast of Puerto Plata; all 189 on board are killed.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "FAA / Boeing", "text": "Require that pitot covers be installed whenever an aircraft is parked for an extended period and that preflight procedures verify pitot-static probes are unobstructed.", "status": "unknown", "outcome": "Operators reinforced pitot cover and inspection procedures.", "trigger_factors": ["pitot_blockage"] },
-    { "id": null, "to": "FAA / Boeing", "text": "Provide clear procedures and training for rejecting takeoff when an airspeed disagreement is detected and for flying with unreliable airspeed using pitch and power.", "status": "unknown", "outcome": "Unreliable airspeed procedures and training were strengthened across the industry.", "trigger_factors": ["unreliable_airspeed", "procedural_noncompliance", "stall_misdiagnosis"] },
-    { "id": null, "to": "FAA / Boeing", "text": "Improve airspeed comparison alerting so that a disagreement between captain's and first officer's airspeed is annunciated directly to the crew.", "status": "unknown", "outcome": "Later Boeing aircraft and 757/767 updates added airspeed disagree alerts.", "trigger_factors": ["unreliable_airspeed", "crm_breakdown"] }
+    {
+      "id": null,
+      "to": "FAA / Boeing",
+      "text": "Require that pitot covers be installed whenever an aircraft is parked for an extended period and that preflight procedures verify pitot-static probes are unobstructed.",
+      "status": "unknown",
+      "outcome": "Operators reinforced pitot cover and inspection procedures.",
+      "trigger_factors": [
+        "pitot_blockage"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA / Boeing",
+      "text": "Provide clear procedures and training for rejecting takeoff when an airspeed disagreement is detected and for flying with unreliable airspeed using pitch and power.",
+      "status": "unknown",
+      "outcome": "Unreliable airspeed procedures and training were strengthened across the industry.",
+      "trigger_factors": [
+        "unreliable_airspeed",
+        "procedural_noncompliance",
+        "stall_misdiagnosis"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA / Boeing",
+      "text": "Improve airspeed comparison alerting so that a disagreement between captain's and first officer's airspeed is annunciated directly to the crew.",
+      "status": "unknown",
+      "outcome": "Later Boeing aircraft and 757/767 updates added airspeed disagree alerts.",
+      "trigger_factors": [
+        "unreliable_airspeed",
+        "crm_breakdown"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -75,13 +362,28 @@
     "Industry-wide emphasis on unreliable airspeed procedures, pitch-and-power flying and rejecting takeoff on airspeed disagreement.",
     "Airspeed disagree alerting introduced on later Boeing aircraft."
   ],
-  "related": ["aeroperu603", "af447", "northwest6231", "saratov703"],
+  "related": [
+    "aeroperu603",
+    "af447",
+    "northwest6231",
+    "saratov703"
+  ],
   "fdr": "birgenair301",
-  "sources": ["https://www.idac.gob.do"],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
-    "notes": ["t0 is the airspeed disagreement during the takeoff roll at about 23:42 local; impact was about 23:47. Intermediate offsets are estimates and clocks are omitted.",
-              "The Dominican final report id, date and URL are unknown; the source given is the Dominican civil aviation authority site.",
-              "The 7,300 ft / 350 knot overspeed figures and the 80 knot remark are widely cited from the report; the stall altitude of about 7,000 ft and the engine flameout are recalled but less certain.",
-              "CVR lines are not quoted because exact transcript wording (English translation) is uncertain; they are paraphrased as crew_speech events.",
-              "Flight number ALW301 reflects the Alas Nacionales flight designation; some sources cite Birgenair 301."] }
+  "sources": [
+    "https://www.idac.gob.do"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "t0 is the airspeed disagreement during the takeoff roll at about 23:42 local; impact was about 23:47. Intermediate offsets are estimates and clocks are omitted.",
+      "The Dominican final report id, date and URL are unknown; the source given is the Dominican civil aviation authority site.",
+      "The 7,300 ft / 350 knot overspeed figures and the 80 knot remark are widely cited from the report; the stall altitude of about 7,000 ft and the engine flameout are recalled but less certain.",
+      "CVR lines are not quoted because exact transcript wording (English translation) is uncertain; they are paraphrased as crew_speech events.",
+      "Flight number ALW301 reflects the Alas Nacionales flight designation; some sources cite Birgenair 301."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Birgenair_Flight_301"
 }

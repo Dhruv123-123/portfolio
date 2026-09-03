@@ -7,83 +7,384 @@
   "t0": "1999-06-02T04:50:20Z",
   "agency": "NTSB",
   "agencies": [
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "lead",
-      "report_id": "NTSB/AAR-01/02", "report_title": "Runway Overrun During Landing, American Airlines Flight 1420, McDonnell Douglas MD-82, N215AA, Little Rock, Arkansas, June 1, 1999", "report_date": "2001-10-23",
-      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0102.pdf" }
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "lead",
+      "report_id": "NTSB/AAR-01/02",
+      "report_title": "Runway Overrun During Landing, American Airlines Flight 1420, McDonnell Douglas MD-82, N215AA, Little Rock, Arkansas, June 1, 1999",
+      "report_date": "2001-10-23",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0102.pdf"
+    }
   ],
-  "aircraft": { "type": "McDonnell Douglas MD-82", "family": "MD-80", "manufacturer": "McDonnell Douglas", "registration": "N215AA", "msn": null, "engines": "Pratt & Whitney JT8D-217" },
+  "aircraft": {
+    "type": "McDonnell Douglas MD-82",
+    "family": "MD-80",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "N215AA",
+    "msn": null,
+    "engines": "Pratt & Whitney JT8D-217"
+  },
   "operator": "American Airlines",
-  "route": { "from": "KDFW", "from_name": "Dallas/Fort Worth", "to": "KLIT", "to_name": "Little Rock National" },
-  "location": { "name": "Beyond the end of runway 4R, Little Rock National Airport, Arkansas", "country": "USA", "lat": 34.73, "lon": -92.22 },
+  "route": {
+    "from": "KDFW",
+    "from_name": "Dallas/Fort Worth",
+    "to": "KLIT",
+    "to_name": "Little Rock National"
+  },
+  "location": {
+    "name": "Beyond the end of runway 4R, Little Rock National Airport, Arkansas",
+    "country": "USA",
+    "lat": 34.73,
+    "lon": -92.22
+  },
   "phase": "landing",
-  "occupants": 145, "fatalities": 11, "injuries_serious": null,
+  "occupants": 145,
+  "fatalities": 11,
+  "injuries_serious": null,
   "damage": "destroyed",
   "category": "RE",
   "summary": "Late at night, at the end of a long duty day, the crew of the MD-82 pressed on with an ILS approach to runway 4R at Little Rock as a severe thunderstorm moved over the airport, with wind shear alerts and a crosswind beyond company limits. After touchdown on the rain-soaked runway the spoilers, which had not been armed, did not deploy, and the captain used reverse thrust above the recommended limit, degrading directional control. The aircraft overran the runway end, struck the approach light structure for the opposite runway and broke apart. The captain and 10 passengers died.",
   "probable_cause": "The flight crew's failure to discontinue the approach when severe thunderstorms and their associated hazards to flight operations had moved into the airport area and the crew's failure to ensure that the spoilers had extended after touchdown. Contributing to the accident were the flight crew's impaired performance resulting from fatigue and the situational stress associated with the intent to land under the circumstances; continuation of the approach to a landing when the company's maximum crosswind component was exceeded; and use of reverse thrust greater than 1.3 engine pressure ratio after landing.",
   "factors": [
-    { "id": "convective_weather", "role": "initiating", "evidence": "A severe thunderstorm with heavy rain, lightning and strong gusty winds moved over the airport during the approach." },
-    { "id": "windshear", "role": "contributing", "evidence": "The tower issued wind shear alerts during the approach." },
-    { "id": "go_around_not_flown", "role": "contributing", "evidence": "The crew did not discontinue the approach when the storm hazards moved into the airport area." },
-    { "id": "fatigue", "role": "contributing", "evidence": "The crew had been on duty about 13.5 hours and the NTSB found their performance impaired by fatigue and the stress of getting in." },
-    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The approach continued with the crosswind above the company maximum and the spoilers were not armed before landing." },
-    { "id": "delayed_deceleration", "role": "contributing", "evidence": "The spoilers did not extend after touchdown and neither pilot verified or manually deployed them, greatly reducing braking effectiveness." },
-    { "id": "inappropriate_control_input", "role": "contributing", "evidence": "Reverse thrust above 1.3 EPR reduced rudder effectiveness and directional control on the wet runway." },
-    { "id": "contaminated_runway", "role": "contributing", "evidence": "The runway was flooded by heavy rain, reducing braking and causing hydroplaning." },
-    { "id": "low_visibility", "role": "contributing", "evidence": "Heavy rain reduced visibility so that the crew lost sight of the runway during the approach." },
-    { "id": "high_workload", "role": "contributing", "evidence": "The crew were rushing to land ahead of the storm while reconfiguring for a runway change and managing wind shear alerts." },
-    { "id": "airport_infrastructure", "role": "latent", "evidence": "The non-frangible approach light support structure beyond the runway end contributed to the severity of the impact." },
-    { "id": "runway_overrun", "role": "outcome", "evidence": "The aircraft left the end of runway 4R and collided with the approach lighting structure and a walkway." },
-    { "id": "post_impact_fire", "role": "outcome", "evidence": "A fire broke out after the aircraft came to rest." }
+    {
+      "id": "convective_weather",
+      "role": "initiating",
+      "evidence": "A severe thunderstorm with heavy rain, lightning and strong gusty winds moved over the airport during the approach."
+    },
+    {
+      "id": "windshear",
+      "role": "contributing",
+      "evidence": "The tower issued wind shear alerts during the approach."
+    },
+    {
+      "id": "go_around_not_flown",
+      "role": "contributing",
+      "evidence": "The crew did not discontinue the approach when the storm hazards moved into the airport area."
+    },
+    {
+      "id": "fatigue",
+      "role": "contributing",
+      "evidence": "The crew had been on duty about 13.5 hours and the NTSB found their performance impaired by fatigue and the stress of getting in."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The approach continued with the crosswind above the company maximum and the spoilers were not armed before landing."
+    },
+    {
+      "id": "delayed_deceleration",
+      "role": "contributing",
+      "evidence": "The spoilers did not extend after touchdown and neither pilot verified or manually deployed them, greatly reducing braking effectiveness."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "Reverse thrust above 1.3 EPR reduced rudder effectiveness and directional control on the wet runway."
+    },
+    {
+      "id": "contaminated_runway",
+      "role": "contributing",
+      "evidence": "The runway was flooded by heavy rain, reducing braking and causing hydroplaning."
+    },
+    {
+      "id": "low_visibility",
+      "role": "contributing",
+      "evidence": "Heavy rain reduced visibility so that the crew lost sight of the runway during the approach."
+    },
+    {
+      "id": "high_workload",
+      "role": "contributing",
+      "evidence": "The crew were rushing to land ahead of the storm while reconfiguring for a runway change and managing wind shear alerts."
+    },
+    {
+      "id": "airport_infrastructure",
+      "role": "latent",
+      "evidence": "The non-frangible approach light support structure beyond the runway end contributed to the severity of the impact."
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "The aircraft left the end of runway 4R and collided with the approach lighting structure and a walkway."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "A fire broke out after the aircraft came to rest."
+    }
   ],
   "chain": [
-    ["fatigue", "go_around_not_flown"],
-    ["convective_weather", "windshear"],
-    ["convective_weather", "go_around_not_flown"],
-    ["convective_weather", "contaminated_runway"],
-    ["convective_weather", "low_visibility"],
-    ["go_around_not_flown", "high_workload"],
-    ["high_workload", "procedural_noncompliance"],
-    ["procedural_noncompliance", "delayed_deceleration"],
-    ["high_workload", "inappropriate_control_input"],
-    ["contaminated_runway", "runway_overrun"],
-    ["delayed_deceleration", "runway_overrun"],
-    ["inappropriate_control_input", "runway_overrun"],
-    ["airport_infrastructure", "post_impact_fire"],
-    ["runway_overrun", "post_impact_fire"]
+    [
+      "fatigue",
+      "go_around_not_flown"
+    ],
+    [
+      "convective_weather",
+      "windshear"
+    ],
+    [
+      "convective_weather",
+      "go_around_not_flown"
+    ],
+    [
+      "convective_weather",
+      "contaminated_runway"
+    ],
+    [
+      "convective_weather",
+      "low_visibility"
+    ],
+    [
+      "go_around_not_flown",
+      "high_workload"
+    ],
+    [
+      "high_workload",
+      "procedural_noncompliance"
+    ],
+    [
+      "procedural_noncompliance",
+      "delayed_deceleration"
+    ],
+    [
+      "high_workload",
+      "inappropriate_control_input"
+    ],
+    [
+      "contaminated_runway",
+      "runway_overrun"
+    ],
+    [
+      "delayed_deceleration",
+      "runway_overrun"
+    ],
+    [
+      "inappropriate_control_input",
+      "runway_overrun"
+    ],
+    [
+      "airport_infrastructure",
+      "post_impact_fire"
+    ],
+    [
+      "runway_overrun",
+      "post_impact_fire"
+    ]
   ],
   "events": [
-    { "t": -4200, "clock": "22:40", "phase": "takeoff", "actor": "CAPT", "text": "Flight departs Dallas/Fort Worth about two hours late after weather delays; the crew are near the end of a long duty day.", "factors": ["fatigue"], "kind": "crew_action" },
-    { "t": -1500, "clock": null, "phase": "descent", "actor": "ATC", "text": "Crew and dispatcher discuss thunderstorms moving toward Little Rock; the crew plan to arrive before the storm.", "factors": ["convective_weather", "go_around_not_flown"], "kind": "atc" },
-    { "t": -700, "clock": null, "phase": "approach", "actor": "ATC", "text": "Because of wind changes the approach is changed from runway 22L to the ILS runway 4R, adding to the crew's workload.", "factors": ["high_workload"], "kind": "atc" },
-    { "t": -480, "clock": null, "phase": "approach", "actor": "ATC", "text": "Tower reports a wind shear alert and strong winds; the crosswind component exceeds the company limit for a wet runway.", "factors": ["windshear", "procedural_noncompliance"], "kind": "atc" },
-    { "t": -300, "clock": null, "phase": "approach", "actor": "ENV", "text": "Heavy rain and lightning envelop the airport; the crew lose sight of the runway and continue the ILS approach.", "factors": ["convective_weather", "low_visibility"], "kind": "env" },
-    { "t": -180, "clock": null, "phase": "approach", "actor": "FO", "text": "Landing checklist is completed without the spoiler lever being armed.", "factors": ["procedural_noncompliance"], "kind": "crew_action" },
-    { "t": -30, "clock": null, "phase": "approach", "actor": "CAPT", "text": "Captain regains sight of the runway close in and continues to land in gusty crosswinds and heavy rain.", "factors": ["go_around_not_flown"], "kind": "crew_action" },
-    { "t": 0, "clock": "23:50:20", "phase": "landing", "actor": "SYS", "text": "Aircraft touches down on the flooded runway 4R; the spoilers do not deploy and neither pilot notices.", "factors": ["delayed_deceleration", "contaminated_runway"], "kind": "system" },
-    { "t": 5, "clock": null, "phase": "landing", "actor": "CAPT", "text": "Captain applies reverse thrust above 1.3 EPR; the aircraft begins to drift and the rudder becomes ineffective in the reverser airflow.", "factors": ["inappropriate_control_input"], "kind": "crew_action" },
-    { "t": 15, "clock": null, "phase": "landing", "actor": "PF", "text": "Aircraft hydroplanes and weathervanes on the wet runway; braking is ineffective without spoilers.", "factors": ["contaminated_runway", "delayed_deceleration"], "kind": "crew_action" },
-    { "t": 25, "clock": null, "phase": "landing", "actor": "ENV", "text": "Aircraft departs the end of runway 4R at high speed and strikes the runway 22L approach lighting structure and a walkway before stopping near the Arkansas River flood plain.", "factors": ["runway_overrun", "airport_infrastructure"], "kind": "outcome" },
-    { "t": 60, "clock": null, "phase": "ground", "actor": "CABIN", "text": "Fire breaks out and the passengers evacuate the broken fuselage in heavy rain; the captain and 10 passengers die.", "factors": ["post_impact_fire"], "kind": "outcome" }
+    {
+      "t": -4200,
+      "clock": "22:40",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "Flight departs Dallas/Fort Worth about two hours late after weather delays; the crew are near the end of a long duty day.",
+      "factors": [
+        "fatigue"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -1500,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ATC",
+      "text": "Crew and dispatcher discuss thunderstorms moving toward Little Rock; the crew plan to arrive before the storm.",
+      "factors": [
+        "convective_weather",
+        "go_around_not_flown"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": -700,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Because of wind changes the approach is changed from runway 22L to the ILS runway 4R, adding to the crew's workload.",
+      "factors": [
+        "high_workload"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": -480,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ATC",
+      "text": "Tower reports a wind shear alert and strong winds; the crosswind component exceeds the company limit for a wet runway.",
+      "factors": [
+        "windshear",
+        "procedural_noncompliance"
+      ],
+      "kind": "atc"
+    },
+    {
+      "t": -300,
+      "clock": null,
+      "phase": "approach",
+      "actor": "ENV",
+      "text": "Heavy rain and lightning envelop the airport; the crew lose sight of the runway and continue the ILS approach.",
+      "factors": [
+        "convective_weather",
+        "low_visibility"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": -180,
+      "clock": null,
+      "phase": "approach",
+      "actor": "FO",
+      "text": "Landing checklist is completed without the spoiler lever being armed.",
+      "factors": [
+        "procedural_noncompliance"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -30,
+      "clock": null,
+      "phase": "approach",
+      "actor": "CAPT",
+      "text": "Captain regains sight of the runway close in and continues to land in gusty crosswinds and heavy rain.",
+      "factors": [
+        "go_around_not_flown"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "23:50:20",
+      "phase": "landing",
+      "actor": "SYS",
+      "text": "Aircraft touches down on the flooded runway 4R; the spoilers do not deploy and neither pilot notices.",
+      "factors": [
+        "delayed_deceleration",
+        "contaminated_runway"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 5,
+      "clock": null,
+      "phase": "landing",
+      "actor": "CAPT",
+      "text": "Captain applies reverse thrust above 1.3 EPR; the aircraft begins to drift and the rudder becomes ineffective in the reverser airflow.",
+      "factors": [
+        "inappropriate_control_input"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 15,
+      "clock": null,
+      "phase": "landing",
+      "actor": "PF",
+      "text": "Aircraft hydroplanes and weathervanes on the wet runway; braking is ineffective without spoilers.",
+      "factors": [
+        "contaminated_runway",
+        "delayed_deceleration"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 25,
+      "clock": null,
+      "phase": "landing",
+      "actor": "ENV",
+      "text": "Aircraft departs the end of runway 4R at high speed and strikes the runway 22L approach lighting structure and a walkway before stopping near the Arkansas River flood plain.",
+      "factors": [
+        "runway_overrun",
+        "airport_infrastructure"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "ground",
+      "actor": "CABIN",
+      "text": "Fire breaks out and the passengers evacuate the broken fuselage in heavy rain; the captain and 10 passengers die.",
+      "factors": [
+        "post_impact_fire"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "FAA", "text": "Require air carriers to provide guidance and training on thunderstorm avoidance and on discontinuing approaches when convective weather affects the airport, and on the effects of fatigue on decision-making.", "status": "unknown", "outcome": null, "trigger_factors": ["convective_weather", "go_around_not_flown", "fatigue"] },
-    { "id": null, "to": "FAA", "text": "Require MD-80 operators to emphasise spoiler arming and verification of spoiler deployment after touchdown, and to limit reverse thrust use on wet runways to preserve directional control.", "status": "unknown", "outcome": null, "trigger_factors": ["delayed_deceleration", "inappropriate_control_input"] },
-    { "id": null, "to": "FAA", "text": "Require approach light support structures and other objects in runway safety areas to be frangible and to review runway safety area standards at Little Rock and similar airports.", "status": "unknown", "outcome": null, "trigger_factors": ["airport_infrastructure"] },
-    { "id": null, "to": "FAA", "text": "Require automatic spoiler deployment or a warning when spoilers are not armed for landing on transport aircraft.", "status": "unknown", "outcome": null, "trigger_factors": ["delayed_deceleration", "procedural_noncompliance"] }
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require air carriers to provide guidance and training on thunderstorm avoidance and on discontinuing approaches when convective weather affects the airport, and on the effects of fatigue on decision-making.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "convective_weather",
+        "go_around_not_flown",
+        "fatigue"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require MD-80 operators to emphasise spoiler arming and verification of spoiler deployment after touchdown, and to limit reverse thrust use on wet runways to preserve directional control.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "delayed_deceleration",
+        "inappropriate_control_input"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require approach light support structures and other objects in runway safety areas to be frangible and to review runway safety area standards at Little Rock and similar airports.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "airport_infrastructure"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require automatic spoiler deployment or a warning when spoilers are not armed for landing on transport aircraft.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "delayed_deceleration",
+        "procedural_noncompliance"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
     "American Airlines revised its thunderstorm and wind shear operating limits and emphasised spoiler verification on the MD-80.",
     "Runway safety areas and the approach light structure at Little Rock were improved; the accident supported later frangibility standards and duty time reform."
   ],
-  "related": ["southwest1248", "delta191", "tam3054"],
+  "related": [
+    "southwest1248",
+    "delta191",
+    "tam3054"
+  ],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0102.pdf", "https://www.ntsb.gov"],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
-    "notes": ["t0 is the touchdown time of about 23:50:20 CDT recalled from the report; the departure time from DFW (about 22:40) is approximate and other offsets are estimates.",
-              "Occupants 145 (139 passengers, 6 crew) and 11 fatalities; the duty period of about 13.5 hours is recalled from the report.",
-              "The ground speed on leaving the runway (about 97 knots) is not stated in the events because the exact value is uncertain.",
-              "Recommendation numbers not recalled and are left null."] }
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0102.pdf",
+    "https://www.ntsb.gov"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "t0 is the touchdown time of about 23:50:20 CDT recalled from the report; the departure time from DFW (about 22:40) is approximate and other offsets are estimates.",
+      "Occupants 145 (139 passengers, 6 crew) and 11 fatalities; the duty period of about 13.5 hours is recalled from the report.",
+      "The ground speed on leaving the runway (about 97 knots) is not stated in the events because the exact value is uncertain.",
+      "Recommendation numbers not recalled and are left null."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/American_Airlines_Flight_1420"
 }

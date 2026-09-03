@@ -27,7 +27,9 @@
   },
   "location": {
     "name": "Tokyo Bay (Haneda Airport approach)",
-    "country": "Japan"
+    "country": "Japan",
+    "lat": 35.5373,
+    "lon": 139.7824
   },
   "phase": "approach",
   "occupants": 174,

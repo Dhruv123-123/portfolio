@@ -29,7 +29,9 @@
   },
   "location": {
     "name": "Quincy Municipal Airport runway intersection, Illinois",
-    "country": "United States"
+    "country": "United States",
+    "lat": 39.9409,
+    "lon": -91.1942
   },
   "phase": "landing",
   "occupants": 14,

@@ -37,7 +37,9 @@
   },
   "location": {
     "name": "Stewart International Airport, Newburgh",
-    "country": "United States"
+    "country": "United States",
+    "lat": 41.5042,
+    "lon": -74.1048
   },
   "phase": "cruise",
   "occupants": 5,

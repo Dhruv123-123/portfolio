@@ -71,9 +71,18 @@
     }
   ],
   "chain": [
-    ["fatigue", "loss_of_situational_awareness"],
-    ["loss_of_situational_awareness", "inadequate_monitoring"],
-    ["inadequate_monitoring", "loss_of_control_inflight"]
+    [
+      "fatigue",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "inadequate_monitoring"
+    ],
+    [
+      "inadequate_monitoring",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
@@ -110,7 +119,9 @@
       "actor": "CAPT",
       "kind": "crew_action",
       "text": "Captain initiated turn from base leg to final approach at airspeed below the calculated reference speed of 147 KIAS, less than 1,000 feet from shoreline, allowing bank angles in excess of 50 degrees (p. 84).",
-      "factors": ["loss_of_situational_awareness"]
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
     },
     {
       "t": 3650,
@@ -119,7 +130,9 @@
       "actor": "PM",
       "kind": "crew_speech",
       "text": "First officer and flight engineer made conflicting remarks questioning the success of the approach (p. 84).",
-      "factors": ["inadequate_monitoring"]
+      "factors": [
+        "inadequate_monitoring"
+      ]
     },
     {
       "t": 3653,
@@ -128,7 +141,9 @@
       "actor": "PM",
       "kind": "crew_speech",
       "text": "Stall warning stick shaker activated, 5 seconds before airplane reached stall speed (p. 85).",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 3658,
@@ -137,7 +152,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Right wing stalled at 200 feet above ground level as aircraft struck terrain approximately 1/4 mile from approach end of runway 10 (p. 6, 84).",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 3660,
@@ -146,7 +163,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft destroyed by impact forces and postaccident fire; all three crew members sustained serious injuries (p. 6).",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 3665,
@@ -165,56 +184,72 @@
       "to": "FAA",
       "text": "Revise the applicable subpart of 14 CFR, Part 121, to require that flight time accumulated in noncommercial 'tail end' ferry flights conducted under 14 CFR, Part 91, as a result of 14 CFR, Part 121, revenue flights, be included in the flight crewmember's total flight and duty time accrued during those revenue operations.",
       "status": "open",
-      "trigger_factors": ["fatigue"]
+      "trigger_factors": [
+        "fatigue"
+      ]
     },
     {
       "id": "A-94-106",
       "to": "FAA",
       "text": "Expedite the review and upgrade of Flight/Duty Time Limitations of the Federal Aviation Regulations to ensure that they incorporate the results of the latest research on fatigue and sleep issues.",
       "status": "open",
-      "trigger_factors": ["fatigue"]
+      "trigger_factors": [
+        "fatigue"
+      ]
     },
     {
       "id": "A-94-107",
       "to": "FAA",
       "text": "Revise 14 CFR, Section 121.445, to eliminate subparagraph (c), and require that all flight crewmembers meet the requirements for operation to or from a special airport, either by operating experience or pictorial means.",
       "status": "open",
-      "trigger_factors": ["loss_of_situational_awareness"]
+      "trigger_factors": [
+        "loss_of_situational_awareness"
+      ]
     },
     {
       "id": "A-94-108",
       "to": "American International Airways",
       "text": "Revise the AIA training program to ensure that all pilots receive crew resource management (CRM) training that conforms to the guidelines set forth in FAA Advisory Circular 120-51A.",
       "status": "open",
-      "trigger_factors": ["inadequate_monitoring"]
+      "trigger_factors": [
+        "inadequate_monitoring"
+      ]
     },
     {
       "id": "A-94-109",
       "to": "American International Airways",
       "text": "Review and revise the AIA special airports training program to require, in addition to flightcrew members, flight engineers to participate in the AIA special airports training program. The revised program should ensure that all flightcrew members who operate airplanes with high approach speeds are aware and understand the effects of high bank angles and increased load factors, adverse wind conditions, and required flightpath profiles necessary to perform the approach.",
       "status": "open",
-      "trigger_factors": ["loss_of_situational_awareness"]
+      "trigger_factors": [
+        "loss_of_situational_awareness"
+      ]
     },
     {
       "id": "A-94-110",
       "to": "Department of Defense",
       "text": "Provide to all civilian contract operators and flightcrew members either verbal and/or written airfield briefing information regarding normal and emergency operations and flight restrictions pertaining to those airfields classified as 'special airports.' The briefing information would contain special considerations for airplanes with high approach speeds and emphasize the effects of high bank angles and increased load factors, adverse wind conditions, and required flightpath profiles necessary to perform the approach. This information would be provided in addition to the regularly published notices to airmen (NOTAMs).",
       "status": "open",
-      "trigger_factors": ["loss_of_situational_awareness"]
+      "trigger_factors": [
+        "loss_of_situational_awareness"
+      ]
     },
     {
       "id": "A-94-2",
       "to": "FAA",
       "text": "Require U.S. air carriers operating under 14 CFR, Part 121, to provide for flightcrews not covered by the Advanced Qualifications Program, a comprehensive crew resource management (CRM) program as described in Advisory Circular 120-51A.",
       "status": "open",
-      "trigger_factors": ["inadequate_monitoring"]
+      "trigger_factors": [
+        "inadequate_monitoring"
+      ]
     },
     {
       "id": "A-94-5",
       "to": "FAA",
       "text": "Require U.S. air carriers operating under 14 CFR, Part 121, to include, as part of pilot training, a program to educate pilots about the detrimental effects of fatigue, and strategies for avoiding fatigue and countering its effects.",
       "status": "open",
-      "trigger_factors": ["fatigue"]
+      "trigger_factors": [
+        "fatigue"
+      ]
     }
   ],
   "dissent": [],
@@ -240,5 +275,6 @@
       "Eight recommendations (A-94-105 through A-94-110, plus A-94-2 and A-94-5) from report pages 85-86",
       "First accident where fatigue explicitly cited as probable cause"
     ]
-  }
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/American_International_Airways_Flight_808"
 }

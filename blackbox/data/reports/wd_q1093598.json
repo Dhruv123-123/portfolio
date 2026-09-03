@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "Flushing, New York",
-    "country": "United States"
+    "country": "United States",
+    "lat": 40.7711,
+    "lon": -73.8547
   },
   "phase": "takeoff",
   "occupants": 51,

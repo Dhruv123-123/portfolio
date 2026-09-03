@@ -36,8 +36,8 @@
   "location": {
     "name": "Aurangabad",
     "country": "India",
-    "lat": null,
-    "lon": null
+    "lat": 19.8833,
+    "lon": 75.3333
   },
   "phase": "takeoff",
   "occupants": 118,

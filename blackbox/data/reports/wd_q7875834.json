@@ -28,7 +28,9 @@
   },
   "location": {
     "name": "Charlotte",
-    "country": "United States"
+    "country": "United States",
+    "lat": 35.2177,
+    "lon": -80.9593
   },
   "phase": "landing",
   "occupants": 57,
@@ -251,7 +253,7 @@
   "tier": "wikidata",
   "depth": "sections",
   "asn_id": null,
-  "wikipedia": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/USAir_Flight_1016",
   "report_links": [
     "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9503.pdf",
     "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR95-03.pdf"

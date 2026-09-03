@@ -7,68 +7,367 @@
   "t0": "1998-09-03T01:10:38Z",
   "agency": "TSB",
   "agencies": [
-    { "code": "TSB", "name": "Transportation Safety Board of Canada", "country": "Canada", "role": "lead",
-      "report_id": "A98H0003", "report_title": "In-Flight Fire Leading to Collision with Water, Swissair Transport Limited, McDonnell Douglas MD-11 HB-IWF, Peggy's Cove, Nova Scotia 5 nm SW, 2 September 1998", "report_date": "2003-03-27",
-      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1998/a98h0003/a98h0003.html" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" },
-    { "code": "AAIB-CH", "name": "Swiss Aircraft Accident Investigation Bureau (BFU)", "country": "Switzerland", "role": "accredited_representative" }
+    {
+      "code": "TSB",
+      "name": "Transportation Safety Board of Canada",
+      "country": "Canada",
+      "role": "lead",
+      "report_id": "A98H0003",
+      "report_title": "In-Flight Fire Leading to Collision with Water, Swissair Transport Limited, McDonnell Douglas MD-11 HB-IWF, Peggy's Cove, Nova Scotia 5 nm SW, 2 September 1998",
+      "report_date": "2003-03-27",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1998/a98h0003/a98h0003.html"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "AAIB-CH",
+      "name": "Swiss Aircraft Accident Investigation Bureau (BFU)",
+      "country": "Switzerland",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "McDonnell Douglas MD-11", "family": "MD-11", "manufacturer": "McDonnell Douglas", "registration": "HB-IWF", "msn": "48448", "engines": "Pratt & Whitney PW4462" },
+  "aircraft": {
+    "type": "McDonnell Douglas MD-11",
+    "family": "MD-11",
+    "manufacturer": "McDonnell Douglas",
+    "registration": "HB-IWF",
+    "msn": "48448",
+    "engines": "Pratt & Whitney PW4462"
+  },
   "operator": "Swissair",
-  "route": { "from": "KJFK", "from_name": "New York John F. Kennedy", "to": "LSGG", "to_name": "Geneva Cointrin" },
-  "location": { "name": "Atlantic Ocean off Peggy's Cove, Nova Scotia", "country": "Canada", "lat": 44.41, "lon": -63.97 },
+  "route": {
+    "from": "KJFK",
+    "from_name": "New York John F. Kennedy",
+    "to": "LSGG",
+    "to_name": "Geneva Cointrin"
+  },
+  "location": {
+    "name": "Atlantic Ocean off Peggy's Cove, Nova Scotia",
+    "country": "Canada",
+    "lat": 44.41,
+    "lon": -63.97
+  },
   "phase": "cruise",
-  "occupants": 229, "fatalities": 229, "injuries_serious": 0,
+  "occupants": 229,
+  "fatalities": 229,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "F-NI",
   "summary": "About 53 minutes after departing New York for Geneva, the crew of the MD-11 noticed an unusual odour and then smoke in the cockpit while cruising at FL330. They declared Pan Pan, diverted toward Halifax, began the smoke checklist and prepared to dump fuel, but a fire spreading above the cockpit ceiling progressively disabled aircraft systems. The aircraft struck the sea near Peggy's Cove about 20 minutes after the odour was first noticed, killing all 229 on board.",
   "probable_cause": "The TSB found that an electrical arcing event, most probably involving in-flight entertainment network wiring, ignited flammable metallised polyethylene terephthalate (MPET) cover material on thermal acoustic insulation blankets in the area above the cockpit ceiling. The fire spread along the flammable insulation and other materials, degrading aircraft systems and the cockpit environment until the crew lost control. Contributing were the absence of a fire-detection and suppression capability in that area, certification standards that allowed flammable materials, and a checklist and diversion philosophy that did not lead to an immediate landing.",
   "factors": [
-    { "id": "wiring_failure", "role": "initiating", "evidence": "Arc-damaged wires, including an in-flight entertainment network power cable, were found in the area above the cockpit; the TSB concluded an arcing event was the most probable ignition source." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The IFE network installation, approved under a supplemental type certificate, was integrated into the aircraft's electrical system in a way that meant its power was not removed by the CABIN BUS switch, and the area above the cockpit had no fire detection or suppression." },
-    { "id": "flammable_material", "role": "contributing", "evidence": "MPET-covered thermal acoustic insulation blankets were easily ignited by the arc and propagated the fire; other materials such as silicone elastomeric end caps and hook-and-loop fasteners also contributed." },
-    { "id": "certification_shortfall", "role": "latent", "evidence": "The MPET insulation passed the certification flammability test then in force (FAR 25.853 vertical Bunsen burner), a test the TSB found inadequate to predict in-service behaviour." },
-    { "id": "regulatory_oversight", "role": "latent", "evidence": "The TSB found deficiencies in regulatory oversight of the STC process and in flammability standards for materials in hidden areas." },
-    { "id": "inflight_fire", "role": "contributing", "evidence": "The fire spread rearward above the ceiling and into the cockpit, damaging wiring and systems and creating smoke and heat in the cockpit." },
-    { "id": "checklist_design", "role": "contributing", "evidence": "The Smoke/Fumes of Unknown Origin checklist was designed around isolating electrical sources and did not direct the crew toward the earliest possible landing; the TSB found it unsuitable for an in-flight fire situation." },
-    { "id": "smoke_checklist_delay", "role": "contributing", "evidence": "The crew, following Swissair procedures, prepared for a landing with fuel dumping and checklist actions rather than an immediate emergency descent; the TSB concluded that even an immediate diversion would probably not have allowed a landing before systems failed." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "After fire-related failures of the flight recorders, autopilot and instruments, the aircraft descended and struck the water at high speed in a steep nose-down, right-wing-low attitude." }
+    {
+      "id": "wiring_failure",
+      "role": "initiating",
+      "evidence": "Arc-damaged wires, including an in-flight entertainment network power cable, were found in the area above the cockpit; the TSB concluded an arcing event was the most probable ignition source."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The IFE network installation, approved under a supplemental type certificate, was integrated into the aircraft's electrical system in a way that meant its power was not removed by the CABIN BUS switch, and the area above the cockpit had no fire detection or suppression."
+    },
+    {
+      "id": "flammable_material",
+      "role": "contributing",
+      "evidence": "MPET-covered thermal acoustic insulation blankets were easily ignited by the arc and propagated the fire; other materials such as silicone elastomeric end caps and hook-and-loop fasteners also contributed."
+    },
+    {
+      "id": "certification_shortfall",
+      "role": "latent",
+      "evidence": "The MPET insulation passed the certification flammability test then in force (FAR 25.853 vertical Bunsen burner), a test the TSB found inadequate to predict in-service behaviour."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "The TSB found deficiencies in regulatory oversight of the STC process and in flammability standards for materials in hidden areas."
+    },
+    {
+      "id": "inflight_fire",
+      "role": "contributing",
+      "evidence": "The fire spread rearward above the ceiling and into the cockpit, damaging wiring and systems and creating smoke and heat in the cockpit."
+    },
+    {
+      "id": "checklist_design",
+      "role": "contributing",
+      "evidence": "The Smoke/Fumes of Unknown Origin checklist was designed around isolating electrical sources and did not direct the crew toward the earliest possible landing; the TSB found it unsuitable for an in-flight fire situation."
+    },
+    {
+      "id": "smoke_checklist_delay",
+      "role": "contributing",
+      "evidence": "The crew, following Swissair procedures, prepared for a landing with fuel dumping and checklist actions rather than an immediate emergency descent; the TSB concluded that even an immediate diversion would probably not have allowed a landing before systems failed."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "After fire-related failures of the flight recorders, autopilot and instruments, the aircraft descended and struck the water at high speed in a steep nose-down, right-wing-low attitude."
+    }
   ],
   "chain": [
-    ["regulatory_oversight", "certification_shortfall"],
-    ["certification_shortfall", "flammable_material"],
-    ["design_deficiency", "wiring_failure"],
-    ["wiring_failure", "inflight_fire"],
-    ["flammable_material", "inflight_fire"],
-    ["checklist_design", "smoke_checklist_delay"],
-    ["smoke_checklist_delay", "inflight_fire"],
-    ["inflight_fire", "loss_of_control_inflight"]
+    [
+      "regulatory_oversight",
+      "certification_shortfall"
+    ],
+    [
+      "certification_shortfall",
+      "flammable_material"
+    ],
+    [
+      "design_deficiency",
+      "wiring_failure"
+    ],
+    [
+      "wiring_failure",
+      "inflight_fire"
+    ],
+    [
+      "flammable_material",
+      "inflight_fire"
+    ],
+    [
+      "checklist_design",
+      "smoke_checklist_delay"
+    ],
+    [
+      "smoke_checklist_delay",
+      "inflight_fire"
+    ],
+    [
+      "inflight_fire",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
-    { "t": -3158, "clock": "00:18", "phase": "takeoff", "actor": "PF", "text": "Departs New York JFK for Geneva with 215 passengers and 14 crew.", "kind": "crew_action" },
-    { "t": 0, "clock": "01:10:38", "phase": "cruise", "actor": "CAPT", "text": "Pilots notice an unusual odour in the cockpit while cruising at FL330; it is initially assessed as an air-conditioning smell.", "state": { "alt": 33000 }, "factors": ["inflight_fire"], "kind": "crew_speech" },
-    { "t": 150, "clock": null, "phase": "cruise", "actor": "CAPT", "text": "Smoke is seen in the cockpit; the crew agree there is a problem, don oxygen masks and decide to divert.", "factors": ["inflight_fire"], "kind": "crew_action" },
-    { "t": 217, "clock": "01:14:15", "phase": "cruise", "actor": "PM", "text": "Crew declare Pan Pan Pan to Moncton Centre, report smoke in the cockpit and request an immediate return to a convenient airport, suggesting Boston.", "state": { "alt": 33000 }, "kind": "crew_speech" },
-    { "t": 250, "clock": null, "phase": "cruise", "actor": "ATC", "text": "Moncton Centre offers Halifax, about 56 nm closer than Boston, and clears the aircraft to descend.", "kind": "atc" },
-    { "t": 298, "clock": "01:15:36", "phase": "descent", "actor": "PM", "text": "Crew accept Halifax and begin the descent.", "kind": "crew_speech" },
-    { "t": 610, "clock": "01:20:48", "phase": "descent", "actor": "PM", "text": "Told they are 30 nm from the Halifax runway, the crew respond that they need more distance to descend from 21,000 ft; ATC turns the aircraft to lose altitude.", "state": { "alt": 21000 }, "factors": ["smoke_checklist_delay"], "kind": "crew_speech" },
-    { "t": 700, "clock": null, "phase": "descent", "actor": "PM", "text": "Crew ask to dump fuel; ATC vectors the aircraft south over St. Margaret's Bay for the dump. The Smoke/Fumes of Unknown Origin checklist is under way.", "factors": ["smoke_checklist_delay", "checklist_design"], "kind": "crew_action" },
-    { "t": 790, "clock": null, "phase": "descent", "actor": "CAPT", "text": "CABIN BUS switch selected OFF as part of the smoke checklist; this does not remove power from the IFE network wiring.", "factors": ["design_deficiency", "checklist_design"], "kind": "crew_action" },
-    { "t": 811, "clock": "01:24:09", "phase": "descent", "actor": "SYS", "text": "Autopilot disconnects as fire damage spreads to aircraft wiring.", "factors": ["inflight_fire", "wiring_failure"], "kind": "system" },
-    { "t": 847, "clock": "01:24:45", "phase": "descent", "actor": "PM", "text": "Crew declare an emergency, state they must land immediately and that they are starting to dump fuel.", "factors": ["inflight_fire"], "kind": "crew_speech" },
-    { "t": 903, "clock": "01:25:41", "phase": "descent", "actor": "SYS", "text": "Flight data recorder and cockpit voice recorder stop as fire-related electrical failures multiply; last radio transmission received from the aircraft.", "factors": ["inflight_fire", "wiring_failure"], "kind": "system" },
-    { "t": 1100, "clock": null, "phase": "descent", "actor": "ENV", "text": "Fire continues to degrade cockpit instruments and displays; the aircraft is observed manoeuvring over St. Margaret's Bay in the final minutes.", "factors": ["inflight_fire"], "kind": "env" },
-    { "t": 1240, "clock": "01:31:18", "phase": "descent", "actor": "SYS", "text": "Aircraft strikes the sea near Peggy's Cove at about 300 kt in a 20-degree nose-down, 110-degree right-bank attitude; all 229 killed.", "state": { "ias": 300, "pitch": -20, "roll": 110 }, "factors": ["loss_of_control_inflight"], "kind": "outcome" }
+    {
+      "t": -3158,
+      "clock": "00:18",
+      "phase": "takeoff",
+      "actor": "PF",
+      "text": "Departs New York JFK for Geneva with 215 passengers and 14 crew.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "01:10:38",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Pilots notice an unusual odour in the cockpit while cruising at FL330; it is initially assessed as an air-conditioning smell.",
+      "state": {
+        "alt": 33000
+      },
+      "factors": [
+        "inflight_fire"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 150,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Smoke is seen in the cockpit; the crew agree there is a problem, don oxygen masks and decide to divert.",
+      "factors": [
+        "inflight_fire"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 217,
+      "clock": "01:14:15",
+      "phase": "cruise",
+      "actor": "PM",
+      "text": "Crew declare Pan Pan Pan to Moncton Centre, report smoke in the cockpit and request an immediate return to a convenient airport, suggesting Boston.",
+      "state": {
+        "alt": 33000
+      },
+      "kind": "crew_speech"
+    },
+    {
+      "t": 250,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "ATC",
+      "text": "Moncton Centre offers Halifax, about 56 nm closer than Boston, and clears the aircraft to descend.",
+      "kind": "atc"
+    },
+    {
+      "t": 298,
+      "clock": "01:15:36",
+      "phase": "descent",
+      "actor": "PM",
+      "text": "Crew accept Halifax and begin the descent.",
+      "kind": "crew_speech"
+    },
+    {
+      "t": 610,
+      "clock": "01:20:48",
+      "phase": "descent",
+      "actor": "PM",
+      "text": "Told they are 30 nm from the Halifax runway, the crew respond that they need more distance to descend from 21,000 ft; ATC turns the aircraft to lose altitude.",
+      "state": {
+        "alt": 21000
+      },
+      "factors": [
+        "smoke_checklist_delay"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 700,
+      "clock": null,
+      "phase": "descent",
+      "actor": "PM",
+      "text": "Crew ask to dump fuel; ATC vectors the aircraft south over St. Margaret's Bay for the dump. The Smoke/Fumes of Unknown Origin checklist is under way.",
+      "factors": [
+        "smoke_checklist_delay",
+        "checklist_design"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 790,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "CABIN BUS switch selected OFF as part of the smoke checklist; this does not remove power from the IFE network wiring.",
+      "factors": [
+        "design_deficiency",
+        "checklist_design"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 811,
+      "clock": "01:24:09",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Autopilot disconnects as fire damage spreads to aircraft wiring.",
+      "factors": [
+        "inflight_fire",
+        "wiring_failure"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 847,
+      "clock": "01:24:45",
+      "phase": "descent",
+      "actor": "PM",
+      "text": "Crew declare an emergency, state they must land immediately and that they are starting to dump fuel.",
+      "factors": [
+        "inflight_fire"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 903,
+      "clock": "01:25:41",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Flight data recorder and cockpit voice recorder stop as fire-related electrical failures multiply; last radio transmission received from the aircraft.",
+      "factors": [
+        "inflight_fire",
+        "wiring_failure"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 1100,
+      "clock": null,
+      "phase": "descent",
+      "actor": "ENV",
+      "text": "Fire continues to degrade cockpit instruments and displays; the aircraft is observed manoeuvring over St. Margaret's Bay in the final minutes.",
+      "factors": [
+        "inflight_fire"
+      ],
+      "kind": "env"
+    },
+    {
+      "t": 1240,
+      "clock": "01:31:18",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Aircraft strikes the sea near Peggy's Cove at about 300 kt in a 20-degree nose-down, 110-degree right-bank attitude; all 229 killed.",
+      "state": {
+        "ias": 300,
+        "pitch": -20,
+        "roll": 110
+      },
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [
-    { "t": 217, "clock": "01:14:15", "speaker": "PM", "text": "Swissair one eleven heavy is declaring Pan Pan Pan. We have smoke in the cockpit. Request immediate return to a convenient place, I guess Boston.", "translation": null }
+    {
+      "t": 217,
+      "clock": "01:14:15",
+      "speaker": "PM",
+      "text": "Swissair one eleven heavy is declaring Pan Pan Pan. We have smoke in the cockpit. Request immediate return to a convenient place, I guess Boston.",
+      "translation": null
+    }
   ],
   "recommendations": [
-    { "id": "A99-07", "to": "Transport Canada / FAA / JAA", "text": "Require cockpit voice recorders with a minimum recording capacity of two hours on aircraft required to carry CVRs and FDRs.", "status": "closed_acceptable", "outcome": "Two-hour CVRs are now required on newly manufactured transport aircraft in Canada, the USA and Europe.", "trigger_factors": ["inflight_fire", "wiring_failure"] },
-    { "id": "A99-08", "to": "Transport Canada / FAA / JAA", "text": "Require an independent power source for CVRs and cockpit-area microphones so that recording continues after loss of aircraft electrical power.", "status": "closed_acceptable", "outcome": "Recorder independent power supplies (RIPS) required on new aircraft by the FAA from 2010.", "trigger_factors": ["inflight_fire", "wiring_failure"] },
-    { "id": null, "to": "Transport Canada / FAA / JAA", "text": "Develop and adopt a flammability test regime for aircraft materials that reflects realistic in-service ignition and fire-propagation conditions, and require the removal or replacement of MPET-covered insulation blankets.", "status": "closed_acceptable", "outcome": "The FAA mandated replacement of MPET insulation in affected aircraft and adopted the radiant panel test (FAR 25.856) for thermal acoustic insulation.", "trigger_factors": ["flammable_material", "certification_shortfall"] },
-    { "id": null, "to": "Transport Canada / FAA / JAA", "text": "Review and improve in-flight firefighting measures, including crew training, smoke and fire checklists that direct the crew to land as soon as possible, and fire detection and suppression in hidden areas.", "status": "unknown", "outcome": "Industry smoke/fire checklists were revised to prioritise an immediate diversion and landing.", "trigger_factors": ["checklist_design", "smoke_checklist_delay"] },
-    { "id": null, "to": "Transport Canada / FAA / JAA", "text": "Improve the certification and installation review of supplemental type certificate modifications that integrate with aircraft electrical systems, and improve circuit protection and arc-fault detection on aircraft wiring.", "status": "unknown", "outcome": null, "trigger_factors": ["design_deficiency", "wiring_failure", "regulatory_oversight"] }
+    {
+      "id": "A99-07",
+      "to": "Transport Canada / FAA / JAA",
+      "text": "Require cockpit voice recorders with a minimum recording capacity of two hours on aircraft required to carry CVRs and FDRs.",
+      "status": "closed_acceptable",
+      "outcome": "Two-hour CVRs are now required on newly manufactured transport aircraft in Canada, the USA and Europe.",
+      "trigger_factors": [
+        "inflight_fire",
+        "wiring_failure"
+      ]
+    },
+    {
+      "id": "A99-08",
+      "to": "Transport Canada / FAA / JAA",
+      "text": "Require an independent power source for CVRs and cockpit-area microphones so that recording continues after loss of aircraft electrical power.",
+      "status": "closed_acceptable",
+      "outcome": "Recorder independent power supplies (RIPS) required on new aircraft by the FAA from 2010.",
+      "trigger_factors": [
+        "inflight_fire",
+        "wiring_failure"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Transport Canada / FAA / JAA",
+      "text": "Develop and adopt a flammability test regime for aircraft materials that reflects realistic in-service ignition and fire-propagation conditions, and require the removal or replacement of MPET-covered insulation blankets.",
+      "status": "closed_acceptable",
+      "outcome": "The FAA mandated replacement of MPET insulation in affected aircraft and adopted the radiant panel test (FAR 25.856) for thermal acoustic insulation.",
+      "trigger_factors": [
+        "flammable_material",
+        "certification_shortfall"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Transport Canada / FAA / JAA",
+      "text": "Review and improve in-flight firefighting measures, including crew training, smoke and fire checklists that direct the crew to land as soon as possible, and fire detection and suppression in hidden areas.",
+      "status": "unknown",
+      "outcome": "Industry smoke/fire checklists were revised to prioritise an immediate diversion and landing.",
+      "trigger_factors": [
+        "checklist_design",
+        "smoke_checklist_delay"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Transport Canada / FAA / JAA",
+      "text": "Improve the certification and installation review of supplemental type certificate modifications that integrate with aircraft electrical systems, and improve circuit protection and arc-fault detection on aircraft wiring.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "design_deficiency",
+        "wiring_failure",
+        "regulatory_oversight"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -78,16 +377,27 @@
     "Smoke, fire and fumes checklists across the industry were rewritten to direct crews to land at the nearest suitable airport as early as possible.",
     "The in-flight entertainment network installation was deactivated on the Swissair MD-11 fleet and STC oversight for electrical modifications was tightened."
   ],
-  "related": ["valujet592", "ups6", "manchester28m"],
+  "related": [
+    "valujet592",
+    "ups6",
+    "manchester28m"
+  ],
   "fdr": null,
   "sources": [
     "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1998/a98h0003/a98h0003.html",
     "https://www.tsb.gc.ca/"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "high", "reviewed": false, "notes": [
-    "Clock times for smoke detection (t=150), ATC offer of Halifax, the fuel-dump request and the CABIN BUS switch action are approximate and reconstructed from the report narrative; other clock times are as published by the TSB.",
-    "The identity of the pilot making radio calls is given as PM without confirmation.",
-    "Only recommendation ids A99-07 and A99-08 are given with confidence; the flammability and firefighting recommendations were issued as several separate TSB recommendations whose numbers are not reproduced here.",
-    "Only the Pan Pan call from the ATC transcript is quoted; the cockpit CVR transcript was not published in full."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Clock times for smoke detection (t=150), ATC offer of Halifax, the fuel-dump request and the CABIN BUS switch action are approximate and reconstructed from the report narrative; other clock times are as published by the TSB.",
+      "The identity of the pilot making radio calls is given as PM without confirmation.",
+      "Only recommendation ids A99-07 and A99-08 are given with confidence; the flammability and firefighting recommendations were issued as several separate TSB recommendations whose numbers are not reproduced here.",
+      "Only the Pan Pan call from the ATC transcript is quoted; the cockpit CVR transcript was not published in full."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Swissair_Flight_111"
 }

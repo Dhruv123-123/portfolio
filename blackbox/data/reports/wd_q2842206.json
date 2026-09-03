@@ -27,7 +27,9 @@
   },
   "location": {
     "name": "Jamaica, Queens",
-    "country": "United States"
+    "country": "United States",
+    "lat": 40.6497,
+    "lon": -73.7521
   },
   "phase": "approach",
   "occupants": 124,

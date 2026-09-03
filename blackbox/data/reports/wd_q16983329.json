@@ -29,7 +29,9 @@
   },
   "location": {
     "name": "Rijeka Airport",
-    "country": "Yugoslavia"
+    "country": "Yugoslavia",
+    "lat": 45.2243,
+    "lon": 14.5628
   },
   "phase": "landing",
   "occupants": 83,

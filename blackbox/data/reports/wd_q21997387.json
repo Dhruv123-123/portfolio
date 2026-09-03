@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "7.7 nm west-north-west of Campbeltown Airport, Scotland",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "lat": 55.4867,
+    "lon": 5.895
   },
   "phase": "approach",
   "occupants": 2,
@@ -71,11 +73,26 @@
     }
   ],
   "chain": [
-    ["fatigue", "loss_of_situational_awareness"],
-    ["fatigue", "descent_below_minimums"],
-    ["spatial_disorientation", "descent_below_minimums"],
-    ["descent_below_minimums", "cfit"],
-    ["loss_of_situational_awareness", "cfit"]
+    [
+      "fatigue",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "fatigue",
+      "descent_below_minimums"
+    ],
+    [
+      "spatial_disorientation",
+      "descent_below_minimums"
+    ],
+    [
+      "descent_below_minimums",
+      "cfit"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "cfit"
+    ]
   ],
   "events": [
     {
@@ -103,7 +120,9 @@
       "actor": "CAPT",
       "kind": "crew_speech",
       "text": "Pilot transmitted that he had completed the base turn, indicating he was inbound to the airport",
-      "factors": ["loss_of_situational_awareness"]
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
     },
     {
       "t": 183,
@@ -112,7 +131,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft impacted the sea, with the wreckage located on the sea bed 7.7 nm west-north-west of the airport",
-      "factors": ["cfit"]
+      "factors": [
+        "cfit"
+      ]
     }
   ],
   "cvr": [],
@@ -140,17 +161,23 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.gov.uk/aaib-reports/aar-2-2006-pilatus-britten-norman-bn2b-26-islander-g-bomg-15-march-2005"],
+  "sources": [
+    "https://www.gov.uk/aaib-reports/aar-2-2006-pilatus-britten-norman-bn2b-26-islander-g-bomg-15-march-2005"
+  ],
   "wikipedia": "https://en.wikipedia.org/wiki/2005_Loganair_Britten-Norman_Islander_crash",
   "asn_id": "20050315-0",
   "interest": 9.7,
-  "report_links": ["https://www.gov.uk/aaib-reports/aar-2-2006-pilatus-britten-norman-bn2b-26-islander-g-bomg-15-march-2005"],
+  "report_links": [
+    "https://www.gov.uk/aaib-reports/aar-2-2006-pilatus-britten-norman-bn2b-26-islander-g-bomg-15-march-2005"
+  ],
   "curated_id": null,
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",
     "confidence": "high",
     "reviewed": false,
-    "notes": ["Read synopsis, findings (with subsections on aircraft, flight operations, and personnel), causal factors, and safety recommendations sections; 22+ findings extracted; 3 safety recommendations from formal investigation"]
+    "notes": [
+      "Read synopsis, findings (with subsections on aircraft, flight operations, and personnel), causal factors, and safety recommendations sections; 22+ findings extracted; 3 safety recommendations from formal investigation"
+    ]
   }
 }

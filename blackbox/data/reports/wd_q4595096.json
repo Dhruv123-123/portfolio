@@ -1,266 +1,268 @@
 {
- "id": "wd_q4595096",
- "qid": "Q4595096",
- "tier": "wikidata",
- "depth": "sections",
- "title": "1999 South Dakota Learjet crash",
- "flight_number": null,
- "date": "1999-10-25",
- "agency": "NTSB",
- "aircraft": {
-  "type": "Learjet 35",
-  "manufacturer": "Learjet",
-  "family": "35",
-  "registration": "N47BA"
- },
- "operator": "Sunjet Aviation",
- "route": {
-  "from_name": "Orlando",
-  "to_name": "Dallas"
- },
- "location": {
-  "name": "near Aberdeen",
-  "country": "United States"
- },
- "phase": "cruise",
- "occupants": 6,
- "fatalities": 6,
- "category": "UNK",
- "summary": "A Learjet 35 departed Orlando bound for Dallas with two pilots and four passengers. At 13:27 UTC while climbing through 23000 feet, the aircraft lost cabin pressure, incapacitating all six occupants with hypoxia. The aircraft continued climbing on autopilot past assigned altitude, failed to make the required westward turn toward Dallas, and continued northwest for approximately four hours and 1500 miles. At 17:10 UTC the engines wound down at fuel exhaustion, and the aircraft subsequently entered an uncontrolled spiral descent and crashed near Aberdeen in Edmunds County, South Dakota.",
- "probable_cause": "Loss of cabin pressurization early in the flight incapacitated all occupants through hypoxia. The aircraft had several unresolved maintenance issues related to cabin pressure in the months leading up to the crash (p. 68)",
- "factors": [
-  {
-   "id": "cabin_pressurization_failure",
-   "role": "initiating",
-   "evidence": "Early in the flight, the aircraft lost cabin pressure, and all six on board were incapacitated and killed by hypoxia"
+  "id": "wd_q4595096",
+  "qid": "Q4595096",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "1999 South Dakota Learjet crash",
+  "flight_number": null,
+  "date": "1999-10-25",
+  "agency": "NTSB",
+  "aircraft": {
+    "type": "Learjet 35",
+    "manufacturer": "Learjet",
+    "family": "35",
+    "registration": "N47BA"
   },
-  {
-   "id": "hypoxia",
-   "role": "contributing",
-   "evidence": "All six on board were incapacitated and killed by hypoxia, a lack of oxygen in the brain and body"
+  "operator": "Sunjet Aviation",
+  "route": {
+    "from_name": "Orlando",
+    "to_name": "Dallas"
   },
-  {
-   "id": "known_defect_unresolved",
-   "role": "contributing",
-   "evidence": "The NTSB report showed that the plane had several instances of maintenance work related to cabin pressure in the months leading up to the crash"
+  "location": {
+    "name": "near Aberdeen",
+    "country": "United States",
+    "lat": 45.4167,
+    "lon": -98.75
   },
-  {
-   "id": "fuel_exhaustion",
-   "role": "outcome",
-   "evidence": "The plane ran out of fuel over South Dakota and crashed into a field near Aberdeen"
-  },
-  {
-   "id": "loss_of_control_inflight",
-   "role": "outcome",
-   "evidence": "The Lear began a right turn and descent doing multiple rolls in severe descent in a descending spiral"
-  }
- ],
- "chain": [
-  [
-   "cabin_pressurization_failure",
-   "hypoxia"
+  "phase": "cruise",
+  "occupants": 6,
+  "fatalities": 6,
+  "category": "UNK",
+  "summary": "A Learjet 35 departed Orlando bound for Dallas with two pilots and four passengers. At 13:27 UTC while climbing through 23000 feet, the aircraft lost cabin pressure, incapacitating all six occupants with hypoxia. The aircraft continued climbing on autopilot past assigned altitude, failed to make the required westward turn toward Dallas, and continued northwest for approximately four hours and 1500 miles. At 17:10 UTC the engines wound down at fuel exhaustion, and the aircraft subsequently entered an uncontrolled spiral descent and crashed near Aberdeen in Edmunds County, South Dakota.",
+  "probable_cause": "Loss of cabin pressurization early in the flight incapacitated all occupants through hypoxia. The aircraft had several unresolved maintenance issues related to cabin pressure in the months leading up to the crash (p. 68)",
+  "factors": [
+    {
+      "id": "cabin_pressurization_failure",
+      "role": "initiating",
+      "evidence": "Early in the flight, the aircraft lost cabin pressure, and all six on board were incapacitated and killed by hypoxia"
+    },
+    {
+      "id": "hypoxia",
+      "role": "contributing",
+      "evidence": "All six on board were incapacitated and killed by hypoxia, a lack of oxygen in the brain and body"
+    },
+    {
+      "id": "known_defect_unresolved",
+      "role": "contributing",
+      "evidence": "The NTSB report showed that the plane had several instances of maintenance work related to cabin pressure in the months leading up to the crash"
+    },
+    {
+      "id": "fuel_exhaustion",
+      "role": "outcome",
+      "evidence": "The plane ran out of fuel over South Dakota and crashed into a field near Aberdeen"
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The Lear began a right turn and descent doing multiple rolls in severe descent in a descending spiral"
+    }
   ],
-  [
-   "known_defect_unresolved",
-   "cabin_pressurization_failure"
+  "chain": [
+    [
+      "cabin_pressurization_failure",
+      "hypoxia"
+    ],
+    [
+      "known_defect_unresolved",
+      "cabin_pressurization_failure"
+    ],
+    [
+      "hypoxia",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "fuel_exhaustion"
+    ]
   ],
-  [
-   "hypoxia",
-   "loss_of_control_inflight"
+  "events": [
+    {
+      "t": 0,
+      "clock": "09:19",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Learjet 35 N47BA departed Orlando International Airport at 13:19 UTC with 5300 lb of Jet A for four hours and 45 minutes of flight.",
+      "factors": []
+    },
+    {
+      "t": 64,
+      "clock": "09:27:18",
+      "phase": "initial_climb",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "At 13:27:13 UTC, the air traffic controller instructed the pilot to climb and maintain flight level 390.",
+      "factors": []
+    },
+    {
+      "t": 420,
+      "clock": "09:33",
+      "phase": "climb",
+      "actor": "ATC",
+      "kind": "system",
+      "text": "The controller's message went unacknowledged and the next attempt to contact the aircraft at 13:33:33 UTC with the aircraft at 36500 ft was also unanswered.",
+      "factors": [
+        "cabin_pressurization_failure",
+        "hypoxia"
+      ]
+    },
+    {
+      "t": 500,
+      "clock": "09:35",
+      "phase": "climb",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft continued climbing on autopilot past assigned altitude, failed to acknowledge controller instructions (p. 45)",
+      "factors": [
+        "cabin_pressurization_failure",
+        "hypoxia"
+      ]
+    },
+    {
+      "t": 1200,
+      "clock": "10:00",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft continued northwestward course for approximately four hours and 1500 miles without making required turn to Dallas (p. 45)",
+      "factors": [
+        "hypoxia",
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 13200,
+      "clock": "12:00",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "The aircraft failed to make the required westward turn toward Dallas over North Florida and continued on its northwestern course for almost four hours and 1500 miles.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 13500,
+      "clock": "12:04",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft remained in cruise flight while all occupants incapacitated by hypoxia (p. 45)",
+      "factors": [
+        "hypoxia"
+      ]
+    },
+    {
+      "t": 14040,
+      "clock": "12:10:40",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Engines heard winding down on CVR recording, indicating fuel exhaustion at 17:10:41 UTC (p. 65)",
+      "factors": [
+        "fuel_exhaustion"
+      ]
+    },
+    {
+      "t": 14041,
+      "clock": "12:10:41",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "At 17:10:41 UTC, the Learjet's engines were heard winding down on the CVR recording, indicating the plane's fuel had been exhausted.",
+      "factors": [
+        "fuel_exhaustion"
+      ]
+    },
+    {
+      "t": 14160,
+      "clock": "12:11:26",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Learjet began right turn and descent with multiple rolls in severe descending spiral at 17:11:26 UTC (p. 65)",
+      "factors": [
+        "loss_of_control_inflight",
+        "fuel_exhaustion"
+      ]
+    },
+    {
+      "t": 14161,
+      "clock": "12:11:26",
+      "phase": "descent",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "At 17:11:26 UTC, the Lear began a right turn and descent doing multiple rolls in severe descent in a descending spiral.",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    }
   ],
-  [
-   "loss_of_control_inflight",
-   "fuel_exhaustion"
-  ]
- ],
- "events": [
-  {
-   "t": 0,
-   "clock": "09:19",
-   "phase": "takeoff",
-   "actor": "CAPT",
-   "kind": "crew_action",
-   "text": "Learjet 35 N47BA departed Orlando International Airport at 13:19 UTC with 5300 lb of Jet A for four hours and 45 minutes of flight.",
-   "factors": []
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0001.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/1999_South_Dakota_Learjet_35_crash",
+  "asn_id": "19991025-1",
+  "interest": 10.18,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Extracted from NTSB report AAB-00/01",
+      "Sections read: History of Flight, Weather, Maintenance History, Probable Cause",
+      "6 events with clock times extracted from flight progression",
+      "Evidence cites investigation findings and maintenance records",
+      "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null; recommendation trigger factors pruned"
+    ]
   },
-  {
-   "t": 64,
-   "clock": "09:27:18",
-   "phase": "initial_climb",
-   "actor": "ATC",
-   "kind": "atc",
-   "text": "At 13:27:13 UTC, the air traffic controller instructed the pilot to climb and maintain flight level 390.",
-   "factors": []
-  },
-  {
-   "t": 420,
-   "clock": "09:33",
-   "phase": "climb",
-   "actor": "ATC",
-   "kind": "system",
-   "text": "The controller's message went unacknowledged and the next attempt to contact the aircraft at 13:33:33 UTC with the aircraft at 36500 ft was also unanswered.",
-   "factors": [
-    "cabin_pressurization_failure",
-    "hypoxia"
-   ]
-  },
-  {
-   "t": 500,
-   "clock": "09:35",
-   "phase": "climb",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft continued climbing on autopilot past assigned altitude, failed to acknowledge controller instructions (p. 45)",
-   "factors": [
-    "cabin_pressurization_failure",
-    "hypoxia"
-   ]
-  },
-  {
-   "t": 1200,
-   "clock": "10:00",
-   "phase": "cruise",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft continued northwestward course for approximately four hours and 1500 miles without making required turn to Dallas (p. 45)",
-   "factors": [
-    "hypoxia",
-    "loss_of_control_inflight"
-   ]
-  },
-  {
-   "t": 13200,
-   "clock": "12:00",
-   "phase": "cruise",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "The aircraft failed to make the required westward turn toward Dallas over North Florida and continued on its northwestern course for almost four hours and 1500 miles.",
-   "factors": [
-    "loss_of_control_inflight"
-   ]
-  },
-  {
-   "t": 13500,
-   "clock": "12:04",
-   "phase": "cruise",
-   "actor": "SYS",
-   "kind": "system",
-   "text": "Aircraft remained in cruise flight while all occupants incapacitated by hypoxia (p. 45)",
-   "factors": [
-    "hypoxia"
-   ]
-  },
-  {
-   "t": 14040,
-   "clock": "12:10:40",
-   "phase": "descent",
-   "actor": "SYS",
-   "kind": "warning",
-   "text": "Engines heard winding down on CVR recording, indicating fuel exhaustion at 17:10:41 UTC (p. 65)",
-   "factors": [
-    "fuel_exhaustion"
-   ]
-  },
-  {
-   "t": 14041,
-   "clock": "12:10:41",
-   "phase": "descent",
-   "actor": "SYS",
-   "kind": "warning",
-   "text": "At 17:10:41 UTC, the Learjet's engines were heard winding down on the CVR recording, indicating the plane's fuel had been exhausted.",
-   "factors": [
-    "fuel_exhaustion"
-   ]
-  },
-  {
-   "t": 14160,
-   "clock": "12:11:26",
-   "phase": "descent",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "Learjet began right turn and descent with multiple rolls in severe descending spiral at 17:11:26 UTC (p. 65)",
-   "factors": [
-    "loss_of_control_inflight",
-    "fuel_exhaustion"
-   ]
-  },
-  {
-   "t": 14161,
-   "clock": "12:11:26",
-   "phase": "descent",
-   "actor": "SYS",
-   "kind": "outcome",
-   "text": "At 17:11:26 UTC, the Lear began a right turn and descent doing multiple rolls in severe descent in a descending spiral.",
-   "factors": [
-    "loss_of_control_inflight"
-   ]
-  }
- ],
- "report_links": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0001.pdf"
- ],
- "wikipedia": "https://en.wikipedia.org/wiki/1999_South_Dakota_Learjet_35_crash",
- "asn_id": "19991025-1",
- "interest": 10.18,
- "extraction": {
-  "method": "llm",
-  "model": "claude-haiku-4-5-20251001",
-  "confidence": "high",
-  "reviewed": false,
-  "notes": [
-   "Extracted from NTSB report AAB-00/01",
-   "Sections read: History of Flight, Weather, Maintenance History, Probable Cause",
-   "6 events with clock times extracted from flight progression",
-   "Evidence cites investigation findings and maintenance records",
-   "auto-repair: cvr was null; dissent was null; safety_changes was null; related was null; recommendation trigger factors pruned"
-  ]
- },
- "curated_id": null,
- "time_reference": "UTC",
- "t0": "1999-10-25T13:19:00Z",
- "sources": [
-  "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0001.pdf"
- ],
- "agencies": [
-  {
-   "code": "NTSB",
-   "name": "National Transportation Safety Board",
-   "country": "United States",
-   "role": "lead"
-  }
- ],
- "recommendations": [
-  {
-   "id": null,
-   "to": "FAA",
-   "text": "Require regular and thorough inspection of cabin pressurization systems on all aircraft to detect and correct defects before they lead to cabin pressure loss",
-   "status": "unknown",
-   "trigger_factors": [
-    "cabin_pressurization_failure",
-    "known_defect_unresolved"
-   ]
-  },
-  {
-   "id": null,
-   "to": "FAA",
-   "text": "Establish procedures to ensure deferred maintenance items related to pressurization are not left unresolved across multiple maintenance events",
-   "status": "unknown",
-   "trigger_factors": [
-    "known_defect_unresolved"
-   ]
-  },
-  {
-   "id": null,
-   "to": "Aircraft Operators",
-   "text": "Establish and maintain pressurization system trending and analysis programs to identify aircraft with recurring pressurization issues",
-   "status": "unknown",
-   "trigger_factors": [
-    "known_defect_unresolved"
-   ]
-  }
- ],
- "cvr": [],
- "dissent": [],
- "safety_changes": [],
- "related": []
+  "curated_id": null,
+  "time_reference": "UTC",
+  "t0": "1999-10-25T13:19:00Z",
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0001.pdf"
+  ],
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Require regular and thorough inspection of cabin pressurization systems on all aircraft to detect and correct defects before they lead to cabin pressure loss",
+      "status": "unknown",
+      "trigger_factors": [
+        "cabin_pressurization_failure",
+        "known_defect_unresolved"
+      ]
+    },
+    {
+      "id": null,
+      "to": "FAA",
+      "text": "Establish procedures to ensure deferred maintenance items related to pressurization are not left unresolved across multiple maintenance events",
+      "status": "unknown",
+      "trigger_factors": [
+        "known_defect_unresolved"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Aircraft Operators",
+      "text": "Establish and maintain pressurization system trending and analysis programs to identify aircraft with recurring pressurization issues",
+      "status": "unknown",
+      "trigger_factors": [
+        "known_defect_unresolved"
+      ]
+    }
+  ],
+  "cvr": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": []
 }

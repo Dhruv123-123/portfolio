@@ -23,13 +23,15 @@
   "operator": "Avianca",
   "route": {
     "from": "SJON",
-    "from_name": "Bogot\u00e1",
+    "from_name": "Bogotá",
     "to": "KJFK",
     "to_name": "New York"
   },
   "location": {
     "name": "Cove Neck",
-    "country": "United States"
+    "country": "United States",
+    "lat": 40.88,
+    "lon": -73.4953
   },
   "phase": "approach",
   "occupants": 158,
@@ -101,7 +103,7 @@
       "phase": "takeoff",
       "actor": "SYS",
       "kind": "system",
-      "text": "Flight 052 departed Bogot\u00e1 International Airport.",
+      "text": "Flight 052 departed Bogotá International Airport.",
       "factors": []
     },
     {
@@ -110,7 +112,7 @@
       "phase": "climb",
       "actor": "SYS",
       "kind": "system",
-      "text": "Flight landed at Medell\u00edn and was refueled for departure to JFK.",
+      "text": "Flight landed at Medellín and was refueled for departure to JFK.",
       "factors": []
     },
     {
@@ -119,7 +121,7 @@
       "phase": "climb",
       "actor": "SYS",
       "kind": "system",
-      "text": "Flight 052 departed Medell\u00edn bound for JFK via oceanic route.",
+      "text": "Flight 052 departed Medellín bound for JFK via oceanic route.",
       "factors": []
     },
     {

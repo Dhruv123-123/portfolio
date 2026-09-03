@@ -38,7 +38,9 @@
   },
   "location": {
     "name": "90 nautical miles south of Miami, Florida",
-    "country": "International waters"
+    "country": "International waters",
+    "lat": 23.1394,
+    "lon": -81.2861
   },
   "phase": "cruise",
   "occupants": 271,

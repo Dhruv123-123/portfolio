@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "Kyzyltu, 1.6 km short of Almaty runway 23R",
-    "country": "Kazakhstan"
+    "country": "Kazakhstan",
+    "lat": 43.3781,
+    "lon": 77.0869
   },
   "phase": "go_around",
   "occupants": 21,

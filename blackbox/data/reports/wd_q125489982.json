@@ -29,7 +29,9 @@
   "location": {
     "name": "Roissy-en-France (Tremblay-lés-Gonesse)",
     "country": "France",
-    "altitude_m": 90
+    "altitude_m": 90,
+    "lat": 48.9894,
+    "lon": 2.5397
   },
   "phase": "approach",
   "occupants": 21,

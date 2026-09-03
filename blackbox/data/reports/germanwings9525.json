@@ -7,55 +7,272 @@
   "t0": "2015-03-24T09:30:53Z",
   "agency": "BEA",
   "agencies": [
-    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses pour la sécurité de l'aviation civile", "country": "France", "role": "lead",
-      "report_id": "BEA2015-0125", "report_title": "Final Report - Accident on 24 March 2015 at Prads-Haute-Bléone (Alpes-de-Haute-Provence, France) to the Airbus A320-211 registered D-AIPX operated by Germanwings", "report_date": "2016-03-13",
-      "url": "https://bea.aero/en/investigation-reports/notified-events/detail/accident-to-the-airbus-a320-211-registered-d-aipx-and-operated-by-germanwings-on-24-03-2015-at-prads-haute-bleone-en/" },
-    { "code": "BFU", "name": "Bundesstelle für Flugunfalluntersuchung", "country": "Germany", "role": "accredited_representative" },
-    { "code": "CIAIAC", "name": "Comisión de Investigación de Accidentes e Incidentes de Aviación Civil", "country": "Spain", "role": "accredited_representative" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" }
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses pour la sécurité de l'aviation civile",
+      "country": "France",
+      "role": "lead",
+      "report_id": "BEA2015-0125",
+      "report_title": "Final Report - Accident on 24 March 2015 at Prads-Haute-Bléone (Alpes-de-Haute-Provence, France) to the Airbus A320-211 registered D-AIPX operated by Germanwings",
+      "report_date": "2016-03-13",
+      "url": "https://bea.aero/en/investigation-reports/notified-events/detail/accident-to-the-airbus-a320-211-registered-d-aipx-and-operated-by-germanwings-on-24-03-2015-at-prads-haute-bleone-en/"
+    },
+    {
+      "code": "BFU",
+      "name": "Bundesstelle für Flugunfalluntersuchung",
+      "country": "Germany",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "CIAIAC",
+      "name": "Comisión de Investigación de Accidentes e Incidentes de Aviación Civil",
+      "country": "Spain",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    }
   ],
-  "aircraft": { "type": "Airbus A320-211", "family": "A320", "manufacturer": "Airbus", "registration": "D-AIPX", "msn": "147", "engines": "CFM International CFM56-5A1" },
+  "aircraft": {
+    "type": "Airbus A320-211",
+    "family": "A320",
+    "manufacturer": "Airbus",
+    "registration": "D-AIPX",
+    "msn": "147",
+    "engines": "CFM International CFM56-5A1"
+  },
   "operator": "Germanwings",
-  "route": { "from": "LEBL", "from_name": "Barcelona El Prat", "to": "EDDL", "to_name": "Düsseldorf" },
-  "location": { "name": "Massif des Trois-Évêchés, Prads-Haute-Bléone, Alpes-de-Haute-Provence", "country": "France", "lat": 44.2803, "lon": 6.4389 },
+  "route": {
+    "from": "LEBL",
+    "from_name": "Barcelona El Prat",
+    "to": "EDDL",
+    "to_name": "Düsseldorf"
+  },
+  "location": {
+    "name": "Massif des Trois-Évêchés, Prads-Haute-Bléone, Alpes-de-Haute-Provence",
+    "country": "France",
+    "lat": 44.2803,
+    "lon": 6.4389
+  },
   "phase": "cruise",
-  "occupants": 150, "fatalities": 150, "injuries_serious": 0,
+  "occupants": 150,
+  "fatalities": 150,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "SEC",
   "summary": "Shortly after the aircraft reached cruise at FL380 the captain left the cockpit. The first officer, alone at the controls, locked the cockpit door, set the selected altitude to 100 ft and initiated a continuous descent. He did not respond to calls from ATC or to the captain's attempts to re-enter the cockpit. The aircraft struck a mountainside in the French Alps about ten minutes later, killing all 150 on board.",
   "probable_cause": "The collision with the ground was due to the deliberate and planned action of the co-pilot, who decided to commit suicide while alone in the cockpit. The process for medical certification of pilots, in particular self-reporting in case of decrease in medical fitness, did not succeed in preventing the co-pilot, who was experiencing mental disorder with psychotic symptoms, from exercising the privilege of his licence. Contributing factors were the co-pilot's probable fear of losing his ability to fly if he declared his condition, the potential financial consequences, the lack of clear guidelines in German regulations on when a threat to public safety outweighs medical confidentiality, and cockpit door locking requirements designed for security threats that made it impossible to enter the flight compartment before the aircraft impacted the terrain.",
   "factors": [
-    { "id": "deliberate_act", "role": "initiating", "evidence": "The co-pilot, alone in the cockpit, deliberately set the selected altitude to 100 ft and flew the aircraft into terrain; he had rehearsed altitude selections on the outbound flight." },
-    { "id": "regulatory_oversight", "role": "latent", "evidence": "Medical certification relied on self-declaration; the co-pilot's psychiatric history and current treatment were not known to the authority or the operator, and German rules on breaking medical confidentiality lacked clear guidance." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The reinforced cockpit door and its lock, designed against hostile entry, could be kept locked from inside and prevented the captain from regaining access." },
-    { "id": "pilot_incapacitation", "role": "contributing", "evidence": "The co-pilot was experiencing a mental disorder with psychotic symptoms and had been prescribed medication incompatible with flying." },
-    { "id": "cfit", "role": "outcome", "evidence": "The aircraft descended under control at about 3,500 ft/min and collided with the mountainside at about 6,000 ft." }
+    {
+      "id": "deliberate_act",
+      "role": "initiating",
+      "evidence": "The co-pilot, alone in the cockpit, deliberately set the selected altitude to 100 ft and flew the aircraft into terrain; he had rehearsed altitude selections on the outbound flight."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "Medical certification relied on self-declaration; the co-pilot's psychiatric history and current treatment were not known to the authority or the operator, and German rules on breaking medical confidentiality lacked clear guidance."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The reinforced cockpit door and its lock, designed against hostile entry, could be kept locked from inside and prevented the captain from regaining access."
+    },
+    {
+      "id": "pilot_incapacitation",
+      "role": "contributing",
+      "evidence": "The co-pilot was experiencing a mental disorder with psychotic symptoms and had been prescribed medication incompatible with flying."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "The aircraft descended under control at about 3,500 ft/min and collided with the mountainside at about 6,000 ft."
+    }
   ],
   "chain": [
-    ["regulatory_oversight", "pilot_incapacitation"],
-    ["pilot_incapacitation", "deliberate_act"],
-    ["design_deficiency", "deliberate_act"],
-    ["deliberate_act", "cfit"]
+    [
+      "regulatory_oversight",
+      "pilot_incapacitation"
+    ],
+    [
+      "pilot_incapacitation",
+      "deliberate_act"
+    ],
+    [
+      "design_deficiency",
+      "deliberate_act"
+    ],
+    [
+      "deliberate_act",
+      "cfit"
+    ]
   ],
   "events": [
-    { "t": -1850, "clock": "09:00", "phase": "takeoff", "actor": "CAPT", "text": "Flight 4U9525 departs Barcelona for Düsseldorf; the first officer is pilot flying.", "kind": "crew_action" },
-    { "t": -230, "clock": "09:27", "phase": "cruise", "actor": "SYS", "text": "Aircraft levels at cruise flight level FL380 under autopilot.", "state": { "alt": 38000 }, "kind": "system" },
-    { "t": -29, "clock": "09:30:24", "phase": "cruise", "actor": "CAPT", "text": "Captain tells the first officer he is leaving the cockpit and asks him to take over radio communications; the cockpit door is heard closing.", "kind": "crew_action" },
-    { "t": 0, "clock": "09:30:53", "phase": "cruise", "actor": "FO", "text": "Selected altitude on the FCU changed from 38,000 ft to 100 ft; the autopilot begins a descent in OPEN DESCENT mode.", "state": { "alt": 38000 }, "factors": ["deliberate_act"], "kind": "crew_action" },
-    { "t": 60, "clock": "09:31:53", "phase": "descent", "actor": "SYS", "text": "Aircraft descending at about 3,500 ft/min; the first officer adjusts the selected speed and the autopilot remains engaged.", "state": { "vs": -3500 }, "factors": ["deliberate_act"], "kind": "system" },
-    { "t": 140, "clock": "09:33:12", "phase": "descent", "actor": "ATC", "text": "Marseille control calls the aircraft several times and receives no reply; the first officer's breathing is recorded and regular throughout the descent.", "kind": "atc" },
-    { "t": 218, "clock": "09:34:31", "phase": "descent", "actor": "CAPT", "text": "Cockpit door access buzzer sounds as the captain requests entry; no response. The keypad emergency access request is later refused from inside.", "factors": ["design_deficiency"], "kind": "crew_action" },
-    { "t": 300, "clock": "09:35:53", "phase": "descent", "actor": "CAPT", "text": "Captain knocks on the door and asks the first officer to open it; the interphone and the emergency door code are unsuccessful.", "factors": ["design_deficiency"], "kind": "crew_speech" },
-    { "t": 480, "clock": "09:38:53", "phase": "descent", "actor": "CAPT", "text": "Violent blows on the cockpit door are heard on the CVR as the captain tries to break in; French air defence is alerted and a fighter is scrambled.", "kind": "crew_action" },
-    { "t": 540, "clock": "09:39:53", "phase": "descent", "actor": "SYS", "text": "GPWS terrain alerts and master warning sound as the aircraft descends below 7,000 ft toward the mountains.", "factors": ["cfit"], "kind": "warning" },
-    { "t": 613, "clock": "09:41:06", "phase": "descent", "actor": "SYS", "text": "Aircraft collides with the mountainside at about 6,000 ft and disintegrates; all 150 occupants killed.", "state": { "alt": 6000 }, "factors": ["cfit"], "kind": "outcome" }
+    {
+      "t": -1850,
+      "clock": "09:00",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "text": "Flight 4U9525 departs Barcelona for Düsseldorf; the first officer is pilot flying.",
+      "kind": "crew_action"
+    },
+    {
+      "t": -230,
+      "clock": "09:27",
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Aircraft levels at cruise flight level FL380 under autopilot.",
+      "state": {
+        "alt": 38000
+      },
+      "kind": "system"
+    },
+    {
+      "t": -29,
+      "clock": "09:30:24",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "text": "Captain tells the first officer he is leaving the cockpit and asks him to take over radio communications; the cockpit door is heard closing.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "09:30:53",
+      "phase": "cruise",
+      "actor": "FO",
+      "text": "Selected altitude on the FCU changed from 38,000 ft to 100 ft; the autopilot begins a descent in OPEN DESCENT mode.",
+      "state": {
+        "alt": 38000
+      },
+      "factors": [
+        "deliberate_act"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 60,
+      "clock": "09:31:53",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Aircraft descending at about 3,500 ft/min; the first officer adjusts the selected speed and the autopilot remains engaged.",
+      "state": {
+        "vs": -3500
+      },
+      "factors": [
+        "deliberate_act"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 140,
+      "clock": "09:33:12",
+      "phase": "descent",
+      "actor": "ATC",
+      "text": "Marseille control calls the aircraft several times and receives no reply; the first officer's breathing is recorded and regular throughout the descent.",
+      "kind": "atc"
+    },
+    {
+      "t": 218,
+      "clock": "09:34:31",
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Cockpit door access buzzer sounds as the captain requests entry; no response. The keypad emergency access request is later refused from inside.",
+      "factors": [
+        "design_deficiency"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 300,
+      "clock": "09:35:53",
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Captain knocks on the door and asks the first officer to open it; the interphone and the emergency door code are unsuccessful.",
+      "factors": [
+        "design_deficiency"
+      ],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 480,
+      "clock": "09:38:53",
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Violent blows on the cockpit door are heard on the CVR as the captain tries to break in; French air defence is alerted and a fighter is scrambled.",
+      "kind": "crew_action"
+    },
+    {
+      "t": 540,
+      "clock": "09:39:53",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "GPWS terrain alerts and master warning sound as the aircraft descends below 7,000 ft toward the mountains.",
+      "factors": [
+        "cfit"
+      ],
+      "kind": "warning"
+    },
+    {
+      "t": 613,
+      "clock": "09:41:06",
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "Aircraft collides with the mountainside at about 6,000 ft and disintegrates; all 150 occupants killed.",
+      "state": {
+        "alt": 6000
+      },
+      "factors": [
+        "cfit"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "EASA", "text": "Require operators to include in their medical assessment of pilots a systematic psychiatric evaluation where there is a history of psychological trouble, and define conditions for pilots with such a history to be followed up.", "status": "unknown", "outcome": "EASA introduced psychological assessment before employment and support programmes.", "trigger_factors": ["regulatory_oversight", "pilot_incapacitation"] },
-    { "id": null, "to": "WHO / EU / member states", "text": "Define clear rules to require health care providers to inform the authorities when a specific patient's health is very likely to affect public safety, including when the patient refuses to consent, while balancing patient confidentiality.", "status": "unknown", "outcome": null, "trigger_factors": ["regulatory_oversight"] },
-    { "id": null, "to": "EASA", "text": "Promote the implementation of peer support programmes for pilots and mitigate the socio-economic risks of loss of licence for medical reasons, for example through loss-of-licence insurance.", "status": "unknown", "outcome": "EU regulation 2018/1042 introduced mandatory pilot support programmes and psychological assessment.", "trigger_factors": ["regulatory_oversight"] },
-    { "id": null, "to": "EASA / ICAO", "text": "Analyse the risks of the cockpit door locking system and evaluate the relevance of a minimum of two crew members in the cockpit at all times.", "status": "unknown", "outcome": "EASA issued a safety information bulletin recommending two persons in the cockpit; later relaxed after risk assessment.", "trigger_factors": ["design_deficiency"] }
+    {
+      "id": null,
+      "to": "EASA",
+      "text": "Require operators to include in their medical assessment of pilots a systematic psychiatric evaluation where there is a history of psychological trouble, and define conditions for pilots with such a history to be followed up.",
+      "status": "unknown",
+      "outcome": "EASA introduced psychological assessment before employment and support programmes.",
+      "trigger_factors": [
+        "regulatory_oversight",
+        "pilot_incapacitation"
+      ]
+    },
+    {
+      "id": null,
+      "to": "WHO / EU / member states",
+      "text": "Define clear rules to require health care providers to inform the authorities when a specific patient's health is very likely to affect public safety, including when the patient refuses to consent, while balancing patient confidentiality.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "EASA",
+      "text": "Promote the implementation of peer support programmes for pilots and mitigate the socio-economic risks of loss of licence for medical reasons, for example through loss-of-licence insurance.",
+      "status": "unknown",
+      "outcome": "EU regulation 2018/1042 introduced mandatory pilot support programmes and psychological assessment.",
+      "trigger_factors": [
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "id": null,
+      "to": "EASA / ICAO",
+      "text": "Analyse the risks of the cockpit door locking system and evaluate the relevance of a minimum of two crew members in the cockpit at all times.",
+      "status": "unknown",
+      "outcome": "EASA issued a safety information bulletin recommending two persons in the cockpit; later relaxed after risk assessment.",
+      "trigger_factors": [
+        "design_deficiency"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
@@ -63,14 +280,24 @@
     "EU regulation 2018/1042 requiring psychological assessment of pilots, pilot support programmes and alcohol testing.",
     "Review of medical confidentiality rules and aeromedical data sharing among European authorities."
   ],
-  "related": ["egyptair990", "silkair185"],
+  "related": [
+    "egyptair990",
+    "silkair185"
+  ],
   "fdr": null,
   "sources": [
     "https://bea.aero/en/investigation-reports/notified-events/detail/accident-to-the-airbus-a320-211-registered-d-aipx-and-operated-by-germanwings-on-24-03-2015-at-prads-haute-bleone-en/"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
-    "Timeline seconds after t0 (09:30:53, selected altitude change) are approximate except impact at 09:41:06; the intermediate clock strings are estimated to within about a minute.",
-    "BEA report reference number and recommendation ids not reproduced with confidence; ids set to null.",
-    "Category SEC used for a deliberate act; factor cfit used as the outcome because the aircraft was under control until impact."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Timeline seconds after t0 (09:30:53, selected altitude change) are approximate except impact at 09:41:06; the intermediate clock strings are estimated to within about a minute.",
+      "BEA report reference number and recommendation ids not reproduced with confidence; ids set to null.",
+      "Category SEC used for a deliberate act; factor cfit used as the outcome because the aircraft was under control until impact."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Germanwings_Flight_9525"
 }

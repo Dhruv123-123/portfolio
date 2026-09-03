@@ -36,7 +36,9 @@
   },
   "location": {
     "name": "Ob River near Strezhevoy",
-    "country": "Russia"
+    "country": "Russia",
+    "lat": 60.0372,
+    "lon": 77.2272
   },
   "phase": "cruise",
   "occupants": 37,

@@ -7,65 +7,240 @@
   "t0": "1997-12-19T09:05:00Z",
   "agency": "KNKT",
   "agencies": [
-    { "code": "KNKT", "name": "Komite Nasional Keselamatan Transportasi", "country": "Indonesia", "role": "lead",
-      "report_id": null, "report_title": "Investigation of Aircraft Accident SilkAir Flight MI 185, Boeing B737-300, 9V-TRF, Musi River, Palembang, Indonesia, 19 December 1997 (National Transportation Safety Committee)", "report_date": "2000-12-14",
-      "url": "https://knkt.go.id/" },
-    { "code": "NTSB", "name": "National Transportation Safety Board", "country": "USA", "role": "accredited_representative" },
-    { "code": "MOC-SG", "name": "Ministry of Communications, Singapore", "country": "Singapore", "role": "accredited_representative" },
-    { "code": "ATSB", "name": "Australian Transport Safety Bureau (then BASI)", "country": "Australia", "role": "assisting" }
+    {
+      "code": "KNKT",
+      "name": "Komite Nasional Keselamatan Transportasi",
+      "country": "Indonesia",
+      "role": "lead",
+      "report_id": null,
+      "report_title": "Investigation of Aircraft Accident SilkAir Flight MI 185, Boeing B737-300, 9V-TRF, Musi River, Palembang, Indonesia, 19 December 1997 (National Transportation Safety Committee)",
+      "report_date": "2000-12-14",
+      "url": "https://knkt.go.id/"
+    },
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "USA",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "MOC-SG",
+      "name": "Ministry of Communications, Singapore",
+      "country": "Singapore",
+      "role": "accredited_representative"
+    },
+    {
+      "code": "ATSB",
+      "name": "Australian Transport Safety Bureau (then BASI)",
+      "country": "Australia",
+      "role": "assisting"
+    }
   ],
-  "aircraft": { "type": "Boeing 737-36N", "family": "737", "manufacturer": "Boeing", "registration": "9V-TRF", "msn": "28556", "engines": "CFM International CFM56-3B2" },
+  "aircraft": {
+    "type": "Boeing 737-36N",
+    "family": "737",
+    "manufacturer": "Boeing",
+    "registration": "9V-TRF",
+    "msn": "28556",
+    "engines": "CFM International CFM56-3B2"
+  },
   "operator": "SilkAir",
-  "route": { "from": "WIII", "from_name": "Jakarta Soekarno-Hatta", "to": "WSSS", "to_name": "Singapore Changi" },
-  "location": { "name": "Musi River near Sungsang, Palembang, South Sumatra", "country": "Indonesia", "lat": -2.7, "lon": 104.92 },
+  "route": {
+    "from": "WIII",
+    "from_name": "Jakarta Soekarno-Hatta",
+    "to": "WSSS",
+    "to_name": "Singapore Changi"
+  },
+  "location": {
+    "name": "Musi River near Sungsang, Palembang, South Sumatra",
+    "country": "Indonesia",
+    "lat": -2.7,
+    "lon": 104.92
+  },
   "phase": "cruise",
-  "occupants": 104, "fatalities": 104, "injuries_serious": 0,
+  "occupants": 104,
+  "fatalities": 104,
+  "injuries_serious": 0,
   "damage": "destroyed",
   "category": "UNK",
   "summary": "In cruise at FL350 between Jakarta and Singapore the 737's cockpit voice recorder stopped, followed six minutes later by the flight data recorder. About a minute after that the aircraft left its cruise altitude in a near-vertical dive, exceeded the speed of sound and shed parts of its tail before striking the Musi River near Palembang. All 104 on board died. The Indonesian NTSC could not determine the cause; the NTSB, as accredited representative, concluded that the evidence was consistent with deliberate pilot action.",
   "probable_cause": "The Indonesian National Transportation Safety Committee concluded that the technical investigation had yielded no evidence to explain the cause of the accident and that the cause could not be determined. The NTSB, in formal comments appended to the report, stated that the accident could be explained by intentional pilot action, most likely by the captain: the sequential stopping of the recorders was consistent with their circuit breakers being pulled, the horizontal stabiliser was found trimmed nearly full nose-down, and no mechanical failure, including the rudder power control unit anomalies examined after other 737 accidents, could account for the flight path.",
   "factors": [
-    { "id": "deliberate_act", "role": "initiating", "evidence": "The NTSB's position, not adopted by the NTSC: the recorder stoppages, the nose-down stabiliser trim and the flight path are consistent with intentional control inputs by a pilot, most likely the captain. The NTSC found the evidence inconclusive." },
-    { "id": "loss_of_control_inflight", "role": "outcome", "evidence": "The aircraft departed FL350 in a near-vertical dive and reached supersonic speed before impact." },
-    { "id": "structural_failure", "role": "outcome", "evidence": "Parts of the horizontal stabiliser and elevator separated in flight during the dive as a result of the extreme speed." }
+    {
+      "id": "deliberate_act",
+      "role": "initiating",
+      "evidence": "The NTSB's position, not adopted by the NTSC: the recorder stoppages, the nose-down stabiliser trim and the flight path are consistent with intentional control inputs by a pilot, most likely the captain. The NTSC found the evidence inconclusive."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "outcome",
+      "evidence": "The aircraft departed FL350 in a near-vertical dive and reached supersonic speed before impact."
+    },
+    {
+      "id": "structural_failure",
+      "role": "outcome",
+      "evidence": "Parts of the horizontal stabiliser and elevator separated in flight during the dive as a result of the extreme speed."
+    }
   ],
   "chain": [
-    ["deliberate_act", "loss_of_control_inflight"],
-    ["loss_of_control_inflight", "structural_failure"]
+    [
+      "deliberate_act",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "structural_failure"
+    ]
   ],
   "events": [
-    { "t": -1680, "clock": "15:37", "phase": "takeoff", "actor": "PF", "text": "Departs Jakarta for Singapore with 97 passengers and 7 crew.", "kind": "crew_action" },
-    { "t": -720, "clock": "15:53", "phase": "cruise", "actor": "PF", "text": "Reaches cruise altitude FL350; the flight proceeds normally.", "state": { "alt": 35000 }, "kind": "crew_action" },
-    { "t": 0, "clock": "16:05", "phase": "cruise", "actor": "SYS", "text": "The cockpit voice recorder stops recording. No aircraft fault was found to explain this; the stoppage is consistent with the CVR circuit breaker being pulled.", "state": { "alt": 35000 }, "kind": "system" },
-    { "t": 300, "clock": null, "phase": "cruise", "actor": "ATC", "text": "Jakarta control has a routine exchange with the flight; nothing abnormal is reported.", "kind": "atc" },
-    { "t": 372, "clock": "16:11", "phase": "cruise", "actor": "SYS", "text": "The flight data recorder stops recording, again with no fault found and consistent with its circuit breaker being pulled.", "kind": "system" },
-    { "t": 423, "clock": "16:12", "phase": "cruise", "actor": "SYS", "text": "Radar shows the aircraft leaving FL350 in a rapid descent. Wreckage evidence shows the horizontal stabiliser trimmed nearly full nose-down.", "state": { "alt": 35000 }, "factors": ["loss_of_control_inflight", "deliberate_act"], "kind": "system" },
-    { "t": 445, "clock": null, "phase": "descent", "actor": "SYS", "text": "The dive becomes near-vertical and the aircraft exceeds the speed of sound; parts of the tail separate in flight and are found some distance from the main wreckage.", "factors": ["structural_failure", "loss_of_control_inflight"], "kind": "system" },
-    { "t": 465, "clock": null, "phase": "descent", "actor": "SYS", "text": "The aircraft strikes the Musi River near Sungsang at very high speed; the wreckage is deeply embedded and highly fragmented. All 104 on board are killed.", "factors": ["loss_of_control_inflight"], "kind": "outcome" },
-    { "t": 1000, "clock": null, "phase": "unknown", "actor": "OTHER", "text": "Investigation: the rudder power control unit is examined and tested for the dual servo valve jam implicated in the USAir 427 and United 585 accidents; no evidence of a rudder hardover is found. The NTSC concludes the cause is undetermined; the NTSB disagrees.", "kind": "outcome" }
+    {
+      "t": -1680,
+      "clock": "15:37",
+      "phase": "takeoff",
+      "actor": "PF",
+      "text": "Departs Jakarta for Singapore with 97 passengers and 7 crew.",
+      "kind": "crew_action"
+    },
+    {
+      "t": -720,
+      "clock": "15:53",
+      "phase": "cruise",
+      "actor": "PF",
+      "text": "Reaches cruise altitude FL350; the flight proceeds normally.",
+      "state": {
+        "alt": 35000
+      },
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "16:05",
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "The cockpit voice recorder stops recording. No aircraft fault was found to explain this; the stoppage is consistent with the CVR circuit breaker being pulled.",
+      "state": {
+        "alt": 35000
+      },
+      "kind": "system"
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "ATC",
+      "text": "Jakarta control has a routine exchange with the flight; nothing abnormal is reported.",
+      "kind": "atc"
+    },
+    {
+      "t": 372,
+      "clock": "16:11",
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "The flight data recorder stops recording, again with no fault found and consistent with its circuit breaker being pulled.",
+      "kind": "system"
+    },
+    {
+      "t": 423,
+      "clock": "16:12",
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "Radar shows the aircraft leaving FL350 in a rapid descent. Wreckage evidence shows the horizontal stabiliser trimmed nearly full nose-down.",
+      "state": {
+        "alt": 35000
+      },
+      "factors": [
+        "loss_of_control_inflight",
+        "deliberate_act"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 445,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "The dive becomes near-vertical and the aircraft exceeds the speed of sound; parts of the tail separate in flight and are found some distance from the main wreckage.",
+      "factors": [
+        "structural_failure",
+        "loss_of_control_inflight"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 465,
+      "clock": null,
+      "phase": "descent",
+      "actor": "SYS",
+      "text": "The aircraft strikes the Musi River near Sungsang at very high speed; the wreckage is deeply embedded and highly fragmented. All 104 on board are killed.",
+      "factors": [
+        "loss_of_control_inflight"
+      ],
+      "kind": "outcome"
+    },
+    {
+      "t": 1000,
+      "clock": null,
+      "phase": "unknown",
+      "actor": "OTHER",
+      "text": "Investigation: the rudder power control unit is examined and tested for the dual servo valve jam implicated in the USAir 427 and United 585 accidents; no evidence of a rudder hardover is found. The NTSC concludes the cause is undetermined; the NTSB disagrees.",
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "FAA / Boeing", "text": "Consider means to prevent flight recorders from being disabled from the cockpit, such as relocating the circuit breakers or providing independent recording of their status.", "status": "unknown", "outcome": null, "trigger_factors": ["deliberate_act"] },
-    { "id": null, "to": "Operators / regulators", "text": "Review pilot medical, psychological and financial-stress screening and support programs.", "status": "unknown", "outcome": null, "trigger_factors": ["deliberate_act"] }
+    {
+      "id": null,
+      "to": "FAA / Boeing",
+      "text": "Consider means to prevent flight recorders from being disabled from the cockpit, such as relocating the circuit breakers or providing independent recording of their status.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "deliberate_act"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Operators / regulators",
+      "text": "Review pilot medical, psychological and financial-stress screening and support programs.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "deliberate_act"
+      ]
+    }
   ],
   "dissent": [
-    { "agency": "NTSB", "position": "In formal comments on the draft final report (December 2000) the NTSB stated that the accident sequence was consistent with, and could be explained by, intentional pilot action, most likely by the captain, and that no mechanical failure could explain the recorder stoppages, the stabiliser trim setting and the flight profile. The NTSC did not adopt this conclusion and reported the cause as undetermined.", "topic": "probable cause" }
+    {
+      "agency": "NTSB",
+      "position": "In formal comments on the draft final report (December 2000) the NTSB stated that the accident sequence was consistent with, and could be explained by, intentional pilot action, most likely by the captain, and that no mechanical failure could explain the recorder stoppages, the stabiliser trim setting and the flight profile. The NTSC did not adopt this conclusion and reported the cause as undetermined.",
+      "topic": "probable cause"
+    }
   ],
   "safety_changes": [
     "The accident, together with EgyptAir 990, focused attention on pilot mental health screening and on measures to prevent flight recorders from being disabled in flight.",
     "The rudder power control unit examination contributed to the wider 737 rudder system investigation following USAir 427."
   ],
-  "related": ["egyptair990", "germanwings9525", "usair427"],
+  "related": [
+    "egyptair990",
+    "germanwings9525",
+    "usair427"
+  ],
   "fdr": null,
   "sources": [
     "https://knkt.go.id/",
     "https://www.ntsb.gov/"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false, "notes": [
-    "The cause of this accident is formally undetermined; deliberate_act is included on the basis of the NTSB's dissenting position and is labelled as such in the evidence.",
-    "Clock strings are given only to the minute (CVR stop about 16:05, FDR stop about 16:11, departure from FL350 about 16:12); the offsets between the recorder stoppages and the impact are approximate.",
-    "A 2004 US civil jury verdict attributing the crash to a rudder servo defect was not an official investigation finding; the NTSC and NTSB found no evidence of a rudder hardover, which is why rudder_hardover is not listed as a factor.",
-    "The Singapore accredited representative's agency code (MOC-SG) is a placeholder; Singapore had no separate investigation bureau at the time."
-  ] }
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "The cause of this accident is formally undetermined; deliberate_act is included on the basis of the NTSB's dissenting position and is labelled as such in the evidence.",
+      "Clock strings are given only to the minute (CVR stop about 16:05, FDR stop about 16:11, departure from FL350 about 16:12); the offsets between the recorder stoppages and the impact are approximate.",
+      "A 2004 US civil jury verdict attributing the crash to a rudder servo defect was not an official investigation finding; the NTSC and NTSB found no evidence of a rudder hardover, which is why rudder_hardover is not listed as a factor.",
+      "The Singapore accredited representative's agency code (MOC-SG) is a placeholder; Singapore had no separate investigation bureau at the time."
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/SilkAir_Flight_185"
 }

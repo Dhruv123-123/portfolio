@@ -33,7 +33,9 @@
   },
   "location": {
     "name": "Fond-du-Lac, Saskatchewan",
-    "country": "Canada"
+    "country": "Canada",
+    "lat": 59.3368,
+    "lon": -107.2018
   },
   "phase": "initial_climb",
   "occupants": 25,

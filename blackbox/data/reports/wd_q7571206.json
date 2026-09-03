@@ -30,7 +30,9 @@
   },
   "location": {
     "name": "Hollywood Burbank Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 34.1972,
+    "lon": -118.349
   },
   "phase": "landing",
   "occupants": 142,
@@ -49,7 +51,7 @@
     {
       "id": "unstable_approach",
       "role": "contributing",
-      "evidence": "Flightpath angle of 7\u00b0 during descent was steeper than typical 3\u00b0 approach. GPWS sink rate and pull up warnings sounded multiple times (p. 20-21). Approach was not in the slot per Southwest procedures."
+      "evidence": "Flightpath angle of 7° during descent was steeper than typical 3° approach. GPWS sink rate and pull up warnings sounded multiple times (p. 20-21). Approach was not in the slot per Southwest procedures."
     },
     {
       "id": "atc_communication_error",
@@ -110,7 +112,7 @@
       "phase": "approach",
       "actor": "ATC",
       "kind": "atc",
-      "text": "ATC instructs left turn to heading 190\u00b0 and descend to 6000 feet msl (p. 2)",
+      "text": "ATC instructs left turn to heading 190° and descend to 6000 feet msl (p. 2)",
       "factors": []
     },
     {

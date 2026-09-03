@@ -39,7 +39,9 @@
   },
   "location": {
     "name": "Anchorage International Airport",
-    "country": "United States"
+    "country": "United States",
+    "lat": 61.1667,
+    "lon": -150.0333
   },
   "phase": "initial_climb",
   "occupants": 5,
@@ -76,10 +78,22 @@
     }
   ],
   "chain": [
-    ["pilot_incapacitation", "aerodynamic_stall"],
-    ["airframe_icing", "aerodynamic_stall"],
-    ["crm_breakdown", "pilot_incapacitation"],
-    ["aerodynamic_stall", "loss_of_control_inflight"]
+    [
+      "pilot_incapacitation",
+      "aerodynamic_stall"
+    ],
+    [
+      "airframe_icing",
+      "aerodynamic_stall"
+    ],
+    [
+      "crm_breakdown",
+      "pilot_incapacitation"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
@@ -158,9 +172,13 @@
     "Strengthened crew resource management training emphasizing second-in-command authority to challenge pilot actions when safety is at risk",
     "Improved procedures for monitoring pilot fitness for duty before flights"
   ],
-  "related": ["birgenair301"],
+  "related": [
+    "birgenair301"
+  ],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7807.pdf"],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7807.pdf"
+  ],
   "extraction": {
     "method": "llm",
     "model": "claude-haiku-4-5",

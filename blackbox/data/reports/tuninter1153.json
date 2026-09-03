@@ -7,80 +7,327 @@
   "t0": "2005-08-06T15:24:00Z",
   "agency": "ANSV",
   "agencies": [
-    { "code": "ANSV", "name": "Agenzia Nazionale per la Sicurezza del Volo", "country": "Italy", "role": "lead",
-      "report_id": null, "report_title": "Final report on the accident to ATR 72-202 TS-LBB, ditching off Capo Gallo (Palermo), 6 August 2005", "report_date": null,
-      "url": "https://ansv.it" },
-    { "code": "BEA", "name": "Bureau d'Enquêtes et d'Analyses", "country": "France", "role": "accredited_representative",
-      "report_id": null, "report_title": null, "report_date": null, "url": "https://bea.aero" }
+    {
+      "code": "ANSV",
+      "name": "Agenzia Nazionale per la Sicurezza del Volo",
+      "country": "Italy",
+      "role": "lead",
+      "report_id": null,
+      "report_title": "Final report on the accident to ATR 72-202 TS-LBB, ditching off Capo Gallo (Palermo), 6 August 2005",
+      "report_date": null,
+      "url": "https://ansv.it"
+    },
+    {
+      "code": "BEA",
+      "name": "Bureau d'Enquêtes et d'Analyses",
+      "country": "France",
+      "role": "accredited_representative",
+      "report_id": null,
+      "report_title": null,
+      "report_date": null,
+      "url": "https://bea.aero"
+    }
   ],
-  "aircraft": { "type": "ATR 72-202", "family": "ATR 72", "manufacturer": "ATR", "registration": "TS-LBB", "msn": null, "engines": "Pratt & Whitney Canada PW124B" },
+  "aircraft": {
+    "type": "ATR 72-202",
+    "family": "ATR 72",
+    "manufacturer": "ATR",
+    "registration": "TS-LBB",
+    "msn": null,
+    "engines": "Pratt & Whitney Canada PW124B"
+  },
   "operator": "Tuninter",
-  "route": { "from": "LIBD", "from_name": "Bari Palese", "to": "DTTJ", "to_name": "Djerba Zarzis" },
-  "location": { "name": "Tyrrhenian Sea off Capo Gallo, north-east of Palermo", "country": "Italy", "lat": 38.33, "lon": 13.28 },
+  "route": {
+    "from": "LIBD",
+    "from_name": "Bari Palese",
+    "to": "DTTJ",
+    "to_name": "Djerba Zarzis"
+  },
+  "location": {
+    "name": "Tyrrhenian Sea off Capo Gallo, north-east of Palermo",
+    "country": "Italy",
+    "lat": 38.33,
+    "lon": 13.28
+  },
   "phase": "cruise",
-  "occupants": 39, "fatalities": 16, "injuries_serious": null,
+  "occupants": 39,
+  "fatalities": 16,
+  "injuries_serious": null,
   "damage": "destroyed",
   "category": "FUEL",
   "summary": "The day before the accident, maintenance in Tunis replaced the aircraft's fuel quantity indicator with a unit designed for the ATR 42, which is physically interchangeable but over-reads on the ATR 72. The aircraft was refuelled on the basis of the false indication and departed Bari with far less fuel than displayed. In cruise both engines flamed out from fuel exhaustion; the crew attempted restarts and diverted toward Palermo but could not reach it, and the aircraft was ditched off Capo Gallo. The fuselage broke into three sections; 16 of the 39 on board died.",
   "probable_cause": "The ANSV concluded that the accident was caused by fuel exhaustion resulting from the installation of an ATR 42 fuel quantity indicator on the ATR 72, which over-read the fuel on board, so that the aircraft was dispatched with insufficient fuel. Contributing factors included the maintenance organisation's failure to verify the part number before installation and the interchangeability of the two indicators, the crew's failure to detect the discrepancy between fuel uplift, fuel used and indicated quantity, and, after the double flame-out, the crew's attempts to restart the engines rather than fly the aircraft at the optimum glide speed toward the nearest airport, which reduced the distance covered.",
   "factors": [
-    { "id": "maintenance_error", "role": "initiating", "evidence": "On 5 August the fuel quantity indicator was replaced in Tunis with an ATR 42 unit whose part number differs from the ATR 72 unit; the mechanic did not verify the part number applicability." },
-    { "id": "design_deficiency", "role": "latent", "evidence": "The ATR 42 and ATR 72 fuel quantity indicators are physically interchangeable and nearly identical in appearance despite different calibrations." },
-    { "id": "fuel_quantity_error", "role": "contributing", "evidence": "The indicator over-read by more than 2,000 kg, so the crew refuelled to a displayed quantity that did not correspond to the actual fuel on board." },
-    { "id": "inadequate_monitoring", "role": "contributing", "evidence": "The report found the crew did not detect the inconsistency between the fuel uplifted, the fuel used since the last refuelling and the indicated quantity." },
-    { "id": "fuel_exhaustion", "role": "contributing", "evidence": "The right engine flamed out in cruise at FL230 followed by the left engine about 100 seconds later because the tanks were empty." },
-    { "id": "dual_engine_failure", "role": "contributing", "evidence": "Both engines stopped and could not be restarted; the aircraft became a glider about 40 nm from Palermo." },
-    { "id": "procedural_noncompliance", "role": "contributing", "evidence": "The crew repeatedly attempted engine restarts and did not maintain the optimum glide speed or configuration, shortening the glide distance." },
-    { "id": "inadequate_training", "role": "latent", "evidence": "The ANSV found that the crew's training for a double engine failure and forced landing at sea was inadequate." },
-    { "id": "ditching", "role": "outcome", "evidence": "The aircraft was ditched in the sea off Capo Gallo; the fuselage broke into three sections on impact." },
-    { "id": "evacuation_deficiency", "role": "contributing", "evidence": "Several occupants died from the impact and in the water; the report examined the survival aspects, including the seats and the life jackets, after the fuselage broke up." }
+    {
+      "id": "maintenance_error",
+      "role": "initiating",
+      "evidence": "On 5 August the fuel quantity indicator was replaced in Tunis with an ATR 42 unit whose part number differs from the ATR 72 unit; the mechanic did not verify the part number applicability."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "latent",
+      "evidence": "The ATR 42 and ATR 72 fuel quantity indicators are physically interchangeable and nearly identical in appearance despite different calibrations."
+    },
+    {
+      "id": "fuel_quantity_error",
+      "role": "contributing",
+      "evidence": "The indicator over-read by more than 2,000 kg, so the crew refuelled to a displayed quantity that did not correspond to the actual fuel on board."
+    },
+    {
+      "id": "inadequate_monitoring",
+      "role": "contributing",
+      "evidence": "The report found the crew did not detect the inconsistency between the fuel uplifted, the fuel used since the last refuelling and the indicated quantity."
+    },
+    {
+      "id": "fuel_exhaustion",
+      "role": "contributing",
+      "evidence": "The right engine flamed out in cruise at FL230 followed by the left engine about 100 seconds later because the tanks were empty."
+    },
+    {
+      "id": "dual_engine_failure",
+      "role": "contributing",
+      "evidence": "Both engines stopped and could not be restarted; the aircraft became a glider about 40 nm from Palermo."
+    },
+    {
+      "id": "procedural_noncompliance",
+      "role": "contributing",
+      "evidence": "The crew repeatedly attempted engine restarts and did not maintain the optimum glide speed or configuration, shortening the glide distance."
+    },
+    {
+      "id": "inadequate_training",
+      "role": "latent",
+      "evidence": "The ANSV found that the crew's training for a double engine failure and forced landing at sea was inadequate."
+    },
+    {
+      "id": "ditching",
+      "role": "outcome",
+      "evidence": "The aircraft was ditched in the sea off Capo Gallo; the fuselage broke into three sections on impact."
+    },
+    {
+      "id": "evacuation_deficiency",
+      "role": "contributing",
+      "evidence": "Several occupants died from the impact and in the water; the report examined the survival aspects, including the seats and the life jackets, after the fuselage broke up."
+    }
   ],
   "chain": [
-    ["design_deficiency", "maintenance_error"],
-    ["maintenance_error", "fuel_quantity_error"],
-    ["fuel_quantity_error", "inadequate_monitoring"],
-    ["fuel_quantity_error", "fuel_exhaustion"],
-    ["fuel_exhaustion", "dual_engine_failure"],
-    ["inadequate_training", "procedural_noncompliance"],
-    ["dual_engine_failure", "procedural_noncompliance"],
-    ["procedural_noncompliance", "ditching"],
-    ["dual_engine_failure", "ditching"],
-    ["ditching", "evacuation_deficiency"]
+    [
+      "design_deficiency",
+      "maintenance_error"
+    ],
+    [
+      "maintenance_error",
+      "fuel_quantity_error"
+    ],
+    [
+      "fuel_quantity_error",
+      "inadequate_monitoring"
+    ],
+    [
+      "fuel_quantity_error",
+      "fuel_exhaustion"
+    ],
+    [
+      "fuel_exhaustion",
+      "dual_engine_failure"
+    ],
+    [
+      "inadequate_training",
+      "procedural_noncompliance"
+    ],
+    [
+      "dual_engine_failure",
+      "procedural_noncompliance"
+    ],
+    [
+      "procedural_noncompliance",
+      "ditching"
+    ],
+    [
+      "dual_engine_failure",
+      "ditching"
+    ],
+    [
+      "ditching",
+      "evacuation_deficiency"
+    ]
   ],
   "events": [
-    { "t": -86400, "clock": null, "phase": "ground", "actor": "GND", "text": "At Tunis on 5 August a mechanic replaces the fuel quantity indicator with an ATR 42 unit taken from stores, without verifying the part number applicability.", "factors": ["maintenance_error", "design_deficiency"], "kind": "crew_action" },
-    { "t": -43200, "clock": null, "phase": "ground", "actor": "GND", "text": "The aircraft is refuelled for the Tunis-Bari and Bari-Djerba sectors on the basis of the indicated quantity, which over-reads by more than 2,000 kg.", "factors": ["fuel_quantity_error"], "kind": "crew_action" },
-    { "t": -3600, "clock": null, "phase": "ground", "actor": "CAPT", "text": "The crew at Bari accept the displayed fuel quantity without reconciling it with the fuel uplift and the fuel used on the inbound sector.", "factors": ["inadequate_monitoring"], "kind": "crew_action" },
-    { "t": -2400, "clock": null, "phase": "takeoff", "actor": "PF", "text": "Departure from Bari for Djerba; climb to FL230.", "factors": [], "kind": "crew_action" },
-    { "t": 0, "clock": "15:24", "phase": "cruise", "actor": "SYS", "text": "The right engine flames out in cruise at FL230 over the Tyrrhenian Sea.", "state": { "alt": 23000 }, "factors": ["fuel_exhaustion"], "kind": "system" },
-    { "t": 100, "clock": null, "phase": "cruise", "actor": "SYS", "text": "About 100 seconds later the left engine also flames out; the fuel gauge still shows fuel remaining.", "factors": ["fuel_exhaustion", "dual_engine_failure", "fuel_quantity_error"], "kind": "system" },
-    { "t": 150, "clock": null, "phase": "descent", "actor": "CAPT", "text": "The crew declare an emergency and request to divert to Palermo, about 40 nm away.", "factors": [], "kind": "atc" },
-    { "t": 200, "clock": null, "phase": "descent", "actor": "CAPT", "text": "The crew make repeated attempts to restart the engines instead of establishing the optimum glide speed toward Palermo.", "factors": ["procedural_noncompliance", "inadequate_training"], "kind": "crew_action" },
-    { "t": 600, "clock": null, "phase": "descent", "actor": "CAPT", "text": "Recognising that Palermo cannot be reached, the captain prepares to ditch and informs ATC and the cabin.", "factors": [], "kind": "crew_speech" },
-    { "t": 900, "clock": "15:39", "phase": "landing", "actor": "ENV", "text": "The aircraft is ditched off Capo Gallo; the fuselage breaks into three sections. 23 occupants survive and are rescued by boats; 16 die.", "factors": ["ditching", "evacuation_deficiency"], "kind": "outcome" }
+    {
+      "t": -86400,
+      "clock": null,
+      "phase": "ground",
+      "actor": "GND",
+      "text": "At Tunis on 5 August a mechanic replaces the fuel quantity indicator with an ATR 42 unit taken from stores, without verifying the part number applicability.",
+      "factors": [
+        "maintenance_error",
+        "design_deficiency"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -43200,
+      "clock": null,
+      "phase": "ground",
+      "actor": "GND",
+      "text": "The aircraft is refuelled for the Tunis-Bari and Bari-Djerba sectors on the basis of the indicated quantity, which over-reads by more than 2,000 kg.",
+      "factors": [
+        "fuel_quantity_error"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -3600,
+      "clock": null,
+      "phase": "ground",
+      "actor": "CAPT",
+      "text": "The crew at Bari accept the displayed fuel quantity without reconciling it with the fuel uplift and the fuel used on the inbound sector.",
+      "factors": [
+        "inadequate_monitoring"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": -2400,
+      "clock": null,
+      "phase": "takeoff",
+      "actor": "PF",
+      "text": "Departure from Bari for Djerba; climb to FL230.",
+      "factors": [],
+      "kind": "crew_action"
+    },
+    {
+      "t": 0,
+      "clock": "15:24",
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "The right engine flames out in cruise at FL230 over the Tyrrhenian Sea.",
+      "state": {
+        "alt": 23000
+      },
+      "factors": [
+        "fuel_exhaustion"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 100,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "text": "About 100 seconds later the left engine also flames out; the fuel gauge still shows fuel remaining.",
+      "factors": [
+        "fuel_exhaustion",
+        "dual_engine_failure",
+        "fuel_quantity_error"
+      ],
+      "kind": "system"
+    },
+    {
+      "t": 150,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "The crew declare an emergency and request to divert to Palermo, about 40 nm away.",
+      "factors": [],
+      "kind": "atc"
+    },
+    {
+      "t": 200,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "The crew make repeated attempts to restart the engines instead of establishing the optimum glide speed toward Palermo.",
+      "factors": [
+        "procedural_noncompliance",
+        "inadequate_training"
+      ],
+      "kind": "crew_action"
+    },
+    {
+      "t": 600,
+      "clock": null,
+      "phase": "descent",
+      "actor": "CAPT",
+      "text": "Recognising that Palermo cannot be reached, the captain prepares to ditch and informs ATC and the cabin.",
+      "factors": [],
+      "kind": "crew_speech"
+    },
+    {
+      "t": 900,
+      "clock": "15:39",
+      "phase": "landing",
+      "actor": "ENV",
+      "text": "The aircraft is ditched off Capo Gallo; the fuselage breaks into three sections. 23 occupants survive and are rescued by boats; 16 die.",
+      "factors": [
+        "ditching",
+        "evacuation_deficiency"
+      ],
+      "kind": "outcome"
+    }
   ],
   "cvr": [],
   "recommendations": [
-    { "id": null, "to": "EASA / ATR", "text": "Make the ATR 42 and ATR 72 fuel quantity indicators non-interchangeable or clearly distinguishable, and review the associated maintenance documentation and parts identification.", "status": "closed_acceptable", "outcome": "ATR issued instructions distinguishing the indicators and revised the illustrated parts catalogue.", "trigger_factors": ["design_deficiency", "maintenance_error"] },
-    { "id": null, "to": "Tunisian civil aviation authority / Tuninter", "text": "Improve maintenance procedures for part number verification and the oversight of the operator's maintenance organisation.", "status": "unknown", "outcome": null, "trigger_factors": ["maintenance_error"] },
-    { "id": null, "to": "Tuninter / operators", "text": "Reinforce crew procedures for checking fuel on board against uplift and consumption, and training for double engine failure, glide management and ditching.", "status": "unknown", "outcome": null, "trigger_factors": ["inadequate_monitoring", "procedural_noncompliance", "inadequate_training"] }
+    {
+      "id": null,
+      "to": "EASA / ATR",
+      "text": "Make the ATR 42 and ATR 72 fuel quantity indicators non-interchangeable or clearly distinguishable, and review the associated maintenance documentation and parts identification.",
+      "status": "closed_acceptable",
+      "outcome": "ATR issued instructions distinguishing the indicators and revised the illustrated parts catalogue.",
+      "trigger_factors": [
+        "design_deficiency",
+        "maintenance_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Tunisian civil aviation authority / Tuninter",
+      "text": "Improve maintenance procedures for part number verification and the oversight of the operator's maintenance organisation.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "maintenance_error"
+      ]
+    },
+    {
+      "id": null,
+      "to": "Tuninter / operators",
+      "text": "Reinforce crew procedures for checking fuel on board against uplift and consumption, and training for double engine failure, glide management and ditching.",
+      "status": "unknown",
+      "outcome": null,
+      "trigger_factors": [
+        "inadequate_monitoring",
+        "procedural_noncompliance",
+        "inadequate_training"
+      ]
+    }
   ],
   "dissent": [],
   "safety_changes": [
     "ATR fuel quantity indicators for the ATR 42 and ATR 72 were made distinguishable and the parts documentation was revised.",
     "A Palermo court convicted the two pilots and several Tuninter maintenance and management staff in 2009 in connection with the accident."
   ],
-  "related": ["aircanada143", "airtransat236", "usair1549", "pelair"],
+  "related": [
+    "aircanada143",
+    "airtransat236",
+    "usair1549",
+    "pelair"
+  ],
   "fdr": null,
   "sources": [
     "https://ansv.it"
   ],
-  "extraction": { "method": "llm", "model": "claude", "confidence": "medium", "reviewed": false,
+  "extraction": {
+    "method": "llm",
+    "model": "claude",
+    "confidence": "medium",
+    "reviewed": false,
     "notes": [
       "The engine flame-out time (about 15:24 UTC) and ditching time (about 15:39 UTC) are from the published narrative to the minute; intermediate event t values are approximate offsets.",
       "The ANSV final report number and publication date were not verified.",
       "The over-read magnitude (more than 2,000 kg) is given from the published summary; the exact figure was not verified.",
       "The BEA's accredited-representative role is assumed from ATR being a French-registered manufacturer.",
       "Lat/lon are approximate for the ditching location off Capo Gallo."
-    ] }
+    ]
+  },
+  "wikipedia": "https://en.wikipedia.org/wiki/Tuninter_Flight_1153"
 }

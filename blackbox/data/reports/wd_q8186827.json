@@ -29,15 +29,17 @@
     "to_name": "Josep Tarradellas Airport Barcelona-El Prat"
   },
   "location": {
-    "name": "Les Agudes, Serralada del Montseny, near Arb\u00facies",
-    "country": "Spain"
+    "name": "Les Agudes, Serralada del Montseny, near Arbúcies",
+    "country": "Spain",
+    "lat": 41.7994,
+    "lon": 2.4581
   },
   "phase": "approach",
   "occupants": 112,
   "fatalities": 112,
   "damage": "destroyed",
   "category": "CFIT",
-  "summary": "Dan-Air Flight 1903 crashed into the Serralada del Montseny near Arb\u00facies during descent toward Barcelona on 3 July 1970, killing all 112 aboard. The crew mistakenly reported passing the Sabadell NDB while still 28 nm north of it over mountainous terrain. The controller, misled by a radar echo from another aircraft over Sabadell, did not notice the error and cleared descent to 2800 ft. The aircraft struck beech trees at about 3800 ft.",
+  "summary": "Dan-Air Flight 1903 crashed into the Serralada del Montseny near Arbúcies during descent toward Barcelona on 3 July 1970, killing all 112 aboard. The crew mistakenly reported passing the Sabadell NDB while still 28 nm north of it over mountainous terrain. The controller, misled by a radar echo from another aircraft over Sabadell, did not notice the error and cleared descent to 2800 ft. The aircraft struck beech trees at about 3800 ft.",
   "probable_cause": "The combination of erroneous position reporting by the crew (who reported passing Sabadell when still 28 nm north) combined with a radar echo from another aircraft near Sabadell led the controller to believe the Comet had passed the beacon. This involuntary mutual error between crew and ATC could not be corrected before the aircraft struck high terrain.",
   "factors": [
     {

@@ -32,7 +32,9 @@
   },
   "location": {
     "name": "Mercedita Airport, Ponce",
-    "country": "Puerto Rico"
+    "country": "Puerto Rico",
+    "lat": 18.0061,
+    "lon": -66.5603
   },
   "phase": "landing",
   "occupants": 28,
@@ -69,10 +71,22 @@
     }
   ],
   "chain": [
-    ["low_visibility", "go_around_not_flown"],
-    ["go_around_not_flown", "inappropriate_stall_recovery"],
-    ["inappropriate_stall_recovery", "aerodynamic_stall"],
-    ["aerodynamic_stall", "loss_of_control_inflight"]
+    [
+      "low_visibility",
+      "go_around_not_flown"
+    ],
+    [
+      "go_around_not_flown",
+      "inappropriate_stall_recovery"
+    ],
+    [
+      "inappropriate_stall_recovery",
+      "aerodynamic_stall"
+    ],
+    [
+      "aerodynamic_stall",
+      "loss_of_control_inflight"
+    ]
   ],
   "events": [
     {
@@ -109,7 +123,9 @@
       "actor": "PF",
       "kind": "crew_action",
       "text": "Just after touching down, flight crew made a decision to go around. The reasons for rejecting the landing are not known.",
-      "factors": ["go_around_not_flown"]
+      "factors": [
+        "go_around_not_flown"
+      ]
     },
     {
       "t": 480,
@@ -118,7 +134,9 @@
       "actor": "PF",
       "kind": "crew_action",
       "text": "Aircraft assumed a steep climbing attitude with high engine power. Witnesses observed the aircraft rock from side to side.",
-      "factors": ["inappropriate_stall_recovery"]
+      "factors": [
+        "inappropriate_stall_recovery"
+      ]
     },
     {
       "t": 540,
@@ -127,7 +145,10 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft overrotated at too low an airspeed, causing an aerodynamic stall. Loss of directional control resulted.",
-      "factors": ["aerodynamic_stall", "loss_of_control_inflight"]
+      "factors": [
+        "aerodynamic_stall",
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 600,
@@ -136,7 +157,9 @@
       "actor": "SYS",
       "kind": "outcome",
       "text": "Aircraft crashed approximately 2,200 feet beyond the runway threshold and 260 feet south of runway 29, coming to rest 74 feet southwest of initial impact after knocking down chain link fence sections and striking a powerline pole.",
-      "factors": ["loss_of_control_inflight"]
+      "factors": [
+        "loss_of_control_inflight"
+      ]
     },
     {
       "t": 620,
@@ -154,7 +177,9 @@
   "safety_changes": [],
   "related": [],
   "fdr": null,
-  "sources": ["https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7234.pdf"],
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7234.pdf"
+  ],
   "asn_id": "19720624-0",
   "wikipedia": "https://en.wikipedia.org/wiki/Prinair_Flight_191",
   "report_links": [

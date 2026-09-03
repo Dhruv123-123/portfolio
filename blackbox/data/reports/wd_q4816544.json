@@ -29,7 +29,9 @@
     "name": "Brunswick",
     "country": "United States",
     "latitude": "31.2596",
-    "longitude": "-81.5095"
+    "longitude": "-81.5095",
+    "lat": 31.2597,
+    "lon": -81.5095
   },
   "phase": "approach",
   "occupants": 23,
@@ -212,7 +214,7 @@
       "phase": "approach",
       "actor": "ENV",
       "kind": "outcome",
-      "text": "Aircraft suddenly turned and rolled left until wings perpendicular to ground; descended in nose-down attitude behind trees near airport; impact 9,975 feet from runway 07 threshold at 31\u00b015'34.8\"N 81\u00b030'34.2\"W (p. 9-10)"
+      "text": "Aircraft suddenly turned and rolled left until wings perpendicular to ground; descended in nose-down attitude behind trees near airport; impact 9,975 feet from runway 07 threshold at 31°15'34.8\"N 81°30'34.2\"W (p. 9-10)"
     }
   ],
   "recommendations": [

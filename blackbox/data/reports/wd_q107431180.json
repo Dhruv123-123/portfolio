@@ -30,7 +30,9 @@
     "name": "Palana, Coastal cliff",
     "country": "Russia",
     "latitude": 59.106,
-    "longitude": 159.842
+    "longitude": 159.842,
+    "lat": 59.1081,
+    "lon": 159.8467
   },
   "phase": "approach",
   "occupants": 28,
