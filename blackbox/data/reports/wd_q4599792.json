@@ -1,0 +1,183 @@
+{
+  "id": "wd_q4599792",
+  "qid": "Q4599792",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "2002 Bristow Helicopters Sikorsky S-76A crash",
+  "flight_number": null,
+  "date": "2002-07-16",
+  "time_reference": "UTC",
+  "t0": "2002-07-16T15:50:00Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Sikorsky S-76A",
+    "manufacturer": "Sikorsky",
+    "family": "S-76",
+    "registration": "G-BJVX"
+  },
+  "operator": "Bristow Helicopters",
+  "route": {
+    "from_name": "Clipper platform",
+    "to_name": "Global Santa Fe Monarch rig"
+  },
+  "location": {
+    "name": "Southern North Sea",
+    "country": "United Kingdom"
+  },
+  "phase": "cruise",
+  "occupants": 11,
+  "fatalities": 11,
+  "damage": "destroyed",
+  "category": "OTHR",
+  "summary": "A 22-year-old Sikorsky S-76A helicopter on a ten-minute flight between oil platforms experienced a main rotor blade failure during cruise. The helicopter dove steeply into the sea. All 11 on board died. Investigation revealed the main rotor blade had been struck by lightning in 1999, repaired by the manufacturer, and returned to service. The lightning strike exploited an anomaly built into the blade at manufacture.",
+  "probable_cause": "Main rotor blade failure resulting from electrical energy imparted by a 1999 lightning strike that exploited an anomaly in the blade built at manufacture. The manufacturer should have detected this error unless it was permitted by concession.",
+  "factors": [
+    {
+      "id": "structural_failure",
+      "role": "initiating",
+      "evidence": "Rotor blade fractured at position approximately 76.75 inches from blade root, main rotor gearbox casing was also fractured."
+    },
+    {
+      "id": "metal_fatigue",
+      "role": "contributing",
+      "evidence": "The electrical energy imparted by the lightning strike in 1999 exploited an anomaly in the blade material."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "The rotor blade had an anomaly that was built into the blade at manufacture."
+    },
+    {
+      "id": "inadequate_inspection",
+      "role": "contributing",
+      "evidence": "The manufacturers should have noticed the error in the blade during manufacture or inspection unless it was permitted by concession."
+    }
+  ],
+  "chain": [
+    [
+      "design_deficiency",
+      "metal_fatigue"
+    ],
+    [
+      "metal_fatigue",
+      "structural_failure"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Helicopter departs Clipper platform bound for Global Santa Fe Monarch rig at 320 feet altitude",
+      "factors": []
+    },
+    {
+      "t": 120,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Crew conducts normal cruise operations during ten-minute flight",
+      "factors": []
+    },
+    {
+      "t": 240,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "About 4.5 minutes into flight, crew observes increased vibration in rotor system",
+      "factors": []
+    },
+    {
+      "t": 250,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "PM",
+      "kind": "crew_action",
+      "text": "Non-handling pilot conducts rotor track and balance procedure in response to vibration",
+      "factors": []
+    },
+    {
+      "t": 290,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Vibration levels continue to increase; workers on receiving rig hear loud bang",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Main rotor blade fractures at 76.75 inches from blade root during flight",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 310,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Rotor gearbox casing fractures; helicopter becomes uncontrollable and begins steep descent",
+      "factors": [
+        "structural_failure"
+      ]
+    },
+    {
+      "t": 320,
+      "clock": null,
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Helicopter dives steeply into North Sea; all 11 occupants killed in impact with water",
+      "factors": [
+        "structural_failure"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.gov.uk/aaib-reports/aar-1-2005-sikorsky-s-76a-g-bjvx-16-july-2002"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/2002_Bristow_Helicopters_Sikorsky_S-76A_crash",
+  "asn_id": null,
+  "interest": 5.36,
+  "report_links": [
+    "https://www.gov.uk/aaib-reports/aar-1-2005-sikorsky-s-76a-g-bjvx-16-july-2002"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "medium",
+    "reviewed": false,
+    "notes": [
+      "Limited clock time data available from summary report",
+      "4 events extracted from available information",
+      "Technical failure investigation with manufacturing defect root cause"
+    ]
+  }
+}

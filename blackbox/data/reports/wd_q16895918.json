@@ -1,0 +1,193 @@
+{
+  "id": "wd_q16895918",
+  "qid": "Q16895918",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "1974 Norfolk mid-air collision",
+  "flight_number": null,
+  "date": "1974-08-09",
+  "time_reference": "UTC",
+  "t0": "1974-08-09T13:08:00Z",
+  "agency": "AAIB",
+  "agencies": [
+    {
+      "code": "AAIB",
+      "name": "Air Accidents Investigation Branch",
+      "country": "United Kingdom",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell-Douglas F-4M Phantom FGR.2",
+    "manufacturer": "McDonnell Douglas",
+    "family": "Phantom",
+    "registration": "XV493"
+  },
+  "operator": "RAF",
+  "route": {},
+  "location": {
+    "name": "Fordham Fen near Hilgay",
+    "country": "United Kingdom"
+  },
+  "phase": "cruise",
+  "occupants": 3,
+  "fatalities": 3,
+  "damage": "destroyed",
+  "category": "MAC",
+  "summary": "An RAF Phantom FGR.2 flying at 300 feet on a low-level training route collided with a Piper Pawnee crop-spraying aircraft near Hilgay, Norfolk. The collision occurred at approximately 400 knots closing speed. The investigation found neither pilot saw the other aircraft in time to avoid collision, with the absence of coordination between military and civil low-flying activities being a significant contributing factor.",
+  "probable_cause": "The accident occurred because neither pilot saw the other aircraft in time. A significant contributing feature was the absence of any system for co-ordinating military and civil low flying activities in the low flying areas and link routes. (p. 1)",
+  "factors": [
+    {
+      "id": "loss_of_situational_awareness",
+      "role": "initiating",
+      "evidence": "Neither of the pilots had seen the other aircraft in time to avoid collision (p. 1)."
+    },
+    {
+      "id": "design_deficiency",
+      "role": "contributing",
+      "evidence": "The view from the Phantom may have been obstructed by the canopy frame (p. 1)."
+    },
+    {
+      "id": "regulatory_oversight",
+      "role": "latent",
+      "evidence": "Absence of any system for coordinating military and civil low flying activities in low flying areas and link routes (p. 1)."
+    },
+    {
+      "id": "excessive_speed",
+      "role": "contributing",
+      "evidence": "Collision occurred at closing speed of about 400 knots, leaving minimal time for the Pawnee pilot to assess and execute maneuver (p. 1)."
+    },
+    {
+      "id": "midair_collision",
+      "role": "outcome",
+      "evidence": "At estimated height around 300 feet the Phantom struck Pawnee on right side near Hilgay, Pawnee disintegrated (p. 1)."
+    }
+  ],
+  "chain": [
+    [
+      "design_deficiency",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "regulatory_oversight",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "excessive_speed",
+      "loss_of_situational_awareness"
+    ],
+    [
+      "loss_of_situational_awareness",
+      "midair_collision"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "13:51",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Phantom departs RAF Coningsby for low-level navigation flight",
+      "factors": []
+    },
+    {
+      "t": 600,
+      "clock": "13:59",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Pawnee conducting crop spraying operations south of Downham Market",
+      "factors": []
+    },
+    {
+      "t": 780,
+      "clock": "14:03",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Pawnee completes spraying, begins northward return flight for refueling",
+      "factors": []
+    },
+    {
+      "t": 900,
+      "clock": "14:04",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Phantom flying low-level at 300 feet on standard training route near Hilgay at 420 knots",
+      "factors": []
+    },
+    {
+      "t": 1000,
+      "clock": "14:06",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Pawnee returning northward at low altitude, neither aircraft in contact with ATC",
+      "factors": [
+        "regulatory_oversight"
+      ]
+    },
+    {
+      "t": 1070,
+      "clock": "14:07:40",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Phantom pilot does not see Pawnee; Pawnee pilot does not see Phantom in time to avoid",
+      "factors": [
+        "loss_of_situational_awareness"
+      ]
+    },
+    {
+      "t": 1080,
+      "clock": "14:08",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Phantom at 300 feet strikes Pawnee on right side near Hilgay at closing speed of 400 knots",
+      "factors": [
+        "midair_collision"
+      ]
+    },
+    {
+      "t": 1085,
+      "clock": "14:08:05",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Pawnee disintegrates on impact; Phantom crashes 1 km away in inverted attitude",
+      "factors": [
+        "midair_collision"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/9-1975%20G-ASVX%20and%20XV493.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/1974_Norfolk_mid-air_collision",
+  "asn_id": null,
+  "interest": 5.41,
+  "report_links": [
+    "http://www.aaib.gov.uk/cms_resources.cfm?file=/9-1975%20G-ASVX%20and%20XV493.pdf"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Limited timeline data in summary report",
+      "4 events extracted from available information",
+      "Report focuses on coordination failure rather than operational details"
+    ]
+  }
+}

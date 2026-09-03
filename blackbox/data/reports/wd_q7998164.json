@@ -1,0 +1,207 @@
+{
+  "id": "wd_q7998164",
+  "qid": "Q7998164",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Wichita State University football team plane crash",
+  "flight_number": null,
+  "date": "1970-10-02",
+  "time_reference": "MDT",
+  "t0": "1970-10-02T13:14:00-06:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Martin 404",
+    "manufacturer": "Martin",
+    "family": "Martin 4",
+    "registration": "N464M"
+  },
+  "operator": "Golden Eagle Aviation",
+  "route": {
+    "from_name": "Denver",
+    "to_name": "Logan"
+  },
+  "location": {
+    "name": "Mount Trelease near Loveland Pass",
+    "country": "United States"
+  },
+  "phase": "cruise",
+  "occupants": 40,
+  "fatalities": 31,
+  "injuries_serious": 9,
+  "damage": "destroyed",
+  "category": "CFIT",
+  "summary": "A Martin 404 carrying the Wichita State University football team crashed into Mount Trelease near Loveland Pass, Colorado. The aircraft attempted a scenic route through a mountain valley without adequate flight planning. The overloaded aircraft became trapped in a box canyon unable to climb over surrounding ridges, struck trees, and was destroyed by impact and fire.",
+  "probable_cause": "The probable cause of this accident was the intentional operation of the aircraft over a mountain valley route at an altitude from which the aircraft could neither climb over the obstructing terrain ahead, nor execute a successful course reversal. Significant factors were the overloaded condition of the aircraft, the virtual absence of flight planning for the chosen route, a lack of understanding of aircraft performance capabilities and limitations, and the lack of operational management to monitor and appropriately control the actions of the flightcrew. (p. 31-32)",
+  "factors": [
+    {
+      "id": "navigation_error",
+      "role": "initiating",
+      "evidence": "Flight crew departed from planned route via established airways and instead proceeded on scenic route through Clear Creek Valley without adequate flight planning (p. 31-32)."
+    },
+    {
+      "id": "weight_and_balance_error",
+      "role": "contributing",
+      "evidence": "Aircraft was 5,190 pounds over maximum takeoff weight at Denver and 2,665 pounds over maximum takeoff weight at impact (p. 32)."
+    },
+    {
+      "id": "loss_of_control_inflight",
+      "role": "contributing",
+      "evidence": "Aircraft became trapped in box canyon at Dry Gulch unable to climb over surrounding ridges or execute successful reversal turn (p. 31-32)."
+    },
+    {
+      "id": "cfit",
+      "role": "outcome",
+      "evidence": "Aircraft struck trees at 10,800 feet elevation on Mount Trelease, descended 425 feet through trees while spinning (p. 2)."
+    },
+    {
+      "id": "post_impact_fire",
+      "role": "outcome",
+      "evidence": "Aircraft was destroyed by fire and impact after striking trees (p. 2)."
+    }
+  ],
+  "chain": [
+    [
+      "navigation_error",
+      "loss_of_control_inflight"
+    ],
+    [
+      "weight_and_balance_error",
+      "loss_of_control_inflight"
+    ],
+    [
+      "loss_of_control_inflight",
+      "cfit"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "13:00",
+      "phase": "cruise",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First Officer Skipper purchases aeronautical sectional charts at Denver for scenic route (p. 4)",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 300,
+      "clock": "13:05",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Aircraft departs Denver Stapleton, N464M takes off on scenic route through Clear Creek Valley (p. 4-5)",
+      "factors": [
+        "navigation_error"
+      ]
+    },
+    {
+      "t": 1800,
+      "clock": "13:20",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Aircraft passes Georgetown at approximately 9,800 feet msl (p. 25-26)",
+      "factors": []
+    },
+    {
+      "t": 2700,
+      "clock": "13:25",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "Aircraft flying low through Clear Creek Valley, all witnesses report altitude below mountaintops (p. 7)",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 3600,
+      "clock": "13:30",
+      "phase": "cruise",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First Officer Skipper tells captain they should reverse course and gain altitude at Dry Gulch (p. 5)",
+      "factors": []
+    },
+    {
+      "t": 3900,
+      "clock": "13:32",
+      "phase": "cruise",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First Officer Skipper initiates right turn, then Captain Crocker takes control (p. 5)",
+      "factors": []
+    },
+    {
+      "t": 4200,
+      "clock": "13:35",
+      "phase": "cruise",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain Crocker executes steep left turn attempting to avoid rising terrain (p. 5)",
+      "factors": [
+        "loss_of_control_inflight"
+      ]
+    },
+    {
+      "t": 4320,
+      "clock": "13:36",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft strikes trees at 10,800 feet on east slope of Mount Trelease (p. 2)",
+      "factors": [
+        "cfit"
+      ]
+    },
+    {
+      "t": 4380,
+      "clock": "13:37",
+      "phase": "cruise",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft continues 425 feet through trees at 215\u00b0 heading, destroyed by fire and impact (p. 2)",
+      "factors": [
+        "cfit",
+        "post_impact_fire"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR71-04.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Wichita_State_University_football_team_plane_crash",
+  "asn_id": "19701002-3",
+  "interest": 6.09,
+  "report_links": [
+    "https://libraryonline.erau.edu/online-full-text/ntsb/aircraft-accident-reports/AAR71-04.pdf"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read Synopsis (p. 1-2), History of Flight (p. 3-8), Analysis and Conclusions (p. 24-32)",
+      "9 events extracted with times and locations from detailed report",
+      "All factor evidence cites page numbers from OCR text"
+    ]
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "id": "wd_q7571206",
+  "qid": "Q7571206",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Southwest Airlines Flight 1455",
+  "flight_number": "SWA 1455",
+  "date": "2000-03-05",
+  "time_reference": "PST",
+  "t0": "2000-03-05T18:11:20-08:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-300",
+    "manufacturer": "Boeing",
+    "family": "737",
+    "registration": "N668SW"
+  },
+  "operator": "Southwest Airlines",
+  "route": {
+    "from_name": "Las Vegas",
+    "to_name": "Burbank"
+  },
+  "location": {
+    "name": "Hollywood Burbank Airport",
+    "country": "United States"
+  },
+  "phase": "landing",
+  "occupants": 142,
+  "fatalities": 0,
+  "injuries_serious": 2,
+  "damage": "substantial",
+  "category": "RE",
+  "summary": "Southwest Airlines Flight 1455 overran the runway at Hollywood Burbank Airport. The Boeing 737-300 touched down at 182 knots and collided with a metal blast fence and perimeter wall, coming to rest on a city street. The NTSB found the accident was due to the pilots attempting to land with excessive speed and steep descent angle, failing to abort an unstabilized approach, combined with ATC positioning that left no safe options for a go-around.",
+  "probable_cause": "The flight crew's excessive airspeed and flightpath angle during the approach and landing and its failure to abort the approach when stabilized approach criteria were not met. Contributing to the accident was the controller's positioning of the airplane in such a manner as to leave no safe options for the flight crew other than a go-around maneuver. (p. 20-22)",
+  "factors": [
+    {
+      "id": "excessive_speed",
+      "role": "initiating",
+      "evidence": "Aircraft touched down at 182 knots, which is 44 knots over the reference speed (p. 20). Flight crew did not reduce airspeed to target of 138 knots."
+    },
+    {
+      "id": "unstable_approach",
+      "role": "contributing",
+      "evidence": "Flightpath angle of 7\u00b0 during descent was steeper than typical 3\u00b0 approach. GPWS sink rate and pull up warnings sounded multiple times (p. 20-21). Approach was not in the slot per Southwest procedures."
+    },
+    {
+      "id": "atc_communication_error",
+      "role": "contributing",
+      "evidence": "ATC failed to cancel 230-knot speed assignment when issuing approach clearance at 18:08:19. Controller positioned aircraft too fast, too high, and too close to runway threshold with no safe go-around option (p. 21-22)."
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "Aircraft overran runway 8 at Burbank after 4,150 feet of ground roll, struck blast fence and perimeter wall (p. 4)."
+    }
+  ],
+  "chain": [
+    [
+      "excessive_speed",
+      "unstable_approach"
+    ],
+    [
+      "atc_communication_error",
+      "unstable_approach"
+    ],
+    [
+      "unstable_approach",
+      "runway_overrun"
+    ]
+  ],
+  "events": [
+    {
+      "t": 0,
+      "clock": "16:50",
+      "phase": "takeoff",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Flight 1455 departed gate at Las Vegas, more than 2 hours behind schedule",
+      "factors": []
+    },
+    {
+      "t": 284,
+      "clock": "17:54:21",
+      "phase": "climb",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain states 'plan on [runway] three three at the moment' (p. 2)",
+      "factors": []
+    },
+    {
+      "t": 732,
+      "clock": "18:02:52",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC advises ATIS information Papa, expects ILS landing on runway 8 (p. 2)",
+      "factors": []
+    },
+    {
+      "t": 809,
+      "clock": "18:03:29",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC instructs left turn to heading 190\u00b0 and descend to 6000 feet msl (p. 2)",
+      "factors": []
+    },
+    {
+      "t": 852,
+      "clock": "18:04:02",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC assigns speed restriction: maintain 230 knots or greater (p. 2)",
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": 912,
+      "clock": "18:04:42",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer informs captain target airspeed for approach is 138 knots (p. 2)",
+      "factors": []
+    },
+    {
+      "t": 1008,
+      "clock": "18:05:54",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC clears descent to 5000 feet, advises traffic at one o'clock and 12 miles (p. 3)",
+      "factors": []
+    },
+    {
+      "t": 1153,
+      "clock": "18:07:43",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC clears descent to 3000 feet msl (p. 3)",
+      "factors": []
+    },
+    {
+      "t": 1188,
+      "clock": "18:08:18",
+      "phase": "approach",
+      "actor": "FO",
+      "kind": "crew_action",
+      "text": "First officer notifies ATC that Southwest traffic is in sight (p. 3)",
+      "factors": []
+    },
+    {
+      "t": 1189,
+      "clock": "18:08:19",
+      "phase": "approach",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "ATC issues altitude restriction and clears visual approach runway 8 (p. 3)",
+      "factors": [
+        "atc_communication_error"
+      ]
+    },
+    {
+      "t": 1206,
+      "clock": "18:08:36",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain begins turning left for final approach through 3,800 feet msl (p. 3)",
+      "factors": []
+    },
+    {
+      "t": 1298,
+      "clock": "18:09:28",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain calls for flaps 5 at indicated airspeed about 220 knots (p. 3)",
+      "factors": [
+        "excessive_speed"
+      ]
+    },
+    {
+      "t": 1313,
+      "clock": "18:09:43",
+      "phase": "approach",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain calls for gear down (p. 3)",
+      "factors": []
+    },
+    {
+      "t": 1398,
+      "clock": "18:10:24",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "warning",
+      "text": "GPWS sink rate alert begins continuously broadcasting, switches to pull up warning (p. 4)",
+      "factors": [
+        "unstable_approach"
+      ]
+    },
+    {
+      "t": 1428,
+      "clock": "18:10:58",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft touches down at approximately 182 knots with flaps at 30 degrees (p. 4)",
+      "factors": [
+        "excessive_speed"
+      ]
+    },
+    {
+      "t": 1450,
+      "clock": "18:11:20",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft strikes metal blast fence and perimeter wall, comes to rest on city street (p. 4)",
+      "factors": [
+        "runway_overrun"
+      ]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [
+    {
+      "id": "A-01-12",
+      "to": "FAA",
+      "text": "Issue an airworthiness directive to require all operators of Boeing 737-300 through -500 series airplanes to replace the slide cover latch brackets on forward slide compartments with the type installed on Boeing 737-600 through -900 series airplanes.",
+      "status": "closed_acceptable"
+    },
+    {
+      "id": "A-01-13",
+      "to": "FAA",
+      "text": "Issue an airworthiness directive to require initial and periodic inspections of the pivot bracket assemblies on all Trans Aero Industries Model 90835 jumpseats installed on Boeing 737-300 through -500 series airplanes.",
+      "status": "closed_unacceptable"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0204.pdf"
+  ],
+  "wikipedia": "https://en.wikipedia.org/wiki/Southwest_Airlines_Flight_1455",
+  "asn_id": "20000305-0",
+  "interest": 6.2,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0204.pdf"
+  ],
+  "curated_id": null,
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Read History of Flight (p. 2-5), Analysis (p. 20-22), Probable Cause (p. 22)",
+      "16 events extracted with clock times from detailed timeline",
+      "All factor evidence includes page citations"
+    ]
+  }
+}
