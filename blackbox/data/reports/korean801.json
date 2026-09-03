@@ -412,5 +412,25 @@
       "Recommendation numbers not recalled and are left null."
     ]
   },
-  "wikipedia": "https://en.wikipedia.org/wiki/Korean_Air_Flight_801"
+  "wikipedia": "https://en.wikipedia.org/wiki/Korean_Air_Flight_801",
+  "audio": [
+    {
+      "title": "Korean Air Flight 801 ATC Recording 6 August 1997 Nimitz Hill, Guam.mp3",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Korean_Air_Flight_801_ATC_Recording_6_August_1997_Nimitz_Hill%2C_Guam.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Korean_Air_Flight_801_ATC_Recording_6_August_1997_Nimitz_Hill,_Guam.mp3",
+      "license": "Public domain",
+      "description": "Korean Air Flight 801 ATC Recording 6 August 1997 Nimitz Hill, Guam",
+      "duration": 274.9913037580255,
+      "kind": "atc"
+    },
+    {
+      "title": "Korean Air Flight 801 crash, Guam air traffic control recording (August 1997).oga",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Korean_Air_Flight_801_crash%2C_Guam_air_traffic_control_recording_%28August_1997%29.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Korean_Air_Flight_801_crash,_Guam_air_traffic_control_recording_(August_1997).oga",
+      "license": "Public domain",
+      "description": "Korean Air 801 - ATC Recording",
+      "duration": 277.00351473922905,
+      "kind": "atc"
+    }
+  ]
 }

@@ -316,5 +316,16 @@
       "All factor IDs from taxonomy; causal chain established from report narrative",
       "No CVR transcript published; no recommendations section in preliminary report"
     ]
-  }
+  },
+  "audio": [
+    {
+      "title": "Air Canada Express 8646 LGA accident ATC Audio.opus",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Air_Canada_Express_8646_LGA_accident_ATC_Audio.opus?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Air_Canada_Express_8646_LGA_accident_ATC_Audio.opus",
+      "license": "Public domain",
+      "description": "ATC Audio of Air Canada Express flight 8646 collision at LaGuardia airport (LGA).",
+      "duration": 99.01635416666667,
+      "kind": "atc"
+    }
+  ]
 }

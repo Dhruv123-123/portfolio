@@ -422,31 +422,31 @@
   "wikipedia": "https://en.wikipedia.org/wiki/Alaska_Airlines_Flight_261",
   "audio": [
     {
-      "title": "Alaska Airlines Flight 261 crash ATC recording.wav",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Alaska_Airlines_Flight_261_crash_ATC_recording.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "page": "https://commons.wikimedia.org/wiki/File:Alaska_Airlines_Flight_261_crash_ATC_recording.wav",
+      "title": "Alaska Airlines Flight 261 crash ATC recording.flac",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Alaska_Airlines_Flight_261_crash_ATC_recording.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Alaska_Airlines_Flight_261_crash_ATC_recording.flac",
       "license": "Public domain",
-      "kind": "atc",
       "description": "Alaska Airlines Flight 261 crash ATC recording",
-      "duration": 236.08421768707484
+      "duration": 236.08421768707484,
+      "kind": "atc"
     },
     {
       "title": "Alaska Airlines Flight 261 crash ATC recording.ogg",
       "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Alaska_Airlines_Flight_261_crash_ATC_recording.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "page": "https://commons.wikimedia.org/wiki/File:Alaska_Airlines_Flight_261_crash_ATC_recording.ogg",
       "license": "Public domain",
-      "kind": "atc",
       "description": "Alaska Airlines Flight 261 crash ATC recording",
-      "duration": 236.08421768707484
+      "duration": 236.08421768707484,
+      "kind": "atc"
     },
     {
-      "title": "Alaska Airlines Flight 261 crash ATC recording.flac",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Alaska_Airlines_Flight_261_crash_ATC_recording.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "page": "https://commons.wikimedia.org/wiki/File:Alaska_Airlines_Flight_261_crash_ATC_recording.flac",
+      "title": "Alaska Airlines Flight 261 crash ATC recording.wav",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Alaska_Airlines_Flight_261_crash_ATC_recording.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Alaska_Airlines_Flight_261_crash_ATC_recording.wav",
       "license": "Public domain",
-      "kind": "atc",
       "description": "Alaska Airlines Flight 261 crash ATC recording",
-      "duration": 236.08421768707484
+      "duration": 236.08421768707484,
+      "kind": "atc"
     }
   ]
 }

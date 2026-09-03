@@ -484,5 +484,16 @@
       "ICAO category BIRD is not in the spec's list, so OTHR is used; the initiating event was a bird strike."
     ]
   },
-  "wikipedia": "https://en.wikipedia.org/wiki/US_Airways_Flight_1549"
+  "wikipedia": "https://en.wikipedia.org/wiki/US_Airways_Flight_1549",
+  "audio": [
+    {
+      "title": "Flight 1549 FAA New York TRACON audio extract.ogg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Flight_1549_FAA_New_York_TRACON_audio_extract.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flight_1549_FAA_New_York_TRACON_audio_extract.ogg",
+      "license": "Public domain",
+      "description": "Extract from the recording by the FAA's New York Terminal Radar Approach Control Facility (TRACON) during the bird strike and subsequent ditching of US Airways Flight 1549.  This recording picks up about the moment of impact, with a normal flight instruction being given to flight 1549, and continues",
+      "duration": 190,
+      "kind": "atc"
+    }
+  ]
 }
