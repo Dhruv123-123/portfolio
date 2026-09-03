@@ -1,0 +1,310 @@
+{
+  "id": "wd_q111948125",
+  "qid": "Q111948125",
+  "tier": "wikidata",
+  "depth": "full",
+  "title": "American Airlines 102",
+  "flight_number": "AA102",
+  "date": "1993-04-14",
+  "time_reference": "CDT",
+  "t0": "1993-04-14T06:59:17-05:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "NTSB/AAR-94/01",
+      "report_date": "1994-02-14"
+    }
+  ],
+  "aircraft": {
+    "type": "McDonnell Douglas DC-10-30",
+    "manufacturer": "McDonnell Douglas",
+    "family": "DC-10",
+    "registration": "N139AA"
+  },
+  "operator": "American Airlines",
+  "route": {
+    "from_name": "Daniel K. Inouye International Airport, Honolulu",
+    "to_name": "Dallas/Fort Worth International Airport"
+  },
+  "location": {
+    "name": "Dallas/Fort Worth International Airport",
+    "country": "United States"
+  },
+  "phase": "landing",
+  "occupants": 202,
+  "fatalities": 0,
+  "injuries_serious": 2,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "American Airlines Flight 102, a DC-10-30, experienced loss of directional control during the landing rollout at Dallas/Fort Worth on 14 April 1993. Upon landing in rain with thunderstorms in the area, shortly after touchdown on runway 17L, the pilot lost directional control as the aircraft began to weathervane and departed the right side of the runway. The aircraft dug into mud, collapsed the nose landing gear, and damaged the left engine and wing. All 202 occupants survived; 38 received injuries during evacuation.",
+  "probable_cause": "The failure of the captain to use proper directional control techniques to maintain the airplane on the runway. (p. 107)",
+  "factors": [
+    {
+      "id": "contaminated_runway",
+      "role": "contributing",
+      "evidence": "Runway surface was wet with rain during landing; weather conditions included visibility 2.5 miles, thunderstorms, rain showers, fog, wind 140° at 11 knots per 0647:58 broadcast; special weather report at 0701 showed wind shifted to 300° at 22 knots gusting to 33 knots with heavy rain (p. 7, 17)."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "initiating",
+      "evidence": "Failure of the captain to use proper directional control techniques to maintain the airplane on the runway during landing rollout; captain took control at 50 feet altitude when first officer announced go-around (p. 6-7, 107)."
+    },
+    {
+      "id": "runway_overrun",
+      "role": "outcome",
+      "evidence": "Aircraft began to weathervane and departed right side of runway; tire tracks paralleled centerline for about 1,700 feet then turned gradually right and departed runway 3,303 feet from runway threshold; aircraft crossed high-speed taxiway 3S before returning to soft soil (p. 10)."
+    }
+  ],
+  "chain": [
+    ["contaminated_runway", "inappropriate_control_input"],
+    ["inappropriate_control_input", "runway_overrun"]
+  ],
+  "events": [
+    {
+      "t": -150,
+      "clock": "0659:17",
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer said 'I'm gonna go around' at 50 feet altitude, less than 1 second after automated voice called out 'fifty feet' (p. 6).",
+      "factors": []
+    },
+    {
+      "t": -148,
+      "clock": "0659:18",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain stated 'No, no, no, I got it' in response to first officer's go-around call; first officer replied 'You got the airplane' (p. 6).",
+      "factors": ["inappropriate_control_input"]
+    },
+    {
+      "t": -82,
+      "clock": "0659:20",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Automated voice said 'thirty' feet altitude during control transfer (p. 6).",
+      "factors": []
+    },
+    {
+      "t": 0,
+      "clock": "0659:29",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Sound of thump similar to aircraft touchdown recorded on CVR at 0659:29 (p. 7).",
+      "factors": []
+    },
+    {
+      "t": 2,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Sound of second thump recorded on CVR about 2 seconds after first thump (p. 7).",
+      "factors": []
+    },
+    {
+      "t": 7,
+      "clock": "0659:36",
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer said 'OK, hundred and twenty knots' indicating airspeed during rollout (p. 7).",
+      "factors": []
+    },
+    {
+      "t": 9,
+      "clock": "0659:38",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_speech",
+      "text": "Captain said 'Oh [expletive]' during landing rollout (p. 7).",
+      "factors": []
+    },
+    {
+      "t": 12,
+      "clock": "0659:41",
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer said 'hundred knots' then 'OK, we're off the grass' indicating aircraft had departed paved runway surface (p. 7).",
+      "factors": ["runway_overrun"]
+    },
+    {
+      "t": 16,
+      "clock": "0659:45",
+      "phase": "landing",
+      "actor": "FO",
+      "kind": "crew_speech",
+      "text": "First officer called 'eighty knots' airspeed (p. 7).",
+      "factors": []
+    },
+    {
+      "t": 21,
+      "clock": "0659:50",
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Sound similar to a horn sounded in the cockpit during rollout (p. 7).",
+      "factors": []
+    },
+    {
+      "t": 24,
+      "clock": "0659:53",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain stated 'Emergency evacuation' (p. 7).",
+      "factors": []
+    },
+    {
+      "t": 46,
+      "clock": "0700:15",
+      "phase": "landing",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "One of the flightcrew members made evacuation announcement on public address system, though only one flight attendant reported hearing it; at least two flight attendants initiated cabin emergency evacuation by activating evacuation signaling system without hearing cockpit call (p. 7).",
+      "factors": []
+    },
+    {
+      "t": 66,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft came to rest upright approximately 2,607 feet from departure end of runway 17L and about 250 feet from right edge of runway, with nose on perpendicular taxiway 31; tire tracks started 4,303 feet from runway beginning, paralleled centerline for 1,700 feet then turned right and departed runway (p. 10).",
+      "factors": ["runway_overrun"]
+    }
+  ],
+  "cvr": [
+    {
+      "t": -150,
+      "clock": "0659:17",
+      "speaker": "FO",
+      "text": "I'm gonna go around."
+    },
+    {
+      "t": -148,
+      "clock": "0659:18",
+      "speaker": "CAPT",
+      "text": "No, no, no, I got it."
+    },
+    {
+      "t": -148,
+      "clock": "0659:18",
+      "speaker": "FO",
+      "text": "You got the airplane."
+    },
+    {
+      "t": 9,
+      "clock": "0659:38",
+      "speaker": "CAPT",
+      "text": "Oh [expletive]."
+    },
+    {
+      "t": 12,
+      "clock": "0659:41",
+      "speaker": "FO",
+      "text": "OK, we're off the grass."
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "A-94-24",
+      "to": "FAA",
+      "text": "Review the pilot training recordkeeping systems of airlines operated under FAR Parts 121 and 135 to determine the quality of information contained therein, and require the airlines to maintain appropriate information on the quality of pilot performance in training and checking programs.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-94-25",
+      "to": "FAA",
+      "text": "Amend the ATC handbook, 7110.65, Chapter 3 to require that tower controllers issue the LLWAS advisory, 'Low Level Windshear Advisories in Effect,' whether or not equipped with ATIS.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-94-26",
+      "to": "FAA",
+      "text": "Revise ATC handbook, 7110.65, Chapter 3 to require controllers to select for display all sensors on the LLWAS when adverse weather conditions such as thunderstorms are forecast or present in the terminal area.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-94-27",
+      "to": "FAA",
+      "text": "Require the manufacturers of rechargeable batteries to provide specific maintenance instructions and recommended care practices.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-94-28",
+      "to": "FAA",
+      "text": "Issue an Advisory Circular that provides proper maintenance instructions to aviation battery maintenance and repair facilities.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-94-29",
+      "to": "FAA",
+      "text": "Require all 14 CFR Part 139 airports to perform runway friction tests regularly.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-94-30",
+      "to": "FAA",
+      "text": "Provide FAA certification and safety inspectors with the training and resources necessary to oversee airport runway friction measurement programs.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-94-31",
+      "to": "FAA",
+      "text": "Place airport certification and safety inspectors on the special emphasis workforce list.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-94-32",
+      "to": "Dallas/Fort Worth International Airport",
+      "text": "Monitor surface friction on all operational runways on a more frequent basis, including the buildup of rubber on all runways, and perform rubber removal operations as required.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-94-33",
+      "to": "American Airlines",
+      "text": "Review the guidelines for developing, implementing, reinforcing, and assessing CRM training programs for flight crewmembers and ensure that the CRM program conforms to FAA guidance contained in Advisory Circular 120-51 A.",
+      "status": "unknown"
+    },
+    {
+      "id": "A-94-34",
+      "to": "American Airlines",
+      "text": "Examine the maintenance procedures and practices that resulted in the misconfiguring of two reverse thrust cascades on the No. 2 engine of N139AA and make appropriate changes.",
+      "status": "unknown"
+    }
+  ],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9401.pdf"
+  ],
+  "asn_id": "19930414-1",
+  "wikipedia": "https://en.wikipedia.org/wiki/American_Airlines_Flight_102",
+  "interest": 5.69,
+  "report_links": [
+    "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9401.pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Deep read from comprehensive sections: Executive Summary (p. 7), History of Flight (p. 8-10), Analysis - Flightcrew Actions (p. 6-7), Probable Cause (p. 107), Recommendations (p. 108-110)",
+      "12 events extracted with clock times from CVR and FDR data; 8 new events vs summary_record showing detailed control transfer and rollout sequence",
+      "All 11 formal safety recommendations extracted with IDs A-94-24 through A-94-34 (note: A-94-30 labeled as A-93-30 in document, corrected to sequence)",
+      "Factors include contaminated runway based on weather analysis; directional control failure as initiating factor per probable cause"
+    ]
+  }
+}

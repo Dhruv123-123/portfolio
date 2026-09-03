@@ -1,0 +1,202 @@
+{
+  "id": "wd_q21400540",
+  "qid": "Q21400540",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Dynamic Airways 405",
+  "flight_number": "405",
+  "date": "2015-10-29",
+  "time_reference": "EDT",
+  "t0": "2015-10-29T12:32:00-04:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "DCA16FA013"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 767-269ER",
+    "manufacturer": "Boeing",
+    "family": "767",
+    "registration": "N251MY",
+    "msn": "23280"
+  },
+  "operator": "Eastern Airlines, LLC (operating as Dynamic International Airways)",
+  "route": {
+    "from_name": "Fort Lauderdale",
+    "to_name": "Caracas"
+  },
+  "location": {
+    "name": "Fort Lauderdale-Hollywood International Airport",
+    "country": "United States"
+  },
+  "phase": "taxi",
+  "occupants": 101,
+  "fatalities": 0,
+  "injuries_serious": 1,
+  "damage": "substantial",
+  "category": "F-POST",
+  "summary": "On 29 October 2015, a Boeing 767 caught fire while taxiing for departure at Fort Lauderdale-Hollywood International Airport. The main fuel supply line coupling assembly disconnected in the wing-to-engine strut, causing fuel leakage. Fire developed during taxi. All 101 passengers and crew were evacuated using emergency slides with 22 people injured. The aircraft was destroyed by fire.",
+  "probable_cause": "The separation of the flexible fuel line coupling and subsequent fuel leak due to the failure of maintenance personnel to install the required safety lockwire. Contributing to the severity of the accident was the initiation of the evacuation before the right engine was shut down which led to a passenger's injury. (p. 2)",
+  "factors": [
+    {
+      "id": "fuel_leak",
+      "role": "initiating",
+      "evidence": "A significant fuel leak developed in the left engine strut and nacelle during taxi due to a Wiggins coupling (flexible fuel line coupling) loosening and disengaging from the main fuel supply line (p. 1-2, 5). The leak was caused by the lack of a required safety lockwire on the coupling assembly per Boeing maintenance manual requirements (p. 2, 5)."
+    },
+    {
+      "id": "maintenance_error",
+      "role": "contributing",
+      "evidence": "Maintenance personnel failed to install the required safety lockwire on the fuel line coupling assembly during maintenance performed in October 2012 at the 4C check prior to aircraft storage (p. 1-2). No broken lockwire was recovered in the strut compartments, confirming it was never installed (p. 5)."
+    },
+    {
+      "id": "inflight_fire",
+      "role": "outcome",
+      "evidence": "The leaking fuel contacted hot engine case surfaces with exhaust gas temperatures of at least 452°C (845.6°F), igniting a fire in the left engine strut and nacelle during taxi (p. 2, 7)."
+    }
+  ],
+  "chain": [
+    ["maintenance_error", "fuel_leak"],
+    ["fuel_leak", "inflight_fire"]
+  ],
+  "events": [
+    {
+      "t": -300,
+      "clock": "12:28",
+      "phase": "taxi",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Aircraft pushes back from Gate E9 for taxi to Runway 28 right (p. 3).",
+      "factors": []
+    },
+    {
+      "t": -60,
+      "clock": "12:32",
+      "phase": "taxi",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Another aircraft taxiing behind accident aircraft advised ATC they observed a large amount of fluid leaking from the left engine of the accident airplane (p. 3).",
+      "factors": ["fuel_leak"]
+    },
+    {
+      "t": -30,
+      "clock": null,
+      "phase": "taxi",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Flight crew heard the transmissions about fluid leak, advised they would return to ramp, and were instructed by ATC to stop on taxiway B just east of taxiway T1 (p. 3).",
+      "factors": ["fuel_leak"]
+    },
+    {
+      "t": 0,
+      "clock": "12:33",
+      "phase": "taxi",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "The trailing aircraft advised that the engine was on fire (p. 3).",
+      "factors": ["inflight_fire"]
+    },
+    {
+      "t": 1,
+      "clock": "12:33",
+      "phase": "taxi",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain shut down the left engine using the fire handle; fire handle found actuated and rotated to bottle 1 discharge position in post-accident inspection (p. 3, 5).",
+      "factors": ["inflight_fire"]
+    },
+    {
+      "t": 2,
+      "clock": "12:33",
+      "phase": "taxi",
+      "actor": "ATC",
+      "kind": "atc",
+      "text": "Flight crew requested fire equipment from ATC (p. 3).",
+      "factors": []
+    },
+    {
+      "t": 5,
+      "clock": null,
+      "phase": "taxi",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "Flight attendant activated emergency signaling system to notify flight deck; CVR recorded the chime but flight crew did not respond via interphone (p. 7). Cabin crew initiated evacuation without coordination with flight crew; passengers saw fire and insisted on evacuation (p. 1, 3)."
+    },
+    {
+      "t": 8,
+      "clock": null,
+      "phase": "taxi",
+      "actor": "CABIN",
+      "kind": "crew_action",
+      "text": "Flight attendants opened forward left (1L), forward right (1R), and aft right (2R) cabin doors; slide rafts deployed though 2R slide did not inflate quickly or symmetrically (p. 3). A passenger opened the right overwing exit but the slide did not deploy (p. 3)."
+    },
+    {
+      "t": 10,
+      "clock": null,
+      "phase": "taxi",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "After evacuation had already begun, flight crew advised over PA to evacuate out the right side of the airplane (p. 3).",
+      "factors": []
+    },
+    {
+      "t": 11,
+      "clock": null,
+      "phase": "taxi",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Number 2 (right) engine still running as passengers evacuated through 2R door; one passenger who evacuated through 2R passed behind the running engine, was blown to the pavement by exhaust, and received serious injuries (p. 3).",
+      "factors": []
+    },
+    {
+      "t": 46,
+      "clock": null,
+      "phase": "taxi",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Number 2 engine shut down approximately 35 seconds after the initial passenger injury (p. 3).",
+      "factors": []
+    },
+    {
+      "t": 60,
+      "clock": null,
+      "phase": "taxi",
+      "actor": "GND",
+      "kind": "system",
+      "text": "Airport authority official arrived and repositioned the 2R slide; airport firefighting vehicles arrived approximately 1 minute later and began extinguishing the fire (p. 3).",
+      "factors": []
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [
+    "Dynamic International Airways issued a Fleet Campaign Directive to inspect remainder of their aircraft to ensure proper installation of fuel line coupling assemblies (p. 4)"
+  ],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/92257/pdf"
+  ],
+  "asn_id": "20151029-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Dynamic_International_Airways_Flight_405",
+  "interest": 5.76,
+  "report_links": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/92257/pdf"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Deep read from sections: Analysis (p. 1-2), Probable Cause and Findings (p. 2), Factual Information History of Flight (p. 3), Examination of fuel coupling (p. 5)",
+      "12 events extracted with clock times and detailed sequence from taxi to fire suppression; 9 new events vs summary_record",
+      "Maintenance error factor emphasized per probable cause; Boeing maintenance manual requirement for lockwire documented (p. 5)"
+    ]
+  }
+}

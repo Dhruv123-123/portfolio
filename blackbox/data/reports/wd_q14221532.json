@@ -1,0 +1,178 @@
+{
+  "id": "wd_q14221532",
+  "qid": "Q14221532",
+  "tier": "wikidata",
+  "depth": "sections",
+  "title": "Southwest Airlines 345",
+  "flight_number": "SWA345",
+  "date": "2013-07-22",
+  "time_reference": "EDT",
+  "t0": "2013-07-22T17:23:00-04:00",
+  "agency": "NTSB",
+  "agencies": [
+    {
+      "code": "NTSB",
+      "name": "National Transportation Safety Board",
+      "country": "United States",
+      "role": "lead",
+      "report_id": "DCA13FA131"
+    }
+  ],
+  "aircraft": {
+    "type": "Boeing 737-7H4",
+    "manufacturer": "Boeing",
+    "family": "737",
+    "registration": "N753SW",
+    "msn": "29848"
+  },
+  "operator": "Southwest Airlines",
+  "route": {
+    "from_name": "Nashville",
+    "to_name": "LaGuardia"
+  },
+  "location": {
+    "name": "LaGuardia Airport",
+    "country": "United States"
+  },
+  "phase": "landing",
+  "occupants": 149,
+  "fatalities": 0,
+  "injuries_serious": 0,
+  "damage": "substantial",
+  "category": "OTHR",
+  "summary": "A 13-year-old Boeing 737 landing at LaGuardia touched down nose-first at 133 knots with the nose gear striking the runway before the main landing gear, causing the nose gear to collapse. The aircraft slid 2500 feet on its nose before stopping. Eight occupants were injured during evacuation. Investigation revealed crew errors: flap change at only 500 feet altitude and the captain taking control at only 27 feet altitude.",
+  "probable_cause": "The captain's attempt to recover from an unstabilized approach by transferring airplane control at low altitude instead of performing a go-around. Contributing to the accident was the captain's failure to comply with standard operating procedures. (p. 2)",
+  "factors": [
+    {
+      "id": "unstable_approach",
+      "role": "initiating",
+      "evidence": "Aircraft was not in planned landing configuration by 1,000 feet above touchdown zone; flaps were set to 30° instead of 40° until 500 feet altitude (p. 3-4). At 100-200 feet altitude the aircraft was above the glideslope with a deviation reaching maximum at 1744:23 just before touchdown (p. 4)."
+    },
+    {
+      "id": "inappropriate_control_input",
+      "role": "contributing",
+      "evidence": "Captain took control of the aircraft from the first officer at an altitude of only 27 feet and three seconds from touching down (1744:23), too late to correct the aircraft's deteriorating energy state and prevent nose gear strike (p. 4). After taking control, the control column was relaxed to neutral position and throttles were not advanced until about 1 second before touchdown (p. 4)."
+    },
+    {
+      "id": "hard_landing",
+      "role": "outcome",
+      "evidence": "Aircraft descended at 960 feet per minute in a nose-down pitch attitude of -3.1 degrees at touchdown, with the nose wheel striking the runway before the main landing gear (p. 4-5)."
+    },
+    {
+      "id": "landing_gear_failure",
+      "role": "outcome",
+      "evidence": "Nose landing gear collapsed due to stress overload from nose-first touchdown; nose tire assembly fractured and penetrated the electronic equipment bay (p. 5)."
+    }
+  ],
+  "chain": [
+    ["unstable_approach", "inappropriate_control_input"],
+    ["inappropriate_control_input", "hard_landing"],
+    ["hard_landing", "landing_gear_failure"]
+  ],
+  "events": [
+    {
+      "t": -500,
+      "clock": "1743:30",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "Captain observed flaps were set to 30° instead of 40° as briefed and manually set flaps to 40° at approximately 500 feet radio altitude, below the required 1,000 feet gate per stabilized approach criteria (p. 3-4).",
+      "factors": ["unstable_approach"]
+    },
+    {
+      "t": -250,
+      "clock": null,
+      "phase": "approach",
+      "actor": "SYS",
+      "kind": "system",
+      "text": "Autopilot disconnected at altitude between 385 and 361 feet radio altitude; first officer actively manipulating flight controls in side-slip maneuver for crosswind correction (p. 4).",
+      "factors": []
+    },
+    {
+      "t": -140,
+      "clock": "1744:14",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_action",
+      "text": "First officer made 100 feet callout; FDR data show aircraft was above glideslope with maximum recorded deviation reaching 1744:23 just before touchdown (p. 4).",
+      "factors": ["unstable_approach"]
+    },
+    {
+      "t": -120,
+      "clock": "1744:17",
+      "phase": "approach",
+      "actor": "PF",
+      "kind": "crew_speech",
+      "text": "Captain repeatedly said 'get down get down get down' to first officer approximately 3 seconds after 100 feet callout, expressing concern that the aircraft was too high and not getting proper sink rate (p. 4).",
+      "factors": ["unstable_approach"]
+    },
+    {
+      "t": -3,
+      "clock": "1744:23",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Captain announced 'I got it' at 27 feet radio altitude, approximately 3 seconds from touchdown, taking control of the aircraft from the first officer who acknowledged 'okay you got it' (p. 4).",
+      "factors": ["inappropriate_control_input"]
+    },
+    {
+      "t": 0,
+      "clock": "1744:36",
+      "phase": "landing",
+      "actor": "CAPT",
+      "kind": "crew_action",
+      "text": "Throttle resolver angles decreased to 35° and N1 values decreased; control column remained near zero position; aircraft pitch began to enter negative nose-down trend continuing to minimum airborne value of -3.87° (p. 4-5).",
+      "factors": ["inappropriate_control_input"]
+    },
+    {
+      "t": 8,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft touched down at 960 feet per minute descent rate with nose-down pitch attitude of -3.1 degrees, nose wheel striking runway first before main landing gear, resulting in nose gear collapse (p. 5).",
+      "factors": ["hard_landing", "landing_gear_failure"],
+      "state": {
+        "ias": 133,
+        "vs": -960,
+        "pitch": -3.1
+      }
+    },
+    {
+      "t": 90,
+      "clock": null,
+      "phase": "landing",
+      "actor": "SYS",
+      "kind": "outcome",
+      "text": "Aircraft slid on nose gear for approximately 2,500 feet on right side of runway centerline before stopping adjacent to taxiway F turnoff; fuselage was scraped and wrinkled, right engine nacelle damaged (p. 5).",
+      "factors": ["hard_landing", "landing_gear_failure"]
+    }
+  ],
+  "cvr": [],
+  "recommendations": [],
+  "dissent": [],
+  "safety_changes": [],
+  "related": [],
+  "fdr": null,
+  "sources": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/87548/pdf"
+  ],
+  "asn_id": "20130722-0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Southwest_Airlines_Flight_345",
+  "interest": 5.91,
+  "report_links": [
+    "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/87548/pdf",
+    "https://www.ntsb.gov/news/press-releases/Pages/PR20130725.aspx"
+  ],
+  "extraction": {
+    "method": "llm",
+    "model": "claude-haiku-4-5-20251001",
+    "confidence": "high",
+    "reviewed": false,
+    "notes": [
+      "Deep read from sections: Probable Cause and Findings (p. 2), Factual Information (p. 3-5), Flight recorders analysis (p. 9-10)",
+      "All 8 events extracted with clock times from FDR/CVR data; 4 new events vs summary_record",
+      "Factors updated to use 'unstable_approach' instead of 'takeoff_configuration_error' per taxonomy"
+    ]
+  }
+}
