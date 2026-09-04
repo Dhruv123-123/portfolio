@@ -19,23 +19,11 @@
   </header>
 
   <main class="article">
-    <section>
-      <h2>Background</h2>
       <p>I watched a lot of Air Crash Investigation as a kid, the show where every episode works backwards from the black box to figure out what happened. It never made me scared of flying. If anything it did the opposite, because what you learn is that a plane basically never crashes for one reason. It's usually five or six small things lining up, a tired crew, a confusing instrument, a maintenance shortcut, some weather, a radio call that meant one thing to the tower and another to the pilot. Take any one of them away and everyone goes home. I found that fascinating then and I still do.</p>
-    </section>
-    <section>
-      <h2>Why accidents specifically</h2>
       <p>The other thing you learn is that every accident changed something. Tenerife in 1977 gave us standardized cockpit phrasing and crew resource management. Überlingen in 2002 settled that pilots follow the collision avoidance system over the controller. Air France 447 changed how pilots are trained for stalls at altitude. Flying is as safe as it is because the industry treats every failure as data. And I think there's a lot of safety work that could still be done, because all that data exists but it's scattered across seventy years of PDFs.</p>
-    </section>
-    <section>
-      <h2>The knowledge graph</h2>
       <p>A few months ago, over a couple of weekends, I vibecoded a tool to fix that for myself. It pulls accident reports, uses a language model to extract the structured stuff out of each one, and loads it into a knowledge graph: aircraft type, operator, phase of flight, contributing factors, and the safety recommendations that came out of each investigation, all as nodes with edges between them.</p>
       <p>Once it's a graph you can ask questions you couldn't really ask of a pile of PDFs. Which recommendations got made multiple times decades apart for the same root cause? Which aircraft types share a failure mode? How long does it usually take between an accident and the rule change it leads to? Some of the answers are reassuring and some really aren't. There's a viewer where you can start at one crash and click outward through everything it connects to, which I realize is the same thing I do on Wikipedia, just pointed at a darker subject. I think it's pretty cool.</p>
-    </section>
-    <section>
-      <h2>Now</h2>
       <p>It's a side project and it's a toy, but it points at something real. A surprising amount of aviation safety is a data problem, making the lessons that are already written down actually findable. I'd like to keep pulling on it.</p>
-    </section>
     <p class="back" style="margin-top: 3rem"><a href="../interests.html">← Back</a></p>
   </main>
 
