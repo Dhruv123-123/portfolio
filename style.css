@@ -89,15 +89,15 @@ ul.plain { list-style: none; padding: 0; margin: 0; display: flex; flex-directio
 .meta { font: 0.75rem/1 var(--mono); color: var(--faint); letter-spacing: 0.02em; }
 .head .meta { margin-left: auto; }
 
-.dishes { counter-reset: dish; }
-.dishes li { counter-increment: dish; }
-.dishes .head::before {
-  content: counter(dish, decimal-leading-zero);
+.numbered { counter-reset: item; }
+.numbered li { counter-increment: item; }
+.numbered .head::before {
+  content: counter(item, decimal-leading-zero);
   font: 0.75rem/1 var(--mono);
   color: var(--faint);
   min-width: 1.6rem;
 }
-.dishlinks { display: flex; gap: 1rem; font: 0.8125rem/1 var(--mono); margin: 0.45rem 0 0 2.35rem; }
+.numbered li p { margin: 0.35rem 0 0 2.35rem; font-size: 0.9375rem; }
 .note { color: var(--faint); font-style: italic; font-size: 0.9rem; }
 
 footer {
