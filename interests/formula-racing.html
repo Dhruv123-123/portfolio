@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Formula racing — Dhruv Ramasubban</title>
-  <meta name="description" content="A year on the vehicle dynamics team, modeling tires so the car turned faster.">
+  <meta name="description" content="A year on the vehicle dynamics team, modeling tires so the car could turn faster.">
   <link rel="icon" href="../favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,20 +21,20 @@
   <main class="article">
     <section>
       <h2>Background</h2>
-      <p>Sim racing gave me a very specific itch: I could tell you exactly what a car was doing through a corner, and I had no idea why. So in my first semester at Berkeley I joined Berkeley Formula Racing, the student team that designs and builds an electric open-wheel car from scratch every year for the Formula SAE competition, and asked to be put wherever the math was. That turned out to be vehicle dynamics.</p>
+      <p>Sim racing gave me a very specific itch. I could tell you exactly what a car was doing through a corner and I had no idea why. So my first semester at Berkeley I joined Berkeley Formula Racing, the student team that designs and builds an electric open wheel car from scratch every year for Formula SAE, and asked to be put wherever the math was. That turned out to be vehicle dynamics.</p>
     </section>
     <section>
       <h2>Tires are the whole car</h2>
-      <p>The thing nobody tells you about racecars is that every single part exists to manage four small patches of rubber, each about the size of your hand. The suspension, the aero, the weight distribution: all of it is there to keep those four patches loaded correctly. So the vehicle dynamics team spends a startling amount of its time on tire data.</p>
-      <p>My job was to turn raw tire test data into something the suspension engineers could actually use. I wrote Python and scikit-learn workflows that modeled how much cornering force a tire produces as a function of the load on it, and got the fits above an R² of 0.85, which in tire land is good. With that model in hand the team could ask real questions: how much should the car roll, how stiff should the anti-roll bars be, where should the weight sit. The answers were worth about seven percent in lap time, which is an eternity.</p>
+      <p>The thing nobody tells you about race cars is that every single part exists to manage four little patches of rubber about the size of your hand. Suspension, aero, weight distribution, all of it is there to keep those four patches loaded right. So vehicle dynamics spends a surprising amount of time on tire data.</p>
+      <p>My job was turning raw tire test data into something the suspension people could actually use. I wrote Python and scikit-learn workflows that modeled how much cornering force a tire makes as a function of the load on it, and got the fits above an R² of 0.85, which for tire data is pretty good. With that model the team could actually answer questions like how much the car should roll or how stiff the anti-roll bars should be. It was worth about seven percent in lap time, which is a lot.</p>
     </section>
     <section>
       <h2>What I actually learned</h2>
-      <p>Mostly that engineers don't want a model, they want an answer, and the shortest path between the two is a notebook they can run themselves. I spent the second half of the year building reproducible analysis notebooks so people could pull their own telemetry insights instead of asking me for one-off queries, and that was probably the most useful thing I did.</p>
+      <p>Mostly that engineers don't want a model, they want an answer, and the fastest way to give them one is a notebook they can run themselves. I spent the second half of the year building analysis notebooks so people could pull their own telemetry insights instead of asking me for one-off queries, and that was probably the most useful thing I did.</p>
     </section>
     <section>
-      <h2>Conclusion</h2>
-      <p>I left when I left Berkeley. I still think about slip angles more than a person should, and I still can't drive a real car anywhere near the limit. But I know exactly why the sim car does what it does now, and that was the point.</p>
+      <h2>Now</h2>
+      <p>I left when I left Berkeley. I still think about slip angles more than a normal person should, and I still can't drive a real car anywhere near the limit, but at least now I know exactly why the sim car does what it does.</p>
     </section>
     <p class="back" style="margin-top: 3rem"><a href="../interests.html">← Back</a></p>
   </main>
