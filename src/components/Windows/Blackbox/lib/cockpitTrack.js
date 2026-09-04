@@ -4,6 +4,8 @@
  * exact replay time regardless of frame rate. Cues live under
  * /blackbox/cockpit/<id>/cues.json (see pipeline/audio/render_cockpit_audio.py).
  */
+import { publicUrl } from './paths.js'
+
 export class CockpitTrack {
   constructor(getContext) {
     this.getContext = getContext // () => AudioContext (shared with the live synth)
@@ -24,7 +26,7 @@ export class CockpitTrack {
     this.buffers = {}
     this.id = id
     if (!id) return null
-    this.loading = fetch(`/blackbox/cockpit/${id}/cues.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null)
+    this.loading = fetch(publicUrl(`cockpit/${id}/cues.json`)).then((r) => (r.ok ? r.json() : null)).catch(() => null)
     const sheet = await this.loading
     if (!sheet || sheet.id !== id) return null
     this.sheet = sheet
@@ -35,7 +37,7 @@ export class CockpitTrack {
     if (this.buffers[file]) return this.buffers[file]
     const ctx = this.getContext()
     if (!ctx) return null
-    const p = fetch(`/blackbox/cockpit/${this.id}/${file}`).then((r) => r.arrayBuffer()).then((ab) => ctx.decodeAudioData(ab)).catch(() => null)
+    const p = fetch(publicUrl(`cockpit/${this.id}/${file}`)).then((r) => r.arrayBuffer()).then((ab) => ctx.decodeAudioData(ab)).catch(() => null)
     this.buffers[file] = p
     return p
   }

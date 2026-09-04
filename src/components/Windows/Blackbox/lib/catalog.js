@@ -2,7 +2,9 @@
  * Catalog tier: thousands of summary-level records served as a compact index
  * plus per-year shards under /blackbox/catalog/.
  */
-const BASE = '/blackbox/catalog'
+import { publicUrl } from './paths.js'
+
+const BASE = publicUrl('catalog')
 let indexPromise = null
 const shardCache = {}
 
