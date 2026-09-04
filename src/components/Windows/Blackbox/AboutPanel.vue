@@ -66,7 +66,7 @@
     <div class="ab-col">
       <h2>Corpus</h2>
       <p v-if="catalog && catalog.state === 'ready'">Catalog loaded: <b>{{ catalog.count.toLocaleString() }}</b> summary-level records ({{ Object.entries(catalog.tiers).map(([k, v]) => k + ' ' + v.toLocaleString()).join(', ') }}) on top of the {{ graph.records.length }} hand-reviewed full records below. Wikidata rows were extracted by Haiku subagents from Wikipedia text; NTSB rows are mapped by rules from the Board's coded findings.</p>
-      <p v-else class="bb-muted">The catalog tier (Wikidata/Wikipedia worldwide index and the NTSB public database) is loaded on demand from the Graph tab.</p>
+      <p v-else class="bb-muted">The catalog tier (Wikidata/Wikipedia worldwide index and the NTSB public database) is loaded on demand when the atlas opens, or from the Graph tab.</p>
       <table class="ab-table">
         <thead><tr><th>Agency</th><th>Records</th><th>Fatalities</th></tr></thead>
         <tbody>

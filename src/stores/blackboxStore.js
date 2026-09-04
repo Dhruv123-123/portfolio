@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 /** Shared state across the three Blackbox tools. */
 export const useBlackboxStore = defineStore('blackbox', {
   state: () => ({
-    tab: 'graph', // graph | replay | timeline | about
+    tab: 'atlas', // atlas | graph | replay | timeline | about; the globe is the landing view
     selectedId: null, // accident id focused in graph/timeline
     compareId: null,
     query: '',

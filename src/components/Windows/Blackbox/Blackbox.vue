@@ -239,8 +239,8 @@ async function loadCatalog() {
 }
 
 const tabs = [
-  { id: 'graph', label: 'Graph', title: 'Causal graph and search', key: '1' },
-  { id: 'atlas', label: 'Atlas', title: 'Every accident on a globe', key: '2' },
+  { id: 'atlas', label: 'Atlas', title: 'Every accident on a globe', key: '1' },
+  { id: 'graph', label: 'Graph', title: 'Causal graph and search', key: '2' },
   { id: 'replay', label: 'Replay', title: 'Flight data recorder replay', key: '3' },
   { id: 'timeline', label: 'Timeline', title: 'Event chain, compare, narrative', key: '4' },
   { id: 'about', label: 'Method', title: 'Method and sources', key: '5' }

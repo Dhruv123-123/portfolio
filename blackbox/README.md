@@ -92,7 +92,7 @@ python3 blackbox/pipeline/flightgear/export_flightgear.py                # Fligh
 On top of the hand-reviewed records, `blackbox/data/catalog/` holds summary-level
 records for thousands of accidents, served to the app as
 `public/blackbox/catalog/index.json` plus per-year shards and loaded on demand
-from the Graph tab.
+when the atlas opens (the landing view) or from the Graph tab.
 
 | Tier | Source | Volume | Extraction |
 |---|---|---|---|
