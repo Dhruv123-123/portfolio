@@ -100,6 +100,20 @@ ul.plain { list-style: none; padding: 0; margin: 0; display: flex; flex-directio
 .numbered li p { margin: 0.35rem 0 0 2.35rem; font-size: 0.9375rem; }
 .note { color: var(--faint); font-style: italic; font-size: 0.9rem; }
 
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem; list-style: none; padding: 0; margin: 0; }
+.card {
+  display: flex; flex-direction: column; gap: 0.4rem; height: 100%;
+  padding: 1.05rem 1.15rem 0.95rem;
+  border: 1px solid var(--rule); border-radius: 6px;
+  color: var(--fg); text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.card:hover { border-color: var(--accent); background: rgba(224, 145, 61, 0.04); color: var(--fg); }
+.card strong { font-size: 1rem; font-weight: 600; }
+.card span { color: var(--muted); font-size: 0.875rem; line-height: 1.5; }
+.card em { font: 0.75rem/1 var(--mono); font-style: normal; color: var(--faint); margin-top: 0.35rem; transition: color 0.15s ease; }
+.card:hover em { color: var(--accent); }
+
 footer {
   border-top: 1px solid var(--rule);
   margin-top: 3.6rem;
@@ -113,4 +127,5 @@ footer p { margin: 0; }
   body { padding-top: 4.5rem; font-size: 16px; }
   h1 { font-size: 1.6rem; }
   .head .meta { margin-left: 0; flex-basis: 100%; }
+  .grid { grid-template-columns: minmax(0, 1fr); }
 }
