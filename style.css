@@ -136,6 +136,16 @@ header p.meta { font: 0.8125rem/1 var(--mono); color: var(--faint); letter-spaci
 .team span.meta { color: var(--faint); }
 .team-figure figcaption { text-align: center; margin-top: 0.4rem; }
 @media (max-width: 480px) { .team { grid-template-columns: minmax(0, 1fr); } }
+.strava-figure { align-items: stretch; margin: 1.5rem 0 1.25rem; }
+.strava { border: 1px solid var(--rule); border-radius: 6px; padding: 1rem 1.15rem 1.05rem; display: flex; flex-direction: column; gap: 0.9rem; }
+.strava-head { display: flex; flex-direction: column; gap: 0.3rem; }
+.strava-head strong { font-size: 1.0625rem; font-weight: 600; }
+.strava-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; margin: 0; }
+.strava-stats div { display: flex; flex-direction: column; gap: 0.2rem; }
+.strava-stats dt { font: 0.7rem/1 var(--mono); color: var(--faint); letter-spacing: 0.04em; text-transform: uppercase; }
+.strava-stats dd { margin: 0; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; }
+.strava-badge { align-self: flex-start; font: 500 0.75rem/1 var(--mono); color: var(--accent); border: 1px solid rgba(224, 145, 61, 0.45); border-radius: 999px; padding: 0.4rem 0.7rem; }
+.strava-figure figcaption { text-align: center; margin-top: 0.4rem; }
 
 footer {
   border-top: 1px solid var(--rule);
