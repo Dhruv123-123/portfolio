@@ -114,6 +114,19 @@ ul.plain { list-style: none; padding: 0; margin: 0; display: flex; flex-directio
 .card em { font: 0.75rem/1 var(--mono); font-style: normal; color: var(--faint); margin-top: 0.35rem; transition: color 0.15s ease; }
 .card:hover em { color: var(--accent); }
 
+.meta.meta { display: block; margin: -0.4rem 0 0; }
+header p.meta { font: 0.8125rem/1 var(--mono); color: var(--faint); letter-spacing: 0.02em; }
+.article section { margin-top: 0; }
+.article h2 { margin-top: 3rem; }
+.article section:first-child h2 { margin-top: 2.6rem; }
+.article p { font-size: 1.0625rem; line-height: 1.7; text-wrap: pretty; }
+.bullets { margin: 0 0 1rem; padding-left: 1.25rem; color: var(--muted); line-height: 1.65; }
+.bullets li { margin: 0.35rem 0; padding-left: 0.2rem; }
+.bullets li::marker { color: var(--faint); }
+.media { margin: 2rem 0 0; display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
+.media video, .media img { display: block; max-width: 100%; max-height: 70vh; border-radius: 6px; border: 1px solid var(--rule); background: #000; }
+.media figcaption { font: 0.75rem/1 var(--mono); color: var(--faint); }
+
 footer {
   border-top: 1px solid var(--rule);
   margin-top: 3.6rem;

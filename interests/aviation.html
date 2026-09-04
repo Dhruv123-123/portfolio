@@ -13,17 +13,36 @@
 </head>
 <body>
   <header>
-    <p class="back"><a href="../">← dhruv ramasubban</a></p>
+    <p class="back"><a href="../interests.html">← interests</a></p>
     <h1>Aviation</h1>
+    <p class="meta">Aviation safety · side project, 2026</p>
   </header>
 
-  <main>
-    <p>I'm fascinated by the world of aviation accidents. Not the spectacle, but the investigations: the chain of small, individually survivable failures that line up into a disaster, and the way every one of them changed how planes are built and flown afterward.</p>
-    <p>I think there's still a lot of safety work to be done there, and a lot of it is a data problem. A few months ago I vibecoded a tool that builds a knowledge graph of every crash on record, linking aircraft, causes, airlines, and the recommendations that came out of each one. I find it pretty cool.</p>
+  <main class="article">
+    <section>
+      <h2>Background</h2>
+      <p>As a kid I watched a lot of Air Crash Investigation, the documentary series where each episode reconstructs an accident from the black box data outward, and I was never scared of flying afterward. The opposite, actually. What the show teaches, episode after episode, is that a plane almost never crashes for one reason. It crashes because six small, individually survivable things line up: a tired crew, a confusing instrument, a maintenance shortcut, a bit of weather, a phrase that meant one thing to the tower and another to the pilot. Remove any one and everyone goes home. I found that fascinating then and I find it fascinating now.</p>
+    </section>
+    <section>
+      <h2>Why accidents</h2>
+      <p>The other thing the show teaches is that every accident changed something. Tenerife in 1977, when two 747s collided in fog because of a misunderstood radio call, gave us standardized cockpit phrasing and crew resource management. Überlingen in 2002 settled, permanently, that pilots follow the collision-avoidance system over the human controller. Air France 447 rewrote how pilots are trained to recognize a stall at altitude. Aviation is the safest form of transport not because it started that way but because it has spent a century treating every failure as data.</p>
+      <p>That framing, safety as a data problem, is the thing I keep coming back to. Because the data is all there. It's just scattered across seventy years of PDFs.</p>
+    </section>
+    <section>
+      <h2>The knowledge graph</h2>
+      <p>A few months ago, over a couple of weekends, I vibecoded a tool to fix that for myself. It pulls accident records and investigation reports, uses a language model to extract the structured facts out of each report, and loads them into a knowledge graph: aircraft type, operator, phase of flight, contributing factors, and the safety recommendations that came out of each investigation, all as nodes with edges between them.</p>
+      <p>Once it's a graph you can ask questions that are almost impossible to ask of a pile of PDFs. Which recommendations have been made more than once, decades apart, for the same underlying cause? Which aircraft types share a failure mode? How long, on average, between an accident and the rule change it produces? Some of the answers are reassuring. Some of them are not.</p>
+      <p>It has a graph viewer where you can start at any single accident and click outward through everything it's connected to. I recognize that this is the same compulsion that keeps me on Wikipedia until 2am, just pointed at a specific and slightly grim subject. I find it pretty cool.</p>
+    </section>
+    <section>
+      <h2>Conclusion</h2>
+      <p>I think there's a lot of safety work still to be done in aviation, and I think a surprising amount of it is data plumbing rather than engineering: making the lessons already written down actually findable. The tool is a toy. But it's a toy that points at something real, and I'd like to keep pulling on it.</p>
+    </section>
+    <p class="back" style="margin-top: 3rem"><a href="../interests.html">← Back</a></p>
   </main>
 
   <footer>
-    <p><a href="../interests.html">← all interests</a> · <a href="mailto:dhruv.ramasubban@berkeley.edu">dhruv.ramasubban@berkeley.edu</a></p>
+    <p>Reach out at <a href="mailto:dhruv.ramasubban@berkeley.edu">dhruv.ramasubban@berkeley.edu</a>.</p>
   </footer>
 </body>
 </html>
