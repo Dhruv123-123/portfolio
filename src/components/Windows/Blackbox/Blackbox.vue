@@ -3,33 +3,36 @@
     <div v-if="booting" class="bb-boot" @click="booting = false">
       <pre class="bb-boot-text">{{ bootText }}<span class="bb-boot-cursor">▌</span></pre>
     </div>
-    <div class="bb-tabs">
-      <div class="bb-brand">
-        <span class="bb-brand-dot"></span>
-        BLACKBOX
-        <span class="bb-brand-sub" v-if="graph">{{ graph.records.length }} curated · {{ catalog.state === 'ready' ? catalog.count.toLocaleString() + ' catalog · ' : '' }}{{ fdrCount }} replays</span>
-      </div>
-      <button v-for="t in tabs" :key="t.id" class="bb-tab" :class="{ active: store.tab === t.id }" @click="store.tab = t.id" :title="t.label + ' · key ' + t.key">{{ t.label }}</button>
-      <span class="bb-tabs-right">
+    <header class="bb-top">
+      <a v-if="home" :href="home" class="bb-home" title="Back to the site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg>
+      </a>
+      <div class="bb-brand"><span class="bb-brand-dot"></span>Blackbox</div>
+      <nav class="bb-nav" aria-label="Sections">
+        <button v-for="t in tabs" :key="t.id" class="bb-tab" :class="{ active: store.tab === t.id }" @click="store.tab = t.id" :title="t.title + ' · key ' + t.key">{{ t.label }}</button>
+      </nav>
+      <div class="bb-top-right">
         <button class="bb-search" @click="palette = true" title="Jump to an accident, factor or action (Ctrl+K or /)">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
-          <span class="bb-search-text">Jump to an accident, factor or action</span>
+          <span class="bb-search-text">Search</span>
           <span class="bb-kbd">⌘K</span>
         </button>
         <span class="bb-menu-wrap">
-          <button class="bb-icon-btn" :class="{ active: menuOpen }" @click="menuOpen = !menuOpen" title="More">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></svg>
+          <button class="bb-btn icon ghost" :class="{ active: menuOpen }" @click="menuOpen = !menuOpen" title="More">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="19" cy="12" r="1.8"></circle></svg>
           </button>
-          <div v-if="menuOpen" class="bb-menu" @click="menuOpen = false">
-            <button class="bb-menu-item" @click="cycleCrt"><span>Screen look</span><span class="bb-muted">{{ store.crt === 'amber' ? 'amber' : store.crt ? 'CRT' : 'plain' }} ▸</span></button>
-            <button class="bb-menu-item" @click="toggleDrift"><span>Drift</span><span class="bb-muted">{{ drifting ? 'on' : 'the exhibit plays itself' }}</span></button>
-            <button v-if="deepLinks" class="bb-menu-item" @click="share"><span>Share this view</span><span class="bb-muted">{{ shared ? 'copied ✓' : 'copy link' }}</span></button>
-            <button class="bb-menu-item" @click="store.tab = 'about'"><span>Method and sources</span><span class="bb-muted">tab 5</span></button>
-            <a class="bb-menu-item" href="https://www.flightgear.org/" target="_blank" rel="noopener"><span>FlightGear</span><span class="bb-muted">replays export to it ↗</span></a>
+          <div v-if="menuOpen" class="bb-popover bb-menu" @click="menuOpen = false">
+            <button class="bb-menu-item" @click="cycleCrt"><span>Screen look</span><span class="bb-muted">{{ store.crt === 'amber' ? 'amber' : store.crt ? 'CRT' : 'plain' }}</span></button>
+            <button class="bb-menu-item" @click="toggleDrift"><span>Drift</span><span class="bb-muted">{{ drifting ? 'on' : 'plays itself' }}</span></button>
+            <button v-if="deepLinks" class="bb-menu-item" @click="share"><span>Share this view</span><span class="bb-muted">{{ shared ? 'copied' : 'copy link' }}</span></button>
+            <div class="bb-divider"></div>
+            <button class="bb-menu-item" @click="store.tab = 'about'"><span>Method and sources</span><span class="bb-muted">5</span></button>
+            <a class="bb-menu-item" href="https://www.flightgear.org/" target="_blank" rel="noopener"><span>FlightGear</span><span class="bb-muted">↗</span></a>
+            <a v-if="source" class="bb-menu-item" :href="source" target="_blank" rel="noopener"><span>Source on GitHub</span><span class="bb-muted">↗</span></a>
           </div>
         </span>
-      </span>
-    </div>
+      </div>
+    </header>
     <div class="bb-body">
       <div v-if="error" class="bb-center bb-error">Failed to load corpus: {{ error }}</div>
       <div v-else-if="!graph" class="bb-center">
@@ -51,6 +54,7 @@
 
 <script setup>
 import { ref, shallowRef, computed, onMounted, onBeforeUnmount, watch } from 'vue'
+import './theme.css'
 import { useBlackboxStore } from '@/stores/blackboxStore'
 import { buildIndex } from './lib/search.js'
 import { loadCatalogIndex, rowToStub } from './lib/catalog.js'
@@ -62,7 +66,9 @@ import AboutPanel from './AboutPanel.vue'
 import StoryMode from './StoryMode.vue'
 import CommandPalette from './CommandPalette.vue'
 
-const props = defineProps({ deepLinks: { type: Boolean, default: false } })
+const props = defineProps({ deepLinks: { type: Boolean, default: false }, home: { type: String, default: '' }, source: { type: String, default: '' } })
+const home = computed(() => props.home)
+const source = computed(() => props.source)
 const deepLinks = computed(() => props.deepLinks)
 const store = useBlackboxStore()
 const graph = shallowRef(null)
@@ -158,7 +164,7 @@ function boot() {
     'mounting taxonomy ............ 122 causal factors',
     'reading curated reports ...... 372 records',
     'indexing catalog ............. 9,952 summaries available',
-    'flight data recorders ........ 6 replays',
+    'flight data recorders ........ 105 replays',
     'audio synthesis .............. ready',
     'READY.'
   ]
@@ -233,18 +239,16 @@ async function loadCatalog() {
 }
 
 const tabs = [
-  { id: 'graph', label: 'Graph & search', key: '1' },
-  { id: 'atlas', label: 'Atlas', key: '2' },
-  { id: 'replay', label: 'FDR replay', key: '3' },
-  { id: 'timeline', label: 'Timeline', key: '4' },
-  { id: 'about', label: 'Method', key: '5' }
+  { id: 'graph', label: 'Graph', title: 'Causal graph and search', key: '1' },
+  { id: 'atlas', label: 'Atlas', title: 'Every accident on a globe', key: '2' },
+  { id: 'replay', label: 'Replay', title: 'Flight data recorder replay', key: '3' },
+  { id: 'timeline', label: 'Timeline', title: 'Event chain, compare, narrative', key: '4' },
+  { id: 'about', label: 'Method', title: 'Method and sources', key: '5' }
 ]
 // The globe is heavy: mount it the first time the tab is opened, then keep it warm.
 const atlasMounted = ref(false)
 watch(() => store.tab, (t) => { if (t === 'atlas') atlasMounted.value = true }, { immediate: true })
 
-const agencyCount = computed(() => (graph.value ? graph.value.agencies.length : 0))
-const fdrCount = computed(() => (graph.value ? graph.value.records.filter((r) => r.fdr).length : 0))
 
 onMounted(async () => {
   boot()
@@ -272,124 +276,36 @@ onBeforeUnmount(() => {
 </script>
 
 <style>
-/* Global (unscoped) Blackbox theme so child components share tokens */
-.bb-root {
-  --bb-bg: #0b0f18;
-  --bb-panel: #121a2a;
-  --bb-panel-2: #182236;
-  --bb-line: #26334d;
-  --bb-text: #e6eefc;
-  --bb-muted: #8fa3c7;
-  --bb-accent: #ffbf00;
-  --bb-accent-2: #22e08a;
-  --bb-danger: #ff4d4d;
-  --bb-blue: #4c8dff;
-  height: 100%;
-  padding-top: 1.55rem;
-  background: var(--bb-bg);
-  color: var(--bb-text);
-  font-family: Tahoma, Verdana, sans-serif;
-  font-size: 12px;
-  display: flex;
-  flex-direction: column;
-  user-select: text;
-}
-.bb-tabs {
-  display: flex;
-  align-items: stretch;
-  background: #070a12;
-  border-bottom: 1px solid var(--bb-line);
-  height: 30px;
-  flex: none;
-}
-.bb-brand {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 0 12px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  font-size: 11px;
-  color: var(--bb-accent);
-  border-right: 1px solid var(--bb-line);
-}
-.bb-brand-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #ff6a00;
-  box-shadow: 0 0 8px #ff6a00;
-}
-.bb-brand-sub {
-  font-weight: 400;
-  letter-spacing: 0;
-  color: var(--bb-muted);
-  margin-left: 6px;
-  font-size: 10px;
-}
-.bb-tab {
-  background: transparent;
-  border: none;
-  border-right: 1px solid var(--bb-line);
-  color: var(--bb-muted);
-  padding: 0 14px;
-  font: inherit;
-  font-size: 11px;
-  cursor: pointer;
-}
-.bb-tab:hover { color: var(--bb-text); background: #0f1524; }
-.bb-tab.active { color: var(--bb-text); background: var(--bb-panel); box-shadow: inset 0 -2px 0 var(--bb-accent); }
-.bb-tab-key { display: inline-block; font-size: 9px; color: #566a92; margin-right: 6px; border: 1px solid #2a3550; border-radius: 3px; padding: 0 3px; }
-.bb-tabs-right { margin-left: auto; display: flex; align-items: center; gap: 8px; padding: 0 10px; }
-.bb-search { display: flex; align-items: center; gap: 8px; height: 24px; width: 260px; max-width: 34vw; background: #0f1524; border: 1px solid var(--bb-line); border-radius: 4px; padding: 0 8px; color: #566a92; font: inherit; font-size: 11px; cursor: pointer; text-align: left; }
-.bb-search:hover { border-color: #3a4a6a; color: var(--bb-muted); }
+/* Shell chrome. Tokens and shared components live in theme.css. */
+.bb-top { display: flex; align-items: center; gap: 4px; height: 44px; padding: 0 10px 0 8px; background: var(--bb-panel); border-bottom: 1px solid var(--bb-line); flex: none; }
+.bb-home { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: var(--bb-radius); color: var(--bb-muted); text-decoration: none; }
+.bb-home:hover { color: var(--bb-text); background: var(--bb-panel-2); }
+.bb-brand { display: flex; align-items: center; gap: 8px; padding: 0 14px 0 6px; font-weight: 600; font-size: 13px; letter-spacing: 0.01em; color: var(--bb-text); }
+.bb-brand-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bb-accent); }
+.bb-nav { display: flex; align-items: stretch; height: 100%; gap: 2px; }
+.bb-tab { position: relative; background: transparent; border: none; color: var(--bb-muted); padding: 0 12px; font: inherit; font-size: 12.5px; cursor: pointer; }
+.bb-tab:hover { color: var(--bb-text); }
+.bb-tab.active { color: var(--bb-text); }
+.bb-tab.active::after { content: ''; position: absolute; left: 10px; right: 10px; bottom: -1px; height: 2px; background: var(--bb-accent); border-radius: 1px; }
+.bb-top-right { margin-left: auto; display: flex; align-items: center; gap: 6px; }
+.bb-search { display: flex; align-items: center; gap: 8px; height: var(--bb-control); width: 200px; max-width: 30vw; background: var(--bb-bg); border: 1px solid var(--bb-line-2); border-radius: var(--bb-radius); padding: 0 8px; color: var(--bb-muted); font: inherit; font-size: 12px; cursor: pointer; text-align: left; }
+.bb-search:hover { border-color: var(--bb-muted); color: var(--bb-text-2); }
 .bb-search-text { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.bb-icon-btn { width: 26px; height: 24px; display: flex; align-items: center; justify-content: center; background: transparent; border: 1px solid var(--bb-line); border-radius: 4px; color: var(--bb-muted); cursor: pointer; }
-.bb-icon-btn:hover, .bb-icon-btn.active { color: var(--bb-text); border-color: #3a4a6a; }
 .bb-menu-wrap { position: relative; }
-.bb-menu { position: absolute; right: 0; top: 30px; z-index: 80; width: 250px; background: #0f1524; border: 1px solid var(--bb-line); border-radius: 6px; box-shadow: 0 12px 40px rgba(0,0,0,0.6); padding: 4px 0; }
-.bb-menu-item { display: flex; justify-content: space-between; gap: 10px; width: 100%; padding: 7px 12px; background: none; border: none; color: var(--bb-text); font: inherit; font-size: 11px; text-align: left; cursor: pointer; text-decoration: none; }
-.bb-menu-item:hover { background: #1c2a45; }
-@media (max-width: 700px) { .bb-search { width: 34px; } .bb-search-text, .bb-search .bb-kbd { display: none; } }
-.bb-body { flex: 1; min-height: 0; position: relative; }
-.bb-boot { position: absolute; inset: 0; z-index: 100; background: #03050a; display: flex; align-items: center; justify-content: center; cursor: pointer; animation: bb-boot-in 0.2s; }
-.bb-boot-text { font-family: Consolas, 'Courier New', monospace; font-size: 12px; line-height: 1.7; color: #ffbf00; text-shadow: 0 0 6px rgba(255,191,0,0.6); margin: 0; letter-spacing: 0.04em; }
+.bb-menu { right: 0; top: 34px; width: 240px; }
+@media (max-width: 700px) { .bb-search { width: 34px; } .bb-search-text, .bb-search .bb-kbd { display: none; } .bb-brand { padding-right: 6px; } .bb-tab { padding: 0 8px; } }
+
+.bb-boot { position: absolute; inset: 0; z-index: 100; background: #04060a; display: flex; align-items: center; justify-content: center; cursor: pointer; animation: bb-boot-in 0.2s; }
+.bb-boot-text { font-family: var(--bb-mono); font-size: 12px; line-height: 1.7; color: var(--bb-accent); margin: 0; letter-spacing: 0.04em; }
 .bb-boot-cursor { animation: bb-blink 0.6s step-end infinite; }
 @keyframes bb-blink { 50% { opacity: 0; } }
 @keyframes bb-boot-in { from { opacity: 0; } to { opacity: 1; } }
 /* Amber monochrome */
 .bb-amber { filter: sepia(1) saturate(2.4) hue-rotate(-12deg) contrast(1.05); }
-.bb-drift .bb-tabs { opacity: 0.35; transition: opacity 1.5s; }
-.bb-drift .bb-tabs:hover { opacity: 1; }
+.bb-drift .bb-top { opacity: 0.35; transition: opacity 1.5s; }
+.bb-drift .bb-top:hover { opacity: 1; }
 /* CRT look */
 .bb-crt::after { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 200; background: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 2px, rgba(0,0,0,0.22) 3px), radial-gradient(ellipse at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.45) 100%); mix-blend-mode: multiply; animation: bb-flicker 4s infinite; }
 .bb-crt { text-shadow: 0 0 1px rgba(120,220,255,0.35); position: relative; }
 @keyframes bb-flicker { 0%, 100% { opacity: 1; } 47% { opacity: 1; } 48% { opacity: 0.85; } 49% { opacity: 1; } 83% { opacity: 1; } 84% { opacity: 0.9; } 85% { opacity: 1; } }
-.bb-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: var(--bb-muted); }
-.bb-error { color: var(--bb-danger); }
-.bb-spinner { width: 26px; height: 26px; border: 3px solid var(--bb-line); border-top-color: var(--bb-accent); border-radius: 50%; animation: bb-spin 0.9s linear infinite; }
-@keyframes bb-spin { to { transform: rotate(360deg); } }
-
-/* Shared widgets */
-.bb-btn { background: var(--bb-panel-2); border: 1px solid var(--bb-line); color: var(--bb-text); font: inherit; font-size: 11px; padding: 3px 8px; border-radius: 3px; cursor: pointer; }
-.bb-btn:hover { border-color: var(--bb-accent); }
-.bb-btn.active { background: var(--bb-accent); color: #111; border-color: var(--bb-accent); font-weight: 700; }
-.bb-btn:disabled { opacity: 0.4; cursor: default; }
-.bb-btn.small { padding: 1px 6px; font-size: 10px; }
-.bb-input { background: #070a12; border: 1px solid var(--bb-line); color: var(--bb-text); font: inherit; padding: 5px 8px; border-radius: 3px; width: 100%; outline: none; }
-.bb-input:focus { border-color: var(--bb-accent); }
-.bb-select { background: #070a12; border: 1px solid var(--bb-line); color: var(--bb-text); font: inherit; font-size: 11px; padding: 3px 4px; border-radius: 3px; }
-.bb-chip { display: inline-flex; align-items: center; gap: 4px; padding: 1px 6px; border-radius: 10px; font-size: 10px; border: 1px solid transparent; cursor: pointer; white-space: nowrap; }
-.bb-chip.factor { color: #111; font-weight: 600; }
-.bb-chip.ghost { border-color: var(--bb-line); color: var(--bb-muted); background: transparent; }
-.bb-chip.ghost:hover { border-color: var(--bb-accent); color: var(--bb-text); }
-.bb-muted { color: var(--bb-muted); }
-.bb-h { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bb-muted); margin: 10px 0 4px; }
-.bb-scroll { overflow: auto; scrollbar-width: thin; scrollbar-color: #2a3550 transparent; }
-.bb-scroll::-webkit-scrollbar { width: 8px; height: 8px; }
-.bb-scroll::-webkit-scrollbar-thumb { background: #2a3550; border-radius: 4px; }
-.bb-kbd { font-family: Consolas, monospace; font-size: 10px; background: #070a12; border: 1px solid var(--bb-line); border-radius: 3px; padding: 0 4px; }
-.bb-agency { font-size: 9px; font-weight: 700; padding: 0 4px; border-radius: 2px; background: #2a3550; color: #cfe0ff; letter-spacing: 0.05em; }
-.bb-link { color: var(--bb-blue); cursor: pointer; text-decoration: underline dotted; }
-.bb-link:hover { color: var(--bb-accent); }
 </style>

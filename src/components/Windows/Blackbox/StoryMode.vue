@@ -6,11 +6,14 @@
       <span class="st-kicker">STORY · {{ rec.title }}</span>
       <span class="st-count bb-muted">{{ sceneIndex + 1 }} / {{ scenes.length }}</span>
       <span class="st-ctl" @click.stop>
-        <button class="bb-btn small" :class="{ active: autoplay }" @click="autoplay = !autoplay" title="auto-advance (space)">{{ autoplay ? '❚❚' : '▶' }}</button>
-        <button class="bb-btn small" :class="{ active: narrate }" @click="toggleNarrate" title="read aloud with speech synthesis">narrate</button>
-        <button class="bb-btn small" @click="prev" title="previous (←)">‹</button>
-        <button class="bb-btn small" @click="next" title="next (→ or click)">›</button>
-        <button class="bb-btn small" @click="close" title="close (esc)">✕</button>
+        <button class="bb-btn small icon" :class="{ active: autoplay }" @click="autoplay = !autoplay" title="auto-advance (space)">
+          <svg v-if="!autoplay" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l11-7z"></path></svg>
+          <svg v-else width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14"></rect><rect x="14" y="5" width="4" height="14"></rect></svg>
+        </button>
+        <button class="bb-btn small" :class="{ active: narrate }" @click="toggleNarrate" title="read aloud with speech synthesis">Narrate</button>
+        <button class="bb-btn small icon" @click="prev" title="previous (←)">‹</button>
+        <button class="bb-btn small icon" @click="next" title="next (→ or click)">›</button>
+        <button class="bb-btn small icon" @click="close" title="close (esc)">×</button>
       </span>
     </div>
 
@@ -44,7 +47,7 @@
           <div v-for="(v, k) in scene.ev.state" :key="k" class="st-inst"><span class="st-inst-k">{{ stateLabel(k) }}</span><span class="st-inst-v">{{ stateValue(k, v) }}</span></div>
         </div>
         <div class="st-factors" v-if="scene.ev.factors && scene.ev.factors.length">
-          <span v-for="f in scene.ev.factors" :key="f" class="bb-chip factor" :style="{ background: factorColor(f) }">{{ factorLabel(f) }}</span>
+          <span v-for="f in scene.ev.factors" :key="f" class="bb-chip factor" :style="{ '--c': factorColor(f) }">{{ factorLabel(f) }}</span>
         </div>
         <div class="st-cvr" v-if="scene.cvr.length">
           <div v-for="(c, i) in scene.cvr" :key="i" class="st-cvr-line"><span class="st-cvr-spk">{{ c.speaker }}</span> “{{ c.translation || c.text }}”</div>
@@ -56,9 +59,9 @@
         <div class="st-label">{{ scene.label }}</div>
         <div class="st-chain">
           <div v-for="(e, i) in rec.chain.slice(0, 14)" :key="i" class="st-chain-row" :style="{ animationDelay: i * 0.35 + 's' }">
-            <span class="bb-chip factor" :style="{ background: factorColor(e[0]) }">{{ factorLabel(e[0]) }}</span>
+            <span class="bb-chip factor" :style="{ '--c': factorColor(e[0]) }">{{ factorLabel(e[0]) }}</span>
             <span class="st-arrow">→</span>
-            <span class="bb-chip factor" :style="{ background: factorColor(e[1]) }">{{ factorLabel(e[1]) }}</span>
+            <span class="bb-chip factor" :style="{ '--c': factorColor(e[1]) }">{{ factorLabel(e[1]) }}</span>
           </div>
           <div v-if="rec.chain.length > 14" class="bb-muted">and {{ rec.chain.length - 14 }} more edges</div>
         </div>
@@ -87,17 +90,17 @@
         <div class="st-sub">investigated · {{ (rec.recommendations || []).length }} recommendations · {{ rec.factors.length }} factors in the graph</div>
         <div v-if="rec.audio && rec.audio.length" class="st-audio" @click.stop>
           <div v-for="(a, i) in rec.audio.slice(0, 2)" :key="i" class="st-audio-item">
-            <span class="st-audio-kind">{{ a.kind === 'cvr' ? 'CVR' : a.kind === 'atc' ? 'ATC' : 'AUDIO' }}</span> {{ a.title }}
+            <span class="bb-tag">{{ a.kind === 'cvr' ? 'CVR' : a.kind === 'atc' ? 'ATC' : 'Audio' }}</span> {{ a.title }}
             <audio controls preload="none" :src="a.url" class="st-audio-el"></audio>
           </div>
         </div>
-        <a :href="wikipediaUrl(rec)" target="_blank" rel="noopener" class="st-readmore" @click.stop>{{ hasWikipediaArticle(rec) ? 'Read more on Wikipedia ↗' : 'Search Wikipedia for this accident ↗' }}</a>
         <div class="st-end-actions" @click.stop>
-          <button class="bb-btn" @click="go('graph')">Open in graph ▸</button>
-          <button class="bb-btn" @click="go('timeline')">Timeline ▸</button>
-          <button class="bb-btn" :disabled="!rec.fdr" @click="go('replay')">FDR replay ▸</button>
-          <button class="bb-btn" @click="go('atlas')">Atlas ▸</button>
-          <button class="bb-btn" @click="restart">Watch again</button>
+          <button class="bb-btn" @click="go('graph')">Open in graph</button>
+          <button class="bb-btn" @click="go('timeline')">Timeline</button>
+          <button class="bb-btn" v-if="rec.fdr" @click="go('replay')">Replay</button>
+          <button class="bb-btn" @click="go('atlas')">Atlas</button>
+          <a :href="wikipediaUrl(rec)" target="_blank" rel="noopener" class="bb-btn st-readmore">{{ hasWikipediaArticle(rec) ? 'Wikipedia ↗' : 'Search Wikipedia ↗' }}</a>
+          <button class="bb-btn ghost" @click="restart">Watch again</button>
         </div>
       </template>
     </div>
@@ -348,16 +351,16 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-.st-root { position: absolute; inset: 0; z-index: 50; background: #04060c; color: #e6eefc; overflow: hidden; cursor: pointer; outline: none; font-family: Tahoma, Verdana, sans-serif; }
+.st-root { position: absolute; inset: 0; z-index: 50; background: #04060c; color: var(--bb-text); overflow: hidden; cursor: pointer; outline: none; font-family: var(--bb-font); }
 .st-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .st-vignette { position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 180px 60px rgba(0,0,0,0.85); }
-.st-top { position: absolute; top: 10px; left: 16px; right: 16px; display: flex; align-items: center; gap: 12px; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bb-accent); z-index: 2; }
+.st-top { position: absolute; top: 10px; left: 16px; right: 16px; display: flex; align-items: center; gap: 12px; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bb-muted); z-index: 2; }
 .st-count { flex: 1; letter-spacing: 0.1em; }
-.st-ctl { display: flex; gap: 3px; cursor: default; }
+.st-ctl { display: flex; gap: 4px; cursor: default; }
 .st-scene { position: absolute; inset: 40px 8% 60px; display: flex; flex-direction: column; justify-content: center; gap: 10px; animation: st-in 0.9s ease-out; max-width: 900px; margin: 0 auto; }
 @keyframes st-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-.st-date { font-family: Consolas, monospace; font-size: 14px; letter-spacing: 0.3em; color: var(--bb-muted); }
-.st-h1 { font-size: clamp(30px, 6vw, 64px); margin: 0; line-height: 1.05; font-weight: 700; letter-spacing: -0.01em; text-shadow: 0 0 30px rgba(255,191,0,0.25); }
+.st-date { font-family: var(--bb-mono); font-size: 14px; letter-spacing: 0.3em; color: var(--bb-muted); }
+.st-h1 { font-size: clamp(30px, 6vw, 64px); margin: 0; line-height: 1.05; font-weight: 600; letter-spacing: -0.02em; }
 .st-h2 { font-size: clamp(22px, 3.5vw, 36px); margin: 0; }
 .st-sub { font-size: 14px; color: #b8c6e3; }
 .st-big { margin-top: 16px; font-size: clamp(36px, 7vw, 72px); font-weight: 700; color: #ff6a5c; line-height: 1; }
@@ -371,32 +374,30 @@ onBeforeUnmount(() => {
 .st-text.small { font-size: clamp(13px, 1.5vw, 17px); }
 .st-cursor { color: var(--bb-accent); animation: st-blink 0.7s step-end infinite; }
 @keyframes st-blink { 50% { opacity: 0; } }
-.st-clock { font-family: Consolas, monospace; font-size: clamp(28px, 5vw, 48px); color: #fff; letter-spacing: 0.08em; }
+.st-clock { font-family: var(--bb-mono); font-size: clamp(28px, 5vw, 48px); color: #fff; letter-spacing: 0.06em; font-variant-numeric: tabular-nums; }
 .st-actor { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #ff8a5c; }
 .actor-ATC { color: #4c8dff; } .actor-SYS { color: #c792ea; } .actor-ENV { color: #8fb3ff; } .actor-FO, .actor-PM, .actor-PNF { color: #22e08a; }
 .st-kind { color: var(--bb-muted); font-weight: 400; letter-spacing: 0.05em; }
 .st-state { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-.st-inst { background: rgba(8,12,24,0.8); border: 1px solid var(--bb-line); border-radius: 4px; padding: 6px 10px; display: flex; flex-direction: column; min-width: 78px; animation: st-in 0.6s ease-out both; }
+.st-inst { background: rgba(19,23,30,0.8); border: 1px solid var(--bb-line-2); border-radius: var(--bb-radius); padding: 6px 10px; display: flex; flex-direction: column; min-width: 78px; animation: st-in 0.6s ease-out both; }
 .st-inst-k { font-size: 9px; color: var(--bb-muted); letter-spacing: 0.1em; }
-.st-inst-v { font-family: Consolas, monospace; font-size: 16px; color: #22e08a; }
+.st-inst-v { font-family: var(--bb-mono); font-size: 16px; color: var(--bb-accent-2); font-variant-numeric: tabular-nums; }
 .st-factors { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
 .st-cvr { margin-top: 10px; border-left: 2px solid var(--bb-line); padding-left: 10px; }
 .st-cvr-line { font-size: 14px; font-style: italic; color: #d3ddf0; line-height: 1.5; }
 .st-cvr-spk { font-style: normal; font-weight: 700; font-size: 10px; color: var(--bb-accent); margin-right: 6px; }
 .st-chain { display: flex; flex-direction: column; gap: 6px; }
 .st-chain-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; animation: st-in 0.6s ease-out both; }
-.st-chain-row .bb-chip { font-size: 12px; padding: 3px 9px; }
+.st-chain-row .bb-chip { font-size: 12.5px; height: 26px; padding: 0 11px; }
 .st-arrow { color: var(--bb-accent); font-weight: 700; font-size: 16px; }
 .st-list { display: flex; flex-direction: column; gap: 10px; }
 .st-list-item { font-size: 15px; line-height: 1.45; animation: st-in 0.7s ease-out both; display: flex; gap: 12px; align-items: baseline; }
-.st-list-head { font-family: Consolas, monospace; font-size: 11px; color: var(--bb-accent); white-space: nowrap; min-width: 60px; }
+.st-list-head { font-family: var(--bb-mono); font-size: 11px; color: var(--bb-accent); white-space: nowrap; min-width: 60px; }
 .st-audio { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; cursor: default; }
 .st-audio-item { font-size: 12px; color: #d3ddf0; }
-.st-audio-kind { font-size: 9px; font-weight: 700; color: #111; background: var(--bb-accent); padding: 0 4px; border-radius: 2px; margin-right: 4px; }
 .st-audio-el { display: block; width: min(420px, 100%); height: 30px; margin-top: 3px; }
-.st-readmore { display: inline-block; align-self: flex-start; color: var(--bb-accent); font-weight: 700; text-decoration: none; border: 1px solid var(--bb-accent); border-radius: 3px; padding: 8px 14px; font-size: 14px; margin-top: 12px; cursor: pointer; }
-.st-readmore:hover { background: var(--bb-accent); color: #111; }
-.st-end-actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; cursor: default; }
+.st-readmore { color: var(--bb-blue); }
+.st-end-actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 16px; cursor: default; }
 .st-progress { position: absolute; left: 16px; right: 16px; bottom: 30px; display: flex; gap: 3px; z-index: 2; }
 .st-seg { flex: 1; height: 3px; background: rgba(255,255,255,0.14); border-radius: 2px; overflow: hidden; cursor: pointer; }
 .st-seg-fill { height: 100%; background: var(--bb-accent); transition: width 0.2s linear; }

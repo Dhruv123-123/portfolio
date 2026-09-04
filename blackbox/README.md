@@ -26,7 +26,9 @@ blackbox/
     build_embeddings.mjs  sentence embeddings -> src/data/blackbox/embeddings.json
     test_search.mjs       query-engine regression cases
 src/components/Windows/Blackbox/
-  Blackbox.vue            shell (tabs, data loading, boot, palette, deep links, CRT)
+  Blackbox.vue            shell (top bar, data loading, boot, palette, deep links, CRT)
+  theme.css               design system: tokens and the shared component classes every panel uses
+  RecordActions.vue       the one action row a record gets everywhere (Timeline, Replay, Story, FlightGear, Wikipedia)
   GraphExplorer.vue       force graph + query engine UI + counterfactuals
   Atlas.vue               globe of every positioned record, century time-scrub
   FdrReplay.vue           three.js replay, PFD/radar, HUD, audio, CVR

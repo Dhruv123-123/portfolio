@@ -1,5 +1,13 @@
 <template>
   <div class="ab-root bb-scroll">
+    <div class="ab-stats bb-stats">
+      <div class="bb-stat"><b>{{ graph.records.length }}</b><span>reviewed records</span></div>
+      <div class="bb-stat"><b>{{ catalog && catalog.state === 'ready' ? catalog.count.toLocaleString() : '9,952' }}</b><span>catalog summaries</span></div>
+      <div class="bb-stat"><b>{{ replays }}</b><span>replays</span></div>
+      <div class="bb-stat"><b>{{ graph.taxonomy.factors.length }}</b><span>factors</span></div>
+      <div class="bb-stat"><b>{{ graph.agencies.length }}</b><span>agencies</span></div>
+      <div class="bb-stat"><b>{{ withAudio }}</b><span>real recordings</span></div>
+    </div>
     <div class="ab-col">
       <h2>What this is</h2>
       <p>
@@ -107,21 +115,29 @@ const byCategory = computed(() =>
   })
 )
 const topEdges = computed(() => props.graph.stats.chain_edges.slice(0, 12))
+const replays = computed(() => props.graph.records.filter((r) => r.fdr).length)
+const withAudio = computed(() => props.graph.records.filter((r) => r.audio && r.audio.length).length)
 const dissenting = computed(() => props.graph.records.filter((r) => r.dissent && r.dissent.length))
 </script>
 
 <style scoped>
-.ab-root { position: absolute; inset: 0; overflow: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 14px 20px 30px; line-height: 1.5; }
-.ab-col h2 { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bb-accent); margin: 14px 0 6px; }
+.ab-root { position: absolute; inset: 0; overflow: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; padding: 0 24px 40px; line-height: 1.55; }
+.ab-stats { grid-column: 1 / -1; gap: 36px; padding: 16px 0; margin: 0 0 8px; border-bottom: 1px solid var(--bb-line); }
+.ab-stats .bb-stat b { font-size: 22px; }
+.ab-col { min-width: 0; }
+.ab-col h2 { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bb-muted); margin: 18px 0 6px; font-weight: 500; }
 .ab-col h2:first-child { margin-top: 0; }
-.ab-col p, .ab-col li { color: #d3ddf0; }
+.ab-col p, .ab-col li { color: var(--bb-text-2); font-size: 12.5px; }
+.ab-col b { color: var(--bb-text); font-weight: 600; }
 .ab-steps { padding-left: 18px; }
 .ab-steps li { margin-bottom: 4px; }
-code { font-family: Consolas, monospace; background: #070a12; padding: 0 3px; border-radius: 2px; }
-.ab-table { width: 100%; border-collapse: collapse; font-size: 11px; }
-.ab-table td, .ab-table th { border-bottom: 1px solid var(--bb-line); padding: 3px 4px; text-align: left; }
-.ab-table th { color: var(--bb-muted); font-weight: 400; font-size: 10px; }
-.ab-swatch { display: inline-block; width: 9px; height: 9px; margin-right: 6px; border-radius: 2px; }
+code { font-family: var(--bb-mono); font-size: 11px; background: var(--bb-panel-2); padding: 0 4px; border-radius: 3px; }
+.ab-table { width: 100%; border-collapse: collapse; font-size: 11.5px; }
+.ab-table td, .ab-table th { border-bottom: 1px solid var(--bb-line); padding: 4px 4px; text-align: left; }
+.ab-table td:not(:first-child) { font-family: var(--bb-mono); font-variant-numeric: tabular-nums; text-align: right; color: var(--bb-text-2); }
+.ab-table th { color: var(--bb-muted); font-weight: 500; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; }
+.ab-table th:not(:first-child) { text-align: right; }
+.ab-swatch { display: inline-block; width: 8px; height: 8px; margin-right: 6px; border-radius: 50%; }
 ul { padding-left: 18px; }
-@media (max-width: 900px) { .ab-root { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .ab-root { grid-template-columns: 1fr; } .ab-stats { flex-wrap: wrap; gap: 20px; } }
 </style>

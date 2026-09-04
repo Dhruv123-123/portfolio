@@ -2,97 +2,103 @@
   <div class="at-root" :class="{ 'at-requiem': requiem }">
     <canvas ref="canvasRef" class="at-canvas"></canvas>
 
-    <!-- Year + playback -->
-    <div class="at-year">
-      <div class="at-year-num">{{ Math.min(Math.floor(year), yearMax - 1) }}</div>
-      <div class="at-year-sub bb-muted">{{ cumulative.n.toLocaleString() }} accidents · {{ cumulative.f.toLocaleString() }} lives so far</div>
-      <div class="at-year-ctl">
-        <button class="bb-btn small" @click="togglePlay">{{ playing ? '❚❚' : '▶ play the century' }}</button>
-        <button class="bb-btn small" @click="setYear(yearMin)" title="rewind">⟲</button>
-        <button class="bb-btn small" @click="setYear(yearMax)" title="show everything">all</button>
-        <button class="bb-btn small" :class="{ active: store.sound }" @click="store.sound = !store.sound" title="a blip for every accident as the century plays">{{ store.sound ? '🔊' : '🔈' }}</button>
-        <button class="bb-btn small at-requiem-btn" @click="startRequiem" title="Requiem: the century plays itself as a memorial, with a drone and a camera that visits each major accident (esc to leave)">requiem</button>
-        <span class="at-speed">
-          <button v-for="s in [1, 3, 8]" :key="s" class="bb-btn small" :class="{ active: speed === s }" @click="speed = s">{{ s }}y/s</button>
-        </span>
-      </div>
-    </div>
-
     <!-- Filters -->
-    <div class="at-filters">
-      <input v-model="textFilter" class="bb-input" placeholder="filter: airline, type, country…" />
-      <label><input type="checkbox" v-model="fatalOnly" /> fatal only</label>
-      <label><input type="checkbox" v-model="preciseOnly" /> precise positions only</label>
+    <div class="at-filters bb-card floating">
+      <div class="bb-field">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <input v-model="textFilter" class="bb-input" placeholder="Airline, type, country…" />
+      </div>
+      <div class="at-checks">
+        <label class="bb-check"><input type="checkbox" v-model="fatalOnly" /> Fatal only</label>
+        <label class="bb-check"><input type="checkbox" v-model="preciseOnly" /> Precise positions</label>
+      </div>
       <div class="at-tiers">
-        <span v-for="t in tierList" :key="t.id" class="bb-chip ghost" :class="{ on: tiers.has(t.id) }" @click="toggleTier(t.id)"><span class="at-dot" :style="{ background: t.color }"></span>{{ t.label }} {{ t.n.toLocaleString() }}</span>
+        <span v-for="t in tierList" :key="t.id" class="bb-chip" :class="{ on: tiers.has(t.id) }" @click="toggleTier(t.id)"><span class="at-dot" :style="{ background: t.color }"></span>{{ t.label }} <span class="bb-muted bb-num">{{ t.n.toLocaleString() }}</span></span>
       </div>
       <div v-if="onThisDay.length" class="at-today">
-        <div class="at-today-h" @click="todayOpen = !todayOpen">On this day · {{ onThisDay.length }} {{ todayOpen ? '▾' : '▸' }}</div>
+        <button class="at-today-h" @click="todayOpen = !todayOpen">On this day <span class="bb-muted bb-num">{{ onThisDay.length }}</span><span class="at-caret">{{ todayOpen ? '▾' : '▸' }}</span></button>
         <div v-if="todayOpen" class="at-today-list bb-scroll">
-          <div v-for="r in onThisDay" :key="r.id" class="at-today-item" @click="select(r.id, true)"><span class="at-today-year">{{ r.date.slice(0, 4) }}</span> {{ r.title }} <span class="bb-muted">· {{ r.fatalities ?? '?' }}</span></div>
+          <div v-for="r in onThisDay" :key="r.id" class="at-today-item" @click="select(r.id, true)"><span class="at-today-year bb-num">{{ r.date.slice(0, 4) }}</span> {{ r.title }}</div>
         </div>
       </div>
-      <div class="bb-muted at-hint" v-if="catalog.state !== 'ready'">{{ catalog.state === 'loading' ? 'Loading the full catalog…' : catalog.state === 'error' ? 'Catalog failed: ' + catalog.error : 'Curated records only' }}</div>
-      <div class="bb-muted at-hint" v-else>{{ items.length.toLocaleString() }} plotted · faint points sit at country level · drag to spin, wheel to zoom</div>
+      <div class="bb-muted at-hint" v-if="catalog.state !== 'ready'">{{ catalog.state === 'loading' ? 'Loading the full catalog…' : catalog.state === 'error' ? 'Catalog failed: ' + catalog.error : 'Reviewed records only' }}</div>
+      <div class="bb-muted at-hint" v-else><span class="bb-num">{{ items.length.toLocaleString() }}</span> plotted · faint points sit at country level</div>
+    </div>
+
+    <!-- Year + playback -->
+    <div class="at-year">
+      <div class="at-year-num bb-num">{{ Math.min(Math.floor(year), yearMax - 1) }}</div>
+      <div class="at-year-sub bb-muted"><span class="bb-num">{{ cumulative.n.toLocaleString() }}</span> accidents · <span class="bb-num">{{ cumulative.f.toLocaleString() }}</span> lives so far</div>
+      <div class="at-year-ctl">
+        <button class="bb-btn small primary at-play" @click="togglePlay" :title="playing ? 'pause' : 'play the century'">
+          <svg v-if="!playing" width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l11-7z"></path></svg>
+          <svg v-else width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14"></rect><rect x="14" y="5" width="4" height="14"></rect></svg>
+          {{ playing ? 'Pause' : 'Play the century' }}
+        </button>
+        <button class="bb-btn small icon" @click="setYear(yearMin)" title="rewind to the first record"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg></button>
+        <button class="bb-btn small icon" @click="setYear(yearMax)" title="show everything"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5l7 7-7 7M13 5l7 7-7 7"></path></svg></button>
+        <span class="bb-seg small" role="group" aria-label="speed">
+          <button v-for="s in [1, 3, 8]" :key="s" :class="{ active: speed === s }" @click="speed = s">{{ s }}y/s</button>
+        </span>
+        <button class="bb-btn small icon" :class="{ active: store.sound }" @click="store.sound = !store.sound" title="a blip for every accident as the century plays">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4z"></path><path v-if="store.sound" d="M15.5 8.5a5 5 0 0 1 0 7M19 5a9 9 0 0 1 0 14"></path></svg>
+        </button>
+        <button class="bb-btn small at-requiem-btn" @click="startRequiem" title="Requiem: the century plays itself as a memorial, with a drone and a camera that visits each major accident (esc to leave)">Requiem</button>
+      </div>
     </div>
 
     <div v-if="requiem" class="at-requiem-ui" @click.stop>
-      <button class="bb-btn small" @click="stopRequiem">leave requiem · esc</button>
-      <button class="bb-btn small" :class="{ active: rollCall }" @click="rollCall = !rollCall" title="read each name aloud as it appears">roll call</button>
+      <button class="bb-btn small" @click="stopRequiem">Leave requiem · esc</button>
+      <button class="bb-btn small" :class="{ active: rollCall }" @click="rollCall = !rollCall" title="read each name aloud as it appears">Roll call</button>
     </div>
     <transition name="at-cap">
       <div v-if="requiem && caption" :key="caption.id" class="at-caption">
-        <div class="at-caption-year">{{ caption.year }}</div>
+        <div class="at-caption-year bb-num">{{ caption.year }}</div>
         <div class="at-caption-title">{{ caption.title }}</div>
         <div class="at-caption-sub">{{ caption.sub }}</div>
       </div>
     </transition>
     <div v-if="selected && sunNote && !requiem" class="at-sunnote bb-muted">{{ sunNote }}</div>
+    <div class="at-scene-hint bb-faint" v-if="!requiem">drag to spin · wheel to zoom</div>
 
     <!-- Hover tooltip -->
-    <div v-if="hover" class="at-tip" :style="{ left: hover.x + 14 + 'px', top: hover.y + 14 + 'px' }">
-      <div class="at-tip-title">{{ hover.rec.title }}</div>
+    <div v-if="hover" class="bb-tip" :style="{ left: hover.x + 14 + 'px', top: hover.y + 14 + 'px' }">
+      <b>{{ hover.rec.title }}</b>
       <div class="bb-muted">{{ hover.rec.date }} · {{ hover.rec.aircraft.type || '?' }} · {{ hover.rec.fatalities ?? '?' }} fatalities{{ hover.approx ? ' · approx. position' : '' }}</div>
     </div>
 
     <!-- Selected record card -->
-    <div v-if="selected" class="at-card bb-scroll">
+    <div v-if="selected" class="at-card bb-card floating bb-scroll">
       <div class="at-card-head">
         <span class="bb-agency">{{ selected.agency }}</span>
-        <span class="at-card-tier">{{ tierLabel(selected) }}</span>
+        <span class="bb-tag" :class="{ accent: !selected.tier }">{{ tierLabel(selected) }}</span>
+        <span v-if="selected.fdr" class="bb-tag">Replay</span>
         <button class="at-close" @click="clearSelection" title="close">×</button>
       </div>
-      <h3>{{ selected.title }}</h3>
-      <div class="bb-muted">{{ selected.date }} · {{ selected.aircraft.type || 'type unknown' }} · {{ selected.operator || '' }}</div>
-      <div class="bb-muted">{{ selected.location?.name || selected.location?.country || 'location unknown' }} · {{ (selected.phase || 'unknown').replace(/_/g, ' ') }}</div>
-      <div class="at-stats">
-        <div><b>{{ selected.fatalities ?? '?' }}</b><span>fatalities</span></div>
-        <div><b>{{ selected.occupants ?? '?' }}</b><span>on board</span></div>
-        <div><b>{{ selected.factors.length }}</b><span>factors</span></div>
+      <h3 class="bb-title">{{ selected.title }}</h3>
+      <div class="bb-meta">{{ selected.date }} · {{ selected.aircraft.type || 'type unknown' }} · {{ selected.operator || '' }}</div>
+      <div class="bb-meta">{{ selected.location?.name || selected.location?.country || 'location unknown' }} · {{ (selected.phase || 'unknown').replace(/_/g, ' ') }}</div>
+      <div class="bb-stats">
+        <div class="bb-stat"><b>{{ selected.fatalities ?? '?' }}</b><span>fatalities</span></div>
+        <div class="bb-stat"><b>{{ selected.occupants ?? '?' }}</b><span>on board</span></div>
+        <div class="bb-stat"><b>{{ selected.factors.length }}</b><span>factors</span></div>
       </div>
-      <p class="at-summary">{{ selected.summary }}</p>
-      <div class="at-factors">
-        <span v-for="f in selected.factors.slice(0, 8)" :key="f.id" class="bb-chip factor" :style="{ background: factorColor(f.id) }">{{ factorLabel(f.id) }}</span>
+      <RecordActions :record="selected" :index="index" current="atlas" show-graph />
+      <p class="bb-prose at-summary">{{ selected.summary }}</p>
+      <div class="bb-chipwrap at-factors">
+        <span v-for="f in selected.factors.slice(0, 8)" :key="f.id" class="bb-chip factor" :style="{ '--c': factorColor(f.id) }">{{ factorLabel(f.id) }}</span>
       </div>
-      <div class="at-actions">
-        <button class="bb-btn" @click="store.openGraph(selected.id)">Graph ▸</button>
-        <button class="bb-btn" :disabled="!(selected.events && selected.events.length)" @click="store.openTimeline(selected.id)">Timeline ▸</button>
-        <button class="bb-btn" :disabled="!selected.fdr" @click="store.openReplay(selected.id)">Replay ▸</button>
-        <button class="bb-btn" :disabled="!selected.fdr" @click="store.openFlightGear(selected.id)" title="FlightGear package or live bridge">FlightGear ▸</button>
-        <button class="bb-btn" :disabled="!(selected.events && selected.events.length)" @click="store.openStory(selected.id)">Story ▸</button>
-      </div>
-      <div v-if="selected.audio && selected.audio.length" class="at-listen" @click="selected.fdr ? store.openReplay(selected.id) : store.openTimeline(selected.id)">♪ {{ selected.audio.length }} real recording{{ selected.audio.length > 1 ? 's' : '' }} · {{ selected.fdr ? 'play in sync with the replay ▸' : 'listen on the timeline ▸' }}</div>
-      <a :href="wikipediaUrl(selected)" target="_blank" rel="noopener" class="at-readmore">{{ hasWikipediaArticle(selected) ? 'Read more on Wikipedia ↗' : 'Search Wikipedia for this accident ↗' }}</a>
+      <div v-if="selected.audio && selected.audio.length" class="at-listen bb-link" @click="selected.fdr ? store.openReplay(selected.id) : store.openTimeline(selected.id)">{{ selected.audio.length }} real recording{{ selected.audio.length > 1 ? 's' : '' }} · {{ selected.fdr ? 'play in sync with the replay' : 'listen on the timeline' }}</div>
       <div class="bb-h" v-if="similar.length">Same mechanism elsewhere</div>
       <div v-for="s in similar" :key="s.id" class="at-similar" @click="select(s.id, true)">
-        <span class="bb-agency">{{ index.byId[s.id].agency }}</span> {{ index.byId[s.id].title }} <span class="bb-muted">· {{ index.byId[s.id].date.slice(0, 4) }} · {{ s.shared }} shared</span>
+        <span class="at-similar-title">{{ index.byId[s.id].title }}</span><span class="bb-muted">{{ index.byId[s.id].date.slice(0, 4) }} · {{ s.shared }} shared</span>
       </div>
     </div>
 
     <!-- Century histogram + scrubber -->
     <div class="at-strip">
       <canvas ref="histRef" class="at-hist" @mousemove="histHover" @mouseleave="histYear = null" @click="histClick"></canvas>
-      <div v-if="histYear" class="at-hist-tip" :style="{ left: histYear.x + 'px' }">{{ histYear.y }} · {{ histYear.n }} accidents · {{ histYear.f.toLocaleString() }} fatalities</div>
+      <div v-if="histYear" class="at-hist-tip bb-num" :style="{ left: histYear.x + 'px' }">{{ histYear.y }} · {{ histYear.n }} accidents · {{ histYear.f.toLocaleString() }} fatalities</div>
       <input type="range" class="at-range" :min="yearMin" :max="yearMax" step="0.05" :value="year" @input="setYear(+$event.target.value)" />
     </div>
   </div>
@@ -102,7 +108,8 @@
 import { ref, computed, watch, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { useBlackboxStore } from '@/stores/blackboxStore'
 import { Globe } from './lib/globe.js'
-import { recordPosition, wikipediaUrl, hasWikipediaArticle } from './lib/geo.js'
+import { recordPosition } from './lib/geo.js'
+import RecordActions from './RecordActions.vue'
 import { similarRecords } from './lib/search.js'
 import { loadCatalogRecord } from './lib/catalog.js'
 import { note, drone } from './lib/synth.js'
@@ -141,7 +148,7 @@ function tierOf(rec) {
   return rec.depth && rec.depth !== 'summary' ? 'deep' : 'wikidata'
 }
 function tierLabel(rec) {
-  return { curated: 'curated · full report', deep: 'official report read', wikidata: 'Wikipedia summary', ntsb: 'NTSB database' }[tierOf(rec)]
+  return { curated: 'reviewed · full report', deep: 'official report read', wikidata: 'Wikipedia summary', ntsb: 'NTSB database' }[tierOf(rec)]
 }
 
 const positioned = computed(() => {
@@ -163,7 +170,7 @@ const tierList = computed(() => {
   const n = { curated: 0, deep: 0, wikidata: 0, ntsb: 0 }
   for (const x of positioned.value) n[x.tier]++
   return [
-    { id: 'curated', label: 'curated', color: TIER_COLORS.curated, n: n.curated },
+    { id: 'curated', label: 'reviewed', color: TIER_COLORS.curated, n: n.curated },
     { id: 'deep', label: 'report read', color: TIER_COLORS.deep, n: n.deep },
     { id: 'wikidata', label: 'Wikipedia', color: TIER_COLORS.wikidata, n: n.wikidata },
     { id: 'ntsb', label: 'NTSB db', color: TIER_COLORS.ntsb, n: n.ntsb }
@@ -486,70 +493,66 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-.at-root { position: absolute; inset: 0; overflow: hidden; background: #05070d; }
+.at-root { position: absolute; inset: 0; overflow: hidden; background: #070a10; }
 .at-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: grab; }
-.at-year { position: absolute; top: 12px; right: 14px; text-align: right; pointer-events: none; }
-.at-year > * { pointer-events: auto; }
-.at-year-num { font-family: Consolas, 'Courier New', monospace; font-size: 54px; font-weight: 700; line-height: 1; color: #fff; text-shadow: 0 0 18px rgba(255,191,0,0.55), 0 0 2px #000; letter-spacing: 0.04em; }
-.at-year-sub { font-size: 11px; margin-top: 2px; text-shadow: 0 1px 2px #000; }
-.at-year-ctl { display: flex; gap: 4px; justify-content: flex-end; margin-top: 8px; flex-wrap: wrap; }
-.at-speed { display: flex; gap: 2px; }
-.at-filters { position: absolute; top: 12px; left: 12px; width: 250px; display: flex; flex-direction: column; gap: 6px; font-size: 10px; color: var(--bb-muted); background: rgba(8,12,24,0.7); border: 1px solid var(--bb-line); border-radius: 4px; padding: 8px; backdrop-filter: blur(4px); }
-.at-filters label { display: flex; gap: 4px; align-items: center; }
+.at-filters { position: absolute; top: 12px; left: 12px; width: 264px; display: flex; flex-direction: column; gap: 8px; font-size: 11px; color: var(--bb-muted); z-index: 2; }
+.at-checks { display: flex; gap: 14px; }
 .at-tiers { display: flex; flex-wrap: wrap; gap: 4px; }
-.at-tiers .bb-chip { opacity: 0.45; }
-.at-tiers .bb-chip.on { opacity: 1; border-color: #3a4a6a; }
+.at-tiers .bb-chip { opacity: 0.5; }
+.at-tiers .bb-chip.on { opacity: 1; }
 .at-dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
-.at-hint { line-height: 1.35; }
+.at-hint { line-height: 1.4; font-size: 10.5px; }
 .at-today { border-top: 1px solid var(--bb-line); padding-top: 6px; }
-.at-today-h { cursor: pointer; color: var(--bb-accent); letter-spacing: 0.08em; text-transform: uppercase; font-size: 9px; }
+.at-today-h { display: flex; align-items: center; gap: 6px; width: 100%; background: none; border: none; color: var(--bb-text-2); font: inherit; font-size: 11px; cursor: pointer; padding: 0; }
+.at-today-h:hover { color: var(--bb-text); }
+.at-caret { margin-left: auto; color: var(--bb-muted); }
 .at-today-list { max-height: 140px; overflow: auto; margin-top: 4px; }
-.at-today-item { cursor: pointer; padding: 2px 0; font-size: 10px; color: #d3ddf0; }
+.at-today-item { cursor: pointer; padding: 2px 0; font-size: 11px; color: var(--bb-text-2); }
 .at-today-item:hover { color: var(--bb-accent); }
-.at-today-year { font-family: Consolas, monospace; color: var(--bb-muted); margin-right: 4px; }
-.at-tip { position: absolute; pointer-events: none; background: rgba(8,12,24,0.95); border: 1px solid var(--bb-line); padding: 6px 8px; border-radius: 4px; font-size: 11px; max-width: 260px; z-index: 3; }
-.at-tip-title { font-weight: 700; }
-.at-card { position: absolute; right: 14px; top: 130px; bottom: 80px; width: 300px; background: rgba(10,15,28,0.88); border: 1px solid var(--bb-line); border-radius: 6px; padding: 10px 12px; overflow: auto; backdrop-filter: blur(6px); box-shadow: 0 8px 40px rgba(0,0,0,0.6); }
-.at-card h3 { margin: 4px 0; font-size: 15px; }
-.at-card-head { display: flex; gap: 6px; align-items: center; }
-.at-card-tier { font-size: 9px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--bb-accent); flex: 1; }
-.at-close { background: none; border: none; color: var(--bb-muted); font-size: 16px; cursor: pointer; }
-.at-close:hover { color: #fff; }
-.at-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 8px 0; }
-.at-stats div { background: var(--bb-panel-2); border: 1px solid var(--bb-line); border-radius: 4px; padding: 5px 4px; text-align: center; display: flex; flex-direction: column; }
-.at-stats b { font-size: 15px; }
-.at-stats span { font-size: 9px; color: var(--bb-muted); }
-.at-summary { line-height: 1.45; margin: 4px 0; color: #d3ddf0; font-size: 11px; }
-.at-factors { display: flex; flex-wrap: wrap; gap: 3px; margin: 6px 0; }
-.at-actions { display: flex; gap: 4px; flex-wrap: wrap; margin: 8px 0 6px; }
-.at-listen { font-size: 11px; color: #9fd8ff; cursor: pointer; margin: 4px 0 6px; }
-.at-listen:hover { color: #fff; }
-.at-readmore { display: inline-block; color: var(--bb-accent); font-weight: 700; text-decoration: none; border: 1px solid var(--bb-accent); border-radius: 3px; padding: 4px 8px; font-size: 11px; }
-.at-readmore:hover { background: var(--bb-accent); color: #111; }
-.at-similar { cursor: pointer; padding: 3px 0; border-bottom: 1px dashed var(--bb-line); font-size: 11px; }
-.at-similar:hover { color: var(--bb-accent); }
-.at-strip { position: absolute; left: 12px; right: 12px; bottom: 8px; height: 62px; }
+.at-today-year { color: var(--bb-muted); margin-right: 4px; }
+
+.at-year { position: absolute; top: 12px; right: 14px; text-align: right; pointer-events: none; z-index: 2; }
+.at-year > * { pointer-events: auto; }
+.at-year-num { font-size: 40px; font-weight: 600; line-height: 1; color: var(--bb-text); letter-spacing: 0.02em; text-shadow: 0 1px 2px #000; }
+.at-year-sub { font-size: 11px; margin-top: 4px; text-shadow: 0 1px 2px #000; }
+.at-year-ctl { display: flex; gap: 6px; justify-content: flex-end; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+.at-year-ctl .bb-btn:not(.primary), .at-year-ctl .bb-seg { background: rgba(19, 23, 30, 0.85); backdrop-filter: blur(6px); }
+
+.at-card { position: absolute; right: 14px; top: 112px; bottom: 84px; width: 320px; overflow: auto; z-index: 2; }
+.at-card-head { display: flex; gap: 5px; align-items: center; margin-bottom: 6px; }
+.at-close { margin-left: auto; background: none; border: none; color: var(--bb-muted); font-size: 18px; line-height: 1; cursor: pointer; padding: 0 2px; }
+.at-close:hover { color: var(--bb-text); }
+.at-summary { font-size: 11.5px; margin: 10px 0 6px; }
+.at-factors { margin: 6px 0; }
+.at-listen { font-size: 11px; margin: 6px 0; display: block; }
+.at-similar { display: flex; justify-content: space-between; gap: 8px; cursor: pointer; padding: 5px 0; border-bottom: 1px solid var(--bb-line); font-size: 11.5px; }
+.at-similar-title { flex: 1; min-width: 0; }
+.at-similar .bb-muted { white-space: nowrap; font-size: 10.5px; }
+.at-similar:hover .at-similar-title { color: var(--bb-accent); }
+
+.at-strip { position: absolute; left: 12px; right: 12px; bottom: 8px; height: 66px; z-index: 2; }
 .at-hist { width: 100%; height: 46px; display: block; cursor: pointer; }
-.at-hist-tip { position: absolute; top: -22px; transform: translateX(-50%); background: rgba(8,12,24,0.95); border: 1px solid var(--bb-line); padding: 2px 6px; border-radius: 3px; font-size: 10px; white-space: nowrap; pointer-events: none; }
-.at-range { width: 100%; margin: 0; height: 14px; accent-color: #ffbf00; }
+.at-hist-tip { position: absolute; top: -24px; transform: translateX(-50%); background: var(--bb-panel-2); border: 1px solid var(--bb-line-2); padding: 2px 6px; border-radius: 3px; font-size: 10px; white-space: nowrap; pointer-events: none; }
+.at-range { width: 100%; margin: 4px 0 0; height: 14px; }
+.at-scene-hint { position: absolute; left: 14px; bottom: 80px; font-size: 10.5px; text-shadow: 0 1px 2px #000; }
+.at-sunnote { position: absolute; left: 14px; bottom: 96px; font-size: 10.5px; font-style: italic; max-width: 280px; text-shadow: 0 1px 2px #000; }
 /* Requiem: the interface fades away and the century plays itself */
-.at-requiem .at-filters, .at-requiem .at-card, .at-requiem .at-strip, .at-requiem .at-year-ctl, .at-requiem .at-tip { opacity: 0; pointer-events: none; transition: opacity 1.2s; }
-.at-requiem .at-year-num { font-size: 84px; text-shadow: 0 0 40px rgba(255,191,0,0.5); transition: font-size 1.2s; }
+.at-requiem .at-filters, .at-requiem .at-card, .at-requiem .at-strip, .at-requiem .at-year-ctl, .at-requiem .bb-tip, .at-requiem .at-scene-hint { opacity: 0; pointer-events: none; transition: opacity 1.2s; }
+.at-requiem .at-year-num { font-size: 84px; text-shadow: 0 0 40px rgba(242,183,5,0.4); transition: font-size 1.2s; }
 .at-requiem .at-year-sub { font-size: 12px; }
-.at-requiem-ui { position: absolute; top: 12px; left: 12px; z-index: 3; opacity: 0.7; display: flex; gap: 4px; }
+.at-requiem-ui { position: absolute; top: 12px; left: 12px; z-index: 3; opacity: 0.7; display: flex; gap: 6px; }
 .at-requiem-ui:hover { opacity: 1; }
 .at-caption { position: absolute; left: 50%; bottom: 14%; transform: translateX(-50%); text-align: center; pointer-events: none; z-index: 3; }
-.at-caption-year { font-family: Consolas, monospace; font-size: 12px; letter-spacing: 0.4em; color: var(--bb-accent); }
-.at-caption-title { font-size: clamp(20px, 3.2vw, 34px); font-weight: 700; color: #fff; text-shadow: 0 2px 20px rgba(0,0,0,0.9), 0 0 30px rgba(255,191,0,0.25); margin: 4px 0; }
-.at-caption-sub { font-size: 12px; color: #b8c6e3; letter-spacing: 0.08em; }
+.at-caption-year { font-size: 12px; letter-spacing: 0.4em; color: var(--bb-accent); }
+.at-caption-title { font-size: clamp(20px, 3.2vw, 34px); font-weight: 600; color: #fff; text-shadow: 0 2px 20px rgba(0,0,0,0.9); margin: 4px 0; }
+.at-caption-sub { font-size: 12px; color: var(--bb-text-2); letter-spacing: 0.06em; }
 .at-cap-enter-active { transition: opacity 1.2s, transform 1.2s; }
 .at-cap-leave-active { transition: opacity 2s; }
 .at-cap-enter-from { opacity: 0; transform: translateX(-50%) translateY(14px); }
 .at-cap-leave-to { opacity: 0; }
-.at-sunnote { position: absolute; left: 12px; bottom: 78px; font-size: 10px; font-style: italic; max-width: 260px; text-shadow: 0 1px 2px #000; }
 @media (max-width: 900px) {
-  .at-filters { width: 200px; }
-  .at-card { left: 12px; right: 12px; width: auto; top: auto; bottom: 80px; max-height: 45%; }
-  .at-year-num { font-size: 36px; }
+  .at-filters { width: 210px; }
+  .at-card { left: 12px; right: 12px; width: auto; top: auto; bottom: 84px; max-height: 45%; }
+  .at-year-num { font-size: 32px; }
 }
 </style>

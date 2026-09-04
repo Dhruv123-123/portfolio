@@ -514,13 +514,13 @@ export class ForceGraph {
       }
       const showLabel = n.kind !== 'accident' || this.labelsAlways || k > 0.9 || n === this.hover || n === this.selected || (hi && hi.has(n.id)) || (neighbors && neighbors.has(n.id))
       if (showLabel) {
-        ctx.font = `${n.kind === 'factor' ? 11 : 10}px Tahoma, Verdana, sans-serif`
+        ctx.font = `${n.kind === 'factor' ? 11 : 10}px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif`
         ctx.fillStyle = n.kind === 'factor' ? '#ffe9b0' : '#e6eefc'
         ctx.textAlign = 'center'
         ctx.textBaseline = 'top'
         const label = n.label
         ctx.lineWidth = 3
-        ctx.strokeStyle = 'rgba(8,12,24,0.85)'
+        ctx.strokeStyle = 'rgba(14,17,22,0.85)'
         ctx.strokeText(label, n.x, n.y + n.r + 2)
         ctx.fillText(label, n.x, n.y + n.r + 2)
       }

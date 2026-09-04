@@ -18,7 +18,7 @@
               <option v-for="r in replayable" :key="r.id" :value="r.id">{{ r.title }} — {{ r.aircraft.type }} ({{ r.date.slice(0, 4) }}){{ r.fdr && fidelityOf(r) ? ' · ' + fidelityOf(r) : '' }}</option>
             </select>
           </label>
-          <div class="fr-env bb-muted" :title="fdr.source">{{ envLabel }} · {{ fdr.fidelity }} · confidence {{ fdr.confidence || 'medium' }}</div>
+          <div class="fr-env" :title="fdr.source"><span v-for="t in envTags" :key="t" class="bb-tag">{{ t }}</span></div>
 
           <div class="fr-marker-toast" v-if="activeMarker">{{ activeMarker.label }}</div>
           <div v-for="a in annotations" :key="a.key" class="fr-tag" :class="{ dim: a.age > 25, formation: a.kind === 'formation' }" :style="{ left: a.x + 'px', top: a.y + 'px', opacity: a.opacity, '--tint': a.tint || '' }">
@@ -49,13 +49,13 @@
           </div>
 
           <!-- layers popover -->
-          <div v-if="layersOpen" class="fr-layers" @click.stop>
-            <div class="fr-layers-h">Sound</div>
-            <label class="fr-row"><span>Engine and slipstream <small>synthesized live from N1 and airspeed (M)</small></span><input type="checkbox" :checked="store.sound" @change="toggleSound" /></label>
-            <label class="fr-row" :class="{ off: !trackSheet }"><span>Crew voices <small>{{ trackSheet ? spokenCount + ' lines, one voice per seat, timed to the transcript' : 'no transcript for this record' }}</small></span><input type="checkbox" v-model="trackVoices" :disabled="!trackSheet" /></label>
-            <label class="fr-row" :class="{ off: !trackSheet }"><span>Cockpit warnings <small>{{ trackSheet ? warningCount + ' cues from the recorded flags' : 'live synthesis only' }}</small></span><input type="checkbox" v-model="trackWarnings" :disabled="!trackSheet" /></label>
-            <label class="fr-row" :class="{ off: !recordings.length }"><span>Real tape <small>{{ recordings.length ? currentRec.kind === 'cvr' ? 'released cockpit voice recorder' : 'air traffic control side' : 'none openly licensed' }}</small></span><input type="checkbox" :checked="deckOn" :disabled="!recordings.length" @change="toggleDeck" /></label>
-            <div v-if="deckOn" class="fr-row fr-row-deck">
+          <div v-if="layersOpen" class="bb-popover fr-layers" @click.stop>
+            <div class="bb-h">Sound</div>
+            <label class="bb-row"><span>Engine and slipstream <small>synthesized live from N1 and airspeed (M)</small></span><input type="checkbox" :checked="store.sound" @change="toggleSound" /></label>
+            <label class="bb-row" :class="{ off: !trackSheet }"><span>Crew voices <small>{{ trackSheet ? spokenCount + ' lines, one voice per seat, timed to the transcript' : 'no transcript for this record' }}</small></span><input type="checkbox" v-model="trackVoices" :disabled="!trackSheet" /></label>
+            <label class="bb-row" :class="{ off: !trackSheet }"><span>Cockpit warnings <small>{{ trackSheet ? warningCount + ' cues from the recorded flags' : 'live synthesis only' }}</small></span><input type="checkbox" v-model="trackWarnings" :disabled="!trackSheet" /></label>
+            <label class="bb-row" :class="{ off: !recordings.length }"><span>Real tape <small>{{ recordings.length ? currentRec.kind === 'cvr' ? 'released cockpit voice recorder' : 'air traffic control side' : 'none openly licensed' }}</small></span><input type="checkbox" :checked="deckOn" :disabled="!recordings.length" @change="toggleDeck" /></label>
+            <div v-if="deckOn" class="bb-row static fr-row-deck">
               <select v-if="recordings.length > 1" class="bb-select" v-model="recIdx"><option v-for="(r, i) in recordings" :key="i" :value="i">{{ r.title }}</option></select>
               <button class="bb-btn small" @click="markAlign" title="The tape is at this moment of the replay right now">align here</button>
               <label class="bb-muted">offset <input type="number" class="bb-input fr-num" v-model.number="deckOffset" step="1" /> s</label>
@@ -64,13 +64,13 @@
               <audio ref="deckEl" :src="currentRec.url" preload="metadata" @loadedmetadata="onDeckMeta" @error="deckError = true"></audio>
               <span v-if="deckError" class="fr-err">could not load</span>
             </div>
-            <div class="fr-layers-h">Scene</div>
-            <label class="fr-row"><span>Event tags in the sky</span><input type="checkbox" v-model="annotationsOn" /></label>
-            <label class="fr-row"><span>Ghost from here <small>holds altitude, heading and speed of this instant</small></span><input type="checkbox" :checked="!!ghost" @change="toggleGhost" /></label>
-            <label class="fr-row"><span>Formation <small>every replay abreast from t=0</small></span><input type="checkbox" :checked="formationOn" @change="toggleFormation" /></label>
-            <label class="fr-row"><span>Quality</span><select class="bb-select" v-model="quality"><option value="high">high</option><option value="medium">medium</option><option value="low">low</option></select></label>
-            <div class="fr-layers-h">FlightGear</div>
-            <div class="fr-row fr-row-fg">
+            <div class="bb-h">Scene</div>
+            <label class="bb-row"><span>Event tags in the sky</span><input type="checkbox" v-model="annotationsOn" /></label>
+            <label class="bb-row"><span>Ghost from here <small>holds altitude, heading and speed of this instant</small></span><input type="checkbox" :checked="!!ghost" @change="toggleGhost" /></label>
+            <label class="bb-row"><span>Formation <small>every replay abreast from t=0</small></span><input type="checkbox" :checked="formationOn" @change="toggleFormation" /></label>
+            <label class="bb-row static"><span>Quality</span><select class="bb-select small" v-model="quality"><option value="high">high</option><option value="medium">medium</option><option value="low">low</option></select></label>
+            <div class="bb-h">FlightGear</div>
+            <div class="bb-row static fr-row-fg">
               <button class="bb-btn small" @click="downloadFg" title="A zip with the trajectory in FlightGear's generic protocol, the protocol file, the fgfs command line and a README">Download package</button>
               <button class="bb-btn small" :class="{ active: fgBridge.state === 'connected' }" @click="toggleFg" :title="'Drive a running FlightGear from this replay: start it with --httpd=8080 --fdm=null'">{{ fgBridge.state === 'connected' ? 'Disconnect' : fgBridge.state === 'connecting' ? 'Connecting…' : 'Connect live' }}</button>
               <input class="bb-input fr-fg-url" v-model="fgUrl" spellcheck="false" />
@@ -118,18 +118,19 @@
 
       <div class="fr-right">
         <div class="fr-panel-tabs">
-          <button class="fr-ptab" :class="{ active: panel === 'pfd' }" @click="panel = 'pfd'">PFD</button>
-          <button class="fr-ptab" :class="{ active: panel === 'wx' }" @click="panel = 'wx'">ND · WX</button>
-          <button class="fr-ptab" :class="{ active: panel === 'radar' }" @click="panel = 'radar'">Scope</button>
-          <span class="bb-muted fr-panel-hint">{{ panel === 'pfd' ? 'primary flight display' : panel === 'wx' ? 'weather radar · heading up' : 'ATC scope · whole track' }}</span>
+          <div class="bb-seg small" role="group" aria-label="Instrument">
+            <button class="fr-ptab" :class="{ active: panel === 'pfd' }" @click="panel = 'pfd'" title="primary flight display">PFD</button>
+            <button class="fr-ptab" :class="{ active: panel === 'wx' }" @click="panel = 'wx'" title="weather radar, heading up">Weather</button>
+            <button class="fr-ptab" :class="{ active: panel === 'radar' }" @click="panel = 'radar'" title="ATC scope, whole track">Scope</button>
+          </div>
         </div>
         <canvas ref="pfdCanvas" class="fr-pfd"></canvas>
         <canvas ref="ctlCanvas" class="fr-ctl"></canvas>
         <div class="fr-cvr">
           <div class="fr-cvr-head">
-            <span>CVR</span>
-            <span class="bb-muted" v-if="!(record.cvr && record.cvr.length)">no public transcript · report events</span>
-            <span class="bb-muted" v-else-if="trackSheet">{{ spokenCount }} lines · voices {{ trackVoices ? 'on, press play' : 'off' }}</span>
+            <span>Transcript</span>
+            <span class="bb-muted" v-if="!(record.cvr && record.cvr.length)">no public CVR · report events</span>
+            <span class="bb-muted" v-else-if="trackSheet">{{ spokenCount }} lines · voices {{ trackVoices ? 'on' : 'off' }}</span>
           </div>
           <div class="fr-cvr-list bb-scroll" ref="cvrList">
             <div v-for="(line, i) in transcript" :key="i" class="fr-cvr-line" :class="{ past: line.t < time, current: i === currentLine, speaking: i === speakingLine, event: line.kind === 'event' }" @click="seek(line.t)">
@@ -318,13 +319,14 @@ const ticks = computed(() => {
   return Array.from({ length: n + 1 }, (_, i) => formatClock(record.value.t0, fdr.value.t_start + ((fdr.value.t_end - fdr.value.t_start) * i) / n))
 })
 const layerCount = computed(() => [store.sound, trackSheet.value && trackVoices.value, deckOn.value, annotationsOn.value, !!ghost.value, formationOn.value, fgBridge.value.state === 'connected'].filter(Boolean).length)
-const envLabel = computed(() => {
+const envTags = computed(() => {
   const e = env.value
   const parts = [e.night > 0.6 ? 'night' : e.night > 0 ? 'dusk' : 'day']
   if (e.storm) parts.push('thunderstorm')
   else if (e.rain > 0) parts.push('precipitation')
   if (e.fog > 0) parts.push('low visibility')
-  return parts.join(' · ')
+  if (fdr.value) parts.push(fdr.value.fidelity, 'confidence ' + (fdr.value.confidence || 'medium'))
+  return parts
 })
 
 const transcript = computed(() => {
@@ -713,7 +715,7 @@ function onKey(e) {
 .fr-root.theatre { position: fixed; z-index: 9999; }
 .fr-main { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 320px; }
 .fr-left { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
-.fr-3d { position: relative; flex: 1; min-height: 0; background: #0b0f18; overflow: hidden; }
+.fr-3d { position: relative; flex: 1; min-height: 0; background: var(--bb-bg); overflow: hidden; }
 .fr-scene { width: 100%; height: 100%; display: block; }
 .fr-hud { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .fr-vignette { position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 120px 40px rgba(255, 40, 40, 0.75); transition: opacity 0.12s; }
@@ -721,15 +723,16 @@ function onKey(e) {
 .fr-3d.danger .fr-vignette { box-shadow: inset 0 0 140px 50px rgba(255, 30, 30, 0.8); }
 .fr-bars { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(#000 0, #000 9%, transparent 9%, transparent 91%, #000 91%); }
 
-.fr-chip { position: absolute; top: 12px; left: 14px; z-index: 3; display: flex; align-items: center; gap: 8px; background: rgba(8,12,24,0.7); border: 1px solid var(--bb-line); border-radius: 4px; padding: 6px 10px; backdrop-filter: blur(4px); cursor: pointer; max-width: min(60%, 520px); color: var(--bb-muted); }
-.fr-chip:hover { border-color: #3a4a6a; }
-.fr-chip-title { font-weight: 700; color: var(--bb-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fr-chip { position: absolute; top: 12px; left: 12px; z-index: 3; display: flex; align-items: center; gap: 8px; height: 32px; background: rgba(19,23,30,0.85); border: 1px solid var(--bb-line-2); border-radius: var(--bb-radius); padding: 0 10px; backdrop-filter: blur(6px); cursor: pointer; max-width: min(60%, 520px); color: var(--bb-muted); }
+.fr-chip:hover { border-color: var(--bb-muted); }
+.fr-chip-title { font-weight: 600; color: var(--bb-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .fr-chip-sub { font-size: 11px; white-space: nowrap; }
 .fr-chip-select { position: absolute; inset: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
-.fr-env { position: absolute; top: 18px; right: 14px; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; text-shadow: 0 1px 2px #000; cursor: help; z-index: 2; }
-.fr-marker-toast { position: absolute; top: 60px; left: 50%; transform: translateX(-50%); background: rgba(8, 12, 24, 0.85); color: var(--bb-accent); font-weight: 700; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--bb-accent); font-size: 12px; white-space: nowrap; max-width: 90%; overflow: hidden; text-overflow: ellipsis; z-index: 2; }
+.fr-env { position: absolute; top: 12px; right: 12px; display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; max-width: 45%; cursor: help; z-index: 2; }
+.fr-env .bb-tag { background: rgba(19,23,30,0.75); backdrop-filter: blur(4px); line-height: 18px; }
+.fr-marker-toast { position: absolute; top: 56px; left: 50%; transform: translateX(-50%); background: rgba(19,23,30,0.85); color: var(--bb-text); font-weight: 500; padding: 5px 12px; border-radius: var(--bb-radius); border: 1px solid var(--bb-line-2); border-left: 3px solid var(--bb-accent); font-size: 12px; white-space: nowrap; max-width: 90%; overflow: hidden; text-overflow: ellipsis; z-index: 2; backdrop-filter: blur(6px); }
 .cinematic .fr-marker-toast { top: auto; bottom: 22%; background: transparent; border: none; font-size: 15px; letter-spacing: 0.06em; text-shadow: 0 1px 4px #000; }
-.fr-scene-hint { position: absolute; bottom: 74px; left: 14px; font-size: 10px; text-shadow: 0 1px 2px #000; z-index: 2; }
+.fr-scene-hint { position: absolute; bottom: 74px; left: 12px; font-size: 10.5px; color: var(--bb-faint); text-shadow: 0 1px 2px #000; z-index: 2; }
 .fr-tag { position: absolute; transform: translate(-4px, -50%); pointer-events: none; display: flex; align-items: center; gap: 6px; font-size: 10px; color: #ffe6a8; text-shadow: 0 1px 3px #000; white-space: nowrap; transition: opacity 0.3s; z-index: 1; }
 .fr-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--bb-accent); box-shadow: 0 0 8px var(--bb-accent); flex: none; }
 .fr-tag-text { background: rgba(4,6,12,0.55); border: 1px solid rgba(255,191,0,0.35); border-radius: 3px; padding: 1px 6px; max-width: 260px; overflow: hidden; text-overflow: ellipsis; }
@@ -741,12 +744,12 @@ function onKey(e) {
 .fr-slowmo { position: absolute; bottom: 74px; right: 14px; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #fff; text-shadow: 0 1px 3px #000; animation: fr-blink 1s step-end infinite; z-index: 2; }
 .fr-fg-live { position: absolute; top: 58px; right: 14px; font-size: 10px; color: #22e08a; text-shadow: 0 1px 2px #000; letter-spacing: 0.06em; z-index: 2; }
 .fr-ended { position: absolute; inset: 0; background: rgba(0,0,0,0.88); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; cursor: pointer; z-index: 5; animation: fr-fade 2.2s ease-out; }
-.fr-ended-t { font-family: Consolas, monospace; font-size: 42px; color: #fff; letter-spacing: 0.08em; }
+.fr-ended-t { font-family: var(--bb-mono); font-size: 42px; color: #fff; letter-spacing: 0.06em; }
 .fr-ended-l { font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--bb-accent); }
 .fr-ended-s { font-size: 12px; color: #d3ddf0; margin-top: 10px; }
 .fr-ended-h { font-size: 10px; margin-top: 14px; }
 @keyframes fr-fade { from { opacity: 0; } to { opacity: 1; } }
-.fr-decode { position: absolute; inset: 0; background: #04060c; z-index: 6; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; font-family: Consolas, monospace; }
+.fr-decode { position: absolute; inset: 0; background: #04060c; z-index: 6; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; font-family: var(--bb-mono); }
 .fr-decode-title { color: var(--bb-accent); letter-spacing: 0.3em; font-size: 13px; animation: fr-blink 0.5s step-end infinite; }
 .fr-decode-sub { color: var(--bb-muted); font-size: 11px; }
 .fr-decode-hex { color: #3f6b4f; font-size: 10px; line-height: 1.5; margin: 10px 0 0; text-align: left; min-height: 150px; }
@@ -754,73 +757,64 @@ function onKey(e) {
 
 /* parameter drawer above the transport */
 .fr-drawer { position: absolute; left: 0; right: 0; bottom: 64px; z-index: 3; display: flex; flex-direction: column; align-items: flex-start; }
-.fr-drawer-handle { background: rgba(11,15,24,0.85); border: 1px solid var(--bb-line); border-bottom: none; border-radius: 4px 4px 0 0; color: var(--bb-muted); font: inherit; font-size: 10px; padding: 2px 8px; cursor: pointer; margin-left: 14px; }
+.fr-drawer-handle { background: rgba(19,23,30,0.9); border: 1px solid var(--bb-line-2); border-bottom: none; border-radius: 4px 4px 0 0; color: var(--bb-muted); font: inherit; font-size: 10.5px; padding: 3px 10px; cursor: pointer; margin-left: 12px; }
 .fr-drawer-handle:hover { color: var(--bb-text); }
-.fr-strips { width: 100%; height: 150px; display: block; border-top: 1px solid var(--bb-line); }
+.fr-strips { width: 100%; height: 150px; display: block; border-top: 1px solid var(--bb-line-2); }
 .theatre .fr-strips { height: 100px; }
 
 /* transport */
-.fr-transport { position: absolute; left: 0; right: 0; bottom: 0; height: 64px; z-index: 4; background: #070a12; border-top: 1px solid var(--bb-line); display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 0 14px; }
+.fr-transport { position: absolute; left: 0; right: 0; bottom: 0; height: 64px; z-index: 4; background: var(--bb-panel); border-top: 1px solid var(--bb-line); display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 0 12px; }
 .fr-tr-left { display: flex; align-items: center; gap: 6px; }
-.fr-ib { height: 30px; min-width: 30px; padding: 0 8px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; background: transparent; border: 1px solid var(--bb-line); border-radius: 4px; color: var(--bb-text); font: inherit; font-size: 11px; cursor: pointer; }
-.fr-ib:hover { border-color: #3a4a6a; }
-.fr-ib.active { background: var(--bb-accent); color: #111; border-color: var(--bb-accent); font-weight: 700; }
-.fr-play { width: 40px; height: 40px; border-radius: 50%; background: var(--bb-accent); border: none; color: #111; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.fr-ib { height: 28px; min-width: 28px; padding: 0 8px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; background: transparent; border: 1px solid var(--bb-line-2); border-radius: var(--bb-radius); color: var(--bb-text-2); font: inherit; font-size: 11px; cursor: pointer; }
+.fr-ib:hover { color: var(--bb-text); background: var(--bb-panel-2); }
+.fr-ib.active { background: var(--bb-panel-3); color: var(--bb-text); }
+.fr-play { width: 38px; height: 38px; border-radius: 50%; background: var(--bb-accent); border: none; color: var(--bb-accent-ink); display: flex; align-items: center; justify-content: center; cursor: pointer; }
 .fr-play:hover { filter: brightness(1.1); }
-.fr-speed { font-family: Consolas, monospace; font-size: 12px; min-width: 44px; }
+.fr-speed { font-family: var(--bb-mono); font-size: 11.5px; min-width: 44px; font-variant-numeric: tabular-nums; }
 .fr-tr-mid { display: flex; flex-direction: column; justify-content: center; min-width: 0; }
 .fr-scrub { position: relative; height: 22px; cursor: pointer; }
-.fr-scrub-track { position: absolute; left: 0; right: 0; top: 9px; height: 4px; background: #2a3550; border-radius: 2px; overflow: hidden; }
+.fr-scrub-track { position: absolute; left: 0; right: 0; top: 9px; height: 4px; background: var(--bb-panel-3); border-radius: 2px; overflow: hidden; }
 .fr-scrub-fill { height: 100%; background: var(--bb-accent); }
 .fr-scrub-marker { position: absolute; top: 3px; width: 2px; height: 16px; background: var(--bb-accent); opacity: 0.7; }
-.fr-scrub-cvr { position: absolute; top: 16px; width: 1px; height: 5px; background: #4c8dff; }
-.fr-scrub-head { position: absolute; top: 2px; width: 12px; height: 18px; margin-left: -6px; background: #fff; border-radius: 3px; box-shadow: 0 0 6px #fff; }
-.fr-scrub-ticks { display: flex; justify-content: space-between; font-family: Consolas, monospace; font-size: 9px; margin-top: 2px; }
+.fr-scrub-cvr { position: absolute; top: 16px; width: 1px; height: 5px; background: var(--bb-blue); }
+.fr-scrub-head { position: absolute; top: 3px; width: 10px; height: 16px; margin-left: -5px; background: #fff; border-radius: 3px; box-shadow: 0 1px 4px rgba(0,0,0,0.6); }
+.fr-scrub-ticks { display: flex; justify-content: space-between; font-family: var(--bb-mono); font-size: 9.5px; margin-top: 2px; font-variant-numeric: tabular-nums; }
 .fr-tr-right { display: flex; align-items: center; gap: 12px; }
 .fr-clock { text-align: right; }
-.fr-clock-t { font-family: Consolas, monospace; font-size: 22px; font-weight: 700; color: #fff; line-height: 1; letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
-.fr-clock-s { font-family: Consolas, monospace; font-size: 10px; margin-top: 3px; }
-.fr-sep { width: 1px; height: 30px; background: var(--bb-line); }
-.fr-cams { display: flex; gap: 2px; border: 1px solid var(--bb-line); border-radius: 4px; padding: 2px; }
-.fr-cam { width: 26px; height: 24px; border-radius: 3px; background: transparent; border: none; color: var(--bb-muted); display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.fr-clock-t { font-family: var(--bb-mono); font-size: 21px; font-weight: 600; color: var(--bb-text); line-height: 1; letter-spacing: 0.02em; font-variant-numeric: tabular-nums; }
+.fr-clock-s { font-family: var(--bb-mono); font-size: 10px; margin-top: 3px; font-variant-numeric: tabular-nums; }
+.fr-sep { width: 1px; height: 28px; background: var(--bb-line-2); }
+.fr-cams { display: flex; gap: 2px; border: 1px solid var(--bb-line-2); border-radius: var(--bb-radius); padding: 2px; height: 28px; }
+.fr-cam { width: 26px; height: 22px; border-radius: 3px; background: transparent; border: none; color: var(--bb-muted); display: flex; align-items: center; justify-content: center; cursor: pointer; }
 .fr-cam:hover { color: var(--bb-text); }
-.fr-cam.active { background: var(--bb-accent); color: #111; }
-.fr-badge { font-size: 9px; color: #111; background: var(--bb-accent); border-radius: 8px; padding: 0 5px; font-weight: 700; }
-.fr-ib.active .fr-badge { background: #111; color: var(--bb-accent); }
+.fr-cam.active { background: var(--bb-panel-3); color: var(--bb-text); }
+.fr-badge { font-size: 9.5px; color: var(--bb-accent); font-weight: 500; }
 
 /* layers popover */
-.fr-layers { position: absolute; right: 60px; bottom: 74px; width: 300px; z-index: 6; background: #0f1524; border: 1px solid var(--bb-line); border-radius: 6px; box-shadow: 0 12px 40px rgba(0,0,0,0.6); padding: 6px 0; max-height: calc(100% - 90px); overflow: auto; }
-.fr-layers-h { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bb-muted); padding: 8px 12px 4px; }
-.fr-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 6px 12px; font-size: 11px; cursor: pointer; }
-.fr-row small { display: block; font-size: 9px; color: var(--bb-muted); margin-top: 1px; }
-.fr-row.off { opacity: 0.5; }
-.fr-row input[type='checkbox'] { accent-color: var(--bb-accent); width: 15px; height: 15px; flex: none; }
-.fr-row-deck, .fr-row-fg { flex-wrap: wrap; justify-content: flex-start; gap: 6px; cursor: default; }
-.fr-num { width: 52px; padding: 1px 4px; font-size: 10px; }
-.fr-deck-clock { font-family: Consolas, monospace; font-size: 10px; }
+.fr-layers { right: 60px; bottom: 74px; width: 310px; z-index: 6; max-height: calc(100% - 90px); overflow: auto; }
+.fr-row-deck, .fr-row-fg { flex-wrap: wrap; justify-content: flex-start; gap: 6px; }
+.fr-num { width: 56px; height: 24px; padding: 0 6px; font-size: 11px; display: inline-block; }
+.fr-deck-clock { font-family: var(--bb-mono); font-size: 10.5px; }
 .fr-err { color: var(--bb-danger); font-size: 10px; }
-.fr-fg-url { font-size: 10px; padding: 2px 6px; width: 100%; font-family: Consolas, monospace; }
+.fr-fg-url { font-size: 10.5px; height: 24px; padding: 0 6px; width: 100%; font-family: var(--bb-mono); }
 .fr-fg-status { font-size: 10px; padding: 0 12px 6px; line-height: 1.4; }
 
 /* right column */
 .fr-right { display: flex; flex-direction: column; border-left: 1px solid var(--bb-line); min-height: 0; }
-.fr-panel-tabs { display: flex; gap: 2px; align-items: center; padding: 6px 8px; border-bottom: 1px solid var(--bb-line); }
-.fr-ptab { padding: 3px 10px; border-radius: 3px; background: transparent; border: none; color: var(--bb-muted); font: inherit; font-size: 10px; cursor: pointer; }
-.fr-ptab.active { background: var(--bb-accent); color: #111; font-weight: 700; }
-.fr-panel-hint { font-size: 9px; margin-left: auto; }
+.fr-panel-tabs { display: flex; align-items: center; padding: 6px 8px; border-bottom: 1px solid var(--bb-line); background: var(--bb-panel); }
 .fr-pfd { width: 100%; height: 250px; display: block; flex: none; }
 .fr-ctl { width: 100%; height: 118px; display: block; border-top: 1px solid var(--bb-line); border-bottom: 1px solid var(--bb-line); flex: none; }
 .fr-cvr { flex: 1; min-height: 0; display: flex; flex-direction: column; }
-.fr-cvr-head { padding: 6px 8px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bb-muted); display: flex; justify-content: space-between; gap: 6px; border-bottom: 1px solid var(--bb-line); }
+.fr-cvr-head { padding: 7px 10px; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bb-muted); display: flex; justify-content: space-between; gap: 6px; border-bottom: 1px solid var(--bb-line); background: var(--bb-panel); }
 .fr-cvr-head .bb-muted { text-transform: none; letter-spacing: 0; }
 .fr-cvr-list { flex: 1; overflow: auto; padding: 4px 6px 20px; }
 .fr-cvr-line { display: grid; grid-template-columns: 52px 44px 1fr; gap: 6px; padding: 3px 4px; border-radius: 3px; font-size: 11px; line-height: 1.35; cursor: pointer; opacity: 0.5; }
 .fr-cvr-line.past { opacity: 0.85; }
-.fr-cvr-line.current { opacity: 1; background: #1c2a45; box-shadow: inset 2px 0 0 var(--bb-accent); }
-.fr-cvr-line.speaking { background: #23305a; box-shadow: inset 2px 0 0 #9fd8ff; }
+.fr-cvr-line.current { opacity: 1; background: var(--bb-panel-3); box-shadow: inset 2px 0 0 var(--bb-accent); }
+.fr-cvr-line.speaking { background: var(--bb-panel-3); box-shadow: inset 2px 0 0 var(--bb-blue); }
 .fr-cvr-line.event { font-style: italic; color: #b8c6e3; }
-.fr-cvr-t { color: var(--bb-muted); font-family: Consolas, monospace; font-size: 10px; }
-.fr-cvr-spk { font-weight: 700; font-size: 10px; color: var(--bb-accent); }
+.fr-cvr-t { color: var(--bb-muted); font-family: var(--bb-mono); font-size: 10px; font-variant-numeric: tabular-nums; }
+.fr-cvr-spk { font-weight: 600; font-size: 10px; color: var(--bb-accent); }
 .spk-pf, .spk-capt { color: #ff8a5c; }
 .spk-pnf, .spk-pm, .spk-fo { color: #22e08a; }
 .spk-atc { color: #4c8dff; }

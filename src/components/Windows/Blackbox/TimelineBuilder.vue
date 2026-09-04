@@ -1,40 +1,54 @@
 <template>
   <div class="tl-root">
-    <div class="tl-list">
-      <input v-model="filter" class="bb-input tl-filter" placeholder="Filter accidents…" />
-      <div class="bb-muted tl-count" v-if="filteredTotal > 400">showing up to 400 of {{ filteredTotal.toLocaleString() }} · type to filter</div>
+    <div class="tl-list bb-rail">
+      <div class="tl-filter">
+        <div class="bb-field">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+          <input v-model="filter" class="bb-input" placeholder="Filter accidents…" />
+        </div>
+        <div class="bb-muted tl-count" v-if="filteredTotal > 400">showing up to 400 of {{ filteredTotal.toLocaleString() }} · type to filter</div>
+      </div>
       <div class="tl-list-scroll bb-scroll">
-        <div v-for="r in filtered" :key="r.id" class="tl-item" :class="{ active: r.id === store.selectedId, compare: r.id === store.compareId }" @click="pick(r.id)">
+        <div v-for="r in filtered" :key="r.id" class="bb-list-row tl-item" :class="{ active: r.id === store.selectedId, compare: r.id === store.compareId }" @click="pick(r.id)">
           <span class="bb-agency">{{ r.agency }}</span>
           <span class="tl-item-title">{{ r.title }}</span>
-          <span class="bb-muted">{{ r.date.slice(0, 4) }}</span>
-          <span v-if="r.fdr" class="tl-fdr" title="FDR replay available">FDR</span>
-          <span v-if="r.tier" class="tl-tier" :title="r.tier + ' · ' + r.depth">{{ r.tier === 'ntsb' ? 'DB' : 'W' }}</span>
-          <span v-if="r.dissent && r.dissent.length" class="tl-dissent" title="agency dissent">≠</span>
+          <span v-if="r.fdr" class="tl-mark" title="FDR replay available">▶</span>
+          <span v-if="r.dissent && r.dissent.length" class="tl-mark warn" title="agency dissent">≠</span>
+          <span class="bb-muted bb-num">{{ r.date.slice(0, 4) }}</span>
         </div>
       </div>
     </div>
 
     <div class="tl-main" v-if="rec">
       <div class="tl-head">
-        <div>
-          <div class="tl-title"><span class="bb-agency">{{ rec.agency }}</span> {{ rec.title }} <span v-if="rec.tier" class="tl-depth">{{ rec.tier === 'ntsb' ? 'NTSB database' : 'Wikidata / Wikipedia' }} · {{ rec.depth }}</span></div>
-          <div class="bb-muted">{{ rec.date }} · {{ rec.aircraft.type }} · {{ rec.operator }} · {{ rec.route?.from_name || rec.route?.from || '' }} → {{ rec.route?.to_name || rec.route?.to || '' }} · {{ rec.fatalities ?? '?' }} fatalities</div>
+        <div class="tl-head-main">
+          <div class="tl-head-tags">
+            <span class="bb-agency">{{ rec.agency }}</span>
+            <span v-if="rec.tier" class="bb-tag">{{ rec.tier === 'ntsb' ? 'NTSB database' : 'Wikidata' }} · {{ rec.depth }}</span>
+            <span v-else class="bb-tag accent">Reviewed · full report</span>
+          </div>
+          <h3 class="bb-title">{{ rec.title }}</h3>
+          <div class="bb-meta">{{ rec.date }} · {{ rec.aircraft.type }} · {{ rec.operator }} · {{ rec.route?.from_name || rec.route?.from || '' }} → {{ rec.route?.to_name || rec.route?.to || '' }} · {{ rec.fatalities ?? '?' }} fatalities</div>
         </div>
-        <div class="tl-modes">
-          <button class="bb-btn" :class="{ active: seqPlaying }" :disabled="!(rec.events && rec.events.length)" @click="toggleSeq" title="Step through the events in order with a ticking clock">{{ seqPlaying ? '❚❚ stop' : '▶ play sequence' }}</button>
-          <button class="bb-btn" :class="{ active: mode === 'chain' }" @click="mode = 'chain'">Event chain</button>
-          <button class="bb-btn" :class="{ active: mode === 'compare' }" @click="mode = 'compare'">Compare</button>
-          <button class="bb-btn" :class="{ active: mode === 'narrative' }" @click="mode = 'narrative'">Narrative</button>
-          <button class="bb-btn" :disabled="!rec.fdr" @click="store.openReplay(rec.id)">Replay ▸</button>
-          <button class="bb-btn" :disabled="!rec.fdr" @click="store.openFlightGear(rec.id)" title="Export this replay as a FlightGear package or drive FlightGear live">FlightGear ▸</button>
-          <button class="bb-btn" :disabled="!(rec.events && rec.events.length)" @click="store.openStory(rec.id)" title="Documentary-style walkthrough">Story ▸</button>
-          <a :href="wikipediaUrl(rec)" target="_blank" rel="noopener" class="tl-readmore">{{ hasWikipediaArticle(rec) ? 'Read more on Wikipedia ↗' : 'Search Wikipedia ↗' }}</a>
+        <div class="tl-head-side">
+          <div class="bb-seg" role="group" aria-label="Mode">
+            <button :class="{ active: mode === 'chain' }" @click="mode = 'chain'">Event chain</button>
+            <button :class="{ active: mode === 'compare' }" @click="mode = 'compare'">Compare</button>
+            <button :class="{ active: mode === 'narrative' }" @click="mode = 'narrative'">Narrative</button>
+          </div>
+          <div class="bb-actions tl-actions">
+            <button class="bb-btn small" :class="{ primary: !seqPlaying, active: seqPlaying }" :disabled="!(rec.events && rec.events.length)" @click="toggleSeq" title="Step through the events in order with a ticking clock">
+              <svg v-if="!seqPlaying" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l11-7z"></path></svg>
+              <svg v-else width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14"></rect><rect x="14" y="5" width="4" height="14"></rect></svg>
+              {{ seqPlaying ? 'Stop' : 'Play sequence' }}
+            </button>
+            <RecordActions :record="rec" :index="index" current="timeline" />
+          </div>
         </div>
       </div>
 
       <div v-if="seqPlaying" class="tl-live" @click="toggleSeq">
-        <div class="tl-live-clock">{{ liveClock }}</div>
+        <div class="tl-live-clock bb-num">{{ liveClock }}</div>
         <div class="tl-live-sub">{{ liveSub }}</div>
       </div>
 
@@ -55,16 +69,16 @@
               </div>
               <div class="tl-event-dot" :class="'actor-' + e.actor"></div>
               <div class="tl-event-body">
-                <div class="tl-event-actor">{{ actorName(e.actor) }} <span class="tl-kind">{{ (e.kind || '').replace(/_/g, ' ') }}</span></div>
+                <div class="tl-event-actor">{{ actorName(e.actor) }} <span class="bb-tag">{{ (e.kind || '').replace(/_/g, ' ') }}</span></div>
                 <div class="tl-event-text">{{ e.text }}</div>
                 <div class="tl-state" v-if="e.state && Object.keys(e.state).length">
                   <span v-for="(v, k) in e.state" :key="k" class="tl-state-item"><span class="bb-muted">{{ stateLabel(k) }}</span> {{ stateValue(k, v) }}</span>
                 </div>
                 <div class="tl-event-factors" v-if="e.factors && e.factors.length">
-                  <span v-for="f in e.factors" :key="f" class="bb-chip factor" :style="{ background: factorColor(f) }" @click.stop="onFactorSelect(f)">{{ factorLabel(f) }}</span>
+                  <span v-for="f in e.factors" :key="f" class="bb-chip factor" :style="{ '--c': factorColor(f) }" @click.stop="onFactorSelect(f)">{{ factorLabel(f) }}</span>
                 </div>
                 <div class="tl-event-recs" v-if="recsForEvent(e).length">
-                  <span v-for="r in recsForEvent(e)" :key="r.key" class="tl-rec-chip" :title="r.text">⇢ {{ r.id || 'recommendation' }}<span class="bb-muted"> to {{ r.to || '?' }}</span></span>
+                  <span v-for="r in recsForEvent(e)" :key="r.key" class="bb-tag ok" :title="r.text">→ {{ r.id || 'recommendation' }} to {{ r.to || '?' }}</span>
                 </div>
               </div>
             </div>
@@ -72,7 +86,7 @@
         </div>
         <div class="tl-side">
           <div class="tl-side-section">
-            <div class="bb-h">CVR {{ rec.cvr && rec.cvr.length ? '' : '(no public transcript)' }}</div>
+            <div class="bb-h">Transcript {{ rec.cvr && rec.cvr.length ? '' : '· none public' }}</div>
             <div class="tl-cvr bb-scroll" ref="cvrEl">
               <div v-for="(c, i) in rec.cvr" :key="i" class="tl-cvr-line" :class="{ near: nearestCvr === i }" @click="activeEventFromTime(c.t)">
                 <span class="tl-cvr-t">{{ c.clock || c.t }}</span>
@@ -84,8 +98,8 @@
           <div class="tl-side-section" v-if="rec.audio && rec.audio.length">
             <div class="bb-h">Recordings</div>
             <div v-for="(a, i) in uniqueAudio(rec.audio)" :key="i" class="tl-audio">
-              <div class="tl-audio-title"><span class="tl-audio-kind">{{ a.kind === 'cvr' ? 'CVR' : a.kind === 'atc' ? 'ATC' : 'AUDIO' }}</span> {{ a.title }}</div>
-              <audio controls preload="none" :src="a.url" class="tl-audio-el"></audio>
+              <div class="tl-audio-title"><span class="bb-tag">{{ a.kind === 'cvr' ? 'CVR' : a.kind === 'atc' ? 'ATC' : 'Audio' }}</span> {{ a.title }}</div>
+              <audio controls preload="none" :src="a.url"></audio>
               <div class="bb-muted tl-audio-credit"><a :href="a.page" target="_blank" rel="noopener" class="bb-link">Wikimedia Commons</a> · {{ a.license }}<span v-if="rec.fdr"> · <span class="bb-link" @click="store.openReplay(rec.id)">play it in sync with the replay ▸</span></span></div>
             </div>
           </div>
@@ -96,12 +110,12 @@
                 <div class="tl-rec-head">
                   <b>{{ r.id || 'Recommendation ' + (i + 1) }}</b>
                   <span class="bb-muted" v-if="r.to">→ {{ r.to }}</span>
-                  <span class="tl-status" :class="'st-' + (r.status || 'unknown')">{{ (r.status || 'unknown').replace(/_/g, ' ') }}</span>
+                  <span class="bb-tag" :class="'st-' + (r.status || 'unknown')">{{ (r.status || 'unknown').replace(/_/g, ' ') }}</span>
                 </div>
                 <div class="tl-rec-text">{{ r.text }}</div>
                 <div class="bb-muted tl-rec-outcome" v-if="r.outcome">{{ r.outcome }}</div>
                 <div class="tl-event-factors" v-if="r.trigger_factors && r.trigger_factors.length">
-                  <span v-for="f in r.trigger_factors" :key="f" class="bb-chip factor" :style="{ background: factorColor(f) }" @click="onFactorSelect(f)">{{ factorLabel(f) }}</span>
+                  <span v-for="f in r.trigger_factors" :key="f" class="bb-chip factor" :style="{ '--c': factorColor(f) }" @click="onFactorSelect(f)">{{ factorLabel(f) }}</span>
                 </div>
               </div>
               <div v-if="rec.safety_changes && rec.safety_changes.length">
@@ -109,7 +123,7 @@
                 <ul class="tl-changes"><li v-for="(s, i) in rec.safety_changes" :key="i">{{ s }}</li></ul>
               </div>
               <div v-if="rec.dissent && rec.dissent.length" class="tl-dissent-box">
-                <div class="bb-h" style="color:#ff9f43">Agency dissent</div>
+                <div class="bb-h">Agency dissent</div>
                 <div v-for="(d, i) in rec.dissent" :key="i"><b>{{ d.agency }}</b> <span class="bb-muted">({{ d.topic }})</span>: {{ d.position }}</div>
               </div>
             </div>
@@ -127,23 +141,23 @@
             <option v-for="r in graph.records" :key="'all' + r.id" :value="r.id">{{ r.title }}</option>
             <option v-if="rec.tier" :value="rec.id" disabled>(catalog records can be compared via suggestions above)</option>
           </select>
-          <span class="tl-sim" v-if="cmp">Mechanism similarity <b>{{ Math.round(similarity * 100) }}%</b> · {{ sharedFactors.length }} shared factors · {{ sharedEdges.length }} shared causal edges</span>
+          <span class="tl-sim bb-muted" v-if="cmp">Mechanism similarity <b class="bb-num">{{ Math.round(similarity * 100) }}%</b> · {{ sharedFactors.length }} shared factors · {{ sharedEdges.length }} shared causal edges</span>
         </div>
         <template v-if="cmp">
           <div class="tl-compare-grid">
             <div class="tl-compare-col">
-              <div class="tl-title"><span class="bb-agency">{{ rec.agency }}</span> {{ rec.title }} <span v-if="rec.tier" class="tl-depth">{{ rec.tier === 'ntsb' ? 'NTSB database' : 'Wikidata / Wikipedia' }} · {{ rec.depth }}</span></div>
+              <div class="tl-title"><span class="bb-agency">{{ rec.agency }}</span> {{ rec.title }}</div>
               <div class="bb-muted">{{ rec.date }} · {{ rec.aircraft.type }} · {{ rec.phase }}</div>
               <p class="tl-summary">{{ rec.summary }}</p>
             </div>
             <div class="tl-compare-mid">
               <div class="bb-h">Shared mechanism</div>
               <div class="tl-chipwrap">
-                <span v-for="f in sharedFactors" :key="f" class="bb-chip factor" :style="{ background: factorColor(f) }">{{ factorLabel(f) }}</span>
+                <span v-for="f in sharedFactors" :key="f" class="bb-chip factor" :style="{ '--c': factorColor(f) }">{{ factorLabel(f) }}</span>
                 <span v-if="!sharedFactors.length" class="bb-muted">none</span>
               </div>
               <div class="bb-h" v-if="sharedEdges.length">Shared causal edges</div>
-              <div v-for="e in sharedEdges" :key="e.join('>')" class="tl-edge">{{ factorLabel(e[0]) }} <span class="tl-arrow">→</span> {{ factorLabel(e[1]) }}</div>
+              <div v-for="e in sharedEdges" :key="e.join('>')" class="tl-edge">{{ factorLabel(e[0]) }} <span class="bb-arrow">→</span> {{ factorLabel(e[1]) }}</div>
             </div>
             <div class="tl-compare-col">
               <div class="tl-title"><span class="bb-agency">{{ cmp.agency }}</span> {{ cmp.title }}</div>
@@ -154,7 +168,7 @@
           <div class="tl-compare-grid">
             <div class="tl-compare-col">
               <div class="bb-h">Only in {{ rec.title }}</div>
-              <div class="tl-chipwrap"><span v-for="f in onlyA" :key="f" class="bb-chip factor" :style="{ background: factorColor(f) }">{{ factorLabel(f) }}</span></div>
+              <div class="tl-chipwrap"><span v-for="f in onlyA" :key="f" class="bb-chip factor" :style="{ '--c': factorColor(f) }">{{ factorLabel(f) }}</span></div>
               <div class="bb-h">Chain</div>
               <div class="tl-dag-small"><ChainDiagram :chain="rec.chain" :index="index" :graph="graph" :highlight="sharedFactors" @select="onFactorSelect" /></div>
               <div class="bb-h">Agencies</div>
@@ -164,7 +178,7 @@
             <div class="tl-compare-mid">
               <div class="bb-h">Same outcome?</div>
               <div class="tl-chipwrap">
-                <span v-for="f in outcomeFactors(rec)" :key="'a' + f" class="bb-chip factor" :style="{ background: factorColor(f), opacity: outcomeFactors(cmp).includes(f) ? 1 : 0.45 }">{{ factorLabel(f) }}</span>
+                <span v-for="f in outcomeFactors(rec)" :key="'a' + f" class="bb-chip factor" :style="{ '--c': factorColor(f), opacity: outcomeFactors(cmp).includes(f) ? 1 : 0.45 }">{{ factorLabel(f) }}</span>
               </div>
               <div class="bb-h">Phase</div>
               <div>{{ rec.phase }} <span class="bb-muted">vs</span> {{ cmp.phase }}</div>
@@ -175,7 +189,7 @@
             </div>
             <div class="tl-compare-col">
               <div class="bb-h">Only in {{ cmp.title }}</div>
-              <div class="tl-chipwrap"><span v-for="f in onlyB" :key="f" class="bb-chip factor" :style="{ background: factorColor(f) }">{{ factorLabel(f) }}</span></div>
+              <div class="tl-chipwrap"><span v-for="f in onlyB" :key="f" class="bb-chip factor" :style="{ '--c': factorColor(f) }">{{ factorLabel(f) }}</span></div>
               <div class="bb-h">Chain</div>
               <div class="tl-dag-small"><ChainDiagram :chain="cmp.chain" :index="index" :graph="graph" :highlight="sharedFactors" @select="onFactorSelect" /></div>
               <div class="bb-h">Agencies</div>
@@ -199,7 +213,7 @@
       <div class="tl-body tl-narrative" v-else>
         <div class="tl-narr-tools">
           <button class="bb-btn small" @click="copyNarrative">{{ copied ? 'Copied ✓' : 'Copy markdown' }}</button>
-          <span class="bb-muted">Generated from the structured record. Cloudberg-style scaffold, not a substitute for the report.</span>
+          <span class="bb-muted">Generated from the structured record; a scaffold, not a substitute for the report.</span>
         </div>
         <div class="tl-narr-html bb-scroll" v-html="narrativeHtml"></div>
       </div>
@@ -215,7 +229,7 @@ import { layoutChain } from './lib/dag.js'
 import { buildNarrative, markdownToHtml } from './lib/narrative.js'
 import { formatRelative } from './lib/fdr.js'
 import { loadCatalogRecord } from './lib/catalog.js'
-import { wikipediaUrl, hasWikipediaArticle } from './lib/geo.js'
+import RecordActions from './RecordActions.vue'
 import { formatClock } from './lib/fdr.js'
 import { note } from './lib/synth.js'
 import { onBeforeUnmount } from 'vue'
@@ -480,15 +494,16 @@ const ChainDiagram = defineComponent({
       const hi = new Set(p.highlight || [])
       const pad = 8
       return h('svg', { viewBox: `${-pad} ${-pad} ${lay.width + 2 * pad} ${lay.height + 2 * pad}`, width: lay.width + 2 * pad, height: lay.height + 2 * pad, style: 'display:block' }, [
-        h('defs', [h('marker', { id: 'bb-arrow', viewBox: '0 0 10 10', refX: 9, refY: 5, markerWidth: 7, markerHeight: 7, orient: 'auto-start-reverse' }, [h('path', { d: 'M 0 0 L 10 5 L 0 10 z', fill: '#ff9628' })])]),
-        ...lay.edges.map((e) => h('path', { d: e.d, fill: 'none', stroke: e.back ? '#ff5cf0' : '#ff9628', 'stroke-width': 1.6, 'stroke-dasharray': e.back ? '4 3' : null, 'marker-end': 'url(#bb-arrow)', opacity: hi.size && !(hi.has(e.from) && hi.has(e.to)) ? 0.35 : 1 })),
+        h('defs', [h('marker', { id: 'bb-arrow', viewBox: '0 0 10 10', refX: 9, refY: 5, markerWidth: 7, markerHeight: 7, orient: 'auto-start-reverse' }, [h('path', { d: 'M 0 0 L 10 5 L 0 10 z', fill: '#8a93a3' })])]),
+        ...lay.edges.map((e) => h('path', { d: e.d, fill: 'none', stroke: e.back ? '#ff5cf0' : '#8a93a3', 'stroke-width': 1.4, 'stroke-dasharray': e.back ? '4 3' : null, 'marker-end': 'url(#bb-arrow)', opacity: hi.size && !(hi.has(e.from) && hi.has(e.to)) ? 0.35 : 1 })),
         ...lay.nodes.map((n) => {
           const f = p.index.factorById[n.id]
           const color = p.graph.taxonomy.categories[f?.category]?.color || '#888'
           const dim = hi.size && !hi.has(n.id)
           return h('g', { transform: `translate(${n.x},${n.y})`, style: 'cursor:pointer', opacity: dim ? 0.4 : 1, onClick: () => emit('select', n.id) }, [
-            h('rect', { width: n.w, height: n.h, rx: 6, fill: color, stroke: hi.has(n.id) ? '#fff' : 'rgba(0,0,0,0.4)', 'stroke-width': hi.has(n.id) ? 2 : 1 }),
-            h('text', { x: n.w / 2, y: n.h / 2 + 4, 'text-anchor': 'middle', 'font-size': 11, 'font-family': 'Tahoma, Verdana, sans-serif', 'font-weight': 600, fill: '#111' }, n.label)
+            h('rect', { width: n.w, height: n.h, rx: 4, fill: '#1a1f28', stroke: hi.has(n.id) ? '#e8ecf1' : '#333b49', 'stroke-width': hi.has(n.id) ? 1.5 : 1 }),
+            h('rect', { x: 0, y: 0, width: 3, height: n.h, rx: 1.5, fill: color }),
+            h('text', { x: n.w / 2 + 2, y: n.h / 2 + 4, 'text-anchor': 'middle', 'font-size': 11, 'font-family': "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif", 'font-weight': 500, fill: '#e8ecf1' }, n.label)
           ])
         })
       ])
@@ -499,105 +514,99 @@ watch(rec, stopSeq)
 </script>
 
 <style scoped>
-.tl-readmore { display: inline-flex; align-items: center; color: var(--bb-accent); font-weight: 700; text-decoration: none; border: 1px solid var(--bb-accent); border-radius: 3px; padding: 3px 8px; font-size: 11px; }
-.tl-readmore:hover { background: var(--bb-accent); color: #111; }
-.tl-root { position: absolute; inset: 0; display: grid; grid-template-columns: 250px 1fr; }
-.tl-list { background: var(--bb-panel); border-right: 1px solid var(--bb-line); display: flex; flex-direction: column; min-height: 0; }
-.tl-filter { margin: 8px; width: calc(100% - 16px); }
+.tl-root { position: absolute; inset: 0; display: grid; grid-template-columns: 272px 1fr; }
+.tl-list { border-right: 1px solid var(--bb-line); }
+.tl-filter { padding: var(--bb-pad) var(--bb-pad) 8px; border-bottom: 1px solid var(--bb-line); }
+.tl-count { font-size: 10.5px; padding-top: 6px; }
 .tl-list-scroll { flex: 1; overflow: auto; }
-.tl-item { display: flex; gap: 5px; align-items: center; padding: 5px 8px; cursor: pointer; border-bottom: 1px solid #1a2438; font-size: 11px; }
-.tl-item:hover { background: var(--bb-panel-2); }
-.tl-item.active { background: #1c2a45; box-shadow: inset 3px 0 0 var(--bb-accent); }
-.tl-item.compare { box-shadow: inset 3px 0 0 #ff5cf0; }
+.tl-item.compare { box-shadow: inset 2px 0 0 #ff5cf0; }
 .tl-item-title { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.tl-tier { font-size: 8px; color: var(--bb-muted); border: 1px solid var(--bb-line); border-radius: 2px; padding: 0 2px; }
-.tl-count { font-size: 10px; padding: 0 8px 4px; }
-.tl-depth { font-size: 9px; font-weight: 400; color: var(--bb-muted); border: 1px solid var(--bb-line); border-radius: 3px; padding: 0 4px; margin-left: 6px; vertical-align: middle; }
-.tl-fdr { font-size: 8px; color: var(--bb-accent-2); border: 1px solid var(--bb-accent-2); border-radius: 2px; padding: 0 2px; }
-.tl-dissent { color: #ff9f43; font-weight: 700; }
-.tl-main { position: relative;  display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.tl-mark { font-size: 9px; color: var(--bb-muted); }
+.tl-mark.warn { color: var(--bb-warn); font-weight: 700; font-size: 11px; }
+.tl-main { position: relative; display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.tl-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 10px var(--bb-pad); border-bottom: 1px solid var(--bb-line); background: var(--bb-panel); }
+.tl-head-main { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.tl-head-tags { display: flex; gap: 4px; align-items: center; }
+.tl-head-side { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex: none; }
+.tl-actions { justify-content: flex-end; }
+.tl-title { font-size: 13px; font-weight: 600; }
 .tl-audio { margin-bottom: 8px; }
-.tl-audio-title { font-size: 11px; color: #d3ddf0; }
-.tl-audio-kind { font-size: 9px; font-weight: 700; color: #111; background: var(--bb-accent); padding: 0 4px; border-radius: 2px; margin-right: 4px; }
-.tl-audio-el { width: 100%; height: 30px; margin-top: 3px; }
-.tl-audio-credit { font-size: 9px; }
-.tl-live { position: absolute; right: 18px; top: 58px; z-index: 5; background: rgba(4,6,12,0.85); border: 1px solid var(--bb-accent); border-radius: 6px; padding: 8px 14px; text-align: right; cursor: pointer; box-shadow: 0 8px 30px rgba(0,0,0,0.6); animation: tl-live-in 0.4s ease-out; }
-.tl-live-clock { font-family: Consolas, monospace; font-size: 34px; color: #fff; letter-spacing: 0.08em; line-height: 1; text-shadow: 0 0 14px rgba(255,191,0,0.5); }
-.tl-live-sub { font-size: 10px; color: var(--bb-muted); margin-top: 4px; letter-spacing: 0.08em; }
+.tl-audio-title { font-size: 11px; color: var(--bb-text-2); margin-bottom: 4px; }
+.tl-audio-credit { font-size: 10px; margin-top: 2px; }
+.tl-live { position: absolute; right: 18px; top: 74px; z-index: 5; background: var(--bb-panel-2); border: 1px solid var(--bb-line-2); border-radius: var(--bb-radius-lg); padding: 8px 14px; text-align: right; cursor: pointer; box-shadow: 0 8px 30px rgba(0,0,0,0.5); animation: tl-live-in 0.4s ease-out; }
+.tl-live-clock { font-size: 30px; color: var(--bb-text); letter-spacing: 0.04em; line-height: 1; }
+.tl-live-sub { font-size: 10.5px; color: var(--bb-muted); margin-top: 4px; }
 @keyframes tl-live-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
-.tl-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; padding: 8px 12px; border-bottom: 1px solid var(--bb-line); background: var(--bb-panel); }
-.tl-title { font-size: 14px; font-weight: 700; }
-.tl-modes { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
-.tl-dag { border-bottom: 1px solid var(--bb-line); padding: 8px 12px; overflow: auto; background: #0d1220; max-height: 190px; flex: none; }
+.tl-dag { border-bottom: 1px solid var(--bb-line); padding: 8px var(--bb-pad); overflow: auto; background: var(--bb-bg); max-height: 190px; flex: none; }
 .tl-body { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 340px; }
-.tl-events { overflow: auto; padding: 8px 12px 30px; }
-.tl-phase-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bb-accent); margin: 10px 0 4px 60px; padding-bottom: 2px; border-bottom: 1px dashed var(--bb-line); }
-.tl-event { display: grid; grid-template-columns: 56px 14px 1fr; gap: 6px; padding: 5px 4px; border-radius: 4px; cursor: pointer; position: relative; }
+.tl-events { overflow: auto; padding: 8px var(--bb-pad) 30px; }
+.tl-phase-label { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bb-muted); margin: 12px 0 4px 66px; padding-bottom: 3px; border-bottom: 1px solid var(--bb-line); }
+.tl-event { display: grid; grid-template-columns: 56px 14px 1fr; gap: 8px; padding: 6px 4px; border-radius: var(--bb-radius); cursor: pointer; position: relative; }
 .tl-event:hover { background: var(--bb-panel-2); }
-.tl-event.active { background: #1c2a45; }
-.tl-event::before { content: ''; position: absolute; left: 68px; top: 0; bottom: 0; width: 1px; background: var(--bb-line); }
+.tl-event.active { background: var(--bb-panel-3); }
+.tl-event::before { content: ''; position: absolute; left: 74px; top: 0; bottom: 0; width: 1px; background: var(--bb-line); }
 .tl-event-time { text-align: right; }
-.tl-clock { font-family: Consolas, monospace; font-size: 11px; }
-.tl-t { font-size: 9px; color: var(--bb-muted); font-family: Consolas, monospace; }
-.tl-event-dot { width: 10px; height: 10px; border-radius: 50%; background: #8fa3c7; margin-top: 3px; position: relative; z-index: 1; border: 2px solid var(--bb-bg); box-sizing: content-box; margin-left: -1px; }
-.actor-SYS { background: #c792ea; } .actor-ATC { background: #4c8dff; } .actor-CAPT, .actor-PF { background: #ff8a5c; } .actor-FO, .actor-PM { background: #22e08a; } .actor-ENV { background: #2a9d8f; } .actor-GND { background: #b5651d; } .actor-CABIN { background: #ffd166; }
-.kind-warning .tl-event-text { color: #ffbf00; }
-.kind-outcome .tl-event-text { color: #ff6b6b; font-weight: 700; }
-.tl-event-actor { font-size: 10px; color: var(--bb-muted); }
-.tl-kind { font-size: 9px; border: 1px solid var(--bb-line); border-radius: 3px; padding: 0 3px; margin-left: 4px; }
-.tl-event-text { line-height: 1.4; color: #e6eefc; }
-.tl-state { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 3px; font-family: Consolas, monospace; font-size: 10px; }
+.tl-clock { font-family: var(--bb-mono); font-size: 11px; font-variant-numeric: tabular-nums; }
+.tl-t { font-size: 9.5px; color: var(--bb-muted); font-family: var(--bb-mono); font-variant-numeric: tabular-nums; }
+.tl-event-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bb-muted); margin-top: 4px; position: relative; z-index: 1; border: 2px solid var(--bb-bg); box-sizing: content-box; margin-left: 1px; }
+.actor-SYS { background: #c792ea; } .actor-ATC { background: #62a0ff; } .actor-CAPT, .actor-PF { background: #ff8a5c; } .actor-FO, .actor-PM { background: #34d399; } .actor-ENV { background: #2a9d8f; } .actor-GND { background: #b5651d; } .actor-CABIN { background: #ffd166; }
+.kind-warning .tl-event-text { color: var(--bb-accent); }
+.kind-outcome .tl-event-text { color: var(--bb-danger); font-weight: 600; }
+.tl-event-actor { font-size: 10.5px; color: var(--bb-muted); display: flex; gap: 6px; align-items: center; }
+.tl-event-text { line-height: 1.45; color: var(--bb-text); margin-top: 1px; }
+.tl-state { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; font-family: var(--bb-mono); font-size: 10.5px; font-variant-numeric: tabular-nums; }
 .tl-state-item .bb-muted { margin-right: 3px; }
-.tl-event-factors { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 4px; }
-.tl-event-recs { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
-.tl-rec-chip { font-size: 9px; color: var(--bb-accent-2); border: 1px dashed var(--bb-accent-2); border-radius: 3px; padding: 0 4px; cursor: help; }
+.tl-event-factors { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 5px; }
+.tl-event-recs { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
 .tl-side { border-left: 1px solid var(--bb-line); display: flex; flex-direction: column; min-height: 0; background: var(--bb-panel); }
-.tl-side-section { flex: 1; min-height: 0; display: flex; flex-direction: column; padding: 0 10px; }
+.tl-side-section { flex: 1; min-height: 0; display: flex; flex-direction: column; padding: var(--bb-pad) var(--bb-pad) 0; }
 .tl-side-section:first-child { border-bottom: 1px solid var(--bb-line); max-height: 45%; }
 .tl-cvr, .tl-recs { flex: 1; overflow: auto; padding-bottom: 10px; }
-.tl-cvr-line { display: grid; grid-template-columns: 52px 40px 1fr; gap: 5px; font-size: 10.5px; padding: 3px 4px; border-radius: 3px; cursor: pointer; line-height: 1.35; }
-.tl-cvr-line.near { background: #1c2a45; box-shadow: inset 2px 0 0 var(--bb-accent); }
-.tl-cvr-t { font-family: Consolas, monospace; color: var(--bb-muted); font-size: 9.5px; }
-.tl-cvr-spk { font-weight: 700; color: var(--bb-accent); font-size: 10px; }
-.tl-rec { border-bottom: 1px solid var(--bb-line); padding: 6px 0; }
+.tl-cvr-line { display: grid; grid-template-columns: 52px 40px 1fr; gap: 6px; font-size: 11px; padding: 3px 4px; border-radius: 3px; cursor: pointer; line-height: 1.4; }
+.tl-cvr-line.near { background: var(--bb-panel-3); box-shadow: inset 2px 0 0 var(--bb-accent); }
+.tl-cvr-t { font-family: var(--bb-mono); color: var(--bb-muted); font-size: 10px; font-variant-numeric: tabular-nums; }
+.tl-cvr-spk { font-weight: 600; color: var(--bb-accent); font-size: 10px; }
+.tl-rec { border-bottom: 1px solid var(--bb-line); padding: 8px 0; }
 .tl-rec-head { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
-.tl-status { font-size: 9px; padding: 0 5px; border-radius: 8px; background: #2a3550; margin-left: auto; }
-.st-open { background: #7a4d00; color: #ffd166; } .st-closed_acceptable { background: #0f5132; color: #8ff0c0; } .st-closed_unacceptable { background: #6b1a1a; color: #ff9a9a; }
-.tl-rec-text { font-size: 11px; line-height: 1.4; margin-top: 2px; }
-.tl-rec-outcome { font-size: 10px; margin-top: 2px; }
-.tl-changes { padding-left: 16px; font-size: 11px; line-height: 1.4; }
-.tl-dissent-box { background: #2a1d10; border: 1px solid #5a3d1a; border-radius: 4px; padding: 4px 8px 8px; margin: 8px 0; line-height: 1.4; font-size: 11px; }
-.tl-compare { display: block; overflow: auto; padding: 10px 12px 30px; }
-.tl-compare-pick { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
+.tl-rec-head .bb-tag { margin-left: auto; }
+.st-open { color: var(--bb-warn); border-color: rgba(255,159,67,0.45); } .st-closed_acceptable { color: var(--bb-accent-2); border-color: rgba(52,211,153,0.45); } .st-closed_unacceptable { color: var(--bb-danger); border-color: rgba(255,93,93,0.45); }
+.tl-rec-text { font-size: 11.5px; line-height: 1.45; margin-top: 3px; color: var(--bb-text-2); }
+.tl-rec-outcome { font-size: 10.5px; margin-top: 3px; }
+.tl-changes { padding-left: 16px; font-size: 11.5px; line-height: 1.45; color: var(--bb-text-2); }
+.tl-dissent-box { margin: 10px 0; padding: 8px 10px; border: 1px solid rgba(255,159,67,0.35); border-radius: var(--bb-radius-lg); line-height: 1.45; font-size: 11.5px; }
+.tl-dissent-box .bb-h { color: var(--bb-warn); }
+.tl-compare { display: block; overflow: auto; padding: var(--bb-pad) var(--bb-pad) 30px; }
+.tl-compare-pick { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
 .tl-compare-pick select { max-width: 380px; }
-.tl-sim { margin-left: auto; }
+.tl-sim { margin-left: auto; font-size: 11px; }
 .tl-compare-grid { display: grid; grid-template-columns: 1fr 260px 1fr; gap: 14px; margin-bottom: 14px; }
 .tl-compare-col { min-width: 0; }
-.tl-compare-mid { background: var(--bb-panel); border: 1px solid var(--bb-line); border-radius: 6px; padding: 4px 10px 10px; }
-.tl-summary { line-height: 1.45; color: #d3ddf0; }
+.tl-compare-mid { background: var(--bb-panel); border: 1px solid var(--bb-line); border-radius: var(--bb-radius-lg); padding: var(--bb-pad); }
+.tl-summary { line-height: 1.5; color: var(--bb-text-2); }
 .tl-chipwrap { display: flex; flex-wrap: wrap; gap: 4px; }
-.tl-edge { font-size: 11px; padding: 2px 0; }
-.tl-arrow { color: var(--bb-accent); }
-.tl-dag-small { overflow: auto; background: #0d1220; border-radius: 4px; padding: 6px; }
-.tl-small { font-size: 10.5px; line-height: 1.4; }
+.tl-edge { font-size: 11.5px; padding: 2px 0; }
+.tl-dag-small { overflow: auto; background: var(--bb-bg); border: 1px solid var(--bb-line); border-radius: var(--bb-radius); padding: 6px; }
+.tl-small { font-size: 11px; line-height: 1.45; }
 .tl-align { display: flex; flex-direction: column; }
-.tl-align-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; border-bottom: 1px solid #1a2438; }
-.tl-align-cell { padding: 4px 6px; font-size: 10.5px; line-height: 1.35; }
-.tl-align-cell.empty { background: repeating-linear-gradient(45deg, transparent 0 6px, #111a2c 6px 7px); }
+.tl-align-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; border-bottom: 1px solid var(--bb-line); }
+.tl-align-cell { padding: 5px 6px; font-size: 11px; line-height: 1.4; }
+.tl-align-cell.empty { background: repeating-linear-gradient(45deg, transparent 0 6px, var(--bb-panel-2) 6px 7px); }
 .tl-align-cell .tl-t { margin-right: 6px; }
 .tl-narrative { display: flex; flex-direction: column; }
-.tl-narr-tools { display: flex; gap: 10px; align-items: center; padding: 8px 12px; border-bottom: 1px solid var(--bb-line); }
-.tl-narr-html { flex: 1; overflow: auto; padding: 12px 24px 40px; max-width: 820px; line-height: 1.6; font-size: 13px; }
-.tl-narr-html :deep(h1) { font-size: 20px; margin: 4px 0 6px; }
-.tl-narr-html :deep(h2) { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bb-accent); margin: 18px 0 6px; }
-.tl-narr-html :deep(p) { margin: 6px 0; color: #d3ddf0; }
-.tl-narr-html :deep(li) { color: #d3ddf0; }
-.tl-narr-html :deep(code) { font-family: Consolas, monospace; background: #070a12; padding: 0 3px; }
+.tl-narr-tools { display: flex; gap: 10px; align-items: center; padding: 8px var(--bb-pad); border-bottom: 1px solid var(--bb-line); }
+.tl-narr-html { flex: 1; overflow: auto; padding: 16px 28px 40px; max-width: 820px; line-height: 1.6; font-size: 13px; }
+.tl-narr-html :deep(h1) { font-size: 20px; margin: 4px 0 6px; font-weight: 600; }
+.tl-narr-html :deep(h2) { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bb-muted); margin: 20px 0 6px; font-weight: 500; }
+.tl-narr-html :deep(p) { margin: 6px 0; color: var(--bb-text-2); }
+.tl-narr-html :deep(li) { color: var(--bb-text-2); }
+.tl-narr-html :deep(code) { font-family: var(--bb-mono); background: var(--bb-panel-2); padding: 0 3px; border-radius: 2px; }
 .tl-narr-html :deep(hr) { border: none; border-top: 1px solid var(--bb-line); margin: 16px 0; }
 @media (max-width: 900px) {
   .tl-root { grid-template-columns: 1fr; grid-template-rows: 30% 70%; }
   .tl-body { grid-template-columns: 1fr; }
   .tl-side { display: none; }
   .tl-compare-grid { grid-template-columns: 1fr; }
+  .tl-head { flex-direction: column; }
+  .tl-head-side { align-items: flex-start; }
 }
 </style>

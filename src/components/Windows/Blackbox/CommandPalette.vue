@@ -30,17 +30,17 @@ const inputRef = ref(null)
 const activeIdx = ref(0)
 
 const ACTIONS = [
-  { key: 'a-surprise', icon: '🎲', title: 'Surprise me', sub: 'the story of a random fully-documented accident', run: () => { const pool = props.graph.records.filter((r) => r.events && r.events.length >= 6); const r = pool[Math.floor(Math.random() * pool.length)]; if (r) store.openStory(r.id) } },
-  { key: 'a-requiem', icon: '🕯', title: 'Requiem', sub: 'the century as a memorial on the atlas', run: () => emit('action', 'requiem') },
-  { key: 'a-atlas', icon: '🌐', title: 'Open the atlas', sub: 'every accident on a globe', run: () => store.openAtlas() },
-  { key: 'a-century', icon: '⏵', title: 'Play the century', sub: 'atlas time-lapse from the first record to today', run: () => emit('action', 'century') },
-  { key: 'a-story', icon: '🎬', title: 'Tell the story of the selected accident', sub: 'documentary walkthrough', run: () => store.selectedId && store.openStory(store.selectedId) },
+  { key: 'a-surprise', icon: '?', title: 'Surprise me', sub: 'the story of a random fully-documented accident', run: () => { const pool = props.graph.records.filter((r) => r.events && r.events.length >= 6); const r = pool[Math.floor(Math.random() * pool.length)]; if (r) store.openStory(r.id) } },
+  { key: 'a-requiem', icon: '◦', title: 'Requiem', sub: 'the century as a memorial on the atlas', run: () => emit('action', 'requiem') },
+  { key: 'a-atlas', icon: '◎', title: 'Open the atlas', sub: 'every accident on a globe', run: () => store.openAtlas() },
+  { key: 'a-century', icon: '▶', title: 'Play the century', sub: 'atlas time-lapse from the first record to today', run: () => emit('action', 'century') },
+  { key: 'a-story', icon: '▷', title: 'Tell the story of the selected accident', sub: 'documentary walkthrough', run: () => store.selectedId && store.openStory(store.selectedId) },
   { key: 'a-replay', icon: '✈', title: 'FDR replay', sub: 'flight data recorder replay', run: () => (store.tab = 'replay') },
-  { key: 'a-fg', icon: '🛩', title: 'Fly the selected accident in FlightGear', sub: 'download a package or drive a running FlightGear live', run: () => { const id = store.selectedId; const r = id && props.index.byId[id]; if (r && r.fdr) store.openFlightGear(id); else store.tab = 'replay' } },
-  { key: 'a-timeline', icon: '⏱', title: 'Timeline of the selected accident', sub: 'event chain, compare, narrative', run: () => store.selectedId && store.openTimeline(store.selectedId) },
-  { key: 'a-sound', icon: '🔊', title: 'Toggle cockpit sound', sub: 'synthesized engines, warnings and call-outs in the replay', run: () => emit('action', 'sound') },
-  { key: 'a-crt', icon: '📺', title: 'Toggle CRT look', sub: 'scanlines and phosphor glow', run: () => (store.crt = !store.crt) },
-  { key: 'a-method', icon: '📖', title: 'How this was built', sub: 'method and data sources', run: () => (store.tab = 'about') }
+  { key: 'a-fg', icon: '⇗', title: 'Fly the selected accident in FlightGear', sub: 'download a package or drive a running FlightGear live', run: () => { const id = store.selectedId; const r = id && props.index.byId[id]; if (r && r.fdr) store.openFlightGear(id); else store.tab = 'replay' } },
+  { key: 'a-timeline', icon: '◷', title: 'Timeline of the selected accident', sub: 'event chain, compare, narrative', run: () => store.selectedId && store.openTimeline(store.selectedId) },
+  { key: 'a-sound', icon: '♪', title: 'Toggle cockpit sound', sub: 'synthesized engines, warnings and call-outs in the replay', run: () => emit('action', 'sound') },
+  { key: 'a-crt', icon: '▣', title: 'Toggle CRT look', sub: 'scanlines and phosphor glow', run: () => (store.crt = !store.crt) },
+  { key: 'a-method', icon: '¶', title: 'How this was built', sub: 'method and data sources', run: () => (store.tab = 'about') }
 ]
 
 function score(text, terms) {
@@ -85,7 +85,7 @@ const groups = computed(() => {
   const acts = ACTIONS.filter((a) => !terms.length || score(`${a.title} ${a.sub}`, terms))
   out.push({ label: 'Actions', items: acts.map((a) => ({ ...a, flat: flat++ })) })
   // free-text search
-  if (terms.length) out.push({ label: 'Search', items: [{ key: 'search', flat: flat++, icon: '🔍', title: `Ask the graph: “${q.value}”`, sub: 'causal-path and text search', run: () => store.openGraph(null, q.value) }] })
+  if (terms.length) out.push({ label: 'Search', items: [{ key: 'search', flat: flat++, icon: '⌕', title: `Ask the graph: “${q.value}”`, sub: 'causal-path and text search', run: () => store.openGraph(null, q.value) }] })
   return out
 })
 const total = computed(() => groups.value.reduce((n, g) => n + g.items.length, 0))
@@ -108,17 +108,18 @@ onMounted(() => inputRef.value && inputRef.value.focus())
 </script>
 
 <style scoped>
-.cp-backdrop { position: absolute; inset: 0; z-index: 60; background: rgba(2, 4, 10, 0.6); backdrop-filter: blur(3px); display: flex; justify-content: center; align-items: flex-start; padding-top: 8vh; }
-.cp-box { width: min(620px, 92%); background: #0b1020; border: 1px solid var(--bb-line); border-radius: 8px; box-shadow: 0 20px 80px rgba(0,0,0,0.7); overflow: hidden; animation: cp-in 0.15s ease-out; }
+.cp-backdrop { position: absolute; inset: 0; z-index: 60; background: rgba(4, 6, 10, 0.55); backdrop-filter: blur(3px); display: flex; justify-content: center; align-items: flex-start; padding-top: 8vh; }
+.cp-box { width: min(620px, 92%); background: var(--bb-panel-2); border: 1px solid var(--bb-line-2); border-radius: var(--bb-radius-lg); box-shadow: 0 20px 80px rgba(0,0,0,0.6); overflow: hidden; animation: cp-in 0.15s ease-out; }
 @keyframes cp-in { from { opacity: 0; transform: translateY(-8px) scale(0.98); } to { opacity: 1; transform: none; } }
-.cp-input { width: 100%; box-sizing: border-box; background: transparent; border: none; border-bottom: 1px solid var(--bb-line); color: #fff; font: inherit; font-size: 15px; padding: 14px 16px; outline: none; }
+.cp-input { width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--bb-line); color: var(--bb-text); font: inherit; font-size: 14px; padding: 14px 16px; outline: none; }
+.cp-input::placeholder { color: var(--bb-faint); }
 .cp-list { max-height: 50vh; overflow: auto; padding: 6px 0; }
-.cp-group { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bb-muted); padding: 8px 16px 2px; }
+.cp-group { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bb-muted); padding: 8px 16px 2px; }
 .cp-item { display: grid; grid-template-columns: 24px 1fr auto; gap: 8px; align-items: center; padding: 6px 16px; cursor: pointer; font-size: 12px; }
-.cp-item.active { background: #1c2a45; box-shadow: inset 3px 0 0 var(--bb-accent); }
-.cp-icon { text-align: center; color: var(--bb-accent); }
-.cp-title { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.cp-sub { font-size: 10px; white-space: nowrap; }
+.cp-item.active { background: var(--bb-panel-3); box-shadow: inset 2px 0 0 var(--bb-accent); }
+.cp-icon { text-align: center; color: var(--bb-muted); font-size: 11px; }
+.cp-title { font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cp-sub { font-size: 10.5px; white-space: nowrap; }
 .cp-empty { padding: 16px; }
-.cp-foot { padding: 6px 16px; border-top: 1px solid var(--bb-line); font-size: 10px; display: flex; gap: 8px; }
+.cp-foot { padding: 6px 16px; border-top: 1px solid var(--bb-line); font-size: 10.5px; display: flex; gap: 8px; align-items: center; }
 </style>

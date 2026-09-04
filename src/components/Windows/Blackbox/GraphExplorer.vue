@@ -1,58 +1,64 @@
 <template>
   <div class="ge-root">
-    <!-- Left: query + results -->
-    <div class="ge-left">
+    <!-- Left rail: query + results -->
+    <div class="ge-left bb-rail">
       <form class="ge-search" @submit.prevent="runQuery">
-        <input v-model="queryText" class="bb-input" placeholder="Ask the graph: e.g. pitot icing led to unreliable airspeed misdiagnosed as a stall" spellcheck="false" />
+        <div class="bb-field">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+          <input v-model="queryText" class="bb-input" placeholder="Ask the graph, e.g. pitot icing led to a stall" spellcheck="false" />
+          <button v-if="queryText" type="button" class="ge-clear" @click="clearQuery" title="clear">×</button>
+        </div>
         <div class="ge-search-row">
-          <button class="bb-btn small" type="submit">Search</button>
-          <button class="bb-btn small" type="button" @click="clearQuery" :disabled="!queryText">Clear</button>
-          <button class="bb-btn small" type="button" :class="{ active: semanticOn }" @click="toggleSemantic" :title="semanticStatus">
-            {{ semanticLabel }}
-          </button>
+          <button class="bb-btn small" type="button" :class="{ active: semanticOn }" @click="toggleSemantic" :title="semanticStatus">{{ semanticLabel }}</button>
           <button class="bb-btn small" type="button" :class="{ active: catalog.state === 'ready' }" :disabled="catalog.state === 'loading' || catalog.state === 'ready'" @click="$emit('load-catalog')" :title="catalog.error || 'Load the full catalog: thousands of summary-level records from Wikidata/Wikipedia and the NTSB database (about 1 MB)'">
-            {{ catalog.state === 'loading' ? 'Catalog…' : catalog.state === 'ready' ? 'Catalog ' + catalog.count.toLocaleString() : catalog.state === 'error' ? 'Catalog failed' : 'Load catalog' }}
+            {{ catalog.state === 'loading' ? 'Loading catalog…' : catalog.state === 'ready' ? 'Catalog · ' + catalog.count.toLocaleString() : catalog.state === 'error' ? 'Catalog failed' : 'Load catalog' }}
           </button>
           <span class="bb-muted ge-status">{{ statusLine }}</span>
         </div>
       </form>
-      <div class="ge-examples">
-        <span class="bb-chip ghost" v-for="ex in examples" :key="ex" @click="useExample(ex)">{{ ex }}</span>
-      </div>
       <div v-if="parsed && (parsed.concepts.length || Object.keys(parsed.filters).length)" class="ge-parsed">
         <span class="bb-muted">Understood as</span>
         <template v-for="(c, i) in parsed.concepts" :key="i">
-          <span v-if="i" class="ge-arrow">{{ parsed.ordered ? '→' : '+' }}</span>
-          <span class="bb-chip factor" :style="{ background: factorColor(c.id) }" @click="selectFactor(c.id)">{{ factorLabel(c.id) }}</span>
+          <span v-if="i" class="bb-arrow">{{ parsed.ordered ? '→' : '+' }}</span>
+          <span class="bb-chip factor" :style="{ '--c': factorColor(c.id) }" @click="selectFactor(c.id)">{{ factorLabel(c.id) }}</span>
         </template>
-        <span v-for="(v, k) in parsed.filters" :key="k" class="bb-chip ghost">{{ k }}: {{ Array.isArray(v) ? v.join('–') : v }}</span>
+        <span v-for="(v, k) in parsed.filters" :key="k" class="bb-tag">{{ k }}: {{ Array.isArray(v) ? v.join('–') : v }}</span>
       </div>
       <div class="ge-results bb-scroll">
         <div v-if="!results.length && queryText" class="bb-muted ge-empty">No accidents match. Try fewer concepts or a different phrasing.</div>
         <div v-for="r in results" :key="r.id" class="ge-result" :class="{ active: r.id === store.selectedId }" @click="selectAccident(r.id)">
           <div class="ge-result-head">
-            <span class="bb-agency">{{ index.byId[r.id].agency }}</span>
-            <span v-if="index.byId[r.id].tier" class="ge-tier" :class="'tier-' + index.byId[r.id].tier">{{ index.byId[r.id].tier === 'ntsb' ? 'NTSB DB' : 'WIKI' }}{{ index.byId[r.id].depth && index.byId[r.id].depth !== 'summary' ? ' · ' + index.byId[r.id].depth : '' }}</span>
             <span class="ge-result-title">{{ index.byId[r.id].title }}</span>
-            <span class="bb-muted">{{ index.byId[r.id].date.slice(0, 4) }}</span>
-            <span class="ge-score" :title="'score ' + r.score.toFixed(2)">{{ r.why.fullPath ? 'FULL PATH' : r.why.hops ? r.why.hops + ' hop' + (r.why.hops > 1 ? 's' : '') : r.why.concepts.length ? r.why.concepts.length + ' concept' + (r.why.concepts.length > 1 ? 's' : '') : r.why.semantic > 0.3 ? 'semantic' : 'text' }}</span>
+            <span class="bb-muted bb-num">{{ index.byId[r.id].date.slice(0, 4) }}</span>
           </div>
-          <div class="ge-result-sub bb-muted">{{ index.byId[r.id].aircraft.type }} · {{ index.byId[r.id].operator }} · {{ index.byId[r.id].phase }}</div>
+          <div class="ge-result-sub bb-meta">
+            <span class="bb-agency">{{ index.byId[r.id].agency }}</span>
+            <span v-if="index.byId[r.id].tier" class="bb-tag">{{ index.byId[r.id].tier === 'ntsb' ? 'NTSB db' : 'Wiki' }}</span>
+            {{ index.byId[r.id].aircraft.type }} · {{ phaseLabel(index.byId[r.id].phase) }}
+            <span class="ge-score">{{ r.why.fullPath ? 'full path' : r.why.hops ? r.why.hops + ' hop' + (r.why.hops > 1 ? 's' : '') : r.why.concepts.length ? r.why.concepts.length + ' concept' + (r.why.concepts.length > 1 ? 's' : '') : r.why.semantic > 0.3 ? 'semantic' : 'text' }}</span>
+          </div>
           <div v-if="r.why.path.length" class="ge-path">
             <template v-for="(f, i) in r.why.path" :key="i">
-              <span v-if="i" class="ge-arrow">→</span>
-              <span class="bb-chip factor" :style="{ background: factorColor(f) }">{{ factorLabel(f) }}</span>
+              <span v-if="i" class="bb-arrow">→</span>
+              <span class="bb-chip factor" :style="{ '--c': factorColor(f) }">{{ factorLabel(f) }}</span>
             </template>
           </div>
           <div v-else-if="r.why.concepts.length" class="ge-path">
-            <span v-for="f in r.why.concepts" :key="f" class="bb-chip factor" :style="{ background: factorColor(f) }">{{ factorLabel(f) }}</span>
+            <span v-for="f in r.why.concepts" :key="f" class="bb-chip factor" :style="{ '--c': factorColor(f) }">{{ factorLabel(f) }}</span>
             <span v-for="f in r.why.missing" :key="'m' + f" class="bb-chip ghost" title="not in this record">no {{ factorLabel(f) }}</span>
           </div>
           <div class="ge-snippet">{{ r.why.snippet }}</div>
         </div>
-        <div v-if="!queryText" class="ge-empty bb-muted">
-          Type a question, or click a node. Concepts in your query are matched to the {{ graph.taxonomy.factors.length }}-factor taxonomy and checked as a causal path against every accident's chain.
-          Filters: <span class="bb-kbd">agency:NTSB</span> <span class="bb-kbd">with:BEA</span> <span class="bb-kbd">phase:approach</span> <span class="bb-kbd">year:1990-2009</span> <span class="bb-kbd">type:737</span> <span class="bb-kbd">fatal:none</span>
+        <div v-if="!queryText" class="ge-empty">
+          <div class="bb-h">Try</div>
+          <div class="ge-examples">
+            <button v-for="ex in examples.slice(0, 5)" :key="ex" class="ge-example" @click="useExample(ex)">{{ ex }}</button>
+          </div>
+          <div class="bb-h">Filters</div>
+          <div class="bb-muted ge-filters">
+            <span class="bb-kbd">agency:NTSB</span> <span class="bb-kbd">with:BEA</span> <span class="bb-kbd">phase:approach</span> <span class="bb-kbd">year:1990-2009</span> <span class="bb-kbd">type:737</span> <span class="bb-kbd">fatal:none</span>
+          </div>
+          <p class="bb-muted ge-help">Concepts in a query are matched to the {{ graph.taxonomy.factors.length }}-factor taxonomy and checked as a causal path against every accident's chain. Or click any node.</p>
         </div>
       </div>
     </div>
@@ -60,129 +66,142 @@
     <!-- Center: graph canvas -->
     <div class="ge-center" :class="{ sky: skyOn }">
       <div class="ge-toolbar">
-        <label><input type="checkbox" v-model="showChain" /> causal edges</label>
-        <label><input type="checkbox" v-model="flowOn" /> flow</label>
-        <label title="Draw the graph as a star chart: factors are stars, causal chains are constellation lines"><input type="checkbox" v-model="skyOn" /> constellation</label>
-        <label title="Orrery: each initiating factor becomes a sun and the accidents it started orbit it"><input type="checkbox" v-model="orreryOn" /> orrery</label>
-        <label title="Knowledge as of a year: only accidents up to then, and the factor statistics they alone support">as of <input type="range" :min="yearBounds[0]" :max="yearBounds[1]" v-model.number="asOfYear" class="ge-year" /> <b>{{ asOfYear }}</b></label>
-        <label><input type="checkbox" v-model="focusMode" /> focus on selection</label>
-        <label><input type="checkbox" v-model="labelsAlways" /> all labels</label>
-        <label>min factor use <input type="range" min="1" max="12" v-model.number="minCount" /> {{ minCount }}</label>
+        <div class="bb-seg small" role="group" aria-label="View">
+          <button :class="{ active: view === 'graph' }" @click="view = 'graph'">Graph</button>
+          <button :class="{ active: view === 'sky' }" @click="view = 'sky'" title="Star chart: factors are stars, causal chains are constellation lines">Constellation</button>
+          <button :class="{ active: view === 'orrery' }" @click="view = 'orrery'" title="Each initiating factor becomes a sun and the accidents it started orbit it">Orrery</button>
+        </div>
         <button class="bb-btn small" @click="fitGraph">Fit</button>
-        <span class="bb-muted ge-legend">
-          <span class="ge-dot" style="background:#4c8dff"></span> accident
+        <span class="ge-opt-wrap">
+          <button class="bb-btn small" :class="{ active: optionsOpen }" @click="optionsOpen = !optionsOpen">Options<span v-if="optionCount" class="ge-count">{{ optionCount }}</span></button>
+          <div v-if="optionsOpen" class="bb-popover ge-options" @click.stop>
+            <div class="bb-h">Show</div>
+            <label class="bb-row"><span>Causal edges</span><input type="checkbox" v-model="showChain" /></label>
+            <label class="bb-row"><span>Flow along causal edges</span><input type="checkbox" v-model="flowOn" /></label>
+            <label class="bb-row"><span>All accident labels</span><input type="checkbox" v-model="labelsAlways" /></label>
+            <label class="bb-row"><span>Focus on the selection <small>only its factors and their close neighbours</small></span><input type="checkbox" v-model="focusMode" /></label>
+            <div class="bb-h">Scope</div>
+            <label class="bb-row static"><span>Minimum factor use <small>hide factors seen in fewer accidents</small></span><span class="ge-range"><input type="range" min="1" max="12" v-model.number="minCount" /><b class="bb-num">{{ minCount }}</b></span></label>
+            <label class="bb-row static"><span>Knowledge as of <small>only accidents up to that year</small></span><span class="ge-range"><input type="range" :min="yearBounds[0]" :max="yearBounds[1]" v-model.number="asOfYear" /><b class="bb-num">{{ asOfYear }}</b></span></label>
+          </div>
+        </span>
+        <span class="ge-legend bb-muted">
+          <span class="ge-dot"></span> accident
           <span class="ge-diamond"></span> factor
-          <span class="ge-line"></span> causal (n)
+          <span class="ge-line"></span> causal edge
         </span>
       </div>
-      <canvas ref="canvasRef" class="ge-canvas"></canvas>
-      <div v-if="tooltip" class="ge-tooltip" :style="{ left: tooltip.x + 12 + 'px', top: tooltip.y + 12 + 'px' }">
-        <div class="ge-tooltip-title">{{ tooltip.title }}</div>
+      <canvas ref="canvasRef" class="ge-canvas" @mousedown="optionsOpen = false"></canvas>
+      <div v-if="tooltip" class="bb-tip" :style="{ left: tooltip.x + 12 + 'px', top: tooltip.y + 12 + 'px' }">
+        <b>{{ tooltip.title }}</b>
         <div class="bb-muted">{{ tooltip.sub }}</div>
       </div>
     </div>
 
-    <!-- Right: detail -->
-    <div class="ge-right bb-scroll">
+    <!-- Right: inspector -->
+    <div class="ge-right bb-rail bb-scroll">
       <template v-if="selectedRecord">
-        <div class="ge-detail-head">
-          <span><span class="bb-agency">{{ selectedRecord.agency }}</span> <span v-if="selectedRecord.tier" class="ge-tier" :class="'tier-' + selectedRecord.tier">{{ selectedRecord.tier === 'ntsb' ? 'NTSB database' : 'Wikidata / Wikipedia' }} · {{ selectedRecord.depth }}</span><span v-else class="ge-tier tier-curated">curated · full report</span></span>
-          <h3>{{ selectedRecord.title }}</h3>
+        <div class="ge-head">
+          <div class="ge-head-tags">
+            <span class="bb-agency">{{ selectedRecord.agency }}</span>
+            <span v-if="selectedRecord.tier" class="bb-tag">{{ selectedRecord.tier === 'ntsb' ? 'NTSB database' : 'Wikidata' }} · {{ selectedRecord.depth }}</span>
+            <span v-else class="bb-tag accent">Reviewed · full report</span>
+            <span v-if="selectedRecord.fdr" class="bb-tag">Replay</span>
+            <span v-if="selectedRecord.audio && selectedRecord.audio.length" class="bb-tag">Recording</span>
+          </div>
+          <h3 class="bb-title">{{ selectedRecord.title }}</h3>
+          <div class="bb-meta">{{ selectedRecord.date }} · {{ selectedRecord.aircraft.type }} · {{ selectedRecord.operator }}</div>
+          <div class="bb-meta">{{ selectedRecord.location?.name }} · {{ phaseLabel(selectedRecord.phase) }} · {{ selectedRecord.category }}</div>
         </div>
-        <div class="bb-muted">{{ selectedRecord.date }} · {{ selectedRecord.aircraft.type }} · {{ selectedRecord.operator }}</div>
-        <div class="bb-muted">{{ selectedRecord.location?.name }} · {{ phaseLabel(selectedRecord.phase) }} · {{ selectedRecord.category }}</div>
-        <div class="ge-stats">
-          <div><b>{{ selectedRecord.fatalities ?? '?' }}</b><span>fatalities</span></div>
-          <div><b>{{ selectedRecord.occupants ?? '?' }}</b><span>on board</span></div>
-          <div><b>{{ selectedRecord.factors.length }}</b><span>factors</span></div>
-          <div><b>{{ selectedRecord.chain.length }}</b><span>causal edges</span></div>
+        <div class="bb-stats">
+          <div class="bb-stat"><b>{{ selectedRecord.fatalities ?? '?' }}</b><span>fatalities</span></div>
+          <div class="bb-stat"><b>{{ selectedRecord.occupants ?? '?' }}</b><span>on board</span></div>
+          <div class="bb-stat"><b>{{ selectedRecord.factors.length }}</b><span>factors</span></div>
+          <div class="bb-stat"><b>{{ selectedRecord.chain.length }}</b><span>causal edges</span></div>
         </div>
-        <div class="ge-actions">
-          <button class="bb-btn" :disabled="!(selectedRecord.events && selectedRecord.events.length)" @click="store.openTimeline(selectedRecord.id)">Timeline ▸</button>
-          <button class="bb-btn" :disabled="!selectedRecord.fdr" @click="store.openReplay(selectedRecord.id)">FDR replay ▸</button>
-          <button class="bb-btn" :disabled="!selectedRecord.fdr" @click="store.openFlightGear(selectedRecord.id)" title="FlightGear package or live bridge">FlightGear ▸</button>
-          <button class="bb-btn" :disabled="!(selectedRecord.events && selectedRecord.events.length)" @click="store.openStory(selectedRecord.id)" title="Documentary-style walkthrough">Story ▸</button>
-          <button v-if="selectedRecord.curated_id && index.byId[selectedRecord.curated_id]" class="bb-btn" @click="selectAccident(selectedRecord.curated_id)">Hand-reviewed record ▸</button>
-        </div>
+        <RecordActions :record="selectedRecord" :index="index" current="graph" />
         <div v-if="selectedRecord.stub" class="bb-muted ge-src">Loading full record…</div>
-        <a :href="wikipediaUrl(selectedRecord)" target="_blank" rel="noopener" class="ge-readmore">{{ hasWikipediaArticle(selectedRecord) ? 'Read more on Wikipedia ↗' : 'Search Wikipedia for this accident ↗' }}</a>
+        <p class="bb-prose ge-summary">{{ selectedRecord.summary }}</p>
         <div v-if="selectedRecord.report_links && selectedRecord.report_links.length && selectedRecord.report_links[0] !== '(see record)'" class="ge-links">
-          <a v-for="(l, i) in (selectedRecord.report_links || []).filter((x) => x.startsWith('http'))" :key="i" :href="l" target="_blank" rel="noopener" class="bb-link" :title="l">report link {{ i + 1 }}</a>
+          <a v-for="(l, i) in (selectedRecord.report_links || []).filter((x) => x.startsWith('http'))" :key="i" :href="l" target="_blank" rel="noopener" class="bb-link" :title="l">Report {{ i + 1 }} ↗</a>
         </div>
-        <p class="ge-summary">{{ selectedRecord.summary }}</p>
         <template v-if="selectedRecord.audio && selectedRecord.audio.length">
           <div class="bb-h">Recordings</div>
           <div v-for="(a, i) in uniqueAudio(selectedRecord.audio)" :key="i" class="ge-audio">
-            <div class="ge-audio-title"><span class="ge-audio-kind">{{ a.kind === 'cvr' ? 'CVR' : a.kind === 'atc' ? 'ATC' : 'AUDIO' }}</span> {{ a.title }}</div>
-            <audio controls preload="none" :src="a.url" class="ge-audio-el"></audio>
+            <div class="ge-audio-title"><span class="bb-tag">{{ a.kind === 'cvr' ? 'CVR' : a.kind === 'atc' ? 'ATC' : 'Audio' }}</span> {{ a.title }}</div>
+            <audio controls preload="none" :src="a.url"></audio>
             <div class="bb-muted ge-src"><a :href="a.page" target="_blank" rel="noopener" class="bb-link">Wikimedia Commons</a> · {{ a.license }}</div>
           </div>
         </template>
         <div class="bb-h">Causal chain</div>
         <div class="ge-chain">
           <div v-for="(edge, i) in selectedRecord.chain" :key="i" class="ge-chain-row">
-            <span class="bb-chip factor" :style="{ background: factorColor(edge[0]) }" @click="selectFactor(edge[0])">{{ factorLabel(edge[0]) }}</span>
-            <span class="ge-arrow">→</span>
-            <span class="bb-chip factor" :style="{ background: factorColor(edge[1]) }" @click="selectFactor(edge[1])">{{ factorLabel(edge[1]) }}</span>
+            <span class="bb-chip factor" :style="{ '--c': factorColor(edge[0]) }" @click="selectFactor(edge[0])">{{ factorLabel(edge[0]) }}</span>
+            <span class="bb-arrow">→</span>
+            <span class="bb-chip factor" :style="{ '--c': factorColor(edge[1]) }" @click="selectFactor(edge[1])">{{ factorLabel(edge[1]) }}</span>
           </div>
         </div>
         <div class="bb-h">Factors</div>
         <div v-for="f in selectedRecord.factors" :key="f.id" class="ge-factor">
-          <span class="bb-chip factor" :style="{ background: factorColor(f.id) }" @click="selectFactor(f.id)">{{ factorLabel(f.id) }}</span>
-          <span class="ge-role">{{ f.role }}</span>
-          <span v-if="singlePointSet.has(f.id)" class="ge-sp" title="Every encoded path from an initiating factor to the outcome runs through this factor: remove it and the chain, as written, breaks.">⚡ single point</span>
+          <div class="ge-factor-head">
+            <span class="bb-chip factor" :style="{ '--c': factorColor(f.id) }" @click="selectFactor(f.id)">{{ factorLabel(f.id) }}</span>
+            <span class="bb-tag">{{ f.role }}</span>
+            <span v-if="singlePointSet.has(f.id)" class="bb-tag accent" title="Every encoded path from an initiating factor to the outcome runs through this factor: remove it and the chain, as written, breaks.">single point</span>
+          </div>
           <div class="bb-muted ge-evidence">{{ f.evidence }}</div>
         </div>
         <div class="bb-h" v-if="selectedRecord.probable_cause">Probable cause</div>
-        <p class="ge-summary" v-if="selectedRecord.probable_cause">{{ selectedRecord.probable_cause }}</p>
+        <p class="bb-prose ge-summary" v-if="selectedRecord.probable_cause">{{ selectedRecord.probable_cause }}</p>
         <div v-if="selectedRecord.dissent && selectedRecord.dissent.length" class="ge-dissent">
-          <div class="bb-h" style="color:#ff9f43">Agency dissent</div>
-          <div v-for="(d, i) in selectedRecord.dissent" :key="i"><b>{{ d.agency }}</b> <span class="bb-muted">({{ d.topic }})</span>: {{ d.position }}</div>
+          <div class="bb-h">Agency dissent</div>
+          <div v-for="(d, i) in selectedRecord.dissent" :key="i" class="ge-dissent-row"><b>{{ d.agency }}</b> <span class="bb-muted">({{ d.topic }})</span> {{ d.position }}</div>
         </div>
         <div class="bb-h">Most similar accidents</div>
         <div v-for="s in similar" :key="s.id" class="ge-similar" @click="selectAccident(s.id)">
-          <span class="bb-agency">{{ index.byId[s.id].agency }}</span> {{ index.byId[s.id].title }} <span class="bb-muted">· {{ s.shared }} shared factors{{ s.sharedEdges ? ', ' + s.sharedEdges + ' shared edges' : '' }}</span>
+          <span class="ge-similar-title">{{ index.byId[s.id].title }}</span>
+          <span class="bb-muted">{{ s.shared }} shared{{ s.sharedEdges ? ' · ' + s.sharedEdges + ' edges' : '' }}</span>
         </div>
         <div class="bb-h">Sources</div>
         <div v-for="a in selectedRecord.agencies" :key="a.code" class="bb-muted ge-src">
-          {{ a.code }} ({{ a.role.replace(/_/g, ' ') }}) {{ a.report_id ? '· ' + a.report_id : '' }} <a v-if="a.url" :href="a.url" target="_blank" rel="noopener" class="bb-link">report</a>
+          {{ a.code }} ({{ a.role.replace(/_/g, ' ') }}) {{ a.report_id ? '· ' + a.report_id : '' }} <a v-if="a.url" :href="a.url" target="_blank" rel="noopener" class="bb-link">report ↗</a>
         </div>
         <div class="bb-muted ge-src">Extraction: {{ selectedRecord.extraction.method }} · confidence {{ selectedRecord.extraction.confidence }}{{ selectedRecord.extraction.reviewed ? ' · reviewed' : '' }}</div>
       </template>
       <template v-else-if="selectedFactor">
-        <div class="ge-detail-head">
-          <span class="bb-chip factor" :style="{ background: factorColor(selectedFactor.id) }">{{ categoryLabel(selectedFactor.category) }}</span>
-          <h3>{{ selectedFactor.label }}</h3>
+        <div class="ge-head">
+          <div class="ge-head-tags"><span class="bb-chip factor" :style="{ '--c': factorColor(selectedFactor.id) }">{{ categoryLabel(selectedFactor.category) }}</span></div>
+          <h3 class="bb-title">{{ selectedFactor.label }}</h3>
         </div>
-        <p class="ge-summary">{{ selectedFactor.description }}</p>
-        <div class="ge-stats">
-          <div><b>{{ factorCount(selectedFactor.id) }}</b><span>accidents</span></div>
-          <div><b>{{ Object.keys(index.stats.predecessors[selectedFactor.id] || {}).length }}</b><span>preceded by</span></div>
-          <div><b>{{ Object.keys(index.stats.successors[selectedFactor.id] || {}).length }}</b><span>leads to</span></div>
+        <p class="bb-prose ge-summary">{{ selectedFactor.description }}</p>
+        <div class="bb-stats">
+          <div class="bb-stat"><b>{{ factorCount(selectedFactor.id) }}</b><span>accidents</span></div>
+          <div class="bb-stat"><b>{{ Object.keys(index.stats.predecessors[selectedFactor.id] || {}).length }}</b><span>preceded by</span></div>
+          <div class="bb-stat"><b>{{ Object.keys(index.stats.successors[selectedFactor.id] || {}).length }}</b><span>leads to</span></div>
         </div>
-        <div class="ge-actions">
-          <button class="bb-btn" @click="queryFactor(selectedFactor.id)">Search this factor</button>
+        <div class="bb-actions">
+          <button class="bb-btn small" @click="queryFactor(selectedFactor.id)">Search this factor</button>
         </div>
-        <div class="ge-cut" v-if="cut">
-          <div class="bb-h" style="color:var(--bb-accent)">What if it had been absent</div>
-          <div class="ge-cut-line">Appears in <b>{{ cut.contains }}</b> accidents. In <b>{{ cut.severed.length }}</b> of them every encoded path from cause to outcome runs through it: as the chain is written, removing it breaks the accident.</div>
+        <div class="ge-cut bb-card" v-if="cut">
+          <div class="bb-h">If it had been absent</div>
+          <div class="ge-cut-line">Appears in <b class="bb-num">{{ cut.contains }}</b> accidents. In <b class="bb-num">{{ cut.severed.length }}</b> of them every encoded path from cause to outcome runs through it: as the chain is written, removing it breaks the accident.</div>
           <div class="ge-cut-bar"><div :style="{ width: (cut.contains ? (cut.severed.length / cut.contains) * 100 : 0) + '%' }"></div></div>
-          <div v-for="id in cut.severed.slice(0, 12)" :key="id" class="ge-similar" @click="selectAccident(id)"><span class="bb-agency">{{ index.byId[id].agency }}</span> {{ index.byId[id].title }} <span class="bb-muted">· {{ index.byId[id].date.slice(0, 4) }}</span></div>
+          <div v-for="id in cut.severed.slice(0, 12)" :key="id" class="ge-similar" @click="selectAccident(id)"><span class="ge-similar-title">{{ index.byId[id].title }}</span><span class="bb-muted bb-num">{{ index.byId[id].date.slice(0, 4) }}</span></div>
           <div v-if="cut.severed.length > 12" class="bb-muted ge-src">and {{ cut.severed.length - 12 }} more</div>
         </div>
-        <div class="bb-h">What leads to it (count)</div>
-        <div class="ge-chipwrap">
-          <span v-for="[id, n] in sortedCounts(index.stats.predecessors[selectedFactor.id])" :key="id" class="bb-chip factor" :style="{ background: factorColor(id) }" @click="selectFactor(id)">{{ factorLabel(id) }} <b>{{ n }}</b></span>
+        <div class="bb-h">What leads to it</div>
+        <div class="bb-chipwrap">
+          <span v-for="[id, n] in sortedCounts(index.stats.predecessors[selectedFactor.id])" :key="id" class="bb-chip factor" :style="{ '--c': factorColor(id) }" @click="selectFactor(id)">{{ factorLabel(id) }} <b>{{ n }}</b></span>
           <span v-if="!sortedCounts(index.stats.predecessors[selectedFactor.id]).length" class="bb-muted">usually an initiating factor</span>
         </div>
-        <div class="bb-h">What it leads to (count)</div>
-        <div class="ge-chipwrap">
-          <span v-for="[id, n] in sortedCounts(index.stats.successors[selectedFactor.id])" :key="id" class="bb-chip factor" :style="{ background: factorColor(id) }" @click="selectFactor(id)">{{ factorLabel(id) }} <b>{{ n }}</b></span>
+        <div class="bb-h">What it leads to</div>
+        <div class="bb-chipwrap">
+          <span v-for="[id, n] in sortedCounts(index.stats.successors[selectedFactor.id])" :key="id" class="bb-chip factor" :style="{ '--c': factorColor(id) }" @click="selectFactor(id)">{{ factorLabel(id) }} <b>{{ n }}</b></span>
           <span v-if="!sortedCounts(index.stats.successors[selectedFactor.id]).length" class="bb-muted">terminal outcome</span>
         </div>
         <div class="bb-h">Accidents ({{ factorCount(selectedFactor.id) }})</div>
         <div v-for="r in accidentsWithFactor(selectedFactor.id)" :key="r.id" class="ge-similar" @click="selectAccident(r.id)">
-          <span class="bb-agency">{{ r.agency }}</span> {{ r.title }} <span class="bb-muted">· {{ r.date.slice(0, 4) }} · {{ r.role }}</span>
+          <span class="ge-similar-title"><span class="bb-agency">{{ r.agency }}</span> {{ r.title }}</span>
+          <span class="bb-muted">{{ r.date.slice(0, 4) }} · {{ r.role }}</span>
         </div>
         <div v-if="factorCount(selectedFactor.id) > 60" class="bb-muted ge-src">Showing 60 of {{ factorCount(selectedFactor.id) }}; search "{{ selectedFactor.label.toLowerCase() }}" to rank them.</div>
         <div class="bb-h">Synonyms the parser understands</div>
@@ -199,9 +218,9 @@ import { useBlackboxStore } from '@/stores/blackboxStore'
 import { search, similarRecords, cosineMap } from './lib/search.js'
 import { ForceGraph } from './lib/forceGraph.js'
 import { loadCatalogRecord } from './lib/catalog.js'
-import { wikipediaUrl, hasWikipediaArticle } from './lib/geo.js'
 import { factorCut, singlePointsCached } from './lib/counterfactual.js'
 import { arpeggio } from './lib/synth.js'
+import RecordActions from './RecordActions.vue'
 
 const props = defineProps({ graph: Object, index: Object, active: Boolean, catalog: { type: Object, default: () => ({ state: 'idle', count: 0 }) } })
 defineEmits(['load-catalog'])
@@ -218,8 +237,11 @@ const parsed = ref(null)
 const tooltip = ref(null)
 const showChain = ref(true)
 const flowOn = ref(true)
-const skyOn = ref(false)
-const orreryOn = ref(false)
+const view = ref('graph') // graph | sky | orrery
+const skyOn = computed(() => view.value !== 'graph')
+const orreryOn = computed(() => view.value === 'orrery')
+const optionsOpen = ref(false)
+const optionCount = computed(() => (showChain.value ? 0 : 1) + (flowOn.value ? 0 : 1) + (labelsAlways.value ? 1 : 0) + (focusMode.value ? 1 : 0) + (minCount.value !== 2 ? 1 : 0) + (asOfYear.value < yearBounds.value[1] ? 1 : 0))
 const yearBounds = computed(() => {
   const ys = props.graph.records.map((r) => +r.date.slice(0, 4)).filter(Boolean)
   return [Math.min(...ys), Math.max(...ys)]
@@ -548,73 +570,70 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-.ge-root { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(260px, 30%) 1fr minmax(240px, 27%); }
-.ge-left, .ge-right { background: var(--bb-panel); border-right: 1px solid var(--bb-line); display: flex; flex-direction: column; min-height: 0; }
-.ge-right { border-right: none; border-left: 1px solid var(--bb-line); padding: 10px 12px; overflow: auto; }
-.ge-search { padding: 10px 10px 4px; }
-.ge-search-row { display: flex; gap: 6px; align-items: center; margin-top: 6px; }
-.ge-status { margin-left: auto; font-size: 10px; }
-.ge-examples { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px 10px 8px; }
-.ge-parsed { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; padding: 0 10px 8px; font-size: 10px; }
-.ge-arrow { color: var(--bb-accent); font-weight: 700; }
+.ge-root { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(280px, 28%) 1fr minmax(280px, 26%); }
+.ge-left { border-right: 1px solid var(--bb-line); }
+.ge-right { border-left: 1px solid var(--bb-line); padding: var(--bb-pad); overflow: auto; }
+.ge-search { padding: var(--bb-pad) var(--bb-pad) 8px; }
+.ge-clear { position: absolute; right: 4px; top: 4px; width: 20px; height: 20px; border: none; background: transparent; color: var(--bb-muted); font-size: 15px; cursor: pointer; border-radius: 3px; }
+.ge-clear:hover { color: var(--bb-text); background: var(--bb-panel-3); }
+.ge-search-row { display: flex; gap: 6px; align-items: center; margin-top: 8px; }
+.ge-status { margin-left: auto; font-size: 10.5px; white-space: nowrap; }
+.ge-parsed { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; padding: 0 var(--bb-pad) 8px; font-size: 10.5px; }
 .ge-results { flex: 1; min-height: 0; overflow: auto; border-top: 1px solid var(--bb-line); }
-.ge-result { padding: 8px 10px; border-bottom: 1px solid var(--bb-line); cursor: pointer; }
+.ge-result { padding: 8px var(--bb-pad); border-bottom: 1px solid var(--bb-line); cursor: pointer; }
 .ge-result:hover { background: var(--bb-panel-2); }
-.ge-result.active { background: #1c2a45; box-shadow: inset 3px 0 0 var(--bb-accent); }
-.ge-result-head { display: flex; gap: 6px; align-items: center; }
-.ge-result-title { font-weight: 700; flex: 1; }
-.ge-score { font-size: 9px; color: var(--bb-accent); letter-spacing: 0.05em; }
-.ge-tier { font-size: 8px; letter-spacing: 0.06em; padding: 0 4px; border-radius: 2px; border: 1px solid var(--bb-line); color: var(--bb-muted); text-transform: uppercase; }
-.tier-ntsb { border-color: #55627d; color: #aab6cf; }
-.tier-wikidata { border-color: #6d7fa3; color: #c6d2ea; }
-.tier-curated { border-color: var(--bb-accent); color: var(--bb-accent); }
-.ge-audio { margin-bottom: 6px; }
-.ge-audio-title { font-size: 11px; color: #d3ddf0; }
-.ge-audio-kind { font-size: 9px; font-weight: 700; color: #111; background: var(--bb-accent); padding: 0 4px; border-radius: 2px; margin-right: 4px; }
-.ge-audio-el { width: 100%; height: 30px; margin-top: 3px; }
-.ge-readmore { display: inline-block; color: var(--bb-accent); font-weight: 700; text-decoration: none; border: 1px solid var(--bb-accent); border-radius: 3px; padding: 3px 8px; font-size: 11px; margin: 6px 0 4px; }
-.ge-readmore:hover { background: var(--bb-accent); color: #111; }
-.ge-sp { font-size: 9px; color: #ffd166; margin-left: 6px; letter-spacing: 0.04em; cursor: help; }
-.ge-cut { background: #1a1a0e; border: 1px solid #4a3d14; border-radius: 4px; padding: 2px 8px 8px; margin: 8px 0; }
-.ge-cut-line { font-size: 11px; line-height: 1.4; color: #e9e2c8; }
-.ge-cut-bar { height: 5px; background: #2a2a1a; border-radius: 3px; margin: 6px 0; overflow: hidden; }
-.ge-cut-bar div { height: 100%; background: var(--bb-accent); }
-.ge-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 6px; font-size: 11px; }
-.ge-result-sub { font-size: 10px; margin-top: 2px; }
-.ge-path { display: flex; flex-wrap: wrap; gap: 3px; align-items: center; margin-top: 5px; }
-.ge-snippet { font-size: 10px; color: #b8c6e3; margin-top: 5px; line-height: 1.35; }
-.ge-empty { padding: 10px; line-height: 1.5; }
-.ge-center { position: relative; background: radial-gradient(ellipse at center, #0f1626 0%, #070a12 100%); min-width: 0; transition: background 1s; }
+.ge-result.active { background: var(--bb-panel-3); box-shadow: inset 2px 0 0 var(--bb-accent); }
+.ge-result-head { display: flex; gap: 8px; align-items: baseline; }
+.ge-result-title { font-weight: 600; flex: 1; }
+.ge-result-sub { display: flex; gap: 5px; align-items: center; margin-top: 3px; flex-wrap: wrap; }
+.ge-score { margin-left: auto; font-size: 10px; color: var(--bb-muted); }
+.ge-path { display: flex; flex-wrap: wrap; gap: 3px; align-items: center; margin-top: 6px; }
+.ge-snippet { font-size: 11px; color: var(--bb-muted); margin-top: 5px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.ge-empty { padding: var(--bb-pad); line-height: 1.5; }
+.ge-examples { display: flex; flex-direction: column; gap: 2px; }
+.ge-example { text-align: left; background: transparent; border: none; color: var(--bb-text-2); font: inherit; font-size: 11.5px; padding: 4px 0; cursor: pointer; }
+.ge-example:hover { color: var(--bb-accent); }
+.ge-filters { display: flex; flex-wrap: wrap; gap: 4px; }
+.ge-help { font-size: 11px; margin: 10px 0 0; }
+
+.ge-center { position: relative; background: var(--bb-bg); min-width: 0; transition: background 1s; }
 .ge-center.sky { background: radial-gradient(ellipse at 30% 40%, #0d1230 0%, #04060e 55%, #02030a 100%); }
-.ge-toolbar { position: absolute; top: 6px; left: 8px; right: 8px; z-index: 2; display: flex; gap: 12px; align-items: center; font-size: 10px; color: var(--bb-muted); flex-wrap: wrap; }
-.ge-toolbar label { display: flex; align-items: center; gap: 4px; }
-.ge-toolbar input[type='range'] { width: 70px; }
-.ge-toolbar .ge-year { width: 90px; accent-color: #ffbf00; }
-.ge-legend { margin-left: auto; display: flex; gap: 6px; align-items: center; }
-.ge-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
-.ge-diamond { width: 8px; height: 8px; background: #e4572e; transform: rotate(45deg); display: inline-block; }
-.ge-line { width: 18px; height: 2px; background: #ff9628; display: inline-block; }
+.ge-toolbar { position: absolute; top: 8px; left: 10px; right: 10px; z-index: 2; display: flex; gap: 6px; align-items: center; }
+.ge-opt-wrap { position: relative; }
+.ge-count { margin-left: 6px; font-size: 9.5px; color: var(--bb-accent); }
+.ge-options { top: 30px; left: 0; width: 290px; }
+.ge-range { display: flex; align-items: center; gap: 8px; }
+.ge-range input { width: 90px; }
+.ge-range b { font-weight: 500; min-width: 30px; text-align: right; font-size: 11px; }
+.ge-legend { margin-left: auto; display: flex; gap: 6px; align-items: center; font-size: 10.5px; }
+.ge-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; background: #62a0ff; }
+.ge-diamond { width: 7px; height: 7px; background: #e4572e; transform: rotate(45deg); display: inline-block; margin-left: 6px; }
+.ge-line { width: 16px; height: 2px; background: #ff9628; display: inline-block; margin-left: 6px; }
 .ge-canvas { width: 100%; height: 100%; display: block; cursor: grab; }
-.ge-tooltip { position: absolute; pointer-events: none; background: rgba(8, 12, 24, 0.95); border: 1px solid var(--bb-line); padding: 6px 8px; border-radius: 4px; font-size: 11px; max-width: 260px; z-index: 3; }
-.ge-tooltip-title { font-weight: 700; }
-.ge-detail-head { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
-.ge-detail-head h3 { font-size: 15px; margin: 0; }
-.ge-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 10px 0; }
-.ge-stats div { background: var(--bb-panel-2); border: 1px solid var(--bb-line); border-radius: 4px; padding: 6px 4px; text-align: center; display: flex; flex-direction: column; }
-.ge-stats b { font-size: 15px; }
-.ge-stats span { font-size: 9px; color: var(--bb-muted); }
-.ge-actions { display: flex; gap: 6px; margin-bottom: 6px; }
-.ge-summary { line-height: 1.45; margin: 4px 0; color: #d3ddf0; }
-.ge-chain-row { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; margin-bottom: 3px; }
-.ge-factor { margin-bottom: 6px; }
-.ge-role { font-size: 9px; color: var(--bb-accent); margin-left: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
-.ge-evidence { font-size: 10px; line-height: 1.35; margin-top: 2px; }
-.ge-dissent { background: #2a1d10; border: 1px solid #5a3d1a; border-radius: 4px; padding: 4px 8px 8px; margin-top: 8px; line-height: 1.4; }
-.ge-similar { cursor: pointer; padding: 3px 0; border-bottom: 1px dashed var(--bb-line); }
-.ge-similar:hover { color: var(--bb-accent); }
-.ge-src { font-size: 10px; margin-bottom: 2px; }
-.ge-chipwrap { display: flex; flex-wrap: wrap; gap: 4px; }
-.ge-syn { font-size: 10px; line-height: 1.4; }
+
+.ge-head { display: flex; flex-direction: column; gap: 4px; }
+.ge-head-tags { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; }
+.ge-summary { margin: 8px 0; }
+.ge-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 6px; font-size: 11px; }
+.ge-audio { margin-bottom: 8px; }
+.ge-audio-title { font-size: 11px; color: var(--bb-text-2); margin-bottom: 4px; }
+.ge-chain-row { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; margin-bottom: 4px; }
+.ge-factor { margin-bottom: 8px; }
+.ge-factor-head { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.ge-evidence { font-size: 11px; line-height: 1.4; margin-top: 3px; }
+.ge-dissent { margin-top: 10px; padding: 8px 10px; border: 1px solid rgba(255, 159, 67, 0.35); border-radius: var(--bb-radius-lg); font-size: 11.5px; line-height: 1.45; }
+.ge-dissent .bb-h { color: var(--bb-warn); }
+.ge-dissent-row { margin-bottom: 4px; }
+.ge-similar { display: flex; justify-content: space-between; gap: 8px; cursor: pointer; padding: 5px 0; border-bottom: 1px solid var(--bb-line); font-size: 11.5px; }
+.ge-similar:hover .ge-similar-title { color: var(--bb-accent); }
+.ge-similar-title { flex: 1; min-width: 0; }
+.ge-similar .bb-muted { white-space: nowrap; font-size: 10.5px; }
+.ge-src { font-size: 10.5px; margin-bottom: 3px; line-height: 1.4; }
+.ge-cut { margin: 10px 0; }
+.ge-cut-line { font-size: 11.5px; line-height: 1.45; color: var(--bb-text-2); }
+.ge-cut-bar { height: 4px; background: var(--bb-panel-3); border-radius: 2px; margin: 8px 0; overflow: hidden; }
+.ge-cut-bar div { height: 100%; background: var(--bb-accent); }
+.ge-syn { font-size: 11px; line-height: 1.45; }
 @media (max-width: 900px) {
   .ge-root { grid-template-columns: 1fr; grid-template-rows: 40% 35% 25%; }
   .ge-right { border-left: none; border-top: 1px solid var(--bb-line); }
