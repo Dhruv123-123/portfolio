@@ -126,6 +126,14 @@ header p.meta { font: 0.8125rem/1 var(--mono); color: var(--faint); letter-spaci
 .media { margin: 2rem 0 0; display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
 .media video, .media img { display: block; max-width: 100%; max-height: 70vh; border-radius: 6px; border: 1px solid var(--rule); background: #000; }
 .media figcaption { font: 0.75rem/1 var(--mono); color: var(--faint); }
+.team-figure { align-items: stretch; margin: 1.5rem 0 1.25rem; }
+.team { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+.team li { display: flex; flex-direction: column; gap: 0.3rem; padding: 0.85rem 1rem; border: 1px solid var(--rule); border-radius: 6px; }
+.team strong { font-size: 0.9375rem; font-weight: 600; }
+.team span { font-size: 0.8125rem; color: var(--muted); line-height: 1.45; }
+.team span.meta { color: var(--faint); }
+.team-figure figcaption { text-align: center; margin-top: 0.4rem; }
+@media (max-width: 480px) { .team { grid-template-columns: minmax(0, 1fr); } }
 
 footer {
   border-top: 1px solid var(--rule);
