@@ -256,6 +256,24 @@ figcaption { margin-top: 8px; font-size: 13px; color: var(--ink-3); }
   color: var(--ink-3);
 }
 .panel-foot a:hover { color: var(--ink); }
+
+.face .placeholder {
+  margin-top: 24px;
+  padding: 12px 14px;
+  border: 1px dashed var(--ink-3);
+  border-radius: 10px;
+  font-size: 13.5px;
+  color: var(--ink-2);
+}
+
+.tape {
+  margin-top: 28px;
+  height: 10px;
+  max-width: 100%;
+  border-radius: 3px;
+  background: repeating-linear-gradient(-45deg, var(--c-yellow) 0 12px, #141414 12px 24px);
+  opacity: 0.85;
+}
 .addr { user-select: all; }
 
 /* ---------- stage ---------- */

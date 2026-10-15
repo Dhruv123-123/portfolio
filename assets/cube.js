@@ -11,10 +11,10 @@ const V = (x, y, z) => new THREE.Vector3(x, y, z);
 // `up` is how each face is drawn in a net and how it sits when brought to the front.
 const FACES = {
   U: { n: V(0, 1, 0), up: V(0, 0, -1), color: 'white', name: 'white side: work', label: 'Work' },
-  D: { n: V(0, -1, 0), up: V(0, 0, 1), color: 'yellow', name: 'yellow side: cubing', label: 'Cubing' },
-  F: { n: V(0, 0, 1), up: V(0, 1, 0), color: 'green', name: 'green side: rabbit holes', label: 'Rabbit holes' },
-  B: { n: V(0, 0, -1), up: V(0, 1, 0), color: 'blue', name: 'blue side: Pokémon', label: 'Pokémon' },
-  R: { n: V(1, 0, 0), up: V(0, 1, 0), color: 'red', name: 'red side: F1 and sim racing', label: 'F1 and sim racing' },
+  D: { n: V(0, -1, 0), up: V(0, 0, 1), color: 'yellow', name: 'yellow side: under construction', label: 'Under construction' },
+  F: { n: V(0, 0, 1), up: V(0, 1, 0), color: 'green', name: 'green side: beliefs and rabbit holes', label: 'Beliefs and rabbit holes' },
+  B: { n: V(0, 0, -1), up: V(0, 1, 0), color: 'blue', name: 'blue side: AI right now', label: 'AI right now' },
+  R: { n: V(1, 0, 0), up: V(0, 1, 0), color: 'red', name: 'red side: training', label: 'Training' },
   L: { n: V(-1, 0, 0), up: V(0, 1, 0), color: 'orange', name: 'orange side: off the clock', label: 'Off the clock' },
 };
 for (const f of Object.values(FACES)) f.right = new THREE.Vector3().crossVectors(f.up, f.n);
