@@ -7,11 +7,11 @@
   <meta name="description" content="Founding ML engineer at Terranox AI (YC W26). Six sides of Dhruv on one Rubik's cube: turn it, scramble it, solve it.">
   <meta property="og:title" content="Dhruv Ramasubban">
   <meta property="og:description" content="Six sides of Dhruv on one Rubik's cube. Turn it, scramble it, solve it.">
-  <meta name="theme-color" content="#0c0d10">
+  <meta name="theme-color" content="#0b0b0c">
   <link rel="icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Instrument+Sans:wght@400..600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..600&family=Geist+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="assets/site.css">
   <script>document.documentElement.classList.add('js')</script>
   <script type="importmap">
@@ -20,12 +20,9 @@
 </head>
 <body>
   <div class="app">
-    <header class="top">
-      <div class="who">
-        <h1>Dhruv Ramasubban</h1>
-        <p>Founding ML engineer at <a href="https://www.ycombinator.com/companies/terranox-ai">Terranox AI</a>. Each face of this cube is one side of me.</p>
-      </div>
-      <nav class="links" aria-label="Elsewhere">
+    <header class="bar">
+      <a class="name" href="./">Dhruv Ramasubban</a>
+      <nav class="nav" aria-label="Elsewhere">
         <a href="resume.pdf">Résumé</a>
         <a href="https://github.com/Dhruv123-123">GitHub</a>
         <a href="https://www.linkedin.com/in/dhruv-ramasubban-6b8a8b240/">LinkedIn</a>
@@ -34,7 +31,6 @@
     </header>
 
     <section class="stage" id="stage" aria-label="Interactive Rubik's cube">
-      <p class="hint" id="hint"><span class="hint-touch">Swipe a face to turn it. Tap a face to bring it to the front. Swipe sideways beside the cube to look around.</span><span class="hint-mouse">Drag a face to turn it. Drag beside the cube to look around. Keys <kbd>U</kbd> <kbd>D</kbd> <kbd>L</kbd> <kbd>R</kbd> <kbd>F</kbd> <kbd>B</kbd>, <kbd>Shift</kbd> for prime, arrows to look.</span></p>
       <div class="floor" id="floor" aria-hidden="true"></div>
       <canvas id="cube" aria-describedby="hint"></canvas>
       <canvas id="fx" aria-hidden="true"></canvas>
@@ -42,31 +38,26 @@
         <p>This browser can't draw the 3D cube, so here are all six sides as a list.</p>
       </div>
       <div class="dock" id="dock">
-        <div class="controls">
-          <button type="button" class="btn primary" id="scramble">Scramble</button>
-          <button type="button" class="btn" id="solve" disabled>Solve it for me</button>
-          <button type="button" class="btn ghost" id="reset" disabled>Reset</button>
+        <p class="status" id="status" aria-live="polite">Solved. Scramble it, then try to put it back.</p>
+        <div class="toolbar">
+          <button type="button" class="tool" id="scramble">Scramble</button>
+          <button type="button" class="tool" id="solve" disabled>Solve</button>
+          <button type="button" class="tool" id="reset" disabled>Reset</button>
+          <span class="readout" aria-live="off"><span class="time" id="time">0:00.00</span><span class="count"><span id="moves">0</span> turns</span></span>
         </div>
-        <div class="clock" aria-live="off">
-          <span class="time" id="time">0:00.00</span>
-          <span class="count"><span id="moves">0</span> turns</span>
-        </div>
-        <p class="status" id="status" aria-live="polite">Solved. Scramble it, then try to put me back together.</p>
         <p class="seq" id="seq" aria-label="Scramble sequence"></p>
+        <p class="hint" id="hint"><span class="hint-touch">Swipe a face to turn it. Tap a face to bring it forward.</span><span class="hint-mouse">Drag a face to turn it. Drag beside the cube to rotate it.</span></p>
       </div>
     </section>
 
-    <aside class="panel" id="panel">
-      <div class="panel-head">
-        <div class="net" id="net" role="group" aria-label="Cube map. Pick a side to bring it to the front."></div>
-        <div class="where">
-          <p class="where-face" id="where-face">U face</p>
-          <p class="where-fit" id="where-fit">9 of 9 stickers in place</p>
-        </div>
+    <main class="panel" id="panel">
+      <p class="intro">Founding ML engineer at <a href="https://www.ycombinator.com/companies/terranox-ai">Terranox AI</a>. Each face of the cube is a different side of me.</p>
+      <div class="sides">
+        <div class="switch" id="net" role="group" aria-label="Choose a side"></div>
+        <p class="sides-meta"><span id="where-face">Work</span><span class="fit" id="where-fit"></span></p>
       </div>
 
       <article class="face active" id="side-U" data-face="U" aria-labelledby="t-U">
-        <p class="eyebrow"><span class="dot"></span>U · white · work</p>
         <h2 id="t-U">The builder</h2>
         <p class="lede">I'm a founding ML engineer at Terranox AI (YC W26), the first AI-powered uranium discovery company.</p>
         <p>Right now I'm building physics-informed models over 70+ years of geological data to find uranium deposits. Before Terranox I was deep in physical AI, working on testing and validation of robot policies. I'm still bullish on that industry.</p>
@@ -84,7 +75,6 @@
       </article>
 
       <article class="face" id="side-L" data-face="L" aria-labelledby="t-L">
-        <p class="eyebrow"><span class="dot"></span>L · orange · off the clock</p>
         <h2 id="t-L">Off the clock</h2>
         <p class="lede">Running, golf, and a brand new guitar.</p>
         <dl class="facts">
@@ -96,7 +86,6 @@
       </article>
 
       <article class="face" id="side-F" data-face="F" aria-labelledby="t-F">
-        <p class="eyebrow"><span class="dot"></span>F · green · rabbit holes</p>
         <h2 id="t-F">The rabbit hole</h2>
         <p class="lede">I can go for hours on Wikipedia, following links from one article to the next.</p>
         <p>The Habsburg jaw leads to Charles II of Spain, then the Treaty of Utrecht, then the monkeys of Gibraltar, then Churchill ordering more monkeys in 1942. And now it's 2am. It also makes me very good at Wiki Race. Pick two articles.</p>
@@ -105,7 +94,6 @@
       </article>
 
       <article class="face" id="side-R" data-face="R" aria-labelledby="t-R">
-        <p class="eyebrow"><span class="dot"></span>R · red · F1 &amp; sim racing</p>
         <h2 id="t-R">The racer</h2>
         <p class="lede">I got into F1 during lockdown in 2020 and quickly wanted to drive the cars, not just watch them.</p>
         <p>Controller first, then a Thrustmaster T150, then online leagues with real qualifying and stewards. At my peak I was in the top 800 in the world in ranked play, mostly from doing laps at Monza for hours.</p>
@@ -118,7 +106,6 @@
       </article>
 
       <article class="face" id="side-B" data-face="B" aria-labelledby="t-B">
-        <p class="eyebrow"><span class="dot"></span>B · blue · Pokémon</p>
         <h2 id="t-B">The trainer</h2>
         <p class="lede">Pokémon is my favorite franchise of all time. My first starter was Mudkip, so this side had to be blue.</p>
         <p>It started in 2013 with a Game Boy Advance SP, Sapphire and FireRed. I've played every generation since. Sapphire is still my favorite, Pearl is a close second, and Swampert forever.</p>
@@ -135,7 +122,6 @@
       </article>
 
       <article class="face" id="side-D" data-face="D" aria-labelledby="t-D">
-        <p class="eyebrow"><span class="dot"></span>D · yellow · cubing</p>
         <h2 id="t-D">The cuber</h2>
         <p class="lede">This site is a cube because I've been solving them since I was ten.</p>
         <p>I learned from a YouTube tutorial, and my first solve took a little over four minutes. Then I found CFOP and learned all 78 OLL and PLL cases from flashcards on the school bus.</p>
@@ -150,10 +136,10 @@
       </article>
 
       <footer class="panel-foot">
-        <p><a href="interests.html">Everything I'm into</a></p>
-        <p>Reach out at <span class="addr">dhruv.ramasubban@berkeley.edu</span></p>
+        <span class="addr">dhruv.ramasubban@berkeley.edu</span>
+        <a href="interests.html">Everything I'm into</a>
       </footer>
-    </aside>
+    </main>
   </div>
   <script type="module" src="assets/cube.js"></script>
 </body>

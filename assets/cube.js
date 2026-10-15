@@ -10,12 +10,12 @@ const V = (x, y, z) => new THREE.Vector3(x, y, z);
 // Standard Western color scheme, white on U and green on F.
 // `up` is how each face is drawn in a net and how it sits when brought to the front.
 const FACES = {
-  U: { n: V(0, 1, 0), up: V(0, 0, -1), color: 'white', name: 'white side: work' },
-  D: { n: V(0, -1, 0), up: V(0, 0, 1), color: 'yellow', name: 'yellow side: cubing' },
-  F: { n: V(0, 0, 1), up: V(0, 1, 0), color: 'green', name: 'green side: rabbit holes' },
-  B: { n: V(0, 0, -1), up: V(0, 1, 0), color: 'blue', name: 'blue side: Pokémon' },
-  R: { n: V(1, 0, 0), up: V(0, 1, 0), color: 'red', name: 'red side: F1 and sim racing' },
-  L: { n: V(-1, 0, 0), up: V(0, 1, 0), color: 'orange', name: 'orange side: off the clock' },
+  U: { n: V(0, 1, 0), up: V(0, 0, -1), color: 'white', name: 'white side: work', label: 'Work' },
+  D: { n: V(0, -1, 0), up: V(0, 0, 1), color: 'yellow', name: 'yellow side: cubing', label: 'Cubing' },
+  F: { n: V(0, 0, 1), up: V(0, 1, 0), color: 'green', name: 'green side: rabbit holes', label: 'Rabbit holes' },
+  B: { n: V(0, 0, -1), up: V(0, 1, 0), color: 'blue', name: 'blue side: Pokémon', label: 'Pokémon' },
+  R: { n: V(1, 0, 0), up: V(0, 1, 0), color: 'red', name: 'red side: F1 and sim racing', label: 'F1 and sim racing' },
+  L: { n: V(-1, 0, 0), up: V(0, 1, 0), color: 'orange', name: 'orange side: off the clock', label: 'Off the clock' },
 };
 for (const f of Object.values(FACES)) f.right = new THREE.Vector3().crossVectors(f.up, f.n);
 const ORDER = ['U', 'L', 'F', 'R', 'B', 'D'];
@@ -107,7 +107,7 @@ for (let x = -1; x <= 1; x++) for (let y = -1; y <= 1; y++) for (let z = -1; z <
     const f = FACES[L];
     if (Math.round(c.position.dot(f.n)) !== 1) continue;
     const mat = new THREE.MeshPhysicalMaterial({
-      color: COLORS[f.color], roughness: 0.38, clearcoat: 0.25, clearcoatRoughness: 0.3, specularIntensity: 0.6,
+      color: COLORS[f.color], roughness: 0.5, clearcoat: 0.12, clearcoatRoughness: 0.4, specularIntensity: 0.35,
       emissive: COLORS[f.color], emissiveIntensity: 0,
     });
     const t = new THREE.Mesh(tileGeo, mat);
@@ -125,14 +125,14 @@ const centerOf = (L) => cubies.find((c) => c.position.equals(FACES[L].n));
 
 // Monogram on the white center, where a real cube carries its logo.
 async function addMonogram() {
-  try { await Promise.race([document.fonts.load('800 140px Archivo'), new Promise((r) => setTimeout(r, 1200))]); } catch (e) { /* fall back */ }
+  try { await Promise.race([document.fonts.load('600 140px Geist'), new Promise((r) => setTimeout(r, 1200))]); } catch (e) { /* fall back */ }
   const cv = document.createElement('canvas');
   cv.width = cv.height = 256;
   const g = cv.getContext('2d');
   g.fillStyle = '#17181d';
   g.textAlign = 'center';
   g.textBaseline = 'middle';
-  g.font = '800 132px Archivo, "Helvetica Neue", Arial, sans-serif';
+  g.font = '600 128px Geist, "Helvetica Neue", Arial, sans-serif';
   g.fillText('DR', 128, 136);
   const tex = new THREE.CanvasTexture(cv);
   tex.colorSpace = THREE.SRGBColorSpace;
@@ -157,7 +157,7 @@ function resize() {
   fx.width = W * Math.min(window.devicePixelRatio || 1, 2);
   fx.height = H * Math.min(window.devicePixelRatio || 1, 2);
   camera.aspect = W / H;
-  const top = hintEl.getBoundingClientRect().bottom - r.top + 8;
+  const top = 16;
   const bottom = r.bottom - dock.getBoundingClientRect().top + 8;
   const free = Math.max(160, H - top - bottom);
   const vHalf = THREE.MathUtils.degToRad(camera.fov / 2);
@@ -329,8 +329,8 @@ function record(m, source) {
   if (!m) return;
   history.push(m);
   if (source === 'user') {
-    if (phase === 'idle') { phase = 'free'; setStatus('Turned by hand. Put it back, or let me solve it.'); }
-    if (phase === 'scrambled') { phase = 'solving'; tStart = performance.now(); setStatus('Timer running. Put all six sides back together.'); }
+    if (phase === 'idle') { phase = 'free'; setStatus('Turned by hand. Put it back, or press Solve.'); }
+    if (phase === 'scrambled') { phase = 'solving'; tStart = performance.now(); setStatus('Timer running.'); }
     if (phase === 'solving') moveCount++;
   }
   updateNet();
@@ -370,7 +370,6 @@ function refreshUI() {
 }
 
 // ---------- the net (cube map) and per-face progress ----------
-const netCells = {};
 for (const L of ORDER) {
   const b = document.createElement('button');
   b.type = 'button';
@@ -378,13 +377,8 @@ for (const L of ORDER) {
   b.dataset.face = L;
   b.setAttribute('aria-label', `Show the ${FACES[L].name}`);
   b.setAttribute('aria-pressed', 'false');
-  netCells[L] = [];
-  for (let i = 0; i < 9; i++) {
-    const s = document.createElement('i');
-    s.dataset.c = FACES[L].color;
-    b.appendChild(s);
-    netCells[L].push(s);
-  }
+  b.title = FACES[L].label;
+  b.appendChild(document.createElement('i'));
   b.addEventListener('click', () => focusFace(L));
   netEl.appendChild(b);
 }
@@ -401,9 +395,6 @@ function updateNet() {
     const L = ORDER.find((k) => FACES[k].n.equals(_n));
     if (!L) continue;
     const f = FACES[L];
-    const col = Math.round(c.position.dot(f.right)) + 1;
-    const row = 1 - Math.round(c.position.dot(f.up));
-    netCells[L][row * 3 + col].dataset.c = t.userData.color;
     if (t.userData.color === f.color) next[L]++;
   }
   fits = next;
@@ -417,13 +408,13 @@ function setActive(L) {
   document.documentElement.dataset.face = L;
   for (const a of document.querySelectorAll('.face')) a.classList.toggle('active', a.dataset.face === L);
   for (const b of netEl.children) b.setAttribute('aria-pressed', String(b.dataset.face === L));
-  whereFace.textContent = `${L} face · ${FACES[L].color}`;
+  whereFace.textContent = FACES[L].label;
   showFit();
 }
 function showFit() {
   if (!active) return;
   const n = fits[active];
-  whereFit.textContent = n === 9 ? 'All 9 stickers in place' : `${n} of 9 stickers in place`;
+  whereFit.textContent = n === 9 ? '' : `${n}/9 in place`;
 }
 
 // ---------- pointer interaction ----------
@@ -467,6 +458,7 @@ function orbitBy(dx, dy) {
 canvas.addEventListener('pointerdown', (e) => {
   if (drag || (e.pointerType === 'mouse' && e.button !== 0)) return;
   canvas.setPointerCapture(e.pointerId);
+  hintEl.classList.add('gone');
   view = null;
   orbitVel.set(0, 0);
   drag = { id: e.pointerId, x0: e.clientX, y0: e.clientY, x: e.clientX, y: e.clientY, t: performance.now(), mode: 'pending', hit: pick(e), w: 0 };
@@ -653,7 +645,7 @@ btnSolve.addEventListener('click', () => {
     phase = 'idle';
     moveCount = 0;
     if (wasTiming) timeEl.textContent = fmtTime(0);
-    setStatus('Solved, with a little help. Scramble again and try it yourself.');
+    setStatus('Solved. Scramble again and try it yourself.');
     seqEl.textContent = '';
     updateNet();
   });
@@ -667,7 +659,7 @@ btnReset.addEventListener('click', () => {
   moveCount = 0;
   timeEl.textContent = fmtTime(0);
   seqEl.textContent = '';
-  setStatus('Solved. Scramble it, then try to put me back together.');
+  setStatus('Solved. Scramble it, then try to put it back.');
   updateNet();
   refreshUI();
 });
@@ -680,19 +672,6 @@ function celebrate() {
   if (reduceMotion) return;
   spin = { t0: performance.now(), dur: 1300 };
   flashT0 = performance.now();
-  const r = stageEl.getBoundingClientRect();
-  const dpr = fx.width / Math.max(1, r.width);
-  const hexes = Object.values(COLORS).map((c) => `#${c.toString(16).padStart(6, '0')}`);
-  for (let i = 0; i < 120; i++) {
-    const a = Math.random() * Math.PI * 2;
-    const sp = 4 + Math.random() * 9;
-    confetti.push({
-      x: (W / 2) * dpr, y: (H * 0.45) * dpr,
-      vx: Math.cos(a) * sp * dpr, vy: (Math.sin(a) * sp - 6) * dpr,
-      r: Math.random() * Math.PI, vr: (Math.random() - 0.5) * 0.3,
-      s: (5 + Math.random() * 6) * dpr, c: hexes[i % hexes.length], life: 1,
-    });
-  }
 }
 function drawConfetti() {
   const g = fx.getContext('2d');
