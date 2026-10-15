@@ -1,58 +1,160 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-face="U">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Dhruv Ramasubban</title>
-  <meta name="description" content="Founding ML engineer at Terranox AI (YC W26), the first AI-powered uranium discovery company.">
+  <meta name="description" content="Founding ML engineer at Terranox AI (YC W26). Six sides of Dhruv on one Rubik's cube: turn it, scramble it, solve it.">
+  <meta property="og:title" content="Dhruv Ramasubban">
+  <meta property="og:description" content="Six sides of Dhruv on one Rubik's cube. Turn it, scramble it, solve it.">
+  <meta name="theme-color" content="#0c0d10">
   <link rel="icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Instrument+Sans:wght@400..600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three/three.module.min.js", "three/addons/": "./vendor/three/" } }
+  </script>
 </head>
 <body>
-  <header>
-    <h1>Dhruv Ramasubban</h1>
-    <p>Founding ML engineer at <a href="https://www.ycombinator.com/companies/terranox-ai">Terranox AI</a> (YC W26), the first AI-powered uranium discovery company.</p>
-    <ul class="links">
-      <li><a href="https://github.com/Dhruv123-123">github</a></li>
-      <li><a href="https://www.linkedin.com/in/dhruv-ramasubban-6b8a8b240/">linkedin</a></li>
-      <li><a href="mailto:dhruv.ramasubban@berkeley.edu">email</a></li>
-      <li><a href="interests.html">interests</a></li>
-    </ul>
-  </header>
+  <div class="app">
+    <header class="top">
+      <div class="who">
+        <h1>Dhruv Ramasubban</h1>
+        <p>Founding ML engineer at <a href="https://www.ycombinator.com/companies/terranox-ai">Terranox AI</a>. Each face of this cube is one side of me.</p>
+      </div>
+      <nav class="links" aria-label="Elsewhere">
+        <a href="resume.pdf">Résumé</a>
+        <a href="https://github.com/Dhruv123-123">GitHub</a>
+        <a href="https://www.linkedin.com/in/dhruv-ramasubban-6b8a8b240/">LinkedIn</a>
+        <a href="mailto:dhruv.ramasubban@berkeley.edu">Email</a>
+      </nav>
+    </header>
 
-  <main>
-    <section>
-      <h2>Now</h2>
-      <p>Building physics-informed models over 70+ years of geological data at Terranox to find uranium deposits.</p>
+    <section class="stage" id="stage" aria-label="Interactive Rubik's cube">
+      <p class="hint" id="hint"><span class="hint-touch">Swipe a face to turn it. Tap a face to bring it to the front. Swipe sideways beside the cube to look around.</span><span class="hint-mouse">Drag a face to turn it. Drag beside the cube to look around. Keys <kbd>U</kbd> <kbd>D</kbd> <kbd>L</kbd> <kbd>R</kbd> <kbd>F</kbd> <kbd>B</kbd>, <kbd>Shift</kbd> for prime, arrows to look.</span></p>
+      <div class="floor" id="floor" aria-hidden="true"></div>
+      <canvas id="cube" aria-describedby="hint"></canvas>
+      <canvas id="fx" aria-hidden="true"></canvas>
+      <div class="nogl">
+        <p>This browser can't draw the 3D cube, so here are all six sides as a list.</p>
+      </div>
+      <div class="dock" id="dock">
+        <div class="controls">
+          <button type="button" class="btn primary" id="scramble">Scramble</button>
+          <button type="button" class="btn" id="solve" disabled>Solve it for me</button>
+          <button type="button" class="btn ghost" id="reset" disabled>Reset</button>
+        </div>
+        <div class="clock" aria-live="off">
+          <span class="time" id="time">0:00.00</span>
+          <span class="count"><span id="moves">0</span> turns</span>
+        </div>
+        <p class="status" id="status" aria-live="polite">Solved. Scramble it, then try to put me back together.</p>
+        <p class="seq" id="seq" aria-label="Scramble sequence"></p>
+      </div>
     </section>
 
-    <section>
-      <h2>Physical AI</h2>
-      <p>Before Terranox I was super interested in the physical AI space, working on testing and validation of robot policies. I'm still bullish on the industry.</p>
-    </section>
+    <aside class="panel" id="panel">
+      <div class="panel-head">
+        <div class="net" id="net" role="group" aria-label="Cube map. Pick a side to bring it to the front."></div>
+        <div class="where">
+          <p class="where-face" id="where-face">U face</p>
+          <p class="where-fit" id="where-fit">9 of 9 stickers in place</p>
+        </div>
+      </div>
 
-    <section>
-      <h2>Startup experience</h2>
-      <ul class="plain">
-        <li class="item">
-          <div class="head"><strong>Terranox AI</strong> <span class="role">founding ML engineer</span> <span class="meta">2026–now</span></div>
-          <p>Physics-informed ML for uranium prospectivity — turning 70+ years of analog geoscience records into ML-ready geospatial data. Backed by Y Combinator and General Catalyst.</p>
-        </li>
-        <li class="item">
-          <div class="head"><strong>Actor Labs</strong> <span class="role">founding engineer</span> <span class="meta">2025</span></div>
-          <p>Multi-terabyte robotics sensor pipelines (RTK GPS, LiDAR, camera) feeding a 72% mAP@0.5 detection model.</p>
-        </li>
-      </ul>
-    </section>
+      <article class="face active" id="side-U" data-face="U" aria-labelledby="t-U">
+        <p class="eyebrow"><span class="dot"></span>U · white · work</p>
+        <h2 id="t-U">The builder</h2>
+        <p class="lede">I'm a founding ML engineer at Terranox AI (YC W26), the first AI-powered uranium discovery company.</p>
+        <p>Right now I'm building physics-informed models over 70+ years of geological data to find uranium deposits. Before Terranox I was deep in physical AI, working on testing and validation of robot policies. I'm still bullish on that industry.</p>
+        <ul class="roles">
+          <li>
+            <div class="role-head"><strong>Terranox AI</strong><span>founding ML engineer</span><span class="yr">2026–now</span></div>
+            <p>Physics-informed ML for uranium prospectivity, turning 70+ years of analog geoscience records into ML-ready geospatial data. Backed by Y Combinator and General Catalyst.</p>
+          </li>
+          <li>
+            <div class="role-head"><strong>Actor Labs</strong><span>founding engineer</span><span class="yr">2025</span></div>
+            <p>Multi-terabyte robotics sensor pipelines (RTK GPS, LiDAR, camera) feeding a 72% mAP@0.5 detection model.</p>
+          </li>
+        </ul>
+        <p class="more"><a href="resume.pdf">Résumé (PDF)</a><a href="https://github.com/Dhruv123-123">GitHub</a><a href="https://www.linkedin.com/in/dhruv-ramasubban-6b8a8b240/">LinkedIn</a></p>
+      </article>
 
+      <article class="face" id="side-L" data-face="L" aria-labelledby="t-L">
+        <p class="eyebrow"><span class="dot"></span>L · orange · off the clock</p>
+        <h2 id="t-L">Off the clock</h2>
+        <p class="lede">Running, golf, and a brand new guitar.</p>
+        <dl class="facts">
+          <div><dt>Running</dt><dd>XC and track in high school, insanely washed now, and getting back on the grind with the Diplo 5K in SF and the Berkeley Half. It's the cheapest hobby I have and where I do most of my thinking.</dd></div>
+          <div><dt>Golf</dt><dd>I love playing Tilden even though it's really hard. Currently working on my iron game.</dd></div>
+          <div><dt>Guitar</dt><dd>A Yamaha Pacifica and a Fender Mustang LT25. Currently learning Everlong.</dd></div>
+        </dl>
+        <p class="more"><a href="interests/running.html">Running</a><a href="interests/golf.html">Golf</a><a href="interests/guitar.html">Guitar</a></p>
+      </article>
 
-  </main>
+      <article class="face" id="side-F" data-face="F" aria-labelledby="t-F">
+        <p class="eyebrow"><span class="dot"></span>F · green · rabbit holes</p>
+        <h2 id="t-F">The rabbit hole</h2>
+        <p class="lede">I can go for hours on Wikipedia, following links from one article to the next.</p>
+        <p>The Habsburg jaw leads to Charles II of Spain, then the Treaty of Utrecht, then the monkeys of Gibraltar, then Churchill ordering more monkeys in 1942. And now it's 2am. It also makes me very good at Wiki Race. Pick two articles.</p>
+        <p>Same instinct, darker subject: I grew up on Air Crash Investigation and built <a href="https://dhruv123-123.github.io/blackbox/">Blackbox</a>, a knowledge graph of every crash on record. You start at one accident and click outward through everything it connects to.</p>
+        <p class="more"><a href="https://dhruv123-123.github.io/blackbox/">Blackbox</a><a href="interests/wikipedia.html">Wikipedia</a><a href="interests/aviation.html">Aviation</a></p>
+      </article>
 
-  <footer>
-    <p>Reach out at <a href="mailto:dhruv.ramasubban@berkeley.edu">dhruv.ramasubban@berkeley.edu</a>.</p>
-  </footer>
+      <article class="face" id="side-R" data-face="R" aria-labelledby="t-R">
+        <p class="eyebrow"><span class="dot"></span>R · red · F1 &amp; sim racing</p>
+        <h2 id="t-R">The racer</h2>
+        <p class="lede">I got into F1 during lockdown in 2020 and quickly wanted to drive the cars, not just watch them.</p>
+        <p>Controller first, then a Thrustmaster T150, then online leagues with real qualifying and stewards. At my peak I was in the top 800 in the world in ranked play, mostly from doing laps at Monza for hours.</p>
+        <figure>
+          <img src="interests/media/monza.jpg" alt="Sim racing cockpit view lapping Monza" loading="lazy" width="1600" height="900">
+          <figcaption>Lapping at Monza.</figcaption>
+        </figure>
+        <p>What getting there taught me: the people ahead weren't faster over one lap. They made fewer mistakes over a full race.</p>
+        <p class="more"><a href="interests/sim-racing.html">The whole story</a></p>
+      </article>
+
+      <article class="face" id="side-B" data-face="B" aria-labelledby="t-B">
+        <p class="eyebrow"><span class="dot"></span>B · blue · Pokémon</p>
+        <h2 id="t-B">The trainer</h2>
+        <p class="lede">Pokémon is my favorite franchise of all time. My first starter was Mudkip, so this side had to be blue.</p>
+        <p>It started in 2013 with a Game Boy Advance SP, Sapphire and FireRed. I've played every generation since. Sapphire is still my favorite, Pearl is a close second, and Swampert forever.</p>
+        <dl class="facts">
+          <div><dt>VGC peak</dt><dd>400th on the global doubles ladder</dd></div>
+          <div><dt>Fresno 2023</dt><dd>Top cut, 6th in Seniors at the <a href="https://www.pokemon.com/us/play-pokemon/regionals/2023/fresno/event-results">Regional</a></dd></div>
+          <div><dt>The team</dt><dd><ul class="chips"><li>Chi-Yu</li><li>Flutter Mane</li><li>Iron Hands</li><li>Amoonguss</li><li>Gyarados</li><li>Baxcalibur</li></ul></dd></div>
+        </dl>
+        <figure>
+          <img src="interests/media/ranked.jpg" alt="Sword and Shield ranked battles screen showing Master Ball tier" loading="lazy" width="1600" height="900">
+          <figcaption>Master Ball tier, Sword and Shield ranked doubles, Season 7.</figcaption>
+        </figure>
+        <p class="more"><a href="interests/pokemon.html">The whole story</a></p>
+      </article>
+
+      <article class="face" id="side-D" data-face="D" aria-labelledby="t-D">
+        <p class="eyebrow"><span class="dot"></span>D · yellow · cubing</p>
+        <h2 id="t-D">The cuber</h2>
+        <p class="lede">This site is a cube because I've been solving them since I was ten.</p>
+        <p>I learned from a YouTube tutorial, and my first solve took a little over four minutes. Then I found CFOP and learned all 78 OLL and PLL cases from flashcards on the school bus.</p>
+        <dl class="facts">
+          <div><dt>3x3</dt><dd>Sub-18 average</dd></div>
+          <div><dt>2x2</dt><dd>Sub-3</dd></div>
+          <div><dt>Blindfolded</dt><dd>Yes. Not fast, but it works.</dd></div>
+          <div><dt>World record</dt><dd>One of seven kids who solved 736 cubes in one hour at Mantri Square Mall, Bengaluru, January 2020. <a href="https://www.worldrecordsindia.com/2020/02/07/most-rubiks-cubes-solved-by-a-team-of-kids-in-hour/">Record</a></dd></div>
+        </dl>
+        <p>I don't cube seriously anymore, but there's one on my desk at work. I'd like to get sub-15 someday. Until then, go ahead and scramble this one.</p>
+        <p class="more"><a href="interests/cubing.html">The whole story</a></p>
+      </article>
+
+      <footer class="panel-foot">
+        <p><a href="interests.html">Everything I'm into</a></p>
+        <p>Reach out at <span class="addr">dhruv.ramasubban@berkeley.edu</span></p>
+      </footer>
+    </aside>
+  </div>
+  <script type="module" src="assets/cube.js"></script>
 </body>
 </html>
