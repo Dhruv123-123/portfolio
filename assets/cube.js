@@ -11,9 +11,9 @@ const V = (x, y, z) => new THREE.Vector3(x, y, z);
 // `up` is how each face is drawn in a net and how it sits when brought to the front.
 const FACES = {
   U: { n: V(0, 1, 0), up: V(0, 0, -1), color: 'white', name: 'white side: work', label: 'Work' },
-  D: { n: V(0, -1, 0), up: V(0, 0, 1), color: 'yellow', name: 'yellow side: under construction', label: 'Under construction' },
+  D: { n: V(0, -1, 0), up: V(0, 0, 1), color: 'yellow', name: 'yellow side: curiosity', label: 'Curiosity' },
   F: { n: V(0, 0, 1), up: V(0, 1, 0), color: 'green', name: 'green side: beliefs and rabbit holes', label: 'Beliefs and rabbit holes' },
-  B: { n: V(0, 0, -1), up: V(0, 1, 0), color: 'blue', name: 'blue side: AI right now', label: 'AI right now' },
+  B: { n: V(0, 0, -1), up: V(0, 1, 0), color: 'blue', name: 'blue side: most interested in', label: 'Most interested in' },
   R: { n: V(1, 0, 0), up: V(0, 1, 0), color: 'red', name: 'red side: training', label: 'Training' },
   L: { n: V(-1, 0, 0), up: V(0, 1, 0), color: 'orange', name: 'orange side: off the clock', label: 'Off the clock' },
 };
